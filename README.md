@@ -1,19 +1,19 @@
 # 25 Years of SMOTE: What Has Been Done and How Did It Benefit Society?
 
 A survey paper, written in LaTeX, reviewing a quarter century of research on the
-**Synthetic Minority Over-sampling Technique (SMOTE)** — from the original algorithm
+**Synthetic Minority Over-sampling Technique (SMOTE)**, from the original algorithm
 by Chawla, Bowyer, Hall and Kegelmeyer (*Journal of Artificial Intelligence Research*,
 2002) to its many extensions, and the real-world impact these methods have had.
 
 ## Aims
 
-1. **What has been done** — map and categorize the SMOTE family of methods
+1. **What has been done**: map and categorize the SMOTE family of methods
    (variants, hybrids, and successors) developed between 2002 and the present.
-2. **How did it benefit society** — document where SMOTE-based methods have been
+2. **How did it benefit society**: document where SMOTE-based methods have been
    applied (e.g., healthcare and medical diagnosis, fraud detection, cybersecurity,
    manufacturing fault detection, environmental and social sciences) and the
    measurable benefits reported.
-3. **What comes next** — identify open problems, limitations, and research gaps
+3. **What comes next**: identify open problems, limitations, and research gaps
    that motivate future oversampling methods (feeding into a planned
    "SMOTE Improvement 2027" paper).
 
@@ -49,32 +49,60 @@ Source papers are kept in the Google Drive folder **`SMOTE25`**, split into:
 8. Limitations, open challenges, and future directions
 9. Conclusion
 
-## Planned Repository Structure
+## Repository Structure
+
+The paper uses the official **JAIR LaTeX template** (JAIR Author Kit, September 2025:
+`jair.cls` 2025/08/15 on top of ACM `acmart`, BibLaTeX + Biber, `acmauthoryear` style).
 
 ```
 .
 ├── README.md
-├── main.tex            # Main LaTeX document
-├── sections/           # One .tex file per section
-├── figures/            # Figures and diagrams (timeline, taxonomy, PRISMA)
-├── tables/             # Summary tables of reviewed methods
-├── references.bib      # BibTeX bibliography
-└── notes/              # Reading notes and extraction sheets
+├── main.tex                # Main LaTeX document (preamble from the JAIR template)
+├── jair.cls                # JAIR class            ┐
+├── acmart.cls              # ACM base class        │ from the JAIR Author Kit:
+├── acmauthoryear.bbx       # BibLaTeX style        │ DO NOT MODIFY (JAIR returns
+├── acmauthoryear.cbx       # BibLaTeX cite style   │ papers with style changes)
+├── acmdatamodel.dbx        # BibLaTeX data model   ┘
+├── references.bib          # Bibliography (BibLaTeX)
+├── sections/               # One .tex file per section + reproducibility appendix
+├── tables/                 # Summary tables of reviewed methods
+├── figures/                # Figures (timeline, taxonomy, PRISMA)
+├── notes/                  # Reading notes and extraction sheets (not uploaded to Overleaf)
+└── template/jair-authorkit # Original JAIR Author Kit, unmodified (example .tex + PDF)
 ```
 
 ## Building the Paper
 
+The template needs **pdfLaTeX + Biber** (not BibTeX).
+
 ```bash
 latexmk -pdf main.tex
 # or
-pdflatex main.tex && bibtex main && pdflatex main.tex && pdflatex main.tex
+pdflatex main && biber main && pdflatex main && pdflatex main
 ```
+
+### Overleaf
+
+1. Upload archive: `SMOTE25_overleaf.zip` (contains `main.tex`, the class files,
+   `references.bib`, `sections/`, `tables/`, `figures/`).
+2. Overleaf: **New Project → Upload Project** → choose the zip.
+3. Menu → Settings: **Compiler = pdfLaTeX**, **TeX Live version = latest**,
+   **Main document = main.tex**. Overleaf runs Biber automatically.
+
+### Before submission
+
+- Fill every `[bracketed]` placeholder (author surnames, e-mails, ORCID, corresponding
+  author, department) and remove every `\TODO{...}`.
+- Keep `\documentclass[manuscript, screen, review]{jair}` for submission; use
+  `\documentclass[]{jair}` for the camera-ready version.
+- Answer the Reproducibility Checklist (Appendix A).
+- Cite with `\textcite{key}` (narrative) or `\cite{key}` / `\parencite{key}` (parenthetical).
 
 ## Author
 
-Supawit (P) — M.Sc. student, Statistics and Data Science, Faculty of Science,
+Supawit (P), M.Sc. student, Statistics and Data Science, Faculty of Science,
 Khon Kaen University · VI Lab
 
 ## Status
 
-🚧 Project initialized — literature collection and taxonomy in progress.
+🚧 Project initialized; JAIR LaTeX template set up. Literature collection and taxonomy in progress.

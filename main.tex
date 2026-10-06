@@ -1,0 +1,135 @@
+%% =====================================================================
+%% 25 Years of SMOTE: What Has Been Done and How Did It Benefit Society?
+%% Survey manuscript for the Journal of Artificial Intelligence Research
+%% =====================================================================
+%%
+%% Built on the official JAIR Example Template (N. Mattei, O. E. Gundersen
+%% and M. Kochenderfer, September 15, 2025; jair.cls 2025/08/15, based on
+%% the ACM acmart template, revision 2.12). The original author kit is kept
+%% unmodified in template/jair-authorkit/ for reference.
+%%
+%% JAIR rule: do NOT modify jair.cls, acmart.cls, the .bbx/.cbx/.dbx files,
+%% or the style commands in this preamble (margins, fonts, spacing,
+%% \vspace tricks). Papers with style modifications are returned.
+%%
+%% Compile with pdfLaTeX + Biber (not BibTeX). Overleaf does this
+%% automatically; locally run:  latexmk -pdf main.tex
+%%
+%% Submission:              \documentclass[manuscript, screen, review]{jair}
+%% Camera-ready (accepted): \documentclass[]{jair}
+%%
+\documentclass[manuscript, screen, review]{jair}
+
+\setcopyright{cc}
+\acmDOI{10.1613/jair.1.xxxxx} % assigned by JAIR after acceptance
+
+%% Editorial metadata: placeholders from the JAIR template, set by JAIR.
+\JAIRAE{Insert JAIR AE Name}
+\JAIRTrack{} % Insert JAIR Track Name only if part of a special track
+\acmVolume{4}
+\acmArticle{6}
+\acmMonth{8}
+\acmYear{2026}
+
+\RequirePackage[
+  datamodel=acmdatamodel,
+  style=acmauthoryear,
+  backend=biber,
+  giveninits=true,
+  uniquename=init
+  ]{biblatex}
+
+\renewcommand*{\bibopenbracket}{(}
+\renewcommand*{\bibclosebracket}{)}
+
+%% Bibliography file (BibLaTeX + acmauthoryear; do not use acmnumeric).
+\addbibresource{references.bib}
+
+%% Figures live in figures/ (e.g. \includegraphics{taxonomy}).
+\graphicspath{{figures/}}
+
+%% Drafting helper: red to-do notes. Remove every \TODO before submission.
+\newcommand{\TODO}[1]{\textcolor{red}{[TODO: #1]}}
+
+\begin{document}
+
+%% Title (short title is used in the running heads).
+\title[25 Years of SMOTE]{25 Years of SMOTE: What Has Been Done and How Did It Benefit Society?}
+
+%% =====================================================================
+%% Authors. One \author per person, full first names, one e-mail each,
+%% ORCID recommended. Placeholders in [brackets] must be filled in.
+%% =====================================================================
+\author{Supawit [Surname]}
+%\orcid{0000-0000-0000-0000}
+\email{[supawit.email]@kkumail.com}
+\affiliation{%
+  \department{Faculty of Science}
+  \institution{Khon Kaen University}
+  \city{Khon Kaen}
+  \country{Thailand}
+}
+
+\author{[Co-author Full Name]}
+\authornote{Corresponding Author.}
+%\orcid{0000-0000-0000-0000}
+\email{[co-author.email]@kku.ac.th}
+\affiliation{%
+  \department{[Department]}
+  \institution{Khon Kaen University}
+  \city{Khon Kaen}
+  \country{Thailand}
+}
+
+%% The short list of authors must be made of all authors' last names.
+\renewcommand{\shortauthors}{[Surname] \& [Co-author Surname]}
+
+%% Structured abstract, as in the JAIR template. Avoid heavy math here:
+%% JAIR also publishes the abstract as plain HTML.
+\begin{abstract}
+{\bf Background:}
+The Synthetic Minority Over-sampling Technique (SMOTE), introduced in this journal in 2002, has become one of the most widely used remedies for class imbalance in machine learning. \TODO{One or two sentences on why a 25-year retrospective is needed now.}
+
+{\bf Objectives:}
+This survey (i) maps and categorizes the SMOTE family of methods (variants, hybrids, and successors) developed since 2002, (ii) documents where SMOTE-based methods have been applied and the benefits reported, and (iii) identifies open problems that motivate future oversampling methods.
+
+{\bf Methods:}
+\TODO{Search strategy, databases, time window, inclusion and exclusion criteria, PRISMA-style screening.}
+
+{\bf Results:}
+\TODO{Number of studies reviewed, the resulting taxonomy, and the main findings on binary and multiclass settings and on applications.}
+
+{\bf Conclusions:}
+\TODO{Main take-away messages and future directions.}
+\end{abstract}
+
+%% JAIR note: do not include ACM CCS Concepts or Keywords.
+
+%% Received/accepted dates are added by JAIR after acceptance:
+%\received{DD Month YYYY}
+%\received[accepted]{DD Month YYYY}
+
+\maketitle
+
+\input{sections/01-introduction}
+\input{sections/02-background}
+\input{sections/03-methodology}
+\input{sections/04-taxonomy}
+\input{sections/05-multiclass}
+\input{sections/06-applications}
+\input{sections/07-empirical-comparisons}
+\input{sections/08-challenges}
+\input{sections/09-conclusion}
+
+%% Acknowledgments must use the acks environment (not a \section).
+\begin{acks}
+\TODO{Funding sources, grant numbers, and thanks to individuals and groups who assisted.}
+\end{acks}
+
+\printbibliography
+
+%% Appendices are lettered (A, B, ...).
+\appendix
+\input{sections/appendix-reproducibility}
+
+\end{document}
