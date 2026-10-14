@@ -1,0 +1,1413 @@
+{
+ "_meta": {
+  "date": "2026-10-14",
+  "what": "Dataset-name top-up pass. Raw per-paper output of six extraction agents reading the PDFs in Drive.",
+  "status": "ai_draft (unverified) - every name here must be ticked against the printed table before it enters the manuscript",
+  "rule": "names are transcribed as printed; programmatically generated groups are recorded as one aggregate with a count, never expanded into invented names"
+ },
+ "RBBoost / Random Balance": {
+  "groups": [
+   {
+    "label": "HDDT collection (Table 2)",
+    "names": [
+     "boundary",
+     "breast-y",
+     "cam",
+     "compustat",
+     "covtype",
+     "credit-g",
+     "estate",
+     "german-numer",
+     "heart-v",
+     "hypo",
+     "ism",
+     "letter",
+     "oil",
+     "optdigits",
+     "page",
+     "pendigits",
+     "phoneme",
+     "PhosS",
+     "satimage",
+     "segment"
+    ]
+   },
+   {
+    "label": "KEEL collection (Table 3)",
+    "names": [
+     "abalone19",
+     "abalone9-18",
+     "cleveland-0_vs_4",
+     "ecoli-0-1-3-7_vs_2-6",
+     "ecoli-0-1-4-6_vs_5",
+     "ecoli-0-1-4-7_vs_2-3-5-6",
+     "ecoli-0-1-4-7_vs_5-6",
+     "ecoli-0-1_vs_2-3-5",
+     "ecoli-0-1_vs_5",
+     "ecoli-0-2-3-4_vs_5",
+     "ecoli-0-2-6-7_vs_3-5",
+     "ecoli-0-3-4-6_vs_5",
+     "ecoli-0-3-4-7_vs_5-6",
+     "ecoli-0-3-4_vs_5",
+     "ecoli-0-4-6_vs_5",
+     "ecoli-0-6-7_vs_3-5",
+     "ecoli-0-6-7_vs_5",
+     "ecoli-0_vs_1",
+     "ecoli1",
+     "ecoli2",
+     "ecoli3",
+     "ecoli4",
+     "glass-0-1-2-3_vs_4-5-6",
+     "glass-0-1-4-6_vs_2",
+     "glass-0-1-5_vs_2",
+     "glass-0-1-6_vs_2",
+     "glass-0-1-6_vs_5",
+     "glass-0-4_vs_5",
+     "glass-0-6_vs_5",
+     "glass0",
+     "glass1",
+     "glass2",
+     "glass4",
+     "glass5",
+     "glass6",
+     "haberman",
+     "iris0",
+     "led7digit-0-2-4-5-6-7-8-9_vs_1",
+     "new-thyroid1",
+     "new-thyroid2",
+     "page-blocks-1-3_vs_4",
+     "page-blocks0",
+     "pima",
+     "segment0",
+     "shuttle-c0-vs-c4",
+     "shuttle-c2-vs-c4",
+     "vehicle0",
+     "vehicle1",
+     "vehicle2",
+     "vehicle3",
+     "vowel0",
+     "wisconsin",
+     "yeast-0-2-5-6_vs_3-7-8-9",
+     "yeast-0-2-5-7-9_vs_3-6-8",
+     "yeast-0-3-5-9_vs_7-8",
+     "yeast-0-5-6-7-9_vs_4",
+     "yeast-1-2-8-9_vs_7",
+     "yeast-1-4-5-8_vs_7",
+     "yeast-1_vs_7",
+     "yeast-2_vs_4",
+     "yeast-2_vs_8",
+     "yeast1",
+     "yeast3",
+     "yeast4",
+     "yeast5",
+     "yeast6"
+    ]
+   }
+  ],
+  "aggregates": [],
+  "n_named_total": 86,
+  "n_claimed": 86,
+  "table_ref": "Table 2 (HDDT, 20) and Table 3 (KEEL, 66)",
+  "status": "complete",
+  "note": "20 + 66 = 86 reconciles. HDDT 'page' is a different binarisation from KEEL 'page-blocks0'; both appear in this one paper."
+ },
+ "SplitBal": {
+  "groups": [
+   {
+    "label": "KEEL highly imbalanced binary (Table 3, IDs 1-46)",
+    "names": [
+     "yeast3",
+     "ecoli3",
+     "pageblocks0",
+     "ecoli034vs5",
+     "yeast2vs4",
+     "ecoli067vs35",
+     "ecoli0234vs5",
+     "glass015vs2",
+     "yeast0359vs78",
+     "yeast0256vs3789",
+     "yeast02579vs368",
+     "ecoli046vs5",
+     "ecoli01vs235",
+     "ecoli0267vs35",
+     "glass04vs5",
+     "ecoli0346vs5",
+     "ecoli0347vs56",
+     "yeast05679vs4",
+     "vowel0",
+     "ecoli067vs5",
+     "glass016vs2",
+     "ecoli0147vs2356",
+     "led7digit02456789vs1",
+     "ecoli01vs5",
+     "glass06vs5",
+     "glass0146vs2",
+     "glass2",
+     "ecoli0147vs56",
+     "cleveland0vs4",
+     "ecoli0146vs5",
+     "shuttlec0vsc4",
+     "yeast1vs7",
+     "glass4",
+     "ecoli4",
+     "pageblocks13vs4",
+     "abalone918",
+     "glass016vs5",
+     "shuttlec2vsc4",
+     "yeast1458vs7",
+     "glass5",
+     "yeast2vs8",
+     "yeast4",
+     "yeast1289vs7",
+     "yeast5",
+     "ecoli0137vs26",
+     "yeast6"
+    ]
+   }
+  ],
+  "aggregates": [],
+  "n_named_total": 46,
+  "n_claimed": 46,
+  "table_ref": "Table 3",
+  "status": "complete",
+  "note": "Compact KEEL spelling with no hyphens or underscores. Same 46 sets as RBBoost's KEEL block minus 20, under a different spelling convention: needs canonical mapping before cross-paper counting."
+ },
+ "CISO": {
+  "groups": [
+   {
+    "label": "Evaluation: KEEL (Table 1 top, 37)",
+    "names": [
+     "abalone9-18",
+     "dermatology-6",
+     "ecoli-0_vs_1",
+     "ecoli1",
+     "ecoli4",
+     "flare-F",
+     "glass-0-1-2-3_vs_4-5-6",
+     "glass-0-1-6_vs_2",
+     "glass-0-1-6_vs_5",
+     "glass1",
+     "glass2",
+     "glass4",
+     "glass5",
+     "glass6",
+     "new-thyroid1",
+     "newthyroid2",
+     "pima",
+     "segment0",
+     "shuttle-c0-vs-c4",
+     "vehicle0",
+     "vehicle1",
+     "vehicle2",
+     "vehicle3",
+     "vowel0",
+     "car-good",
+     "winequality-red-4",
+     "wisconsin",
+     "yeast-0-5-6-7-9_vs_4",
+     "yeast-1-2-8-9_vs_7",
+     "yeast-1-4-5-8_vs_7",
+     "yeast-1_vs_7",
+     "yeast-2_vs_4",
+     "yeast-2_vs_8",
+     "yeast1",
+     "yeast4",
+     "yeast5",
+     "yeast6"
+    ]
+   },
+   {
+    "label": "Evaluation: UCI large-scale (Table 1 bottom, 8)",
+    "names": [
+     "Spambase",
+     "Waveform",
+     "Statlog (Landsat)",
+     "Musk (v2)",
+     "Page Blocks",
+     "Online Shoppers",
+     "HTRU2",
+     "Letter"
+    ]
+   },
+   {
+    "label": "Tuning suite (Table 2, 5, held out from evaluation)",
+    "names": [
+     "glass0",
+     "haberman",
+     "ecoli3",
+     "yeast3",
+     "abalone19"
+    ]
+   }
+  ],
+  "aggregates": [],
+  "n_named_total": 50,
+  "n_claimed": 45,
+  "table_ref": "Table 1 (37 KEEL + 8 UCI) and Table 2 (5 tuning)",
+  "status": "complete",
+  "note": "50 named, not 45: the paper evaluates on 45 and tunes on a disjoint 5. One of the few papers in the corpus with a declared held-out tuning suite - worth flagging as good practice. The extraction renders KEEL '_vs_' as ' vs '; restored to '_vs_' here, so those spellings need a visual check."
+ },
+ "OBU": {
+  "groups": [
+   {
+    "label": "UCI and KEEL (Table 1, 36; no separate characteristics table)",
+    "names": [
+     "Abalone09-18",
+     "Ecoli1",
+     "Ecoli2",
+     "Glass016vs2",
+     "Glass4",
+     "Haberman",
+     "Ecoli0137vs26",
+     "Ecoli4",
+     "New-thyroid1",
+     "Vowel0",
+     "Yeast5",
+     "Iris0",
+     "Page-blocks13vs2",
+     "Shuttle2vs4",
+     "Glass0",
+     "Glass0123vs456",
+     "Glass1",
+     "Glass6",
+     "Pima",
+     "Vehicle1",
+     "Vehicle2",
+     "Yeast1",
+     "Ecoli3",
+     "Glass016vs5",
+     "Glass5",
+     "Segmemt0",
+     "Yeast05679vs4",
+     "Yeast1289vs7",
+     "Yeast1458vs7",
+     "Yeast4",
+     "Yeast6",
+     "Abalone19",
+     "Glass2",
+     "Vehicle3",
+     "Yeast2vs4",
+     "Yeast3"
+    ]
+   }
+  ],
+  "aggregates": [],
+  "n_named_total": 36,
+  "n_claimed": 36,
+  "table_ref": "Table 1 (results table; characteristics are columns of it)",
+  "status": "complete",
+  "note": "No characteristics table: dataset properties are columns of the results table. Prints 'Segmemt0' (segment0), 'Page-blocks13vs2' (KEEL page-blocks-1-3_vs_4, IR 15.86 matches), 'Shuttle2vs4' (shuttle-c2-vs-c4, IR 20.5 matches). Paper does not say which sets are UCI and which KEEL."
+ },
+ "GDO": {
+  "groups": [
+   {
+    "label": "KEEL (Table 2, 40)",
+    "names": [
+     "glass1",
+     "ecoli-0_vs_1",
+     "wisconsin",
+     "yeast1",
+     "haberman",
+     "planningrelax",
+     "ecoli1",
+     "new-thyroid1",
+     "ecoli2",
+     "segment0",
+     "yeast3",
+     "ecoli3",
+     "yeast-2_vs_4",
+     "yeast-0-5-6-7-9_vs_4",
+     "vowel0",
+     "kr-vs-k-three_vs_eleven",
+     "glass2",
+     "shuttle-c0-vs-c4",
+     "yeast-1_vs_7",
+     "glass4",
+     "ecoli4",
+     "glass-0-1-6_vs_2",
+     "bupa",
+     "abalone9-18",
+     "glass-0-1-6_vs_5",
+     "yeast-1-4-5-8_vs_7",
+     "glass5",
+     "car-good",
+     "car-vgood",
+     "kr-vs-k-zero-one_vs_draw",
+     "kr-vs-k-one_vs_fifteen",
+     "yeast4",
+     "breast-cancer-wisconsin",
+     "yeast5",
+     "glass-0-1-2-3_vs_4-5-6",
+     "yeast6",
+     "abalone-3_vs_11",
+     "winequality-white-3_vs_7",
+     "australian",
+     "abalone19"
+    ]
+   },
+   {
+    "label": "large UCI (Table 3, 10)",
+    "names": [
+     "Chesscking-Rook vs. King",
+     "HTRU2",
+     "isolet",
+     "letter-recognition",
+     "musk",
+     "nursery",
+     "page-block0",
+     "parkinsons telemonitoring",
+     "sat",
+     "waveform"
+    ]
+   },
+   {
+    "label": "author-collected (Sec. 4.2.3, 2)",
+    "names": [
+     "Internet video traffic data set",
+     "esophageal cancer patient data set"
+    ]
+   }
+  ],
+  "aggregates": [],
+  "n_named_total": 52,
+  "n_claimed": 52,
+  "table_ref": "Table 2, Table 3, Sec. 4.2.3",
+  "status": "complete",
+  "note": "The only paper in this top-up with author-collected (non-public) data: an Internet video traffic set and an esophageal cancer patient set, neither with an identifier-style name and neither shared. Relevant to the reproducibility argument."
+ },
+ "FW-SMOTE": {
+  "groups": [
+   {
+    "label": "low-dimensional UCI/KEEL (Table 1, ldd1-ldd30)",
+    "names": [
+     "abalone7",
+     "ecoli",
+     "ecoli-0-1_vs_5",
+     "ecoli-0-1-4-6_vs_5",
+     "ecoli-0-1-4-7_vs_5-6",
+     "ecoli-0-2-3-4_vs_5",
+     "ecoli-0-2-6-7_vs_3-5",
+     "ecoli-0-3-4_vs_5",
+     "ecoli-0-3-4-6_vs_5",
+     "ecoli-0-3-4-7_vs_5-6",
+     "ecoli-0-4-6_vs_5",
+     "ecoli-0-6-7_vs_3-5",
+     "ecoli-0-6-7_vs_5",
+     "ecoli4",
+     "glass-0-1-6_vs_2",
+     "glass-0-4_vs_5",
+     "glass-0-6_vs_5",
+     "glass4",
+     "image1",
+     "page-blocks-1-3_vs_4",
+     "shuttle-c0-vs-c4",
+     "solar",
+     "yeast-0-2-5-7-9_vs_3-6-8",
+     "yeast-0-5-6-7-9_vs_4",
+     "yeast-1_vs_7",
+     "yeast-1-4-5-8_vs_7",
+     "yeast-2_vs_4",
+     "yeast3",
+     "yeast4",
+     "yeast5"
+    ]
+   },
+   {
+    "label": "high-dimensional microarray (Table 1, hdd1-hdd12)",
+    "names": [
+     "bhat1",
+     "bhat2",
+     "bhat3",
+     "bhat4",
+     "bullinger",
+     "car1",
+     "car2",
+     "car3",
+     "car4",
+     "glioma",
+     "lung",
+     "srbct"
+    ]
+   }
+  ],
+  "aggregates": [],
+  "n_named_total": 42,
+  "n_claimed": 42,
+  "table_ref": "Table 1",
+  "status": "complete",
+  "note": "One of only two papers in the corpus pairing low-dimensional UCI/KEEL sets with high-dimensional microarray sets (n << p). The extraction rendered ' vs ' and en dashes; restored to KEEL '_vs_' and '-' here, so spellings need a visual check."
+ },
+ "RBO": {
+  "groups": [
+   {
+    "label": "preliminary analysis (Table 1 top, 10)",
+    "names": [
+     "pima",
+     "yeast1",
+     "haberman",
+     "vehicle2",
+     "led7digit02456789vs1",
+     "yeast1vs7",
+     "winequalityred4",
+     "poker9vs7",
+     "abalone3vs11",
+     "winequalitywhite9vs4"
+    ]
+   },
+   {
+    "label": "final analysis (Table 1 bottom, 24)",
+    "names": [
+     "glass1",
+     "glass0",
+     "vehicle1",
+     "vehicle3",
+     "glass0123vs456",
+     "vehicle0",
+     "ecoli1",
+     "newthyroid1",
+     "ecoli2",
+     "segment0",
+     "glass6",
+     "yeast3",
+     "ecoli3",
+     "yeast2vs4",
+     "vowel0",
+     "glass016vs2",
+     "glass2",
+     "ecoli4",
+     "pageblocks13vs4",
+     "abalone918",
+     "yeast1458vs7",
+     "yeast4",
+     "yeast1289vs7",
+     "poker89vs6"
+    ]
+   }
+  ],
+  "aggregates": [],
+  "n_named_total": 34,
+  "n_claimed": 34,
+  "table_ref": "Table 1",
+  "status": "complete",
+  "note": "Declared split between a 10-set preliminary suite and a 24-set final suite. Compact spelling, no separators."
+ },
+ "QC-SMOTE": {
+  "groups": [
+   {
+    "label": "D1-D30 (Table 1, VS-SMOTE benchmark order)",
+    "names": [
+     "ecoli1",
+     "ecoli2",
+     "ecoli3",
+     "ecoli4",
+     "glass-0-1-2-3_vs_4-5-6",
+     "glass0",
+     "glass1",
+     "glass6",
+     "newthyroid2",
+     "page-blocks-1-3_vs_4",
+     "page-blocks0",
+     "pima",
+     "segment0",
+     "shuttle-c0-vs-c4",
+     "vehicle0",
+     "vehicle1",
+     "vehicle2",
+     "vehicle3",
+     "vowel0",
+     "wisconsin",
+     "yeast-0-5-6-7-9_vs_4",
+     "yeast-1-2-8-9_vs_7",
+     "yeast-1-4-5-8_vs_7",
+     "yeast-1_vs_7",
+     "yeast-2_vs_4",
+     "yeast-2_vs_8",
+     "yeast1",
+     "yeast3",
+     "yeast4",
+     "yeast5"
+    ]
+   }
+  ],
+  "aggregates": [],
+  "n_named_total": 30,
+  "n_claimed": 30,
+  "table_ref": "Table 1",
+  "status": "complete",
+  "note": "Benchmark adopted wholesale from VS-SMOTE, labelled D1-D30 (prefixes stripped here). Paper prints 'newthyroid2' with IR 5.14, but 5.14 is new-thyroid1's IR in every other paper: either the name or the IR is wrong. Left as printed."
+ },
+ "NBU": {
+  "groups": [
+   {
+    "label": "UCI/KEEL real-world (Table 1, Experiment II, 24)",
+    "names": [
+     "Wisconsin",
+     "Pima",
+     "Glass0",
+     "Vehicle1",
+     "Vehicle0",
+     "Ecoli1",
+     "New-thyroid1",
+     "New-thyroid2",
+     "Ecoli2",
+     "Segmemt0",
+     "Yeast3",
+     "Ecoli3",
+     "Yeast2vs4",
+     "Vowel0",
+     "Glass2",
+     "Yeast1vs7",
+     "Glass4",
+     "Ecoli4",
+     "Page-blocks13vs2",
+     "Abalone09-18",
+     "Glass5",
+     "Yeast4",
+     "Ecoli0137vs26",
+     "Yeast6"
+    ]
+   },
+   {
+    "label": "large real-world (Experiment III, text only, 2)",
+    "names": [
+     "KDD Cup 2008 breast cancer",
+     "MNIST handwritten digits"
+    ]
+   }
+  ],
+  "aggregates": [
+   {
+    "label": "simulated datasets (Experiment I)",
+    "count": 66,
+    "description": "generator grid: imbalance degree N/P in {1.5,3,12,30,60,120} crossed with class overlap 0-100 percent in steps of 10 = 6 x 11 = 66; negatives fixed at 6000, positives varied 50-4000. Never named individually."
+   }
+  ],
+  "n_named_total": 26,
+  "n_aggregate_total": 66,
+  "n_claimed": 92,
+  "table_ref": "Table 1; Sec 5.2 text; Table 13",
+  "status": "complete",
+  "note": "24 + 2 + 66 = 92 reconciles. 72 percent of this paper's headline dataset count is one generator grid. MNIST is used in two scenarios (minority class 3, minority class 5) giving 3 result rows for 2 counted datasets. Shares the Segmemt0 / Page-blocks13vs2 / Abalone09-18 spellings with OBU: same authors, inherited benchmark."
+ },
+ "k-means SMOTE": {
+  "groups": [
+   {
+    "label": "UCI (Table 2 top, 12)",
+    "names": [
+     "breast tissue",
+     "ecoli",
+     "glass",
+     "haberman",
+     "heart",
+     "iris",
+     "libra",
+     "liver disorders",
+     "pima",
+     "segment",
+     "vehicle",
+     "wine"
+    ]
+   },
+   {
+    "label": "KEEL (Table 2 middle, 20 rows printed, text says 19)",
+    "names": [
+     "new-thyroid1",
+     "new-thyroid2",
+     "cleveland-0",
+     "dermatology-6",
+     "led7digit",
+     "page-blocks0",
+     "page-blocks-1-3",
+     "vowel0",
+     "yeast1",
+     "yeast2",
+     "yeast3",
+     "yeast4",
+     "yeast5",
+     "yeast-0-2-5-6",
+     "yeast-0-2-5-7-9",
+     "yeast-0-3-5-9",
+     "yeast-0-5-6-7-9",
+     "yeast-1-2-8-9",
+     "yeast-2_vs_4",
+     "yeast-2_vs_8"
+    ]
+   },
+   {
+    "label": "generated, listed individually in Table 2 (10 MADELON variations from scikit-learn)",
+    "names": [
+     "simulated1",
+     "simulated2",
+     "simulated3",
+     "simulated4",
+     "simulated5",
+     "simulated6",
+     "simulated7",
+     "simulated8",
+     "simulated9",
+     "simulated10"
+    ]
+   }
+  ],
+  "aggregates": [
+   {
+    "label": "undersampled copies of the 12 UCI sets",
+    "count": 48,
+    "description": "each UCI set randomly undersampled to raise IR by about x2, x4, x6, x10, x15, x20, kept only where at least 8 minority samples remain. Explicitly omitted from Table 2. The count 48 is the residual 90 - 42, NOT a figure the paper states; upper bound 72."
+   }
+  ],
+  "n_named_total": 42,
+  "n_aggregate_total": 48,
+  "n_claimed": 90,
+  "table_ref": "Table 2",
+  "status": "complete",
+  "note": "The paper's own table lists 42 rows against a headline of 90. The 48 undersampled copies are inferred as a residual and the paper never states their number, so the headline 90 cannot be reconstructed from the published artifact. Table 2 also truncates KEEL names ('yeast-0-2-5-6' for yeast-0-2-5-6_vs_3-7-8-9), and the 10 'simulated' rows are MADELON variants not labelled as such in the table."
+ },
+ "G-SMOTE": {
+  "groups": [
+   {
+    "label": "base datasets (Table 1 rows without a factor; 27 printed, text says 28)",
+    "names": [
+     "HEART",
+     "LIVER",
+     "WINE",
+     "PIMA",
+     "BREAST TISSUE",
+     "IRIS",
+     "GLASS",
+     "YEAST 1",
+     "HABERMAN",
+     "VEHICLE",
+     "NEW THYROID 1",
+     "NEW THYROID 2",
+     "ECOLI",
+     "EUCALYPTUS",
+     "SEGMENTATION",
+     "YEAST 3",
+     "PAGE BLOCKS 0",
+     "VOWEL",
+     "LED",
+     "LIBRAS",
+     "PAGE BLOCKS 1 3",
+     "DERMATOLOGY",
+     "MANDELON 1",
+     "MANDELON 2",
+     "YEAST 4",
+     "YEAST 5",
+     "YEAST 6"
+    ]
+   }
+  ],
+  "aggregates": [
+   {
+    "label": "undersampled versions (printed in Table 1 as 'NAME (2)' and 'NAME (3)')",
+    "count": 42,
+    "description": "base IR multiplied by 2 and 3 by random undersampling of the minority class, kept where minority count >= 15; 24 rows marked (2) and 18 marked (3)."
+   }
+  ],
+  "n_named_total": 27,
+  "n_aggregate_total": 42,
+  "n_claimed": 69,
+  "table_ref": "Table 1 (all 69 rows printed, sorted by ascending IR)",
+  "status": "complete",
+  "note": "27 + 42 = 69 reconciles with the printed table, but the text says 13 UCI + 13 KEEL + 2 MADELON = 28 base sets, one more than the table prints. Unlike k-means SMOTE this paper does print every variant, so the inflation is visible - but 61 percent of the 69 are re-undersamplings of 27 bases. 'MANDELON' is printed that way (MADELON)."
+ },
+ "DLexiBoost": {
+  "groups": [
+   {
+    "label": "hyperspectral images (Sec. 4.4 text, 5)",
+    "names": [
+     "Samson",
+     "Jasper ridge",
+     "Kennedy Space Center (KSC)",
+     "Salinas A",
+     "Indian pines"
+    ]
+   },
+   {
+    "label": "ImageNet subsets (Sec. 4.5 text, 3)",
+    "names": [
+     "ImageNet8",
+     "ImageNet9",
+     "ImageNet12"
+    ]
+   }
+  ],
+  "aggregates": [
+   {
+    "label": "artificial two-class datasets",
+    "count": 54,
+    "description": "27 clean sets = 5-dimensional Gaussians, IR in {5,10,25} x size in {500,1000,2500} x majority centre in {[3]^5,[1.7]^5,[1.5]^5}; plus 27 analogous sets with outliers made by swapping 10 percent of each class's instances with the opposite class."
+   },
+   {
+    "label": "KEEL real-world datasets",
+    "count": 25,
+    "description": "15 two-class + 10 multi-class KEEL sets. Real, not generated, but their NAMES appear only in the online supplementary document, not in the PDF. Table 3 reports average ranks only."
+   }
+  ],
+  "n_named_total": 8,
+  "n_aggregate_total": 79,
+  "n_claimed": 87,
+  "table_ref": "Table 3 (ranks only), Table 4; no table lists dataset names",
+  "status": "partial",
+  "note": "8 + 54 + 25 = 87. The paper never states 87 itself. No table in the PDF names a single dataset: 54 are generated and unnamed, 25 are real but named only in supplementary material, 8 are named in running text. The headline count cannot be checked from the PDF alone. GAP REMAINS: the 25 KEEL names need the supplementary file."
+ },
+ "CGMOS": {
+  "groups": [
+   {
+    "label": "UCI (Table 1, 30)",
+    "names": [
+     "BankMarket",
+     "BloodService",
+     "BreastCancer",
+     "BreastTissue",
+     "CarEvaluation",
+     "Card'graphy",
+     "CharacterTraj",
+     "Chess",
+     "ClimateSim",
+     "Contraceptive",
+     "Fertility",
+     "Haberman",
+     "ILPD",
+     "ImgSeg",
+     "Leaf",
+     "Libras",
+     "MultipleFs",
+     "Parkinson",
+     "PlanRelax",
+     "QSAR",
+     "SPECT",
+     "SPECTF",
+     "SeismicBumps",
+     "Statlog",
+     "PlatesFaults",
+     "TAEvaluation",
+     "UKnowledge",
+     "Vertebral",
+     "Customers",
+     "Yeast"
+    ]
+   }
+  ],
+  "aggregates": [],
+  "n_named_total": 30,
+  "n_claimed": 30,
+  "table_ref": "Table 1",
+  "status": "complete",
+  "note": "Names are the paper's own abbreviations, not repository identifiers: 'Statlog', 'Customers', 'PlanRelax' do not say which UCI set is meant, and Statlog alone covers at least six different UCI datasets. Table 3 spells UKnowledge as 'UserKnowledge'. Reproducing this benchmark requires guessing."
+ },
+ "SVDD-WSMOTE": {
+  "groups": [
+   {
+    "label": "UCI-derived (Table 2, 24 rows)",
+    "names": [
+     "Wine",
+     "Iris",
+     "Abalone",
+     "Pima",
+     "Ecoli",
+     "Libra",
+     "Vehicle",
+     "Balance",
+     "Haberman",
+     "Car",
+     "Liver",
+     "Seed",
+     "Spect",
+     "Pageblock",
+     "Pageblock1",
+     "Yeast",
+     "Yeast1",
+     "Yeast2",
+     "Yeast3",
+     "Yeast4",
+     "Yeast5",
+     "Yeast6",
+     "Yeast7",
+     "Yeast8"
+    ]
+   },
+   {
+    "label": "simulated 2-D (Sec. 5.1, illustration only, 4)",
+    "names": [
+     "A",
+     "B",
+     "C",
+     "D"
+    ]
+   },
+   {
+    "label": "bearing fault health-condition combinations (Sec. 5.5 / Table 8, 8)",
+    "names": [
+     "NC",
+     "IF",
+     "OF",
+     "RF",
+     "IF + OF",
+     "OF + RF",
+     "IF + RF",
+     "IF + OF + RF"
+    ]
+   }
+  ],
+  "aggregates": [],
+  "n_named_total": 36,
+  "n_claimed": 24,
+  "table_ref": "Table 2; Sec. 5.1; Sec. 5.5 and Table 8",
+  "status": "complete",
+  "note": "Table 2's 24 rows are only 15 distinct base sets: Yeast appears 9 times and Pageblock twice under different class combinations, i.e. 9 of the 24 'datasets' are re-splits of yeast. Text says 16 base sets but the table shows 15. Printed Table 8 shows 7 of the 8 bearing combinations (NC appears only in the text). Simulated sets are named only A-D."
+ },
+ "LS": {
+  "groups": [
+   {
+    "label": "evaluation (Table 2, real-world and UCI, 20)",
+    "names": [
+     "Boundary",
+     "Breast-W",
+     "Calmodoulin",
+     "Compustat",
+     "E-State",
+     "FourClass",
+     "German.Numer",
+     "Intrusion",
+     "Letter",
+     "Mammography",
+     "Oil",
+     "Page",
+     "Pendigits",
+     "Phoneme",
+     "PhosS",
+     "Pima",
+     "Satimage",
+     "Segment",
+     "Splice",
+     "SVMGuide1"
+    ]
+   }
+  ],
+  "aggregates": [
+   {
+    "label": "motivation-only synthetic radial scenarios (Fig. 2 / Table 1)",
+    "count": 9,
+    "description": "two-class radial sets at 50:1000 skew on a 3x3 grid of positive density (High/Medium/Low) x centroid separation (High/Medium/Low); referred to by (density, separation) pair labels, not by names; not part of the 20-set evaluation."
+   }
+  ],
+  "n_named_total": 20,
+  "n_aggregate_total": 9,
+  "n_claimed": 20,
+  "table_ref": "Table 2",
+  "status": "complete",
+  "note": "Clean separation between a 9-scenario synthetic motivation study and a 20-set real evaluation, and the headline count covers only the latter. Spelling drifts between tables ('Breast-W' vs 'Breast-w', 'SVMGuide1' vs 'SVMguide1'). Compustat and Intrusion carry fixed train/test splits."
+ },
+ "Global-CS (AAAI)": {
+  "groups": [
+   {
+    "label": "UCI (Table 2, 14)",
+    "names": [
+     "mfeat-fouri",
+     "segment",
+     "vowel",
+     "waveform",
+     "abalone",
+     "ann",
+     "balance",
+     "car",
+     "cmc",
+     "connect4",
+     "page",
+     "satellite",
+     "solarflare2",
+     "splice"
+    ]
+   },
+   {
+    "label": "synthetic (Table 2, 6)",
+    "names": [
+     "syn-a",
+     "syn-b",
+     "syn-c",
+     "syn-d",
+     "syn-e",
+     "syn-f"
+    ]
+   }
+  ],
+  "aggregates": [],
+  "n_named_total": 20,
+  "n_claimed": 20,
+  "table_ref": "Table 2",
+  "status": "complete",
+  "note": "Synthetic sets are named individually (2 attributes, 3 or 5 classes, random normal distributions), so they are listed rather than aggregated. First 10 rows balanced, last 10 imbalanced - a deliberate design, not an accident."
+ },
+ "Global-CS (journal)": {
+  "groups": [
+   {
+    "label": "UCI (Table 2, 14)",
+    "names": [
+     "mfeat-fouri",
+     "segment",
+     "vowel",
+     "waveform",
+     "abalone",
+     "ann",
+     "balance",
+     "car",
+     "cmc",
+     "connect4",
+     "page",
+     "satellite",
+     "solarflare2",
+     "splice"
+    ]
+   },
+   {
+    "label": "synthetic (Table 2, 6)",
+    "names": [
+     "syn-a",
+     "syn-b",
+     "syn-c",
+     "syn-d",
+     "syn-e",
+     "syn-f"
+    ]
+   }
+  ],
+  "aggregates": [],
+  "n_named_total": 20,
+  "n_claimed": 20,
+  "table_ref": "Table 2",
+  "status": "complete",
+  "note": "VERIFIED IDENTICAL to the AAAI version: same 20 names, same order, same sizes, attributes, classes and class distributions. The journal extension reuses the conference benchmark unchanged."
+ },
+ "INOS": {
+  "title": "Integrated Oversampling for Imbalanced Time Series Classification",
+  "authors": "Cao et al.",
+  "year": 2013,
+  "venue": "IEEE TKDE",
+  "task": "binary",
+  "groups": [
+   {
+    "label": "UCR time series, main evaluation (names from running text; Table 1 body is an image)",
+    "names": [
+     "Adiac",
+     "FaceAll",
+     "50words",
+     "SLeaf",
+     "Wafer",
+     "TwoPats",
+     "Yoga"
+    ]
+   },
+   {
+    "label": "additional UCR sets (named in text; results only on the authors' website)",
+    "names": [
+     "CBF",
+     "Synthetic Control",
+     "OSU Leaf",
+     "Fish",
+     "Gun-Point",
+     "Trace",
+     "ECG"
+    ]
+   }
+  ],
+  "aggregates": [
+   {
+    "label": "imbalanced two-class apportions",
+    "count": 48,
+    "description": "built from the 7 balanced UCR sets by taking one class positive and the rest negative (Adiac 37 classes, FaceAll 14, 50words 50, SLeaf 15); the apportion list is only in the image of Table 1. These are re-splits of the 7 counted UCR sets, not additional datasets.",
+    "derived": true
+   }
+  ],
+  "n_named_total": 14,
+  "n_aggregate_total": 48,
+  "n_claimed": 7,
+  "results_granularity": "per-dataset partial",
+  "classifiers": "SVM; 1NN; 1NN-DTW; EasyEnsemble; BalanceCascade",
+  "metrics": "F-Value; G-Mean; Precision; Recall; True Negative Rate",
+  "stat_test": "not stated",
+  "table_ref": "Table 1 (image); Table 2; Tables 3-4; Table 6 (image)",
+  "status": "table is an image",
+  "note": "NEW PAPER. Second case in the corpus of an unreadable image table (with MWMOTE). Every source dataset is originally BALANCED and binarised by the authors - a pure Modified-data paper. Claims 'significantly better' with no named statistical test. 7 further UCR sets are named but their results live only on a website."
+ },
+ "SMOTE-IPF": {
+  "title": "SMOTE-IPF: Addressing the noisy and borderline examples problem in imbalanced classification by a re-sampling method with filtering",
+  "authors": "Saez et al.",
+  "year": 2015,
+  "venue": "Information Sciences",
+  "task": "binary",
+  "groups": [
+   {
+    "label": "real-world (Table 1 / Table 6, 9)",
+    "names": [
+     "acl",
+     "breast",
+     "bupa",
+     "cleveland",
+     "ecoli",
+     "haberman",
+     "hepatitis",
+     "newthyroid",
+     "pima"
+    ]
+   }
+  ],
+  "aggregates": [
+   {
+    "label": "synthetic with borderline examples (Table 3)",
+    "count": 30,
+    "description": "3 shapes (sub-cluster, clover, paw) x IR in {5,7} x disturbance ratio in {0,30,50,60,70} percent; 600 examples at IR 5, 800 at IR 7. Named by their parameter triple, not by dataset names."
+   },
+   {
+    "label": "noise-injected copies of the 9 real-world sets",
+    "count": 36,
+    "description": "9 datasets x noise level in {20,40} percent x noise type in {class, attribute}."
+   }
+  ],
+  "n_named_total": 9,
+  "n_aggregate_total": 66,
+  "n_claimed": 75,
+  "results_granularity": "per-dataset",
+  "classifiers": "C4.5 (main); k-NN, SVM, RIPPER, PART (web page only)",
+  "metrics": "AUC",
+  "stat_test": "Wilcoxon + aligned Friedman + Hochberg post-hoc",
+  "table_ref": "Table 1, Table 3, Table 6, Table 9",
+  "status": "complete",
+  "note": "NEW PAPER. 9 real datasets out of a headline 75: 88 percent of the benchmark is synthetic or author-perturbed. Reports per-dataset results for all of it and runs a proper statistical protocol, so the inflation is transparent rather than hidden. Results for 4 of the 5 classifiers are off-paper."
+ },
+ "HDE": {
+  "title": "A hybrid data-level ensemble to enable learning from highly imbalanced dataset",
+  "authors": "Chen et al.",
+  "year": 2021,
+  "venue": "Information Sciences",
+  "task": "binary",
+  "groups": [
+   {
+    "label": "KEEL (Table 1, Source column, 28)",
+    "names": [
+     "yeast2vs4",
+     "yeast05679vs4",
+     "glass016vs2",
+     "glass2",
+     "shuttlec0vsc4",
+     "yeast1458vs7",
+     "ecoli4",
+     "abalone9-18",
+     "madelon",
+     "glass016vs5",
+     "shuttlec2vsc4",
+     "yeast1289vs7",
+     "glass5",
+     "yeast1vs7",
+     "yeast5",
+     "krvsk3vs11",
+     "ecoli0137vs26",
+     "abalone-17vs78910",
+     "yeast6",
+     "krvsk0vs8",
+     "shuttle2vs5",
+     "kddbufferoverflowvsback",
+     "kddlandvssatan",
+     "krvsk0vs15",
+     "poker8vs6",
+     "poker89vs5",
+     "kddrootkitvsback",
+     "abalone19"
+    ]
+   },
+   {
+    "label": "LibSVM, minority instances randomly removed by the authors to raise IR (Table 1, 14)",
+    "names": [
+     "vowel0",
+     "german",
+     "svmguide3",
+     "breast-cancer",
+     "diabetes",
+     "svmguide1",
+     "gisette",
+     "australian",
+     "a1a",
+     "mushrooms",
+     "phishing",
+     "skinnonskin",
+     "cod",
+     "ijcnn"
+    ]
+   }
+  ],
+  "aggregates": [],
+  "n_named_total": 42,
+  "n_claimed": 42,
+  "results_granularity": "per-dataset",
+  "classifiers": "C4.5 base (40 per ensemble); vs SMOTEBoost, EUSBoost, RUSBoost, SMOTEBagging, UnderBagging, EasyEnsemble, IIVotes, CBIS, SNGEIP, sNED",
+  "metrics": "AUC; G-mean",
+  "stat_test": "Friedman + Holm post-hoc; Wilcoxon paired",
+  "table_ref": "Table 1; Tables 3-4; Tables 7-10",
+  "status": "complete",
+  "note": "NEW PAPER. Declares its own modification in the table: 14 of 42 sets are LibSVM data the authors undersampled to manufacture high IR, and the Source column says so. Datasets uploaded to GitHub. IR 9.08 to 970.6. A clean example of modified data that is labelled as modified."
+ },
+ "NROMM": {
+  "title": "Noise-robust oversampling for imbalanced data classification",
+  "authors": "Liu et al.",
+  "year": 2023,
+  "venue": "Pattern Recognition",
+  "task": "both",
+  "groups": [
+   {
+    "label": "multi-class KEEL (Table 2, 20)",
+    "names": [
+     "Wine",
+     "Glass",
+     "New-thyroid",
+     "Vehicle",
+     "Winequality-red",
+     "Page-blocks",
+     "Zoo",
+     "Lymphography",
+     "Hayes-roth",
+     "Dermatology",
+     "Led7digit",
+     "Balance",
+     "Flare",
+     "Car",
+     "Automobile",
+     "Cleveland",
+     "Ecoli",
+     "Contraceptive",
+     "Yeast",
+     "Thyroid"
+    ]
+   }
+  ],
+  "aggregates": [
+   {
+    "label": "binary datasets D1-D10 (Table 6)",
+    "count": 10,
+    "description": "ten binary sets labelled D1 to D10 for the SVM comparison; their identities are given only in the supplementary material, not in the paper."
+   }
+  ],
+  "n_named_total": 20,
+  "n_aggregate_total": 10,
+  "n_claimed": 20,
+  "results_granularity": "per-dataset partial",
+  "classifiers": "C5.0; MLP; KNN; NB (multi-class); SVM (binary)",
+  "metrics": "AvAcc; MG; CBA; CEN (multi-class); AUC; G-mean (binary)",
+  "stat_test": "Friedman + Shaffer post-hoc; Wilcoxon signed-ranks",
+  "table_ref": "Table 2; Table 3 (7 of 20 datasets); Table 4; Table 6",
+  "status": "partial",
+  "note": "NEW PAPER. Table 3 prints C5.0 results for only 7 of the 20 datasets; the full per-dataset results for all 20 datasets x 4 classifiers are in supplementary material, and the 10 binary sets are anonymous D1-D10 in the paper. Directly relevant to the reporting-granularity axis. Baselines include MC-CCR, MC-RBO, MDO, SMOM, SMOTE-IPF, KNNOR."
+ },
+ "GOIO": {
+  "title": "GOIO: Generative Oversampling Approach to Class Imbalance and Overlap of Tabular Data",
+  "authors": "Ren et al.",
+  "year": 2025,
+  "venue": "IEEE TKDE",
+  "task": "binary",
+  "groups": [
+   {
+    "label": "real-world, UCI and imbalanced-learn (Table I, 18)",
+    "names": [
+     "default",
+     "shoppers",
+     "bank_full",
+     "bank_small",
+     "avila_0vs5",
+     "optical_digits",
+     "avila_0vs6",
+     "sick_euthyroid",
+     "avila_0vs7",
+     "scene",
+     "abalone_15",
+     "thyroid_sick",
+     "abalone_6",
+     "wine_quality",
+     "taiwanses",
+     "mammography",
+     "bankruptcy",
+     "page-blocks_0vs3"
+    ]
+   },
+   {
+    "label": "artificial, authors' own Gaussian generator (Table II, 5)",
+    "names": [
+     "artificial_0.3_5",
+     "artificial_0.5_2.5",
+     "artificial_0.5_5",
+     "artificial_0.5_10",
+     "artificial_1_5"
+    ]
+   }
+  ],
+  "aggregates": [],
+  "n_named_total": 23,
+  "n_claimed": 23,
+  "results_granularity": "per-dataset",
+  "classifiers": "GNB; KNN; DTC; SVM; RFC",
+  "metrics": "F1-score; MCC; Accuracy",
+  "stat_test": "Friedman + Bonferroni-Dunn post-hoc; Wilcoxon signed-rank",
+  "table_ref": "Table I, Table II; per-dataset results in Tables V-VII",
+  "status": "complete",
+  "note": "NEW PAPER. Tables I and II are images; names transcribed from the rendered page. Baselines: SMOTE, SMOTETL, MLOS, BSMOTE, GAMO, SOS, plus an IDENTITY control. CTGAN and cWGAN were EXCLUDED on the authors' own preliminary judgement of 'lower synthesis quality'; TVAE and TabDDPM not compared. GOIO itself builds on Tabsyn. Prints 'taiwanses'. All 18 real sets public, none author-collected."
+ },
+ "DGOT": {
+  "title": "Diffusion GAN-Based Oversampling for Imbalanced Tabular Data",
+  "authors": "Ren et al.",
+  "year": 2026,
+  "venue": "IEEE TKDE",
+  "task": "both",
+  "groups": [
+   {
+    "label": "UCI (Table I, Source [45], 12)",
+    "names": [
+     "satimage",
+     "students_dropout",
+     "default",
+     "Dry_Beans",
+     "bank",
+     "nursery",
+     "abalone_15",
+     "abalone_6",
+     "polish_bankruptcy",
+     "avila",
+     "page-blocks",
+     "firewall"
+    ]
+   },
+   {
+    "label": "imbalanced-learn (Table I, Source [48], 10)",
+    "names": [
+     "optical_digits",
+     "satimage_4",
+     "pen_digits",
+     "sick_euthyroid",
+     "isolet",
+     "thyroid_sick",
+     "coil_2000",
+     "wine_quality",
+     "letter_img",
+     "abalone_19"
+    ]
+   }
+  ],
+  "aggregates": [],
+  "n_named_total": 22,
+  "n_claimed": 22,
+  "results_granularity": "per-dataset",
+  "classifiers": "XGBoost; KNN; DTC; Logistic Regression; RFC",
+  "metrics": "Accuracy; F1-score; MCC",
+  "stat_test": "Friedman + Bonferroni-Dunn post-hoc; Wilcoxon signed-rank",
+  "table_ref": "Table I; per-dataset results in Tables IV-VI",
+  "status": "complete",
+  "note": "NEW PAPER. Table I is an image; names transcribed from the rendered page. 15 binary + 7 multi-class. Compares CTGAN, TVAE and SOS alongside SMOTE, BSMOTE, SMOTETL and an IDENTITY control: the most complete generative baseline set in the corpus. Same group as GOIO, and the benchmarks overlap heavily (default, abalone_15, abalone_6, optical_digits, sick_euthyroid, thyroid_sick, wine_quality) though the lists are not identical."
+ },
+ "Loyalty-SMOTE": {
+  "title": "Loyalty-SMOTE: Data synthesis algorithm for effective imbalanced data classification",
+  "authors": "Hu et al.",
+  "year": 2026,
+  "venue": "Neural Networks",
+  "task": "both",
+  "groups": [
+   {
+    "label": "group 1, UCI/KEEL (Table 2; text says 30, table prints 31)",
+    "names": [
+     "adult",
+     "ai4i2020",
+     "banknote",
+     "drug",
+     "AIDS_5000",
+     "Maternal",
+     "national",
+     "occupancy",
+     "online",
+     "Shoppers",
+     "Academic",
+     "AIDS_15000",
+     "german",
+     "statlog",
+     "Shuttle",
+     "Fault",
+     "ICR",
+     "Bankruptcy",
+     "breast",
+     "wdbc",
+     "wpbc",
+     "heart",
+     "ionosphere",
+     "iris",
+     "bezediris",
+     "raisin",
+     "glass5",
+     "vowel0",
+     "ecoli-0-1-3-7_vs_2-6",
+     "ecoli-0-1-4-6_vs_5",
+     "yeast-0-3-5-9_vs_7-8"
+    ]
+   },
+   {
+    "label": "group 2, Kaggle (Table 3, 5)",
+    "names": [
+     "australia",
+     "Obesity",
+     "Gender",
+     "approval",
+     "spambase"
+    ]
+   },
+   {
+    "label": "group 3, Kaggle (Table 4; text claims 9, table prints 8)",
+    "names": [
+     "magic04",
+     "covertype",
+     "Purchase",
+     "Satisfied",
+     "AIDS_50000",
+     "smoke",
+     "vertebal",
+     "parkinson"
+    ]
+   },
+   {
+    "label": "group 3, name appearing only in runtime Table 14",
+    "names": [
+     "bank-full"
+    ]
+   },
+   {
+    "label": "group 4, UCI multiclass (Table 5, 5)",
+    "names": [
+     "yeast",
+     "HR",
+     "employee",
+     "Drug200",
+     "MEDV"
+    ]
+   },
+   {
+    "label": "group 5, Kaggle high-dimensional and large-scale (Table 6, 10)",
+    "names": [
+     "Mushroom",
+     "Firewall",
+     "Cardiovascular",
+     "RT-IOT",
+     "Gender_by_name",
+     "Smartphone",
+     "Bankruptcy",
+     "darwin",
+     "toxicity",
+     "cnae"
+    ]
+   }
+  ],
+  "aggregates": [],
+  "n_named_total": 60,
+  "n_claimed": 59,
+  "results_granularity": "per-dataset",
+  "classifiers": "SVM (RBF, C=1.0, gamma=0.5) only",
+  "metrics": "F1-score; AUROC; Recall; G-mean",
+  "stat_test": "not stated",
+  "table_ref": "Tables 2-6; results Tables 9-12, 14, 15-18, 19-22",
+  "status": "complete",
+  "note": "NEW PAPER. 60 entries printed, 59 distinct ('Bankruptcy' appears in both group 1 and group 5 with the same 6820 instances and IR 31). Group counts do not reconcile: group 1 claims 30 but prints 31; group 3 claims 9, Table 4 prints 8 omitting bank-full while Table 14 prints bank-full and omits parkinson. Spelling drifts between description and result tables (wdbc/WDBC, bezediris/bezdeiris, darwin/Darwin). One classifier only, no statistical test, best-count comparison only - the weakest evaluation protocol among the 2026 papers."
+ }
+}

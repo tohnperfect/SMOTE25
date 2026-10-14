@@ -1,0 +1,117 @@
+# -*- coding: utf-8 -*-
+"""Mapping from paper record key -> the Drive file(s) that hold it.
+Counting rule: one paper = one entry, even when the same document sits in two folders.
+`folders` lists every folder it appears in; `files` lists the file name used in each."""
+
+# key: (folders, [filenames in the same order as folders])
+INVENTORY = {
+# ---- Survey (2) ----
+"Survey: Stop Oversampling": (["Survey"], ["90b9923d-25db-4077-bab6-59f3073325f4.pdf"]),
+"Survey: SMOTE Review":      (["Survey"], ["SMOTE_for_Handling_Imbalanced_Data_Problem__A_Review.pdf"]),
+# ---- Binary only (19) ----
+"OSS":            (["Binary"], ["1997 One-sided selection - Kubat, Matwin.pdf"]),
+"SHRINK":         (["Binary"], ["1998 SHRINK - Kubat, Holte, Matwin.pdf"]),
+"Cluster-SMOTE":  (["Binary"], ["2006 Cluster-SMOTE - Cieslak, Chawla, Striegel.pdf"]),
+"COG-OS":         (["Binary"], ["2007 COG-OS - Wu, Xiong, Wu, Chen.pdf"]),
+"LS":             (["Binary"], ["2008 LS (Local Sampling) - Cieslak, Chawla.pdf"]),
+"RAMOBoost":      (["Binary"], ["2010 RAMOBoost - Chen, He, Garcia.pdf"]),
+"SPIDER2":        (["Binary"], ["2010 SPIDER2 - Napierala, Stefanowski, Wilk.pdf"]),
+"A-SUWO":         (["Binary"], ["2016 A-SUWO - Nekooeimehr (dissertation, ch.3 reprint).pdf"]),
+"k-means SMOTE":  (["Binary"], ["2018 k-means SMOTE - Douzas, Bacao, Last (accepted manuscript).pdf"]),
+"OBU":            (["Binary"], ["2018 OBU - Vuttipittayamongkol et al (accepted manuscript).pdf"]),
+"G-SMOTE":        (["Binary"], ["2019 G-SMOTE - Douzas, Bacao (accepted manuscript).pdf"]),
+"AB-SMOTE":       (["Binary"], ["2020 AB-SMOTE - Al Majzoub et al.pdf"]),
+"NBU":            (["Binary"], ["2020 NBU - Vuttipittayamongkol, Elyan (accepted manuscript).pdf"]),
+"ADASYN":         (["Binary"], ["ADASYN_Adaptive_synthetic_sampling_approach_for_imbalanced_learning.pdf"]),
+"CGMOS":          (["Binary"], ["CGMOS Certainty Guided Minority OverSampling.pdf"]),
+"CISO":           (["Binary"], ["CISO.pdf"]),
+"QC-SMOTE":       (["Binary"], ["QC-SMOTE Quality-Controlled SMOTE for Imbalanced.pdf"]),
+"RSMOTE":         (["Binary"], ["RSMOTE A self-adaptive robust SMOTE for imbalanced problems with label noise.pdf"]),
+"SVDD-WSMOTE":    (["Binary"], ["SVDD-based weighted oversampling technique for imbalanced.pdf"]),
+# ---- Binary + Both (5 duplicates) ----
+"SMOTE":                   (["Binary","Both"], ["SMOTE (Original).pdf","SMOTE - Synthetic Minority Over-Sampling Technique (JAIR 2002).pdf"]),
+"Borderline-SMOTE":        (["Binary","Both"], ["Borderline-SMOTE.pdf","Borderline-SMOTE - A New Over-Sampling Method in Imbalanced Data Sets Learning (ICIC 2005).pdf"]),
+"Safe-Level-SMOTE":        (["Binary","Both"], ["SafeLavel.pdf","Safe-Level-SMOTE - Safe-Level-Synthetic Minority Over-Sampling Technique for Handling the Class Imbalanced Problem (PAKDD 2009).pdf"]),
+"MWMOTE":                  (["Binary","Both"], ["MWMOTE.pdf","MWMOTE - Majority Weighted Minority Oversampling Technique for Imbalanced Data Set Learning (IEEE TKDE 2014).pdf"]),
+"SMOTE-ENN / SMOTE-Tomek": (["Binary","Both"], ["2004 SMOTE-ENN, SMOTE-Tomek - Batista, Prati, Monard.pdf","SMOTE-Tomek & SMOTE-ENN (Batista) - A Study of the Behavior of Several Methods for Balancing Machine Learning Training Data (SIGKDD Explorations 2004).pdf"]),
+# ---- Multiclass only (14) ----
+"Global-CS (AAAI)":    (["Multiclass"], ["2006_Global-CS_On multi-class cost-sensitive learning (AAAI conference version).pdf"]),
+"Global-CS (journal)": (["Multiclass"], ["2010_Global-CS_On multi-class cost-sensitive learning.pdf"]),
+"OVO-SMOTE":           (["Multiclass"], ["2013_OVO-SMOTE_Analysing the classification of imbalanced data-sets with multiple classes - Binarization techniques and ad-hoc approaches.pdf"]),
+"SCUT":                (["Multiclass"], ["2015_SCUT_Multi-Class Imbalanced Data Classification using SMOTE and Cluster-based Undersampling.pdf"]),
+"AMDO":                (["Multiclass"], ["2018_AMDO_An Over-Sampling Technique for Multi-Class Imbalanced Problems.pdf"]),
+"SOUP":                (["Multiclass"], ["2019_SOUP_Using information on class interrelations to improve classification of multiclass imbalanced data - A new resampling algorithm.pdf"]),
+"EMDO":                (["Multiclass"], ["2021_EMDO_Evolutionary Mahalanobis Distance-Based Oversampling for Multi-Class Imbalanced Data Classification.pdf"]),
+"SHSampler":           (["Multiclass"], ["2022_SHSampler_Combating Mutuality with Difficulty Factors in Multi-class Imbalanced Data - A Similarity-based Hybrid Sampling.pdf"]),
+"GLOS":                (["Multiclass"], ["2023_GLOS_Global-local information based oversampling for multi-class imbalanced data.pdf"]),
+"GMMSampling":         (["Multiclass"], ["2024_GMMSampling_A new model-based, data difficulty-driven resampling method for multi-class imbalanced data.pdf"]),
+"MC-MBRC":             (["Multiclass"], ["2024_MC-MBRC_A membership-based resampling and cleaning algorithm for multi-class imbalanced overlapping data.pdf"]),
+"MKC-SMOTE":           (["Multiclass"], ["2024_MKC-SMOTE_A Novel Synthetic Oversampling Method for Multi-Class Imbalanced Data Classification.pdf"]),
+"GDHS":                (["Multiclass"], ["2025_GDHS_An efficient hybrid sampling method for multi-class imbalanced data classification.pdf"]),
+"MC-NCLWO":            (["Multiclass"], ["2025_MC-NCLWO_Newton's Cooling Law-Based Oversampling Algorithm for Multi-Class Imbalanced Datasets With Feature Noise.pdf"]),
+# ---- Multiclass + Both (7 duplicates) ----
+"MDO":                    (["Multiclass","Both"], ["2016_MDO_To Combat Multi-Class Imbalanced Problems by Means of Over-Sampling Techniques.pdf","MDO - To Combat Multi-Class Imbalanced Problems by Means of Over-Sampling Techniques (IEEE TKDE 2016).pdf"]),
+"SMOM":                   (["Multiclass","Both"], ["2017_SMOM_Synthetic minority oversampling technique for multiclass imbalance problems.pdf","SMOM - Synthetic Minority Oversampling Technique for Multiclass Imbalance Problems (Pattern Recognition 2017).pdf"]),
+"DSRBF / Static-SMOTE":   (["Multiclass","Both"], ["2011_DSRBF_A dynamic over-sampling procedure based on sensitivity for multi-class problems.pdf","Static-SMOTE - A Dynamic Over-Sampling Procedure Based on Sensitivity for Multi-Class Problems (Pattern Recognition 2011).pdf"]),
+"MC-CCR":                 (["Multiclass","Both"], ["2020_MC-CCR_Combined Cleaning and Resampling Algorithm for Multi-Class Imbalanced Data with Label Noise.pdf","MC-CCR - Combined Cleaning and Resampling Algorithm for Multi-Class Imbalanced Data with Label Noise (Knowledge-Based Systems 2020).pdf"]),
+"MC-RBO":                 (["Multiclass","Both"], ["2020_MC-RBO_Radial-Based Oversampling for Multiclass Imbalanced Data Classification.pdf","MC-RBO - Radial-Based Oversampling for Multiclass Imbalanced Data Classification (IEEE TNNLS 2020).pdf"]),
+"CBHSID":                 (["Multiclass","Both"], ["2022_CBHSID_A hybrid sampling approach for imbalanced binary and multi-class data using clustering analysis.pdf","CBHSID - A Hybrid Sampling Approach for Imbalanced Binary and Multi-Class Data Using Clustering Analysis (IEEE Access 2022).pdf"]),
+"OREM-M":                 (["Multiclass","Both"], ["2023_OREM-M_Oversampling With Reliably Expanding Minority Class Regions for Imbalanced Data Learning.pdf","OREM - Oversampling With Reliably Expanding Minority Class Regions for Imbalanced Data Learning (IEEE TKDE 2023).pdf"]),
+# ---- Both only, already in the records (22) ----
+"AdaBoost":                       (["Both"], ["AdaBoost - A Decision-Theoretic Generalization of On-Line Learning and an Application to Boosting (JCSS 1997).pdf"]),
+"ClusterCentroids":               (["Both"], ["ClusterCentroids (Yen-Lee) - Cluster-Based Under-Sampling Approaches for Imbalanced Data Distributions (ESWA 2009).pdf"]),
+"CTGAN / TVAE":                   (["Both"], ["CTGAN-TVAE - Modeling Tabular Data Using Conditional GAN (NeurIPS 2019).pdf"]),
+"DLexiBoost":                     (["Both"], ["DLexiBoost - Boosting with Lexicographic Programming Addressing Class Imbalance without Cost Tuning (IEEE TKDE 2020).pdf"]),
+"EasyEnsemble / BalanceCascade":  (["Both"], ["EasyEnsemble-BalanceCascade - Exploratory Undersampling for Class-Imbalance Learning (IEEE TSMC-B 2009).pdf"]),
+"ENN (Wilson)":                   (["Both"], ["ENN (Wilson) - Asymptotic Properties of Nearest Neighbor Rules Using Edited Data (IEEE TSMC 1972).pdf"]),
+"FW-SMOTE":                       (["Both"], ["FW-SMOTE - A Feature-Weighted Oversampling Approach for Imbalanced Classification (Pattern Recognition 2022).pdf"]),
+"GAMO":                           (["Both"], ["GAMO - Generative Adversarial Minority Oversampling (ICCV 2019).pdf"]),
+"GDO":                            (["Both"], ["GDO - Gaussian Distribution Based Oversampling for Imbalanced Data Classification (IEEE TKDE 2022).pdf"]),
+"KNNOR":                          (["Both"], ["KNNOR - An Oversampling Technique for Imbalanced Datasets (Applied Soft Computing 2022).pdf"]),
+"MBS":                            (["Both"], ["MBS - Model-Based Synthetic Sampling for Imbalanced Data (IEEE TKDE 2020).pdf"]),
+"MLOS":                           (["Both"], ["MLOS - Synthetic Oversampling with Mahalanobis Distance and Local Information for Highly Imbalanced Class-Overlapped Data (ESWA 2025).pdf"]),
+"RACOG / wRACOG":                 (["Both"], ["RACOG-wRACOG - Two Probabilistic Oversampling Techniques (IEEE TKDE 2015).pdf"]),
+"RBBoost / Random Balance":       (["Both"], ["RBBoost - Random Balance Ensembles of Variable Priors Classifiers for Imbalanced Data (Knowledge-Based Systems 2015).pdf"]),
+"RBO":                            (["Both"], ["RBO - Radial-Based Oversampling for Noisy Imbalanced Data Classification (Neurocomputing 2019).pdf"]),
+"ROS (Buda)":                     (["Both"], ["ROS (Buda) - A Systematic Study of the Class Imbalance Problem in Convolutional Neural Networks (Neural Networks 2018).pdf"]),
+"RUSBoost":                       (["Both"], ["RUSBoost - A Hybrid Approach to Alleviating Class Imbalance (IEEE TSMC-A 2010).pdf"]),
+"SMOTEBoost":                     (["Both"], ["SMOTEBoost - Improving Prediction of the Minority Class in Boosting (PKDD 2003).pdf"]),
+"SOS":                            (["Both"], ["SOS - Score-Based Oversampling for Tabular Data (KDD 2022).pdf"]),
+"SPE":                            (["Both"], ["SPE - Self-Paced Ensemble for Highly Imbalanced Massive Data Classification (ICDE 2020).pdf"]),
+"SplitBal":                       (["Both"], ["SplitBal - A Novel Ensemble Method for Classifying Imbalanced Data (Pattern Recognition 2015).pdf"]),
+"Tomek Links":                    (["Both"], ["Tomek Links - Two Modifications of CNN (IEEE TSMC 1976).pdf"]),
+}
+
+# Papers present in Drive but missing from the 69 records. No data extracted yet.
+MISSING = [
+ # key, title, year, venue, filename
+ ("INOS",          "Integrated Oversampling for Imbalanced Time Series Classification", 2013, "IEEE TKDE",
+  "INOS - Integrated Oversampling for Imbalanced Time Series Classification (IEEE TKDE 2013).pdf"),
+ ("SMOTE-IPF",     "Addressing the Noisy and Borderline Examples Problem in Imbalanced Classification by a Re-Sampling Method with Filtering", 2015, "Information Sciences",
+  "SMOTE-IPF - Addressing the Noisy and Borderline Examples Problem in Imbalanced Classification by a Re-Sampling Method with Filtering (Information Sciences 2015).pdf"),
+ ("HDE",           "A Hybrid Data-Level Ensemble to Enable Learning from Highly Imbalanced Dataset", 2021, "Information Sciences",
+  "HDE - A Hybrid Data-Level Ensemble to Enable Learning from Highly Imbalanced Dataset (Information Sciences 2021).pdf"),
+ ("NROMM",         "Noise-Robust Oversampling for Imbalanced Data Classification", 2023, "Pattern Recognition",
+  "NROMM - Noise-Robust Oversampling for Imbalanced Data Classification (Pattern Recognition 2023).pdf"),
+ ("GOIO",          "Generative Oversampling Approach to Class Imbalance and Overlap of Tabular Data", 2025, "IEEE TKDE",
+  "GOIO - Generative Oversampling Approach to Class Imbalance and Overlap of Tabular Data (IEEE TKDE 2025).pdf"),
+ ("DGOT",          "Diffusion GAN-Based Oversampling for Imbalanced Tabular Data", 2026, "IEEE TKDE",
+  "DGOT - Diffusion GAN-Based Oversampling for Imbalanced Tabular Data (IEEE TKDE 2026).pdf"),
+ ("Loyalty-SMOTE", "Data Synthesis Algorithm for Effective Imbalanced Data Classification", 2026, "Neural Networks",
+  "Loyalty-SMOTE - Data Synthesis Algorithm for Effective Imbalanced Data Classification (Neural Networks 2026).pdf"),
+]
+
+SUPPLEMENTARY = [
+ ("CTGAN / TVAE",            "CTGAN-TVAE - Supplementary (NeurIPS 2019).pdf"),
+ ("DLexiBoost",              "DLexiBoost - Supplementary (IEEE TKDE 2020).pdf"),
+ ("FW-SMOTE",                "FW-SMOTE - Supplementary (Pattern Recognition 2022).pdf"),
+ ("GAMO",                    "GAMO - Supplementary (ICCV 2019).pdf"),
+ ("NROMM",                   "NROMM - Supplementary (Pattern Recognition 2023).pdf"),
+ ("OREM-M",                  "OREM - Supplementary 54pp (IEEE TKDE 2023).pdf"),
+ ("RBBoost / Random Balance","RBBoost - Supplementary (Knowledge-Based Systems 2015).pdf"),
+ ("SMOM",                    "SMOM - Supplementary (Pattern Recognition 2017).pdf"),
+ ("ROS (Buda)",              "ROS (Buda) - Supplementary 1 Appendix A Reshuffled Splits (Neural Networks 2018).pdf"),
+ ("ROS (Buda)",              "ROS (Buda) - Supplementary 2 Appendix B Convergence Plots (Neural Networks 2018).pdf"),
+ ("ROS (Buda)",              "ROS (Buda) - Supplementary 3 Appendix C Confusion Matrices (Neural Networks 2018).pdf"),
+ ("ROS (Buda)",              "ROS (Buda) - Supplementary 4 Appendix C.2 Confusion Matrices CIFAR-10 (Neural Networks 2018).pdf"),
+]

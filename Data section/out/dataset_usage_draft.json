@@ -1,0 +1,6084 @@
+{
+ "mode": "draft",
+ "papers": 76,
+ "dataset_mentions": 1446,
+ "single_name_mentions": 1366,
+ "aggregate_entries": 80,
+ "distinct_datasets": 601,
+ "claimed_total": 1728,
+ "listed_total": 1446,
+ "covered_by_aggregate": 320,
+ "aggregate_entry_count": 10,
+ "unaccounted": 13,
+ "coverage_pct": 83.7,
+ "accounted_pct": 102.2,
+ "papers_short": [
+  {
+   "paper": "MWMOTE",
+   "claimed": 20,
+   "named": 8,
+   "by_aggregate": 0,
+   "missing": 12
+  },
+  {
+   "paper": "Tomek Links",
+   "claimed": 1,
+   "named": 0,
+   "by_aggregate": 0,
+   "missing": 1
+  }
+ ],
+ "papers_over": [
+  {
+   "paper": "CISO",
+   "claimed": 45,
+   "named": 50,
+   "by_aggregate": 0,
+   "extra": 5
+  },
+  {
+   "paper": "ClusterCentroids",
+   "claimed": 2,
+   "named": 3,
+   "by_aggregate": 0,
+   "extra": 1
+  },
+  {
+   "paper": "GAMO",
+   "claimed": 7,
+   "named": 9,
+   "by_aggregate": 0,
+   "extra": 2
+  },
+  {
+   "paper": "INOS",
+   "claimed": 7,
+   "named": 14,
+   "by_aggregate": 0,
+   "extra": 7
+  },
+  {
+   "paper": "LS",
+   "claimed": 20,
+   "named": 20,
+   "by_aggregate": 9,
+   "extra": 9
+  },
+  {
+   "paper": "NROMM",
+   "claimed": 20,
+   "named": 20,
+   "by_aggregate": 10,
+   "extra": 10
+  },
+  {
+   "paper": "SMOTE-ENN / SMOTE-Tomek",
+   "claimed": 13,
+   "named": 15,
+   "by_aggregate": 0,
+   "extra": 2
+  },
+  {
+   "paper": "SPIDER2",
+   "claimed": 9,
+   "named": 12,
+   "by_aggregate": 0,
+   "extra": 3
+  },
+  {
+   "paper": "SVDD-WSMOTE",
+   "claimed": 24,
+   "named": 36,
+   "by_aggregate": 0,
+   "extra": 12
+  }
+ ],
+ "aggregate_heavy_papers": [
+  {
+   "paper": "DLexiBoost",
+   "claimed": 87,
+   "named": 8,
+   "by_aggregate": 79
+  },
+  {
+   "paper": "SMOTE-IPF",
+   "claimed": 75,
+   "named": 9,
+   "by_aggregate": 66
+  },
+  {
+   "paper": "NBU",
+   "claimed": 92,
+   "named": 26,
+   "by_aggregate": 66
+  },
+  {
+   "paper": "k-means SMOTE",
+   "claimed": 90,
+   "named": 42,
+   "by_aggregate": 48
+  },
+  {
+   "paper": "G-SMOTE",
+   "claimed": 69,
+   "named": 27,
+   "by_aggregate": 42
+  }
+ ],
+ "usage_distribution": {
+  "1": 403,
+  "2": 91,
+  "3": 23,
+  "4": 14,
+  "5": 18,
+  "6": 10,
+  "7": 4,
+  "8": 7,
+  "9": 6,
+  "10": 2,
+  "11": 3,
+  "12": 4,
+  "13": 5,
+  "14": 3,
+  "15": 1,
+  "16": 1,
+  "19": 1,
+  "21": 3,
+  "22": 1,
+  "24": 1
+ },
+ "core": [
+  {
+   "dataset": "ecoli",
+   "n_papers": 24,
+   "printed_as": [
+    "ECOLI",
+    "Ecoli",
+    "ecoli"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "A-SUWO",
+    "AMDO",
+    "EMDO",
+    "FW-SMOTE",
+    "G-SMOTE",
+    "GLOS",
+    "GMMSampling",
+    "MC-CCR",
+    "MC-MBRC",
+    "MC-NCLWO",
+    "MC-RBO",
+    "MDO",
+    "MKC-SMOTE",
+    "NROMM",
+    "OVO-SMOTE",
+    "RSMOTE",
+    "SCUT",
+    "SHSampler",
+    "SMOM",
+    "SMOTE-IPF",
+    "SOUP",
+    "SPIDER2",
+    "SVDD-WSMOTE",
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "pima",
+   "n_papers": 22,
+   "printed_as": [
+    "PIMA",
+    "Pima",
+    "pima",
+    "pima (class 1)"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "A-SUWO",
+    "ADASYN",
+    "Borderline-SMOTE",
+    "CBHSID",
+    "CISO",
+    "EasyEnsemble / BalanceCascade",
+    "G-SMOTE",
+    "KNNOR",
+    "LS",
+    "MWMOTE",
+    "NBU",
+    "OBU",
+    "QC-SMOTE",
+    "RBBoost / Random Balance",
+    "RBO",
+    "RSMOTE",
+    "SMOTE",
+    "SMOTE-ENN / SMOTE-Tomek",
+    "SMOTE-IPF",
+    "SPIDER2",
+    "SVDD-WSMOTE",
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "haberman",
+   "n_papers": 21,
+   "printed_as": [
+    "HABERMAN",
+    "Haberman",
+    "haberman",
+    "haberman (class 2)"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "A-SUWO",
+    "AB-SMOTE",
+    "Borderline-SMOTE",
+    "CBHSID",
+    "CGMOS",
+    "CISO",
+    "DSRBF / Static-SMOTE",
+    "EasyEnsemble / BalanceCascade",
+    "G-SMOTE",
+    "GDO",
+    "KNNOR",
+    "OBU",
+    "RACOG / wRACOG",
+    "RBBoost / Random Balance",
+    "RBO",
+    "SMOTE-ENN / SMOTE-Tomek",
+    "SMOTE-IPF",
+    "SPIDER2",
+    "SVDD-WSMOTE",
+    "Safe-Level-SMOTE",
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "vehicle",
+   "n_papers": 21,
+   "printed_as": [
+    "VEHICLE",
+    "Vehicle",
+    "vehicle",
+    "vehicle (opel)"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "A-SUWO",
+    "ADASYN",
+    "EasyEnsemble / BalanceCascade",
+    "G-SMOTE",
+    "GDHS",
+    "GMMSampling",
+    "MBS",
+    "MC-CCR",
+    "MC-NCLWO",
+    "MC-RBO",
+    "MDO",
+    "MWMOTE",
+    "NROMM",
+    "RAMOBoost",
+    "RSMOTE",
+    "SHSampler",
+    "SMOM",
+    "SMOTE-ENN / SMOTE-Tomek",
+    "SOUP",
+    "SVDD-WSMOTE",
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "yeast",
+   "n_papers": 21,
+   "printed_as": [
+    "Yeast",
+    "yeast"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CGMOS",
+    "DSRBF / Static-SMOTE",
+    "GDHS",
+    "GLOS",
+    "GMMSampling",
+    "Loyalty-SMOTE",
+    "MC-CCR",
+    "MC-MBRC",
+    "MC-NCLWO",
+    "MC-RBO",
+    "MDO",
+    "MKC-SMOTE",
+    "MWMOTE",
+    "NROMM",
+    "OREM-M",
+    "OVO-SMOTE",
+    "RAMOBoost",
+    "SCUT",
+    "SHSampler",
+    "SOUP",
+    "SVDD-WSMOTE"
+   ]
+  },
+  {
+   "dataset": "glass",
+   "n_papers": 19,
+   "printed_as": [
+    "GLASS",
+    "Glass",
+    "glass"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "A-SUWO",
+    "DSRBF / Static-SMOTE",
+    "G-SMOTE",
+    "GDHS",
+    "GLOS",
+    "GMMSampling",
+    "MC-CCR",
+    "MC-MBRC",
+    "MC-NCLWO",
+    "MC-RBO",
+    "MDO",
+    "MWMOTE",
+    "NROMM",
+    "OVO-SMOTE",
+    "RAMOBoost",
+    "SHSampler",
+    "SMOTE-ENN / SMOTE-Tomek",
+    "SOUP",
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "balance",
+   "n_papers": 16,
+   "printed_as": [
+    "Balance",
+    "balance"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "A-SUWO",
+    "AMDO",
+    "DSRBF / Static-SMOTE",
+    "EMDO",
+    "EasyEnsemble / BalanceCascade",
+    "GLOS",
+    "Global-CS (AAAI)",
+    "Global-CS (journal)",
+    "MC-CCR",
+    "MC-NCLWO",
+    "MC-RBO",
+    "MDO",
+    "NROMM",
+    "OVO-SMOTE",
+    "SHSampler",
+    "SVDD-WSMOTE"
+   ]
+  },
+  {
+   "dataset": "satimage",
+   "n_papers": 15,
+   "printed_as": [
+    "Satimage",
+    "satimage",
+    "satimage (class 4)"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Borderline-SMOTE",
+    "COG-OS",
+    "DGOT",
+    "EasyEnsemble / BalanceCascade",
+    "LS",
+    "MBS",
+    "MWMOTE",
+    "OVO-SMOTE",
+    "RAMOBoost",
+    "RBBoost / Random Balance",
+    "SMOTE",
+    "SMOTE-ENN / SMOTE-Tomek",
+    "SMOTEBoost",
+    "SOS",
+    "Safe-Level-SMOTE"
+   ]
+  },
+  {
+   "dataset": "car",
+   "n_papers": 14,
+   "printed_as": [
+    "Car",
+    "car",
+    "car (acc)"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "AMDO",
+    "EasyEnsemble / BalanceCascade",
+    "GDHS",
+    "Global-CS (AAAI)",
+    "Global-CS (journal)",
+    "MC-CCR",
+    "MC-MBRC",
+    "MC-NCLWO",
+    "MC-RBO",
+    "NROMM",
+    "RACOG / wRACOG",
+    "SHSampler",
+    "SOUP",
+    "SVDD-WSMOTE"
+   ]
+  },
+  {
+   "dataset": "wine",
+   "n_papers": 14,
+   "printed_as": [
+    "WINE",
+    "Wine",
+    "wine"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "A-SUWO",
+    "G-SMOTE",
+    "GLOS",
+    "MC-CCR",
+    "MC-NCLWO",
+    "MC-RBO",
+    "MDO",
+    "NROMM",
+    "OVO-SMOTE",
+    "RAMOBoost",
+    "RSMOTE",
+    "SHSampler",
+    "SVDD-WSMOTE",
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "yeast4",
+   "n_papers": 14,
+   "printed_as": [
+    "Yeast4",
+    "yeast4"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CBHSID",
+    "CISO",
+    "FW-SMOTE",
+    "GDO",
+    "NBU",
+    "OBU",
+    "QC-SMOTE",
+    "RACOG / wRACOG",
+    "RBBoost / Random Balance",
+    "RBO",
+    "SVDD-WSMOTE",
+    "SplitBal",
+    "Survey: Stop Oversampling",
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "contraceptive",
+   "n_papers": 13,
+   "printed_as": [
+    "Contraceptive",
+    "contraceptive"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "AMDO",
+    "CBHSID",
+    "CGMOS",
+    "GDHS",
+    "GMMSampling",
+    "MC-CCR",
+    "MC-MBRC",
+    "MC-NCLWO",
+    "MC-RBO",
+    "MDO",
+    "NROMM",
+    "OVO-SMOTE",
+    "RSMOTE"
+   ]
+  },
+  {
+   "dataset": "dermatology",
+   "n_papers": 13,
+   "printed_as": [
+    "DERMATOLOGY",
+    "Dermatology",
+    "Dermatology (358, KEEL)",
+    "dermatology"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "AMDO",
+    "CBHSID",
+    "EMDO",
+    "G-SMOTE",
+    "GLOS",
+    "MC-CCR",
+    "MC-NCLWO",
+    "MC-RBO",
+    "NROMM",
+    "OREM-M",
+    "OVO-SMOTE",
+    "SCUT",
+    "SOUP"
+   ]
+  },
+  {
+   "dataset": "new-thyroid",
+   "n_papers": 13,
+   "printed_as": [
+    "New-Thyroid",
+    "New-thyroid",
+    "new-thyroid"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "AMDO",
+    "EMDO",
+    "GMMSampling",
+    "MC-CCR",
+    "MC-NCLWO",
+    "MC-RBO",
+    "MDO",
+    "MKC-SMOTE",
+    "NROMM",
+    "OREM-M",
+    "OVO-SMOTE",
+    "SMOTE-ENN / SMOTE-Tomek",
+    "SOUP"
+   ]
+  },
+  {
+   "dataset": "page-blocks",
+   "n_papers": 13,
+   "printed_as": [
+    "Page-Blocks",
+    "Page-blocks",
+    "Page-blocks (5473)",
+    "page-blocks"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "AMDO",
+    "COG-OS",
+    "DGOT",
+    "EMDO",
+    "MC-CCR",
+    "MC-MBRC",
+    "MC-NCLWO",
+    "MC-RBO",
+    "NROMM",
+    "OREM-M",
+    "OVO-SMOTE",
+    "SHSampler",
+    "SMOM"
+   ]
+  },
+  {
+   "dataset": "yeast5",
+   "n_papers": 13,
+   "printed_as": [
+    "Yeast5",
+    "yeast5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CBHSID",
+    "CISO",
+    "FW-SMOTE",
+    "GDO",
+    "HDE",
+    "OBU",
+    "QC-SMOTE",
+    "RBBoost / Random Balance",
+    "SMOM",
+    "SVDD-WSMOTE",
+    "SplitBal",
+    "Survey: Stop Oversampling",
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "cleveland",
+   "n_papers": 12,
+   "printed_as": [
+    "Cleveland",
+    "cleveland"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GDHS",
+    "GLOS",
+    "MC-CCR",
+    "MC-MBRC",
+    "MC-NCLWO",
+    "MDO",
+    "NROMM",
+    "OREM-M",
+    "OVO-SMOTE",
+    "SHSampler",
+    "SMOTE-IPF",
+    "SPIDER2"
+   ]
+  },
+  {
+   "dataset": "hayes-roth",
+   "n_papers": 12,
+   "printed_as": [
+    "Hayes-Roth",
+    "Hayes-roth",
+    "hayes-roth"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "AMDO",
+    "EMDO",
+    "GDHS",
+    "GMMSampling",
+    "MC-CCR",
+    "MC-NCLWO",
+    "MC-RBO",
+    "MDO",
+    "NROMM",
+    "OVO-SMOTE",
+    "SHSampler",
+    "SOUP"
+   ]
+  },
+  {
+   "dataset": "yeast3",
+   "n_papers": 12,
+   "printed_as": [
+    "Yeast3",
+    "yeast3"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CBHSID",
+    "CISO",
+    "FW-SMOTE",
+    "GDO",
+    "NBU",
+    "OBU",
+    "QC-SMOTE",
+    "RBBoost / Random Balance",
+    "RBO",
+    "SVDD-WSMOTE",
+    "SplitBal",
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "yeast6",
+   "n_papers": 12,
+   "printed_as": [
+    "Yeast6",
+    "yeast6"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CBHSID",
+    "CISO",
+    "GDO",
+    "HDE",
+    "MLOS",
+    "NBU",
+    "OBU",
+    "RACOG / wRACOG",
+    "RBBoost / Random Balance",
+    "SVDD-WSMOTE",
+    "SplitBal",
+    "Survey: Stop Oversampling"
+   ]
+  },
+  {
+   "dataset": "ecoli4",
+   "n_papers": 11,
+   "printed_as": [
+    "Ecoli4",
+    "ecoli4"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CISO",
+    "FW-SMOTE",
+    "GDO",
+    "HDE",
+    "NBU",
+    "OBU",
+    "QC-SMOTE",
+    "RBBoost / Random Balance",
+    "RBO",
+    "RUSBoost",
+    "SplitBal"
+   ]
+  },
+  {
+   "dataset": "thyroid",
+   "n_papers": 11,
+   "printed_as": [
+    "Thyroid",
+    "Thyroid (7200)",
+    "thyroid"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "AMDO",
+    "CBHSID",
+    "GDHS",
+    "MC-CCR",
+    "MC-MBRC",
+    "MC-NCLWO",
+    "MC-RBO",
+    "NROMM",
+    "OVO-SMOTE",
+    "SCUT",
+    "SHSampler"
+   ]
+  },
+  {
+   "dataset": "vowel0",
+   "n_papers": 11,
+   "printed_as": [
+    "Vowel0",
+    "vowel0"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CISO",
+    "GDO",
+    "HDE",
+    "Loyalty-SMOTE",
+    "NBU",
+    "OBU",
+    "QC-SMOTE",
+    "RBBoost / Random Balance",
+    "RBO",
+    "SplitBal",
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "abalone",
+   "n_papers": 10,
+   "printed_as": [
+    "Abalone",
+    "abalone",
+    "abalone (Ring=7)"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "ADASYN",
+    "EasyEnsemble / BalanceCascade",
+    "Global-CS (AAAI)",
+    "Global-CS (journal)",
+    "MDO",
+    "MKC-SMOTE",
+    "OREM-M",
+    "RACOG / wRACOG",
+    "RAMOBoost",
+    "SVDD-WSMOTE"
+   ]
+  },
+  {
+   "dataset": "zoo",
+   "n_papers": 10,
+   "printed_as": [
+    "Zoo",
+    "zoo"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "DSRBF / Static-SMOTE",
+    "GDHS",
+    "MC-CCR",
+    "MC-MBRC",
+    "MC-NCLWO",
+    "MC-RBO",
+    "MKC-SMOTE",
+    "NROMM",
+    "OVO-SMOTE",
+    "SHSampler"
+   ]
+  },
+  {
+   "dataset": "ecoli3",
+   "n_papers": 9,
+   "printed_as": [
+    "Ecoli3",
+    "ecoli3"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CISO",
+    "GDO",
+    "KNNOR",
+    "NBU",
+    "OBU",
+    "QC-SMOTE",
+    "RBBoost / Random Balance",
+    "RBO",
+    "SplitBal"
+   ]
+  },
+  {
+   "dataset": "flare",
+   "n_papers": 9,
+   "printed_as": [
+    "Flare",
+    "Flare (1066, solar flare 1)",
+    "flare"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "AB-SMOTE",
+    "AMDO",
+    "MC-CCR",
+    "MC-MBRC",
+    "MC-NCLWO",
+    "MC-RBO",
+    "NROMM",
+    "OVO-SMOTE",
+    "SOUP"
+   ]
+  },
+  {
+   "dataset": "glass5",
+   "n_papers": 9,
+   "printed_as": [
+    "Glass5",
+    "glass5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CISO",
+    "GDO",
+    "HDE",
+    "Loyalty-SMOTE",
+    "MLOS",
+    "NBU",
+    "OBU",
+    "RBBoost / Random Balance",
+    "SplitBal"
+   ]
+  },
+  {
+   "dataset": "letter",
+   "n_papers": 9,
+   "printed_as": [
+    "Letter",
+    "letter",
+    "letter (A)"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CISO",
+    "COG-OS",
+    "EasyEnsemble / BalanceCascade",
+    "LS",
+    "MDO",
+    "RACOG / wRACOG",
+    "RAMOBoost",
+    "RBBoost / Random Balance",
+    "RSMOTE"
+   ]
+  },
+  {
+   "dataset": "segment",
+   "n_papers": 9,
+   "printed_as": [
+    "Segment",
+    "segment"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "A-SUWO",
+    "GLOS",
+    "Global-CS (AAAI)",
+    "Global-CS (journal)",
+    "LS",
+    "RAMOBoost",
+    "RBBoost / Random Balance",
+    "RSMOTE",
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "yeast1",
+   "n_papers": 9,
+   "printed_as": [
+    "Yeast1",
+    "yeast1"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CBHSID",
+    "CISO",
+    "GDO",
+    "OBU",
+    "QC-SMOTE",
+    "RBBoost / Random Balance",
+    "RBO",
+    "SVDD-WSMOTE",
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "ecoli1",
+   "n_papers": 8,
+   "printed_as": [
+    "Ecoli1",
+    "ecoli1"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CISO",
+    "GDO",
+    "NBU",
+    "OBU",
+    "QC-SMOTE",
+    "RACOG / wRACOG",
+    "RBBoost / Random Balance",
+    "RBO"
+   ]
+  },
+  {
+   "dataset": "glass2",
+   "n_papers": 8,
+   "printed_as": [
+    "Glass2",
+    "glass2"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CISO",
+    "GDO",
+    "HDE",
+    "NBU",
+    "OBU",
+    "RBBoost / Random Balance",
+    "RBO",
+    "SplitBal"
+   ]
+  },
+  {
+   "dataset": "glass4",
+   "n_papers": 8,
+   "printed_as": [
+    "Glass4",
+    "glass4"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CISO",
+    "FW-SMOTE",
+    "GDO",
+    "KNNOR",
+    "NBU",
+    "OBU",
+    "RBBoost / Random Balance",
+    "SplitBal"
+   ]
+  },
+  {
+   "dataset": "led7digit",
+   "n_papers": 8,
+   "printed_as": [
+    "Led7digit",
+    "led7digit"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MC-CCR",
+    "MC-NCLWO",
+    "MC-RBO",
+    "NROMM",
+    "OVO-SMOTE",
+    "SHSampler",
+    "SOUP",
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "lymphography",
+   "n_papers": 8,
+   "printed_as": [
+    "Lymphography",
+    "lymphography"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MC-CCR",
+    "MC-MBRC",
+    "MC-NCLWO",
+    "MC-RBO",
+    "NROMM",
+    "OVO-SMOTE",
+    "SCUT",
+    "SHSampler"
+   ]
+  },
+  {
+   "dataset": "vehicle1",
+   "n_papers": 8,
+   "printed_as": [
+    "Vehicle1",
+    "vehicle1"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CBHSID",
+    "CISO",
+    "NBU",
+    "OBU",
+    "QC-SMOTE",
+    "RBBoost / Random Balance",
+    "RBO",
+    "RUSBoost"
+   ]
+  },
+  {
+   "dataset": "winequality-red",
+   "n_papers": 8,
+   "printed_as": [
+    "Winequality-red",
+    "winequality-red"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GDHS",
+    "GLOS",
+    "MC-CCR",
+    "MC-MBRC",
+    "MC-NCLWO",
+    "MC-RBO",
+    "MDO",
+    "NROMM"
+   ]
+  },
+  {
+   "dataset": "glass0",
+   "n_papers": 7,
+   "printed_as": [
+    "Glass0",
+    "glass0"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CISO",
+    "KNNOR",
+    "NBU",
+    "OBU",
+    "QC-SMOTE",
+    "RBBoost / Random Balance",
+    "RBO"
+   ]
+  },
+  {
+   "dataset": "glass1",
+   "n_papers": 7,
+   "printed_as": [
+    "Glass1",
+    "glass1"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CISO",
+    "GDO",
+    "KNNOR",
+    "OBU",
+    "QC-SMOTE",
+    "RBBoost / Random Balance",
+    "RBO"
+   ]
+  },
+  {
+   "dataset": "nursery",
+   "n_papers": 7,
+   "printed_as": [
+    "Nursery",
+    "nursery"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "AMDO",
+    "DGOT",
+    "GDO",
+    "MKC-SMOTE",
+    "OVO-SMOTE",
+    "RACOG / wRACOG",
+    "SMOTE-ENN / SMOTE-Tomek"
+   ]
+  },
+  {
+   "dataset": "splice",
+   "n_papers": 7,
+   "printed_as": [
+    "Splice",
+    "splice"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "AMDO",
+    "COG-OS",
+    "Global-CS (AAAI)",
+    "Global-CS (journal)",
+    "LS",
+    "OVO-SMOTE",
+    "RSMOTE"
+   ]
+  },
+  {
+   "dataset": "abalone19",
+   "n_papers": 6,
+   "printed_as": [
+    "Abalone19",
+    "abalone19"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CISO",
+    "GDO",
+    "HDE",
+    "MLOS",
+    "OBU",
+    "RBBoost / Random Balance"
+   ]
+  },
+  {
+   "dataset": "automobile",
+   "n_papers": 6,
+   "printed_as": [
+    "Automobile",
+    "Automobile (159)",
+    "automobile"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MC-CCR",
+    "MC-MBRC",
+    "MC-NCLWO",
+    "MC-RBO",
+    "NROMM",
+    "SMOM"
+   ]
+  },
+  {
+   "dataset": "ecoli2",
+   "n_papers": 6,
+   "printed_as": [
+    "Ecoli2",
+    "ecoli2"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GDO",
+    "NBU",
+    "OBU",
+    "QC-SMOTE",
+    "RBBoost / Random Balance",
+    "RBO"
+   ]
+  },
+  {
+   "dataset": "glass6",
+   "n_papers": 6,
+   "printed_as": [
+    "Glass6",
+    "glass6"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CBHSID",
+    "CISO",
+    "OBU",
+    "QC-SMOTE",
+    "RBBoost / Random Balance",
+    "RBO"
+   ]
+  },
+  {
+   "dataset": "iris",
+   "n_papers": 6,
+   "printed_as": [
+    "IRIS",
+    "Iris",
+    "iris"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "A-SUWO",
+    "G-SMOTE",
+    "Loyalty-SMOTE",
+    "RSMOTE",
+    "SVDD-WSMOTE",
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "new-thyroid1",
+   "n_papers": 6,
+   "printed_as": [
+    "New-thyroid1",
+    "new-thyroid1"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CISO",
+    "GDO",
+    "NBU",
+    "OBU",
+    "RBBoost / Random Balance",
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "phoneme",
+   "n_papers": 6,
+   "printed_as": [
+    "Phoneme",
+    "phoneme",
+    "phoneme (class 1)"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "EasyEnsemble / BalanceCascade",
+    "LS",
+    "RAMOBoost",
+    "RBBoost / Random Balance",
+    "SMOTE",
+    "SMOTEBoost"
+   ]
+  },
+  {
+   "dataset": "shuttle",
+   "n_papers": 6,
+   "printed_as": [
+    "Shuttle",
+    "shuttle"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE",
+    "MBS",
+    "MC-MBRC",
+    "MC-NCLWO",
+    "OVO-SMOTE",
+    "RAMOBoost"
+   ]
+  },
+  {
+   "dataset": "vowel",
+   "n_papers": 6,
+   "printed_as": [
+    "VOWEL",
+    "Vowel",
+    "vowel"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "ADASYN",
+    "COG-OS",
+    "G-SMOTE",
+    "Global-CS (AAAI)",
+    "Global-CS (journal)",
+    "RAMOBoost"
+   ]
+  },
+  {
+   "dataset": "yeast-2 vs 4",
+   "n_papers": 6,
+   "printed_as": [
+    "yeast-2_vs_4"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CISO",
+    "FW-SMOTE",
+    "GDO",
+    "QC-SMOTE",
+    "RBBoost / Random Balance",
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "cmc",
+   "n_papers": 5,
+   "printed_as": [
+    "cmc",
+    "cmc (class 2)"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "EasyEnsemble / BalanceCascade",
+    "Global-CS (AAAI)",
+    "Global-CS (journal)",
+    "MC-MBRC",
+    "SOUP"
+   ]
+  },
+  {
+   "dataset": "ecoli0137vs26",
+   "n_papers": 5,
+   "printed_as": [
+    "Ecoli0137vs26",
+    "ecoli0137vs26"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "HDE",
+    "KNNOR",
+    "NBU",
+    "OBU",
+    "SplitBal"
+   ]
+  },
+  {
+   "dataset": "glass016vs2",
+   "n_papers": 5,
+   "printed_as": [
+    "Glass016vs2",
+    "glass016vs2"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "HDE",
+    "KNNOR",
+    "OBU",
+    "RBO",
+    "SplitBal"
+   ]
+  },
+  {
+   "dataset": "heart",
+   "n_papers": 5,
+   "printed_as": [
+    "HEART",
+    "Heart",
+    "heart"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "A-SUWO",
+    "G-SMOTE",
+    "Loyalty-SMOTE",
+    "RSMOTE",
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "ionosphere",
+   "n_papers": 5,
+   "printed_as": [
+    "Ionosphere",
+    "ionosphere",
+    "ionosphere (bad)"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "ADASYN",
+    "EasyEnsemble / BalanceCascade",
+    "Loyalty-SMOTE",
+    "MBS",
+    "RAMOBoost"
+   ]
+  },
+  {
+   "dataset": "libra",
+   "n_papers": 5,
+   "printed_as": [
+    "Libra",
+    "libra"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "A-SUWO",
+    "MWMOTE",
+    "RSMOTE",
+    "SVDD-WSMOTE",
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "mammography",
+   "n_papers": 5,
+   "printed_as": [
+    "Mammography",
+    "mammography"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GOIO",
+    "LS",
+    "RUSBoost",
+    "SMOTE",
+    "SMOTEBoost"
+   ]
+  },
+  {
+   "dataset": "newthyroid",
+   "n_papers": 5,
+   "printed_as": [
+    "Newthyroid",
+    "newthyroid"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "DSRBF / Static-SMOTE",
+    "GDHS",
+    "MC-MBRC",
+    "SHSampler",
+    "SMOTE-IPF"
+   ]
+  },
+  {
+   "dataset": "page",
+   "n_papers": 5,
+   "printed_as": [
+    "Page",
+    "page"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Global-CS (AAAI)",
+    "Global-CS (journal)",
+    "LS",
+    "MC-MBRC",
+    "RBBoost / Random Balance"
+   ]
+  },
+  {
+   "dataset": "segment0",
+   "n_papers": 5,
+   "printed_as": [
+    "segment0"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CISO",
+    "GDO",
+    "QC-SMOTE",
+    "RBBoost / Random Balance",
+    "RBO"
+   ]
+  },
+  {
+   "dataset": "shuttle-c0-vs-c4",
+   "n_papers": 5,
+   "printed_as": [
+    "shuttle-c0-vs-c4"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CISO",
+    "FW-SMOTE",
+    "GDO",
+    "QC-SMOTE",
+    "RBBoost / Random Balance"
+   ]
+  },
+  {
+   "dataset": "vehicle0",
+   "n_papers": 5,
+   "printed_as": [
+    "Vehicle0",
+    "vehicle0"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CISO",
+    "NBU",
+    "QC-SMOTE",
+    "RBBoost / Random Balance",
+    "RBO"
+   ]
+  },
+  {
+   "dataset": "vehicle2",
+   "n_papers": 5,
+   "printed_as": [
+    "Vehicle2",
+    "vehicle2"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CISO",
+    "OBU",
+    "QC-SMOTE",
+    "RBBoost / Random Balance",
+    "RBO"
+   ]
+  },
+  {
+   "dataset": "vehicle3",
+   "n_papers": 5,
+   "printed_as": [
+    "Vehicle3",
+    "vehicle3"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CISO",
+    "OBU",
+    "QC-SMOTE",
+    "RBBoost / Random Balance",
+    "RBO"
+   ]
+  },
+  {
+   "dataset": "wine quality",
+   "n_papers": 5,
+   "printed_as": [
+    "Wine Quality",
+    "Wine quality",
+    "wine_quality"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "AB-SMOTE",
+    "DGOT",
+    "GMMSampling",
+    "GOIO",
+    "SCUT"
+   ]
+  },
+  {
+   "dataset": "wisconsin",
+   "n_papers": 5,
+   "printed_as": [
+    "Wisconsin",
+    "wisconsin"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CISO",
+    "GDO",
+    "NBU",
+    "QC-SMOTE",
+    "RBBoost / Random Balance"
+   ]
+  },
+  {
+   "dataset": "yeast-1 vs 7",
+   "n_papers": 5,
+   "printed_as": [
+    "yeast-1_vs_7"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CISO",
+    "FW-SMOTE",
+    "GDO",
+    "QC-SMOTE",
+    "RBBoost / Random Balance"
+   ]
+  },
+  {
+   "dataset": "yeast2vs4",
+   "n_papers": 5,
+   "printed_as": [
+    "Yeast2vs4",
+    "yeast2vs4"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "HDE",
+    "NBU",
+    "OBU",
+    "RBO",
+    "SplitBal"
+   ]
+  }
+ ],
+ "singletons": [
+  {
+   "dataset": "50words",
+   "n_papers": 1,
+   "printed_as": [
+    "50words"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "INOS"
+   ]
+  },
+  {
+   "dataset": "a",
+   "n_papers": 1,
+   "printed_as": [
+    "A"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SVDD-WSMOTE"
+   ]
+  },
+  {
+   "dataset": "a1a",
+   "n_papers": 1,
+   "printed_as": [
+    "a1a"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "HDE"
+   ]
+  },
+  {
+   "dataset": "abalone 19",
+   "n_papers": 1,
+   "printed_as": [
+    "abalone_19"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "DGOT"
+   ]
+  },
+  {
+   "dataset": "abalone-17vs78910",
+   "n_papers": 1,
+   "printed_as": [
+    "abalone-17vs78910"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "HDE"
+   ]
+  },
+  {
+   "dataset": "abalone-3 vs 11",
+   "n_papers": 1,
+   "printed_as": [
+    "abalone-3_vs_11"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GDO"
+   ]
+  },
+  {
+   "dataset": "abalone10",
+   "n_papers": 1,
+   "printed_as": [
+    "abalone10"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SMOM"
+   ]
+  },
+  {
+   "dataset": "abalone3vs11",
+   "n_papers": 1,
+   "printed_as": [
+    "abalone3vs11"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RBO"
+   ]
+  },
+  {
+   "dataset": "abalone7",
+   "n_papers": 1,
+   "printed_as": [
+    "abalone7"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "FW-SMOTE"
+   ]
+  },
+  {
+   "dataset": "abalone8",
+   "n_papers": 1,
+   "printed_as": [
+    "abalone8"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SMOM"
+   ]
+  },
+  {
+   "dataset": "absenteeism at work",
+   "n_papers": 1,
+   "printed_as": [
+    "Absenteeism at Work"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MKC-SMOTE"
+   ]
+  },
+  {
+   "dataset": "academic",
+   "n_papers": 1,
+   "printed_as": [
+    "Academic"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "adiac",
+   "n_papers": 1,
+   "printed_as": [
+    "Adiac"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "INOS"
+   ]
+  },
+  {
+   "dataset": "ai4i2020",
+   "n_papers": 1,
+   "printed_as": [
+    "ai4i2020"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "aids 15000",
+   "n_papers": 1,
+   "printed_as": [
+    "AIDS_15000"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "aids 5000",
+   "n_papers": 1,
+   "printed_as": [
+    "AIDS_5000"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "aids 50000",
+   "n_papers": 1,
+   "printed_as": [
+    "AIDS_50000"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "alarm",
+   "n_papers": 1,
+   "printed_as": [
+    "alarm"
+   ],
+   "provenance": "synthetic",
+   "papers": [
+    "CTGAN / TVAE"
+   ]
+  },
+  {
+   "dataset": "anneal",
+   "n_papers": 1,
+   "printed_as": [
+    "Anneal"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "DSRBF / Static-SMOTE"
+   ]
+  },
+  {
+   "dataset": "approval",
+   "n_papers": 1,
+   "printed_as": [
+    "approval"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "artificial 0.3 5",
+   "n_papers": 1,
+   "printed_as": [
+    "artificial_0.3_5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GOIO"
+   ]
+  },
+  {
+   "dataset": "artificial 0.5 10",
+   "n_papers": 1,
+   "printed_as": [
+    "artificial_0.5_10"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GOIO"
+   ]
+  },
+  {
+   "dataset": "artificial 0.5 2.5",
+   "n_papers": 1,
+   "printed_as": [
+    "artificial_0.5_2.5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GOIO"
+   ]
+  },
+  {
+   "dataset": "artificial 0.5 5",
+   "n_papers": 1,
+   "printed_as": [
+    "artificial_0.5_5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GOIO"
+   ]
+  },
+  {
+   "dataset": "artificial 1 5",
+   "n_papers": 1,
+   "printed_as": [
+    "artificial_1_5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GOIO"
+   ]
+  },
+  {
+   "dataset": "asia",
+   "n_papers": 1,
+   "printed_as": [
+    "asia"
+   ],
+   "provenance": "synthetic",
+   "papers": [
+    "CTGAN / TVAE"
+   ]
+  },
+  {
+   "dataset": "australia",
+   "n_papers": 1,
+   "printed_as": [
+    "australia"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "auto5",
+   "n_papers": 1,
+   "printed_as": [
+    "Auto5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "OREM-M"
+   ]
+  },
+  {
+   "dataset": "avila 0vs5",
+   "n_papers": 1,
+   "printed_as": [
+    "avila_0vs5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GOIO"
+   ]
+  },
+  {
+   "dataset": "avila 0vs6",
+   "n_papers": 1,
+   "printed_as": [
+    "avila_0vs6"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GOIO"
+   ]
+  },
+  {
+   "dataset": "avila 0vs7",
+   "n_papers": 1,
+   "printed_as": [
+    "avila_0vs7"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GOIO"
+   ]
+  },
+  {
+   "dataset": "b",
+   "n_papers": 1,
+   "printed_as": [
+    "B"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SVDD-WSMOTE"
+   ]
+  },
+  {
+   "dataset": "balance-scale",
+   "n_papers": 1,
+   "printed_as": [
+    "balance-scale"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SOUP"
+   ]
+  },
+  {
+   "dataset": "bank full",
+   "n_papers": 1,
+   "printed_as": [
+    "bank_full"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GOIO"
+   ]
+  },
+  {
+   "dataset": "bank small",
+   "n_papers": 1,
+   "printed_as": [
+    "bank_small"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GOIO"
+   ]
+  },
+  {
+   "dataset": "bank-full",
+   "n_papers": 1,
+   "printed_as": [
+    "bank-full"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "bankmarket",
+   "n_papers": 1,
+   "printed_as": [
+    "BankMarket"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CGMOS"
+   ]
+  },
+  {
+   "dataset": "banknote",
+   "n_papers": 1,
+   "printed_as": [
+    "banknote"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "bar crawl",
+   "n_papers": 1,
+   "printed_as": [
+    "Bar Crawl"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MKC-SMOTE"
+   ]
+  },
+  {
+   "dataset": "bezediris",
+   "n_papers": 1,
+   "printed_as": [
+    "bezediris"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "bhat1",
+   "n_papers": 1,
+   "printed_as": [
+    "bhat1"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "FW-SMOTE"
+   ]
+  },
+  {
+   "dataset": "bhat2",
+   "n_papers": 1,
+   "printed_as": [
+    "bhat2"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "FW-SMOTE"
+   ]
+  },
+  {
+   "dataset": "bhat3",
+   "n_papers": 1,
+   "printed_as": [
+    "bhat3"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "FW-SMOTE"
+   ]
+  },
+  {
+   "dataset": "bhat4",
+   "n_papers": 1,
+   "printed_as": [
+    "bhat4"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "FW-SMOTE"
+   ]
+  },
+  {
+   "dataset": "bloodservice",
+   "n_papers": 1,
+   "printed_as": [
+    "BloodService"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CGMOS"
+   ]
+  },
+  {
+   "dataset": "br",
+   "n_papers": 1,
+   "printed_as": [
+    "br"
+   ],
+   "provenance": "author-collected",
+   "papers": [
+    "OSS"
+   ]
+  },
+  {
+   "dataset": "breast cancer",
+   "n_papers": 1,
+   "printed_as": [
+    "Breast cancer"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SPIDER2"
+   ]
+  },
+  {
+   "dataset": "breast cancer original",
+   "n_papers": 1,
+   "printed_as": [
+    "Breast Cancer Original"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MWMOTE"
+   ]
+  },
+  {
+   "dataset": "breast tissue2",
+   "n_papers": 1,
+   "printed_as": [
+    "breast_tissue2"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RSMOTE"
+   ]
+  },
+  {
+   "dataset": "breast-cancer",
+   "n_papers": 1,
+   "printed_as": [
+    "breast-cancer"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "HDE"
+   ]
+  },
+  {
+   "dataset": "breast-cancer-wisconsin",
+   "n_papers": 1,
+   "printed_as": [
+    "breast-cancer-wisconsin"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GDO"
+   ]
+  },
+  {
+   "dataset": "breast-y",
+   "n_papers": 1,
+   "printed_as": [
+    "breast-y"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RBBoost / Random Balance"
+   ]
+  },
+  {
+   "dataset": "breastc",
+   "n_papers": 1,
+   "printed_as": [
+    "BreastC"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "DSRBF / Static-SMOTE"
+   ]
+  },
+  {
+   "dataset": "breasttissue",
+   "n_papers": 1,
+   "printed_as": [
+    "BreastTissue"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CGMOS"
+   ]
+  },
+  {
+   "dataset": "buddy",
+   "n_papers": 1,
+   "printed_as": [
+    "Buddy"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SOS"
+   ]
+  },
+  {
+   "dataset": "bullinger",
+   "n_papers": 1,
+   "printed_as": [
+    "bullinger"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "FW-SMOTE"
+   ]
+  },
+  {
+   "dataset": "c",
+   "n_papers": 1,
+   "printed_as": [
+    "C"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SVDD-WSMOTE"
+   ]
+  },
+  {
+   "dataset": "calmodoulin",
+   "n_papers": 1,
+   "printed_as": [
+    "Calmodoulin"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "LS"
+   ]
+  },
+  {
+   "dataset": "cam",
+   "n_papers": 1,
+   "printed_as": [
+    "cam"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RBBoost / Random Balance"
+   ]
+  },
+  {
+   "dataset": "camel-1.0",
+   "n_papers": 1,
+   "printed_as": [
+    "camel-1.0"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MLOS"
+   ]
+  },
+  {
+   "dataset": "camel-1.4",
+   "n_papers": 1,
+   "printed_as": [
+    "camel-1.4"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GDHS"
+   ]
+  },
+  {
+   "dataset": "camel-1.6",
+   "n_papers": 1,
+   "printed_as": [
+    "camel-1.6"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GDHS"
+   ]
+  },
+  {
+   "dataset": "can",
+   "n_papers": 1,
+   "printed_as": [
+    "Can"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SMOTE"
+   ]
+  },
+  {
+   "dataset": "cancer",
+   "n_papers": 1,
+   "printed_as": [
+    "Cancer"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CBHSID"
+   ]
+  },
+  {
+   "dataset": "car evaluation",
+   "n_papers": 1,
+   "printed_as": [
+    "Car Evaluation"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MKC-SMOTE"
+   ]
+  },
+  {
+   "dataset": "car-vgood",
+   "n_papers": 1,
+   "printed_as": [
+    "car-vgood"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GDO"
+   ]
+  },
+  {
+   "dataset": "car1",
+   "n_papers": 1,
+   "printed_as": [
+    "car1"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "FW-SMOTE"
+   ]
+  },
+  {
+   "dataset": "car2",
+   "n_papers": 1,
+   "printed_as": [
+    "car2"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "FW-SMOTE"
+   ]
+  },
+  {
+   "dataset": "car4",
+   "n_papers": 1,
+   "printed_as": [
+    "car4"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "FW-SMOTE"
+   ]
+  },
+  {
+   "dataset": "card'graphy",
+   "n_papers": 1,
+   "printed_as": [
+    "Card'graphy"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CGMOS"
+   ]
+  },
+  {
+   "dataset": "cardiovascular",
+   "n_papers": 1,
+   "printed_as": [
+    "Cardiovascular"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "carevaluation",
+   "n_papers": 1,
+   "printed_as": [
+    "CarEvaluation"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CGMOS"
+   ]
+  },
+  {
+   "dataset": "cbf",
+   "n_papers": 1,
+   "printed_as": [
+    "CBF"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "INOS"
+   ]
+  },
+  {
+   "dataset": "cccs12",
+   "n_papers": 1,
+   "printed_as": [
+    "CCCS12"
+   ],
+   "provenance": "author-collected",
+   "papers": [
+    "RUSBoost"
+   ]
+  },
+  {
+   "dataset": "celeba-large",
+   "n_papers": 1,
+   "printed_as": [
+    "CelebA-Large"
+   ],
+   "provenance": "image benchmark",
+   "papers": [
+    "GAMO"
+   ]
+  },
+  {
+   "dataset": "celeba-small",
+   "n_papers": 1,
+   "printed_as": [
+    "CelebA-Small"
+   ],
+   "provenance": "image benchmark",
+   "papers": [
+    "GAMO"
+   ]
+  },
+  {
+   "dataset": "census",
+   "n_papers": 1,
+   "printed_as": [
+    "census"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CTGAN / TVAE"
+   ]
+  },
+  {
+   "dataset": "census-income",
+   "n_papers": 1,
+   "printed_as": [
+    "Census-Income (UCI KDD)"
+   ],
+   "provenance": "author-collected",
+   "papers": [
+    "ClusterCentroids"
+   ]
+  },
+  {
+   "dataset": "charactertraj",
+   "n_papers": 1,
+   "printed_as": [
+    "CharacterTraj"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CGMOS"
+   ]
+  },
+  {
+   "dataset": "checkerboard",
+   "n_papers": 1,
+   "printed_as": [
+    "Checkerboard (synthetic)"
+   ],
+   "provenance": "synthetic",
+   "papers": [
+    "SPE"
+   ]
+  },
+  {
+   "dataset": "chesscking-rook vs. king",
+   "n_papers": 1,
+   "printed_as": [
+    "Chesscking-Rook vs. King"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GDO"
+   ]
+  },
+  {
+   "dataset": "child",
+   "n_papers": 1,
+   "printed_as": [
+    "child"
+   ],
+   "provenance": "synthetic",
+   "papers": [
+    "CTGAN / TVAE"
+   ]
+  },
+  {
+   "dataset": "cifar-10",
+   "n_papers": 1,
+   "printed_as": [
+    "CIFAR-10"
+   ],
+   "provenance": "image benchmark",
+   "papers": [
+    "ROS (Buda)"
+   ]
+  },
+  {
+   "dataset": "cifar10",
+   "n_papers": 1,
+   "printed_as": [
+    "CIFAR10"
+   ],
+   "provenance": "image benchmark",
+   "papers": [
+    "GAMO"
+   ]
+  },
+  {
+   "dataset": "circle",
+   "n_papers": 1,
+   "printed_as": [
+    "Circle (simulated)"
+   ],
+   "provenance": "synthetic",
+   "papers": [
+    "Borderline-SMOTE"
+   ]
+  },
+  {
+   "dataset": "cleveland-0",
+   "n_papers": 1,
+   "printed_as": [
+    "cleveland-0"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "climate",
+   "n_papers": 1,
+   "printed_as": [
+    "climate"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MLOS"
+   ]
+  },
+  {
+   "dataset": "climatesim",
+   "n_papers": 1,
+   "printed_as": [
+    "ClimateSim"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CGMOS"
+   ]
+  },
+  {
+   "dataset": "clover",
+   "n_papers": 1,
+   "printed_as": [
+    "clover"
+   ],
+   "provenance": "synthetic",
+   "papers": [
+    "SPIDER2"
+   ]
+  },
+  {
+   "dataset": "cnae",
+   "n_papers": 1,
+   "printed_as": [
+    "cnae"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "cod",
+   "n_papers": 1,
+   "printed_as": [
+    "cod"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "HDE"
+   ]
+  },
+  {
+   "dataset": "codrna",
+   "n_papers": 1,
+   "printed_as": [
+    "codrna"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RSMOTE"
+   ]
+  },
+  {
+   "dataset": "coil 2000",
+   "n_papers": 1,
+   "printed_as": [
+    "coil_2000"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "DGOT"
+   ]
+  },
+  {
+   "dataset": "contra2",
+   "n_papers": 1,
+   "printed_as": [
+    "Contra2"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RUSBoost"
+   ]
+  },
+  {
+   "dataset": "contraceptive method choice",
+   "n_papers": 1,
+   "printed_as": [
+    "Contraceptive Method Choice"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MKC-SMOTE"
+   ]
+  },
+  {
+   "dataset": "covtype",
+   "n_papers": 1,
+   "printed_as": [
+    "covtype"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RBBoost / Random Balance"
+   ]
+  },
+  {
+   "dataset": "credit",
+   "n_papers": 1,
+   "printed_as": [
+    "credit"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CTGAN / TVAE"
+   ]
+  },
+  {
+   "dataset": "credit fraud",
+   "n_papers": 1,
+   "printed_as": [
+    "Credit Fraud"
+   ],
+   "provenance": "author-collected",
+   "papers": [
+    "SPE"
+   ]
+  },
+  {
+   "dataset": "credit-g",
+   "n_papers": 1,
+   "printed_as": [
+    "credit-g"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RBBoost / Random Balance"
+   ]
+  },
+  {
+   "dataset": "creditapproval",
+   "n_papers": 1,
+   "printed_as": [
+    "creditApproval"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RSMOTE"
+   ]
+  },
+  {
+   "dataset": "customer churn wireless telecom",
+   "n_papers": 1,
+   "printed_as": [
+    "Customer Churn Wireless Telecom"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "AB-SMOTE"
+   ]
+  },
+  {
+   "dataset": "customers",
+   "n_papers": 1,
+   "printed_as": [
+    "Customers"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CGMOS"
+   ]
+  },
+  {
+   "dataset": "cytvspox",
+   "n_papers": 1,
+   "printed_as": [
+    "CYTvsPOX"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "DSRBF / Static-SMOTE"
+   ]
+  },
+  {
+   "dataset": "d",
+   "n_papers": 1,
+   "printed_as": [
+    "D"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SVDD-WSMOTE"
+   ]
+  },
+  {
+   "dataset": "darwin",
+   "n_papers": 1,
+   "printed_as": [
+    "darwin"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "destinations",
+   "n_papers": 1,
+   "printed_as": [
+    "Destinations (Notre Dame)"
+   ],
+   "provenance": "author-collected",
+   "papers": [
+    "Cluster-SMOTE"
+   ]
+  },
+  {
+   "dataset": "drug",
+   "n_papers": 1,
+   "printed_as": [
+    "drug"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "drug200",
+   "n_papers": 1,
+   "printed_as": [
+    "Drug200"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "dry bean",
+   "n_papers": 1,
+   "printed_as": [
+    "Dry_Bean"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MC-MBRC"
+   ]
+  },
+  {
+   "dataset": "dry beans",
+   "n_papers": 1,
+   "printed_as": [
+    "Dry_Beans"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "DGOT"
+   ]
+  },
+  {
+   "dataset": "dry-bean",
+   "n_papers": 1,
+   "printed_as": [
+    "Dry-Bean"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MC-NCLWO"
+   ]
+  },
+  {
+   "dataset": "dsiejdk synthetic family",
+   "n_papers": 1,
+   "printed_as": [
+    "DSiEjDk synthetic family"
+   ],
+   "provenance": "synthetic",
+   "papers": [
+    "ClusterCentroids"
+   ]
+  },
+  {
+   "dataset": "e. coli",
+   "n_papers": 1,
+   "printed_as": [
+    "E. coli"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "DSRBF / Static-SMOTE"
+   ]
+  },
+  {
+   "dataset": "ecg",
+   "n_papers": 1,
+   "printed_as": [
+    "ECG"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "INOS"
+   ]
+  },
+  {
+   "dataset": "ecoli0146vs5",
+   "n_papers": 1,
+   "printed_as": [
+    "ecoli0146vs5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SplitBal"
+   ]
+  },
+  {
+   "dataset": "ecoli0147vs56",
+   "n_papers": 1,
+   "printed_as": [
+    "ecoli0147vs56"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SplitBal"
+   ]
+  },
+  {
+   "dataset": "ecoli01vs235",
+   "n_papers": 1,
+   "printed_as": [
+    "ecoli01vs235"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SplitBal"
+   ]
+  },
+  {
+   "dataset": "ecoli01vs5",
+   "n_papers": 1,
+   "printed_as": [
+    "ecoli01vs5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SplitBal"
+   ]
+  },
+  {
+   "dataset": "ecoli0234vs5",
+   "n_papers": 1,
+   "printed_as": [
+    "ecoli0234vs5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SplitBal"
+   ]
+  },
+  {
+   "dataset": "ecoli0267vs35",
+   "n_papers": 1,
+   "printed_as": [
+    "ecoli0267vs35"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SplitBal"
+   ]
+  },
+  {
+   "dataset": "ecoli0346vs5",
+   "n_papers": 1,
+   "printed_as": [
+    "ecoli0346vs5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SplitBal"
+   ]
+  },
+  {
+   "dataset": "ecoli046vs5",
+   "n_papers": 1,
+   "printed_as": [
+    "ecoli046vs5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SplitBal"
+   ]
+  },
+  {
+   "dataset": "ecoli067vs5",
+   "n_papers": 1,
+   "printed_as": [
+    "ecoli067vs5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SplitBal"
+   ]
+  },
+  {
+   "dataset": "employee",
+   "n_papers": 1,
+   "printed_as": [
+    "employee"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "employee attrition",
+   "n_papers": 1,
+   "printed_as": [
+    "Employee Attrition"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "AB-SMOTE"
+   ]
+  },
+  {
+   "dataset": "era",
+   "n_papers": 1,
+   "printed_as": [
+    "ERA"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SMOM"
+   ]
+  },
+  {
+   "dataset": "era5",
+   "n_papers": 1,
+   "printed_as": [
+    "ERA5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SMOM"
+   ]
+  },
+  {
+   "dataset": "esl",
+   "n_papers": 1,
+   "printed_as": [
+    "ESL"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SMOM"
+   ]
+  },
+  {
+   "dataset": "esophageal cancer patient data set",
+   "n_papers": 1,
+   "printed_as": [
+    "esophageal cancer patient data set"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GDO"
+   ]
+  },
+  {
+   "dataset": "estate",
+   "n_papers": 1,
+   "printed_as": [
+    "estate"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RBBoost / Random Balance"
+   ]
+  },
+  {
+   "dataset": "faceall",
+   "n_papers": 1,
+   "printed_as": [
+    "FaceAll"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "INOS"
+   ]
+  },
+  {
+   "dataset": "fashion-mnist",
+   "n_papers": 1,
+   "printed_as": [
+    "Fashion-MNIST"
+   ],
+   "provenance": "image benchmark",
+   "papers": [
+    "GAMO"
+   ]
+  },
+  {
+   "dataset": "fault",
+   "n_papers": 1,
+   "printed_as": [
+    "Fault"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "fertility",
+   "n_papers": 1,
+   "printed_as": [
+    "Fertility"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CGMOS"
+   ]
+  },
+  {
+   "dataset": "fish",
+   "n_papers": 1,
+   "printed_as": [
+    "Fish"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "INOS"
+   ]
+  },
+  {
+   "dataset": "flag",
+   "n_papers": 1,
+   "printed_as": [
+    "Flag"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SMOTE-ENN / SMOTE-Tomek"
+   ]
+  },
+  {
+   "dataset": "flare-f",
+   "n_papers": 1,
+   "printed_as": [
+    "flare-F"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CISO"
+   ]
+  },
+  {
+   "dataset": "forest cover",
+   "n_papers": 1,
+   "printed_as": [
+    "Forest Cover"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SMOTE"
+   ]
+  },
+  {
+   "dataset": "g7",
+   "n_papers": 1,
+   "printed_as": [
+    "g7 (glass)"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "OSS"
+   ]
+  },
+  {
+   "dataset": "gender",
+   "n_papers": 1,
+   "printed_as": [
+    "Gender"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "gender by name",
+   "n_papers": 1,
+   "printed_as": [
+    "Gender_by_name"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "german-numer",
+   "n_papers": 1,
+   "printed_as": [
+    "german-numer"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RBBoost / Random Balance"
+   ]
+  },
+  {
+   "dataset": "gesturephase",
+   "n_papers": 1,
+   "printed_as": [
+    "GesturePhase"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GLOS"
+   ]
+  },
+  {
+   "dataset": "gisette",
+   "n_papers": 1,
+   "printed_as": [
+    "gisette"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "HDE"
+   ]
+  },
+  {
+   "dataset": "give me some credit",
+   "n_papers": 1,
+   "printed_as": [
+    "Give Me Some Credit"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MBS"
+   ]
+  },
+  {
+   "dataset": "glass identification",
+   "n_papers": 1,
+   "printed_as": [
+    "Glass Identification"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MKC-SMOTE"
+   ]
+  },
+  {
+   "dataset": "glass0146vs2",
+   "n_papers": 1,
+   "printed_as": [
+    "glass0146vs2"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SplitBal"
+   ]
+  },
+  {
+   "dataset": "glass015vs2",
+   "n_papers": 1,
+   "printed_as": [
+    "glass015vs2"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SplitBal"
+   ]
+  },
+  {
+   "dataset": "glass04vs5",
+   "n_papers": 1,
+   "printed_as": [
+    "glass04vs5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SplitBal"
+   ]
+  },
+  {
+   "dataset": "glass06vs5",
+   "n_papers": 1,
+   "printed_as": [
+    "glass06vs5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SplitBal"
+   ]
+  },
+  {
+   "dataset": "glass3",
+   "n_papers": 1,
+   "printed_as": [
+    "Glass3"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RUSBoost"
+   ]
+  },
+  {
+   "dataset": "glioma",
+   "n_papers": 1,
+   "printed_as": [
+    "glioma"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "FW-SMOTE"
+   ]
+  },
+  {
+   "dataset": "grid",
+   "n_papers": 1,
+   "printed_as": [
+    "Grid"
+   ],
+   "provenance": "synthetic",
+   "papers": [
+    "CTGAN / TVAE"
+   ]
+  },
+  {
+   "dataset": "gridr",
+   "n_papers": 1,
+   "printed_as": [
+    "GridR"
+   ],
+   "provenance": "synthetic",
+   "papers": [
+    "CTGAN / TVAE"
+   ]
+  },
+  {
+   "dataset": "gun-point",
+   "n_papers": 1,
+   "printed_as": [
+    "Gun-Point"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "INOS"
+   ]
+  },
+  {
+   "dataset": "haberman's survival",
+   "n_papers": 1,
+   "printed_as": [
+    "Haberman's Survival"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MBS"
+   ]
+  },
+  {
+   "dataset": "hayesroth",
+   "n_papers": 1,
+   "printed_as": [
+    "Hayesroth"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GLOS"
+   ]
+  },
+  {
+   "dataset": "hcv",
+   "n_papers": 1,
+   "printed_as": [
+    "HCV"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MKC-SMOTE"
+   ]
+  },
+  {
+   "dataset": "healthy older people2",
+   "n_papers": 1,
+   "printed_as": [
+    "Healthy_Older_People2"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RSMOTE"
+   ]
+  },
+  {
+   "dataset": "heart failure",
+   "n_papers": 1,
+   "printed_as": [
+    "Heart failure"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CBHSID"
+   ]
+  },
+  {
+   "dataset": "heart-v",
+   "n_papers": 1,
+   "printed_as": [
+    "heart-v"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RBBoost / Random Balance"
+   ]
+  },
+  {
+   "dataset": "heating",
+   "n_papers": 1,
+   "printed_as": [
+    "Heating"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "A-SUWO"
+   ]
+  },
+  {
+   "dataset": "hive-0.12.0",
+   "n_papers": 1,
+   "printed_as": [
+    "hive-0.12.0"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GDHS"
+   ]
+  },
+  {
+   "dataset": "hmeq",
+   "n_papers": 1,
+   "printed_as": [
+    "Hmeq"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MBS"
+   ]
+  },
+  {
+   "dataset": "housing",
+   "n_papers": 1,
+   "printed_as": [
+    "housing (target in [20,23])"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "EasyEnsemble / BalanceCascade"
+   ]
+  },
+  {
+   "dataset": "housing5",
+   "n_papers": 1,
+   "printed_as": [
+    "housing5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SMOM"
+   ]
+  },
+  {
+   "dataset": "hr",
+   "n_papers": 1,
+   "printed_as": [
+    "HR"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "hypo",
+   "n_papers": 1,
+   "printed_as": [
+    "hypo"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RBBoost / Random Balance"
+   ]
+  },
+  {
+   "dataset": "icr",
+   "n_papers": 1,
+   "printed_as": [
+    "ICR"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "if",
+   "n_papers": 1,
+   "printed_as": [
+    "IF"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SVDD-WSMOTE"
+   ]
+  },
+  {
+   "dataset": "if + of",
+   "n_papers": 1,
+   "printed_as": [
+    "IF + OF"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SVDD-WSMOTE"
+   ]
+  },
+  {
+   "dataset": "if + of + rf",
+   "n_papers": 1,
+   "printed_as": [
+    "IF + OF + RF"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SVDD-WSMOTE"
+   ]
+  },
+  {
+   "dataset": "if + rf",
+   "n_papers": 1,
+   "printed_as": [
+    "IF + RF"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SVDD-WSMOTE"
+   ]
+  },
+  {
+   "dataset": "ijcnn",
+   "n_papers": 1,
+   "printed_as": [
+    "ijcnn"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "HDE"
+   ]
+  },
+  {
+   "dataset": "ilpd",
+   "n_papers": 1,
+   "printed_as": [
+    "ILPD"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CGMOS"
+   ]
+  },
+  {
+   "dataset": "ilsvrc-2012",
+   "n_papers": 1,
+   "printed_as": [
+    "ILSVRC-2012 (ImageNet)"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "ROS (Buda)"
+   ]
+  },
+  {
+   "dataset": "image1",
+   "n_papers": 1,
+   "printed_as": [
+    "image1"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "FW-SMOTE"
+   ]
+  },
+  {
+   "dataset": "imagenet12",
+   "n_papers": 1,
+   "printed_as": [
+    "ImageNet12"
+   ],
+   "provenance": "image benchmark",
+   "papers": [
+    "DLexiBoost"
+   ]
+  },
+  {
+   "dataset": "imagenet8",
+   "n_papers": 1,
+   "printed_as": [
+    "ImageNet8"
+   ],
+   "provenance": "image benchmark",
+   "papers": [
+    "DLexiBoost"
+   ]
+  },
+  {
+   "dataset": "imagenet9",
+   "n_papers": 1,
+   "printed_as": [
+    "ImageNet9"
+   ],
+   "provenance": "image benchmark",
+   "papers": [
+    "DLexiBoost"
+   ]
+  },
+  {
+   "dataset": "imgseg",
+   "n_papers": 1,
+   "printed_as": [
+    "ImgSeg"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CGMOS"
+   ]
+  },
+  {
+   "dataset": "indian pines",
+   "n_papers": 1,
+   "printed_as": [
+    "Indian pines"
+   ],
+   "provenance": "image benchmark",
+   "papers": [
+    "DLexiBoost"
+   ]
+  },
+  {
+   "dataset": "insurance",
+   "n_papers": 1,
+   "printed_as": [
+    "insurance"
+   ],
+   "provenance": "synthetic",
+   "papers": [
+    "CTGAN / TVAE"
+   ]
+  },
+  {
+   "dataset": "internet video traffic data set",
+   "n_papers": 1,
+   "printed_as": [
+    "Internet video traffic data set"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GDO"
+   ]
+  },
+  {
+   "dataset": "ism",
+   "n_papers": 1,
+   "printed_as": [
+    "ism"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RBBoost / Random Balance"
+   ]
+  },
+  {
+   "dataset": "isolet5",
+   "n_papers": 1,
+   "printed_as": [
+    "isolet5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RSMOTE"
+   ]
+  },
+  {
+   "dataset": "ivy-1.4",
+   "n_papers": 1,
+   "printed_as": [
+    "ivy-1.4"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MLOS"
+   ]
+  },
+  {
+   "dataset": "jasper ridge",
+   "n_papers": 1,
+   "printed_as": [
+    "Jasper ridge"
+   ],
+   "provenance": "image benchmark",
+   "papers": [
+    "DLexiBoost"
+   ]
+  },
+  {
+   "dataset": "jedit-4.3",
+   "n_papers": 1,
+   "printed_as": [
+    "jedit-4.3"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MLOS"
+   ]
+  },
+  {
+   "dataset": "k1b",
+   "n_papers": 1,
+   "printed_as": [
+    "k1b"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "COG-OS"
+   ]
+  },
+  {
+   "dataset": "kdd cup 2008 breast cancer",
+   "n_papers": 1,
+   "printed_as": [
+    "KDD Cup 2008 breast cancer"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "NBU"
+   ]
+  },
+  {
+   "dataset": "kddbufferoverflowvsback",
+   "n_papers": 1,
+   "printed_as": [
+    "kddbufferoverflowvsback"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "HDE"
+   ]
+  },
+  {
+   "dataset": "kddcup",
+   "n_papers": 1,
+   "printed_as": [
+    "KDDCUP (DOS vs PRB)",
+    "KDDCUP (DOS vs R2L)"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SPE"
+   ]
+  },
+  {
+   "dataset": "kddcup-99 intrusion",
+   "n_papers": 1,
+   "printed_as": [
+    "KDDCup-99 Intrusion"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SMOTEBoost"
+   ]
+  },
+  {
+   "dataset": "kddcup99",
+   "n_papers": 1,
+   "printed_as": [
+    "kddcup99 (probe, r2l)"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "COG-OS"
+   ]
+  },
+  {
+   "dataset": "kddlandvssatan",
+   "n_papers": 1,
+   "printed_as": [
+    "kddlandvssatan"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "HDE"
+   ]
+  },
+  {
+   "dataset": "kddrootkitvsback",
+   "n_papers": 1,
+   "printed_as": [
+    "kddrootkitvsback"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "HDE"
+   ]
+  },
+  {
+   "dataset": "kennedy space center",
+   "n_papers": 1,
+   "printed_as": [
+    "Kennedy Space Center (KSC)"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "DLexiBoost"
+   ]
+  },
+  {
+   "dataset": "kr",
+   "n_papers": 1,
+   "printed_as": [
+    "kr"
+   ],
+   "provenance": "author-collected",
+   "papers": [
+    "OSS"
+   ]
+  },
+  {
+   "dataset": "kr-vs-k-one vs fifteen",
+   "n_papers": 1,
+   "printed_as": [
+    "kr-vs-k-one_vs_fifteen"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GDO"
+   ]
+  },
+  {
+   "dataset": "kr-vs-k-three vs eleven",
+   "n_papers": 1,
+   "printed_as": [
+    "kr-vs-k-three_vs_eleven"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GDO"
+   ]
+  },
+  {
+   "dataset": "kr-vs-k-zero-one vs draw",
+   "n_papers": 1,
+   "printed_as": [
+    "kr-vs-k-zero-one_vs_draw"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GDO"
+   ]
+  },
+  {
+   "dataset": "krvsk0vs15",
+   "n_papers": 1,
+   "printed_as": [
+    "krvsk0vs15"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "HDE"
+   ]
+  },
+  {
+   "dataset": "krvsk0vs8",
+   "n_papers": 1,
+   "printed_as": [
+    "krvsk0vs8"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "HDE"
+   ]
+  },
+  {
+   "dataset": "krvsk3vs11",
+   "n_papers": 1,
+   "printed_as": [
+    "krvsk3vs11"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "HDE"
+   ]
+  },
+  {
+   "dataset": "la12",
+   "n_papers": 1,
+   "printed_as": [
+    "la12"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "COG-OS"
+   ]
+  },
+  {
+   "dataset": "laryngeal",
+   "n_papers": 1,
+   "printed_as": [
+    "Laryngeal"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "OREM-M"
+   ]
+  },
+  {
+   "dataset": "leaf",
+   "n_papers": 1,
+   "printed_as": [
+    "Leaf"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CGMOS"
+   ]
+  },
+  {
+   "dataset": "leaves plant",
+   "n_papers": 1,
+   "printed_as": [
+    "Leaves plant"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "OREM-M"
+   ]
+  },
+  {
+   "dataset": "led",
+   "n_papers": 1,
+   "printed_as": [
+    "LED"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "G-SMOTE"
+   ]
+  },
+  {
+   "dataset": "letter img",
+   "n_papers": 1,
+   "printed_as": [
+    "letter_img"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "DGOT"
+   ]
+  },
+  {
+   "dataset": "letter recognition",
+   "n_papers": 1,
+   "printed_as": [
+    "Letter Recognition"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MKC-SMOTE"
+   ]
+  },
+  {
+   "dataset": "letter-a",
+   "n_papers": 1,
+   "printed_as": [
+    "Letter-a"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SMOTE-ENN / SMOTE-Tomek"
+   ]
+  },
+  {
+   "dataset": "letter-recognition",
+   "n_papers": 1,
+   "printed_as": [
+    "letter-recognition"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GDO"
+   ]
+  },
+  {
+   "dataset": "letter-vowel",
+   "n_papers": 1,
+   "printed_as": [
+    "Letter-vowel"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SMOTE-ENN / SMOTE-Tomek"
+   ]
+  },
+  {
+   "dataset": "liver disorders",
+   "n_papers": 1,
+   "printed_as": [
+    "liver disorders"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "log4j-1.2",
+   "n_papers": 1,
+   "printed_as": [
+    "log4j-1.2"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MLOS"
+   ]
+  },
+  {
+   "dataset": "lsun-large",
+   "n_papers": 1,
+   "printed_as": [
+    "LSUN-Large"
+   ],
+   "provenance": "image benchmark",
+   "papers": [
+    "GAMO"
+   ]
+  },
+  {
+   "dataset": "lsun-small",
+   "n_papers": 1,
+   "printed_as": [
+    "LSUN-Small"
+   ],
+   "provenance": "image benchmark",
+   "papers": [
+    "GAMO"
+   ]
+  },
+  {
+   "dataset": "lung",
+   "n_papers": 1,
+   "printed_as": [
+    "lung"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "FW-SMOTE"
+   ]
+  },
+  {
+   "dataset": "machine",
+   "n_papers": 1,
+   "printed_as": [
+    "machine"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SMOM"
+   ]
+  },
+  {
+   "dataset": "madelon",
+   "n_papers": 1,
+   "printed_as": [
+    "madelon"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "HDE"
+   ]
+  },
+  {
+   "dataset": "mafalda",
+   "n_papers": 1,
+   "printed_as": [
+    "Mafalda"
+   ],
+   "provenance": "author-collected",
+   "papers": [
+    "EMDO"
+   ]
+  },
+  {
+   "dataset": "magic",
+   "n_papers": 1,
+   "printed_as": [
+    "magic"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RSMOTE"
+   ]
+  },
+  {
+   "dataset": "magic04",
+   "n_papers": 1,
+   "printed_as": [
+    "magic04"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "mandelon 1",
+   "n_papers": 1,
+   "printed_as": [
+    "MANDELON 1"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "G-SMOTE"
+   ]
+  },
+  {
+   "dataset": "mandelon 2",
+   "n_papers": 1,
+   "printed_as": [
+    "MANDELON 2"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "G-SMOTE"
+   ]
+  },
+  {
+   "dataset": "maternal",
+   "n_papers": 1,
+   "printed_as": [
+    "Maternal"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "me2vsother",
+   "n_papers": 1,
+   "printed_as": [
+    "ME2vsOther"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "DSRBF / Static-SMOTE"
+   ]
+  },
+  {
+   "dataset": "medv",
+   "n_papers": 1,
+   "printed_as": [
+    "MEDV"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "mf zernike",
+   "n_papers": 1,
+   "printed_as": [
+    "Mf_Zernike"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RAMOBoost"
+   ]
+  },
+  {
+   "dataset": "mf-morph",
+   "n_papers": 1,
+   "printed_as": [
+    "mf-morph (class 10)"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "EasyEnsemble / BalanceCascade"
+   ]
+  },
+  {
+   "dataset": "mf-zernike",
+   "n_papers": 1,
+   "printed_as": [
+    "mf-zernike (class 10)"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "EasyEnsemble / BalanceCascade"
+   ]
+  },
+  {
+   "dataset": "mnist handwritten digits",
+   "n_papers": 1,
+   "printed_as": [
+    "MNIST handwritten digits"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "NBU"
+   ]
+  },
+  {
+   "dataset": "mnist12",
+   "n_papers": 1,
+   "printed_as": [
+    "MNIST12"
+   ],
+   "provenance": "image benchmark",
+   "papers": [
+    "CTGAN / TVAE"
+   ]
+  },
+  {
+   "dataset": "mnist28",
+   "n_papers": 1,
+   "printed_as": [
+    "MNIST28"
+   ],
+   "provenance": "image benchmark",
+   "papers": [
+    "CTGAN / TVAE"
+   ]
+  },
+  {
+   "dataset": "mocap",
+   "n_papers": 1,
+   "printed_as": [
+    "mocap"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RSMOTE"
+   ]
+  },
+  {
+   "dataset": "movement libras",
+   "n_papers": 1,
+   "printed_as": [
+    "movement_libras"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MLOS"
+   ]
+  },
+  {
+   "dataset": "multiplefs",
+   "n_papers": 1,
+   "printed_as": [
+    "MultipleFs"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CGMOS"
+   ]
+  },
+  {
+   "dataset": "mushroom",
+   "n_papers": 1,
+   "printed_as": [
+    "Mushroom"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "national",
+   "n_papers": 1,
+   "printed_as": [
+    "national"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "nc",
+   "n_papers": 1,
+   "printed_as": [
+    "NC"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SVDD-WSMOTE"
+   ]
+  },
+  {
+   "dataset": "new thyroid",
+   "n_papers": 1,
+   "printed_as": [
+    "New thyroid"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SPIDER2"
+   ]
+  },
+  {
+   "dataset": "new thyroid 1",
+   "n_papers": 1,
+   "printed_as": [
+    "NEW THYROID 1"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "G-SMOTE"
+   ]
+  },
+  {
+   "dataset": "new thyroid 2",
+   "n_papers": 1,
+   "printed_as": [
+    "NEW THYROID 2"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "G-SMOTE"
+   ]
+  },
+  {
+   "dataset": "news",
+   "n_papers": 1,
+   "printed_as": [
+    "news"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CTGAN / TVAE"
+   ]
+  },
+  {
+   "dataset": "nomao",
+   "n_papers": 1,
+   "printed_as": [
+    "nomao"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RSMOTE"
+   ]
+  },
+  {
+   "dataset": "obesity",
+   "n_papers": 1,
+   "printed_as": [
+    "Obesity"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "obs",
+   "n_papers": 1,
+   "printed_as": [
+    "OBS"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RSMOTE"
+   ]
+  },
+  {
+   "dataset": "occupancy",
+   "n_papers": 1,
+   "printed_as": [
+    "occupancy"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "of",
+   "n_papers": 1,
+   "printed_as": [
+    "OF"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SVDD-WSMOTE"
+   ]
+  },
+  {
+   "dataset": "of + rf",
+   "n_papers": 1,
+   "printed_as": [
+    "OF + RF"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SVDD-WSMOTE"
+   ]
+  },
+  {
+   "dataset": "oil spill",
+   "n_papers": 1,
+   "printed_as": [
+    "Oil spill (9 images, 937 regions)"
+   ],
+   "provenance": "author-collected",
+   "papers": [
+    "SHRINK"
+   ]
+  },
+  {
+   "dataset": "oil1",
+   "n_papers": 1,
+   "printed_as": [
+    "oil1"
+   ],
+   "provenance": "author-collected",
+   "papers": [
+    "OSS"
+   ]
+  },
+  {
+   "dataset": "oil2",
+   "n_papers": 1,
+   "printed_as": [
+    "oil2"
+   ],
+   "provenance": "author-collected",
+   "papers": [
+    "OSS"
+   ]
+  },
+  {
+   "dataset": "online",
+   "n_papers": 1,
+   "printed_as": [
+    "online"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "online retail",
+   "n_papers": 1,
+   "printed_as": [
+    "Online_Retail"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RSMOTE"
+   ]
+  },
+  {
+   "dataset": "online shoppers",
+   "n_papers": 1,
+   "printed_as": [
+    "Online Shoppers"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CISO"
+   ]
+  },
+  {
+   "dataset": "osu leaf",
+   "n_papers": 1,
+   "printed_as": [
+    "OSU Leaf"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "INOS"
+   ]
+  },
+  {
+   "dataset": "overdue detection database",
+   "n_papers": 1,
+   "printed_as": [
+    "Overdue Detection Database (private bank)"
+   ],
+   "provenance": "author-collected",
+   "papers": [
+    "ClusterCentroids"
+   ]
+  },
+  {
+   "dataset": "ozone-level",
+   "n_papers": 1,
+   "printed_as": [
+    "Ozone-Level"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MLOS"
+   ]
+  },
+  {
+   "dataset": "packets",
+   "n_papers": 1,
+   "printed_as": [
+    "Packets (Notre Dame)"
+   ],
+   "provenance": "author-collected",
+   "papers": [
+    "Cluster-SMOTE"
+   ]
+  },
+  {
+   "dataset": "page blocks 0",
+   "n_papers": 1,
+   "printed_as": [
+    "PAGE BLOCKS 0"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "G-SMOTE"
+   ]
+  },
+  {
+   "dataset": "page blocks 1 3",
+   "n_papers": 1,
+   "printed_as": [
+    "PAGE BLOCKS 1 3"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "G-SMOTE"
+   ]
+  },
+  {
+   "dataset": "page-block0",
+   "n_papers": 1,
+   "printed_as": [
+    "page-block0"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GDO"
+   ]
+  },
+  {
+   "dataset": "page-blocks 0vs3",
+   "n_papers": 1,
+   "printed_as": [
+    "page-blocks_0vs3"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GOIO"
+   ]
+  },
+  {
+   "dataset": "pageblock1",
+   "n_papers": 1,
+   "printed_as": [
+    "Pageblock1"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SVDD-WSMOTE"
+   ]
+  },
+  {
+   "dataset": "pageblocks0",
+   "n_papers": 1,
+   "printed_as": [
+    "pageblocks0"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SplitBal"
+   ]
+  },
+  {
+   "dataset": "parkinsons telemonitoring",
+   "n_papers": 1,
+   "printed_as": [
+    "parkinsons telemonitoring"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GDO"
+   ]
+  },
+  {
+   "dataset": "paw",
+   "n_papers": 1,
+   "printed_as": [
+    "paw"
+   ],
+   "provenance": "synthetic",
+   "papers": [
+    "SPIDER2"
+   ]
+  },
+  {
+   "dataset": "payment simulation",
+   "n_papers": 1,
+   "printed_as": [
+    "Payment Simulation"
+   ],
+   "provenance": "author-collected",
+   "papers": [
+    "SPE"
+   ]
+  },
+  {
+   "dataset": "pc1",
+   "n_papers": 1,
+   "printed_as": [
+    "PC1"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RUSBoost"
+   ]
+  },
+  {
+   "dataset": "pen digits",
+   "n_papers": 1,
+   "printed_as": [
+    "pen_digits"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "DGOT"
+   ]
+  },
+  {
+   "dataset": "pendigits5",
+   "n_papers": 1,
+   "printed_as": [
+    "Pendigits5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RUSBoost"
+   ]
+  },
+  {
+   "dataset": "phishing",
+   "n_papers": 1,
+   "printed_as": [
+    "phishing"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "HDE"
+   ]
+  },
+  {
+   "dataset": "pid",
+   "n_papers": 1,
+   "printed_as": [
+    "PID"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RAMOBoost"
+   ]
+  },
+  {
+   "dataset": "pima indian diabetes",
+   "n_papers": 1,
+   "printed_as": [
+    "Pima Indian Diabetes"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MBS"
+   ]
+  },
+  {
+   "dataset": "pima-diabetes",
+   "n_papers": 1,
+   "printed_as": [
+    "pima-diabetes"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "COG-OS"
+   ]
+  },
+  {
+   "dataset": "planningrelax",
+   "n_papers": 1,
+   "printed_as": [
+    "planningrelax"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GDO"
+   ]
+  },
+  {
+   "dataset": "planrelax",
+   "n_papers": 1,
+   "printed_as": [
+    "PlanRelax"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CGMOS"
+   ]
+  },
+  {
+   "dataset": "plates faults",
+   "n_papers": 1,
+   "printed_as": [
+    "Plates faults"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "OREM-M"
+   ]
+  },
+  {
+   "dataset": "plates-faults5",
+   "n_papers": 1,
+   "printed_as": [
+    "plates-faults5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SMOM"
+   ]
+  },
+  {
+   "dataset": "plates-faults7",
+   "n_papers": 1,
+   "printed_as": [
+    "plates-faults7"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SMOM"
+   ]
+  },
+  {
+   "dataset": "platesfaults",
+   "n_papers": 1,
+   "printed_as": [
+    "PlatesFaults"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CGMOS"
+   ]
+  },
+  {
+   "dataset": "poker",
+   "n_papers": 1,
+   "printed_as": [
+    "poker"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RSMOTE"
+   ]
+  },
+  {
+   "dataset": "poker hand",
+   "n_papers": 1,
+   "printed_as": [
+    "Poker Hand"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MKC-SMOTE"
+   ]
+  },
+  {
+   "dataset": "poker-8 vs 6",
+   "n_papers": 1,
+   "printed_as": [
+    "poker-8_vs_6"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MLOS"
+   ]
+  },
+  {
+   "dataset": "poker89vs5",
+   "n_papers": 1,
+   "printed_as": [
+    "poker89vs5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "HDE"
+   ]
+  },
+  {
+   "dataset": "poker89vs6",
+   "n_papers": 1,
+   "printed_as": [
+    "poker89vs6"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RBO"
+   ]
+  },
+  {
+   "dataset": "poker8vs6",
+   "n_papers": 1,
+   "printed_as": [
+    "poker8vs6"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "HDE"
+   ]
+  },
+  {
+   "dataset": "polish bankruptcy",
+   "n_papers": 1,
+   "printed_as": [
+    "polish_bankruptcy"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "DGOT"
+   ]
+  },
+  {
+   "dataset": "pre2d",
+   "n_papers": 1,
+   "printed_as": [
+    "Pre2D"
+   ],
+   "provenance": "author-collected",
+   "papers": [
+    "AMDO"
+   ]
+  },
+  {
+   "dataset": "prend",
+   "n_papers": 1,
+   "printed_as": [
+    "PreND"
+   ],
+   "provenance": "author-collected",
+   "papers": [
+    "AMDO"
+   ]
+  },
+  {
+   "dataset": "promotion",
+   "n_papers": 1,
+   "printed_as": [
+    "Promotion"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MBS"
+   ]
+  },
+  {
+   "dataset": "prompting",
+   "n_papers": 1,
+   "printed_as": [
+    "prompting"
+   ],
+   "provenance": "author-collected",
+   "papers": [
+    "RACOG / wRACOG"
+   ]
+  },
+  {
+   "dataset": "purchase",
+   "n_papers": 1,
+   "printed_as": [
+    "Purchase"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "qsar",
+   "n_papers": 1,
+   "printed_as": [
+    "QSAR"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CGMOS"
+   ]
+  },
+  {
+   "dataset": "raisin",
+   "n_papers": 1,
+   "printed_as": [
+    "raisin"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "record linkage",
+   "n_papers": 1,
+   "printed_as": [
+    "Record Linkage"
+   ],
+   "provenance": "author-collected",
+   "papers": [
+    "SPE"
+   ]
+  },
+  {
+   "dataset": "rf",
+   "n_papers": 1,
+   "printed_as": [
+    "RF"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SVDD-WSMOTE"
+   ]
+  },
+  {
+   "dataset": "ring",
+   "n_papers": 1,
+   "printed_as": [
+    "Ring"
+   ],
+   "provenance": "synthetic",
+   "papers": [
+    "CTGAN / TVAE"
+   ]
+  },
+  {
+   "dataset": "robot",
+   "n_papers": 1,
+   "printed_as": [
+    "robot"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SMOM"
+   ]
+  },
+  {
+   "dataset": "rt-iot",
+   "n_papers": 1,
+   "printed_as": [
+    "RT-IOT"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "sales win loss",
+   "n_papers": 1,
+   "printed_as": [
+    "Sales Win Loss"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "AB-SMOTE"
+   ]
+  },
+  {
+   "dataset": "salinas a",
+   "n_papers": 1,
+   "printed_as": [
+    "Salinas A"
+   ],
+   "provenance": "image benchmark",
+   "papers": [
+    "DLexiBoost"
+   ]
+  },
+  {
+   "dataset": "samson",
+   "n_papers": 1,
+   "printed_as": [
+    "Samson"
+   ],
+   "provenance": "image benchmark",
+   "papers": [
+    "DLexiBoost"
+   ]
+  },
+  {
+   "dataset": "satimage 4",
+   "n_papers": 1,
+   "printed_as": [
+    "satimage_4"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "DGOT"
+   ]
+  },
+  {
+   "dataset": "satimage4",
+   "n_papers": 1,
+   "printed_as": [
+    "Satimage4"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RUSBoost"
+   ]
+  },
+  {
+   "dataset": "satisfied",
+   "n_papers": 1,
+   "printed_as": [
+    "Satisfied"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "saureus4",
+   "n_papers": 1,
+   "printed_as": [
+    "Saureus4"
+   ],
+   "provenance": "author-collected",
+   "papers": [
+    "DSRBF / Static-SMOTE"
+   ]
+  },
+  {
+   "dataset": "scene",
+   "n_papers": 1,
+   "printed_as": [
+    "scene"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GOIO"
+   ]
+  },
+  {
+   "dataset": "seed",
+   "n_papers": 1,
+   "printed_as": [
+    "Seed"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SVDD-WSMOTE"
+   ]
+  },
+  {
+   "dataset": "segment 2",
+   "n_papers": 1,
+   "printed_as": [
+    "Segment_2"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GLOS"
+   ]
+  },
+  {
+   "dataset": "segment 6",
+   "n_papers": 1,
+   "printed_as": [
+    "Segment_6"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GLOS"
+   ]
+  },
+  {
+   "dataset": "segment5",
+   "n_papers": 1,
+   "printed_as": [
+    "Segment5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RUSBoost"
+   ]
+  },
+  {
+   "dataset": "segmentation",
+   "n_papers": 1,
+   "printed_as": [
+    "SEGMENTATION"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "G-SMOTE"
+   ]
+  },
+  {
+   "dataset": "seismicbumps",
+   "n_papers": 1,
+   "printed_as": [
+    "SeismicBumps"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CGMOS"
+   ]
+  },
+  {
+   "dataset": "shuttle-c2-vs-c4",
+   "n_papers": 1,
+   "printed_as": [
+    "shuttle-c2-vs-c4"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RBBoost / Random Balance"
+   ]
+  },
+  {
+   "dataset": "shuttle2vs4",
+   "n_papers": 1,
+   "printed_as": [
+    "Shuttle2vs4"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "OBU"
+   ]
+  },
+  {
+   "dataset": "shuttle2vs5",
+   "n_papers": 1,
+   "printed_as": [
+    "shuttle2vs5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "HDE"
+   ]
+  },
+  {
+   "dataset": "simulated1",
+   "n_papers": 1,
+   "printed_as": [
+    "simulated1"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "simulated10",
+   "n_papers": 1,
+   "printed_as": [
+    "simulated10"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "simulated2",
+   "n_papers": 1,
+   "printed_as": [
+    "simulated2"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "simulated3",
+   "n_papers": 1,
+   "printed_as": [
+    "simulated3"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "simulated4",
+   "n_papers": 1,
+   "printed_as": [
+    "simulated4"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "simulated5",
+   "n_papers": 1,
+   "printed_as": [
+    "simulated5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "simulated6",
+   "n_papers": 1,
+   "printed_as": [
+    "simulated6"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "simulated7",
+   "n_papers": 1,
+   "printed_as": [
+    "simulated7"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "simulated8",
+   "n_papers": 1,
+   "printed_as": [
+    "simulated8"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "simulated9",
+   "n_papers": 1,
+   "printed_as": [
+    "simulated9"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "skin",
+   "n_papers": 1,
+   "printed_as": [
+    "skin"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RSMOTE"
+   ]
+  },
+  {
+   "dataset": "skinnonskin",
+   "n_papers": 1,
+   "printed_as": [
+    "skinnonskin"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "HDE"
+   ]
+  },
+  {
+   "dataset": "sleaf",
+   "n_papers": 1,
+   "printed_as": [
+    "SLeaf"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "INOS"
+   ]
+  },
+  {
+   "dataset": "smartphone",
+   "n_papers": 1,
+   "printed_as": [
+    "Smartphone"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "smoke",
+   "n_papers": 1,
+   "printed_as": [
+    "smoke"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "solar",
+   "n_papers": 1,
+   "printed_as": [
+    "solar"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "FW-SMOTE"
+   ]
+  },
+  {
+   "dataset": "solarflaref",
+   "n_papers": 1,
+   "printed_as": [
+    "SolarFlareF"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RUSBoost"
+   ]
+  },
+  {
+   "dataset": "sonar",
+   "n_papers": 1,
+   "printed_as": [
+    "Sonar"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RAMOBoost"
+   ]
+  },
+  {
+   "dataset": "sp1",
+   "n_papers": 1,
+   "printed_as": [
+    "SP1"
+   ],
+   "provenance": "author-collected",
+   "papers": [
+    "RUSBoost"
+   ]
+  },
+  {
+   "dataset": "sp3",
+   "n_papers": 1,
+   "printed_as": [
+    "SP3"
+   ],
+   "provenance": "author-collected",
+   "papers": [
+    "RUSBoost"
+   ]
+  },
+  {
+   "dataset": "spectf",
+   "n_papers": 1,
+   "printed_as": [
+    "SPECTF"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CGMOS"
+   ]
+  },
+  {
+   "dataset": "splice-ei",
+   "n_papers": 1,
+   "printed_as": [
+    "Splice-ei"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SMOTE-ENN / SMOTE-Tomek"
+   ]
+  },
+  {
+   "dataset": "splice-ie",
+   "n_papers": 1,
+   "printed_as": [
+    "Splice-ie"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SMOTE-ENN / SMOTE-Tomek"
+   ]
+  },
+  {
+   "dataset": "srbct",
+   "n_papers": 1,
+   "printed_as": [
+    "srbct"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "FW-SMOTE"
+   ]
+  },
+  {
+   "dataset": "stock10",
+   "n_papers": 1,
+   "printed_as": [
+    "Stock10"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "OREM-M"
+   ]
+  },
+  {
+   "dataset": "students dropout",
+   "n_papers": 1,
+   "printed_as": [
+    "students_dropout"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "DGOT"
+   ]
+  },
+  {
+   "dataset": "subclus",
+   "n_papers": 1,
+   "printed_as": [
+    "subclus"
+   ],
+   "provenance": "synthetic",
+   "papers": [
+    "SPIDER2"
+   ]
+  },
+  {
+   "dataset": "sun397",
+   "n_papers": 1,
+   "printed_as": [
+    "SUN397"
+   ],
+   "provenance": "image benchmark",
+   "papers": [
+    "GAMO"
+   ]
+  },
+  {
+   "dataset": "surgical",
+   "n_papers": 1,
+   "printed_as": [
+    "Surgical"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SOS"
+   ]
+  },
+  {
+   "dataset": "susy",
+   "n_papers": 1,
+   "printed_as": [
+    "susy"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RSMOTE"
+   ]
+  },
+  {
+   "dataset": "svhn",
+   "n_papers": 1,
+   "printed_as": [
+    "SVHN"
+   ],
+   "provenance": "image benchmark",
+   "papers": [
+    "GAMO"
+   ]
+  },
+  {
+   "dataset": "svmguide2",
+   "n_papers": 1,
+   "printed_as": [
+    "svmguide2"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RSMOTE"
+   ]
+  },
+  {
+   "dataset": "synthetic control",
+   "n_papers": 1,
+   "printed_as": [
+    "Synthetic Control"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "INOS"
+   ]
+  },
+  {
+   "dataset": "taevaluation",
+   "n_papers": 1,
+   "printed_as": [
+    "TAEvaluation"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CGMOS"
+   ]
+  },
+  {
+   "dataset": "taiwanses",
+   "n_papers": 1,
+   "printed_as": [
+    "taiwanses"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GOIO"
+   ]
+  },
+  {
+   "dataset": "telco customer churn",
+   "n_papers": 1,
+   "printed_as": [
+    "Telco Customer Churn"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "AB-SMOTE"
+   ]
+  },
+  {
+   "dataset": "texture l",
+   "n_papers": 1,
+   "printed_as": [
+    "Texture_l"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GLOS"
+   ]
+  },
+  {
+   "dataset": "texture s",
+   "n_papers": 1,
+   "printed_as": [
+    "Texture_s"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GLOS"
+   ]
+  },
+  {
+   "dataset": "toxicity",
+   "n_papers": 1,
+   "printed_as": [
+    "toxicity"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "toy",
+   "n_papers": 1,
+   "printed_as": [
+    "Toy"
+   ],
+   "provenance": "synthetic",
+   "papers": [
+    "OREM-M"
+   ]
+  },
+  {
+   "dataset": "trace",
+   "n_papers": 1,
+   "printed_as": [
+    "Trace"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "INOS"
+   ]
+  },
+  {
+   "dataset": "twopats",
+   "n_papers": 1,
+   "printed_as": [
+    "TwoPats"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "INOS"
+   ]
+  },
+  {
+   "dataset": "uknowledge",
+   "n_papers": 1,
+   "printed_as": [
+    "UKnowledge"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CGMOS"
+   ]
+  },
+  {
+   "dataset": "user knowledge-modelling",
+   "n_papers": 1,
+   "printed_as": [
+    "User Knowledge-Modelling"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MDO"
+   ]
+  },
+  {
+   "dataset": "veh1",
+   "n_papers": 1,
+   "printed_as": [
+    "veh1 (vehicles)"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "OSS"
+   ]
+  },
+  {
+   "dataset": "velocity-1.5",
+   "n_papers": 1,
+   "printed_as": [
+    "velocity-1.5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GDHS"
+   ]
+  },
+  {
+   "dataset": "vertebal",
+   "n_papers": 1,
+   "printed_as": [
+    "vertebal"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "Loyalty-SMOTE"
+   ]
+  },
+  {
+   "dataset": "voice",
+   "n_papers": 1,
+   "printed_as": [
+    "Voice"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MDO"
+   ]
+  },
+  {
+   "dataset": "voice3",
+   "n_papers": 1,
+   "printed_as": [
+    "Voice3"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "OREM-M"
+   ]
+  },
+  {
+   "dataset": "voice6",
+   "n_papers": 1,
+   "printed_as": [
+    "Voice6"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "OREM-M"
+   ]
+  },
+  {
+   "dataset": "voice9 6",
+   "n_papers": 1,
+   "printed_as": [
+    "voice9_6"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SMOM"
+   ]
+  },
+  {
+   "dataset": "voice9 7",
+   "n_papers": 1,
+   "printed_as": [
+    "voice9_7"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SMOM"
+   ]
+  },
+  {
+   "dataset": "votes",
+   "n_papers": 1,
+   "printed_as": [
+    "votes"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RSMOTE"
+   ]
+  },
+  {
+   "dataset": "vowel4",
+   "n_papers": 1,
+   "printed_as": [
+    "Vowel4"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "OREM-M"
+   ]
+  },
+  {
+   "dataset": "vowel7",
+   "n_papers": 1,
+   "printed_as": [
+    "vowel7"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SMOM"
+   ]
+  },
+  {
+   "dataset": "vw0",
+   "n_papers": 1,
+   "printed_as": [
+    "vw0 (vowels)"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "OSS"
+   ]
+  },
+  {
+   "dataset": "wafer",
+   "n_papers": 1,
+   "printed_as": [
+    "Wafer"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "INOS"
+   ]
+  },
+  {
+   "dataset": "weatheraus",
+   "n_papers": 1,
+   "printed_as": [
+    "WeatherAUS"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SOS"
+   ]
+  },
+  {
+   "dataset": "wine quality red",
+   "n_papers": 1,
+   "printed_as": [
+    "wine quality red"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SOUP"
+   ]
+  },
+  {
+   "dataset": "wine quality-white",
+   "n_papers": 1,
+   "printed_as": [
+    "Wine Quality-White"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MKC-SMOTE"
+   ]
+  },
+  {
+   "dataset": "wine-quality-red",
+   "n_papers": 1,
+   "printed_as": [
+    "Wine-Quality-Red"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "OVO-SMOTE"
+   ]
+  },
+  {
+   "dataset": "wine-quality-white",
+   "n_papers": 1,
+   "printed_as": [
+    "Wine-Quality-White"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "OVO-SMOTE"
+   ]
+  },
+  {
+   "dataset": "wine-red",
+   "n_papers": 1,
+   "printed_as": [
+    "wine-red"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SMOM"
+   ]
+  },
+  {
+   "dataset": "winequality-red-3 vs 5",
+   "n_papers": 1,
+   "printed_as": [
+    "winequality-red-3_vs_5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MLOS"
+   ]
+  },
+  {
+   "dataset": "winequality-red-4",
+   "n_papers": 1,
+   "printed_as": [
+    "winequality-red-4"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "CISO"
+   ]
+  },
+  {
+   "dataset": "winequality-white-3 vs 7",
+   "n_papers": 1,
+   "printed_as": [
+    "winequality-white-3_vs_7"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GDO"
+   ]
+  },
+  {
+   "dataset": "winequalityred4",
+   "n_papers": 1,
+   "printed_as": [
+    "winequalityred4"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RBO"
+   ]
+  },
+  {
+   "dataset": "winequalitywhite3vs7",
+   "n_papers": 1,
+   "printed_as": [
+    "winequalitywhite3vs7"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "KNNOR"
+   ]
+  },
+  {
+   "dataset": "winequalitywhite9vs4",
+   "n_papers": 1,
+   "printed_as": [
+    "winequalitywhite9vs4"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "RBO"
+   ]
+  },
+  {
+   "dataset": "wisconsin5",
+   "n_papers": 1,
+   "printed_as": [
+    "Wisconsin5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "OREM-M"
+   ]
+  },
+  {
+   "dataset": "xalan-2.4",
+   "n_papers": 1,
+   "printed_as": [
+    "xalan-2.4"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GDHS"
+   ]
+  },
+  {
+   "dataset": "xalan-2.7",
+   "n_papers": 1,
+   "printed_as": [
+    "xalan-2.7"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MLOS"
+   ]
+  },
+  {
+   "dataset": "xerces-1.2",
+   "n_papers": 1,
+   "printed_as": [
+    "xerces-1.2"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "GDHS"
+   ]
+  },
+  {
+   "dataset": "yeast 1",
+   "n_papers": 1,
+   "printed_as": [
+    "YEAST 1"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "G-SMOTE"
+   ]
+  },
+  {
+   "dataset": "yeast 3",
+   "n_papers": 1,
+   "printed_as": [
+    "YEAST 3"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "G-SMOTE"
+   ]
+  },
+  {
+   "dataset": "yeast 4",
+   "n_papers": 1,
+   "printed_as": [
+    "YEAST 4"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "G-SMOTE"
+   ]
+  },
+  {
+   "dataset": "yeast 5",
+   "n_papers": 1,
+   "printed_as": [
+    "YEAST 5"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "G-SMOTE"
+   ]
+  },
+  {
+   "dataset": "yeast 6",
+   "n_papers": 1,
+   "printed_as": [
+    "YEAST 6"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "G-SMOTE"
+   ]
+  },
+  {
+   "dataset": "yeast0256vs3789",
+   "n_papers": 1,
+   "printed_as": [
+    "yeast0256vs3789"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SplitBal"
+   ]
+  },
+  {
+   "dataset": "yeast02579vs368",
+   "n_papers": 1,
+   "printed_as": [
+    "yeast02579vs368"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SplitBal"
+   ]
+  },
+  {
+   "dataset": "yeast0359vs78",
+   "n_papers": 1,
+   "printed_as": [
+    "yeast0359vs78"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SplitBal"
+   ]
+  },
+  {
+   "dataset": "yeast2vs8",
+   "n_papers": 1,
+   "printed_as": [
+    "yeast2vs8"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "SplitBal"
+   ]
+  },
+  {
+   "dataset": "yoga",
+   "n_papers": 1,
+   "printed_as": [
+    "Yoga"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "INOS"
+   ]
+  }
+ ],
+ "aggregates": [
+  "Abalone09-18",
+  "Abalone9-18",
+  "Cleveland (303-sum variant)",
+  "abalone9-18",
+  "ecoli-0-1-3-7_vs_2-6",
+  "ecoli-0-1-4-6_vs_5",
+  "ecoli-0-1-4-7_vs_2-3-5-6",
+  "ecoli-0-1-4-7_vs_5-6",
+  "ecoli-0-1_vs_2-3-5",
+  "ecoli-0-1_vs_5",
+  "ecoli-0-2-3-4_vs_5",
+  "ecoli-0-2-6-7_vs_3-5",
+  "ecoli-0-3-4-6_vs_5",
+  "ecoli-0-3-4-7_vs_5-6",
+  "ecoli-0-3-4_vs_5",
+  "ecoli-0-4-6_vs_5",
+  "ecoli-0-6-7_vs_3-5",
+  "ecoli-0-6-7_vs_5",
+  "glass-0-1-2-3_vs_4-5-6",
+  "glass-0-1-4-6_vs_2",
+  "glass-0-1-5_vs_2",
+  "glass-0-1-6_vs_2",
+  "glass-0-1-6_vs_5",
+  "glass-0-4_vs_5",
+  "glass-0-6_vs_5",
+  "led7digit-0-2-4-5-6-7-8-9_vs_1",
+  "page-blocks-1-3",
+  "page-blocks-1-3_vs_4",
+  "yeast-0-2-5-6",
+  "yeast-0-2-5-6_vs_3-7-8-9",
+  "yeast-0-2-5-7-9",
+  "yeast-0-2-5-7-9_vs_3-6-8",
+  "yeast-0-3-5-9",
+  "yeast-0-3-5-9_vs_7-8",
+  "yeast-0-5-6-7-9",
+  "yeast-0-5-6-7-9_vs_4",
+  "yeast-1-2-8-9",
+  "yeast-1-2-8-9_vs_7",
+  "yeast-1-4-5-8_vs_7"
+ ],
+ "singleton_provenance": {
+  "unclassified": 351,
+  "synthetic": 14,
+  "author-collected": 20,
+  "image benchmark": 18
+ }
+}
