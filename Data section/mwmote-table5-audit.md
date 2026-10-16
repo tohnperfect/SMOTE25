@@ -3,8 +3,9 @@
 ตรวจ 16 ตุลาคม 2026 เทียบ 7 จาก 20 แถวกับเอกสารต้นทางของแต่ละ dataset
 ต้นฉบับที่ลอกจากหน้า PDF อยู่ที่ `build/mwmote_table5.tsv`
 
-**สถานะ** ตัวเลขฝั่งเราตรวจกับแหล่งต้นทางแล้ว แต่ยังไม่ได้เปิดเนื้อความใน MWMOTE
-เพื่อดูว่าเขาอ้างแหล่งและ split ไว้ว่าอย่างไร นั่นคือขั้นที่เหลือ
+**สถานะ** ตรวจตัวเลขกับแหล่งต้นทางแล้ว และอ่านเนื้อความใน MWMOTE แล้ว
+ค่าที่แก้ได้แล้วถูกบันทึกในคอลัมน์ `*_corrected` ของชีต `extraction`
+**ค่าที่ paper พิมพ์ยังคงอยู่ในคอลัมน์เดิมไม่ถูกเขียนทับ** เพราะส่วนต่างคือ finding ของเราเอง
 
 ---
 
@@ -19,6 +20,32 @@
 | Texture | 1500 / **1500** | 3977 / **4000** | 5477 / **5500** | majority ผิด |
 | Phoneme | 1520 / 1586 | 3707 / 3818 | 5227 / 5404 | ไม่ตรงทั้งแถว |
 | Vehicle | 219 / 212 | 721 / 634 | 940 / 846 | ไม่ตรงทั้งแถว |
+
+---
+
+## สิ่งที่ paper บอกเกี่ยวกับแหล่งข้อมูล
+
+อ่านเนื้อความรอบตาราง 5 แล้ว สิ่งที่ paper เขียนไว้มีเท่านี้
+
+> "We also use 20 real-world data sets collected from the UCI machine learning repository [41]."
+> (Section 5, หน้า 415)
+
+> "Some of the data sets have samples of more than two classes. We transform them to two-class
+> problems because of our interest. Table 5 shows detailed characteristics of the data sets and
+> the majority and minority classes found after the transformations." (Section 5.4, หน้า 416)
+
+อ้างอิง [41] คือ `UC Irvine Machine Learning Repository, http://archive.ics.uci.edu/ml/, 2009.`
+caption ของตารางคือ `TABLE 5 Description of Minority Class, Majority Class, and Characteristics of Real-World Data Sets`
+
+**สิ่งที่ paper ไม่ได้บอก และเป็นประเด็น**
+
+1. **ไม่ได้บอกว่าใช้ training split** แต่ Statlandsat (4435) และ OCR (3823) เป็น training split ชัดเจน
+   ผู้อ่านที่ไปโหลดชุดเต็มตามที่ paper บอกจะได้ข้อมูลคนละขนาดกับที่รายงาน
+2. **ไม่ได้บอกกติกาการเลือกคลาส** ว่าคลาสไหนเป็น minority เพราะอะไร มีแต่ในตารางซึ่งเป็นรูปภาพ
+3. **Phoneme กับ Texture น่าจะไม่ได้มาจาก UCI** ค้นในคลัง UCI ไม่พบหน้า dataset ของทั้งสองชื่อ
+   ทั้งคู่เป็นชุดที่แจกผ่าน KEEL และ OpenML **ข้อนี้ยังต้องยืนยันให้แน่น**
+   ถ้าจริง แปลว่าประโยคที่ว่า "ทั้ง 20 ชุดมาจาก UCI" ไม่ตรงกับความจริงอย่างน้อย 2 ชุด
+4. **ไม่ได้บอกว่าตัดแถวซ้ำหรือกรองข้อมูล** ซึ่งเป็นคำอธิบายเดียวที่เหลือสำหรับ Phoneme
 
 ---
 
@@ -105,10 +132,13 @@ N จึงเกินมา 3 ตาม
 ถ้าเป็นเรื่องการเลือกคลาสจริง ความผิดต้องไปโผล่ที่ minority ไม่ใช่ majority
 
 **Phoneme** เป็นปัญหาสองคลาสโดยกำเนิด ไม่มีคลาสให้เลือก แต่ผิดทั้งสองฝั่ง
-minority ขาด 66 majority ขาด 111 รวมขาด 177 น่าจะเป็นคนละเวอร์ชันของข้อมูล หรือมีการกรองแถวออก
+minority ขาด 66 (4.2% ของคลาส) majority ขาด 111 (2.9% ของคลาส) รวมขาด 177
+สัดส่วนการขาดใกล้เคียงกันทั้งสองคลาส ซึ่งเข้ากับการตัดแถวซ้ำออกมากกว่าการสุ่มตัด
+แต่ paper ไม่ได้บอกว่าทำอะไรกับข้อมูล **จึงยังพิสูจน์ไม่ได้**
 
 **Vehicle** อธิบายไม่ได้ N 940 ไม่ตรงกับชุดที่แจก (846) และไม่ตรงกับชุดเดิมก่อนกัน 100 แถวไว้ validate (946)
-minority 219 ไม่ตรงกับจำนวนในคลาสใดเลย (212, 217, 218, 199) **ต้องดูว่า paper อ้างแหล่งไหน**
+minority 219 ไม่ตรงกับจำนวนในคลาสใดเลย (212, 217, 218, 199)
+paper บอกแค่ว่ามาจาก UCI ไม่ได้ระบุเวอร์ชันหรือการเตรียมข้อมูลใด ๆ **ยังหาคำอธิบายไม่ได้**
 
 ---
 
@@ -152,7 +182,7 @@ MWMOTE เป็นแบบหลัง ตาราง 5 ไม่ได้พ
 | Statlog Landsat | sat.doc และ satimage.names จำนวนต่อคลาสแยก train กับ test |
 | optdigits | รายการไฟล์ optdigits.tra 3823 / optdigits.tes 1797 พร้อมจำนวนต่อ digit |
 | Page Blocks | page-blocks.names ตารางการกระจายคลาส |
-| Phoneme | KEEL dataset page |
+| Phoneme | KEEL dataset page (5404 แถว คลาส 0 = 3818 คลาส 1 = 1586) |
 | Vehicle | vehicle.names ของ Statlog |
 
 URL เต็มอยู่ในประวัติการสนทนาและใน commit message

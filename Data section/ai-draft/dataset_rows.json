@@ -3692,7 +3692,15 @@
   "C": 2,
   "ir": null,
   "note": "minority = Class of 'Graphic', 'Vert.line', 'Picture' ; majority = All other classes ; min 231 / maj 5245 ; %min 4 ; printed ratio 0.04:0.96",
-  "audit": "ตรวจแล้ว 16 ต.ค.: minority 231 ถูกเป๊ะ (graphic 28 + vert.line 88 + picture 115) แต่ majority พิมพ์ 5245 ค่าที่ถูกคือ 5242 และ N พิมพ์ 5476 ค่าที่ถูกคือ 5473"
+  "audit": "ตรวจแล้ว 16 ต.ค.: minority 231 ถูกเป๊ะ (graphic 28 + vert.line 88 + picture 115) แต่ majority พิมพ์ 5245 ค่าที่ถูกคือ 5242 และ N พิมพ์ 5476 ค่าที่ถูกคือ 5473",
+  "n_min": 231,
+  "n_maj": 5245,
+  "N_corr": 5473,
+  "min_corr": null,
+  "maj_corr": 5242,
+  "F_corr": null,
+  "corr_basis": "minority 231 ถูกเป๊ะ = graphic 28 + vert.line 88 + picture 115. majority ที่ถูก = text 4913 + horiz.line 329 = 5242 และ N ที่ถูก = 5473",
+  "corrected": "yes"
  },
  {
   "paper": "MWMOTE",
@@ -3701,7 +3709,9 @@
   "F": 7,
   "C": 2,
   "ir": null,
-  "note": "minority = Class of '18' ; majority = Class of '9' ; min 42 / maj 689 ; %min 6 ; printed ratio 0.06:0.94"
+  "note": "minority = Class of '18' ; majority = Class of '9' ; min 42 / maj 689 ; %min 6 ; printed ratio 0.06:0.94",
+  "n_min": 42,
+  "n_maj": 689
  },
  {
   "paper": "MWMOTE",
@@ -3710,7 +3720,9 @@
   "F": 21,
   "C": 2,
   "ir": null,
-  "note": "minority = Class of '3', '4' ; majority = All other classes ; min 134 / maj 1992 ; %min 6.30 ; printed ratio 0.06:0.94"
+  "note": "minority = Class of '3', '4' ; majority = All other classes ; min 134 / maj 1992 ; %min 6.30 ; printed ratio 0.06:0.94",
+  "n_min": 134,
+  "n_maj": 1992
  },
  {
   "paper": "MWMOTE",
@@ -3720,7 +3732,15 @@
   "C": 2,
   "ir": null,
   "note": "minority = Class of '0' ; majority = All other classes ; min 376 / maj 3447 ; %min 9 ; printed ratio 0.09:0.91",
-  "audit": "ตรวจแล้ว 16 ต.ค.: = optdigits.tra. minority 376 ถูก (digit 0) majority 3447 ถูก แต่ N พิมพ์ 3826 ค่าที่ถูกคือ 3823. บวกเลขผิดล้วน"
+  "audit": "ตรวจแล้ว 16 ต.ค.: = optdigits.tra. minority 376 ถูก (digit 0) majority 3447 ถูก แต่ N พิมพ์ 3826 ค่าที่ถูกคือ 3823. บวกเลขผิดล้วน",
+  "n_min": 376,
+  "n_maj": 3447,
+  "N_corr": 3823,
+  "min_corr": null,
+  "maj_corr": null,
+  "F_corr": null,
+  "corr_basis": "ชุดนี้คือ optdigits.tra optdigits.tra. minority 376 (digit 0) และ majority 3447 ถูกทั้งคู่ 376 + 3447 = 3823 ซึ่งเท่ากับจำนวนแถวใน optdigits.tra พอดี ที่พิมพ์ 3826 คือบวกผิด",
+  "corrected": "yes"
  },
  {
   "paper": "MWMOTE",
@@ -3730,7 +3750,15 @@
   "C": 2,
   "ir": null,
   "note": "minority = Class of '4' ; majority = All other classes ; min 415 / maj 4435 ; %min 9.36 ; printed ratio 0.09:0.91",
-  "audit": "ตรวจแล้ว 16 ต.ค.: N 4435 ถูก (= sat.trn) minority 415 ถูก (class 4) แต่ majority พิมพ์ 4435 ซึ่งเท่ากับ N ค่าที่ถูกคือ 4020. เป็น subset ของแถว Satimage ในตารางเดียวกัน"
+  "audit": "ตรวจแล้ว 16 ต.ค.: N 4435 ถูก (= sat.trn) minority 415 ถูก (class 4) แต่ majority พิมพ์ 4435 ซึ่งเท่ากับ N ค่าที่ถูกคือ 4020. เป็น subset ของแถว Satimage ในตารางเดียวกัน",
+  "n_min": 415,
+  "n_maj": 4435,
+  "N_corr": null,
+  "min_corr": null,
+  "maj_corr": 4020,
+  "F_corr": 36,
+  "corr_basis": "N 4435 = sat.trn และ minority 415 = คลาส 4 ใน sat.trn ทั้งคู่ยืนยันได้ majority ที่พิมพ์ 4435 เท่ากับ N ของตัวเอง ค่าที่ถูก = 4435 - 415 = 4020. feature ที่ถูกคือ 36 (4 spectral bands x 9 pixels) ที่พิมพ์ 37 น่าจะนับคอลัมน์คลาสด้วย",
+  "corrected": "yes"
  },
  {
   "paper": "MWMOTE",
@@ -3739,7 +3767,9 @@
   "F": 265,
   "C": 2,
   "ir": null,
-  "note": "minority = Class of '4' ; majority = All other classes ; min 161 / maj 1432 ; %min 10.11 ; printed ratio 0.11:0.89"
+  "note": "minority = Class of '4' ; majority = All other classes ; min 161 / maj 1432 ; %min 10.11 ; printed ratio 0.11:0.89",
+  "n_min": 161,
+  "n_maj": 1432
  },
  {
   "paper": "MWMOTE",
@@ -3748,7 +3778,9 @@
   "F": 19,
   "C": 2,
   "ir": null,
-  "note": "minority = Class of 'Grass' ; majority = All other classes ; min 330 / maj 1980 ; %min 14 ; printed ratio 0.14:0.86"
+  "note": "minority = Class of 'Grass' ; majority = All other classes ; min 330 / maj 1980 ; %min 14 ; printed ratio 0.14:0.86",
+  "n_min": 330,
+  "n_maj": 1980
  },
  {
   "paper": "MWMOTE",
@@ -3757,7 +3789,9 @@
   "F": 90,
   "C": 2,
   "ir": null,
-  "note": "minority = Class of '1', '2', '3' ; majority = All other classes ; min 72 / maj 288 ; %min 20 ; printed ratio 0.20:0.80"
+  "note": "minority = Class of '1', '2', '3' ; majority = All other classes ; min 72 / maj 288 ; %min 20 ; printed ratio 0.20:0.80",
+  "n_min": 72,
+  "n_maj": 288
  },
  {
   "paper": "MWMOTE",
@@ -3766,7 +3800,9 @@
   "F": 8,
   "C": 2,
   "ir": null,
-  "note": "minority = Class of ME3', 'ME2', 'EXC', 'VAC', 'POX', 'ERL' ; majority = All other classes ; min 304 / maj 1180 ; %min 21 ; printed ratio 0.20:0.80"
+  "note": "minority = Class of ME3', 'ME2', 'EXC', 'VAC', 'POX', 'ERL' ; majority = All other classes ; min 304 / maj 1180 ; %min 21 ; printed ratio 0.20:0.80",
+  "n_min": 304,
+  "n_maj": 1180
  },
  {
   "paper": "MWMOTE",
@@ -3775,7 +3811,9 @@
   "F": 24,
   "C": 2,
   "ir": null,
-  "note": "minority = Class of 'slight-left-turn', 'slight-right-turn' ; majority = All other classes ; min 1154 / maj 4302 ; %min 22 ; printed ratio 0.21:0.79"
+  "note": "minority = Class of 'slight-left-turn', 'slight-right-turn' ; majority = All other classes ; min 1154 / maj 4302 ; %min 22 ; printed ratio 0.21:0.79",
+  "n_min": 1154,
+  "n_maj": 4302
  },
  {
   "paper": "MWMOTE",
@@ -3784,7 +3822,9 @@
   "F": 7,
   "C": 2,
   "ir": null,
-  "note": "minority = Class of 'im' ; majority = All other classes ; min 77 / maj 259 ; %min 23 ; printed ratio 0.23:0.77"
+  "note": "minority = Class of 'im' ; majority = All other classes ; min 77 / maj 259 ; %min 23 ; printed ratio 0.23:0.77",
+  "n_min": 77,
+  "n_maj": 259
  },
  {
   "paper": "MWMOTE",
@@ -3793,7 +3833,9 @@
   "F": 9,
   "C": 2,
   "ir": null,
-  "note": "minority = Class of '5', '6', '7' ; majority = All other classes ; min 51 / maj 163 ; %min 24 ; printed ratio 0.24:0.76"
+  "note": "minority = Class of '5', '6', '7' ; majority = All other classes ; min 51 / maj 163 ; %min 24 ; printed ratio 0.24:0.76",
+  "n_min": 51,
+  "n_maj": 163
  },
  {
   "paper": "MWMOTE",
@@ -3803,7 +3845,15 @@
   "C": 2,
   "ir": null,
   "note": "minority = Class of '1' ; majority = All other classes ; min 219 / maj 721 ; %min 24 ; printed ratio 0.23:0.77",
-  "audit": "ตรวจแล้ว 16 ต.ค.: อธิบายไม่ได้ N 940 ไม่ตรงทั้งชุดที่แจก (846) และชุดเดิมก่อนกันไว้ validate (946) minority 219 ไม่ตรงกับคลาสใดเลย (212/217/218/199) ต้องดูว่า paper อ้างแหล่งไหน"
+  "audit": "ตรวจแล้ว 16 ต.ค.: อธิบายไม่ได้ N 940 ไม่ตรงทั้งชุดที่แจก (846) และชุดเดิมก่อนกันไว้ validate (946) minority 219 ไม่ตรงกับคลาสใดเลย (212/217/218/199) ต้องดูว่า paper อ้างแหล่งไหน",
+  "n_min": 219,
+  "n_maj": 721,
+  "N_corr": null,
+  "min_corr": null,
+  "maj_corr": null,
+  "F_corr": null,
+  "corr_basis": "ยังแก้ไม่ได้ ไม่ทราบเวอร์ชัน. ชุดที่ UCI แจก 846 แถว (คลาส 212/217/218/199) ชุดเดิมก่อนกัน 100 แถวไว้ validate คือ 946 ที่พิมพ์ 940 (219 / 721) ไม่ตรงทั้งสองค่า และ minority 219 ไม่ตรงกับจำนวนในคลาสใดเลย",
+  "corrected": "no"
  },
  {
   "paper": "MWMOTE",
@@ -3812,7 +3862,9 @@
   "F": 13,
   "C": 2,
   "ir": null,
-  "note": "minority = Class of '3' ; majority = All other classes ; min 48 / maj 130 ; %min 27 ; printed ratio 0.27:0.73"
+  "note": "minority = Class of '3' ; majority = All other classes ; min 48 / maj 130 ; %min 27 ; printed ratio 0.27:0.73",
+  "n_min": 48,
+  "n_maj": 130
  },
  {
   "paper": "MWMOTE",
@@ -3822,7 +3874,15 @@
   "C": 2,
   "ir": null,
   "note": "minority = Class of '2', '3', '4' ; majority = All other classes ; min 1500 / maj 3977 ; %min 28 ; printed ratio 0.27:0.73",
-  "audit": "ตรวจแล้ว 16 ต.ค.: minority 1500 ถูกเป๊ะ (3 คลาส x 500) แต่ majority พิมพ์ 3977 ค่าที่ถูกคือ 4000 และ N พิมพ์ 5477 ค่าที่ถูกคือ 5500"
+  "audit": "ตรวจแล้ว 16 ต.ค.: minority 1500 ถูกเป๊ะ (3 คลาส x 500) แต่ majority พิมพ์ 3977 ค่าที่ถูกคือ 4000 และ N พิมพ์ 5477 ค่าที่ถูกคือ 5500",
+  "n_min": 1500,
+  "n_maj": 3977,
+  "N_corr": 5500,
+  "min_corr": null,
+  "maj_corr": 4000,
+  "F_corr": null,
+  "corr_basis": "minority 1500 ถูกเป๊ะ = 3 คลาส x 500. ชุดเต็มมี 11 คลาส x 500 = 5500 majority ที่ถูก = 5500 - 1500 = 4000",
+  "corrected": "yes"
  },
  {
   "paper": "MWMOTE",
@@ -3832,7 +3892,15 @@
   "C": 2,
   "ir": null,
   "note": "minority = Class of '1' ; majority = All other classes ; min 1520 / maj 3707 ; %min 30 ; printed ratio 0.29:0.71",
-  "audit": "ตรวจแล้ว 16 ต.ค.: ไม่ตรงทั้งสองฝั่ง minority 1520 (มาตรฐาน 1586) majority 3707 (มาตรฐาน 3818) N 5227 (มาตรฐาน 5404) ขาดไป 177 แถว ไม่ใช่การเลือกคลาส น่าจะคนละเวอร์ชันของข้อมูล"
+  "audit": "ตรวจแล้ว 16 ต.ค.: ไม่ตรงทั้งสองฝั่ง minority 1520 (มาตรฐาน 1586) majority 3707 (มาตรฐาน 3818) N 5227 (มาตรฐาน 5404) ขาดไป 177 แถว ไม่ใช่การเลือกคลาส น่าจะคนละเวอร์ชันของข้อมูล",
+  "n_min": 1520,
+  "n_maj": 3707,
+  "N_corr": null,
+  "min_corr": null,
+  "maj_corr": null,
+  "F_corr": null,
+  "corr_basis": "ยังแก้ไม่ได้ ไม่ทราบเวอร์ชัน. ชุดมาตรฐาน 5404 (คลาส 0 = 3818, คลาส 1 = 1586) ที่พิมพ์ 5227 (1520 / 3707) ขาดไป 177 แถว แบ่งเป็น minority 66 majority 111 สัดส่วนการขาดใกล้เคียงกันทั้งสองคลาส (4.2% กับ 2.9%) ซึ่งเข้ากับการตัดแถวซ้ำออก แต่ยังพิสูจน์ไม่ได้",
+  "corrected": "no"
  },
  {
   "paper": "MWMOTE",
@@ -3842,7 +3910,15 @@
   "C": 2,
   "ir": null,
   "note": "minority = Class of '2', '4', '5' ; majority = All other classes ; min 2036 / maj 4399 ; %min 32 ; printed ratio 0.32:0.68",
-  "audit": "ตรวจแล้ว 16 ต.ค.: ทุกค่าถูกต้อง N 6435 = sat.trn 4435 + sat.tst 2000. แถว Statlandsat ในตารางเดียวกันคือ training split ของชุดนี้"
+  "audit": "ตรวจแล้ว 16 ต.ค.: ทุกค่าถูกต้อง N 6435 = sat.trn 4435 + sat.tst 2000. แถว Statlandsat ในตารางเดียวกันคือ training split ของชุดนี้",
+  "n_min": 2036,
+  "n_maj": 4399,
+  "N_corr": null,
+  "min_corr": null,
+  "maj_corr": null,
+  "F_corr": null,
+  "corr_basis": "ตรวจแล้วถูกต้องทุกค่า N 6435 = sat.trn 4435 + sat.tst 2000, minority 2036 = คลาส 2+4+5",
+  "corrected": "no"
  },
  {
   "paper": "MWMOTE",
@@ -3851,7 +3927,9 @@
   "F": 9,
   "C": 2,
   "ir": null,
-  "note": "minority = Class of 'CAR', 'FAD' ; majority = All other classes ; min 36 / maj 70 ; %min 34 ; printed ratio 0.34:0.66"
+  "note": "minority = Class of 'CAR', 'FAD' ; majority = All other classes ; min 36 / maj 70 ; %min 34 ; printed ratio 0.34:0.66",
+  "n_min": 36,
+  "n_maj": 70
  },
  {
   "paper": "MWMOTE",
@@ -3860,7 +3938,9 @@
   "F": 9,
   "C": 2,
   "ir": null,
-  "note": "minority = Class of 'Malignant' ; majority = Class of 'Benign' ; min 239 / maj 444 ; %min 35 ; printed ratio 0.35:0.65"
+  "note": "minority = Class of 'Malignant' ; majority = Class of 'Benign' ; min 239 / maj 444 ; %min 35 ; printed ratio 0.35:0.65",
+  "n_min": 239,
+  "n_maj": 444
  },
  {
   "paper": "MWMOTE",
@@ -3869,6 +3949,8 @@
   "F": 8,
   "C": 2,
   "ir": null,
-  "note": "minority = Class of '1' ; majority = Class of '0' ; min 268 / maj 500 ; %min 35 ; printed ratio 0.35:0.65"
+  "note": "minority = Class of '1' ; majority = Class of '0' ; min 268 / maj 500 ; %min 35 ; printed ratio 0.35:0.65",
+  "n_min": 268,
+  "n_maj": 500
  }
 ]

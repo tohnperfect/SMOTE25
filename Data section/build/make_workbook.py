@@ -80,7 +80,15 @@ EXTRACT_COLS = [
  ("modification_detail",        34, "fill", None,               "Free text, e.g. 'class 4 as minority, rest merged' or 'minority undersampled to IR 20'.", "you"),
  ("n_instances",                10, "ai",   None,               "As printed for this dataset in this paper.", "prefilled where known, verify"),
  ("n_features",                 10, "ai",   None,               "As printed. Note whether the paper counts the class attribute.", "prefilled where known, verify"),
+ ("n_minority",                 10, "ai",   None,               "Minority-class count as printed for this dataset in this paper. Blank when the paper prints only a total.", "prefilled where known, verify"),
+ ("n_majority",                 10, "ai",   None,               "Majority-class count as printed. Blank when the paper prints only a total.", "prefilled where known, verify"),
  ("n_classes",                  9,  "ai",   None,               "As printed.", "prefilled where known, verify"),
+ ("values_corrected",           11, "ai",   "YESNO",            "yes = at least one printed value on this row was checked against the dataset's own documentation and found wrong. The printed values stay in their columns; the corrected ones go in the *_corrected columns. Never overwrite what the paper printed: the discrepancy is itself a finding.", "prefilled, verify"),
+ ("n_instances_corrected",      12, "ai",   None,               "Correct total where the printed one is wrong. Blank when the printed value is right or the discrepancy is unresolved.", "prefilled, verify"),
+ ("n_minority_corrected",       12, "ai",   None,               "Correct minority count where the printed one is wrong.", "prefilled, verify"),
+ ("n_majority_corrected",       12, "ai",   None,               "Correct majority count where the printed one is wrong.", "prefilled, verify"),
+ ("n_features_corrected",       12, "ai",   None,               "Correct feature count where the printed one is wrong.", "prefilled, verify"),
+ ("correction_basis",           46, "ai",   None,               "Which source establishes the correct value, and the arithmetic that settles which printed cell is wrong. Required whenever values_corrected = yes.", "prefilled, verify"),
  ("ir_as_reported",             13, "ai",   None,               "The number the paper prints. Do not recompute it here.", "prefilled where known, verify"),
  ("ir_definition",              30, "fill", "IR_DEFINITION",    "Which formula produced that number. If the paper does not say, choose 'not stated'.", "you"),
  ("ir_source",                  24, "fill", "IR_SOURCE",        "Whether the IR came from the paper or from your own calculation.", "you"),
@@ -253,7 +261,15 @@ def build(papers_json, dsrows_json, out):
               "dataset_name_as_printed": nm,
               "n_instances": rec["N"] if rec else None,
               "n_features":  rec["F"] if rec else None,
+              "n_minority":  rec.get("n_min") if rec else None,
+              "n_majority":  rec.get("n_maj") if rec else None,
               "n_classes":   rec["C"] if rec else None,
+              "values_corrected":      (rec.get("corrected") if rec else None),
+              "n_instances_corrected": (rec.get("N_corr") if rec else None),
+              "n_minority_corrected":  (rec.get("min_corr") if rec else None),
+              "n_majority_corrected":  (rec.get("maj_corr") if rec else None),
+              "n_features_corrected":  (rec.get("F_corr") if rec else None),
+              "correction_basis":      (rec.get("corr_basis") if rec else None),
               "ir_as_reported": rec["ir"] if rec else None,
               "group_in_paper": grp,
               "is_aggregate": "yes" if agg else "no",
@@ -266,7 +282,11 @@ def build(papers_json, dsrows_json, out):
                         ("aggregate entry, expand into individual datasets when verifying" if AGG.search(nm) else None)),
             }
             for h,i in eidx.items():
-                c = we.cell(row=row, column=i, value=vals.get(h))
+                v = vals.get(h)
+                # Excel อ่านข้อความที่ขึ้นต้นด้วย = + - @ เป็นสูตร ยกเว้นสูตรที่เราตั้งใจใส่เอง
+                if isinstance(v, str) and v[:1] in "=+-@" and h != "method_name":
+                    v = "'" + v
+                c = we.cell(row=row, column=i, value=v)
                 c.font = BODY; c.border = BORDER
                 kind = EXTRACT_COLS[i-1][2]
                 if FILLKIND[kind]: c.fill = FILLKIND[kind]

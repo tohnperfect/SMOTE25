@@ -299,6 +299,50 @@ oversampler ทำงานด้วยโดยตรงกลับแม่�
 **ยังค้าง** ยังไม่ได้เปิดเนื้อความใน MWMOTE ดูว่าเขาอ้างแหล่งและ split ไว้ว่าอย่างไร
 และยังเหลืออีก 13 แถวที่ยังไม่ได้ตรวจเทียบ
 
+### 16 ตุลาคม 2026 แก้ค่าที่ผิดในตาราง 5 และอ่านเนื้อความ MWMOTE
+
+**วิธีแก้ที่ใช้ ไม่เขียนทับค่าที่ paper พิมพ์**
+ถ้าเขียนทับ เราจะทำลายหลักฐานที่เป็น finding ของเราเอง จึงเพิ่มคอลัมน์ใหม่ในชีต `extraction` แทน
+`n_minority`, `n_majority` (ตามที่พิมพ์) และ `values_corrected`, `n_instances_corrected`,
+`n_minority_corrected`, `n_majority_corrected`, `n_features_corrected`, `correction_basis`
+**กติกาใหม่ ค่าที่ paper พิมพ์อยู่คอลัมน์เดิมเสมอ ค่าที่แก้อยู่คอลัมน์ `_corrected` เสมอ**
+คอลัมน์ `n_minority` กับ `n_majority` ใช้ได้กับทุก paper ไม่ใช่แค่ MWMOTE
+
+**ค่าที่แก้แล้ว 4 แถว**
+
+| dataset | ช่องที่ผิด | พิมพ์ | แก้เป็น |
+|---|---|---|---|
+| OCR | N | 3826 | 3823 |
+| Statlandsat | majority | 4435 | 4020 |
+| Statlandsat | features | 37 | 36 |
+| Pageblocks | N / majority | 5476 / 5245 | 5473 / 5242 |
+| Texture | N / majority | 5477 / 3977 | 5500 / 4000 |
+
+Satimage ตรวจแล้วถูกทุกค่า ส่วน Phoneme กับ Vehicle ยังแก้ไม่ได้ ใส่ `values_corrected = no` พร้อมเหตุผล
+
+**อ่านเนื้อความใน MWMOTE แล้ว สิ่งที่ paper บอกมีแค่นี้**
+"We also use 20 real-world data sets collected from the UCI machine learning repository [41]."
+และ "Some of the data sets have samples of more than two classes. We transform them to two-class
+problems because of our interest." อ้างอิง [41] คือหน้าแรกของคลัง UCI ไม่ใช่ชุดข้อมูลเฉพาะเรื่อง
+
+**สิ่งที่ paper ไม่ได้บอก และกลายเป็นประเด็นของ section เรา**
+1. ไม่ได้บอกว่าใช้ training split แต่ Statlandsat กับ OCR เป็น training split ชัดเจน
+   ผู้อ่านที่โหลดชุดเต็มตามที่ paper บอกจะได้ข้อมูลคนละขนาดกับที่รายงาน
+2. ไม่ได้บอกกติกาการเลือกคลาสเป็น minority มีแต่ในตารางซึ่งเป็นรูปภาพ
+3. Phoneme กับ Texture น่าจะไม่ได้มาจาก UCI ค้นในคลัง UCI ไม่พบหน้า dataset ของทั้งสองชื่อ
+   ทั้งคู่แจกผ่าน KEEL และ OpenML **ยังต้องยืนยันให้แน่นก่อนเขียน**
+4. ไม่ได้บอกว่าตัดแถวซ้ำหรือกรองข้อมูล ซึ่งเป็นคำอธิบายเดียวที่เหลือสำหรับ Phoneme
+
+**Phoneme** ขาด 177 แถว แบ่งเป็น minority 66 (4.2% ของคลาส) majority 111 (2.9% ของคลาส)
+สัดส่วนใกล้เคียงกันทั้งสองคลาส เข้ากับการตัดแถวซ้ำมากกว่าการสุ่มตัด แต่ paper ไม่ได้บอก จึงยังพิสูจน์ไม่ได้
+
+**Vehicle** ยังอธิบายไม่ได้ 940 ไม่ตรงทั้ง 846 (ชุดที่แจก) และ 946 (ก่อนกัน 100 แถวไว้ validate)
+minority 219 ไม่ตรงกับคลาสใดเลย paper บอกแค่ว่ามาจาก UCI
+
+**บั๊กที่เจอและแก้แล้ว** ข้อความใน cell ที่ขึ้นต้นด้วย `=` ทำให้ Excel มองเป็นสูตรและขึ้น `#VALUE!`
+ใส่ guard ใน `build/make_workbook.py` ให้เติม `'` นำหน้าข้อความที่ขึ้นต้นด้วย `=` `+` `-` `@`
+อัตโนมัติ (ยกเว้นคอลัมน์สูตรที่ตั้งใจใส่) recalc กลับมา 0 error
+
 **หยุดงานไว้ตรงนี้**
 
 push สำเร็จเป็น `45ad6c4` บน `origin/main` ตรวจบน remote แล้วมี 22 ไฟล์ใต้ `Data section/`
