@@ -1,0 +1,149 @@
+{
+ "Statlandsat": {
+  "printed": {
+   "N": 4435,
+   "min": 415,
+   "maj": 4435,
+   "feat": 37
+  },
+  "source": {
+   "N": 4435,
+   "min": 415,
+   "maj": 4020,
+   "feat": 36,
+   "ref": "Statlog Landsat, sat.trn (training split)"
+  },
+  "delta": {
+   "N": 0,
+   "min": 0,
+   "maj": 415
+  },
+  "adds_up": false
+ },
+ "Satimage": {
+  "printed": {
+   "N": 6435,
+   "min": 2036,
+   "maj": 4399,
+   "feat": 36
+  },
+  "source": {
+   "N": 6435,
+   "min": 2036,
+   "maj": 4399,
+   "feat": 36,
+   "ref": "Statlog Landsat, full (sat.trn + sat.tst)"
+  },
+  "delta": {
+   "N": 0,
+   "min": 0,
+   "maj": 0
+  },
+  "adds_up": true
+ },
+ "OCR": {
+  "printed": {
+   "N": 3826,
+   "min": 376,
+   "maj": 3447,
+   "feat": 64
+  },
+  "source": {
+   "N": 3823,
+   "min": 376,
+   "maj": 3447,
+   "feat": 64,
+   "ref": "optdigits.tra (training split)"
+  },
+  "delta": {
+   "N": 3,
+   "min": 0,
+   "maj": 0
+  },
+  "adds_up": false
+ },
+ "Pageblocks": {
+  "printed": {
+   "N": 5476,
+   "min": 231,
+   "maj": 5245,
+   "feat": 10
+  },
+  "source": {
+   "N": 5473,
+   "min": 231,
+   "maj": 5242,
+   "feat": 10,
+   "ref": "Page Blocks Classification"
+  },
+  "delta": {
+   "N": 3,
+   "min": 0,
+   "maj": 3
+  },
+  "adds_up": true
+ },
+ "Texture": {
+  "printed": {
+   "N": 5477,
+   "min": 1500,
+   "maj": 3977,
+   "feat": 40
+  },
+  "source": {
+   "N": 5500,
+   "min": 1500,
+   "maj": 4000,
+   "feat": 40,
+   "ref": "Texture (11 classes x 500)"
+  },
+  "delta": {
+   "N": -23,
+   "min": 0,
+   "maj": -23
+  },
+  "adds_up": true
+ },
+ "Phoneme": {
+  "printed": {
+   "N": 5227,
+   "min": 1520,
+   "maj": 3707,
+   "feat": 5
+  },
+  "source": {
+   "N": 5404,
+   "min": 1586,
+   "maj": 3818,
+   "feat": 5,
+   "ref": "Phoneme (ELENA)"
+  },
+  "delta": {
+   "N": -177,
+   "min": -66,
+   "maj": -111
+  },
+  "adds_up": true
+ },
+ "Vehicle": {
+  "printed": {
+   "N": 940,
+   "min": 219,
+   "maj": 721,
+   "feat": 18
+  },
+  "source": {
+   "N": 846,
+   "min": 212,
+   "maj": 634,
+   "feat": 18,
+   "ref": "Statlog Vehicle Silhouettes"
+  },
+  "delta": {
+   "N": 94,
+   "min": 7,
+   "maj": 87
+  },
+  "adds_up": true
+ }
+}

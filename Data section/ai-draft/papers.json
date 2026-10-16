@@ -1583,7 +1583,7 @@
    "Small disjuncts",
    "Class overlap"
   ],
-  "specnote": "Artificial checkerboard data deliberately creates multiple minority sub-concepts (within-class imbalance) to show that kNN-based oversamplers generate wrong samples. Table 5, which holds the per-dataset characteristics and the class-to-minority mapping, is an image in both available copies of the PDF; Tables 6 to 12 are affected the same way. Only eight of the twenty dataset names survive anywhere in the text, via the Fig. 7 caption. The paper states that it uses datasets with continuous features only.",
+  "specnote": "Table 5 ตรวจแล้ว 7 จาก 20 แถวเทียบกับเอกสารต้นทาง: Statlog Landsat ถูกนับสองครั้ง (Statlandsat = training split 4435 เป็น subset ของ Satimage = ชุดเต็ม 6435); OCR คือ optdigits.tra และ N พิมพ์ผิด; Statlandsat พิมพ์ majority เป็นค่า N ของตัวเอง; Pageblocks และ Texture minority ถูกเป๊ะแต่ majority ผิด; Phoneme และ Vehicle ไม่ตรงกับ release มาตรฐานทั้งคู่. ความผิดพลาดกระจุกอยู่ที่คอลัมน์ majority และ N ซึ่งเป็นคอลัมน์ที่กำหนดค่า IR",
   "prep": "Multiclass to two-class conversion per Table 5. Real data 10-fold CV; artificial data average of 20 runs. Neural network, AdaBoost.M2 ensemble, kNN (k=5), C4.5. Synthetic samples = 200% of minority.",
   "dsn": [
    "Pageblocks",
@@ -1664,7 +1664,160 @@
   "nd_claimed": 20,
   "ds_table_ref": "Table 5",
   "ds_status": "complete",
-  "dsn_src": "transcribed from the PDF by toon, 2026-10-16 (Table 5 is an image; not machine-extractable)"
+  "dsn_src": "transcribed from the PDF by toon, 2026-10-16 (Table 5 is an image; not machine-extractable)",
+  "audit": {
+   "date": "2026-10-16",
+   "scope": "Table 5, 7 of 20 datasets checked against primary sources",
+   "detail": {
+    "Statlandsat": {
+     "printed": {
+      "N": 4435,
+      "min": 415,
+      "maj": 4435,
+      "feat": 37
+     },
+     "source": {
+      "N": 4435,
+      "min": 415,
+      "maj": 4020,
+      "feat": 36,
+      "ref": "Statlog Landsat, sat.trn (training split)"
+     },
+     "delta": {
+      "N": 0,
+      "min": 0,
+      "maj": 415
+     },
+     "adds_up": false
+    },
+    "Satimage": {
+     "printed": {
+      "N": 6435,
+      "min": 2036,
+      "maj": 4399,
+      "feat": 36
+     },
+     "source": {
+      "N": 6435,
+      "min": 2036,
+      "maj": 4399,
+      "feat": 36,
+      "ref": "Statlog Landsat, full (sat.trn + sat.tst)"
+     },
+     "delta": {
+      "N": 0,
+      "min": 0,
+      "maj": 0
+     },
+     "adds_up": true
+    },
+    "OCR": {
+     "printed": {
+      "N": 3826,
+      "min": 376,
+      "maj": 3447,
+      "feat": 64
+     },
+     "source": {
+      "N": 3823,
+      "min": 376,
+      "maj": 3447,
+      "feat": 64,
+      "ref": "optdigits.tra (training split)"
+     },
+     "delta": {
+      "N": 3,
+      "min": 0,
+      "maj": 0
+     },
+     "adds_up": false
+    },
+    "Pageblocks": {
+     "printed": {
+      "N": 5476,
+      "min": 231,
+      "maj": 5245,
+      "feat": 10
+     },
+     "source": {
+      "N": 5473,
+      "min": 231,
+      "maj": 5242,
+      "feat": 10,
+      "ref": "Page Blocks Classification"
+     },
+     "delta": {
+      "N": 3,
+      "min": 0,
+      "maj": 3
+     },
+     "adds_up": true
+    },
+    "Texture": {
+     "printed": {
+      "N": 5477,
+      "min": 1500,
+      "maj": 3977,
+      "feat": 40
+     },
+     "source": {
+      "N": 5500,
+      "min": 1500,
+      "maj": 4000,
+      "feat": 40,
+      "ref": "Texture (11 classes x 500)"
+     },
+     "delta": {
+      "N": -23,
+      "min": 0,
+      "maj": -23
+     },
+     "adds_up": true
+    },
+    "Phoneme": {
+     "printed": {
+      "N": 5227,
+      "min": 1520,
+      "maj": 3707,
+      "feat": 5
+     },
+     "source": {
+      "N": 5404,
+      "min": 1586,
+      "maj": 3818,
+      "feat": 5,
+      "ref": "Phoneme (ELENA)"
+     },
+     "delta": {
+      "N": -177,
+      "min": -66,
+      "maj": -111
+     },
+     "adds_up": true
+    },
+    "Vehicle": {
+     "printed": {
+      "N": 940,
+      "min": 219,
+      "maj": 721,
+      "feat": 18
+     },
+     "source": {
+      "N": 846,
+      "min": 212,
+      "maj": 634,
+      "feat": 18,
+      "ref": "Statlog Vehicle Silhouettes"
+     },
+     "delta": {
+      "N": 94,
+      "min": 7,
+      "maj": 87
+     },
+     "adds_up": true
+    }
+   }
+  }
  },
  {
   "key": "RACOG / wRACOG",

@@ -3691,7 +3691,8 @@
   "F": 10,
   "C": 2,
   "ir": null,
-  "note": "minority = Class of 'Graphic', 'Vert.line', 'Picture' ; majority = All other classes ; min 231 / maj 5245 ; %min 4 ; printed ratio 0.04:0.96"
+  "note": "minority = Class of 'Graphic', 'Vert.line', 'Picture' ; majority = All other classes ; min 231 / maj 5245 ; %min 4 ; printed ratio 0.04:0.96",
+  "audit": "ตรวจแล้ว 16 ต.ค.: minority 231 ถูกเป๊ะ (graphic 28 + vert.line 88 + picture 115) แต่ majority พิมพ์ 5245 ค่าที่ถูกคือ 5242 และ N พิมพ์ 5476 ค่าที่ถูกคือ 5473"
  },
  {
   "paper": "MWMOTE",
@@ -3718,7 +3719,8 @@
   "F": 64,
   "C": 2,
   "ir": null,
-  "note": "minority = Class of '0' ; majority = All other classes ; min 376 / maj 3447 ; %min 9 ; printed ratio 0.09:0.91"
+  "note": "minority = Class of '0' ; majority = All other classes ; min 376 / maj 3447 ; %min 9 ; printed ratio 0.09:0.91",
+  "audit": "ตรวจแล้ว 16 ต.ค.: = optdigits.tra. minority 376 ถูก (digit 0) majority 3447 ถูก แต่ N พิมพ์ 3826 ค่าที่ถูกคือ 3823. บวกเลขผิดล้วน"
  },
  {
   "paper": "MWMOTE",
@@ -3727,7 +3729,8 @@
   "F": 37,
   "C": 2,
   "ir": null,
-  "note": "minority = Class of '4' ; majority = All other classes ; min 415 / maj 4435 ; %min 9.36 ; printed ratio 0.09:0.91"
+  "note": "minority = Class of '4' ; majority = All other classes ; min 415 / maj 4435 ; %min 9.36 ; printed ratio 0.09:0.91",
+  "audit": "ตรวจแล้ว 16 ต.ค.: N 4435 ถูก (= sat.trn) minority 415 ถูก (class 4) แต่ majority พิมพ์ 4435 ซึ่งเท่ากับ N ค่าที่ถูกคือ 4020. เป็น subset ของแถว Satimage ในตารางเดียวกัน"
  },
  {
   "paper": "MWMOTE",
@@ -3799,7 +3802,8 @@
   "F": 18,
   "C": 2,
   "ir": null,
-  "note": "minority = Class of '1' ; majority = All other classes ; min 219 / maj 721 ; %min 24 ; printed ratio 0.23:0.77"
+  "note": "minority = Class of '1' ; majority = All other classes ; min 219 / maj 721 ; %min 24 ; printed ratio 0.23:0.77",
+  "audit": "ตรวจแล้ว 16 ต.ค.: อธิบายไม่ได้ N 940 ไม่ตรงทั้งชุดที่แจก (846) และชุดเดิมก่อนกันไว้ validate (946) minority 219 ไม่ตรงกับคลาสใดเลย (212/217/218/199) ต้องดูว่า paper อ้างแหล่งไหน"
  },
  {
   "paper": "MWMOTE",
@@ -3817,7 +3821,8 @@
   "F": 40,
   "C": 2,
   "ir": null,
-  "note": "minority = Class of '2', '3', '4' ; majority = All other classes ; min 1500 / maj 3977 ; %min 28 ; printed ratio 0.27:0.73"
+  "note": "minority = Class of '2', '3', '4' ; majority = All other classes ; min 1500 / maj 3977 ; %min 28 ; printed ratio 0.27:0.73",
+  "audit": "ตรวจแล้ว 16 ต.ค.: minority 1500 ถูกเป๊ะ (3 คลาส x 500) แต่ majority พิมพ์ 3977 ค่าที่ถูกคือ 4000 และ N พิมพ์ 5477 ค่าที่ถูกคือ 5500"
  },
  {
   "paper": "MWMOTE",
@@ -3826,7 +3831,8 @@
   "F": 5,
   "C": 2,
   "ir": null,
-  "note": "minority = Class of '1' ; majority = All other classes ; min 1520 / maj 3707 ; %min 30 ; printed ratio 0.29:0.71"
+  "note": "minority = Class of '1' ; majority = All other classes ; min 1520 / maj 3707 ; %min 30 ; printed ratio 0.29:0.71",
+  "audit": "ตรวจแล้ว 16 ต.ค.: ไม่ตรงทั้งสองฝั่ง minority 1520 (มาตรฐาน 1586) majority 3707 (มาตรฐาน 3818) N 5227 (มาตรฐาน 5404) ขาดไป 177 แถว ไม่ใช่การเลือกคลาส น่าจะคนละเวอร์ชันของข้อมูล"
  },
  {
   "paper": "MWMOTE",
@@ -3835,7 +3841,8 @@
   "F": 36,
   "C": 2,
   "ir": null,
-  "note": "minority = Class of '2', '4', '5' ; majority = All other classes ; min 2036 / maj 4399 ; %min 32 ; printed ratio 0.32:0.68"
+  "note": "minority = Class of '2', '4', '5' ; majority = All other classes ; min 2036 / maj 4399 ; %min 32 ; printed ratio 0.32:0.68",
+  "audit": "ตรวจแล้ว 16 ต.ค.: ทุกค่าถูกต้อง N 6435 = sat.trn 4435 + sat.tst 2000. แถว Statlandsat ในตารางเดียวกันคือ training split ของชุดนี้"
  },
  {
   "paper": "MWMOTE",

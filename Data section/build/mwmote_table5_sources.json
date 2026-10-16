@@ -1,0 +1,23 @@
+{
+ "Statlandsat": {"src":"Statlog Landsat, sat.trn (training split)","N":4435,
+   "classes":{"1":1072,"2":479,"3":961,"4":415,"5":470,"7":1038},
+   "minority_classes":["4"],"feat":36},
+ "Satimage": {"src":"Statlog Landsat, full (sat.trn + sat.tst)","N":6435,
+   "classes":{"1":1533,"2":703,"3":1358,"4":626,"5":707,"7":1508},
+   "minority_classes":["2","4","5"],"feat":36},
+ "OCR": {"src":"optdigits.tra (training split)","N":3823,
+   "classes":{"0":376,"1":389,"2":380,"3":389,"4":387,"5":376,"6":377,"7":387,"8":380,"9":382},
+   "minority_classes":["0"],"feat":64},
+ "Pageblocks": {"src":"Page Blocks Classification","N":5473,
+   "classes":{"text":4913,"horiz.line":329,"graphic":28,"vert.line":88,"picture":115},
+   "minority_classes":["graphic","vert.line","picture"],"feat":10},
+ "Texture": {"src":"Texture (11 classes x 500)","N":5500,
+   "classes":{"c1":500,"c2":500,"c3":500,"c4":500,"c5":500,"c6":500,"c7":500,"c8":500,"c9":500,"c10":500,"c11":500},
+   "minority_classes":["c2","c3","c4"],"feat":40},
+ "Phoneme": {"src":"Phoneme (ELENA)","N":5404,
+   "classes":{"0":3818,"1":1586},
+   "minority_classes":["1"],"feat":5},
+ "Vehicle": {"src":"Statlog Vehicle Silhouettes","N":846,
+   "classes":{"1":212,"2":217,"3":218,"4":199},
+   "minority_classes":["1"],"feat":18}
+}
