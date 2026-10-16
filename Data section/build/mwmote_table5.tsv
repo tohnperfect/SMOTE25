@@ -1,0 +1,20 @@
+Pageblocks	Class of 'Graphic', 'Vert.line', 'Picture'	All other classes	10	5476	231	5245	4	0.04:0.96
+Abalone	Class of '18'	Class of '9'	7	731	42	689	6	0.06:0.94
+CTG	Class of '3', '4'	All other classes	21	2126	134	1992	6.30	0.06:0.94
+OCR	Class of '0'	All other classes	64	3826	376	3447	9	0.09:0.91
+Statlandsat	Class of '4'	All other classes	37	4435	415	4435	9.36	0.09:0.91
+Semeion	Class of '4'	All other classes	265	1593	161	1432	10.11	0.11:0.89
+Segment	Class of 'Grass'	All other classes	19	2310	330	1980	14	0.14:0.86
+Libra	Class of '1', '2', '3'	All other classes	90	360	72	288	20	0.20:0.80
+Yeast	Class of ME3', 'ME2', 'EXC', 'VAC', 'POX', 'ERL'	All other classes	8	1484	304	1180	21	0.20:0.80
+Robot	Class of 'slight-left-turn', 'slight-right-turn'	All other classes	24	5456	1154	4302	22	0.21:0.79
+Ecoli	Class of 'im'	All other classes	7	336	77	259	23	0.23:0.77
+Glass	Class of '5', '6', '7'	All other classes	9	214	51	163	24	0.24:0.76
+Vehicle	Class of '1'	All other classes	18	940	219	721	24	0.23:0.77
+Wine	Class of '3'	All other classes	13	178	48	130	27	0.27:0.73
+Texture	Class of '2', '3', '4'	All other classes	40	5477	1500	3977	28	0.27:0.73
+Phoneme	Class of '1'	All other classes	5	5227	1520	3707	30	0.29:0.71
+Satimage	Class of '2', '4', '5'	All other classes	36	6435	2036	4399	32	0.32:0.68
+Breast-tissue	Class of 'CAR', 'FAD'	All other classes	9	106	36	70	34	0.34:0.66
+Breast-cancer-original	Class of 'Malignant'	Class of 'Benign'	9	683	239	444	35	0.35:0.65
+Pima	Class of '1'	Class of '0'	8	768	268	500	35	0.35:0.65

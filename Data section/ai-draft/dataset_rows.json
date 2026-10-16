@@ -1,1 +1,3867 @@
-[{"paper": "MC-RBO", "raw": "Automobile", "key": "automobile", "N": 159, "F": 25, "C": 6, "dist": [48, 46, 29, 20, 13, 3], "dist_printed": [3, 20, 48, 46, 29, 13], "ir": 16.0, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "instance count corrected from 150 to 159: the paper prints 150 but its own class distribution sums to 159, and MC-NCLWO reports 159"}, {"paper": "MC-CCR", "raw": "Automobile", "key": "automobile", "N": 159, "F": 25, "C": 6, "dist": [48, 46, 29, 20, 13, 3], "dist_printed": [3, 20, 48, 46, 29, 13], "ir": 16.0, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO: instance count corrected from 150 to 159: the paper prints 150 but its own class distribution sums to 159, and MC-NCLWO reports 159"}, {"paper": "MC-RBO", "raw": "Balance", "key": "balance", "N": 625, "F": 4, "C": 3, "dist": [288, 288, 49], "dist_printed": [288, 49, 288], "ir": 5.88, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-CCR", "raw": "Balance", "key": "balance", "N": 625, "F": 4, "C": 3, "dist": [288, 288, 49], "dist_printed": [288, 49, 288], "ir": 5.88, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO"}, {"paper": "MC-RBO", "raw": "Car", "key": "car", "N": 1728, "F": 6, "C": 4, "dist": [1210, 384, 69, 65], "dist_printed": [65, 69, 384, 1210], "ir": 18.61, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-CCR", "raw": "Car", "key": "car", "N": 1728, "F": 6, "C": 4, "dist": [1210, 384, 69, 65], "dist_printed": [65, 69, 384, 1210], "ir": 18.61, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO"}, {"paper": "MC-RBO", "raw": "Cleveland", "key": "cleveland", "N": 297, "F": 13, "C": 5, "dist": [164, 55, 36, 35, 13], "dist_printed": [164, 55, 36, 35, 13], "ir": 12.62, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "class distribution sums to 303 against the stated 297; the same 303-sum distribution appears in SOUP"}, {"paper": "MC-CCR", "raw": "Cleveland", "key": "cleveland", "N": 297, "F": 13, "C": 5, "dist": [164, 55, 36, 35, 13], "dist_printed": [164, 55, 36, 35, 13], "ir": 12.62, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO: class distribution sums to 303 against the stated 297; the same 303-sum distribution appears in SOUP"}, {"paper": "MC-RBO", "raw": "Contraceptive", "key": "contraceptive", "N": 1473, "F": 9, "C": 3, "dist": [629, 511, 333], "dist_printed": [629, 333, 511], "ir": 1.89, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-CCR", "raw": "Contraceptive", "key": "contraceptive", "N": 1473, "F": 9, "C": 3, "dist": [629, 511, 333], "dist_printed": [629, 333, 511], "ir": 1.89, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO"}, {"paper": "MC-RBO", "raw": "Dermatology", "key": "dermatology", "N": 358, "F": 33, "C": 6, "dist": [111, 71, 60, 48, 48, 20], "dist_printed": [111, 60, 71, 48, 48, 20], "ir": 5.55, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "358 is the KEEL version. The UCI original (doi:10.24432/C5FK5P) has 366 instances and 34 features; the 8 missing instances are the records whose age attribute is missing, and the feature count of 33 corresponds to dropping that attribute. Both variants are kept"}, {"paper": "MC-CCR", "raw": "Dermatology", "key": "dermatology", "N": 358, "F": 33, "C": 6, "dist": [111, 71, 60, 48, 48, 20], "dist_printed": [111, 60, 71, 48, 48, 20], "ir": 5.55, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO: 358 is the KEEL version. The UCI original (doi:10.24432/C5FK5P) has 366 instances and 34 features; the 8 missing instances are the records whose age attribute is missing, and the feature count of 33 corresponds to dropping that attribute. Both variants are kept"}, {"paper": "MC-RBO", "raw": "Ecoli", "key": "ecoli", "N": 336, "F": 7, "C": 8, "dist": [143, 77, 52, 35, 20, 5, 2, 2], "dist_printed": [143, 77, 2, 2, 35, 20, 5, 52], "ir": 71.5, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "distribution corrected: the paper prints 143/77/2/235/20/5/52, where 235 is a run-together of 2 and 35; the corrected reading sums to 336 and gives the stated IR of 71.50"}, {"paper": "MC-CCR", "raw": "Ecoli", "key": "ecoli", "N": 336, "F": 7, "C": 8, "dist": [143, 77, 52, 35, 20, 5, 2, 2], "dist_printed": [143, 77, 2, 2, 35, 20, 5, 52], "ir": 71.5, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO: distribution corrected: the paper prints 143/77/2/235/20/5/52, where 235 is a run-together of 2 and 35; the corrected reading sums to 336 and gives the stated IR of 71.50"}, {"paper": "MC-RBO", "raw": "Flare", "key": "flare", "N": 1066, "F": 11, "C": 6, "dist": [331, 239, 211, 147, 95, 43], "dist_printed": [331, 239, 211, 147, 95, 43], "ir": 7.7, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "1066 instances is solar flare 1; SOUP uses solar flare 2 with 1389"}, {"paper": "MC-CCR", "raw": "Flare", "key": "flare", "N": 1066, "F": 11, "C": 6, "dist": [331, 239, 211, 147, 95, 43], "dist_printed": [331, 239, 211, 147, 95, 43], "ir": 7.7, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO: 1066 instances is solar flare 1; SOUP uses solar flare 2 with 1389"}, {"paper": "MC-RBO", "raw": "Glass", "key": "glass", "N": 214, "F": 9, "C": 6, "dist": [76, 70, 29, 17, 13, 9], "dist_printed": [70, 76, 17, 13, 9, 29], "ir": 8.44, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-CCR", "raw": "Glass", "key": "glass", "N": 214, "F": 9, "C": 6, "dist": [76, 70, 29, 17, 13, 9], "dist_printed": [70, 76, 17, 13, 9, 29], "ir": 8.44, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO"}, {"paper": "MC-RBO", "raw": "Hayes-Roth", "key": "hayes-roth", "N": 160, "F": 4, "C": 3, "dist": [65, 64, 31], "dist_printed": [65, 64, 31], "ir": 2.1, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "the distribution column prints four values (160/65/64/31); the leading 160 repeats the instance count"}, {"paper": "MC-CCR", "raw": "Hayes-Roth", "key": "hayes-roth", "N": 160, "F": 4, "C": 3, "dist": [65, 64, 31], "dist_printed": [65, 64, 31], "ir": 2.1, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO: the distribution column prints four values (160/65/64/31); the leading 160 repeats the instance count"}, {"paper": "MC-RBO", "raw": "Led7digit", "key": "led7digit", "N": 500, "F": 7, "C": 10, "dist": [57, 57, 53, 52, 52, 51, 49, 47, 45, 37], "dist_printed": [45, 37, 51, 57, 52, 52, 47, 57, 53, 49], "ir": 1.54, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-CCR", "raw": "Led7digit", "key": "led7digit", "N": 500, "F": 7, "C": 10, "dist": [57, 57, 53, 52, 52, 51, 49, 47, 45, 37], "dist_printed": [45, 37, 51, 57, 52, 52, 47, 57, 53, 49], "ir": 1.54, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO"}, {"paper": "MC-RBO", "raw": "Lymphography", "key": "lymphography", "N": 148, "F": 18, "C": 4, "dist": [81, 61, 4, 2], "dist_printed": [2, 81, 61, 4], "ir": 40.5, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-CCR", "raw": "Lymphography", "key": "lymphography", "N": 148, "F": 18, "C": 4, "dist": [81, 61, 4, 2], "dist_printed": [2, 81, 61, 4], "ir": 40.5, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO"}, {"paper": "MC-RBO", "raw": "New-thyroid", "key": "new-thyroid", "N": 215, "F": 5, "C": 3, "dist": [150, 35, 30], "dist_printed": [150, 35, 30], "ir": 5.0, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-CCR", "raw": "New-thyroid", "key": "new-thyroid", "N": 215, "F": 5, "C": 3, "dist": [150, 35, 30], "dist_printed": [150, 35, 30], "ir": 5.0, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO"}, {"paper": "MC-RBO", "raw": "Page-blocks", "key": "page-blocks", "N": 5473, "F": 10, "C": 5, "dist": [4913, 329, 115, 88, 28], "dist_printed": [4913, 329, 115, 88, 28], "ir": 175.46, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "instance count corrected from 5472 to 5473 against the UCI record (doi:10.24432/C5J590). The printed distribution 4913/329/28/87/115 sums to 5472; MC-NCLWO prints 88 where MC-RBO prints 87, and 4913/329/115/88/28 sums to 5473 exactly, so the single-digit difference is the source of the missing instance"}, {"paper": "MC-CCR", "raw": "Page-blocks", "key": "page-blocks", "N": 5473, "F": 10, "C": 5, "dist": [4913, 329, 115, 88, 28], "dist_printed": [4913, 329, 115, 88, 28], "ir": 175.46, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO: instance count corrected from 5472 to 5473 against the UCI record (doi:10.24432/C5J590). The printed distribution 4913/329/28/87/115 sums to 5472; MC-NCLWO prints 88 where MC-RBO prints 87, and 4913/329/115/88/28 sums to 5473 exactly, so the single-digit difference is the source of the missing instance"}, {"paper": "MC-RBO", "raw": "Thyroid", "key": "thyroid", "N": 7200, "F": 21, "C": 3, "dist": [6666, 368, 166], "dist_printed": [166, 368, 6666], "ir": 40.16, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "this is the 7200-instance thyroid; MC-NCLWO and CBHSID use a 720-instance dataset under the same name"}, {"paper": "MC-CCR", "raw": "Thyroid", "key": "thyroid", "N": 7200, "F": 21, "C": 3, "dist": [6666, 368, 166], "dist_printed": [166, 368, 6666], "ir": 40.16, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO: this is the 7200-instance thyroid; MC-NCLWO and CBHSID use a 720-instance dataset under the same name"}, {"paper": "MC-RBO", "raw": "Vehicle", "key": "vehicle", "N": 846, "F": 18, "C": 4, "dist": [218, 217, 212, 199], "dist_printed": [199, 212, 217, 218], "ir": 1.17, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "the printed IR of 1.17 cannot be derived from this distribution by any standard formula; max over min gives 1.10"}, {"paper": "MC-CCR", "raw": "Vehicle", "key": "vehicle", "N": 846, "F": 18, "C": 4, "dist": [218, 217, 212, 199], "dist_printed": [199, 212, 217, 218], "ir": 1.17, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO: the printed IR of 1.17 cannot be derived from this distribution by any standard formula; max over min gives 1.10"}, {"paper": "MC-RBO", "raw": "Wine", "key": "wine", "N": 178, "F": 13, "C": 3, "dist": [71, 59, 48], "dist_printed": [59, 71, 48], "ir": 1.48, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-CCR", "raw": "Wine", "key": "wine", "N": 178, "F": 13, "C": 3, "dist": [71, 59, 48], "dist_printed": [59, 71, 48], "ir": 1.48, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO"}, {"paper": "MC-RBO", "raw": "Winequality-red", "key": "winequality-red", "N": 1599, "F": 11, "C": 6, "dist": [681, 638, 199, 53, 18, 10], "dist_printed": [10, 53, 681, 638, 199, 18], "ir": 68.1, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-CCR", "raw": "Winequality-red", "key": "winequality-red", "N": 1599, "F": 11, "C": 6, "dist": [681, 638, 199, 53, 18, 10], "dist_printed": [10, 53, 681, 638, 199, 18], "ir": 68.1, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO"}, {"paper": "MC-RBO", "raw": "Yeast", "key": "yeast", "N": 1484, "F": 8, "C": 10, "dist": [463, 429, 244, 163, 51, 44, 35, 30, 20, 5], "dist_printed": [244, 429, 463, 44, 51, 163, 35, 30, 20, 5], "ir": 92.6, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-CCR", "raw": "Yeast", "key": "yeast", "N": 1484, "F": 8, "C": 10, "dist": [463, 429, 244, 163, 51, 44, 35, 30, 20, 5], "dist_printed": [244, 429, 463, 44, 51, 163, 35, 30, 20, 5], "ir": 92.6, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO"}, {"paper": "MC-RBO", "raw": "Zoo", "key": "zoo", "N": 101, "F": 16, "C": 7, "dist": [41, 20, 13, 10, 8, 5, 4], "dist_printed": [41, 13, 10, 20, 8, 5, 4], "ir": 10.25, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-CCR", "raw": "Zoo", "key": "zoo", "N": 101, "F": 16, "C": 7, "dist": [41, 20, 13, 10, 8, 5, 4], "dist_printed": [41, 13, 10, 20, 8, 5, 4], "ir": 10.25, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO"}, {"paper": "MC-NCLWO", "raw": "vehicle", "key": "vehicle", "N": 846, "F": 18, "C": 4, "dist": [218, 217, 212, 199], "dist_printed": [218, 217, 212, 199], "ir": 1.1, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "reports 1.1, which is max over min; MC-CCR and MC-RBO print 1.17 for the same counts"}, {"paper": "MC-NCLWO", "raw": "penbased", "key": "penbased", "N": 1100, "F": 16, "C": 10, "dist": [115, 115, 114, 114, 114, 106, 106, 106, 105, 105], "dist_printed": [115, 115, 114, 114, 114, 106, 106, 106, 105, 105], "ir": 1.1, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "a 1100-instance subsample; the full UCI pendigits has 10992"}, {"paper": "MC-NCLWO", "raw": "wine", "key": "wine", "N": 178, "F": 13, "C": 3, "dist": [71, 59, 48], "dist_printed": [71, 59, 48], "ir": 1.48, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-NCLWO", "raw": "led7digit", "key": "led7digit", "N": 500, "F": 7, "C": 10, "dist": [57, 57, 53, 52, 52, 51, 49, 47, 45, 37], "dist_printed": [57, 57, 53, 52, 52, 51, 49, 47, 45, 37], "ir": 1.54, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-NCLWO", "raw": "contraceptive", "key": "contraceptive", "N": 1473, "F": 9, "C": 3, "dist": [629, 511, 333], "dist_printed": [629, 511, 333], "ir": 1.89, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-NCLWO", "raw": "hayes-roth", "key": "hayes-roth", "N": 160, "F": 4, "C": 3, "dist": [65, 64, 31], "dist_printed": [65, 64, 31], "ir": 2.1, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-NCLWO", "raw": "new-thyroid", "key": "new-thyroid", "N": 215, "F": 5, "C": 3, "dist": [150, 35, 30], "dist_printed": [150, 35, 30], "ir": 5, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-NCLWO", "raw": "dermatology", "key": "dermatology", "N": 358, "F": 34, "C": 6, "dist": [111, 71, 60, 48, 48, 20], "dist_printed": [111, 71, 60, 48, 48, 20], "ir": 5.55, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "358 instances (KEEL) but 34 features (UCI count); MC-RBO prints 33 features for the same 358 instances"}, {"paper": "MC-NCLWO", "raw": "balance", "key": "balance", "N": 625, "F": 4, "C": 3, "dist": [288, 288, 49], "dist_printed": [288, 288, 49], "ir": 5.88, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-NCLWO", "raw": "Dry-Bean", "key": "dry-bean", "N": 13611, "F": 16, "C": 7, "dist": [3546, 2636, 2027, 1928, 1630, 1322, 522], "dist_printed": [3546, 2636, 2027, 1928, 1630, 1322, 522], "ir": 6.79, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-NCLWO", "raw": "flare", "key": "flare", "N": 1066, "F": 11, "C": 6, "dist": [331, 239, 211, 147, 95, 43], "dist_printed": [331, 239, 211, 147, 95, 43], "ir": 7.7, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-NCLWO", "raw": "glass", "key": "glass", "N": 214, "F": 9, "C": 6, "dist": [76, 70, 29, 17, 13, 9], "dist_printed": [76, 70, 29, 17, 13, 9], "ir": 8.44, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-NCLWO", "raw": "zoo", "key": "zoo", "N": 101, "F": 16, "C": 7, "dist": [41, 20, 13, 10, 8, 5, 4], "dist_printed": [41, 20, 13, 10, 8, 5, 4], "ir": 10.25, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-NCLWO", "raw": "cleveland", "key": "cleveland", "N": 297, "F": 13, "C": 5, "dist": [160, 54, 35, 35, 13], "dist_printed": [160, 54, 35, 35, 13], "ir": 12.31, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "this distribution sums to 297 and is the UCI figure; MC-RBO and SOUP use a 303-sum variant"}, {"paper": "MC-NCLWO", "raw": "automobile", "key": "automobile", "N": 159, "F": 25, "C": 6, "dist": [48, 46, 29, 20, 13, 3], "dist_printed": [48, 46, 29, 20, 13, 3], "ir": 16, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-NCLWO", "raw": "car", "key": "car", "N": 1728, "F": 6, "C": 4, "dist": [1210, 384, 69, 65], "dist_printed": [1210, 384, 69, 65], "ir": 18.62, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-NCLWO", "raw": "thyroid", "key": "thyroid", "N": 720, "F": 21, "C": 3, "dist": [666, 37, 17], "dist_printed": [666, 37, 17], "ir": 39.18, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "a 720-instance thyroid; MC-RBO uses a 7200-instance dataset under the same name"}, {"paper": "MC-NCLWO", "raw": "lymphography", "key": "lymphography", "N": 148, "F": 18, "C": 4, "dist": [81, 61, 4, 2], "dist_printed": [81, 61, 4, 2], "ir": 40.5, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-NCLWO", "raw": "winequality-red", "key": "winequality-red", "N": 1599, "F": 11, "C": 6, "dist": [681, 638, 199, 53, 18, 10], "dist_printed": [681, 638, 199, 53, 18, 10], "ir": 68.1, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-NCLWO", "raw": "ecoli", "key": "ecoli", "N": 336, "F": 7, "C": 8, "dist": [143, 77, 52, 35, 20, 5, 2, 2], "dist_printed": [143, 77, 52, 35, 20, 5, 2, 2], "ir": 71.5, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-NCLWO", "raw": "yeast", "key": "yeast", "N": 1484, "F": 8, "C": 10, "dist": [463, 429, 244, 163, 51, 44, 35, 30, 20, 5], "dist_printed": [463, 429, 244, 163, 51, 44, 35, 30, 20, 5], "ir": 92.6, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-NCLWO", "raw": "page-blocks", "key": "page-blocks", "N": 5473, "F": 10, "C": 5, "dist": [4913, 329, 115, 88, 28], "dist_printed": [4913, 329, 115, 88, 28], "ir": 175.46, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": ""}, {"paper": "MC-NCLWO", "raw": "shuttle", "key": "shuttle", "N": 2175, "F": 9, "C": 5, "dist": [1706, 338, 123, 6, 2], "dist_printed": [1706, 338, 123, 6, 2], "ir": 853, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "a 2175-instance shuttle subsample; OVO-SMOTE uses the full 57999-instance shuttle at IR 4558.6"}, {"paper": "MKC-SMOTE", "raw": "Contraceptive Method Choice", "key": "contraceptive", "N": 1473, "F": 9, "C": 3, "dist": [629, 511, 333], "dist_printed": [629, 511, 333], "ir": 1.89, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "", "ir_overall": 1.65}, {"paper": "MKC-SMOTE", "raw": "User Knowledge Modeling", "key": "userknowledge", "N": 403, "F": 5, "C": 4, "dist": [129, 122, 102, 50], "dist_printed": [129, 122, 102, 50], "ir": 2.58, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "", "ir_overall": 4.58}, {"paper": "MKC-SMOTE", "raw": "New-thyroid", "key": "new-thyroid", "N": 215, "F": 5, "C": 3, "dist": [150, 35, 30], "dist_printed": [150, 35, 30], "ir": 5.0, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "", "ir_overall": 7.45}, {"paper": "MKC-SMOTE", "raw": "Connect-4", "key": "connect-4", "N": 6756, "F": 42, "C": 3, "dist": [4463, 1653, 640], "dist_printed": [4463, 1653, 640], "ir": 6.97, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "a 6756-instance subsample; the full UCI connect-4 has 67557", "ir_overall": 9.26}, {"paper": "MKC-SMOTE", "raw": "Zoo", "key": "zoo", "N": 101, "F": 16, "C": 5, "dist": [41, 20, 17, 13, 10], "dist_printed": [41, 20, 17, 13, 10], "ir": 4.1, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "5 classes, not the 7 used by MC-RBO and MC-NCLWO, so the IR of 4.10 is not comparable with their 10.25", "ir_overall": 10.74}, {"paper": "MKC-SMOTE", "raw": "Cardiotocography", "key": "cardiotocography", "N": 1728, "F": 21, "C": 3, "dist": [1655, 295, 176], "dist_printed": [1655, 295, 176], "ir": 9.4, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "", "ir_overall": 13.69}, {"paper": "MKC-SMOTE", "raw": "Ecoli", "key": "ecoli", "N": 336, "F": 7, "C": 5, "dist": [143, 77, 52, 35, 29], "dist_printed": [143, 77, 52, 35, 29], "ir": 4.93, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "5 classes, not 8; the three smallest classes are dropped, so the IR of 4.93 is not comparable with the 71.50 reported elsewhere", "ir_overall": 14.45}, {"paper": "MKC-SMOTE", "raw": "Glass Identification", "key": "glass", "N": 214, "F": 9, "C": 5, "dist": [76, 70, 29, 22, 17], "dist_printed": [76, 70, 29, 22, 17], "ir": 4.47, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "5 classes, not 6", "ir_overall": 15.66}, {"paper": "MKC-SMOTE", "raw": "Absenteeism at Work", "key": "absenteeism", "N": 740, "F": 11, "C": 7, "dist": [208, 157, 112, 88, 71, 60, 44], "dist_printed": [208, 157, 112, 88, 71, 60, 44], "ir": 4.73, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "", "ir_overall": 23.38}, {"paper": "MKC-SMOTE", "raw": "Nursery", "key": "nursery", "N": 12960, "F": 8, "C": 4, "dist": [4320, 4266, 4044, 330], "dist_printed": [4320, 4266, 4044, 330], "ir": 13.09, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "", "ir_overall": 35.41}, {"paper": "MKC-SMOTE", "raw": "Letter Recognition", "key": "letter", "N": 10723, "F": 16, "C": 10, "dist": [3822, 805, 789, 775, 773, 768, 766, 755, 736, 734], "dist_printed": [3822, 805, 789, 775, 773, 768, 766, 755, 736, 734], "ir": 5.21, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "10 of the 26 letter classes, and 10723 of 20000 instances", "ir_overall": 37.21}, {"paper": "MKC-SMOTE", "raw": "Car Evaluation", "key": "car", "N": 1728, "F": 6, "C": 4, "dist": [1210, 384, 69, 65], "dist_printed": [1210, 384, 69, 65], "ir": 18.91, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "the printed IR of 18.91 is not derivable from this distribution; max over min gives 18.62, and 1210/64 gives 18.91, so the smallest class was probably keyed as 64", "ir_overall": 45.84}, {"paper": "MKC-SMOTE", "raw": "Wine Quality-White", "key": "winequality-white", "N": 4895, "F": 11, "C": 5, "dist": [2198, 1457, 880, 188, 175], "dist_printed": [2198, 1457, 880, 188, 175], "ir": 12.56, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "5 classes of the 7 in UCI, and 4895 of 4898 instances", "ir_overall": 46.77}, {"paper": "MKC-SMOTE", "raw": "Poker Hand", "key": "poker hand", "N": 24811, "F": 10, "C": 4, "dist": [12493, 10599, 1206, 513], "dist_printed": [12493, 10599, 1206, 513], "ir": 24.35, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "", "ir_overall": 61.69}, {"paper": "MKC-SMOTE", "raw": "HCV", "key": "hcv", "N": 589, "F": 12, "C": 4, "dist": [526, 24, 20, 19], "dist_printed": [526, 24, 20, 19], "ir": 27.68, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "", "ir_overall": 73.42}, {"paper": "MKC-SMOTE", "raw": "Yeast", "key": "yeast", "N": 1484, "F": 8, "C": 8, "dist": [463, 429, 244, 163, 55, 51, 44, 35], "dist_printed": [463, 429, 244, 163, 55, 51, 44, 35], "ir": 13.23, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "8 classes, not 10; the IR of 13.23 is not comparable with the 92.60 reported elsewhere", "ir_overall": 107.2}, {"paper": "MKC-SMOTE", "raw": "Covertype", "key": "covertype", "N": 5781, "F": 54, "C": 6, "dist": [2801, 2132, 361, 195, 186, 106], "dist_printed": [2801, 2132, 361, 195, 186, 106], "ir": 26.42, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "a 5781-instance subsample of a 581012-instance source", "ir_overall": 110.18}, {"paper": "MKC-SMOTE", "raw": "Chess (King-Rook vs King)", "key": "chess-krk", "N": 2376, "F": 6, "C": 8, "dist": [683, 592, 471, 246, 198, 81, 78, 27], "dist_printed": [683, 592, 471, 246, 198, 81, 78, 27], "ir": 25.3, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "", "ir_overall": 136.17}, {"paper": "MKC-SMOTE", "raw": "Abalone", "key": "abalone", "N": 3966, "F": 8, "C": 13, "dist": [689, 634, 568, 487, 391, 267, 259, 203, 126, 115, 103, 67, 57], "dist_printed": [689, 634, 568, 487, 391, 267, 259, 203, 126, 115, 103, 67, 57], "ir": 12.09, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "13 classes, the highest class count of any multi-class paper here", "ir_overall": 195.2}, {"paper": "MKC-SMOTE", "raw": "Bar Crawl", "key": "bar crawl", "N": 10486, "F": 4, "C": 12, "dist": [2539, 2029, 1277, 1212, 1017, 861, 468, 285, 268, 220, 162, 148], "dist_printed": [2539, 2029, 1277, 1212, 1017, 861, 468, 285, 268, 220, 162, 148], "ir": 17.16, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "", "ir_overall": 226.12}, {"paper": "MKC-SMOTE", "raw": "Avila", "key": "avila", "N": 10430, "F": 10, "C": 11, "dist": [4286, 1961, 1095, 831, 522, 519, 446, 352, 266, 103, 49], "dist_printed": [4286, 1961, 1095, 831, 522, 519, 446, 352, 266, 103, 49], "ir": 87.47, "irdef": "max over min (as reported)", "kind": "multi-class", "extra": "", "ir_overall": 391.52}, {"paper": "SOUP", "raw": "balance-scale", "key": "balance", "N": 625, "F": null, "C": 3, "dist": [288, 288, 49], "dist_printed": [288, 288, 49], "ir": 5.88, "irdef": "derived by us as max over min; SOUP reports no IR column", "kind": "multi-class", "extra": "", "minority": ["B"]}, {"paper": "SOUP", "raw": "car", "key": "car", "N": 1728, "F": null, "C": 4, "dist": [1210, 384, 69, 65], "dist_printed": [1210, 384, 69, 65], "ir": 18.62, "irdef": "derived by us as max over min; SOUP reports no IR column", "kind": "multi-class", "extra": "", "minority": ["good", "vgood"]}, {"paper": "SOUP", "raw": "cleveland 1", "key": "cleveland", "N": 303, "F": null, "C": 5, "dist": [164, 55, 36, 35, 13], "dist_printed": [164, 55, 36, 35, 13], "ir": 12.62, "irdef": "derived by us as max over min; SOUP reports no IR column", "kind": "multi-class", "extra": "four minority classes; counts sum to 303 against the UCI 297", "minority": ["1", "2", "3", "4"]}, {"paper": "SOUP", "raw": "cleveland 2", "key": "cleveland", "N": 303, "F": null, "C": 4, "dist": [219, 36, 35, 13], "dist_printed": [219, 36, 35, 13], "ir": 16.85, "irdef": "derived by us as max over min; SOUP reports no IR column", "kind": "multi-class", "extra": "a second variant of the same source with classes 0 and 1 merged", "minority": ["2", "3", "4"]}, {"paper": "SOUP", "raw": "cmc", "key": "contraceptive", "N": 1473, "F": null, "C": 3, "dist": [629, 511, 333], "dist_printed": [629, 511, 333], "ir": 1.89, "irdef": "derived by us as max over min; SOUP reports no IR column", "kind": "multi-class", "extra": "", "minority": ["2"]}, {"paper": "SOUP", "raw": "dermatology", "key": "dermatology", "N": 366, "F": null, "C": 6, "dist": [112, 72, 61, 52, 49, 20], "dist_printed": [112, 72, 61, 52, 49, 20], "ir": 5.6, "irdef": "derived by us as max over min; SOUP reports no IR column", "kind": "multi-class", "extra": "counts sum to 366, the UCI original (doi:10.24432/C5FK5P); MC-RBO and MC-NCLWO use the 358-instance KEEL version", "minority": ["6"]}, {"paper": "SOUP", "raw": "ecoli", "key": "ecoli", "N": 336, "F": null, "C": 5, "dist": [145, 77, 52, 37, 25], "dist_printed": [145, 77, 52, 37, 25], "ir": 5.8, "irdef": "derived by us as max over min; SOUP reports no IR column", "kind": "multi-class", "extra": "classes aggregated to 5 from the UCI 8", "minority": ["pp", "imU+imS", "om+omL"]}, {"paper": "SOUP", "raw": "flare", "key": "flare", "N": 1389, "F": null, "C": 6, "dist": [396, 327, 287, 212, 116, 51], "dist_printed": [396, 327, 287, 212, 116, 51], "ir": 7.76, "irdef": "derived by us as max over min; SOUP reports no IR column", "kind": "multi-class", "extra": "1389 instances, that is solar flare 2; MC-RBO and MC-NCLWO use solar flare 1 with 1066", "minority": ["4", "5"]}, {"paper": "SOUP", "raw": "glass", "key": "glass", "N": 214, "F": null, "C": 6, "dist": [76, 70, 29, 17, 13, 9], "dist_printed": [76, 70, 29, 17, 13, 9], "ir": 8.44, "irdef": "derived by us as max over min; SOUP reports no IR column", "kind": "multi-class", "extra": "", "minority": ["vwf", "con", "tab"]}, {"paper": "SOUP", "raw": "hayes roth", "key": "hayes-roth", "N": 160, "F": null, "C": 3, "dist": [65, 64, 31], "dist_printed": [65, 64, 31], "ir": 2.1, "irdef": "derived by us as max over min; SOUP reports no IR column", "kind": "multi-class", "extra": "", "minority": ["3"]}, {"paper": "SOUP", "raw": "led7digit", "key": "led7digit", "N": 500, "F": null, "C": 6, "dist": [108, 99, 98, 94, 52, 49], "dist_printed": [108, 99, 98, 94, 52, 49], "ir": 2.2, "irdef": "derived by us as max over min; SOUP reports no IR column", "kind": "multi-class", "extra": "classes aggregated to 6 from 10", "minority": ["5", "10"]}, {"paper": "SOUP", "raw": "new thyroid", "key": "new-thyroid", "N": 215, "F": null, "C": 3, "dist": [150, 35, 30], "dist_printed": [150, 35, 30], "ir": 5.0, "irdef": "derived by us as max over min; SOUP reports no IR column", "kind": "multi-class", "extra": "", "minority": ["2", "3"]}, {"paper": "SOUP", "raw": "vehicle", "key": "vehicle", "N": 846, "F": null, "C": 3, "dist": [429, 218, 199], "dist_printed": [429, 218, 199], "ir": 2.16, "irdef": "derived by us as max over min; SOUP reports no IR column", "kind": "multi-class", "extra": "opel and saab merged into one majority class, so 3 classes rather than 4", "minority": ["bus", "van"]}, {"paper": "SOUP", "raw": "yeast", "key": "yeast", "N": 1484, "F": null, "C": 9, "dist": [463, 429, 244, 168, 51, 44, 35, 30, 20], "dist_printed": [463, 429, 244, 168, 51, 44, 35, 30, 20], "ir": 23.15, "irdef": "derived by us as max over min; SOUP reports no IR column", "kind": "multi-class", "extra": "five minority classes, the most of any dataset in the corpus", "minority": ["2", "3", "5", "6", "7"]}, {"paper": "SOUP", "raw": "wine quality red", "key": "winequality-red", "N": 1599, "F": null, "C": 4, "dist": [681, 638, 199, 81], "dist_printed": [681, 638, 199, 81], "ir": 8.41, "irdef": "derived by us as max over min; SOUP reports no IR column", "kind": "multi-class", "extra": "classes aggregated to 4 from 6", "minority": ["7", "8"]}, {"paper": "SOUP", "raw": "art1", "key": "art1", "N": 1200, "F": null, "C": 3, "dist": [840, 240, 120], "dist_printed": [840, 240, 120], "ir": 7.0, "irdef": "derived by us as max over min; SOUP reports no IR column", "kind": "multi-class", "extra": "synthetic; art1 to art4 share this profile and differ only in difficulty", "minority": ["MIN1", "MIN2"]}, {"paper": "SOUP", "raw": "art2", "key": "art2", "N": 1200, "F": null, "C": 3, "dist": [840, 240, 120], "dist_printed": [840, 240, 120], "ir": 7.0, "irdef": "derived by us as max over min; SOUP reports no IR column", "kind": "multi-class", "extra": "", "minority": ["MIN1", "MIN2"]}, {"paper": "SOUP", "raw": "art3", "key": "art3", "N": 1200, "F": null, "C": 3, "dist": [840, 240, 120], "dist_printed": [840, 240, 120], "ir": 7.0, "irdef": "derived by us as max over min; SOUP reports no IR column", "kind": "multi-class", "extra": "", "minority": ["MIN1", "MIN2"]}, {"paper": "SOUP", "raw": "art4", "key": "art4", "N": 1200, "F": null, "C": 3, "dist": [840, 240, 120], "dist_printed": [840, 240, 120], "ir": 7.0, "irdef": "derived by us as max over min; SOUP reports no IR column", "kind": "multi-class", "extra": "", "minority": ["MIN1", "MIN2"]}, {"paper": "CBHSID", "raw": "Liver", "key": "liver", "N": null, "F": 6, "C": 2, "dist": null, "dist_printed": null, "ir": 1.38, "irdef": "not stated", "kind": "binary (KEEL two-class task)", "extra": ""}, {"paper": "CBHSID", "raw": "Pima", "key": "pima", "N": null, "F": 8, "C": 2, "dist": null, "dist_printed": null, "ir": 1.87, "irdef": "not stated", "kind": "binary (KEEL two-class task)", "extra": ""}, {"paper": "CBHSID", "raw": "Cancer", "key": "cancer", "N": null, "F": 10, "C": 2, "dist": null, "dist_printed": null, "ir": 1.89, "irdef": "not stated", "kind": "binary (KEEL two-class task)", "extra": ""}, {"paper": "CBHSID", "raw": "Heart failure", "key": "heart failure", "N": null, "F": 12, "C": 2, "dist": null, "dist_printed": null, "ir": 2.13, "irdef": "not stated", "kind": "binary (KEEL two-class task)", "extra": ""}, {"paper": "CBHSID", "raw": "Yeast1", "key": "yeast1", "N": null, "F": 8, "C": 2, "dist": null, "dist_printed": null, "ir": 2.46, "irdef": "not stated", "kind": "binary (KEEL two-class task)", "extra": ""}, {"paper": "CBHSID", "raw": "Haberman", "key": "haberman", "N": null, "F": 3, "C": 2, "dist": null, "dist_printed": null, "ir": 2.78, "irdef": "not stated", "kind": "binary (KEEL two-class task)", "extra": ""}, {"paper": "CBHSID", "raw": "Vehicle1", "key": "vehicle1", "N": null, "F": 18, "C": 2, "dist": null, "dist_printed": null, "ir": 2.9, "irdef": "not stated", "kind": "binary (KEEL two-class task)", "extra": ""}, {"paper": "CBHSID", "raw": "Glass6", "key": "glass6", "N": null, "F": 9, "C": 2, "dist": null, "dist_printed": null, "ir": 6.38, "irdef": "not stated", "kind": "binary (KEEL two-class task)", "extra": ""}, {"paper": "CBHSID", "raw": "Yeast3", "key": "yeast3", "N": null, "F": 8, "C": 2, "dist": null, "dist_printed": null, "ir": 8.1, "irdef": "not stated", "kind": "binary (KEEL two-class task)", "extra": ""}, {"paper": "CBHSID", "raw": "Yeast4", "key": "yeast4", "N": null, "F": 8, "C": 2, "dist": null, "dist_printed": null, "ir": 28.1, "irdef": "not stated", "kind": "binary (KEEL two-class task)", "extra": ""}, {"paper": "CBHSID", "raw": "Yeast5", "key": "yeast5", "N": null, "F": 8, "C": 2, "dist": null, "dist_printed": null, "ir": 32.73, "irdef": "not stated", "kind": "binary (KEEL two-class task)", "extra": ""}, {"paper": "CBHSID", "raw": "Yeast6", "key": "yeast6", "N": null, "F": 8, "C": 2, "dist": null, "dist_printed": null, "ir": 41.4, "irdef": "not stated", "kind": "binary (KEEL two-class task)", "extra": ""}, {"paper": "CBHSID", "raw": "Penbased", "key": "penbased", "N": null, "F": 16, "C": 10, "dist": null, "dist_printed": null, "ir": 1.95, "irdef": "not stated", "kind": "multi-class", "extra": ""}, {"paper": "CBHSID", "raw": "Contraceptive", "key": "contraceptive", "N": null, "F": 9, "C": 3, "dist": null, "dist_printed": null, "ir": 5.6, "irdef": "not stated", "kind": "multi-class", "extra": "IR 5.6 where every other paper reports 1.89 for the same dataset; the definition used is not stated"}, {"paper": "CBHSID", "raw": "Dermatology", "key": "dermatology", "N": null, "F": 34, "C": 6, "dist": null, "dist_printed": null, "ir": 36.94, "irdef": "not stated", "kind": "multi-class", "extra": "IR 36.94 where every other paper reports 5.55; the definition used is not stated"}, {"paper": "CBHSID", "raw": "Thyroid", "key": "thyroid", "N": null, "F": 21, "C": 3, "dist": null, "dist_printed": null, "ir": 39.17, "irdef": "not stated", "kind": "multi-class", "extra": "IR 39.17 matches the 720-instance thyroid used by MC-NCLWO, not the 7200-instance one"}, {"paper": "EasyEnsemble / BalanceCascade", "raw": "abalone", "key": "abalone", "N": 4177, "F": 8, "C": 2, "dist": [3786, 391], "dist_printed": [3786, 391], "ir": 9.7, "irdef": "majority over minority after binarisation", "kind": "binary (one-vs-rest)", "extra": "binarisation target published: Ring=7"}, {"paper": "EasyEnsemble / BalanceCascade", "raw": "balance", "key": "balance", "N": 625, "F": 4, "C": 2, "dist": [576, 49], "dist_printed": [576, 49], "ir": 11.8, "irdef": "majority over minority after binarisation", "kind": "binary (one-vs-rest)", "extra": "binarisation target published: Balance"}, {"paper": "EasyEnsemble / BalanceCascade", "raw": "car", "key": "car", "N": 1728, "F": 6, "C": 2, "dist": [1344, 384], "dist_printed": [1344, 384], "ir": 3.5, "irdef": "majority over minority after binarisation", "kind": "binary (one-vs-rest)", "extra": "binarisation target published: acc"}, {"paper": "EasyEnsemble / BalanceCascade", "raw": "cmc", "key": "contraceptive", "N": 1473, "F": 9, "C": 2, "dist": [1140, 333], "dist_printed": [1140, 333], "ir": 3.4, "irdef": "majority over minority after binarisation", "kind": "binary (one-vs-rest)", "extra": "binarisation target published: class 2"}, {"paper": "EasyEnsemble / BalanceCascade", "raw": "haberman", "key": "haberman", "N": 306, "F": 3, "C": 2, "dist": [225, 81], "dist_printed": [225, 81], "ir": 2.8, "irdef": "majority over minority after binarisation", "kind": "binary (one-vs-rest)", "extra": "binarisation target published: class 2"}, {"paper": "EasyEnsemble / BalanceCascade", "raw": "housing", "key": "housing", "N": 506, "F": 13, "C": 2, "dist": [400, 106], "dist_printed": [400, 106], "ir": 3.8, "irdef": "majority over minority after binarisation", "kind": "binary (one-vs-rest)", "extra": "binarisation target published: target in [20,23]"}, {"paper": "EasyEnsemble / BalanceCascade", "raw": "ionosphere", "key": "ionosphere", "N": 351, "F": 33, "C": 2, "dist": [225, 126], "dist_printed": [225, 126], "ir": 1.8, "irdef": "majority over minority after binarisation", "kind": "binary (one-vs-rest)", "extra": "binarisation target published: bad"}, {"paper": "EasyEnsemble / BalanceCascade", "raw": "letter", "key": "letter", "N": 20000, "F": 16, "C": 2, "dist": [19211, 789], "dist_printed": [19211, 789], "ir": 24.3, "irdef": "majority over minority after binarisation", "kind": "binary (one-vs-rest)", "extra": "binarisation target published: A"}, {"paper": "EasyEnsemble / BalanceCascade", "raw": "mf-morph", "key": "mf-morph", "N": 2000, "F": 6, "C": 2, "dist": [1800, 200], "dist_printed": [1800, 200], "ir": 9.0, "irdef": "majority over minority after binarisation", "kind": "binary (one-vs-rest)", "extra": "binarisation target published: class 10"}, {"paper": "EasyEnsemble / BalanceCascade", "raw": "mf-zernike", "key": "mf-zernike", "N": 2000, "F": 47, "C": 2, "dist": [1800, 200], "dist_printed": [1800, 200], "ir": 9.0, "irdef": "majority over minority after binarisation", "kind": "binary (one-vs-rest)", "extra": "binarisation target published: class 10"}, {"paper": "EasyEnsemble / BalanceCascade", "raw": "phoneme", "key": "phoneme", "N": 5404, "F": 5, "C": 2, "dist": [3818, 1586], "dist_printed": [3818, 1586], "ir": 2.4, "irdef": "majority over minority after binarisation", "kind": "binary (one-vs-rest)", "extra": "binarisation target published: class 1"}, {"paper": "EasyEnsemble / BalanceCascade", "raw": "pima", "key": "pima", "N": 768, "F": 8, "C": 2, "dist": [500, 268], "dist_printed": [500, 268], "ir": 1.9, "irdef": "majority over minority after binarisation", "kind": "binary (one-vs-rest)", "extra": "binarisation target published: class 1"}, {"paper": "EasyEnsemble / BalanceCascade", "raw": "satimage", "key": "satimage", "N": 6435, "F": 36, "C": 2, "dist": [5809, 626], "dist_printed": [5809, 626], "ir": 9.3, "irdef": "majority over minority after binarisation", "kind": "binary (one-vs-rest)", "extra": "binarisation target published: class 4"}, {"paper": "EasyEnsemble / BalanceCascade", "raw": "vehicle", "key": "vehicle", "N": 846, "F": 18, "C": 2, "dist": [634, 212], "dist_printed": [634, 212], "ir": 3.0, "irdef": "majority over minority after binarisation", "kind": "binary (one-vs-rest)", "extra": "binarisation target published: opel"}, {"paper": "EasyEnsemble / BalanceCascade", "raw": "wdbc", "key": "wdbc", "N": 569, "F": 30, "C": 2, "dist": [357, 212], "dist_printed": [357, 212], "ir": 1.7, "irdef": "majority over minority after binarisation", "kind": "binary (one-vs-rest)", "extra": "binarisation target published: malignant"}, {"paper": "EasyEnsemble / BalanceCascade", "raw": "wpbc", "key": "wpbc", "N": 198, "F": 33, "C": 2, "dist": [151, 47], "dist_printed": [151, 47], "ir": 3.2, "irdef": "majority over minority after binarisation", "kind": "binary (one-vs-rest)", "extra": "binarisation target published: recur"}, {"paper": "RUSBoost", "raw": "SP3", "key": "sp3", "N": 3541, "F": 43, "C": 2, "dist": [3494, 47], "dist_printed": [3494, 47], "ir": 74.34, "irdef": "derived from the published percentage minority", "kind": "binary (one-vs-rest)", "extra": "proprietary, never released percentage minority 1.33; the attribute count includes the dependent attribute"}, {"paper": "RUSBoost", "raw": "Mammography", "key": "mammography", "N": 11183, "F": 7, "C": 2, "dist": [10923, 260], "dist_printed": [10923, 260], "ir": 42.01, "irdef": "derived from the published percentage minority", "kind": "binary (one-vs-rest)", "extra": "percentage minority 2.32; the attribute count includes the dependent attribute"}, {"paper": "RUSBoost", "raw": "SolarFlareF", "key": "solarflaref", "N": 1389, "F": 13, "C": 2, "dist": [1338, 51], "dist_printed": [1338, 51], "ir": 26.24, "irdef": "derived from the published percentage minority", "kind": "binary (one-vs-rest)", "extra": "1389 instances, that is solar flare 2, the same source SOUP uses percentage minority 3.67; the attribute count includes the dependent attribute"}, {"paper": "RUSBoost", "raw": "Car3", "key": "car3", "N": 1728, "F": 7, "C": 2, "dist": [1659, 69], "dist_printed": [1659, 69], "ir": 24.04, "irdef": "derived from the published percentage minority", "kind": "binary (one-vs-rest)", "extra": "percentage minority 3.99; the attribute count includes the dependent attribute"}, {"paper": "RUSBoost", "raw": "CCCS12", "key": "cccs12", "N": 282, "F": 9, "C": 2, "dist": [266, 16], "dist_printed": [266, 16], "ir": 16.62, "irdef": "derived from the published percentage minority", "kind": "binary (one-vs-rest)", "extra": "proprietary, never released percentage minority 5.67; the attribute count includes the dependent attribute"}, {"paper": "RUSBoost", "raw": "SP1", "key": "sp1", "N": 3649, "F": 43, "C": 2, "dist": [3420, 229], "dist_printed": [3420, 229], "ir": 14.93, "irdef": "derived from the published percentage minority", "kind": "binary (one-vs-rest)", "extra": "proprietary, never released percentage minority 6.28; the attribute count includes the dependent attribute"}, {"paper": "RUSBoost", "raw": "PC1", "key": "pc1", "N": 1107, "F": 16, "C": 2, "dist": [1031, 76], "dist_printed": [1031, 76], "ir": 13.57, "irdef": "derived from the published percentage minority", "kind": "binary (one-vs-rest)", "extra": "percentage minority 6.87; the attribute count includes the dependent attribute"}, {"paper": "RUSBoost", "raw": "Glass3", "key": "glass3", "N": 214, "F": 10, "C": 2, "dist": [197, 17], "dist_printed": [197, 17], "ir": 11.59, "irdef": "derived from the published percentage minority", "kind": "binary (one-vs-rest)", "extra": "percentage minority 7.94; the attribute count includes the dependent attribute"}, {"paper": "RUSBoost", "raw": "CM1", "key": "cm1", "N": 505, "F": 16, "C": 2, "dist": [457, 48], "dist_printed": [457, 48], "ir": 9.52, "irdef": "derived from the published percentage minority", "kind": "binary (one-vs-rest)", "extra": "percentage minority 9.50; the attribute count includes the dependent attribute"}, {"paper": "RUSBoost", "raw": "Pendigits5", "key": "pendigits5", "N": 10992, "F": 17, "C": 2, "dist": [9937, 1055], "dist_printed": [9937, 1055], "ir": 9.42, "irdef": "derived from the published percentage minority", "kind": "binary (one-vs-rest)", "extra": "percentage minority 9.60; the attribute count includes the dependent attribute"}, {"paper": "RUSBoost", "raw": "Satimage4", "key": "satimage4", "N": 6435, "F": 37, "C": 2, "dist": [5809, 626], "dist_printed": [5809, 626], "ir": 9.28, "irdef": "derived from the published percentage minority", "kind": "binary (one-vs-rest)", "extra": "percentage minority 9.73; the attribute count includes the dependent attribute"}, {"paper": "RUSBoost", "raw": "Ecoli4", "key": "ecoli4", "N": 336, "F": 8, "C": 2, "dist": [301, 35], "dist_printed": [301, 35], "ir": 8.6, "irdef": "derived from the published percentage minority", "kind": "binary (one-vs-rest)", "extra": "percentage minority 10.42; the attribute count includes the dependent attribute"}, {"paper": "RUSBoost", "raw": "Segment5", "key": "segment5", "N": 2310, "F": 20, "C": 2, "dist": [1980, 330], "dist_printed": [1980, 330], "ir": 6.0, "irdef": "derived from the published percentage minority", "kind": "binary (one-vs-rest)", "extra": "percentage minority 14.29; the attribute count includes the dependent attribute"}, {"paper": "RUSBoost", "raw": "Contra2", "key": "contra2", "N": 1473, "F": 10, "C": 2, "dist": [1140, 333], "dist_printed": [1140, 333], "ir": 3.42, "irdef": "derived from the published percentage minority", "kind": "binary (one-vs-rest)", "extra": "percentage minority 22.61; the attribute count includes the dependent attribute"}, {"paper": "RUSBoost", "raw": "Vehicle1", "key": "vehicle1", "N": 846, "F": 19, "C": 2, "dist": [634, 212], "dist_printed": [634, 212], "ir": 2.99, "irdef": "derived from the published percentage minority", "kind": "binary (one-vs-rest)", "extra": "percentage minority 25.06; the attribute count includes the dependent attribute"}]
+[
+ {
+  "paper": "MC-RBO",
+  "raw": "Automobile",
+  "key": "automobile",
+  "N": 159,
+  "F": 25,
+  "C": 6,
+  "dist": [
+   48,
+   46,
+   29,
+   20,
+   13,
+   3
+  ],
+  "dist_printed": [
+   3,
+   20,
+   48,
+   46,
+   29,
+   13
+  ],
+  "ir": 16.0,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "instance count corrected from 150 to 159: the paper prints 150 but its own class distribution sums to 159, and MC-NCLWO reports 159"
+ },
+ {
+  "paper": "MC-CCR",
+  "raw": "Automobile",
+  "key": "automobile",
+  "N": 159,
+  "F": 25,
+  "C": 6,
+  "dist": [
+   48,
+   46,
+   29,
+   20,
+   13,
+   3
+  ],
+  "dist_printed": [
+   3,
+   20,
+   48,
+   46,
+   29,
+   13
+  ],
+  "ir": 16.0,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO: instance count corrected from 150 to 159: the paper prints 150 but its own class distribution sums to 159, and MC-NCLWO reports 159"
+ },
+ {
+  "paper": "MC-RBO",
+  "raw": "Balance",
+  "key": "balance",
+  "N": 625,
+  "F": 4,
+  "C": 3,
+  "dist": [
+   288,
+   288,
+   49
+  ],
+  "dist_printed": [
+   288,
+   49,
+   288
+  ],
+  "ir": 5.88,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-CCR",
+  "raw": "Balance",
+  "key": "balance",
+  "N": 625,
+  "F": 4,
+  "C": 3,
+  "dist": [
+   288,
+   288,
+   49
+  ],
+  "dist_printed": [
+   288,
+   49,
+   288
+  ],
+  "ir": 5.88,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO"
+ },
+ {
+  "paper": "MC-RBO",
+  "raw": "Car",
+  "key": "car",
+  "N": 1728,
+  "F": 6,
+  "C": 4,
+  "dist": [
+   1210,
+   384,
+   69,
+   65
+  ],
+  "dist_printed": [
+   65,
+   69,
+   384,
+   1210
+  ],
+  "ir": 18.61,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-CCR",
+  "raw": "Car",
+  "key": "car",
+  "N": 1728,
+  "F": 6,
+  "C": 4,
+  "dist": [
+   1210,
+   384,
+   69,
+   65
+  ],
+  "dist_printed": [
+   65,
+   69,
+   384,
+   1210
+  ],
+  "ir": 18.61,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO"
+ },
+ {
+  "paper": "MC-RBO",
+  "raw": "Cleveland",
+  "key": "cleveland",
+  "N": 297,
+  "F": 13,
+  "C": 5,
+  "dist": [
+   164,
+   55,
+   36,
+   35,
+   13
+  ],
+  "dist_printed": [
+   164,
+   55,
+   36,
+   35,
+   13
+  ],
+  "ir": 12.62,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "class distribution sums to 303 against the stated 297; the same 303-sum distribution appears in SOUP"
+ },
+ {
+  "paper": "MC-CCR",
+  "raw": "Cleveland",
+  "key": "cleveland",
+  "N": 297,
+  "F": 13,
+  "C": 5,
+  "dist": [
+   164,
+   55,
+   36,
+   35,
+   13
+  ],
+  "dist_printed": [
+   164,
+   55,
+   36,
+   35,
+   13
+  ],
+  "ir": 12.62,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO: class distribution sums to 303 against the stated 297; the same 303-sum distribution appears in SOUP"
+ },
+ {
+  "paper": "MC-RBO",
+  "raw": "Contraceptive",
+  "key": "contraceptive",
+  "N": 1473,
+  "F": 9,
+  "C": 3,
+  "dist": [
+   629,
+   511,
+   333
+  ],
+  "dist_printed": [
+   629,
+   333,
+   511
+  ],
+  "ir": 1.89,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-CCR",
+  "raw": "Contraceptive",
+  "key": "contraceptive",
+  "N": 1473,
+  "F": 9,
+  "C": 3,
+  "dist": [
+   629,
+   511,
+   333
+  ],
+  "dist_printed": [
+   629,
+   333,
+   511
+  ],
+  "ir": 1.89,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO"
+ },
+ {
+  "paper": "MC-RBO",
+  "raw": "Dermatology",
+  "key": "dermatology",
+  "N": 358,
+  "F": 33,
+  "C": 6,
+  "dist": [
+   111,
+   71,
+   60,
+   48,
+   48,
+   20
+  ],
+  "dist_printed": [
+   111,
+   60,
+   71,
+   48,
+   48,
+   20
+  ],
+  "ir": 5.55,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "358 is the KEEL version. The UCI original (doi:10.24432/C5FK5P) has 366 instances and 34 features; the 8 missing instances are the records whose age attribute is missing, and the feature count of 33 corresponds to dropping that attribute. Both variants are kept"
+ },
+ {
+  "paper": "MC-CCR",
+  "raw": "Dermatology",
+  "key": "dermatology",
+  "N": 358,
+  "F": 33,
+  "C": 6,
+  "dist": [
+   111,
+   71,
+   60,
+   48,
+   48,
+   20
+  ],
+  "dist_printed": [
+   111,
+   60,
+   71,
+   48,
+   48,
+   20
+  ],
+  "ir": 5.55,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO: 358 is the KEEL version. The UCI original (doi:10.24432/C5FK5P) has 366 instances and 34 features; the 8 missing instances are the records whose age attribute is missing, and the feature count of 33 corresponds to dropping that attribute. Both variants are kept"
+ },
+ {
+  "paper": "MC-RBO",
+  "raw": "Ecoli",
+  "key": "ecoli",
+  "N": 336,
+  "F": 7,
+  "C": 8,
+  "dist": [
+   143,
+   77,
+   52,
+   35,
+   20,
+   5,
+   2,
+   2
+  ],
+  "dist_printed": [
+   143,
+   77,
+   2,
+   2,
+   35,
+   20,
+   5,
+   52
+  ],
+  "ir": 71.5,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "distribution corrected: the paper prints 143/77/2/235/20/5/52, where 235 is a run-together of 2 and 35; the corrected reading sums to 336 and gives the stated IR of 71.50"
+ },
+ {
+  "paper": "MC-CCR",
+  "raw": "Ecoli",
+  "key": "ecoli",
+  "N": 336,
+  "F": 7,
+  "C": 8,
+  "dist": [
+   143,
+   77,
+   52,
+   35,
+   20,
+   5,
+   2,
+   2
+  ],
+  "dist_printed": [
+   143,
+   77,
+   2,
+   2,
+   35,
+   20,
+   5,
+   52
+  ],
+  "ir": 71.5,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO: distribution corrected: the paper prints 143/77/2/235/20/5/52, where 235 is a run-together of 2 and 35; the corrected reading sums to 336 and gives the stated IR of 71.50"
+ },
+ {
+  "paper": "MC-RBO",
+  "raw": "Flare",
+  "key": "flare",
+  "N": 1066,
+  "F": 11,
+  "C": 6,
+  "dist": [
+   331,
+   239,
+   211,
+   147,
+   95,
+   43
+  ],
+  "dist_printed": [
+   331,
+   239,
+   211,
+   147,
+   95,
+   43
+  ],
+  "ir": 7.7,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "1066 instances is solar flare 1; SOUP uses solar flare 2 with 1389"
+ },
+ {
+  "paper": "MC-CCR",
+  "raw": "Flare",
+  "key": "flare",
+  "N": 1066,
+  "F": 11,
+  "C": 6,
+  "dist": [
+   331,
+   239,
+   211,
+   147,
+   95,
+   43
+  ],
+  "dist_printed": [
+   331,
+   239,
+   211,
+   147,
+   95,
+   43
+  ],
+  "ir": 7.7,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO: 1066 instances is solar flare 1; SOUP uses solar flare 2 with 1389"
+ },
+ {
+  "paper": "MC-RBO",
+  "raw": "Glass",
+  "key": "glass",
+  "N": 214,
+  "F": 9,
+  "C": 6,
+  "dist": [
+   76,
+   70,
+   29,
+   17,
+   13,
+   9
+  ],
+  "dist_printed": [
+   70,
+   76,
+   17,
+   13,
+   9,
+   29
+  ],
+  "ir": 8.44,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-CCR",
+  "raw": "Glass",
+  "key": "glass",
+  "N": 214,
+  "F": 9,
+  "C": 6,
+  "dist": [
+   76,
+   70,
+   29,
+   17,
+   13,
+   9
+  ],
+  "dist_printed": [
+   70,
+   76,
+   17,
+   13,
+   9,
+   29
+  ],
+  "ir": 8.44,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO"
+ },
+ {
+  "paper": "MC-RBO",
+  "raw": "Hayes-Roth",
+  "key": "hayes-roth",
+  "N": 160,
+  "F": 4,
+  "C": 3,
+  "dist": [
+   65,
+   64,
+   31
+  ],
+  "dist_printed": [
+   65,
+   64,
+   31
+  ],
+  "ir": 2.1,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "the distribution column prints four values (160/65/64/31); the leading 160 repeats the instance count"
+ },
+ {
+  "paper": "MC-CCR",
+  "raw": "Hayes-Roth",
+  "key": "hayes-roth",
+  "N": 160,
+  "F": 4,
+  "C": 3,
+  "dist": [
+   65,
+   64,
+   31
+  ],
+  "dist_printed": [
+   65,
+   64,
+   31
+  ],
+  "ir": 2.1,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO: the distribution column prints four values (160/65/64/31); the leading 160 repeats the instance count"
+ },
+ {
+  "paper": "MC-RBO",
+  "raw": "Led7digit",
+  "key": "led7digit",
+  "N": 500,
+  "F": 7,
+  "C": 10,
+  "dist": [
+   57,
+   57,
+   53,
+   52,
+   52,
+   51,
+   49,
+   47,
+   45,
+   37
+  ],
+  "dist_printed": [
+   45,
+   37,
+   51,
+   57,
+   52,
+   52,
+   47,
+   57,
+   53,
+   49
+  ],
+  "ir": 1.54,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-CCR",
+  "raw": "Led7digit",
+  "key": "led7digit",
+  "N": 500,
+  "F": 7,
+  "C": 10,
+  "dist": [
+   57,
+   57,
+   53,
+   52,
+   52,
+   51,
+   49,
+   47,
+   45,
+   37
+  ],
+  "dist_printed": [
+   45,
+   37,
+   51,
+   57,
+   52,
+   52,
+   47,
+   57,
+   53,
+   49
+  ],
+  "ir": 1.54,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO"
+ },
+ {
+  "paper": "MC-RBO",
+  "raw": "Lymphography",
+  "key": "lymphography",
+  "N": 148,
+  "F": 18,
+  "C": 4,
+  "dist": [
+   81,
+   61,
+   4,
+   2
+  ],
+  "dist_printed": [
+   2,
+   81,
+   61,
+   4
+  ],
+  "ir": 40.5,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-CCR",
+  "raw": "Lymphography",
+  "key": "lymphography",
+  "N": 148,
+  "F": 18,
+  "C": 4,
+  "dist": [
+   81,
+   61,
+   4,
+   2
+  ],
+  "dist_printed": [
+   2,
+   81,
+   61,
+   4
+  ],
+  "ir": 40.5,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO"
+ },
+ {
+  "paper": "MC-RBO",
+  "raw": "New-thyroid",
+  "key": "new-thyroid",
+  "N": 215,
+  "F": 5,
+  "C": 3,
+  "dist": [
+   150,
+   35,
+   30
+  ],
+  "dist_printed": [
+   150,
+   35,
+   30
+  ],
+  "ir": 5.0,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-CCR",
+  "raw": "New-thyroid",
+  "key": "new-thyroid",
+  "N": 215,
+  "F": 5,
+  "C": 3,
+  "dist": [
+   150,
+   35,
+   30
+  ],
+  "dist_printed": [
+   150,
+   35,
+   30
+  ],
+  "ir": 5.0,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO"
+ },
+ {
+  "paper": "MC-RBO",
+  "raw": "Page-blocks",
+  "key": "page-blocks",
+  "N": 5473,
+  "F": 10,
+  "C": 5,
+  "dist": [
+   4913,
+   329,
+   115,
+   88,
+   28
+  ],
+  "dist_printed": [
+   4913,
+   329,
+   115,
+   88,
+   28
+  ],
+  "ir": 175.46,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "instance count corrected from 5472 to 5473 against the UCI record (doi:10.24432/C5J590). The printed distribution 4913/329/28/87/115 sums to 5472; MC-NCLWO prints 88 where MC-RBO prints 87, and 4913/329/115/88/28 sums to 5473 exactly, so the single-digit difference is the source of the missing instance"
+ },
+ {
+  "paper": "MC-CCR",
+  "raw": "Page-blocks",
+  "key": "page-blocks",
+  "N": 5473,
+  "F": 10,
+  "C": 5,
+  "dist": [
+   4913,
+   329,
+   115,
+   88,
+   28
+  ],
+  "dist_printed": [
+   4913,
+   329,
+   115,
+   88,
+   28
+  ],
+  "ir": 175.46,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO: instance count corrected from 5472 to 5473 against the UCI record (doi:10.24432/C5J590). The printed distribution 4913/329/28/87/115 sums to 5472; MC-NCLWO prints 88 where MC-RBO prints 87, and 4913/329/115/88/28 sums to 5473 exactly, so the single-digit difference is the source of the missing instance"
+ },
+ {
+  "paper": "MC-RBO",
+  "raw": "Thyroid",
+  "key": "thyroid",
+  "N": 7200,
+  "F": 21,
+  "C": 3,
+  "dist": [
+   6666,
+   368,
+   166
+  ],
+  "dist_printed": [
+   166,
+   368,
+   6666
+  ],
+  "ir": 40.16,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "this is the 7200-instance thyroid; MC-NCLWO and CBHSID use a 720-instance dataset under the same name"
+ },
+ {
+  "paper": "MC-CCR",
+  "raw": "Thyroid",
+  "key": "thyroid",
+  "N": 7200,
+  "F": 21,
+  "C": 3,
+  "dist": [
+   6666,
+   368,
+   166
+  ],
+  "dist_printed": [
+   166,
+   368,
+   6666
+  ],
+  "ir": 40.16,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO: this is the 7200-instance thyroid; MC-NCLWO and CBHSID use a 720-instance dataset under the same name"
+ },
+ {
+  "paper": "MC-RBO",
+  "raw": "Vehicle",
+  "key": "vehicle",
+  "N": 846,
+  "F": 18,
+  "C": 4,
+  "dist": [
+   218,
+   217,
+   212,
+   199
+  ],
+  "dist_printed": [
+   199,
+   212,
+   217,
+   218
+  ],
+  "ir": 1.17,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "the printed IR of 1.17 cannot be derived from this distribution by any standard formula; max over min gives 1.10"
+ },
+ {
+  "paper": "MC-CCR",
+  "raw": "Vehicle",
+  "key": "vehicle",
+  "N": 846,
+  "F": 18,
+  "C": 4,
+  "dist": [
+   218,
+   217,
+   212,
+   199
+  ],
+  "dist_printed": [
+   199,
+   212,
+   217,
+   218
+  ],
+  "ir": 1.17,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO: the printed IR of 1.17 cannot be derived from this distribution by any standard formula; max over min gives 1.10"
+ },
+ {
+  "paper": "MC-RBO",
+  "raw": "Wine",
+  "key": "wine",
+  "N": 178,
+  "F": 13,
+  "C": 3,
+  "dist": [
+   71,
+   59,
+   48
+  ],
+  "dist_printed": [
+   59,
+   71,
+   48
+  ],
+  "ir": 1.48,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-CCR",
+  "raw": "Wine",
+  "key": "wine",
+  "N": 178,
+  "F": 13,
+  "C": 3,
+  "dist": [
+   71,
+   59,
+   48
+  ],
+  "dist_printed": [
+   59,
+   71,
+   48
+  ],
+  "ir": 1.48,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO"
+ },
+ {
+  "paper": "MC-RBO",
+  "raw": "Winequality-red",
+  "key": "winequality-red",
+  "N": 1599,
+  "F": 11,
+  "C": 6,
+  "dist": [
+   681,
+   638,
+   199,
+   53,
+   18,
+   10
+  ],
+  "dist_printed": [
+   10,
+   53,
+   681,
+   638,
+   199,
+   18
+  ],
+  "ir": 68.1,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-CCR",
+  "raw": "Winequality-red",
+  "key": "winequality-red",
+  "N": 1599,
+  "F": 11,
+  "C": 6,
+  "dist": [
+   681,
+   638,
+   199,
+   53,
+   18,
+   10
+  ],
+  "dist_printed": [
+   10,
+   53,
+   681,
+   638,
+   199,
+   18
+  ],
+  "ir": 68.1,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO"
+ },
+ {
+  "paper": "MC-RBO",
+  "raw": "Yeast",
+  "key": "yeast",
+  "N": 1484,
+  "F": 8,
+  "C": 10,
+  "dist": [
+   463,
+   429,
+   244,
+   163,
+   51,
+   44,
+   35,
+   30,
+   20,
+   5
+  ],
+  "dist_printed": [
+   244,
+   429,
+   463,
+   44,
+   51,
+   163,
+   35,
+   30,
+   20,
+   5
+  ],
+  "ir": 92.6,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-CCR",
+  "raw": "Yeast",
+  "key": "yeast",
+  "N": 1484,
+  "F": 8,
+  "C": 10,
+  "dist": [
+   463,
+   429,
+   244,
+   163,
+   51,
+   44,
+   35,
+   30,
+   20,
+   5
+  ],
+  "dist_printed": [
+   244,
+   429,
+   463,
+   44,
+   51,
+   163,
+   35,
+   30,
+   20,
+   5
+  ],
+  "ir": 92.6,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO"
+ },
+ {
+  "paper": "MC-RBO",
+  "raw": "Zoo",
+  "key": "zoo",
+  "N": 101,
+  "F": 16,
+  "C": 7,
+  "dist": [
+   41,
+   20,
+   13,
+   10,
+   8,
+   5,
+   4
+  ],
+  "dist_printed": [
+   41,
+   13,
+   10,
+   20,
+   8,
+   5,
+   4
+  ],
+  "ir": 10.25,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-CCR",
+  "raw": "Zoo",
+  "key": "zoo",
+  "N": 101,
+  "F": 16,
+  "C": 7,
+  "dist": [
+   41,
+   20,
+   13,
+   10,
+   8,
+   5,
+   4
+  ],
+  "dist_printed": [
+   41,
+   13,
+   10,
+   20,
+   8,
+   5,
+   4
+  ],
+  "ir": 10.25,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "MC-CCR publishes the same 20-dataset table as MC-RBO"
+ },
+ {
+  "paper": "MC-NCLWO",
+  "raw": "vehicle",
+  "key": "vehicle",
+  "N": 846,
+  "F": 18,
+  "C": 4,
+  "dist": [
+   218,
+   217,
+   212,
+   199
+  ],
+  "dist_printed": [
+   218,
+   217,
+   212,
+   199
+  ],
+  "ir": 1.1,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "reports 1.1, which is max over min; MC-CCR and MC-RBO print 1.17 for the same counts"
+ },
+ {
+  "paper": "MC-NCLWO",
+  "raw": "penbased",
+  "key": "penbased",
+  "N": 1100,
+  "F": 16,
+  "C": 10,
+  "dist": [
+   115,
+   115,
+   114,
+   114,
+   114,
+   106,
+   106,
+   106,
+   105,
+   105
+  ],
+  "dist_printed": [
+   115,
+   115,
+   114,
+   114,
+   114,
+   106,
+   106,
+   106,
+   105,
+   105
+  ],
+  "ir": 1.1,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "a 1100-instance subsample; the full UCI pendigits has 10992"
+ },
+ {
+  "paper": "MC-NCLWO",
+  "raw": "wine",
+  "key": "wine",
+  "N": 178,
+  "F": 13,
+  "C": 3,
+  "dist": [
+   71,
+   59,
+   48
+  ],
+  "dist_printed": [
+   71,
+   59,
+   48
+  ],
+  "ir": 1.48,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-NCLWO",
+  "raw": "led7digit",
+  "key": "led7digit",
+  "N": 500,
+  "F": 7,
+  "C": 10,
+  "dist": [
+   57,
+   57,
+   53,
+   52,
+   52,
+   51,
+   49,
+   47,
+   45,
+   37
+  ],
+  "dist_printed": [
+   57,
+   57,
+   53,
+   52,
+   52,
+   51,
+   49,
+   47,
+   45,
+   37
+  ],
+  "ir": 1.54,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-NCLWO",
+  "raw": "contraceptive",
+  "key": "contraceptive",
+  "N": 1473,
+  "F": 9,
+  "C": 3,
+  "dist": [
+   629,
+   511,
+   333
+  ],
+  "dist_printed": [
+   629,
+   511,
+   333
+  ],
+  "ir": 1.89,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-NCLWO",
+  "raw": "hayes-roth",
+  "key": "hayes-roth",
+  "N": 160,
+  "F": 4,
+  "C": 3,
+  "dist": [
+   65,
+   64,
+   31
+  ],
+  "dist_printed": [
+   65,
+   64,
+   31
+  ],
+  "ir": 2.1,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-NCLWO",
+  "raw": "new-thyroid",
+  "key": "new-thyroid",
+  "N": 215,
+  "F": 5,
+  "C": 3,
+  "dist": [
+   150,
+   35,
+   30
+  ],
+  "dist_printed": [
+   150,
+   35,
+   30
+  ],
+  "ir": 5,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-NCLWO",
+  "raw": "dermatology",
+  "key": "dermatology",
+  "N": 358,
+  "F": 34,
+  "C": 6,
+  "dist": [
+   111,
+   71,
+   60,
+   48,
+   48,
+   20
+  ],
+  "dist_printed": [
+   111,
+   71,
+   60,
+   48,
+   48,
+   20
+  ],
+  "ir": 5.55,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "358 instances (KEEL) but 34 features (UCI count); MC-RBO prints 33 features for the same 358 instances"
+ },
+ {
+  "paper": "MC-NCLWO",
+  "raw": "balance",
+  "key": "balance",
+  "N": 625,
+  "F": 4,
+  "C": 3,
+  "dist": [
+   288,
+   288,
+   49
+  ],
+  "dist_printed": [
+   288,
+   288,
+   49
+  ],
+  "ir": 5.88,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-NCLWO",
+  "raw": "Dry-Bean",
+  "key": "dry-bean",
+  "N": 13611,
+  "F": 16,
+  "C": 7,
+  "dist": [
+   3546,
+   2636,
+   2027,
+   1928,
+   1630,
+   1322,
+   522
+  ],
+  "dist_printed": [
+   3546,
+   2636,
+   2027,
+   1928,
+   1630,
+   1322,
+   522
+  ],
+  "ir": 6.79,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-NCLWO",
+  "raw": "flare",
+  "key": "flare",
+  "N": 1066,
+  "F": 11,
+  "C": 6,
+  "dist": [
+   331,
+   239,
+   211,
+   147,
+   95,
+   43
+  ],
+  "dist_printed": [
+   331,
+   239,
+   211,
+   147,
+   95,
+   43
+  ],
+  "ir": 7.7,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-NCLWO",
+  "raw": "glass",
+  "key": "glass",
+  "N": 214,
+  "F": 9,
+  "C": 6,
+  "dist": [
+   76,
+   70,
+   29,
+   17,
+   13,
+   9
+  ],
+  "dist_printed": [
+   76,
+   70,
+   29,
+   17,
+   13,
+   9
+  ],
+  "ir": 8.44,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-NCLWO",
+  "raw": "zoo",
+  "key": "zoo",
+  "N": 101,
+  "F": 16,
+  "C": 7,
+  "dist": [
+   41,
+   20,
+   13,
+   10,
+   8,
+   5,
+   4
+  ],
+  "dist_printed": [
+   41,
+   20,
+   13,
+   10,
+   8,
+   5,
+   4
+  ],
+  "ir": 10.25,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-NCLWO",
+  "raw": "cleveland",
+  "key": "cleveland",
+  "N": 297,
+  "F": 13,
+  "C": 5,
+  "dist": [
+   160,
+   54,
+   35,
+   35,
+   13
+  ],
+  "dist_printed": [
+   160,
+   54,
+   35,
+   35,
+   13
+  ],
+  "ir": 12.31,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "this distribution sums to 297 and is the UCI figure; MC-RBO and SOUP use a 303-sum variant"
+ },
+ {
+  "paper": "MC-NCLWO",
+  "raw": "automobile",
+  "key": "automobile",
+  "N": 159,
+  "F": 25,
+  "C": 6,
+  "dist": [
+   48,
+   46,
+   29,
+   20,
+   13,
+   3
+  ],
+  "dist_printed": [
+   48,
+   46,
+   29,
+   20,
+   13,
+   3
+  ],
+  "ir": 16,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-NCLWO",
+  "raw": "car",
+  "key": "car",
+  "N": 1728,
+  "F": 6,
+  "C": 4,
+  "dist": [
+   1210,
+   384,
+   69,
+   65
+  ],
+  "dist_printed": [
+   1210,
+   384,
+   69,
+   65
+  ],
+  "ir": 18.62,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-NCLWO",
+  "raw": "thyroid",
+  "key": "thyroid",
+  "N": 720,
+  "F": 21,
+  "C": 3,
+  "dist": [
+   666,
+   37,
+   17
+  ],
+  "dist_printed": [
+   666,
+   37,
+   17
+  ],
+  "ir": 39.18,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "a 720-instance thyroid; MC-RBO uses a 7200-instance dataset under the same name"
+ },
+ {
+  "paper": "MC-NCLWO",
+  "raw": "lymphography",
+  "key": "lymphography",
+  "N": 148,
+  "F": 18,
+  "C": 4,
+  "dist": [
+   81,
+   61,
+   4,
+   2
+  ],
+  "dist_printed": [
+   81,
+   61,
+   4,
+   2
+  ],
+  "ir": 40.5,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-NCLWO",
+  "raw": "winequality-red",
+  "key": "winequality-red",
+  "N": 1599,
+  "F": 11,
+  "C": 6,
+  "dist": [
+   681,
+   638,
+   199,
+   53,
+   18,
+   10
+  ],
+  "dist_printed": [
+   681,
+   638,
+   199,
+   53,
+   18,
+   10
+  ],
+  "ir": 68.1,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-NCLWO",
+  "raw": "ecoli",
+  "key": "ecoli",
+  "N": 336,
+  "F": 7,
+  "C": 8,
+  "dist": [
+   143,
+   77,
+   52,
+   35,
+   20,
+   5,
+   2,
+   2
+  ],
+  "dist_printed": [
+   143,
+   77,
+   52,
+   35,
+   20,
+   5,
+   2,
+   2
+  ],
+  "ir": 71.5,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-NCLWO",
+  "raw": "yeast",
+  "key": "yeast",
+  "N": 1484,
+  "F": 8,
+  "C": 10,
+  "dist": [
+   463,
+   429,
+   244,
+   163,
+   51,
+   44,
+   35,
+   30,
+   20,
+   5
+  ],
+  "dist_printed": [
+   463,
+   429,
+   244,
+   163,
+   51,
+   44,
+   35,
+   30,
+   20,
+   5
+  ],
+  "ir": 92.6,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-NCLWO",
+  "raw": "page-blocks",
+  "key": "page-blocks",
+  "N": 5473,
+  "F": 10,
+  "C": 5,
+  "dist": [
+   4913,
+   329,
+   115,
+   88,
+   28
+  ],
+  "dist_printed": [
+   4913,
+   329,
+   115,
+   88,
+   28
+  ],
+  "ir": 175.46,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "MC-NCLWO",
+  "raw": "shuttle",
+  "key": "shuttle",
+  "N": 2175,
+  "F": 9,
+  "C": 5,
+  "dist": [
+   1706,
+   338,
+   123,
+   6,
+   2
+  ],
+  "dist_printed": [
+   1706,
+   338,
+   123,
+   6,
+   2
+  ],
+  "ir": 853,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "a 2175-instance shuttle subsample; OVO-SMOTE uses the full 57999-instance shuttle at IR 4558.6"
+ },
+ {
+  "paper": "MKC-SMOTE",
+  "raw": "Contraceptive Method Choice",
+  "key": "contraceptive",
+  "N": 1473,
+  "F": 9,
+  "C": 3,
+  "dist": [
+   629,
+   511,
+   333
+  ],
+  "dist_printed": [
+   629,
+   511,
+   333
+  ],
+  "ir": 1.89,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "",
+  "ir_overall": 1.65
+ },
+ {
+  "paper": "MKC-SMOTE",
+  "raw": "User Knowledge Modeling",
+  "key": "userknowledge",
+  "N": 403,
+  "F": 5,
+  "C": 4,
+  "dist": [
+   129,
+   122,
+   102,
+   50
+  ],
+  "dist_printed": [
+   129,
+   122,
+   102,
+   50
+  ],
+  "ir": 2.58,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "",
+  "ir_overall": 4.58
+ },
+ {
+  "paper": "MKC-SMOTE",
+  "raw": "New-thyroid",
+  "key": "new-thyroid",
+  "N": 215,
+  "F": 5,
+  "C": 3,
+  "dist": [
+   150,
+   35,
+   30
+  ],
+  "dist_printed": [
+   150,
+   35,
+   30
+  ],
+  "ir": 5.0,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "",
+  "ir_overall": 7.45
+ },
+ {
+  "paper": "MKC-SMOTE",
+  "raw": "Connect-4",
+  "key": "connect-4",
+  "N": 6756,
+  "F": 42,
+  "C": 3,
+  "dist": [
+   4463,
+   1653,
+   640
+  ],
+  "dist_printed": [
+   4463,
+   1653,
+   640
+  ],
+  "ir": 6.97,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "a 6756-instance subsample; the full UCI connect-4 has 67557",
+  "ir_overall": 9.26
+ },
+ {
+  "paper": "MKC-SMOTE",
+  "raw": "Zoo",
+  "key": "zoo",
+  "N": 101,
+  "F": 16,
+  "C": 5,
+  "dist": [
+   41,
+   20,
+   17,
+   13,
+   10
+  ],
+  "dist_printed": [
+   41,
+   20,
+   17,
+   13,
+   10
+  ],
+  "ir": 4.1,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "5 classes, not the 7 used by MC-RBO and MC-NCLWO, so the IR of 4.10 is not comparable with their 10.25",
+  "ir_overall": 10.74
+ },
+ {
+  "paper": "MKC-SMOTE",
+  "raw": "Cardiotocography",
+  "key": "cardiotocography",
+  "N": 1728,
+  "F": 21,
+  "C": 3,
+  "dist": [
+   1655,
+   295,
+   176
+  ],
+  "dist_printed": [
+   1655,
+   295,
+   176
+  ],
+  "ir": 9.4,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "",
+  "ir_overall": 13.69
+ },
+ {
+  "paper": "MKC-SMOTE",
+  "raw": "Ecoli",
+  "key": "ecoli",
+  "N": 336,
+  "F": 7,
+  "C": 5,
+  "dist": [
+   143,
+   77,
+   52,
+   35,
+   29
+  ],
+  "dist_printed": [
+   143,
+   77,
+   52,
+   35,
+   29
+  ],
+  "ir": 4.93,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "5 classes, not 8; the three smallest classes are dropped, so the IR of 4.93 is not comparable with the 71.50 reported elsewhere",
+  "ir_overall": 14.45
+ },
+ {
+  "paper": "MKC-SMOTE",
+  "raw": "Glass Identification",
+  "key": "glass",
+  "N": 214,
+  "F": 9,
+  "C": 5,
+  "dist": [
+   76,
+   70,
+   29,
+   22,
+   17
+  ],
+  "dist_printed": [
+   76,
+   70,
+   29,
+   22,
+   17
+  ],
+  "ir": 4.47,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "5 classes, not 6",
+  "ir_overall": 15.66
+ },
+ {
+  "paper": "MKC-SMOTE",
+  "raw": "Absenteeism at Work",
+  "key": "absenteeism",
+  "N": 740,
+  "F": 11,
+  "C": 7,
+  "dist": [
+   208,
+   157,
+   112,
+   88,
+   71,
+   60,
+   44
+  ],
+  "dist_printed": [
+   208,
+   157,
+   112,
+   88,
+   71,
+   60,
+   44
+  ],
+  "ir": 4.73,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "",
+  "ir_overall": 23.38
+ },
+ {
+  "paper": "MKC-SMOTE",
+  "raw": "Nursery",
+  "key": "nursery",
+  "N": 12960,
+  "F": 8,
+  "C": 4,
+  "dist": [
+   4320,
+   4266,
+   4044,
+   330
+  ],
+  "dist_printed": [
+   4320,
+   4266,
+   4044,
+   330
+  ],
+  "ir": 13.09,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "",
+  "ir_overall": 35.41
+ },
+ {
+  "paper": "MKC-SMOTE",
+  "raw": "Letter Recognition",
+  "key": "letter",
+  "N": 10723,
+  "F": 16,
+  "C": 10,
+  "dist": [
+   3822,
+   805,
+   789,
+   775,
+   773,
+   768,
+   766,
+   755,
+   736,
+   734
+  ],
+  "dist_printed": [
+   3822,
+   805,
+   789,
+   775,
+   773,
+   768,
+   766,
+   755,
+   736,
+   734
+  ],
+  "ir": 5.21,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "10 of the 26 letter classes, and 10723 of 20000 instances",
+  "ir_overall": 37.21
+ },
+ {
+  "paper": "MKC-SMOTE",
+  "raw": "Car Evaluation",
+  "key": "car",
+  "N": 1728,
+  "F": 6,
+  "C": 4,
+  "dist": [
+   1210,
+   384,
+   69,
+   65
+  ],
+  "dist_printed": [
+   1210,
+   384,
+   69,
+   65
+  ],
+  "ir": 18.91,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "the printed IR of 18.91 is not derivable from this distribution; max over min gives 18.62, and 1210/64 gives 18.91, so the smallest class was probably keyed as 64",
+  "ir_overall": 45.84
+ },
+ {
+  "paper": "MKC-SMOTE",
+  "raw": "Wine Quality-White",
+  "key": "winequality-white",
+  "N": 4895,
+  "F": 11,
+  "C": 5,
+  "dist": [
+   2198,
+   1457,
+   880,
+   188,
+   175
+  ],
+  "dist_printed": [
+   2198,
+   1457,
+   880,
+   188,
+   175
+  ],
+  "ir": 12.56,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "5 classes of the 7 in UCI, and 4895 of 4898 instances",
+  "ir_overall": 46.77
+ },
+ {
+  "paper": "MKC-SMOTE",
+  "raw": "Poker Hand",
+  "key": "poker hand",
+  "N": 24811,
+  "F": 10,
+  "C": 4,
+  "dist": [
+   12493,
+   10599,
+   1206,
+   513
+  ],
+  "dist_printed": [
+   12493,
+   10599,
+   1206,
+   513
+  ],
+  "ir": 24.35,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "",
+  "ir_overall": 61.69
+ },
+ {
+  "paper": "MKC-SMOTE",
+  "raw": "HCV",
+  "key": "hcv",
+  "N": 589,
+  "F": 12,
+  "C": 4,
+  "dist": [
+   526,
+   24,
+   20,
+   19
+  ],
+  "dist_printed": [
+   526,
+   24,
+   20,
+   19
+  ],
+  "ir": 27.68,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "",
+  "ir_overall": 73.42
+ },
+ {
+  "paper": "MKC-SMOTE",
+  "raw": "Yeast",
+  "key": "yeast",
+  "N": 1484,
+  "F": 8,
+  "C": 8,
+  "dist": [
+   463,
+   429,
+   244,
+   163,
+   55,
+   51,
+   44,
+   35
+  ],
+  "dist_printed": [
+   463,
+   429,
+   244,
+   163,
+   55,
+   51,
+   44,
+   35
+  ],
+  "ir": 13.23,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "8 classes, not 10; the IR of 13.23 is not comparable with the 92.60 reported elsewhere",
+  "ir_overall": 107.2
+ },
+ {
+  "paper": "MKC-SMOTE",
+  "raw": "Covertype",
+  "key": "covertype",
+  "N": 5781,
+  "F": 54,
+  "C": 6,
+  "dist": [
+   2801,
+   2132,
+   361,
+   195,
+   186,
+   106
+  ],
+  "dist_printed": [
+   2801,
+   2132,
+   361,
+   195,
+   186,
+   106
+  ],
+  "ir": 26.42,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "a 5781-instance subsample of a 581012-instance source",
+  "ir_overall": 110.18
+ },
+ {
+  "paper": "MKC-SMOTE",
+  "raw": "Chess (King-Rook vs King)",
+  "key": "chess-krk",
+  "N": 2376,
+  "F": 6,
+  "C": 8,
+  "dist": [
+   683,
+   592,
+   471,
+   246,
+   198,
+   81,
+   78,
+   27
+  ],
+  "dist_printed": [
+   683,
+   592,
+   471,
+   246,
+   198,
+   81,
+   78,
+   27
+  ],
+  "ir": 25.3,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "",
+  "ir_overall": 136.17
+ },
+ {
+  "paper": "MKC-SMOTE",
+  "raw": "Abalone",
+  "key": "abalone",
+  "N": 3966,
+  "F": 8,
+  "C": 13,
+  "dist": [
+   689,
+   634,
+   568,
+   487,
+   391,
+   267,
+   259,
+   203,
+   126,
+   115,
+   103,
+   67,
+   57
+  ],
+  "dist_printed": [
+   689,
+   634,
+   568,
+   487,
+   391,
+   267,
+   259,
+   203,
+   126,
+   115,
+   103,
+   67,
+   57
+  ],
+  "ir": 12.09,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "13 classes, the highest class count of any multi-class paper here",
+  "ir_overall": 195.2
+ },
+ {
+  "paper": "MKC-SMOTE",
+  "raw": "Bar Crawl",
+  "key": "bar crawl",
+  "N": 10486,
+  "F": 4,
+  "C": 12,
+  "dist": [
+   2539,
+   2029,
+   1277,
+   1212,
+   1017,
+   861,
+   468,
+   285,
+   268,
+   220,
+   162,
+   148
+  ],
+  "dist_printed": [
+   2539,
+   2029,
+   1277,
+   1212,
+   1017,
+   861,
+   468,
+   285,
+   268,
+   220,
+   162,
+   148
+  ],
+  "ir": 17.16,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "",
+  "ir_overall": 226.12
+ },
+ {
+  "paper": "MKC-SMOTE",
+  "raw": "Avila",
+  "key": "avila",
+  "N": 10430,
+  "F": 10,
+  "C": 11,
+  "dist": [
+   4286,
+   1961,
+   1095,
+   831,
+   522,
+   519,
+   446,
+   352,
+   266,
+   103,
+   49
+  ],
+  "dist_printed": [
+   4286,
+   1961,
+   1095,
+   831,
+   522,
+   519,
+   446,
+   352,
+   266,
+   103,
+   49
+  ],
+  "ir": 87.47,
+  "irdef": "max over min (as reported)",
+  "kind": "multi-class",
+  "extra": "",
+  "ir_overall": 391.52
+ },
+ {
+  "paper": "SOUP",
+  "raw": "balance-scale",
+  "key": "balance",
+  "N": 625,
+  "F": null,
+  "C": 3,
+  "dist": [
+   288,
+   288,
+   49
+  ],
+  "dist_printed": [
+   288,
+   288,
+   49
+  ],
+  "ir": 5.88,
+  "irdef": "derived by us as max over min; SOUP reports no IR column",
+  "kind": "multi-class",
+  "extra": "",
+  "minority": [
+   "B"
+  ]
+ },
+ {
+  "paper": "SOUP",
+  "raw": "car",
+  "key": "car",
+  "N": 1728,
+  "F": null,
+  "C": 4,
+  "dist": [
+   1210,
+   384,
+   69,
+   65
+  ],
+  "dist_printed": [
+   1210,
+   384,
+   69,
+   65
+  ],
+  "ir": 18.62,
+  "irdef": "derived by us as max over min; SOUP reports no IR column",
+  "kind": "multi-class",
+  "extra": "",
+  "minority": [
+   "good",
+   "vgood"
+  ]
+ },
+ {
+  "paper": "SOUP",
+  "raw": "cleveland 1",
+  "key": "cleveland",
+  "N": 303,
+  "F": null,
+  "C": 5,
+  "dist": [
+   164,
+   55,
+   36,
+   35,
+   13
+  ],
+  "dist_printed": [
+   164,
+   55,
+   36,
+   35,
+   13
+  ],
+  "ir": 12.62,
+  "irdef": "derived by us as max over min; SOUP reports no IR column",
+  "kind": "multi-class",
+  "extra": "four minority classes; counts sum to 303 against the UCI 297",
+  "minority": [
+   "1",
+   "2",
+   "3",
+   "4"
+  ]
+ },
+ {
+  "paper": "SOUP",
+  "raw": "cleveland 2",
+  "key": "cleveland",
+  "N": 303,
+  "F": null,
+  "C": 4,
+  "dist": [
+   219,
+   36,
+   35,
+   13
+  ],
+  "dist_printed": [
+   219,
+   36,
+   35,
+   13
+  ],
+  "ir": 16.85,
+  "irdef": "derived by us as max over min; SOUP reports no IR column",
+  "kind": "multi-class",
+  "extra": "a second variant of the same source with classes 0 and 1 merged",
+  "minority": [
+   "2",
+   "3",
+   "4"
+  ]
+ },
+ {
+  "paper": "SOUP",
+  "raw": "cmc",
+  "key": "contraceptive",
+  "N": 1473,
+  "F": null,
+  "C": 3,
+  "dist": [
+   629,
+   511,
+   333
+  ],
+  "dist_printed": [
+   629,
+   511,
+   333
+  ],
+  "ir": 1.89,
+  "irdef": "derived by us as max over min; SOUP reports no IR column",
+  "kind": "multi-class",
+  "extra": "",
+  "minority": [
+   "2"
+  ]
+ },
+ {
+  "paper": "SOUP",
+  "raw": "dermatology",
+  "key": "dermatology",
+  "N": 366,
+  "F": null,
+  "C": 6,
+  "dist": [
+   112,
+   72,
+   61,
+   52,
+   49,
+   20
+  ],
+  "dist_printed": [
+   112,
+   72,
+   61,
+   52,
+   49,
+   20
+  ],
+  "ir": 5.6,
+  "irdef": "derived by us as max over min; SOUP reports no IR column",
+  "kind": "multi-class",
+  "extra": "counts sum to 366, the UCI original (doi:10.24432/C5FK5P); MC-RBO and MC-NCLWO use the 358-instance KEEL version",
+  "minority": [
+   "6"
+  ]
+ },
+ {
+  "paper": "SOUP",
+  "raw": "ecoli",
+  "key": "ecoli",
+  "N": 336,
+  "F": null,
+  "C": 5,
+  "dist": [
+   145,
+   77,
+   52,
+   37,
+   25
+  ],
+  "dist_printed": [
+   145,
+   77,
+   52,
+   37,
+   25
+  ],
+  "ir": 5.8,
+  "irdef": "derived by us as max over min; SOUP reports no IR column",
+  "kind": "multi-class",
+  "extra": "classes aggregated to 5 from the UCI 8",
+  "minority": [
+   "pp",
+   "imU+imS",
+   "om+omL"
+  ]
+ },
+ {
+  "paper": "SOUP",
+  "raw": "flare",
+  "key": "flare",
+  "N": 1389,
+  "F": null,
+  "C": 6,
+  "dist": [
+   396,
+   327,
+   287,
+   212,
+   116,
+   51
+  ],
+  "dist_printed": [
+   396,
+   327,
+   287,
+   212,
+   116,
+   51
+  ],
+  "ir": 7.76,
+  "irdef": "derived by us as max over min; SOUP reports no IR column",
+  "kind": "multi-class",
+  "extra": "1389 instances, that is solar flare 2; MC-RBO and MC-NCLWO use solar flare 1 with 1066",
+  "minority": [
+   "4",
+   "5"
+  ]
+ },
+ {
+  "paper": "SOUP",
+  "raw": "glass",
+  "key": "glass",
+  "N": 214,
+  "F": null,
+  "C": 6,
+  "dist": [
+   76,
+   70,
+   29,
+   17,
+   13,
+   9
+  ],
+  "dist_printed": [
+   76,
+   70,
+   29,
+   17,
+   13,
+   9
+  ],
+  "ir": 8.44,
+  "irdef": "derived by us as max over min; SOUP reports no IR column",
+  "kind": "multi-class",
+  "extra": "",
+  "minority": [
+   "vwf",
+   "con",
+   "tab"
+  ]
+ },
+ {
+  "paper": "SOUP",
+  "raw": "hayes roth",
+  "key": "hayes-roth",
+  "N": 160,
+  "F": null,
+  "C": 3,
+  "dist": [
+   65,
+   64,
+   31
+  ],
+  "dist_printed": [
+   65,
+   64,
+   31
+  ],
+  "ir": 2.1,
+  "irdef": "derived by us as max over min; SOUP reports no IR column",
+  "kind": "multi-class",
+  "extra": "",
+  "minority": [
+   "3"
+  ]
+ },
+ {
+  "paper": "SOUP",
+  "raw": "led7digit",
+  "key": "led7digit",
+  "N": 500,
+  "F": null,
+  "C": 6,
+  "dist": [
+   108,
+   99,
+   98,
+   94,
+   52,
+   49
+  ],
+  "dist_printed": [
+   108,
+   99,
+   98,
+   94,
+   52,
+   49
+  ],
+  "ir": 2.2,
+  "irdef": "derived by us as max over min; SOUP reports no IR column",
+  "kind": "multi-class",
+  "extra": "classes aggregated to 6 from 10",
+  "minority": [
+   "5",
+   "10"
+  ]
+ },
+ {
+  "paper": "SOUP",
+  "raw": "new thyroid",
+  "key": "new-thyroid",
+  "N": 215,
+  "F": null,
+  "C": 3,
+  "dist": [
+   150,
+   35,
+   30
+  ],
+  "dist_printed": [
+   150,
+   35,
+   30
+  ],
+  "ir": 5.0,
+  "irdef": "derived by us as max over min; SOUP reports no IR column",
+  "kind": "multi-class",
+  "extra": "",
+  "minority": [
+   "2",
+   "3"
+  ]
+ },
+ {
+  "paper": "SOUP",
+  "raw": "vehicle",
+  "key": "vehicle",
+  "N": 846,
+  "F": null,
+  "C": 3,
+  "dist": [
+   429,
+   218,
+   199
+  ],
+  "dist_printed": [
+   429,
+   218,
+   199
+  ],
+  "ir": 2.16,
+  "irdef": "derived by us as max over min; SOUP reports no IR column",
+  "kind": "multi-class",
+  "extra": "opel and saab merged into one majority class, so 3 classes rather than 4",
+  "minority": [
+   "bus",
+   "van"
+  ]
+ },
+ {
+  "paper": "SOUP",
+  "raw": "yeast",
+  "key": "yeast",
+  "N": 1484,
+  "F": null,
+  "C": 9,
+  "dist": [
+   463,
+   429,
+   244,
+   168,
+   51,
+   44,
+   35,
+   30,
+   20
+  ],
+  "dist_printed": [
+   463,
+   429,
+   244,
+   168,
+   51,
+   44,
+   35,
+   30,
+   20
+  ],
+  "ir": 23.15,
+  "irdef": "derived by us as max over min; SOUP reports no IR column",
+  "kind": "multi-class",
+  "extra": "five minority classes, the most of any dataset in the corpus",
+  "minority": [
+   "2",
+   "3",
+   "5",
+   "6",
+   "7"
+  ]
+ },
+ {
+  "paper": "SOUP",
+  "raw": "wine quality red",
+  "key": "winequality-red",
+  "N": 1599,
+  "F": null,
+  "C": 4,
+  "dist": [
+   681,
+   638,
+   199,
+   81
+  ],
+  "dist_printed": [
+   681,
+   638,
+   199,
+   81
+  ],
+  "ir": 8.41,
+  "irdef": "derived by us as max over min; SOUP reports no IR column",
+  "kind": "multi-class",
+  "extra": "classes aggregated to 4 from 6",
+  "minority": [
+   "7",
+   "8"
+  ]
+ },
+ {
+  "paper": "SOUP",
+  "raw": "art1",
+  "key": "art1",
+  "N": 1200,
+  "F": null,
+  "C": 3,
+  "dist": [
+   840,
+   240,
+   120
+  ],
+  "dist_printed": [
+   840,
+   240,
+   120
+  ],
+  "ir": 7.0,
+  "irdef": "derived by us as max over min; SOUP reports no IR column",
+  "kind": "multi-class",
+  "extra": "synthetic; art1 to art4 share this profile and differ only in difficulty",
+  "minority": [
+   "MIN1",
+   "MIN2"
+  ]
+ },
+ {
+  "paper": "SOUP",
+  "raw": "art2",
+  "key": "art2",
+  "N": 1200,
+  "F": null,
+  "C": 3,
+  "dist": [
+   840,
+   240,
+   120
+  ],
+  "dist_printed": [
+   840,
+   240,
+   120
+  ],
+  "ir": 7.0,
+  "irdef": "derived by us as max over min; SOUP reports no IR column",
+  "kind": "multi-class",
+  "extra": "",
+  "minority": [
+   "MIN1",
+   "MIN2"
+  ]
+ },
+ {
+  "paper": "SOUP",
+  "raw": "art3",
+  "key": "art3",
+  "N": 1200,
+  "F": null,
+  "C": 3,
+  "dist": [
+   840,
+   240,
+   120
+  ],
+  "dist_printed": [
+   840,
+   240,
+   120
+  ],
+  "ir": 7.0,
+  "irdef": "derived by us as max over min; SOUP reports no IR column",
+  "kind": "multi-class",
+  "extra": "",
+  "minority": [
+   "MIN1",
+   "MIN2"
+  ]
+ },
+ {
+  "paper": "SOUP",
+  "raw": "art4",
+  "key": "art4",
+  "N": 1200,
+  "F": null,
+  "C": 3,
+  "dist": [
+   840,
+   240,
+   120
+  ],
+  "dist_printed": [
+   840,
+   240,
+   120
+  ],
+  "ir": 7.0,
+  "irdef": "derived by us as max over min; SOUP reports no IR column",
+  "kind": "multi-class",
+  "extra": "",
+  "minority": [
+   "MIN1",
+   "MIN2"
+  ]
+ },
+ {
+  "paper": "CBHSID",
+  "raw": "Liver",
+  "key": "liver",
+  "N": null,
+  "F": 6,
+  "C": 2,
+  "dist": null,
+  "dist_printed": null,
+  "ir": 1.38,
+  "irdef": "not stated",
+  "kind": "binary (KEEL two-class task)",
+  "extra": ""
+ },
+ {
+  "paper": "CBHSID",
+  "raw": "Pima",
+  "key": "pima",
+  "N": null,
+  "F": 8,
+  "C": 2,
+  "dist": null,
+  "dist_printed": null,
+  "ir": 1.87,
+  "irdef": "not stated",
+  "kind": "binary (KEEL two-class task)",
+  "extra": ""
+ },
+ {
+  "paper": "CBHSID",
+  "raw": "Cancer",
+  "key": "cancer",
+  "N": null,
+  "F": 10,
+  "C": 2,
+  "dist": null,
+  "dist_printed": null,
+  "ir": 1.89,
+  "irdef": "not stated",
+  "kind": "binary (KEEL two-class task)",
+  "extra": ""
+ },
+ {
+  "paper": "CBHSID",
+  "raw": "Heart failure",
+  "key": "heart failure",
+  "N": null,
+  "F": 12,
+  "C": 2,
+  "dist": null,
+  "dist_printed": null,
+  "ir": 2.13,
+  "irdef": "not stated",
+  "kind": "binary (KEEL two-class task)",
+  "extra": ""
+ },
+ {
+  "paper": "CBHSID",
+  "raw": "Yeast1",
+  "key": "yeast1",
+  "N": null,
+  "F": 8,
+  "C": 2,
+  "dist": null,
+  "dist_printed": null,
+  "ir": 2.46,
+  "irdef": "not stated",
+  "kind": "binary (KEEL two-class task)",
+  "extra": ""
+ },
+ {
+  "paper": "CBHSID",
+  "raw": "Haberman",
+  "key": "haberman",
+  "N": null,
+  "F": 3,
+  "C": 2,
+  "dist": null,
+  "dist_printed": null,
+  "ir": 2.78,
+  "irdef": "not stated",
+  "kind": "binary (KEEL two-class task)",
+  "extra": ""
+ },
+ {
+  "paper": "CBHSID",
+  "raw": "Vehicle1",
+  "key": "vehicle1",
+  "N": null,
+  "F": 18,
+  "C": 2,
+  "dist": null,
+  "dist_printed": null,
+  "ir": 2.9,
+  "irdef": "not stated",
+  "kind": "binary (KEEL two-class task)",
+  "extra": ""
+ },
+ {
+  "paper": "CBHSID",
+  "raw": "Glass6",
+  "key": "glass6",
+  "N": null,
+  "F": 9,
+  "C": 2,
+  "dist": null,
+  "dist_printed": null,
+  "ir": 6.38,
+  "irdef": "not stated",
+  "kind": "binary (KEEL two-class task)",
+  "extra": ""
+ },
+ {
+  "paper": "CBHSID",
+  "raw": "Yeast3",
+  "key": "yeast3",
+  "N": null,
+  "F": 8,
+  "C": 2,
+  "dist": null,
+  "dist_printed": null,
+  "ir": 8.1,
+  "irdef": "not stated",
+  "kind": "binary (KEEL two-class task)",
+  "extra": ""
+ },
+ {
+  "paper": "CBHSID",
+  "raw": "Yeast4",
+  "key": "yeast4",
+  "N": null,
+  "F": 8,
+  "C": 2,
+  "dist": null,
+  "dist_printed": null,
+  "ir": 28.1,
+  "irdef": "not stated",
+  "kind": "binary (KEEL two-class task)",
+  "extra": ""
+ },
+ {
+  "paper": "CBHSID",
+  "raw": "Yeast5",
+  "key": "yeast5",
+  "N": null,
+  "F": 8,
+  "C": 2,
+  "dist": null,
+  "dist_printed": null,
+  "ir": 32.73,
+  "irdef": "not stated",
+  "kind": "binary (KEEL two-class task)",
+  "extra": ""
+ },
+ {
+  "paper": "CBHSID",
+  "raw": "Yeast6",
+  "key": "yeast6",
+  "N": null,
+  "F": 8,
+  "C": 2,
+  "dist": null,
+  "dist_printed": null,
+  "ir": 41.4,
+  "irdef": "not stated",
+  "kind": "binary (KEEL two-class task)",
+  "extra": ""
+ },
+ {
+  "paper": "CBHSID",
+  "raw": "Penbased",
+  "key": "penbased",
+  "N": null,
+  "F": 16,
+  "C": 10,
+  "dist": null,
+  "dist_printed": null,
+  "ir": 1.95,
+  "irdef": "not stated",
+  "kind": "multi-class",
+  "extra": ""
+ },
+ {
+  "paper": "CBHSID",
+  "raw": "Contraceptive",
+  "key": "contraceptive",
+  "N": null,
+  "F": 9,
+  "C": 3,
+  "dist": null,
+  "dist_printed": null,
+  "ir": 5.6,
+  "irdef": "not stated",
+  "kind": "multi-class",
+  "extra": "IR 5.6 where every other paper reports 1.89 for the same dataset; the definition used is not stated"
+ },
+ {
+  "paper": "CBHSID",
+  "raw": "Dermatology",
+  "key": "dermatology",
+  "N": null,
+  "F": 34,
+  "C": 6,
+  "dist": null,
+  "dist_printed": null,
+  "ir": 36.94,
+  "irdef": "not stated",
+  "kind": "multi-class",
+  "extra": "IR 36.94 where every other paper reports 5.55; the definition used is not stated"
+ },
+ {
+  "paper": "CBHSID",
+  "raw": "Thyroid",
+  "key": "thyroid",
+  "N": null,
+  "F": 21,
+  "C": 3,
+  "dist": null,
+  "dist_printed": null,
+  "ir": 39.17,
+  "irdef": "not stated",
+  "kind": "multi-class",
+  "extra": "IR 39.17 matches the 720-instance thyroid used by MC-NCLWO, not the 7200-instance one"
+ },
+ {
+  "paper": "EasyEnsemble / BalanceCascade",
+  "raw": "abalone",
+  "key": "abalone",
+  "N": 4177,
+  "F": 8,
+  "C": 2,
+  "dist": [
+   3786,
+   391
+  ],
+  "dist_printed": [
+   3786,
+   391
+  ],
+  "ir": 9.7,
+  "irdef": "majority over minority after binarisation",
+  "kind": "binary (one-vs-rest)",
+  "extra": "binarisation target published: Ring=7"
+ },
+ {
+  "paper": "EasyEnsemble / BalanceCascade",
+  "raw": "balance",
+  "key": "balance",
+  "N": 625,
+  "F": 4,
+  "C": 2,
+  "dist": [
+   576,
+   49
+  ],
+  "dist_printed": [
+   576,
+   49
+  ],
+  "ir": 11.8,
+  "irdef": "majority over minority after binarisation",
+  "kind": "binary (one-vs-rest)",
+  "extra": "binarisation target published: Balance"
+ },
+ {
+  "paper": "EasyEnsemble / BalanceCascade",
+  "raw": "car",
+  "key": "car",
+  "N": 1728,
+  "F": 6,
+  "C": 2,
+  "dist": [
+   1344,
+   384
+  ],
+  "dist_printed": [
+   1344,
+   384
+  ],
+  "ir": 3.5,
+  "irdef": "majority over minority after binarisation",
+  "kind": "binary (one-vs-rest)",
+  "extra": "binarisation target published: acc"
+ },
+ {
+  "paper": "EasyEnsemble / BalanceCascade",
+  "raw": "cmc",
+  "key": "contraceptive",
+  "N": 1473,
+  "F": 9,
+  "C": 2,
+  "dist": [
+   1140,
+   333
+  ],
+  "dist_printed": [
+   1140,
+   333
+  ],
+  "ir": 3.4,
+  "irdef": "majority over minority after binarisation",
+  "kind": "binary (one-vs-rest)",
+  "extra": "binarisation target published: class 2"
+ },
+ {
+  "paper": "EasyEnsemble / BalanceCascade",
+  "raw": "haberman",
+  "key": "haberman",
+  "N": 306,
+  "F": 3,
+  "C": 2,
+  "dist": [
+   225,
+   81
+  ],
+  "dist_printed": [
+   225,
+   81
+  ],
+  "ir": 2.8,
+  "irdef": "majority over minority after binarisation",
+  "kind": "binary (one-vs-rest)",
+  "extra": "binarisation target published: class 2"
+ },
+ {
+  "paper": "EasyEnsemble / BalanceCascade",
+  "raw": "housing",
+  "key": "housing",
+  "N": 506,
+  "F": 13,
+  "C": 2,
+  "dist": [
+   400,
+   106
+  ],
+  "dist_printed": [
+   400,
+   106
+  ],
+  "ir": 3.8,
+  "irdef": "majority over minority after binarisation",
+  "kind": "binary (one-vs-rest)",
+  "extra": "binarisation target published: target in [20,23]"
+ },
+ {
+  "paper": "EasyEnsemble / BalanceCascade",
+  "raw": "ionosphere",
+  "key": "ionosphere",
+  "N": 351,
+  "F": 33,
+  "C": 2,
+  "dist": [
+   225,
+   126
+  ],
+  "dist_printed": [
+   225,
+   126
+  ],
+  "ir": 1.8,
+  "irdef": "majority over minority after binarisation",
+  "kind": "binary (one-vs-rest)",
+  "extra": "binarisation target published: bad"
+ },
+ {
+  "paper": "EasyEnsemble / BalanceCascade",
+  "raw": "letter",
+  "key": "letter",
+  "N": 20000,
+  "F": 16,
+  "C": 2,
+  "dist": [
+   19211,
+   789
+  ],
+  "dist_printed": [
+   19211,
+   789
+  ],
+  "ir": 24.3,
+  "irdef": "majority over minority after binarisation",
+  "kind": "binary (one-vs-rest)",
+  "extra": "binarisation target published: A"
+ },
+ {
+  "paper": "EasyEnsemble / BalanceCascade",
+  "raw": "mf-morph",
+  "key": "mf-morph",
+  "N": 2000,
+  "F": 6,
+  "C": 2,
+  "dist": [
+   1800,
+   200
+  ],
+  "dist_printed": [
+   1800,
+   200
+  ],
+  "ir": 9.0,
+  "irdef": "majority over minority after binarisation",
+  "kind": "binary (one-vs-rest)",
+  "extra": "binarisation target published: class 10"
+ },
+ {
+  "paper": "EasyEnsemble / BalanceCascade",
+  "raw": "mf-zernike",
+  "key": "mf-zernike",
+  "N": 2000,
+  "F": 47,
+  "C": 2,
+  "dist": [
+   1800,
+   200
+  ],
+  "dist_printed": [
+   1800,
+   200
+  ],
+  "ir": 9.0,
+  "irdef": "majority over minority after binarisation",
+  "kind": "binary (one-vs-rest)",
+  "extra": "binarisation target published: class 10"
+ },
+ {
+  "paper": "EasyEnsemble / BalanceCascade",
+  "raw": "phoneme",
+  "key": "phoneme",
+  "N": 5404,
+  "F": 5,
+  "C": 2,
+  "dist": [
+   3818,
+   1586
+  ],
+  "dist_printed": [
+   3818,
+   1586
+  ],
+  "ir": 2.4,
+  "irdef": "majority over minority after binarisation",
+  "kind": "binary (one-vs-rest)",
+  "extra": "binarisation target published: class 1"
+ },
+ {
+  "paper": "EasyEnsemble / BalanceCascade",
+  "raw": "pima",
+  "key": "pima",
+  "N": 768,
+  "F": 8,
+  "C": 2,
+  "dist": [
+   500,
+   268
+  ],
+  "dist_printed": [
+   500,
+   268
+  ],
+  "ir": 1.9,
+  "irdef": "majority over minority after binarisation",
+  "kind": "binary (one-vs-rest)",
+  "extra": "binarisation target published: class 1"
+ },
+ {
+  "paper": "EasyEnsemble / BalanceCascade",
+  "raw": "satimage",
+  "key": "satimage",
+  "N": 6435,
+  "F": 36,
+  "C": 2,
+  "dist": [
+   5809,
+   626
+  ],
+  "dist_printed": [
+   5809,
+   626
+  ],
+  "ir": 9.3,
+  "irdef": "majority over minority after binarisation",
+  "kind": "binary (one-vs-rest)",
+  "extra": "binarisation target published: class 4"
+ },
+ {
+  "paper": "EasyEnsemble / BalanceCascade",
+  "raw": "vehicle",
+  "key": "vehicle",
+  "N": 846,
+  "F": 18,
+  "C": 2,
+  "dist": [
+   634,
+   212
+  ],
+  "dist_printed": [
+   634,
+   212
+  ],
+  "ir": 3.0,
+  "irdef": "majority over minority after binarisation",
+  "kind": "binary (one-vs-rest)",
+  "extra": "binarisation target published: opel"
+ },
+ {
+  "paper": "EasyEnsemble / BalanceCascade",
+  "raw": "wdbc",
+  "key": "wdbc",
+  "N": 569,
+  "F": 30,
+  "C": 2,
+  "dist": [
+   357,
+   212
+  ],
+  "dist_printed": [
+   357,
+   212
+  ],
+  "ir": 1.7,
+  "irdef": "majority over minority after binarisation",
+  "kind": "binary (one-vs-rest)",
+  "extra": "binarisation target published: malignant"
+ },
+ {
+  "paper": "EasyEnsemble / BalanceCascade",
+  "raw": "wpbc",
+  "key": "wpbc",
+  "N": 198,
+  "F": 33,
+  "C": 2,
+  "dist": [
+   151,
+   47
+  ],
+  "dist_printed": [
+   151,
+   47
+  ],
+  "ir": 3.2,
+  "irdef": "majority over minority after binarisation",
+  "kind": "binary (one-vs-rest)",
+  "extra": "binarisation target published: recur"
+ },
+ {
+  "paper": "RUSBoost",
+  "raw": "SP3",
+  "key": "sp3",
+  "N": 3541,
+  "F": 43,
+  "C": 2,
+  "dist": [
+   3494,
+   47
+  ],
+  "dist_printed": [
+   3494,
+   47
+  ],
+  "ir": 74.34,
+  "irdef": "derived from the published percentage minority",
+  "kind": "binary (one-vs-rest)",
+  "extra": "proprietary, never released percentage minority 1.33; the attribute count includes the dependent attribute"
+ },
+ {
+  "paper": "RUSBoost",
+  "raw": "Mammography",
+  "key": "mammography",
+  "N": 11183,
+  "F": 7,
+  "C": 2,
+  "dist": [
+   10923,
+   260
+  ],
+  "dist_printed": [
+   10923,
+   260
+  ],
+  "ir": 42.01,
+  "irdef": "derived from the published percentage minority",
+  "kind": "binary (one-vs-rest)",
+  "extra": "percentage minority 2.32; the attribute count includes the dependent attribute"
+ },
+ {
+  "paper": "RUSBoost",
+  "raw": "SolarFlareF",
+  "key": "solarflaref",
+  "N": 1389,
+  "F": 13,
+  "C": 2,
+  "dist": [
+   1338,
+   51
+  ],
+  "dist_printed": [
+   1338,
+   51
+  ],
+  "ir": 26.24,
+  "irdef": "derived from the published percentage minority",
+  "kind": "binary (one-vs-rest)",
+  "extra": "1389 instances, that is solar flare 2, the same source SOUP uses percentage minority 3.67; the attribute count includes the dependent attribute"
+ },
+ {
+  "paper": "RUSBoost",
+  "raw": "Car3",
+  "key": "car3",
+  "N": 1728,
+  "F": 7,
+  "C": 2,
+  "dist": [
+   1659,
+   69
+  ],
+  "dist_printed": [
+   1659,
+   69
+  ],
+  "ir": 24.04,
+  "irdef": "derived from the published percentage minority",
+  "kind": "binary (one-vs-rest)",
+  "extra": "percentage minority 3.99; the attribute count includes the dependent attribute"
+ },
+ {
+  "paper": "RUSBoost",
+  "raw": "CCCS12",
+  "key": "cccs12",
+  "N": 282,
+  "F": 9,
+  "C": 2,
+  "dist": [
+   266,
+   16
+  ],
+  "dist_printed": [
+   266,
+   16
+  ],
+  "ir": 16.62,
+  "irdef": "derived from the published percentage minority",
+  "kind": "binary (one-vs-rest)",
+  "extra": "proprietary, never released percentage minority 5.67; the attribute count includes the dependent attribute"
+ },
+ {
+  "paper": "RUSBoost",
+  "raw": "SP1",
+  "key": "sp1",
+  "N": 3649,
+  "F": 43,
+  "C": 2,
+  "dist": [
+   3420,
+   229
+  ],
+  "dist_printed": [
+   3420,
+   229
+  ],
+  "ir": 14.93,
+  "irdef": "derived from the published percentage minority",
+  "kind": "binary (one-vs-rest)",
+  "extra": "proprietary, never released percentage minority 6.28; the attribute count includes the dependent attribute"
+ },
+ {
+  "paper": "RUSBoost",
+  "raw": "PC1",
+  "key": "pc1",
+  "N": 1107,
+  "F": 16,
+  "C": 2,
+  "dist": [
+   1031,
+   76
+  ],
+  "dist_printed": [
+   1031,
+   76
+  ],
+  "ir": 13.57,
+  "irdef": "derived from the published percentage minority",
+  "kind": "binary (one-vs-rest)",
+  "extra": "percentage minority 6.87; the attribute count includes the dependent attribute"
+ },
+ {
+  "paper": "RUSBoost",
+  "raw": "Glass3",
+  "key": "glass3",
+  "N": 214,
+  "F": 10,
+  "C": 2,
+  "dist": [
+   197,
+   17
+  ],
+  "dist_printed": [
+   197,
+   17
+  ],
+  "ir": 11.59,
+  "irdef": "derived from the published percentage minority",
+  "kind": "binary (one-vs-rest)",
+  "extra": "percentage minority 7.94; the attribute count includes the dependent attribute"
+ },
+ {
+  "paper": "RUSBoost",
+  "raw": "CM1",
+  "key": "cm1",
+  "N": 505,
+  "F": 16,
+  "C": 2,
+  "dist": [
+   457,
+   48
+  ],
+  "dist_printed": [
+   457,
+   48
+  ],
+  "ir": 9.52,
+  "irdef": "derived from the published percentage minority",
+  "kind": "binary (one-vs-rest)",
+  "extra": "percentage minority 9.50; the attribute count includes the dependent attribute"
+ },
+ {
+  "paper": "RUSBoost",
+  "raw": "Pendigits5",
+  "key": "pendigits5",
+  "N": 10992,
+  "F": 17,
+  "C": 2,
+  "dist": [
+   9937,
+   1055
+  ],
+  "dist_printed": [
+   9937,
+   1055
+  ],
+  "ir": 9.42,
+  "irdef": "derived from the published percentage minority",
+  "kind": "binary (one-vs-rest)",
+  "extra": "percentage minority 9.60; the attribute count includes the dependent attribute"
+ },
+ {
+  "paper": "RUSBoost",
+  "raw": "Satimage4",
+  "key": "satimage4",
+  "N": 6435,
+  "F": 37,
+  "C": 2,
+  "dist": [
+   5809,
+   626
+  ],
+  "dist_printed": [
+   5809,
+   626
+  ],
+  "ir": 9.28,
+  "irdef": "derived from the published percentage minority",
+  "kind": "binary (one-vs-rest)",
+  "extra": "percentage minority 9.73; the attribute count includes the dependent attribute"
+ },
+ {
+  "paper": "RUSBoost",
+  "raw": "Ecoli4",
+  "key": "ecoli4",
+  "N": 336,
+  "F": 8,
+  "C": 2,
+  "dist": [
+   301,
+   35
+  ],
+  "dist_printed": [
+   301,
+   35
+  ],
+  "ir": 8.6,
+  "irdef": "derived from the published percentage minority",
+  "kind": "binary (one-vs-rest)",
+  "extra": "percentage minority 10.42; the attribute count includes the dependent attribute"
+ },
+ {
+  "paper": "RUSBoost",
+  "raw": "Segment5",
+  "key": "segment5",
+  "N": 2310,
+  "F": 20,
+  "C": 2,
+  "dist": [
+   1980,
+   330
+  ],
+  "dist_printed": [
+   1980,
+   330
+  ],
+  "ir": 6.0,
+  "irdef": "derived from the published percentage minority",
+  "kind": "binary (one-vs-rest)",
+  "extra": "percentage minority 14.29; the attribute count includes the dependent attribute"
+ },
+ {
+  "paper": "RUSBoost",
+  "raw": "Contra2",
+  "key": "contra2",
+  "N": 1473,
+  "F": 10,
+  "C": 2,
+  "dist": [
+   1140,
+   333
+  ],
+  "dist_printed": [
+   1140,
+   333
+  ],
+  "ir": 3.42,
+  "irdef": "derived from the published percentage minority",
+  "kind": "binary (one-vs-rest)",
+  "extra": "percentage minority 22.61; the attribute count includes the dependent attribute"
+ },
+ {
+  "paper": "RUSBoost",
+  "raw": "Vehicle1",
+  "key": "vehicle1",
+  "N": 846,
+  "F": 19,
+  "C": 2,
+  "dist": [
+   634,
+   212
+  ],
+  "dist_printed": [
+   634,
+   212
+  ],
+  "ir": 2.99,
+  "irdef": "derived from the published percentage minority",
+  "kind": "binary (one-vs-rest)",
+  "extra": "percentage minority 25.06; the attribute count includes the dependent attribute"
+ },
+ {
+  "paper": "MWMOTE",
+  "raw": "Pageblocks",
+  "N": 5476,
+  "F": 10,
+  "C": 2,
+  "ir": null,
+  "note": "minority = Class of 'Graphic', 'Vert.line', 'Picture' ; majority = All other classes ; min 231 / maj 5245 ; %min 4 ; printed ratio 0.04:0.96"
+ },
+ {
+  "paper": "MWMOTE",
+  "raw": "Abalone",
+  "N": 731,
+  "F": 7,
+  "C": 2,
+  "ir": null,
+  "note": "minority = Class of '18' ; majority = Class of '9' ; min 42 / maj 689 ; %min 6 ; printed ratio 0.06:0.94"
+ },
+ {
+  "paper": "MWMOTE",
+  "raw": "CTG",
+  "N": 2126,
+  "F": 21,
+  "C": 2,
+  "ir": null,
+  "note": "minority = Class of '3', '4' ; majority = All other classes ; min 134 / maj 1992 ; %min 6.30 ; printed ratio 0.06:0.94"
+ },
+ {
+  "paper": "MWMOTE",
+  "raw": "OCR",
+  "N": 3826,
+  "F": 64,
+  "C": 2,
+  "ir": null,
+  "note": "minority = Class of '0' ; majority = All other classes ; min 376 / maj 3447 ; %min 9 ; printed ratio 0.09:0.91"
+ },
+ {
+  "paper": "MWMOTE",
+  "raw": "Statlandsat",
+  "N": 4435,
+  "F": 37,
+  "C": 2,
+  "ir": null,
+  "note": "minority = Class of '4' ; majority = All other classes ; min 415 / maj 4435 ; %min 9.36 ; printed ratio 0.09:0.91"
+ },
+ {
+  "paper": "MWMOTE",
+  "raw": "Semeion",
+  "N": 1593,
+  "F": 265,
+  "C": 2,
+  "ir": null,
+  "note": "minority = Class of '4' ; majority = All other classes ; min 161 / maj 1432 ; %min 10.11 ; printed ratio 0.11:0.89"
+ },
+ {
+  "paper": "MWMOTE",
+  "raw": "Segment",
+  "N": 2310,
+  "F": 19,
+  "C": 2,
+  "ir": null,
+  "note": "minority = Class of 'Grass' ; majority = All other classes ; min 330 / maj 1980 ; %min 14 ; printed ratio 0.14:0.86"
+ },
+ {
+  "paper": "MWMOTE",
+  "raw": "Libra",
+  "N": 360,
+  "F": 90,
+  "C": 2,
+  "ir": null,
+  "note": "minority = Class of '1', '2', '3' ; majority = All other classes ; min 72 / maj 288 ; %min 20 ; printed ratio 0.20:0.80"
+ },
+ {
+  "paper": "MWMOTE",
+  "raw": "Yeast",
+  "N": 1484,
+  "F": 8,
+  "C": 2,
+  "ir": null,
+  "note": "minority = Class of ME3', 'ME2', 'EXC', 'VAC', 'POX', 'ERL' ; majority = All other classes ; min 304 / maj 1180 ; %min 21 ; printed ratio 0.20:0.80"
+ },
+ {
+  "paper": "MWMOTE",
+  "raw": "Robot",
+  "N": 5456,
+  "F": 24,
+  "C": 2,
+  "ir": null,
+  "note": "minority = Class of 'slight-left-turn', 'slight-right-turn' ; majority = All other classes ; min 1154 / maj 4302 ; %min 22 ; printed ratio 0.21:0.79"
+ },
+ {
+  "paper": "MWMOTE",
+  "raw": "Ecoli",
+  "N": 336,
+  "F": 7,
+  "C": 2,
+  "ir": null,
+  "note": "minority = Class of 'im' ; majority = All other classes ; min 77 / maj 259 ; %min 23 ; printed ratio 0.23:0.77"
+ },
+ {
+  "paper": "MWMOTE",
+  "raw": "Glass",
+  "N": 214,
+  "F": 9,
+  "C": 2,
+  "ir": null,
+  "note": "minority = Class of '5', '6', '7' ; majority = All other classes ; min 51 / maj 163 ; %min 24 ; printed ratio 0.24:0.76"
+ },
+ {
+  "paper": "MWMOTE",
+  "raw": "Vehicle",
+  "N": 940,
+  "F": 18,
+  "C": 2,
+  "ir": null,
+  "note": "minority = Class of '1' ; majority = All other classes ; min 219 / maj 721 ; %min 24 ; printed ratio 0.23:0.77"
+ },
+ {
+  "paper": "MWMOTE",
+  "raw": "Wine",
+  "N": 178,
+  "F": 13,
+  "C": 2,
+  "ir": null,
+  "note": "minority = Class of '3' ; majority = All other classes ; min 48 / maj 130 ; %min 27 ; printed ratio 0.27:0.73"
+ },
+ {
+  "paper": "MWMOTE",
+  "raw": "Texture",
+  "N": 5477,
+  "F": 40,
+  "C": 2,
+  "ir": null,
+  "note": "minority = Class of '2', '3', '4' ; majority = All other classes ; min 1500 / maj 3977 ; %min 28 ; printed ratio 0.27:0.73"
+ },
+ {
+  "paper": "MWMOTE",
+  "raw": "Phoneme",
+  "N": 5227,
+  "F": 5,
+  "C": 2,
+  "ir": null,
+  "note": "minority = Class of '1' ; majority = All other classes ; min 1520 / maj 3707 ; %min 30 ; printed ratio 0.29:0.71"
+ },
+ {
+  "paper": "MWMOTE",
+  "raw": "Satimage",
+  "N": 6435,
+  "F": 36,
+  "C": 2,
+  "ir": null,
+  "note": "minority = Class of '2', '4', '5' ; majority = All other classes ; min 2036 / maj 4399 ; %min 32 ; printed ratio 0.32:0.68"
+ },
+ {
+  "paper": "MWMOTE",
+  "raw": "Breast-tissue",
+  "N": 106,
+  "F": 9,
+  "C": 2,
+  "ir": null,
+  "note": "minority = Class of 'CAR', 'FAD' ; majority = All other classes ; min 36 / maj 70 ; %min 34 ; printed ratio 0.34:0.66"
+ },
+ {
+  "paper": "MWMOTE",
+  "raw": "Breast-cancer-original",
+  "N": 683,
+  "F": 9,
+  "C": 2,
+  "ir": null,
+  "note": "minority = Class of 'Malignant' ; majority = Class of 'Benign' ; min 239 / maj 444 ; %min 35 ; printed ratio 0.35:0.65"
+ },
+ {
+  "paper": "MWMOTE",
+  "raw": "Pima",
+  "N": 768,
+  "F": 8,
+  "C": 2,
+  "ir": null,
+  "note": "minority = Class of '1' ; majority = Class of '0' ; min 268 / maj 500 ; %min 35 ; printed ratio 0.35:0.65"
+ }
+]

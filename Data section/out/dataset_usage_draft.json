@@ -1,25 +1,18 @@
 {
  "mode": "draft",
  "papers": 76,
- "dataset_mentions": 1446,
- "single_name_mentions": 1366,
+ "dataset_mentions": 1458,
+ "single_name_mentions": 1378,
  "aggregate_entries": 80,
- "distinct_datasets": 601,
+ "distinct_datasets": 605,
  "claimed_total": 1728,
- "listed_total": 1446,
- "covered_by_aggregate": 320,
- "aggregate_entry_count": 10,
- "unaccounted": 13,
- "coverage_pct": 83.7,
- "accounted_pct": 102.2,
+ "listed_total": 1458,
+ "covered_by_aggregate": 324,
+ "aggregate_entry_count": 11,
+ "unaccounted": 1,
+ "coverage_pct": 84.4,
+ "accounted_pct": 103.1,
  "papers_short": [
-  {
-   "paper": "MWMOTE",
-   "claimed": 20,
-   "named": 8,
-   "by_aggregate": 0,
-   "missing": 12
-  },
   {
    "paper": "Tomek Links",
    "claimed": 1,
@@ -63,6 +56,13 @@
    "named": 20,
    "by_aggregate": 9,
    "extra": 9
+  },
+  {
+   "paper": "MWMOTE",
+   "claimed": 20,
+   "named": 20,
+   "by_aggregate": 4,
+   "extra": 4
   },
   {
    "paper": "NROMM",
@@ -126,31 +126,31 @@
   }
  ],
  "usage_distribution": {
-  "1": 403,
+  "1": 406,
   "2": 91,
-  "3": 23,
-  "4": 14,
-  "5": 18,
-  "6": 10,
-  "7": 4,
+  "3": 24,
+  "4": 13,
+  "5": 19,
+  "6": 9,
+  "7": 5,
   "8": 7,
-  "9": 6,
+  "9": 5,
   "10": 2,
-  "11": 3,
+  "11": 4,
   "12": 4,
   "13": 5,
-  "14": 3,
-  "15": 1,
+  "14": 2,
+  "15": 2,
   "16": 1,
   "19": 1,
   "21": 3,
   "22": 1,
-  "24": 1
+  "25": 1
  },
  "core": [
   {
    "dataset": "ecoli",
-   "n_papers": 24,
+   "n_papers": 25,
    "printed_as": [
     "ECOLI",
     "Ecoli",
@@ -171,6 +171,7 @@
     "MC-RBO",
     "MDO",
     "MKC-SMOTE",
+    "MWMOTE",
     "NROMM",
     "OVO-SMOTE",
     "RSMOTE",
@@ -405,6 +406,33 @@
    ]
   },
   {
+   "dataset": "wine",
+   "n_papers": 15,
+   "printed_as": [
+    "WINE",
+    "Wine",
+    "wine"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "A-SUWO",
+    "G-SMOTE",
+    "GLOS",
+    "MC-CCR",
+    "MC-NCLWO",
+    "MC-RBO",
+    "MDO",
+    "MWMOTE",
+    "NROMM",
+    "OVO-SMOTE",
+    "RAMOBoost",
+    "RSMOTE",
+    "SHSampler",
+    "SVDD-WSMOTE",
+    "k-means SMOTE"
+   ]
+  },
+  {
    "dataset": "car",
    "n_papers": 14,
    "printed_as": [
@@ -428,32 +456,6 @@
     "SHSampler",
     "SOUP",
     "SVDD-WSMOTE"
-   ]
-  },
-  {
-   "dataset": "wine",
-   "n_papers": 14,
-   "printed_as": [
-    "WINE",
-    "Wine",
-    "wine"
-   ],
-   "provenance": "unclassified",
-   "papers": [
-    "A-SUWO",
-    "G-SMOTE",
-    "GLOS",
-    "MC-CCR",
-    "MC-NCLWO",
-    "MC-RBO",
-    "MDO",
-    "NROMM",
-    "OVO-SMOTE",
-    "RAMOBoost",
-    "RSMOTE",
-    "SHSampler",
-    "SVDD-WSMOTE",
-    "k-means SMOTE"
    ]
   },
   {
@@ -700,6 +702,29 @@
    ]
   },
   {
+   "dataset": "abalone",
+   "n_papers": 11,
+   "printed_as": [
+    "Abalone",
+    "abalone",
+    "abalone (Ring=7)"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "ADASYN",
+    "EasyEnsemble / BalanceCascade",
+    "Global-CS (AAAI)",
+    "Global-CS (journal)",
+    "MDO",
+    "MKC-SMOTE",
+    "MWMOTE",
+    "OREM-M",
+    "RACOG / wRACOG",
+    "RAMOBoost",
+    "SVDD-WSMOTE"
+   ]
+  },
+  {
    "dataset": "ecoli4",
    "n_papers": 11,
    "printed_as": [
@@ -767,25 +792,24 @@
    ]
   },
   {
-   "dataset": "abalone",
+   "dataset": "segment",
    "n_papers": 10,
    "printed_as": [
-    "Abalone",
-    "abalone",
-    "abalone (Ring=7)"
+    "Segment",
+    "segment"
    ],
    "provenance": "unclassified",
    "papers": [
-    "ADASYN",
-    "EasyEnsemble / BalanceCascade",
+    "A-SUWO",
+    "GLOS",
     "Global-CS (AAAI)",
     "Global-CS (journal)",
-    "MDO",
-    "MKC-SMOTE",
-    "OREM-M",
-    "RACOG / wRACOG",
+    "LS",
+    "MWMOTE",
     "RAMOBoost",
-    "SVDD-WSMOTE"
+    "RBBoost / Random Balance",
+    "RSMOTE",
+    "k-means SMOTE"
    ]
   },
   {
@@ -889,26 +913,6 @@
     "RAMOBoost",
     "RBBoost / Random Balance",
     "RSMOTE"
-   ]
-  },
-  {
-   "dataset": "segment",
-   "n_papers": 9,
-   "printed_as": [
-    "Segment",
-    "segment"
-   ],
-   "provenance": "unclassified",
-   "papers": [
-    "A-SUWO",
-    "GLOS",
-    "Global-CS (AAAI)",
-    "Global-CS (journal)",
-    "LS",
-    "RAMOBoost",
-    "RBBoost / Random Balance",
-    "RSMOTE",
-    "k-means SMOTE"
    ]
   },
   {
@@ -1119,6 +1123,25 @@
    ]
   },
   {
+   "dataset": "phoneme",
+   "n_papers": 7,
+   "printed_as": [
+    "Phoneme",
+    "phoneme",
+    "phoneme (class 1)"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "EasyEnsemble / BalanceCascade",
+    "LS",
+    "MWMOTE",
+    "RAMOBoost",
+    "RBBoost / Random Balance",
+    "SMOTE",
+    "SMOTEBoost"
+   ]
+  },
+  {
    "dataset": "splice",
    "n_papers": 7,
    "printed_as": [
@@ -1241,24 +1264,6 @@
    ]
   },
   {
-   "dataset": "phoneme",
-   "n_papers": 6,
-   "printed_as": [
-    "Phoneme",
-    "phoneme",
-    "phoneme (class 1)"
-   ],
-   "provenance": "unclassified",
-   "papers": [
-    "EasyEnsemble / BalanceCascade",
-    "LS",
-    "RAMOBoost",
-    "RBBoost / Random Balance",
-    "SMOTE",
-    "SMOTEBoost"
-   ]
-  },
-  {
    "dataset": "shuttle",
    "n_papers": 6,
    "printed_as": [
@@ -1307,6 +1312,22 @@
     "QC-SMOTE",
     "RBBoost / Random Balance",
     "k-means SMOTE"
+   ]
+  },
+  {
+   "dataset": "breast-tissue",
+   "n_papers": 5,
+   "printed_as": [
+    "Breast-Tissue",
+    "Breast-tissue"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "AMDO",
+    "EMDO",
+    "GLOS",
+    "MDO",
+    "MWMOTE"
    ]
   },
   {
@@ -2117,17 +2138,6 @@
    ]
   },
   {
-   "dataset": "breast cancer original",
-   "n_papers": 1,
-   "printed_as": [
-    "Breast Cancer Original"
-   ],
-   "provenance": "unclassified",
-   "papers": [
-    "MWMOTE"
-   ]
-  },
-  {
    "dataset": "breast tissue2",
    "n_papers": 1,
    "printed_as": [
@@ -2147,6 +2157,17 @@
    "provenance": "unclassified",
    "papers": [
     "HDE"
+   ]
+  },
+  {
+   "dataset": "breast-cancer-original",
+   "n_papers": 1,
+   "printed_as": [
+    "Breast-cancer-original"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MWMOTE"
    ]
   },
   {
@@ -2697,6 +2718,17 @@
    "provenance": "unclassified",
    "papers": [
     "RSMOTE"
+   ]
+  },
+  {
+   "dataset": "ctg",
+   "n_papers": 1,
+   "printed_as": [
+    "CTG"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MWMOTE"
    ]
   },
   {
@@ -4351,6 +4383,17 @@
    ]
   },
   {
+   "dataset": "ocr",
+   "n_papers": 1,
+   "printed_as": [
+    "OCR"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MWMOTE"
+   ]
+  },
+  {
    "dataset": "of",
    "n_papers": 1,
    "printed_as": [
@@ -4912,17 +4955,6 @@
    ]
   },
   {
-   "dataset": "robot",
-   "n_papers": 1,
-   "printed_as": [
-    "robot"
-   ],
-   "provenance": "unclassified",
-   "papers": [
-    "SMOM"
-   ]
-  },
-  {
    "dataset": "rt-iot",
    "n_papers": 1,
    "printed_as": [
@@ -5085,6 +5117,17 @@
    "provenance": "unclassified",
    "papers": [
     "CGMOS"
+   ]
+  },
+  {
+   "dataset": "semeion",
+   "n_papers": 1,
+   "printed_as": [
+    "Semeion"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MWMOTE"
    ]
   },
   {
@@ -5382,6 +5425,17 @@
    "provenance": "unclassified",
    "papers": [
     "FW-SMOTE"
+   ]
+  },
+  {
+   "dataset": "statlandsat",
+   "n_papers": 1,
+   "printed_as": [
+    "Statlandsat"
+   ],
+   "provenance": "unclassified",
+   "papers": [
+    "MWMOTE"
    ]
   },
   {
@@ -6076,7 +6130,7 @@
   "yeast-1-4-5-8_vs_7"
  ],
  "singleton_provenance": {
-  "unclassified": 351,
+  "unclassified": 354,
   "synthetic": 14,
   "author-collected": 20,
   "image benchmark": 18
