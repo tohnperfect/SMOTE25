@@ -1,5 +1,30 @@
 # Handoff: Data section
 
+## เริ่มงานที่นี่ ถ้าเป็นแชทใหม่
+
+ก็อปข้อความในกรอบนี้ส่งให้แชทใหม่ได้เลย
+
+> งาน SMOTE25 survey ส่วน Data section repo อยู่ที่ `D:\SMOTE25` บนเครื่องของฉัน
+> โฟลเดอร์ของงานนี้คือ `Data section` ที่ระดับบนสุดของ repo (ชื่อมีเว้นวรรค ต้องใส่เครื่องหมายคำพูดเวลาพิมพ์คำสั่ง)
+>
+> 1. `git fetch origin main` ดูก่อนว่าฝ่ายอื่นมีของใหม่ไหม ถ้ามีให้ `git pull --rebase origin main`
+> 2. อ่าน `Data section/handoff.md` ให้จบก่อนลงมือ โดยเฉพาะข้อ 4 บันทึกการดำเนินงาน
+>    (รายการล่าสุดอยู่ล่างสุด) ข้อ 6 เรื่องที่ยังไม่ตัดสิน ข้อ 7 งานขั้นถัดไป และข้อ 9 กติกาที่ห้ามละเมิด
+> 3. ทำงานตามข้อ 7 แล้วเขียนบันทึกลงข้อ 4 ทุกครั้งที่มีความคืบหน้า
+>
+> push ทำจากฝั่ง Claude ไม่ได้ ต้องบอกให้ฉันรันเอง ส่วน fetch กับ pull ทำได้
+
+**ถ้าแชทใหม่อยู่ใน Project SMOTE25 เดียวกัน** จะได้ ID ของโฟลเดอร์ Google Drive
+ที่เก็บ paper ทั้ง 76 เรื่องมาอัตโนมัติจาก project instructions
+**ถ้าอยู่นอก Project** ต้องบอก ID ให้เอง รายการอยู่ใน `drive-inventory.md`
+
+**สิ่งที่แชทใหม่จะไม่รู้ถ้าไม่บอก** สไตล์การทำงานที่ตกลงกันไว้ ตอบกระชับเป็นภาษาไทย
+ใช้ศัพท์เทคนิคอังกฤษได้ เขียนโค้ดขอไฟล์สมบูรณ์ไม่เอาเป็นท่อน และห้ามสรุป insight แทน
+ให้จัดข้อมูลและวิเคราะห์โดยทุกค่าต้องตรวจย้อนกลับไปหาแหล่งที่มาได้
+
+---
+
+
 เอกสารส่งต่อสถานะของ **Data section** ใน survey `25 Years of SMOTE: What Has Been Done and How Did It Benefit Society?`
 
 ผู้รับผิดชอบ section นี้: Toon
@@ -549,10 +574,13 @@ Fernandez et al. 2018 ใน JAIR เองก็ไม่มี search protocol
 **คำสั่ง regenerate ทั้งหมด** รันจาก `Data section/`
 
 ```
-python3 build/merge_topup.py papers.json build/topup_raw.json papers_v2.json
-python3 build/make_workbook.py papers_v2.json ds_rows.json SMOTE25_data_extraction.xlsx
-python3 build/analyse_dataset_usage.py draft papers_v2.json out/
+python3 build/make_workbook.py ai-draft/papers.json ai-draft/dataset_rows.json SMOTE25_data_extraction.xlsx
+python3 build/analyse_dataset_usage.py draft ai-draft/papers.json out/
 ```
+
+ต้องมี `openpyxl` ทดสอบแล้วว่ารันได้จากโครงไฟล์ที่อยู่ใน repo จริง (16 ต.ค.)
+`build/merge_topup.py` เป็นสคริปต์ของรอบเติมชื่อเมื่อ 14 ต.ค. ไม่ต้องรันอีก
+ผลของมัน merge อยู่ใน `ai-draft/papers.json` แล้ว เก็บไว้เป็นร่องรอยเท่านั้น
 
 โหมด `draft` อ่านจาก `papers.json` ใช้ดูภาพรวมระหว่างทาง
 โหมด `sheet` อ่านจาก workbook เฉพาะแถวที่ `value_status` ขึ้นต้นด้วย `verified` หรือ `corrected`
