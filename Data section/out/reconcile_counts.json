@@ -1,0 +1,1180 @@
+{
+ "_about": "สร้างโดย build/reconcile_counts.py อ่านอย่างเดียวจากไฟล์ใน sources ดูกติกา R1-R6 ใน docstring ของสคริปต์",
+ "sources": {
+  "datasets": {
+   "path": "out/verified_datasets.csv",
+   "sha256": "99b0cfd08de4c281014ba1a7eaea18f4b51ef69329102f5cd0467712d2d0d385"
+  },
+  "outcomes": {
+   "path": "out/verified_outcomes.csv",
+   "sha256": "5b39338d3938eb4d12e7f4f1cfa445ad834c7d5e3c667ba7e8a6ad495889b3d6"
+  },
+  "summary": {
+   "path": "out/full_summary.json",
+   "sha256": "8eba0dbab72c8f0b2f8db96a169db452e355bafc2d16274973767d54aedca63c"
+  }
+ },
+ "names": {
+  "rule": "R1 + R2: exclude placeholder descriptions; distinct values of analyse_dataset_usage.norm(name)",
+  "entries_total": 1654,
+  "entries_named": 1653,
+  "papers": 73,
+  "excluded_placeholder_rows": [
+   {
+    "csv_line": 1558,
+    "paper": "Tomek Links",
+    "name": "[two-class uniform 2-D example from ref. [4], not named]",
+    "how_obtained_final": "synthetic"
+   }
+  ],
+  "empty_name_rows": [],
+  "distinct_names": 771,
+  "single_paper_names": 546,
+  "distinct_names_incl_placeholder": 772,
+  "single_paper_names_incl_placeholder": 547,
+  "distinct_if_all_punctuation_removed": 678,
+  "norm_definition": "lower-case; drop text in parentheses; collapse underscores and whitespace; hyphens and dots kept"
+ },
+ "name_frequencies": {
+  "rule": "R3: papers per name; exact = norm(name)==f, family = norm(name).startswith(f)",
+  "yeast": {
+   "exact_name_papers": 22,
+   "family_prefix_papers": 39,
+   "prefix_name_keys": [
+    "yeast",
+    "yeast 1",
+    "yeast 3",
+    "yeast 4",
+    "yeast 5",
+    "yeast 6",
+    "yeast-0-2-5-6",
+    "yeast-0-2-5-6 vs 3-7-8-9",
+    "yeast-0-2-5-7-9",
+    "yeast-0-2-5-7-9 vs 3-6-8",
+    "yeast-0-3-5-9",
+    "yeast-0-3-5-9 vs 7-8",
+    "yeast-0-5-6-7-9",
+    "yeast-0-5-6-7-9 vs 4",
+    "yeast-1 vs 7",
+    "yeast-1-2-8-9",
+    "yeast-1-2-8-9 vs 7",
+    "yeast-1-4-5-8 vs 7",
+    "yeast-2 vs 4",
+    "yeast-2 vs 8",
+    "yeast0256vs3789",
+    "yeast02579vs368",
+    "yeast0359vs78",
+    "yeast05679vs4",
+    "yeast1",
+    "yeast1289vs7",
+    "yeast1458vs7",
+    "yeast1vs7",
+    "yeast2",
+    "yeast2vs4",
+    "yeast2vs8",
+    "yeast3",
+    "yeast4",
+    "yeast5",
+    "yeast6",
+    "yeast7",
+    "yeast8"
+   ],
+   "papers_exact": [
+    "CGMOS",
+    "DLexiBoost",
+    "DSRBF / Static-SMOTE",
+    "GDHS",
+    "GLOS",
+    "GMMSampling",
+    "Loyalty-SMOTE",
+    "MC-CCR",
+    "MC-MBRC",
+    "MC-NCLWO",
+    "MC-RBO",
+    "MDO",
+    "MKC-SMOTE",
+    "MWMOTE",
+    "NROMM",
+    "OREM-M",
+    "OVO-SMOTE",
+    "RAMOBoost",
+    "SCUT",
+    "SHSampler",
+    "SOUP",
+    "SVDD-WSMOTE"
+   ],
+   "papers_only_via_prefix": [
+    "CBHSID",
+    "CISO",
+    "FW-SMOTE",
+    "G-SMOTE",
+    "GDO",
+    "HDE",
+    "MLOS",
+    "NBU",
+    "OBU",
+    "QC-SMOTE",
+    "RACOG / wRACOG",
+    "RBBoost / Random Balance",
+    "RBO",
+    "SMOM",
+    "SplitBal",
+    "Survey: Stop Oversampling",
+    "k-means SMOTE"
+   ]
+  },
+  "ecoli": {
+   "exact_name_papers": 26,
+   "family_prefix_papers": 39,
+   "prefix_name_keys": [
+    "ecoli",
+    "ecoli-0 vs 1",
+    "ecoli-0-1 vs 2-3-5",
+    "ecoli-0-1 vs 5",
+    "ecoli-0-1-3-7 vs 2-6",
+    "ecoli-0-1-4-6 vs 5",
+    "ecoli-0-1-4-7 vs 2-3-5-6",
+    "ecoli-0-1-4-7 vs 5-6",
+    "ecoli-0-1-4-7 vs 5–6",
+    "ecoli-0-2-3-4 vs 5",
+    "ecoli-0-2-6-7 vs 3-5",
+    "ecoli-0-2-6-7 vs 3–5",
+    "ecoli-0-3-4 vs 5",
+    "ecoli-0-3-4-6 vs 5",
+    "ecoli-0-3-4-7 vs 5-6",
+    "ecoli-0-3-4-7 vs 5–6",
+    "ecoli-0-4-6 vs 5",
+    "ecoli-0-6-7 vs 3-5",
+    "ecoli-0-6-7 vs 3–5",
+    "ecoli-0-6-7 vs 5",
+    "ecoli0137vs26",
+    "ecoli0146vs5",
+    "ecoli0147vs2356",
+    "ecoli0147vs56",
+    "ecoli01vs235",
+    "ecoli01vs5",
+    "ecoli0234vs5",
+    "ecoli0267vs35",
+    "ecoli0346vs5",
+    "ecoli0347vs56",
+    "ecoli034vs5",
+    "ecoli046vs5",
+    "ecoli067vs35",
+    "ecoli067vs5",
+    "ecoli0vs1",
+    "ecoli1",
+    "ecoli2",
+    "ecoli3",
+    "ecoli4",
+    "ecoli6"
+   ],
+   "papers_exact": [
+    "A-SUWO",
+    "AMDO",
+    "DLexiBoost",
+    "EMDO",
+    "FW-SMOTE",
+    "G-SMOTE",
+    "GLOS",
+    "GMMSampling",
+    "MC-CCR",
+    "MC-MBRC",
+    "MC-NCLWO",
+    "MC-RBO",
+    "MDO",
+    "MKC-SMOTE",
+    "MWMOTE",
+    "NROMM",
+    "OVO-SMOTE",
+    "RSMOTE",
+    "SCUT",
+    "SHSampler",
+    "SMOM",
+    "SMOTE-IPF",
+    "SOUP",
+    "SPIDER2",
+    "SVDD-WSMOTE",
+    "k-means SMOTE"
+   ],
+   "papers_only_via_prefix": [
+    "CISO",
+    "GDO",
+    "HDE",
+    "KNNOR",
+    "Loyalty-SMOTE",
+    "NBU",
+    "OBU",
+    "QC-SMOTE",
+    "RACOG / wRACOG",
+    "RBBoost / Random Balance",
+    "RBO",
+    "RUSBoost",
+    "SplitBal"
+   ]
+  },
+  "glass": {
+   "exact_name_papers": 19,
+   "family_prefix_papers": 36,
+   "prefix_name_keys": [
+    "glass",
+    "glass identification",
+    "glass-0-1-2-3 vs 4-5-6",
+    "glass-0-1-4-6 vs 2",
+    "glass-0-1-5 vs 2",
+    "glass-0-1-6 vs 2",
+    "glass-0-1-6 vs 5",
+    "glass-0-4 vs 5",
+    "glass-0-6 vs 5",
+    "glass0",
+    "glass0123vs456",
+    "glass0146vs2",
+    "glass015vs2",
+    "glass016vs2",
+    "glass016vs5",
+    "glass04vs5",
+    "glass06vs5",
+    "glass1",
+    "glass2",
+    "glass3",
+    "glass4",
+    "glass5",
+    "glass6"
+   ],
+   "papers_exact": [
+    "A-SUWO",
+    "DSRBF / Static-SMOTE",
+    "G-SMOTE",
+    "GDHS",
+    "GLOS",
+    "GMMSampling",
+    "MC-CCR",
+    "MC-MBRC",
+    "MC-NCLWO",
+    "MC-RBO",
+    "MDO",
+    "MWMOTE",
+    "NROMM",
+    "OVO-SMOTE",
+    "RAMOBoost",
+    "SHSampler",
+    "SMOTE-ENN / SMOTE-Tomek",
+    "SOUP",
+    "k-means SMOTE"
+   ],
+   "papers_only_via_prefix": [
+    "CBHSID",
+    "CISO",
+    "DLexiBoost",
+    "FW-SMOTE",
+    "GDO",
+    "HDE",
+    "KNNOR",
+    "Loyalty-SMOTE",
+    "MKC-SMOTE",
+    "MLOS",
+    "NBU",
+    "OBU",
+    "QC-SMOTE",
+    "RBBoost / Random Balance",
+    "RBO",
+    "RUSBoost",
+    "SplitBal"
+   ]
+  }
+ },
+ "outcomes": {
+  "rule": "R4 + R5: plain and wrapper never pooled; rows whose dataset starts with Mean/Average are aggregate, reported separately",
+  "all_rows": {
+   "rows": 835,
+   "papers": 44,
+   "proposed_higher": 631,
+   "smote_higher": 156,
+   "equal": 48
+  },
+  "unexpected_smote_kinds": [],
+  "aggregate_rows": [
+   {
+    "csv_line": 295,
+    "paper": "KNNOR",
+    "dataset": "Mean over all 19 datasets (no per-dataset rows in paper)",
+    "smote_kind": "plain SMOTE",
+    "metric": "G-score (mean over 19 datasets)",
+    "table": "Table 5 (G-score block)",
+    "page": "15",
+    "proposed": ".8363",
+    "smote": ".8238",
+    "raw_sign": "+"
+   }
+  ],
+  "plain_incl_aggregate": {
+   "rows": 542,
+   "papers": 31,
+   "proposed_higher": 421,
+   "smote_higher": 82,
+   "equal": 39
+  },
+  "plain_per_dataset": {
+   "rows": 541,
+   "papers": 30,
+   "proposed_higher": 420,
+   "smote_higher": 82,
+   "equal": 39
+  },
+  "plain_per_dataset_by_type": {
+   "modified": {
+    "rows": 143,
+    "papers": 14,
+    "proposed_higher": 109,
+    "smote_higher": 30,
+    "equal": 4
+   },
+   "not stated": {
+    "rows": 104,
+    "papers": 13,
+    "proposed_higher": 82,
+    "smote_higher": 9,
+    "equal": 13
+   },
+   "original": {
+    "rows": 167,
+    "papers": 26,
+    "proposed_higher": 133,
+    "smote_higher": 29,
+    "equal": 5
+   },
+   "repository-defined": {
+    "rows": 119,
+    "papers": 9,
+    "proposed_higher": 90,
+    "smote_higher": 13,
+    "equal": 16
+   },
+   "synthetic": {
+    "rows": 5,
+    "papers": 1,
+    "proposed_higher": 5,
+    "smote_higher": 0,
+    "equal": 0
+   },
+   "unmatched": {
+    "rows": 3,
+    "papers": 2,
+    "proposed_higher": 1,
+    "smote_higher": 1,
+    "equal": 1
+   }
+  },
+  "plain_per_dataset_standard": {
+   "rows": 286,
+   "papers": 29,
+   "proposed_higher": 223,
+   "smote_higher": 42,
+   "equal": 21,
+   "papers_with_standard_rows": 29,
+   "papers_without_standard_rows": [
+    "INOS"
+   ]
+  },
+  "wrapper": {
+   "rows": 293,
+   "papers": 13,
+   "proposed_higher": 210,
+   "smote_higher": 74,
+   "equal": 9
+  },
+  "wrapper_by_type": {
+   "modified": {
+    "rows": 30,
+    "papers": 6,
+    "proposed_higher": 27,
+    "smote_higher": 2,
+    "equal": 1
+   },
+   "not stated": {
+    "rows": 17,
+    "papers": 1,
+    "proposed_higher": 6,
+    "smote_higher": 11,
+    "equal": 0
+   },
+   "original": {
+    "rows": 179,
+    "papers": 12,
+    "proposed_higher": 148,
+    "smote_higher": 26,
+    "equal": 5
+   },
+   "repository-defined": {
+    "rows": 63,
+    "papers": 1,
+    "proposed_higher": 25,
+    "smote_higher": 35,
+    "equal": 3
+   },
+   "synthetic": {
+    "rows": 4,
+    "papers": 1,
+    "proposed_higher": 4,
+    "smote_higher": 0,
+    "equal": 0
+   }
+  },
+  "wrapper_papers": {
+   "AMDO": 17,
+   "DSRBF / Static-SMOTE": 13,
+   "EMDO": 9,
+   "EasyEnsemble / BalanceCascade": 16,
+   "GAMO": 9,
+   "GDHS": 20,
+   "MC-CCR": 20,
+   "MC-RBO": 20,
+   "NROMM": 20,
+   "OVO-SMOTE": 24,
+   "RBBoost / Random Balance": 86,
+   "SHSampler": 20,
+   "SOUP": 19
+  }
+ },
+ "paper_level": {
+  "rule": "smote_kind per paper from full_summary.json (classified from smote_name_as_printed); rows from verified_outcomes.csv",
+  "by_kind": {
+   "SMOTE variant (multiclass/ensemble wrapper)": {
+    "papers": 13,
+    "with_outcome_rows": [
+     "AMDO",
+     "DSRBF / Static-SMOTE",
+     "EMDO",
+     "EasyEnsemble / BalanceCascade",
+     "GAMO",
+     "GDHS",
+     "MC-CCR",
+     "MC-RBO",
+     "NROMM",
+     "OVO-SMOTE",
+     "RBBoost / Random Balance",
+     "SHSampler",
+     "SOUP"
+    ],
+    "with_per_dataset_rows": [
+     "AMDO",
+     "DSRBF / Static-SMOTE",
+     "EMDO",
+     "EasyEnsemble / BalanceCascade",
+     "GAMO",
+     "GDHS",
+     "MC-CCR",
+     "MC-RBO",
+     "NROMM",
+     "OVO-SMOTE",
+     "RBBoost / Random Balance",
+     "SHSampler",
+     "SOUP"
+    ],
+    "without_outcome_rows": [],
+    "aggregate_rows_only": [],
+    "n_with_outcome_rows": 13,
+    "n_with_per_dataset_rows": 13,
+    "n_aggregate_rows_only": 0,
+    "n_without_outcome_rows": 0
+   },
+   "not a baseline": {
+    "papers": 16,
+    "with_outcome_rows": [],
+    "with_per_dataset_rows": [],
+    "without_outcome_rows": [
+     {
+      "paper": "COG-OS",
+      "results_granularity": "no comparison"
+     },
+     {
+      "paper": "CTGAN / TVAE",
+      "results_granularity": "per-dataset"
+     },
+     {
+      "paper": "ClusterCentroids",
+      "results_granularity": "per-dataset partial"
+     },
+     {
+      "paper": "DLexiBoost",
+      "results_granularity": "no comparison"
+     },
+     {
+      "paper": "GMMSampling",
+      "results_granularity": "per-dataset partial"
+     },
+     {
+      "paper": "Global-CS (AAAI)",
+      "results_granularity": "per-dataset"
+     },
+     {
+      "paper": "Global-CS (journal)",
+      "results_granularity": "per-dataset"
+     },
+     {
+      "paper": "HDE",
+      "results_granularity": "per-dataset"
+     },
+     {
+      "paper": "LS",
+      "results_granularity": "per-dataset"
+     },
+     {
+      "paper": "OBU",
+      "results_granularity": "no comparison"
+     },
+     {
+      "paper": "OSS",
+      "results_granularity": "per-dataset"
+     },
+     {
+      "paper": "ROS (Buda)",
+      "results_granularity": "per-dataset partial"
+     },
+     {
+      "paper": "SHRINK",
+      "results_granularity": "no comparison"
+     },
+     {
+      "paper": "SMOTE",
+      "results_granularity": "per-dataset partial"
+     },
+     {
+      "paper": "SPIDER2",
+      "results_granularity": "per-dataset"
+     },
+     {
+      "paper": "Tomek Links",
+      "results_granularity": "no comparison"
+     }
+    ],
+    "aggregate_rows_only": [],
+    "n_with_outcome_rows": 0,
+    "n_with_per_dataset_rows": 0,
+    "n_aggregate_rows_only": 0,
+    "n_without_outcome_rows": 16
+   },
+   "plain SMOTE": {
+    "papers": 44,
+    "with_outcome_rows": [
+     "A-SUWO",
+     "AB-SMOTE",
+     "ADASYN",
+     "CBHSID",
+     "CGMOS",
+     "DGOT",
+     "FW-SMOTE",
+     "GDO",
+     "GOIO",
+     "INOS",
+     "KNNOR",
+     "Loyalty-SMOTE",
+     "MBS",
+     "MC-MBRC",
+     "MKC-SMOTE",
+     "MLOS",
+     "MWMOTE",
+     "NBU",
+     "OREM-M",
+     "RACOG / wRACOG",
+     "RAMOBoost",
+     "RSMOTE",
+     "RUSBoost",
+     "SCUT",
+     "SMOM",
+     "SMOTE-ENN / SMOTE-Tomek",
+     "SMOTE-IPF",
+     "SMOTEBoost",
+     "SOS",
+     "SPE",
+     "SVDD-WSMOTE"
+    ],
+    "with_per_dataset_rows": [
+     "A-SUWO",
+     "AB-SMOTE",
+     "ADASYN",
+     "CBHSID",
+     "CGMOS",
+     "DGOT",
+     "FW-SMOTE",
+     "GDO",
+     "GOIO",
+     "INOS",
+     "Loyalty-SMOTE",
+     "MBS",
+     "MC-MBRC",
+     "MKC-SMOTE",
+     "MLOS",
+     "MWMOTE",
+     "NBU",
+     "OREM-M",
+     "RACOG / wRACOG",
+     "RAMOBoost",
+     "RSMOTE",
+     "RUSBoost",
+     "SCUT",
+     "SMOM",
+     "SMOTE-ENN / SMOTE-Tomek",
+     "SMOTE-IPF",
+     "SMOTEBoost",
+     "SOS",
+     "SPE",
+     "SVDD-WSMOTE"
+    ],
+    "without_outcome_rows": [
+     {
+      "paper": "Borderline-SMOTE",
+      "results_granularity": "plots only"
+     },
+     {
+      "paper": "CISO",
+      "results_granularity": "aggregate only"
+     },
+     {
+      "paper": "Cluster-SMOTE",
+      "results_granularity": "plots only"
+     },
+     {
+      "paper": "G-SMOTE",
+      "results_granularity": "aggregate only"
+     },
+     {
+      "paper": "GLOS",
+      "results_granularity": "plots only"
+     },
+     {
+      "paper": "MC-NCLWO",
+      "results_granularity": "ranking only"
+     },
+     {
+      "paper": "MDO",
+      "results_granularity": "ranking only"
+     },
+     {
+      "paper": "QC-SMOTE",
+      "results_granularity": "aggregate only"
+     },
+     {
+      "paper": "RBO",
+      "results_granularity": "ranking only"
+     },
+     {
+      "paper": "Safe-Level-SMOTE",
+      "results_granularity": "plots only"
+     },
+     {
+      "paper": "SplitBal",
+      "results_granularity": "aggregate only"
+     },
+     {
+      "paper": "Survey: Stop Oversampling",
+      "results_granularity": "per-dataset partial"
+     },
+     {
+      "paper": "k-means SMOTE",
+      "results_granularity": "plots only"
+     }
+    ],
+    "aggregate_rows_only": [
+     "KNNOR"
+    ],
+    "n_with_outcome_rows": 31,
+    "n_with_per_dataset_rows": 30,
+    "n_aggregate_rows_only": 1,
+    "n_without_outcome_rows": 13
+   }
+  },
+  "papers_with_smote_baseline": 57,
+  "papers_with_baseline_but_no_per_dataset_pair": [
+   "Borderline-SMOTE",
+   "CISO",
+   "Cluster-SMOTE",
+   "G-SMOTE",
+   "GLOS",
+   "KNNOR",
+   "MC-NCLWO",
+   "MDO",
+   "QC-SMOTE",
+   "RBO",
+   "Safe-Level-SMOTE",
+   "SplitBal",
+   "Survey: Stop Oversampling",
+   "k-means SMOTE"
+  ],
+  "n_no_per_dataset_pair": 14,
+  "rows_with_smote_consistent": true,
+  "note_two_meanings_of_44": "44 = papers whose SMOTE baseline is plain SMOTE (paper level); also 44 = papers with any outcome row (31 plain + 13 wrapper). Coincidence, different sets."
+ },
+ "repository_defined": {
+  "rule": "how_obtained == repository-defined; plain per-dataset vs wrapper reported separately",
+  "plain SMOTE": {
+   "total": {
+    "rows": 119,
+    "papers": 9,
+    "proposed_higher": 90,
+    "smote_higher": 13,
+    "equal": 16
+   },
+   "by_paper": {
+    "AB-SMOTE": {
+     "rows": 1,
+     "papers": 1,
+     "proposed_higher": 1,
+     "smote_higher": 0,
+     "equal": 0
+    },
+    "CBHSID": {
+     "rows": 7,
+     "papers": 1,
+     "proposed_higher": 5,
+     "smote_higher": 2,
+     "equal": 0
+    },
+    "DGOT": {
+     "rows": 10,
+     "papers": 1,
+     "proposed_higher": 9,
+     "smote_higher": 0,
+     "equal": 1
+    },
+    "FW-SMOTE": {
+     "rows": 27,
+     "papers": 1,
+     "proposed_higher": 19,
+     "smote_higher": 1,
+     "equal": 7
+    },
+    "GDO": {
+     "rows": 40,
+     "papers": 1,
+     "proposed_higher": 32,
+     "smote_higher": 7,
+     "equal": 1
+    },
+    "Loyalty-SMOTE": {
+     "rows": 5,
+     "papers": 1,
+     "proposed_higher": 2,
+     "smote_higher": 0,
+     "equal": 3
+    },
+    "MLOS": {
+     "rows": 6,
+     "papers": 1,
+     "proposed_higher": 6,
+     "smote_higher": 0,
+     "equal": 0
+    },
+    "NBU": {
+     "rows": 21,
+     "papers": 1,
+     "proposed_higher": 14,
+     "smote_higher": 3,
+     "equal": 4
+    },
+    "OREM-M": {
+     "rows": 2,
+     "papers": 1,
+     "proposed_higher": 2,
+     "smote_higher": 0,
+     "equal": 0
+    }
+   }
+  },
+  "SMOTE variant (multiclass/ensemble wrapper)": {
+   "total": {
+    "rows": 63,
+    "papers": 1,
+    "proposed_higher": 25,
+    "smote_higher": 35,
+    "equal": 3
+   },
+   "by_paper": {
+    "RBBoost / Random Balance": {
+     "rows": 63,
+     "papers": 1,
+     "proposed_higher": 25,
+     "smote_higher": 35,
+     "equal": 3
+    }
+   }
+  }
+ },
+ "cross_table_pairs": {
+  "rule": "R6: candidates = rows whose table field names more than one table; verdict from CROSS_TABLE_REVIEW",
+  "candidates": {
+   "AMDO": {
+    "rows": 17,
+    "csv_lines": [
+     31,
+     47
+    ],
+    "review": "not cross-table: numeric datasets in Table 6, nominal/mixed in Table 9; each pair from one table"
+   },
+   "EasyEnsemble / BalanceCascade": {
+    "rows": 16,
+    "csv_lines": [
+     138,
+     153
+    ],
+    "review": "not cross-table: easy tasks in Table X, hard tasks in Table XI; each pair from one table"
+   },
+   "NROMM": {
+    "rows": 20,
+    "csv_lines": [
+     480,
+     499
+    ],
+    "review": "not cross-table: all pairs from Supplementary Table 8; main Table 3 repeats 7 rows"
+   },
+   "RBBoost / Random Balance": {
+    "rows": 86,
+    "csv_lines": [
+     574,
+     659
+    ],
+    "review": "cross-table pair: RB-B from Supplementary Table 11 (Boosting family) vs ESM from Supplementary Table 3 (Data-processing family); same protocol per main paper p.101-102 but the paper never compares RB-B with ESM directly"
+   },
+   "SMOTE-ENN / SMOTE-Tomek": {
+    "rows": 15,
+    "csv_lines": [
+     757,
+     771
+    ],
+    "review": "not cross-table: pairs from Table 4; Table 5 searched only for best_other"
+   }
+  },
+  "confirmed_cross_table": [
+   "RBBoost / Random Balance"
+  ],
+  "unreviewed": []
+ },
+ "partitions": {
+  "rule": "R7: primary = plain per-dataset, wrapper = eligible wrapper, excluded = aggregate (R4) + confirmed cross-table (R6); never pooled",
+  "primary": {
+   "rows": 541,
+   "papers": 30,
+   "proposed_higher": 420,
+   "smote_higher": 82,
+   "equal": 39,
+   "by_type": {
+    "modified": {
+     "rows": 143,
+     "papers": 14,
+     "proposed_higher": 109,
+     "smote_higher": 30,
+     "equal": 4
+    },
+    "not stated": {
+     "rows": 104,
+     "papers": 13,
+     "proposed_higher": 82,
+     "smote_higher": 9,
+     "equal": 13
+    },
+    "original": {
+     "rows": 167,
+     "papers": 26,
+     "proposed_higher": 133,
+     "smote_higher": 29,
+     "equal": 5
+    },
+    "repository-defined": {
+     "rows": 119,
+     "papers": 9,
+     "proposed_higher": 90,
+     "smote_higher": 13,
+     "equal": 16
+    },
+    "synthetic": {
+     "rows": 5,
+     "papers": 1,
+     "proposed_higher": 5,
+     "smote_higher": 0,
+     "equal": 0
+    },
+    "unmatched": {
+     "rows": 3,
+     "papers": 2,
+     "proposed_higher": 1,
+     "smote_higher": 1,
+     "equal": 1
+    }
+   }
+  },
+  "wrapper_eligible": {
+   "rows": 207,
+   "papers": 12,
+   "proposed_higher": 175,
+   "smote_higher": 26,
+   "equal": 6,
+   "by_type": {
+    "modified": {
+     "rows": 30,
+     "papers": 6,
+     "proposed_higher": 27,
+     "smote_higher": 2,
+     "equal": 1
+    },
+    "original": {
+     "rows": 173,
+     "papers": 11,
+     "proposed_higher": 144,
+     "smote_higher": 24,
+     "equal": 5
+    },
+    "synthetic": {
+     "rows": 4,
+     "papers": 1,
+     "proposed_higher": 4,
+     "smote_higher": 0,
+     "equal": 0
+    }
+   },
+   "papers_list": [
+    "AMDO",
+    "DSRBF / Static-SMOTE",
+    "EMDO",
+    "EasyEnsemble / BalanceCascade",
+    "GAMO",
+    "GDHS",
+    "MC-CCR",
+    "MC-RBO",
+    "NROMM",
+    "OVO-SMOTE",
+    "SHSampler",
+    "SOUP"
+   ]
+  },
+  "excluded": {
+   "rows": 87,
+   "aggregate": [
+    {
+     "csv_line": 295,
+     "paper": "KNNOR",
+     "dataset": "Mean over all 19 datasets (no per-dataset rows in paper)",
+     "smote_kind": "plain SMOTE"
+    }
+   ],
+   "cross_table": {
+    "rows": 86,
+    "papers": [
+     "RBBoost / Random Balance"
+    ],
+    "proposed_higher": 35,
+    "smote_higher": 48,
+    "equal": 3,
+    "by_type": {
+     "not stated": 17,
+     "original": 6,
+     "repository-defined": 63
+    },
+    "smote_kind": {
+     "SMOTE variant (multiclass/ensemble wrapper)": 86
+    }
+   }
+  },
+  "unassigned_rows": 0
+ },
+ "checks": {
+  "distinct_names": {
+   "expected": 771,
+   "got": 771,
+   "ok": true
+  },
+  "distinct_names_incl_placeholder": {
+   "expected": 772,
+   "got": 772,
+   "ok": true
+  },
+  "ecoli_family_papers": {
+   "expected": 39,
+   "got": 39,
+   "ok": true
+  },
+  "entries_named": {
+   "expected": 1653,
+   "got": 1653,
+   "ok": true
+  },
+  "entries_total": {
+   "expected": 1654,
+   "got": 1654,
+   "ok": true
+  },
+  "excluded_aggregate_rows": {
+   "expected": 1,
+   "got": 1,
+   "ok": true
+  },
+  "excluded_cross_table_not_stated": {
+   "expected": 17,
+   "got": 17,
+   "ok": true
+  },
+  "excluded_cross_table_original": {
+   "expected": 6,
+   "got": 6,
+   "ok": true
+  },
+  "excluded_cross_table_repository_defined": {
+   "expected": 63,
+   "got": 63,
+   "ok": true
+  },
+  "excluded_cross_table_rows": {
+   "expected": 86,
+   "got": 86,
+   "ok": true
+  },
+  "excluded_rows": {
+   "expected": 87,
+   "got": 87,
+   "ok": true
+  },
+  "glass_family_papers": {
+   "expected": 36,
+   "got": 36,
+   "ok": true
+  },
+  "outcome_papers_plain_incl_aggregate": {
+   "expected": 31,
+   "got": 31,
+   "ok": true
+  },
+  "outcome_rows_all": {
+   "expected": 835,
+   "got": 835,
+   "ok": true
+  },
+  "outcome_rows_plain_incl_aggregate": {
+   "expected": 542,
+   "got": 542,
+   "ok": true
+  },
+  "paper_level_none": {
+   "expected": 16,
+   "got": 16,
+   "ok": true
+  },
+  "paper_level_plain": {
+   "expected": 44,
+   "got": 44,
+   "ok": true
+  },
+  "paper_level_wrapper": {
+   "expected": 13,
+   "got": 13,
+   "ok": true
+  },
+  "partitions_cover_all_rows_once": {
+   "expected": true,
+   "got": true,
+   "ok": true
+  },
+  "plain_per_dataset_papers": {
+   "expected": 30,
+   "got": 30,
+   "ok": true
+  },
+  "plain_per_dataset_rows": {
+   "expected": 541,
+   "got": 541,
+   "ok": true
+  },
+  "primary_papers": {
+   "expected": 30,
+   "got": 30,
+   "ok": true
+  },
+  "primary_rows": {
+   "expected": 541,
+   "got": 541,
+   "ok": true
+  },
+  "single_paper_names": {
+   "expected": 546,
+   "got": 546,
+   "ok": true
+  },
+  "single_paper_names_incl_placeholder": {
+   "expected": 547,
+   "got": 547,
+   "ok": true
+  },
+  "wrapper_eligible_equal": {
+   "expected": 6,
+   "got": 6,
+   "ok": true
+  },
+  "wrapper_eligible_modified": {
+   "expected": 30,
+   "got": 30,
+   "ok": true
+  },
+  "wrapper_eligible_not_stated": {
+   "expected": 0,
+   "got": 0,
+   "ok": true
+  },
+  "wrapper_eligible_original": {
+   "expected": 173,
+   "got": 173,
+   "ok": true
+  },
+  "wrapper_eligible_papers": {
+   "expected": 12,
+   "got": 12,
+   "ok": true
+  },
+  "wrapper_eligible_proposed_higher": {
+   "expected": 175,
+   "got": 175,
+   "ok": true
+  },
+  "wrapper_eligible_repository_defined": {
+   "expected": 0,
+   "got": 0,
+   "ok": true
+  },
+  "wrapper_eligible_rows": {
+   "expected": 207,
+   "got": 207,
+   "ok": true
+  },
+  "wrapper_eligible_signs_sum_equals_rows": {
+   "expected": true,
+   "got": true,
+   "ok": true
+  },
+  "wrapper_eligible_smote_higher": {
+   "expected": 26,
+   "got": 26,
+   "ok": true
+  },
+  "wrapper_eligible_synthetic": {
+   "expected": 4,
+   "got": 4,
+   "ok": true
+  },
+  "wrapper_eligible_types_sum_equals_rows": {
+   "expected": true,
+   "got": true,
+   "ok": true
+  },
+  "wrapper_eligible_unmatched": {
+   "expected": 0,
+   "got": 0,
+   "ok": true
+  },
+  "wrapper_repository_defined_rows": {
+   "expected": 63,
+   "got": 63,
+   "ok": true
+  },
+  "yeast_family_papers": {
+   "expected": 39,
+   "got": 39,
+   "ok": true
+  }
+ }
+}

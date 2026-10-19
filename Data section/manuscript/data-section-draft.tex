@@ -1,0 +1,401 @@
+% =====================================================================
+% Data section: working draft v2 (Claude, 18 Oct 2026)
+% ---------------------------------------------------------------------
+% Toon asked (18 Oct) for a full draft of what goes in the manuscript.
+% Markup, delete before submission:
+%  * \draftnum{}   number NOT yet verified against the papers (orange). Numbers without
+%                  this macro were checked against the PDFs on 18 Oct 2026 (Claude, counted
+%                  as verified by Toon's decision; see out/verified_*.csv). Replace with values from
+%                  build/analyse_dataset_usage.py `sheet` mode or rows with page_ref.
+%  * \claudedraft{} sentence that interprets or argues (blue). Claude wrote it so
+%                  the section reads end to end; the supervisor requires the
+%                  interpretation to be Toon's own, so rewrite or delete every one.
+%  * \evidence{}   where the numbers come from (grey). Delete in the final version.
+%  * \pcite{}      placeholder for a bibliography key not yet in references.bib.
+% Sources: out/full_summary.json, out/full_outcome_rows.csv, out/full_datasets.csv
+% (72 papers re-read 18 Oct with table and page refs), out/data_handling_summary.json
+% (selection-rationale codes, 6 Oct records), handoff.md.
+% No em-dash anywhere. Placement in main.tex undecided (new file vs 07).
+% Revised 19 Oct 2026 (Claude, approved by Toon): counts reconciled with
+% build/reconcile_counts.py (out/reconcile_counts.json, rules R1-R6). Tomek links
+% placeholder excluded from name counts; KNNOR's mean reported apart from the
+% per-dataset set (541 rows, 30 papers); RBBoost's cross-table pairs excluded
+% from every comparison set. See handoff.md, entries of 19 Oct.
+% Conventions followed (from the repo README, main.tex, tables/ and Section 7):
+%  * British spelling, as in P's Section 7 draft (normalise, binarise, analyse).
+%  * Section and caption titles in Title Case; caption above the table;
+%    booktabs rules with \midrule only between header and body.
+%  * \pcite{key} uses the bibkeys of P's Section 7 (out/section7_key_map.csv);
+%    switch to \parencite / \textcite once the entries are in references.bib.
+%  * Counts: corpus 76 papers; 73 have an evaluation on data (ENN, AdaBoost and
+%    Pradipta et al. excluded; Tomek links counted by Toon's decision 18 Oct).
+%    P's Section 7 counts 71 empirical studies: it excludes Tomek links and also
+%    treats Hassanat et al. 2022 as a survey. State both numbers when the sections meet.
+%  * Data-type labels: original / repository-defined (kept separate, Toon 23:34) /
+%    modified / synthetic / not stated. Win, tie, loss: interim rule A of
+%    decisions-pending (Toon 18 Oct), pending the supervisor.
+% Overlap with P's Section 7 draft (section07-empirical-comparisons-draft.html),
+% left as is here; to settle with P before merging:
+%  * Extraction Procedure  ~ Sec 7 "Corpus and Coding Scheme" and Sec 3.3
+%  * Benchmark Landscape    ~ Sec 7 "Benchmark Data (RQ1)" (UCI/KEEL shares,
+%                              datasets per study, synthetic data)
+%  * Recommendations item 6 ~ Sec 7 RQ4 (tuning) and RQ2 (baselines), and
+%                              Sec 7 "A Minimum Evaluation Standard" (tab-remedies)
+% =====================================================================
+% booktabs is loaded by acmart/jair.cls; the preview wrapper must load it too.
+\providecommand{\draftnum}[1]{\textcolor{orange}{#1}}
+\providecommand{\claudedraft}[1]{\textcolor{blue}{#1}}
+\providecommand{\evidence}[1]{\par\noindent{\footnotesize\textcolor{gray}{\textbf{Evidence:} #1}}\par}
+\providecommand{\pcite}[1]{[\textsc{#1}]}
+\providecommand{\toon}[1]{\par\noindent\fbox{\parbox{0.95\linewidth}{\small\textbf{[Toon]} #1}}\par}
+
+\section{How the SMOTE Literature Uses Data}
+\label{sec:data}
+
+A reader who wants to compare two SMOTE variants, or to choose a benchmark for a
+new one, needs answers to questions that the papers rarely answer together.
+Can the numbers that two papers report on a dataset of the same name be
+compared? How broad is the evidence behind the benchmarks the field relies on?
+When a paper reports that its method beats SMOTE, on what kind of data does
+that happen, and can a reader check it? This section answers these questions
+from the 1,654 dataset entries and 835 comparisons with SMOTE
+(834 per dataset and one average over datasets) that we extracted from the 76 papers of
+our corpus. Three of them (ENN, AdaBoost and one review) contain no
+evaluation on data, so counts below use the 73 papers with an
+evaluation on data; Tomek links is kept because it illustrates its method on
+one synthetic two-class set.
+
+\claudedraft{The central observation is that the evidence for a new oversampler
+is only as interpretable as the description of its data, and in this
+literature that description is often incomplete: the same name can denote
+different tasks, modifications are frequently undeclared, and a sizeable share
+of papers report results that cannot be traced back to individual datasets.}
+
+% ---------------------------------------------------------------------
+\subsection{Extraction Procedure}
+\label{sec:data-method}
+For every paper we read the full text and any supplementary file in our
+collection, and recorded each dataset as printed, including spelling, with
+its group in the paper, source repository, size, number of features and
+classes, minority and majority counts, and the imbalance ratio where the
+paper prints them, together with the table and page they come from. For each
+dataset we also recorded how it reached the experiment:
+\emph{original} (used as distributed, with its native classes),
+\emph{repository-defined} (a two-class split published by a repository such
+as KEEL or imbalanced-learn, used as is), \emph{modified} (the authors chose
+the minority classes, merged or dropped classes, set a threshold, undersampled
+or injected noise), or \emph{synthetic} (generated by the authors). Where a
+paper did not state its source, two fixed rules were applied and flagged:
+names that follow the KEEL file convention (for example
+\texttt{ecoli-0-1\_vs\_5}, \texttt{yeast4}) were labelled repository-defined,
+and common names in multiclass papers with no stated change were labelled
+original. Two further rules were fixed before counting: a set that is two-class
+in its source and is used without comment was labelled original, and a set from
+which the authors removed rows (for example, records with missing values) or
+attributes was labelled modified.
+
+For the results we copied, per dataset, the printed score of the proposed
+method and of SMOTE from one results table selected by a fixed rule:
+G-mean, else AUC, else F-measure, else accuracy; the classifier highlighted
+in the abstract, else the first reported; the unperturbed condition. We
+recorded values rather than wins so that any definition of a win can be
+applied later. Plain SMOTE was distinguished from SMOTE embedded in a
+multiclass or ensemble wrapper (Static-SMOTE, OVO-SMOTE~\pcite{fernandez2013analysing}, SMOTE-all,
+SMOTE+AdaBoost). Values printed in a paper are never overwritten; corrections
+against the source repository are stored beside them with their justification.
+Every extracted value was then checked against the PDF a second time: a value
+was accepted when the dataset name and its numbers appear on the same line of
+the cited page, and every table that is printed as an image or whose text layer
+is garbled was read from the rendered page instead. All 1,654 dataset entries
+and 835 comparisons passed this check.
+
+\evidence{ai-draft/full/SCHEMA.md; build/full\_extraction.py; KEEL and
+multiclass rules approved by Toon 18 Oct, rules A and B 18 Oct; 454 extraction notes in
+out/full\_uncertain.csv, each resolved in out/uncertain\_resolution.csv; second check:
+build/verify\_pdf.py, out/visual\_checks.json, out/verified\_*.csv.}
+
+\toon{Add the blind re-extraction agreement rate once phase 5 is done.}
+
+% ---------------------------------------------------------------------
+\subsection{The Benchmark Landscape}
+\label{sec:data-landscape}
+The 73 papers with an evaluation on data list 1,654 dataset entries. One of
+them, the single toy example in Tomek links, is a description rather than a
+name and is set aside here, leaving 1,653 named entries. These reduce to 771
+distinct names once names are lower-cased, text in parentheses is dropped, and
+underscores and spaces are treated alike; hyphens and dots are kept, so
+\texttt{page-blocks} and \texttt{pageblocks} remain two names.
+Most names appear once: 546 of the 771 occur in a single paper.
+Counted by exact name, ecoli appears in 26 papers, yeast in 22 and glass in 19;
+counted together with the splits derived from them (for example
+\texttt{yeast4} or \texttt{glass-0-1-6\_vs\_2}), the yeast and ecoli families
+each appear in 39 papers and the glass family in 36, about half of the 73.
+
+\claudedraft{A count of datasets therefore overstates the diversity of the
+evidence. Many distinct names are splits of the same few sources, so a paper
+that reports forty datasets may be testing on a handful of underlying
+distributions.}
+
+\paragraph{What the reader should do.} \claudedraft{Report the source family
+of each dataset alongside the count, so that readers can see how many
+independent sources stand behind a claim.}
+
+\evidence{out/verified\_datasets.csv; counts reproduced by build/reconcile\_counts.py
+(out/reconcile\_counts.json): rule R1 sets aside the Tomek links placeholder (row 1558,
+kept in the file), R2 normalises with build/analyse\_dataset\_usage.py norm(), R3 gives
+exact-name and prefix (family) counts. With the placeholder the counts are 772 and 547;
+removing all punctuation would leave 678 names. The 605 names of the 6 Oct list are
+superseded by the 771 of the full re-read.}
+
+% ---------------------------------------------------------------------
+\subsection{How Datasets Are Chosen and Modified}
+\label{sec:data-handling}
+
+\begin{table}[t]
+\centering\small
+\caption{How the Papers Choose and Obtain Their Data.
+Top: paper level, 73 papers with an evaluation on data. Bottom: dataset entries.}
+\label{tab:data-handling}
+\begin{tabular}{lr}
+\toprule
+\multicolumn{2}{l}{\emph{Reason given for the choice of datasets (papers)}}\\
+\quad Own reason (diversity, difficulty, application, \ldots) & 48\\
+\quad Cites prior work & 14\\
+\quad ``Widely used'' only & 3\\
+\quad Not stated & 8\\
+Benchmark list adopted from earlier work, declared (papers) & 20 (wholesale 11)\\
+Binarised, minority rule not stated (papers) & 8 of 37\\
+\addlinespace
+\multicolumn{2}{l}{\emph{How each dataset entry reached the experiment}}\\
+\quad Original & 534\\
+\quad Repository-defined (KEEL, imbalanced-learn) & 470\\
+\quad Modified by the authors & 331\\
+\quad Synthetic & 120\\
+\quad Cannot be told from the paper & 199\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:data-handling} shows that modification by the authors is
+common: 331 of 1,654 dataset entries were changed by the
+authors themselves, and for 199 the paper does not let a reader
+tell how the data were obtained. Eleven papers give no reason for their
+choice of datasets or only call them widely used.
+
+\claudedraft{Modification is not a fault in itself: binarising a multiclass
+set or raising the imbalance ratio are legitimate ways to probe a method.
+What matters for the reader is whether the modification is declared where a
+reader looks for it. A KEEL file name such as \texttt{yeast-0-5-6-7-9\_vs\_4}
+declares its split; a paper that prints only ``Yeast'' after choosing its own
+minority classes does not.}
+
+\toon{This is where your axis ``declared vs undeclared'' belongs. Evidence
+for where each paper declares its modification exists for the 7 papers
+re-read on 16 Oct and in how\_obtained\_detail of the full re-read.}
+
+\evidence{out/data\_handling\_summary.json (paper-level codes);
+out/full\_summary.json how\_obtained\_all (entry level, with rules).}
+
+% ---------------------------------------------------------------------
+\subsection{The Same Name Is Not the Same Data}
+\label{sec:data-names}
+Of the 198 dataset names that at least two papers print with a size, 78
+appear with more than one size: thyroid with 7,200 instances in five papers and
+720 in four, dermatology with 358 (the KEEL version) in eight and 366 (UCI) in
+two, ecoli with 336, 327, 310 and 301, and pima with 768, 769, 635 and 590.
+Some of these differences are declared subsamples; the name alone does not tell
+which. MWMOTE~\pcite{barua2014mwmote} illustrates the problem inside a single paper:
+its Satimage (6,435 instances) and Statlandsat (4,435) are the full Statlog
+Landsat set and its training file, counted as two of its twenty datasets,
+and its common names are ambiguous in both directions (its Ecoli matches the
+KEEL file \texttt{ecoli1} exactly, while its Yeast matches no published split).
+
+Imbalance ratios add a second layer. Table~\ref{tab:ir-definitions} lists the
+definitions found in the corpus; some are not convertible into one another,
+and some papers print IR without a formula.
+
+\begin{table}[t]
+\centering\small
+\caption{Imbalance-Ratio Definitions Printed in the Papers}
+\label{tab:ir-definitions}
+\begin{tabular}{p{0.28\linewidth}p{0.3\linewidth}p{0.32\linewidth}}
+\toprule
+Definition & Formula & Used by (examples)\\
+\midrule
+Largest over smallest class & $N_{\max}/N_{\min}$ & MDO~\pcite{abdi2016mdo}, CBHSID~\pcite{palli2022cbhsid}, MKC-SMOTE~\pcite{wang2024mkc} (its $IR$)\\
+Majority over minority (binary wording) & $N_{\mathrm{maj}}/N_{\mathrm{min}}$ & OVO-SMOTE (defined for the binary case, applied to multiclass sets)\\
+Percentage minority & $100\,N_{\min}/N$ & RUSBoost~\pcite{seiffert2010rusboost}\\
+Per-class imbalance degree & $\sum_{q\neq i} N_q/((C-1)N_i)$ & OREM-M~\pcite{zhu2023orem} (overall IR only cited, not printed)\\
+Summed pairwise multiclass IR & $\sum_{i<j} (N_i/N_j - 1)$ & SMOM~\pcite{zhu2017smom}, GDHS~\pcite{yan2025gdhs}, MKC-SMOTE ($IR_{\mathrm{overall}}$)\\
+Imbalance degree $Id$ & distance from uniform \pcite{ortigosa-hernandez: not in corpus, key to create} & SHSampler~\pcite{zheng2022shsampler} (cited, no formula printed)\\
+Minimum class prior & $N_{\min}/N$ & DSRBF~\pcite{fernandeznavarro2011dsrbf}\\
+Coefficient of variation & $\mathrm{sd}(N_i)/\mathrm{mean}(N_i)$ & COG-OS~\pcite{wu2007cogos}\\
+Proportion pair & e.g.\ $0.04{:}0.96$ & MWMOTE (wording: minority to majority)\\
+Not stated (values equal $N_{\max}/N_{\min}$) & n/a & MC-CCR~\pcite{koziarski2020mcccr}, MC-RBO~\pcite{krawczyk2020mcrbo}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\claudedraft{Errors also travel with shared benchmark tables: MC-CCR and
+MC-RBO both print an IR of 1.17 for vehicle, a value no definition produces
+from its class counts.}
+
+\paragraph{What the reader should do.} \claudedraft{Compare results across
+papers only after mapping each name to its exact file and class split, and
+report the IR formula together with its values.}
+
+\evidence{out/verified\_datasets.csv: names normalised, printed n\_instances compared across
+papers (198 names with a printed size in two or more papers); the earlier 20 of 75 from
+ai-draft/dataset\_variants.json covered 8 papers only and is superseded;
+mwmote-table5-audit.md; extraction-notes.md; full re-read ir\_definition per
+paper in out/full\_summary.json.}
+
+% ---------------------------------------------------------------------
+\subsection{Where Reported Wins over SMOTE Come From}
+\label{sec:data-wins}
+
+\begin{table}[t]
+\centering\small
+\caption{Per-Dataset Comparisons of the Proposed Method with Plain SMOTE,
+by How the Dataset Was Obtained. Wins, ties and losses compare printed values
+under interim rule A (one metric fixed per paper; equal at the printed precision is a tie);
+scores are not comparable across papers. KNNOR's single row, a mean over its 19 datasets,
+is not a per-dataset comparison and is reported in the text instead.}
+\label{tab:wins-by-type}
+\begin{tabular}{lrrrrr}
+\toprule
+How obtained & Rows & Papers & Proposed wins & SMOTE wins & Ties\\
+\midrule
+Original & 167 & 26 & 133 & 29 & 5\\
+Repository-defined & 119 & 9 & 90 & 13 & 16\\
+Modified & 143 & 14 & 109 & 30 & 4\\
+Synthetic & 5 & 1 & 5 & 0 & 0\\
+Cannot be told & 104 & 13 & 82 & 9 & 13\\
+Result row not matched to a dataset & 3 & 2 & 1 & 1 & 1\\
+\addlinespace
+All & 541 & 30 & 420 & 82 & 39\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+At the paper level, 44 of the 73 papers use plain SMOTE as a baseline,
+13 use SMOTE inside a wrapper, and 16 do not compare with SMOTE at all.
+Fewer papers give rows that can be compared: 30 papers print per-dataset
+scores for both the proposed method and plain SMOTE in the same table, giving
+541 comparisons (Table~\ref{tab:wins-by-type}). In these, the
+proposed method wins in 420 rows, ties in 39 and loses in 82.
+KNNOR~\pcite{islam2022knnor} prints only a mean over its 19 datasets
+(G-score .8363 for KNNOR and .8238 for SMOTE); we report it here as an
+aggregate result and do not count it as a per-dataset comparison.
+
+Comparisons with SMOTE inside a wrapper are kept apart and are not pooled
+with Table~\ref{tab:wins-by-type}: all 13 wrapper papers print per-dataset
+pairs, giving 293 rows. In one of them, RBBoost~\pcite{diezpastor2015randombalance},
+the extracted pairs do not meet the same-table rule. The scores of its
+RB-Boost come from the Boosting-family table of its supplement
+(Supplementary Table~11) and those of its SMOTE ensemble (ESM) from the
+data-processing-family table (Supplementary Table~3). Both tables report G-mean under one protocol (J48 with Laplace
+smoothing, ensembles of 100, stratified $5\times2$-fold cross-validation), but
+the paper compares methods only within each family and never compares
+RB-Boost with ESM directly. Its 86 rows, 63 of them on repository-defined
+data, are kept in our data for audit and excluded from every comparison set
+reported here; the other 12 wrapper papers contribute 207 rows.
+
+Split by data type, 29 of the 30 papers include at least
+one standard dataset (original or repository-defined) in the comparison, and
+on these 286 standard rows SMOTE wins in 42 and ties in 21. One paper reports its per-dataset comparison with SMOTE
+only on modified, synthetic or unidentifiable data (INOS~\pcite{cao2013inos}); KNNOR, whose only comparison is the aggregate above, is not counted here.
+Conversely, six papers compare only on standard data (GDO~\pcite{xie2022gdo}, MC-MBRC~\pcite{ma2024mcmbrc},
+MKC-SMOTE, OREM-M, SCUT~\pcite{agrawal2015scut}, SPE~\pcite{liu2020spe}).
+
+\toon{Your hypothesis H1 lives here. Look at the shares of ``SMOTE higher''
+per row of Table~\ref{tab:wins-by-type} and at the per-paper split in the
+Atlas (fourth tab, wins over SMOTE by data type). What you conclude, and how strongly,
+is yours; the within-paper comparison (standard vs modified rows of the same
+paper) is the strongest test because it holds the paper constant.}
+
+\claudedraft{A method that wins on unmodified standard benchmarks gives the
+reader evidence that does not depend on choices the authors made about the
+data. Reporting the standard and the modified datasets separately would let
+readers see this directly.}
+
+\evidence{out/verified\_outcomes.csv (smote\_kind = plain SMOTE; KNNOR's aggregate,
+row 295, set aside by rule R4); counts reproduced by build/reconcile\_counts.py
+(out/reconcile\_counts.json). Of the 541 rows, 3 could not be matched to a dataset
+entry and 15 were matched by row order only (over all 835 rows: 4 and 22). Paper-level
+baselines: out/full\_summary.json, papers, smote\_kind. RBBoost: rows 574--659;
+supplement Table~3 pp.3--5 and Table~11 pp.17--18; protocol p.101 and family design
+p.102 of the paper; review recorded in CROSS\_TABLE\_REVIEW of build/reconcile\_counts.py.}
+
+% ---------------------------------------------------------------------
+\subsection{Can the Reported Results Be Checked?}
+\label{sec:data-verifiability}
+
+\begin{table}[t]
+\centering\small
+\caption{Granularity of the Results Each Paper Reports (73 Papers)}
+\label{tab:granularity}
+\begin{tabular}{lr}
+\toprule
+Per-dataset table & 47\\
+Per-dataset, partial (some datasets, metrics or classifiers only) & 8\\
+Plots only & 5\\
+Averages over all datasets only & 5\\
+Ranks only & 3\\
+No comparison with other methods & 5\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Of the 57 papers that use SMOTE as a baseline (44 plain, 13 wrapped), 13
+give a reader no per-dataset pair of scores in the paper itself: the results
+are plots (Borderline-SMOTE~\pcite{han2005borderline}, Safe-Level-SMOTE~\pcite{bunkhumpornpat2009safelevel}, Cluster-SMOTE~\pcite{cieslak2006cluster}, k-means SMOTE~\pcite{douzas2018kmeans},
+GLOS~\pcite{han2023glos}), averages (G-SMOTE~\pcite{douzas2019gsmote}, CISO~\pcite{yadav2025ciso}, SplitBal~\pcite{sun2015splitbal}, QC-SMOTE~\pcite{upman2026qcsmote}), or ranks (MDO, RBO~\pcite{koziarski2019rbo},
+MC-NCLWO~\pcite{tao2025mcnclwo}), and the review by Hassanat et al.~\pcite{hassanat2022stop}\ compares synthetic points
+rather than classifiers. A fourteenth paper, KNNOR, prints its pair of scores only
+as a mean over its datasets.
+
+Baseline results are also reused across papers. QC-SMOTE copies its baseline
+numbers from the VS-SMOTE paper~\pcite{vs-smote: not in corpus, key to create}, and every SMOTE-all value in MC-CCR's Table~6
+is identical, to two decimals and on all 20 datasets, to the SMOTE-all
+column of MC-RBO's Table~VI, from the same group and with the same C5.0 setup.
+The same pattern appears across research groups: the Baseline, SSMOTE, GCS,
+ABNC, OSMOTE and AMDO columns of EMDO's Table~5~\pcite{yao2021emdo} repeat, value for value on all
+nine shared datasets, the MAUC results of AMDO's Table~6~\pcite{yang2018amdo}; EMDO states that it
+uses the same datasets as AMDO but not that the baseline results were copied.
+\claudedraft{Reusing a baseline is efficient, but unless it is stated, a reader
+cannot tell whether the comparison was run under identical conditions.}
+Several of these papers place per-dataset results on GitHub or in material
+outside the paper. Where only ranks are given, the paper's own table can
+still be informative: in RBO's Table~2 (CART, no added noise) SMOTE has the
+better mean G-mean rank, and CISO reports itself statistically equivalent to
+SMOTE.
+
+\claudedraft{For these papers the headline claim cannot be falsified from what
+is published. This does not mean the claims are wrong; it means a reader
+cannot tell whether an average improvement comes from consistent gains or
+from large gains on a few datasets.}
+
+\evidence{out/full\_summary.json granularity and per-paper notes; MC-RBO
+Table VI p.10 vs MC-CCR Table 6 p.10 (ai-draft/full/MC-RBO.json notes).
+MWMOTE Table 5 audit: of 15 checkable rows, minority counts exact in 13, four
+rows with wrong N or majority (single paper, case only).}
+
+% ---------------------------------------------------------------------
+\subsection{Recommendations for Reporting Data}
+\label{sec:data-recommendations}
+\begin{enumerate}
+\item Name the repository and version of every dataset, and whether the full
+      set or a training file was used.
+\item State which class or classes form the minority and why, in the text and
+      not only in a table.
+\item Declare every modification (binarisation, class merging,
+      undersampling, noise, dropped attributes) in the data section.
+\item Give the imbalance-ratio formula, not only its values.
+\item Report per-dataset results for the proposed method and plain SMOTE,
+      and report standard and modified datasets separately.
+\item Separate tuning datasets from evaluation datasets, as CISO and LS~\pcite{cieslak2008ls} do,
+      and run the baselines rather than copying their numbers.
+\end{enumerate}
+
+\toon{Keep, cut or reword; each item should point back to a finding above.}

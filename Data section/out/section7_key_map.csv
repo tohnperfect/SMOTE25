@@ -1,0 +1,77 @@
+﻿paper_id,data_section_key,year,section7_key,bibkey,match,section7_empirical,section7_paper_type,section7_title
+P001,ENN (Wilson),1972,ENN-1972,wilson1972asymptotic,manual,no,foundational,Asymptotic Properties of Nearest Neighbor Rules Using Edited Data
+P002,Tomek Links,1976,TomekLinks-1976,tomek1976modifications,auto,no,foundational,Two Modifications of CNN
+P003,AdaBoost,1997,AdaBoost-1997,freund1997adaboost,auto,no,foundational,A Decision-Theoretic Generalization of On-Line Learning and an Application to Boosting
+P004,OSS,1997,OSS-1997,kubat1997oss,auto,yes,method,Addressing the Curse of Imbalanced Training Sets: One-Sided Selection
+P005,SHRINK,1998,SHRINK-1998,kubat1998shrink,auto,yes,foundational,Machine Learning for the Detection of Oil Spills in Satellite Radar Images
+P006,SMOTE,2002,SMOTE-2002,chawla2002smote,auto,yes,method,SMOTE: Synthetic Minority Over-sampling Technique
+P007,SMOTEBoost,2003,SMOTEBoost-2003,chawla2003smoteboost,auto,yes,method,SMOTEBoost: Improving Prediction of the Minority Class in Boosting
+P008,SMOTE-ENN / SMOTE-Tomek,2004,SMOTE-ENN-Tomek-2004,batista2004study,manual,yes,method,A Study of the Behavior of Several Methods for Balancing Machine Learning Training Data
+P009,Borderline-SMOTE,2005,Borderline-SMOTE-2005,han2005borderline,auto,yes,method,Borderline-SMOTE: A New Over-Sampling Method in Imbalanced Data Sets Learning
+P010,Cluster-SMOTE,2006,Cluster-SMOTE-2006,cieslak2006cluster,auto,yes,method,Combating Imbalance in Network Intrusion Datasets
+P011,Global-CS (AAAI),2006,Global-CS-2006,zhou2006globalcs,manual,yes,method,On Multi-Class Cost-Sensitive Learning
+P012,COG-OS,2007,COG-OS-2007,wu2007cogos,auto,yes,method,Local Decomposition for Rare Class Analysis
+P013,ADASYN,2008,ADASYN-2008,he2008adasyn,auto,yes,method,ADASYN: Adaptive Synthetic Sampling Approach for Imbalanced Learning
+P014,LS,2008,LS-2008,cieslak2008ls,auto,yes,method,"Start Globally, Optimize Locally, Predict Globally: Improving Performance on Imbalanced Data"
+P015,ClusterCentroids,2009,SBC-2009,yen2009sbc,manual,yes,method,Cluster-based under-sampling approaches for imbalanced data distributions
+P016,EasyEnsemble / BalanceCascade,2009,EasyEnsemble-BalanceCascade-2009,liu2009easyensemble,manual,yes,method,Exploratory Undersampling for Class-Imbalance Learning
+P017,Safe-Level-SMOTE,2009,Safe-Level-SMOTE-2009,bunkhumpornpat2009safelevel,auto,yes,method,Safe-Level-SMOTE: Safe-Level-Synthetic Minority Over-Sampling TEchnique for Handling the Class Imbalanced Problem
+P018,Global-CS (journal),2010,Global-CS-2010,zhou2010globalcs,manual,yes,method,On Multi-Class Cost-Sensitive Learning
+P019,RAMOBoost,2010,RAMOBoost-2010,chen2010ramoboost,auto,yes,method,RAMOBoost: Ranked Minority Oversampling in Boosting
+P020,RUSBoost,2010,RUSBoost-2010,seiffert2010rusboost,auto,yes,method,RUSBoost: A Hybrid Approach to Alleviating Class Imbalance
+P021,SPIDER2,2010,SPIDER2-2010,napierala2010spider2,auto,yes,method,Learning from Imbalanced Data in Presence of Noisy and Borderline Examples
+P022,DSRBF / Static-SMOTE,2011,DSRBF-2011,fernandeznavarro2011dsrbf,manual,yes,method,A dynamic over-sampling procedure based on sensitivity for multi-class problems
+P023,INOS,2013,INOS-2013,cao2013inos,auto,yes,method,Integrated Oversampling for Imbalanced Time Series Classification
+P024,OVO-SMOTE,2013,OVO-SMOTE-2013,fernandez2013analysing,auto,yes,empirical-study,Analysing the classification of imbalanced data-sets with multiple classes: Binarization techniques and ad-hoc approaches
+P025,MWMOTE,2014,MWMOTE-2014,barua2014mwmote,auto,yes,method,MWMOTE: Majority Weighted Minority Oversampling Technique for Imbalanced Data Set Learning
+P026,RACOG / wRACOG,2015,RACOG-2015,das2015racog,manual,yes,method,RACOG and wRACOG: Two Probabilistic Oversampling Techniques
+P027,RBBoost / Random Balance,2015,RBBoost-2015,diezpastor2015randombalance,manual,yes,method,Random Balance: Ensembles of variable priors classifiers for imbalanced data
+P028,SCUT,2015,SCUT-2015,agrawal2015scut,auto,yes,method,SCUT: Multi-Class Imbalanced Data Classification using SMOTE and Cluster-based Undersampling
+P029,SMOTE-IPF,2015,SMOTE-IPF-2015,saez2015smoteipf,auto,yes,method,SMOTE-IPF: Addressing the noisy and borderline examples problem in imbalanced classification by a re-sampling method with filtering
+P030,SplitBal,2015,SplitBal-2015,sun2015splitbal,auto,yes,method,A novel ensemble method for classifying imbalanced data
+P031,A-SUWO,2016,A-SUWO-2016,nekooeimehr2016asuwo,auto,yes,method,Oversampling Methods for Imbalanced Dataset Classification and their Application to Gynecological Disorder Diagnosis (Ch. 3: Adaptive Semi-Unsupervised Weighted Oversampling (A-SUWO) for Imbalanced Datasets)
+P032,CGMOS,2016,CGMOS-2016,zhang2016cgmos,auto,yes,method,CGMOS: Certainty Guided Minority OverSampling
+P033,MDO,2016,MDO-2016,abdi2016mdo,auto,yes,method,To Combat Multi-Class Imbalanced Problems by Means of Over-Sampling Techniques
+P034,SMOM,2017,SMOM-2017,zhu2017smom,auto,yes,method,Synthetic minority oversampling technique for multiclass imbalance problems
+P035,AMDO,2018,AMDO-2018,yang2018amdo,auto,yes,method,AMDO: an Over-Sampling Technique for Multi-Class Imbalanced Problems
+P036,OBU,2018,OBU-2018,vuttipittayamongkol2018obu,auto,yes,method,Overlap-based undersampling for improving imbalanced data classification
+P037,ROS (Buda),2018,ROS-Buda-2018,buda2018systematic,manual,yes,empirical-study,A systematic study of the class imbalance problem in convolutional neural networks
+P038,k-means SMOTE,2018,KMeansSMOTE-2018,douzas2018kmeans,manual,yes,method,Improving imbalanced learning through a heuristic oversampling method based on k-means and SMOTE
+P039,CTGAN / TVAE,2019,CTGAN-2019,xu2019ctgan,manual,yes,method,Modeling Tabular Data using Conditional GAN
+P040,G-SMOTE,2019,G-SMOTE-2019,douzas2019gsmote,auto,yes,method,Geometric SMOTE a geometrically enhanced drop-in replacement for SMOTE
+P041,GAMO,2019,GAMO-2019,mullick2019gamo,auto,yes,method,Generative Adversarial Minority Oversampling
+P042,RBO,2019,RBO-2019,koziarski2019rbo,auto,yes,method,Radial-Based oversampling for noisy imbalanced data classification
+P043,SOUP,2019,SOUP-2019,janicka2019soup,auto,yes,method,Using information on class interrelations to improve classification of multiclass imbalanced data: A new resampling algorithm
+P044,AB-SMOTE,2020,AB-SMOTE-2020,almajzoub2020absmote,auto,yes,method,AB-SMOTE: An Affinitive Borderline SMOTE Approach for Imbalanced Data Binary Classification
+P045,DLexiBoost,2020,DLexiBoost-2020,datta2020dlexiboost,auto,yes,method,Boosting with Lexicographic Programming: Addressing Class Imbalance without Cost Tuning
+P046,MBS,2020,MBS-2020,liu2020mbs,auto,yes,method,Model-Based Synthetic Sampling for Imbalanced Data
+P047,MC-CCR,2020,MC-CCR-2020,koziarski2020mcccr,auto,yes,method,Combined Cleaning and Resampling algorithm for multi-class imbalanced data with label noise
+P048,MC-RBO,2020,MC-RBO-2020,krawczyk2020mcrbo,auto,yes,method,Radial-Based Oversampling for Multiclass Imbalanced Data Classification
+P049,NBU,2020,NBU-2020,vuttipittayamongkol2020nbu,auto,yes,method,Neighbourhood-based undersampling approach for handling imbalanced and overlapped data
+P050,SPE,2020,SPE-2020,liu2020spe,auto,yes,method,Self-paced Ensemble for Highly Imbalanced Massive Data Classification
+P051,EMDO,2021,EMDO-2021,yao2021emdo,auto,yes,method,Evolutionary Mahalanobis Distance-Based Oversampling for Multi-Class Imbalanced Data Classification
+P052,HDE,2021,HDE-2021,chen2021hde,auto,yes,method,A hybrid data-level ensemble to enable learning from highly imbalanced dataset
+P053,RSMOTE,2021,RSMOTE-2021,chen2021rsmote,auto,yes,method,RSMOTE: A self-adaptive robust SMOTE for imbalanced problems with label noise
+P054,Survey: SMOTE Review,2021,PradiptaReview-2021,pradipta2021smote,manual,no,survey,SMOTE for Handling Imbalanced Data Problem: A Review
+P055,CBHSID,2022,CBHSID-2022,palli2022cbhsid,auto,yes,method,A Hybrid Sampling Approach for Imbalanced Binary and Multi-Class Data Using Clustering Analysis
+P056,FW-SMOTE,2022,FW-SMOTE-2022,maldonado2022fwsmote,auto,yes,method,FW-SMOTE: A feature-weighted oversampling approach for imbalanced classification
+P057,GDO,2022,GDO-2022,xie2022gdo,auto,yes,method,Gaussian Distribution Based Oversampling for Imbalanced Data Classification
+P058,KNNOR,2022,KNNOR-2022,islam2022knnor,auto,yes,method,KNNOR: An oversampling technique for imbalanced datasets
+P059,SHSampler,2022,SHSampler-2022,zheng2022shsampler,auto,yes,method,Combating Mutuality with Difficulty Factors in Multi-class Imbalanced Data: A Similarity-based Hybrid Sampling
+P060,SOS,2022,SOS-2022,kim2022sos,auto,yes,method,SOS: Score-based Oversampling for Tabular Data
+P061,SVDD-WSMOTE,2022,SVDDWSMOTE-2022,tao2022svddw,manual,yes,method,SVDD-based weighted oversampling technique for imbalanced and overlapped dataset learning
+P062,Survey: Stop Oversampling,2022,StopOversampling-2022,hassanat2022stop,manual,no,survey,Stop Oversampling for Class Imbalance Learning: A Critical Review
+P063,GLOS,2023,GLOS-2023,han2023glos,auto,yes,method,Global-local information based oversampling for multi-class imbalanced data
+P064,NROMM,2023,NROMM-2023,liu2023nromm,auto,yes,method,Noise-robust oversampling for imbalanced data classification
+P065,OREM-M,2023,OREM-2023,zhu2023orem,manual,yes,method,Oversampling With Reliably Expanding Minority Class Regions for Imbalanced Data Learning
+P066,GMMSampling,2024,GMMSampling-2024,naglik2024gmmsampling,auto,yes,method,"GMMSampling: a new model-based, data difficulty-driven resampling method for multi-class imbalanced data"
+P067,MC-MBRC,2024,MC-MBRC-2024,ma2024mcmbrc,auto,yes,method,A membership-based resampling and cleaning algorithm for multi-class imbalanced overlapping data
+P068,MKC-SMOTE,2024,MKC-SMOTE-2024,wang2024mkc,auto,yes,method,MKC-SMOTE: A Novel Synthetic Oversampling Method for Multi-Class Imbalanced Data Classification
+P069,CISO,2025,CISO-2025,yadav2025ciso,auto,yes,method,Certified Interpolation Oversampling: Per-Instance Safety Guarantees for Imbalanced Learning
+P070,GDHS,2025,GDHS-2025,yan2025gdhs,auto,yes,method,GDHS: An efficient hybrid sampling method for multi-class imbalanced data classification
+P071,GOIO,2025,GOIO-2025,ren2025goio,auto,yes,method,GOIO: Generative Oversampling Approach to Class Imbalance and Overlap of Tabular Data
+P072,MC-NCLWO,2025,MC-NCLWO-2025,tao2025mcnclwo,auto,yes,method,MC-NCLWO: Newton's Cooling Law-Based Oversampling Algorithm for Multi-Class Imbalanced Datasets With Feature Noise
+P073,MLOS,2025,MLOS-2025,yan2025mlos,auto,yes,method,Synthetic oversampling with Mahalanobis distance and local information for highly imbalanced class-overlapped data
+P074,DGOT,2026,DGOT-2026,ren2026dgot,auto,yes,method,Diffusion GAN-Based Oversampling for Imbalanced Tabular Data
+P075,Loyalty-SMOTE,2026,Loyalty-SMOTE-2026,hu2026loyalty,auto,yes,method,Loyalty-SMOTE: Data synthesis algorithm for effective imbalanced data classification
+P076,QC-SMOTE,2026,QC-SMOTE-2026,upman2026qcsmote,auto,yes,method,QC-SMOTE: Quality-Controlled SMOTE for Imbalanced Classification

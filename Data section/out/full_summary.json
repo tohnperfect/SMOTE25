@@ -1,0 +1,4670 @@
+{
+ "summary": {
+  "_note": "ai_draft ทุกค่า diff เทียบข้าม paper ไม่ได้ (คนละ metric/หน่วย) ชนิดข้อมูลมาจากที่ผู้อ่านจัดตามคำนิยามใน SCHEMA.md",
+  "papers": 73,
+  "datasets_listed": 1654,
+  "uncertain_items": 454,
+  "granularity": {
+   "per-dataset": 47,
+   "plots only": 5,
+   "aggregate only": 5,
+   "no comparison": 5,
+   "per-dataset partial": 8,
+   "ranking only": 3
+  },
+  "smote_baseline": {
+   "plain SMOTE": 44,
+   "SMOTE variant (multiclass/ensemble wrapper)": 13,
+   "not a baseline": 16
+  },
+  "papers_with_rows_vs_smote": [
+   "A-SUWO",
+   "AB-SMOTE",
+   "ADASYN",
+   "AMDO",
+   "CBHSID",
+   "CGMOS",
+   "DGOT",
+   "DSRBF / Static-SMOTE",
+   "EMDO",
+   "EasyEnsemble / BalanceCascade",
+   "FW-SMOTE",
+   "GAMO",
+   "GDHS",
+   "GDO",
+   "GOIO",
+   "INOS",
+   "KNNOR",
+   "Loyalty-SMOTE",
+   "MBS",
+   "MC-CCR",
+   "MC-MBRC",
+   "MC-RBO",
+   "MKC-SMOTE",
+   "MLOS",
+   "MWMOTE",
+   "NBU",
+   "NROMM",
+   "OREM-M",
+   "OVO-SMOTE",
+   "RACOG / wRACOG",
+   "RAMOBoost",
+   "RBBoost / Random Balance",
+   "RSMOTE",
+   "RUSBoost",
+   "SCUT",
+   "SHSampler",
+   "SMOM",
+   "SMOTE-ENN / SMOTE-Tomek",
+   "SMOTE-IPF",
+   "SMOTEBoost",
+   "SOS",
+   "SOUP",
+   "SPE",
+   "SVDD-WSMOTE"
+  ],
+  "how_obtained_all": {
+   "modified": 331,
+   "original": 534,
+   "repository-defined": 470,
+   "not stated": 199,
+   "synthetic": 120
+  },
+  "how_obtained_reader_only": {
+   "modified": 330,
+   "original": 287,
+   "repository-defined": 362,
+   "not stated": 555,
+   "synthetic": 120
+  },
+  "match_methods": {
+   "name": 734,
+   "prefix": 75,
+   "row order (check)": 22,
+   "unmatched": 4
+  },
+  "outcome_all": {
+   "rows": 835,
+   "papers": 44,
+   "proposed_higher": 631,
+   "smote_higher": 156,
+   "equal": 48
+  },
+  "outcome_plain": {
+   "rows": 542,
+   "papers": 31,
+   "proposed_higher": 421,
+   "smote_higher": 82,
+   "equal": 39
+  },
+  "by_how_obtained_all": {
+   "modified": {
+    "rows": 173,
+    "papers": 20,
+    "proposed_higher": 136,
+    "smote_higher": 32,
+    "equal": 5
+   },
+   "not stated": {
+    "rows": 121,
+    "papers": 14,
+    "proposed_higher": 88,
+    "smote_higher": 20,
+    "equal": 13
+   },
+   "original": {
+    "rows": 346,
+    "papers": 38,
+    "proposed_higher": 281,
+    "smote_higher": 55,
+    "equal": 10
+   },
+   "repository-defined": {
+    "rows": 182,
+    "papers": 10,
+    "proposed_higher": 115,
+    "smote_higher": 48,
+    "equal": 19
+   },
+   "synthetic": {
+    "rows": 9,
+    "papers": 2,
+    "proposed_higher": 9,
+    "smote_higher": 0,
+    "equal": 0
+   },
+   "unmatched": {
+    "rows": 4,
+    "papers": 3,
+    "proposed_higher": 2,
+    "smote_higher": 1,
+    "equal": 1
+   }
+  },
+  "by_how_obtained_plain": {
+   "modified": {
+    "rows": 143,
+    "papers": 14,
+    "proposed_higher": 109,
+    "smote_higher": 30,
+    "equal": 4
+   },
+   "not stated": {
+    "rows": 104,
+    "papers": 13,
+    "proposed_higher": 82,
+    "smote_higher": 9,
+    "equal": 13
+   },
+   "original": {
+    "rows": 167,
+    "papers": 26,
+    "proposed_higher": 133,
+    "smote_higher": 29,
+    "equal": 5
+   },
+   "repository-defined": {
+    "rows": 119,
+    "papers": 9,
+    "proposed_higher": 90,
+    "smote_higher": 13,
+    "equal": 16
+   },
+   "synthetic": {
+    "rows": 5,
+    "papers": 1,
+    "proposed_higher": 5,
+    "smote_higher": 0,
+    "equal": 0
+   },
+   "unmatched": {
+    "rows": 4,
+    "papers": 3,
+    "proposed_higher": 2,
+    "smote_higher": 1,
+    "equal": 1
+   }
+  },
+  "by_paper_and_type": {
+   "A-SUWO": {
+    "modified": {
+     "rows": 12,
+     "papers": 1,
+     "proposed_higher": 8,
+     "smote_higher": 2,
+     "equal": 2
+    },
+    "original": {
+     "rows": 4,
+     "papers": 1,
+     "proposed_higher": 3,
+     "smote_higher": 0,
+     "equal": 1
+    }
+   },
+   "AB-SMOTE": {
+    "not stated": {
+     "rows": 4,
+     "papers": 1,
+     "proposed_higher": 0,
+     "smote_higher": 3,
+     "equal": 1
+    },
+    "original": {
+     "rows": 3,
+     "papers": 1,
+     "proposed_higher": 1,
+     "smote_higher": 2,
+     "equal": 0
+    },
+    "repository-defined": {
+     "rows": 1,
+     "papers": 1,
+     "proposed_higher": 1,
+     "smote_higher": 0,
+     "equal": 0
+    }
+   },
+   "ADASYN": {
+    "modified": {
+     "rows": 3,
+     "papers": 1,
+     "proposed_higher": 3,
+     "smote_higher": 0,
+     "equal": 0
+    },
+    "original": {
+     "rows": 2,
+     "papers": 1,
+     "proposed_higher": 2,
+     "smote_higher": 0,
+     "equal": 0
+    }
+   },
+   "AMDO": {
+    "modified": {
+     "rows": 3,
+     "papers": 1,
+     "proposed_higher": 3,
+     "smote_higher": 0,
+     "equal": 0
+    },
+    "original": {
+     "rows": 14,
+     "papers": 1,
+     "proposed_higher": 9,
+     "smote_higher": 4,
+     "equal": 1
+    }
+   },
+   "CBHSID": {
+    "not stated": {
+     "rows": 2,
+     "papers": 1,
+     "proposed_higher": 2,
+     "smote_higher": 0,
+     "equal": 0
+    },
+    "original": {
+     "rows": 7,
+     "papers": 1,
+     "proposed_higher": 6,
+     "smote_higher": 1,
+     "equal": 0
+    },
+    "repository-defined": {
+     "rows": 7,
+     "papers": 1,
+     "proposed_higher": 5,
+     "smote_higher": 2,
+     "equal": 0
+    }
+   },
+   "CGMOS": {
+    "not stated": {
+     "rows": 26,
+     "papers": 1,
+     "proposed_higher": 21,
+     "smote_higher": 1,
+     "equal": 4
+    },
+    "original": {
+     "rows": 4,
+     "papers": 1,
+     "proposed_higher": 3,
+     "smote_higher": 0,
+     "equal": 1
+    }
+   },
+   "DGOT": {
+    "modified": {
+     "rows": 2,
+     "papers": 1,
+     "proposed_higher": 2,
+     "smote_higher": 0,
+     "equal": 0
+    },
+    "original": {
+     "rows": 10,
+     "papers": 1,
+     "proposed_higher": 7,
+     "smote_higher": 3,
+     "equal": 0
+    },
+    "repository-defined": {
+     "rows": 10,
+     "papers": 1,
+     "proposed_higher": 9,
+     "smote_higher": 0,
+     "equal": 1
+    }
+   },
+   "DSRBF / Static-SMOTE": {
+    "modified": {
+     "rows": 2,
+     "papers": 1,
+     "proposed_higher": 2,
+     "smote_higher": 0,
+     "equal": 0
+    },
+    "original": {
+     "rows": 11,
+     "papers": 1,
+     "proposed_higher": 11,
+     "smote_higher": 0,
+     "equal": 0
+    }
+   },
+   "EMDO": {
+    "original": {
+     "rows": 9,
+     "papers": 1,
+     "proposed_higher": 9,
+     "smote_higher": 0,
+     "equal": 0
+    }
+   },
+   "EasyEnsemble / BalanceCascade": {
+    "modified": {
+     "rows": 10,
+     "papers": 1,
+     "proposed_higher": 8,
+     "smote_higher": 1,
+     "equal": 1
+    },
+    "original": {
+     "rows": 6,
+     "papers": 1,
+     "proposed_higher": 3,
+     "smote_higher": 3,
+     "equal": 0
+    }
+   },
+   "FW-SMOTE": {
+    "not stated": {
+     "rows": 15,
+     "papers": 1,
+     "proposed_higher": 11,
+     "smote_higher": 0,
+     "equal": 4
+    },
+    "repository-defined": {
+     "rows": 27,
+     "papers": 1,
+     "proposed_higher": 19,
+     "smote_higher": 1,
+     "equal": 7
+    }
+   },
+   "GAMO": {
+    "modified": {
+     "rows": 9,
+     "papers": 1,
+     "proposed_higher": 9,
+     "smote_higher": 0,
+     "equal": 0
+    }
+   },
+   "GDHS": {
+    "original": {
+     "rows": 20,
+     "papers": 1,
+     "proposed_higher": 15,
+     "smote_higher": 4,
+     "equal": 1
+    }
+   },
+   "GDO": {
+    "repository-defined": {
+     "rows": 40,
+     "papers": 1,
+     "proposed_higher": 32,
+     "smote_higher": 7,
+     "equal": 1
+    }
+   },
+   "GOIO": {
+    "modified": {
+     "rows": 6,
+     "papers": 1,
+     "proposed_higher": 6,
+     "smote_higher": 0,
+     "equal": 0
+    },
+    "not stated": {
+     "rows": 3,
+     "papers": 1,
+     "proposed_higher": 3,
+     "smote_higher": 0,
+     "equal": 0
+    },
+    "original": {
+     "rows": 9,
+     "papers": 1,
+     "proposed_higher": 8,
+     "smote_higher": 1,
+     "equal": 0
+    },
+    "synthetic": {
+     "rows": 5,
+     "papers": 1,
+     "proposed_higher": 5,
+     "smote_higher": 0,
+     "equal": 0
+    }
+   },
+   "INOS": {
+    "modified": {
+     "rows": 7,
+     "papers": 1,
+     "proposed_higher": 7,
+     "smote_higher": 0,
+     "equal": 0
+    }
+   },
+   "KNNOR": {
+    "unmatched": {
+     "rows": 1,
+     "papers": 1,
+     "proposed_higher": 1,
+     "smote_higher": 0,
+     "equal": 0
+    }
+   },
+   "Loyalty-SMOTE": {
+    "not stated": {
+     "rows": 16,
+     "papers": 1,
+     "proposed_higher": 13,
+     "smote_higher": 1,
+     "equal": 2
+    },
+    "original": {
+     "rows": 8,
+     "papers": 1,
+     "proposed_higher": 6,
+     "smote_higher": 1,
+     "equal": 1
+    },
+    "repository-defined": {
+     "rows": 5,
+     "papers": 1,
+     "proposed_higher": 2,
+     "smote_higher": 0,
+     "equal": 3
+    },
+    "unmatched": {
+     "rows": 1,
+     "papers": 1,
+     "proposed_higher": 0,
+     "smote_higher": 0,
+     "equal": 1
+    }
+   },
+   "MBS": {
+    "not stated": {
+     "rows": 8,
+     "papers": 1,
+     "proposed_higher": 6,
+     "smote_higher": 0,
+     "equal": 2
+    },
+    "original": {
+     "rows": 5,
+     "papers": 1,
+     "proposed_higher": 5,
+     "smote_higher": 0,
+     "equal": 0
+    }
+   },
+   "MC-CCR": {
+    "original": {
+     "rows": 20,
+     "papers": 1,
+     "proposed_higher": 20,
+     "smote_higher": 0,
+     "equal": 0
+    }
+   },
+   "MC-MBRC": {
+    "original": {
+     "rows": 20,
+     "papers": 1,
+     "proposed_higher": 18,
+     "smote_higher": 2,
+     "equal": 0
+    }
+   },
+   "MC-RBO": {
+    "original": {
+     "rows": 20,
+     "papers": 1,
+     "proposed_higher": 20,
+     "smote_higher": 0,
+     "equal": 0
+    }
+   },
+   "MKC-SMOTE": {
+    "original": {
+     "rows": 21,
+     "papers": 1,
+     "proposed_higher": 19,
+     "smote_higher": 2,
+     "equal": 0
+    }
+   },
+   "MLOS": {
+    "not stated": {
+     "rows": 10,
+     "papers": 1,
+     "proposed_higher": 7,
+     "smote_higher": 3,
+     "equal": 0
+    },
+    "repository-defined": {
+     "rows": 6,
+     "papers": 1,
+     "proposed_higher": 6,
+     "smote_higher": 0,
+     "equal": 0
+    }
+   },
+   "MWMOTE": {
+    "modified": {
+     "rows": 17,
+     "papers": 1,
+     "proposed_higher": 12,
+     "smote_higher": 5,
+     "equal": 0
+    },
+    "original": {
+     "rows": 1,
+     "papers": 1,
+     "proposed_higher": 1,
+     "smote_higher": 0,
+     "equal": 0
+    },
+    "unmatched": {
+     "rows": 2,
+     "papers": 1,
+     "proposed_higher": 1,
+     "smote_higher": 1,
+     "equal": 0
+    }
+   },
+   "NBU": {
+    "not stated": {
+     "rows": 1,
+     "papers": 1,
+     "proposed_higher": 0,
+     "smote_higher": 1,
+     "equal": 0
+    },
+    "original": {
+     "rows": 2,
+     "papers": 1,
+     "proposed_higher": 1,
+     "smote_higher": 1,
+     "equal": 0
+    },
+    "repository-defined": {
+     "rows": 21,
+     "papers": 1,
+     "proposed_higher": 14,
+     "smote_higher": 3,
+     "equal": 4
+    }
+   },
+   "NROMM": {
+    "original": {
+     "rows": 20,
+     "papers": 1,
+     "proposed_higher": 20,
+     "smote_higher": 0,
+     "equal": 0
+    }
+   },
+   "OREM-M": {
+    "original": {
+     "rows": 19,
+     "papers": 1,
+     "proposed_higher": 11,
+     "smote_higher": 8,
+     "equal": 0
+    },
+    "repository-defined": {
+     "rows": 2,
+     "papers": 1,
+     "proposed_higher": 2,
+     "smote_higher": 0,
+     "equal": 0
+    }
+   },
+   "OVO-SMOTE": {
+    "modified": {
+     "rows": 4,
+     "papers": 1,
+     "proposed_higher": 3,
+     "smote_higher": 1,
+     "equal": 0
+    },
+    "original": {
+     "rows": 20,
+     "papers": 1,
+     "proposed_higher": 15,
+     "smote_higher": 5,
+     "equal": 0
+    }
+   },
+   "RACOG / wRACOG": {
+    "modified": {
+     "rows": 8,
+     "papers": 1,
+     "proposed_higher": 3,
+     "smote_higher": 4,
+     "equal": 1
+    },
+    "original": {
+     "rows": 2,
+     "papers": 1,
+     "proposed_higher": 1,
+     "smote_higher": 1,
+     "equal": 0
+    }
+   },
+   "RAMOBoost": {
+    "modified": {
+     "rows": 13,
+     "papers": 1,
+     "proposed_higher": 9,
+     "smote_higher": 4,
+     "equal": 0
+    },
+    "original": {
+     "rows": 6,
+     "papers": 1,
+     "proposed_higher": 6,
+     "smote_higher": 0,
+     "equal": 0
+    }
+   },
+   "RBBoost / Random Balance": {
+    "not stated": {
+     "rows": 17,
+     "papers": 1,
+     "proposed_higher": 6,
+     "smote_higher": 11,
+     "equal": 0
+    },
+    "original": {
+     "rows": 6,
+     "papers": 1,
+     "proposed_higher": 4,
+     "smote_higher": 2,
+     "equal": 0
+    },
+    "repository-defined": {
+     "rows": 63,
+     "papers": 1,
+     "proposed_higher": 25,
+     "smote_higher": 35,
+     "equal": 3
+    }
+   },
+   "RSMOTE": {
+    "modified": {
+     "rows": 18,
+     "papers": 1,
+     "proposed_higher": 12,
+     "smote_higher": 6,
+     "equal": 0
+    },
+    "not stated": {
+     "rows": 7,
+     "papers": 1,
+     "proposed_higher": 7,
+     "smote_higher": 0,
+     "equal": 0
+    },
+    "original": {
+     "rows": 2,
+     "papers": 1,
+     "proposed_higher": 2,
+     "smote_higher": 0,
+     "equal": 0
+    }
+   },
+   "RUSBoost": {
+    "modified": {
+     "rows": 9,
+     "papers": 1,
+     "proposed_higher": 9,
+     "smote_higher": 0,
+     "equal": 0
+    },
+    "not stated": {
+     "rows": 5,
+     "papers": 1,
+     "proposed_higher": 5,
+     "smote_higher": 0,
+     "equal": 0
+    },
+    "original": {
+     "rows": 1,
+     "papers": 1,
+     "proposed_higher": 1,
+     "smote_higher": 0,
+     "equal": 0
+    }
+   },
+   "SCUT": {
+    "original": {
+     "rows": 8,
+     "papers": 1,
+     "proposed_higher": 4,
+     "smote_higher": 3,
+     "equal": 1
+    }
+   },
+   "SHSampler": {
+    "original": {
+     "rows": 20,
+     "papers": 1,
+     "proposed_higher": 12,
+     "smote_higher": 7,
+     "equal": 1
+    }
+   },
+   "SMOM": {
+    "modified": {
+     "rows": 14,
+     "papers": 1,
+     "proposed_higher": 10,
+     "smote_higher": 4,
+     "equal": 0
+    },
+    "original": {
+     "rows": 13,
+     "papers": 1,
+     "proposed_higher": 9,
+     "smote_higher": 3,
+     "equal": 1
+    }
+   },
+   "SMOTE-ENN / SMOTE-Tomek": {
+    "modified": {
+     "rows": 12,
+     "papers": 1,
+     "proposed_higher": 6,
+     "smote_higher": 5,
+     "equal": 1
+    },
+    "original": {
+     "rows": 3,
+     "papers": 1,
+     "proposed_higher": 2,
+     "smote_higher": 1,
+     "equal": 0
+    }
+   },
+   "SMOTE-IPF": {
+    "not stated": {
+     "rows": 5,
+     "papers": 1,
+     "proposed_higher": 5,
+     "smote_higher": 0,
+     "equal": 0
+    },
+    "original": {
+     "rows": 4,
+     "papers": 1,
+     "proposed_higher": 4,
+     "smote_higher": 0,
+     "equal": 0
+    }
+   },
+   "SMOTEBoost": {
+    "modified": {
+     "rows": 2,
+     "papers": 1,
+     "proposed_higher": 2,
+     "smote_higher": 0,
+     "equal": 0
+    },
+    "original": {
+     "rows": 2,
+     "papers": 1,
+     "proposed_higher": 2,
+     "smote_higher": 0,
+     "equal": 0
+    }
+   },
+   "SOS": {
+    "not stated": {
+     "rows": 2,
+     "papers": 1,
+     "proposed_higher": 2,
+     "smote_higher": 0,
+     "equal": 0
+    },
+    "original": {
+     "rows": 4,
+     "papers": 1,
+     "proposed_higher": 4,
+     "smote_higher": 0,
+     "equal": 0
+    }
+   },
+   "SOUP": {
+    "modified": {
+     "rows": 2,
+     "papers": 1,
+     "proposed_higher": 2,
+     "smote_higher": 0,
+     "equal": 0
+    },
+    "original": {
+     "rows": 13,
+     "papers": 1,
+     "proposed_higher": 10,
+     "smote_higher": 1,
+     "equal": 2
+    },
+    "synthetic": {
+     "rows": 4,
+     "papers": 1,
+     "proposed_higher": 4,
+     "smote_higher": 0,
+     "equal": 0
+    }
+   },
+   "SPE": {
+    "original": {
+     "rows": 3,
+     "papers": 1,
+     "proposed_higher": 3,
+     "smote_higher": 0,
+     "equal": 0
+    }
+   },
+   "SVDD-WSMOTE": {
+    "modified": {
+     "rows": 20,
+     "papers": 1,
+     "proposed_higher": 20,
+     "smote_higher": 0,
+     "equal": 0
+    },
+    "original": {
+     "rows": 4,
+     "papers": 1,
+     "proposed_higher": 4,
+     "smote_higher": 0,
+     "equal": 0
+    }
+   }
+  },
+  "papers_with_standard_rows": [
+   "A-SUWO",
+   "AB-SMOTE",
+   "ADASYN",
+   "AMDO",
+   "CBHSID",
+   "CGMOS",
+   "DGOT",
+   "DSRBF / Static-SMOTE",
+   "EMDO",
+   "EasyEnsemble / BalanceCascade",
+   "FW-SMOTE",
+   "GDHS",
+   "GDO",
+   "GOIO",
+   "Loyalty-SMOTE",
+   "MBS",
+   "MC-CCR",
+   "MC-MBRC",
+   "MC-RBO",
+   "MKC-SMOTE",
+   "MLOS",
+   "MWMOTE",
+   "NBU",
+   "NROMM",
+   "OREM-M",
+   "OVO-SMOTE",
+   "RACOG / wRACOG",
+   "RAMOBoost",
+   "RBBoost / Random Balance",
+   "RSMOTE",
+   "RUSBoost",
+   "SCUT",
+   "SHSampler",
+   "SMOM",
+   "SMOTE-ENN / SMOTE-Tomek",
+   "SMOTE-IPF",
+   "SMOTEBoost",
+   "SOS",
+   "SOUP",
+   "SPE",
+   "SVDD-WSMOTE"
+  ],
+  "papers_without_standard_rows": [
+   "GAMO",
+   "INOS",
+   "KNNOR"
+  ],
+  "standard_rows_where_smote_higher": [
+   [
+    "AB-SMOTE",
+    "Harberman (Table VI)",
+    "0.575",
+    "0.643"
+   ],
+   [
+    "AB-SMOTE",
+    "Telco Customer Churn (Table VIII)",
+    "0.678",
+    "0.731"
+   ],
+   [
+    "AMDO",
+    "Page-blocks",
+    "92.98",
+    "93.51"
+   ],
+   [
+    "AMDO",
+    "Breast-tissue",
+    "77.93",
+    "79.50"
+   ],
+   [
+    "AMDO",
+    "Pre2D",
+    "82.86",
+    "90.35"
+   ],
+   [
+    "AMDO",
+    "Thyroid",
+    "96.75",
+    "98.29"
+   ],
+   [
+    "CBHSID",
+    "Vehicle1",
+    "0.7660",
+    "0.8090"
+   ],
+   [
+    "CBHSID",
+    "Yeast3",
+    "0.8496",
+    "0.8734"
+   ],
+   [
+    "CBHSID",
+    "Dermatology",
+    "0.9814",
+    "0.9852"
+   ],
+   [
+    "DGOT",
+    "satimage",
+    "0.8660",
+    "0.8693"
+   ],
+   [
+    "DGOT",
+    "bankruptcy",
+    "0.5939",
+    "0.6104"
+   ],
+   [
+    "DGOT",
+    "avila",
+    "0.8393",
+    "0.8472"
+   ],
+   [
+    "EasyEnsemble / BalanceCascade",
+    "ionosphere",
+    ".919",
+    ".922"
+   ],
+   [
+    "EasyEnsemble / BalanceCascade",
+    "phoneme",
+    ".892",
+    ".899"
+   ],
+   [
+    "EasyEnsemble / BalanceCascade",
+    "wdbc",
+    ".962",
+    ".964"
+   ],
+   [
+    "FW-SMOTE",
+    "ldd10 (ecoli-0-3-4-7 vs 5–6)",
+    "90.1",
+    "91.2"
+   ],
+   [
+    "GDHS",
+    "car",
+    "0.9490",
+    "0.9504"
+   ],
+   [
+    "GDHS",
+    "hayes-roth",
+    "0.8236",
+    "0.8293"
+   ],
+   [
+    "GDHS",
+    "thyroid",
+    "0.9302",
+    "0.9362"
+   ],
+   [
+    "GDHS",
+    "camel-1.6",
+    "0.5551",
+    "0.5610"
+   ],
+   [
+    "GDO",
+    "ecoli2",
+    "0.8538",
+    "0.8899"
+   ],
+   [
+    "GDO",
+    "yeast-2_vs_4",
+    "0.8745",
+    "0.8889"
+   ],
+   [
+    "GDO",
+    "ecoli4",
+    "0.9132",
+    "0.9322"
+   ],
+   [
+    "GDO",
+    "bupa",
+    "0.6768",
+    "0.6805"
+   ],
+   [
+    "GDO",
+    "kr-vs-k-one_vs_fifteen",
+    "0.9998",
+    "1.0000"
+   ],
+   [
+    "GDO",
+    "breast-cancer-wisconsin",
+    "0.9602",
+    "0.9635"
+   ],
+   [
+    "GDO",
+    "abalone-3_vs_11",
+    "0.9987",
+    "1.0000"
+   ],
+   [
+    "GOIO",
+    "sick_euthyroid",
+    "0.7151",
+    "0.7305"
+   ],
+   [
+    "Loyalty-SMOTE",
+    "heart",
+    "0.8663",
+    "0.8878"
+   ],
+   [
+    "MC-MBRC",
+    "cmc",
+    "42.61",
+    "46.15"
+   ],
+   [
+    "MC-MBRC",
+    "contraceptive",
+    "37.63",
+    "47.06"
+   ],
+   [
+    "MKC-SMOTE",
+    "let",
+    "97.01",
+    "97.06"
+   ],
+   [
+    "MKC-SMOTE",
+    "car",
+    "91.73",
+    "92.91"
+   ],
+   [
+    "NBU",
+    "Pima",
+    "55.24",
+    "60.02"
+   ],
+   [
+    "NBU",
+    "New-thyroid2",
+    "95.74",
+    "100"
+   ],
+   [
+    "NBU",
+    "Page-blocks13vs2",
+    "97.7",
+    "100"
+   ],
+   [
+    "NBU",
+    "Yeast6",
+    "74.54",
+    "75.46"
+   ],
+   [
+    "OREM-M",
+    "Vt (Vertebral)",
+    "0.7615",
+    "0.7667"
+   ],
+   [
+    "OREM-M",
+    "Vi-3 (Voice3)",
+    "0.2161",
+    "0.2262"
+   ],
+   [
+    "OREM-M",
+    "W5 (Wisconsin5)",
+    "0.0954",
+    "0.0998"
+   ],
+   [
+    "OREM-M",
+    "Cl (Cleveland)",
+    "0.2646",
+    "0.2793"
+   ],
+   [
+    "OREM-M",
+    "Vi-6 (Voice6)",
+    "0.1524",
+    "0.1538"
+   ],
+   [
+    "OREM-M",
+    "Ye (Yeast)",
+    "0.5413",
+    "0.5414"
+   ],
+   [
+    "OREM-M",
+    "S10 (Stock10)",
+    "0.7536",
+    "0.7597"
+   ],
+   [
+    "OREM-M",
+    "Ab (Abalone)",
+    "0.2654",
+    "0.2683"
+   ],
+   [
+    "OVO-SMOTE",
+    "bal",
+    "54.29",
+    "55.30"
+   ],
+   [
+    "OVO-SMOTE",
+    "hay",
+    "83.49",
+    "86.03"
+   ],
+   [
+    "OVO-SMOTE",
+    "led",
+    "71.64",
+    "72.55"
+   ],
+   [
+    "OVO-SMOTE",
+    "lym",
+    "60.91",
+    "67.81"
+   ],
+   [
+    "OVO-SMOTE",
+    "win",
+    "92.02",
+    "94.24"
+   ],
+   [
+    "RACOG / wRACOG",
+    "haberman",
+    "0.00",
+    "0.5032"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel abalone19",
+    "0.1099",
+    "0.3596"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel abalone9-18",
+    "0.5716",
+    "0.6103"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel cleveland-0 vs 4",
+    "0.6754",
+    "0.7143"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel ecoli-0-6-7 vs 3-5",
+    "0.8059",
+    "0.8358"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel ecoli-0-6-7 vs 5",
+    "0.8953",
+    "0.8969"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel ecoli-0 vs 1",
+    "0.9771",
+    "0.9820"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel ecoli1",
+    "0.8538",
+    "0.8693"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel ecoli2",
+    "0.8694",
+    "0.8812"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel ecoli3",
+    "0.7162",
+    "0.8086"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel glass-0-1-4-6 vs 2",
+    "0.4106",
+    "0.5652"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel glass-0-1-5 vs 2",
+    "0.4377",
+    "0.5817"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel glass-0-1-6 vs 2",
+    "0.3315",
+    "0.4431"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel glass-0-1-6 vs 5",
+    "0.8161",
+    "0.9227"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel glass-0-4 vs 5",
+    "0.9185",
+    "0.9939"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel glass-0-6 vs 5",
+    "0.8719",
+    "0.9485"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel glass2",
+    "0.3848",
+    "0.6042"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel glass4",
+    "0.6551",
+    "0.7379"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel glass5",
+    "0.7761",
+    "0.9454"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel haberman",
+    "0.4957",
+    "0.6265"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel led7digit-0-2-4-5-6-",
+    "0.8714",
+    "0.9025"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel page-blocks0",
+    "0.9302",
+    "0.9384"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel pima",
+    "0.7025",
+    "0.7349"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel vehicle1",
+    "0.6830",
+    "0.7301"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel vehicle3",
+    "0.6647",
+    "0.7218"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel yeast-0-2-5-6 vs 3-7",
+    "0.7195",
+    "0.7574"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel yeast-0-2-5-7-9 vs 3",
+    "0.8799",
+    "0.8978"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel yeast-0-3-5-9 vs 7-8",
+    "0.5319",
+    "0.6212"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel yeast-0-5-6-7-9 vs 4",
+    "0.6452",
+    "0.7308"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel yeast-1-2-8-9 vs 7",
+    "0.4452",
+    "0.5713"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel yeast-1-4-5-8 vs 7",
+    "0.2365",
+    "0.4955"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel yeast-1 vs 7",
+    "0.5663",
+    "0.5953"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel yeast-2 vs 4",
+    "0.8547",
+    "0.8933"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel yeast1",
+    "0.6461",
+    "0.6988"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel yeast3",
+    "0.8603",
+    "0.9148"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel yeast4",
+    "0.5807",
+    "0.7564"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel yeast5",
+    "0.8438",
+    "0.9269"
+   ],
+   [
+    "RBBoost / Random Balance",
+    "keel yeast6",
+    "0.6878",
+    "0.7510"
+   ],
+   [
+    "SCUT",
+    "Thyroid",
+    "0.980",
+    "0.989"
+   ],
+   [
+    "SCUT",
+    "Autos",
+    "0.763",
+    "0.893"
+   ],
+   [
+    "SCUT",
+    "Ecoli",
+    "0.907",
+    "0.921"
+   ],
+   [
+    "SHSampler",
+    "balance",
+    "0.2990",
+    "0.3022"
+   ],
+   [
+    "SHSampler",
+    "car",
+    "0.9263",
+    "0.9468"
+   ],
+   [
+    "SHSampler",
+    "glass",
+    "0.5125",
+    "0.5393"
+   ],
+   [
+    "SHSampler",
+    "led7digit",
+    "0.6746",
+    "0.6800"
+   ],
+   [
+    "SHSampler",
+    "sensorReadings",
+    "0.9866",
+    "0.9913"
+   ],
+   [
+    "SHSampler",
+    "thyroid",
+    "0.9298",
+    "0.9595"
+   ],
+   [
+    "SHSampler",
+    "wine",
+    "0.9255",
+    "0.9306"
+   ],
+   [
+    "SMOM",
+    "vehicle",
+    "0.9215",
+    "0.922"
+   ],
+   [
+    "SMOM",
+    "voice9_7",
+    "0.0121",
+    "0.0264"
+   ],
+   [
+    "SMOM",
+    "ERA",
+    "0.1112",
+    "0.1113"
+   ],
+   [
+    "SMOTE-ENN / SMOTE-Tomek",
+    "Pima",
+    "83.66",
+    "85.49"
+   ],
+   [
+    "SOUP",
+    "ecoli",
+    "0.735",
+    "0.738"
+   ]
+  ]
+ },
+ "papers": [
+  {
+   "key": "A-SUWO",
+   "task": "binary",
+   "n_datasets_claimed": 16,
+   "n_datasets_listed": 16,
+   "characteristics_table": "Table 3.1, printed p.35 (PDF index not determined)",
+   "ir_definition": "not stated in paper",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "G-mean (G-M)",
+   "classifier": "SVM (RBF)",
+   "table": "Table 3.2",
+   "page": "printed p.38 (PDF index not determined)",
+   "rows_with_smote": 16,
+   "summary": [
+    {
+     "label": "Avg rank (Table 3.6, SVM, G-mean, printed p.42)",
+     "proposed": "2.688",
+     "smote": "5.406"
+    },
+    {
+     "label": "Holm p-value vs control A-SUWO (Table 3.8, SVM, G-mean, printed p.43)",
+     "proposed": "control",
+     "smote": "0.000351**"
+    },
+    {
+     "label": "Friedman p-value (Table 3.7, SVM, G-mean, printed p.42)",
+     "proposed": "0.001138**",
+     "smote": "0.001138**"
+    }
+   ],
+   "claim": {
+    "quote": "Results show that our method performs significantly better compared to other sampling methods in most datasets and in larger datasets with higher imbalance ratio.",
+    "page": "printed p.46"
+   },
+   "stat_test": "Friedman test followed by Holm post-hoc with A-SUWO as control (Tables 3.7, 3.8)",
+   "n_uncertain": 8,
+   "notes": "Dissertation chapter 3 reprint of Nekooeimehr & Lai-Yuen, Expert Systems with Applications (2016). Measures: F-measure, G-mean, AUC; classifiers SVM, KNN, Logistic Regression, LDA (Tables 3.2-3.5, pp.38-41). Parameter tuning by stratified CV on training set with G-mean criterion. Table 3.4 (Logistic Regression) Pima row is identical to Table 3.2 (SVM) Pima row in the dissertation. Sensitivity analysis Table 3.9 (p.45) uses SVM G-mean on Haberman, Ecoli, Wine, Breast, Libra. Source repository of datasets not stated in Ch.3 ('16 publicly available datasets'). No supplementary file referenced."
+  },
+  {
+   "key": "AB-SMOTE",
+   "task": "binary",
+   "n_datasets_claimed": null,
+   "n_datasets_listed": 8,
+   "characteristics_table": "Table I, p.3 (printed p.33)",
+   "ir_definition": "not stated in paper as a formula; Table I column 'IR Ratio' printed as percentages. Selection wording: 'if minority number of instances are less than 40% of the number of instances of the majority class, the dataset is considered unbalanced'",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "2.0: SMOTE k=5",
+   "smote_kind": "plain SMOTE",
+   "metric": "F-measure (no G-mean or AUC reported; Recall also reported)",
+   "classifier": "J48 decision tree (WEKA), 5-fold CV",
+   "table": "Tables IV-XI (one per dataset)",
+   "page": "p.4-5 (printed 34-35)",
+   "rows_with_smote": 8,
+   "summary": [
+    {
+     "label": "Table XII 'best results' count, Recall (BSMOTE vs AB-SMOTE, SMOTE not included), p.5 printed 35",
+     "proposed": "6",
+     "smote": "not applicable (BSMOTE = 3)"
+    },
+    {
+     "label": "Table XII 'best results' count, F-Measure (BSMOTE vs AB-SMOTE)",
+     "proposed": "7",
+     "smote": "not applicable (BSMOTE = 2)"
+    }
+   ],
+   "claim": {
+    "quote": "Experiments' results show the AB-SOMTE, when compared with BSMOTE, managed to produce the most accurate results in the majority of the test cases adopted in our study.",
+    "page": "p.1 (printed p.31); also Conclusion"
+   },
+   "stat_test": "none stated",
+   "n_uncertain": 8,
+   "notes": "Compares only against Original, SMOTE (k=5, 100%) and Borderline-SMOTE variants (BSMOTE 3.0-3.4) on 8 datasets, J48 in WEKA, 5-fold CV; metrics Recall and F-measure only. Other AB-SMOTE variants (F-measure, Tables IV-XI): 4.1/4.2/4.3 — Abalone 0.529/0.519/0.559; Churn 0.72/0.698/0.698; Haberman 0.643/0.639/0.581; Employee 0.603/0.595/0.593; Telco churn 0.679/0.665/0.665; Flare 0.463/0.397/0.359; Wine 0.205/0.215/0.205; Sales 0.826/0.822/0.82. Paper text (Sec. V) admits SMOTE was better than BSMOTE/AB-SMOTE in one case (Table V). Gen = number of generated instances is also tabulated. Number of datasets not stated as a claim; 8 in Table I."
+  },
+  {
+   "key": "ADASYN",
+   "task": "binary",
+   "n_datasets_claimed": 5,
+   "n_datasets_listed": 6,
+   "characteristics_table": "Table I, p.3 (printed 1324)",
+   "ir_definition": "degree of class imbalance d = ms/ml (Eq. 1), where ms = # minority, ml = # majority, d in (0,1]",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "G mean",
+   "classifier": "decision tree",
+   "table": "Table II",
+   "page": "p.5 (printed 1326)",
+   "rows_with_smote": 5,
+   "summary": [
+    {
+     "label": "Winning times (G mean column)",
+     "proposed": "5",
+     "smote": "0"
+    },
+    {
+     "label": "Winning times (OA / Precision / Recall / F measure)",
+     "proposed": "3 / 0 / 4 / 3",
+     "smote": "0 / 0 / 1 / 1"
+    }
+   ],
+   "claim": {
+    "quote": "Simulation results on five data sets based on various evaluation metrics show the effectiveness of this method.",
+    "page": "p.6 (printed 1327)"
+   },
+   "stat_test": "not stated in paper",
+   "n_uncertain": 3,
+   "notes": "Tables are text-extractable (not images). Table II also reports OA, Precision, Recall, F measure for Decision tree (original data), SMOTE, ADASYN. Decision tree = learning on original imbalanced data, used as reference; base classifier is decision tree throughout. No std reported. Abstract claim: 'Simulation analyses on several machine learning data sets show the effectiveness of this method across five evaluation metrics.' (p.1). Paper misspells SMOTE as 'SMTOE' once (p.5)."
+  },
+  {
+   "key": "AMDO",
+   "task": "multiclass",
+   "n_datasets_claimed": 17,
+   "n_datasets_listed": 17,
+   "characteristics_table": "Table 1, p.7",
+   "ir_definition": "IR is computed as the proportion of nmaj to nmin, where nmin is the smallest number of class samples among the minority classes. A data set is considered to be imbalanced if IR>1.5",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "OSMOTE (OVOSMOTE: 'uses SMOTE as an ad hoc approach after OVO decomposition')",
+   "smote_kind": "SMOTE variant (multiclass/ensemble wrapper)",
+   "metric": "MAUC (%), mean with std (subscript)",
+   "classifier": "C4.5 (KEEL default settings)",
+   "table": "Table 6 (10 numeric data sets) + Table 9 (7 nominal/mixed-type data sets)",
+   "page": "p.10 and p.11",
+   "rows_with_smote": 17,
+   "summary": [
+    {
+     "label": "Average (numeric, Table 6 MAUC)",
+     "proposed": "87.99",
+     "smote": "87.25"
+    },
+    {
+     "label": "Mean rank (numeric, Table 6 MAUC)",
+     "proposed": "2.20",
+     "smote": "3.35"
+    },
+    {
+     "label": "Average (nominal/mixed, Table 9 MAUC)",
+     "proposed": "89.11",
+     "smote": "86.89"
+    },
+    {
+     "label": "Mean rank (nominal/mixed, Table 9 MAUC)",
+     "proposed": "1.71",
+     "smote": "3.43"
+    },
+    {
+     "label": "Average (mean rank) all data sets, Table 11 MAUC, p.12",
+     "proposed": "88.45(1.94)",
+     "smote": "87.10(3.03)"
+    },
+    {
+     "label": "Friedman p-value MAUC numeric (Table 7, p.10)",
+     "proposed": "0.0661",
+     "smote": "0.0661"
+    },
+    {
+     "label": "Bonferroni-Dunn rank difference vs AMDO, MAUC numeric (Table 7)",
+     "proposed": "control",
+     "smote": "-"
+    },
+    {
+     "label": "Friedman p-value MAUC nominal/mixed (Table 10, p.11)",
+     "proposed": "0.0362",
+     "smote": "0.0362"
+    },
+    {
+     "label": "Bonferroni-Dunn rank difference vs AMDO, MAUC nominal/mixed (Table 10, CD=2.58)",
+     "proposed": "control",
+     "smote": "1.71"
+    },
+    {
+     "label": "Friedman p-value MAUC all (Table 12, p.12)",
+     "proposed": "0.0205",
+     "smote": "0.0205"
+    },
+    {
+     "label": "Bonferroni-Dunn rank difference vs AMDO, MAUC all (Table 12, CD=1.35)",
+     "proposed": "control",
+     "smote": "1.09"
+    }
+   ],
+   "claim": {
+    "quote": "The results confirm that AMDO improves both the accuracy of the minority class and the overall performance of the classifier in most data sets, showing promising precision and AUC.",
+    "page": "p.12 (Sec. 5)"
+   },
+   "stat_test": "Friedman test with Bonferroni-Dunn post hoc test, AMDO as control, alpha=0.05 (Tables 7, 10, 12); Wilcoxon test for AMDO vs MDO/MDO+ (Table 4)",
+   "n_uncertain": 8,
+   "notes": "IEEE TKDE (accepted 2017, DOI 10.1109/TKDE.2017.2761347). Proposed AMDO; precursor MDO and MDO+ compared only on 10 numeric sets with C4.5 (Tables 2-3, p.8-9). Results for SMOTE variants are in Tables 5/6 (numeric) and 8/9 (nominal/mixed) with Pmin, Pavg, AUCm, MAUC; Table 13 (p.12) average minimum sensitivity (Base 52.94, SSMOTE 58.21, OSMOTE 61.28, AMDO 65.18). Only C4.5 used as base classifier. AMDO params K1=5, K2=10 (K1=1 for Balance, Breast-tissue); SSMOTE/OSMOTE k=5. Tables rendered from PDF images at 170 dpi and cross-checked against text extraction. Extra row fields ssmote_value/ssmote_std/source added beyond schema."
+  },
+  {
+   "key": "Borderline-SMOTE",
+   "task": "binary",
+   "n_datasets_claimed": 4,
+   "n_datasets_listed": 4,
+   "characteristics_table": "Table 2, p.6 (printed 883)",
+   "ir_definition": "not stated in paper (only 'Percentage of minority class' is reported in Table 2)",
+   "results_granularity": "plots only",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE (legend: 'smote')",
+   "smote_kind": "plain SMOTE",
+   "metric": "F-value (minority class, beta=1)",
+   "classifier": "C4.5",
+   "table": "Fig. 2 (line plots, not digitised)",
+   "page": "p.8 (printed 885)",
+   "rows_with_smote": 0,
+   "summary": [],
+   "claim": {
+    "quote": "For the minority class, experiments show that our approaches achieve better TP rate and F-value than SMOTE and random over-sampling methods.",
+    "page": "p.1 (printed 878)"
+   },
+   "stat_test": "not stated in paper",
+   "n_uncertain": 3,
+   "notes": "Proposed variants: borderline-SMOTE1 (chosen) and borderline-SMOTE2. Metrics reported: TP rate and F-value of the minority class only (no G-mean/AUC). Text p.7 (printed 884) gives only best improvements over the ORIGINAL data sets (not vs SMOTE), e.g. F-value improvements for borderline-SMOTE1/2: Circle 12.1/10.3, Pima 2.3/1.3, Satimage 2.3/1.4, Haberman 24.7/23.0 per cent; TP rate: Circle 20/22, Pima 21.3/20.5, Satimage 10.1/10.0, Haberman 45.2/45.2 per cent. m set so that DANGER is about half of the minority class; k=5. Table 2 read from PDF text extraction (clean); no supplementary file referenced."
+  },
+  {
+   "key": "CBHSID",
+   "task": "both",
+   "n_datasets_claimed": 16,
+   "n_datasets_listed": 16,
+   "characteristics_table": "Table 1, p.8",
+   "ir_definition": "number of data samples in the majority class over the number of data samples in the minority class, for both binary and multi-class datasets",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "G-Mean",
+   "classifier": "SVM (simple SVM for binary; multi-class SVM one-vs-rest for multi-class)",
+   "table": "Table 3",
+   "page": "p.9 (printed 118647)",
+   "rows_with_smote": 16,
+   "summary": [
+    {
+     "label": "Mean rank G-Mean (Table 7, p.11)",
+     "proposed": "1.91",
+     "smote": "4.34"
+    },
+    {
+     "label": "Friedman test G-Mean",
+     "proposed": "X2=20.774, p=0.002 (Reject Ho)",
+     "smote": "same test"
+    },
+    {
+     "label": "Wilcoxon CBHSID vs SMOTE G-mean (Table 8c, p.12)",
+     "proposed": "R+=113",
+     "smote": "R-=23, I=0, p=.02 **"
+    },
+    {
+     "label": "Mean rank Recall / F1score",
+     "proposed": "1.66 / 1.59",
+     "smote": "3.03 / 2.94"
+    }
+   ],
+   "claim": {
+    "quote": "Based on Geometric-Mean (G-Mean), Recall, and F1-score, our method outperformed the other compared methods on 14 datasets out of 16.",
+    "page": "p.1 (abstract)"
+   },
+   "stat_test": "Friedman test (alpha 0.05) with Bonferroni-Dunn post-hoc (CD=2.014, Fig. 4) and Wilcoxon signed-ranks (Table 8). G-mean: CBHSID vs SMOTE significant in both Bonferroni-Dunn text (p.11) and Wilcoxon p=.02 **; Recall and F1 vs SMOTE not significant (p=.109, p=.066).",
+   "n_uncertain": 6,
+   "notes": "Datasets drawn from UCI and KEEL (text p.8); per-dataset repository, sizes and class counts not printed; Table 1 only has features, classes, IR. Imbalance ratio range text says 1.38 to 41.4. Multi-class IR 1.95 etc. as printed. Class thresholding: mean class size mu=Z_D/C_D; CBHSID resamples all classes to about mu (Eq.1, p.4) so for multiclass it undersamples/oversamples every class. Other metrics reported: Recall (Table 4, p.9), F1 (Table 5, p.10). Supplementary file not referenced. No GitHub link printed. Dataset-level results marked as image tables (Tables 1,3,4 rendered visually)."
+  },
+  {
+   "key": "CGMOS",
+   "task": "binary",
+   "n_datasets_claimed": 30,
+   "n_datasets_listed": 30,
+   "characteristics_table": "Table 1, p.5 (printed 1627)",
+   "ir_definition": "imbalance ratio (defined as #minority/#majority)",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "AUC",
+   "classifier": "average over all 6 base classifiers (b-kde, knn, svm, nn, rf, Adaboost.M1) as printed; no per-classifier per-dataset table",
+   "table": "Table 3",
+   "page": "p.7 (printed 1629)",
+   "rows_with_smote": 30,
+   "summary": [
+    {
+     "label": "Average (Table 3, AUC averaged over 6 classifiers)",
+     "proposed": "0.864",
+     "smote": "0.844"
+    },
+    {
+     "label": "Table 2 b-kde aggregate AUC",
+     "proposed": "0.842",
+     "smote": "0.807"
+    },
+    {
+     "label": "Table 2 b-kde aggregate minority Gscore",
+     "proposed": "0.526",
+     "smote": "0.587"
+    },
+    {
+     "label": "Table 2 knn aggregate minority Gscore",
+     "proposed": "0.646",
+     "smote": "0.638"
+    },
+    {
+     "label": "Table 2 svm aggregate minority Gscore",
+     "proposed": "0.661",
+     "smote": "0.648"
+    },
+    {
+     "label": "Table 2 nn aggregate minority Gscore",
+     "proposed": "0.659",
+     "smote": "0.645"
+    },
+    {
+     "label": "Table 2 rf aggregate minority Gscore",
+     "proposed": "0.681",
+     "smote": "0.661"
+    },
+    {
+     "label": "Table 2 Adaboost.M1 aggregate minority Gscore",
+     "proposed": "0.672",
+     "smote": "0.659"
+    },
+    {
+     "label": "Wilcoxon p-value CGMOS vs SMOTE (Table 4): Knn / Rf / B-kde / Nn / Svm / Boost",
+     "proposed": "0.003 / 2e-4 / 6e-6 / 0.018 / 0.006 / 0.046",
+     "smote": null
+    }
+   ],
+   "claim": {
+    "quote": "The paper provides a proof that the proposed algorithm is guaranteed to work better than SMOTE for training data. Further, experimental results on 30 real-world datasets show that CGMOS works better than existing algorithms when using 6 different classifiers.",
+    "page": "p.1 (printed 1623), abstract"
+   },
+   "stat_test": "Wilcoxon signed-ranks test, CGMOS vs each compared method per classifier (Table 4, p.5, printed 1627); paper states all p < 0.05",
+   "n_uncertain": 7,
+   "notes": "CIKM 2016. Tables read from rendered page images at 200 dpi (text layer column-scrambled). Table 3 bold marks copied. Table 2 Gscore defined as sqrt(Precision*Recall) per class (p.5), reported separately for minority and majority. Classifiers: b-kde, knn, svm (RBF), nn, rf (C4.5), Adaboost.M1. Extra experiment on oversampling amount k*delta (Fig. 3) is plots only. No supplementary material or GitHub referenced."
+  },
+  {
+   "key": "CISO",
+   "task": "binary",
+   "n_datasets_claimed": 45,
+   "n_datasets_listed": 50,
+   "characteristics_table": "Table 1, p.16 (KEEL 37 + UCI 8); Table 2, p.18 (5 tuning)",
+   "ir_definition": "not stated in paper",
+   "results_granularity": "aggregate only",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "PR-AUC (primary metric; no per-dataset table, no aggregate G-mean table found)",
+   "classifier": "HGB (histogram-based gradient boosting; highlighted in abstract)",
+   "table": "Table 3 (HGB columns)",
+   "page": "p.20",
+   "rows_with_smote": 0,
+   "summary": [
+    {
+     "label": "HGB mean rank (lower is better)",
+     "proposed": "5.11",
+     "smote": "5.78"
+    },
+    {
+     "label": "HGB mean PR-AUC",
+     "proposed": "0.733",
+     "smote": "0.731"
+    },
+    {
+     "label": "HGB W/T/L of CISO vs SMOTE",
+     "proposed": "15/10/12",
+     "smote": "-"
+    },
+    {
+     "label": "HGB Holm-corrected Wilcoxon p (CISO vs SMOTE)",
+     "proposed": "1.000",
+     "smote": "-"
+    },
+    {
+     "label": "LR mean rank / PR-AUC",
+     "proposed": "5.91 / 0.694",
+     "smote": "5.34 / 0.702"
+    },
+    {
+     "label": "LR W/T/L; Holm p",
+     "proposed": "11/10/16; 1.000",
+     "smote": "-"
+    },
+    {
+     "label": "SVC mean rank / PR-AUC",
+     "proposed": "5.34 / 0.715",
+     "smote": "4.91 / 0.711"
+    },
+    {
+     "label": "SVC W/T/L; Holm p",
+     "proposed": "15/7/15; 0.866",
+     "smote": "-"
+    },
+    {
+     "label": "RF mean rank / PR-AUC",
+     "proposed": "5.74 / 0.729",
+     "smote": "6.14 / 0.726"
+    },
+    {
+     "label": "RF W/T/L; Holm p",
+     "proposed": "17/10/10; 0.416",
+     "smote": "-"
+    },
+    {
+     "label": "Best HGB mean rank (other method)",
+     "proposed": "-",
+     "smote": "Random oversampling 5.05 (PR-AUC 0.731)"
+    }
+   ],
+   "claim": {
+    "quote": "CISO is statistically equivalent to SMOTE on precision-recall AUC, ranks second of eleven under gradient boosting, and completes every one of 11,460 fold-level evaluations without failure.",
+    "page": "p.1"
+   },
+   "stat_test": "Friedman test (p: LR 0.0006, SVC 8.8e-10, RF 1.9e-08, HGB 0.0036) then Holm-corrected Wilcoxon signed-rank of CISO vs each method (Table 3, p.20; Sect 5.6)",
+   "n_uncertain": 7,
+   "notes": "No per-dataset results table; outcome.rows empty. Per-dataset results not printed in the paper text read; no GitHub/supplement URL seen (only grep for 'github' and 'supplement' returned no hits). Table 6 (p.27-28) gives scale-suite (8 UCI) mean PR-AUC ranks for LR/RF/HGB (SVC omitted); SMOTE ranks 5.50 (LR), 4.50 (RF), 4.88 (HGB); CISO row not captured in this extraction pass. Table 4 p.22 component ablation, Table 5 certified fraction correlation also aggregate. Proposed method CISO = Certified Interpolation Safe Oversampling. Four classifiers: LR, SVC (RBF), RF, HGB. Preregistered protocol; 5 hyperparameters tuned once on the 5 tuning datasets (90 configs), Sect 5.5 p.17. Baseline implementations from imbalanced-learn defaults with k matched to CISO's k (p.16). Preregistered Q1 success criterion not met (p.20)."
+  },
+  {
+   "key": "COG-OS",
+   "task": "both",
+   "n_datasets_claimed": null,
+   "n_datasets_listed": 17,
+   "characteristics_table": "Table 2, p.5 (printed 818); also Table 8, p.7 (printed 820) for kddcup99data and modified binary sets; Table 3, p.6 (printed 819) for sampled imbalanced binary sets",
+   "ir_definition": "not stated in paper (imbalance described by CV, Coefficient of Variation of class sizes; no IR used)",
+   "results_granularity": "no comparison",
+   "smote_in_baselines": "no",
+   "smote_name": "SMOTE (cited only in Related Work [6]; not compared)",
+   "smote_kind": "not a baseline",
+   "metric": "F-measure of rare class (1(rare))",
+   "classifier": "SVMs (LIBSVM, linear kernel -t 0)",
+   "table": "Table 7",
+   "page": "p.7 (printed 820)",
+   "rows_with_smote": 0,
+   "summary": [],
+   "claim": {
+    "quote": "as demonstrated by our experimental results on various real-world data sets, COG with over-sampling can have much better prediction performance on rare classes than state-of-the-art methods.",
+    "page": "p.10 (printed 823)"
+   },
+   "stat_test": "none",
+   "n_uncertain": 5,
+   "notes": "SMOTE is not a baseline (only mentioned in Related Work), so no vs-SMOTE numbers exist; Table 7 (COG-OS vs US vs OS, F-measure, SVMs) recorded as closest comparison. Table 7 also prints large-class and 'total' F-measure per data set. Other results: Table 4 (COG-OS vs pure SVM recall/precision/F per class), Table 6 (COG vs pure SVM on page-blocks, k1b, la12), Table 9 (probe/r2l binary: SVMs, RIPPER, PNrule, COG-OS F-measure), Table 10/11 (COG accuracy on balanced sets with SVMs, BMR, C4.5, RIPPER), Figures 4-7. Tested classifiers: LIBSVM linear, BMR, C4.5, RIPPER. Split: random stratified 70/30 when no test set provided. COG-OS settings: 4 clusters on large class; rare class replicated to approx average size of large-class clusters (#repetitions 2-9 in Table 4; 30 and 120 for probe/r2l)."
+  },
+  {
+   "key": "CTGAN / TVAE",
+   "task": "both",
+   "n_datasets_claimed": 15,
+   "n_datasets_listed": 15,
+   "characteristics_table": "Supplementary Table 1, supp p.1",
+   "ir_definition": "not stated in paper",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "no",
+   "smote_name": "not stated in paper",
+   "smote_kind": "not a baseline",
+   "metric": "F1 (adult, census, credit); Macro [F1] (cover., intru.); Acc (mnist12, mnist28); R2 (news) - metric per column as printed",
+   "classifier": "average over multiple prediction models per dataset (Supp. Table 2: e.g. Adaboost, Decision Tree, Logistic Regression, MLP; Linear Regression/MLP for news)",
+   "table": "Supplementary Table 3 (real-data / machine learning efficacy block)",
+   "page": "supp p.3",
+   "rows_with_smote": 0,
+   "summary": [
+    {
+     "label": "Real clf average F1 (main Table 2, p.8); best_other TVAE = 0.519",
+     "proposed": "0.469",
+     "smote": null
+    },
+    {
+     "label": "Real reg R2 (main Table 2, p.8); best_other TVAE = -0.20",
+     "proposed": "-0.43",
+     "smote": null
+    },
+    {
+     "label": "Rank on real data (Supp. Table 3 brackets); TVAE(1)",
+     "proposed": "TGAN(1)",
+     "smote": null
+    },
+    {
+     "label": "Wins vs CLBN / PrivBN on 8 real datasets (main Table 1, p.1)",
+     "proposed": "7 / 8",
+     "smote": null
+    }
+   ],
+   "claim": {
+    "quote": "CTGAN outperforms Bayesian methods on most of the real datasets whereas other deep learning methods could not.",
+    "page": "p.1"
+   },
+   "stat_test": "none",
+   "n_uncertain": 5,
+   "notes": "Tabular data generator (CTGAN; TVAE also proposed as a challenger), not an oversampler. No SMOTE. Evaluation = likelihood fitness (Lsyn, Ltest) on 7 simulated datasets and machine learning efficacy on 8 real datasets. Main paper Table 2 (p.8) gives only averages; per-dataset results in Supplementary Table 3 (rendered image, supp p.3). best_other is TVAE (main comparator) per instruction; ablation Table 3 p.9 reports % change on real classification datasets. Code: https://github.com/DAI-Lab/CTGAN; benchmark https://github.com/DAI-Lab/SDGym (not fetched)."
+  },
+  {
+   "key": "Cluster-SMOTE",
+   "task": "binary",
+   "n_datasets_claimed": 2,
+   "n_datasets_listed": 2,
+   "characteristics_table": "Table I, p.2",
+   "ir_definition": "not stated in paper",
+   "results_granularity": "plots only",
+   "smote_in_baselines": "yes",
+   "smote_name": "500 SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "ROC curve (%TP vs %FP); no G-mean/AUC/F1/accuracy values printed",
+   "classifier": "RIPPER",
+   "table": "Fig. 4 (ROC curves; no numeric table)",
+   "page": "5",
+   "rows_with_smote": 0,
+   "summary": [],
+   "claim": {
+    "quote": "we establish that our clustering based approach is more suitable for the detecting intrusions and is able to provide additional improvement over just synthetic generation of instances.",
+    "page": "1"
+   },
+   "stat_test": "not stated in paper",
+   "n_uncertain": 3,
+   "notes": "Paper title in PDF: 'Combating Imbalance in Network Intrusion Datasets'. Proposed method: Cluster-SMOTE (k-means on minority class, SMOTE applied per cluster; variants '500 3 clusters SMOTE' and '500 5 clusters SMOTE' in Fig. 4). Evaluation: Packets 75%/25% stratified split; Destinations 10-fold CV with TP/FP rates averaged (p.5). Undersampling levels {1%MAJ, 5%MAJ, 10%MAJ, 20%MAJ, ..., 100%MAJ} (p.4). Loss ratio varied from 1 to .01 (p.5). Results only as ROC curves in Figs. 2-5; no supplementary file referenced."
+  },
+  {
+   "key": "ClusterCentroids",
+   "task": "binary",
+   "n_datasets_claimed": null,
+   "n_datasets_listed": 7,
+   "characteristics_table": "none",
+   "ir_definition": "not stated in paper",
+   "results_granularity": "per-dataset partial",
+   "smote_in_baselines": "no",
+   "smote_name": "SMOTE (discussed in Related work only, p.2; not a baseline)",
+   "smote_kind": "not a baseline",
+   "metric": "MI's F-measure",
+   "classifier": "artificial neural network (backpropagation; IBM Intelligent Miner for Data V8.1)",
+   "table": "Table 4",
+   "page": "p.8 (printed 5725)",
+   "rows_with_smote": 0,
+   "summary": [],
+   "claim": {
+    "quote": "The experimental results show that our cluster-based under-sampling approaches outperform the other under-sampling techniques in the previous studies.",
+    "page": "p.1 (abstract)"
+   },
+   "stat_test": "none reported",
+   "n_uncertain": 5,
+   "notes": "Under-sampling paper (SBC = under-sampling based on clustering). Proposed variants: SBC, SBCNM-1, SBCNM-2, SBCNM-3, SBCMD, SBCMF. Metrics: MI's precision, recall, F-measure (plus MA's for Census). No G-mean or AUC reported. Only Census-Income has numeric per-method table (Table 4, text-extractable, verified against rendered page 8). Synthetic results (Figs. 4-8) and Overdue Detection (Fig. 11) are bar/line plots only, no printed numbers. Execution times in Figs. 9, 10, 12. Paper refers to 'two real datasets'; number of synthetic datasets not stated. Classifier is a single ANN throughout; clustering by k-means. Table 4 other values (MI's F-measure): RT 46.47, AT 51.9, SBCNM-1 45.28, SBCNM-2 45.64, SBCNM-3 44.61, SBCMD 44.94, SBCMF 59.04."
+  },
+  {
+   "key": "DGOT",
+   "task": "both",
+   "n_datasets_claimed": 22,
+   "n_datasets_listed": 22,
+   "characteristics_table": "Table I, p.8 (printed p.990)",
+   "ir_definition": "IR = N_maj / N_min (Eq. 26); for multi-class datasets, IR is the ratio between the number of instances in the class with the most and those with the fewest instances.",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "F1-score (unweighted mean over labels for multi-class); G-mean and AUC not reported",
+   "classifier": "not stated in paper (five classifiers XGBoost, KNN, DTC, Logit, RFC used; tables Table IV-VI do not say which classifier or whether averaged)",
+   "table": "Table V (F1-score)",
+   "page": "p.10 (printed p.992)",
+   "rows_with_smote": 22,
+   "summary": [
+    {
+     "label": "Average Rank (F1, Table V)",
+     "proposed": "1.54",
+     "smote": "3.95"
+    },
+    {
+     "label": "Average Rank (Accuracy, Table IV)",
+     "proposed": "1.63",
+     "smote": "5.23"
+    },
+    {
+     "label": "Average Rank (MCC, Table VI)",
+     "proposed": "2",
+     "smote": "4.00"
+    },
+    {
+     "label": "Friedman F_F (F1, Table VII)",
+     "proposed": "15.16 (reject; critical F(7,147)=2.07)",
+     "smote": "-"
+    },
+    {
+     "label": "Bonferroni-Dunn (Table VII, CD=1.99, k=8, alpha=0.05)",
+     "proposed": "DGOT",
+     "smote": "SMOTE marked '-' on F1 (3.95-) i.e. rank gap larger than CD as printed"
+    },
+    {
+     "label": "Wilcoxon (Table VIII)",
+     "proposed": "only for DGOT vs IDENTITY (Acc) p=0.18; DGOT vs SOS (MCC) p=0.0000003; DGOT vs INDENTITY (MCC) p=0.00006",
+     "smote": "no SMOTE comparison printed"
+    }
+   ],
+   "claim": {
+    "quote": "our method consistently outperforms six counterparts regarding Accuracy, F1-score, and MCC for binary and multi-class scenarios.",
+    "page": "p.1 (abstract)"
+   },
+   "stat_test": "Friedman test + post-hoc Bonferroni-Dunn (alpha=0.05); Wilcoxon signed-rank as complement (Table VII, VIII, p.11)",
+   "n_uncertain": 10,
+   "notes": "Per-dataset results from Table V (F1, p.10) transcribed from rendered 200/300 dpi image. IDENTITY (no oversampling) is a control column, not an oversampler; best_other_* is the max numeric among IDENTITY, BSMOTE, SMOTETL, CTGAN, TVAE, SOS and does not declare a winner. Other tables: Table IV accuracy (p.10), Table VI MCC (p.11), Table IX ablation F1 on four datasets (p.12), Table X sensitivity on coil_2000 (p.12). Table II/III: SMOTE/BSMOTE/SMOTETL k=5 (imbalanced-learn); classifiers XGBoost n_estimators=100, KNN k=5, DTC gini, Logit max_iter=500 l2, RF n_estimators=100. Supplementary material (https://doi.org/10.1109/TKDE.2025.3639433) pointed to for noise schedule and Tables S2-S4; not found in Drive folder (not searched beyond DGOT title; search returned only the paper plus a next-page token). Code: https://github.com/MLneuers/DGOT (not fetched). Other proposed variants: none."
+  },
+  {
+   "key": "DLexiBoost",
+   "task": "both",
+   "n_datasets_claimed": null,
+   "n_datasets_listed": 35,
+   "characteristics_table": "none (per-dataset IR and |C| only in Supplement Tables 1,3,5,6; n_instances/n_features not printed for KEEL sets)",
+   "ir_definition": "measured as the ratio of the number of representatives from the largest and the smallest classes",
+   "results_granularity": "no comparison",
+   "smote_in_baselines": "no",
+   "smote_name": "not stated in paper (SMOTEBoost only cited in related work, p.2)",
+   "smote_kind": "not a baseline",
+   "metric": "G-Mean / AUC / Avg-AUC (no SMOTE column)",
+   "classifier": "C4.5 and kNN",
+   "table": "none",
+   "page": "none",
+   "rows_with_smote": 0,
+   "summary": [],
+   "claim": {
+    "quote": "Experiments conducted on artificial and real-world imbalanced datasets as well as on challenging applications such as hyperspectral image classification and ImageNet classification establish the efficacy of the proposal.",
+    "page": "p.1 (abstract)"
+   },
+   "stat_test": "Friedman + Wilcoxon signed rank (two-class and multi-class real-world); Kruskal-Wallis + rank-sum per dataset (hyperspectral, ImageNet)",
+   "n_uncertain": 7,
+   "notes": "SMOTE is NOT a baseline; no SMOTE comparison exists, so outcome rows are empty. Proposed: LexiBoost and Dual-LexiBoost. Per-dataset results (AUC and GM, C4.5 and kNN, two-class) are in Supplement Tables 1-2, multi-class Tables 3-4 (Avg-AUC, GM), but without SMOTE. Artificial results only as Fig. 3 (main p.9, kNN, average G-Mean) and supplement Fig. 1 (C4.5): plots only. Code at https://github.com/Shounak-D/LexiBoost. Main Tables 3-4 are summary (ranks, WSRT) only. Main Table 2 lists parameter settings; T=10."
+  },
+  {
+   "key": "DSRBF / Static-SMOTE",
+   "task": "both",
+   "n_datasets_claimed": 13,
+   "n_datasets_listed": 13,
+   "characteristics_table": "Table 3, p.8 (printed 1828)",
+   "ir_definition": "not stated in paper (no IR defined; paper reports p* = minimum of the estimated prior probabilities, p* = min{f_i/N}, used in Eq. (8) and Table 3)",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SmoteOS (SmoteOver-Sampling)",
+   "smote_kind": "SMOTE variant (multiclass/ensemble wrapper)",
+   "metric": "accuracy CG (%) on generalization set, mean (SD)",
+   "classifier": "DSRBF: RBFNN trained by memetic algorithm; SmoteOS: MLP trained by RProp (CSNN package) - classifiers differ",
+   "table": "Table 6",
+   "page": "p.10 (printed 1830)",
+   "rows_with_smote": 13,
+   "summary": [
+    {
+     "label": "Mean CG (%)",
+     "proposed": "82.94 (bold)",
+     "smote": "76.38"
+    },
+    {
+     "label": "Mean rank R (CG)",
+     "proposed": "1.46 (bold)",
+     "smote": "5.23"
+    },
+    {
+     "label": "Mean MS_G (%)",
+     "proposed": "51.62 (bold)",
+     "smote": "46.28 (italic)"
+    },
+    {
+     "label": "Mean rank R (MS_G)",
+     "proposed": "1.53 (bold)",
+     "smote": "2.84 (italic)"
+    },
+    {
+     "label": "Nemenyi rank difference SmoteOS vs DSRBF, CG (Table 7)",
+     "proposed": "3.76 marked significant at alpha=0.05, + (CD 0.05 = 2.09)",
+     "smote": ""
+    },
+    {
+     "label": "Nemenyi rank difference SmoteOS vs DSRBF, MS_G (Table 7)",
+     "proposed": "1.30 (not marked)",
+     "smote": ""
+    },
+    {
+     "label": "Bonferroni-Dunn DSRBF control vs SmoteOS (Table 7)",
+     "proposed": "CG 3.76 marked significant +; MS_G 1.30 not marked (CD 0.05 = 1.89, 0.1 = 1.70)",
+     "smote": ""
+    }
+   ],
+   "claim": {
+    "quote": "The approach has been compared with other neural network learning algorithms specifically designed for dealing with imbalanced datasets, and the results obtained show the competitiveness of the proposal.",
+    "page": "p.12 (printed 1832), Conclusions"
+   },
+   "stat_test": "Friedman test on ranks (alpha=0.05; F=19.03 for CG, 14.88 for MS_G, F0.05=2.36) followed by Nemenyi and Bonferroni-Dunn post-hoc tests with DSRBF as control (Table 7, p.10; text p.11-12)",
+   "n_uncertain": 7,
+   "notes": "Proposed = DSRBF (dynamic SMOTE radial basis function); SSRBF (static SMOTE) is the authors' second proposed variant and appears with MRBF in Table 4 (p.8) as justification. best_other taken from Table 6 baselines OS, TMNN, SE, HE only (SmoteOS excluded). Datasets and partitions said to be on http://www.uco.es/grupos/ayrna/index.php?lang=en (Datasets section) - not fetched. Text extraction glued mean and SD; values read from rendered page 10 at 300 dpi. Table 6 MS_G (%) mean(SD), DSRBF vs SmoteOS: Hepatitis 60.50(21.35) bold vs 51.08(24.20); BreastC 51.75(13.72) bold vs 40.50(15.88) italic; Haberman 44.83(11.32) bold vs 31.11(14.94); CYTvsPOX 55.11(28.63) bold vs 52.80(24.32); ME2vsOther 66.63(3.70) italic vs 69.25(12.28) bold; Newthyroid 91.47(12.47) bold vs 91.45(11.53) italic; Balance 79.39(17.60) bold vs 75.09(15.85); Saureus4 20.32(9.41) italic vs 21.57(8.97) bold; Anneal 77.60(20.22) bold vs 66.96(36.80); Glass 16.61(22.00) bold vs 14.18(18.92) italic; Zoo 67.00(47.26) bold vs 46.25(49.03); E. coli 34.10(33.75) vs 35.72(37.15) (SE 38.41 bold, HE 37.42 italic); Yeast 5.80(11.12) bold vs 5.75(9.83) italic; mean MS_G 51.62 bold vs 46.28 italic; mean rank 1.53 bold vs 2.84 italic."
+  },
+  {
+   "key": "EMDO",
+   "task": "multiclass",
+   "n_datasets_claimed": null,
+   "n_datasets_listed": 11,
+   "characteristics_table": "Table 1, p.13 (Example 1); Table 6, p.16 (Example 2)",
+   "ir_definition": "IRmax = Nmax/Nmin, Nmin = min_j(N_j), Nmax = max_j(N_j) (Eq. 47)",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SSMOTE (Static-SMOTE, ref [60])",
+   "smote_kind": "SMOTE variant (multiclass/ensemble wrapper)",
+   "metric": "MAUC (%), mean with std subscript",
+   "classifier": "C4.5",
+   "table": "Table 5",
+   "page": "p.15",
+   "rows_with_smote": 9,
+   "summary": [
+    {
+     "label": "Average",
+     "proposed": "90.33",
+     "smote": "86.21"
+    },
+    {
+     "label": "Rank Avg.",
+     "proposed": "1.06",
+     "smote": "6.11"
+    }
+   ],
+   "claim": {
+    "quote": "The results of computer simulations conducted herein indicate that EMDO outperforms most of the widely used oversampling schemes.",
+    "page": "p.1 (abstract)"
+   },
+   "stat_test": "none stated; only average ranks reported (no significance test)",
+   "n_uncertain": 6,
+   "notes": "Other tables with SSMOTE per dataset: Table 2 Pmin, Table 3 Pavg, Table 4 AUCm (p.14-15), not extracted. No G-mean reported. Metrics: Pmin, Pavg, AUCm, MAUC. Table 1 also lists number of ellipsoids per class (not extracted). Std for Table 5 values are the printed subscripts."
+  },
+  {
+   "key": "EasyEnsemble / BalanceCascade",
+   "task": "binary",
+   "n_datasets_claimed": 16,
+   "n_datasets_listed": 16,
+   "characteristics_table": "Table II, p.4 (printed 542)",
+   "ir_definition": "Ratio IS THE SIZE OF MAJORITY CLASS DIVIDED BY THAT OF MINORITY CLASS (Table II caption); also 'level of imbalance (ratio of size of the majority class to minority class)' (p.1)",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE + AdaBoost (abbreviated as SMOTE)",
+   "smote_kind": "SMOTE variant (multiclass/ensemble wrapper)",
+   "metric": "G-mean",
+   "classifier": "AdaBoost ensembles with CART weak learners (40 weak classifiers; Easy: T=4, si=10)",
+   "table": "Table X ('easy' tasks) + Table XI ('hard' tasks)",
+   "page": "p.8 (printed 546) and p.9 (printed 547)",
+   "rows_with_smote": 16,
+   "summary": [
+    {
+     "label": "avg. ('easy' tasks, Table X, p.8) mean ± std",
+     "proposed": ".934 ± .042",
+     "smote": ".935 ± .046"
+    },
+    {
+     "label": "avg. ('hard' tasks, Table XI, p.9) mean ± std",
+     "proposed": ".728 ± .107",
+     "smote": ".680 ± .111"
+    },
+    {
+     "label": "t-test W-T-L, 6 'easy' tasks (Table XII upper triangle, row SMOTE vs column Easy), p.9",
+     "proposed": "Easy: see SMOTE row (no Easy-row entry in upper triangle)",
+     "smote": "2-3-1"
+    },
+    {
+     "label": "t-test W-T-L, 10 'hard' tasks (Table XII lower triangle, row Easy vs column SMOTE), p.9",
+     "proposed": "10-0-0",
+     "smote": "Easy row vs SMOTE column"
+    }
+   ],
+   "claim": {
+    "quote": "For problems where class-imbalance learning methods really help, both EasyEnsemble and BalanceCascade have higher AUC, F-measure, and G-mean than almost all other compared methods, and the former is superior than the latter.",
+    "page": "p.11 (printed 549)"
+   },
+   "stat_test": "t-test, significance level 0.05, win-tie-lose counts (Table XII for G-mean; Table VI AUC; Table IX F-measure)",
+   "n_uncertain": 5,
+   "notes": "Paper proposes two methods: EasyEnsemble (Easy) and BalanceCascade (Cascade); Easy recorded as proposed per instruction, conclusion says Easy is superior to Cascade on 'hard' tasks. SMOTE baseline is SMOTE + AdaBoost (CART weak learners, 40 iterations, k=5; |P'|=|P| synthetic, majority subsampled to 2|P| when |N|>2|P|; SMOTE-NC for nominal attributes). Over and SMB not reported on 'easy' tasks due to training cost (footnote 3, p.6). AUC (Tables IV-V) and F-measure (Tables VII-VIII) also per-dataset; G-mean chosen per metric priority. Table XIII compares stacking vs original ensemble strategy (AUC). No supplementary material referenced."
+  },
+  {
+   "key": "FW-SMOTE",
+   "task": "binary",
+   "n_datasets_claimed": 42,
+   "n_datasets_listed": 42,
+   "characteristics_table": "Table 1, p.7",
+   "ir_definition": "not stated in paper (Table 1 column 'IR' = Imbalance Ratio; no formula given)",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE (column 'SMT' in Appendix tables)",
+   "smote_kind": "plain SMOTE",
+   "metric": "G-mean x100 (average over 10-fold CV; best parameter configuration)",
+   "classifier": "k-NN (k=5), first reported classifier",
+   "table": "Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",
+   "page": "supplementary printed p.32 (PDF index within supplementary file not verified)",
+   "rows_with_smote": 42,
+   "summary": [
+    {
+     "label": "XLDD average G-mean (Table A.4)",
+     "proposed": "83.0",
+     "smote": "80.3"
+    },
+    {
+     "label": "XHDD average G-mean (Table A.4)",
+     "proposed": "95.7",
+     "smote": "91.8"
+    },
+    {
+     "label": "Table 2 k-NN low-dim: Friedman avg rank (AUC-based) / G-mean mean±sd",
+     "proposed": "1.600 / 83 ±19.5",
+     "smote": "5.300 / 80.3 ±20"
+    },
+    {
+     "label": "Table 2 k-NN low-dim: W/T/L (G-mean) vs best-ranked method and Holm p (AUC)",
+     "proposed": "-",
+     "smote": "1/6/23 ; p < 0.001 *"
+    },
+    {
+     "label": "Table 3 k-NN high-dim: Friedman avg rank (AUC-based) / G-mean mean±sd",
+     "proposed": "2.708 / 95.7 ±23.9",
+     "smote": "6.625 / 91.8 ±23.8"
+    },
+    {
+     "label": "Table 3 k-NN high-dim: W/D/L (G-mean) and APV Holm",
+     "proposed": "-",
+     "smote": "0/2/10 ; APV 0.004 *"
+    }
+   ],
+   "claim": {
+    "quote": "achieving the best predictive performance when compared with the traditional SMOTE approach and other recent variants on low- and high-dimensional settings",
+    "page": "p.1 (abstract)"
+   },
+   "stat_test": "Friedman test with Iman-Davenport correction on AUC ranks, Holm post-hoc vs best-ranked method (beta=5%), W/T/L counts; Tables 2-3, pp.8-9",
+   "n_uncertain": 8,
+   "notes": "Proposed = FW-SMOTE (weighted Minkowski/OWA SMOTE variant; parameters r in {n/2,3n/4,n}, p in {1,2,inf}, alpha in {0.4,0.6} grid searched). Other classifiers' per-dataset G-mean in Tables A.5 (SVM) and A.6 (LR), AUC in A.1-A.3 of supplementary. Oversampling amount N=1 or 3 chosen on average test performance. Table 5 (feature selection comparison) not used. No GitHub link for results seen."
+  },
+  {
+   "key": "G-SMOTE",
+   "task": "binary",
+   "n_datasets_claimed": 69,
+   "n_datasets_listed": 69,
+   "characteristics_table": "Table 1, p.18-19 (printed p.17-18)",
+   "ir_definition": "\"the ratio between the majority class and each of the minority classes\"; Table 1 IR = Majority instances / Minority instances",
+   "results_granularity": "aggregate only",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "G-MEAN",
+   "classifier": "LR (first reported; abstract highlights no classifier)",
+   "table": "Table 2 (mean CV score across 69 datasets); Table 3 (mean rank); Table 5 (Holm adjusted p)",
+   "page": "p.21-23 (printed p.20-22)",
+   "rows_with_smote": 0,
+   "summary": [
+    {
+     "label": "Average (Table 2, LR, G-MEAN)",
+     "proposed": "0.856",
+     "smote": "0.841"
+    },
+    {
+     "label": "Avg rank (Table 3, LR, G-MEAN; 1=best of 4)",
+     "proposed": "1.210",
+     "smote": "2.580"
+    },
+    {
+     "label": "Holm adjusted p-value vs SMOTE, G-SMOTE control (Table 5, LR, G-MEAN)",
+     "proposed": "control",
+     "smote": "1.4 · 10−8"
+    },
+    {
+     "label": "Friedman test p-value (Table 4, LR, G-MEAN)",
+     "proposed": "1.7 · 10−30",
+     "smote": "1.7 · 10−30"
+    }
+   ],
+   "claim": {
+    "quote": "We present empirical results that show a significant improvement in the quality of the generated data when G-SMOTE is used as an oversampling algorithm.",
+    "page": "p.2 (abstract)"
+   },
+   "stat_test": "Friedman test (alpha 0.05) + Holm's method with G-SMOTE as control (Tables 4-5, p.23)",
+   "n_uncertain": 5,
+   "notes": "No per-dataset results in paper; only means across datasets (Table 2), mean ranks (Table 3), Friedman (Table 4) and Holm (Table 5) for LR/KNN/DT/GBC x AUC/F-SCORE/G-MEAN. Full per-dataset results stated to be at https://github.com/IMS-ML-Lab/publications/blob/master/data/results/gsmote-journal/wide_optimal.csv (p.22, not fetched). Datasets at https://github.com/IMS-ML-Lab/research-showcase/tree/master/data/binary-numerical-imbalanced (p.18). Name printed as 'MANDELON' (sic, MADELON). G-MEAN other classifiers G-SMOTE vs SMOTE means: KNN 0.821/0.783, DT 0.866/0.833, GBC 0.868/0.834 (Table 2). Hyper-parameter special cases (SMOTE, inverse SMOTE, hyper-sphere SMOTE etc.) analysed in Fig.18 only. Table text extracted cleanly (not images)."
+  },
+  {
+   "key": "GAMO",
+   "task": "multiclass",
+   "n_datasets_claimed": 7,
+   "n_datasets_listed": 14,
+   "characteristics_table": "none (no characteristics table in main paper; counts given in Sec 4.1-4.4 text; non-image properties in Supplement Table 7, p.8)",
+   "ir_definition": "Imbalance Ratio (IR: ratio of the number of representatives from the largest class to that of the smallest class)",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE+CN",
+   "smote_kind": "SMOTE variant (multiclass/ensemble wrapper)",
+   "metric": "GM (Geometric Mean)",
+   "classifier": "CN (classifier network M); LS (least-square) variant",
+   "table": "Tables 1 (LS columns), 2, 3 (During Testing columns), 4",
+   "page": "p.6 (Tables 1,2), p.7 (Tables 3,4); printed 1700-1701",
+   "rows_with_smote": 9,
+   "summary": [
+    {
+     "label": "Supplement Table 8 Average Performance GM (5 non-image datasets, not in rows)",
+     "proposed": "0.62",
+     "smote": "0.57"
+    }
+   ],
+   "claim": {
+    "quote": "Extensive experiments on multiple class imbalanced image datasets establish the efficacy of our proposal.",
+    "page": "p.1"
+   },
+   "stat_test": "not stated in paper (means and standard deviations over 10 repetitions only)",
+   "n_uncertain": 8,
+   "notes": "Other variants: GAMO\\D ablation, CE variant. Table 1 MNIST SMOTE+CN LS GM 0.89 vs GAMO 0.90. Supplement Table 8 (non-image, ACSA/GM, SMOTE+CN vs GAMO per dataset) exists on Supp p.8: Abalone19 GM 0.48/0.48, Chess 0.00/0.20, Cover Type 0.64/0.64, IJCNN1 0.93/0.95, Magic 0.81/0.83 (SMOTE+CN/GAMO), 10-fold stratified CV. Code/data at https://github.com/SankhaSubhra/GAMO (not fetched). Test sets: 100 per class (SUN397: 20 per class)."
+  },
+  {
+   "key": "GDHS",
+   "task": "multiclass",
+   "n_datasets_claimed": 20,
+   "n_datasets_listed": 20,
+   "characteristics_table": "Table 1, p.8",
+   "ir_definition": "IR = sum_{i=1}^{M-1} sum_{j>i} (|C_i|/|C_j| - 1), classes sorted in descending size (Eq. 17; formula garbled in text extraction, reconstructed from fragments)",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "OVO-SMOTE (column 'OVO')",
+   "smote_kind": "SMOTE variant (multiclass/ensemble wrapper)",
+   "metric": "mGM",
+   "classifier": "Decision tree (DT)",
+   "table": "Table 5",
+   "page": "11",
+   "rows_with_smote": 20,
+   "summary": [
+    {
+     "label": "Average (mGM, Table 5)",
+     "proposed": "0.6281",
+     "smote": "0.5922"
+    },
+    {
+     "label": "Mean rank (mGM, Table 7, p.11)",
+     "proposed": "4.63",
+     "smote": "7.95"
+    },
+    {
+     "label": "Average (MAUC, Table 6, p.11)",
+     "proposed": "0.7860",
+     "smote": "0.7694"
+    },
+    {
+     "label": "Mean rank (MAUC, Table 8, p.12)",
+     "proposed": "5.63",
+     "smote": "7.63"
+    }
+   ],
+   "claim": {
+    "quote": "Numerical experiments over 20 data sets demonstrate the superiority of the proposed method in terms of mGM and MAUC compared with 12 state-of-the-art methods.",
+    "page": "1"
+   },
+   "stat_test": "Bayesian signed-rank test, rope 0.5%, probability matrices in Figs. 7 and 8 (images, p.13, numbers not extracted)",
+   "n_uncertain": 9,
+   "notes": "Other proposed variants (Table 5 mGM): GDHS_GL and GDHS_BA columns; averages 0.6278 and 0.6493; MAUC averages 0.7867 and 0.7978; mean ranks mGM 3.83 (GL), 4.30 (BA). 'Baseline' column = no resampling. Code at https://github.com/ytyancp/GDHS (not fetched). Datasets 15-20 are binary software-defect sets though paper calls all 'multi-class imbalanced' in title context. CBHSID has 0.0000 on car/cleveland etc as printed. No supplementary file read. Extra fields mean_class_size_printed and fdr_printed added to dataset rows (Table 1 columns)."
+  },
+  {
+   "key": "GDO",
+   "task": "binary",
+   "n_datasets_claimed": 52,
+   "n_datasets_listed": 52,
+   "characteristics_table": "Table 2, p.7 (KEEL, IR only) and Table 3, p.8 (large); Table 4, p.8 (video traffic)",
+   "ir_definition": "IR = n_maj / n_min (Eq. 25): ratio between the number of majority and minority class instances",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "G-mean",
+   "classifier": "SVM (base learner; 10-fold CV)",
+   "table": "Table 7",
+   "page": "9 (printed 675)",
+   "rows_with_smote": 40,
+   "summary": [
+    {
+     "label": "Wilcoxon R+ (GDO vs SMOTE), G-mean, Table 10, p.10",
+     "proposed": "1062",
+     "smote": "R-: 163"
+    },
+    {
+     "label": "Wilcoxon p-value (GDO vs SMOTE), G-mean",
+     "proposed": "1.82E-06",
+     "smote": null
+    },
+    {
+     "label": "Highest G-mean count on 40 KEEL (text p.9)",
+     "proposed": "16 of 40",
+     "smote": null
+    },
+    {
+     "label": "Fig. 7 winning times",
+     "proposed": "AUC ~14, G-mean ~16 (bar chart)",
+     "smote": "AUC ~1, G-mean 0 (bar chart)"
+    }
+   ],
+   "claim": {
+    "quote": "All the experimental results suggest that our method can obtain higher AUC and G-mean with low memory consumption than the compared algorithms.",
+    "page": "12"
+   },
+   "stat_test": "Wilcoxon signed rank test on the 40 KEEL data sets only (Table 10, p.10); alpha=0.05; all p-values far below 0.05 (G-mean GDO vs SMOTE p=1.82E-06)",
+   "n_uncertain": 6,
+   "notes": "Only G-mean/AUC and runtime/memory per-dataset tables exist; AUC in Tables 6 and 8. Proposed method GDO parameters k_neighbors=5, d=1 (Table 5). Classifier: SVM base model for oversamplers; SVM-CS (KEEL) and BalanceCascade (KEEL) are separate. Table 7 SMOTE-column values copied to 4 decimals, no std printed. Winner not decided. Real application results only as histograms (Figs. 9, 10)."
+  },
+  {
+   "key": "GLOS",
+   "task": "multiclass",
+   "n_datasets_claimed": 21,
+   "n_datasets_listed": 21,
+   "characteristics_table": "Table 1, p.9",
+   "ir_definition": "not stated in paper",
+   "results_granularity": "plots only",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "G (modified multi-class G-mean, Eq.13); also Gmin, Gminave, Pave, Pmin, Pminave, CBA",
+   "classifier": "C4.5 (default parameters); best over OAA/OAO/OAHO/AandO decomposition per method",
+   "table": "Table 2 (Wilcoxon, GLOS vs SMOTE); per-dataset values only in Figs 8-14",
+   "page": "13",
+   "rows_with_smote": 0,
+   "summary": [
+    {
+     "label": "Wilcoxon G, GLOS vs SMOTE: R+ / R- / exact P / asymptotic P (Table 2, p.13)",
+     "proposed": "R+ 88.5",
+     "smote": "R- 16.5; exact P 0.0224; asymptotic P 0.0219"
+    },
+    {
+     "label": "Wilcoxon Gmin, GLOS vs SMOTE (Table 2)",
+     "proposed": "R+ 80.0",
+     "smote": "R- 11.0; exact P 0.0134; asymptotic P 0.0136"
+    },
+    {
+     "label": "Wilcoxon Gminave, GLOS vs SMOTE (Table 2)",
+     "proposed": "R+ 77.0",
+     "smote": "R- 14.0; exact P 0.0266; asymptotic P 0.0253"
+    },
+    {
+     "label": "Wilcoxon Pmin, GLOS vs SMOTE (Table 4, p.14)",
+     "proposed": "R+ 53.5",
+     "smote": "R- 21.5 ; asymptotic P 0.0480 (exact P not captured in text extraction, p.14)"
+    }
+   ],
+   "claim": {
+    "quote": "Experimental results show that GLOS significantly outperforms other methods, especially in improving minority class recall.",
+    "page": "15"
+   },
+   "stat_test": "Wilcoxon signed-rank test, confidence levels 0.9 and 0.95 (Tables 2-6, pp.13-15)",
+   "n_uncertain": 7,
+   "notes": "Proposed method GLOS (alpha=2, K=5). SMOTE plain, K=5, oversamples to Nmax-Ni. Metrics defined: Pave, Pminave, Pmin, G, Gminave, Gmin, CBA (pp.10-11). 5-fold CV x10 runs. Table 1 text extraction (not image) so is_image false. Paper mentions benchmark 'Sonar' in Fig 7 although not in Table 1. No GitHub/supplementary pointers found."
+  },
+  {
+   "key": "GMMSampling",
+   "task": "multiclass",
+   "n_datasets_claimed": 15,
+   "n_datasets_listed": 15,
+   "characteristics_table": "Table 1, p.12 (printed 5194)",
+   "ir_definition": "a ratio of the biggest class size to the cardinality of the smallest class",
+   "results_granularity": "per-dataset partial",
+   "smote_in_baselines": "no",
+   "smote_name": "not stated in paper (plain SMOTE not a baseline; closest: Static-SMOTE (S-SMOTE, S-SM) and K-means-SMOTE (KM-SM))",
+   "smote_kind": "not a baseline",
+   "metric": "balanced accuracy (average of class recalls); G-mean per-dataset only in online appendix",
+   "classifier": "decision tree (CART)",
+   "table": "Table 2",
+   "page": "p.14 (printed 5196)",
+   "rows_with_smote": 0,
+   "summary": [
+    {
+     "label": "Average",
+     "proposed": "0.677",
+     "smote": null,
+     "all": {
+      "Ours": "0.677",
+      "RUS": "0.626",
+      "AkNN": "0.622",
+      "ROS": "0.630",
+      "KM-SM": "0.632",
+      "KDE": "0.648",
+      "MDO": "0.647",
+      "Gl-CS": "0.624",
+      "S-SM": "0.646",
+      "SOUP": "0.657",
+      "MC-CCR": "0.653"
+     }
+    },
+    {
+     "label": "Median",
+     "proposed": "0.745",
+     "smote": null,
+     "all": {
+      "Ours": "0.745",
+      "RUS": "0.655",
+      "AkNN": "0.643",
+      "ROS": "0.678",
+      "KM-SM": "0.630",
+      "KDE": "0.680",
+      "MDO": "0.697",
+      "Gl-CS": "0.661",
+      "S-SM": "0.712",
+      "SOUP": "0.713",
+      "MC-CCR": "0.701"
+     }
+    },
+    {
+     "label": "Table 3 avg rank, BAcc, DT (Ours; S-SM)",
+     "proposed": "2.13",
+     "smote": null
+    },
+    {
+     "label": "Table 3 avg rank, G-mean, DT (Ours; S-SM)",
+     "proposed": "2.33",
+     "smote": null
+    },
+    {
+     "label": "Table 4 Wilcoxon p, BAcc, DT vs S-SM",
+     "proposed": "0.000",
+     "smote": null
+    },
+    {
+     "label": "Table 5 ablation G-mean DT: avg rank / avg G-mean (full method)",
+     "proposed": "1.86 / 0.6689",
+     "smote": null
+    }
+   ],
+   "claim": {
+    "quote": "The experimental evaluation demonstrated that the proposed method achieves better results in terms of G-mean, balanced accuracy, macro-AP, MCC and F-score than other related methods.",
+    "page": "p.1 (abstract, printed 5183)"
+   },
+   "stat_test": "Friedman tests (reject H0 at alpha=5% for all measure/classifier pairs); paired Wilcoxon tests vs each baseline (Table 4, p.16, printed 5198)",
+   "n_uncertain": 7,
+   "notes": "Proposed method: GMMSampling (Naglik & Lango, Machine Learning 2024, 113:5183-5202). Ablation variants in Table 5 (p.17): without GMM, without undersampling, without Q_k, without P(x|k); Table 5 uses decision tree + G-mean (avg G-mean full method 0.6689). Per-dataset results for other classifiers and measures are in the online appendix at https://www.cs.put.poznan.pl/mlango/publications/GMMSampling.html (as printed, footnote 3, p.13) - not fetched. Table 3 (p.15) gives average ranks (DT, G-mean: Ours 2.33; S-SM 5.53; KM-SM 6.87). Implementation submitted to multi-imbalance library (https://github.com/damian-horna/multi-imbalance, as printed). Table 2 Average row printed: Ours 0.677; S-SM 0.646; KM-SM 0.632."
+  },
+  {
+   "key": "GOIO",
+   "task": "binary",
+   "n_datasets_claimed": 23,
+   "n_datasets_listed": 23,
+   "characteristics_table": "Table I, p.7 (real-world, image); Table II, p.7 (artificial, image)",
+   "ir_definition": "IR = N_maj / N_min (Eq. 16)",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "F1-score (no G-mean/AUC reported; also MCC Table VI, Accuracy Table VII)",
+   "classifier": "not stated per table: table titled 'Average Performance on 23 Datasets'; paper uses GNB, KNN, DTC, SVM, RFC (p.9) with no highlighted one",
+   "table": "Table V",
+   "page": "p.10 (printed 6459)",
+   "rows_with_smote": 23,
+   "summary": [
+    {
+     "label": "Average Rank",
+     "proposed": "1.52",
+     "smote": "5.57"
+    },
+    {
+     "label": "Average Value",
+     "proposed": "0.7024",
+     "smote": "0.6540"
+    }
+   ],
+   "claim": {
+    "quote": "GOIO outperforms the state-of-the-art oversampling methods in F1-score, MCC, and Accuracy.",
+    "page": "p.1"
+   },
+   "stat_test": "Friedman test with Bonferroni-Dunn post-hoc (Table VIII, p.11) and Wilcoxon signed-rank (Table IX, p.12), alpha=0.05; not extracted per metric here",
+   "n_uncertain": 9,
+   "notes": "Per-dataset results only for F1 (Table V, chosen), MCC (Table VI), Accuracy (Table VII); tables VI/VII not extracted. Code at https://github.com/MLneuers/GOIO. Other proposed variants: ablation LDM, LDM+CF, LDM+TCL (Table X, p.12). SMOTE/BSMOTE/SMOTETL run via imbalanced-learn (p.8). Table V includes the 23 datasets in different order than Table I."
+  },
+  {
+   "key": "Global-CS (AAAI)",
+   "task": "multiclass",
+   "n_datasets_claimed": 20,
+   "n_datasets_listed": 20,
+   "characteristics_table": "Table 2, p.4 (printed 570)",
+   "ir_definition": "not stated in paper",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "no",
+   "smote_name": "not stated in paper (SMOTE only cited, Chawla et al. 2002, p.1/p.5)",
+   "smote_kind": "not a baseline",
+   "metric": "MAUC (Hand & Till 2001)",
+   "classifier": "C4.5 decision tree",
+   "table": "Table 6",
+   "page": "p.5 (printed 571)",
+   "rows_with_smote": 0,
+   "summary": [
+    {
+     "label": "ave. (Table 6)",
+     "proposed": ".877 ± .114",
+     "smote": null,
+     "best_other": ".874 ± .116 (BLIND)"
+    },
+    {
+     "label": "pairwise two-tailed t-test 0.05, RESCALEnew vs BLIND (text p.5-6)",
+     "proposed": "significantly better on 6 (abalone, ann, cmc, page, satellite, solarflare2), worse on 2 (car, connect4), no significant difference on 2 (balance, splice)",
+     "smote": null
+    }
+   ],
+   "claim": {
+    "quote": "this paper shows that the proposed approach is helpful when unequal misclassification costs and class imbalance occur simultaneously, and can also be used to tackle pure class-imbalance learning.",
+    "page": "p.1 (abstract, printed 567)"
+   },
+   "stat_test": "pairwise two-tailed t-test, 0.05 significance level",
+   "n_uncertain": 4,
+   "notes": "Proposed method: RESCALEnew (denoted NEW): checks cost-matrix consistency (rank of coefficient matrix < c); if consistent, solves weights w and rescales all classes via example weighting; otherwise pairwise-coupling decomposition with voting. Classifier C4.5 throughout. Tables 3 (consistent cost matrices) and 4 (inconsistent) on p.4 report misclassification cost on all 20 data sets: BLIND as absolute cost, OLD and NEW as ratios to BLIND (lower is better); e.g. Table 3 imbalanced ave. OLD .930 ± .066, NEW .867 ± .087; Table 4 imbalanced ave. OLD .925 ± .101, NEW .893 ± .161. Table 5 (p.5) W/T/L (t-test 0.05): NEW vs OLD 13/7/0 on CCM, 13/6/1 on ICM; NEW vs BLIND 15/5/0 (CCM), 17/2/1 (ICM); OLD vs BLIND 8/12/0 (CCM), 7/13/0 (ICM). Cost matrices randomly generated in [1,10] (smallest-to-largest class misclassification cost biggest for imbalanced sets). SMOTE is not evaluated. Pages: PDF index 1-6 = printed 567-572."
+  },
+  {
+   "key": "Global-CS (journal)",
+   "task": "multiclass",
+   "n_datasets_claimed": 20,
+   "n_datasets_listed": 20,
+   "characteristics_table": "Table 2, p.8 (printed 239)",
+   "ir_definition": "not stated in paper",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "no",
+   "smote_name": null,
+   "smote_kind": "not a baseline",
+   "metric": "MAUC",
+   "classifier": "C4.5 decision tree (BLIND-C45 baseline; RESCALEnew with C4.5)",
+   "table": "Table 24",
+   "page": "p.24 (printed 255)",
+   "rows_with_smote": 0,
+   "summary": [
+    {
+     "label": "ave. (MAUC)",
+     "proposed": "0.877 ± 0.114",
+     "smote": null,
+     "best_other": "BLIND-C45 0.874 ± 0.116"
+    },
+    {
+     "label": "pairwise t-test 95%, RESCALEnew vs C4.5 (text p.23-24)",
+     "proposed": "better on 6 (abalone, ann, cmc, page, satellite, solarflare2), worse on car and connect4, no significant difference on balance and splice",
+     "smote": null
+    }
+   ],
+   "claim": {
+    "quote": "Empirical study shows that our proposal is not only helpful to multi-class cost-sensitive learning, but also useful in multi-class class-imbalance learning.",
+    "page": "p.24 (printed 255)"
+   },
+   "stat_test": "pairwise t-tests at 95% significance level",
+   "n_uncertain": 5,
+   "notes": "Proposed RESCALEnew (denoted NEW; realized as NEW-IW, NEW-OS, NEW-US, NEW-NN, NEW-PETS, NEW-HE, NEW-SE) vs traditional rescaling OLD-* and cost-blind BLIND-*. Tables 3-23 report misclassification costs (BLIND absolute; OLD/NEW as ratio to BLIND, lower is better) on consistent (Tables 3,6,9,12,15,18,21) and inconsistent (Tables 4,7,10,13,16,19,22) cost matrices, with W/T/L summaries in Tables 5,8,11,14,17,20,23. NN/HE/SE exclude connect4 and splice; PETs excludes splice. Over-sampling (OLD-OS/NEW-OS) is cost-proportional duplication-based resampling, not SMOTE. SMOTE only cited (Chawla et al. 2002) in Section 4.4 motivation. Preliminary version: Zhou and Liu 2006a (AAAI)."
+  },
+  {
+   "key": "HDE",
+   "task": "binary",
+   "n_datasets_claimed": 42,
+   "n_datasets_listed": 42,
+   "characteristics_table": "Table 1, p.10 (printed 166)",
+   "ir_definition": "IR = ratio of majority instances to minority instances (Introduction)",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "no",
+   "smote_name": "not in baselines; only SMOTE-based ensembles SMOTEBoost (SBO) and SMOTEBagging (SBAG)",
+   "smote_kind": "not a baseline",
+   "metric": "G-mean (average over 5x10-fold CV)",
+   "classifier": "C4.5 decision tree, 40 base classifiers per ensemble",
+   "table": "Table 4 (G-mean, vs group 1 ensembles; continued on next page)",
+   "page": "p.12-13 (printed 168-169)",
+   "rows_with_smote": 0,
+   "summary": [
+    {
+     "label": "Average G-mean (baselines: SBO 0.6792, EBO 0.6745, RBO 0.7322, SBAG 0.7124, UBAG 0.7973, EASY 0.7801, IIVO 0.5609)",
+     "proposed": "0.8124",
+     "smote": null
+    },
+    {
+     "label": "Best/Worst counts (SBO 3/1, EBO 2/4, RBO 4/2, SBAG 3/3, UBAG 6/3, EASY 5/1, IIVO 1/30)",
+     "proposed": "28/1",
+     "smote": null
+    },
+    {
+     "label": "Friedman test (G-mean, 8 ensembles)",
+     "proposed": "p = 0.00 < 0.05",
+     "smote": null
+    }
+   ],
+   "claim": {
+    "quote": "Experimental results demonstrated the performance advantages of proposed HD-Ensemble over ten other ensemble solutions.",
+    "page": "p.1 (abstract)"
+   },
+   "stat_test": "Friedman test then Holm post hoc test (control = HD-Ensemble, alpha 0.05), p.15; Wilcoxon signed-rank vs group 2 (Table 10, AUC)",
+   "n_uncertain": 5,
+   "notes": "Per-dataset class counts (minority/majority) not printed; only #Ex, #Atts, IR. Table 1 abbreviations: used in Table 3/4 row labels. Datasets with first column names in Table 1 are as printed (e.g. 'yeast05679vs4', 'krvsk3vs11'). Other ensembles of group 2 (CBIS, SNGEIP, sNED) compared on AUC only using results from original papers (Tables 7-9, p.17; datasets there e.g. Glass6, not all in the 42). Also AUC table (Table 3, p.11) per-dataset exists; G-mean chosen per metric priority. Datasets uploaded to GitHub https://github.com/smallcube/HD-Ensemble (not fetched). Other proposed-variant: none."
+  },
+  {
+   "key": "INOS",
+   "task": "binary",
+   "n_datasets_claimed": 7,
+   "n_datasets_listed": 7,
+   "characteristics_table": "Table 1, p.7 (printed 2815)",
+   "ir_definition": "IM-ratio: 'the number of negative samples divided by the number of positive samples' (computed on training set per Table 1)",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "G-Mean",
+   "classifier": "SVM (RBF kernel)",
+   "table": "Table 2",
+   "page": "p.9 (printed 2817)",
+   "rows_with_smote": 7,
+   "summary": [
+    {
+     "label": "Average (G-Mean, Table 2)",
+     "proposed": ".860±.0014",
+     "smote": ".810±.0011"
+    },
+    {
+     "label": "Average (F-Value, Table 2)",
+     "proposed": ".810±.0020",
+     "smote": ".760±.0015"
+    }
+   ],
+   "claim": {
+    "quote": "Extensive experiments based on seven public time series data sets demonstrate that our INOS approach, used with support vector machines (SVM), achieved better performance over existing oversampling methods",
+    "page": "p.1"
+   },
+   "stat_test": "none reported (text says 'significantly better' p.8 but no test named)",
+   "n_uncertain": 6,
+   "notes": "Folder 'Both' but paper is binary only (two-class apportions). 48 imbalanced apportions built from 7 UCR datasets; apportioned data shared at http://sites.google.com/site/sstarcao/ (not fetched). Table 2 (image) gives per-dataset F-Value, G-Mean, Precision, Recall, TNR for Repeat/SMOTE/B-SMOTE/ADASYN/DataBoost/SPO/INOS with SVM. Tables 3 (Adiac) and 4 (Yoga) give per-apportion F-Value/G-Mean incl. SMO(TE); Table 5 integration variants (ESPO+SMO 70%); Table 6 compares INOS vs Easy/Bal./1NN/1NN DTW (no SMOTE). Additional 7 UCR datasets (CBF, Synthetic Control, OSU Leaf, Fish, Gun-Point, Trace, ECG) results only online at https://sites.google.com/site/sstarcao/publication/journal-papers (not fetched). INOS = ESPO (r=0.7) + ADASYN (30%) + noise-link cleaning; SVM RBF with (C,g) grid search. Without oversampling avg F-Value 72.9%, G-Mean 77.7% (p.10)."
+  },
+  {
+   "key": "KNNOR",
+   "task": "binary",
+   "n_datasets_claimed": 19,
+   "n_datasets_listed": 19,
+   "characteristics_table": "Table 2, p.11",
+   "ir_definition": "IR = N- / N+ (N- = number of majority (negative) samples, N+ = number of minority (positive) samples) (Eq. 11; extracted text renders it as 'IR = N−N+')",
+   "results_granularity": "aggregate only",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE [18]",
+   "smote_kind": "plain SMOTE",
+   "metric": "G-score (mean over 19 datasets)",
+   "classifier": "SVM (first classifier listed; abstract highlights none)",
+   "table": "Table 5 (G-score block)",
+   "page": "15",
+   "rows_with_smote": 1,
+   "summary": [
+    {
+     "label": "Table 5 G, DT (KNNOR rank 2; rank 1 LVQ-SMOTE .8356)",
+     "proposed": ".823",
+     "smote": ".8198"
+    },
+    {
+     "label": "Table 5 G, KNN (KNNOR rank 9 .8512; rank 1 polynom-fit-SMOTE .8611)",
+     "proposed": ".8512",
+     "smote": ".858"
+    },
+    {
+     "label": "Table 5 G, MLP (KNNOR rank 1)",
+     "proposed": ".8508",
+     "smote": ".8342"
+    },
+    {
+     "label": "Table 5 G No Oversampling SVM/DT/KNN/MLP",
+     "proposed": "n/a",
+     "smote": "n/a"
+    },
+    {
+     "label": "Table 6 avg rank (KNNOR 1; SMOTE 10.25) - column labelling ambiguous, see uncertain",
+     "proposed": "1",
+     "smote": "10.25"
+    }
+   ],
+   "claim": {
+    "quote": "The experimental results on several common imbalanced datasets show that our method ranks first more consistently than the other state-of-art oversamplers.",
+    "page": "abstract (p.1)"
+   },
+   "stat_test": "none stated in paper (mean scores and ranks only)",
+   "n_uncertain": 6,
+   "notes": "Per-dataset results are not in the paper: 'The entire result is a part of the additional documents due to page limitations' (p.12); no supplementary file found in Drive folder search (only the main PDF matched 'KNNOR'; a nextPageToken was returned but not followed). Code/data repo cited as https://github.com/ashhadulislam/smote_variants (ref [51], not fetched); Code Ocean capsule https://doi.org/10.24433/CO.6530837.v1. Compared with 13 oversamplers incl. SMOTE and No Augmentation; 4 classifiers kNN, SVM, DT, MLP; repeated stratified 5-fold CV x3; metrics G, AUC, F1, P20. 19 datasets randomly chosen from 62 KEEL-type sets with <1000 instances (p.11). Dataset names as printed (habarman typo kept). Table 5 lists only top 9 samplers plus SMOTE and No Oversampling; No Oversampling G: SVM .529, DT .7432, KNN .7525, MLP .6114."
+  },
+  {
+   "key": "LS",
+   "task": "binary",
+   "n_datasets_claimed": 20,
+   "n_datasets_listed": 20,
+   "characteristics_table": "Table 2, p.7",
+   "ir_definition": "not stated in paper",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "no",
+   "smote_name": "no plain SMOTE baseline; closest is 'C4.5 + UnSM' (combination of undersampling and SMOTE, levels tuned by wrapper)",
+   "smote_kind": "not a baseline",
+   "metric": "AUROC",
+   "classifier": "C4.5",
+   "table": "Table 3",
+   "page": "p.8",
+   "rows_with_smote": 0,
+   "summary": [
+    {
+     "label": "Avg Rank",
+     "proposed": "1.33",
+     "smote": null,
+     "unsm": "2.75",
+     "others": {
+      "C4.5": "4.85",
+      "SVM": "4.90",
+      "C4.5+COGOS": "3.65",
+      "SVM+COGOS": "3.53"
+     }
+    },
+    {
+     "label": "Friedman α = .05",
+     "proposed": "—",
+     "smote": null,
+     "unsm": "✓",
+     "others": {
+      "C4.5": "✓",
+      "SVM": "✓",
+      "C4.5+COGOS": "✓",
+      "SVM+COGOS": "✓"
+     }
+    }
+   ],
+   "claim": {
+    "quote": "This framework is able to achieve significantly better performances than other contemporary methods. As per the Friedman test, it achieves best performance, and statistically so, across 20 datasets derived from different domains.",
+    "page": "p.10"
+   },
+   "stat_test": "Combined 5x2cv F-test (Alpaydin) at 95% per dataset (bold = C4.5+LS significantly better than that method; italic = method significantly better than C4.5+LS); Friedman test with Holm procedure (Demsar) on ranks at 95% (✓ = C4.5+LS significantly lower rank)",
+   "n_uncertain": 7,
+   "notes": "Proposed method: Local Sampling (LS) with C4.5 = Hellinger-distance partitioning (tree height 2, <=4 segments) + per-partition wrapper-tuned undersampling (0-100 step 10) and SMOTE (0-500 step 50). SVM was not combined with UnSM or LS (computational cost, p.7). Table 4 (p.9) lists chosen sampling parameters (Undersample, SMOTE) per dataset for UnSM and LS, and (k, r) for COG-OS. Table 1 (p.4) gives synthetic 2-D radial experiments (9 scenarios, skew 50:1000) for C4.5 vs C4.5+sampling only, not part of the main suite. Pima illustrative example p.6: C4.5 0.765, LS 0.817, global UnSM 0.790. Text p.9 counts significant improvements on 18 tested datasets: 10 vs C4.5+UnSM. Table 3 checked against rendered page image (text extraction matched). best_other chosen as max among the five non-LS columns as printed. Authors offer datasets/code on request; no supplementary file referenced."
+  },
+  {
+   "key": "Loyalty-SMOTE",
+   "task": "both",
+   "n_datasets_claimed": 59,
+   "n_datasets_listed": 59,
+   "characteristics_table": "Tables 2-6, p.8 (Table 1, p.7 gives group sources)",
+   "ir_definition": "IR = N_majority / N_minority (Eq. 14)",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "G-mean",
+   "classifier": "SVM (rbf, C=1.0, gamma=0.5)",
+   "table": "Table 12",
+   "page": "12",
+   "rows_with_smote": 30,
+   "summary": [
+    {
+     "label": "Datasets with highest G-mean (text claim, not a table row)",
+     "proposed": "27 of 30 (90%)",
+     "smote": "not stated in paper"
+    }
+   ],
+   "claim": {
+    "quote": "Loyalty-SMOTE achieved the highest F1-score in 26 datasets (87%), the highest AUROC in 29 datasets (97%), the highest Recall in 26 datasets (87%), and the highest G-mean in 27 datasets (90%)",
+    "page": "15"
+   },
+   "stat_test": "none reported",
+   "n_uncertain": 10,
+   "notes": "Proposed = Loyalty-SMOTE; only classifier is SVM. Table 12 chosen (G-mean, 30 group-1 datasets); best_other = highest value among the five baselines incl. SMOTE, ties joined with '/'. Other results: Tables 9-11 (F1, AUROC, Recall group 1), 15-18 (group 4 multiclass F1/AUROC/Recall/G-mean, p.13), 19-22 (group 5, p.14); group 5 and group 4 not chosen (multiclass uses first-class-majority/last-minority treatment; 'main suite' = group 1). Multiclass SMOTE is plain SMOTE. Runtime Table 14 p.13. No supplementary file or GitHub referenced in paper text read."
+  },
+  {
+   "key": "MBS",
+   "task": "binary",
+   "n_datasets_claimed": 13,
+   "n_datasets_listed": 13,
+   "characteristics_table": "Table 2, p.7 (printed 1549)",
+   "ir_definition": "not stated in paper (Table 2 column 'Imbalance ratio' prints minority:majority counts with minority percentage, e.g. 268:500(34.9%))",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "Smote (text: SMOTE)",
+   "smote_kind": "plain SMOTE",
+   "metric": "AUC",
+   "classifier": "logistic regression",
+   "table": "Table 3 Average AUC Results",
+   "page": "p.8 (printed 1550)",
+   "rows_with_smote": 13,
+   "summary": [
+    {
+     "label": "Table 4 per-dataset ranks (p.8) MBS_linear / Smote, in order Pima,Haberman,Satimage,Ecoli,Shuttle,Ionosphere,Vehicle,Credit,Diabetes,Hmeq,Promotion,Bank,Spambase",
+     "proposed": "1,1,2,1,1,1,5,1,1,3,4,1,3",
+     "smote": "5,5,5,8,11,10,7,6,7,5,3,8,6"
+    },
+    {
+     "label": "Wilcoxon signed-rank p-value MBS_linear vs SMOTE (Table 5, p.9)",
+     "proposed": "Rejected (alpha=0.05)",
+     "smote": "0.0005"
+    }
+   ],
+   "claim": {
+    "quote": "The experimental results indicate that the proposed method outperforms other alternatives in most cases in terms of effectiveness and robustness.",
+    "page": "p.13 (Conclusion)"
+   },
+   "stat_test": "Wilcoxon signed-rank test, alpha=0.05, Table 5 p.9 (printed 1551); MBS_linear vs SMOTE: Rejected, p=0.0005. Other p-values: Baseline 0.0033, Over 0.0024, Under 0.0012, CBO 0.0002, SBC 0.0002, B-Smote1 0.0012, B-Smote2 0.0081, Safe-level 0.0004, ADASYN 0.0034",
+   "n_uncertain": 5,
+   "notes": "Proposed = MBS_linear (best variant per text p.8); other variants MBS_CART, MBS_SVR also in Table 3. Only logistic regression classifier used. Metric is AUC only (no G-mean/F1). Table 3 reports average over 10 splits x 10 sampling seeds (100 runs); no std in Table 3 (Fig. 5 shows 95% CI for Haberman and Shuttle only, plots). Ensemble comparison Table 8 p.11 (MBSBoost) not used. Dataset detail on GitHub https://github.com/b10071007/Model-Based-Synthetic-Sampling (not fetched). No supplementary file searched beyond the main PDF."
+  },
+  {
+   "key": "MC-CCR",
+   "task": "multiclass",
+   "n_datasets_claimed": 20,
+   "n_datasets_listed": 20,
+   "characteristics_table": "Table 1, p.8",
+   "ir_definition": "not stated in paper",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE-all",
+   "smote_kind": "SMOTE variant (multiclass/ensemble wrapper)",
+   "metric": "mGM [%]",
+   "classifier": "C5.0",
+   "table": "Table 6",
+   "page": "p.10",
+   "rows_with_smote": 20,
+   "summary": [
+    {
+     "label": "Avg. rank",
+     "proposed": "1.80",
+     "smote": "5.45"
+    }
+   ],
+   "claim": {
+    "quote": "MC-CCR usually outperforms the state-of-art reference oversampling strategies considered in this work, which manifested in the highest average ranks concerning all of the performance metrics.",
+    "page": "p.12"
+   },
+   "stat_test": "Combined 10-fold CV F-test (pairwise); Friedman ranking with Shaffer post-hoc (Table 8, alpha=0.05)",
+   "n_uncertain": 7,
+   "notes": "Text extraction was clean (tables not garbled), so no image rendering. Per-dataset tables 4-7 (AvAcc, CBA, mGM, CEN) are C5.0 only, without noise; other classifiers (MLP, k-NN, NB) only in Fig 4 and Tables 3, 8. mGM chosen as G-mean. Noise experiments (levels 0.0-0.25) in Figs 5-7 and Table 9 only. Code link in footnote 1 not captured. n_minority/n_majority left null (multiclass; not printed separately). Proposed method in Tables 4-7 is MC-CCR (translation cleaning, proportional selection, sampling decomposition)."
+  },
+  {
+   "key": "MC-MBRC",
+   "task": "multiclass",
+   "n_datasets_claimed": 20,
+   "n_datasets_listed": 20,
+   "characteristics_table": "Table 2, p.7",
+   "ir_definition": "not stated in paper (Table 2 gives IR column; no formula; text only says shuttle IR 853 high imbalance, contraceptive IR 1.9 low)",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE (Appendix A.1 text and Table 8 only; Tables 9-12 column headers do not name it)",
+   "smote_kind": "plain SMOTE",
+   "metric": "F_betaM (mean F-beta measure) [%], no G-mean/AUC table exists; AvAcc in Table 9, CBA Table 11, CEN Table 12",
+   "classifier": "RF (only classifier with per-dataset tables)",
+   "table": "Table 10",
+   "page": "10",
+   "rows_with_smote": 20,
+   "summary": [
+    {
+     "label": "avg_rank (Table 10; header-order columns MDO/CURE_SMOTE/NRAS/kmeans_SMOTE/MC-CCR/MC-MBRC)",
+     "proposed": "1.8",
+     "smote": "4.85 (first column, header printed MDO)"
+    },
+    {
+     "label": "best_times (Table 10)",
+     "proposed": "14",
+     "smote": "0 (first column, header printed MDO)"
+    },
+    {
+     "label": "Average F_betaM, Table 13, p.11",
+     "proposed": "58.93",
+     "smote": "44.97* (first column, header printed MDO)"
+    }
+   ],
+   "claim": {
+    "quote": "compared with state-of-the-art methods, the proposed method makes significant statistical improvements in different classification performance metrics and is robust to data containing class overlap and label noise.",
+    "page": "1 (abstract)"
+   },
+   "stat_test": "Post-hoc Nemenyi test, 95% confidence; asterisk in Table 13 marks significant difference from MC-MBRC",
+   "n_uncertain": 6,
+   "notes": "Per-dataset SMOTE comparison exists only for RF in appendix Tables 9-12; CART/KNN/MLP only as averages (Tables 14-16, which do label SMOTE explicitly, e.g. KNN avg SMOTE 75.6/45.34/38.18/0.41 vs MC-MBRC 85.84/55.53/51.2/0.32; metrics AvAcc/F_betaM/CBA/CEN). Main paper Tables 3-7 compare MDO, CURE_SMOTE, NRAS, kmeans_SMOTE, MC-CCR only. n_minority/n_majority left null (only class_distribution printed). Label-noise (Fig. 6) and artificial-data (Fig. 5) experiments excluded (plots only). Other metrics tables (9,11,12) available on p.10-11 with same layout. Datasets in Table 2 used in results: all 20."
+  },
+  {
+   "key": "MC-NCLWO",
+   "task": "multiclass",
+   "n_datasets_claimed": 23,
+   "n_datasets_listed": 23,
+   "characteristics_table": "Table 1, p.10 (printed p.152629)",
+   "ir_definition": "not stated in paper",
+   "results_granularity": "ranking only",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "FβM (mean F-beta; also AvAcc, CBA, CEN reported)",
+   "classifier": "KNN (first of KNN, CART, NB, SVM)",
+   "table": "Table 2 (average ranks only; per-dataset tables not in paper)",
+   "page": "p.14 (printed p.152633)",
+   "rows_with_smote": 0,
+   "summary": [
+    {
+     "label": "Avg rank, KNN, FβM (Table 2, p.14)",
+     "proposed": "2.478",
+     "smote": "6.087"
+    },
+    {
+     "label": "Avg rank, KNN, AvAcc (Table 2, p.14)",
+     "proposed": "3.174",
+     "smote": "6.435"
+    },
+    {
+     "label": "Avg rank, KNN, CBA (Table 2, p.14)",
+     "proposed": "2.522",
+     "smote": "6.174"
+    },
+    {
+     "label": "Avg rank, KNN, CEN (Table 2, p.14)",
+     "proposed": "3.696",
+     "smote": "7.152"
+    },
+    {
+     "label": "Avg rank, CART, FβM (Table 2, p.14)",
+     "proposed": "1.761",
+     "smote": "5.913"
+    },
+    {
+     "label": "Avg rank, CART, AvAcc (Table 2, p.14)",
+     "proposed": "2.543",
+     "smote": "5.717"
+    },
+    {
+     "label": "Avg rank, CART, CBA (Table 2, p.14)",
+     "proposed": "2.130",
+     "smote": "5.870"
+    },
+    {
+     "label": "Avg rank, CART, CEN (Table 2, p.14)",
+     "proposed": "2.848",
+     "smote": "6.870"
+    },
+    {
+     "label": "Avg rank, NB, FβM (Table 2, p.14)",
+     "proposed": "3.174",
+     "smote": "5.761"
+    },
+    {
+     "label": "Avg rank, NB, AvAcc (Table 2, p.14)",
+     "proposed": "3.261",
+     "smote": "5.609"
+    },
+    {
+     "label": "Avg rank, NB, CBA (Table 2, p.14)",
+     "proposed": "3.609",
+     "smote": "5.761"
+    },
+    {
+     "label": "Avg rank, NB, CEN (Table 2, p.14)",
+     "proposed": "4.000",
+     "smote": "6.565"
+    },
+    {
+     "label": "Avg rank, SVM, FβM (Table 2, p.14)",
+     "proposed": "2.391",
+     "smote": "6.478"
+    },
+    {
+     "label": "Avg rank, SVM, AvAcc (Table 2, p.14)",
+     "proposed": "2.522",
+     "smote": "6.261"
+    },
+    {
+     "label": "Avg rank, SVM, CBA (Table 2, p.14)",
+     "proposed": "2.848",
+     "smote": "6.326"
+    },
+    {
+     "label": "Avg rank, SVM, CEN (Table 2, p.14)",
+     "proposed": "2.826",
+     "smote": "6.630"
+    }
+   ],
+   "claim": {
+    "quote": "MC-NCLWO consistently outperforms 10 state-of-the-art methods across multiple performance metrics, including FβM, AvAcc, CBA, and CEN.",
+    "page": "p.1 (abstract)"
+   },
+   "stat_test": "Holm's post-hoc test on average ranks (p<0.05 marked *); Win/tie/loss counts shown only as bar chart Fig. 11",
+   "n_uncertain": 5,
+   "notes": "Per-dataset metric tables are not in the paper: 'Due to space limitations ... publicly available at' https://github.com/taoliangliang/MC-NCLWO/result (not fetched, per rules). Only Table 2 average ranks (all 4 metrics x 4 classifiers) and boxplots (Fig. 12), W/T/L bars (Fig. 11) are in the paper. Noise experiments (Fig. 13, 5-30% Gaussian feature noise, SVM, 4 datasets) are plots only and excluded by condition. Proposed method is the only MC-NCLWO variant. Ranks computed over 23 datasets implied (ranks not stated as such)."
+  },
+  {
+   "key": "MC-RBO",
+   "task": "multiclass",
+   "n_datasets_claimed": 20,
+   "n_datasets_listed": 20,
+   "characteristics_table": "Table I, p.7 (printed p.2824)",
+   "ir_definition": "not stated in paper (IR column printed; values equal largest/smallest class, e.g. Ecoli 143/2 = 71.50)",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE-all (SMOTE with round-robin class balancing); OVO + SMOTE also reported as 'SMOTE' under Binarization+sampling",
+   "smote_kind": "SMOTE variant (multiclass/ensemble wrapper)",
+   "metric": "mGM [%]",
+   "classifier": "C5.0",
+   "table": "Table VI",
+   "page": "p.10 (printed p.2827)",
+   "rows_with_smote": 20,
+   "summary": [
+    {
+     "label": "Avg. rank (Table VI, mGM, C5.0)",
+     "proposed": "2.35",
+     "smote": "11.55",
+     "smote_ovo": "7.87"
+    }
+   ],
+   "claim": {
+    "quote": "not copied in this pass",
+    "page": ""
+   },
+   "stat_test": "see paper Section IV-C (Shaffer post-hoc); not copied",
+   "n_uncertain": 5,
+   "notes": "OBSERVATION (not a judgement): every SMOTE-all value in Table VI is identical to the SMOTE-all column of MC-CCR Table 6 (same group, same C5.0 setup), and other baselines (e.g. SMOM 78.75 Automobile, MDO 95.73 Car) also match. Baseline results appear to be shared across the two papers rather than re-run; check against MC-CCR text."
+  },
+  {
+   "key": "MDO",
+   "task": "multiclass",
+   "n_datasets_claimed": 20,
+   "n_datasets_listed": 20,
+   "characteristics_table": "Table 1, p.9 (printed p.246)",
+   "ir_definition": "\"Imbalance ratio or IR is computed as the proportion of the number of majority class examples to the number of minority class examples [40]. The class with maximum number of instances is the majority class and the class with minimum number of examples is the minority class.\"",
+   "results_granularity": "ranking only",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "G-mean (multi-class extended G-mean) - mean Friedman rank over 20 data sets",
+   "classifier": "C4.5",
+   "table": "Table 2 (mean ranks) and Table 3 (Bonferroni-Dunn post-hoc)",
+   "page": "p.10 (printed p.247)",
+   "rows_with_smote": 0,
+   "summary": [
+    {
+     "label": "Avg rank (G-mean, C4.5, Table 2)",
+     "proposed": "1.9500",
+     "smote": "2.3750"
+    },
+    {
+     "label": "Bonferroni-Dunn mean-rank difference vs MDO control (G-mean, C4.5, Table 3; CD = 1.2490)",
+     "proposed": null,
+     "smote": "0.4250"
+    },
+    {
+     "label": "Friedman (Iman-Davenport F_F) result (G-mean, C4.5, Table 3)",
+     "proposed": "Reject",
+     "smote": "Reject"
+    }
+   ],
+   "claim": {
+    "quote": "MDO outperformed exiting over-sampling techniques in terms of MAUC and precision with KNN and Ripper classifiers, significantly.",
+    "page": "p.13 (printed p.250)"
+   },
+   "stat_test": "Friedman test (Iman-Davenport improved F_F) + Bonferroni-Dunn post-hoc, MDO as control, q_alpha=0.05 = 2.4980, CD = 1.2490 (p.10)",
+   "n_uncertain": 7,
+   "notes": "No per-dataset numbers anywhere in the paper; results only as Friedman mean ranks (Tables 2,4,6) and Bonferroni-Dunn rank differences (Tables 3,5,7) for MAUC, G-mean, precision, recall, F-measure with C4.5, KNN (K=5), Ripper (Weka). Other mean ranks MDO vs SMOTE: C4.5 MAUC 1.1750 vs 2.2250, F-measure 1.9000 vs 2.7250; KNN MAUC 1.2000 vs 2.6500, G-mean 2.1000 vs 2.4750; Ripper MAUC 1.2000 vs 2.5500, G-mean 2.1000 vs 2.7750. SMOTE applied to each minority class separately (one-vs-majority style); ADASYN and Borderline-SMOTE used with OAA (p.3). Precision/recall/F-measure computed for the minority class only. Parameters: K=5 all methods, ADASYN beta=1, MDO K1=5, K2=10. Table 1 text verified against rendered page 9 image. No supplementary file referenced."
+  },
+  {
+   "key": "MKC-SMOTE",
+   "task": "multiclass",
+   "n_datasets_claimed": 21,
+   "n_datasets_listed": 21,
+   "characteristics_table": "Table 1, p.5",
+   "ir_definition": "IR = ratio of maximum class size (majority) to minimum class size (minority); IRoverall = sum over i=1..C-1, sum over j>i of (N_i/N_j - 1) (Eq. 1)",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE (denoted SMO)",
+   "smote_kind": "plain SMOTE",
+   "metric": "MG (multi-class G-mean)",
+   "classifier": "CART",
+   "table": "Table 4",
+   "page": "p.7 (printed 196935)",
+   "rows_with_smote": 21,
+   "summary": [
+    {
+     "label": "Avg. (CART, MG)",
+     "proposed": "78.54",
+     "smote": "70.70"
+    },
+    {
+     "label": "Avg. (SVM, MG; other classifier)",
+     "proposed": "76.70",
+     "smote": "70.98"
+    },
+    {
+     "label": "Wilcoxon MG CART vs.SMO: R+ / R- / p",
+     "proposed": "222 / 9 / 0.0000157400*",
+     "smote": null
+    },
+    {
+     "label": "Wilcoxon MG SVM vs.SMO: R+ / R- / p",
+     "proposed": "208 / 20 / 0.0007915000*",
+     "smote": null
+    }
+   ],
+   "claim": {
+    "quote": "the MKC-SMOTE algorithm consistently outperforms these methods across various classifiers.",
+    "page": "p.9"
+   },
+   "stat_test": "Wilcoxon signed rank test, MKC-SMOTE vs each compared algorithm (Table 5, p.8); * = significant at alpha=0.05",
+   "n_uncertain": 4,
+   "notes": "Proposed vs SMOTE only; other metric MAUC (Table 3, p.6) also per-dataset for CART and SVM, not extracted. SVM MG table is also in Table 4. Table 6 (p.8) k=3/5/7 sensitivity. Abstract says 'six imbalance problem handling methods and two classifiers' (baselines listed are 7 incl. ORI). Best_other excludes MKCS; includes ORI. Ties not specially handled (con: ORI/KSM tie 36.75 irrelevant). Avg row: ORI 43.62, MDO 64.40, KSM 42.58, RMS 68.89, FIY 76.83, MCC 66.90 (CART)."
+  },
+  {
+   "key": "MLOS",
+   "task": "binary",
+   "n_datasets_claimed": 16,
+   "n_datasets_listed": 16,
+   "characteristics_table": "Table 1, p.9",
+   "ir_definition": "not stated in paper",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "G-mean",
+   "classifier": "SVM",
+   "table": "Table 8",
+   "page": "13",
+   "rows_with_smote": 16,
+   "summary": [
+    {
+     "label": "Average",
+     "proposed": "0.7192",
+     "smote": "0.6489"
+    },
+    {
+     "label": "Rank",
+     "proposed": "4.1875",
+     "smote": "8.2813"
+    }
+   ],
+   "claim": {
+    "quote": "Comparative experiments on 16 highly imbalanced and class-overlapped datasets to 17 algorithms demonstrate that MLOS notably enhances classification performance.",
+    "page": "12"
+   },
+   "stat_test": "Bayesian signed-rank test (Benavoli et al., 2017), Figs 7-9; no per-dataset p-values",
+   "n_uncertain": 6,
+   "notes": "Baseline row listed 'Baseline' in Table 8; 17 comparison methods per paper. Other metrics: Table 7 AUC, Table 9 Fmeasure (not extracted). Ablation variants MLOS1, MLOS2, MLOS(O), MLOS(U) in Tables 5-6. Code at https://github.com/ytyancp/MLOS (not fetched). Table 8 header spans two blocks; columns parsed by position."
+  },
+  {
+   "key": "MWMOTE",
+   "task": "binary",
+   "n_datasets_claimed": 20,
+   "n_datasets_listed": 21,
+   "characteristics_table": "Table 5, p.12 (printed p.416)",
+   "ir_definition": "'The imbalance ratio, the ratio between the number of the minority class and majority class samples' (Introduction); Table 5 prints it as minority:majority proportions e.g. 0.04:0.96",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE [15]",
+   "smote_kind": "plain SMOTE",
+   "metric": "G-mean",
+   "classifier": "Single Neural Network (back-propagation, 5 hidden neurons)",
+   "table": "Table 6 (and Table 6 continued)",
+   "page": "p.13-14 (printed p.417-418)",
+   "rows_with_smote": 20,
+   "summary": [
+    {
+     "label": "Wilcoxon signed-rank on averaged AUC, single NN (Table 7): R+, R-, T",
+     "proposed": "R+ = 166",
+     "smote": "R- = 44; T = min{166, 44} = 44; critical value 52 at 0.05 (text p.15)"
+    },
+    {
+     "label": "Wilcoxon signed-rank on averaged AUC, AdaBoost.M2 ensemble NN (Table 8): T",
+     "proposed": "R+ = 189",
+     "smote": "R- = 21; T = min{189, 21} = 21"
+    },
+    {
+     "label": "W/L counts on AUC single NN (text p.15)",
+     "proposed": "MWMOTE better for 14 data sets",
+     "smote": "SMOTE better for six data sets"
+    }
+   ],
+   "claim": {
+    "quote": "In almost all cases, MWMOTE outperformed the others in terms of several performance measures such as accuracy, precision, F-measure, G-mean, and AUC",
+    "page": "p.18-19 (printed p.422-423), Conclusion"
+   },
+   "stat_test": "Wilcoxon signed-rank test on average AUC, MWMOTE vs each method pairwise, alpha 0.05 (Tables 7, 8, 11); no test on G-mean",
+   "n_uncertain": 9,
+   "notes": "Proposed = MWMOTE (parameters k1=5,k2=3,k3=|Smin|/2,Cp=3,Cf(th)=5,CMAX=2). Table 6 also gives F-measure, AUC, Std of AUC for single NN and AdaBoost.M2 ensemble (G-mean ensemble not extracted here). Table 9 gives results with k-NN (k=5) and C4.5 on real-world data; Tables 2-4 on 4 artificial domains (20 runs each); Table 10/11 vs LS and COGOS on subset; Table 12 parameter sensitivity. Dataset names differ between Table 5 and Table 6 (e.g. Pageblocks/Page-blocks, Breast-tissue/Btissue, Breast-cancer-original/Bcancerorig). Author mismatch: Table 10 caption cites 'LS [30], COGOS [31]' but text says COGOS [30], LS [31]. No supplementary file. Source repository: text says 20 real-world data sets 'collected from the UCI machine learning repository [41]' (p.9)."
+  },
+  {
+   "key": "NBU",
+   "task": "binary",
+   "n_datasets_claimed": null,
+   "n_datasets_listed": 28,
+   "characteristics_table": "Table 1, p.17 (printed 16)",
+   "ir_definition": "imbalance degree (imb) = N/P, N and P = numbers of negative and positive instances (Eq. 2)",
+   "results_granularity": "per-dataset partial",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "G-mean (%)",
+   "classifier": "SVM (RBF kernel; first reported)",
+   "table": "Table 4",
+   "page": "26",
+   "rows_with_smote": 24,
+   "summary": [
+    {
+     "label": "Average rank (Table 4, G-mean, SVM)",
+     "proposed": "NB-Basic 4.52; NB-Tomek 4; NB-Comm 3.13 (bold); NB-Rec 5.43",
+     "smote": "6 (BLSMOTE 6.39; ENN 4.65; kmUnder 3.78; OBU 5.3; Baseline 5.78)"
+    },
+    {
+     "label": "Table 2 Exp. I (66 simulated, average over all sets, G-mean)",
+     "proposed": "NB-Basic 92.93; NB-Tomek 93.09; NB-Comm 93.19; NB-Rec 92.18",
+     "smote": "93.87 (BLSMOTE 93.78 bold; ENN 82.53; kmUnder 91.71; OBU 90.43; Baseline 77.86)"
+    },
+    {
+     "label": "Table 12 (RF) G-mean Wilcoxon p vs SMOTE, p.30",
+     "proposed": "NB-Basic 8.08E-01; NB-Tomek 6.48E-01; NB-Comm 5.35E-01; NB-Rec 9.46E-01",
+     "smote": "n/a"
+    }
+   ],
+   "claim": {
+    "quote": "Results showed that our methods achieved highest sensitivity with competitive G-means across all imbalance degrees on both simulated and real-world datasets.",
+    "page": "33"
+   },
+   "stat_test": "Wilcoxon Signed Rank tests, alpha 0.05, Tables 7 (SVM) and 12 (RF); Table 7 G-mean p-values vs SMOTE are on p.28 (not transcribed here)",
+   "n_uncertain": 8,
+   "notes": "Method is undersampling (neighbourhood-based, removes majority overlap instances); SMOTE is a comparator. Per-dataset simulated results only in supplementary material on GitHub (https://github.com/fonkafon/NB-undersampling Results.git, as printed footnote 7, p.20); not fetched. Table 13 (Exp. III, SVM, p.31) lists NB variants, ENN, kmUnder, OBU, Baseline only: no SMOTE. G-mean in Table 13: Breast Cancer NB-Basic 78.83, NB-Tomek 76.1, NB-Comm 76.69, NB-Rec 79.65; MNIST 3: 94.82/94.56/94.38/77.19; MNIST 5: 96.26/96.85/95.52/70.98. Other tables: Table 3 sensitivity, 5 precision, 6 F1 (SVM, p.25-27); RF: Tables 8-11 p.28-30. Pages are PDF page index; printed page = index-1. Metric is G-mean x100 (percent)."
+  },
+  {
+   "key": "NROMM",
+   "task": "both",
+   "n_datasets_claimed": 20,
+   "n_datasets_listed": 30,
+   "characteristics_table": "Table 2, main p.7 (20 multi-class); Table 1, supp p.11 (binary D1-D10)",
+   "ir_definition": "The imbalance ratio (IR) is computed by dividing the number of samples from the largest class by the number of samples from the smallest class.",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE-all (SMOTE using the round-robin decomposition strategy)",
+   "smote_kind": "SMOTE variant (multiclass/ensemble wrapper)",
+   "metric": "MG (multi-class G-mean)",
+   "classifier": "C5.0 decision tree",
+   "table": "Supplementary Table 8 (MG [%], C5.0); 7 of the 20 rows also in main Table 3",
+   "page": "supp p.24",
+   "rows_with_smote": 20,
+   "summary": [
+    {
+     "label": "Friedman mean rank, C5.0 MG (main Table 4, p.8)",
+     "proposed": "1.700",
+     "smote": "9.000 * (significantly different from NROMM, Shaffer post hoc, 0.05)"
+    }
+   ],
+   "claim": {
+    "quote": "The algorithm significantly outperforms other oversampling baselines on most classifiers and assessment metrics.",
+    "page": "main p.11"
+   },
+   "stat_test": "Friedman ranking test with Shaffer's post hoc (main Table 4 p.8; supp Table 22 p.31); Wilcoxon signed-ranks test (main Fig. 5 p.8, plot only).",
+   "n_uncertain": 6,
+   "notes": "Main paper is multi-class/mixed-type; 20 KEEL datasets. Complete per-dataset results for 4 classifiers x 4 metrics (AvAcc, CBA, MG, CEN) are in supp Tables 6-21 (pp.23-30). Main Table 6 binary results (AUC, GM, SVM) on D1-D10 compare PA, SVDD, F-SMOTE, Proposed only. Other variants: none named. Supp Table 5 (p.16) is simulated-data SVM accuracy. EMDO comparison in supp Tables 23-26 (C4.5; Pmin, Pavg, AUCm, MAUC) on 6 benchmarks. Noise-added conditions not extracted."
+  },
+  {
+   "key": "OBU",
+   "task": "binary",
+   "n_datasets_claimed": 36,
+   "n_datasets_listed": 36,
+   "characteristics_table": "Table 1, p.7 (printed p.6) (combined characteristics + results table)",
+   "ir_definition": "not stated in paper",
+   "results_granularity": "no comparison",
+   "smote_in_baselines": "no",
+   "smote_name": "not applicable (SMOTE not compared)",
+   "smote_kind": "not a baseline",
+   "metric": "Balance accuracy (BA) (paper reports only Sensitivity and BA; neither G-mean, AUC, F1 nor accuracy available)",
+   "classifier": "Random Forest (caret R defaults, 500 trees)",
+   "table": "Table 1",
+   "page": "p.7 (printed p.6)",
+   "rows_with_smote": 0,
+   "summary": [
+    {
+     "label": "One-tailed Wilcoxon p-value, OBU vs baseline (Org), BA",
+     "proposed": "0.108",
+     "smote": null
+    },
+    {
+     "label": "One-tailed Wilcoxon p-value, OBU vs kmeans, BA",
+     "proposed": "0.271",
+     "smote": null
+    },
+    {
+     "label": "One-tailed Wilcoxon p-value, OBU vs baseline (Org), Sensitivity",
+     "proposed": "1.16 × 10−6",
+     "smote": null
+    },
+    {
+     "label": "One-tailed Wilcoxon p-value, OBU vs kmeans, Sensitivity",
+     "proposed": "0.473",
+     "smote": null
+    },
+    {
+     "label": "Datasets where OBU best (as stated in text)",
+     "proposed": "26 (Sensitivity), 23 (BA), 14 both",
+     "smote": null
+    }
+   ],
+   "claim": {
+    "quote": "Testing and evaluating the proposed method using 36 public imbalanced datasets showed statistically significant improvements in classification performance.",
+    "page": "p.2 (abstract, printed p.1)"
+   },
+   "stat_test": "one-tailed Wilcoxon signed rank test, significance level 0.05 (p.8, printed p.7)",
+   "n_uncertain": 8,
+   "notes": "OBU = Overlap-Based Undersampling with Fuzzy C-means (C=2), alpha-cut 0.45 (tested 0.3,0.36,0.42,0.45,0.5). Undersampling method, not an oversampler; no SMOTE comparison. Table 1 also gives nMajLeft (majority instances left after OBU) and Sens for each method. Dataset names copied as printed incl. typo 'Segmemt0'. Code: https://github.com/fonkafon/Overlap_based_Undersampling (as printed, not fetched). IDEAL 2018, LNCS 11341, pp. 689-697."
+  },
+  {
+   "key": "OREM-M",
+   "task": "multiclass",
+   "n_datasets_claimed": 21,
+   "n_datasets_listed": 21,
+   "characteristics_table": "Table 6, p.11 (printed 6177)",
+   "ir_definition": "Overall IR on multiclass datasets 'is computed as [5]' (formula not printed in paper); per-class imbalance degree ID_ci = sum_{q!=i} n_cq / ((|C|-1) * n_ci), Eq. (1), used for rebalancing",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "MG (multiclass G-mean)",
+   "classifier": "C4.5",
+   "table": "Table S24 (supplementary)",
+   "page": "supplementary page not identified (main paper has only Table 7 p-values, p.12)",
+   "rows_with_smote": 21,
+   "summary": [
+    {
+     "label": "Average (MG, C4.5)",
+     "proposed": "0.5646",
+     "smote": "0.5507"
+    },
+    {
+     "label": "Mean rank (MG, C4.5)",
+     "proposed": "2.0000",
+     "smote": "2.6905"
+    },
+    {
+     "label": "Wilcoxon p-value OREM-M vs SMOTE, C4.5 MG (Table 7, p.12)",
+     "proposed": "0.090437+*",
+     "smote": "n/a"
+    }
+   ],
+   "claim": {
+    "quote": "The experimental results show that OREM-M often statistically outperforms the existing multiclass oversampling methods.",
+    "page": "14"
+   },
+   "stat_test": "Wilcoxon signed-rank test; '+*' / '++' = OREM-M statistically better at 0.1 / 0.05; '+' = only quantitatively better (Table 7, p.12)",
+   "n_uncertain": 8,
+   "notes": "Per-dataset results from supplementary Table S24 (C4.5; columns Original,SMOTE,SMOM,MDO,RBO-MC,OREM-M for macro-F1, MG, MAUC; MG = columns 7-12). Also available S25 (NN), S26 (SVM). Other variants in paper: OREM (two-class), OREMBoost, OREM-S (Table S27), SMOTE-M (Table S28). Table 6 bold minority classes shown with ** markers, read visually from PDF page 11 image (is_image-type check). Dataset names as in Table 6: ID 2 'Laryngeal', etc."
+  },
+  {
+   "key": "OSS",
+   "task": "binary",
+   "n_datasets_claimed": 7,
+   "n_datasets_listed": 7,
+   "characteristics_table": "Table 3, p.5",
+   "ir_definition": "not stated in paper",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "no",
+   "smote_name": "not stated in paper",
+   "smote_kind": "not a baseline",
+   "metric": "g (geometric mean of a+ and a-)",
+   "classifier": "1-NN",
+   "table": "Tables 4-7 (p.6) and Table 8 (p.7)",
+   "page": "6-7",
+   "rows_with_smote": 0,
+   "summary": [],
+   "claim": {
+    "quote": "The sensitivity to an imbalanced distribution of examples can be mitigated by selection techniques that discard those negative examples that lie in the borderline region, are noisy, or redundant.",
+    "page": "7"
+   },
+   "stat_test": "none reported",
+   "n_uncertain": 5,
+   "notes": "Paper (1997) predates SMOTE (2002), so no SMOTE baseline; smote fields null. Proposed = one-sided selection, set T (CNN-style consistent subset C, then removal of negatives in Tomek links). Comparisons are S (all data) and C. Metric g = sqrt(a+ * a-); tables also give a+, a-, acc and #ex. C4.5 g for T: oil1 84.3, oil2 66.0, KR 80.8, BR 83.4, g7 84.5, vw0 84.0, veh1 69.4. No std, no bold, no significance test. No supplementary material referenced. Page numbers are PDF page indices; no printed page numbers visible."
+  },
+  {
+   "key": "OVO-SMOTE",
+   "task": "multiclass",
+   "n_datasets_claimed": 24,
+   "n_datasets_listed": 24,
+   "characteristics_table": "Table 2, p.6 (printed 102); per-class counts Table 3, p.6",
+   "ir_definition": "\"the ratio of the number of instances of the majority (known as the negative class) and the minority class (known as the positive class)\"; data-set considered imbalanced when a class has below 40% of majority-class instances, i.e. IR higher than 1.5 (p.5)",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "Static-SMT (Static-SMOTE [21]); also OVO+SMT and OVA+SMT where SMT = SMOTE",
+   "smote_kind": "SMOTE variant (multiclass/ensemble wrapper)",
+   "metric": "average accuracy (AvgAcc, mean per-class TPR, %)",
+   "classifier": "C4.5",
+   "table": "Table 7",
+   "page": "p.10 (printed 106)",
+   "rows_with_smote": 24,
+   "summary": [
+    {
+     "label": "Average (avg row, Table 7, p.10)",
+     "proposed": "72.74",
+     "smote": "70.18"
+    },
+    {
+     "label": "Avg. rank (aligned ranks, Table 6, p.9; position) avg-acc",
+     "proposed": "(2) 94.98",
+     "smote": "(9) 148.90"
+    },
+    {
+     "label": "Wilcoxon p-value OVO+SMT (column) vs Static-SMT (row), Table 8, p.10",
+     "proposed": "0.0357",
+     "smote": "0.0357"
+    },
+    {
+     "label": "Wilcoxon p-value OVO+SMT vs Base (C4.5), Table 8, p.10",
+     "proposed": "0.0231",
+     "smote": null
+    },
+    {
+     "label": "Wilcoxon p-value OVO+SMT vs Std-OVO (C4.5), Table 8, p.10",
+     "proposed": "0.0075",
+     "smote": null
+    }
+   ],
+   "claim": {
+    "quote": "the synergy between pairwise learning and oversampling/cost-sensitive learning, which obtained the best global results for all the classification algorithms used in this study",
+    "page": "p.13 (printed 109), Concluding remarks"
+   },
+   "stat_test": "Wilcoxon signed-rank test (pairwise, p-values) plus aligned-ranks average ranking (Sec. 4.4, p.7; Tables 5, 8, 10, 12)",
+   "n_uncertain": 8,
+   "notes": "Empirical study (Fernández, López, Galar, del Jesus, Herrera, KBS 42 (2013) 97-110). Proposed = OVO + SMT (SMOTE applied to each OVO binary subproblem, balanced to 50%, 5-NN), the combination the paper recommends (lesson d, p.12: 'best of techniques studied are those based on OVO with SMT and OVO with cost-sensitive learning'); OVO+CS is the co-recommended variant (columns CS in Tables 7/9/11). Comparator = Static-SMT, the SMOTE-based ad hoc multiclass method (no binarization), because plain SMOTE without binarization is not reported per data-set; Base (C4.5 without preprocessing) also appears in Table 7 and is available in best_other columns. Metric: only average accuracy is reported per data-set in the paper; mean f-measure tables are said to be on the web page http://sci2s.ugr.es/multi-imbalanced/ (p.8), not fetched. No G-mean/AUC. Classifier C4.5 = first reported (abstract highlights none). SVM (Table 9, p.11) has no Base column; kNN in Table 11 p.12. OVA+SMT only aggregate (Table 4, p.8: C4.5 68.14). Table 8 p-values are for column method (OVO+preproc) vs row method; SMT vs Static-SMT C4.5 p=0.0357. Text layer verified with pdftotext -layout; tables were not images."
+  },
+  {
+   "key": "QC-SMOTE",
+   "task": "binary",
+   "n_datasets_claimed": 30,
+   "n_datasets_listed": 30,
+   "characteristics_table": "Table 1, p.8 (name and IR only)",
+   "ir_definition": "not stated in paper (IR 'denotes imbalance ratio'; no formula)",
+   "results_granularity": "aggregate only",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "AUC-ROC (average over 30 datasets; Macro F1 also in Table 2; no G-mean numbers printed)",
+   "classifier": "CatBoost",
+   "table": "Table 2",
+   "page": "9",
+   "rows_with_smote": 0,
+   "summary": [
+    {
+     "label": "Average AUC-ROC score",
+     "proposed": "0.9321",
+     "smote": "0.8731"
+    },
+    {
+     "label": "Average AUC-ROC rank",
+     "proposed": "1.1667",
+     "smote": "6.2500"
+    },
+    {
+     "label": "AUC-ROC wins",
+     "proposed": "29",
+     "smote": "1"
+    },
+    {
+     "label": "Average Macro F1 score",
+     "proposed": "0.8408",
+     "smote": "0.7579"
+    },
+    {
+     "label": "Average Macro F1 rank",
+     "proposed": "1.6667",
+     "smote": "6.5167"
+    },
+    {
+     "label": "Macro F1 wins",
+     "proposed": "17",
+     "smote": "1"
+    },
+    {
+     "label": "Table 3 Mild IR(<5) AUC / Macro F1",
+     "proposed": "0.9219 / 0.8433",
+     "smote": "0.8699 / 0.8035"
+    },
+    {
+     "label": "Table 3 Moderate IR(5-15) AUC / Macro F1",
+     "proposed": "0.9643 / 0.8917",
+     "smote": "0.9137 / 0.8195"
+    },
+    {
+     "label": "Table 3 High IR(>=15) AUC / Macro F1",
+     "proposed": "0.8878 / 0.7621",
+     "smote": "0.8087 / 0.5806"
+    },
+    {
+     "label": "Table 6 Wilcoxon p, QC-SMOTE vs SMOTE (AUC / Macro F1)",
+     "proposed": "1.5e-5 / 1.9e-5 (printed 1.5 x 10^-5, 1.9 x 10^-5)",
+     "smote": null
+    }
+   ],
+   "claim": {
+    "quote": "QC-SMOTE achieves the strongest average AUC-ROC and Macro F1 among the compared oversampling methods, with particularly clear gains under moderate and severe imbalance.",
+    "page": "1"
+   },
+   "stat_test": "Table 6: paired Wilcoxon signed-rank, unadjusted pairwise p-values over 30 dataset-level scores; vs VS-SMOTE p=1.5 x 10^-5 (AUC-ROC), 0.127 (Macro F1)",
+   "n_uncertain": 4,
+   "notes": "BASELINE NUMBERS COPIED, NOT RE-RUN: Sec 4.3 p.8 says 'we retain the published CatBoost baselines' and 'The non-QC-SMOTE columns are retained from the published benchmark, while the QC-SMOTE column is obtained from our reproduced runs'; ranks/wins recomputed on expanded set. No per-dataset results table in paper (only Table 2 aggregate, Table 3 by IR regime, Table 4 ablation, Table 5 sensitivity, Table 6 Wilcoxon, Table 7 runtime); per-dataset results refer to 'published result tables' of VS-SMOTE (Qiu et al. 2025, Neurocomputing, ref [24]). Dataset n_instances/features/minority/majority not printed; source repository not stated (names look KEEL-style but paper does not say). Metrics: AUC-ROC and Macro F1. No supplementary file or GitHub link found. Other metrics: Table 2 other baselines AUC: B-SMOTE1 0.8807, SMOTE-WE 0.8667, K-SMOTE 0.8798, RSMOTE 0.8562, SMOTEWB 0.8689, SMOTE-CD 0.8799, VS-SMOTE 0.8977."
+  },
+  {
+   "key": "RACOG / wRACOG",
+   "task": "binary",
+   "n_datasets_claimed": 10,
+   "n_datasets_listed": 10,
+   "characteristics_table": "Table 2, p.4 (printed 225)",
+   "ir_definition": "not stated in paper (Table 2 reports '% Min. Class' instead of an IR)",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "G-mean",
+   "classifier": "SVM (RBF kernel, gamma = 0.01)",
+   "table": "Table 5 (Results for SVM), G-mean block",
+   "page": "p.8 (printed 229)",
+   "rows_with_smote": 10,
+   "summary": [],
+   "claim": {
+    "quote": "Experiments with RACOG and wRACOG on a wide variety of data sets and classifiers indicate that the algorithm is able to attain higher sensitivity than other methods, while maintaining higher G-mean.",
+    "page": "p.12 (printed 233)"
+   },
+   "stat_test": "Student's t-test; RACOG and wRACOG significant (p < 0.05) improvement over SMOTE and SMOTEBoost reported in bold in Tables 5, 6 and 7 (p.9); no test between RACOG and wRACOG",
+   "n_uncertain": 8,
+   "notes": "Printed page = PDF page + 221. Results tables: Table 4 C4.5 AUC-ROC (p.8); Table 5 SVM, Table 6 kNN (p.9), Table 7 Logistic Regression (p.10), each with Sensitivity, G-mean, AUC-ROC blocks, mean +/- std over 5-fold CV. C4.5 sensitivity and G-mean only as plots (Fig. 6, Fig. 7, p.11); Fig. 8 = number of added samples. SMOTE and RACOG oversample to 50:50; RUSBoost to 35:65; SMOTEBoost 10 iterations; RACOG burn-in 100, lag 20; wRACOG stops when std of sensitivity over 10 recent iterations falls below a threshold. Classifier params tuned on baseline data (Table 3, p.7). No average/rank/W-T-L summary rows. Paper notes wRACOG G-mean 0 on haberman (attributed to only three attributes, p.10). Conclusion mentions brief experiments with random over/undersampling (not tabulated, p.12). No supplementary file referenced."
+  },
+  {
+   "key": "RAMOBoost",
+   "task": "binary",
+   "n_datasets_claimed": 19,
+   "n_datasets_listed": 19,
+   "characteristics_table": "Table I, p.7 (printed 1630)",
+   "ir_definition": "not stated in paper (Table I column 'Imbalanced ratio' printed as minority : majority class proportions, e.g. '0.47 : 0.53')",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "G-mean",
+   "classifier": "MLP neural network (4 hidden neurons, base learner for all methods)",
+   "table": "Table III",
+   "page": "p.9-10 (printed 1632-1633)",
+   "rows_with_smote": 19,
+   "summary": [
+    {
+     "label": "Wilcoxon signed-ranks on averaged AUC (not G-mean), RAMOBoost vs SMOTE, Table VI p.12 (printed 1635): R+ / R- / T",
+     "proposed": "R+ = 154",
+     "smote": "R- = 36; T = 36(+)"
+    },
+    {
+     "label": "Wilcoxon signed-ranks on averaged AUC, RAMOBoost vs SMOTEBoost, Table IV p.11: R+ / R-",
+     "proposed": "R+ = 147.5",
+     "smote": "R- = 42.5 (SMOTEBoost, not SMOTE)"
+    }
+   ],
+   "claim": {
+    "quote": "Simulation results on 19 datasets across various assessment metrics, including OA, Precision, Recall, F-measure, G-mean, ROC graphs, and AUC, demonstrate the effectiveness and robustness of the proposed method.",
+    "page": "p.17 (printed 1640)"
+   },
+   "stat_test": "Wilcoxon signed-ranks test on averaged AUC only (alpha=0.05, critical T<=46 for 19 datasets); no test on G-mean",
+   "n_uncertain": 7,
+   "notes": "Proposed RAMOBoost (boosting AdaBoost.M2 + ranked minority oversampling). Also variant 'RAMO' (sampling only, Simulation 2, Table VII AUC vs SMOTE, p.12) and Simulation 3 (k=10, 10 most skewed datasets, Table IX AUC, p.13). Table III also gives OA, Precision, Recall, F-measure, AUC for all 7 methods. Bold = best per dataset per metric; underline denotes significance in test tables. Further Abalone-only experiments: oversampling ratio (Table XII), imbalance ratio by merging classes (Tables XIV-XVII), class label noise (XVIII-XX), attribute noise (XXI-XXIII). Features normalized nonlinearly to [0,1]. Table I p.7 header: 'Summary of the dataset characteristics (sorted in the degree of class skew)'. No supplementary file referenced."
+  },
+  {
+   "key": "RBBoost / Random Balance",
+   "task": "binary",
+   "n_datasets_claimed": 86,
+   "n_datasets_listed": 86,
+   "characteristics_table": "Table 2, p.7 (HDDT, 20) and Table 3, p.8 (KEEL, 66)",
+   "ir_definition": "\"the imbalance ratio (the number of instances of the majority class for each instance of the minority class)\"",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "ESM (Ensemble, SMOTE: \"SMOTE in each iteration until 50% of the data belongs to minority class\"); fixed-rate variants ESM100/ESM200/ESM500 also reported",
+   "smote_kind": "SMOTE variant (multiclass/ensemble wrapper)",
+   "metric": "Geometric mean (G-mean)",
+   "classifier": "J48 (C4.5) unpruned, no collapsing, Laplace smoothing (C4.4), ensemble size 100",
+   "table": "Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11",
+   "page": "Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",
+   "rows_with_smote": 86,
+   "summary": [
+    {
+     "label": "Avg rank G-mean within family (main Table 10; RB-B in (c) Boosting family of 9, ESM in (a) Data-processing family of 11, not comparable rankings)",
+     "proposed": "3.6686",
+     "smote": "6.4070"
+    },
+    {
+     "label": "Hochberg adjusted p vs family best (Table 10; RB-B vs RUSB; ESM vs E-RB)",
+     "proposed": "3.0550e004 (printed; likely e-004)",
+     "smote": "1.0563e008 (printed; likely e-008)"
+    },
+    {
+     "label": "Avg rank AUC within family (Table 8)",
+     "proposed": "2.9884",
+     "smote": "8.2674"
+    },
+    {
+     "label": "Avg rank F-Measure within family (Table 9)",
+     "proposed": "3.3372",
+     "smote": "5.7326"
+    }
+   ],
+   "claim": {
+    "quote": "Experiments with 86 imbalanced data sets from two well known repositories demonstrate the advantage of the Random Balance approach.",
+    "page": "p.1 (abstract)"
+   },
+   "stat_test": "Average ranks with Friedman / Iman-Davenport test, Hochberg post hoc test (within each family; across family-best methods in Table 13)",
+   "n_uncertain": 7,
+   "notes": "Proposed main method RB-Boost (RB-B, Random Balance + AdaBoost.M2); other proposed variants E-RB (Ensemble-RB) and BAG-RB (Bagging-RB). Main Table 7 gives only the three proposed methods per dataset (AUC, F-Measure, G-mean); all baselines per dataset are in the Supplementary PDF (Tables 1-22, AUC/F/G-mean/accuracy per family, plus fusion rules and base classifiers J48/SVM/KNN). SMOTE k=5. Boosting family SMOTE-related baselines are SMOTEBoost SB100/200/500 (not plain SMOTE). best_other taken from the other 8 Boosting-family methods in Supplementary Table 11. No bold/underline marks in supplementary tables (no bold fonts). Supplementary page numbers are PDF page indices of the Supplementary file and match its printed footers."
+  },
+  {
+   "key": "RBO",
+   "task": "binary",
+   "n_datasets_claimed": 34,
+   "n_datasets_listed": 34,
+   "characteristics_table": "Table 1, p.6",
+   "ir_definition": "not stated in paper",
+   "results_granularity": "ranking only",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "G-mean (average Friedman rank)",
+   "classifier": "CART (first reported; abstract highlights none)",
+   "table": "Table 2",
+   "page": "p.9 (printed p.27)",
+   "rows_with_smote": 0,
+   "summary": [
+    {
+     "label": "Avg rank, G-mean, CART, no noise (lower rank = better)",
+     "proposed": "5.1667",
+     "smote": "4.1667"
+    },
+    {
+     "label": "Avg rank G-mean CART: Base",
+     "proposed": null,
+     "smote": "6.7917"
+    },
+    {
+     "label": "Avg rank G-mean CART: ADASYN",
+     "proposed": null,
+     "smote": "2.9167 (marked -)"
+    },
+    {
+     "label": "Avg rank G-mean CART: Bord",
+     "proposed": null,
+     "smote": "4.4792"
+    },
+    {
+     "label": "Avg rank G-mean CART: SMOTE + TL",
+     "proposed": null,
+     "smote": "3.9792"
+    },
+    {
+     "label": "Avg rank G-mean CART: SMOTE + ENN",
+     "proposed": null,
+     "smote": "5.0000"
+    },
+    {
+     "label": "Avg rank G-mean CART: NCL",
+     "proposed": null,
+     "smote": "3.5000"
+    }
+   ],
+   "claim": {
+    "quote": "Experimental results on diverse set of benchmark datasets with and without noise proved that our RBO algorithm could be an useful alternative for SMOTE-based solutions, especially when dealing with complex data distributions.",
+    "page": "p.13"
+   },
+   "stat_test": "Friedman test average ranks; Shaffer's post-hoc test at 0.05 (signs in subscript relative to RBO)",
+   "n_uncertain": 4,
+   "notes": "Per-dataset results not in paper; stated available at https://github.com/michalkoziarski/RBO (not fetched). Table 2 ranks printed for CART/kNN/SVM/NB x Precision/Recall/F/AUC/G-mean; Table 2 SMOTE G-mean ranks: CART 4.1667 (not significant marked), RBO 5.1667. Reference methods: SMOTE, Bord, SMOTE+TL, SMOTE+ENN, ADASYN, NCL, Base. RBO 5x2 CV; classifiers CART, kNN, SVM-RBF, NB. Datasets 10 preliminary and 24 final listed without Table 1 minority/majority counts. Noise levels 0-20% in Tables 3-6 (0.0 level = baseline)."
+  },
+  {
+   "key": "ROS (Buda)",
+   "task": "multiclass",
+   "n_datasets_claimed": 3,
+   "n_datasets_listed": 3,
+   "characteristics_table": "Table 1, p.4 (printed 252)",
+   "ir_definition": "ρ = max_i{|C_i|} / min_i{|C_i|} (ratio between number of examples in majority and minority classes, Eq. 2); step imbalance also uses µ = fraction of minority classes (Eq. 1); linear imbalance uses same ρ with linear interpolation of class sizes",
+   "results_granularity": "per-dataset partial",
+   "smote_in_baselines": "no",
+   "smote_name": "SMOTE (mentioned only in Sec. 2.1/2.2 literature review, p.2; not evaluated)",
+   "smote_kind": "not a baseline",
+   "metric": "multi-class ROC AUC",
+   "classifier": "ResNet-10",
+   "table": "Table 4",
+   "page": "p.8 (printed 256)",
+   "rows_with_smote": 0,
+   "summary": [],
+   "claim": {
+    "quote": "the method of addressing class imbalance that emerged as dominant in almost all analyzed scenarios was oversampling",
+    "page": "p.1 (printed 249), abstract"
+   },
+   "stat_test": "not stated in paper",
+   "n_uncertain": 4,
+   "notes": "Comparative study, not a new method: proposed = random minority oversampling ('Oversampling'). SMOTE not evaluated. All three datasets are 10- or 1000-class multiclass with artificially induced step/linear imbalance on the training set; test sets kept balanced. MNIST and CIFAR-10 results (Figs. 3-7) are plots only. Table 4 Undersampling values: 96.85, 94.98, 88.35, 84.08, 83.74. Supplementary Appendix A (CIFAR-10 reshuffled splits) contains plots only; Appendix B (convergence plots) and Appendix C (confusion matrices) not used for numeric comparison. Main comparator: Baseline (do-nothing)."
+  },
+  {
+   "key": "RSMOTE",
+   "task": "both",
+   "n_datasets_claimed": 35,
+   "n_datasets_listed": 35,
+   "characteristics_table": "Table 2, p.13 (binary); Table 7, p.20 (multi-class)",
+   "ir_definition": "IR = #Majority / #Minority",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE (SMT.)",
+   "smote_kind": "plain SMOTE",
+   "metric": "G-mean",
+   "classifier": "average over five classifiers (Adaboost, LR, DT, KNN, GBDT); not per-classifier",
+   "table": "Table 3 (binary, c = 0), G-mean block",
+   "page": "14 (printed 410)",
+   "rows_with_smote": 27,
+   "summary": [
+    {
+     "label": "Average (27 binary sets)",
+     "proposed": "0.874",
+     "smote": "0.835"
+    },
+    {
+     "label": "Winning times",
+     "proposed": "22",
+     "smote": "11"
+    }
+   ],
+   "claim": {
+    "quote": "The experimental results demonstrate that the proposed approach performs better than the comparison methods in terms of several metrics, including Precision, Recall, Area Under the Curve (AUC), F1-measure, and G-mean.",
+    "page": "1"
+   },
+   "stat_test": "Friedman test plus Holm post hoc test with RSMOTE as control (Tables 5-6, A.12), on per-classifier mean ranks; not on Table 3 values",
+   "n_uncertain": 5,
+   "notes": "Binary tables are text-extracted, not images. No other proposed variants. Appendix A has c=0.1/0.2 (Tables A.10, A.11); c=0.3 in Table 4. Code link as printed: https://github.com/syx iaa/RSMOTE. Multi-class (DOVO, 75/25 split, five runs): Table 8 p.21 macro_G-mean c=0, order NONE/SMOTE/Bl1/Bl2/AB-SMOTE/ADASYN/km-SMOTE/RSMOTE: contraceptive 0.5011/0.5498/0.5253/0.5424/0.5797/0.4988/0.5626/0.5712; OBS 1.0000 all; PhishingData 0.5751/0.8281/0.8176/0.8141/0.8067/0.8285/0.8330/0.8378; sensorReadings 0.9939/0.9947/0.9945/0.9913/0.9946/0.9939/0.9951/0.9961; svmguide2 0.8072/0.7746/0.7971/0.7586/0.7469/0.7402/0.7926/0.7513; userknowledge 0.8330/0.8279/0.8566/0.8301/0.7748/0.7653/0.8199/0.9332; vertebralColumn 0.8783/0.9008/0.8882/0.8882/0.8892/0.9008/0.9328/0.8854; Healthy_Older_People2 0.9384/0.9366/0.9375/0.9348/0.9447/0.9430/0.9304/0.9464; Average 0.8159/0.8516/0.8521/0.8449/0.8421/0.8338/0.8583/0.8652. Label noise flips minority and majority labels equally to keep IR; multi-class flips to any other class."
+  },
+  {
+   "key": "RUSBoost",
+   "task": "binary",
+   "n_datasets_claimed": 15,
+   "n_datasets_listed": 15,
+   "characteristics_table": "Table I, p.5 (printed 189)",
+   "ir_definition": "Imbalance level reported as '%min' = percentage of all examples belonging to the minority class ('commonly referred to as the level of imbalance'); no majority/minority ratio defined",
+   "results_granularity": "per-dataset partial",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "A-ROC (area under ROC curve)",
+   "classifier": "C4.5D (Weka J48, default parameters)",
+   "table": "Table IV",
+   "page": "p.9 (printed 193)",
+   "rows_with_smote": 15,
+   "summary": [
+    {
+     "label": "Average",
+     "proposed": "0.8729",
+     "smote": "0.7780"
+    },
+    {
+     "label": "# A's (data sets in HSD group A)",
+     "proposed": "15",
+     "smote": "0"
+    }
+   ],
+   "claim": {
+    "quote": "RUSBoost and SMOTEBoost both outperform the other procedures, and RUSBoost performs comparably to (and often better than) SMOTEBoost while being a simpler and faster technique.",
+    "page": "p.1 (abstract)"
+   },
+   "stat_test": "One-factor ANOVA with Tukey's HSD at alpha=5% (per data set in Table IV); two-sample t-tests RUSBoost vs SMOTEBoost only (Table VII)",
+   "n_uncertain": 7,
+   "notes": "All tables are images (rendered at 220 dpi). No G-mean reported; metrics: A-ROC, A-PRC, K-S, F-measure; learners C4.5D, C4.5N, RIPPER, NB. Per-dataset values printed only for C4.5D/A-ROC (Table IV, p.9) and RIPPER/A-PRC (Table V, p.10); other 14 learner/metric combos only as #group-A counts (Table VI, p.10) and averages (Tables II-III, p.7-8). Table VII (p.11) = t-test counts RUSBoost vs SMOTEBoost. SMOTEBoost is a hybrid baseline, not counted as SMOTE. Each sampling technique run at 35/50/65% minority target; boosting 10 iterations; 10x10-fold CV. best_other excludes SMOTE itself. No supplementary file referenced."
+  },
+  {
+   "key": "SCUT",
+   "task": "multiclass",
+   "n_datasets_claimed": 8,
+   "n_datasets_listed": 8,
+   "characteristics_table": "Table 1, p.4",
+   "ir_definition": "not stated in paper",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE (\"the original SMOTE algorithm\")",
+   "smote_kind": "plain SMOTE",
+   "metric": "G-mean",
+   "classifier": "J48",
+   "table": "Table 2: G-mean values for J48.",
+   "page": "p.5",
+   "rows_with_smote": 8,
+   "summary": [
+    {
+     "label": "Rank (Table 14, G-mean, J48 row, p.6; rank of rank-sums over 8 datasets)",
+     "proposed": "2",
+     "smote": "1"
+    },
+    {
+     "label": "Friedman test p-value (Table 17, G-mean, J48, p.7; across all 5 methods)",
+     "proposed": "0.01460",
+     "smote": "0.01460"
+    }
+   ],
+   "claim": {
+    "quote": "Our experimental results against a number of multi-class problems show that, when the SCUT method is used for pre-processing the data before classification, we obtain highly accurate models that compare favourably to the state-of-the-art.",
+    "page": "p.1"
+   },
+   "stat_test": "Friedman test over the five methods per classifier/metric (Table 17, p.7); p < 0.05 deemed significant; no pairwise post-hoc test",
+   "n_uncertain": 6,
+   "notes": "Proposed method SCUT (SMOTE + EM cluster-based undersampling to class mean). Baselines: SMOTE, RU, CUT (SCUT without SMOTE), Orig. (no sampling). Classifiers: J48, Naive Bayes, SMO, IBk (k=5), WEKA, 10-fold CV. Metrics: G-mean (Tables 2-5, p.5), F-measure (Tables 6-9, p.5-6), AUC (Tables 10-13, p.6); rank summaries Tables 14-16 (p.6); Friedman p-values Table 17 (p.7). Dataset names in results tables are abbreviated (Lympho., Pageblock/Pageblocks/Pageblk, Derma./Derma, Wine). No std reported. All tables are text (verified by rendering pages 4-6). Conclusion (p.8): 'We were not able to establish a clear superiority of one oversampling method over the other.'"
+  },
+  {
+   "key": "SHRINK",
+   "task": "binary",
+   "n_datasets_claimed": 1,
+   "n_datasets_listed": 1,
+   "characteristics_table": "Table 2, p.11 (printed p.205)",
+   "ir_definition": "not stated in paper",
+   "results_granularity": "no comparison",
+   "smote_in_baselines": "no",
+   "smote_name": "not stated in paper",
+   "smote_kind": "not a baseline",
+   "metric": "g-mean (paper's main measure; no SMOTE comparison exists)",
+   "classifier": "SHRINK (theta = 0)",
+   "table": "none",
+   "page": null,
+   "rows_with_smote": 0,
+   "summary": [],
+   "claim": {
+    "quote": "Our solutions to these issues are implemented in the Canadian Environmental Hazards Detection System (CEHDS), which is about to undergo field testing.",
+    "page": "p.1 (printed p.195), abstract"
+   },
+   "stat_test": "t-test mentioned for C4.5 with one-sided selection improvement (p.14, printed p.208); none for SHRINK vs SMOTE",
+   "n_uncertain": 3,
+   "notes": "Paper predates SMOTE (2002); no SMOTE baseline. SHRINK results only as plots (Fig. 4, p.15/printed p.209: g-mean, acc+, acc- vs number of negatives, 5x10-fold CV; Fig. 5 ROC curve) and Table 4 (p.16, printed p.210) SHRINK theta=0: CV g-mean 70.9, acc+ 82.5, acc- 60.9; LOBO g-mean 62.5, acc+ 78.1, acc- 50.1. Table 3 (p.14, printed p.208) one-sided selection: C4.5 g-mean 81.1, acc+ 76.0, acc- 86.6; 1-NN 67.2, 54.0, 83.4. g-mean defined as sqrt(acc+ x acc-) (p.9, printed p.203). Evaluation: 5 random runs of 10-fold CV, and leave-one-batch-out (LOBO). Related method one-sided selection (Kubat & Matwin 1997)."
+  },
+  {
+   "key": "SHSampler",
+   "task": "multiclass",
+   "n_datasets_claimed": 20,
+   "n_datasets_listed": 20,
+   "characteristics_table": "none",
+   "ir_definition": "not stated in paper (cites imbalanced degree (Id) [30] and Fisher's discriminant ratio (Fdr) [31]; no formula printed)",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "OVO-SMO (OVO-SMOTE)",
+   "smote_kind": "SMOTE variant (multiclass/ensemble wrapper)",
+   "metric": "mGM",
+   "classifier": "DT",
+   "table": "Table II",
+   "page": "7",
+   "rows_with_smote": 20,
+   "summary": [
+    {
+     "label": "Average (mGM, DT)",
+     "proposed": "0.6406",
+     "smote": "0.5973"
+    },
+    {
+     "label": "Mean rank (Friedman, mGM, DT)",
+     "proposed": "2.75",
+     "smote": "4.10"
+    },
+    {
+     "label": "Average (MAUC, DT, Table I)",
+     "proposed": "0.8517",
+     "smote": "0.8361"
+    },
+    {
+     "label": "Mean rank (MAUC, DT, Table I)",
+     "proposed": "2.80",
+     "smote": "3.48"
+    }
+   ],
+   "claim": {
+    "quote": "Extensive experiments over 20 typical datasets demonstrate the superiority of SHSampler in terms of MAUC and mGM when compared with 6 state-of-the-art methods.",
+    "page": "1"
+   },
+   "stat_test": "Friedman mean rank in tables; Bayesian signed-rank test with rope 0.5% (Fig. 7, probability matrices, image only, values not read)",
+   "n_uncertain": 5,
+   "notes": "DSAA 2022. Table text extraction was column-wise garbled; values read from rendered page 7 image. Other proposed variants: SHSu, SHSo (ablation components), SHSmin, SHSmax (Figs 5-6, plots only). Classifiers DT, RF, NB (default params), stratified 5-fold CV. Datasets listed from Table I/II row labels. Supplementary materials pointed to but no URL printed."
+  },
+  {
+   "key": "SMOM",
+   "task": "multiclass",
+   "n_datasets_claimed": 27,
+   "n_datasets_listed": 27,
+   "characteristics_table": "Table 1, p.8 (printed 334)",
+   "ir_definition": "Overall imbalance degree for multiclass data: IR = sum_{i=1}^{C-1} sum_{j>i} (N_i/N_j - 1), Eq. (3), classes sorted in descending size; IR = 0 if all classes equal size. Minority/majority classes: classes with size smaller/greater than M/L.",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "MG (geometric mean of per-class recalls)",
+   "classifier": "C4.5",
+   "table": "Table S3 (Supplementary)",
+   "page": "Supplementary p.7 (printed 7)",
+   "rows_with_smote": 27,
+   "summary": [
+    {
+     "label": "Avg-MG (Table S3, supp p.7)",
+     "proposed": "0.5247",
+     "smote": "0.5119"
+    },
+    {
+     "label": "Mean rank (Table S3, supp p.7; 8 methods)",
+     "proposed": "1.9444",
+     "smote": "2.8519"
+    },
+    {
+     "label": "Avg-MG mean±SD (Table 2, p.9)",
+     "proposed": "0.525±0.332",
+     "smote": "0.512±0.334"
+    },
+    {
+     "label": "Mean rank (Table 2, p.9)",
+     "proposed": "1.944",
+     "smote": "2.852"
+    },
+    {
+     "label": "Wilcoxon signed-ranks, SMOM vs SMOTE, MG, C4.5 (Table 3, p.10): R+ / R- / T",
+     "proposed": "R+ = 316",
+     "smote": "R- = 62; T = 62(++) (++ = SMOM significantly better at 0.05)"
+    }
+   ],
+   "claim": {
+    "quote": "The experimental results show that SMOM often statistically outperformed other compared methods in terms of MG, MAUC and recall.",
+    "page": "p.12 (printed 338)"
+   },
+   "stat_test": "Wilcoxon signed-ranks test (Table 3, p.10; Table 5, p.12 for k=12 variants); '++'/'+*' = SMOM significantly better at 0.05/0.1",
+   "n_uncertain": 7,
+   "notes": "Per-dataset results only in Supplementary (Tables S3-S20); main paper gives averages/ranks (Tables 2, 4) and Wilcoxon tests (Tables 3, 5, 6). Metric priority G-mean: MG used. Other per-dataset tables: MAUC (S5,S6), recall/precision of smallest class (S7-S10), F-measure SL-SMOTE vs SMOM only (S11), Experiment 2 with SMOTE (k=12) (S13-S16; S13 = MG). Classifiers: C4.5, AdaBoost.M1(C4.5), MLP, NB (Weka). SMOM params k1=12, k2=8, rTh=5/8, nTh=10, w1=0.2, w2=1/2, r1=1/3, r2=0.2. Main text extraction garbled SWD/LEV/ERA/ERA5 M as '10 0 0'; values read from rendered page 8 image (1000). Table S3 text extraction was clean; bold marks verified from rendered image. 'voice9_6' etc. printed with underscore in Table 1 (rendered as 'voice9 6' in S3 text layer)."
+  },
+  {
+   "key": "SMOTE-ENN / SMOTE-Tomek",
+   "task": "binary",
+   "n_datasets_claimed": 13,
+   "n_datasets_listed": 15,
+   "characteristics_table": "Table 3, p.6 (printed p.25)",
+   "ir_definition": "not stated in paper (Figure 3 x-axis uses 'Proportion of negative/positive examples'; Table 3 gives Class % (min., maj.))",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "Smote",
+   "smote_kind": "plain SMOTE",
+   "metric": "AUC (%) , mean(std) over 10-fold CV",
+   "classifier": "C4.5 release 8",
+   "table": "Table 4 (best_other also searched in Table 5, pruned rows)",
+   "page": "p.7 (printed p.26); Table 5 p.8 (printed p.27)",
+   "rows_with_smote": 15,
+   "summary": [],
+   "claim": {
+    "quote": "Smote + Tomek and Smote + ENN (two of the methods proposed in this work) in particular for data sets with few positive (minority) examples, provided very good results in practice.",
+    "page": "p.10 (printed p.29), Conclusion"
+   },
+   "stat_test": "Hsu's Multiple Comparison with the Best (MCB), 95% confidence; Tables 6 (pruned) and 7 (unpruned) rank methods per dataset, asterisk = statistically inferior to top-ranked method (p.7-8)",
+   "n_uncertain": 6,
+   "notes": "Proposed methods: Smote+ENN, Smote+Tomek (and CNN+Tomek under-sampler). Part B uses Smote+ENN; Smote+Tomek pruned values are in best_other where it is best. Smote+Tomek pruned AUC (Table 4): Pima 84.46(5.84), German 81.75(4.78), Post-operative 41.80(16.59), Haberman 75.73(6.55), Splice-ie 98.26(0.51), Splice-ei 98.87(0.44), Vehicle 98.96(0.98), Letter-vowel 98.90(0.20), New-thyroid 98.91(1.84), E.Coli 95.98(4.21), Satimage 95.43(1.03), Flag 79.30(28.68), Glass 91.40(8.24), Letter-a 99.91(0.12), Nursery 99.27(0.36). Unpruned (Pruning=no) Smote+ENN / Smote / Smote+Tomek: Pima 83.64(5.35)/85.97(5.82)/85.56(6.02); German 83.90(3.70))/84.51(4.55)/84.02(3.94); Post-operative 59.48(34.91)/68.19(26.62)/47.99(16.61); Haberman 77.01(5.10)/75.45(11.02)/78.41(7.11); Splice-ie 98.88(0.34)/99.19(0.28)/99.13(0.31); Splice-ei 99.49(0.16)/99.52(0.26)/99.51(0.32); Vehicle 98.22(0.90)/99.04(0.85)/99.04(0.85); Letter-vowel 99.19(0.15)/99.15(0.17)/99.14(0.17); New-thyroid 99.22(1.72)/98.91(1.84)/98.91(1.84); E.Coli 95.29(3.79)/95.49(4.30)/95.98(4.21); Satimage 96.06(1.20)/95.69(1.28)/95.69(1.28); Flag 78.56(28.79)/73.87(30.34)/82.06(29.52); Glass 93.40(7.61)/91.27(8.38)/91.27(8.38); Letter-a 99.91(0.14)/99.92(0.12)/99.92(0.12); Nursery 99.20(0.51)/99.75(0.34)/99.53(0.31). All methods balance to 50/50; k-NN steps use HVDM distance; ENN uses 3 nearest neighbours and removes examples of both classes. No G-mean or F-measure reported; AUC is the only per-dataset metric. Tables 8-9 give tree complexity (rules, conditions per rule) for unpruned trees. Text extraction of Tables 4/5 was interleaved, values read from rendered pages 7-8."
+  },
+  {
+   "key": "SMOTE-IPF",
+   "task": "binary",
+   "n_datasets_claimed": null,
+   "n_datasets_listed": 41,
+   "characteristics_table": "Table 1, p.9 (printed 192) for real-world datasets; synthetic datasets described in text Section 4.1, p.7-8",
+   "ir_definition": "IR = N- / N+, 'the relation between the majority class and minority class examples', where N- and N+ are the number of examples of the majority and minority classes (Eq. 1); imbalanced when IR > 1",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "AUC (no G-mean or other metric reported)",
+   "classifier": "C4.5",
+   "table": "Table 6",
+   "page": "p.12 (printed 195)",
+   "rows_with_smote": 9,
+   "summary": [
+    {
+     "label": "Wilcoxon SMOTE–IPF vs. SMOTE, real-world (Table 7, p.12): R+ (SMOTE–IPF) / R- (SMOTE)",
+     "proposed": "45.0",
+     "smote": "0.0"
+    },
+    {
+     "label": "Wilcoxon SMOTE–IPF vs. SMOTE, real-world (Table 7): pWilcoxon",
+     "proposed": "0.0039",
+     "smote": null
+    },
+    {
+     "label": "Aligned Friedman rank, real-world, Filtering group (Table 8; SMOTE not included)",
+     "proposed": "6.89",
+     "smote": null
+    },
+    {
+     "label": "Aligned Friedman rank, real-world, Change-Dir. group (Table 8; SMOTE not included)",
+     "proposed": "9.33",
+     "smote": null
+    }
+   ],
+   "claim": {
+    "quote": "The results show that the new proposal performs better than existing SMOTE generalizations for all these different scenarios.",
+    "page": "p.1 (printed 184)"
+   },
+   "stat_test": "Wilcoxon signed ranks test (SMOTE–IPF vs None and vs SMOTE); aligned Friedman test with Hochberg post-hoc (vs filtering-based and change-direction groups); significance at p < 0.1",
+   "n_uncertain": 5,
+   "notes": "Proposed method: SMOTE–IPF (SMOTE followed by Iterative-Partitioning Filter; majority voting, n=9 partitions, k=3, p=1%; SMOTE k=5, HVDM, balance to 50%). Evaluation: 5 runs of stratified 5-fold CV, AUC, C4.5 (main). Other result tables with SMOTE per dataset: Table 3 (30 synthetic, p.11) and Table 9 (36 noisy real-world, class and attribute noise 20%/40%, p.13); Wilcoxon vs SMOTE also in Table 4 (synthetic: R+ 366.0, R- 99.0, p 0.0050) and Table 10 (noisy). Results for k-NN, SVM, RIPPER and PART are only on the web page http://sci2s.ugr.es/noisebor-imbalanced (p.3), not fetched. Implementation in KEEL (www.keel.es). No supplementary file referenced. All tables were extractable as text (is_image=false)."
+  },
+  {
+   "key": "SMOTE",
+   "task": "binary",
+   "n_datasets_claimed": 9,
+   "n_datasets_listed": 9,
+   "characteristics_table": "Table 2, p.14 (printed 334)",
+   "ir_definition": "not stated in paper",
+   "results_granularity": "per-dataset partial",
+   "smote_in_baselines": "no",
+   "smote_name": "SMOTE (the proposed method itself; columns '50 SMOTE' ... '500 SMOTE' in Table 3 = SMOTE at N% combined with majority under-sampling)",
+   "smote_kind": "not a baseline",
+   "metric": "AUC (printed as 4-digit integers, e.g. 7242)",
+   "classifier": "C4.5",
+   "table": "Table 3",
+   "page": "p.25 (printed 345)",
+   "rows_with_smote": 0,
+   "summary": [
+    {
+     "label": "Text claim (ROC convex hull, all classifiers, p.32 printed 352)",
+     "proposed": "Out of a total of 48 experiments performed, SMOTE-classifier does not perform the best only for 4 experiments.",
+     "smote": null
+    }
+   ],
+   "claim": {
+    "quote": "a combination of our method of over-sampling the minority (abnormal) class and under-sampling the majority (normal) class can achieve better classifier performance (in ROC space) than only under-sampling the majority class.",
+    "page": "p.1 (printed 321), abstract"
+   },
+   "stat_test": "none",
+   "n_uncertain": 7,
+   "notes": "Paper IS SMOTE; there is no plain-SMOTE baseline. Proposed method as presented = SMOTE (k=5 nearest neighbours) combined with random majority under-sampling; ROC curves built by varying under-sampling at fixed SMOTE %. Comparisons: Under-C4.5 and Under-Ripper (plain under-sampling), Ripper Loss Ratio, Naive Bayes with varied priors (compared against SMOTE-C4.5), C4.5 decision thresholds (Phoneme), replication over-sampling (Mammography), SHRINK/one-sided selection (Oil, Tables 4-5, Acc+/Acc-). Only Table 3 gives per-dataset numbers (AUC, C4.5 only); Ripper and Naive Bayes results are ROC plots only (Figs 7-29) and AUCs for Ripper/Naive Bayes are explicitly not included. Table 5 (p.27, printed 347) gives Acc+/Acc- for 500% SMOTE + under-sampling 10%-800% on Oil vs Table 4 SHRINK 82.5%/60.9% and One-sided selection 76.0%/86.6%. Variants also introduced: SMOTE-NC (tested on Adult) and SMOTE-N (proposed, not tested). Paper notes exceptions: Pima (Naive Bayes dominates SMOTE-C4.5), Oil (Under-Ripper dominates SMOTE-Ripper), Can (overlap). A copy 'SMOTE (Original).pdf' exists in Binary folder; not read. Page indices are PDF page numbers; printed page = PDF page + 320."
+  },
+  {
+   "key": "SMOTEBoost",
+   "task": "both",
+   "n_datasets_claimed": 4,
+   "n_datasets_listed": 4,
+   "characteristics_table": "Table 2, p.6 (printed 112)",
+   "ir_definition": "not stated in paper",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "F-value (minority class)",
+   "classifier": "RIPPER",
+   "table": "Tables 3, 4, 5, 6",
+   "page": "p.7 (printed 113) for Tables 3-4; p.8 (printed 114) for Tables 5-6",
+   "rows_with_smote": 4,
+   "summary": [],
+   "claim": {
+    "quote": "SMOTEBoost applied to several highly and moderately imbalanced data sets shows improvement in prediction performance on the minority class and overall improved F-values.",
+    "page": "p.1 (abstract)"
+   },
+   "stat_test": "none",
+   "n_uncertain": 7,
+   "notes": "Proposed method SMOTEBoost (variant of AdaBoost.M2 with SMOTE in each round), base learner RIPPER. Evaluation: 10-fold CV for mammography, satimage, phoneme; separate test set for KDDCup-99 (p.6). Only recall, precision, F-value for minority class are reported; no G-mean or AUC. Precision and recall also reported per setting in Tables 3-6. SMOTE parameter N ranged 100-500. Text p.10 gives relative F-value improvements of SMOTEBoost over AdaBoost.M1: U2R ~4%, R2L 0.61%, mammography 2.2%, satimage 3.4%, phoneme 1.4% (vs boosting, not SMOTE). Figs 2-4 plot precision/recall/F-value over boosting rounds (incl. 'SMOTE applied on RIPPER' line). n_features not printed for any dataset."
+  },
+  {
+   "key": "SOS",
+   "task": "both",
+   "n_datasets_claimed": 6,
+   "n_datasets_listed": 6,
+   "characteristics_table": "none",
+   "ir_definition": "not stated in paper",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "Weighted F1 (only metric in main table; G-mean/AUC not reported)",
+   "classifier": "average over Decision Tree, Logistic Regression, AdaBoost, MLP (Sec 4.1.4)",
+   "table": "Table 2",
+   "page": "7",
+   "rows_with_smote": 6,
+   "summary": [],
+   "claim": {
+    "quote": "In our experiments with 6 datasets and 10 baselines, our method outperforms other oversampling methods in all cases.",
+    "page": "1"
+   },
+   "stat_test": "none stated in paper",
+   "n_uncertain": 7,
+   "notes": "Other SOS variants (Table 2, p.7), VE: 0.571/0.675/0.709/0.672/0.607/0.854; VP: 0.559/0.658/0.712/0.680/0.607/0.857 for Default/Shoppers/Surgical/WeatherAUS/Buddy/Satimage. Datasets split in paper as Single Minority (Default, Shoppers, Surgical, WeatherAUS) vs Multiple Minority (Buddy, Satimage). Code and data at https://github.com/JayoungKim408/SOS (not fetched). Table 9 (p.11) is full-synthesis experiment with Acc/F1, not used."
+  },
+  {
+   "key": "SOUP",
+   "task": "multiclass",
+   "n_datasets_claimed": 19,
+   "n_datasets_listed": 19,
+   "characteristics_table": "Table 2, p.8 (printed 776) (image-rendered and read visually; is_image=true)",
+   "ir_definition": "not stated in paper",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "Static-SMOTE",
+   "smote_kind": "SMOTE variant (multiclass/ensemble wrapper)",
+   "metric": "G-mean (multiclass geometric mean of per-class sensitivities)",
+   "classifier": "J4.8 (J48) decision tree",
+   "table": "Table 6",
+   "page": "p.11 (printed 779)",
+   "rows_with_smote": 19,
+   "summary": [
+    {
+     "label": "Table 8 average rank J4.8 (lower better; SOUP vs MRBB, OVO RUS, OVO SO, OVO ROS, OVO SU, OVO NCR; Static-SMOTE not included)",
+     "proposed": "3.29",
+     "smote": "not in table"
+    },
+    {
+     "label": "Table 7 Wilcoxon p-value SOUP vs Static-SMOTE, G-mean, J4.8",
+     "proposed": "<0.001",
+     "smote": "<0.001"
+    },
+    {
+     "label": "Table 7 Wilcoxon p-value SOUP vs Static-SMOTE, PART / kNN",
+     "proposed": "PART <0.001; kNN 0.002",
+     "smote": "same"
+    }
+   ],
+   "claim": {
+    "quote": "It also works significantly better than Static-SMOTE and Global-CS two—popular preprocessing methods for multiclass imbalances.",
+    "page": "p.12 (printed 780)"
+   },
+   "stat_test": "Friedman (p=0.058 for final comparison, not rejected); Nemenyi post-hoc (Fig. 2); paired Wilcoxon SOUP vs others (Table 7, p.11); alpha 5%",
+   "n_uncertain": 6,
+   "notes": "Proposed = SOUP (Similarity Oversampling and Undersampling Preprocessing); other variants OVO SO / OVO SU also introduced. SMOTE baseline = Static-SMOTE (Fernandez-Navarro et al. 2011): iteratively picks smallest class and oversamples with standard SMOTE treating non-selected classes as majority; iterations = number of classes (p.3). Classifiers evaluated: J4.8, PART, k-NN (k=3); J4.8 used as first reported. Metrics: G-mean, average minority, F-score; G-mean per-dataset tables only for J4.8 in paper. Other classifiers' per-dataset results are on web page www.cs.put.poznan.pl/mlango/publications/soup.html (as printed; not fetched). Table 5 (p.10) also gives per-dataset G-mean for Static-SMOTE and baseline with J4.8; baseline column not used. Static-SMOTE not included in Table 8 ranking. Text claim p.1 abstract: 'competitive with the most popular decomposition ensembles and better than specialized preprocessing techniques for multi-imbalanced problems'."
+  },
+  {
+   "key": "SPE",
+   "task": "binary",
+   "n_datasets_claimed": null,
+   "n_datasets_listed": 6,
+   "characteristics_table": "Table III, p.8",
+   "ir_definition": "Imbalance Ratio (IR) = n_majority / n_minority = |N| / |P|",
+   "results_granularity": "per-dataset partial",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "GM (G-mean)",
+   "classifier": "KNN first reported (Credit Fraud); DT and MLP rows also listed. Other datasets use their own Table III model, SMOTE missing there",
+   "table": "Table IV",
+   "page": "p.8",
+   "rows_with_smote": 3,
+   "summary": [],
+   "claim": {
+    "quote": "SPE demonstrates the best performance on all tested real-world tasks using 5 classifiers over 4 evaluation criteria.",
+    "page": "p.8 (Section VI-B, results discussion); conclusion p.11: 'our framework has better performance, wider applicability, and higher computational efficiency'"
+   },
+   "stat_test": "none stated in paper (mean and std of 10 independent runs only)",
+   "n_uncertain": 7,
+   "notes": "Metric is labelled GM; paper defines G-mean as sqrt(Recall*Precision) (p.3). Other metrics in Table IV: AUCPRC, F1, MCC. Table IV note (footnote 4, p.8) says only representative results are listed; additional results on github.com/ZhiningLiu1998/self-paced-ensemble (as printed). Table II (p.6): checkerboard AUCPRC, 8 classifiers, SMOTE vs SPE10 (e.g. KNN SMOTE 0.271+-0.003, SPE10 0.498+-0.004). Table V (p.9): Credit Fraud AUCPRC with 12 resamplers incl. SMOTE (KNN 0.362+-0.005, SPE10 0.767+-0.001). Table VI (p.10): ensemble comparison with C4.5 on Credit Fraud (GM n=10: SMOTEBoost 0.847+-0.014, SMOTEBagging 0.819+-0.002, SPE 0.835+-0.018). Number of datasets: 1 synthetic + 5 real. No supplementary file in folder searched (not found by title search)."
+  },
+  {
+   "key": "SPIDER2",
+   "task": "binary",
+   "n_datasets_claimed": null,
+   "n_datasets_listed": 33,
+   "characteristics_table": "none",
+   "ir_definition": "not stated in paper (imbalance ratio printed as e.g. '1:7', '1:3 to 1:9')",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "no",
+   "smote_name": "not used in paper (SMOTE only mentioned in related work, p.2)",
+   "smote_kind": "not a baseline",
+   "metric": "G-mean",
+   "classifier": "MODLEM (unpruned)",
+   "table": "Table 2",
+   "page": "p.7 (printed 164)",
+   "rows_with_smote": 0,
+   "summary": [],
+   "claim": {
+    "quote": "if data was sufficiently disturbed by these factors, then the focused re-sampling methods – NCR and our SPIDER2 – strongly outperformed the oversampling methods.",
+    "page": "p.1"
+   },
+   "stat_test": "Wilcoxon Signed Ranks Test (alpha=0.05) for pairwise comparison, reported only for real data sensitivity (Table 4), p.8",
+   "n_uncertain": 6,
+   "notes": "Proposed = SPIDER2 (SP2). Only G-mean per-dataset table is Table 2 (artificial, disturbance series); Tables 1, 3, 4 report sensitivity only. Real data (Table 4) compare Base/RO/NCR/SP1/SP2 (no CO). Preliminary experiments with 200-1200 examples, IR 1:3-1:9, 1-5 sub-regions not reported; 600-example sets also omitted (p.4-5). Table 2 C4.5 SP2 G-mean values also available. Evaluation: sensitivity, specificity, G-mean, accuracy; specificity/accuracy tables not printed."
+  },
+  {
+   "key": "SVDD-WSMOTE",
+   "task": "binary",
+   "n_datasets_claimed": 24,
+   "n_datasets_listed": 35,
+   "characteristics_table": "Table 2, p.23",
+   "ir_definition": "ratio of the number of instances in the majority class to the number of instances in the minority class (Intro); Table 2 prints it as 1:x",
+   "results_granularity": "per-dataset",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "G-M (G-mean)",
+   "classifier": "BPNN (first reported; abstract highlights none; Tables 4 and 5 use LDA and SVM)",
+   "table": "Table 3 (and continued)",
+   "page": "24-25",
+   "rows_with_smote": 24,
+   "summary": [
+    {
+     "label": "Holm's test p-value vs SVDDWSMOTE (control), G-Means, BPNN (Table 7, p.32)",
+     "proposed": "control",
+     "smote": "3.2863e-08 (alpha 0.0253)"
+    }
+   ],
+   "claim": {
+    "quote": "the experimental results on some UCI datasets show the proposed approach performs statistically better than other existing over-sampling methods and some class-overlap based methods in most datasets",
+    "page": "37"
+   },
+   "stat_test": "Friedman test then Holm's post-hoc with SVDDWSMOTE as control (Table 7, p.32); mean rankings in Figs 16-18 (values not in text)",
+   "n_uncertain": 10,
+   "notes": "Proposed = SVDDWSMOTE (printed also as 'SVDDWSMOTE' in abstract). Metrics G-M, F-M, AUC in Tables 3-5 (BPNN, LDA, SVM). best_other = highest G-M among all baselines including SMOTE (ties listed with '/'), copied not judged. Section 5.6 compares with class-overlap methods (SPIDER, NBU, OBU etc., Table 9 p.35-36 Holm's test), not extracted. Table 9 on Holm vs class-overlap methods; Table 6 computation time p.30. Simulated data on GitHub: https://github.com/Zheng7777/simulated-datasets.git (not fetched)."
+  },
+  {
+   "key": "Safe-Level-SMOTE",
+   "task": "binary",
+   "n_datasets_claimed": 2,
+   "n_datasets_listed": 2,
+   "characteristics_table": "Table 3, p.6 (printed p.480)",
+   "ir_definition": "not stated in paper (Table 3 reports '% Minority' instead of an IR)",
+   "results_granularity": "plots only",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "AUC (only shown in Fig. 2(d), Haberman, SVMs); no G-mean reported",
+   "classifier": "SVMs (only classifier plotted with AUC); first reported classifier is C4.5",
+   "table": "Fig. 2 (line plots only; not digitised)",
+   "page": "p.6-7 (printed p.480-481)",
+   "rows_with_smote": 0,
+   "summary": [],
+   "claim": {
+    "quote": "By synthesizing the minority instances more around larger safe level, we achieve a better accuracy performance than SMOTE and Borderline-SMOTE.",
+    "page": "p.1 (abstract)"
+   },
+   "stat_test": "not stated in paper",
+   "n_uncertain": 4,
+   "notes": "Results are only line plots (Fig. 2 a-d: precision C4.5 Haberman; recall Naive Bayes Satimage; F-value C4.5 Satimage; AUC SVMs Haberman) vs over-sampling percent; not digitised per instructions. Each panel shows a different dataset/classifier/metric combination; no tables of numeric results. Metrics used: precision, recall, F-value (beta=1), AUC. Classifiers: C4.5, Naive Bayes, SVMs. Text claims Safe-Level-SMOTE and SMOTE show similar AUC on Haberman with SVMs (p.6). No supplementary material referenced."
+  },
+  {
+   "key": "SplitBal",
+   "task": "binary",
+   "n_datasets_claimed": 46,
+   "n_datasets_listed": 46,
+   "characteristics_table": "Table 3, p.6 (printed 1628)",
+   "ir_definition": "IR = number of majority class instances / number of minority class instances (footnote 1)",
+   "results_granularity": "aggregate only",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "AUC (average over 46 data sets)",
+   "classifier": "Naive Bayes (first reported; abstract highlights none)",
+   "table": "Table 9",
+   "page": "p.9 (printed 1631)",
+   "rows_with_smote": 0,
+   "summary": [
+    {
+     "label": "Average AUC over 46 data sets, Naive Bayes (Table 9, p.9)",
+     "proposed": "0.8811",
+     "smote": "0.8646"
+    },
+    {
+     "label": "Rank among 14 methods by average AUC, Naive Bayes (Table 10, p.10)",
+     "proposed": "2",
+     "smote": "10"
+    },
+    {
+     "label": "Sum of ranks over six classifiers (Table 10, p.10)",
+     "proposed": "11",
+     "smote": "54"
+    },
+    {
+     "label": "Final rank over six classifiers (Table 10, p.10)",
+     "proposed": "1",
+     "smote": "10"
+    },
+    {
+     "label": "Average AUC, J48 (Table 9)",
+     "proposed": "0.9146",
+     "smote": "0.8499"
+    },
+    {
+     "label": "Average AUC, Ripper (Table 9)",
+     "proposed": "0.9050",
+     "smote": "0.8423"
+    },
+    {
+     "label": "Average AUC, RandomForest (Table 9)",
+     "proposed": "0.9309",
+     "smote": "0.9095"
+    },
+    {
+     "label": "Average AUC, SMO (Table 9)",
+     "proposed": "0.8810",
+     "smote": "0.8485"
+    },
+    {
+     "label": "Average AUC, IBK (Table 9)",
+     "proposed": "0.9141",
+     "smote": "0.8973"
+    }
+   ],
+   "claim": {
+    "quote": "The experimental results on 46 imbalanced data sets show that our proposed method is usually superior to the conventional imbalance data handling methods when solving the highly imbalanced problems.",
+    "page": "p.1"
+   },
+   "stat_test": "Friedman test (alpha 0.05; all six p-values < 0.05) then Nemenyi post hoc (alpha 0.05), Fig. 2 p.10; text p.10 states the two combinations outperform RUS, ROS, SMOTE and MetaCost significantly for all six classifiers",
+   "n_uncertain": 4,
+   "notes": "Binary-only paper (KEEL highly imbalanced, IR 8.10-41.40). Metric is AUC only (G-mean and F-measure explicitly not used, p.6). Per-dataset AUC for SplitBal+MaxDistance across six classifiers exists in Table 8 p.9 (Naive Bayes SplitBal Avg 0.8811). SMOTE appears only as average AUC (Table 9), ranks (Table 10) and Nemenyi plots (Fig. 2). Other variants: five ensemble rules (MaxDistance, MinDistance, ProDistance, MajDistance, SumDistance) vs Kittler rules (Tables 4-7). Weka default params, IBK K=5; SMOTE parameters not stated in paper. Fuzzy comparison Chi3-GTS/Chi5-GTS in Table 11 p.11."
+  },
+  {
+   "key": "Survey: Stop Oversampling",
+   "task": "binary",
+   "n_datasets_claimed": 3,
+   "n_datasets_listed": 4,
+   "characteristics_table": "Table 2, p.9",
+   "ir_definition": "not stated in paper (no imbalance ratio defined; Equation 3 defines the error rate Error = CM/SS, CM = synthetic examples close to majority examples, SS = total synthetic subset)",
+   "results_granularity": "per-dataset partial",
+   "smote_in_baselines": "yes",
+   "smote_name": "M1 SMOTE [82] (Table 1); mapped to 'M1' in Table 3",
+   "smote_kind": "plain SMOTE",
+   "metric": "Error rate ER = CM/SS (fraction of synthetic examples closer to hidden majority examples); lower is better; NOT a classifier metric",
+   "classifier": "none (Hamming-type distance similarity, no classifier)",
+   "table": "Table 3",
+   "page": "9-10",
+   "rows_with_smote": 0,
+   "summary": [
+    {
+     "label": "M1 Avg. ER (3 datasets)",
+     "proposed": null,
+     "smote": "0.23"
+    },
+    {
+     "label": "M1 Avg. Rank (of 72, lower better)",
+     "proposed": null,
+     "smote": "24"
+    }
+   ],
+   "claim": {
+    "quote": "all oversampling methods studied generate minority samples that are most likely to be majority. Given data and methods in hand, we argue that oversampling in its current forms and methodologies is unreliable",
+    "page": "1"
+   },
+   "stat_test": "none stated; no proposed method (critical review; no new oversampling method)",
+   "n_uncertain": 6,
+   "notes": "Critical review proposing a validation system (hide 10/25/50% of majority examples, compare synthetic points to hidden majority); no proposed oversampling method, so 'proposed' is null. Table 3 (10% hidden) gives M1 SMOTE rows above; 25% and 50% results only as box plots in Figure 3 (p.11). Table 4 (Vehicle3, 25% hidden) omits SMOTE. Lowest-ER method M51 (Avg ER 0.00, rank 1); M24 rank 2, M62 rank 3 (Table 3). Method names for M51 etc. not looked up. Experiments repeated 5 times, averages reported."
+  },
+  {
+   "key": "Tomek Links",
+   "task": "binary",
+   "n_datasets_claimed": 1,
+   "n_datasets_listed": 1,
+   "characteristics_table": "none (Fig. 6 caption p.3 and text p.4)",
+   "ir_definition": "not stated in paper",
+   "results_granularity": "no comparison",
+   "smote_in_baselines": "no",
+   "smote_name": "",
+   "smote_kind": "not a baseline",
+   "metric": null,
+   "classifier": null,
+   "table": null,
+   "page": null,
+   "rows_with_smote": 0,
+   "summary": [],
+   "claim": null,
+   "stat_test": "none",
+   "n_uncertain": 2,
+   "notes": "Added 18 Oct 2026 by Claude after Toon decided to count Tomek Links. Read from local PDF text layer, Fig. 6 caption p.3 and p.4."
+  },
+  {
+   "key": "k-means SMOTE",
+   "task": "binary",
+   "n_datasets_claimed": 90,
+   "n_datasets_listed": 97,
+   "characteristics_table": "Table 2, p.15 (printed 14)",
+   "ir_definition": "not stated in paper (Table 2 column 'imbalance ratio' consistent with #majority/#minority but formula not given for datasets; cluster-level IR defined as (majority count(c)+1)/(minority count(c)+1), p.8)",
+   "results_granularity": "plots only",
+   "smote_in_baselines": "yes",
+   "smote_name": "SMOTE",
+   "smote_kind": "plain SMOTE",
+   "metric": "AUPRC",
+   "classifier": "KNN",
+   "table": "Figure 8 (only per-dataset results; dot/interval plot, no printed values)",
+   "page": "p.24 (printed 23)",
+   "rows_with_smote": 0,
+   "summary": [
+    {
+     "label": "Mean score improvement vs SMOTE, KNN, AUPRC (Figure 6, p.18)",
+     "proposed": "0.035 (k-means SMOTE minus SMOTE)",
+     "smote": null
+    },
+    {
+     "label": "Mean score improvement vs SMOTE, KNN, F1 (Figure 6)",
+     "proposed": "0.038",
+     "smote": null
+    },
+    {
+     "label": "Mean score improvement vs SMOTE, KNN, g-mean (Figure 6)",
+     "proposed": "0.019",
+     "smote": null
+    },
+    {
+     "label": "Mean score improvement vs SMOTE, GBM, AUPRC/F1/g-mean (Figure 6)",
+     "proposed": "0.018 / 0.021 / 0.018",
+     "smote": null
+    },
+    {
+     "label": "Mean score improvement vs SMOTE, LR, AUPRC/F1/g-mean (Figure 6)",
+     "proposed": "0.017 / 0.033 / 0.007",
+     "smote": null
+    },
+    {
+     "label": "Max score improvement vs SMOTE, KNN, AUPRC/F1/g-mean (Figure 7, p.18)",
+     "proposed": "0.21 / 0.3 / 0.22",
+     "smote": null
+    },
+    {
+     "label": "Max score improvement vs SMOTE, GBM, AUPRC/F1/g-mean (Figure 7)",
+     "proposed": "0.12 / 0.22 / 0.21",
+     "smote": null
+    },
+    {
+     "label": "Max score improvement vs SMOTE, LR, AUPRC/F1/g-mean (Figure 7)",
+     "proposed": "0.17 / 0.16 / 0.043",
+     "smote": null
+    },
+    {
+     "label": "Holm p-value, k-means SMOTE (control) vs SMOTE, KNN, AUPRC (Table 3, p.18)",
+     "proposed": "control",
+     "smote": "1.40E-16"
+    },
+    {
+     "label": "Holm p-value vs SMOTE, KNN, F1 (Table 3)",
+     "proposed": "control",
+     "smote": "4.29E-13"
+    },
+    {
+     "label": "Holm p-value vs SMOTE, KNN, g-mean (Table 3)",
+     "proposed": "control",
+     "smote": "5.46E-06"
+    },
+    {
+     "label": "Holm p-value vs SMOTE, GBM, AUPRC/F1/g-mean (Table 3)",
+     "proposed": "control",
+     "smote": "3.61E-10 / 9.71E-10 / 4.03E-05"
+    },
+    {
+     "label": "Holm p-value vs SMOTE, LR, AUPRC/F1/g-mean (Table 3)",
+     "proposed": "control",
+     "smote": "6.03E-11 / 1.84E-11 / 1.21E-06"
+    },
+    {
+     "label": "Datasets with no improvement over SMOTE (KNN, AUPRC; text p.19)",
+     "proposed": "'Only in 6 out of 90 datasets tested there were no improvements'",
+     "smote": null
+    },
+    {
+     "label": "Mean rank (Figure 5, p.17)",
+     "proposed": "plot only; text: better than 2 in 8 of 9 classifier/metric cases, better than 3 in remaining case",
+     "smote": "plot only"
+    }
+   ],
+   "claim": {
+    "quote": "the proposed method consistently outperforms the most widely available oversampling techniques such as SMOTE, borderline-SMOTE, and random oversampling.",
+    "page": "p.20 (printed 19), Conclusion"
+   },
+   "stat_test": "Friedman test (alpha=0.05) then Holm step-down post-hoc with k-means SMOTE as control; ranks averaged over datasets and 5 repetitions (Demsar)",
+   "n_uncertain": 8,
+   "notes": "Proposed: k-means SMOTE (k in {2,20,50,100,250,500}, knn in {3,5,20,inf}, irt in {1,inf}, de in {0,2,#features}); SMOTE knn in {3,5,20}. Classifiers LR, KNN (k 3,5,8), GBM (50,100,200 trees); abstract highlights none, LR listed first, but only KNN has per-dataset plot. Metrics g-mean, F1, AUPRC; best value over grid per metric; evaluation: 5-fold CV repeated five times (p.13; stratification discussed generally on p.10 but not stated for the experiments). All oversamplers balance classes fully. Figure 9 (p.25): false positives of k-means SMOTE as % of SMOTE per dataset (plot), avg 55% reduction. Modified/simulated datasets released at https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz; toy at .../v0.0.2/toy_datasets.tar.gz; code https://github.com/felix-last/kmeans_smote (not fetched). Figure 8 ordering top-to-bottom (KNN AUPRC): vowel0, libra, newthyroid2, iris6, iris, libra2, new-thyroid1, iris2, libra4, dermatology-6, segment, vehicle, libra6, ecoli, iris4, segment2, page-blocks0, page-blocks-1-3_vs_4, ecoli2, yeast-2_vs_4, wine, yeast-0-2-5-7-9, ecoli6, vehicle2, yeast3, yeast5, glass, ecoli4, led-digit, segment4, wine2, wine4, vehicle4, breast_tissue, heart, segment6, pima, glass2, liver_disorders, yeast-0-2-5-6, wine6, yeast-2_vs_8, yeast1, vehicle6, segment15, heart2, segment10, breast_tissue4, yeast-0-5-6-7-9_vs_4, breast_tissue2, glass4, vehicle10, vehicle15, liver_disorders2, segment20, poker-9_vs_7, haberman, pima2, glass6, yeast-0-3-5-9_vs_7-8, vehicle20, heart4, haberman2, liver_disorders4, yeast4, heart6, haberman4, pima4, liver_disorders10, cleveland-0_vs_4, liver_disorders6, haberman6, heart10, liver_disorders15, yeast-1-2-8-9_vs_7, pima6, pima20, pima15, haberman10, pima10, heart15, simulated1, simulated2, simulated6, simulated7, simulated10, simulated4, simulated8, simulated5, simulated3, simulated9. Text: biggest gain ~0.2 on vehicle20; gains <0.03 on vowel0, libra, newthyroid2, iris6, iris, libra2. Dataset entries in this JSON: 12 UCI + 20 KEEL (Table 2) + poker-9_vs_7 + 10 simulated + 49 undersampled + 5 toy = 97."
+  }
+ ]
+}

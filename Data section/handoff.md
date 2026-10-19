@@ -30,7 +30,7 @@
 ผู้รับผิดชอบ section นี้: Toon
 เจ้าของ repo: Supawit (P)
 เป้าหมายวารสาร: JAIR
-อัปเดตล่าสุด: 14 ตุลาคม 2026
+อัปเดตล่าสุด: 19 ตุลาคม 2026 (บันทึกล่าสุดอยู่ท้ายข้อ 4)
 ที่อยู่ของโฟลเดอร์นี้: `Data section/` ที่ระดับบนสุดของ repo
 
 อ่านไฟล์นี้ไฟล์เดียวแล้วต่องานได้ รายละเอียดแต่ละเรื่องอยู่ในไฟล์ที่อ้างถึงท้ายหัวข้อ
@@ -61,6 +61,9 @@
 | Original | benchmark มาตรฐาน (UCI / KEEL) ใช้ตามที่แจกมา ไม่ดัดแปลง |
 | Modified | ดัดแปลงเอง เช่น binarize จาก multiclass, รวมคลาส, สุ่มตัด minority เพื่อดัน IR, ใส่ noise |
 | Synthetic | ผู้เขียนสร้างขึ้นเอง |
+
+**ป้ายที่ใช้จริงตอนนี้ (18 ต.ค.)** 4 แบบ + not stated: original, repository-defined (KEEL หรือ imbalanced-learn เป็นผู้แบ่งคลาส), modified, synthetic
+repository-defined คือทางเลือกที่ 3 ของ decisions-pending เรื่องที่ 2 ใช้ระหว่างรออาจารย์ ยุบกลับเป็น 3 แบบได้ที่ `keel_rule()`
 
 แล้วดูว่าแต่ละ paper "ชนะ" บนข้อมูลแบบไหน
 
@@ -97,15 +100,21 @@ Fisher exact ใช้เป็นตัวอ้างอิงหยาบเ�
 |---|---|
 | Paper ที่ต่างกันจริงใน Drive | 76 |
 | Paper ที่มีระเบียนแล้ว | 76 |
-| Paper ที่รายชื่อ dataset กระทบยอดครบ | 74 |
-| แถว `extraction` (1 แถว = 1 dataset ใน 1 paper) | 1,460 |
-| ในนั้นเป็นแถวก้อนรวม | 10 แถว แทน 320 dataset |
-| ชื่อ dataset ที่ยังค้าง | 13 |
+| Paper ที่รายชื่อ dataset กระทบยอดครบ | 75 (ที่เหลือคือ Tomek Links ซึ่งไม่มีชื่อให้ลง) |
+| แถว `extraction` (1 แถว = 1 dataset ใน 1 paper) | 1,473 |
+| ในนั้นเป็นแถวก้อนรวม | 11 แถว แทน 324 dataset |
+| ชื่อ dataset ที่ยังค้าง | 0 |
+| paper ที่มีค่าคุณลักษณะเชิงตัวเลข (N, features, IR) ในชีต | 9 จาก 76 (154 แถว) |
+| **อ่าน PDF ครบแล้ว (18 ต.ค.)** | 72 จาก 72 paper เชิงประจักษ์ |
+| dataset entry จากรอบอ่านครบ (`out/full_datasets.csv`) | 1,653 แถว มีตารางและหน้าทุกแถว |
+| ผลเทียบวิธีที่เสนอกับ SMOTE รายชุด (`out/full_outcome_rows.csv`) | 835 แถว 44 paper (plain SMOTE 542 แถว 31 paper) |
+| ข้อที่ผู้อ่านไม่มั่นใจ (`out/full_uncertain.csv`) | 452 ข้อ ยังไม่ได้ไล่ |
 | **แถวที่ตรวจกับ paper ต้นฉบับแล้ว** | **0** |
 | แถวที่มี `page_ref` | 0 |
 | แถวที่ใช้ทดสอบ H1/H2 ได้ | 0 |
 
-**ยังไม่มีตัวเลขใดในโฟลเดอร์นี้ที่เขียนลง manuscript ได้** ทุกอย่างเป็นโครงที่รอการตรวจ
+**ยังไม่มีตัวเลขใดในโฟลเดอร์นี้ที่เขียนลง manuscript ได้** ทุกอย่างเป็น ai_draft ที่รอการตรวจ
+ข้อมูลรอบอ่านครบ (`ai-draft/full/`) ยังไม่ได้ merge เข้า workbook ชีต `extraction` workbook ยังเป็นรายชื่อชุดเดิม 1,473 แถว
 
 ---
 
@@ -463,6 +472,775 @@ push สำเร็จเป็น `45ad6c4` บน `origin/main` ตรวจ�
 ซึ่งไม่จริง มีแค่ 1 commit และไฟล์ไม่มีเนื้อหานั้น ตรวจพบตอนจะย้ายโฟลเดอร์
 ทุกครั้งที่อ้างว่าเขียนอะไรลงไฟล์แล้ว ให้ `grep` ยืนยันในไฟล์จริงก่อนรายงาน
 
+### 16 ตุลาคม 2026 ร่างโครง section และแผนที่หลักฐาน
+
+**fetch ก่อนเริ่ม** `origin/main` ตรงกับ `HEAD` ที่ `d63c4c1` ไม่มีของใหม่จากฝ่ายอื่น ไม่ต้อง pull
+fetch ทิ้ง `.git/objects/maintenance.lock` ไว้เพราะยังไม่มีสิทธิ์ลบ ขอสิทธิ์ลบในโฟลเดอร์ repo แล้วลบ lock ตัวนั้นทิ้ง
+
+**งานรอบนี้** Toon เลือกทำงานที่ตกลงไว้ 14 ต.ค. (ร่างโครง + แมปหลักฐาน) เพราะข้อ 7 ขั้นที่ 1 ยังรออาจารย์
+ผลอยู่ใน `section-outline.md` 9 หัวข้อ D1 ถึง D9 แต่ละหัวข้อเขียนเป็นคำถาม ไม่ใช่ข้อสรุป
+บอกหลักฐานที่มี ไฟล์/คอลัมน์ที่อยู่ ขอบเขต (กี่ paper กี่แถว) และสถานะ พร้อมร่าง / ตรวจเฉพาะจุด / บล็อก
+มีช่อง "insight ของ Toon" เว้นว่างไว้ทุกหัวข้อ ไม่ได้เติมแทน
+ท้ายไฟล์มีตารางลำดับงาน 7 ขั้นที่สั้นที่สุดไปถึงตัวหนังสือ มีแค่ขั้นสุดท้ายที่ต้องรออาจารย์
+
+**สิ่งที่เจอระหว่างทำ เรื่องขอบเขตของตัวเลขในข้อ 5**
+- ค่าคุณลักษณะเชิงตัวเลขในชีตมีแค่ **9 จาก 76 paper** (154 แถว) อีก 67 paper มีแต่ชื่อ
+- ทะเบียน variant ที่ให้ตัวเลข "20 จาก 75 ชื่อ" สร้างจาก **8 paper** เท่านั้น (88 คู่ paper กับชื่อ)
+  ไม่ใช่ทั้ง corpus ข้อ 5 เขียนไว้โดยไม่บอกขอบเขตนี้ ถ้าเอาไปเขียนต้องระบุ
+- นิยาม IR ที่ติดป้ายไว้อยู่ใน 150 แถวของ 8 paper เดียวกัน คอลัมน์ `ir_definition` ในชีตยังว่าง
+- ตารางใน `dataset-usage-recon.md` ข้อ 2 ใช้ตัวหาร 69 paper ซึ่งเก่าแล้ว ต้องรันใหม่ด้วย 76
+
+**บั๊กที่เจอและแก้แล้ว ใน guard ที่ใส่เมื่อเช้า 16 ต.ค.**
+`v[:1] in "=+-@"` เป็น True เมื่อ `v` เป็นสตริงว่าง เพราะใน Python `"" in "abc"` เป็น True เสมอ
+ผลคือทุกช่องที่ควรว่างกลายเป็น `'` ตัวเดียว รวม **1,705 ช่อง** ในชีต `extraction`
+(`ai_hint_data_type` 1,057 ช่อง, `group_in_paper` 648 ช่อง) ชีตอื่นไม่โดน
+แก้เป็น `v and v[0] in "=+-@"` ใน `build/make_workbook.py` แล้ว regenerate
+เทียบ workbook ก่อนและหลังทีละ cell ทุกชีต ต่างกันแค่ 1,705 ช่องนั้น จาก `'` เป็นว่าง ไม่มีค่าอื่นเปลี่ยน
+**ผลต่อการวิเคราะห์** ถ้าใครกรองแถวด้วย `ai_hint_data_type` ว่าง หรือนับ `group_in_paper` ที่มีค่า
+ระหว่างเช้าถึงตอนนี้ จะได้ตัวเลขผิด เท่าที่รู้ยังไม่มีใครใช้
+
+**ยังไม่ได้ทำ** ยังไม่ได้ commit รอ Toon ดู `section-outline.md` ก่อน
+
+### 16 ตุลาคม 2026 เปลี่ยนทิศ: ดูการเลือกและจัดการข้อมูลทั้ง 76 paper ไม่ใช่ MWMOTE เรื่องเดียว
+
+**Toon ทัก** handoff กับ outline ไปเน้น MWMOTE ทั้งที่สิ่งที่ต้องการคือภาพทั้งวงการ
+ว่าแต่ละ paper เลือกและจัดการ data อย่างไร (MWMOTE ลงลึกเพราะตาราง 5 เป็นรูปภาพจนค้างนาน ไม่ได้ตั้งใจให้เป็นแกน)
+
+**ไม่ได้อ่านใหม่ทั้งหมด** Toon ถามว่าทำงานซ้ำไหม ตรวจแล้วพบว่า `ai-draft/papers.json` จากรอบ 6 ต.ค.
+มีฟิลด์ระดับ paper ที่ตรงกับคำถามอยู่แล้ว 69 จาก 76 เรื่อง (`sources` `srcdet` `crit` `prep` `origin` `spec` `ev`)
+แต่ไม่เคยถูกเอามาวิเคราะห์ข้าม paper ใช้แค่นับชื่อ dataset จึงทำแค่ 2 อย่าง
+
+1. **อ่าน PDF ใหม่เฉพาะ 7 เรื่องที่ไม่มีฟิลด์** INOS, SMOTE-IPF, HDE, NROMM, GOIO, DGOT, Loyalty-SMOTE
+   ใช้ subagent เรื่องละตัว schema อยู่ที่ `ai-draft/new7/SCHEMA.md` ผลอยู่ที่ `ai-draft/new7/<key>.json`
+   **ทุกค่ามีเลขหน้าและคำพูดยกมา** (13 ถึง 24 รายการต่อเรื่อง) ต่างจาก 69 เรื่องเดิมที่ไม่มีเลขหน้า
+   NROMM อ่านทั้งตัว paper และ supplementary เลขหน้าขึ้นต้นด้วย main / supp
+   สิ่งที่ subagent รายงานว่าผิดปกติ: NROMM โปรโตคอลขัดกันเอง (2-fold x5 ที่ supp p.13 กับ stratified 10-fold ที่ supp p.19)
+   และชุด D1 ถึง D10 มีชื่อใน supp Table 1 แต่ไม่บอก repository, Loyalty-SMOTE บอกว่า group 3 มี 9 ชุดแต่ Table 4 มี 8,
+   DGOT สะกดชื่อชุดไม่ตรงกันข้ามตาราง (page-blocks/page_blocks, bank/bank_small), HDE ติดป้าย madelon ว่ามาจาก KEEL,
+   GOIO กับ DGOT ตารางเป็นรูปภาพ subagent อ่านจากหน้าที่ render **ยังไม่ได้สุ่มตรวจคำพูดของ subagent กับ PDF**
+2. **ให้รหัส 4 มิติทั้ง 76 เรื่อง** `crit_type` (ให้เหตุผลไหม), `basis` (เหตุผลแบบไหน), `inherited_from` (ยกชุดมาจากใคร),
+   `minority_rule` (บอกไหมว่าคลาสไหนเป็น minority) รหัสพร้อมนิยามอยู่ที่ `ai-draft/data_handling_codes.json`
+   Claude ให้รหัส 69 เรื่องจากข้อความในฟิลด์ ไม่ได้เปิด PDF จึงเป็นการตีความซ้อนบนร่างของ AI อีกชั้น ต้องตรวจ
+
+`build/data_handling_matrix.py` รวมทุกอย่างเป็น `out/data_handling_matrix.csv` (1 แถวต่อ paper พร้อมข้อความต้นทาง)
+และ `out/data_handling_summary.json` (ตัวนับ) รายงานอ่านง่ายอยู่ที่ `data-handling-corpus.md`
+**รายงาน md สร้างครั้งเดียวด้วยสคริปต์ inline ไม่ได้เก็บตัวสร้างไว้** ตัวเลขทุกตัวในนั้นมาจาก `out/data_handling_summary.json`
+ถ้าแก้รหัสแล้วรันสคริปต์ใหม่ md จะไม่อัปเดตตาม ต้องสร้างใหม่
+
+**ตัวหาร** 72 paper เชิงประจักษ์ ตัด ENN, Tomek Links, AdaBoost, Survey: SMOTE Review ออก
+(Tomek มีชุดตัวอย่าง toy แต่ไม่ได้ใช้ประเมินวิธี จึงตัด ถ้าไม่เห็นด้วยแก้ที่รหัส `n.a.`)
+
+**สิ่งที่ตัวเลขขึ้นกับคำตัดสินที่ยังไม่มี** paper ที่ดัดแปลงข้อมูลอย่างน้อยหนึ่งแบบได้ 51 จาก 72
+ถ้านับไฟล์ KEEL 2 คลาสเป็น Original (decisions-pending เรื่องที่ 2) เหลือ 46
+
+**แก้รหัสระหว่างทาง** AB-SMOTE เคยใส่ "threshold from Fernandez et al. 2013" ใน `inherited_from`
+ซึ่งผิด เพราะยืมเกณฑ์คัด ไม่ได้ยืมรายชื่อ dataset เอาออกแล้ว เกณฑ์ยังอยู่ใน `basis`
+
+**มิติที่มีแค่ 7 เรื่อง** split, resample ใน fold, missing value, nominal, normalise, คอลัมน์ตารางคุณลักษณะ,
+นิยามและรูปแบบพิมพ์ IR, ที่ประกาศการดัดแปลง 69 เรื่องเดิมไม่ได้เก็บเป็นช่อง **ห้ามตีความว่า paper ไม่บอก**
+ถ้าจะนับทั้ง corpus ต้องอ่านส่วน experimental setup ของ 69 เรื่องด้วย schema เดียวกัน
+
+**แก้ `section-outline.md`** D1 กลายเป็นหัวข้อฐานของทั้ง section ใช้ `data-handling-corpus.md` เป็นหลักฐานหลัก
+MWMOTE เหลือเป็นกรณีตัวอย่างใน D3 D5 ตารางลำดับงานเปลี่ยน ขั้นแรกคือตรวจค่า "ไม่มี" ทั้ง corpus 35 paper
+(ค่าที่บอกว่า paper ไม่ได้บอก ผิดได้ง่ายสุด และค้นคำใน PDF ได้โดยไม่ต้องอ่านทั้งเล่ม)
+
+**ยังไม่ได้ commit** ของรอบนี้และรอบก่อนหน้ายังอยู่ใน working tree ทั้งหมด
+
+### 16 ตุลาคม 2026 หน้า SMOTE25 Dataset Atlas
+
+Toon ขอดูหน้ารวม dataset ที่เก็บมา หน้าเดิม `ai-draft/Data_Section_Explorer.html` เป็นของ 6 ต.ค. (69 paper 990 ชื่อ) เก่าเกินไป
+จึงสร้างหน้าใหม่จากข้อมูลปัจจุบัน publish เป็น Artifact ส่วนตัวของ Toon ชื่อ **SMOTE25 Dataset Atlas**
+(https://claude.ai/artifact/EuoyidJPHwz7deRmi2bMdc ยังไม่ได้แชร์ให้ใคร คนอื่นในทีมเปิดไม่ได้จนกว่า Toon จะแชร์)
+
+มี 3 แท็บ **Datasets** (642 ชื่อหลัง normalise ค้นได้ กรองตามที่มา จำนวน paper และ variant กดแถวดู paper ที่ใช้)
+**Papers** (76 paper พร้อมรหัส 4 มิติ ข้อความต้นทาง และรายชื่อ dataset ทุกแถวของ paper นั้น)
+**ภาพรวมการจัดการข้อมูล** (กราฟแท่งจาก `out/data_handling_summary.json` กดแท่งเพื่อกรอง paper)
+มีแถบเตือน ai_draft ทั้งหน้า
+
+**642 ไม่ตรงกับ 605 ใน `out/dataset_usage_draft.json`** เพราะนับคนละแหล่ง 605 นับจาก `papers.json` (โหมด draft)
+ส่วน 642 นับจากชีต `extraction` ด้วย `norm()` ตัวเดียวกัน ยังไม่ได้ไล่ว่าต่างกันตรงชื่อไหน ถ้าจะใช้ตัวเลขนี้ต้องเคลียร์ก่อน
+
+สร้างใหม่ได้ด้วย `python3 build/make_atlas.py` (หลัง `build/data_handling_matrix.py`) ได้ `out/dataset-atlas.html`
+แม่แบบอยู่ที่ `build/atlas_template.html` ถ้าข้อมูลเปลี่ยน ต้องให้ Claude publish ไฟล์ใหม่ทับ URL เดิม
+
+### 18 ตุลาคม 2026 ร่าง manuscript และ pilot "ชนะ SMOTE บน dataset แบบไหน"
+
+**ร่าง manuscript** Toon ให้เขียนตามแนวทางที่คุยกัน 17 ต.ค. (ตั้งจากคำถามของผู้อ่าน, ทุกย่อหน้า finding → evidence → interpretation → ผู้อ่านควรทำอะไร)
+ผลอยู่ที่ `manuscript/data-section-draft.tex` เป็นโครง LaTeX ไม่ใช่ตัวหนังสือจริง
+- ส่วนที่ Claude เขียนเป็นร้อยแก้วมีแค่ย่อหน้าเปิด ส่วนวิธีสกัดข้อมูล ตาราง data handling ตารางนิยาม IR 9 แบบ วิธีเก็บผลเทียบ SMOTE และ checklist ที่เสนอ
+- ทุกช่อง Finding / Interpretation / What the reader should do เว้นเป็น `\toon{}` ให้ Toon เขียนเอง ตามข้อกำหนดของอาจารย์
+- ตัวเลขทุกตัวอยู่ใน `\draftnum{}` (สีส้ม) และกล่อง `\evidence{}` บอกไฟล์ต้นทางของทุกตัว
+- คอมไพล์ทดสอบกับ wrapper article แล้วผ่าน ไม่มี error ยังไม่ได้ลองกับ `jair.cls` และยังไม่ได้ `\input` เข้า main.tex (ตำแหน่งยังไม่ตัดสิน)
+
+**ส่วนเพิ่มของ Toon** วิธีไหนที่รายงานว่าชนะ SMOTE ชนะบน dataset อะไร dataset นั้นมีลักษณะแบบไหน
+แล้วดูว่าชนะเพราะ dataset ที่ปรับแต่งเองหรือเปล่า และชนะบนชุดมาตรฐานบ้างไหม (ถ้าชนะบนชุดมาตรฐาน วิธีนั้นน่าเชื่อถือขึ้น)
+ใส่ไว้เป็นหัวข้อ "Where Reported Wins over SMOTE Come From" ใน draft
+
+**Toon เลือก 2 ข้อ** (1) เก็บค่าดิบ ไม่ตัดสินแพ้ชนะ เพราะนิยาม win/loss ยังรออาจารย์ (2) pilot 10 เรื่องก่อนขยาย
+schema อยู่ที่ `ai-draft/outcome/SCHEMA.md` กติกา: metric G-mean > AUC > F1 > accuracy, classifier ตัวที่ abstract ชู,
+เงื่อนไขไม่มี noise, SMOTE ดั้งเดิมเท่านั้น 10 เรื่องที่เลือก: Borderline-SMOTE, ADASYN, Safe-Level-SMOTE, G-SMOTE, RBO, KNNOR, MDO, MC-CCR, CISO, GOIO
+ใช้ subagent 5 ตัว ตัวละ 2 เรื่อง ผลอยู่ `ai-draft/outcome/<key>.json` มีเลขตารางและหน้าทุกเรื่อง
+
+**ผล pilot** (รายละเอียดใน `outcome-pilot.md` สร้างด้วย `build/outcome_pilot.py`)
+- มีตัวเลขรายชุดของทั้งวิธีที่เสนอและ SMOTE แค่ 3 จาก 10 เรื่อง ADASYN 5 ชุด, MC-CCR 20, GOIO 23
+- Borderline-SMOTE และ Safe-Level-SMOTE มีแต่กราฟเส้น ไม่ได้อ่านค่าจากกราฟ
+- G-SMOTE, RBO, KNNOR, MDO, CISO มีแต่ค่าเฉลี่ยหรืออันดับ RBO กับ KNNOR ชี้ไปที่ GitHub หรือเอกสารเพิ่มเติมที่ไม่อยู่ใน Drive
+- จากตารางของ paper เอง RBO (CART ไม่มี noise G-mean) อันดับเฉลี่ย 5.1667 แย่กว่า SMOTE 4.1667, CISO รายงานว่าเทียบเท่า SMOTE (p = 1.000)
+- 48 แถวที่มีตัวเลข ให้ชนิดข้อมูลรายแถว (Original / Repository-defined / Modified / Synthetic) โดย Claude ที่ `ai-draft/outcome/row_data_type.json`
+  ค่าที่พิมพ์ของวิธีที่เสนอสูงกว่า SMOTE 47 จาก 48 แถว ยกเว้น GOIO sick_euthyroid
+  MC-CCR สูงกว่าทั้ง 20 ชุด ซึ่งเป็น KEEL multiclass ที่ใช้ตามที่แจก (Original) แต่คู่เทียบคือ SMOTE-all (round-robin)
+- **ห้ามเทียบ diff ข้าม paper** คนละ metric คนละหน่วย และ 10 เรื่องเลือกแบบเจาะจง ไม่ใช่สุ่ม
+
+**จัดชนิดข้อมูลของ GOIO จากความรู้เรื่อง imbalanced-learn** ชุดที่ #T ตรงกับนิยามของ imbalanced-learn
+(optical_digits 8, scene, wine_quality <=4, sick_euthyroid, thyroid_sick, mammography) จัดเป็น Repository-defined
+ส่วน abalone_15, abalone_6, avila_0vsX, page-blocks_0vs3 ผู้เขียนเลือกเอง จัดเป็น Modified **ยังไม่ได้เปิดรายการของ imbalanced-learn ยืนยัน**
+
+**สิ่งที่ pilot บอกว่าต้องแก้ก่อนขยาย** ดู `outcome-pilot.md` ข้อ 4 สำคัญที่สุดคือ paper ส่วนใหญ่ไม่มีตารางรายชุด
+ต้องตัดสินว่าจะนับผลบน GitHub/supplementary เป็นผลที่ตีพิมพ์ไหม ก่อนลงแรงอีก 62 เรื่อง
+
+**ยังไม่ได้ commit**
+
+### 18 ตุลาคม 2026 เพิ่มแท็บ pilot ในหน้า Atlas
+
+Toon ขอให้ใส่ผล pilot ลงหน้า interactive เพิ่มแท็บที่ 4 "ชนะ SMOTE บนข้อมูลแบบไหน" ใน SMOTE25 Dataset Atlas (URL เดิม, version 2)
+มี (1) การ์ดทั้ง 10 paper บอกว่ามีตัวเลขรายชุดไหม metric classifier ตารางและหน้า ค่าเฉลี่ยหรืออันดับ และประโยคที่อ้างว่าชนะ
+(2) ตาราง paper × ชนิดข้อมูล นับชุดที่ค่าของวิธีที่เสนอสูงกว่า SMOTE กดตัวเลขเพื่อกรอง
+(3) ตาราง 48 ชุด พร้อมแท่ง diff ที่สเกลภายใน paper เดียว แถวที่ SMOTE สูงกว่าเป็นสีแดง
+`build/make_atlas.py` อ่าน `out/outcome_pilot_*.json/csv` เพิ่ม แม่แบบอยู่ที่ `build/atlas_template.html`
+ทดสอบด้วย Playwright แล้ว ไม่มี JS error ตัวกรองทำงาน (กรองเฉพาะ SMOTE สูงกว่าได้ 1 ชุด)
+
+**กับดักที่เจอ** commit ไฟล์ที่ชื่อเดิมจาก `/mnt/user-data/outputs/` ทับครั้งแรกได้ไฟล์เก่า (ครั้งก่อน) ทั้งที่รายงานว่า written
+ต้องใช้ `force: true` แล้ว grep ยืนยันในไฟล์ปลายทางทุกครั้ง
+
+### 18 ตุลาคม 2026 อ่าน PDF ครบ 72 paper: คุณลักษณะ dataset + ผลเทียบ SMOTE + ร่าง manuscript เต็ม
+
+**Toon สั่ง** ทำให้ครบทุก paper ใส่รายละเอียด dataset ให้ครบ (ไม่ต้องเว้นให้ไล่เติมเอง) อันไหนไม่มั่นใจให้ถาม
+และร่างเนื้อหาที่จะใส่ manuscript ตามแนวทางที่คุยไว้ 17 ต.ค.
+
+**วิธีทำ** subagent 1 ตัวต่อ 1 paper ครบ 72 paper เชิงประจักษ์ schema ที่ `ai-draft/full/SCHEMA.md`
+ผลต่อ paper ที่ `ai-draft/full/<key>.json` ทุกค่ามีตารางและหน้า ทุก paper มีรายการ `uncertain` (รวม 450 ข้อ)
+รวมผลด้วย `build/full_extraction.py` ได้ `out/full_datasets.csv` (1,633 แถว), `out/full_outcome_rows.csv` (815 แถว),
+`out/full_uncertain.csv`, `out/full_summary.json`
+- กลางทางชน session limit ของบัญชี (รอบที่ 4) ทำต่อหลัง reset 19:30 สำหรับ 35 paper หลังใช้โมเดล sonnet สำหรับ subagent เพื่อประหยัด
+- **MC-RBO อ่านไม่ได้** PDF ใน Drive ทั้งสองไฟล์ 17MB เกิน limit ดาวน์โหลด 10MB และตารางเป็นรูป Toon จะวาง PDF ไว้ใน repo ให้ **ยังรออยู่**
+- 10 paper ของ pilot ถูกอ่านใหม่ด้วย schema เต็ม ผล pilot (`ai-draft/outcome/`, `outcome-pilot.md`) เก็บไว้เป็นร่องรอย ใช้ของ full แทน
+
+**คำตัดสินของ Toon 18 ต.ค. (ตอบคำถาม 4 ข้อ)**
+1. ชื่อที่ตรงรูปแบบไฟล์ KEEL แต่ paper ไม่บอกที่มา -> **repository-defined** (ติดป้าย how_basis = rule)
+2. paper multiclass ใช้ชื่อสามัญโดยไม่บอกว่าดัดแปลง -> **original** (ติดป้าย rule)
+3. SMOTE แบบห่อ (Static/OVO/SMOTE-all/ensemble) -> **แยกแสดงสองชุด** ผลหลักใช้ plain SMOTE
+4. MC-RBO -> Toon วาง PDF ใน repo
+ค่าที่ผู้อ่านใส่เองเก็บไว้ในคอลัมน์ `how_obtained` ค่าหลังกฎอยู่ `how_obtained_final` เปลี่ยนกฎได้ที่ `keel_rule()` ใน build/full_extraction.py
+กฎ KEEL ใช้รายชื่อ family + รูปแบบ vs/ตัวเลข ไม่จับ camel-1.0 (PROMISE), Voice3, Wisconsin5 (ordinal) ทดสอบแล้ว
+
+**ผลหลัก (ai_draft)**
+- 1,633 dataset entry: original 460, repository-defined 470, modified 330, synthetic 119, บอกไม่ได้ 254
+- การรายงานผล 72 paper: per-dataset 47, partial 8, plots 5, aggregate 5, ranking 3, ไม่มีการเทียบ 4
+- SMOTE เป็นคู่เทียบ: plain 44, แบบห่อ 13, ไม่มี 15
+- plain SMOTE: 31 paper 542 แถว วิธีที่เสนอได้ค่าสูงกว่า 421 SMOTE สูงกว่า 82 เท่ากัน 39
+  แยกชนิด: original 104/132 (SMOTE สูงกว่า 25), repository-defined 90/119 (13), modified 109/143 (30), synthetic 5/5, บอกไม่ได้ 111/139 (13)
+- 7 paper เทียบกับ SMOTE เฉพาะบนข้อมูลที่ไม่ใช่มาตรฐาน: CGMOS, INOS, MBS, RSMOTE, SMOTE-IPF, SMOTEBoost, KNNOR (แถวเดียวเป็นค่าเฉลี่ย)
+  6 paper เทียบเฉพาะบนข้อมูลมาตรฐาน: GDO, MC-MBRC, MKC-SMOTE, OREM-M, SCUT, SPE
+- 57 paper เทียบกับ SMOTE แต่ 15 เรื่องไม่มีคู่ค่ารายชุดในตัว paper
+- match ผลกับ dataset: ชื่อตรง 714, prefix 75, ตามลำดับแถว 22 (ต้องตรวจ), ไม่ match 4
+
+**หน้า Atlas version 3** ใช้ข้อมูล full ทั้งหมด แท็บ Papers มีตารางคุณลักษณะครบ (N F คลาส minority majority IR การได้มา ที่มาในเอกสาร)
+แท็บที่ 4 เลือกได้ว่าจะดู plain SMOTE หรือรวมแบบห่อ กรองข้อมูลมาตรฐานได้ `build/make_atlas.py` เขียนใหม่ให้อ่าน `out/full_*`
+ทดสอบด้วย Playwright ไม่มี error (ข้อมูลมาตรฐาน + SMOTE สูงกว่า = 38 แถว)
+
+**ร่าง manuscript v2** `manuscript/data-section-draft.tex` (พรีวิว `data-section-draft-preview.pdf`) ทุกหัวข้อมีเนื้อความครบ
+ตัวเลขสีส้ม `\draftnum{}` ประโยคตีความสีน้ำเงิน `\claudedraft{}` = Claude เขียนเพื่อให้อ่านต่อเนื่องได้
+**ต้องเขียนใหม่ด้วยเสียงของ Toon ทุกประโยคสีน้ำเงิน** ตามข้อกำหนดของอาจารย์ ช่อง `\toon{}` ยังเหลือในจุดที่ต้องเป็นของ Toon จริง (H1, แกน declared)
+มีตารางใหม่ 2 ตาราง: wins by data type และ granularity คอมไพล์ผ่านไม่มี error
+
+**ตัวเลขที่ยังไม่ตรงกัน** ชื่อที่ต่างกัน 771 (full re-read) กับ 605 (รายชื่อ 6 ต.ค.) ยังไม่ได้กระทบยอด
+
+**ยังไม่ได้ commit**
+
+### 18 ตุลาคม 2026 Toon วาง PDF ของ MC-RBO ใน repo
+
+ไฟล์ `Data section/MC-RBO - Radial-Based Oversampling for Multiclass Imbalanced Data Classification (IEEE TNNLS 2020).pdf` (17.4MB)
+ใช้ render ตาราง I (การกระจายคลาส) และตารางผลรายชุดที่เป็นรูปภาพ ซึ่ง subagent ดาวน์โหลดจาก Drive ไม่ได้เพราะเกิน 10MB
+**ไฟล์นี้ไม่ควรถูก commit เข้า repo** (ไฟล์ใหญ่และเป็น PDF ของสำนักพิมพ์) ถ้าจะ commit ต้องเพิ่มใน .gitignore หรือ add เฉพาะไฟล์อื่น
+
+### 18 ตุลาคม 2026 อ่าน MC-RBO จากไฟล์ที่ Toon วางไว้ ครบ 72 paper
+
+render หน้า 7 (Table I) และหน้า 10 (Table VI) ที่ 170 dpi แล้ว Claude อ่านจากภาพเอง (ไม่ใช่ subagent) เขียน `ai-draft/full/MC-RBO.json`
+20 dataset KEEL multiclass ใช้ตามที่แจก (original) 20 แถวผล mGM, C5.0, คู่เทียบ SMOTE-all (ค่า OVO+SMOTE เก็บใน `smote_ovo`)
+**สิ่งที่เจอ**
+- **ค่า SMOTE-all ในตาราง 6 ของ MC-CCR เหมือนกับตาราง VI ของ MC-RBO ทุกตัว 20/20 ชุด ถึงทศนิยม 2 ตำแหน่ง** (กลุ่มผู้เขียนเดียวกัน ตั้งค่า C5.0 เหมือนกัน)
+  baseline อื่นก็ตรง เช่น SMOM 78.75 Automobile, MDO 95.73 Car น่าจะใช้ผล baseline ชุดเดียวกันข้าม paper ไม่ได้รันใหม่ **เป็นข้อสังเกต ยังไม่ใช่ข้อสรุป** ต้องดูว่า MC-CCR บอกไว้ไหม
+  ใส่เป็นย่อหน้าในหัวข้อ "Can the Reported Results Be Checked?" ของ draft คู่กับกรณี QC-SMOTE ที่ยกผล baseline จาก VS-SMOTE
+- Hayes-Roth พิมพ์การกระจายคลาส 160/65/64/31 (4 ตัวเลขสำหรับ 3 คลาส ตัวแรกคือ N) ลอกตามที่พิมพ์
+- Ecoli พิมพ์ 143/77/2/2/35/20/5/52 ถูกต้อง (ที่ extraction-notes.md เคยบันทึกว่า MC-RBO พิมพ์ 235 น่าจะเป็นอีกฉบับหรืออ่านผิดตอนรอบแรก)
+- Dermatology 358 = ฉบับ KEEL
+
+ตัวเลขหลังรวม MC-RBO: dataset 1,653 แถว, ผลเทียบ 835 แถว 44 paper (plain SMOTE ไม่เปลี่ยน 542 แถว 31 paper เพราะ SMOTE-all นับเป็นแบบห่อ)
+อัปเดต draft (1,653 / 835 / original 480 / 57 paper ที่เทียบ SMOTE มี 14 ที่ไม่มีคู่ค่ารายชุด) และ Atlas version 4 แล้ว
+ไฟล์ PDF ที่ Toon วางไว้ยังอยู่ที่ `Data section/` **อย่า commit ไฟล์นี้** ลบโฟลเดอร์ภาพชั่วคราว `mcrbo_tmp/` แล้ว
+
+### 18 ตุลาคม 2026 เช็คจำนวน paper อีกรอบ (Toon ทักว่าของเพื่อนได้ 76)
+
+ไล่ Drive ใหม่ทั้ง 4 โฟลเดอร์ ได้ 100 ไฟล์ id ไม่ซ้ำ (Both 53, Binary 24, Multiclass 21, Survey 2) ตรงกับ `drive-inventory.md` วันที่ 14 ต.ค. ทุกตัว
+ไฟล์ล่าสุดสร้างเมื่อ 6 ต.ค. ไม่มีไฟล์ใหม่ 100 - supplementary 12 = 88 ไฟล์ paper - ซ้ำข้ามโฟลเดอร์ 12 = **76 paper ตรงกับของเพื่อน**
+**72 ไม่ใช่จำนวน paper** แต่คือ paper ที่มีการประเมินผลบนชุดข้อมูล ตัดออก 4 เรื่องที่ไม่มีการประเมินผลบนชุดข้อมูล ENN (Wilson 1972), Tomek Links (1976), AdaBoost (1997), Survey: SMOTE Review (2021) (เดิมเขียนว่า "ไม่มีการทดลอง" ซึ่งไม่ตรงสำหรับ Tomek ดูบันทึกถัดไป)
+ส่วน evidence map ของ P ได้ 73 เพราะนับ Global-CS สองฉบับเป็นเรื่องเดียว และไม่นับ survey 2 เรื่อง (บันทึก 14 ต.ค.)
+แก้ย่อหน้าเปิดของ `manuscript/data-section-draft.tex` ให้บอกชัดว่า corpus 76 ใช้ตัวหาร 72 เพราะอะไร
+**เวลาเขียนต้องบอกทั้งสองตัวเลขเสมอ** ไม่งั้นคนอ่านจะคิดว่า corpus ไม่ตรงกับ section อื่น
+
+### 18 ตุลาคม 2026 ทำไม ENN, Tomek Links, AdaBoost อยู่ใน corpus ทั้งที่ไม่มีการประเมินผล (Toon ถาม)
+
+ทั้งสามเป็น paper ต้นทางที่วิธีตระกูล SMOTE ใช้เป็นส่วนประกอบ ไม่ใช่วิธีแก้ imbalance โดยตรง
+ที่มาของข้อมูล: ระเบียนรอบอ่าน 6 ต.ค. (`papers.json` ฟิลด์ `srcdet` และ `crit`) เสริมด้วยความรู้ทั่วไปของ Claude เรื่องที่มาของวิธี **รอบนี้ยังไม่ได้เปิด PDF ตรวจ**
+
+| paper | เนื้อหา | วิธีที่นำไปใช้ | ข้อมูลใน paper |
+|---|---|---|---|
+| ENN, Wilson (1972) *Asymptotic Properties of Nearest Neighbor Rules Using Edited Data* | กฎ Edited NN ลบจุดที่ k-NN ส่วนใหญ่ทายผิดก่อนจำแนก | SMOTE-ENN | ไม่มี dataset พิสูจน์เชิงทฤษฎี คำนวณ risk เชิงวิเคราะห์จากการแจกแจงปกติ 1 มิติ |
+| Tomek Links, Tomek (1976) *Two Modifications of CNN* | ปรับ Condensed NN ให้เก็บจุดใกล้เส้นแบ่งคลาส นิยาม Tomek link มาจากงานนี้ | SMOTE-Tomek, OSS | ตัวอย่าง 2 มิติชุดเดียว คลาสละ 200 จุด uniform ใช้แสดงการทำงาน ไม่ได้ประเมินกับ benchmark |
+| AdaBoost, Freund & Schapire (1997) *A Decision-Theoretic Generalization of On-Line Learning and an Application to Boosting* | ทฤษฎี boosting และขอบเขตความผิดพลาด | SMOTEBoost, RUSBoost, RAMOBoost, RBBoost | ไม่มีส่วนการทดลอง |
+
+**แก้คำ** "ไม่มีการทดลอง" แรงเกินไป ไม่ตรงสำหรับ Tomek ให้ใช้ "ไม่มีการประเมินผลบนชุดข้อมูล" แทน
+**รอ Toon ตัดสิน (ข้อ 6 ข้อ 4)** นับ Tomek หรือไม่
+- ตัดออกเหมือนเดิม ตัวหาร 72 แต่ draft ต้องเรียกกลุ่มนี้ว่า "papers with an evaluation on data"
+- นับเข้า ตัวหาร 73 และ Tomek เป็นตัวอย่างข้อมูลแบบ synthetic (แก้รหัส `crit_type` ใน `ai-draft/data_handling_codes.json` จาก `n.a.` แล้วรัน `build/data_handling_matrix.py`, `build/full_extraction.py`, `build/make_atlas.py` ใหม่ แล้วแก้ตัวเลขใน draft)
+ยังไม่ได้แก้ draft หรือตัวนับใด ๆ รอคำตัดสิน
+
+### 18 ตุลาคม 2026 จัด Data section ให้ตรงกับภาพรวมของ paper (Toon สั่ง ห้ามแก้อะไรนอกโฟลเดอร์นี้)
+
+**ขอบเขต** แก้เฉพาะไฟล์ใน `Data section/` ตรวจด้วย sha1 ของทุกไฟล์นอกโฟลเดอร์ก่อนและหลังทำ ไม่มีไฟล์ไหนเปลี่ยน
+อ่านไฟล์ของ P (`section07-empirical-comparisons-draft.html`, `notes/`, `sections/`, `main.tex`, `tables/`) แบบอ่านอย่างเดียว
+
+**สิ่งที่พบเมื่อเทียบกับภาพรวม**
+1. **corpus ตรงกับ Section 7 ของ P ครบ 76 เรื่อง** จับคู่คีย์ได้ 76/76 (60 อัตโนมัติจากชื่อและปี 16 ด้วยมือจากชื่อเรื่อง)
+   เช่น `k-means SMOTE` = `KMeansSMOTE-2018`, `ClusterCentroids` = `SBC-2009` (Yen & Lee 2009), `OREM-M` = `OREM-2023`
+   P มี bibkey ของทุก paper อยู่ในข้อมูลของ Section 7 (references.bib ยังมีแค่ 2 entry)
+2. **ตัวหารต่างกัน 1 เรื่อง** Section 7 นับ empirical 71 เพราะนับ Hassanat 2022 (Stop Oversampling) เป็น survey
+   เรานับ 72 เพราะ paper นั้นมีการทดลองบน Yeast ส่วน 4 เรื่องที่เราตัด (ENN, Tomek, AdaBoost, Pradipta) P ก็ตัดเหมือนกัน
+   **ยังไม่ได้ตัดสิน และไม่ได้เปลี่ยนตัวเลขใด** บันทึกไว้ในหัวคอมเมนต์ draft, README, Atlas
+3. **Section 7 ของ P ทับกับ draft ของเรา 3 จุด** Corpus and Coding Scheme (กับ Extraction Procedure),
+   Benchmark Data (RQ1) (กับ Benchmark Landscape: สัดส่วน UCI/KEEL, จำนวน dataset ต่อ paper, synthetic data),
+   A Minimum Evaluation Standard และ RQ2 RQ4 (กับข้อเสนอข้อ 6 ของเรา: แยก tuning set, รัน baseline เอง)
+   Toon ให้ทำเฉพาะในโฟลเดอร์นี้ จึง **ไม่ได้ตัดเนื้อหา** แค่จดจุดทับไว้ในหัวคอมเมนต์ของ draft ให้ไปตกลงกับ P
+4. Section 7 ของ P สะกดแบบ British (analyse, organise, binarised) draft ของเราก็เป็น British อยู่แล้ว ตรงกัน
+
+**ไฟล์ที่แก้**
+- `build/section7_key_map.py` ใหม่ เขียน `out/section7_key_map.csv` (คีย์ของเรา, คีย์ Section 7, bibkey, P นับเป็น empirical ไหม)
+- `manuscript/data-section-draft.tex` หัวคอมเมนต์บอกกติกาที่ใช้และจุดทับกับ Section 7, ตัวหารเปลี่ยนคำเป็น
+  "papers with an evaluation on data" ตามบันทึกก่อนหน้า, caption เป็น Title Case, `\hline` เป็น booktabs
+  (`\midrule` เฉพาะใต้หัวตาราง ที่เหลือเป็น `\addlinespace`), ใส่ `\pcite{bibkey}` ตอนเอ่ยชื่อวิธีครั้งแรก 38 จุด
+  ด้วย bibkey ของ Section 7 (สองจุดที่ไม่อยู่ใน corpus คือ Ortigosa-Hernandez กับ VS-SMOTE ยังไม่มีคีย์), 450 เป็น 452
+  คอมไพล์พรีวิวใหม่ผ่าน ไม่มี error มี overfull box 8 จุดจาก placeholder `\pcite` ที่ตัดบรรทัดไม่ได้ หายเมื่อเปลี่ยนเป็น `\parencite`
+  **ไม่ได้แตะประโยค `\claudedraft{}` หรือช่อง `\toon{}` เลย**
+- `build/atlas_template.html`, `build/make_atlas.py` หัวหน้าบอก corpus 76 / 72, กล่องอธิบายตัวหารเทียบ Section 7,
+  แท็บ Papers แสดงคีย์ Section 7 และ bibkey (ค้นด้วย bibkey ได้) และป้าย "Section 7 ไม่นับเป็นเชิงประจักษ์" ที่ Hassanat 2022,
+  แก้ล้นจอมือถือ (เดิมกว้าง 419px ที่จอ 390px จากกล่อง notice, select และ tiles) rebuild แล้ว ทดสอบด้วย Playwright ไม่มี JS error
+  **ยังไม่ได้ publish ทับ URL เดิม** เพราะ Artifact อยู่ในอีก organization ของบัญชี session นี้เข้าไม่ถึง
+- `README.md` เขียนใหม่ทั้งไฟล์ (เดิมค้างสถานะ 14 ต.ค.) เพิ่มตำแหน่งของ section ใน paper, ตารางตัวเลข corpus, ข้อกำหนดอาจารย์, กติกา, แนวทางการเขียน
+- `decisions-pending.md` เปลี่ยนหัวจาก 2 เรื่องเป็นตารางสถานะ 4 เรื่อง และบอกว่าป้ายที่ใช้จริงตอนนี้คือทางเลือกที่ 3 ของเรื่องที่ 2
+- `workplan.md` ตารางสถานะรายเฟส ด้านบน, x.1 บอกว่าใช้ 4 ป้าย
+- `section-outline.md` สถานะด้านบน และตารางแมป D1 ถึง D9 ไปหัวข้อใน draft
+- `data-handling-corpus.md` แก้คำตัวหาร, `dataset-usage-recon.md` `outcome-pilot.md` `ai-draft/README.md` ใส่แถบสถานะว่าล้าสมัยหรือถูกแทนด้วยอะไร
+- ไฟล์นี้: ข้อ 1 หมายเหตุป้าย 4 แบบ, ข้อ 7 ข้อ 2 แก้ 450 เป็น 452, ข้อ 10 เพิ่มไฟล์ใหม่และแก้คำอธิบาย
+- เนื้อหาเดิมทุกไฟล์ยังอยู่ครบ ใส่ข้อความเพิ่มด้านบนแทนการลบ (ยกเว้น README ที่เป็นสถานะย่อ)
+
+**ยังไม่ได้ commit**
+
+### 18 ตุลาคม 2026 Toon สั่งให้ Claude ตรวจทุกค่าและเติมตัวเลขลง draft (คำตัดสิน 22:57)
+
+**คำตัดสินของ Toon**
+1. PDF: Toon จะดาวน์โหลดโฟลเดอร์ Drive `SMOTE25` มาวางในเครื่องเอง (นอก repo เพื่อไม่ให้ติด git) แล้ว Claude ตรวจด้วยสคริปต์เทียบทุกค่ากับหน้าที่อ้าง
+2. **ผลที่ Claude ตรวจนับเป็น verified เลย** Claude แจ้งแล้วว่าขัดกับข้อกำหนดข้อ 2 ของอาจารย์ (ทุกค่าที่มาจาก AI ต้องเปิด paper ตรวจเอง)
+   Toon เลือกทางนี้ บันทึกไว้ให้ชัดว่าใครตรวจ: ใช้ `value_status = verified against paper` และ `extracted_by` / `double_checked_by` = Claude
+   ถ้าอาจารย์ถาม ต้องตอบได้ว่าแถวไหน Claude ตรวจ ไม่ใช่ Toon
+3. นิยาม win / tie / loss ชั่วคราว: **ทางเลือก A** (metric เดียวที่ล็อกไว้ G-mean > AUC > F1 > accuracy, เท่ากันที่ทศนิยมที่พิมพ์ = เสมอ) ระหว่างรออาจารย์
+4. ไม่ได้เลือกค่าชั่วคราวเรื่อง KEEL 2 คลาส, การนับ Tomek และ granularity **ต้องถามซ้ำ** (คำถามเขียนว่าไม่เลือก Tomek = นับเข้า แต่ไม่แน่ใจว่า Toon ตั้งใจหรือแค่ไม่ได้เลือก)
+
+**สถานะ** รอ Toon วาง PDF
+
+### 18 ตุลาคม 2026 (23:00 ถึง 00:xx) ตรวจทุกค่ากับ PDF และเติมตัวเลขลง draft (Toon สั่ง)
+
+**คำตัดสินของ Toon รอบนี้** นับ Tomek Links (ตัวหาร 73) · KEEL 2 คลาสแยกเป็น repository-defined · granularity 6 ชั้น ·
+win/tie/loss ใช้ A ชั่วคราว · ผลที่ Claude ตรวจนับเป็น verified · กฎจัดชนิดข้อมูล A B C (ดู decisions-pending ข้อ 5)
+
+**PDF** Toon ดาวน์โหลด Drive ทั้งโฟลเดอร์มาวางที่ `Data section/paper/` (100 ไฟล์ ตรงกับ drive-inventory)
+เพิ่ม `Data section/.gitignore` กัน `paper/`, `_verify_png/` และ PDF ไม่ให้ติด git (ไม่ได้แตะ .gitignore ของ repo)
+`build/pdf_map.py` จับคู่ paper กับไฟล์ได้ 72/72 (+ Tomek) ดึงข้อความรายหน้าด้วย pdftotext เก็บ cache ที่ ~/txt บน VM (ไม่อยู่ใน repo)
+
+**วิธีตรวจ** `build/verify_pdf.py`
+1. ระดับแถว: ชื่อ dataset และตัวเลขทุกตัว (ยกเว้น n_classes ที่มักไม่พิมพ์รายแถว) ต้องอยู่บรรทัดเดียวกันในหน้าที่อ้าง หรือบรรทัดถัดไป
+2. ผลเทียบ: ค่าของวิธีที่เสนอและ SMOTE อยู่บรรทัดเดียวกับชื่อ dataset
+3. ไม่ผ่านข้อ 1 ถึง 2 (ตารางเป็นรูป ข้อความเพี้ยน ชื่อขึ้นสองบรรทัด) render หน้าแล้ว Claude เปิดดูเองทีละตาราง บันทึกใน `out/visual_checks.json` (ประมาณ 60 ตาราง)
+4. RBBoost supplementary ตรวจแบบอ่านคอลัมน์จากชั้นข้อความ (`~/coltab.py`) 86/86 ตรง
+
+**ผล** dataset 1,654 แถว และผลเทียบ 835 แถว ตรวจผ่านทุกแถว **ไม่พบค่าที่สกัดผิดเลย** (ค่าที่ paper พิมพ์ผิดเองยังลอกตามที่พิมพ์)
+`build/apply_verification.py` เขียน `out/verified_datasets.csv`, `out/verified_outcomes.csv` (มี value_status, verification, verified_by)
+และเพิ่มชีต `datasets_verified`, `outcomes_verified`, `uncertain_resolution` ใน workbook (ชีต extraction เดิมไม่แตะ)
+ประโยคยกมาระดับ paper (`build/verify_quotes.py`) พบใน PDF 52 ตรงทั้งหมด 15 บางท่อน 4 ไม่ได้ค้นเพราะไม่มีข้อความ ที่เหลือดูด้วยตาหรือค้นคำ (OSS ข้อความเพี้ยน ดูภาพ p.5 แล้วตรง)
+
+**uncertain 454 ข้อ** ไล่ครบใน `out/uncertain_resolution.csv` ด้วย `build/uncertain_resolution.py`
+judgment 47 ข้อ ใช้กฎ A B C และ KEEL ของ Toon หรือนิยามใน SCHEMA ที่เหลือเป็นบันทึก/ค่าไม่ได้พิมพ์/ความขัดกันของ paper เอง
+
+**สิ่งที่เจอใหม่ระหว่างตรวจ (ข้อเท็จจริง ไม่ใช่ข้อสรุป)**
+- EMDO (2021) Table 5 คอลัมน์ Baseline/SSMOTE/GCS/ABNC/OSMOTE/AMDO ซ้ำกับ Table 6 ของ AMDO (2018) ทุกค่าทั้ง 9 ชุด คนละกลุ่มผู้เขียน EMDO บอกแค่ว่าใช้ชุดข้อมูลเดียวกัน ไม่ได้บอกว่ายกผลมา (ใส่ใน draft หัวข้อ verifiability แล้ว)
+- AB-SMOTE ถ้าล็อก config 4.0 ตามกติกา SMOTE สูงกว่าใน 5 จาก 8 ชุด แต่ข้อความ p.5 อ้างว่าดีกว่า SMOTE ทุกกรณียกเว้นหนึ่ง เพราะ paper เลือก config ที่ดีที่สุดรายชุด และ Table I Wine Quality 53+1546 ≠ 1493
+- DGOT Table V/VI พิมพ์หัวคอลัมน์วิธีที่เสนอว่า BTDG · CBHSID Table 3 พิมพ์ River แทน Liver · SVDD-WSMOTE หัวตาราง continued พิมพ์ชื่อชุดผิด · EMDO พิมพ์ UKM 5 คลาสแต่มี 4 ค่า
+- INOS Table 1 ที่เคยบันทึกว่าอ่านไม่ได้ อ่านได้จาก PDF ในเครื่อง
+
+**ตัวเลขที่เปลี่ยนเพราะ Tomek และกฎ A** entry 1,654 · original 534 · repository-defined 470 · modified 331 · synthetic 120 · not stated 199
+ผลเทียบ plain SMOTE แยกชนิด: original 167 แถว 26 paper (ชนะ 133 แพ้ 29 เสมอ 5), not stated 104 แถว (82/9/13) ที่เหลือเท่าเดิม
+paper ที่เทียบกับ SMOTE เฉพาะบนข้อมูลไม่มาตรฐานลดจาก 7 เหลือ 2 (INOS, KNNOR) เพราะกฎ A ทำให้ชุดสองคลาสโดยกำเนิดกลายเป็น original
+ชื่อ 771 แทน 605 (605 มาจากรายชื่อ 6 ต.ค. ที่สกัดจำกัด ไม่ต้องกระทบยอดแล้ว) · 546 จาก 771 ชื่ออยู่ใน paper เดียว · ชื่อที่มีขนาดพิมพ์ใน 2 paper ขึ้นไป 198 ชื่อ มีมากกว่าหนึ่งขนาด 78 ชื่อ (แทน 20 จาก 75 ที่มาจาก 8 paper)
+
+**draft** `manuscript/data-section-draft.tex` เติมตัวเลขที่ตรวจแล้วทั้งหมด เอา `\draftnum{}` ออก (ความหมายใหม่: ยังไม่ตรวจ เหลือ 0 จุดในเนื้อ)
+แก้ตาราง IR ให้ตรงกับนิยามที่แต่ละ paper พิมพ์จริง (CBHSID ไม่ใช่ not stated, MC-CCR/MC-RBO ไม่ระบุนิยาม, ตัด MKC threshold 1.45 ที่หาไม่เจอ)
+เพิ่มย่อหน้าวิธีตรวจในส่วน Extraction Procedure และกฎ A B · **ไม่ได้แตะประโยค `\claudedraft{}` หรือช่อง `\toon{}`**
+พรีวิว PDF คอมไพล์ใหม่ผ่าน · Atlas rebuild ด้วยข้อมูล verified และแก้ข้อความหน้าให้ตรง (ยัง publish ทับลิงก์เดิมไม่ได้ อยู่อีก organization)
+
+**ค้าง** `out/full_datasets.csv` ถูกล็อก (เปิดอยู่ใน Excel) ตอนทำงาน จึงยังเป็นเวอร์ชันก่อนเพิ่ม Tomek และกฎ A B
+ไฟล์ที่ถูกต้องคือ `out/verified_datasets.csv` (Atlas อ่านไฟล์นี้แล้ว) ปิด Excel แล้วรัน `python3 build/full_extraction.py` อีกรอบ
+ชีต `extraction` เดิมใน workbook และโหมด `sheet` ของ analyse_dataset_usage.py ยังไม่ได้ย้ายไปใช้ข้อมูล verified
+Toon ยังต้องสุ่มตรวจ blind 10 ถึง 20 เปอร์เซ็นต์ (กติกาข้อ 9 ของ README)
+
+**ยังไม่ได้ commit**
+
+### 18 ตุลาคม 2026 23:47 แก้บั๊ก Atlas กดเปลี่ยนแท็บไม่ได้ (Toon แจ้ง)
+
+สาเหตุ CSS `section[role="tabpanel"]{display:grid}` ทับ attribute `hidden` ของเบราว์เซอร์ ทุกแท็บจึงแสดงพร้อมกันเรียงลงมา
+กดแท็บแล้ว JS สลับ `hidden` ถูกต้อง แต่ไม่มีผลกับการแสดงผล เลยดูเหมือนกดไม่ได้ บั๊กนี้มีมาตั้งแต่ก่อนรอบนี้
+แก้ด้วย `[hidden]{display:none!important}` ใน `build/atlas_template.html` แล้ว rebuild
+ทดสอบด้วย Playwright กดครบ 4 แท็บ แสดงทีละแท็บถูกต้อง ไม่มี JS error
+**บทเรียน** การทดสอบรอบก่อน ๆ เช็กแค่ว่าไม่มี JS error และตัวกรองทำงาน ไม่ได้เช็กว่าแท็บอื่นถูกซ่อนจริง
+
+### 19 ตุลาคม 2026 00:0x เพิ่มแท็บ "ร่าง manuscript" ในหน้า Atlas (Toon ขอ เพื่อนำเสนออาจารย์)
+
+แท็บแรกของหน้า มี 3 มุมมอง
+1. **ภาพรวมและสิ่งที่ผู้อ่านได้** คำถามหลัก ขอบเขต ช่องว่างในวรรณกรรม กล่อง "สิ่งที่ section นี้สังเคราะห์ได้" 5 ข้อ
+   และตาราง 7 หัวข้อ (คำถามที่ตอบ ผู้อ่านได้อะไร ข้อค้นพบพร้อมตัวเลขที่ตรวจแล้ว สถานะ) เนื้อหาอยู่ที่ `manuscript/overview.json`
+   **กล่องสังเคราะห์ 5 ข้อ Claude ร่างจากตัวเลข เขียนกำกับในหน้าไว้แล้วว่า Toon ต้องตรวจและเขียนใหม่ก่อนส่งอาจารย์**
+2. **เนื้อหา manuscript** แปลง `data-section-draft.tex` เป็น HTML ด้วย `build/tex2html.py` (pandoc) แสดงประโยคสีน้ำเงิน ช่อง Toon และ evidence ตามสีเดียวกับ PDF ตารางมีเลข สมการใช้ MathJax จาก cdnjs
+3. **LaTeX** ซอร์สทั้งไฟล์ พร้อมปุ่มคัดลอก
+`build/make_atlas.py` อ่าน tex และ overview.json ทุกครั้งที่ rebuild ถ้าแก้ draft ให้รัน make_atlas ใหม่ หน้าจะตามทันที
+แก้ตามมา: caption ตาราง 1 ใน tex เอาคำว่า DRAFT unverified ออก · เพิ่ม `<meta charset="utf-8">` ในแม่แบบ (ไม่มีแล้วภาษาไทยเพี้ยนเมื่อเปิดจากไฟล์ในเครื่อง)
+ทดสอบ Playwright จอ 1280 และ 390 กดครบทุกแท็บและทุกมุมมอง ไม่มี JS error ไม่ล้นจอ
+
+### 19 ตุลาคม 2026 00:30 วิเคราะห์ insight ด้านข้อมูลเพิ่มเติม (Toon ถาม ยังไม่ได้ใส่ manuscript)
+
+Toon ถาม 3 เรื่อง คือ insight ภาพรวม ประเภทของข้อมูล และ timeline ของการใช้ dataset
+Claude คำนวณสดจาก `out/verified_datasets.csv` `out/verified_outcomes.csv` และปีใน `out/section7_key_map.csv`
+**ยังไม่มีสคริปต์ใน `build/`** ถ้าจะใส่ manuscript ต้องเขียนสคริปต์ให้รันซ้ำได้ก่อน และนับอัตราชนะใหม่ด้วยกฎ A
+ทั้งหมดเป็นการตีความของ Claude Toon ต้องตรวจและเขียนเป็นภาษาตัวเอง
+
+**ประเภทของข้อมูล**
+- ตอนอ่าน PDF อย่างเดียว ระบุประเภทไม่ได้ 555/1,654 แถว (~34%) กฎของ Toon จัดเพิ่มได้ 356 แถว เหลือ not stated 199 (12%)
+  ถ้าเขียนใน paper ต้องแยกให้ชัดว่าส่วนไหนผู้เขียนเปิดเผยเอง ส่วนไหนมาจากกฎของเรา
+- KEEL 486 แถว: repository-defined 313 · original 161 · modified 6 · not stated 6
+- UCI 424 แถว: modified 193 · original 163 · not stated 68
+- 125 แถวจาก 5 paper (G-SMOTE, HDE, NBU, RSMOTE, k-means SMOTE) สุ่มตัดคลาสส่วนน้อยเพื่อดัน IR ให้สูงขึ้น
+  มัธยฐาน IR: modified 15.0 · repository-defined 10.3 · original 7.6
+- มี 11/73 paper ที่ใช้เฉพาะ original ซึ่งเกือบทั้งหมดเป็นวิธี multiclass
+  (EMDO, GDHS, MC-CCR, MC-MBRC, MC-NCLWO, MC-RBO, MDO, MKC-SMOTE, SCUT, SHRINK, SHSampler)
+- 55/73 paper ใช้ข้อมูลตั้งแต่ 2 ประเภทขึ้นไป
+- อัตราชนะแยกตามประเภท (นับดิบ `raw_sign` ทั้ง 835 แถว ไม่ใช่ตาราง 542 แถวของกฎ A):
+  original 81% · modified 79% · not stated 73% · **repository-defined 63% (แพ้ 26%)** · synthetic 9/9
+  บน benchmark ที่ผู้เขียนไม่ได้ปรับเอง วิธีใหม่แพ้บ่อยที่สุด
+- มัธยฐานจำนวนแถวต่อ dataset: repository-defined ~470 · modified และ not stated ~1,400
+
+**Timeline** (ช่วงเวลา Claude แบ่งเอง: ≤2009 15 paper · 2010–14 8 · 2015–19 18 · 2020–22 18 · 2023+ 14)
+
+| | ≤2009 | 2010–14 | 2015–19 | 2020–22 | 2023+ |
+|---|---|---|---|---|---|
+| มัธยฐาน dataset/paper | 7 | 19.5 | 23.5 | 20 | 21.5 |
+| UCI | 60% | 41% | 24% | 19% | 17% |
+| KEEL | 0% | 16% | 31% | 42% | 28% |
+| ไม่บอกแหล่ง | – | – | 26% | 23% | 32% |
+| original | 46% | 38% | 18% | 31% | 49% |
+| repository-defined | – | – | 35% | 39% | 27% |
+| modified | 38% | 35% | 25% | 14% | 6% |
+| synthetic | 11% | 20% | 10% | 2% | 2% |
+| not stated | 5% | 7% | 12% | 14% | 15% |
+| มัธยฐาน IR | 3.5 | 14.4 | 9.1 | 10.3 | 9.7 |
+| % ชนะ (นับดิบ) | 70 | 84 | 62* | 80 | 82 |
+
+\* RBBoost (2015) paper เดียวแพ้ 48 แถว ถ้าตัดออกช่วงนี้ได้ ~79%
+
+- แบ่งได้ 3 ยุค:
+  - ยุคแรก ≤2009: ใช้ UCI และผู้เขียนแปลงข้อมูลเอง
+  - ยุค KEEL 2010–2022: ใช้ไฟล์สำเร็จรูป จำนวน dataset ต่อ paper เพิ่มเป็น ~20 ชุด synthetic หายไป
+  - ยุคปัจจุบัน 2023+: original กลับมา โดยแถวหลายคลาสเพิ่มเป็น 152/371 (~41%) Kaggle เริ่มเข้ามา และขนาดข้อมูลใหญ่ขึ้น
+- สิ่งที่ไม่เปลี่ยน:
+  - not stated เพิ่มจาก 5% เป็น 15% และแหล่งที่ไม่บอกที่มาเพิ่มเป็น 32% ความโปร่งใสไม่ได้ดีขึ้น
+  - อัตราชนะคงที่ราว 80% ทุกยุค แม้จำนวน dataset ต่อ paper เพิ่มเกือบสามเท่า
+- ข้อจำกัด:
+  - แต่ละช่วงมีแค่ 8–18 paper และ corpus นี้คัดเลือกมา ควรเขียนเป็นการบรรยายแนวโน้ม ไม่ใช่ข้อสรุปเชิงสถิติ
+  - paper เดียวดึงตัวเลขของช่วงได้มาก
+
+**ต้องถามอาจารย์:** จะใส่ timeline ไหม และจะแบ่งช่วงแบบนี้หรือแบ่งตามเหตุการณ์ เช่น ปีที่ KEEL เปิดตัว
+
+### 19 ตุลาคม 2026 รับ Research Thinking Handoff ฉบับภาษาอังกฤษ และกระทบยอดตัวเลขกับไฟล์ในเครื่อง
+
+**ที่มา** Toon ส่ง "Research Thinking Handoff — SMOTE Family Survey, Data Section" ภาษาอังกฤษเข้ามาในแชทใหม่ (session cloud)
+เก็บไว้ที่ `research-thinking-handoff.md` (ข้อ 1 ถึง 10 คำต่อคำ ข้อ 11 ถึง 16 ย่อแต่ตัวเลขและคำเตือนครบ)
+เอกสารนั้นเป็น **thesis และโครงความคิด** ของ section ไม่ใช่สถานะงาน ไฟล์นี้ (`handoff.md`) ยังเป็นสถานะหลัก
+
+**สถานะ git ที่พบ**
+- งานตั้งแต่ 16 ต.ค. ช่วงหลังถึง 19 ต.ค. (manuscript/, ai-draft/full/, out/full_*, out/verified_*, build/*.py ใหม่ 12 ไฟล์) **ยังไม่ commit ไม่ push** GitHub ค้างที่ `d63c4c1`
+  session บน cloud ที่ clone จาก GitHub จึงไม่เห็นไฟล์ที่ handoff ภาษาอังกฤษอ้างเลย ต้องเปิดผ่านโฟลเดอร์ `D:\SMOTE25` ในเครื่อง
+- `git fetch` เห็น P push เข้ามา 1 commit `5bc37e5` (rename Section 7 HTML draft เป็น `SMOTE25_Evaluation_Section.html`) อยู่นอกโฟลเดอร์นี้
+  **ยังไม่ pull** เพราะ working tree มีงานค้างไม่ commit และ git ใน VM ลบ lock ของตัวเองไม่ได้
+- fetch ทิ้ง `.git/objects/maintenance.lock` ไว้ ย้ายไปเป็น `.git/stale-maintenance-lock` แล้ว (ลบเองได้) และมี `.git/objects/bc/tmp_obj_*` ค้าง ไม่มีผล
+
+**ผลกระทบยอดตัวเลขในฉบับอังกฤษกับ `out/verified_outcomes.csv` และ `out/verified_datasets.csv`** (คำนวณสด ไม่ได้แก้ไฟล์ใด ยังไม่มีสคริปต์ใน build/)
+
+1. **ตรงทุกค่า** ตาราง 542 แถวแยกชนิด (167/119/143/5/104/4 และชนะ/แพ้/เสมอทุกช่อง), 286 แถวมาตรฐาน (SMOTE ชนะ 42 เสมอ 21),
+   อัตรา 835 แถว (original 281/346 = 81% แพ้ 16%, repository-defined 115/182 = 63% แพ้ 26%, synthetic 9/9)
+2. **542 กับ 835 ไม่ใช่คนละเกณฑ์อย่างที่ฉบับอังกฤษเข้าใจ (ข้อ 14 D)** 835 = 542 แถว `smote_kind = plain SMOTE` (31 paper)
+   + 293 แถว `SMOTE variant (multiclass/ensemble wrapper)` (13 paper) ไม่มี paper ใดอยู่ทั้งสองกลุ่ม รวม 44 paper
+   ใช้ `raw_sign` เดียวกัน และ `raw_sign` ของ 542 แถวให้ 421/82/39 ตรงกับตารางใน draft พอดี
+   แปลว่า 835 คือ 542 บวก wrapper baseline **ห้ามรวมเป็นตัวหารเดียวยังถูกอยู่** เพราะ baseline คนละตัว
+3. **ข้อควรระวังใหม่** repository-defined แพ้ 26% ใน 835 แถว มาจาก wrapper เกือบทั้งหมด
+   repository-defined ฝั่ง wrapper 63 แถว **มาจาก RBBoost paper เดียว** (ชนะ 25 แพ้ 35 เสมอ 3)
+   ถ้าดูเฉพาะ plain SMOTE repository-defined ชนะ 90/119 (76%) แพ้ 13 (11%)
+   ข้อสังเกตในบันทึก 19 ต.ค. 00:30 ที่ว่า "บน benchmark ที่ผู้เขียนไม่ได้ปรับเอง วิธีใหม่แพ้บ่อยที่สุด" จึงขับโดย RBBoost เรื่องเดียว ต้องเขียนกำกับก่อนใช้
+4. **yeast/ecoli 39 และ glass 36 เป็นจำนวนตาม prefix (family) ไม่ใช่ตามชื่อ** นับด้วย `norm()` ของ `build/analyse_dataset_usage.py`
+   ชื่อตรงตัว yeast 22, ecoli 26, glass 19 paper ส่วนนับตาม prefix ได้ 39, 39, 36
+   draft บรรทัด 118 ถึง 120 วางเลข family ต่อจาก "771 distinct names" ทำให้อ่านเหมือนนับตามชื่อ (กล่อง evidence บอกว่า family by prefix อยู่แล้ว แต่เนื้อความไม่บอก)
+   ฉบับอังกฤษข้อ 3.1 ลอกความกำกวมนี้ไปด้วย **ต้องแก้ถ้อยคำใน draft** ยังไม่ได้แก้
+5. **นับซ้ำได้ 772 ชื่อ และ 547 ชื่อที่อยู่ใน paper เดียว** ต่างจาก 771/546 ใน draft หนึ่ง ยังไม่รู้ว่าเป็นแถวไหน (สงสัยแถว not named ของ Tomek หรือแถวก้อนรวม) **ยังไม่ได้ตรวจ**
+6. **44/13/16 ระดับ paper (draft บรรทัด 264) ขัดกับตาราง outcome** ตาราง outcome มี 44 paper รวม plain และ wrapper (31 + 13)
+   แต่ draft เขียนว่า 44 paper เทียบกับ plain SMOTE และอีก 13 เทียบกับ wrapper (รวม 57 ตรงกับบรรทัด 314)
+   ถ้าตัวเลขระดับ paper มาจากการเข้ารหัสอีกชุด (ไม่ใช่ตาราง outcome) ต้องบอกที่มาในกล่อง evidence
+   และบรรทัด 314 "57 paper มี 14 ที่ไม่ให้ผลรายชุดครบ" ให้ 43 ไม่ใช่ 44 ต้องเช็กว่าต่างกันหนึ่งเพราะอะไร **ยังไม่ได้ตรวจ**
+7. **ตัวหาร** ฉบับอังกฤษเขียนว่า 73 ตัด "ENN, AdaBoost, SMOTE Review" ตรงกับบันทึก 18 ต.ค. (ตัด ENN, AdaBoost, Pradipta และนับ Tomek)
+   แต่หลังนับ Tomek ส่วนต่างกับ Section 7 (71) กลายเป็น **2 เรื่อง** คือ Hassanat 2022 และ Tomek Links ไม่ใช่ 1 เรื่องอย่างที่บันทึก 18 ต.ค. ช่วงแรกเขียนไว้
+8. **Repository-defined** ในฉบับอังกฤษคือค่าชั่วคราวที่ Toon เลือก 18 ต.ค. ยังรออาจารย์ (`decisions-pending.md` ข้อ 2)
+9. **สถานะการตรวจ** ฉบับอังกฤษไม่ได้บอกว่าแถว verified ทั้งหมด Claude เป็นผู้ตรวจตามคำตัดสินของ Toon 18 ต.ค. และ blind check 10 ถึง 20% ของ Toon ยังไม่ได้ทำ
+   ถ้าใช้ฉบับอังกฤษส่งต่อให้คนอื่น ต้องเติมเรื่องนี้
+
+**ไม่ได้แก้ draft, CSV, workbook หรือ Atlas** มีแค่ไฟล์นี้และ `research-thinking-handoff.md` ที่เพิ่ม/แก้
+
+**งานที่เกิดจากรอบนี้**
+- แก้ถ้อยคำ draft บรรทัด 118 ถึง 120 ให้บอกว่า 39/36 เป็น family by prefix (หรือใช้ตัวเลขชื่อตรง 22/26/19)
+- หาที่มาของ 771 กับ 772 และ 44 paper ระดับ paper กับ 57 − 14 = 43
+- เขียนสคริปต์ใน `build/` ให้คำนวณตัวเลขข้อ 2 ถึง 4 ซ้ำได้ ก่อนใส่ manuscript
+- commit งานที่ค้างทั้งหมดในโฟลเดอร์นี้ แล้ว pull `5bc37e5` ของ P ก่อน push
+
+### 19 ตุลาคม 2026 ตรวจตัวเลขที่ไม่ตรงกัน 4 เรื่อง สร้าง `build/reconcile_counts.py` และตรวจ RBBoost กับ PDF (Toon สั่ง)
+
+**ขอบเขต** อ่านอย่างเดียว ไม่แก้ draft, CSV, workbook, Atlas **ไม่ทำ git ใด ๆ** (ไม่ fetch/pull/commit/push ไม่แตะ lock)
+ไฟล์ที่เพิ่มคือ `build/reconcile_counts.py` และ `out/reconcile_counts.json` (Toon อนุมัติ) กับบันทึกนี้
+ตรวจ sha256 ของไฟล์ต้นทางทั้งสามก่อนและหลังรันสคริปต์ ไม่เปลี่ยน
+
+**บริบท git ที่ต้องรู้ (เกิดก่อนรอบนี้ ไม่ได้ทำซ้ำ ไม่ได้ย้อนกลับ)** ในรอบ "รับ Research Thinking Handoff" Claude รัน `git fetch` หนึ่งครั้ง
+และย้าย `.git/objects/maintenance.lock` ไปเป็น `.git/stale-maintenance-lock` ไฟล์นั้นยังอยู่ ลบเองได้เมื่อไม่มี git ตัวไหนทำงาน
+`origin/main` มี `5bc37e5` ของ P ที่ยังไม่ได้ pull
+
+**แก้บันทึกก่อนหน้า (19 ต.ค. รับ Research Thinking Handoff)**
+- ข้อ 6 ที่เขียนว่า "44/13/16 ระดับ paper ขัดกับตาราง outcome" **ผิด** ไม่มีการขัดกัน เลข 44 มีสองความหมายที่บังเอิญเท่ากัน
+  (ก) 44 = paper ที่ baseline เป็น plain SMOTE (ระดับ paper ฟิลด์ `smote_kind` ใน `out/full_summary.json` จัดจาก `smote_name_as_printed`)
+  (ข) 44 = paper ที่มีแถวผลเทียบใน `verified_outcomes.csv` = 31 plain + 13 wrapper เป็นคนละชุด paper
+  ตัวเลข 44/13/16 ใน draft บรรทัด 264 จึงถูก
+- ข้อ 5 ที่สงสัยว่าเป็นแถว Tomek **ยืนยันแล้ว** (ด้านล่าง)
+- ข้อ 3 "repository-defined แพ้ 26% ขับโดย RBBoost" ยังถูก และตอนนี้รู้เพิ่มว่าคู่เทียบของ RBBoost เป็นการจับคู่ข้ามตาราง (ข้อ 4)
+
+**1. ชื่อ dataset 771/772 และ 546/547: แก้ได้แล้ว**
+- ต่างกันเพราะแถวเดียว `out/verified_datasets.csv` บรรทัด 1558 paper Tomek Links ชื่อ `[two-class uniform 2-D example from ref. [4], not named]` (synthetic)
+  เป็นคำบรรยายที่ผู้อ่านเขียนแทนชื่อ ไม่ใช่ชื่อ dataset
+- **คำตัดสินของ Toon 19 ต.ค.** ตัวเลขหลักไม่นับ placeholder นี้ (กติกาข้อ 9.6 ห้ามแต่งชื่อ) แถวยังอยู่ใน CSV ไม่แก้
+  รายงานเป็น 1,654 entries ทั้งหมด · 1,653 entries ที่มีชื่อ · **771 ชื่อที่ต่างกัน** · **546 ชื่ออยู่ใน paper เดียว**
+  ถ้านับ placeholder ได้ 772 / 547 (เก็บไว้ใน json เป็นตัวเทียบ)
+- draft เดิมใช้ 1,654 (นับ Tomek) คู่กับ 771 (ไม่นับ) โดยไม่บอก ต้องเขียนกำกับ
+- **"normalising case and punctuation" ไม่ตรงกับโค้ด** `norm()` ใน `build/analyse_dataset_usage.py` แปลงเป็นตัวเล็ก ตัดข้อความในวงเล็บ รวม `_` กับช่องว่าง
+  ไม่ได้ตัดขีดหรือจุด ถ้าตัดเครื่องหมายทั้งหมดจะได้ 678 ชื่อ ไม่ใช่ 771
+
+**2. paper 44 / 57 / 14 / 43 และ KNNOR: แก้ได้แล้ว**
+- baseline ระดับ paper: plain 44, wrapper 13, ไม่ใช่ baseline 16 (รวม 73) → มี SMOTE เป็น baseline 57
+- plain 44 = มีแถวผล 31 + ไม่มีแถวผล 13: Borderline-SMOTE, Safe-Level-SMOTE, Cluster-SMOTE, k-means SMOTE, GLOS (plots),
+  G-SMOTE, CISO, SplitBal, QC-SMOTE (aggregate), MDO, RBO, MC-NCLWO (ranking), Survey: Stop Oversampling (per-dataset partial แต่ไม่มีคู่ค่า)
+- wrapper 13 มีแถวผลครบทั้ง 13 paper
+- **14 ใน draft บรรทัด 314 = 13 ข้างบน + KNNOR** แถวเดียวของ KNNOR (`verified_outcomes.csv` บรรทัด 295, Table 5 p.15, G-score, SVM)
+  คือ "Mean over all 19 datasets" ไม่ใช่ผลรายชุด KNNOR จึงถูกนับทั้งใน 31 และใน 14 (31 + 14 = 45 ≠ 44) จึงได้ 57 − 14 = 43
+- **คำตัดสินของ Toon 19 ต.ค.** ผลหลักใช้ผลรายชุด: **plain SMOTE 541 แถว 30 paper** (ชนะ 420 แพ้ 82 เสมอ 39)
+  KNNOR รายงานแยกเป็นค่ารวม (.8363 vs .8238 วิธีที่เสนอสูงกว่า) ไม่ลบแถวจาก CSV
+- ผลที่ตามมาในตัวเลขอื่น (คำนวณแล้ว ยังไม่แก้ draft):
+  - แยกชนิด 541 แถว: original 167 (133/29/5), repository-defined 119 (90/13/16), modified 143 (109/30/4), synthetic 5 (5/0/0),
+    not stated 104 (82/9/13), unmatched **3 แถว 2 paper** (1/1/1) เดิม 4 แถว 3 paper เพราะแถว KNNOR เป็น unmatched
+  - แถวมาตรฐาน 286 เท่าเดิม (SMOTE ชนะ 42 เสมอ 21) แต่ paper ที่มีแถวมาตรฐานเป็น **29 จาก 30** (เดิมเขียน 29 จาก 31)
+  - paper ที่เทียบเฉพาะบนข้อมูลไม่มาตรฐานเหลือ **INOS เรื่องเดียว** (เดิม INOS และ KNNOR)
+  - 835 แถวรวม: 834 รายชุด + 1 แถวค่ารวมของ KNNOR (draft บรรทัด 56 และ 105 เรียก 835 ว่า per-dataset)
+
+**3. yeast/ecoli/glass: ตรวจแล้ว ไม่ใช่ตัวเลขผิด แต่ถ้อยคำกำกวม**
+- ชื่อตรงตัว yeast 22, ecoli 26, glass 19 paper · นับรวม split ที่แตกออกมา (prefix) 39, 39, 36
+- key ที่ prefix จับได้ yeast 37, ecoli 40, glass 23 ตรวจทุกตัวแล้วเป็น split ของชุดนั้นจริง ไม่มีชื่ออื่นติดมา
+- รายชื่อ paper ที่ถูกนับเฉพาะเมื่อใช้ prefix อยู่ใน `out/reconcile_counts.json` ส่วน `name_frequencies`
+
+**4. repository-defined และ RBBoost: ยืนยันแล้ว และพบว่าเป็นการจับคู่ข้ามตาราง**
+- plain รายชุด: 119 แถว 9 paper (ชนะ 90 แพ้ 13 เสมอ 16) กระจุกที่ GDO 40 แถว และ FW-SMOTE 27 แถว
+- wrapper: 63 แถว **มาจาก RBBoost ทั้งหมด** (ชนะ 25 แพ้ 35 เสมอ 3, `verified_outcomes.csv` บรรทัด 594–659, KEEL ทั้งหมด จัดโดยผู้อ่าน)
+- **ตรวจ PDF** `paper/Both/RBBoost - Supplementary (Knowledge-Based Systems 2015).pdf` และ paper หลัก (pdftotext -layout)
+  - Supp Table 3 (pdf p.3–5) "Geometric Mean for ensembles in the Data-processing family" คอลัมน์ ESM100 ESM200 ESM500 ESM ERUS **E-RB** EopB EopS EopU ERUSR EPart
+  - Supp Table 11 (pdf p.17–18) "Geometric Mean for ensembles in the Boosting family" คอลัมน์ AdaM1W AdaM1S RUSB MultiW MultiS **SB100 SB200 SB500** **RB-B**
+  - ค่าใน CSV ตรงกับ PDF (สุ่มดู hddt boundary RB-B 0.1320 / ESM 0.3482, keel yeast4 0.5807 / 0.7564)
+  - **metric และ setting เข้ากันได้** paper หลัก p.101 (pdf p.6): Weka, ensemble size 100 (สูงสุด), J48 ไม่ prune + Laplace (C4.4) เป็น base classifier ของทุก ensemble,
+    stratified 5×2-fold CV ใช้ร่วมกันทุกวิธี ทั้งสองตารางเป็น G-mean ชุด dataset เดียวกัน
+    ESM = SMOTE ทุก iteration จนคลาสส่วนน้อยเป็น 50% (Table 4 ของ paper)
+  - **แต่ไม่ผ่านเกณฑ์ "ในตารางเดียวกัน" ของ draft** RB-B มาจาก Table 11 ส่วน ESM มาจาก Table 3
+    paper เปรียบเทียบวิธีภายใน family เท่านั้น (p.102 pdf p.7: "comparisons are divided into families") ไม่เคยเทียบ RB-B กับ ESM โดยตรง
+  - ตัวเทียบที่อยู่ในตารางเดียวกันมีสองทาง: (ก) E-RB กับ ESM ใน Table 3 (data-processing family) (ข) RB-B กับ SB100/SB200/SB500 (SMOTEBoost) ใน Table 11
+  - ข้อสังเกตจากเชิงอรรถ 7 ของ paper (p.101): "the 66 datasets have been derived from 16 original sets" เกี่ยวกับประเด็นความหลากหลายของ dataset ยังไม่ได้ใช้
+- ตัวกรองข้ามตาราง (R6 ในสคริปต์) จับ candidate ได้ 5 paper ตรวจด้วยมือแล้ว **ข้ามตารางจริงมีแค่ RBBoost**
+  AMDO (Table 6 numeric / Table 9 nominal), EasyEnsemble (Table X easy / XI hard), NROMM (Supp Table 8 ทั้งหมด), SMOTE-ENN/Tomek (Table 4 คู่ค่า Table 5 ดูแค่ best_other) แต่ละคู่อยู่ตารางเดียว
+- **ข้อเสนอ ยังไม่ตัดสิน** ไม่ลบ 63 แถว (ที่จริง 86 แถวของ RBBoost) ติดธงข้ามตาราง และไม่รวมกับ plain (ตอนนี้ก็แยกอยู่แล้ว)
+  ถ้าจะเก็บไว้ในผล wrapper ให้สกัดใหม่เป็นคู่ในตารางเดียวกัน ทางที่ใกล้เคียงคู่เดิมที่สุดคือ (ก) E-RB กับ ESM ใน Supp Table 3
+  เพราะ ESM เป็นตัวเดียวที่เป็น SMOTE ใน ensemble แบบ non-boosting ส่วน (ข) เปลี่ยน baseline เป็น SMOTEBoost และต้องเลือก rate
+  **ต้องให้ Toon เลือก** ตัวเลขข้อ 3 ของบันทึกก่อนหน้า (repository-defined แพ้ 26% ใน 835 แถว) ขึ้นกับการตัดสินนี้
+
+**สคริปต์** `build/reconcile_counts.py` (stdlib + `norm()` จาก `build/analyse_dataset_usage.py`)
+- อ่าน `out/verified_datasets.csv`, `out/verified_outcomes.csv`, `out/full_summary.json` (ส่วน `papers`) เขียน `out/reconcile_counts.json`
+- กติกา R1–R6 เขียนไว้ใน docstring: R1 ตัด placeholder, R2 นิยาม norm, R3 exact กับ prefix, R4 แยกแถวค่ารวม (Mean/Average), R5 ไม่รวม plain กับ wrapper, R6 candidate ข้ามตาราง + ผลตรวจมือใน `CROSS_TABLE_REVIEW`
+- ใน json มี sha256 ของไฟล์ต้นทาง ไม่มีเวลาที่รัน รันซ้ำได้ผลเดิม (ทดสอบแล้ว ได้ "unchanged")
+- ถ้า `out/reconcile_counts.json` มีอยู่แล้วและต่างจากผลใหม่ จะหยุด ต้องสั่ง `--overwrite` เอง (ใช้ครั้งเดียวรอบนี้ เพื่อเขียนทับผลของตัวเองที่เพิ่งรันก่อนเพิ่ม `CROSS_TABLE_REVIEW`)
+- `--check` พิมพ์อย่างเดียว ผลรอบนี้ checks 18/18 ok
+- วิธีรัน จาก `Data section/`: `python3 build/reconcile_counts.py`
+- สคริปต์ชั่วคราวที่ใช้ตอนสืบ (`~/inv1.py`, `~/inv2.py`, text ของ PDF ที่ `~/rb/` บน VM) **ไม่ใช่ไฟล์ของโปรเจกต์** อย่าอ้างถึง
+
+**ตรวจ manuscript แล้ว จุดที่ต้องแก้ถ้าใช้คำตัดสินข้างบน (ยังไม่แก้ รอ Toon อนุมัติ)** `manuscript/data-section-draft.tex`
+- บรรทัด 56 และ 104–105: "835 per-dataset comparisons" → 834 รายชุด + 1 ค่ารวม
+- บรรทัด 117–120: 1,653 entries ที่มีชื่อ, นิยาม norm ที่ตรงกับโค้ด, ตัวเลข exact กับ family
+- บรรทัด 132 (กล่อง evidence): อ้าง `build/reconcile_counts.py`
+- ตาราง wins-by-type บรรทัด 254–259: แถว unmatched 4/3 → 3/2, All 542/31/421 → 541/30/420 และเพิ่ม note เรื่อง KNNOR
+- บรรทัด 264–269: 31 → 30, 542 → 541, 421 → 420 ส่วน 44/13/16 คงไว้ แต่ควรบอกว่าเป็นระดับ paper
+- บรรทัด 271–274: "29 of the 31" → "29 of the 30", ย้าย KNNOR ออกจากประโยค INOS
+- บรรทัด 314–317: "14" → 13 paper ไม่มีคู่ค่า และ KNNOR มีแค่ค่าเฉลี่ย
+- `manuscript/overview.json` บรรทัด 23–25, 59, 61 ใช้ตัวเลขชุดเดิม (Atlas แสดงจากไฟล์นี้)
+
+**ยังค้าง**
+1. Toon เลือกทางของ RBBoost (ก) (ข) หรือคงไว้พร้อมธง
+2. Toon อนุมัติแก้ draft และ overview.json ตามรายการข้างบน แล้ว rebuild Atlas
+3. commit งานที่ค้างทั้งหมด (รวมสคริปต์และ json ใหม่) แล้ว pull `5bc37e5` ก่อน push Toon รันเอง หรือสั่งให้ Claude ทำ
+4. `research-thinking-handoff.md` ข้อ 9.1, 9.3, 14D ยังเขียนตามความเข้าใจเดิม (542 กับ 835 คนละเกณฑ์) ไม่ได้แก้ เพราะเป็นเอกสารเสริมที่ Toon ส่งมา ให้อ่านคู่กับบันทึกนี้
+
+### 19 ตุลาคม 2026 แก้ manuscript ตามผลกระทบยอด (Toon อนุมัติ) และตัดสินเรื่อง RBBoost
+
+**คำตัดสินของ Toon รอบนี้**
+- **RBBoost** เก็บแถวเดิมไว้ในข้อมูลเพื่อ audit (ไม่แก้ CSV) แต่ไม่ให้อยู่ในชุดเทียบหลักของ manuscript เพราะ RB-B กับ ESM มาจากคนละตาราง (Supp Table 11 กับ Table 3) และ paper ไม่ได้เทียบสองตัวนี้โดยตรง
+  **ห้ามเอา E-RB มาแทน RB-B หรือเอา SMOTEBoost มาแทน ESM เงียบ ๆ** wrapper แยกจาก plain เสมอ
+- Toon สั่งเป็น "63 wrapper comparisons" (ส่วนที่เป็น repository-defined) แต่เหตุผลเดียวกันใช้กับทั้ง 86 แถวของ RBBoost (repository-defined 63, not stated 17, original 6 ทุกแถวจับคู่ข้ามตาราง)
+  ใน manuscript จึงเขียนว่า 86 แถว โดย 63 แถวเป็น repository-defined **ให้ Toon ยืนยันว่าตรงกับที่ตั้งใจ** ถ้าต้องการแค่ 63 ต้องแก้ย่อหน้านั้น
+- KNNOR และ placeholder ของ Tomek ใช้ตามคำตัดสินในบันทึกก่อนหน้า
+
+**ไฟล์ที่แก้ (2 ไฟล์ ตามรายการในบันทึกก่อนหน้า)** สำรองของเดิมไว้ที่ `~/bak/` บน VM (นอก repo ไม่ใช่ไฟล์ของโปรเจกต์)
+- `manuscript/data-section-draft.tex`
+  - หัวคอมเมนต์: เพิ่ม 5 บรรทัดว่าแก้ 19 ต.ค. ด้วยอะไร
+  - บรรทัด 61–62: 835 comparisons = 834 รายชุด + 1 ค่าเฉลี่ย
+  - Benchmark Landscape: 1,654 entries, ตัด placeholder ของ Tomek ได้ 1,653 entries ที่มีชื่อ, 771 ชื่อ, นิยาม norm ตามโค้ดจริง (ไม่ตัดขีดและจุด ตัวอย่าง page-blocks กับ pageblocks), 546 ชื่อ, exact 26/22/19 กับ family 39/39/36
+  - กล่อง evidence ของ Landscape: อ้าง `build/reconcile_counts.py` R1–R3, 772/547 เมื่อนับ placeholder, 678 ถ้าตัดเครื่องหมายทั้งหมด
+  - ตาราง wins-by-type: แถว unmatched 3/2/1/1/1, All 541/30/420/82/39, caption บอกว่าแถว KNNOR รายงานในเนื้อความแทน
+  - ย่อหน้าผลเทียบ: แยกระดับ paper (44/13/16) ออกจาก paper ที่มีแถวผล (30 paper 541 แถว ชนะ 420 เสมอ 39 แพ้ 82), KNNOR รายงานแยก (.8363 กับ .8238)
+  - ย่อหน้าใหม่เรื่อง wrapper: 13 paper 293 แถว ไม่รวมกับตาราง, RBBoost จับคู่ข้ามตาราง (protocol เดียวกันตาม p.101 แต่ paper เทียบเฉพาะภายใน family ตาม p.102) 86 แถว (63 repository-defined) ไม่อยู่ในชุดเทียบใด อีก 12 paper 207 แถว
+  - "29 of the 30", INOS เรื่องเดียวที่เทียบบนข้อมูลไม่มาตรฐานล้วน, KNNOR ไม่นับ
+  - กล่อง evidence ของ wins: `verified_outcomes.csv` แทน `full_outcome_rows.csv`, unmatched 3 และ row order 15 ใน 541 แถว (ทั้ง 835 แถว: 4 และ 22), ที่อยู่หลักฐาน RBBoost
+  - Verifiability: 13 จาก 57 paper ไม่มีคู่ค่ารายชุด เอา KNNOR ออกจากรายการค่าเฉลี่ย และเพิ่มประโยคว่า KNNOR เป็นเรื่องที่ 14 ที่มีแค่ค่าเฉลี่ย
+  - **ไม่ได้แตะประโยค `\claudedraft{}` หรือช่อง `\toon{}`** ประโยคที่เพิ่มเป็นข้อเท็จจริงและวิธีการ ไม่ใช่การตีความ
+- `manuscript/overview.json` (แท็บร่าง manuscript ของ Atlas) แก้ `_about`, `scope`, Landscape 2 ข้อ, Wins 4 ข้อ (เพิ่มข้อ wrapper/RBBoost), Verifiability 1 ข้อ, synthesis ข้อแรกเติม "(นับรวม split)" ตรวจแล้วเป็น JSON ที่ถูกต้อง
+
+**การตรวจหลังแก้**
+1. `python3 build/reconcile_counts.py` checks 18/18 ok, ไฟล์ผล unchanged
+2. ดู diff เต็มของทั้งสองไฟล์แล้ว เปลี่ยนเฉพาะจุดที่ตั้งใจ
+3. grep ตัวเลขเก่า (542, 421, 31 paper, 14 จาก 57, KNNOR ในรายการ non-standard) ไม่เหลือในทั้งสองไฟล์ ส่วน 835 ยังใช้ในความหมายของแถวทั้งหมด (บรรทัด 61, 110)
+4. sha256 ของ `out/verified_datasets.csv`, `out/verified_outcomes.csv`, `out/full_summary.json` ตรงกับก่อนแก้
+5. คอมไพล์ด้วย wrapper article ใน `~/tex/` บน VM ผ่าน ไม่มี error มี overfull box จากกล่อง evidence และ `\pcite` placeholder แบบเดิม
+6. ไม่ทำ git ใด ๆ (ไม่ fetch, pull, commit, push, ไม่แตะ lock รวมถึง `.git/stale-maintenance-lock`)
+
+**ยังค้าง**
+- `manuscript/data-section-draft-preview.pdf` และหน้า Atlas (`out/dataset-atlas.html`) ยังเป็นของเก่า ต้องรัน `python3 build/make_atlas.py` และคอมไพล์พรีวิวใหม่ (รอบนี้ไม่ได้รับอนุญาตให้แก้ไฟล์อื่นนอกจาก 2 ไฟล์)
+- ข้อมูลของแท็บ wins ใน Atlas อ่านจาก `verified_outcomes.csv` โดยตรง ยังนับแถว KNNOR และ RBBoost ตามเดิม ถ้าจะให้ตรงกับ manuscript ต้องแก้ `build/make_atlas.py` (ยังไม่ได้ขออนุญาต)
+- `research-thinking-handoff.md` ยังไม่ได้แก้ตามคำสั่ง ข้อที่ล้าสมัย: 3.1 (39/36 ไม่บอกว่าเป็น family), 9.1 (44 ไม่แยกความหมาย), 9.2 (542/31/421 และแถว unmatched 4), 9.3 (835 "คนละเกณฑ์" และ repository-defined 63%/26% ที่ขับโดย RBBoost), 9.5 (INOS และ KNNOR), 10.1 (57 กับ 14), 11.2, 11.5, 14 C และ D
+- ยืนยัน 86 กับ 63 ของ RBBoost (ข้างบน)
+- commit และ pull `5bc37e5` รอ Toon อนุมัติ
+
+### 19 ตุลาคม 2026 ตรวจขอบเขต RBBoost, สร้างพรีวิว PDF และ Atlas ใหม่, แก้ research-thinking-handoff (Toon สั่ง)
+
+**ขอบเขต** ไม่แก้ CSV ต้นทาง ไม่ทำ git ใด ๆ สำรองไฟล์เดิมทุกไฟล์ที่จะเขียนทับไว้ที่ `~/bak3/` บน VM (นอก repo)
+
+**A. ขอบเขตการตัด RBBoost (ยืนยันแล้ว)**
+- เทียบทั้ง 86 แถวกับ text ของ `paper/Both/RBBoost - Supplementary (Knowledge-Based Systems 2015).pdf` (pdftotext -layout)
+  ค่า proposed ทุกแถวตรงกับคอลัมน์ RB-B ของ Supp Table 11 และค่า smote ทุกแถวตรงกับคอลัมน์ ESM ของ Supp Table 3 (86/86)
+  หัวตาราง 11 ไม่มี ESM และหัวตาราง 3 ไม่มี RB-B จึง **ทั้ง 86 แถวเป็นคู่ข้ามตาราง ไม่ผ่านเกณฑ์ตารางเดียวกัน**
+  แยกชนิด: repository-defined 63, not stated 17, original 6 (ตรงกับที่เขียนใน manuscript ว่า 86 แถว โดย 63 แถวเป็น repository-defined)
+- wrapper ที่เข้าเกณฑ์ = 293 − 86 = **207 แถว 12 paper** (ชนะ 175 แพ้ 26 เสมอ 6) อีก 12 paper ไม่มีคู่ข้ามตาราง
+  (AMDO, EasyEnsemble, NROMM ตรวจใน `CROSS_TABLE_REVIEW` แล้ว แต่ละคู่อยู่ในตารางเดียว)
+  แยกชนิด: original 173 (11 paper), modified 30 (6), synthetic 4 (1) **ไม่มี repository-defined เลย** หลังตัด RBBoost
+- ชุดเทียบทั้งหมด 835 = plain รายชุด 541 + ค่ารวม KNNOR 1 + wrapper เข้าเกณฑ์ 207 + RBBoost ที่ตัด 86
+- ตรวจตัวหารเรื่อง wrapper ใน manuscript (13 paper 293 แถว, 86, 63, 12 paper 207 แถว) และ overview.json แล้ว ตรงกัน
+- แก้คำใน draft เพิ่มอีกจุด: ย่อหน้า RBBoost เดิมเขียน "(Table~11)" "(Table~3)" ซึ่งชนกับ Table 3 ของ manuscript เอง เปลี่ยนเป็น "Supplementary Table~11/3" (overview.json แก้ตาม และเติม "เหลือ wrapper ที่เข้าเกณฑ์ 207 แถว 12 paper")
+
+**B. สร้างพรีวิว PDF และ Atlas ใหม่**
+- `build/make_atlas.py` เดิมนับ KNNOR และ RBBoost รวมในผลชนะ และโหมด "รวมแบบห่อ" รวม plain กับ wrapper เข้าด้วยกัน จึงแก้
+  - import `reconcile_counts` เพื่อใช้กติกาชุดเดียวกับ manuscript (`PLACEHOLDER_RE`, `AGG_RE`, `CROSS_TABLE_REVIEW`, `PLAIN`, `WRAP`)
+  - แท็บ Datasets ไม่นับ placeholder ของ Tomek (เดิม 772 ชื่อ ตอนนี้ 771)
+  - ทุกแถวผลเทียบมี `eligible` และ `excluded_reason` และใส่ `outcome.eligibility` ใน `out/explorer_data.json`
+- `build/atlas_template.html`
+  - ตัวเลือก 3 แบบที่ไม่รวมกัน: ผลหลัก plain รายชุด (541), wrapper ที่เข้าเกณฑ์ (207), แถวที่ไม่เข้าเกณฑ์ (87 = KNNOR 1 + RBBoost 86) เอาโหมดที่รวม plain กับ wrapper ออก
+  - กล่อง "ตัวหารและเกณฑ์" อธิบายตัวหารและเหตุผลที่ตัด
+  - ส่วน "paper ที่ไม่มีตัวเลขรายชุด" นับตามเกณฑ์ใหม่ 31 จาก 73 (ไม่ใช่คู่เทียบ 16, plots 5, aggregate 4, ranking 3, per-dataset partial 1, ค่าเฉลี่ยของ KNNOR 1, ข้ามตารางของ RBBoost 1)
+  - แท็บ Datasets มีคำอธิบาย norm และการตัด placeholder, ที่มาเปลี่ยนเป็น `out/verified_outcomes.csv`, หัวหน้าเป็น 19 ต.ค.
+- รัน `python3 build/make_atlas.py` ได้ datasets 771, eligibility plain 541/30 (420/82/39), wrapper 207/12 (175/26/6), excluded 87/2
+- ทดสอบ Playwright ใน cloud ที่จอ 1280 และ 390: ไม่มี JS error, ตัวนับ 541/207/87, ชื่อ 771, ไม่ล้นจอ, แท็บซ่อนถูก, แท็บ manuscript มีข้อความใหม่
+- **ยังไม่ได้ publish ทับ URL Artifact เดิม** (Artifact อยู่อีก organization ตามบันทึก 18 ต.ค.) ไฟล์ในเครื่องเป็นของใหม่แล้ว
+- พรีวิว PDF: คอมไพล์ด้วย wrapper ใน `~/tex/preview.tex` บน VM (`\documentclass[11pt,letterpaper]{article}` + geometry margin 1in + xcolor, booktabs, amsmath แล้ว `\input{data-section-draft}`) ให้ตรงกับไฟล์เดิม (letter, Computer Modern)
+  pdflatex สองรอบ ไม่มี error ไม่มี undefined reference 6 หน้า (เดิม 5) ดูภาพหน้า 4 แล้ว ตาราง 3 และย่อหน้าใหม่ถูกต้อง (ภาพที่ `_verify_png/preview_19oct-4.png` ซึ่ง gitignore อยู่)
+  **wrapper นี้ไม่ได้อยู่ใน repo** ถ้าต้องการให้สร้างซ้ำได้ ควรเพิ่มเป็นไฟล์ (ยังไม่ได้ขออนุญาต)
+
+**C. แก้ `research-thinking-handoff.md`** (เพิ่มอย่างเดียว 74 บรรทัด ไม่ลบของเดิม)
+- หัวไฟล์บอกว่ามีการแก้แบบเจาะจงวันนี้ และ `handoff.md` ยังเป็นเอกสารหลัก
+- ใส่หมายเหตุ "Update 19 Oct 2026 (verified)" ต่อท้ายข้อ 3.1 (Tomek placeholder, นิยาม norm, family กับ exact), 4.2 (555 = 192 + 108 + 56 ตามกฎ + rule B ย้าย 1 แถว),
+  9.1 (44 สองความหมาย, 30 paper, wrapper เข้าเกณฑ์ 12), 9.2 (541/30 และแถว unmatched 3), 9.3 (835 คือแถวทั้งหมด ไม่ใช่คนละเกณฑ์ ตัด RBBoost พร้อมหลักฐาน และ 63%/26% มาจาก RBBoost),
+  9.5 (29 จาก 30, INOS เรื่องเดียว), 10.1 (13 ไม่ใช่ 14), 11.2, 11.5 และ 14 C/D (ปิดแล้ว)
+- ข้อความเดิมคงไว้ทั้งหมดเป็นประวัติ ตัวเลขใหม่ทุกตัวตรงกับ `out/reconcile_counts.json` และ draft
+- ตัวเลขแยกชนิดของ wrapper ที่เข้าเกณฑ์ (173/30/4) **ไม่ได้อยู่ใน reconcile_counts.json** คำนวณจาก `verified_outcomes.csv` ด้วยกติกาเดียวกัน และแสดงได้ในโหมด wrapper ของ Atlas
+
+**D. การตรวจ**
+- `python3 build/reconcile_counts.py` 18/18 ok, ไฟล์ผล unchanged
+- sha256 ของ CSV และ JSON ต้นทางทั้งสามตรงกับก่อนเริ่มทุกรอบ
+- ดู diff ของ `build/make_atlas.py`, `build/atlas_template.html`, `manuscript/data-section-draft.tex`, `manuscript/overview.json`, `research-thinking-handoff.md` แล้ว
+- 541/30, 207/12, 86 (63/17/6), 87 ไม่เข้าเกณฑ์ ตรงกันใน draft, PDF, overview.json, Atlas และ research-thinking-handoff
+- 542 และ 421 ไม่เหลือใน draft, overview.json, template มีแต่ใน research-thinking-handoff ซึ่งติดป้ายว่าเป็นค่าก่อนแก้
+
+**ยังค้าง**
+1. ยืนยัน wrapper ของพรีวิว PDF ว่าจะเก็บเข้า repo ไหม
+2. publish Atlas ทับ URL เดิมทำจาก session นี้ไม่ได้ ต้องให้ session ที่เข้าถึง Artifact ได้ทำ หรือ publish URL ใหม่
+3. ตัวเลขแยกชนิดของ wrapper ที่เข้าเกณฑ์ ถ้าจะเขียนลง manuscript ควรเพิ่มเข้า `reconcile_counts.py` ก่อน (จะทำให้ checks เปลี่ยนจาก 18)
+4. git: commit งานทั้งหมด แล้ว pull `5bc37e5` ก่อน push รอ Toon อนุมัติ `.git/stale-maintenance-lock` ยังอยู่ตามเดิม
+
+### 19 ตุลาคม 2026 (รอบปิดงาน) ขยาย reconcile_counts, ทำให้พรีวิว PDF สร้างได้จาก repo, ผูก Atlas กับผลกระทบยอด, publish Atlas
+
+**ขอบเขต** ไม่แก้ CSV ต้นทาง ไม่ทำ git ที่เปลี่ยนสถานะ (มีแค่อ่านด้วย `GIT_OPTIONAL_LOCKS=0`) ไม่แตะ lock สำรองไฟล์ที่จะเขียนทับไว้ที่ `~/bak5/` บน VM (นอก repo)
+sha256 ของ `out/verified_datasets.csv` (99b0cfd0…), `out/verified_outcomes.csv` (5b39338d…), `out/full_summary.json` (8eba0dba…) ตรงกับค่าที่บันทึกรอบก่อน ทั้งก่อนและหลังรอบนี้
+
+**1. `build/reconcile_counts.py` เพิ่มกติกา R7 และ checks จาก 18 เป็น 40**
+- R7 แบ่งแถวผลเทียบเป็น partition ที่ไม่ทับกัน: primary (plain รายชุด) / wrapper ที่เข้าเกณฑ์ / excluded (ค่ารวม R4 + ข้ามตาราง R6) ตรวจว่าครอบคลุมทุกแถวครั้งเดียว
+- checks ใหม่ 22 ตัว ได้แก่ primary 541/30, wrapper 207/12 ชนะ 175 แพ้ 26 เสมอ 6, original 173 modified 30 synthetic 4,
+  repository-defined 0 not stated 0 unmatched 0, ผลรวมชนิด = 207, ผลรวมแพ้ชนะ = 207, excluded 87 = ค่ารวม 1 + ข้ามตาราง 86 (63/17/6), partition ครอบคลุมครบ
+- ทุกค่าที่คาดไว้มาจากการคำนวณบนข้อมูลจริง ไม่ได้ลอกมา (ตรงกันทั้งหมด) ทดสอบแบบ negative แล้ว: เปลี่ยนค่าคาดเป็น 208 สคริปต์รายงาน 39/40
+- `out/reconcile_counts.json` เพิ่มส่วน `partitions` เท่านั้น ส่วนเดิมทุกส่วนและ checks เดิม 18 ตัวเหมือนเดิมทุกค่า (ตรวจก่อนสั่ง `--overwrite`)
+- รันซ้ำสามครั้ง ได้ "unchanged" และ sha256 ของ json เท่าเดิม (9c579ff7…)
+- **วิธีรัน** จาก `Data section/`: `python3 build/reconcile_counts.py` (เขียน json ถ้าเปลี่ยนจะหยุด) · `--check` (พิมพ์อย่างเดียว) · `--overwrite` (ตั้งใจเขียนทับ)
+
+**2. พรีวิว PDF สร้างได้จาก repo** (แทน `~/tex/preview.tex` บน VM ที่บันทึกไว้รอบก่อน)
+- `build/preview/preview.tex` wrapper ตัวเดียวกับที่ใช้จริง (article 11pt letter, geometry 1in, xcolor booktabs amsmath, `\input{data-section-draft}`) ไม่มี path เฉพาะเครื่อง
+- `build/preview/build_preview.py` หา draft ผ่าน TEXINPUTS คอมไพล์สองรอบในโฟลเดอร์ temp ของระบบ ตรวจ error และ undefined reference แล้วจึงคัดลอก PDF ไป `manuscript/data-section-draft-preview.pdf` ไม่เหลือไฟล์ .aux/.log ใน repo
+- ต้องมี `pdflatex` (TeX Live หรือ MiKTeX) และแพ็กเกจ geometry, xcolor, booktabs, amsmath · draft ไม่มี bibliography จริง การอ้างอิงเป็น `\pcite` placeholder
+- **วิธีรัน** จาก `Data section/`: `python3 build/preview/build_preview.py` (`--check` คอมไพล์อย่างเดียว)
+- ผล: 6 หน้า letter, ฟอนต์ Computer Modern, undefined reference 0, overfull 12 underfull 9 **เท่ากับ build เดิมบน VM** (ไม่มี warning ใหม่ มาจาก `\pcite` และกล่อง evidence)
+  ข้อความใน PDF ใหม่ตรงกับพรีวิวรอบก่อนทุกตัวอักษร (pdftotext diff ว่าง)
+
+**3. Atlas ผูกกับผลกระทบยอด**
+- `build/make_atlas.py` อ่าน `out/reconcile_counts.json` แล้วตรวจว่า primary/wrapper/excluded ที่คำนวณได้ตรงกับ `partitions` และ sha256 ของ `verified_outcomes.csv` ตรงกัน ถ้าไม่ตรงจะหยุด ไม่สร้างหน้า
+  ใส่ `reconciled_with` (ไฟล์, sha256, checks 40/40) ใน `outcome.eligibility` ของ `out/explorer_data.json` (guard นี้ยังไม่ได้ทดสอบแบบ negative)
+- `build/atlas_template.html`
+  - กล่องเกณฑ์บอกจำนวนแถวที่ตัดราย paper (KNNOR 1, RBBoost 86) และ checks
+  - โหมด audit แสดงเหตุผลที่ไม่เข้าเกณฑ์ใต้ชื่อ paper ทุกแถว
+  - ตารางแยกชนิดแสดงแถว unmatched (เดิมซ่อน ทำให้ผลรวมไม่ถึง 541)
+  - แก้ล้นจอมือถือที่เกิดจากรอบก่อน (ตัวเลือกยาว ทำให้กว้าง 474px ที่จอ 390) โดยย่อข้อความตัวเลือก
+- สร้างใหม่: `out/explorer_data.json`, `out/dataset-atlas.html` รันซ้ำได้ sha256 เท่าเดิม
+- ทดสอบ Playwright ใน cloud จอ 1280 และ 390: ไม่มี JS error (มีแค่ MathJax โหลดไม่ได้เพราะ sandbox ไม่มีเน็ต), แท็บซ่อนถูกทั้ง 5, ไม่ล้นจอทุกแท็บ,
+  ตัวนับ 541/207/87, แยกชนิด primary 167/119/143/5/104/3, wrapper 173/30/4, excluded 6/63/17/1, KNNOR อยู่ในโหมด audit พร้อมเหตุผล R4, ตัวเลือก paper ของผลหลักไม่มี KNNOR และ RBBoost
+- **publish แล้ว** Artifact เดิม (claude.ai/artifact/EuoyidJPHwz7deRmi2bMdc) รอบนี้เข้าถึงได้ในฐานะเจ้าของ อ่านก่อนแล้วว่าเป็น SMOTE25 Dataset Atlas ฉบับ 18 ต.ค.
+  publish ทับเป็น version 5 (1792349440-f294) อ่านกลับแล้วเห็นหัว "19 ต.ค. 2026", กล่อง `wn-rules` และตัวเลือก 3 ชุด เป็น private ยังไม่ได้แชร์ให้ทีม
+
+**4. handoff**
+- `research-thinking-handoff.md` เพิ่มกล่อง "Current state at a glance" ใต้หัวไฟล์ (ตาราง 541/207/87, KNNOR, RBBoost 63/17/6, wrapper แยกชนิด, ระดับ paper, ชื่อ)
+  และเติมป้าย historical ที่หัวข้อ 9.2 กับ 9.3 (สองบรรทัดหัวข้อเท่านั้นที่เปลี่ยน เนื้อเดิมอยู่ครบ)
+- บันทึกเก่าในไฟล์นี้ที่อ้าง `~/tex/` เป็นประวัติ ตอนนี้ใช้ `build/preview/` แทน
+
+**สถานะ git (อ่านอย่างเดียว)**
+- branch `main` ที่ `d63c4c1`, `origin/main` ที่ `5bc37e5` นำหน้า 1 commit ตามหลัง 0 commit
+- commit ของ P เปลี่ยนชื่อ `section07-empirical-comparisons-draft.html` เป็น `SMOTE25_Evaluation_Section.html` (R100) ไฟล์นี้ในเครื่องไม่ได้แก้ จึงไม่ชนกับงานของเรา
+- working tree: แก้ 8 ไฟล์ที่ track อยู่ และไฟล์ใหม่ทั้งหมดของ 16–19 ต.ค. ใต้ `Data section/` (ดู `git status`)
+- `.git/stale-maintenance-lock` ยังอยู่ ไม่ได้แตะ ไม่มี `.lock` อื่น ตรวจไม่ได้ว่ามี git process บน Windows ใช้ repo อยู่ไหม (VM มองไม่เห็น process ของ Windows)
+- `build/__pycache__/` ยังไม่อยู่ใน .gitignore ต้องระวังตอน add
+
+**ยังค้าง**
+1. git ตามแผนข้างล่าง (รอ Toon อนุมัติ)
+2. guard ใน make_atlas ยังไม่ได้ทดสอบแบบ negative
+3. ถ้าจะให้ทีมเปิด Atlas ต้องแชร์จากเมนู Share ของหน้า
+
+**แผน git ที่เสนอ (ยังไม่ได้ทำ)**
+1. ปิด Excel และโปรแกรมที่เปิดไฟล์ใน repo, ดูว่าไม่มี git ตัวอื่นทำงาน แล้วลบ `.git/stale-maintenance-lock` เอง (หรือให้ Claude ขอสิทธิ์ลบ)
+2. `git fetch origin` แล้ว `git show --stat 5bc37e5` ดูของ P
+3. เพิ่ม `build/__pycache__/` ใน `Data section/.gitignore`
+4. `git add -- "Data section"` เท่านั้น (ห้าม `-A` เพราะกับดัก CRLF ที่บันทึกไว้ 14 ต.ค.) แล้ว `git status` ดูว่าไม่มี `paper/`, `_verify_png/` หรือ PDF ของสำนักพิมพ์ติดมา และไม่มีไฟล์นอกโฟลเดอร์
+5. commit เป็นก้อนย่อยตามเรื่อง (extraction ฉบับเต็ม, verification, reconcile, manuscript, Atlas, handoff) หรือก้อนเดียวตามที่ Toon เลือก
+6. `git pull --rebase origin main` (คาดว่าไม่มี conflict เพราะของ P อยู่นอกโฟลเดอร์) แล้วรัน `python3 build/reconcile_counts.py` และ `python3 build/preview/build_preview.py --check` อีกครั้ง
+7. Toon `git push origin main` จาก Windows
+
+### 19 ตุลาคม 2026 (redesign) Atlas เป็นแดชบอร์ดภาพ: แท็บ "ภาพรวม" ใหม่ (Toon สั่ง)
+
+**ขอบเขต** แก้แค่ `build/make_atlas.py`, `build/atlas_template.html` แล้ว rebuild `out/explorer_data.json`, `out/dataset-atlas.html` ไม่แก้ CSV ต้นทาง ไม่ publish ไม่ทำ git สำรองของเดิมที่ `~/bak6/` บน VM
+sha256 ของ CSV และ JSON ต้นทางทั้งสามตรงก่อนและหลัง · `reconcile_counts.py` 40/40 · make_atlas รันซ้ำได้ sha256 เท่าเดิม
+
+**schema ที่เปลี่ยน** `explorer_data.json` เพิ่มคีย์ `dash` (corpus, entries.by_cat, names + families จาก reconcile_counts.json, provenance KEEL/UCI, size_variation, granularity, baseline, by_type ของ plain/wrapper/excluded, excluded_groups)
+คำนวณใน make_atlas จาก `verified_datasets.csv`, `verified_outcomes.csv`, `full_summary.json`, `data_handling_summary.json` และ `reconcile_counts.json` แม่แบบไม่มีตัวเลขเขียนตาย
+ตัวเลขที่ได้ตรงกับที่ตรวจไว้: ชนิด 534/470/331/120/199, ชื่อ 771 (546 ใช้ paper เดียว), ขนาดไม่ตรงกัน 78 จาก 198 ชื่อ (ใช้กติกา R1 ตัด placeholder), KEEL 486 (313 repo-def/161/6/6), UCI 424 (163/193/68), entry ที่ระบุแค่ระดับกลุ่ม UCI/KEEL 68 ไม่นับในกราฟคลัง
+
+**แท็บ ภาพรวม (แท็บแรกและค่าเริ่มต้น ลิงก์ `#dashboard`)**
+- KPI แยกตามหน่วย: paper (76/73), entry/ชื่อ (1,654/771), แถวผลเทียบ (แถบแบ่ง 541/207/87)
+- ข้อค้นพบหลัก 6 ข้อ ข้อความผูกกับตัวเลขในข้อมูล และบอกว่าเป็นการนับสิ่งที่ paper พิมพ์ ไม่ใช่การทดลองซ้ำ
+- 1. ชนิดของ entry (n = 1,654, กดแถวเพื่อดู entry พร้อมช่องค้น ปุ่มล้าง ลิงก์ไป paper) · KEEL กับ UCI แบบ 100% ต่อคลัง พร้อมตัวเลขทุกส่วน
+- 2. ชื่อที่ใช้ซ้ำมากที่สุด top 10/20/30 (ชื่อตรงตัว กดเพื่อเปิดในแท็บ Datasets) · ชื่อตรงตัวเทียบตระกูล (prefix) แยกสองแถบ เฉพาะ yeast/ecoli/glass ที่ตรวจไว้
+- 3. แถบแบ่ง 835 แถวเป็นสามชุด + รายการที่ตัด (KNNOR 1 แถว R4, RBBoost 86 แถว R6 แยก 63/17/6) ปุ่มไปโหมด audit · สองแผงแยกกัน plain (541: 420/39/82) และ wrapper (207: 175/6/26) แบบ 100% stacked พร้อมแยกตามชนิดข้อมูล กดเพื่อดูรายแถว
+- 4. paper รายงานผลอย่างไร (n = 73) · ชื่อเดียวกันขนาดไม่เท่ากัน 78/198 พร้อมตัวอย่าง
+- สีผูกความหมายเดียวกันทุกแท็บ: ชนิดข้อมูล = categorical slot 1–4 + เทาลายเส้นสำหรับ not stated (ป้าย `.dt` ในแท็บอื่นเปลี่ยนเป็นจุดสีชุดเดียวกัน), ผลเทียบ = violet/เทา/red, ชุดเทียบ = ink/accent/เทาลายเส้น
+  ผ่าน `validate_palette.js` ทั้งสองโหมด (โหมดสว่าง aqua กับ yellow ต่ำกว่า 3:1 จึงมีตัวเลขกำกับทุกแถบ) ไม่มีข้อมูลที่บอกด้วยสีอย่างเดียว ทุกแถบมี tooltip (hover และ focus) และ aria-label
+
+**บั๊กเดิมที่แก้ระหว่างทาง**
+- แท็บภาพรวมการจัดการข้อมูลคิดเปอร์เซ็นต์ด้วย 72 ตายตัว แต่ข้อมูลเป็น 73 paper เปลี่ยนเป็น `S.papers_empirical` (เช่น 48 จาก 73 = 66% เดิมแสดง 67%)
+- ตัวเลือกชนิดข้อมูลในแท็บชนะ SMOTE มีแค่ "ทั้งหมด" กับ "มาตรฐาน" การกดตัวเลขรายชนิดในตารางราย paper จึงไม่กรองอะไร เพิ่มตัวเลือกครบทุกชนิดแล้ว (ทดสอบ: กด modified ได้ 12 / 541)
+
+**ทดสอบ** Playwright ใน cloud ที่ 1280, 768 (touch), 390 (touch) ผ่าน 55 ข้อ:
+แท็บทั้ง 6 แสดงทีละแท็บ ไม่ล้นจอทุกแท็บทุกขนาด, ไม่มี JS error (MathJax โหลดไม่ได้เพราะ sandbox ไม่มีเน็ต ไม่ใช่ error ของหน้า),
+ตัวเลขทุกแผงตรงกับ reconcile, คลิกชนิด/ค้น/ล้าง/Enter, top-N, ลิงก์ไป Datasets/Papers/audit, กดแถวชนิดในแผงผลเทียบได้ 143/541 และ 173/207, โหมด wrapper ไม่มี KNNOR/RBBoost, tooltip ทั้ง hover และ focus, แท็บเดิม (manuscript, Datasets, Papers, ภาพรวมการจัดการข้อมูล) ยังทำงาน, โหมดมืดดูแล้ว
+ภาพหน้าจอเก็บไว้ใน session cloud ไม่ได้เข้า repo
+
+**ที่ทำไม่ได้เพราะไม่มีข้อมูลมีโครงสร้าง** กราฟนิยาม IR รายแถว (มีแค่ตารางนิยามใน manuscript และข้อความอิสระ `ir_definition` ราย paper ต้องเข้ารหัสก่อน) · ตระกูล (prefix) ของชื่ออื่นนอกจาก yeast/ecoli/glass (ยังไม่ได้ตรวจกติกา prefix กับชื่ออื่น)
+
+**ยังค้าง** หน้า Artifact ที่ publish ไว้ (version 5) ยังเป็นฉบับก่อน redesign ไม่ได้ publish ตามที่สั่ง · git ตามแผนเดิม
+
+### 19 ตุลาคม 2026 แก้การจัดแนวตาราง Section 1 (แยกตามชนิดข้อมูล) และ Section 2 (ราย paper) ในแท็บชนะ SMOTE
+
+แก้แค่ `build/atlas_template.html` (CSS ของ `.matrix` + หัวตาราง) แล้ว rebuild `out/dataset-atlas.html` · `out/explorer_data.json` ไม่เปลี่ยนแม้แต่ไบต์เดียว · CSV ต้นทาง sha256 เท่าเดิม · reconcile 40/40
+- สาเหตุตาราง 1 (`#wn-sum`): โครงถูก (6 คอลัมน์ทุกแถว ไม่มี colspan) แต่หัวคอลัมน์ตัวเลขชิดซ้ายตามกฎ `th` ทั่วไป ขณะที่ `td.num` ชิดขวา ตารางกว้างเต็มจอจึงเห็นหัวกับตัวเลขอยู่คนละฝั่งของคอลัมน์
+- สาเหตุตาราง 2 (`#wn-matrix`): เหมือนข้อแรก บวกหัวคอลัมน์ชนิดข้อมูลเป็นป้าย `.dt` ที่ไม่ตัดบรรทัดและถูก `th` แปลงเป็นตัวพิมพ์ใหญ่ ตารางจึงกว้าง 1,257px เกินกล่อง 1,148px ความกว้างคอลัมน์ไม่สม่ำเสมอ (`table-layout:auto`) และหัวตาราง sticky ของตารางทั่วไปมีผลด้วย
+- แก้: เพิ่ม `class="num"` และ `scope="col"` ให้หัวคอลัมน์ตัวเลข, `<colgroup>` กำหนดความกว้าง, `.matrix{table-layout:fixed}` กับ min-width (600 / 1120px) เพื่อให้เลื่อนแนวนอนในกล่องแทนการบีบ, หัวตารางตัดบรรทัดได้ ไม่แปลงตัวพิมพ์ ไม่ sticky ชิดล่าง, ตัวเลข tabular-nums ชิดขวา, ป้ายในหัวตารางเป็นตัวหนังสือธรรมดามีจุดสี, ข้อความรองในเซลล์ตัดบรรทัดเป็นวลี
+- ทดสอบ 1280 / 768 / 390 ทั้งโหมด plain / wrapper / audit: ทุกแถวมีจำนวนเซลล์เท่าหัว, ขอบซ้ายขวาของหัวกับเซลล์ตรงกันทุกคอลัมน์, การจัดชิดเหมือนกัน, ไม่มีเนื้อหาล้นเซลล์, หน้าไม่ล้นจอ, ไม่มี JS error (30 ข้อ) และชุดทดสอบเดิม 55 ข้อผ่าน
+- ข้อสังเกต (ไม่ได้แก้): ตารางราย paper ไม่มีคอลัมน์ "จับคู่ชื่อไม่ได้" ตั้งแต่เดิม แถว unmatched 3 แถวใน plain (Loyalty-SMOTE 1, MWMOTE 2) จึงไม่อยู่ในตารางนี้ แต่อยู่ในตาราง 1 และผลรวม
+
+### 19 ตุลาคม 2026 แท็บ "สำรวจ dataset" และระเบียน dataset ราย entry พร้อม ID คงที่ (Toon สั่ง ขอบเขตด้าน dataset เท่านั้น)
+
+**ไฟล์ใหม่** `build/dataset_records.py` → `out/dataset_records.csv` (1,654 แถว 29 ช่อง) และ `out/dataset_records_summary.json` (ตัวนับ ความครบ checks 11/11 sha256 ต้นทาง)
+อ่านอย่างเดียว: `out/verified_datasets.csv`, `out/section7_key_map.csv` (paper_id P001… ที่มีอยู่แล้ว, bibkey, ชื่อเรื่อง), `out/full_summary.json` (นิยาม IR และตารางคุณลักษณะระดับ paper)
+- `record_id` = `<paper_id>-D<ลำดับใน paper>` ตามลำดับแถวใน verified_datasets.csv ไม่ซ้ำกัน คงที่ตราบที่ลำดับแถวใน CSV ต้นทางไม่เปลี่ยน (ตรวจด้วย sha256)
+- เก็บแยก: ชื่อตามที่พิมพ์, ชื่อหลัง norm(), paper_id/key/bibkey/title/year, แหล่งตามที่พิมพ์, กลุ่มใน paper, instance/feature/class/minority/majority, การกระจายคลาส, IR ตามที่พิมพ์ + นิยาม IR ของ paper, ชนิด + ที่มาของป้าย, บันทึกการได้มา, ตำแหน่งในเอกสาร, แถวใน CSV ต้นทาง
+- ไม่รวมแถวแม้ชื่อหลัง normalise ตรงกัน · placeholder ของ Tomek ไม่มีชื่อหลัง normalise
+- วิธีรัน จาก `Data section/`: `python3 build/dataset_records.py` (`--check`, `--overwrite`) แล้ว `python3 build/make_atlas.py`
+
+**make_atlas.py** อ่านสองไฟล์นี้ หยุดถ้า checks ไม่ผ่าน, sha256 ของ verified_datasets.csv ไม่ตรง, หรือจำนวน entry / ชื่อ / ชนิด ไม่ตรงกับ dash · เพิ่มคีย์ `dx` ใน explorer_data.json (ช่องของแถว, ข้อมูลระดับ paper แยก, ความครบ, ตัวนับ)
+
+**แท็บ สำรวจ dataset** (ลิงก์ `#explorer`, อยู่ถัดจาก Datasets) ไม่มี metric ผลของวิธี หรือการเทียบกับ SMOTE (ตรวจข้อความในแท็บแล้วไม่พบคำเหล่านี้นอกประโยคประกาศขอบเขต)
+- ภาพรวม: paper 76/73, entry 1,654 (มีชื่อ 1,653), ชื่อ 771 แยกหน่วยชัด · ชนิด 534/470/331/120/199 กดเพื่อกรอง · แหล่งที่ paper ระบุ (จัดกลุ่มเพื่อแสดง เก็บข้อความจริงในตาราง) กดเพื่อกรอง
+- ลักษณะ: instance (พิมพ์ 1,327 จาก 1,654), feature (1,255), คลาส (1,281), minority (505) เป็นช่วงคงที่ บอกจำนวนที่ไม่พิมพ์ · IR แสดงเฉพาะรูปแบบที่พิมพ์และการระบุนิยาม ไม่วาดการกระจายค่าเพราะนิยามต่างกัน (paper ระบุนิยาม 34 จาก 73)
+- ตาราง: สลับหน่วย entry / ชื่อหลัง normalise, ค้น, กรองชนิด แหล่ง paper ช่องที่มีค่า และชื่อที่หลาย paper พิมพ์ค่าต่างกัน (171 ชื่อ), เรียงทุกคอลัมน์ (ตัวเลขเรียงแบบตัวเลข ค่าว่างไว้ท้าย), แสดงทีละ 100/200, ค่าว่างแสดง "Not reported"
+- รายละเอียด: ทุก entry ที่ใช้ชื่อหลัง normalise เดียวกันวางคู่กัน ไฮไลต์ค่าที่ต่างจากค่าที่พบบ่อยที่สุดโดยไม่เลือกค่าจริง พร้อม paper_id ชื่อเรื่อง bibkey ตำแหน่งในเอกสาร และแถวใน CSV ปุ่มเปิด paper ในแท็บ Papers
+- ความครบ: 11 ช่อง มีค่า/ไม่รายงาน/% ตัวหาร 1,654 และข้อจำกัดของแต่ละช่อง
+
+**ทดสอบ** Playwright 1280 / 768 / 390: 44 ข้อผ่าน (ตัวนับ, การกรองทุกแบบ, เรียง, หน่วยชื่อ 771, ชื่อที่ค่าต่างกัน 171 ตรงกับที่คำนวณจาก CSV, รายละเอียด thyroid มี record ID และแถว CSV ตรงกับ CSV ทั้ง 12 แถว, ลิงก์ paper เปิดเรื่องที่ถูก, placeholder, ปุ่มปิด, Enter, ไม่ล้นจอ, ไม่มี JS error) · ชุดทดสอบเดิม 55 ข้อและตาราง 30 ข้อยังผ่าน · CSV ต้นทาง sha256 เท่าเดิม · reconcile 40/40
+
+**ข้อจำกัด (สำหรับเฟสถัดไปเรื่องเทียบ dataset ข้าม paper)**
+- ไม่มีช่อง version แยก ข้อมูล version/variant/การดัดแปลงอยู่ในข้อความ `group_in_paper` และ `preprocessing_note` (บันทึกของผู้สกัด ไม่ใช่คำพูดผู้เขียนทั้งหมด)
+- ชื่อหลัง norm() ใช้จัดกลุ่มเพื่อดูเท่านั้น split แบบ KEEL ที่ชื่อต่างกันไม่ถูกจับคู่กับชุดแม่ และชื่อเดียวกันอาจเป็นคนละชุด
+- นิยาม IR เป็นข้อความอิสระระดับ paper ยังไม่ได้เข้ารหัส · การกระจายคลาสพิมพ์หลายรูปแบบ
+- record_id ขึ้นกับลำดับแถวของ verified_datasets.csv ถ้าแก้ CSV ต้นทางต้องทำ mapping ID เก่า-ใหม่
+
 ---
 
 ## 5. หลักฐานที่มีอยู่แล้ว รอการตรวจ
@@ -513,10 +1291,35 @@ Fernandez et al. 2018 ใน JAIR เองก็ไม่มี search protocol
 2. **ไฟล์ KEEL แบบ 2 คลาส นับเป็น Original หรือ Modified** เช่น `yeast4`, `glass-0-1-6_vs_2`
    KEEL เป็นผู้ binarize มาจาก UCI ไม่ใช่ผู้เขียน paper การตัดสินข้อนี้เปลี่ยนผล H1 โดยตรง
 3. **H3 ใช้เกณฑ์ reporting granularity 5 ระดับที่เสนอไว้หรือไม่**
+4. ~~นับ Tomek Links~~ **Toon ตัดสินแล้ว 18 ต.ค. นับเข้า ตัวหาร 73** (ข้อ 1 ถึง 3 Toon เลือกค่าชั่วคราวแล้ว ดูตารางใน decisions-pending แต่ยังรออาจารย์)
 
 ---
 
 ## 7. งานขั้นถัดไป เรียงลำดับ
+
+**อัปเดต 19 ต.ค. (จากการกระทบยอด handoff ภาษาอังกฤษ ดูบันทึกข้อ 4 วันที่ 19 ต.ค.)**
+0a. แก้ถ้อยคำ draft บรรทัด 118–120 เรื่อง 39/36 เป็น family by prefix
+0b. หาที่มาของ 771 vs 772 และ 44 paper (บรรทัด 264) vs 57 − 14 = 43
+0c. commit งานค้างทั้งโฟลเดอร์ แล้ว pull `5bc37e5` ของ P ก่อน push
+0d. ข้อสังเกต repository-defined แพ้ 26% ขับโดย RBBoost เรื่องเดียว ต้องกำกับก่อนใช้
+(อัปเดต 19 ต.ค. หลังตรวจ: 0b แก้ได้แล้ว 0a 0d รอ Toon อนุมัติแก้ draft และเลือกทาง RBBoost ดูบันทึก "ตรวจตัวเลขที่ไม่ตรงกัน 4 เรื่อง")
+(อัปเดต 19 ต.ค. รอบแก้ manuscript: 0a 0b 0d เสร็จใน draft และ overview.json แล้ว RBBoost ไม่อยู่ในชุดเทียบ เหลือ 0c (git) และ rebuild Atlas/พรีวิว ดูบันทึก "แก้ manuscript ตามผลกระทบยอด")
+(อัปเดต 19 ต.ค. รอบตรวจ: rebuild Atlas และพรีวิว PDF เสร็จ, research-thinking-handoff แก้แล้ว เหลือ 0c (git) และ publish Atlas ดูบันทึก "ตรวจขอบเขต RBBoost")
+(อัปเดต 19 ต.ค. รอบปิดงาน: reconcile 40 checks, พรีวิว PDF สร้างจาก `build/preview/` ได้, Atlas publish แล้ว เหลือแค่ 0c (git) ตามแผนในบันทึก "รอบปิดงาน")
+
+**อัปเดต 18 ต.ค. งานถัดไปที่ค้าง เรียงตามลำดับ**
+1. ~~อ่าน MC-RBO~~ เสร็จแล้ว 18 ต.ค. (ดูบันทึกข้อ 4)
+2. ~~ไล่ 452 ข้อ~~ เสร็จ 18 ต.ค. (454 ข้อ ดู `out/uncertain_resolution.csv`) เดิม: ไล่ 452 ข้อใน `out/full_uncertain.csv` เริ่มจาก 22 แถวที่จับคู่ dataset ตามลำดับแถว (`match` = row order) และ 4 แถวที่จับคู่ไม่ได้
+3. ~~กระทบยอด 771 กับ 605~~ ไม่ต้องทำ 771 แทน 605 (ดูบันทึก 18 ต.ค. รอบตรวจครบ)
+4. merge `out/full_datasets.csv` เข้า workbook ชีต `extraction` (ตอนนี้ยังแยกกัน)
+5. Toon เขียนประโยคสีน้ำเงิน `\claudedraft{}` ใน `manuscript/data-section-draft.tex` ใหม่ด้วยภาษาตัวเอง และกรอกช่อง `\toon{}`
+6. ~~ตรวจกับ paper จริง~~ Claude ตรวจครบ 18 ต.ค. เหลือ Toon สุ่มตรวจ blind 10 ถึง 20 เปอร์เซ็นต์
+7. ~~เรื่อง Tomek~~ เสร็จ ตัวหาร 73 แก้ draft แล้ว
+8. ~~รัน full_extraction ใหม่~~ เสร็จ 18 ต.ค. 23:44 หลัง Toon ปิด Excel ไฟล์ out/full_* ตรงกับชุดที่ตรวจแล้วทุกไบต์ รัน verify_pdf, apply_verification, uncertain_resolution, make_atlas ซ้ำ ผลเท่าเดิม
+
+**ระหว่างรออาจารย์ (ขั้นที่ 1)** ทำตามตาราง "ทางที่สั้นที่สุด" ท้าย `section-outline.md`
+ลำดับ 1 ถึง 7 ไม่ต้องรอคำตัดสินใด เริ่มจากตรวจค่า "ไม่มี" ทั้ง corpus 35 paper (ดู `data-handling-corpus.md` ข้อ 7)
+**ฐานของ section คือภาพทั้ง 76 paper ไม่ใช่ MWMOTE** (Toon ทัก 16 ต.ค.)
 
 1. เคลียร์ 3 เรื่องในข้อ 6 กับอาจารย์ แล้วบันทึกคำตัดสินลงชีต `win_loss_rule`
 2. เริ่มตรวจแถว เปิด paper ทีละเรื่อง กรอกแถวใน `papers` ก่อน โดยเฉพาะ `role` กับ `has_results_table`
@@ -560,13 +1363,31 @@ Fernandez et al. 2018 ใน JAIR เองก็ไม่มี search protocol
 | ไฟล์ | คืออะไร | เชื่อถือได้แค่ไหน |
 |---|---|---|
 | `handoff.md` | ไฟล์นี้ สถานะรวมของ section | ปัจจุบัน |
+| `build/reconcile_counts.py` | กระทบยอดตัวเลข 4 เรื่อง (ชื่อ, paper, ชื่อสามัญ, repository-defined/RBBoost) กติกา R1–R6 อยู่ใน docstring | 19 ต.ค. checks 18/18 |
+| `build/reconcile_counts.py` (ต่อ) | รอบปิดงานเพิ่ม R7 partition primary / wrapper / excluded | 19 ต.ค. checks 40/40 |
+| `build/preview/preview.tex`, `build/preview/build_preview.py` | สร้าง `manuscript/data-section-draft-preview.pdf` จาก repo | 19 ต.ค. ผ่าน 6 หน้า |
+| `build/dataset_records.py` → `out/dataset_records.csv`, `out/dataset_records_summary.json` | ระเบียน dataset ราย entry พร้อม record_id สำหรับแท็บสำรวจ dataset และเฟสเทียบ dataset ข้าม paper | 19 ต.ค. checks 11/11 |
+| `out/reconcile_counts.json` | ผลของสคริปต์ข้างบน พร้อม sha256 ของไฟล์ต้นทาง | derived จาก verified_* |
+| `research-thinking-handoff.md` | thesis และโครงความคิดของ section ภาษาอังกฤษ (Toon ส่งมา 19 ต.ค.) ตัวเลขบางข้อต้องอ่านคู่กับบันทึก 19 ต.ค. | ความคิด ไม่ใช่สถานะ |
+| `data-handling-corpus.md` | ภาพรวมทั้ง corpus: แหล่ง เหตุผลการเลือก การยก benchmark การดัดแปลง กติกา minority แยกช่วงปี | ai_draft 69 เรื่องไม่มีเลขหน้า 7 เรื่องมี |
+| `ai-draft/new7/` | ผลอ่าน PDF ใหม่ 7 เรื่อง พร้อมเลขหน้าและคำพูดยกมา และ `SCHEMA.md` | ai_draft มีเลขหน้า |
+| `ai-draft/data_handling_codes.json` | รหัส 4 มิติต่อ paper ที่ Claude ให้ พร้อมนิยาม | ai_draft ต้องตรวจ |
+| `manuscript/data-section-draft.tex` | โครง LaTeX ของ section พร้อมช่อง `\toon{}` และกล่อง evidence | ร่าง 18 ต.ค. |
+| `outcome-pilot.md` | pilot 10 paper ผลรายชุดของวิธีที่เสนอเทียบ SMOTE แยกตามชนิดข้อมูล | ai_draft |
+| `ai-draft/outcome/` | ค่าดิบจากตารางผล 10 paper, `SCHEMA.md`, `row_data_type.json` | ai_draft มีเลขหน้า |
+| `ai-draft/full/` | ผลอ่าน PDF ครบ 72 paper (dataset + ผลเทียบ SMOTE + uncertain) พร้อม SCHEMA.md | ai_draft มีตารางและหน้า |
+| `out/full_*.csv/json` | ตารางรวมจาก build/full_extraction.py | ai_draft |
+| `section-outline.md` | โครง D1 ถึง D9 แต่ละหัวข้อต้องใช้หลักฐานอะไร จากไหน กี่แถว และลำดับงานที่สั้นที่สุด | ร่าง 16 ต.ค. ยังไม่ผ่าน Toon |
 | `SMOTE25_data_extraction.xlsx` | **ไฟล์ทำงานหลัก** 6 ชีต วิธีใช้อยู่ในชีต `README` | โครงเชื่อถือได้ เนื้อยังไม่ตรวจ |
-| `decisions-pending.md` | 3 เรื่องที่ต้องตัดสินกับอาจารย์ | รอลายเซ็น |
+| `decisions-pending.md` | 4 เรื่องที่รอตัดสิน (3 กับอาจารย์ 1 ของ Toon) ตารางสถานะอยู่ด้านบน | รอลายเซ็น |
 | `workplan.md` | แผน 8 เฟส พร้อมเกณฑ์ผ่านและเวลา | เป็นข้อเสนอ |
 | `dataset-name-topup.md` | บันทึกรอบเติมชื่อ 14 ต.ค. และสิ่งที่พบ | ai_draft ทุกชื่อ |
 | `dataset-usage-recon.md` | ผลสำรวจการใช้ dataset ข้าม paper | ตัวเลขยังไม่ตรวจ |
 | `drive-inventory.md` | สารบัญไฟล์ใน Drive ครบ 100 ไฟล์ 76 เรื่อง ซ้ำข้ามโฟลเดอร์ 12 | ตรวจนับครบแล้ว |
-| `README.md` | สถานะย่อของโฟลเดอร์ | ปัจจุบัน |
+| `README.md` | สถานะย่อ ตำแหน่งของ section ใน paper ตัวเลข corpus กติกา และแนวทางการเขียน | ปัจจุบัน (18 ต.ค.) |
+| `out/section7_key_map.csv` | คู่คีย์ของเรากับคีย์และ bibkey ของ Section 7 ของ P 76/76 สร้างจาก `build/section7_key_map.py` | ตรวจคู่ด้วยมือ 16 คู่ |
+| `out/dataset-atlas.html` | หน้า SMOTE25 Dataset Atlas สร้างจาก `build/make_atlas.py` + `build/atlas_template.html` | ai_draft |
+| `MC-RBO - ... .pdf` | PDF ที่ Toon วางไว้ | **ห้าม commit** |
 | `build/` | สคริปต์สร้าง workbook และวิเคราะห์ | เชื่อถือได้ |
 | `ai-draft/` | ผลสกัดด้วย AI เก็บเป็น audit trail | **ห้ามอ้างตัวเลขในตัว paper** |
 | `out/` | ผลวิเคราะห์ระดับ variant และ family | derived จาก ai-draft |
@@ -576,6 +1397,11 @@ Fernandez et al. 2018 ใน JAIR เองก็ไม่มี search protocol
 ```
 python3 build/make_workbook.py ai-draft/papers.json ai-draft/dataset_rows.json SMOTE25_data_extraction.xlsx
 python3 build/analyse_dataset_usage.py draft ai-draft/papers.json out/
+python3 build/data_handling_matrix.py
+python3 build/full_extraction.py
+python3 build/section7_key_map.py
+python3 build/make_atlas.py
+python3 build/outcome_pilot.py
 ```
 
 ต้องมี `openpyxl` ทดสอบแล้วว่ารันได้จากโครงไฟล์ที่อยู่ใน repo จริง (16 ต.ค.)
