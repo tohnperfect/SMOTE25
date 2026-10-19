@@ -155,6 +155,12 @@ table.mx thead th.h-Both{color:var(--both);box-shadow:inset 0 3px 0 var(--both)}
 table.mx thead th.h-Survey{color:var(--sur);box-shadow:inset 0 3px 0 var(--sur)}
 table.mx thead th:first-child{width:150px}
 table.tl thead th:first-child{width:90px}
+table.fl thead th.h-Core{color:var(--both);box-shadow:inset 0 3px 0 var(--both)}
+table.fl thead th.h-Partial{color:var(--both);box-shadow:inset 0 3px 0 var(--both-bg),inset 0 -1px 0 var(--line)}
+table.fl thead th.h-Study{color:var(--sur);box-shadow:inset 0 3px 0 var(--sur)}
+table.fl thead th.h-Not{color:var(--muted);box-shadow:inset 0 3px 0 var(--line-strong)}
+table.fl thead th.h-Other{color:var(--muted)}
+table.fl tbody th .cum{display:block;font:400 .7rem/1.4 var(--f-mono);color:var(--both)}
 table.mx tbody th{font:600 .9rem/1.25 var(--f-display)}
 table.mx tbody th .code{display:block;font:500 .72rem/1.4 var(--f-mono);color:var(--muted)}
 table.mx tbody th .n{font:400 .74rem/1.4 var(--f-mono);color:var(--muted)}
@@ -230,6 +236,7 @@ table.tl tbody th{width:80px;font:500 .95rem/1.3 var(--f-mono)}
     <button class="tab" role="tab" data-act="view" data-v="table" id="tab-table" type="button">Table</button>
     <button class="tab" role="tab" data-act="view" data-v="matrix" id="tab-matrix" type="button">Approach × group</button>
     <button class="tab" role="tab" data-act="view" data-v="timeline" id="tab-timeline" type="button">Year × group</button>
+    <button class="tab" role="tab" data-act="view" data-v="flags" id="tab-flags" type="button">Year × flag</button>
   </div>
 
   <div id="view"></div>
@@ -414,6 +421,25 @@ function boot(){
     });
     return h+'</tbody></table></div>';
   }
+  var FLAGCOLS=[['Core','SMOTE-family · Core','Core'],['Partial','SMOTE-family · Partial','Partial'],['Study','Studies SMOTE','Study'],['Not counted','Not counted','Not'],['','No SMOTE link','Other']];
+  function renderFlagTimeline(r){
+    if(!r.length) return '<div class="none">No papers match these filters.</div>';
+    var years=[];r.forEach(function(p){if(years.indexOf(p.year)<0) years.push(p.year);});years.sort(function(a,b){return a-b;});
+    var h='<div class="codes"><span>Columns follow the SMOTE-family definition above; chip edge = group: <span class="badge b-Binary">Binary</span> <span class="badge b-Multiclass">Multiclass</span> <span class="badge b-Binary+Multiclass">Both</span> <span class="badge b-Survey">Survey</span></span><span>Year · papers that year; <b>SF</b> = SMOTE-family papers up to that year</span></div>';
+    h+='<div class="gridbox"><table class="mx tl fl"><thead><tr><th>Year</th>'+FLAGCOLS.map(function(f){var n=r.filter(function(p){return (p.smote_rel||'')===f[0];}).length;return '<th class="h-'+f[2]+'">'+esc(f[1])+'<span class="n">'+n+'</span></th>';}).join('')+'</tr></thead><tbody>';
+    var cum=0;
+    years.forEach(function(y){
+      var ry=r.filter(function(p){return p.year===y;});
+      cum+=ry.filter(function(p){return p.smote_based;}).length;
+      h+='<tr><th>'+y+'<span class="n"> · '+ry.length+'</span><span class="cum">'+cum+' SF</span></th>';
+      FLAGCOLS.forEach(function(f){
+        var c=ry.filter(function(p){return (p.smote_rel||'')===f[0];});
+        h+='<td>'+(c.length?'<div class="chips">'+c.map(function(p){return chip(p,'timeline');}).join('')+'</div>':'')+'</td>';
+      });
+      h+='</tr>';
+    });
+    return h+'</tbody></table></div>';
+  }
 
   function syncPressed(){
     var btns=root.querySelectorAll('[data-act]');
@@ -430,7 +456,7 @@ function boot(){
       var r=rows();
       document.getElementById('count').innerHTML='Showing <b>'+r.length+'</b> of '+P.length;
       var v=document.getElementById('view');
-      v.innerHTML=S.view==='matrix'?renderMatrix(r):S.view==='timeline'?renderTimeline(r):renderTable(r);
+      v.innerHTML=S.view==='matrix'?renderMatrix(r):S.view==='timeline'?renderTimeline(r):S.view==='flags'?renderFlagTimeline(r):renderTable(r);
       syncPressed();
     }catch(e){showErr(e);}
   }
@@ -499,7 +525,7 @@ function boot(){
     else if(ev.key==='/'&&document.activeElement&&document.activeElement.tagName!=='INPUT'&&document.activeElement.tagName!=='TEXTAREA'){ev.preventDefault();document.getElementById('q').focus();}
   });
   var hv=(location.hash||'').replace('#','');
-  if(hv==='matrix'||hv==='timeline'||hv==='table') S.view=hv;
+  if(hv==='matrix'||hv==='timeline'||hv==='flags'||hv==='table') S.view=hv;
   render();
   }catch(e){showErr(e);}
 }
