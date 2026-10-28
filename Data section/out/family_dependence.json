@@ -1,13 +1,13 @@
 {
- "rows": 541,
- "papers": 30,
+ "rows": 521,
+ "papers": 29,
  "sign_counts": {
-  "+": 420,
+  "+": 402,
   "=": 39,
-  "-": 82
+  "-": 80
  },
  "t1_unmapped_rows": 3,
- "rows_linked_to_records": 538,
+ "rows_linked_to_records": 518,
  "confirmed": {
   "pairs": 220,
   "same_sign": 0.5818,

@@ -1,5 +1,7 @@
 # Analysis A — What "Modified" means in practice (331 entries)
 
+> **Update 29 Oct 2026 (rule R8, Toon):** the primary set is now 521 rows (MC-MBRC's 20 original rows left); the 143 modified primary rows quoted below are unchanged.
+
 Status: **completed, verified against the extracted notes; purposes verified against PDF text** (19 Oct 2026).
 Script: `build/modified_operations.py` (rerunnable, stops if a quoted purpose is not found in the PDF).
 Row-level table: `out/modified_operations_audit.csv` (331 rows). Counts: `out/modified_operations_summary.json`.

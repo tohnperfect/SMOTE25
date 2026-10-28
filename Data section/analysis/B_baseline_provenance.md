@@ -1,5 +1,7 @@
 # Analysis B — Where the SMOTE baseline numbers come from
 
+> **Update 29 Oct 2026 (rule R8, Toon):** MC-MBRC's 20 rows left the primary set (its per-dataset table headers do not name SMOTE). Primary is now 521 rows / 29 papers; excluded 107. Changed here: B2 linked primary rows 287 → 267 (B2 total 288 → 268), B2 papers with per-dataset rows 21 → 20; tier 1 stays 216 rows / 13 papers (now of 521 / 29); the 108 rows of unknown origin are unchanged. Numbers below are as of 19 Oct; current values in `out/baseline_provenance_summary.json`.
+
 Status: **completed for the defined scope; evidence verified against PDF text; not reviewed by Toon** (19 Oct 2026).
 Script: `build/baseline_provenance.py` (stops if any quoted statement is not found in the PDF).
 Outputs: `out/baseline_provenance_papers.csv` (57 papers), `out/baseline_identical_values.csv` (row-level identical

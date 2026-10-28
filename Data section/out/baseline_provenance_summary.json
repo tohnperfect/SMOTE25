@@ -9,7 +9,7 @@
  },
  "provenance_papers_with_per_dataset_rows": {
   "B1": 17,
-  "B2": 21,
+  "B2": 20,
   "B4": 4
  },
  "identical_value_pairs": {
@@ -33,7 +33,7 @@
  "rows_by_partition_and_provenance": {
   "primary": {
    "B1|linked": 251,
-   "B2|linked": 287,
+   "B2|linked": 267,
    "B2|unlinked": 1,
    "B1|unlinked": 2
   },
@@ -43,7 +43,7 @@
    "B1|repository-defined": 91,
    "B1|not stated": 35,
    "B2|not stated": 70,
-   "B2|original": 112,
+   "B2|original": 92,
    "B1|synthetic": 5,
    "B2|modified": 77,
    "B2|unlinked": 1,

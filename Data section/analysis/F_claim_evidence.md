@@ -1,5 +1,7 @@
 # Analysis F — Do evaluated data match the data conditions papers target?
 
+> **Update 29 Oct 2026 (rule R8, Toon):** MC-MBRC has no comparison rows left, so its two claims (multi-class, overlap; both 'aligned') drop out: 25 claims from 21 papers (was 27 / 22), aligned 17 (was 19). Current values in `out/claim_evidence_summary.json`.
+
 Status: **completed for a defined subset** (19 Oct 2026). Not reviewed by Toon.
 Script: `build/claim_evidence.py`. Outputs: `out/claim_evidence_matrix.csv` (27 claim rows), `out/claim_evidence_summary.json`.
 

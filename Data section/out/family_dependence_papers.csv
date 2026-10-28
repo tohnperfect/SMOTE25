@@ -11,7 +11,6 @@ confirmed,GOIO,23,0,0,"{'+': 22, '-': 1}",False,{}
 confirmed,INOS,7,0,0,{'+': 7},True,{}
 confirmed,Loyalty-SMOTE,30,1,2,"{'+': 21, '=': 7, '-': 2}",False,"{'ecoli': {'+': 1, '=': 1}}"
 confirmed,MBS,13,0,0,"{'+': 11, '=': 2}",False,{}
-confirmed,MC-MBRC,20,0,0,"{'+': 18, '-': 2}",False,{}
 confirmed,MKC-SMOTE,21,0,0,"{'+': 19, '-': 2}",False,{}
 confirmed,MLOS,16,0,0,"{'+': 13, '-': 3}",False,{}
 confirmed,MWMOTE,20,0,0,"{'-': 6, '+': 14}",False,{}
@@ -41,7 +40,6 @@ t1,GOIO,23,3,10,"{'+': 22, '-': 1}",False,"{'artificial': {'+': 5}, 'avila': {'+
 t1,INOS,7,0,0,{'+': 7},True,{}
 t1,Loyalty-SMOTE,30,2,4,"{'+': 21, '=': 7, '-': 2}",False,"{'aids': {'+': 2}, 'ecoli': {'+': 1, '=': 1}}"
 t1,MBS,13,0,0,"{'+': 11, '=': 2}",False,{}
-t1,MC-MBRC,20,0,0,"{'+': 18, '-': 2}",False,{}
 t1,MKC-SMOTE,21,0,0,"{'+': 19, '-': 2}",False,{}
 t1,MLOS,16,0,0,"{'+': 13, '-': 3}",False,{}
 t1,MWMOTE,20,0,0,"{'-': 6, '+': 14}",False,{}

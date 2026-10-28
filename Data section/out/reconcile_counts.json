@@ -52,18 +52,18 @@
       "7200"
      ],
      "papers_per_size": {
+      "720": [
+       "GDHS",
+       "MC-MBRC",
+       "MC-NCLWO",
+       "SCUT"
+      ],
       "7200": [
        "AMDO",
        "MC-CCR",
        "MC-RBO",
        "NROMM",
        "OVO-SMOTE"
-      ],
-      "720": [
-       "GDHS",
-       "MC-MBRC",
-       "MC-NCLWO",
-       "SCUT"
       ]
      }
     },
@@ -74,10 +74,6 @@
       "366"
      ],
      "papers_per_size": {
-      "366": [
-       "GLOS",
-       "SCUT"
-      ],
       "358": [
        "AMDO",
        "EMDO",
@@ -87,6 +83,10 @@
        "MC-RBO",
        "NROMM",
        "OVO-SMOTE"
+      ],
+      "366": [
+       "GLOS",
+       "SCUT"
       ]
      }
     },
@@ -99,6 +99,9 @@
       "336"
      ],
      "papers_per_size": {
+      "310": [
+       "G-SMOTE"
+      ],
       "336": [
        "A-SUWO",
        "FW-SMOTE",
@@ -116,18 +119,15 @@
        "SMOTE-IPF",
        "k-means SMOTE"
       ],
-      "301": [
-       "G-SMOTE"
-      ],
-      "310": [
-       "G-SMOTE"
-      ],
       "327": [
        "AMDO",
        "EMDO",
        "GLOS",
        "MDO",
        "SMOM"
+      ],
+      "301": [
+       "G-SMOTE"
       ]
      }
     },
@@ -141,9 +141,6 @@
      ],
      "papers_per_size": {
       "635": [
-       "G-SMOTE"
-      ],
-      "590": [
        "G-SMOTE"
       ],
       "768": [
@@ -164,6 +161,9 @@
        "SMOTE-IPF",
        "k-means SMOTE"
       ],
+      "590": [
+       "G-SMOTE"
+      ],
       "769": [
        "G-SMOTE"
       ]
@@ -182,18 +182,18 @@
       "7200"
      ],
      "papers_per_size": {
+      "720": [
+       "GDHS",
+       "MC-MBRC",
+       "MC-NCLWO",
+       "SCUT"
+      ],
       "7200": [
        "AMDO",
        "MC-CCR",
        "MC-RBO",
        "NROMM",
        "OVO-SMOTE"
-      ],
-      "720": [
-       "GDHS",
-       "MC-MBRC",
-       "MC-NCLWO",
-       "SCUT"
       ]
      }
     },
@@ -204,10 +204,6 @@
       "366"
      ],
      "papers_per_size": {
-      "366": [
-       "GLOS",
-       "SCUT"
-      ],
       "358": [
        "AMDO",
        "EMDO",
@@ -217,6 +213,10 @@
        "MC-RBO",
        "NROMM",
        "OVO-SMOTE"
+      ],
+      "366": [
+       "GLOS",
+       "SCUT"
       ]
      }
     },
@@ -229,6 +229,9 @@
       "336"
      ],
      "papers_per_size": {
+      "310": [
+       "G-SMOTE"
+      ],
       "336": [
        "A-SUWO",
        "DSRBF / Static-SMOTE",
@@ -249,18 +252,15 @@
        "SMOTE-IPF",
        "k-means SMOTE"
       ],
-      "301": [
-       "G-SMOTE"
-      ],
-      "310": [
-       "G-SMOTE"
-      ],
       "327": [
        "AMDO",
        "EMDO",
        "GLOS",
        "MDO",
        "SMOM"
+      ],
+      "301": [
+       "G-SMOTE"
       ]
      }
     },
@@ -274,9 +274,6 @@
      ],
      "papers_per_size": {
       "635": [
-       "G-SMOTE"
-      ],
-      "590": [
        "G-SMOTE"
       ],
       "768": [
@@ -296,6 +293,9 @@
        "SMOTE-ENN / SMOTE-Tomek",
        "SMOTE-IPF",
        "k-means SMOTE"
+      ],
+      "590": [
+       "G-SMOTE"
       ],
       "769": [
        "G-SMOTE"
@@ -593,10 +593,10 @@
    "equal": 39
   },
   "plain_per_dataset": {
-   "rows": 541,
-   "papers": 30,
-   "proposed_higher": 420,
-   "smote_higher": 82,
+   "rows": 521,
+   "papers": 29,
+   "proposed_higher": 402,
+   "smote_higher": 80,
    "equal": 39
   },
   "plain_per_dataset_by_type": {
@@ -615,10 +615,10 @@
     "equal": 13
    },
    "original": {
-    "rows": 166,
-    "papers": 26,
-    "proposed_higher": 132,
-    "smote_higher": 29,
+    "rows": 146,
+    "papers": 25,
+    "proposed_higher": 114,
+    "smote_higher": 27,
     "equal": 5
    },
    "repository-defined": {
@@ -644,12 +644,12 @@
    }
   },
   "plain_per_dataset_standard": {
-   "rows": 285,
-   "papers": 29,
-   "proposed_higher": 222,
-   "smote_higher": 42,
+   "rows": 265,
+   "papers": 28,
+   "proposed_higher": 204,
+   "smote_higher": 40,
    "equal": 21,
-   "papers_with_standard_rows": 29,
+   "papers_with_standard_rows": 28,
    "papers_without_standard_rows": [
     "INOS"
    ]
@@ -1128,12 +1128,12 @@
   "unreviewed": []
  },
  "partitions": {
-  "rule": "R7: primary = plain per-dataset, wrapper = eligible wrapper, excluded = aggregate (R4) + confirmed cross-table (R6); never pooled",
+  "rule": "R7: primary = plain per-dataset, wrapper = eligible wrapper, excluded = aggregate (R4) + confirmed cross-table (R6) + comparator not confirmed as SMOTE (R8); never pooled",
   "primary": {
-   "rows": 541,
-   "papers": 30,
-   "proposed_higher": 420,
-   "smote_higher": 82,
+   "rows": 521,
+   "papers": 29,
+   "proposed_higher": 402,
+   "smote_higher": 80,
    "equal": 39,
    "by_type": {
     "modified": {
@@ -1151,10 +1151,10 @@
      "equal": 13
     },
     "original": {
-     "rows": 166,
-     "papers": 26,
-     "proposed_higher": 132,
-     "smote_higher": 29,
+     "rows": 146,
+     "papers": 25,
+     "proposed_higher": 114,
+     "smote_higher": 27,
      "equal": 5
     },
     "repository-defined": {
@@ -1225,7 +1225,20 @@
    ]
   },
   "excluded": {
-   "rows": 87,
+   "rows": 107,
+   "comparator": {
+    "rows": 20,
+    "papers": 1,
+    "proposed_higher": 18,
+    "smote_higher": 2,
+    "equal": 0,
+    "reasons": {
+     "MC-MBRC": "comparator not confirmed as SMOTE: Tables 9-12 do not name SMOTE in the column header (all-metric copy reads 'MDO'); SMOTE is named only in Appendix A.1 and Table 8 (Toon 29 Oct 2026)"
+    },
+    "by_type": {
+     "original": 20
+    }
+   },
    "aggregate": [
     {
      "csv_line": 295,
@@ -1290,6 +1303,11 @@
    "got": 1,
    "ok": true
   },
+  "excluded_comparator_rows": {
+   "expected": 20,
+   "got": 20,
+   "ok": true
+  },
   "excluded_cross_table_not_stated": {
    "expected": 17,
    "got": 17,
@@ -1311,8 +1329,8 @@
    "ok": true
   },
   "excluded_rows": {
-   "expected": 87,
-   "got": 87,
+   "expected": 107,
+   "got": 107,
    "ok": true
   },
   "families_t1": {
@@ -1361,23 +1379,23 @@
    "ok": true
   },
   "plain_per_dataset_papers": {
-   "expected": 30,
-   "got": 30,
+   "expected": 29,
+   "got": 29,
    "ok": true
   },
   "plain_per_dataset_rows": {
-   "expected": 541,
-   "got": 541,
+   "expected": 521,
+   "got": 521,
    "ok": true
   },
   "primary_papers": {
-   "expected": 30,
-   "got": 30,
+   "expected": 29,
+   "got": 29,
    "ok": true
   },
   "primary_rows": {
-   "expected": 541,
-   "got": 541,
+   "expected": 521,
+   "got": 521,
    "ok": true
   },
   "single_paper_names": {

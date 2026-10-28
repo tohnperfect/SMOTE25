@@ -84,6 +84,8 @@ for r in FO:
         r["eligible"], r["excluded_reason"] = False, "aggregate over datasets, not a per-dataset pair (rule R4)"
     elif r["paper"] in CROSS:
         r["eligible"], r["excluded_reason"] = False, "cross-table pair: " + RC.CROSS_TABLE_REVIEW[r["paper"]] + " (rule R6)"
+    elif r["paper"] in RC.EXCLUDED_COMPARATOR:
+        r["eligible"], r["excluded_reason"] = False, RC.EXCLUDED_COMPARATOR[r["paper"]] + " (rule R8)"
     else:
         r["eligible"], r["excluded_reason"] = True, ""
 def _tal(L): return dict(rows=len(L), papers=len({r["paper"] for r in L}), up=sum(r["raw_sign"] == "+" for r in L),
@@ -147,7 +149,8 @@ DASH = dict(
     baseline=dict(C.Counter(x["smote_kind"] for x in FS["papers"])),
     by_type=dict(plain=_typ([r for r in FO if r["eligible"] and r["smote_kind"] == RC.PLAIN]),
                  wrapper=_typ([r for r in FO if r["eligible"] and r["smote_kind"] == RC.WRAP]), excluded=_typ(_xc)),
-    excluded_groups=[dict(paper=k, reason=("aggregate" if all(r["excluded_reason"].startswith("aggregate") for r in _xc if r["paper"] == k) else "cross-table"),
+    excluded_groups=[dict(paper=k, reason=("aggregate" if all(r["excluded_reason"].startswith("aggregate") for r in _xc if r["paper"] == k)
+                                            else "comparator" if k in RC.EXCLUDED_COMPARATOR else "cross-table"),
                           **_tal([r for r in _xc if r["paper"] == k])) for k in sorted({r["paper"] for r in _xc})],
 )
 # ---- Dataset Explorer (19 ต.ค. 2026): ระเบียนราย entry จาก build/dataset_records.py เฉพาะด้าน dataset ไม่มีผลเทียบ ----

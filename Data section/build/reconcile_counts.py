@@ -27,6 +27,9 @@
   R4  ผลเทียบหลักคือ plain SMOTE รายชุด แถวที่ dataset ขึ้นต้นด้วย Mean/Average คือค่ารวมหลายชุด (AGG_RE)
       แยกรายงานต่างหาก ไม่นับเป็นผลรายชุด (ตอนนี้ตรงแถวเดียวคือ KNNOR)
   R5  plain SMOTE กับ SMOTE แบบห่อ (wrapper) รายงานแยกกันเสมอ ไม่รวมกัน
+  R8  (Toon 29 Oct 2026) paper ที่ตัวเทียบไม่ยืนยันว่าเป็น SMOTE ตัดออกจากชุดเทียบทั้งหมด (EXCLUDED_COMPARATOR)
+      ตอนนี้คือ MC-MBRC 20 แถว: ตาราง 9-12 ไม่ได้เขียนชื่อ SMOTE ที่หัวคอลัมน์ (ฉบับ all-metric อ่านได้ "MDO")
+      แถวยังอยู่ใน verified_outcomes.csv และยังนับใน 835 / plain_incl_aggregate 542 / paper level
   R6  แถวที่ช่อง table อ้างมากกว่าหนึ่งตารางเป็น "candidate" เท่านั้น (regex จับได้ทั้งกรณีที่ dataset คนละชุดอยู่คนละตาราง)
       ผลตรวจด้วยมือว่าเป็นการจับคู่ค่าวิธีที่เสนอกับ SMOTE ข้ามตารางจริงหรือไม่ อยู่ใน CROSS_TABLE_REVIEW ไม่ลบแถว แค่รายงาน
   R7  (เพิ่ม 19 ต.ค. 2026 รอบ final) ชุดเทียบแบ่งเป็น partition ที่ไม่ทับกัน 3 ส่วน ไม่รวมกันเด็ดขาด
@@ -53,6 +56,10 @@ TABLE_RE = re.compile(r"\bTable\s+[A-Z]?\d+|\bTable\s+[IVXL]+\b", re.I)
 STD = {"original", "repository-defined"}
 PLAIN, WRAP = "plain SMOTE", "SMOTE variant (multiclass/ensemble wrapper)"
 FAMILIES = ["yeast", "ecoli", "glass"]
+# R8 (Toon 29 Oct 2026): ตัวเทียบไม่ยืนยันว่าเป็น SMOTE -> ตัดออกจากผลรายชุดทุกชุด (ตรงกับ EXCLUDED ใน winloss_allmetric.py)
+EXCLUDED_COMPARATOR = {
+    "MC-MBRC": "comparator not confirmed as SMOTE: Tables 9-12 do not name SMOTE in the column header (all-metric copy reads 'MDO'); SMOTE is named only in Appendix A.1 and Table 8 (Toon 29 Oct 2026)",
+}
 # ผลตรวจด้วยมือ 19 ต.ค. 2026 จากช่อง table ใน verified_outcomes.csv และ PDF (RBBoost)
 CROSS_TABLE_REVIEW = {
     "RBBoost / Random Balance": "cross-table pair: RB-B from Supplementary Table 11 (Boosting family) vs ESM from Supplementary Table 3 (Data-processing family); same protocol per main paper p.101-102 but the paper never compares RB-B with ESM directly",
@@ -70,17 +77,17 @@ EXPECTED = {
     "datasets_t1": 680, "families_t1": 459,  # T1 + Toon follow-up 28 Oct (pageblock = pageblocks; 8 same-source names joined)
     "size_var_names_2plus": 198, "size_var_names_multi": 78, "size_var_datasets_2plus": 192, "size_var_datasets_multi": 90,
     "outcome_rows_all": 835, "outcome_rows_plain_incl_aggregate": 542, "outcome_papers_plain_incl_aggregate": 31,
-    "plain_per_dataset_rows": 541, "plain_per_dataset_papers": 30,
+    "plain_per_dataset_rows": 521, "plain_per_dataset_papers": 29,  # R8 29 Oct 2026 (was 541/30 incl. MC-MBRC)
     "paper_level_plain": 44, "paper_level_wrapper": 13, "paper_level_none": 16,
     "wrapper_repository_defined_rows": 63,
     # R7 partitions (เพิ่ม 19 ต.ค. 2026 รอบ final)
-    "primary_rows": 541, "primary_papers": 30,
+    "primary_rows": 521, "primary_papers": 29,  # R8 29 Oct 2026 (was 541/30)
     "wrapper_eligible_rows": 207, "wrapper_eligible_papers": 12,
     "wrapper_eligible_proposed_higher": 175, "wrapper_eligible_smote_higher": 26, "wrapper_eligible_equal": 6,
     "wrapper_eligible_original": 173, "wrapper_eligible_modified": 30, "wrapper_eligible_synthetic": 4,
     "wrapper_eligible_repository_defined": 0, "wrapper_eligible_not_stated": 0, "wrapper_eligible_unmatched": 0,
     "wrapper_eligible_types_sum_equals_rows": True, "wrapper_eligible_signs_sum_equals_rows": True,
-    "excluded_rows": 87, "excluded_aggregate_rows": 1, "excluded_cross_table_rows": 86,
+    "excluded_rows": 107, "excluded_aggregate_rows": 1, "excluded_cross_table_rows": 86, "excluded_comparator_rows": 20,
     "excluded_cross_table_repository_defined": 63, "excluded_cross_table_not_stated": 17, "excluded_cross_table_original": 6,
     "partitions_cover_all_rows_once": True,
 }
@@ -174,7 +181,7 @@ def main():
     agg_ids = {id(r) for r in agg}
     plain = [r for r in O if r["smote_kind"] == PLAIN]
     wrap = [r for r in O if r["smote_kind"] == WRAP]
-    plain_ds = [r for r in plain if id(r) not in agg_ids]
+    plain_ds = [r for r in plain if id(r) not in agg_ids and r["paper"] not in EXCLUDED_COMPARATOR]
     other_kind = sorted({r["smote_kind"] for r in O} - {PLAIN, WRAP})
     papers_plain_ds = sorted({r["paper"] for r in plain_ds})
     std_papers = sorted({r["paper"] for r in plain_ds if r["how_obtained"] in STD})
@@ -243,6 +250,7 @@ def main():
     def part(r):
         if id(r) in agg_ids: return "excluded_aggregate"
         if r["paper"] in confirmed: return "excluded_cross_table"
+        if r["paper"] in EXCLUDED_COMPARATOR: return "excluded_comparator"
         if r["smote_kind"] == PLAIN: return "primary"
         if r["smote_kind"] == WRAP: return "wrapper"
         return "unassigned"
@@ -251,10 +259,12 @@ def main():
     weg = PART["wrapper"]; wtypes = Counter(r["how_obtained"] for r in weg); wsig = signs(weg)
     xc = PART["excluded_cross_table"]; xtypes = Counter(r["how_obtained"] for r in xc)
     R["partitions"] = {
-        "rule": "R7: primary = plain per-dataset, wrapper = eligible wrapper, excluded = aggregate (R4) + confirmed cross-table (R6); never pooled",
+        "rule": "R7: primary = plain per-dataset, wrapper = eligible wrapper, excluded = aggregate (R4) + confirmed cross-table (R6) + comparator not confirmed as SMOTE (R8); never pooled",
         "primary": {**signs(PART["primary"]), "by_type": by_type(PART["primary"])},
         "wrapper_eligible": {**wsig, "by_type": by_type(weg), "papers_list": sorted({r["paper"] for r in weg})},
-        "excluded": {"rows": len(PART["excluded_aggregate"]) + len(xc),
+        "excluded": {"rows": len(PART["excluded_aggregate"]) + len(xc) + len(PART["excluded_comparator"]),
+                     "comparator": {**signs(PART["excluded_comparator"]), "reasons": EXCLUDED_COMPARATOR,
+                                    "by_type": dict(sorted(Counter(r["how_obtained"] for r in PART["excluded_comparator"]).items()))},
                      "aggregate": [{"csv_line": O.index(r) + 2, "paper": r["paper"], "dataset": r["dataset"], "smote_kind": r["smote_kind"]}
                                    for r in PART["excluded_aggregate"]],
                      "cross_table": {**signs(xc), "papers": sorted({r["paper"] for r in xc}),
@@ -291,7 +301,8 @@ def main():
         "wrapper_eligible_types_sum_equals_rows": sum(wtypes.values()) == wsig["rows"]
             and wtypes["original"] + wtypes["modified"] + wtypes["synthetic"] == wsig["rows"],
         "wrapper_eligible_signs_sum_equals_rows": wsig["proposed_higher"] + wsig["smote_higher"] + wsig["equal"] == wsig["rows"],
-        "excluded_rows": len(PART["excluded_aggregate"]) + len(xc), "excluded_aggregate_rows": len(PART["excluded_aggregate"]),
+        "excluded_rows": len(PART["excluded_aggregate"]) + len(xc) + len(PART["excluded_comparator"]),
+        "excluded_aggregate_rows": len(PART["excluded_aggregate"]), "excluded_comparator_rows": len(PART["excluded_comparator"]),
         "excluded_cross_table_rows": len(xc), "excluded_cross_table_repository_defined": xtypes["repository-defined"],
         "excluded_cross_table_not_stated": xtypes["not stated"], "excluded_cross_table_original": xtypes["original"],
         "partitions_cover_all_rows_once": covered == len(O) and not PART["unassigned"]

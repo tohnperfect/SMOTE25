@@ -47,7 +47,7 @@ for name, a, b in PER:
     B = [x for x in BP if x["year"] and per(x["year"]) == name]
     d["smote_baseline_papers"] = frac(len(B), nP)
     d["provenance_papers_of_smote_baseline_papers"] = {k: frac(sum(x["provenance"].startswith(k) for x in B), len(B)) for k in ["B1", "B2", "B3", "B4"]}
-    pr = [(o, l) for o, l in zip(O, LK) if per(yr[o["paper"]]) == name and not RC.AGG_RE.match(o["dataset"] or "") and o["paper"] not in CROSS and o["smote_kind"] == RC.PLAIN]
+    pr = [(o, l) for o, l in zip(O, LK) if per(yr[o["paper"]]) == name and not RC.AGG_RE.match(o["dataset"] or "") and o["paper"] not in CROSS and o["paper"] not in RC.EXCLUDED_COMPARATOR and o["smote_kind"] == RC.PLAIN]
     d["primary_rows"] = len(pr); d["primary_papers"] = len({o["paper"] for o, _ in pr})
     d["primary_rows_by_category"] = {c: frac(sum(o["how_obtained"] == c for o, _ in pr), len(pr)) for c in CATS + ["unmatched"]}
     d["primary_rows_sign"] = dict(Counter(o["raw_sign"] for o, _ in pr))

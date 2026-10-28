@@ -23,10 +23,11 @@
 % difficulty/difficulty_refs.bib, not yet in references.bib). Figure file:
 % manuscript/figures/data-difficulty.pdf (copy to the repo figures/ folder on merge).
 % Revised 19 Oct 2026 (Claude, approved by Toon): counts reconciled with
-% build/reconcile_counts.py (out/reconcile_counts.json, rules R1-R6). Tomek links
+% build/reconcile_counts.py (out/reconcile_counts.json, rules R1-R8). Tomek links
 % placeholder excluded from name counts; KNNOR's mean reported apart from the
-% per-dataset set (541 rows, 30 papers); RBBoost's cross-table pairs excluded
-% from every comparison set. See handoff.md, entries of 19 Oct.
+% per-dataset set (521 rows, 29 papers); RBBoost's cross-table pairs excluded
+% from every comparison set; MC-MBRC excluded by rule R8 (Toon, 29 Oct 2026;
+% comparator column not named SMOTE; set was 541 rows, 30 papers before). See handoff.md, entries of 19 Oct.
 % Conventions followed (from the repo README, main.tex, tables/ and Section 7):
 %  * British spelling, as in P's Section 7 draft (normalise, binarise, analyse).
 %  * Section and caption titles in Title Case; caption above the table;
@@ -515,24 +516,27 @@ is not a per-dataset comparison and is reported in the text instead.}
 \toprule
 How obtained & Rows & Papers & Proposed wins & SMOTE wins & Ties\\
 \midrule
-Original & 166 & 26 & 132 & 29 & 5\\
+Original & 146 & 25 & 114 & 27 & 5\\
 Repository-defined & 119 & 9 & 90 & 13 & 16\\
 Modified & 143 & 14 & 109 & 30 & 4\\
 Synthetic & 5 & 1 & 5 & 0 & 0\\
 Cannot be told & 105 & 13 & 83 & 9 & 13\\
 Result row not matched to a dataset & 3 & 2 & 1 & 1 & 1\\
 \addlinespace
-All & 541 & 30 & 420 & 82 & 39\\
+All & 521 & 29 & 402 & 80 & 39\\
 \bottomrule
 \end{tabular}
 \end{table}
 
 At the paper level, 44 of the 73 papers use plain SMOTE as a baseline,
 13 use SMOTE inside a wrapper, and 16 do not compare with SMOTE at all.
-Fewer papers give rows that can be compared: 30 papers print per-dataset
+Fewer papers give rows that can be compared: 29 papers print per-dataset
 scores for both the proposed method and plain SMOTE in the same table, giving
-541 comparisons (Table~\ref{tab:wins-by-type}). In these, the
-proposed method wins in 420 rows, ties in 39 and loses in 82.
+521 comparisons (Table~\ref{tab:wins-by-type}). In these, the
+proposed method wins in 402 rows, ties in 39 and loses in 80.
+MC-MBRC~\pcite{ma2024mcmbrc} names SMOTE as a baseline, but the column headers of
+its per-dataset tables do not say which column is SMOTE; its 20 rows are kept in
+our data and left out of every comparison set.
 KNNOR~\pcite{islam2022knnor} prints only a mean over its 19 datasets
 (G-score .8363 for KNNOR and .8238 for SMOTE); we report it here as an
 aggregate result and do not count it as a per-dataset comparison.
@@ -550,11 +554,11 @@ RB-Boost with ESM directly. Its 86 rows, 63 of them on repository-defined
 data, are kept in our data for audit and excluded from every comparison set
 reported here; the other 12 wrapper papers contribute 207 rows.
 
-Split by data type, 29 of the 30 papers include at least
+Split by data type, 28 of the 29 papers include at least
 one standard dataset (original or repository-defined) in the comparison, and
-on these 285 standard rows SMOTE wins in 42 and ties in 21. One paper reports its per-dataset comparison with SMOTE
+on these 265 standard rows SMOTE wins in 40 and ties in 21. One paper reports its per-dataset comparison with SMOTE
 only on modified, synthetic or unidentifiable data (INOS~\pcite{cao2013inos}); KNNOR, whose only comparison is the aggregate above, is not counted here.
-Conversely, six papers compare only on standard data (GDO~\pcite{xie2022gdo}, MC-MBRC~\pcite{ma2024mcmbrc},
+Conversely, five papers compare only on standard data (GDO~\pcite{xie2022gdo},
 MKC-SMOTE, OREM-M, SCUT~\pcite{agrawal2015scut}, SPE~\pcite{liu2020spe}).
 
 \toon{Your hypothesis H1 lives here. Look at the shares of ``SMOTE higher''
@@ -570,7 +574,7 @@ readers see this directly.}
 
 \evidence{out/verified\_outcomes.csv (smote\_kind = plain SMOTE; KNNOR's aggregate,
 row 295, set aside by rule R4); counts reproduced by build/reconcile\_counts.py
-(out/reconcile\_counts.json). Of the 541 rows, 3 could not be matched to a dataset
+(out/reconcile\_counts.json); MC-MBRC's 20 rows (Table 10, p.10; SMOTE named only in Appendix A.1 and Table 8, column headers of Tables 9--12 do not name it) set aside by rule R8. Of the 521 rows, 3 could not be matched to a dataset
 entry and 15 were matched by row order only (over all 835 rows: 4 and 22). Paper-level
 baselines: out/full\_summary.json, papers, smote\_kind. RBBoost: rows 574--659;
 supplement Table~3 pp.3--5 and Table~11 pp.17--18; protocol p.101 and family design

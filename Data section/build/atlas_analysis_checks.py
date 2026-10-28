@@ -46,7 +46,8 @@ lab = collections.Counter(r["provenance"][:2] for r in bp)
 pc = bs["rows_by_partition_and_provenance"]["primary_cat"]
 t1 = sum(n for k, n in pc.items() if k.startswith("B1|") and k.split("|")[1] not in ("not stated", "unlinked"))
 prim = sum(bs["rows_by_partition_and_provenance"]["primary"].values())
-chk("B tier1 recomputed", t1 == 216 and prim == 541, f"tier1 {t1}, primary {prim}, labels {dict(lab)}")
+chk("B tier1 recomputed", t1 == 216 and prim == 521,  # 541 before rule R8 (MC-MBRC, 29 Oct 2026)
+    f"tier1 {t1}, primary {prim}, labels {dict(lab)}")
 
 # C
 cj = json.load(open(os.path.join(OUT, "benchmark_concentration.json"), encoding="utf-8"))
@@ -72,8 +73,9 @@ chk("E follow-up items complete", len(an["E"]["followup"]) == 3 and all(x.rstrip
 # F
 fm = rcsv("claim_evidence_matrix.csv")
 fs = json.load(open(os.path.join(OUT, "claim_evidence_summary.json"), encoding="utf-8"))
-chk("F rows = csv", len(an["F"]["rows"]) == len(fm) == fs["claims"] == 27, f"{len(fm)}")
-chk("F papers = 22", len({r["paper"] for r in an["F"]["rows"]}) == fs["papers"] == 22)
+chk("F rows = csv", len(an["F"]["rows"]) == len(fm) == fs["claims"] == 25,  # 27 before rule R8 (MC-MBRC claims need its comparison rows)
+    f"{len(fm)}")
+chk("F papers = 21 (22 before rule R8)", len({r["paper"] for r in an["F"]["rows"]}) == fs["papers"] == 21)
 chk("F labels recomputed = summary", dict(collections.Counter(r["label"] for r in an["F"]["rows"])) == fs["by_label"])
 
 # G

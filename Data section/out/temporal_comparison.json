@@ -746,43 +746,43 @@
      "pct": 13.8
     }
    },
-   "primary_rows": 356,
-   "primary_papers": 17,
+   "primary_rows": 336,
+   "primary_papers": 16,
    "primary_rows_by_category": {
     "original": {
-     "n": 116,
-     "of": 356,
-     "pct": 32.6
+     "n": 96,
+     "of": 336,
+     "pct": 28.6
     },
     "repository-defined": {
      "n": 119,
-     "of": 356,
-     "pct": 33.4
+     "of": 336,
+     "pct": 35.4
     },
     "modified": {
      "n": 46,
-     "of": 356,
-     "pct": 12.9
+     "of": 336,
+     "pct": 13.7
     },
     "synthetic": {
      "n": 5,
-     "of": 356,
-     "pct": 1.4
+     "of": 336,
+     "pct": 1.5
     },
     "not stated": {
      "n": 69,
-     "of": 356,
-     "pct": 19.4
+     "of": 336,
+     "pct": 20.5
     },
     "unmatched": {
      "n": 1,
-     "of": 356,
+     "of": 336,
      "pct": 0.3
     }
    },
    "primary_rows_sign": {
-    "+": 281,
-    "-": 48,
+    "+": 263,
+    "-": 46,
     "=": 27
    },
    "selection_rationale_papers_AI_DRAFT_UNVERIFIED": {

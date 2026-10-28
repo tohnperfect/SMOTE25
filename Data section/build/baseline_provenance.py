@@ -67,6 +67,7 @@ CROSS = {k for k, v in RC.CROSS_TABLE_REVIEW.items() if v.startswith("cross-tabl
 def part(o):
     if RC.AGG_RE.match(o["dataset"] or ""): return "excluded: aggregate"
     if o["paper"] in CROSS: return "excluded: cross-table"
+    if o["paper"] in RC.EXCLUDED_COMPARATOR: return "excluded: comparator not confirmed (R8)"
     return "primary" if o["smote_kind"] == RC.PLAIN else "wrapper"
 # ---- ค่าซ้ำข้าม paper: ทุกคู่ paper, ชื่อ normalise เดียวกัน, ค่า smote/proposed/best_other เท่ากันเป็นสตริง (>=3 หลัก ไม่ใช่ 0 หรือ 1)
 by = defaultdict(list)

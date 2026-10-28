@@ -3,8 +3,8 @@
 Question: within one paper, are outcomes on splits of the same source (e.g. yeast4, yeast5, yeast-2_vs_4)
 more alike than outcomes on datasets from different sources? If yes, splits are not independent evidence.
 
-Data: primary set of out/verified_outcomes.csv (plain SMOTE, per dataset, KNNOR's average excluded: 541 rows,
-30 papers). Outcome = raw_sign of the interim rule A ('+' proposed higher, '-' SMOTE higher, '=' tie), and,
+Data: primary set of out/verified_outcomes.csv (plain SMOTE, per dataset, KNNOR's average excluded, MC-MBRC excluded
+by rule R8 on 29 Oct 2026: 521 rows, 29 papers; MC-MBRC had no same-family pair, so pairs and p-values are unchanged). Outcome = raw_sign of the interim rule A ('+' proposed higher, '-' SMOTE higher, '=' tie), and,
 separately, the rank of diff within the paper (metric scales differ across papers, ranks do not).
 Family of a dataset (two versions):
   confirmed : yeast / ecoli / glass by name prefix (the families confirmed in R3); every other name is its own family
@@ -28,6 +28,7 @@ import pandas as pd
 HERE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(HERE / "build"))
 from analyse_dataset_usage import norm  # same normalisation as the 771 names
+import reconcile_counts as RC  # R8: EXCLUDED_COMPARATOR
 
 NPERM, SEED = 10000, 0
 
@@ -88,9 +89,10 @@ def run(df, famcol, rng):
 def main():
     o = pd.read_csv(HERE / "out" / "verified_outcomes.csv", encoding="utf-8-sig", dtype=str).fillna("")
     o["line"] = [str(i + 2) for i in range(len(o))]  # csv line number (header = line 1)
-    p = o[(o.smote_kind == "plain SMOTE") & (o.paper != "KNNOR")].copy().reset_index(drop=True)
-    if len(p) != 541:
-        sys.exit(f"STOP: {len(p)} rows, expected 541")
+    p = o[(o.smote_kind == "plain SMOTE") & (o.paper != "KNNOR")
+          & ~o.paper.isin(list(RC.EXCLUDED_COMPARATOR))].copy().reset_index(drop=True)
+    if len(p) != 521:
+        sys.exit(f"STOP: {len(p)} rows, expected 521 (541 before rule R8)")
     # dataset name: the linked dataset record (out/outcome_dataset_links.csv) where one exists, so that table
     # abbreviations such as 'Haber' or 'ldd3 (ecoli-0-1 vs 5)' resolve to the record's normalised name
     L = pd.read_csv(HERE / "out" / "outcome_dataset_links.csv", dtype=str).fillna("")

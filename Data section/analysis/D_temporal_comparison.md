@@ -1,5 +1,7 @@
 # Analysis D — Earlier and later papers
 
+> **Update 29 Oct 2026 (rule R8, Toon):** MC-MBRC (2024) left the primary set. 2020–2026 primary rows 356 (17 papers) → 336 (16); original 116 → 96; signs +281/−48 → +263/−46; the 69 rows of unknown origin are unchanged (now 20.5% of 336). Current values in `out/temporal_comparison.json`.
+
 Status: **completed (descriptive)** 19 Oct 2026. Not reviewed by Toon.
 Script: `build/temporal_comparison.py`. Output: `out/temporal_comparison.json` (every count with its denominator).
 

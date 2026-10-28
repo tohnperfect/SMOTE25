@@ -36,11 +36,11 @@ for k, lab in LAB.items():
 allrow = f'All & {pr["rows"]} & {pr["papers"]} & {pr["proposed_higher"]} & {pr["smote_higher"]} & {pr["equal"]}\\\\'
 ck("tex wins table row 'All'", allrow in tex, allrow)
 ck("tex standard rows sentence", f'on these {std["rows"]} standard rows SMOTE wins in {std["smote_higher"]} and ties in {std["equal"]}' in tex)
-ck("tex 541 / 420 / 39 / 82 sentence", f'{pr["rows"]} comparisons' in tex and f'wins in {pr["proposed_higher"]} rows, ties in {pr["equal"]} and loses in {pr["smote_higher"]}' in tex)
+ck("tex primary rows/wins/ties/losses sentence (521/402/39/80 since R8)", f'{pr["rows"]} comparisons' in tex and f'wins in {pr["proposed_higher"]} rows, ties in {pr["equal"]} and loses in {pr["smote_higher"]}' in tex)
 ck("tex wrapper 207 and RBBoost 86/63", f'contribute {P["wrapper_eligible"]["rows"]} rows' in tex and "Its 86 rows, 63 of them on repository-defined" in tex)
 ov = open("manuscript/overview.json", encoding="utf-8").read()
 ck("overview.json standard rows", f'บนชุดมาตรฐาน {std["rows"]} แถว SMOTE ชนะ {std["smote_higher"]} เสมอ {std["equal"]}' in ov)
-ck("overview.json 541/420/39/82", f'{pr["rows"]} แถว: วิธีที่เสนอชนะ {pr["proposed_higher"]} เสมอ {pr["equal"]} แพ้ {pr["smote_higher"]}' in ov)
+ck("overview.json primary rows/wins/ties/losses", f'{pr["rows"]} แถว: วิธีที่เสนอชนะ {pr["proposed_higher"]} เสมอ {pr["equal"]} แพ้ {pr["smote_higher"]}' in ov)
 pdf = "manuscript/data-section-draft-preview.pdf"
 pt = subprocess.run(["pdftotext", pdf, "-"], capture_output=True, text=True).stdout
 ck("preview PDF newer than tex and shows current standard count", os.path.getmtime(pdf) >= os.path.getmtime("manuscript/data-section-draft.tex") and f'{std["rows"]} standard rows' in re.sub(r"\s+", " ", pt))
@@ -72,6 +72,10 @@ ck("Atlas reconciled_with sha = current outcomes", el["reconciled_with"]["outcom
 # 6 handoff
 H = open("handoff.md", encoding="utf-8").read()
 ck("handoff records current standard count and audit file", f"{std['rows']}" in H and "outcome_mapping_audit.csv" in H)
+# R8 (29 Oct 2026): papers excluded for an unconfirmed SMOTE comparator are the same in the rule-A set and the all-metric set
+_WA = json.load(open("out/winloss_allmetric_summary.json", encoding="utf-8"))
+_r8 = set(RC["partitions"]["excluded"]["comparator"]["reasons"])
+ck("R8 excluded papers: rule-A set = all-metric set", _r8 == set(_WA["excluded"]) and _r8, f"{sorted(_r8)} vs {sorted(_WA['excluded'])}")
 w = max(len(n) for n, _, _ in res)
 for n, ok, d in res: print(f"{'ok  ' if ok else 'FAIL'} {n:{w}s} {d}")
 print(f"{sum(ok for _, ok, _ in res)}/{len(res)} ok"); sys.exit(0 if all(ok for _, ok, _ in res) else 1)

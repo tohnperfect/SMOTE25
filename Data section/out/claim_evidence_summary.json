@@ -1,7 +1,7 @@
 {
- "selection": "papers with per-dataset SMOTE pairs (42) whose title names a data condition",
- "papers": 22,
- "claims": 27,
+ "selection": "papers with per-dataset SMOTE pairs (41; 42 before rule R8, MC-MBRC) whose title names a data condition",
+ "papers": 21,
+ "claims": 25,
  "by_condition": {
   "difficulty factors": {
    "insufficient evidence": 1
@@ -14,7 +14,7 @@
    "reported (no threshold)": 1
   },
   "multi-class": {
-   "aligned": 10,
+   "aligned": 9,
    "partially supported": 2,
    "insufficient evidence": 2
   },
@@ -23,11 +23,11 @@
    "insufficient evidence": 1
   },
   "overlap": {
-   "aligned": 5
+   "aligned": 4
   }
  },
  "by_label": {
-  "aligned": 19,
+  "aligned": 17,
   "partially supported": 2,
   "insufficient evidence": 5,
   "reported (no threshold)": 1

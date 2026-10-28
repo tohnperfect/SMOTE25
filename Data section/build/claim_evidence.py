@@ -1,6 +1,6 @@
 """claim_evidence.py  Analysis F (19 ต.ค. 2026): เงื่อนไขข้อมูลที่ paper ประกาศ เทียบกับข้อมูลที่ใช้ประเมินจริง
 
-เลือก paper: อยู่ในชุดเทียบรายชุด (primary หรือ wrapper, 42 paper) และ "ชื่อเรื่อง" ระบุเงื่อนไขของข้อมูล
+เลือก paper: อยู่ในชุดเทียบรายชุด (primary หรือ wrapper, 41 paper หลังกติกา R8 29 ต.ค.; เดิม 42) และ "ชื่อเรื่อง" ระบุเงื่อนไขของข้อมูล
   (multi-class, highly/extremely imbalanced หรือ massive, noise/label noise, overlap, difficulty factors) -> 24 paper
   claim = เงื่อนไขที่ชื่อเรื่องระบุ (ข้อความจาก paper_title ใน dataset_records.csv) ไม่ได้อนุมานจากชื่ออัลกอริทึม
 หลักฐาน = data entry ที่ผูกกับแถวผลเทียบ SMOTE ของ paper นั้น (out/outcome_dataset_links.csv) + หลักฐานความยาก (out/difficulty_evidence.json)
@@ -67,7 +67,7 @@ for k, b in sorted(B.items()):
                          evaluated_entries=len(E), baseline_provenance=b["provenance"][:2], comparison_rows=b["comparison_rows"], note=cmp_note))
 with open("out/claim_evidence_matrix.csv", "w", encoding="utf-8", newline="") as fh:
     w = csv.DictWriter(fh, fieldnames=list(rows[0]), lineterminator="\n"); w.writeheader(); w.writerows(rows)
-S = dict(selection="papers with per-dataset SMOTE pairs (42) whose title names a data condition", papers=len({r["paper"] for r in rows}),
+S = dict(selection="papers with per-dataset SMOTE pairs (41; 42 before rule R8, MC-MBRC) whose title names a data condition", papers=len({r["paper"] for r in rows}),
          claims=len(rows), by_condition={c: dict(Counter(r["label"] for r in rows if r["claimed_condition"] == c)) for c in sorted({r["claimed_condition"] for r in rows})},
          by_label=dict(Counter(r["label"] for r in rows)))
 json.dump(S, open("out/claim_evidence_summary.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)

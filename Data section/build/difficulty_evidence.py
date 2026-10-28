@@ -83,6 +83,7 @@ part = defaultdict(Counter)
 for o in O:
     if RC.AGG_RE.match(o["dataset"] or ""): k = "excluded"
     elif o["paper"] in {k for k, v in RC.CROSS_TABLE_REVIEW.items() if v.startswith("cross-table")}: k = "excluded"
+    elif o["paper"] in RC.EXCLUDED_COMPARATOR: k = "excluded"
     else: k = "primary" if o["smote_kind"] == RC.PLAIN else "wrapper"
     part[o["paper"]][k] += 1
 cond = {}

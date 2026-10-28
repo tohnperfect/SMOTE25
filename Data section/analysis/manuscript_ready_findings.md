@@ -1,5 +1,7 @@
 # Manuscript-ready findings for the Data Section (draft, not inserted)
 
+> **Update 29 Oct 2026 (rule R8, Toon):** read 541 primary pairs as 521 (29 papers); the 216 pairs from 13 papers are unchanged.
+
 Status: proposed text for Toon to accept, rewrite or reject. Nothing below has been put into
 `manuscript/data-section-draft.tex`. Each paragraph names its evidence file. Findings, interpretation and
 limitations are separated. Toon's own insight slots (`\toon{}`) are not filled here.
