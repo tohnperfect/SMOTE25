@@ -1,0 +1,274 @@
+{
+ "key": "CGMOS",
+ "classifier": "average over all 6 base classifiers (b-kde, knn, svm, nn, rf, Adaboost.M1) as printed",
+ "condition": "original IR datasets, oversampled to balance; 10 rounds of 10-fold CV",
+ "proposed_column": "CGMOS",
+ "smote_column": "SMOTE",
+ "metrics": [
+  {
+   "metric": "AUC",
+   "metric_family": "AUC",
+   "table": "Table 3",
+   "page": "PDF page 7 (printed p.1629)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "BankMarket",
+     "proposed": "0.728",
+     "proposed_std": null,
+     "smote": "0.718",
+     "smote_std": null,
+     "marks": "bold: CGMOS"
+    },
+    {
+     "dataset_as_printed": "BloodService",
+     "proposed": "0.733",
+     "proposed_std": null,
+     "smote": "0.649",
+     "smote_std": null,
+     "marks": "bold: CGMOS"
+    },
+    {
+     "dataset_as_printed": "BreastCancer",
+     "proposed": "0.992",
+     "proposed_std": null,
+     "smote": "0.992",
+     "smote_std": null,
+     "marks": "bold: Dup"
+    },
+    {
+     "dataset_as_printed": "BreastTissue",
+     "proposed": "0.984",
+     "proposed_std": null,
+     "smote": "0.932",
+     "smote_std": null,
+     "marks": "bold: CGMOS"
+    },
+    {
+     "dataset_as_printed": "CarEvaluation",
+     "proposed": "0.997",
+     "proposed_std": null,
+     "smote": "0.997",
+     "smote_std": null,
+     "marks": "bold: CGMOS, SMOTE, ADASYN"
+    },
+    {
+     "dataset_as_printed": "Card’graphy",
+     "proposed": "0.977",
+     "proposed_std": null,
+     "smote": "0.962",
+     "smote_std": null,
+     "marks": "bold: CGMOS"
+    },
+    {
+     "dataset_as_printed": "CharacterTraj",
+     "proposed": "0.985",
+     "proposed_std": null,
+     "smote": "0.985",
+     "smote_std": null,
+     "marks": "bold: ADASYN"
+    },
+    {
+     "dataset_as_printed": "Chess",
+     "proposed": "0.977",
+     "proposed_std": null,
+     "smote": "0.973",
+     "smote_std": null,
+     "marks": "bold: CGMOS, B-SMOTE"
+    },
+    {
+     "dataset_as_printed": "ClimateSim",
+     "proposed": "0.908",
+     "proposed_std": null,
+     "smote": "0.902",
+     "smote_std": null,
+     "marks": "bold: CGMOS, Original"
+    },
+    {
+     "dataset_as_printed": "Contraceptive",
+     "proposed": "0.724",
+     "proposed_std": null,
+     "smote": "0.712",
+     "smote_std": null,
+     "marks": "bold: CGMOS"
+    },
+    {
+     "dataset_as_printed": "Fertility",
+     "proposed": "0.673",
+     "proposed_std": null,
+     "smote": "0.634",
+     "smote_std": null,
+     "marks": "bold: CGMOS"
+    },
+    {
+     "dataset_as_printed": "Haberman",
+     "proposed": "0.651",
+     "proposed_std": null,
+     "smote": "0.600",
+     "smote_std": null,
+     "marks": "bold: CGMOS"
+    },
+    {
+     "dataset_as_printed": "ILPD",
+     "proposed": "0.707",
+     "proposed_std": null,
+     "smote": "0.715",
+     "smote_std": null,
+     "marks": "bold: SMOTE"
+    },
+    {
+     "dataset_as_printed": "ImgSeg",
+     "proposed": "0.999",
+     "proposed_std": null,
+     "smote": "0.997",
+     "smote_std": null,
+     "marks": "bold: CGMOS, Dup"
+    },
+    {
+     "dataset_as_printed": "Leaf",
+     "proposed": "0.908",
+     "proposed_std": null,
+     "smote": "0.852",
+     "smote_std": null,
+     "marks": "bold: CGMOS"
+    },
+    {
+     "dataset_as_printed": "Libras",
+     "proposed": "0.945",
+     "proposed_std": null,
+     "smote": "0.929",
+     "smote_std": null,
+     "marks": "bold: CGMOS"
+    },
+    {
+     "dataset_as_printed": "MultipleFs",
+     "proposed": "0.998",
+     "proposed_std": null,
+     "smote": "0.998",
+     "smote_std": null,
+     "marks": "bold: CGMOS, Original, SMOTE"
+    },
+    {
+     "dataset_as_printed": "Parkinson",
+     "proposed": "0.841",
+     "proposed_std": null,
+     "smote": "0.834",
+     "smote_std": null,
+     "marks": "bold: ADASYN"
+    },
+    {
+     "dataset_as_printed": "PlanRelax",
+     "proposed": "0.472",
+     "proposed_std": null,
+     "smote": "0.469",
+     "smote_std": null,
+     "marks": "bold: ADASYN"
+    },
+    {
+     "dataset_as_printed": "QSAR",
+     "proposed": "0.901",
+     "proposed_std": null,
+     "smote": "0.895",
+     "smote_std": null,
+     "marks": "bold: CGMOS"
+    },
+    {
+     "dataset_as_printed": "SPECT",
+     "proposed": "0.820",
+     "proposed_std": null,
+     "smote": "0.808",
+     "smote_std": null,
+     "marks": "bold: CGMOS"
+    },
+    {
+     "dataset_as_printed": "SPECTF",
+     "proposed": "0.819",
+     "proposed_std": null,
+     "smote": "0.805",
+     "smote_std": null,
+     "marks": "bold: ADASYN"
+    },
+    {
+     "dataset_as_printed": "SeismicBumps",
+     "proposed": "0.743",
+     "proposed_std": null,
+     "smote": "0.727",
+     "smote_std": null,
+     "marks": "bold: CGMOS"
+    },
+    {
+     "dataset_as_printed": "Statlog",
+     "proposed": "0.998",
+     "proposed_std": null,
+     "smote": "0.998",
+     "smote_std": null,
+     "marks": "bold: CGMOS, SMOTE"
+    },
+    {
+     "dataset_as_printed": "PlatesFaults",
+     "proposed": "0.956",
+     "proposed_std": null,
+     "smote": "0.954",
+     "smote_std": null,
+     "marks": "bold: CGMOS, ADASYN"
+    },
+    {
+     "dataset_as_printed": "TAEvaluation",
+     "proposed": "0.748",
+     "proposed_std": null,
+     "smote": "0.703",
+     "smote_std": null,
+     "marks": "bold: CGMOS"
+    },
+    {
+     "dataset_as_printed": "UserKnowledge",
+     "proposed": "0.958",
+     "proposed_std": null,
+     "smote": "0.953",
+     "smote_std": null,
+     "marks": "bold: CGMOS"
+    },
+    {
+     "dataset_as_printed": "Vertebral",
+     "proposed": "0.890",
+     "proposed_std": null,
+     "smote": "0.855",
+     "smote_std": null,
+     "marks": "bold: CGMOS"
+    },
+    {
+     "dataset_as_printed": "Customers",
+     "proposed": "0.952",
+     "proposed_std": null,
+     "smote": "0.946",
+     "smote_std": null,
+     "marks": "bold: CGMOS, RAMOboost"
+    },
+    {
+     "dataset_as_printed": "Yeast",
+     "proposed": "0.925",
+     "proposed_std": null,
+     "smote": "0.907",
+     "smote_std": null,
+     "marks": "bold: CGMOS"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average (bold: CGMOS)",
+      "proposed": "0.864",
+      "smote": "0.844"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper (caption: 'CGMOS achieves best AUC measures for 24 datasets out of 30. On average, the AUC of CGMOS is 2% higher than that of the compared approaches.'; text: 'on average the AUC of CGMOS is 2 percent higher than SMOTE whose AUC is 2nd highest.')",
+    "stat_test": "Wilcoxon signed-ranks test, CGMOS against each compared method, per classifier (Table 4 p-values). SMOTE row: Knn 0.003, Rf 2e-4, B-kde 6e-6, Nn 0.018, Svm 0.006, Boost 0.046. Text: 'the p-value of all tests are smaller than 0.05 and pass the test.'"
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [],
+ "metrics_without_smote": [],
+ "notes": "Table 3 text layer is extractable (not an image); verified against rendered page 7. Bold marks copied from image (multiple bold per row for ties). Table 2 (p.6) reports AUC, minority/majority Precision, Recall, Fscore, Gscore per classifier but only aggregated over all datasets (no per-dataset rows), so not copied as metrics; Figures 2/3 are ROC/curve plots without per-dataset printed numbers. Table 2 SMOTE vs CGMOS per-classifier aggregate values exist if needed."
+}

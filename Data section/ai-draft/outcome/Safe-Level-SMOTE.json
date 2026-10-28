@@ -1,0 +1,26 @@
+{
+ "key": "Safe-Level-SMOTE",
+ "smote_in_baselines": "yes",
+ "smote_name_as_printed": "SMOTE",
+ "baselines_all": ["ORG (original dataset)", "SMOTE", "Borderline-SMOTE (BORD)"],
+ "results_tables": [
+  {"table": "Fig. 2 (a) Precision, C4.5, Haberman (line plot vs over-sampling percent)", "page": "PDF p.7 (printed p.481)", "metric": "Precision", "classifier": "C4.5", "granularity": "per-dataset (figure only, no numeric table)", "is_image": true},
+  {"table": "Fig. 2 (b) Recall, Naive Bayes, Satimage (line plot)", "page": "PDF p.7 (printed p.481)", "metric": "Recall", "classifier": "Naive Bayes", "granularity": "per-dataset (figure only, no numeric table)", "is_image": true},
+  {"table": "Fig. 2 (c) F-value, C4.5, Satimage (line plot)", "page": "PDF p.7 (printed p.481)", "metric": "F-value", "classifier": "C4.5", "granularity": "per-dataset (figure only, no numeric table)", "is_image": true},
+  {"table": "Fig. 2 (d) AUC, SVMs, Haberman (line plot)", "page": "PDF p.7 (printed p.481)", "metric": "AUC", "classifier": "SVMs", "granularity": "per-dataset (figure only, no numeric table)", "is_image": true}
+ ],
+ "chosen": {
+  "table": "none: no numeric results table in paper",
+  "page": "not stated in paper",
+  "metric": "not stated in paper",
+  "classifier": "not stated in paper",
+  "condition": "not stated in paper",
+  "higher_is_better": true,
+  "why_this_choice": "Rule 3 requires a per-dataset table containing both the proposed method and SMOTE; the paper reports results only as four line plots (Fig. 2), each a different metric/classifier/dataset, plotted against over-sampling percent. No G-mean is reported. Values were not read off the plots to avoid estimating numbers."
+ },
+ "rows": [],
+ "summary_rows": [],
+ "stat_test": "not stated in paper",
+ "win_claim": {"quote": "The experiments show that the performance of Safe-Level-SMOTE evaluated by precision and F-value are better than that of SMOTE and Borderline-SMOTE when decision trees C4.5 are applied as classifiers.", "page": "PDF p.7 (printed p.481, Section 5 Conclusion; page inferred from text extraction order)"},
+ "notes": "Only 2 UCI datasets (Table 3, printed p.480): Satimage (class 4 as minority; 6,435 instances, 37 attributes, 626 pos, 5,809 neg, 9.73% minority) and Haberman (306, 4, 81, 225, 26.47%). Metrics: precision, recall, F-value (beta=1), AUC; classifiers C4.5, Naive Bayes, SVMs; k=5; 10-fold CV. Results only in Fig. 2 (line plots over over-sampling percent; labels ORG, SMOTE, BORD, SAFE); each panel shows a single dataset/classifier/metric combination, so no metric/classifier is available for both datasets. AUC is only for Haberman with SVMs (Fig. 2d), where text says Safe-Level-SMOTE and SMOTE show similar AUC. Figures were not rendered/digitised; text extraction was clean. Page numbers: PDF pages 1-8 = printed pp. 475-482; Fig. 2 and the Conclusion appear on printed p.481 (inferred from text extraction order, not visually verified). Duplicate copy of this PDF also exists in the 'Both' folder."
+}

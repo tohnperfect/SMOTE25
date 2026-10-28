@@ -1,0 +1,38 @@
+% Proposed table (reference_collection.py, 28 Oct 2026). NOT inserted into data-section-draft.tex.
+\begin{table}[t]\centering\small
+\caption{Proposed Reference Collection of Verifiable Tasks. One row per selected task; Role: core = most used task in its cell, low/high = lowest/highest noise index in its cell. Profile: S small sample, O outliers, D small disjuncts.}
+\label{tab:data-reference}
+\begin{tabular}{@{}llllrrrrrr@{}}
+\toprule
+Task & Role & Profile & IR band & $N$ & $N_{\min}$ & $d$ & IR & Noise & Entries\\
+\midrule
+\texttt{australian} & low & none & $\leq$1.5 & 690 & 307 & 14 & 1.2 & 0.29 & 1\\
+\texttt{bupa} & core+high & none & $\leq$1.5 & 345 & 145 & 6 & 1.4 & 0.79 & 2\\
+\texttt{iris0} & low & none & 1.5--3 & 150 & 50 & 4 & 2.0 & 0.02 & 2\\
+\texttt{haberman} & core+high & none & 1.5--3 & 306 & 81 & 3 & 2.8 & 0.84 & 21\\
+\texttt{segment0} & low & none & 3--9 & 2,308 & 329 & 19 & 6.0 & 0.02 & 7\\
+\texttt{yeast3} & core & none & 3--9 & 1,484 & 163 & 8 & 8.1 & 0.40 & 13\\
+\texttt{adult} & high & none & 3--9 & 48,842 & 11,687 & 14 & 3.2 & 0.54 & 2\\
+\texttt{kr-vs-k-one\_vs\_fifteen} & low & none & $>$9 & 2,244 & 78 & 6 & 27.8 & 0.00 & 1\\
+\texttt{shuttle-c0-vs-c4} & core & none & $>$9 & 1,829 & 123 & 9 & 13.9 & 0.01 & 7\\
+\texttt{yeast-0-2-5-6\_vs\_3-7-8-9} & high & none & $>$9 & 1,004 & 99 & 8 & 9.1 & 0.57 & 2\\
+\texttt{heart} & core+low & S & $\leq$1.5 & 270 & 120 & 13 & 1.2 & 0.33 & 4\\
+\texttt{sonar} & high & S & $\leq$1.5 & 208 & 97 & 60 & 1.1 & 0.40 & 1\\
+\texttt{wine [minority: 1]} & low & S & 1.5--3 & 178 & 59 & 13 & 2.0 & 0.00 & 1\\
+\texttt{glass0} & core & S & 1.5--3 & 214 & 70 & 9 & 2.1 & 0.44 & 7\\
+\texttt{glass1} & high & S & 1.5--3 & 214 & 76 & 9 & 1.8 & 0.47 & 7\\
+\texttt{ecoli2} & low & S & 3--9 & 336 & 52 & 7 & 5.5 & 0.23 & 6\\
+\texttt{ecoli3} & core & S & 3--9 & 336 & 35 & 7 & 8.6 & 0.69 & 10\\
+\texttt{hepatitis (PMLB, N=155)} & high & S & 3--9 & 155 & 32 & 19 & 3.8 & 0.75 & 2\\
+\texttt{dermatology-6} & low & S & $>$9 & 358 & 20 & 34 & 16.9 & 0.00 & 2\\
+\texttt{yeast5} & core & S & $>$9 & 1,484 & 44 & 8 & 32.7 & 0.66 & 13\\
+\texttt{cleveland-0\_vs\_4} & high & S & $>$9 & 177 & 13 & 13 & 12.6 & 1.00 & 4\\
+\texttt{ecoli-0-1-3-7\_vs\_2-6} & low & S+O & $>$9 & 281 & 7 & 7 & 39.1 & 0.29 & 7\\
+\texttt{yeast4} & core & S+O & $>$9 & 1,484 & 51 & 8 & 28.1 & 0.86 & 15\\
+\texttt{winequality-red-3\_vs\_5} & high & S+O & $>$9 & 691 & 10 & 11 & 68.1 & 1.00 & 1\\
+\texttt{yeast-1-4-5-8\_vs\_7} & low & D+S+O & $>$9 & 693 & 30 & 8 & 22.1 & 0.60 & 7\\
+\texttt{glass2} & core & D+S+O & $>$9 & 214 & 17 & 9 & 11.6 & 0.65 & 9\\
+\texttt{winequality-red-8\_vs\_6-7} & high & D+S+O & $>$9 & 855 & 18 & 11 & 46.5 & 0.78 & 1\\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,160 @@
+{
+ "key": "Survey: Stop Oversampling",
+ "pdf_file_read": "90b9923d-25db-4077-bab6-59f3073325f4.pdf (full text read via read_file_content; tables were text, not images)",
+ "task": "binary",
+ "n_datasets_claimed": 3,
+ "characteristics_table": "Table 2, p.9",
+ "datasets": [
+  {
+   "name": "Yeast4",
+   "group": "",
+   "source_repo": "not stated in paper",
+   "n_instances": null,
+   "n_features": 10,
+   "n_classes": 2,
+   "n_minority": 51,
+   "n_majority": 1433,
+   "class_distribution": "51/1433",
+   "ir_printed": null,
+   "how_obtained": "not stated",
+   "how_obtained_detail": "Paper says datasets are freely available at ref [189] (not named); names match KEEL yeast4/5/6 but paper does not say so; majority examples then randomly hidden 10/25/50% as part of the validation protocol",
+   "in_results_table": "yes",
+   "ref": "Table 2, p.9 (No. Attributes 10, No. Classes 2, No. Minor, No. Major)"
+  },
+  {
+   "name": "Yeast5",
+   "group": "",
+   "source_repo": "not stated in paper",
+   "n_instances": null,
+   "n_features": 10,
+   "n_classes": 2,
+   "n_minority": 44,
+   "n_majority": 1440,
+   "class_distribution": "44/1440",
+   "ir_printed": null,
+   "how_obtained": "not stated",
+   "how_obtained_detail": "Paper says datasets are freely available at ref [189] (not named); names match KEEL yeast4/5/6 but paper does not say so; majority examples then randomly hidden 10/25/50% as part of the validation protocol",
+   "in_results_table": "yes",
+   "ref": "Table 2, p.9 (No. Attributes 10, No. Classes 2, No. Minor, No. Major)"
+  },
+  {
+   "name": "Yeast6",
+   "group": "",
+   "source_repo": "not stated in paper",
+   "n_instances": null,
+   "n_features": 10,
+   "n_classes": 2,
+   "n_minority": 35,
+   "n_majority": 1449,
+   "class_distribution": "35/1449",
+   "ir_printed": null,
+   "how_obtained": "not stated",
+   "how_obtained_detail": "Paper says datasets are freely available at ref [189] (not named); names match KEEL yeast4/5/6 but paper does not say so; majority examples then randomly hidden 10/25/50% as part of the validation protocol",
+   "in_results_table": "yes",
+   "ref": "Table 2, p.9 (No. Attributes 10, No. Classes 2, No. Minor, No. Major)"
+  },
+  {
+   "name": "Vehicle3",
+   "group": "",
+   "source_repo": "not stated in paper",
+   "n_instances": null,
+   "n_features": null,
+   "n_classes": null,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": null,
+   "ir_printed": null,
+   "how_obtained": "not stated",
+   "how_obtained_detail": "Fourth dataset used only to re-validate the best performers (25% hidden); no characteristics printed; Table 4 lists SE=264 for most methods",
+   "in_results_table": "yes",
+   "ref": "Table 4, p.13; text p.12-13"
+  }
+ ],
+ "ir_definition": "not stated in paper (no imbalance ratio defined; Equation 3 defines the error rate Error = CM/SS, CM = synthetic examples close to majority examples, SS = total synthetic subset)",
+ "ir_definition_ref": "p.9",
+ "outcome": {
+  "smote_in_baselines": "yes",
+  "smote_name_as_printed": "M1 SMOTE [82] (Table 1); mapped to 'M1' in Table 3",
+  "baselines_all": [
+   "72 oversampling methods M1-M72 in Table 1 (e.g. M2 SMOTE TomekLinks, M3 SMOTE ENN, M4 Borderline SMOTE1, M5 Borderline SMOTE2)"
+  ],
+  "results_granularity": "per-dataset partial",
+  "chosen": {
+   "table": "Table 3",
+   "page": "9-10",
+   "metric": "Error rate ER = CM/SS (fraction of synthetic examples closer to hidden majority examples); lower is better; NOT a classifier metric",
+   "classifier": "none (Hamming-type distance similarity, no classifier)",
+   "condition": "10% of majority examples hidden, average of 5 runs",
+   "higher_is_better": false,
+   "is_image": false
+  },
+  "rows": [
+   {
+    "dataset_as_printed": "Yeast4",
+    "proposed": null,
+    "proposed_std": null,
+    "smote": "NE=463.2; SE=1239; ER=0.37",
+    "smote_std": null,
+    "best_other_value": "NE=14; SE=1239; ER=0.01",
+    "best_other_name": "M51 (lowest ER)",
+    "marks": "none"
+   },
+   {
+    "dataset_as_printed": "Yeast5",
+    "proposed": null,
+    "proposed_std": null,
+    "smote": "NE=108; SE=1252; ER=0.09",
+    "smote_std": null,
+    "best_other_value": "NE=2; SE=1252; ER=0.00",
+    "best_other_name": "M51 (lowest ER)",
+    "marks": "none"
+   },
+   {
+    "dataset_as_printed": "Yeast6",
+    "proposed": null,
+    "proposed_std": null,
+    "smote": "NE=294; SE=1270; ER=0.23",
+    "smote_std": null,
+    "best_other_value": "NE=0; SE=1270; ER=0.00",
+    "best_other_name": "M51 (lowest ER)",
+    "marks": "none"
+   },
+   {
+    "dataset_as_printed": "Vehicle3 (25% hidden)",
+    "proposed": null,
+    "proposed_std": null,
+    "smote": null,
+    "smote_std": null,
+    "best_other_value": "M51: NE=168; SE=264; ER=0.64 (M61 lowest shown: ER=0.23)",
+    "best_other_name": "Table 4 lists only M51, M24, M62, M61, M19, M39, M44, M68; M1 SMOTE not listed",
+    "marks": "none"
+   }
+  ],
+  "summary_rows": [
+   {
+    "label": "M1 Avg. ER (3 datasets)",
+    "proposed": null,
+    "smote": "0.23"
+   },
+   {
+    "label": "M1 Avg. Rank (of 72, lower better)",
+    "proposed": null,
+    "smote": "24"
+   }
+  ],
+  "stat_test": "none stated; no proposed method (critical review; no new oversampling method)",
+  "win_claim": {
+   "quote": "all oversampling methods studied generate minority samples that are most likely to be majority. Given data and methods in hand, we argue that oversampling in its current forms and methodologies is unreliable",
+   "page": "1"
+  }
+ },
+ "uncertain": [
+  "Abstract says three datasets; Conclusion says four (Vehicle3 added in Table 4, p.13) - counted 4 in datasets",
+  "Page numbers taken from printed page numbers in extracted text; Table 3 spans p.9-10 (M1 on p.9)",
+  "Equation 3 garbled in extraction; 'Error = CM/SS' reconstructed from description, p.9",
+  "Yeast datasets' repository stated only as ref [189]; reference not read",
+  "Table 3 columns: NE, SE, ER per dataset; '-' entries exist for some methods (not M1)",
+  "Equation for Hamming-type distance (HD) not used in outcome"
+ ],
+ "notes": "Critical review proposing a validation system (hide 10/25/50% of majority examples, compare synthetic points to hidden majority); no proposed oversampling method, so 'proposed' is null. Table 3 (10% hidden) gives M1 SMOTE rows above; 25% and 50% results only as box plots in Figure 3 (p.11). Table 4 (Vehicle3, 25% hidden) omits SMOTE. Lowest-ER method M51 (Avg ER 0.00, rank 1); M24 rank 2, M62 rank 3 (Table 3). Method names for M51 etc. not looked up. Experiments repeated 5 times, averages reported."
+}

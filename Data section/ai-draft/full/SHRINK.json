@@ -1,0 +1,44 @@
+{
+  "key": "SHRINK",
+  "pdf_file_read": "1998 SHRINK - Kubat, Holte, Matwin.pdf (Drive id 1W9DubnXJROPbPHHYcvOI1SXvE7I3OC6g; Kubat, Holte, Matwin, 'Machine Learning for the Detection of Oil Spills in Satellite Radar Images', Machine Learning 30, 195-215, 1998; 21 PDF pages)",
+  "task": "binary",
+  "n_datasets_claimed": 1,
+  "characteristics_table": "Table 2, p.11 (printed p.205)",
+  "datasets": [
+    {
+      "name": "oil spill (regions from 9 RADARSAT/ERS-1 satellite radar images)",
+      "group": "",
+      "source_repo": "private",
+      "n_instances": 937,
+      "n_features": 49,
+      "n_classes": 2,
+      "n_minority": 41,
+      "n_majority": 896,
+      "class_distribution": "41 positives / 896 negatives (per image positives 8 4 2 6 2 4 3 5 7; negatives 3 180 101 129 60 70 76 80 197; totals 11 184 103 135 62 74 79 85 204)",
+      "ir_printed": "the majority class thus comprises almost 96% of the data",
+      "how_obtained": "original",
+      "how_obtained_detail": "Dark regions extracted by Macdonald Dettwiler image-processing from 9 images (strait of Juan de Fuca), labelled by a human expert as oil slick vs lookalike; all lookalike subtypes kept as one nonspill class (p.6, p.11, p.12-13). For Figs 3-4, negatives were randomly sampled to varying numbers (p.13).",
+      "in_results_table": "not applicable (no per-dataset results)",
+      "ref": "Table 2, p.11 (printed p.205); 49 features p.12-13 (printed p.206-207); 41/896 p.5 (printed p.199)"
+    }
+  ],
+  "ir_definition": "not stated in paper",
+  "ir_definition_ref": "p.5 (printed p.199): imbalance described only as 'majority class thus comprises almost 96% of the data'",
+  "outcome": {
+    "smote_in_baselines": "no",
+    "smote_name_as_printed": "not stated in paper",
+    "baselines_all": ["C4.5", "1-NN", "C4.5 with one-sided selection", "1-NN with one-sided selection", "Solberg and Solberg (1996) decision tree (reported accuracies only, discussed in Sec. 8)"],
+    "results_granularity": "no comparison",
+    "chosen": {"table": "none", "page": null, "metric": "g-mean (paper's main measure; no SMOTE comparison exists)", "classifier": "SHRINK (theta = 0)", "condition": "not applicable", "higher_is_better": true, "is_image": false},
+    "rows": [],
+    "summary_rows": [],
+    "stat_test": "t-test mentioned for C4.5 with one-sided selection improvement (p.14, printed p.208); none for SHRINK vs SMOTE",
+    "win_claim": {"quote": "Our solutions to these issues are implemented in the Canadian Environmental Hazards Detection System (CEHDS), which is about to undergo field testing.", "page": "p.1 (printed p.195), abstract"}
+  },
+  "uncertain": [
+    "Drive file titled SHRINK is the 1998 Machine Learning oil-spill paper; SHRINK itself was introduced in Kubat, Holte & Matwin (1997) ECML 'Learning when Negative Examples Abound', which reports other datasets (p.11, printed p.205)",
+    "source_repo set to 'private': paper says data from sponsor Macdonald Dettwiler, does not state public release (p.4, printed p.198)",
+    "n_features=49 taken from text 'a region is described by 49 features' (p.12, printed p.206); feature set changed during project (p.13)"
+  ],
+  "notes": "Paper predates SMOTE (2002); no SMOTE baseline. SHRINK results only as plots (Fig. 4, p.15/printed p.209: g-mean, acc+, acc- vs number of negatives, 5x10-fold CV; Fig. 5 ROC curve) and Table 4 (p.16, printed p.210) SHRINK theta=0: CV g-mean 70.9, acc+ 82.5, acc- 60.9; LOBO g-mean 62.5, acc+ 78.1, acc- 50.1. Table 3 (p.14, printed p.208) one-sided selection: C4.5 g-mean 81.1, acc+ 76.0, acc- 86.6; 1-NN 67.2, 54.0, 83.4. g-mean defined as sqrt(acc+ x acc-) (p.9, printed p.203). Evaluation: 5 random runs of 10-fold CV, and leave-one-batch-out (LOBO). Related method one-sided selection (Kubat & Matwin 1997)."
+}

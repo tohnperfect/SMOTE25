@@ -1,0 +1,23 @@
+{
+  "key": "Borderline-SMOTE",
+  "smote_in_baselines": "yes",
+  "smote_name_as_printed": "SMOTE (legend label 'smote' in Fig. 2)",
+  "baselines_all": ["SMOTE", "random over-sampling", "original (C4.5 on original data sets)"],
+  "results_tables": [
+    {"table": "Fig. 2 (no results table in paper)", "page": "PDF p.8 (printed p.885)", "metric": "F-value and TP rate of minority class vs number of synthetic examples", "classifier": "C4.5", "granularity": "aggregate only", "is_image": true}
+  ],
+  "chosen": {
+    "table": "not stated in paper (no per-dataset results table; results only as line plots in Fig. 2)",
+    "page": "PDF p.8 (printed p.885)",
+    "metric": "F-value",
+    "classifier": "C4.5",
+    "condition": "not applicable; curves vary number of synthetic examples, no single reported value per method",
+    "higher_is_better": true,
+    "why_this_choice": "Rule 3: no G-mean or AUC reported; F-value is highest-priority available metric. Rule 4: C4.5 is the only classifier. No numeric per-dataset values for SMOTE are printed, so rows left empty rather than reading values off plots."
+  },
+  "rows": [],
+  "summary_rows": [],
+  "stat_test": "not stated in paper",
+  "win_claim": {"quote": "For the minority class, experiments show that our approaches achieve better TP rate and F-value than SMOTE and random over-sampling methods.", "page": "PDF p.1 (printed p.878)"},
+  "notes": "Results are only line plots (Fig. 2 a-d: Circle, Pima, Satimage, Haberman; F-value and TP rate vs number of synthetic examples), no numeric table, so no per-dataset rows copied. Proposed has two variants: borderline-SMOTE1 and borderline-SMOTE2 (abstract highlights both; text says 'border-SMOTE1 behaves excellent on both TP rate and F-value'). Only numbers printed in text (p.884) are best improvements over the original data set, not vs SMOTE: F-value improvement for borderline-SMOTE1 / borderline-SMOTE2: Circle 12.1 / 10.3 per cent, Pima 2.3 / 1.3, Satimage 2.3 / 1.4, Haberman 24.7 / 23.0; TP rate improvement: Circle 20 / 22, Pima 21.3 / 20.5, Satimage 10.1 / 10.0, Haberman 45.2 / 45.2 ('both 45.2'). Text: for Satimage TP rate of proposed is 'comparable with SMOTE'. Datasets (Table 2): Circle(Simulation), Pima(UCI), Satimage(UCI), Haberman(UCI); Fig. 2 caption misspells 'Satimge'. Evaluation: three independent 10-fold CV runs averaged. Figure page not rendered visually because values would have to be estimated from curves."
+}

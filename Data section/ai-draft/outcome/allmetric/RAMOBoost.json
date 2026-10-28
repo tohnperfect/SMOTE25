@@ -1,0 +1,1025 @@
+{
+ "key": "RAMOBoost",
+ "classifier": "MLP neural network (4 hidden neurons, base learner for all methods)",
+ "condition": "Simulation 1: 19 datasets, 10 runs of random 50/50 train/test split, T=20, k1=5, k2=10, alpha=0.3, 200% synthetic, no added noise",
+ "proposed_column": "RAMOBoost",
+ "smote_column": "SMOTE",
+ "metrics": [
+  {
+   "metric": "G-mean",
+   "metric_family": "G-mean",
+   "table": "Table III",
+   "page": "PDF pages 9-10 (printed p.1632-1633)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "Sonar",
+     "proposed": "0.7796",
+     "proposed_std": null,
+     "smote": "0.7605",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Spambase",
+     "proposed": "0.9438",
+     "proposed_std": null,
+     "smote": "0.9382",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Ionosphere",
+     "proposed": "0.7874",
+     "proposed_std": null,
+     "smote": "0.7643",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "PID",
+     "proposed": "0.729",
+     "proposed_std": null,
+     "smote": "0.7281",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Wine",
+     "proposed": "0.9813",
+     "proposed_std": null,
+     "smote": "0.9804",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "German",
+     "proposed": "0.6547",
+     "proposed_std": null,
+     "smote": "0.6420",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Phoneme",
+     "proposed": "0.8222",
+     "proposed_std": null,
+     "smote": "0.7942",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "0.956",
+     "proposed_std": null,
+     "smote": "0.9511",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Texture",
+     "proposed": "0.9981",
+     "proposed_std": null,
+     "smote": "0.9916",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Segment",
+     "proposed": "0.9941",
+     "proposed_std": null,
+     "smote": "0.9918",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Page_Blocks",
+     "proposed": "0.9349",
+     "proposed_std": null,
+     "smote": "0.9118",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Satimage",
+     "proposed": "0.819",
+     "proposed_std": null,
+     "smote": "0.7465",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Mf_Zernike",
+     "proposed": "0.584",
+     "proposed_std": null,
+     "smote": "0.7356",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Vowel",
+     "proposed": "0.9962",
+     "proposed_std": null,
+     "smote": "0.9599",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Abalone",
+     "proposed": "0.6808",
+     "proposed_std": null,
+     "smote": "0.7166",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Glass",
+     "proposed": "0.8610",
+     "proposed_std": null,
+     "smote": "0.9491",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Yeast",
+     "proposed": "0.6405",
+     "proposed_std": null,
+     "smote": "0.7030",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Letter",
+     "proposed": "0.9827",
+     "proposed_std": null,
+     "smote": "0.9391",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Shuttle",
+     "proposed": "0.9828",
+     "proposed_std": null,
+     "smote": "0.9716",
+     "smote_std": null,
+     "marks": ""
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "not stated in paper (Wilcoxon only on averaged AUC). Table III: \"the best performance of each algorithm across each evaluation criteria is highlighted\" (bold)."
+   }
+  },
+  {
+   "metric": "OA",
+   "metric_family": "accuracy",
+   "table": "Table III",
+   "page": "PDF pages 9-10 (printed p.1632-1633)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Sonar",
+     "proposed": "0.7798",
+     "proposed_std": null,
+     "smote": "0.7606",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Spambase",
+     "proposed": "0.9448",
+     "proposed_std": null,
+     "smote": "0.9397",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Ionosphere",
+     "proposed": "0.8411",
+     "proposed_std": null,
+     "smote": "0.8177",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "PID",
+     "proposed": "0.724",
+     "proposed_std": null,
+     "smote": "0.7214",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Wine",
+     "proposed": "0.9798",
+     "proposed_std": null,
+     "smote": "0.9787",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "German",
+     "proposed": "0.7262",
+     "proposed_std": null,
+     "smote": "0.6850",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Phoneme",
+     "proposed": "0.7921",
+     "proposed_std": null,
+     "smote": "0.7860",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "0.9655",
+     "proposed_std": null,
+     "smote": "0.9589",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Texture",
+     "proposed": "0.9991",
+     "proposed_std": null,
+     "smote": "0.9949",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Segment",
+     "proposed": "0.9966",
+     "proposed_std": null,
+     "smote": "0.9958",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Page_Blocks",
+     "proposed": "0.9702",
+     "proposed_std": null,
+     "smote": "0.9594",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Satimage",
+     "proposed": "0.9195",
+     "proposed_std": null,
+     "smote": "0.8977",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Mf_Zernike",
+     "proposed": "0.8718",
+     "proposed_std": null,
+     "smote": "0.8838",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Vowel",
+     "proposed": "0.9988",
+     "proposed_std": null,
+     "smote": "0.9794",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Abalone",
+     "proposed": "0.9405",
+     "proposed_std": null,
+     "smote": "0.9477",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Glass",
+     "proposed": "0.9748",
+     "proposed_std": null,
+     "smote": "0.9897",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Yeast",
+     "proposed": "0.9581",
+     "proposed_std": null,
+     "smote": "0.9722",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Letter",
+     "proposed": "0.9982",
+     "proposed_std": null,
+     "smote": "0.9921",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Shuttle",
+     "proposed": "0.9999",
+     "proposed_std": null,
+     "smote": "0.9999",
+     "smote_std": null,
+     "marks": "RAMOBoost bold; SMOTE bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "not stated in paper (Wilcoxon only on averaged AUC). Table III: \"the best performance of each algorithm across each evaluation criteria is highlighted\" (bold)."
+   }
+  },
+  {
+   "metric": "Precision",
+   "metric_family": "precision",
+   "table": "Table III",
+   "page": "PDF pages 9-10 (printed p.1632-1633)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Sonar",
+     "proposed": "0.7566",
+     "proposed_std": null,
+     "smote": "0.7330",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Spambase",
+     "proposed": "0.9244",
+     "proposed_std": null,
+     "smote": "0.9194",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Ionosphere",
+     "proposed": "0.8512",
+     "proposed_std": null,
+     "smote": "0.8026",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "PID",
+     "proposed": "0.5766",
+     "proposed_std": null,
+     "smote": "0.5746",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Wine",
+     "proposed": "0.9525",
+     "proposed_std": null,
+     "smote": "0.9505",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "German",
+     "proposed": "0.5602",
+     "proposed_std": null,
+     "smote": "0.4878",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Phoneme",
+     "proposed": "0.5914",
+     "proposed_std": null,
+     "smote": "0.5952",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "0.9142",
+     "proposed_std": null,
+     "smote": "0.891",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Texture",
+     "proposed": "0.9986",
+     "proposed_std": null,
+     "smote": "0.9853",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Segment",
+     "proposed": "0.9854",
+     "proposed_std": null,
+     "smote": "0.9835",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Page_Blocks",
+     "proposed": "0.8326",
+     "proposed_std": null,
+     "smote": "0.7781",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Satimage",
+     "proposed": "0.5671",
+     "proposed_std": null,
+     "smote": "0.4791",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Mf_Zernike",
+     "proposed": "0.3608",
+     "proposed_std": null,
+     "smote": "0.4409",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Vowel",
+     "proposed": "0.9934",
+     "proposed_std": null,
+     "smote": "0.8569",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Abalone",
+     "proposed": "0.4968",
+     "proposed_std": null,
+     "smote": "0.5886",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Glass",
+     "proposed": "0.6169",
+     "proposed_std": null,
+     "smote": "0.8940",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Yeast",
+     "proposed": "0.467",
+     "proposed_std": null,
+     "smote": "0.7557",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Letter",
+     "proposed": "0.9882",
+     "proposed_std": null,
+     "smote": "0.9122",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Shuttle",
+     "proposed": "0.9495",
+     "proposed_std": null,
+     "smote": "0.9719",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "not stated in paper (Wilcoxon only on averaged AUC). Table III: \"the best performance of each algorithm across each evaluation criteria is highlighted\" (bold)."
+   }
+  },
+  {
+   "metric": "Recall",
+   "metric_family": "recall",
+   "table": "Table III",
+   "page": "PDF pages 9-10 (printed p.1632-1633)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Sonar",
+     "proposed": "0.7813",
+     "proposed_std": null,
+     "smote": "0.7687",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Spambase",
+     "proposed": "0.9387",
+     "proposed_std": null,
+     "smote": "0.9311",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Ionosphere",
+     "proposed": "0.6638",
+     "proposed_std": null,
+     "smote": "0.6425",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "PID",
+     "proposed": "0.7467",
+     "proposed_std": null,
+     "smote": "0.7511",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Wine",
+     "proposed": "0.9885",
+     "proposed_std": null,
+     "smote": "0.9885",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "German",
+     "proposed": "0.5270",
+     "proposed_std": null,
+     "smote": "0.5570",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Phoneme",
+     "proposed": "0.9068",
+     "proposed_std": null,
+     "smote": "0.8248",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "0.9398",
+     "proposed_std": null,
+     "smote": "0.9373",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Texture",
+     "proposed": "0.9966",
+     "proposed_std": null,
+     "smote": "0.9863",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Segment",
+     "proposed": "0.9907",
+     "proposed_std": null,
+     "smote": "0.9863",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Page_Blocks",
+     "proposed": "0.8928",
+     "proposed_std": null,
+     "smote": "0.8563",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Satimage",
+     "proposed": "0.7127",
+     "proposed_std": null,
+     "smote": "0.606",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Mf_Zernike",
+     "proposed": "0.369",
+     "proposed_std": null,
+     "smote": "0.592",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Vowel",
+     "proposed": "0.9931",
+     "proposed_std": null,
+     "smote": "0.9379",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Abalone",
+     "proposed": "0.4889",
+     "proposed_std": null,
+     "smote": "0.5328",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Glass",
+     "proposed": "0.8464",
+     "proposed_std": null,
+     "smote": "0.9179",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Yeast",
+     "proposed": "0.4341",
+     "proposed_std": null,
+     "smote": "0.5107",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Letter",
+     "proposed": "0.9662",
+     "proposed_std": null,
+     "smote": "0.8853",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Shuttle",
+     "proposed": "0.9728",
+     "proposed_std": null,
+     "smote": "0.9444",
+     "smote_std": null,
+     "marks": ""
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "not stated in paper (Wilcoxon only on averaged AUC). Table III: \"the best performance of each algorithm across each evaluation criteria is highlighted\" (bold)."
+   }
+  },
+  {
+   "metric": "F-measure",
+   "metric_family": "F-measure",
+   "table": "Table III",
+   "page": "PDF pages 9-10 (printed p.1632-1633)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Sonar",
+     "proposed": "0.7672",
+     "proposed_std": null,
+     "smote": "0.7485",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Spambase",
+     "proposed": "0.9315",
+     "proposed_std": null,
+     "smote": "0.9251",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Ionosphere",
+     "proposed": "0.744",
+     "proposed_std": null,
+     "smote": "0.7106",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "PID",
+     "proposed": "0.6497",
+     "proposed_std": null,
+     "smote": "0.6496",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Wine",
+     "proposed": "0.9696",
+     "proposed_std": null,
+     "smote": "0.9684",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "German",
+     "proposed": "0.5409",
+     "proposed_std": null,
+     "smote": "0.5192",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Phoneme",
+     "proposed": "0.7158",
+     "proposed_std": null,
+     "smote": "0.6899",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "0.926",
+     "proposed_std": null,
+     "smote": "0.9132",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Texture",
+     "proposed": "0.9976",
+     "proposed_std": null,
+     "smote": "0.9858",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Segment",
+     "proposed": "0.9880",
+     "proposed_std": null,
+     "smote": "0.9848",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Page_Blocks",
+     "proposed": "0.8614",
+     "proposed_std": null,
+     "smote": "0.8140",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Satimage",
+     "proposed": "0.6312",
+     "proposed_std": null,
+     "smote": "0.5327",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Mf_Zernike",
+     "proposed": "0.3645",
+     "proposed_std": null,
+     "smote": "0.5045",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Vowel",
+     "proposed": "0.9931",
+     "proposed_std": null,
+     "smote": "0.893",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Abalone",
+     "proposed": "0.4813",
+     "proposed_std": null,
+     "smote": "0.5412",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Glass",
+     "proposed": "0.7731",
+     "proposed_std": null,
+     "smote": "0.8874",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Yeast",
+     "proposed": "0.4418",
+     "proposed_std": null,
+     "smote": "0.5761",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Letter",
+     "proposed": "0.977",
+     "proposed_std": null,
+     "smote": "0.8981",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Shuttle",
+     "proposed": "0.9576",
+     "proposed_std": null,
+     "smote": "0.9538",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "not stated in paper (Wilcoxon only on averaged AUC). Table III: \"the best performance of each algorithm across each evaluation criteria is highlighted\" (bold)."
+   }
+  },
+  {
+   "metric": "AUC",
+   "metric_family": "AUC",
+   "table": "Table III",
+   "page": "PDF pages 9-10 (printed p.1632-1633)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Sonar",
+     "proposed": "0.86343",
+     "proposed_std": null,
+     "smote": "0.84311",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Spambase",
+     "proposed": "0.98379",
+     "proposed_std": null,
+     "smote": "0.97942",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Ionosphere",
+     "proposed": "0.90138",
+     "proposed_std": null,
+     "smote": "0.82093",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "PID",
+     "proposed": "0.79608",
+     "proposed_std": null,
+     "smote": "0.80428",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Wine",
+     "proposed": "0.99940",
+     "proposed_std": null,
+     "smote": "0.99908",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "German",
+     "proposed": "0.74139",
+     "proposed_std": null,
+     "smote": "0.71365",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Phoneme",
+     "proposed": "0.90621",
+     "proposed_std": null,
+     "smote": "0.87186",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "0.99487",
+     "proposed_std": null,
+     "smote": "0.99314",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Texture",
+     "proposed": "0.99999",
+     "proposed_std": null,
+     "smote": "0.99920",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Segment",
+     "proposed": "0.99976",
+     "proposed_std": null,
+     "smote": "0.99959",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Page_Blocks",
+     "proposed": "0.98899",
+     "proposed_std": null,
+     "smote": "0.97993",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Satimage",
+     "proposed": "0.94860",
+     "proposed_std": null,
+     "smote": "0.89748",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Mf_Zernike",
+     "proposed": "0.89452",
+     "proposed_std": null,
+     "smote": "0.8922",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Vowel",
+     "proposed": "0.99990",
+     "proposed_std": null,
+     "smote": "0.99615",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Abalone",
+     "proposed": "0.97609",
+     "proposed_std": null,
+     "smote": "0.92291",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Glass",
+     "proposed": "0.99478",
+     "proposed_std": null,
+     "smote": "0.99801",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Yeast",
+     "proposed": "0.74512",
+     "proposed_std": null,
+     "smote": "0.81603",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Letter",
+     "proposed": "0.99978",
+     "proposed_std": null,
+     "smote": "0.99514",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    },
+    {
+     "dataset_as_printed": "Shuttle",
+     "proposed": "0.9998",
+     "proposed_std": null,
+     "smote": "0.9998",
+     "smote_std": null,
+     "marks": "RAMOBoost bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Wilcoxon signed-ranks test on averaged AUC, Simulation 1 (Table VI): RAMOBoost vs. SMOTE R+ = 154, R- = 36, T = 36(+) with 36 bold+underscored (underscore = significance). Text: \"Since there are 19 datasets, T should be less than or equal to 46 to reject a null hypothesis in the significance level of 0.05\"; \"RAMOBoost also statistically outperforms SMOTE, ADASYN, BorderlineSMOTE, and SMOTE-Tomek.\" \"(+)\" signifies RAMOBoost quantitatively better."
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [],
+ "metrics_without_smote": [
+  {
+   "metric": "AUC Wilcoxon RAMOBoost vs SMOTEBoost / AdaCost",
+   "table": "Table IV, Table V"
+  }
+ ],
+ "notes": "Table III is text; method-row/column mapping verified visually on rendered pages 9-10; bold marks read from images. Other tables with SMOTE are different conditions (Simulation 2 RAMO-vs-SMOTE AUC Table VII/VIII; Simulation 3 Table IX/X; imbalance-ratio tuning Table XII/XIII; oversampling-rate tables), not copied. OA = overall accuracy."
+}

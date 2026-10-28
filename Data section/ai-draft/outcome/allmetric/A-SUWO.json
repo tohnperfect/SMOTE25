@@ -1,0 +1,467 @@
+{
+ "key": "A-SUWO",
+ "classifier": "SVM (RBF)",
+ "condition": "main suite, original IR, 4-fold stratified CV x3, mean±std",
+ "proposed_column": "A-SUWO",
+ "smote_column": "SMOTE",
+ "metrics": [
+  {
+   "metric": "G-M (G-mean)",
+   "metric_family": "G-mean",
+   "table": "Table 3.2",
+   "page": "PDF page 50 (printed p.38)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "0.976",
+     "proposed_std": "0.007",
+     "smote": "0.969",
+     "smote_std": "0.013",
+     "marks": "A-SUWO bold"
+    },
+    {
+     "dataset_as_printed": "Ecoli",
+     "proposed": "0.940",
+     "proposed_std": "0.034",
+     "smote": "0.940",
+     "smote_std": "0.032",
+     "marks": "A-SUWO bold"
+    },
+    {
+     "dataset_as_printed": "Pima",
+     "proposed": "0.734",
+     "proposed_std": "0.015",
+     "smote": "0.678",
+     "smote_std": "0.066",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Balance",
+     "proposed": "0.548",
+     "proposed_std": "0.086",
+     "smote": "0.358",
+     "smote_std": "0.116",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Liver",
+     "proposed": "0.659",
+     "proposed_std": "0.033",
+     "smote": "0.655",
+     "smote_std": "0.041",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Wine",
+     "proposed": "0.981",
+     "proposed_std": "0.017",
+     "smote": "0.978",
+     "smote_std": "0.019",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Breast",
+     "proposed": "0.748",
+     "proposed_std": "0.088",
+     "smote": "0.722",
+     "smote_std": "0.078",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Libra",
+     "proposed": "0.723",
+     "proposed_std": "0.079",
+     "smote": "0.756",
+     "smote_std": "0.115",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "LEV",
+     "proposed": "0.804",
+     "proposed_std": "0.076",
+     "smote": "0.746",
+     "smote_std": "0.049",
+     "marks": "A-SUWO bold"
+    },
+    {
+     "dataset_as_printed": "Iris",
+     "proposed": "0.972",
+     "proposed_std": "0.018",
+     "smote": "0.972",
+     "smote_std": "0.018",
+     "marks": "A-SUWO bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Heart",
+     "proposed": "0.829",
+     "proposed_std": "0.030",
+     "smote": "0.816",
+     "smote_std": "0.029",
+     "marks": "A-SUWO bold"
+    },
+    {
+     "dataset_as_printed": "Glass",
+     "proposed": "0.828",
+     "proposed_std": "0.025",
+     "smote": "0.813",
+     "smote_std": "0.036",
+     "marks": "A-SUWO bold"
+    },
+    {
+     "dataset_as_printed": "Haber",
+     "proposed": "0.571",
+     "proposed_std": "0.046",
+     "smote": "0.571",
+     "smote_std": "0.037",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Eucal.",
+     "proposed": "0.617",
+     "proposed_std": "0.061",
+     "smote": "0.335",
+     "smote_std": "0.145",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Heating",
+     "proposed": "0.865",
+     "proposed_std": "0.034",
+     "smote": "0.690",
+     "smote_std": "0.007",
+     "marks": "A-SUWO bold"
+    },
+    {
+     "dataset_as_printed": "Seg.",
+     "proposed": "0.948",
+     "proposed_std": "0.008",
+     "smote": "0.956",
+     "smote_std": "0.014",
+     "marks": ""
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Table 3.6 mean ranking over 16 datasets (SVM; lower is better)",
+      "proposed": "2.688",
+      "smote": "5.406"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Holm test (Table 3.8, control A-SUWO, SVM, G-mean): SMOTE i=4, alpha0.10=0.0200, p-value 0.000351**. Friedman test p-value (SVM, Table 3.7): 0.001138**. Text: \"the proposed A-SUWO method outperforms all other methods based on all three measures when SVM was used as the classifier.\" Best measures shown in bold."
+   }
+  },
+  {
+   "metric": "F_M (F-measure)",
+   "metric_family": "F-measure",
+   "table": "Table 3.2",
+   "page": "PDF page 50 (printed p.38)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": null,
+     "proposed": "0.961",
+     "proposed_std": "0.012",
+     "smote": "0.953",
+     "smote_std": "0.019",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "0.860",
+     "proposed_std": "0.032",
+     "smote": "0.860",
+     "smote_std": "0.023",
+     "marks": "A-SUWO bold"
+    },
+    {
+     "dataset_as_printed": "Ecoli",
+     "proposed": "0.658",
+     "proposed_std": "0.018",
+     "smote": "0.589",
+     "smote_std": "0.080",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Pima",
+     "proposed": "0.212",
+     "proposed_std": "0.036",
+     "smote": "0.113",
+     "smote_std": "0.066",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Balance",
+     "proposed": "0.604",
+     "proposed_std": "0.044",
+     "smote": "0.607",
+     "smote_std": "0.055",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Liver",
+     "proposed": "0.979",
+     "proposed_std": "0.018",
+     "smote": "0.976",
+     "smote_std": "0.020",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Wine",
+     "proposed": "0.685",
+     "proposed_std": "0.088",
+     "smote": "0.654",
+     "smote_std": "0.085",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Breast",
+     "proposed": "0.684",
+     "proposed_std": "0.098",
+     "smote": "0.625",
+     "smote_std": "0.140",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Libra",
+     "proposed": "0.553",
+     "proposed_std": "0.064",
+     "smote": "0.510",
+     "smote_std": "0.043",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "LEV",
+     "proposed": "0.956",
+     "proposed_std": "0.025",
+     "smote": "0.956",
+     "smote_std": "0.025",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Iris",
+     "proposed": "0.810",
+     "proposed_std": "0.036",
+     "smote": "0.796",
+     "smote_std": "0.034",
+     "marks": "A-SUWO bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Heart",
+     "proposed": "0.755",
+     "proposed_std": "0.027",
+     "smote": "0.740",
+     "smote_std": "0.042",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Glass",
+     "proposed": "0.412",
+     "proposed_std": "0.050",
+     "smote": "0.410",
+     "smote_std": "0.042",
+     "marks": "A-SUWO bold"
+    },
+    {
+     "dataset_as_printed": "Haber",
+     "proposed": "0.417",
+     "proposed_std": "0.061",
+     "smote": "0.189",
+     "smote_std": "0.118",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Eucal.",
+     "proposed": "0.759",
+     "proposed_std": "0.052",
+     "smote": "0.591",
+     "smote_std": "0.021",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Heating",
+     "proposed": "0.868",
+     "proposed_std": "0.006",
+     "smote": "0.886",
+     "smote_std": "0.031",
+     "marks": "A-SUWO bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Table 3.6 mean ranking over 16 datasets (SVM; lower is better)",
+      "proposed": "2.625",
+      "smote": "4.969"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Holm test (Table 3.8, control A-SUWO, SVM, F-measure): SMOTE i=4, alpha0.10=0.0200, p-value 0.002493**. Friedman test p-value (SVM, Table 3.7): 0.005956**. Text: \"the proposed A-SUWO method outperforms all other methods based on all three measures when SVM was used as the classifier.\" Best measures shown in bold."
+   }
+  },
+  {
+   "metric": "AUC",
+   "metric_family": "AUC",
+   "table": "Table 3.2",
+   "page": "PDF page 50 (printed p.38)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "0.996",
+     "proposed_std": "0.002",
+     "smote": "0.994",
+     "smote_std": "0.003",
+     "marks": "A-SUWO bold"
+    },
+    {
+     "dataset_as_printed": "Ecoli",
+     "proposed": "0.959",
+     "proposed_std": "0.031",
+     "smote": "0.958",
+     "smote_std": "0.028",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Pima",
+     "proposed": "0.825",
+     "proposed_std": "0.022",
+     "smote": "0.757",
+     "smote_std": "0.069",
+     "marks": "A-SUWO bold"
+    },
+    {
+     "dataset_as_printed": "Balance",
+     "proposed": "0.758",
+     "proposed_std": "0.026",
+     "smote": "0.703",
+     "smote_std": "0.030",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Liver",
+     "proposed": "0.719",
+     "proposed_std": "0.032",
+     "smote": "0.727",
+     "smote_std": "0.034",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Wine",
+     "proposed": "0.999",
+     "proposed_std": "0.001",
+     "smote": "0.999",
+     "smote_std": "0.001",
+     "marks": "A-SUWO bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Breast",
+     "proposed": "0.860",
+     "proposed_std": "0.066",
+     "smote": "0.829",
+     "smote_std": "0.052",
+     "marks": "A-SUWO bold"
+    },
+    {
+     "dataset_as_printed": "Libra",
+     "proposed": "0.996",
+     "proposed_std": "0.006",
+     "smote": "0.994",
+     "smote_std": "0.007",
+     "marks": "A-SUWO bold"
+    },
+    {
+     "dataset_as_printed": "LEV",
+     "proposed": "0.870",
+     "proposed_std": "0.073",
+     "smote": "0.750",
+     "smote_std": "0.053",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Iris",
+     "proposed": "0.994",
+     "proposed_std": "0.004",
+     "smote": "0.994",
+     "smote_std": "0.004",
+     "marks": "A-SUWO bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Heart",
+     "proposed": "0.873",
+     "proposed_std": "0.027",
+     "smote": "0.867",
+     "smote_std": "0.027",
+     "marks": "A-SUWO bold"
+    },
+    {
+     "dataset_as_printed": "Glass",
+     "proposed": "0.870",
+     "proposed_std": "0.028",
+     "smote": "0.873",
+     "smote_std": "0.022",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Haber",
+     "proposed": "0.659",
+     "proposed_std": "0.018",
+     "smote": "0.645",
+     "smote_std": "0.040",
+     "marks": "A-SUWO bold"
+    },
+    {
+     "dataset_as_printed": "Eucal.",
+     "proposed": "0.785",
+     "proposed_std": "0.045",
+     "smote": "0.733",
+     "smote_std": "0.036",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Heating",
+     "proposed": "0.923",
+     "proposed_std": "0.021",
+     "smote": "0.875",
+     "smote_std": "0.027",
+     "marks": "A-SUWO bold"
+    },
+    {
+     "dataset_as_printed": "Seg.",
+     "proposed": "0.984",
+     "proposed_std": "0.005",
+     "smote": "0.986",
+     "smote_std": "0.006",
+     "marks": ""
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Table 3.6 mean ranking over 16 datasets (SVM; lower is better)",
+      "proposed": "2.500",
+      "smote": "5.781"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Holm test (Table 3.8, control A-SUWO, SVM, AUC): SMOTE i=5, alpha0.10=0.0250, p-value 0.007747**. Friedman test p-value (SVM, Table 3.7): 3.69E-05**. Text: \"the proposed A-SUWO method outperforms all other methods based on all three measures when SVM was used as the classifier.\" Best measures shown in bold."
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [],
+ "metrics_without_smote": [
+  {
+   "metric": "Sensitivity analysis on A-SUWO parameters (F-measure/G-mean/AUC)",
+   "table": "Table 3.9"
+  }
+ ],
+ "notes": "Table 3.2 is text (not image); column mapping verified against rendered page 50. Same three metrics also reported for KNN (Table 3.3), Logistic Regression (Table 3.4), LDA (Table 3.5) but these are other classifiers of the same metrics, not copied. Bold = best measure across 9 methods per row (read from rendered image)."
+}

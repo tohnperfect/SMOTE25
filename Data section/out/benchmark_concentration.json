@@ -1,0 +1,566 @@
+{
+ "units": "entry = data set in one paper; use = distinct (paper, normalised name); name = norm() of analyse_dataset_usage.py",
+ "papers": 72,
+ "named_entries": 1653,
+ "by_name": {
+  "names": 771,
+  "uses": 1609,
+  "singletons": 546,
+  "singleton_share_of_names": 0.7082,
+  "singleton_share_of_uses": 0.3393,
+  "top_share": {
+   "5": 0.0684,
+   "10": 0.1187,
+   "20": 0.1989,
+   "50": 0.3567,
+   "100": 0.4935
+  },
+  "names_for_half_of_uses": 104,
+  "effective_number": 263.7,
+  "gini": 0.449,
+  "papers_per_name_distribution": {
+   "1": 546,
+   "2": 106,
+   "3-4": 43,
+   "5-9": 46,
+   "10-19": 25,
+   "20+": 5
+  }
+ },
+ "by_entry": {
+  "entries": 1653,
+  "top_share": {
+   "5": 0.0714,
+   "10": 0.1228,
+   "20": 0.2008,
+   "50": 0.3575,
+   "100": 0.4936
+  },
+  "effective_number": 259.4
+ },
+ "by_dataset": {
+  "names": 680,
+  "uses": 1609,
+  "singletons": 463,
+  "singleton_share_of_names": 0.6809,
+  "singleton_share_of_uses": 0.2878,
+  "top_share": {
+   "5": 0.0715,
+   "10": 0.1274,
+   "20": 0.2144,
+   "50": 0.3866,
+   "100": 0.5488
+  },
+  "names_for_half_of_uses": 81,
+  "effective_number": 226.6,
+  "gini": 0.4898,
+  "papers_per_name_distribution": {
+   "1": 463,
+   "2": 88,
+   "3-4": 46,
+   "5-9": 50,
+   "10-19": 27,
+   "20+": 6
+  }
+ },
+ "by_family": {
+  "names": 459,
+  "uses": 1191,
+  "singletons": 323,
+  "singleton_share_of_names": 0.7037,
+  "singleton_share_of_uses": 0.2712,
+  "top_share": {
+   "5": 0.1511,
+   "10": 0.2485,
+   "20": 0.3778,
+   "50": 0.5533,
+   "100": 0.6683
+  },
+  "names_for_half_of_uses": 37,
+  "effective_number": 99.7,
+  "gini": 0.544,
+  "papers_per_name_distribution": {
+   "1": 323,
+   "2": 57,
+   "3-4": 33,
+   "5-9": 21,
+   "10-19": 15,
+   "20+": 10
+  }
+ },
+ "t1_rule": "T1 (Toon, 28 Oct 2026): names differing only by '-', '_', spaces or dots are one dataset; numbered or split versions belong to their main set's family; non-standard names are not merged (build/family_rule.py)",
+ "names_used_by_10plus_papers": 30,
+ "uses_on_those_names": 425,
+ "papers_using_any_name_shared_by_5plus": 64,
+ "papers_whose_names_are_all_single_paper": [
+  "Cluster-SMOTE",
+  "ClusterCentroids",
+  "INOS",
+  "OSS",
+  "SHRINK",
+  "SPE"
+ ],
+ "median_share_of_a_papers_names_that_are_common_5plus": 0.459,
+ "datasets_used_by_10plus_papers": 33,
+ "uses_on_those_datasets": 482,
+ "datasets_used_by_10plus": [
+  [
+   "abalone",
+   11
+  ],
+  [
+   "balance",
+   16
+  ],
+  [
+   "car",
+   14
+  ],
+  [
+   "cleveland",
+   13
+  ],
+  [
+   "contraceptive",
+   13
+  ],
+  [
+   "dermatology",
+   13
+  ],
+  [
+   "ecoli",
+   29
+  ],
+  [
+   "ecoli3",
+   10
+  ],
+  [
+   "ecoli4",
+   12
+  ],
+  [
+   "glass",
+   19
+  ],
+  [
+   "glass2",
+   10
+  ],
+  [
+   "glass4",
+   10
+  ],
+  [
+   "glass5",
+   10
+  ],
+  [
+   "haberman",
+   20
+  ],
+  [
+   "hayes-roth",
+   14
+  ],
+  [
+   "new-thyroid",
+   19
+  ],
+  [
+   "page-blocks",
+   22
+  ],
+  [
+   "pima",
+   21
+  ],
+  [
+   "satimage",
+   15
+  ],
+  [
+   "segment",
+   10
+  ],
+  [
+   "thyroid",
+   12
+  ],
+  [
+   "vehicle",
+   21
+  ],
+  [
+   "vowel0",
+   11
+  ],
+  [
+   "wine",
+   16
+  ],
+  [
+   "winequality-red",
+   10
+  ],
+  [
+   "yeast",
+   22
+  ],
+  [
+   "yeast-2 vs 4",
+   11
+  ],
+  [
+   "yeast1",
+   10
+  ],
+  [
+   "yeast3",
+   14
+  ],
+  [
+   "yeast4",
+   16
+  ],
+  [
+   "yeast5",
+   15
+  ],
+  [
+   "yeast6",
+   13
+  ],
+  [
+   "zoo",
+   10
+  ]
+ ],
+ "size_profile_all_entries": {
+  "entries": 1653,
+  "instances": {
+   "reported": 1324,
+   "median": 800.0,
+   "p90": 7200.0,
+   "share_ge_10000": 0.091
+  },
+  "features": {
+   "reported": 1254,
+   "median": 9.0,
+   "p90": 41.0,
+   "share_ge_100": 0.047
+  },
+  "classes": {
+   "reported": 1280,
+   "share_2": 0.684,
+   "share_ge_5": 0.186
+  }
+ },
+ "size_profile_names_used_by_10plus_papers": {
+  "entries": 437,
+  "instances": {
+   "reported": 351,
+   "median": 625.0,
+   "p90": 2310.0,
+   "share_ge_10000": 0.0
+  },
+  "features": {
+   "reported": 338,
+   "median": 8.0,
+   "p90": 19.0,
+   "share_ge_100": 0.0
+  },
+  "classes": {
+   "reported": 342,
+   "share_2": 0.494,
+   "share_ge_5": 0.257
+  }
+ },
+ "size_profile_datasets_used_by_10plus_papers": {
+  "entries": 502,
+  "instances": {
+   "reported": 403,
+   "median": 625.0,
+   "p90": 2310.0,
+   "share_ge_10000": 0.0
+  },
+  "features": {
+   "reported": 389,
+   "median": 8.0,
+   "p90": 18.0,
+   "share_ge_100": 0.0
+  },
+  "classes": {
+   "reported": 392,
+   "share_2": 0.513,
+   "share_ge_5": 0.258
+  }
+ },
+ "top20": [
+  [
+   "ecoli",
+   26,
+   28
+  ],
+  [
+   "yeast",
+   22,
+   22
+  ],
+  [
+   "pima",
+   21,
+   23
+  ],
+  [
+   "vehicle",
+   21,
+   23
+  ],
+  [
+   "haberman",
+   20,
+   22
+  ],
+  [
+   "glass",
+   19,
+   21
+  ],
+  [
+   "balance",
+   16,
+   16
+  ],
+  [
+   "wine",
+   16,
+   18
+  ],
+  [
+   "satimage",
+   15,
+   15
+  ],
+  [
+   "yeast4",
+   15,
+   15
+  ],
+  [
+   "car",
+   14,
+   14
+  ],
+  [
+   "yeast5",
+   14,
+   14
+  ],
+  [
+   "cleveland",
+   13,
+   13
+  ],
+  [
+   "contraceptive",
+   13,
+   13
+  ],
+  [
+   "dermatology",
+   13,
+   13
+  ],
+  [
+   "page-blocks",
+   13,
+   13
+  ],
+  [
+   "yeast3",
+   13,
+   13
+  ],
+  [
+   "ecoli4",
+   12,
+   12
+  ],
+  [
+   "new-thyroid",
+   12,
+   12
+  ],
+  [
+   "thyroid",
+   12,
+   12
+  ]
+ ],
+ "top20_datasets": [
+  [
+   "ecoli",
+   29
+  ],
+  [
+   "page-blocks",
+   22
+  ],
+  [
+   "yeast",
+   22
+  ],
+  [
+   "pima",
+   21
+  ],
+  [
+   "vehicle",
+   21
+  ],
+  [
+   "haberman",
+   20
+  ],
+  [
+   "glass",
+   19
+  ],
+  [
+   "new-thyroid",
+   19
+  ],
+  [
+   "balance",
+   16
+  ],
+  [
+   "wine",
+   16
+  ],
+  [
+   "yeast4",
+   16
+  ],
+  [
+   "satimage",
+   15
+  ],
+  [
+   "yeast5",
+   15
+  ],
+  [
+   "car",
+   14
+  ],
+  [
+   "hayes-roth",
+   14
+  ],
+  [
+   "yeast3",
+   14
+  ],
+  [
+   "cleveland",
+   13
+  ],
+  [
+   "contraceptive",
+   13
+  ],
+  [
+   "dermatology",
+   13
+  ],
+  [
+   "yeast6",
+   13
+  ]
+ ],
+ "top20_families": [
+  [
+   "ecoli",
+   42
+  ],
+  [
+   "yeast",
+   39
+  ],
+  [
+   "glass",
+   35
+  ],
+  [
+   "page-blocks",
+   34
+  ],
+  [
+   "vehicle",
+   30
+  ],
+  [
+   "new-thyroid",
+   29
+  ],
+  [
+   "abalone",
+   26
+  ],
+  [
+   "pima",
+   21
+  ],
+  [
+   "cleveland",
+   20
+  ],
+  [
+   "haberman",
+   20
+  ],
+  [
+   "vowel",
+   19
+  ],
+  [
+   "balance",
+   16
+  ],
+  [
+   "satimage",
+   16
+  ],
+  [
+   "wine",
+   16
+  ],
+  [
+   "dermatology",
+   15
+  ],
+  [
+   "segment",
+   15
+  ],
+  [
+   "shuttle",
+   15
+  ],
+  [
+   "car",
+   14
+  ],
+  [
+   "hayes-roth",
+   14
+  ],
+  [
+   "winequality-red",
+   14
+  ]
+ ]
+}

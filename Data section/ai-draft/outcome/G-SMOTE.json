@@ -1,0 +1,298 @@
+{
+ "key": "G-SMOTE",
+ "smote_in_baselines": "yes",
+ "smote_name_as_printed": "SMOTE",
+ "baselines_all": [
+  "NO OVERSAMPLING",
+  "RANDOM OVERSAMPLING",
+  "SMOTE"
+ ],
+ "results_tables": [
+  {
+   "table": "Table 2",
+   "page": "PDF p.21-22 (values on p.21, caption on p.22; manuscript p.20-21)",
+   "metric": "AUC, F-SCORE, G-MEAN",
+   "classifier": "LR, KNN, DT, GBC",
+   "granularity": "aggregate only",
+   "is_image": false
+  },
+  {
+   "table": "Table 3",
+   "page": "PDF p.22",
+   "metric": "AUC, F-SCORE, G-MEAN",
+   "classifier": "LR, KNN, DT, GBC",
+   "granularity": "ranking only",
+   "is_image": false
+  },
+  {
+   "table": "Table 4 (Friedman test p-values)",
+   "page": "PDF p.23",
+   "metric": "AUC, F-SCORE, G-MEAN",
+   "classifier": "LR, KNN, DT, GBC",
+   "granularity": "aggregate only",
+   "is_image": false
+  },
+  {
+   "table": "Table 5 (Holm adjusted p-values, G-SMOTE as control)",
+   "page": "PDF p.23",
+   "metric": "AUC, F-SCORE, G-MEAN",
+   "classifier": "LR, KNN, DT, GBC",
+   "granularity": "aggregate only",
+   "is_image": false
+  },
+  {
+   "table": "Figure 16 (percentage difference G-SMOTE vs SMOTE relative to no oversampling)",
+   "page": "PDF p.22",
+   "metric": "AUC, F-SCORE, G-MEAN",
+   "classifier": "LR, KNN, DT, GBC",
+   "granularity": "aggregate only",
+   "is_image": true
+  }
+ ],
+ "chosen": {
+  "table": "Table 2",
+  "page": "PDF p.21-22",
+  "metric": "G-MEAN",
+  "classifier": "LR",
+  "condition": "all 69 datasets pooled (original + undersampled (2)/(3) variants + simulated MANDELON); optimal hyper-parameters per combination, mean of 3 repetitions of 5-fold CV",
+  "higher_is_better": true,
+  "why_this_choice": "No per-dataset table exists in the paper (full per-dataset results only at external URL https://github.com/IMS-ML-Lab/publications/blob/master/data/results/gsmote-journal/wide_optimal.csv, not copied). Rule 3: G-mean is highest-priority metric reported; aggregate Table 2 used. Rule 4: abstract highlights no classifier, so first reported (LR)."
+ },
+ "rows": [],
+ "summary_rows": [
+  {
+   "label": "Average (Table 2, mean CV score across 69 datasets) LR G-MEAN",
+   "proposed": "0.856",
+   "smote": "0.841",
+   "no_oversampling": "0.499",
+   "random_oversampling": "0.842"
+  },
+  {
+   "label": "Average (Table 2, mean CV score across 69 datasets) LR AUC",
+   "proposed": "0.907",
+   "smote": "0.903",
+   "no_oversampling": "0.899",
+   "random_oversampling": "0.903"
+  },
+  {
+   "label": "Average (Table 2, mean CV score across 69 datasets) LR F-SCORE",
+   "proposed": "0.604",
+   "smote": "0.593",
+   "no_oversampling": "0.444",
+   "random_oversampling": "0.588"
+  },
+  {
+   "label": "Average (Table 2, mean CV score across 69 datasets) KNN AUC",
+   "proposed": "0.863",
+   "smote": "0.842",
+   "no_oversampling": "0.825",
+   "random_oversampling": "0.822"
+  },
+  {
+   "label": "Average (Table 2, mean CV score across 69 datasets) KNN F-SCORE",
+   "proposed": "0.620",
+   "smote": "0.590",
+   "no_oversampling": "0.546",
+   "random_oversampling": "0.584"
+  },
+  {
+   "label": "Average (Table 2, mean CV score across 69 datasets) KNN G-MEAN",
+   "proposed": "0.821",
+   "smote": "0.783",
+   "no_oversampling": "0.628",
+   "random_oversampling": "0.758"
+  },
+  {
+   "label": "Average (Table 2, mean CV score across 69 datasets) DT AUC",
+   "proposed": "0.894",
+   "smote": "0.865",
+   "no_oversampling": "0.845",
+   "random_oversampling": "0.849"
+  },
+  {
+   "label": "Average (Table 2, mean CV score across 69 datasets) DT F-SCORE",
+   "proposed": "0.690",
+   "smote": "0.641",
+   "no_oversampling": "0.623",
+   "random_oversampling": "0.625"
+  },
+  {
+   "label": "Average (Table 2, mean CV score across 69 datasets) DT G-MEAN",
+   "proposed": "0.866",
+   "smote": "0.833",
+   "no_oversampling": "0.726",
+   "random_oversampling": "0.820"
+  },
+  {
+   "label": "Average (Table 2, mean CV score across 69 datasets) GBC AUC",
+   "proposed": "0.927",
+   "smote": "0.913",
+   "no_oversampling": "0.907",
+   "random_oversampling": "0.906"
+  },
+  {
+   "label": "Average (Table 2, mean CV score across 69 datasets) GBC F-SCORE",
+   "proposed": "0.736",
+   "smote": "0.697",
+   "no_oversampling": "0.661",
+   "random_oversampling": "0.679"
+  },
+  {
+   "label": "Average (Table 2, mean CV score across 69 datasets) GBC G-MEAN",
+   "proposed": "0.868",
+   "smote": "0.834",
+   "no_oversampling": "0.748",
+   "random_oversampling": "0.817"
+  },
+  {
+   "label": "Avg rank (Table 3, mean ranking 1-4, lower better) LR G-MEAN",
+   "proposed": "1.210",
+   "smote": "2.580",
+   "no_oversampling": "3.739",
+   "random_oversampling": "2.471"
+  },
+  {
+   "label": "Avg rank (Table 3, mean ranking 1-4, lower better) LR AUC",
+   "proposed": "1.406",
+   "smote": "2.739",
+   "no_oversampling": "2.913",
+   "random_oversampling": "2.942"
+  },
+  {
+   "label": "Avg rank (Table 3, mean ranking 1-4, lower better) LR F-SCORE",
+   "proposed": "1.471",
+   "smote": "2.420",
+   "no_oversampling": "3.232",
+   "random_oversampling": "2.877"
+  },
+  {
+   "label": "Avg rank (Table 3, mean ranking 1-4, lower better) KNN AUC",
+   "proposed": "1.246",
+   "smote": "2.384",
+   "no_oversampling": "2.978",
+   "random_oversampling": "3.391"
+  },
+  {
+   "label": "Avg rank (Table 3, mean ranking 1-4, lower better) KNN F-SCORE",
+   "proposed": "1.413",
+   "smote": "2.696",
+   "no_oversampling": "3.159",
+   "random_oversampling": "2.732"
+  },
+  {
+   "label": "Avg rank (Table 3, mean ranking 1-4, lower better) KNN G-MEAN",
+   "proposed": "1.290",
+   "smote": "2.174",
+   "no_oversampling": "3.696",
+   "random_oversampling": "2.841"
+  },
+  {
+   "label": "Avg rank (Table 3, mean ranking 1-4, lower better) DT AUC",
+   "proposed": "1.174",
+   "smote": "2.428",
+   "no_oversampling": "3.239",
+   "random_oversampling": "3.159"
+  },
+  {
+   "label": "Avg rank (Table 3, mean ranking 1-4, lower better) DT F-SCORE",
+   "proposed": "1.384",
+   "smote": "2.659",
+   "no_oversampling": "2.797",
+   "random_oversampling": "3.159"
+  },
+  {
+   "label": "Avg rank (Table 3, mean ranking 1-4, lower better) DT G-MEAN",
+   "proposed": "1.167",
+   "smote": "2.370",
+   "no_oversampling": "3.652",
+   "random_oversampling": "2.812"
+  },
+  {
+   "label": "Avg rank (Table 3, mean ranking 1-4, lower better) GBC AUC",
+   "proposed": "1.152",
+   "smote": "2.623",
+   "no_oversampling": "2.993",
+   "random_oversampling": "3.232"
+  },
+  {
+   "label": "Avg rank (Table 3, mean ranking 1-4, lower better) GBC F-SCORE",
+   "proposed": "1.196",
+   "smote": "2.529",
+   "no_oversampling": "3.196",
+   "random_oversampling": "3.080"
+  },
+  {
+   "label": "Avg rank (Table 3, mean ranking 1-4, lower better) GBC G-MEAN",
+   "proposed": "1.123",
+   "smote": "2.312",
+   "no_oversampling": "3.645",
+   "random_oversampling": "2.920"
+  },
+  {
+   "label": "Holm adjusted p-value G-SMOTE vs SMOTE (Table 5) LR G-MEAN",
+   "proposed": null,
+   "smote": "1.4 · 10−8"
+  },
+  {
+   "label": "Holm adjusted p-value G-SMOTE vs SMOTE (Table 5) LR AUC",
+   "proposed": null,
+   "smote": "1.5 · 10−7"
+  },
+  {
+   "label": "Holm adjusted p-value G-SMOTE vs SMOTE (Table 5) LR F-SCORE",
+   "proposed": null,
+   "smote": "9.2 · 10−5"
+  },
+  {
+   "label": "Holm adjusted p-value G-SMOTE vs SMOTE (Table 5) KNN AUC",
+   "proposed": null,
+   "smote": "5.3 · 10−5"
+  },
+  {
+   "label": "Holm adjusted p-value G-SMOTE vs SMOTE (Table 5) KNN F-SCORE",
+   "proposed": null,
+   "smote": "2.0 · 10−10"
+  },
+  {
+   "label": "Holm adjusted p-value G-SMOTE vs SMOTE (Table 5) KNN G-MEAN",
+   "proposed": null,
+   "smote": "1.6 · 10−2"
+  },
+  {
+   "label": "Holm adjusted p-value G-SMOTE vs SMOTE (Table 5) DT AUC",
+   "proposed": null,
+   "smote": "1.3 · 10−10"
+  },
+  {
+   "label": "Holm adjusted p-value G-SMOTE vs SMOTE (Table 5) DT F-SCORE",
+   "proposed": null,
+   "smote": "1.8 · 10−9"
+  },
+  {
+   "label": "Holm adjusted p-value G-SMOTE vs SMOTE (Table 5) DT G-MEAN",
+   "proposed": null,
+   "smote": "4.6 · 10−10"
+  },
+  {
+   "label": "Holm adjusted p-value G-SMOTE vs SMOTE (Table 5) GBC AUC",
+   "proposed": null,
+   "smote": "1.6 · 10−9"
+  },
+  {
+   "label": "Holm adjusted p-value G-SMOTE vs SMOTE (Table 5) GBC F-SCORE",
+   "proposed": null,
+   "smote": "1.7 · 10−12"
+  },
+  {
+   "label": "Holm adjusted p-value G-SMOTE vs SMOTE (Table 5) GBC G-MEAN",
+   "proposed": null,
+   "smote": "1.7 · 10−12"
+  }
+ ],
+ "stat_test": "Friedman test on mean rankings of the 4 oversamplers per classifier/metric (Table 4, all significant), then Holm's method adjusting p-values of paired tests with G-SMOTE as control vs NO OVERSAMPLING, RANDOM OVERSAMPLING and SMOTE (Table 5); a = 0.05",
+ "win_claim": {
+  "quote": "The results show that G-SMOTE performs significantly better compared to the other methods.",
+  "page": "PDF p.27 (Conclusions)"
+ },
+ "notes": "Paper contains NO per-dataset results table; rows left empty. Table 1 (PDF p.18-19) lists the 69 datasets (13 UCI, 13 KEEL, 2 simulated MANDELON, plus undersampled variants with IR x2 '(2)' and x3 '(3)'): HEART, LIVER, WINE, PIMA, BREAST TISSUE, IRIS, GLASS, YEAST 1, HEART (2), LIVER (2), HABERMAN, WINE (2), VEHICLE, PIMA (2), HEART (3), BREAST TISSUE (2), IRIS (2), GLASS (2), LIVER (3), WINE (3), YEAST 1 (2), NEW THYROID 1, NEW THYROID 2, ECOLI, EUCALYPTUS, HABERMAN (2), PIMA (3), SEGMENTATION, IRIS (3), GLASS (3), VEHICLE (2), YEAST 1 (3), YEAST 3, HABERMAN (3), PAGE BLOCKS 0, VEHICLE (3), VOWEL, NEW THYROID 2 (2), NEW THYROID 1 (2), ECOLI (2), LED, EUCALYPTUS (2), SEGMENTATION (2), LIBRAS, PAGE BLOCKS 1 3, YEAST 3 (2), ECOLI (3), DERMATOLOGY, EUCALYPTUS (3), PAGE BLOCKS 0 (2), SEGMENTATION (3), VOWEL (2), LED (2), YEAST 3 (3), PAGE BLOCKS 0 (3), MANDELON 1, MANDELON 2, YEAST 4, VOWEL (3), YEAST 5, YEAST 6, MANDELON 1 (2), MANDELON 2 (2), YEAST 4 (2), YEAST 5 (2), MANDELON 1 (3), MANDELON 2 (3), YEAST 4 (3), YEAST 6 (2). Paper text says 'MANDELON' (sic, not MADELON). The paper's full results CSV (wide_optimal.csv on GitHub) is external and was not fetched; per-dataset values would have to come from there if needed. summary_rows: first entry is the chosen LR G-MEAN; all 12 classifier/metric combinations from Table 2 and Table 3 plus SMOTE-column Holm p-values from Table 5 are included (extra keys no_oversampling / random_oversampling hold the other baselines). Hyper-parameters tuned (best CV score reported) for both SMOTE (k in {3,5}) and G-SMOTE (grid of selection strategy, k, truncation, deformation). Text extracted cleanly; no rendering needed. PDF page numbers count the cover sheet as p.1."
+}

@@ -1,0 +1,328 @@
+{
+ "key": "GOIO",
+ "smote_in_baselines": "yes",
+ "smote_name_as_printed": "SMOTE",
+ "baselines_all": [
+  "IDENTITY",
+  "SMOTE",
+  "BSMOTE",
+  "SMOTETL",
+  "MLOS",
+  "GAMO",
+  "SOS"
+ ],
+ "results_tables": [
+  {
+   "table": "Table V",
+   "page": "10 (journal p. 6459)",
+   "metric": "F1-score",
+   "classifier": "not stated in paper (single table; apparently averaged over GNB, KNN, DTC, SVM, RF)",
+   "granularity": "per-dataset",
+   "is_image": true
+  },
+  {
+   "table": "Table VI",
+   "page": "10 (journal p. 6459)",
+   "metric": "MCC",
+   "classifier": "not stated in paper (single table; apparently averaged over GNB, KNN, DTC, SVM, RF)",
+   "granularity": "per-dataset",
+   "is_image": true
+  },
+  {
+   "table": "Table VII",
+   "page": "11 (journal p. 6460)",
+   "metric": "Accuracy",
+   "classifier": "not stated in paper (single table; apparently averaged over GNB, KNN, DTC, SVM, RF)",
+   "granularity": "per-dataset",
+   "is_image": true
+  },
+  {
+   "table": "Table VIII",
+   "page": "11 (journal p. 6460)",
+   "metric": "mean ranks for F1, MCC, ACC + Friedman/Bonferroni-Dunn",
+   "classifier": "same as Tables V-VII",
+   "granularity": "ranking only",
+   "is_image": true
+  },
+  {
+   "table": "Table IX",
+   "page": "12 (journal p. 6461)",
+   "metric": "Wilcoxon p-values (ACC vs IDENTITY, GAMO; MCC vs SOS)",
+   "classifier": "same as Tables V-VII",
+   "granularity": "aggregate only",
+   "is_image": true
+  },
+  {
+   "table": "Table X",
+   "page": "12 (journal p. 6461)",
+   "metric": "F1-score ablation (5 datasets)",
+   "classifier": "same as Tables V-VII",
+   "granularity": "per-dataset",
+   "is_image": true
+  }
+ ],
+ "chosen": {
+  "table": "Table V",
+  "page": "10 (journal p. 6459)",
+  "metric": "F1-score",
+  "classifier": "not stated in paper: Table V reports one value per method/dataset with no classifier given; five classifiers (GNB, KNN, DTC, SVM, RF) are used, results presumably averaged across them",
+  "condition": "original datasets (18 real-world + 5 artificial, all in one table)",
+  "higher_is_better": true,
+  "why_this_choice": "Rule 3: no G-mean or AUC reported; F1-score is the highest-priority metric with a per-dataset table containing GOIO and SMOTE. Rule 4: abstract highlights no classifier and tables are not split by classifier, so the single reported value is used."
+ },
+ "rows": [
+  {
+   "dataset_as_printed": "default",
+   "proposed": "0.6597",
+   "proposed_std": "0.04",
+   "smote": "0.6095",
+   "smote_std": "0.11",
+   "best_other_value": "0.6582",
+   "best_other_name": "SOS",
+   "marks": "GOIO rank (1) bold; SMOTE rank (6); bold rank-1 in row: GOIO"
+  },
+  {
+   "dataset_as_printed": "shoppers",
+   "proposed": "0.7244",
+   "proposed_std": "0.05",
+   "smote": "0.6923",
+   "smote_std": "0.11",
+   "best_other_value": "0.7217",
+   "best_other_name": "MLOS",
+   "marks": "GOIO rank (1) bold; SMOTE rank (8); bold rank-1 in row: GOIO"
+  },
+  {
+   "dataset_as_printed": "bank_full",
+   "proposed": "0.7161",
+   "proposed_std": "0.04",
+   "smote": "0.7008",
+   "smote_std": "0.04",
+   "best_other_value": "0.7066",
+   "best_other_name": "MLOS",
+   "marks": "GOIO rank (1) bold; SMOTE rank (5); bold rank-1 in row: GOIO"
+  },
+  {
+   "dataset_as_printed": "bank_small",
+   "proposed": "0.6742",
+   "proposed_std": "0.04",
+   "smote": "0.6642",
+   "smote_std": "0.03",
+   "best_other_value": "0.6793",
+   "best_other_name": "MLOS",
+   "marks": "GOIO rank (2); SMOTE rank (6); bold rank-1 in row: MLOS"
+  },
+  {
+   "dataset_as_printed": "avila_0vs5",
+   "proposed": "0.8595",
+   "proposed_std": "0.12",
+   "smote": "0.7777",
+   "smote_std": "0.19",
+   "best_other_value": "0.8533",
+   "best_other_name": "GAMO",
+   "marks": "GOIO rank (1) bold; SMOTE rank (5); bold rank-1 in row: GOIO"
+  },
+  {
+   "dataset_as_printed": "artificial_0.5_10",
+   "proposed": "0.6197",
+   "proposed_std": "0.04",
+   "smote": "0.5710",
+   "smote_std": "0.09",
+   "best_other_value": "0.6216",
+   "best_other_name": "SOS",
+   "marks": "GOIO rank (2); SMOTE rank (5); bold rank-1 in row: SOS"
+  },
+  {
+   "dataset_as_printed": "optical_digits",
+   "proposed": "0.8696",
+   "proposed_std": "0.16",
+   "smote": "0.8350",
+   "smote_std": "0.25",
+   "best_other_value": "0.9194",
+   "best_other_name": "GAMO",
+   "marks": "GOIO rank (2); SMOTE rank (5); bold rank-1 in row: GAMO"
+  },
+  {
+   "dataset_as_printed": "avila_0vs6",
+   "proposed": "0.7926",
+   "proposed_std": "0.18",
+   "smote": "0.7202",
+   "smote_std": "0.25",
+   "best_other_value": "0.8257",
+   "best_other_name": "GAMO",
+   "marks": "GOIO rank (2); SMOTE rank (6); bold rank-1 in row: GAMO"
+  },
+  {
+   "dataset_as_printed": "sick_euthyroid",
+   "proposed": "0.7151",
+   "proposed_std": "0.20",
+   "smote": "0.7305",
+   "smote_std": "0.20",
+   "best_other_value": "0.7451",
+   "best_other_name": "GAMO",
+   "marks": "GOIO rank (5); SMOTE rank (3); bold rank-1 in row: GAMO"
+  },
+  {
+   "dataset_as_printed": "avila_0vs7",
+   "proposed": "0.8220",
+   "proposed_std": "0.18",
+   "smote": "0.7237",
+   "smote_std": "0.29",
+   "best_other_value": "0.8341",
+   "best_other_name": "GAMO",
+   "marks": "GOIO rank (2); SMOTE rank (7); bold rank-1 in row: GAMO"
+  },
+  {
+   "dataset_as_printed": "scene",
+   "proposed": "0.5645",
+   "proposed_std": "0.04",
+   "smote": "0.5373",
+   "smote_std": "0.05",
+   "best_other_value": "0.5570",
+   "best_other_name": "MLOS",
+   "marks": "GOIO rank (1) bold; SMOTE rank (5); bold rank-1 in row: GOIO"
+  },
+  {
+   "dataset_as_printed": "abalone_15",
+   "proposed": "0.6441",
+   "proposed_std": "0.06",
+   "smote": "0.5999",
+   "smote_std": "0.08",
+   "best_other_value": "0.6187",
+   "best_other_name": "MLOS",
+   "marks": "GOIO rank (1) bold; SMOTE rank (5); bold rank-1 in row: GOIO"
+  },
+  {
+   "dataset_as_printed": "thyroid_sick",
+   "proposed": "0.7564",
+   "proposed_std": "0.16",
+   "smote": "0.7168",
+   "smote_std": "0.22",
+   "best_other_value": "0.7284",
+   "best_other_name": "GAMO",
+   "marks": "GOIO rank (1) bold; SMOTE rank (5); bold rank-1 in row: GOIO"
+  },
+  {
+   "dataset_as_printed": "abalone_6",
+   "proposed": "0.9164",
+   "proposed_std": "0.04",
+   "smote": "0.8931",
+   "smote_std": "0.03",
+   "best_other_value": "0.9150",
+   "best_other_name": "GAMO",
+   "marks": "GOIO rank (1) bold; SMOTE rank (4); bold rank-1 in row: GOIO"
+  },
+  {
+   "dataset_as_printed": "artificial_0.3_5",
+   "proposed": "0.5253",
+   "proposed_std": "0.02",
+   "smote": "0.4753",
+   "smote_std": "0.06",
+   "best_other_value": "0.5239",
+   "best_other_name": "SOS",
+   "marks": "GOIO rank (1) bold; SMOTE rank (7); bold rank-1 in row: GOIO"
+  },
+  {
+   "dataset_as_printed": "artificial_0.5_5",
+   "proposed": "0.5912",
+   "proposed_std": "0.04",
+   "smote": "0.5422",
+   "smote_std": "0.04",
+   "best_other_value": "0.5804",
+   "best_other_name": "SOS",
+   "marks": "GOIO rank (1) bold; SMOTE rank (4); bold rank-1 in row: GOIO"
+  },
+  {
+   "dataset_as_printed": "artificial_1_5",
+   "proposed": "0.6992",
+   "proposed_std": "0.04",
+   "smote": "0.6383",
+   "smote_std": "0.06",
+   "best_other_value": "0.6859",
+   "best_other_name": "SOS",
+   "marks": "GOIO rank (1) bold; SMOTE rank (6); bold rank-1 in row: GOIO"
+  },
+  {
+   "dataset_as_printed": "wine_quality",
+   "proposed": "0.6286",
+   "proposed_std": "0.05",
+   "smote": "0.5653",
+   "smote_std": "0.05",
+   "best_other_value": "0.5886",
+   "best_other_name": "MLOS",
+   "marks": "GOIO rank (1) bold; SMOTE rank (7); bold rank-1 in row: GOIO"
+  },
+  {
+   "dataset_as_printed": "taiwanses",
+   "proposed": "0.6030",
+   "proposed_std": "0.06",
+   "smote": "0.5809",
+   "smote_std": "0.13",
+   "best_other_value": "0.5861",
+   "best_other_name": "SOS",
+   "marks": "GOIO rank (1) bold; SMOTE rank (4); bold rank-1 in row: GOIO"
+  },
+  {
+   "dataset_as_printed": "artificial_0.5_2.5",
+   "proposed": "0.5344",
+   "proposed_std": "0.03",
+   "smote": "0.4946",
+   "smote_std": "0.03",
+   "best_other_value": "0.5344",
+   "best_other_name": "SOS",
+   "marks": "GOIO rank (2); SMOTE rank (5); bold rank-1 in row: SOS"
+  },
+  {
+   "dataset_as_printed": "mammography",
+   "proposed": "0.8023",
+   "proposed_std": "0.03",
+   "smote": "0.6976",
+   "smote_std": "0.09",
+   "best_other_value": "0.7979",
+   "best_other_name": "GAMO",
+   "marks": "GOIO rank (1) bold; SMOTE rank (7); bold rank-1 in row: GOIO"
+  },
+  {
+   "dataset_as_printed": "bankruptcy",
+   "proposed": "0.5295",
+   "proposed_std": "0.04",
+   "smote": "0.4715",
+   "smote_std": "0.19",
+   "best_other_value": "0.5374",
+   "best_other_name": "SOS",
+   "marks": "GOIO rank (2); SMOTE rank (6); bold rank-1 in row: SOS"
+  },
+  {
+   "dataset_as_printed": "page-blocks_0vs3",
+   "proposed": "0.9075",
+   "proposed_std": "0.04",
+   "smote": "0.8043",
+   "smote_std": "0.14",
+   "best_other_value": "0.9078",
+   "best_other_name": "GAMO",
+   "marks": "GOIO rank (2); SMOTE rank (7); bold rank-1 in row: GAMO"
+  }
+ ],
+ "summary_rows": [
+  {
+   "label": "Average Rank",
+   "proposed": "1.52",
+   "smote": "5.57"
+  },
+  {
+   "label": "Average Value",
+   "proposed": "0.7024",
+   "smote": "0.6540"
+  },
+  {
+   "label": "Mean rank in Table VIII (F1; '-' = Bonferroni-Dunn significant vs GOIO)",
+   "proposed": "1.52",
+   "smote": "5.57-"
+  }
+ ],
+ "stat_test": "Friedman test (F1: F_F=11.73, critical F(6,132)=2.07, reject) + Bonferroni-Dunn post-hoc, CD=1.94 (k=8, alpha=0.05), Table VIII; SMOTE marked '-' for F1, MCC, ACC. Wilcoxon signed-rank only reported for GOIO vs IDENTITY and GAMO (ACC, p=1) and vs SOS (MCC, p=2.56e-7), Table IX; no Wilcoxon vs SMOTE.",
+ "win_claim": {
+  "quote": "Comprehensive experiments on 18 real-world and five synthetic datasets demonstrate that GOIO outperforms the state-of-the-art oversampling methods in F1-score, MCC, and Accuracy.",
+  "page": "1"
+ },
+ "notes": "All results tables are images; pages 9-12 rendered at 200-300 dpi and read visually (Table V cropped at 300 dpi). Cells printed as mean±std(rank); rank kept in marks, std copied as printed (2 decimals). best_other = highest value among IDENTITY, BSMOTE, SMOTETL, MLOS, GAMO, SOS (excluding GOIO and SMOTE); IDENTITY (no resampling) is included in that pool. artificial_0.5_2.5: SOS 0.5344 bold rank 1 and GOIO 0.5344 rank 2 (tie in printed value). Table V has 23 rows = 18 real-world (Table I) + 5 artificial (Table II); dataset name 'taiwanses' copied as printed. Classifier-level breakdown not stated in paper. Other metrics: MCC Table VI (GOIO avg 0.4308, SMOTE 0.3962), Accuracy Table VII. Cross-check with Table I dataset list not done in detail (Table I is an image)."
+}

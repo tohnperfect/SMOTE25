@@ -1,0 +1,267 @@
+{
+ "key": "SCUT",
+ "pdf_file_read": "2015_SCUT_Multi-Class Imbalanced Data Classification using SMOTE and Cluster-based Undersampling.pdf (Drive id 1ZIWXUhaCqxK_bGMQ6E0Awx_XKRK9pugY, 8 pages)",
+ "task": "multiclass",
+ "n_datasets_claimed": 8,
+ "characteristics_table": "Table 1, p.4",
+ "datasets": [
+  {
+   "name": "Thyroid",
+   "group": "",
+   "source_repo": "KEEL",
+   "n_instances": 720,
+   "n_features": null,
+   "n_classes": 3,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": "17, 37, 666",
+   "ir_printed": null,
+   "how_obtained": "original",
+   "how_obtained_detail": "one of 'Seven multi-class datasets from the KEEL repository' (Sec. 3.1, p.4); used as multiclass, no class selection stated",
+   "in_results_table": "yes",
+   "ref": "Table 1, p.4"
+  },
+  {
+   "name": "Lymphography",
+   "group": "",
+   "source_repo": "KEEL",
+   "n_instances": 148,
+   "n_features": null,
+   "n_classes": 4,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": "2, 81, 61, 4",
+   "ir_printed": null,
+   "how_obtained": "original",
+   "how_obtained_detail": "one of 'Seven multi-class datasets from the KEEL repository' (Sec. 3.1, p.4); used as multiclass, no class selection stated",
+   "in_results_table": "yes",
+   "ref": "Table 1, p.4"
+  },
+  {
+   "name": "Pageblocks",
+   "group": "",
+   "source_repo": "KEEL",
+   "n_instances": 548,
+   "n_features": null,
+   "n_classes": 5,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": "492, 33, 8, 12, 3",
+   "ir_printed": null,
+   "how_obtained": "original",
+   "how_obtained_detail": "one of 'Seven multi-class datasets from the KEEL repository' (Sec. 3.1, p.4); used as multiclass, no class selection stated",
+   "in_results_table": "yes",
+   "ref": "Table 1, p.4"
+  },
+  {
+   "name": "Dermatology",
+   "group": "",
+   "source_repo": "KEEL",
+   "n_instances": 366,
+   "n_features": null,
+   "n_classes": 6,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": "112, 61, 72, 49, 52, 20",
+   "ir_printed": null,
+   "how_obtained": "original",
+   "how_obtained_detail": "one of 'Seven multi-class datasets from the KEEL repository' (Sec. 3.1, p.4); used as multiclass, no class selection stated",
+   "in_results_table": "yes",
+   "ref": "Table 1, p.4"
+  },
+  {
+   "name": "Autos",
+   "group": "",
+   "source_repo": "KEEL",
+   "n_instances": 159,
+   "n_features": null,
+   "n_classes": 6,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": "3, 20, 48, 46, 29, 13",
+   "ir_printed": null,
+   "how_obtained": "original",
+   "how_obtained_detail": "one of 'Seven multi-class datasets from the KEEL repository' (Sec. 3.1, p.4); used as multiclass, no class selection stated",
+   "in_results_table": "yes",
+   "ref": "Table 1, p.4"
+  },
+  {
+   "name": "Ecoli",
+   "group": "",
+   "source_repo": "KEEL",
+   "n_instances": 336,
+   "n_features": null,
+   "n_classes": 8,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": "143, 77, 52, 35, 20, 5, 2, 2",
+   "ir_printed": null,
+   "how_obtained": "original",
+   "how_obtained_detail": "one of 'Seven multi-class datasets from the KEEL repository' (Sec. 3.1, p.4); used as multiclass, no class selection stated",
+   "in_results_table": "yes",
+   "ref": "Table 1, p.4"
+  },
+  {
+   "name": "Wine Quality",
+   "group": "",
+   "source_repo": "UCI",
+   "n_instances": 6497,
+   "n_features": null,
+   "n_classes": 7,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": "30, 216, 2138, 2836, 1079, 193, 5",
+   "ir_printed": null,
+   "how_obtained": "not stated",
+   "how_obtained_detail": "Wine Quality from UCI (Lichman 2013; Cortez et al. 2009); 6497 instances / 7 classes as printed; paper does not say whether red and white files were combined (p.4)",
+   "in_results_table": "yes",
+   "ref": "Table 1, p.4"
+  },
+  {
+   "name": "Yeast",
+   "group": "",
+   "source_repo": "KEEL",
+   "n_instances": 1484,
+   "n_features": null,
+   "n_classes": 10,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": "244, 429, 463, 44, 51, 163, 35, 30, 20, 5",
+   "ir_printed": null,
+   "how_obtained": "original",
+   "how_obtained_detail": "one of 'Seven multi-class datasets from the KEEL repository' (Sec. 3.1, p.4); used as multiclass, no class selection stated",
+   "in_results_table": "yes",
+   "ref": "Table 1, p.4"
+  }
+ ],
+ "ir_definition": "not stated in paper",
+ "ir_definition_ref": "not stated in paper",
+ "outcome": {
+  "smote_in_baselines": "yes",
+  "smote_name_as_printed": "SMOTE (\"the original SMOTE algorithm\")",
+  "baselines_all": [
+   "SMOTE",
+   "CUT",
+   "RU",
+   "Orig."
+  ],
+  "results_granularity": "per-dataset",
+  "chosen": {
+   "table": "Table 2: G-mean values for J48.",
+   "page": "p.5",
+   "metric": "G-mean",
+   "classifier": "J48",
+   "condition": "main suite, original data, ten-fold cross validation",
+   "higher_is_better": true,
+   "is_image": false
+  },
+  "rows": [
+   {
+    "dataset_as_printed": "Thyroid",
+    "proposed": "0.980",
+    "proposed_std": null,
+    "smote": "0.989",
+    "smote_std": null,
+    "best_other_value": "0.986",
+    "best_other_name": "RU",
+    "marks": "SMOTE bold"
+   },
+   {
+    "dataset_as_printed": "Lympho.",
+    "proposed": "0.936",
+    "proposed_std": null,
+    "smote": "0.909",
+    "smote_std": null,
+    "best_other_value": "0.822",
+    "best_other_name": "Orig.",
+    "marks": "SCUT bold"
+   },
+   {
+    "dataset_as_printed": "Pageblock",
+    "proposed": "0.975",
+    "proposed_std": null,
+    "smote": "0.975",
+    "smote_std": null,
+    "best_other_value": "0.910",
+    "best_other_name": "RU",
+    "marks": "SCUT bold; SMOTE bold (tie)"
+   },
+   {
+    "dataset_as_printed": "Derma.",
+    "proposed": "0.977",
+    "proposed_std": null,
+    "smote": "0.971",
+    "smote_std": null,
+    "best_other_value": "0.980",
+    "best_other_name": "RU",
+    "marks": "RU bold"
+   },
+   {
+    "dataset_as_printed": "Autos",
+    "proposed": "0.763",
+    "proposed_std": null,
+    "smote": "0.893",
+    "smote_std": null,
+    "best_other_value": "0.853",
+    "best_other_name": "Orig.",
+    "marks": "SMOTE bold"
+   },
+   {
+    "dataset_as_printed": "Ecoli",
+    "proposed": "0.907",
+    "proposed_std": null,
+    "smote": "0.921",
+    "smote_std": null,
+    "best_other_value": "0.899",
+    "best_other_name": "Orig.",
+    "marks": "SMOTE bold"
+   },
+   {
+    "dataset_as_printed": "Wine",
+    "proposed": "0.800",
+    "proposed_std": null,
+    "smote": "0.762",
+    "smote_std": null,
+    "best_other_value": "0.728",
+    "best_other_name": "RU",
+    "marks": "SCUT bold"
+   },
+   {
+    "dataset_as_printed": "Yeast",
+    "proposed": "0.828",
+    "proposed_std": null,
+    "smote": "0.766",
+    "smote_std": null,
+    "best_other_value": "0.763",
+    "best_other_name": "CUT",
+    "marks": "SCUT bold"
+   }
+  ],
+  "summary_rows": [
+   {
+    "label": "Rank (Table 14, G-mean, J48 row, p.6; rank of rank-sums over 8 datasets)",
+    "proposed": "2",
+    "smote": "1"
+   },
+   {
+    "label": "Friedman test p-value (Table 17, G-mean, J48, p.7; across all 5 methods)",
+    "proposed": "0.01460",
+    "smote": "0.01460"
+   }
+  ],
+  "stat_test": "Friedman test over the five methods per classifier/metric (Table 17, p.7); p < 0.05 deemed significant; no pairwise post-hoc test",
+  "win_claim": {
+   "quote": "Our experimental results against a number of multi-class problems show that, when the SCUT method is used for pre-processing the data before classification, we obtain highly accurate models that compare favourably to the state-of-the-art.",
+   "page": "p.1"
+  }
+ },
+ "uncertain": [
+  "Classifier choice: abstract highlights none; J48 taken as first reported (Table 2, p.5). Paper says SCUT best for Naive Bayes/SMO, SMOTE best for J48/IBk (p.7).",
+  "Source repo per dataset inferred from 'Seven multi-class datasets from the KEEL repository and the Wine Quality dataset from the UCI repository' (p.4); individual KEEL file names not printed.",
+  "Wine Quality: 6497 instances / 7 classes; paper does not say whether red and white were merged, so how_obtained = not stated (p.4).",
+  "Pageblocks size 548 printed (p.4); paper does not say it is a reduced version; recorded as printed.",
+  "n_features not printed for any dataset (Table 1, p.4).",
+  "Summary row 'Friedman p-value' is a single test across all 5 methods, not SCUT vs SMOTE; placed in both columns only for reference (p.7)."
+ ],
+ "notes": "Proposed method SCUT (SMOTE + EM cluster-based undersampling to class mean). Baselines: SMOTE, RU, CUT (SCUT without SMOTE), Orig. (no sampling). Classifiers: J48, Naive Bayes, SMO, IBk (k=5), WEKA, 10-fold CV. Metrics: G-mean (Tables 2-5, p.5), F-measure (Tables 6-9, p.5-6), AUC (Tables 10-13, p.6); rank summaries Tables 14-16 (p.6); Friedman p-values Table 17 (p.7). Dataset names in results tables are abbreviated (Lympho., Pageblock/Pageblocks/Pageblk, Derma./Derma, Wine). No std reported. All tables are text (verified by rendering pages 4-6). Conclusion (p.8): 'We were not able to establish a clear superiority of one oversampling method over the other.'"
+}

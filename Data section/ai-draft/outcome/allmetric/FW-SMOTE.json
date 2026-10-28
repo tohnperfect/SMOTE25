@@ -1,0 +1,763 @@
+{
+ "key": "FW-SMOTE",
+ "classifier": "k-NN (k=5), first reported classifier",
+ "condition": "main suite, no feature selection, original IR",
+ "proposed_column": "FW-SMOTE",
+ "smote_column": "SMT",
+ "metrics": [
+  {
+   "metric": "AUC x100",
+   "metric_family": "AUC",
+   "table": "Table A.1 (Supplementary)",
+   "page": "supplementary PDF page 1 (printed p.29)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "ldd1",
+     "proposed": "72.9",
+     "proposed_std": null,
+     "smote": "69.1",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd2",
+     "proposed": "92.3",
+     "proposed_std": null,
+     "smote": "92.0",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd3",
+     "proposed": "92.3",
+     "proposed_std": null,
+     "smote": "92.1",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd4",
+     "proposed": "91.4",
+     "proposed_std": null,
+     "smote": "89.2",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd5",
+     "proposed": "91.9",
+     "proposed_std": null,
+     "smote": "91.7",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd6",
+     "proposed": "90.0",
+     "proposed_std": null,
+     "smote": "88.0",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd7",
+     "proposed": "92.2",
+     "proposed_std": null,
+     "smote": "92.2",
+     "smote_std": null,
+     "marks": "FW-SMOTE and SMT bold (others may also be bold)"
+    },
+    {
+     "dataset_as_printed": "ldd8",
+     "proposed": "92.2",
+     "proposed_std": null,
+     "smote": "92.0",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd9",
+     "proposed": "91.2",
+     "proposed_std": null,
+     "smote": "90.2",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd10",
+     "proposed": "92.2",
+     "proposed_std": null,
+     "smote": "89.7",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd11",
+     "proposed": "89.1",
+     "proposed_std": null,
+     "smote": "86.3",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd12",
+     "proposed": "89.8",
+     "proposed_std": null,
+     "smote": "88.5",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ldd13",
+     "proposed": "88.1",
+     "proposed_std": null,
+     "smote": "86.6",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd14",
+     "proposed": "92.3",
+     "proposed_std": null,
+     "smote": "91.9",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd15",
+     "proposed": "78.5",
+     "proposed_std": null,
+     "smote": "72.6",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd16",
+     "proposed": "90.0",
+     "proposed_std": null,
+     "smote": "83.8",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd17",
+     "proposed": "89.0",
+     "proposed_std": null,
+     "smote": "79.5",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd18",
+     "proposed": "95.5",
+     "proposed_std": null,
+     "smote": "95.3",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd19",
+     "proposed": "99.7",
+     "proposed_std": null,
+     "smote": "99.4",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd20",
+     "proposed": "98.1",
+     "proposed_std": null,
+     "smote": "97.8",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd21",
+     "proposed": "99.6",
+     "proposed_std": null,
+     "smote": "99.6",
+     "smote_std": null,
+     "marks": "FW-SMOTE and SMT bold (others may also be bold)"
+    },
+    {
+     "dataset_as_printed": "ldd22",
+     "proposed": "66.3",
+     "proposed_std": null,
+     "smote": "60.3",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd23",
+     "proposed": "95.8",
+     "proposed_std": null,
+     "smote": "90.6",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd24",
+     "proposed": "85.8",
+     "proposed_std": null,
+     "smote": "82.9",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd25",
+     "proposed": "70.1",
+     "proposed_std": null,
+     "smote": "61.5",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd26",
+     "proposed": "65.9",
+     "proposed_std": null,
+     "smote": "59.3",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd27",
+     "proposed": "91.8",
+     "proposed_std": null,
+     "smote": "89.6",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd28",
+     "proposed": "90.3",
+     "proposed_std": null,
+     "smote": "88.4",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd29",
+     "proposed": "76.9",
+     "proposed_std": null,
+     "smote": "70.5",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd30",
+     "proposed": "95.8",
+     "proposed_std": null,
+     "smote": "94.5",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "hdd1",
+     "proposed": "99.7",
+     "proposed_std": null,
+     "smote": "99.7",
+     "smote_std": null,
+     "marks": "FW-SMOTE and SMT bold (others may also be bold)"
+    },
+    {
+     "dataset_as_printed": "hdd2",
+     "proposed": "88.7",
+     "proposed_std": null,
+     "smote": "88.7",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "hdd3",
+     "proposed": "84.1",
+     "proposed_std": null,
+     "smote": "79.1",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "hdd4",
+     "proposed": "100",
+     "proposed_std": null,
+     "smote": "99.7",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "hdd5",
+     "proposed": "81.7",
+     "proposed_std": null,
+     "smote": "80.6",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "hdd6",
+     "proposed": "99.7",
+     "proposed_std": null,
+     "smote": "97.2",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "hdd7",
+     "proposed": "95.0",
+     "proposed_std": null,
+     "smote": "86.9",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "hdd8",
+     "proposed": "100",
+     "proposed_std": null,
+     "smote": "92.9",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "hdd9",
+     "proposed": "99.7",
+     "proposed_std": null,
+     "smote": "98.8",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "hdd10",
+     "proposed": "65.0",
+     "proposed_std": null,
+     "smote": "63.8",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "hdd11",
+     "proposed": "100",
+     "proposed_std": null,
+     "smote": "100",
+     "smote_std": null,
+     "marks": "FW-SMOTE and SMT bold (others may also be bold)"
+    },
+    {
+     "dataset_as_printed": "hdd12",
+     "proposed": "98.7",
+     "proposed_std": null,
+     "smote": "98.0",
+     "smote_std": null,
+     "marks": ""
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "X̄_LDD (average)",
+      "proposed": "88.2",
+      "smote": "85.5"
+     },
+     {
+      "label": "X̄_HDD (average)",
+      "proposed": "92.7",
+      "smote": "90.5"
+     },
+     {
+      "label": "Main Table 2 (low-dim, k-NN) AUC mean±sd",
+      "proposed": "88.2±9",
+      "smote": "85.5±11.1"
+     },
+     {
+      "label": "Main Table 3 (high-dim, k-NN) AUC mean±sd",
+      "proposed": "92.7±10.5",
+      "smote": "90.5±10.8"
+     }
+    ],
+    "wtl_vs_smote": "Main Table 2 (low-dim, k-NN) SMOTE W/T/L (AUC) 0/2/28; Main Table 3 (high-dim, k-NN) SMOTE W/D/L 0/2/10 (counts from SMOTE's perspective vs FW-SMOTE)",
+    "stat_test": "Main paper Holm post-hoc (control = best-ranked FW-SMOTE; ranking from Friedman with Iman-Davenport on AUC). Table 2 (low-dim, k-NN): SMOTE Ranking 5.300, p-value (Holm test) < 0.001* (FW-SMOTE ranking 1.600). Table 3 (high-dim, k-NN): SMOTE Ranking 6.625, APV (Holm test) 0.004* (FW-SMOTE 2.708). '*' = SMOTE variant outperformed by the best-ranked method."
+   }
+  },
+  {
+   "metric": "G-mean x100",
+   "metric_family": "G-mean",
+   "table": "Table A.4 (Supplementary)",
+   "page": "supplementary PDF page 4 (printed p.32)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "ldd1",
+     "proposed": "71.6",
+     "proposed_std": null,
+     "smote": "68.3",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd2",
+     "proposed": "87.5",
+     "proposed_std": null,
+     "smote": "83.5",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd3",
+     "proposed": "91.1",
+     "proposed_std": null,
+     "smote": "90.7",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd4",
+     "proposed": "91.0",
+     "proposed_std": null,
+     "smote": "91.0",
+     "smote_std": null,
+     "marks": "FW-SMOTE and SMT bold (others may also be bold)"
+    },
+    {
+     "dataset_as_printed": "ldd5",
+     "proposed": "90.5",
+     "proposed_std": null,
+     "smote": "88.0",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd6",
+     "proposed": "90.7",
+     "proposed_std": null,
+     "smote": "90.7",
+     "smote_std": null,
+     "marks": "FW-SMOTE and SMT bold (others may also be bold)"
+    },
+    {
+     "dataset_as_printed": "ldd7",
+     "proposed": "86.7",
+     "proposed_std": null,
+     "smote": "80.1",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ldd8",
+     "proposed": "90.9",
+     "proposed_std": null,
+     "smote": "90.9",
+     "smote_std": null,
+     "marks": "FW-SMOTE and SMT bold (others may also be bold)"
+    },
+    {
+     "dataset_as_printed": "ldd9",
+     "proposed": "90.9",
+     "proposed_std": null,
+     "smote": "90.9",
+     "smote_std": null,
+     "marks": "FW-SMOTE and SMT bold (others may also be bold)"
+    },
+    {
+     "dataset_as_printed": "ldd10",
+     "proposed": "90.1",
+     "proposed_std": null,
+     "smote": "91.2",
+     "smote_std": null,
+     "marks": "SMT bold"
+    },
+    {
+     "dataset_as_printed": "ldd11",
+     "proposed": "90.9",
+     "proposed_std": null,
+     "smote": "90.9",
+     "smote_std": null,
+     "marks": "FW-SMOTE and SMT bold (others may also be bold)"
+    },
+    {
+     "dataset_as_printed": "ldd12",
+     "proposed": "81.5",
+     "proposed_std": null,
+     "smote": "78.9",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ldd13",
+     "proposed": "88.0",
+     "proposed_std": null,
+     "smote": "87.6",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ldd14",
+     "proposed": "87.0",
+     "proposed_std": null,
+     "smote": "79.8",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd15",
+     "proposed": "72.3",
+     "proposed_std": null,
+     "smote": "68.4",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd16",
+     "proposed": "98.8",
+     "proposed_std": null,
+     "smote": "87.5",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd17",
+     "proposed": "0.0",
+     "proposed_std": null,
+     "smote": "0.0",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ldd18",
+     "proposed": "95.2",
+     "proposed_std": null,
+     "smote": "94.7",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd19",
+     "proposed": "99.7",
+     "proposed_std": null,
+     "smote": "99.4",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd20",
+     "proposed": "97.8",
+     "proposed_std": null,
+     "smote": "92.2",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd21",
+     "proposed": "99.6",
+     "proposed_std": null,
+     "smote": "99.6",
+     "smote_std": null,
+     "marks": "FW-SMOTE and SMT bold (others may also be bold)"
+    },
+    {
+     "dataset_as_printed": "ldd22",
+     "proposed": "62.4",
+     "proposed_std": null,
+     "smote": "51.4",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd23",
+     "proposed": "89.8",
+     "proposed_std": null,
+     "smote": "88.9",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd24",
+     "proposed": "84.7",
+     "proposed_std": null,
+     "smote": "82.6",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd25",
+     "proposed": "58.7",
+     "proposed_std": null,
+     "smote": "51.3",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd26",
+     "proposed": "51.2",
+     "proposed_std": null,
+     "smote": "49.0",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ldd27",
+     "proposed": "92.0",
+     "proposed_std": null,
+     "smote": "88.7",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd28",
+     "proposed": "90.3",
+     "proposed_std": null,
+     "smote": "88.6",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd29",
+     "proposed": "71.7",
+     "proposed_std": null,
+     "smote": "70.9",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ldd30",
+     "proposed": "95.6",
+     "proposed_std": null,
+     "smote": "94.4",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "hdd1",
+     "proposed": "99.7",
+     "proposed_std": null,
+     "smote": "99.7",
+     "smote_std": null,
+     "marks": "FW-SMOTE and SMT bold (others may also be bold)"
+    },
+    {
+     "dataset_as_printed": "hdd2",
+     "proposed": "98.5",
+     "proposed_std": null,
+     "smote": "98.5",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "hdd3",
+     "proposed": "96.0",
+     "proposed_std": null,
+     "smote": "76.5",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "hdd4",
+     "proposed": "99.7",
+     "proposed_std": null,
+     "smote": "99.7",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "hdd5",
+     "proposed": "76.7",
+     "proposed_std": null,
+     "smote": "74.8",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "hdd6",
+     "proposed": "98.1",
+     "proposed_std": null,
+     "smote": "89.7",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "hdd7",
+     "proposed": "89.6",
+     "proposed_std": null,
+     "smote": "85.9",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "hdd8",
+     "proposed": "100",
+     "proposed_std": null,
+     "smote": "92.7",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "hdd9",
+     "proposed": "98.8",
+     "proposed_std": null,
+     "smote": "96.3",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "hdd10",
+     "proposed": "92.8",
+     "proposed_std": null,
+     "smote": "90.4",
+     "smote_std": null,
+     "marks": "FW-SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "hdd11",
+     "proposed": "99.7",
+     "proposed_std": null,
+     "smote": "99.7",
+     "smote_std": null,
+     "marks": "FW-SMOTE and SMT bold (others may also be bold)"
+    },
+    {
+     "dataset_as_printed": "hdd12",
+     "proposed": "98.6",
+     "proposed_std": null,
+     "smote": "98.2",
+     "smote_std": null,
+     "marks": ""
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "X̄_LDD (average)",
+      "proposed": "83.0",
+      "smote": "80.3"
+     },
+     {
+      "label": "X̄_HDD (average)",
+      "proposed": "95.7",
+      "smote": "91.8"
+     },
+     {
+      "label": "Main Table 2 (low-dim, k-NN) G-mean mean±sd",
+      "proposed": "83±19.5",
+      "smote": "80.3±20"
+     },
+     {
+      "label": "Main Table 3 (high-dim, k-NN) G-mean mean±sd",
+      "proposed": "95.7±23.9",
+      "smote": "91.8±23.8"
+     }
+    ],
+    "wtl_vs_smote": "Main Table 2 (low-dim, k-NN) SMOTE W/T/L (G-mean) 1/6/23; Main Table 3 (high-dim, k-NN) SMOTE W/D/L (G-mean) 0/2/10 (counts from SMOTE's perspective vs FW-SMOTE)",
+    "stat_test": "No separate stat test for G-mean; Holm test/ranking in Tables 2-3 computed on AUC (see AUC entry)."
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [],
+ "metrics_without_smote": [
+  {
+   "metric": "AUC and G-mean, feature-selection experiments (Fisher/Relief/CFS/BFE + SMOTE, no plain SMOTE)",
+   "table": "Main Table 5 and its detailed tables"
+  }
+ ],
+ "notes": "Per-dataset numbers from supplementary Appendix A (text layer clean; column order verified against rendered page images). Datasets printed only as ldd1..ldd30, hdd1..hdd12 in these tables. 'The best performance is emphasized in bold type' — marks record whether FW-SMOTE and/or SMT cell is bold (other methods may share bold). Same AUC/G-mean also reported for SVM (A.2/A.5) and LR (A.3/A.6), not copied (different classifier). Main Table 2/3 W/T/L columns are from the compared method's perspective (SMOTE wins/ties/losses vs FW-SMOTE); this matches A.1 counts (SMT ties on ldd7, ldd21). Note: A.4 ldd17 both 0.0."
+}

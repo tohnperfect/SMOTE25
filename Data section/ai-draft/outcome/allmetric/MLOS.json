@@ -1,0 +1,486 @@
+{
+ "key": "MLOS",
+ "classifier": "SVM",
+ "condition": "original datasets, main suite (20 runs of 5-fold CV)",
+ "proposed_column": "MLOS",
+ "smote_column": "SMOTE",
+ "metrics": [
+  {
+   "metric": "AUC",
+   "metric_family": "AUC",
+   "table": "Table 7",
+   "page": "PDF page 12 (printed p.12)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Ozo",
+     "proposed": "0.8359",
+     "proposed_std": "0.0052",
+     "smote": "0.7998",
+     "smote_std": "0.0131",
+     "marks": "bold: MLOS"
+    },
+    {
+     "dataset_as_printed": "Phi",
+     "proposed": "0.8393",
+     "proposed_std": "0.0086",
+     "smote": "0.8818",
+     "smote_std": "0.0128",
+     "marks": "bold: ROS"
+    },
+    {
+     "dataset_as_printed": "aba19",
+     "proposed": "0.7463",
+     "proposed_std": "0.0121",
+     "smote": "0.7115",
+     "smote_std": "0.0286",
+     "marks": "bold: MLOS"
+    },
+    {
+     "dataset_as_printed": "Cam",
+     "proposed": "0.6430",
+     "proposed_std": "0.0443",
+     "smote": "0.5919",
+     "smote_std": "0.0346",
+     "marks": "bold: MLOS"
+    },
+    {
+     "dataset_as_printed": "cle",
+     "proposed": "0.9247",
+     "proposed_std": "0.0260",
+     "smote": "0.8160",
+     "smote_std": "0.0392",
+     "marks": "bold: MLOS"
+    },
+    {
+     "dataset_as_printed": "cli",
+     "proposed": "0.8556",
+     "proposed_std": "0.0170",
+     "smote": "0.7089",
+     "smote_std": "0.0213",
+     "marks": "bold: MLOS"
+    },
+    {
+     "dataset_as_printed": "gla",
+     "proposed": "0.9262",
+     "proposed_std": "0.0374",
+     "smote": "0.8669",
+     "smote_std": "0.0234",
+     "marks": "bold: GDO"
+    },
+    {
+     "dataset_as_printed": "ivy",
+     "proposed": "0.5956",
+     "proposed_std": "0.0515",
+     "smote": "0.4985",
+     "smote_std": "0.0277",
+     "marks": "bold: MLOS"
+    },
+    {
+     "dataset_as_printed": "jed",
+     "proposed": "0.6283",
+     "proposed_std": "0.0253",
+     "smote": "0.5867",
+     "smote_std": "0.0478",
+     "marks": "bold: SWIM_RBF"
+    },
+    {
+     "dataset_as_printed": "log",
+     "proposed": "0.4916",
+     "proposed_std": "0.0367",
+     "smote": "0.5280",
+     "smote_std": "0.0284",
+     "marks": "bold: GDO"
+    },
+    {
+     "dataset_as_printed": "mov",
+     "proposed": "0.9052",
+     "proposed_std": "0.0248",
+     "smote": "0.9217",
+     "smote_std": "0.0268",
+     "marks": "bold: SWIM_RBF"
+    },
+    {
+     "dataset_as_printed": "pok",
+     "proposed": "0.9545",
+     "proposed_std": "0.0373",
+     "smote": "0.8433",
+     "smote_std": "0.0355",
+     "marks": "bold: GDO"
+    },
+    {
+     "dataset_as_printed": "win35",
+     "proposed": "0.6340",
+     "proposed_std": "0.0249",
+     "smote": "0.6138",
+     "smote_std": "0.0213",
+     "marks": "bold: ENaNSMOTE"
+    },
+    {
+     "dataset_as_printed": "win",
+     "proposed": "0.7538",
+     "proposed_std": "0.0074",
+     "smote": "0.7192",
+     "smote_std": "0.0096",
+     "marks": "bold: MLOS"
+    },
+    {
+     "dataset_as_printed": "xal",
+     "proposed": "0.6991",
+     "proposed_std": "0.0057",
+     "smote": "0.7480",
+     "smote_std": "0.0151",
+     "marks": "bold: ENaNSMOTE"
+    },
+    {
+     "dataset_as_printed": "yea",
+     "proposed": "0.8761",
+     "proposed_std": "0.0116",
+     "smote": "0.8739",
+     "smote_std": "0.0130",
+     "marks": "bold: CCR"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average",
+      "proposed": "0.7693 (bold)",
+      "smote": "0.7319"
+     },
+     {
+      "label": "Rank (average rank over 18 methods, lower better)",
+      "proposed": "5.4063 (bold)",
+      "smote": "9.0000"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper (vs all methods: 'for the metric AUC, MLOS achieved top-three performance in 10 datasets (first in 7 datasets, second in 2 datasets, and third in 1 dataset)')",
+    "stat_test": "Bayesian signed-rank test (Benavoli et al., 2017), MLOS vs each compared method on SVM, rope 0.5%, Figs. 7-9: 'on the AUC metric, except for ROS (0.99), CCR (0.93), GDO (0.95), ENaNSMOTE (0.99), CCO (0.99), SWIMMD (0.98), and SWIMRBF (0.95), the probability of MLOS being better than the compared methods is 1' (i.e., P(MLOS better than SMOTE) = 1 as stated in text)."
+   }
+  },
+  {
+   "metric": "G-mean",
+   "metric_family": "G-mean",
+   "table": "Table 8",
+   "page": "PDF page 13 (printed p.13)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "Ozo",
+     "proposed": "0.8307",
+     "proposed_std": "0.0046",
+     "smote": "0.7907",
+     "smote_std": "0.0156",
+     "marks": "bold: MLOS"
+    },
+    {
+     "dataset_as_printed": "Phi",
+     "proposed": "0.8371",
+     "proposed_std": "0.0088",
+     "smote": "0.8792",
+     "smote_std": "0.0139",
+     "marks": "bold: ROS"
+    },
+    {
+     "dataset_as_printed": "aba19",
+     "proposed": "0.7409",
+     "proposed_std": "0.0141",
+     "smote": "0.6943",
+     "smote_std": "0.0364",
+     "marks": "bold: MLOS"
+    },
+    {
+     "dataset_as_printed": "Cam",
+     "proposed": "0.5347",
+     "proposed_std": "0.0905",
+     "smote": "0.3768",
+     "smote_std": "0.0916",
+     "marks": "bold: MLOS"
+    },
+    {
+     "dataset_as_printed": "cle",
+     "proposed": "0.9209",
+     "proposed_std": "0.0275",
+     "smote": "0.7564",
+     "smote_std": "0.0719",
+     "marks": "bold: MLOS"
+    },
+    {
+     "dataset_as_printed": "cli",
+     "proposed": "0.8528",
+     "proposed_std": "0.0182",
+     "smote": "0.6362",
+     "smote_std": "0.0361",
+     "marks": "bold: MLOS"
+    },
+    {
+     "dataset_as_printed": "gla",
+     "proposed": "0.9199",
+     "proposed_std": "0.0429",
+     "smote": "0.8121",
+     "smote_std": "0.0645",
+     "marks": "bold: GDO"
+    },
+    {
+     "dataset_as_printed": "ivy",
+     "proposed": "0.4897",
+     "proposed_std": "0.0961",
+     "smote": "0.3004",
+     "smote_std": "0.0776",
+     "marks": "bold: MLOS"
+    },
+    {
+     "dataset_as_printed": "jed",
+     "proposed": "0.4520",
+     "proposed_std": "0.0906",
+     "smote": "0.4386",
+     "smote_std": "0.1148",
+     "marks": "bold: SWIM_RBF"
+    },
+    {
+     "dataset_as_printed": "log",
+     "proposed": "0.4001",
+     "proposed_std": "0.0807",
+     "smote": "0.3972",
+     "smote_std": "0.0788",
+     "marks": "bold: SWIM_RBF"
+    },
+    {
+     "dataset_as_printed": "mov",
+     "proposed": "0.8941",
+     "proposed_std": "0.0302",
+     "smote": "0.9154",
+     "smote_std": "0.0304",
+     "marks": "bold: SWIM_RBF"
+    },
+    {
+     "dataset_as_printed": "pok",
+     "proposed": "0.9339",
+     "proposed_std": "0.0741",
+     "smote": "0.8050",
+     "smote_std": "0.0602",
+     "marks": "bold: GDO"
+    },
+    {
+     "dataset_as_printed": "win35",
+     "proposed": "0.4299",
+     "proposed_std": "0.0713",
+     "smote": "0.3508",
+     "smote_std": "0.0650",
+     "marks": "bold: ENaNSMOTE"
+    },
+    {
+     "dataset_as_printed": "win",
+     "proposed": "0.7531",
+     "proposed_std": "0.0073",
+     "smote": "0.7134",
+     "smote_std": "0.0107",
+     "marks": "bold: MLOS"
+    },
+    {
+     "dataset_as_printed": "xal",
+     "proposed": "0.6446",
+     "proposed_std": "0.0415",
+     "smote": "0.6477",
+     "smote_std": "0.0371",
+     "marks": "bold: ENaNSMOTE"
+    },
+    {
+     "dataset_as_printed": "yea",
+     "proposed": "0.8727",
+     "proposed_std": "0.0113",
+     "smote": "0.8683",
+     "smote_std": "0.0168",
+     "marks": "bold: CCR"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average",
+      "proposed": "0.7192 (bold)",
+      "smote": "0.6489"
+     },
+     {
+      "label": "Rank (average rank over 18 methods, lower better)",
+      "proposed": "4.1875 (bold)",
+      "smote": "8.2813"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper (vs all methods: 'For the metric G-mean, MLOS achieved top-three performance in 10 datasets (first in 7 datasets, second in 1 dataset, and third in 2 datasets)')",
+    "stat_test": "Bayesian signed-rank test (Benavoli et al., 2017), MLOS vs each compared method on SVM, rope 0.5%, Figs. 7-9: 'on the G-mean metric, except for ROS (0.98), CCR (0.97), GDO (0.96), ENaNSMOTE (0.99), CCO (0.99), and SWIMRBF (0.93), the probability of MLOS being better is 1' (i.e., P(MLOS better than SMOTE) = 1 as stated in text)."
+   }
+  },
+  {
+   "metric": "Recall",
+   "metric_family": "recall",
+   "table": "Table 9",
+   "page": "PDF page 14 (printed p.14)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Ozo",
+     "proposed": "0.9253",
+     "proposed_std": "0.0110",
+     "smote": "0.7034",
+     "smote_std": "0.0266",
+     "marks": "bold: MLOS"
+    },
+    {
+     "dataset_as_printed": "Phi",
+     "proposed": "0.8610",
+     "proposed_std": "0.0185",
+     "smote": "0.8373",
+     "smote_std": "0.0250",
+     "marks": "bold: CCR"
+    },
+    {
+     "dataset_as_printed": "aba19",
+     "proposed": "0.7200",
+     "proposed_std": "0.0212",
+     "smote": "0.6202",
+     "smote_std": "0.0579",
+     "marks": "bold: MLOS"
+    },
+    {
+     "dataset_as_printed": "Cam",
+     "proposed": "0.4467",
+     "proposed_std": "0.0884",
+     "smote": "0.3017",
+     "smote_std": "0.0662",
+     "marks": "bold: MLOS"
+    },
+    {
+     "dataset_as_printed": "cle",
+     "proposed": "0.9267",
+     "proposed_std": "0.0442",
+     "smote": "0.6550",
+     "smote_std": "0.0784",
+     "marks": "bold: MLOS"
+    },
+    {
+     "dataset_as_printed": "cli",
+     "proposed": "0.8311",
+     "proposed_std": "0.0301",
+     "smote": "0.4311",
+     "smote_std": "0.0430",
+     "marks": "bold: MLOS"
+    },
+    {
+     "dataset_as_printed": "gla",
+     "proposed": "0.9200",
+     "proposed_std": "0.0748",
+     "smote": "0.7650",
+     "smote_std": "0.0477",
+     "marks": "bold: GDO"
+    },
+    {
+     "dataset_as_printed": "ivy",
+     "proposed": "0.3767",
+     "proposed_std": "0.0847",
+     "smote": "0.2150",
+     "smote_std": "0.0572",
+     "marks": "bold: MLOS"
+    },
+    {
+     "dataset_as_printed": "jed",
+     "proposed": "0.3267",
+     "proposed_std": "0.0533",
+     "smote": "0.3733",
+     "smote_std": "0.1057",
+     "marks": "bold: SWIM_RBF"
+    },
+    {
+     "dataset_as_printed": "log",
+     "proposed": "0.3133",
+     "proposed_std": "0.0427",
+     "smote": "0.3050",
+     "smote_std": "0.0563",
+     "marks": "bold: ENaNSMOTE"
+    },
+    {
+     "dataset_as_printed": "mov",
+     "proposed": "0.8240",
+     "proposed_std": "0.0557",
+     "smote": "0.8655",
+     "smote_std": "0.0539",
+     "marks": "bold: SWIM_MD"
+    },
+    {
+     "dataset_as_printed": "pok",
+     "proposed": "0.9333",
+     "proposed_std": "0.0730",
+     "smote": "0.6867",
+     "smote_std": "0.0710",
+     "marks": "bold: GDO"
+    },
+    {
+     "dataset_as_printed": "win35",
+     "proposed": "0.3400",
+     "proposed_std": "0.0490",
+     "smote": "0.2750",
+     "smote_std": "0.0433",
+     "marks": "bold: ENaNSMOTE"
+    },
+    {
+     "dataset_as_printed": "win",
+     "proposed": "0.7602",
+     "proposed_std": "0.0107",
+     "smote": "0.6348",
+     "smote_std": "0.0189",
+     "marks": "bold: MLOS"
+    },
+    {
+     "dataset_as_printed": "xal",
+     "proposed": "0.5400",
+     "proposed_std": "0.0133",
+     "smote": "0.5417",
+     "smote_std": "0.0276",
+     "marks": "bold: ENaNSMOTE"
+    },
+    {
+     "dataset_as_printed": "yea",
+     "proposed": "0.8457",
+     "proposed_std": "0.0229",
+     "smote": "0.8186",
+     "smote_std": "0.0260",
+     "marks": "bold: GDO"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average",
+      "proposed": "0.6807 (bold)",
+      "smote": "0.5643"
+     },
+     {
+      "label": "Rank (average rank over 18 methods, lower better)",
+      "proposed": "4.1875 (bold)",
+      "smote": "9.21875"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper (vs all methods: 'For the metric Recall, MLOS achieved top-three performance in 10 datasets (first in 7 datasets, second in 2 datasets, and third in 1 dataset)')",
+    "stat_test": "Bayesian signed-rank test (Benavoli et al., 2017), MLOS vs each compared method on SVM, rope 0.5%, Figs. 7-9: 'on the Recall metric, except for ROS (0.99) CCR (0.98), and SWIMRBF (0.97), the probability of MLOS being better than the compared methods is 1' (i.e., P(MLOS better than SMOTE) = 1 as stated in text)."
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [],
+ "metrics_without_smote": [
+  {
+   "metric": "AUC, G-mean, Recall",
+   "table": "Table 5 (cleaning method comparison)"
+  },
+  {
+   "metric": "AUC, G-mean, Recall",
+   "table": "Table 6 (Origin, MLOS(O), MLOS(U), MLOS ablation)"
+  }
+ ],
+ "notes": "Tables 7-9 are each split into two blocks (Baseline..RSMOTE with SMOTE; LDAS..MLOS with MLOS); values mean ± std. Bold (CharisSIL-Bold font, extracted via pdfplumber) marks the best of all 18 methods per row; marks list the bold column(s). Bayesian probabilities read from text, not from Figs. 7-9 heatmaps."
+}

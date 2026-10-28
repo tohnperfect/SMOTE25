@@ -1,0 +1,227 @@
+{
+ "key": "OSS",
+ "pdf_file_read": "1997 One-sided selection - Kubat, Matwin.pdf",
+ "task": "binary",
+ "n_datasets_claimed": 7,
+ "characteristics_table": "Table 3, p.5",
+ "datasets": [
+  {
+   "name": "oil1",
+   "group": "oil-spill detection project",
+   "source_repo": "private",
+   "n_instances": null,
+   "n_features": 44,
+   "n_classes": 2,
+   "n_minority": 24,
+   "n_majority": 480,
+   "class_distribution": null,
+   "ir_printed": null,
+   "how_obtained": "original",
+   "how_obtained_detail": "oil-spill satellite radar images (Kubat, Holte, Matwin 1997); oil1 and oil2 are the same images preprocessed by different image-processing methods (p.5)",
+   "in_results_table": "yes",
+   "ref": "Table 3, p.5"
+  },
+  {
+   "name": "oil2",
+   "group": "oil-spill detection project",
+   "source_repo": "private",
+   "n_instances": null,
+   "n_features": 39,
+   "n_classes": 2,
+   "n_minority": 21,
+   "n_majority": 350,
+   "class_distribution": null,
+   "ir_printed": null,
+   "how_obtained": "original",
+   "how_obtained_detail": "same satellite images as oil1, different image-processing method (p.5)",
+   "in_results_table": "yes",
+   "ref": "Table 3, p.5"
+  },
+  {
+   "name": "kr",
+   "group": "sleep classification",
+   "source_repo": "private",
+   "n_instances": null,
+   "n_features": 15,
+   "n_classes": 2,
+   "n_minority": 150,
+   "n_majority": 750,
+   "class_distribution": null,
+   "ir_printed": null,
+   "how_obtained": "not stated",
+   "how_obtained_detail": "sleep data from Kubat, Pfurtscheller, Flotzinger (1994), Dept. of Medical Informatics, TU Graz; negatives belong to several subclasses; how the two-class task was formed is not stated (p.5, p.7 acknowledgements)",
+   "in_results_table": "yes",
+   "ref": "Table 3, p.5"
+  },
+  {
+   "name": "br",
+   "group": "sleep classification",
+   "source_repo": "private",
+   "n_instances": null,
+   "n_features": 15,
+   "n_classes": 2,
+   "n_minority": 140,
+   "n_majority": 700,
+   "class_distribution": null,
+   "ir_printed": null,
+   "how_obtained": "not stated",
+   "how_obtained_detail": "sleep data from Kubat, Pfurtscheller, Flotzinger (1994); negatives belong to several subclasses; formation of two-class task not stated (p.5)",
+   "in_results_table": "yes",
+   "ref": "Table 3, p.5"
+  },
+  {
+   "name": "g7",
+   "group": "benchmark (UCI)",
+   "source_repo": "UCI",
+   "n_instances": null,
+   "n_features": 10,
+   "n_classes": 2,
+   "n_minority": 28,
+   "n_majority": 182,
+   "class_distribution": null,
+   "ir_printed": null,
+   "how_obtained": "modified",
+   "how_obtained_detail": "glass domain: class 7 vs other classes; some examples randomly discarded so each of k folds has same pos/neg proportion (p.5)",
+   "in_results_table": "yes",
+   "ref": "Table 3, p.5"
+  },
+  {
+   "name": "vw0",
+   "group": "benchmark (UCI)",
+   "source_repo": "UCI",
+   "n_instances": null,
+   "n_features": 10,
+   "n_classes": 2,
+   "n_minority": 90,
+   "n_majority": 900,
+   "class_distribution": null,
+   "ir_printed": null,
+   "how_obtained": "modified",
+   "how_obtained_detail": "vowels domain: class 0 vs other classes (p.5)",
+   "in_results_table": "yes",
+   "ref": "Table 3, p.5"
+  },
+  {
+   "name": "veh1",
+   "group": "benchmark (UCI)",
+   "source_repo": "UCI",
+   "n_instances": null,
+   "n_features": 19,
+   "n_classes": 2,
+   "n_minority": 168,
+   "n_majority": 676,
+   "class_distribution": null,
+   "ir_printed": null,
+   "how_obtained": "modified",
+   "how_obtained_detail": "vehicles domain: class 1 vs other classes; some examples randomly discarded for equal fold proportions (p.5)",
+   "in_results_table": "yes",
+   "ref": "Table 3, p.5"
+  }
+ ],
+ "ir_definition": "not stated in paper",
+ "ir_definition_ref": null,
+ "outcome": {
+  "smote_in_baselines": "no",
+  "smote_name_as_printed": "not stated in paper",
+  "baselines_all": [
+   "S (classifier induced from all training examples)",
+   "C (consistent subset: redundant negative examples removed, Hart-variant CNN)"
+  ],
+  "results_granularity": "per-dataset",
+  "chosen": {
+   "table": "Tables 4-7 (p.6) and Table 8 (p.7)",
+   "page": "6-7",
+   "metric": "g (geometric mean of a+ and a-)",
+   "classifier": "1-NN",
+   "condition": "set T (one-sided selection) vs S and C; k-fold stratified CV, k per Table 3",
+   "higher_is_better": true,
+   "is_image": true
+  },
+  "rows": [
+   {
+    "dataset_as_printed": "oil-slicks I (Table 4)",
+    "proposed": "90.6",
+    "proposed_std": null,
+    "smote": null,
+    "smote_std": null,
+    "best_other_value": "66.6",
+    "best_other_name": "C (redundant negatives removed)",
+    "marks": "none"
+   },
+   {
+    "dataset_as_printed": "oil-slicks II (Table 5)",
+    "proposed": "53.0",
+    "proposed_std": null,
+    "smote": null,
+    "smote_std": null,
+    "best_other_value": "51.3",
+    "best_other_name": "S (all training examples)",
+    "marks": "none"
+   },
+   {
+    "dataset_as_printed": "KR (Table 6)",
+    "proposed": "75.8",
+    "proposed_std": null,
+    "smote": null,
+    "smote_std": null,
+    "best_other_value": "69.8",
+    "best_other_name": "C (redundant negatives removed)",
+    "marks": "none"
+   },
+   {
+    "dataset_as_printed": "BR (Table 7)",
+    "proposed": "87.8",
+    "proposed_std": null,
+    "smote": null,
+    "smote_std": null,
+    "best_other_value": "81.3",
+    "best_other_name": "C (redundant negatives removed)",
+    "marks": "none"
+   },
+   {
+    "dataset_as_printed": "g7 (Table 8)",
+    "proposed": "96.6",
+    "proposed_std": null,
+    "smote": null,
+    "smote_std": null,
+    "best_other_value": "96.6",
+    "best_other_name": "C (redundant negatives removed)",
+    "marks": "none"
+   },
+   {
+    "dataset_as_printed": "vw0 (Table 8)",
+    "proposed": "90.9",
+    "proposed_std": null,
+    "smote": null,
+    "smote_std": null,
+    "best_other_value": "90.8",
+    "best_other_name": "C (redundant negatives removed)",
+    "marks": "none"
+   },
+   {
+    "dataset_as_printed": "veh1 (Table 8)",
+    "proposed": "66.8",
+    "proposed_std": null,
+    "smote": null,
+    "smote_std": null,
+    "best_other_value": "55.4",
+    "best_other_name": "C (redundant negatives removed)",
+    "marks": "none"
+   }
+  ],
+  "summary_rows": [],
+  "stat_test": "none reported",
+  "win_claim": {
+   "quote": "The sensitivity to an imbalanced distribution of examples can be mitigated by selection techniques that discard those negative examples that lie in the borderline region, are noisy, or redundant.",
+   "page": "7"
+  }
+ },
+ "uncertain": [
+  "Classifier choice: abstract highlights no classifier; 1-NN chosen as first reported (p.5-6); C4.5 also reported in all tables.",
+  "kr/br how_obtained: two-class formation from sleep data not described; set 'not stated' (p.5).",
+  "oil1/oil2 how_obtained set 'original' (authors' own project data, two preprocessings); could be considered not stated (p.5).",
+  "g7/veh1 counts in Table 3 are after random discarding of some examples; original sizes not printed (p.5).",
+  "Tables 4-8 text extraction garbled (split digits, Table 7 title read as '7 R'); values read from rendered pages p.6-7, is_image set true though tables are vector text."
+ ],
+ "notes": "Paper (1997) predates SMOTE (2002), so no SMOTE baseline; smote fields null. Proposed = one-sided selection, set T (CNN-style consistent subset C, then removal of negatives in Tomek links). Comparisons are S (all data) and C. Metric g = sqrt(a+ * a-); tables also give a+, a-, acc and #ex. C4.5 g for T: oil1 84.3, oil2 66.0, KR 80.8, BR 83.4, g7 84.5, vw0 84.0, veh1 69.4. No std, no bold, no significance test. No supplementary material referenced. Page numbers are PDF page indices; no printed page numbers visible."
+}

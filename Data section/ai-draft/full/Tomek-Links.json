@@ -1,0 +1,46 @@
+{
+ "key": "Tomek Links",
+ "pdf_file_read": "Tomek Links - Two Modifications of CNN (IEEE TSMC 1976).pdf (local copy in paper/Both, 4 PDF pages = printed 769-772)",
+ "task": "binary",
+ "n_datasets_claimed": 1,
+ "characteristics_table": "none (Fig. 6 caption p.3 and text p.4)",
+ "datasets": [
+  {
+   "name": "[two-class uniform 2-D example from ref. [4], not named]",
+   "group": "illustration",
+   "source_repo": "synthetic",
+   "n_instances": 400,
+   "n_features": 2,
+   "n_classes": 2,
+   "n_minority": 200,
+   "n_majority": 200,
+   "class_distribution": "200/200",
+   "ir_printed": null,
+   "how_obtained": "synthetic",
+   "how_obtained_detail": "example taken from ref. [4]: 2 classes of 200 two-dimensional samples each, uniform distribution with irregular decision boundaries (Fig. 6 caption p.3; text p.4). Balanced, used only to illustrate the editing methods",
+   "in_results_table": "not applicable (no per-dataset results)",
+   "ref": "Fig. 6, p.3 (printed 771); text p.4 (printed 772)"
+  }
+ ],
+ "ir_definition": "not stated in paper",
+ "ir_definition_ref": "",
+ "outcome": {
+  "smote_in_baselines": "no",
+  "smote_name_as_printed": "",
+  "baselines_all": [
+   "CNN (Hart)",
+   "Gates reduced NN"
+  ],
+  "results_granularity": "no comparison",
+  "chosen": null,
+  "rows": [],
+  "summary_rows": [],
+  "stat_test": "none",
+  "win_claim": null
+ },
+ "uncertain": [
+  "Fig. 6 compares the two proposed methods with CNN and another method only visually (number of retained samples); no accuracy on held-out data (p.3)",
+  "Counted as a paper with an evaluation on data by Toon's decision 18 Oct 2026 (denominator 73); the example is balanced (200/200) so it carries no imbalance ratio"
+ ],
+ "notes": "Added 18 Oct 2026 by Claude after Toon decided to count Tomek Links. Read from local PDF text layer, Fig. 6 caption p.3 and p.4."
+}

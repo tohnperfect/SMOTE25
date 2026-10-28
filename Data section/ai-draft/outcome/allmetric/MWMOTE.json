@@ -1,0 +1,564 @@
+{
+ "key": "MWMOTE",
+ "classifier": "Single Neural Network (back-propagation, 5 hidden neurons)",
+ "condition": "20 real-world UCI data sets, 10-fold CV averages, 200% synthetic minority samples, no added noise",
+ "proposed_column": "MWMOTE (row within each data set block, Single Neural Network columns)",
+ "smote_column": "SMOTE (row within each data set block, Single Neural Network columns)",
+ "metrics": [
+  {
+   "metric": "G-mean",
+   "metric_family": "G-mean",
+   "table": "Table 6 (and Table 6 continued)",
+   "page": "PDF pages 13-14 (printed p.417-418)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "Abalone",
+     "proposed": "0.51451",
+     "proposed_std": null,
+     "smote": "0.62356",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "CTG",
+     "proposed": "0.7232",
+     "proposed_std": null,
+     "smote": "0.70765",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Semeion",
+     "proposed": "0.92444",
+     "proposed_std": null,
+     "smote": "0.91312",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Statlandsat",
+     "proposed": "0.73219",
+     "proposed_std": null,
+     "smote": "0.68017",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Bcancerorig",
+     "proposed": "0.97432",
+     "proposed_std": null,
+     "smote": "0.97438",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Btissue",
+     "proposed": "0.77634",
+     "proposed_std": null,
+     "smote": "0.7156",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Ecoli",
+     "proposed": "0.85931",
+     "proposed_std": null,
+     "smote": "0.87041",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Glass",
+     "proposed": "0.93611",
+     "proposed_std": null,
+     "smote": "0.87774",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Libra",
+     "proposed": "0.95059",
+     "proposed_std": null,
+     "smote": "0.88706",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Phoneme",
+     "proposed": "0.76618",
+     "proposed_std": null,
+     "smote": "0.75935",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Pima",
+     "proposed": "0.74088",
+     "proposed_std": null,
+     "smote": "0.73159",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Robot",
+     "proposed": "0.80073",
+     "proposed_std": null,
+     "smote": "0.80532",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Satimage",
+     "proposed": "0.818",
+     "proposed_std": null,
+     "smote": "0.81077",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "0.9661",
+     "proposed_std": null,
+     "smote": "0.96321",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Wine",
+     "proposed": "0.99215",
+     "proposed_std": null,
+     "smote": "0.97483",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Yeast",
+     "proposed": "0.83093",
+     "proposed_std": null,
+     "smote": "0.82486",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Texture",
+     "proposed": "0.93872",
+     "proposed_std": null,
+     "smote": "0.93126",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Segment",
+     "proposed": "0.79108",
+     "proposed_std": null,
+     "smote": "0.77089",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "OCR",
+     "proposed": "0.98861",
+     "proposed_std": null,
+     "smote": "0.99255",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Page-blocks",
+     "proposed": "0.97259",
+     "proposed_std": null,
+     "smote": "0.99032",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "not stated in paper (Wilcoxon only on AUC). Best results are highlighted in bold-face type (best of SMOTE, ADASYN, RAMO, MWMOTE per cell)."
+   }
+  },
+  {
+   "metric": "F-measure",
+   "metric_family": "F-measure",
+   "table": "Table 6 (and Table 6 continued)",
+   "page": "PDF pages 13-14 (printed p.417-418)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Abalone",
+     "proposed": "0.39497",
+     "proposed_std": null,
+     "smote": "0.44167",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "CTG",
+     "proposed": "0.55378",
+     "proposed_std": null,
+     "smote": "0.55373",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Semeion",
+     "proposed": "0.87694",
+     "proposed_std": null,
+     "smote": "0.8636",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Statlandsat",
+     "proposed": "0.50238",
+     "proposed_std": null,
+     "smote": "0.48018",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Bcancerorig",
+     "proposed": "0.9594",
+     "proposed_std": null,
+     "smote": "0.95949",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Btissue",
+     "proposed": "0.73604",
+     "proposed_std": null,
+     "smote": "0.67953",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Ecoli",
+     "proposed": "0.73988",
+     "proposed_std": null,
+     "smote": "0.76277",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Glass",
+     "proposed": "0.87968",
+     "proposed_std": null,
+     "smote": "0.82579",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Libra",
+     "proposed": "0.91568",
+     "proposed_std": null,
+     "smote": "0.84458",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Phoneme",
+     "proposed": "0.65563",
+     "proposed_std": null,
+     "smote": "0.64755",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Pima",
+     "proposed": "0.67917",
+     "proposed_std": null,
+     "smote": "0.66811",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Robot",
+     "proposed": "0.63647",
+     "proposed_std": null,
+     "smote": "0.63498",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Satimage",
+     "proposed": "0.73935",
+     "proposed_std": null,
+     "smote": "0.73049",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "0.92081",
+     "proposed_std": null,
+     "smote": "0.91769",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Wine",
+     "proposed": "0.98182",
+     "proposed_std": null,
+     "smote": "0.95844",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Yeast",
+     "proposed": "0.68953",
+     "proposed_std": null,
+     "smote": "0.68509",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Texture",
+     "proposed": "0.88108",
+     "proposed_std": null,
+     "smote": "0.8696",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Segment",
+     "proposed": "0.59392",
+     "proposed_std": null,
+     "smote": "0.58299",
+     "smote_std": null,
+     "marks": "MWMOTE bold"
+    },
+    {
+     "dataset_as_printed": "OCR",
+     "proposed": "0.98378",
+     "proposed_std": null,
+     "smote": "0.98666",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Page-blocks",
+     "proposed": "0.93337",
+     "proposed_std": null,
+     "smote": "0.97481",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "not stated in paper. Best results are highlighted in bold-face type (best of SMOTE, ADASYN, RAMO, MWMOTE per cell)."
+   }
+  },
+  {
+   "metric": "AUC",
+   "metric_family": "AUC",
+   "table": "Table 6 (and Table 6 continued)",
+   "page": "PDF pages 13-14 (printed p.417-418)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Abalone",
+     "proposed": "0.87745",
+     "proposed_std": "0.093925",
+     "smote": "0.87288",
+     "smote_std": "0.05505",
+     "marks": "Table 7 (MWMOTE vs. SMOTE): Difference 0.00457, Rank +11"
+    },
+    {
+     "dataset_as_printed": "CTG",
+     "proposed": "0.91479",
+     "proposed_std": "0.039941",
+     "smote": "0.89328",
+     "smote_std": "0.038801",
+     "marks": "MWMOTE bold; Table 7 (MWMOTE vs. SMOTE): Difference 0.02151, Rank +16"
+    },
+    {
+     "dataset_as_printed": "Semeion",
+     "proposed": "0.98094",
+     "proposed_std": "0.0062194",
+     "smote": "0.97867",
+     "smote_std": "0.010405",
+     "marks": "MWMOTE bold; MWMOTE Std of AUC bold; Table 7 (MWMOTE vs. SMOTE): Difference 0.00227, Rank +6"
+    },
+    {
+     "dataset_as_printed": "Statlandsat",
+     "proposed": "0.89288",
+     "proposed_std": "0.019968",
+     "smote": "0.8467",
+     "smote_std": "0.03165",
+     "marks": "MWMOTE bold; MWMOTE Std of AUC bold; Table 7 (MWMOTE vs. SMOTE): Difference 0.04618, Rank +19"
+    },
+    {
+     "dataset_as_printed": "Bcancerorig",
+     "proposed": "0.97629",
+     "proposed_std": "0.0038563",
+     "smote": "0.97692",
+     "smote_std": "0.0047089",
+     "marks": "SMOTE bold; MWMOTE Std of AUC bold; Table 7 (MWMOTE vs. SMOTE): Difference -0.00063, Rank -1"
+    },
+    {
+     "dataset_as_printed": "Btissue",
+     "proposed": "0.84189",
+     "proposed_std": "0.085073",
+     "smote": "0.84299",
+     "smote_std": "0.077278",
+     "marks": "SMOTE Std of AUC bold; Table 7 (MWMOTE vs. SMOTE): Difference -0.0011, Rank -3"
+    },
+    {
+     "dataset_as_printed": "Ecoli",
+     "proposed": "0.93705",
+     "proposed_std": "0.045388",
+     "smote": "0.94622",
+     "smote_std": "0.030888",
+     "marks": "SMOTE bold; SMOTE Std of AUC bold; Table 7 (MWMOTE vs. SMOTE): Difference -0.00917, Rank -14"
+    },
+    {
+     "dataset_as_printed": "Glass",
+     "proposed": "0.95831",
+     "proposed_std": "0.0472",
+     "smote": "0.93227",
+     "smote_std": "0.078684",
+     "marks": "MWMOTE bold; MWMOTE Std of AUC bold; Table 7 (MWMOTE vs. SMOTE): Difference 0.02604, Rank +17"
+    },
+    {
+     "dataset_as_printed": "Libra",
+     "proposed": "0.96955",
+     "proposed_std": "0.02643",
+     "smote": "0.91719",
+     "smote_std": "0.02274",
+     "marks": "MWMOTE bold; SMOTE Std of AUC bold; Table 7 (MWMOTE vs. SMOTE): Difference 0.05236, Rank +20"
+    },
+    {
+     "dataset_as_printed": "Phoneme",
+     "proposed": "0.82019",
+     "proposed_std": "0.026922",
+     "smote": "0.82397",
+     "smote_std": "0.024579",
+     "marks": "Table 7 (MWMOTE vs. SMOTE): Difference -0.00378, Rank -10"
+    },
+    {
+     "dataset_as_printed": "Pima",
+     "proposed": "0.83026",
+     "proposed_std": "0.025115",
+     "smote": "0.81443",
+     "smote_std": "0.038935",
+     "marks": "MWMOTE bold; MWMOTE Std of AUC bold; Table 7 (MWMOTE vs. SMOTE): Difference 0.01583, Rank +15"
+    },
+    {
+     "dataset_as_printed": "Robot",
+     "proposed": "0.86586",
+     "proposed_std": "0.023286",
+     "smote": "0.86939",
+     "smote_std": "0.02672",
+     "marks": "SMOTE bold; MWMOTE Std of AUC bold; Table 7 (MWMOTE vs. SMOTE): Difference -0.00353, Rank -9"
+    },
+    {
+     "dataset_as_printed": "Satimage",
+     "proposed": "0.90156",
+     "proposed_std": "0.015749",
+     "smote": "0.89643",
+     "smote_std": "0.019875",
+     "marks": "MWMOTE bold; Table 7 (MWMOTE vs. SMOTE): Difference 0.00513, Rank +12"
+    },
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "0.97949",
+     "proposed_std": "0.0053514",
+     "smote": "0.97428",
+     "smote_std": "0.020316",
+     "marks": "MWMOTE bold; MWMOTE Std of AUC bold; Table 7 (MWMOTE vs. SMOTE): Difference 0.00521, Rank +13"
+    },
+    {
+     "dataset_as_printed": "Wine",
+     "proposed": "0.98276",
+     "proposed_std": "0.0021407",
+     "smote": "0.98182",
+     "smote_std": "0.0032953",
+     "marks": "MWMOTE bold; MWMOTE Std of AUC bold; Table 7 (MWMOTE vs. SMOTE): Difference 0.00094, Rank +2"
+    },
+    {
+     "dataset_as_printed": "Yeast",
+     "proposed": "0.89101",
+     "proposed_std": "0.025102",
+     "smote": "0.88801",
+     "smote_std": "0.025871",
+     "marks": "MWMOTE bold; Table 7 (MWMOTE vs. SMOTE): Difference 0.003, Rank +8"
+    },
+    {
+     "dataset_as_printed": "Texture",
+     "proposed": "0.96809",
+     "proposed_std": "0.024788",
+     "smote": "0.96672",
+     "smote_std": "0.014346",
+     "marks": "MWMOTE bold; SMOTE Std of AUC bold; Table 7 (MWMOTE vs. SMOTE): Difference 0.00137, Rank +4"
+    },
+    {
+     "dataset_as_printed": "Segment",
+     "proposed": "0.94269",
+     "proposed_std": "0.019839",
+     "smote": "0.90016",
+     "smote_std": "0.02899",
+     "marks": "MWMOTE bold; Table 7 (MWMOTE vs. SMOTE): Difference 0.04253, Rank +18"
+    },
+    {
+     "dataset_as_printed": "OCR",
+     "proposed": "0.98855",
+     "proposed_std": "0.00061808",
+     "smote": "0.98639",
+     "smote_std": "0.0074111",
+     "marks": "MWMOTE bold; MWMOTE Std of AUC bold; Table 7 (MWMOTE vs. SMOTE): Difference 0.00216, Rank +5"
+    },
+    {
+     "dataset_as_printed": "Page-blocks",
+     "proposed": "0.98312",
+     "proposed_std": "0.0099119",
+     "smote": "0.98609",
+     "smote_std": "0.0052576",
+     "marks": "SMOTE bold; SMOTE Std of AUC bold; Table 7 (MWMOTE vs. SMOTE): Difference -0.00297, Rank -7"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "Text (p.419): \"in case of MWMOTE versus SMOTE with single neural network, SMOTE is better (negative difference) than MWMOTE for six data sets, while MWMOTE is better (positive difference) than SMOTE for 14 data sets (Table 7).\"",
+    "stat_test": "Wilcoxon signed-rank test on averaged AUC (Table 7, single neural network): MWMOTE vs. SMOTE \"T = min{166, 44} = 44\"; text: \"Since there are 20 data sets, the T value at a significance level of 0.05 should be less than or equal to 52 (the critical value) to reject the null hypothesis [44]. That is, MWMOTE is better than SMOTE.\" Best results are highlighted in bold-face type (best of SMOTE, ADASYN, RAMO, MWMOTE per cell)."
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [
+  {
+   "metric": "F-measure, G-mean, AUC (Std of AUC)",
+   "table": "Table 6 AdaBoost.M2 columns; Table 8 Wilcoxon AUC",
+   "classifiers": "AdaBoost.M2 ensemble of neural networks"
+  },
+  {
+   "metric": "performance metrics on real-world data",
+   "table": "Table 9",
+   "classifiers": "k-NN, C4.5 decision tree"
+  }
+ ],
+ "metrics_without_smote": [
+  {
+   "metric": "F-measure/G-mean/AUC vs LS, COGOS",
+   "table": "Table 10"
+  },
+  {
+   "metric": "AUC Wilcoxon vs LS/COGOS",
+   "table": "Table 11"
+  },
+  {
+   "metric": "AUC parameter sensitivity",
+   "table": "Table 12"
+  }
+ ],
+ "notes": "Table 6 is an image; transcribed from 300-dpi renders, only Single Neural Network columns (F-measure, G-mean, AUC, Std of AUC). Artificial-domain Tables 2-4 (also with SMOTE) are not the fixed condition (real-world suite) and were not copied. Inconsistency in paper: Table 7 Semeion row prints MWMOTE 0.91479 / SMOTE 0.89328 (identical to the CTG row), whereas Table 6 gives Semeion AUC 0.98094 / 0.97867; Table 6 values were copied, Table 7 Difference/Rank copied verbatim into marks."
+}

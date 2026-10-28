@@ -1,0 +1,102 @@
+{
+  "key": "ROS (Buda)",
+  "pdf_file_read": "ROS (Buda) - A Systematic Study of the Class Imbalance Problem in Convolutional Neural Networks (Neural Networks 2018).pdf (+ Supplementary 1 Appendix A Reshuffled Splits, plots only)",
+  "task": "multiclass",
+  "n_datasets_claimed": 3,
+  "characteristics_table": "Table 1, p.4 (printed 252)",
+  "datasets": [
+    {
+      "name": "MNIST",
+      "group": "",
+      "source_repo": "other: MNIST benchmark (LeCun, Bottou, Bengio, & Haffner, 1998)",
+      "n_instances": null,
+      "n_features": null,
+      "n_classes": 10,
+      "n_minority": null,
+      "n_majority": null,
+      "class_distribution": null,
+      "ir_printed": "ρ ∈ {10, 25, 50, 100, 250, 500, 1000, 2500, 5000}; step µ ∈ {0.1,...,0.9}",
+      "how_obtained": "modified",
+      "how_obtained_detail": "Each class uniformly at random subsampled to no more than 5000 training examples (balanced subset: 5000 train / 1000 test per class, Table 1; image 28x28x1), then artificially imbalanced (step and linear imbalance); minority classes randomized, 50 repetitions per setting; test set left balanced (Sec. 3.3.1, 3.4, p.4-5)",
+      "in_results_table": "no",
+      "ref": "Table 1, p.4 (printed 252); Sec. 3.3.1 p.4"
+    },
+    {
+      "name": "CIFAR-10",
+      "group": "",
+      "source_repo": "other: CIFAR-10 benchmark (Krizhevsky & Hinton, 2009)",
+      "n_instances": null,
+      "n_features": null,
+      "n_classes": 10,
+      "n_minority": null,
+      "n_majority": null,
+      "class_distribution": null,
+      "ir_printed": "ρ ∈ {2, 10, 20, 50}; step µ ∈ {0.2, 0.5, 0.8}",
+      "how_obtained": "modified",
+      "how_obtained_detail": "Original 5000 train / 1000 test per class (32x32x3); training set artificially imbalanced (step and linear); minority classes = lowest label values; test set left balanced (Sec. 3.3.2, p.4-5)",
+      "in_results_table": "no",
+      "ref": "Table 1, p.4 (printed 252); Sec. 3.3.2 p.4-5"
+    },
+    {
+      "name": "ILSVRC-2012",
+      "group": "ImageNet",
+      "source_repo": "other: ImageNet ILSVRC-2012 (Russakovsky et al., 2015)",
+      "n_instances": null,
+      "n_features": null,
+      "n_classes": 1000,
+      "n_minority": null,
+      "n_majority": null,
+      "class_distribution": null,
+      "ir_printed": "µ = 0.1, ρ = 10; µ = 0.8, ρ = 50; µ = 0.9, ρ = 100",
+      "how_obtained": "modified",
+      "how_obtained_detail": "Majority classes reduced from 1200 to 1000 examples (1000 train / 50 test per class in balanced subset, Table 1; images rescaled, smaller side 256); classes with <1000 cases always chosen as minority; three step-imbalanced subsets, highest imbalance run 3 times with randomized minority classes (Sec. 3.3.3, p.5)",
+      "in_results_table": "yes",
+      "ref": "Table 1, p.4 (printed 252); Sec. 3.3.3 p.5; Table 4 p.8 (printed 256)"
+    }
+  ],
+  "ir_definition": "ρ = max_i{|C_i|} / min_i{|C_i|} (ratio between number of examples in majority and minority classes, Eq. 2); step imbalance also uses µ = fraction of minority classes (Eq. 1); linear imbalance uses same ρ with linear interpolation of class sizes",
+  "ir_definition_ref": "p.3 (printed 251), Eq. (1)-(2)",
+  "outcome": {
+    "smote_in_baselines": "no",
+    "smote_name_as_printed": "SMOTE (mentioned only in Sec. 2.1/2.2 literature review, p.2; not evaluated)",
+    "baselines_all": [
+      "Baseline",
+      "Random majority undersampling",
+      "Two-phase training with pre-training on randomly oversampled dataset",
+      "Two-phase training with pre-training on randomly undersampled dataset",
+      "Thresholding with prior class probabilities",
+      "Oversampling with thresholding",
+      "Undersampling with thresholding"
+    ],
+    "results_granularity": "per-dataset partial",
+    "chosen": {
+      "table": "Table 4",
+      "page": "p.8 (printed 256)",
+      "metric": "multi-class ROC AUC",
+      "classifier": "ResNet-10",
+      "condition": "ImageNet (ILSVRC-2012) step imbalance; all three settings (µ = 0.1, ρ = 10; µ = 0.8, ρ = 50; µ = 0.9, ρ = 100 with three runs)",
+      "higher_is_better": true,
+      "is_image": false
+    },
+    "rows": [
+      {"dataset_as_printed": "ILSVRC-2012 µ = 0.1, ρ = 10", "proposed": "99.35", "proposed_std": null, "smote": null, "smote_std": null, "best_other_value": "99.41", "best_other_name": "Baseline", "marks": ""},
+      {"dataset_as_printed": "ILSVRC-2012 µ = 0.8, ρ = 50", "proposed": "95.06", "proposed_std": null, "smote": null, "smote_std": null, "best_other_value": "96.31", "best_other_name": "Baseline", "marks": ""},
+      {"dataset_as_printed": "ILSVRC-2012 µ = 0.9, ρ = 100 (run 1)", "proposed": "88.38", "proposed_std": null, "smote": null, "smote_std": null, "best_other_value": "90.74", "best_other_name": "Baseline", "marks": ""},
+      {"dataset_as_printed": "ILSVRC-2012 µ = 0.9, ρ = 100 (run 2)", "proposed": "88.39", "proposed_std": null, "smote": null, "smote_std": null, "best_other_value": "90.46", "best_other_name": "Baseline", "marks": ""},
+      {"dataset_as_printed": "ILSVRC-2012 µ = 0.9, ρ = 100 (run 3)", "proposed": "88.17", "proposed_std": null, "smote": null, "smote_std": null, "best_other_value": "90.05", "best_other_name": "Baseline", "marks": ""}
+    ],
+    "summary_rows": [],
+    "stat_test": "not stated in paper",
+    "win_claim": {
+      "quote": "the method of addressing class imbalance that emerged as dominant in almost all analyzed scenarios was oversampling",
+      "page": "p.1 (printed 249), abstract"
+    }
+  },
+  "uncertain": [
+    "Run labels '(run 1/2/3)' for the three µ = 0.9, ρ = 100 columns are added by extractor; Table 4 prints three unlabeled columns under one header (p.8)",
+    "Classifier choice: no classifier highlighted in abstract; first reported is LeNet-5 (MNIST) but MNIST/CIFAR-10 results are plots only, so ResNet-10 (only numeric table) used (p.4, p.8)",
+    "n_instances left null: Table 1 gives per-class balanced counts only (5000/1000, 5000/1000, 1000/50), totals for imbalanced subsets vary by setting and are not printed (p.4)",
+    "Only Baseline, Oversampling, Undersampling were run on ImageNet; best_other is chosen from these two (p.5, p.8)"
+  ],
+  "notes": "Comparative study, not a new method: proposed = random minority oversampling ('Oversampling'). SMOTE not evaluated. All three datasets are 10- or 1000-class multiclass with artificially induced step/linear imbalance on the training set; test sets kept balanced. MNIST and CIFAR-10 results (Figs. 3-7) are plots only. Table 4 Undersampling values: 96.85, 94.98, 88.35, 84.08, 83.74. Supplementary Appendix A (CIFAR-10 reshuffled splits) contains plots only; Appendix B (convergence plots) and Appendix C (confusion matrices) not used for numeric comparison. Main comparator: Baseline (do-nothing)."
+}

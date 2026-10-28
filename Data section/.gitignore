@@ -1,0 +1,9 @@
+# PDF ของสำนักพิมพ์ ห้าม commit (18 ต.ค. 2026)
+paper/
+*.pdf
+!manuscript/*.pdf
+_verify_png/
+
+# Python bytecode (28 Oct 2026)
+__pycache__/
+*.pyc

@@ -1,0 +1,1238 @@
+{
+ "key": "RSMOTE",
+ "classifier": "average over five classifiers (Adaboost, LR, DT, KNN, GBDT); not per-classifier",
+ "condition": "c = 0 (0% label noise)",
+ "proposed_column": "RSMT. (RSMOTE)",
+ "smote_column": "SMT. (SMOTE)",
+ "metrics": [
+  {
+   "metric": "Precision",
+   "metric_family": "precision",
+   "table": "Table 3 (binary, c = 0), Precision block",
+   "page": "PDF page 14 (printed p.410)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "avila",
+     "proposed": "0.536",
+     "proposed_std": null,
+     "smote": "0.405",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "breast_tissue2",
+     "proposed": "0.827",
+     "proposed_std": null,
+     "smote": "0.709",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "breastcancer",
+     "proposed": "0.968",
+     "proposed_std": null,
+     "smote": "0.941",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "codrna",
+     "proposed": "0.630",
+     "proposed_std": null,
+     "smote": "0.509",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "creditApproval",
+     "proposed": "0.671",
+     "proposed_std": null,
+     "smote": "0.504",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ecoli",
+     "proposed": "0.893",
+     "proposed_std": null,
+     "smote": "0.505",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "heart",
+     "proposed": "0.942",
+     "proposed_std": null,
+     "smote": "0.672",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "iris",
+     "proposed": "0.902",
+     "proposed_std": null,
+     "smote": "0.914",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "isolet5",
+     "proposed": "0.734",
+     "proposed_std": null,
+     "smote": "0.415",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "letter",
+     "proposed": "0.641",
+     "proposed_std": null,
+     "smote": "0.555",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "libra",
+     "proposed": "0.932",
+     "proposed_std": null,
+     "smote": "0.832",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "magic",
+     "proposed": "0.593",
+     "proposed_std": null,
+     "smote": "0.360",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "mocap",
+     "proposed": "0.462",
+     "proposed_std": null,
+     "smote": "0.351",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "mushrooms",
+     "proposed": "1.000",
+     "proposed_std": null,
+     "smote": "1.000",
+     "smote_std": null,
+     "marks": "RSMOTE bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "nomao",
+     "proposed": "0.796",
+     "proposed_std": null,
+     "smote": "0.677",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "pima",
+     "proposed": "0.714",
+     "proposed_std": null,
+     "smote": "0.595",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "poker",
+     "proposed": "0.103",
+     "proposed_std": null,
+     "smote": "0.023",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "segment",
+     "proposed": "0.821",
+     "proposed_std": null,
+     "smote": "0.744",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "skin",
+     "proposed": "0.582",
+     "proposed_std": null,
+     "smote": "0.564",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "splice",
+     "proposed": "0.730",
+     "proposed_std": null,
+     "smote": "0.627",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "susy",
+     "proposed": "0.516",
+     "proposed_std": null,
+     "smote": "0.279",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "svmguide1",
+     "proposed": "0.827",
+     "proposed_std": null,
+     "smote": "0.755",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "svmguide3",
+     "proposed": "0.624",
+     "proposed_std": null,
+     "smote": "0.284",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "vehicle",
+     "proposed": "0.918",
+     "proposed_std": null,
+     "smote": "0.824",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "votes",
+     "proposed": "0.854",
+     "proposed_std": null,
+     "smote": "0.957",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "wine",
+     "proposed": "1.000",
+     "proposed_std": null,
+     "smote": "0.949",
+     "smote_std": null,
+     "marks": "RSMOTE bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Online_Retail",
+     "proposed": "0.906",
+     "proposed_std": null,
+     "smote": "0.823",
+     "smote_std": null,
+     "marks": ""
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average",
+      "proposed": "0.745",
+      "smote": "0.621"
+     },
+     {
+      "label": "Winning times",
+      "proposed": "19",
+      "smote": "3"
+     }
+    ],
+    "wtl_vs_smote": "Winning times row = number of datasets where method is among 'the highest two scores' (bold) across all 8 columns incl. NONE; not pairwise vs SMOTE.",
+    "stat_test": "Table 5 (PDF p.19), Holm's test with RSMOTE as control (c = 0), alpha = 0.05, per classifier (not averaged); adjusted p for SMT.: Adaboost: 6.01E-05; DT: 1.52E-10; GBDT: 7.85E-07; KNN: 1.23E-03; LR: 8.86E-01. 'The bold indicates that the null hypothesis is rejected' (bold coincides with adj-p < 0.05 in render). Friedman statistics in Table A.12."
+   }
+  },
+  {
+   "metric": "Recall",
+   "metric_family": "recall",
+   "table": "Table 3 (binary, c = 0), Recall block",
+   "page": "PDF page 14 (printed p.410)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "avila",
+     "proposed": "0.680",
+     "proposed_std": null,
+     "smote": "0.700",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "breast_tissue2",
+     "proposed": "0.950",
+     "proposed_std": null,
+     "smote": "0.750",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "breastcancer",
+     "proposed": "0.967",
+     "proposed_std": null,
+     "smote": "0.889",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "codrna",
+     "proposed": "0.785",
+     "proposed_std": null,
+     "smote": "0.835",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "creditApproval",
+     "proposed": "0.825",
+     "proposed_std": null,
+     "smote": "0.825",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ecoli",
+     "proposed": "1.000",
+     "proposed_std": null,
+     "smote": "0.673",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "heart",
+     "proposed": "0.950",
+     "proposed_std": null,
+     "smote": "0.833",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "iris",
+     "proposed": "0.980",
+     "proposed_std": null,
+     "smote": "0.900",
+     "smote_std": null,
+     "marks": "RSMOTE bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "isolet5",
+     "proposed": "0.488",
+     "proposed_std": null,
+     "smote": "0.625",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "letter",
+     "proposed": "0.755",
+     "proposed_std": null,
+     "smote": "0.700",
+     "smote_std": null,
+     "marks": "RSMOTE bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "libra",
+     "proposed": "0.973",
+     "proposed_std": null,
+     "smote": "0.840",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "magic",
+     "proposed": "0.699",
+     "proposed_std": null,
+     "smote": "0.748",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "mocap",
+     "proposed": "0.844",
+     "proposed_std": null,
+     "smote": "0.874",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "mushrooms",
+     "proposed": "1.000",
+     "proposed_std": null,
+     "smote": "0.995",
+     "smote_std": null,
+     "marks": "RSMOTE bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "nomao",
+     "proposed": "0.886",
+     "proposed_std": null,
+     "smote": "0.908",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "pima",
+     "proposed": "0.837",
+     "proposed_std": null,
+     "smote": "0.700",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "poker",
+     "proposed": "0.155",
+     "proposed_std": null,
+     "smote": "0.137",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "segment",
+     "proposed": "0.970",
+     "proposed_std": null,
+     "smote": "0.945",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "skin",
+     "proposed": "0.985",
+     "proposed_std": null,
+     "smote": "0.981",
+     "smote_std": null,
+     "marks": "RSMOTE bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "splice",
+     "proposed": "0.829",
+     "proposed_std": null,
+     "smote": "0.800",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "susy",
+     "proposed": "0.574",
+     "proposed_std": null,
+     "smote": "0.639",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "svmguide1",
+     "proposed": "0.955",
+     "proposed_std": null,
+     "smote": "0.945",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "svmguide3",
+     "proposed": "0.474",
+     "proposed_std": null,
+     "smote": "0.516",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "vehicle",
+     "proposed": "1.000",
+     "proposed_std": null,
+     "smote": "0.975",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "votes",
+     "proposed": "0.855",
+     "proposed_std": null,
+     "smote": "0.964",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "wine",
+     "proposed": "1.000",
+     "proposed_std": null,
+     "smote": "0.973",
+     "smote_std": null,
+     "marks": "RSMOTE bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Online_Retail",
+     "proposed": "0.988",
+     "proposed_std": null,
+     "smote": "0.997",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average",
+      "proposed": "0.830",
+      "smote": "0.803"
+     },
+     {
+      "label": "Winning times",
+      "proposed": "15",
+      "smote": "9"
+     }
+    ],
+    "wtl_vs_smote": "Winning times row = number of datasets where method is among 'the highest two scores' (bold) across all 8 columns incl. NONE; not pairwise vs SMOTE.",
+    "stat_test": "Table 5 (PDF p.19), Holm's test with RSMOTE as control (c = 0), alpha = 0.05, per classifier (not averaged); adjusted p for SMT.: Adaboost: 1.70E-01; DT: 3.33E-02; GBDT: 6.59E-01; KNN: 2.51E-01; LR: 1.00E+00. 'The bold indicates that the null hypothesis is rejected' (bold coincides with adj-p < 0.05 in render). Friedman statistics in Table A.12."
+   }
+  },
+  {
+   "metric": "AUC",
+   "metric_family": "AUC",
+   "table": "Table 3 (binary, c = 0), AUC block",
+   "page": "PDF page 14 (printed p.410)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "avila",
+     "proposed": "0.856",
+     "proposed_std": null,
+     "smote": "0.842",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "breast_tissue2",
+     "proposed": "0.938",
+     "proposed_std": null,
+     "smote": "0.877",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "breastcancer",
+     "proposed": "0.994",
+     "proposed_std": null,
+     "smote": "0.968",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "codrna",
+     "proposed": "0.932",
+     "proposed_std": null,
+     "smote": "0.935",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "creditApproval",
+     "proposed": "0.920",
+     "proposed_std": null,
+     "smote": "0.881",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ecoli",
+     "proposed": "0.996",
+     "proposed_std": null,
+     "smote": "0.834",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "heart",
+     "proposed": "0.984",
+     "proposed_std": null,
+     "smote": "0.820",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "iris",
+     "proposed": "0.967",
+     "proposed_std": null,
+     "smote": "0.935",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "isolet5",
+     "proposed": "0.838",
+     "proposed_std": null,
+     "smote": "0.836",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "letter",
+     "proposed": "0.888",
+     "proposed_std": null,
+     "smote": "0.876",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "libra",
+     "proposed": "0.993",
+     "proposed_std": null,
+     "smote": "0.910",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "magic",
+     "proposed": "0.883",
+     "proposed_std": null,
+     "smote": "0.857",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "mocap",
+     "proposed": "0.925",
+     "proposed_std": null,
+     "smote": "0.936",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "mushrooms",
+     "proposed": "1.000",
+     "proposed_std": null,
+     "smote": "1.000",
+     "smote_std": null,
+     "marks": "RSMOTE bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "nomao",
+     "proposed": "0.973",
+     "proposed_std": null,
+     "smote": "0.971",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "pima",
+     "proposed": "0.886",
+     "proposed_std": null,
+     "smote": "0.790",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "poker",
+     "proposed": "0.547",
+     "proposed_std": null,
+     "smote": "0.519",
+     "smote_std": null,
+     "marks": "RSMOTE bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "segment",
+     "proposed": "0.986",
+     "proposed_std": null,
+     "smote": "0.972",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "skin",
+     "proposed": "0.985",
+     "proposed_std": null,
+     "smote": "0.986",
+     "smote_std": null,
+     "marks": "RSMOTE bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "splice",
+     "proposed": "0.927",
+     "proposed_std": null,
+     "smote": "0.884",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "susy",
+     "proposed": "0.823",
+     "proposed_std": null,
+     "smote": "0.800",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "svmguide1",
+     "proposed": "0.988",
+     "proposed_std": null,
+     "smote": "0.981",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "svmguide3",
+     "proposed": "0.788",
+     "proposed_std": null,
+     "smote": "0.786",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "vehicle",
+     "proposed": "0.996",
+     "proposed_std": null,
+     "smote": "0.981",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "votes",
+     "proposed": "0.948",
+     "proposed_std": null,
+     "smote": "0.999",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "wine",
+     "proposed": "1.000",
+     "proposed_std": null,
+     "smote": "0.982",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Online_Retail",
+     "proposed": "0.998",
+     "proposed_std": null,
+     "smote": "0.999",
+     "smote_std": null,
+     "marks": "RSMOTE bold; SMOTE bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average",
+      "proposed": "0.924",
+      "smote": "0.895"
+     },
+     {
+      "label": "Winning times",
+      "proposed": "23",
+      "smote": "7"
+     }
+    ],
+    "wtl_vs_smote": "Winning times row = number of datasets where method is among 'the highest two scores' (bold) across all 8 columns incl. NONE; not pairwise vs SMOTE.",
+    "stat_test": "Table 5 (PDF p.19), Holm's test with RSMOTE as control (c = 0), alpha = 0.05, per classifier (not averaged); adjusted p for SMT.: Adaboost: 5.40E-03; DT: 2.22E-04; GBDT: 2.94E-02; KNN: 2.94E-02; LR: 7.50E-01. 'The bold indicates that the null hypothesis is rejected' (bold coincides with adj-p < 0.05 in render). Friedman statistics in Table A.12."
+   }
+  },
+  {
+   "metric": "F1",
+   "metric_family": "F-measure",
+   "table": "Table 3 (binary, c = 0), F1 block",
+   "page": "PDF page 14 (printed p.410)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "avila",
+     "proposed": "0.577",
+     "proposed_std": null,
+     "smote": "0.497",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "breast_tissue2",
+     "proposed": "0.870",
+     "proposed_std": null,
+     "smote": "0.690",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "breastcancer",
+     "proposed": "0.967",
+     "proposed_std": null,
+     "smote": "0.912",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "codrna",
+     "proposed": "0.676",
+     "proposed_std": null,
+     "smote": "0.623",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "creditApproval",
+     "proposed": "0.728",
+     "proposed_std": null,
+     "smote": "0.622",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ecoli",
+     "proposed": "0.942",
+     "proposed_std": null,
+     "smote": "0.558",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "heart",
+     "proposed": "0.946",
+     "proposed_std": null,
+     "smote": "0.743",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "iris",
+     "proposed": "0.934",
+     "proposed_std": null,
+     "smote": "0.902",
+     "smote_std": null,
+     "marks": "RSMOTE bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "isolet5",
+     "proposed": "0.563",
+     "proposed_std": null,
+     "smote": "0.478",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "letter",
+     "proposed": "0.667",
+     "proposed_std": null,
+     "smote": "0.595",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "libra",
+     "proposed": "0.951",
+     "proposed_std": null,
+     "smote": "0.829",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "magic",
+     "proposed": "0.629",
+     "proposed_std": null,
+     "smote": "0.483",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "mocap",
+     "proposed": "0.541",
+     "proposed_std": null,
+     "smote": "0.469",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "mushrooms",
+     "proposed": "1.000",
+     "proposed_std": null,
+     "smote": "0.998",
+     "smote_std": null,
+     "marks": "RSMOTE bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "nomao",
+     "proposed": "0.835",
+     "proposed_std": null,
+     "smote": "0.773",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "pima",
+     "proposed": "0.770",
+     "proposed_std": null,
+     "smote": "0.643",
+     "smote_std": null,
+     "marks": "RSMOTE bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "poker",
+     "proposed": "0.075",
+     "proposed_std": null,
+     "smote": "0.032",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "segment",
+     "proposed": "0.877",
+     "proposed_std": null,
+     "smote": "0.825",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "skin",
+     "proposed": "0.659",
+     "proposed_std": null,
+     "smote": "0.644",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "splice",
+     "proposed": "0.733",
+     "proposed_std": null,
+     "smote": "0.655",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "susy",
+     "proposed": "0.534",
+     "proposed_std": null,
+     "smote": "0.388",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "svmguide1",
+     "proposed": "0.876",
+     "proposed_std": null,
+     "smote": "0.832",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "svmguide3",
+     "proposed": "0.517",
+     "proposed_std": null,
+     "smote": "0.350",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "vehicle",
+     "proposed": "0.956",
+     "proposed_std": null,
+     "smote": "0.892",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "votes",
+     "proposed": "0.843",
+     "proposed_std": null,
+     "smote": "0.957",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "wine",
+     "proposed": "1.000",
+     "proposed_std": null,
+     "smote": "0.961",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Online_Retail",
+     "proposed": "0.942",
+     "proposed_std": null,
+     "smote": "0.885",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average",
+      "proposed": "0.763",
+      "smote": "0.675"
+     },
+     {
+      "label": "Winning times",
+      "proposed": "27",
+      "smote": "3"
+     }
+    ],
+    "wtl_vs_smote": "Winning times row = number of datasets where method is among 'the highest two scores' (bold) across all 8 columns incl. NONE; not pairwise vs SMOTE.",
+    "stat_test": "Table 5 (PDF p.19), Holm's test with RSMOTE as control (c = 0), alpha = 0.05, per classifier (not averaged); adjusted p for SMT.: Adaboost: 2.72E-08; DT: 6.76E-10; GBDT: 2.57E-06; KNN: 1.55E-04; LR: 1.42E-01. 'The bold indicates that the null hypothesis is rejected' (bold coincides with adj-p < 0.05 in render). Friedman statistics in Table A.12."
+   }
+  },
+  {
+   "metric": "G-mean",
+   "metric_family": "G-mean",
+   "table": "Table 3 (binary, c = 0), G-mean block",
+   "page": "PDF page 14 (printed p.410)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "avila",
+     "proposed": "0.784",
+     "proposed_std": null,
+     "smote": "0.775",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "breast_tissue2",
+     "proposed": "0.924",
+     "proposed_std": null,
+     "smote": "0.796",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "breastcancer",
+     "proposed": "0.980",
+     "proposed_std": null,
+     "smote": "0.936",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "codrna",
+     "proposed": "0.871",
+     "proposed_std": null,
+     "smote": "0.892",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "creditApproval",
+     "proposed": "0.861",
+     "proposed_std": null,
+     "smote": "0.824",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ecoli",
+     "proposed": "0.988",
+     "proposed_std": null,
+     "smote": "0.751",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "heart",
+     "proposed": "0.951",
+     "proposed_std": null,
+     "smote": "0.748",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "iris",
+     "proposed": "0.954",
+     "proposed_std": null,
+     "smote": "0.919",
+     "smote_std": null,
+     "marks": "RSMOTE bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "isolet5",
+     "proposed": "0.680",
+     "proposed_std": null,
+     "smote": "0.735",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "letter",
+     "proposed": "0.836",
+     "proposed_std": null,
+     "smote": "0.797",
+     "smote_std": null,
+     "marks": "RSMOTE bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "libra",
+     "proposed": "0.976",
+     "proposed_std": null,
+     "smote": "0.890",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "magic",
+     "proposed": "0.810",
+     "proposed_std": null,
+     "smote": "0.802",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "mocap",
+     "proposed": "0.886",
+     "proposed_std": null,
+     "smote": "0.895",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "mushrooms",
+     "proposed": "1.000",
+     "proposed_std": null,
+     "smote": "0.998",
+     "smote_std": null,
+     "marks": "RSMOTE bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "nomao",
+     "proposed": "0.935",
+     "proposed_std": null,
+     "smote": "0.942",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "pima",
+     "proposed": "0.825",
+     "proposed_std": null,
+     "smote": "0.721",
+     "smote_std": null,
+     "marks": "RSMOTE bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "poker",
+     "proposed": "0.310",
+     "proposed_std": null,
+     "smote": "0.240",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "segment",
+     "proposed": "0.960",
+     "proposed_std": null,
+     "smote": "0.940",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "skin",
+     "proposed": "0.980",
+     "proposed_std": null,
+     "smote": "0.978",
+     "smote_std": null,
+     "marks": "RSMOTE bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "splice",
+     "proposed": "0.839",
+     "proposed_std": null,
+     "smote": "0.747",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "susy",
+     "proposed": "0.732",
+     "proposed_std": null,
+     "smote": "0.729",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "svmguide1",
+     "proposed": "0.964",
+     "proposed_std": null,
+     "smote": "0.954",
+     "smote_std": null,
+     "marks": "RSMOTE bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "svmguide3",
+     "proposed": "0.673",
+     "proposed_std": null,
+     "smote": "0.652",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "vehicle",
+     "proposed": "0.985",
+     "proposed_std": null,
+     "smote": "0.954",
+     "smote_std": null,
+     "marks": "RSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "votes",
+     "proposed": "0.906",
+     "proposed_std": null,
+     "smote": "0.976",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "wine",
+     "proposed": "1.000",
+     "proposed_std": null,
+     "smote": "0.968",
+     "smote_std": null,
+     "marks": "RSMOTE bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Online_Retail",
+     "proposed": "0.993",
+     "proposed_std": null,
+     "smote": "0.995",
+     "smote_std": null,
+     "marks": "RSMOTE bold; SMOTE bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average",
+      "proposed": "0.874",
+      "smote": "0.835"
+     },
+     {
+      "label": "Winning times",
+      "proposed": "22",
+      "smote": "11"
+     }
+    ],
+    "wtl_vs_smote": "Winning times row = number of datasets where method is among 'the highest two scores' (bold) across all 8 columns incl. NONE; not pairwise vs SMOTE.",
+    "stat_test": "Table 5 (PDF p.19), Holm's test with RSMOTE as control (c = 0), alpha = 0.05, per classifier (not averaged); adjusted p for SMT.: Adaboost: 7.36E-03; DT: 9.58E-05; GBDT: 1.18E-01; KNN: 1.00E+00; LR: 1.00E+00. 'The bold indicates that the null hypothesis is rejected' (bold coincides with adj-p < 0.05 in render). Friedman statistics in Table A.12."
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [
+  {
+   "metric": "macro_Precision, macro_Recall, macro_F1, macro_G-mean (8 multi-class datasets, c = 0)",
+   "table": "Table 8 (Appendix B for c=0.1,0.2)",
+   "classifiers": "DOVO (diversified one-vs-one ensemble), different dataset suite"
+  },
+  {
+   "metric": "Holm adj-p per classifier",
+   "table": "Table 5",
+   "classifiers": "Adaboost, DT, GBDT, KNN, LR separately"
+  }
+ ],
+ "metrics_without_smote": [],
+ "notes": "Bold marks taken from PDF font names (AdvGulliv-B) via pdfplumber, not visually. Caption says bold = highest two among oversamplers, but NONE column also bolded in many rows. Holm p-values: text extraction drops the minus glyph (e.g. '2.45E05'); render shows '2.45E−05', so written with E-. Same metrics at c=0.3 in Table 4, c=0.1/0.2 in Appendix A (different condition, not copied)."
+}

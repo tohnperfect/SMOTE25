@@ -1,0 +1,795 @@
+{
+ "key": "MC-MBRC",
+ "classifier": "RF (only classifier with per-dataset tables)",
+ "condition": "20 real datasets, no added label noise, 30x2-fold CV, Appendix A.1 comparison",
+ "proposed_column": "MC-MBRC",
+ "smote_column": "FIRST data column of Appendix Tables 9-12, PRINTED HEADER 'MDO' (header appears copy-pasted from main Tables 3-6); identification as SMOTE is inferred, not printed",
+ "metrics": [
+  {
+   "metric": "AvAcc [%]",
+   "metric_family": "balanced-accuracy",
+   "table": "Table 9",
+   "page": "PDF page 10 (printed p.10)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "automobile",
+     "proposed": "85.26",
+     "proposed_std": null,
+     "smote": "81.06",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "autos",
+     "proposed": "83.94",
+     "proposed_std": null,
+     "smote": "75.64",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "car",
+     "proposed": "93.23",
+     "proposed_std": null,
+     "smote": "87.23",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "cleveland",
+     "proposed": "74.48",
+     "proposed_std": null,
+     "smote": "41.34",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "cmc",
+     "proposed": "61.36",
+     "proposed_std": null,
+     "smote": "56.86",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "contraceptive",
+     "proposed": "59.95",
+     "proposed_std": null,
+     "smote": "57.75",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Dry_Bean",
+     "proposed": "97.33",
+     "proposed_std": null,
+     "smote": "89.82",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "ecoli",
+     "proposed": "94.94",
+     "proposed_std": null,
+     "smote": "91.11",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "flare",
+     "proposed": "89.11",
+     "proposed_std": null,
+     "smote": "60.11",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "glass",
+     "proposed": "83.31",
+     "proposed_std": null,
+     "smote": "81.77",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "lymphography",
+     "proposed": "89.75",
+     "proposed_std": null,
+     "smote": "83.46",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "newthyroid",
+     "proposed": "95.44",
+     "proposed_std": null,
+     "smote": "89.02",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "page",
+     "proposed": "89.03",
+     "proposed_std": null,
+     "smote": "88.07",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "page-blocks",
+     "proposed": "97.38",
+     "proposed_std": null,
+     "smote": "84.46",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "shuttle",
+     "proposed": "98.22",
+     "proposed_std": null,
+     "smote": "76.63",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "thyroid",
+     "proposed": "94.6",
+     "proposed_std": null,
+     "smote": "34.12",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "winequality-red",
+     "proposed": "83.09",
+     "proposed_std": null,
+     "smote": "77.02",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "winequality-white",
+     "proposed": "83.46",
+     "proposed_std": null,
+     "smote": "76.9",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "yeast",
+     "proposed": "87.52",
+     "proposed_std": null,
+     "smote": "69.35",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "zoo",
+     "proposed": "98.77",
+     "proposed_std": null,
+     "smote": "97.56",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "avg_rank",
+      "proposed": "1.5",
+      "smote": "5.3"
+     },
+     {
+      "label": "best_times",
+      "proposed": "12",
+      "smote": "0"
+     },
+     {
+      "label": "Table 13 average over 20 datasets",
+      "proposed": "87.01",
+      "smote": "74.96*"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Table 13 (Appendix A.1): '(*) next to each value represents the results of the significance test at 95% confidence level' (Friedman/Nemenyi per main text). First column (printed 'MDO') value 74.96* carries asterisk, i.e. significantly different from MC-MBRC."
+   }
+  },
+  {
+   "metric": "F_betaM [%]",
+   "metric_family": "F-measure",
+   "table": "Table 10",
+   "page": "PDF page 10 (printed p.10)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "automobile",
+     "proposed": "55.15",
+     "proposed_std": null,
+     "smote": "49.17",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "autos",
+     "proposed": "54.62",
+     "proposed_std": null,
+     "smote": "45.88",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "car",
+     "proposed": "77.38",
+     "proposed_std": null,
+     "smote": "64.99",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "cleveland",
+     "proposed": "30.24",
+     "proposed_std": null,
+     "smote": "18.19",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "cmc",
+     "proposed": "42.61",
+     "proposed_std": null,
+     "smote": "46.15",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "contraceptive",
+     "proposed": "37.63",
+     "proposed_std": null,
+     "smote": "47.06",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Dry_Bean",
+     "proposed": "92.32",
+     "proposed_std": null,
+     "smote": "71.22",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "ecoli",
+     "proposed": "57.76",
+     "proposed_std": null,
+     "smote": "50.19",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "flare",
+     "proposed": "57.74",
+     "proposed_std": null,
+     "smote": "28.28",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "glass",
+     "proposed": "57.55",
+     "proposed_std": null,
+     "smote": "57.39",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "lymphography",
+     "proposed": "62.02",
+     "proposed_std": null,
+     "smote": "48.24",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "newthyroid",
+     "proposed": "90.96",
+     "proposed_std": null,
+     "smote": "78.98",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "page",
+     "proposed": "47.54",
+     "proposed_std": null,
+     "smote": "32.53",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "page-blocks",
+     "proposed": "68.2",
+     "proposed_std": null,
+     "smote": "40.05",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "shuttle",
+     "proposed": "75.41",
+     "proposed_std": null,
+     "smote": "37.24",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "thyroid",
+     "proposed": "68.98",
+     "proposed_std": null,
+     "smote": "16.18",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "winequality-red",
+     "proposed": "32.97",
+     "proposed_std": null,
+     "smote": "30.16",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "winequality-white",
+     "proposed": "31.34",
+     "proposed_std": null,
+     "smote": "26.84",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "yeast",
+     "proposed": "48.18",
+     "proposed_std": null,
+     "smote": "31.83",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "zoo",
+     "proposed": "90.09",
+     "proposed_std": null,
+     "smote": "78.86",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "avg_rank",
+      "proposed": "1.8",
+      "smote": "4.85"
+     },
+     {
+      "label": "best_times",
+      "proposed": "14",
+      "smote": "0"
+     },
+     {
+      "label": "Table 13 average over 20 datasets",
+      "proposed": "58.93",
+      "smote": "44.97*"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Table 13 (Appendix A.1): '(*) next to each value represents the results of the significance test at 95% confidence level' (Friedman/Nemenyi per main text). First column (printed 'MDO') value 44.97* carries asterisk, i.e. significantly different from MC-MBRC."
+   }
+  },
+  {
+   "metric": "CBA [%]",
+   "metric_family": "other",
+   "table": "Table 11",
+   "page": "PDF page 11 (printed p.11)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "automobile",
+     "proposed": "49.71",
+     "proposed_std": null,
+     "smote": "41.93",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "autos",
+     "proposed": "48.94",
+     "proposed_std": null,
+     "smote": "37.79",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "car",
+     "proposed": "71.03",
+     "proposed_std": null,
+     "smote": "53.9",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "cleveland",
+     "proposed": "27.98",
+     "proposed_std": null,
+     "smote": "13.4",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "cmc",
+     "proposed": "37.69",
+     "proposed_std": null,
+     "smote": "38.42",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "contraceptive",
+     "proposed": "33.19",
+     "proposed_std": null,
+     "smote": "40.14",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Dry_Bean",
+     "proposed": "91.48",
+     "proposed_std": null,
+     "smote": "62.38",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "ecoli",
+     "proposed": "55",
+     "proposed_std": null,
+     "smote": "44.55",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "flare",
+     "proposed": "54.84",
+     "proposed_std": null,
+     "smote": "23.24",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "glass",
+     "proposed": "51.64",
+     "proposed_std": null,
+     "smote": "50.77",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "lymphography",
+     "proposed": "57.9",
+     "proposed_std": null,
+     "smote": "41.67",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "newthyroid",
+     "proposed": "86.64",
+     "proposed_std": null,
+     "smote": "71.41",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "page",
+     "proposed": "40.57",
+     "proposed_std": null,
+     "smote": "26.27",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "page-blocks",
+     "proposed": "60.82",
+     "proposed_std": null,
+     "smote": "33.45",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "shuttle",
+     "proposed": "72.12",
+     "proposed_std": null,
+     "smote": "27.79",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "thyroid",
+     "proposed": "62.16",
+     "proposed_std": null,
+     "smote": "9.76",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "winequality-red",
+     "proposed": "31.09",
+     "proposed_std": null,
+     "smote": "26.25",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "winequality-white",
+     "proposed": "28.3",
+     "proposed_std": null,
+     "smote": "23.92",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "yeast",
+     "proposed": "43.39",
+     "proposed_std": null,
+     "smote": "25.71",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "zoo",
+     "proposed": "86.39",
+     "proposed_std": null,
+     "smote": "73.06",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "avg_rank",
+      "proposed": "1.75",
+      "smote": "5"
+     },
+     {
+      "label": "best_times",
+      "proposed": "14",
+      "smote": "0"
+     },
+     {
+      "label": "Table 13 average over 20 datasets",
+      "proposed": "54.54",
+      "smote": "38.29*"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Table 13 (Appendix A.1): '(*) next to each value represents the results of the significance test at 95% confidence level' (Friedman/Nemenyi per main text). First column (printed 'MDO') value 38.29* carries asterisk, i.e. significantly different from MC-MBRC."
+   }
+  },
+  {
+   "metric": "CEN",
+   "metric_family": "other",
+   "table": "Table 12",
+   "page": "PDF page 11 (printed p.11)",
+   "is_image": false,
+   "higher_is_better": false,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "automobile",
+     "proposed": "0.37",
+     "proposed_std": null,
+     "smote": "0.38",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "autos",
+     "proposed": "0.39",
+     "proposed_std": null,
+     "smote": "0.44",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "car",
+     "proposed": "0.19",
+     "proposed_std": null,
+     "smote": "0.26",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "cleveland",
+     "proposed": "0.51",
+     "proposed_std": null,
+     "smote": "0.65",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "cmc",
+     "proposed": "0.63",
+     "proposed_std": null,
+     "smote": "0.71",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "contraceptive",
+     "proposed": "0.6",
+     "proposed_std": null,
+     "smote": "0.72",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "Dry_Bean",
+     "proposed": "0.14",
+     "proposed_std": null,
+     "smote": "0.27",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "ecoli",
+     "proposed": "0.19",
+     "proposed_std": null,
+     "smote": "0.26",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "flare",
+     "proposed": "0.26",
+     "proposed_std": null,
+     "smote": "0.39",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "glass",
+     "proposed": "0.37",
+     "proposed_std": null,
+     "smote": "0.4",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "lymphography",
+     "proposed": "0.25",
+     "proposed_std": null,
+     "smote": "0.32",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "newthyroid",
+     "proposed": "0.15",
+     "proposed_std": null,
+     "smote": "0.24",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "page",
+     "proposed": "0.15",
+     "proposed_std": null,
+     "smote": "0.21",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "page-blocks",
+     "proposed": "0.1",
+     "proposed_std": null,
+     "smote": "0.26",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "shuttle",
+     "proposed": "0.06",
+     "proposed_std": null,
+     "smote": "0.24",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "thyroid",
+     "proposed": "0.14",
+     "proposed_std": null,
+     "smote": "0.36",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "winequality-red",
+     "proposed": "0.42",
+     "proposed_std": null,
+     "smote": "0.5",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "winequality-white",
+     "proposed": "0.42",
+     "proposed_std": null,
+     "smote": "0.52",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    },
+    {
+     "dataset_as_printed": "yeast",
+     "proposed": "0.4",
+     "proposed_std": null,
+     "smote": "0.48",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "zoo",
+     "proposed": "0.03",
+     "proposed_std": null,
+     "smote": "0.05",
+     "smote_std": null,
+     "marks": "MC-MBRC bold (best of 6, inferred as row best; count checked vs best_times)"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "avg_rank",
+      "proposed": "1.4",
+      "smote": "4.55"
+     },
+     {
+      "label": "best_times",
+      "proposed": "12",
+      "smote": "0"
+     },
+     {
+      "label": "Table 13 average over 20 datasets",
+      "proposed": "0.29",
+      "smote": "0.38*"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Table 13 (Appendix A.1): '(*) next to each value represents the results of the significance test at 95% confidence level' (Friedman/Nemenyi per main text). First column (printed 'MDO') value 0.38* carries asterisk, i.e. significantly different from MC-MBRC."
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [
+  {
+   "metric": "AvAcc, F1, CBA, CEN (averages over 20 datasets only, no per-dataset rows; SMOTE row explicitly labeled)",
+   "table": "Table 14 (CART), Table 15 (KNN), Table 16 (MLP)",
+   "classifiers": "CART, KNN, MLP"
+  }
+ ],
+ "metrics_without_smote": [
+  {
+   "metric": "AvAcc, F_betaM, CBA, CEN (main comparison vs MDO, CURE_SMOTE, NRAS, kmeans_SMOTE, MC-CCR)",
+   "table": "Tables 3-7"
+  },
+  {
+   "metric": "AvAcc vs noise level / overlap (figures)",
+   "table": "Figs. 5-7"
+  }
+ ],
+ "notes": "PROBLEM: Appendix A.1 text says MC-MBRC is compared with SMOTE, Random sampling, BLSMOTE, SMOTE-IPF and BoostOBU (Table 8 params) and results are in Tables 9-12 (RF) with averages in Table 13, but Tables 9-13 are printed with the SAME column headers as main Tables 3-7 (MDO, CURE_SMOTE, NRAS, kmeans_SMOTE, MC-CCR, MC-MBRC) while containing DIFFERENT numbers (e.g. automobile AvAcc first col 80.66 in Table 3 vs 81.06 in Table 9). No column is labelled SMOTE. First column was taken as SMOTE because (a) SMOTE is listed first in text and Table 8, and (b) in Tables 14-16 the explicitly labelled SMOTE row is close to SMOTE_IPF and low, matching the pattern of Table 13 col1 (74.96) vs col3 (75.26). This mapping is an inference; downstream should treat it as uncertain or exclude. Column averages of Tables 9-12 recomputed and match Table 13 (74.96/44.97/38.29/0.38 first col; 87.01/58.93/54.54/0.29 MC-MBRC). Bold marks: per paper 'best results in bold'; first column has best_times 0 in all four tables. CEN lower is better. Text-extracted tables (not images) checked against page-10 render."
+}

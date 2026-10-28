@@ -1,0 +1,231 @@
+{
+ "key": "OVO-SMOTE",
+ "classifier": "C4.5",
+ "condition": "10-fold CV, original data, OVO + SMT (balanced 50%, k=5) vs Static-SMT",
+ "proposed_column": "SMT (OVO + SMOTE)",
+ "smote_column": "Static-SMT",
+ "metrics": [
+  {
+   "metric": "Average accuracy (Avg-Acc)",
+   "metric_family": "balanced-accuracy",
+   "table": "Table 7",
+   "page": "PDF page 10 (printed p.106)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "aut",
+     "proposed": "80.11",
+     "proposed_std": null,
+     "smote": "82.04",
+     "smote_std": null,
+     "marks": "Global-CS bold (row best)"
+    },
+    {
+     "dataset_as_printed": "bal",
+     "proposed": "54.29",
+     "proposed_std": null,
+     "smote": "55.30",
+     "smote_std": null,
+     "marks": "AdaB. NC bold (row best)"
+    },
+    {
+     "dataset_as_printed": "cle",
+     "proposed": "33.89",
+     "proposed_std": null,
+     "smote": "24.91",
+     "smote_std": null,
+     "marks": "SMT bold (row best)"
+    },
+    {
+     "dataset_as_printed": "con",
+     "proposed": "50.09",
+     "proposed_std": null,
+     "smote": "47.19",
+     "smote_std": null,
+     "marks": "SMT–ENN bold (row best)"
+    },
+    {
+     "dataset_as_printed": "der",
+     "proposed": "95.61",
+     "proposed_std": null,
+     "smote": "94.83",
+     "smote_std": null,
+     "marks": "CS bold (row best)"
+    },
+    {
+     "dataset_as_printed": "eco",
+     "proposed": "70.99",
+     "proposed_std": null,
+     "smote": "65.15",
+     "smote_std": null,
+     "marks": "AdaB. NC bold (row best)"
+    },
+    {
+     "dataset_as_printed": "fla",
+     "proposed": "64.74",
+     "proposed_std": null,
+     "smote": "64.01",
+     "smote_std": null,
+     "marks": "SMT bold (row best)"
+    },
+    {
+     "dataset_as_printed": "gla",
+     "proposed": "70.84",
+     "proposed_std": null,
+     "smote": "63.71",
+     "smote_std": null,
+     "marks": "AdaB. NC bold (row best)"
+    },
+    {
+     "dataset_as_printed": "hay",
+     "proposed": "83.49",
+     "proposed_std": null,
+     "smote": "86.03",
+     "smote_std": null,
+     "marks": "AdaB. NC bold (row best)"
+    },
+    {
+     "dataset_as_printed": "led",
+     "proposed": "71.64",
+     "proposed_std": null,
+     "smote": "72.55",
+     "smote_std": null,
+     "marks": "Static-SMT bold (row best)"
+    },
+    {
+     "dataset_as_printed": "lym",
+     "proposed": "60.91",
+     "proposed_std": null,
+     "smote": "67.81",
+     "smote_std": null,
+     "marks": "ROS bold (row best)"
+    },
+    {
+     "dataset_as_printed": "new",
+     "proposed": "92.50",
+     "proposed_std": null,
+     "smote": "90.56",
+     "smote_std": null,
+     "marks": "AdaB. NC bold (row best)"
+    },
+    {
+     "dataset_as_printed": "nur",
+     "proposed": "94.07",
+     "proposed_std": null,
+     "smote": "87.76",
+     "smote_std": null,
+     "marks": "SMT bold (row best)"
+    },
+    {
+     "dataset_as_printed": "pag",
+     "proposed": "90.24",
+     "proposed_std": null,
+     "smote": "85.55",
+     "smote_std": null,
+     "marks": "ROS bold (row best)"
+    },
+    {
+     "dataset_as_printed": "pos",
+     "proposed": "48.33",
+     "proposed_std": null,
+     "smote": "21.34",
+     "smote_std": null,
+     "marks": "SL-SMT bold (row best)"
+    },
+    {
+     "dataset_as_printed": "sat",
+     "proposed": "84.18",
+     "proposed_std": null,
+     "smote": "83.19",
+     "smote_std": null,
+     "marks": "AdaB. NC bold (row best)"
+    },
+    {
+     "dataset_as_printed": "shu",
+     "proposed": "96.84",
+     "proposed_std": null,
+     "smote": "95.05",
+     "smote_std": null,
+     "marks": "Global-CS bold (row best)"
+    },
+    {
+     "dataset_as_printed": "spl",
+     "proposed": "94.88",
+     "proposed_std": null,
+     "smote": "94.33",
+     "smote_std": null,
+     "marks": "CS bold (row best)"
+    },
+    {
+     "dataset_as_printed": "thy",
+     "proposed": "99.28",
+     "proposed_std": null,
+     "smote": "98.65",
+     "smote_std": null,
+     "marks": "SMT bold (row best)"
+    },
+    {
+     "dataset_as_printed": "win",
+     "proposed": "92.02",
+     "proposed_std": null,
+     "smote": "94.24",
+     "smote_std": null,
+     "marks": "AdaB. NC bold (row best)"
+    },
+    {
+     "dataset_as_printed": "wqr",
+     "proposed": "34.01",
+     "proposed_std": null,
+     "smote": "31.87",
+     "smote_std": null,
+     "marks": "AdaB. NC bold (row best)"
+    },
+    {
+     "dataset_as_printed": "wqw",
+     "proposed": "42.35",
+     "proposed_std": null,
+     "smote": "38.78",
+     "smote_std": null,
+     "marks": "AdaB. NC bold (row best)"
+    },
+    {
+     "dataset_as_printed": "yea",
+     "proposed": "52.10",
+     "proposed_std": null,
+     "smote": "51.77",
+     "smote_std": null,
+     "marks": "AdaB. NC bold (row best)"
+    },
+    {
+     "dataset_as_printed": "zoo",
+     "proposed": "88.45",
+     "proposed_std": null,
+     "smote": "87.64",
+     "smote_std": null,
+     "marks": "AdaB. NC bold (row best)"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "avg",
+      "proposed": "72.74",
+      "smote": "70.18"
+     },
+     {
+      "label": "Table 6 C4.5 Avg. rank (lower better; rank position in parentheses)",
+      "proposed": "(2) 94.98",
+      "smote": "(9) 148.90"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Table 8 Wilcoxon (C4.5), p-value for OVO+SMT (column SMT) vs Static-SMT (row): 0.0357. Text: 'Static-SMT is clearly outperformed by ROS, SL-SMT, SMT and CS'."
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [],
+ "metrics_without_smote": [],
+ "notes": "Only metric with per-dataset tables is average accuracy (Tables 7/9/11 for C4.5/SVM/kNN); mean f-measure results mentioned only as on the associated web-page, not in paper. Smote column = Static-SMT as in existing extraction (paper's non-binarized SMOTE baseline); SMT column is OVO+SMOTE. Column mapping verified on rendered page. 'fla' printed with fl ligature. Bold marks = best per row among all 10 columns."
+}

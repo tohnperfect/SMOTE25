@@ -7,7 +7,7 @@
   },
   "outcomes": {
    "path": "out/verified_outcomes.csv",
-   "sha256": "5b39338d3938eb4d12e7f4f1cfa445ad834c7d5e3c667ba7e8a6ad495889b3d6"
+   "sha256": "370abda782a5b894d6dfa0eb3114dc638e8f6ab7df8a504d49ebb2af5f50eceb"
   },
   "summary": {
    "path": "out/full_summary.json",
@@ -33,14 +33,285 @@
   "distinct_names_incl_placeholder": 772,
   "single_paper_names_incl_placeholder": 547,
   "distinct_if_all_punctuation_removed": 678,
-  "norm_definition": "lower-case; drop text in parentheses; collapse underscores and whitespace; hyphens and dots kept"
+  "norm_definition": "lower-case; drop text in parentheses; collapse underscores and whitespace; hyphens and dots kept",
+  "t1_rule": "T1 (Toon, 28 Oct 2026): names differing only by '-', '_', spaces or dots are one dataset; numbered or split versions belong to their main set's family; non-standard names are not merged (build/family_rule.py)",
+  "datasets_t1": 680,
+  "single_paper_datasets_t1": 463,
+  "families_t1": 459,
+  "single_paper_families_t1": 323
+ },
+ "size_variation": {
+  "names": {
+   "with_size_in_2plus_papers": 198,
+   "with_more_than_one_size": 78,
+   "examples": {
+    "thyroid": {
+     "papers": 9,
+     "sizes": [
+      "720",
+      "7200"
+     ],
+     "papers_per_size": {
+      "7200": [
+       "AMDO",
+       "MC-CCR",
+       "MC-RBO",
+       "NROMM",
+       "OVO-SMOTE"
+      ],
+      "720": [
+       "GDHS",
+       "MC-MBRC",
+       "MC-NCLWO",
+       "SCUT"
+      ]
+     }
+    },
+    "dermatology": {
+     "papers": 10,
+     "sizes": [
+      "358",
+      "366"
+     ],
+     "papers_per_size": {
+      "366": [
+       "GLOS",
+       "SCUT"
+      ],
+      "358": [
+       "AMDO",
+       "EMDO",
+       "G-SMOTE",
+       "MC-CCR",
+       "MC-NCLWO",
+       "MC-RBO",
+       "NROMM",
+       "OVO-SMOTE"
+      ]
+     }
+    },
+    "ecoli": {
+     "papers": 20,
+     "sizes": [
+      "301",
+      "310",
+      "327",
+      "336"
+     ],
+     "papers_per_size": {
+      "336": [
+       "A-SUWO",
+       "FW-SMOTE",
+       "G-SMOTE",
+       "MC-CCR",
+       "MC-MBRC",
+       "MC-NCLWO",
+       "MC-RBO",
+       "MKC-SMOTE",
+       "MWMOTE",
+       "NROMM",
+       "OVO-SMOTE",
+       "RSMOTE",
+       "SCUT",
+       "SMOTE-IPF",
+       "k-means SMOTE"
+      ],
+      "301": [
+       "G-SMOTE"
+      ],
+      "310": [
+       "G-SMOTE"
+      ],
+      "327": [
+       "AMDO",
+       "EMDO",
+       "GLOS",
+       "MDO",
+       "SMOM"
+      ]
+     }
+    },
+    "pima": {
+     "papers": 17,
+     "sizes": [
+      "590",
+      "635",
+      "768",
+      "769"
+     ],
+     "papers_per_size": {
+      "635": [
+       "G-SMOTE"
+      ],
+      "590": [
+       "G-SMOTE"
+      ],
+      "768": [
+       "A-SUWO",
+       "Borderline-SMOTE",
+       "CISO",
+       "EasyEnsemble / BalanceCascade",
+       "KNNOR",
+       "LS",
+       "MWMOTE",
+       "NBU",
+       "OBU",
+       "RBBoost / Random Balance",
+       "RBO",
+       "RSMOTE",
+       "SMOTE",
+       "SMOTE-ENN / SMOTE-Tomek",
+       "SMOTE-IPF",
+       "k-means SMOTE"
+      ],
+      "769": [
+       "G-SMOTE"
+      ]
+     }
+    }
+   }
+  },
+  "datasets_t1": {
+   "with_size_in_2plus_papers": 192,
+   "with_more_than_one_size": 90,
+   "examples": {
+    "thyroid": {
+     "papers": 9,
+     "sizes": [
+      "720",
+      "7200"
+     ],
+     "papers_per_size": {
+      "7200": [
+       "AMDO",
+       "MC-CCR",
+       "MC-RBO",
+       "NROMM",
+       "OVO-SMOTE"
+      ],
+      "720": [
+       "GDHS",
+       "MC-MBRC",
+       "MC-NCLWO",
+       "SCUT"
+      ]
+     }
+    },
+    "dermatology": {
+     "papers": 10,
+     "sizes": [
+      "358",
+      "366"
+     ],
+     "papers_per_size": {
+      "366": [
+       "GLOS",
+       "SCUT"
+      ],
+      "358": [
+       "AMDO",
+       "EMDO",
+       "G-SMOTE",
+       "MC-CCR",
+       "MC-NCLWO",
+       "MC-RBO",
+       "NROMM",
+       "OVO-SMOTE"
+      ]
+     }
+    },
+    "ecoli": {
+     "papers": 23,
+     "sizes": [
+      "301",
+      "310",
+      "327",
+      "336"
+     ],
+     "papers_per_size": {
+      "336": [
+       "A-SUWO",
+       "DSRBF / Static-SMOTE",
+       "FW-SMOTE",
+       "G-SMOTE",
+       "MBS",
+       "MC-CCR",
+       "MC-MBRC",
+       "MC-NCLWO",
+       "MC-RBO",
+       "MKC-SMOTE",
+       "MWMOTE",
+       "NROMM",
+       "OVO-SMOTE",
+       "RSMOTE",
+       "SCUT",
+       "SMOTE-ENN / SMOTE-Tomek",
+       "SMOTE-IPF",
+       "k-means SMOTE"
+      ],
+      "301": [
+       "G-SMOTE"
+      ],
+      "310": [
+       "G-SMOTE"
+      ],
+      "327": [
+       "AMDO",
+       "EMDO",
+       "GLOS",
+       "MDO",
+       "SMOM"
+      ]
+     }
+    },
+    "pima": {
+     "papers": 17,
+     "sizes": [
+      "590",
+      "635",
+      "768",
+      "769"
+     ],
+     "papers_per_size": {
+      "635": [
+       "G-SMOTE"
+      ],
+      "590": [
+       "G-SMOTE"
+      ],
+      "768": [
+       "A-SUWO",
+       "Borderline-SMOTE",
+       "CISO",
+       "EasyEnsemble / BalanceCascade",
+       "KNNOR",
+       "LS",
+       "MWMOTE",
+       "NBU",
+       "OBU",
+       "RBBoost / Random Balance",
+       "RBO",
+       "RSMOTE",
+       "SMOTE",
+       "SMOTE-ENN / SMOTE-Tomek",
+       "SMOTE-IPF",
+       "k-means SMOTE"
+      ],
+      "769": [
+       "G-SMOTE"
+      ]
+     }
+    }
+   }
+  }
  },
  "name_frequencies": {
-  "rule": "R3: papers per name; exact = norm(name)==f, family = norm(name).startswith(f)",
+  "rule": "R3 (revised 28 Oct 2026, rule T1): exact = norm(name)==f; dataset = same T1 dataset key (punctuation ignored); family = T1 family (split versions included, non-standard names excluded); the earlier prefix count is kept as family_prefix_papers_superseded",
   "yeast": {
    "exact_name_papers": 22,
-   "family_prefix_papers": 39,
-   "prefix_name_keys": [
+   "dataset_papers": 22,
+   "family_papers": 39,
+   "family_name_keys": [
     "yeast",
     "yeast 1",
     "yeast 3",
@@ -103,7 +374,7 @@
     "SOUP",
     "SVDD-WSMOTE"
    ],
-   "papers_only_via_prefix": [
+   "papers_only_via_family": [
     "CBHSID",
     "CISO",
     "FW-SMOTE",
@@ -121,12 +392,16 @@
     "SplitBal",
     "Survey: Stop Oversampling",
     "k-means SMOTE"
-   ]
+   ],
+   "family_prefix_papers_superseded": 39
   },
   "ecoli": {
    "exact_name_papers": 26,
-   "family_prefix_papers": 39,
-   "prefix_name_keys": [
+   "dataset_papers": 29,
+   "family_papers": 42,
+   "family_name_keys": [
+    "e. coli",
+    "e.coli",
     "ecoli",
     "ecoli-0 vs 1",
     "ecoli-0-1 vs 2-3-5",
@@ -196,12 +471,14 @@
     "SVDD-WSMOTE",
     "k-means SMOTE"
    ],
-   "papers_only_via_prefix": [
+   "papers_only_via_family": [
     "CISO",
+    "DSRBF / Static-SMOTE",
     "GDO",
     "HDE",
     "KNNOR",
     "Loyalty-SMOTE",
+    "MBS",
     "NBU",
     "OBU",
     "QC-SMOTE",
@@ -209,15 +486,17 @@
     "RBBoost / Random Balance",
     "RBO",
     "RUSBoost",
+    "SMOTE-ENN / SMOTE-Tomek",
     "SplitBal"
-   ]
+   ],
+   "family_prefix_papers_superseded": 39
   },
   "glass": {
    "exact_name_papers": 19,
-   "family_prefix_papers": 36,
-   "prefix_name_keys": [
+   "dataset_papers": 19,
+   "family_papers": 35,
+   "family_name_keys": [
     "glass",
-    "glass identification",
     "glass-0-1-2-3 vs 4-5-6",
     "glass-0-1-4-6 vs 2",
     "glass-0-1-5 vs 2",
@@ -261,7 +540,7 @@
     "SOUP",
     "k-means SMOTE"
    ],
-   "papers_only_via_prefix": [
+   "papers_only_via_family": [
     "CBHSID",
     "CISO",
     "DLexiBoost",
@@ -270,7 +549,6 @@
     "HDE",
     "KNNOR",
     "Loyalty-SMOTE",
-    "MKC-SMOTE",
     "MLOS",
     "NBU",
     "OBU",
@@ -279,7 +557,8 @@
     "RBO",
     "RUSBoost",
     "SplitBal"
-   ]
+   ],
+   "family_prefix_papers_superseded": 36
   }
  },
  "outcomes": {
@@ -329,16 +608,16 @@
     "equal": 4
    },
    "not stated": {
-    "rows": 104,
+    "rows": 105,
     "papers": 13,
-    "proposed_higher": 82,
+    "proposed_higher": 83,
     "smote_higher": 9,
     "equal": 13
    },
    "original": {
-    "rows": 167,
+    "rows": 166,
     "papers": 26,
-    "proposed_higher": 133,
+    "proposed_higher": 132,
     "smote_higher": 29,
     "equal": 5
    },
@@ -365,9 +644,9 @@
    }
   },
   "plain_per_dataset_standard": {
-   "rows": 286,
+   "rows": 285,
    "papers": 29,
-   "proposed_higher": 223,
+   "proposed_higher": 222,
    "smote_higher": 42,
    "equal": 21,
    "papers_with_standard_rows": 29,
@@ -865,16 +1144,16 @@
      "equal": 4
     },
     "not stated": {
-     "rows": 104,
+     "rows": 105,
      "papers": 13,
-     "proposed_higher": 82,
+     "proposed_higher": 83,
      "smote_higher": 9,
      "equal": 13
     },
     "original": {
-     "rows": 167,
+     "rows": 166,
      "papers": 26,
-     "proposed_higher": 133,
+     "proposed_higher": 132,
      "smote_higher": 29,
      "equal": 5
     },
@@ -976,6 +1255,11 @@
   "unassigned_rows": 0
  },
  "checks": {
+  "datasets_t1": {
+   "expected": 680,
+   "got": 680,
+   "ok": true
+  },
   "distinct_names": {
    "expected": 771,
    "got": 771,
@@ -987,8 +1271,8 @@
    "ok": true
   },
   "ecoli_family_papers": {
-   "expected": 39,
-   "got": 39,
+   "expected": 42,
+   "got": 42,
    "ok": true
   },
   "entries_named": {
@@ -1031,9 +1315,14 @@
    "got": 87,
    "ok": true
   },
+  "families_t1": {
+   "expected": 459,
+   "got": 459,
+   "ok": true
+  },
   "glass_family_papers": {
-   "expected": 36,
-   "got": 36,
+   "expected": 35,
+   "got": 35,
    "ok": true
   },
   "outcome_papers_plain_incl_aggregate": {
@@ -1099,6 +1388,26 @@
   "single_paper_names_incl_placeholder": {
    "expected": 547,
    "got": 547,
+   "ok": true
+  },
+  "size_var_datasets_2plus": {
+   "expected": 192,
+   "got": 192,
+   "ok": true
+  },
+  "size_var_datasets_multi": {
+   "expected": 90,
+   "got": 90,
+   "ok": true
+  },
+  "size_var_names_2plus": {
+   "expected": 198,
+   "got": 198,
+   "ok": true
+  },
+  "size_var_names_multi": {
+   "expected": 78,
+   "got": 78,
    "ok": true
   },
   "wrapper_eligible_equal": {

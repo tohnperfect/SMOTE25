@@ -1,0 +1,34 @@
+{
+ "key": "MDO",
+ "smote_in_baselines": "yes",
+ "smote_name_as_printed": "SMOTE",
+ "baselines_all": ["SMOTE", "random over-sampling (ROS)", "Borderline-SMOTE (B-S)", "ADASYN"],
+ "results_tables": [
+  {"table": "Table 2", "page": "PDF p.10 (journal p.247)", "metric": "MAUC, G-mean, Precision, Recall, F-measure (mean ranks)", "classifier": "C4.5", "granularity": "ranking only", "is_image": false},
+  {"table": "Table 3", "page": "PDF p.10 (journal p.247)", "metric": "MAUC, G-mean, Precision, Recall, F-measure (Friedman + Bonferroni-Dunn rank differences vs MDO)", "classifier": "C4.5", "granularity": "ranking only", "is_image": false},
+  {"table": "Table 4", "page": "PDF p.10 (journal p.247)", "metric": "MAUC, G-mean, Precision, Recall, F-measure (mean ranks)", "classifier": "KNN", "granularity": "ranking only", "is_image": false},
+  {"table": "Table 5", "page": "PDF p.10 (journal p.247)", "metric": "MAUC, G-mean, Precision, Recall, F-measure (Friedman + Bonferroni-Dunn rank differences vs MDO)", "classifier": "KNN", "granularity": "ranking only", "is_image": false},
+  {"table": "Table 6", "page": "PDF p.10 (journal p.247)", "metric": "MAUC, G-mean, Precision, Recall, F-measure (mean ranks)", "classifier": "Ripper", "granularity": "ranking only", "is_image": false},
+  {"table": "Table 7", "page": "PDF p.10 (journal p.247)", "metric": "MAUC, G-mean, Precision, Recall, F-measure (Friedman + Bonferroni-Dunn rank differences vs MDO)", "classifier": "Ripper", "granularity": "ranking only", "is_image": false}
+ ],
+ "chosen": {
+  "table": "Table 2",
+  "page": "PDF p.10 (journal p.247)",
+  "metric": "G-mean (mean rank over 20 data sets)",
+  "classifier": "C4.5",
+  "condition": "original data sets (no condition varied)",
+  "higher_is_better": false,
+  "why_this_choice": "Rule 3: no per-dataset results table exists for any metric, so the highest-priority metric (G-mean) is taken from the ranking table. Rule 4: abstract highlights no classifier; C4.5 is the first reported (Tables 2-3). higher_is_better=false because values are mean ranks (rank 1 = best)."
+ },
+ "rows": [],
+ "summary_rows": [
+  {"label": "Avg rank (G-mean, C4.5, Table 2)", "proposed": "1.9500", "smote": "2.3750"},
+  {"label": "Avg rank (MAUC, C4.5, Table 2)", "proposed": "1.1750", "smote": "2.2250"},
+  {"label": "Avg rank (F-measure, C4.5, Table 2)", "proposed": "1.9000", "smote": "2.7250"},
+  {"label": "Bonferroni-Dunn mean-rank difference MDO vs SMOTE (G-mean, C4.5, Table 3; CD = 1.2490)", "proposed": "control", "smote": "0.4250"},
+  {"label": "Bonferroni-Dunn mean-rank difference MDO vs SMOTE (MAUC, C4.5, Table 3; CD = 1.2490)", "proposed": "control", "smote": "1.0500"}
+ ],
+ "stat_test": "Iman-Davenport improved Friedman test (F_F) over 5 over-sampling methods x 20 data sets, with Bonferroni-Dunn post-hoc test using MDO as control (q_0.05 = 2.4980, CD = 1.2490); done per metric (MAUC, G-mean, precision, recall, F-measure) and per classifier (C4.5, KNN, Ripper). Friedman null rejected in all cases.",
+ "win_claim": {"quote": "Our theoretical analyses and empirical observations across wide spectrum multi-class imbalanced benchmarks indicate that MDO is the method of choice by offering statistical superior MAUC and precision compared to the popular over-sampling techniques.", "page": "PDF p.1 (abstract)"},
+ "notes": "Paper reports NO per-dataset metric values: only mean ranks (Tables 2, 4, 6) and Friedman/post-hoc rank differences (Tables 3, 5, 7), so rows is empty. Table 1 (PDF p.9, journal p.246) lists 20 UCI/KEEL data sets (e.g. Breast-tissue, Hayes-roth, Wine, Autos, ..., winequality-white, Letter). Precision/recall/F-measure are computed for the minority class only; G-mean is multi-class extended G-mean, MAUC is Hand-Till M-measure. Protocol: stratified 5-fold CV x 10 runs, Weka classifiers. Other classifiers' G-mean mean ranks (MDO / SMOTE): KNN Table 4 2.1000 / 2.4750; Ripper Table 6 2.1000 / 2.7750. Boldface significance marks in Tables 3/5/7 not verifiable from text extraction (pages not rendered). Single method, no variants."
+}

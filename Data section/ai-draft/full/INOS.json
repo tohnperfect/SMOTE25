@@ -1,0 +1,247 @@
+{
+ "key": "INOS",
+ "pdf_file_read": "INOS - Integrated Oversampling for Imbalanced Time Series Classification (IEEE TKDE 2013).pdf",
+ "task": "binary",
+ "n_datasets_claimed": 7,
+ "characteristics_table": "Table 1, p.7 (printed 2815)",
+ "datasets": [
+  {
+   "name": "Adiac",
+   "group": "UCR time series; 10 apportions",
+   "source_repo": "UCR",
+   "n_instances": null,
+   "n_features": 176,
+   "n_classes": 2,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": "Training #Pos 10 / #Neg 380; Test #Pos 10~15 / #Neg 376~381",
+   "ir_printed": "38",
+   "how_obtained": "modified",
+   "how_obtained_detail": "originally 37 classes; one class selected as positive, remaining classes form negative (stated p.8); train/test divided randomly by authors; #Apportions = 10",
+   "in_results_table": "yes",
+   "ref": "Table 1, p.7 (printed 2815); text p.8"
+  },
+  {
+   "name": "FaceAll",
+   "group": "UCR time series; 10 apportions",
+   "source_repo": "UCR",
+   "n_instances": null,
+   "n_features": 131,
+   "n_classes": 2,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": "Training #Pos 50 / #Neg 1000; Test #Pos 62~223 / #Neg 977~1138",
+   "ir_printed": "20",
+   "how_obtained": "modified",
+   "how_obtained_detail": "originally 14 classes; one class selected as positive, remaining classes form negative (stated p.8); train/test divided randomly by authors; #Apportions = 10",
+   "in_results_table": "yes",
+   "ref": "Table 1, p.7 (printed 2815); text p.8"
+  },
+  {
+   "name": "50Words",
+   "group": "UCR time series; 10 apportions",
+   "source_repo": "UCR",
+   "n_instances": null,
+   "n_features": 270,
+   "n_classes": 2,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": "Training #Pos 10~50 / #Neg 400; Test #Pos 12~59 / #Neg 396~483",
+   "ir_printed": "8~40",
+   "how_obtained": "modified",
+   "how_obtained_detail": "originally 50 classes; one class selected as positive, remaining classes form negative (stated p.8); train/test divided randomly by authors; #Apportions = 10",
+   "in_results_table": "yes",
+   "ref": "Table 1, p.7 (printed 2815); text p.8"
+  },
+  {
+   "name": "SLeaf",
+   "group": "UCR time series; 10 apportions",
+   "source_repo": "UCR",
+   "n_instances": null,
+   "n_features": 128,
+   "n_classes": 2,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": "Training #Pos 35 / #Neg 450; Test #Pos 40~50 / #Neg 250~600",
+   "ir_printed": "12.9",
+   "how_obtained": "modified",
+   "how_obtained_detail": "'Swedish Leaf'; originally 15 classes; one class selected as positive, remaining classes form negative (stated p.8); train/test divided randomly by authors; #Apportions = 10",
+   "in_results_table": "yes",
+   "ref": "Table 1, p.7 (printed 2815); text p.8"
+  },
+  {
+   "name": "TwoPats",
+   "group": "UCR time series; 4 apportions",
+   "source_repo": "UCR",
+   "n_instances": null,
+   "n_features": 128,
+   "n_classes": 2,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": "Training #Pos 50 / #Neg 1800; Test #Pos 1151~1256 / #Neg 1894~1999",
+   "ir_printed": "36",
+   "how_obtained": "modified",
+   "how_obtained_detail": "original class count and positive-class choice not stated in paper; authors chose #Pos training counts (round numbers, <=50% of available positives); train/test divided randomly by authors; #Apportions = 4",
+   "in_results_table": "yes",
+   "ref": "Table 1, p.7 (printed 2815); text p.8"
+  },
+  {
+   "name": "Wafer",
+   "group": "UCR time series; 2 apportions",
+   "source_repo": "UCR",
+   "n_instances": null,
+   "n_features": 152,
+   "n_classes": 2,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": "Training #Pos 50 / #Neg 380-3000; Test #Pos 712~6532 / #Neg 382~3402",
+   "ir_printed": "7.6-60",
+   "how_obtained": "modified",
+   "how_obtained_detail": "original class count not stated; authors chose #Pos training counts (round numbers, <=50% of available positives); train/test divided randomly by authors; #Apportions = 2",
+   "in_results_table": "yes",
+   "ref": "Table 1, p.7 (printed 2815); text p.8"
+  },
+  {
+   "name": "Yoga",
+   "group": "UCR time series; 2 apportions",
+   "source_repo": "UCR",
+   "n_instances": null,
+   "n_features": 426,
+   "n_classes": 2,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": "Training #Pos 50 / #Neg 800~900; Test #Pos 1480~1720 / #Neg 730~870",
+   "ir_printed": "16~18",
+   "how_obtained": "modified",
+   "how_obtained_detail": "original class count not stated; authors chose #Pos training counts (round numbers, <=50% of available positives); train/test divided randomly by authors; #Apportions = 2",
+   "in_results_table": "yes",
+   "ref": "Table 1, p.7 (printed 2815); text p.8"
+  }
+ ],
+ "ir_definition": "IM-ratio: 'the number of negative samples divided by the number of positive samples' (computed on training set per Table 1)",
+ "ir_definition_ref": "p.8",
+ "outcome": {
+  "smote_in_baselines": "yes",
+  "smote_name_as_printed": "SMOTE",
+  "baselines_all": [
+   "Repeat",
+   "SMOTE",
+   "B-SMOTE",
+   "ADASYN",
+   "DataBoost",
+   "SPO",
+   "EasyEnsemble (Easy)",
+   "BalanceCascade (Bal.)",
+   "1NN",
+   "1NN DTW"
+  ],
+  "results_granularity": "per-dataset",
+  "chosen": {
+   "table": "Table 2",
+   "page": "p.9 (printed 2817)",
+   "metric": "G-Mean",
+   "classifier": "SVM (RBF kernel)",
+   "condition": "main suite; values averaged over each dataset's apportions; r=0.7",
+   "higher_is_better": true,
+   "is_image": true
+  },
+  "rows": [
+   {
+    "dataset_as_printed": "Adiac",
+    "proposed": ".882",
+    "proposed_std": ".0023",
+    "smote": ".807",
+    "smote_std": ".0001",
+    "best_other_value": ".872±.0014",
+    "best_other_name": "SPO",
+    "marks": "INOS bold"
+   },
+   {
+    "dataset_as_printed": "FaceAll",
+    "proposed": ".945",
+    "proposed_std": ".0004",
+    "smote": ".916",
+    "smote_std": ".0004",
+    "best_other_value": ".946±.003",
+    "best_other_name": "SPO",
+    "marks": "SPO bold"
+   },
+   {
+    "dataset_as_printed": "50Words",
+    "proposed": ".880",
+    "proposed_std": ".0006",
+    "smote": ".863",
+    "smote_std": ".0008",
+    "best_other_value": ".877±.0009",
+    "best_other_name": "SPO",
+    "marks": "INOS bold"
+   },
+   {
+    "dataset_as_printed": "SLeaf",
+    "proposed": ".962",
+    "proposed_std": ".0008",
+    "smote": ".933",
+    "smote_std": ".0009",
+    "best_other_value": ".959±.0009",
+    "best_other_name": "SPO",
+    "marks": "INOS bold"
+   },
+   {
+    "dataset_as_printed": "TwoPats",
+    "proposed": ".614",
+    "proposed_std": ".0020",
+    "smote": ".467",
+    "smote_std": ".0015",
+    "best_other_value": ".561±.0015",
+    "best_other_name": "SPO",
+    "marks": "INOS bold"
+   },
+   {
+    "dataset_as_printed": "Wafer",
+    "proposed": ".985",
+    "proposed_std": ".0005",
+    "smote": ".966",
+    "smote_std": ".0010",
+    "best_other_value": ".984±.0005",
+    "best_other_name": "SPO",
+    "marks": "INOS bold"
+   },
+   {
+    "dataset_as_printed": "Yoga",
+    "proposed": ".750",
+    "proposed_std": ".0030",
+    "smote": ".720",
+    "smote_std": ".0025",
+    "best_other_value": ".733±.0025",
+    "best_other_name": "SPO",
+    "marks": "INOS bold"
+   }
+  ],
+  "summary_rows": [
+   {
+    "label": "Average (G-Mean, Table 2)",
+    "proposed": ".860±.0014",
+    "smote": ".810±.0011"
+   },
+   {
+    "label": "Average (F-Value, Table 2)",
+    "proposed": ".810±.0020",
+    "smote": ".760±.0015"
+   }
+  ],
+  "stat_test": "none reported (text says 'significantly better' p.8 but no test named)",
+  "win_claim": {
+   "quote": "Extensive experiments based on seven public time series data sets demonstrate that our INOS approach, used with support vector machines (SVM), achieved better performance over existing oversampling methods",
+   "page": "p.1"
+  }
+ },
+ "uncertain": [
+  "Meaning of ± in Table 2 not defined in paper (stored as std); p.9",
+  "Table 2 values appear to be averages over each dataset's apportions (10/10/10/10/4/2/2) - stated only implicitly; p.8-9",
+  "n_instances/n_minority/n_majority left null: Table 1 gives training/test counts, often as ranges across apportions; p.7",
+  "TwoPats, Wafer, Yoga: original number of classes and which class is positive not stated in paper; marked 'modified' because authors chose #Pos and split; p.8",
+  "Wafer #Neg printed '380-3000' and IM-Ratio '7.6-60' with hyphen (other rows use '~'); copied as printed; p.7",
+  "n_classes=2 refers to the constructed binary apportions, not the original UCR class counts; p.8"
+ ],
+ "notes": "Folder 'Both' but paper is binary only (two-class apportions). 48 imbalanced apportions built from 7 UCR datasets; apportioned data shared at http://sites.google.com/site/sstarcao/ (not fetched). Table 2 (image) gives per-dataset F-Value, G-Mean, Precision, Recall, TNR for Repeat/SMOTE/B-SMOTE/ADASYN/DataBoost/SPO/INOS with SVM. Tables 3 (Adiac) and 4 (Yoga) give per-apportion F-Value/G-Mean incl. SMO(TE); Table 5 integration variants (ESPO+SMO 70%); Table 6 compares INOS vs Easy/Bal./1NN/1NN DTW (no SMOTE). Additional 7 UCR datasets (CBF, Synthetic Control, OSU Leaf, Fish, Gun-Point, Trace, ECG) results only online at https://sites.google.com/site/sstarcao/publication/journal-papers (not fetched). INOS = ESPO (r=0.7) + ADASYN (30%) + noise-link cleaning; SVM RBF with (C,g) grid search. Without oversampling avg F-Value 72.9%, G-Mean 77.7% (p.10)."
+}

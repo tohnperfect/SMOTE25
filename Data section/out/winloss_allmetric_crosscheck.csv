@@ -1,0 +1,840 @@
+paper,dataset,old_proposed,new_proposed,old_smote,new_smote,status
+A-SUWO,Vehicle,0.976,0.976,0.969,0.969,match
+A-SUWO,Ecoli,0.940,0.940,0.940,0.940,match
+A-SUWO,Pima,0.734,0.734,0.678,0.678,match
+A-SUWO,Balance,0.548,0.548,0.358,0.358,match
+A-SUWO,Liver,0.659,0.659,0.655,0.655,match
+A-SUWO,Wine,0.981,0.981,0.978,0.978,match
+A-SUWO,Breast,0.748,0.748,0.722,0.722,match
+A-SUWO,Libra,0.723,0.723,0.756,0.756,match
+A-SUWO,LEV,0.804,0.804,0.746,0.746,match
+A-SUWO,Iris,0.972,0.972,0.972,0.972,match
+A-SUWO,Heart,0.829,0.829,0.816,0.816,match
+A-SUWO,Glass,0.828,0.828,0.813,0.813,match
+A-SUWO,Haber,0.571,0.571,0.571,0.571,match
+A-SUWO,Eucal.,0.617,0.617,0.335,0.335,match
+A-SUWO,Heating,0.865,0.865,0.690,0.690,match
+A-SUWO,Seg.,0.948,0.948,0.956,0.956,match
+AB-SMOTE,Abalone9-18 (Table IV),0.493,0.493,0.474,0.474,match
+AB-SMOTE,Customer Churn (Table V),0.704,0.704,0.749,0.749,match
+AB-SMOTE,Harberman (Table VI),0.575,0.575,0.643,0.643,match
+AB-SMOTE,Employee Attrition (Table VII),0.603,0.603,0.58,0.58,match
+AB-SMOTE,Telco Customer Churn (Table VIII),0.678,0.678,0.731,0.731,match
+AB-SMOTE,Flare (Table IX),0.421,0.421,0.47,0.47,match
+AB-SMOTE,Wine Quality (Table X),0.215,0.215,0.215,0.215,match
+AB-SMOTE,Sales: Win Loss (Table XI),0.826,0.826,0.838,0.838,match
+ADASYN,Vehicle,0.9168,0.9168,0.9018,0.9018,match
+ADASYN,Pima Indian Diabetes,0.6625,0.6625,0.6454,0.6454,match
+ADASYN,Vowel recognition,0.9622,0.9622,0.9470,0.9470,match
+ADASYN,Ionosphere,0.8530,0.8530,0.8489,0.8489,match
+ADASYN,Abalone,0.6291,0.6291,0.5588,0.5588,match
+AMDO,Balance,70.27,70.27,68.39,68.39,match
+AMDO,Hayes-roth,88.73,88.73,88.73,88.73,match
+AMDO,New-thyroid,97.40,97.40,94.40,94.40,match
+AMDO,Page-blocks,92.98,92.98,93.51,93.51,match
+AMDO,Dermatology,98.13,98.13,97.19,97.19,match
+AMDO,Breast-tissue,77.93,77.93,79.50,79.50,match
+AMDO,UKM,96.15,96.15,94.52,94.52,match
+AMDO,Vertebral-column,86.42,86.42,82.75,82.75,match
+AMDO,Ecoli,89.03,89.03,83.20,83.20,match
+AMDO,Pre2D,82.86,82.86,90.35,90.35,match
+AMDO,Contraceptive,64.39,64.39,63.89,63.89,match
+AMDO,Flare,78.07,78.07,75.14,75.14,match
+AMDO,Thyroid,96.75,96.75,98.29,98.29,match
+AMDO,Car,94.64,94.64,86.92,86.92,match
+AMDO,Nursery,97.16,97.16,92.87,92.87,match
+AMDO,Splice,96.09,96.09,95.69,95.69,match
+AMDO,PreND,96.70,96.70,95.43,95.43,match
+CBHSID,River,0.6652,0.6652,0.6268,0.6268,match
+CBHSID,Pima,0.7546,0.7546,0.7326,0.7326,match
+CBHSID,Cancer,0.9656,0.9656,0.9602,0.9602,match
+CBHSID,Heart failure,0.7710,0.7710,0.7606,0.7606,match
+CBHSID,Yeast1,0.7336,0.7336,0.7158,0.7158,match
+CBHSID,Haberman,0.6906,0.6906,0.6488,0.6488,match
+CBHSID,Vehicle1,0.7660,0.7660,0.8090,0.8090,match
+CBHSID,Glass6,0.9544,0.9544,0.9070,0.9070,match
+CBHSID,Yeast3,0.8496,0.8496,0.8734,0.8734,match
+CBHSID,Yeast4,0.8006,0.8006,0.6570,0.6570,match
+CBHSID,Yeast5,0.9680,0.9680,0.9262,0.9262,match
+CBHSID,Yeast6,0.9066,0.9066,0.8334,0.8334,match
+CBHSID,Penbased,0.9742,0.9742,0.9698,0.9698,match
+CBHSID,Contraceptive,0.5668,0.5668,0.5646,0.5646,match
+CBHSID,Dermatology,0.9814,0.9814,0.9852,0.9852,match
+CBHSID,Thyroid,0.7246,0.7246,0.6818,0.6818,match
+CGMOS,BankMarket,0.728,0.728,0.718,0.718,match
+CGMOS,BloodService,0.733,0.733,0.649,0.649,match
+CGMOS,BreastCancer,0.992,0.992,0.992,0.992,match
+CGMOS,BreastTissue,0.984,0.984,0.932,0.932,match
+CGMOS,CarEvaluation,0.997,0.997,0.997,0.997,match
+CGMOS,Card’graphy,0.977,0.977,0.962,0.962,match
+CGMOS,CharacterTraj,0.985,0.985,0.985,0.985,match
+CGMOS,Chess,0.977,0.977,0.973,0.973,match
+CGMOS,ClimateSim,0.908,0.908,0.902,0.902,match
+CGMOS,Contraceptive,0.724,0.724,0.712,0.712,match
+CGMOS,Fertility,0.673,0.673,0.634,0.634,match
+CGMOS,Haberman,0.651,0.651,0.600,0.600,match
+CGMOS,ILPD,0.707,0.707,0.715,0.715,match
+CGMOS,ImgSeg,0.999,0.999,0.997,0.997,match
+CGMOS,Leaf,0.908,0.908,0.852,0.852,match
+CGMOS,Libras,0.945,0.945,0.929,0.929,match
+CGMOS,MultipleFs,0.998,0.998,0.998,0.998,match
+CGMOS,Parkinson,0.841,0.841,0.834,0.834,match
+CGMOS,PlanRelax,0.472,0.472,0.469,0.469,match
+CGMOS,QSAR,0.901,0.901,0.895,0.895,match
+CGMOS,SPECT,0.820,0.820,0.808,0.808,match
+CGMOS,SPECTF,0.819,0.819,0.805,0.805,match
+CGMOS,SeismicBumps,0.743,0.743,0.727,0.727,match
+CGMOS,Statlog,0.998,0.998,0.998,0.998,match
+CGMOS,PlatesFaults,0.956,0.956,0.954,0.954,match
+CGMOS,TAEvaluation,0.748,0.748,0.703,0.703,match
+CGMOS,UserKnowledge,0.958,0.958,0.953,0.953,match
+CGMOS,Vertebral,0.890,0.890,0.855,0.855,match
+CGMOS,Customers,0.952,0.952,0.946,0.946,match
+CGMOS,Yeast,0.925,0.925,0.907,0.907,match
+DGOT,satimage,0.8660,0.8660,0.8693,0.8693,match
+DGOT,students_dropout,0.6632,0.6632,0.6552,0.6552,match
+DGOT,default,0.6690,0.6690,0.6530,0.6530,match
+DGOT,Dry_Beans,0.9327,0.9327,0.9304,0.9304,match
+DGOT,bank_small,0.6950,0.6950,0.6764,0.6764,match
+DGOT,optical_digits,0.9448,0.9448,0.9429,0.9429,match
+DGOT,satimage_4,0.7625,0.7625,0.7297,0.7297,match
+DGOT,pen_digits,0.9689,0.9689,0.9601,0.9601,match
+DGOT,sick_euthyroid,0.8754,0.8754,0.8536,0.8536,match
+DGOT,isolet,0.8844,0.8844,0.8739,0.8739,match
+DGOT,nursery,0.8059,0.8059,0.7853,0.7853,match
+DGOT,thyroid_sick,0.8813,0.8813,0.8447,0.8447,match
+DGOT,abalone_15,0.6624,0.6624,0.6422,0.6422,match
+DGOT,coil_2000,0.5254,0.5254,0.5254,0.5254,match
+DGOT,abalone_6,0.9341,0.9341,0.9078,0.9078,match
+DGOT,wine_quality,0.6524,0.6524,0.5817,0.5817,match
+DGOT,letter_img,0.9618,0.9618,0.9326,0.9326,match
+DGOT,bankruptcy,0.5939,0.5939,0.6104,0.6104,match
+DGOT,avila,0.8393,0.8393,0.8472,0.8472,match
+DGOT,abalone_19,0.5277,0.5277,0.5122,0.5122,match
+DGOT,page-blocks,0.8405,0.8405,0.7673,0.7673,match
+DGOT,firewall,0.8468,0.8468,0.7659,0.7659,match
+DSRBF,Hepatitis,83.30,83.30,80.05,80.05,match
+DSRBF,BreastC,67.53,67.53,63.26,63.26,match
+DSRBF,Haberman,69.48,69.48,61.56,61.56,match
+DSRBF,CYTvsPOX,96.49,96.49,84.41,84.41,match
+DSRBF,ME2vsOther,95.54,95.54,83.83,83.83,match
+DSRBF,Newthyroid,97.60,97.60,97.44,97.44,match
+DSRBF,Balance,93.86,93.86,88.28,88.28,match
+DSRBF,Saureus4,72.93,72.93,62.03,62.03,match
+DSRBF,Anneal,98.82,98.82,91.48,91.48,match
+DSRBF,Glass,65.60,65.60,55.96,55.96,match
+DSRBF,Zoo,95.81,95.81,90.12,90.12,match
+DSRBF,E. coli,85.91,85.91,85.02,85.02,match
+DSRBF,Yeast,55.42,55.42,49.56,49.56,match
+EMDO,Balance,73.13,73.13,68.79,68.79,match
+EMDO,Hayes-Roth,89.15,89.15,88.50,88.50,match
+EMDO,New-Thyroid,97.76,97.76,93.31,93.31,match
+EMDO,Page-Blocks,93.85,93.85,90.35,90.35,match
+EMDO,Dermatology,98.26,98.26,97.44,97.44,match
+EMDO,Breast-Tissue,84.07,84.07,76.53,76.53,match
+EMDO,UKM,96.91,96.91,95.05,95.05,match
+EMDO,Vertebral-Column,89.05,89.05,82.92,82.92,match
+EMDO,Ecoli,90.82,90.82,83.01,83.01,match
+EasyEnsemble,car,.958,.958,.969,.969,match
+EasyEnsemble,ionosphere,.919,.919,.922,.922,match
+EasyEnsemble,letter,.995,.995,.995,.995,match
+EasyEnsemble,phoneme,.892,.892,.899,.899,match
+EasyEnsemble,sat,.876,.876,.862,.862,match
+EasyEnsemble,wdbc,.962,.962,.964,.964,match
+EasyEnsemble,abalone,.785,.785,.742,.742,match
+EasyEnsemble,balance,.577,.577,.465,.465,match
+EasyEnsemble,cmc,.646,.646,.605,.605,match
+EasyEnsemble,haberman,.615,.615,.562,.562,match
+EasyEnsemble,housing,.739,.739,.710,.710,match
+EasyEnsemble,mf-morph,.914,.914,.841,.841,match
+EasyEnsemble,mf-zernike,.869,.869,.813,.813,match
+EasyEnsemble,pima,.734,.734,.708,.708,match
+EasyEnsemble,vehicle,.781,.781,.743,.743,match
+EasyEnsemble,wpbc,.623,.623,.610,.610,match
+FW-SMOTE,ldd1,71.6,71.6,68.3,68.3,match
+FW-SMOTE,ldd2,87.5,87.5,83.5,83.5,match
+FW-SMOTE,ldd3,91.1,91.1,90.7,90.7,match
+FW-SMOTE,ldd4,91.0,91.0,91.0,91.0,match
+FW-SMOTE,ldd5,90.5,90.5,88.0,88.0,match
+FW-SMOTE,ldd6,90.7,90.7,90.7,90.7,match
+FW-SMOTE,ldd7,86.7,86.7,80.1,80.1,match
+FW-SMOTE,ldd8,90.9,90.9,90.9,90.9,match
+FW-SMOTE,ldd9,90.9,90.9,90.9,90.9,match
+FW-SMOTE,ldd10,90.1,90.1,91.2,91.2,match
+FW-SMOTE,ldd11,90.9,90.9,90.9,90.9,match
+FW-SMOTE,ldd12,81.5,81.5,78.9,78.9,match
+FW-SMOTE,ldd13,88.0,88.0,87.6,87.6,match
+FW-SMOTE,ldd14,87.0,87.0,79.8,79.8,match
+FW-SMOTE,ldd15,72.3,72.3,68.4,68.4,match
+FW-SMOTE,ldd16,98.8,98.8,87.5,87.5,match
+FW-SMOTE,ldd17,0.0,0.0,0.0,0.0,match
+FW-SMOTE,ldd18,95.2,95.2,94.7,94.7,match
+FW-SMOTE,ldd19,99.7,99.7,99.4,99.4,match
+FW-SMOTE,ldd20,97.8,97.8,92.2,92.2,match
+FW-SMOTE,ldd21,99.6,99.6,99.6,99.6,match
+FW-SMOTE,ldd22,62.4,62.4,51.4,51.4,match
+FW-SMOTE,ldd23,89.8,89.8,88.9,88.9,match
+FW-SMOTE,ldd24,84.7,84.7,82.6,82.6,match
+FW-SMOTE,ldd25,58.7,58.7,51.3,51.3,match
+FW-SMOTE,ldd26,51.2,51.2,49.0,49.0,match
+FW-SMOTE,ldd27,92.0,92.0,88.7,88.7,match
+FW-SMOTE,ldd28,90.3,90.3,88.6,88.6,match
+FW-SMOTE,ldd29,71.7,71.7,70.9,70.9,match
+FW-SMOTE,ldd30,95.6,95.6,94.4,94.4,match
+FW-SMOTE,hdd1,99.7,99.7,99.7,99.7,match
+FW-SMOTE,hdd2,98.5,98.5,98.5,98.5,match
+FW-SMOTE,hdd3,96.0,96.0,76.5,76.5,match
+FW-SMOTE,hdd4,99.7,99.7,99.7,99.7,match
+FW-SMOTE,hdd5,76.7,76.7,74.8,74.8,match
+FW-SMOTE,hdd6,98.1,98.1,89.7,89.7,match
+FW-SMOTE,hdd7,89.6,89.6,85.9,85.9,match
+FW-SMOTE,hdd8,100,100,92.7,92.7,match
+FW-SMOTE,hdd9,98.8,98.8,96.3,96.3,match
+FW-SMOTE,hdd10,92.8,92.8,90.4,90.4,match
+FW-SMOTE,hdd11,99.7,99.7,99.7,99.7,match
+FW-SMOTE,hdd12,98.6,98.6,98.2,98.2,match
+GAMO,"MNIST (Table 1, LS, GM)",0.90,0.90,0.89,0.89,match
+GAMO,"Fashion-MNIST (Table 1, LS, GM)",0.81,0.81,0.77,0.77,match
+GAMO,"CIFAR10 (Table 2, GM)",0.43,0.43,0.4,0.4,match
+GAMO,"SVHN (Table 2, GM)",0.75,0.75,0.73,0.73,match
+GAMO,"CelebA-Small (Table 3, During Testing, GM)",0.54,0.54,0.48,0.48,match
+GAMO,"CelebA-Large (Table 3, During Testing, GM)",0.70,0.70,0.66,0.66,match
+GAMO,"LSUN-Small (Table 3, During Testing, GM)",0.50,0.50,0.40,0.40,match
+GAMO,"LSUN-Large (Table 3, During Testing, GM)",0.68,0.68,0.62,0.62,match
+GAMO,"SUN397 (Table 4, GM)",0.24,0.24,0.21,0.21,match
+GDHS,car,0.9490,0.9490,0.9504,0.9504,match
+GDHS,cleveland,0.1210,0.1210,0.0307,0.0307,match
+GDHS,contraceptive,0.4801,0.4801,0.4305,0.4305,match
+GDHS,glass,0.6094,0.6094,0.4389,0.4389,match
+GDHS,hayes-roth,0.8236,0.8236,0.8293,0.8293,match
+GDHS,newthyroid,0.9231,0.9231,0.9193,0.9193,match
+GDHS,sensorReadings,0.9925,0.9925,0.9916,0.9916,match
+GDHS,thyroid,0.9302,0.9302,0.9362,0.9362,match
+GDHS,userknowledge,0.7379,0.7379,0.7242,0.7242,match
+GDHS,vehicle,0.6746,0.6746,0.6720,0.6720,match
+GDHS,vertebralColumn,0.7501,0.7501,0.7239,0.7239,match
+GDHS,winequality-red,0.0620,0.0620,0.0216,0.0216,match
+GDHS,yeast,0.2220,0.2220,0.0694,0.0694,match
+GDHS,zoo,0.5811,0.5811,0.5811,0.5811,match
+GDHS,camel-1.4,0.5679,0.5679,0.5292,0.5292,match
+GDHS,camel-1.6,0.5551,0.5551,0.5610,0.5610,match
+GDHS,hive-0.12.0,0.6037,0.6037,0.5778,0.5778,match
+GDHS,velocity-1.5,0.7032,0.7032,0.6699,0.6699,match
+GDHS,xalan-2.4,0.6508,0.6508,0.5834,0.5834,match
+GDHS,xerces-1.2,0.6253,0.6253,0.6028,0.6028,match
+GDO,glass1,0.7392,0.7392,0.7263,0.7263,match
+GDO,ecoli-0_vs_1,0.9516,0.9516,0.9469,0.9469,match
+GDO,wisconsin,0.9659,0.9659,0.9653,0.9653,match
+GDO,yeast1,0.6972,0.6972,0.6966,0.6966,match
+GDO,haberman,0.4328,0.4328,0.3992,0.3992,match
+GDO,planningrelax,0.5046,0.5046,0.4042,0.4042,match
+GDO,ecoli1,0.8925,0.8925,0.8640,0.8640,match
+GDO,new-thyroid1,0.8999,0.8999,0.8013,0.8013,match
+GDO,ecoli2,0.8538,0.8538,0.8899,0.8899,match
+GDO,segment0,0.9196,0.9196,0.8467,0.8467,match
+GDO,yeast3,0.9058,0.9058,0.9058,0.9058,match
+GDO,ecoli3,0.8867,0.8867,0.8860,0.8860,match
+GDO,yeast-2_vs_4,0.8745,0.8745,0.8889,0.8889,match
+GDO,yeast-0-5-6-7-9_vs_4,0.7941,0.7941,0.7832,0.7832,match
+GDO,vowel0,0.8905,0.8905,0.1925,0.1925,match
+GDO,kr-vs-k-three_vs_eleven,0.9934,0.9934,0.9827,0.9827,match
+GDO,glass2,0.7823,0.7823,0.7260,0.7260,match
+GDO,shuttle-c0-vs-c4,0.9246,0.9246,0.8519,0.8519,match
+GDO,yeast-1_vs_7,0.7464,0.7464,0.7245,0.7245,match
+GDO,glass4,0.9419,0.9419,0.9033,0.9033,match
+GDO,ecoli4,0.9132,0.9132,0.9322,0.9322,match
+GDO,glass-0-1-6_vs_2,0.7012,0.7012,0.6136,0.6136,match
+GDO,bupa,0.6768,0.6768,0.6805,0.6805,match
+GDO,abalone9-18,0.7822,0.7822,0.7474,0.7474,match
+GDO,glass-0-1-6_vs_5,0.8428,0.8428,0.4714,0.4714,match
+GDO,yeast-1-4-5-8_vs_7,0.5980,0.5980,0.5523,0.5523,match
+GDO,glass5,0.8410,0.8410,0.4714,0.4714,match
+GDO,car-good,0.9277,0.9277,0.7649,0.7649,match
+GDO,car-vgood,0.8055,0.8055,0.7273,0.7273,match
+GDO,kr-vs-k-zero-one_vs_draw,0.9757,0.9757,0.8588,0.8588,match
+GDO,kr-vs-k-one_vs_fifteen,0.9998,0.9998,1.0000,1.0000,match
+GDO,yeast4,0.8518,0.8518,0.8267,0.8267,match
+GDO,breast-cancer-wisconsin,0.9602,0.9602,0.9635,0.9635,match
+GDO,yeast5,0.9634,0.9634,0.9322,0.9322,match
+GDO,glass-0-1-2-3_vs_4-5-6,0.9560,0.9560,0.9474,0.9474,match
+GDO,yeast6,0.8574,0.8574,0.8066,0.8066,match
+GDO,abalone-3_vs_11,0.9987,0.9987,1.0000,1.0000,match
+GDO,winequality-white-3_vs_7,0.7773,0.7773,0.0000,0.0000,match
+GDO,australian,0.8221,0.8221,0.8098,0.8098,match
+GDO,abalone19,0.6598,0.6598,0.5481,0.5481,match
+GOIO,default,0.6597,0.6597,0.6095,0.6095,match
+GOIO,shoppers,0.7244,0.7244,0.6923,0.6923,match
+GOIO,bank_full,0.7161,0.7161,0.7008,0.7008,match
+GOIO,bank_small,0.6742,0.6742,0.6642,0.6642,match
+GOIO,avila_0vs5,0.8595,0.8595,0.7777,0.7777,match
+GOIO,artificial_0.5_10,0.6197,0.6197,0.5710,0.5710,match
+GOIO,optical_digits,0.8696,0.8696,0.8350,0.8350,match
+GOIO,avila_0vs6,0.7926,0.7926,0.7202,0.7202,match
+GOIO,sick_euthyroid,0.7151,0.7151,0.7305,0.7305,match
+GOIO,avila_0vs7,0.8220,0.8220,0.7237,0.7237,match
+GOIO,scene,0.5645,0.5645,0.5373,0.5373,match
+GOIO,abalone_15,0.6441,0.6441,0.5999,0.5999,match
+GOIO,thyroid_sick,0.7564,0.7564,0.7168,0.7168,match
+GOIO,abalone_6,0.9164,0.9164,0.8931,0.8931,match
+GOIO,artificial_0.3_5,0.5253,0.5253,0.4753,0.4753,match
+GOIO,artificial_0.5_5,0.5912,0.5912,0.5422,0.5422,match
+GOIO,artificial_1_5,0.6992,0.6992,0.6383,0.6383,match
+GOIO,wine_quality,0.6286,0.6286,0.5653,0.5653,match
+GOIO,taiwanses,0.6030,0.6030,0.5809,0.5809,match
+GOIO,artificial_0.5_2.5,0.5344,0.5344,0.4946,0.4946,match
+GOIO,mammography,0.8023,0.8023,0.6976,0.6976,match
+GOIO,bankruptcy,0.5295,0.5295,0.4715,0.4715,match
+GOIO,page-blocks_0vs3,0.9075,0.9075,0.8043,0.8043,match
+INOS,Adiac,.882,.882,.807,.807,match
+INOS,FaceAll,.945,.945,.916,.916,match
+INOS,50Words,.880,.880,.863,.863,match
+INOS,SLeaf,.962,.962,.933,.933,match
+INOS,TwoPats,.614,.614,.467,.467,match
+INOS,Wafer,.985,.985,.966,.966,match
+INOS,Yoga,.750,.750,.720,.720,match
+KNNOR,Mean over all 19 datasets (no per-dataset rows in paper),.8363,.8363,.8238,.8238,match
+Loyalty-SMOTE,adult,0.8485,0.8485,0.8409,0.8409,match
+Loyalty-SMOTE,ai4i2020,0.9685,0.9685,0.8219,0.8219,match
+Loyalty-SMOTE,banknote,1,1,1,1,match
+Loyalty-SMOTE,drug,0.9973,0.9973,0.7261,0.7261,match
+Loyalty-SMOTE,AIDS_5000,0.8532,0.8532,0.7433,0.7433,match
+Loyalty-SMOTE,Maternal,0.9368,0.9368,0.8786,0.8786,match
+Loyalty-SMOTE,national,0.9914,0.9914,0.9884,0.9884,match
+Loyalty-SMOTE,occupancy,0.9846,0.9846,0.9904,0.9904,match
+Loyalty-SMOTE,online,0.5980,0.5980,0.4480,0.4480,match
+Loyalty-SMOTE,Shoppers,0.8294,0.8294,0.7756,0.7756,match
+Loyalty-SMOTE,Academic,0.9556,0.9556,0.8611,0.8611,match
+Loyalty-SMOTE,AIDS_15000,0.8734,0.8734,0.7373,0.7373,match
+Loyalty-SMOTE,german,0.8946,0.8946,0.7962,0.7962,match
+Loyalty-SMOTE,statlog,9100,9100,0.8020,0.8020,match
+Loyalty-SMOTE,Shuttle,0.9965,0.9965,0.9965,0.9965,match
+Loyalty-SMOTE,Fault,0.9844,0.9844,0.8370,0.8370,match
+Loyalty-SMOTE,ICR,0.9955,0.9955,0.9321,0.9321,match
+Loyalty-SMOTE,breast,0.9882,0.9882,0.9793,0.9793,match
+Loyalty-SMOTE,WDBC,0.9904,0.9904,0.9741,0.9741,match
+Loyalty-SMOTE,WPBC,0.9011,0.9011,0.7674,0.7674,match
+Loyalty-SMOTE,heart,0.8663,0.8663,0.8878,0.8878,match
+Loyalty-SMOTE,ionosphere,0.9836,0.9836,0.9558,0.9558,match
+Loyalty-SMOTE,iris,1,1,1,1,match
+Loyalty-SMOTE,bezdeiris,1,1,1,1,match
+Loyalty-SMOTE,raisin,0.9336,0.9336,0.8931,0.8931,match
+Loyalty-SMOTE,glass5,0.8165,0.8165,0.8165,0.8165,match
+Loyalty-SMOTE,vowel0,1,1,1,1,match
+Loyalty-SMOTE,ecoli-0-1-3-7_vs_2-6,1,1,0.9879,0.9879,match
+Loyalty-SMOTE,ecoli-0-1-4-6_vs_5,0.9129,0.9129,0.9129,0.9129,match
+Loyalty-SMOTE,yeast-0-3-5-9_vs_7-8,0.7128,0.7128,0.6835,0.6835,match
+MBS,Pima,0.8254,0.8254,0.8238,0.8238,match
+MBS,Haberman,0.6873,0.6873,0.6825,0.6825,match
+MBS,Satimage,0.7645,0.7645,0.7613,0.7613,match
+MBS,Ecoli,0.9296,0.9296,0.9233,0.9233,match
+MBS,Shuttle,0.8902,0.8902,0.8684,0.8684,match
+MBS,Ionosphere,0.8661,0.8661,0.8373,0.8373,match
+MBS,Vehicle,0.9882,0.9882,0.9836,0.9836,match
+MBS,Credit,0.7178,0.7178,0.7003,0.7003,match
+MBS,Diabetes,0.6348,0.6348,0.6322,0.6322,match
+MBS,Hmeq,0.7837,0.7837,0.7837,0.7837,match
+MBS,Promotion,0.6499,0.6499,0.6499,0.6499,match
+MBS,Bank,0.8600,0.8600,0.8581,0.8581,match
+MBS,Spambase,0.9712,0.9712,0.9661,0.9661,match
+MC-CCR,Automobile,75.68,75.68,51.86,51.86,match
+MC-CCR,Balance,62.22,62.22,40.57,40.57,match
+MC-CCR,Car,95.03,95.03,81.16,81.16,match
+MC-CCR,Cleveland,30.98,30.98,18.00,18.00,match
+MC-CCR,Contraceptive,49.72,49.72,38.15,38.15,match
+MC-CCR,Dermatology,94.88,94.88,79.34,79.34,match
+MC-CCR,Ecoli,70.98,70.98,51.72,51.72,match
+MC-CCR,Flare,64.71,64.71,55.98,55.98,match
+MC-CCR,Glass,71.06,71.06,55.41,55.41,match
+MC-CCR,Hayes-roth,85.16,85.16,70.52,70.52,match
+MC-CCR,Led7digit,80.44,80.44,57.85,57.85,match
+MC-CCR,Lymphography,77.36,77.36,40.60,40.60,match
+MC-CCR,Newthyroid,92.17,92.17,80.69,80.69,match
+MC-CCR,Pageblocks,82.55,82.55,71.64,71.64,match
+MC-CCR,Thyroid,81.48,81.48,73.62,73.62,match
+MC-CCR,Vehicle,70.35,70.35,59.57,59.57,match
+MC-CCR,Wine,92.87,92.87,80.82,80.82,match
+MC-CCR,Winequality-red,46.66,46.66,17.80,17.80,match
+MC-CCR,Yeast,56.91,56.91,43.83,43.83,match
+MC-CCR,Zoo,84.29,84.29,55.61,55.61,match
+MC-MBRC,automobile,55.15,55.15,49.17,49.17,match
+MC-MBRC,autos,54.62,54.62,45.88,45.88,match
+MC-MBRC,car,77.38,77.38,64.99,64.99,match
+MC-MBRC,cleveland,30.24,30.24,18.19,18.19,match
+MC-MBRC,cmc,42.61,42.61,46.15,46.15,match
+MC-MBRC,contraceptive,37.63,37.63,47.06,47.06,match
+MC-MBRC,Dry_Bean,92.32,92.32,71.22,71.22,match
+MC-MBRC,ecoli,57.76,57.76,50.19,50.19,match
+MC-MBRC,flare,57.74,57.74,28.28,28.28,match
+MC-MBRC,glass,57.55,57.55,57.39,57.39,match
+MC-MBRC,lymphography,62.02,62.02,48.24,48.24,match
+MC-MBRC,newthyroid,90.96,90.96,78.98,78.98,match
+MC-MBRC,page,47.54,47.54,32.53,32.53,match
+MC-MBRC,page-blocks,68.2,68.2,40.05,40.05,match
+MC-MBRC,shuttle,75.41,75.41,37.24,37.24,match
+MC-MBRC,thyroid,68.98,68.98,16.18,16.18,match
+MC-MBRC,winequality-red,32.97,32.97,30.16,30.16,match
+MC-MBRC,winequality-white,31.34,31.34,26.84,26.84,match
+MC-MBRC,yeast,48.18,48.18,31.83,31.83,match
+MC-MBRC,zoo,90.09,90.09,78.86,78.86,match
+MC-RBO,Automobile,77.20,77.20,51.86,51.86,match
+MC-RBO,Balance,61.93,61.93,40.57,40.57,match
+MC-RBO,Car,97.15,97.15,81.16,81.16,match
+MC-RBO,Cleveland,34.04,34.04,18.00,18.00,match
+MC-RBO,Contraceptive,50.99,50.99,38.15,38.15,match
+MC-RBO,Dermatology,95.72,95.72,79.34,79.34,match
+MC-RBO,Ecoli,72.66,72.66,51.72,51.72,match
+MC-RBO,Flare,65.50,65.50,55.98,55.98,match
+MC-RBO,Glass,73.08,73.08,55.41,55.41,match
+MC-RBO,Hayes-roth,81.93,81.93,70.52,70.52,match
+MC-RBO,Led7digit,75.02,75.02,57.85,57.85,match
+MC-RBO,Lymphography,79.13,79.13,40.60,40.60,match
+MC-RBO,Newthyroid,96.73,96.73,80.69,80.69,match
+MC-RBO,Pageblocks,87.27,87.27,71.64,71.64,match
+MC-RBO,Thyroid,86.94,86.94,73.62,73.62,match
+MC-RBO,Vehicle,70.47,70.47,59.57,59.57,match
+MC-RBO,Wine,91.73,91.73,80.82,80.82,match
+MC-RBO,Winequality-red,48.33,48.33,17.80,17.80,match
+MC-RBO,Yeast,58.06,58.06,43.83,43.83,match
+MC-RBO,Zoo,85.01,85.01,55.61,55.61,match
+MKC-SMOTE,cmc,57.79,57.79,54.37,54.37,match
+MKC-SMOTE,use,93.52,93.52,92.47,92.47,match
+MKC-SMOTE,new,94.93,94.93,93.58,93.58,match
+MKC-SMOTE,con,84.39,84.39,77.55,77.55,match
+MKC-SMOTE,zoo,99.53,99.53,97.17,97.17,match
+MKC-SMOTE,ctg,95.13,95.13,95.09,95.09,match
+MKC-SMOTE,eco,91.84,91.84,84.12,84.12,match
+MKC-SMOTE,gla,79.43,79.43,71.06,71.06,match
+MKC-SMOTE,abs,58.33,58.33,20.39,20.39,match
+MKC-SMOTE,nur,99.83,99.83,99.80,99.80,match
+MKC-SMOTE,let,97.01,97.01,97.06,97.06,match
+MKC-SMOTE,car,91.73,91.73,92.91,92.91,match
+MKC-SMOTE,win,62.25,62.25,41.41,41.41,match
+MKC-SMOTE,pok,8.73,8.73,0.00,0.00,match
+MKC-SMOTE,hcv,95.16,95.16,88.72,88.72,match
+MKC-SMOTE,yea,79.52,79.52,58.08,58.08,match
+MKC-SMOTE,cov,86.93,86.93,86.47,86.47,match
+MKC-SMOTE,che,68.21,68.21,62.45,62.45,match
+MKC-SMOTE,aba,56.68,56.68,47.66,47.66,match
+MKC-SMOTE,bar,79.62,79.62,60.48,60.48,match
+MKC-SMOTE,avi,68.85,68.85,63.87,63.87,match
+MLOS,Ozo,0.8307,0.8307,0.7907,0.7907,match
+MLOS,Phi,0.8371,0.8371,0.8792,0.8792,match
+MLOS,aba19,0.7409,0.7409,0.6943,0.6943,match
+MLOS,Cam,0.5347,0.5347,0.3768,0.3768,match
+MLOS,cle,0.9209,0.9209,0.7564,0.7564,match
+MLOS,cli,0.8528,0.8528,0.6362,0.6362,match
+MLOS,gla,0.9199,0.9199,0.8121,0.8121,match
+MLOS,ivy,0.4897,0.4897,0.3004,0.3004,match
+MLOS,jed,0.4520,0.4520,0.4386,0.4386,match
+MLOS,log,0.4001,0.4001,0.3972,0.3972,match
+MLOS,mov,0.8941,0.8941,0.9154,0.9154,match
+MLOS,pok,0.9339,0.9339,0.8050,0.8050,match
+MLOS,win35,0.4299,0.4299,0.3508,0.3508,match
+MLOS,win,0.7531,0.7531,0.7134,0.7134,match
+MLOS,xal,0.6446,0.6446,0.6477,0.6477,match
+MLOS,yea,0.8727,0.8727,0.8683,0.8683,match
+MWMOTE,Abalone,0.51451,0.51451,0.62356,0.62356,match
+MWMOTE,CTG,0.7232,0.7232,0.70765,0.70765,match
+MWMOTE,Semeion,0.92444,0.92444,0.91312,0.91312,match
+MWMOTE,Statlandsat,0.73219,0.73219,0.68017,0.68017,match
+MWMOTE,Bcancerorig,0.97432,0.97432,0.97438,0.97438,match
+MWMOTE,Btissue,0.77634,0.77634,0.7156,0.7156,match
+MWMOTE,Ecoli,0.85931,0.85931,0.87041,0.87041,match
+MWMOTE,Glass,0.93611,0.93611,0.87774,0.87774,match
+MWMOTE,Libra,0.95059,0.95059,0.88706,0.88706,match
+MWMOTE,Phoneme,0.76618,0.76618,0.75935,0.75935,match
+MWMOTE,Pima,0.74088,0.74088,0.73159,0.73159,match
+MWMOTE,Robot,0.80073,0.80073,0.80532,0.80532,match
+MWMOTE,Satimage,0.818,0.818,0.81077,0.81077,match
+MWMOTE,Vehicle,0.9661,0.9661,0.96321,0.96321,match
+MWMOTE,Wine,0.99215,0.99215,0.97483,0.97483,match
+MWMOTE,Yeast,0.83093,0.83093,0.82486,0.82486,match
+MWMOTE,Texture,0.93872,0.93872,0.93126,0.93126,match
+MWMOTE,Segment,0.79108,0.79108,0.77089,0.77089,match
+MWMOTE,OCR,0.98861,0.98861,0.99255,0.99255,match
+MWMOTE,Page-blocks,0.97259,0.97259,0.99032,0.99032,match
+NBU,Wisconsin,97.12,97.12,96.66,96.66,match
+NBU,Pima,55.24,55.24,60.02,60.02,match
+NBU,Glass0,73.19,73.19,68.14,68.14,match
+NBU,Vehicle1,55.92,55.92,48.93,48.93,match
+NBU,Vehicle0,87.16,87.16,84.07,84.07,match
+NBU,Ecoli1,87.67,87.67,70.11,70.11,match
+NBU,New-thyroid1,95.74,95.74,75.59,75.59,match
+NBU,New-thyroid2,95.74,95.74,100,100,match
+NBU,Ecoli2,94.02,94.02,83.67,83.67,match
+NBU,Segmemt0,94,94,97.54,97.54,match
+NBU,Yeast3,91.08,91.08,67.68,67.68,match
+NBU,Ecoli3,94.87,94.87,52.55,52.55,match
+NBU,Yeast2vs4,81.83,81.83,62.9,62.9,match
+NBU,Vowel0,99.72,99.72,84.98,84.98,match
+NBU,Glass2,73.96,73.96,57.74,57.74,match
+NBU,Yeast1vs7,51.64,51.64,0,0,match
+NBU,Glass4,70.71,70.71,70.71,70.71,match
+NBU,Ecoli4,100,100,100,100,match
+NBU,Page-blocks13vs2,97.7,97.7,100,100,match
+NBU,Abalone09-18,64.5,64.5,35.1,35.1,match
+NBU,Glass5,0,0,0,0,match
+NBU,Yeast4,84.29,84.29,54.29,54.29,match
+NBU,Ecoli0137vs26,100,100,100,100,match
+NBU,Yeast6,74.54,74.54,75.46,75.46,match
+NROMM,Wine,97.05,97.05,80.82,80.82,match
+NROMM,Glass,79.74,79.74,55.41,55.41,match
+NROMM,New-thyroid,97.73,97.73,80.69,80.69,match
+NROMM,Vehicle,71.68,71.68,59.57,59.57,match
+NROMM,Page-blocks,88.20,88.20,71.64,71.64,match
+NROMM,Winequality-red,47.89,47.89,17.80,17.80,match
+NROMM,Zoo,96.86,96.86,55.61,55.61,match
+NROMM,Balance,66.74,66.74,40.57,40.57,match
+NROMM,Car,94.46,94.46,81.16,81.16,match
+NROMM,Led7digit,78.60,78.60,57.85,57.85,match
+NROMM,Dermatology,96.42,96.42,79.34,79.34,match
+NROMM,Flare,64.04,64.04,55.98,55.98,match
+NROMM,Hayes-roth,91.16,91.16,70.52,70.52,match
+NROMM,Lymphography,88.22,88.22,40.60,40.60,match
+NROMM,Automobile,91.78,91.78,51.86,51.86,match
+NROMM,Cleveland,36.02,36.02,18.00,18.00,match
+NROMM,Contraceptive,52.79,52.79,38.15,38.15,match
+NROMM,Ecoli,71.72,71.72,51.72,51.72,match
+NROMM,Yeast,55.85,55.85,43.83,43.83,match
+NROMM,Thyroid,96.05,96.05,73.62,73.62,match
+OREM-M,Vt,0.7615,0.7615,0.7667,0.7667,match
+OREM-M,Lg,0.6184,0.6184,0.5985,0.5985,match
+OREM-M,NT,0.9122,0.9122,0.901,0.901,match
+OREM-M,Toy,0.8581,0.8581,0.8574,0.8574,match
+OREM-M,Vi-3,0.2161,0.2161,0.2262,0.2262,match
+OREM-M,W5,0.0954,0.0954,0.0998,0.0998,match
+OREM-M,Cl,0.2646,0.2646,0.2793,0.2793,match
+OREM-M,Vi-6,0.1524,0.1524,0.1538,0.1538,match
+OREM-M,Vw-5,0.8664,0.8664,0.8623,0.8623,match
+OREM-M,Vw-4,0.8057,0.8057,0.8021,0.8021,match
+OREM-M,Dto,0.9534,0.9534,0.9514,0.9514,match
+OREM-M,PB,0.9445,0.9445,0.9373,0.9373,match
+OREM-M,SWD,0.5473,0.5473,0.489,0.489,match
+OREM-M,Ye,0.5413,0.5413,0.5414,0.5414,match
+OREM-M,Au5,0.3834,0.3834,0.2922,0.2922,match
+OREM-M,LEV,0.5551,0.5551,0.477,0.477,match
+OREM-M,LP,0.5388,0.5388,0.5134,0.5134,match
+OREM-M,S10,0.7536,0.7536,0.7597,0.7597,match
+OREM-M,PF,0.7428,0.7428,0.7384,0.7384,match
+OREM-M,Ab,0.2654,0.2654,0.2683,0.2683,match
+OREM-M,H10,0.0795,0.0795,0.0503,0.0503,match
+OVO-SMOTE,aut,80.11,80.11,82.04,82.04,match
+OVO-SMOTE,bal,54.29,54.29,55.30,55.30,match
+OVO-SMOTE,cle,33.89,33.89,24.91,24.91,match
+OVO-SMOTE,con,50.09,50.09,47.19,47.19,match
+OVO-SMOTE,der,95.61,95.61,94.83,94.83,match
+OVO-SMOTE,eco,70.99,70.99,65.15,65.15,match
+OVO-SMOTE,fla,64.74,64.74,64.01,64.01,match
+OVO-SMOTE,gla,70.84,70.84,63.71,63.71,match
+OVO-SMOTE,hay,83.49,83.49,86.03,86.03,match
+OVO-SMOTE,led,71.64,71.64,72.55,72.55,match
+OVO-SMOTE,lym,60.91,60.91,67.81,67.81,match
+OVO-SMOTE,new,92.50,92.50,90.56,90.56,match
+OVO-SMOTE,nur,94.07,94.07,87.76,87.76,match
+OVO-SMOTE,pag,90.24,90.24,85.55,85.55,match
+OVO-SMOTE,pos,48.33,48.33,21.34,21.34,match
+OVO-SMOTE,sat,84.18,84.18,83.19,83.19,match
+OVO-SMOTE,shu,96.84,96.84,95.05,95.05,match
+OVO-SMOTE,spl,94.88,94.88,94.33,94.33,match
+OVO-SMOTE,thy,99.28,99.28,98.65,98.65,match
+OVO-SMOTE,win,92.02,92.02,94.24,94.24,match
+OVO-SMOTE,wqr,34.01,34.01,31.87,31.87,match
+OVO-SMOTE,wqw,42.35,42.35,38.78,38.78,match
+OVO-SMOTE,yea,52.10,52.10,51.77,51.77,match
+OVO-SMOTE,zoo,88.45,88.45,87.64,87.64,match
+RACOG,prompting,0.7913,0.7913,0.7317,0.7317,match
+RACOG,abalone,0.8621,0.8621,0.8968,0.8968,match
+RACOG,car,0.9622,0.9622,0.9622,0.9622,match
+RACOG,nursery,0.9775,0.9775,0.976,0.976,match
+RACOG,letter,0.9394,0.9394,0.9424,0.9424,match
+RACOG,connect-4,0.585,0.585,0.7372,0.7372,match
+RACOG,ecoli1,0.8378,0.8378,0.8888,0.8888,match
+RACOG,haberman,0.00,0.00,0.5032,0.5032,match
+RACOG,yeast4,0.8106,0.8106,0.7082,0.7082,match
+RACOG,yeast6,0.8999,0.8999,0.8721,0.8721,match
+RAMOBoost,Sonar,0.7796,0.7796,0.7605,0.7605,match
+RAMOBoost,Spambase,0.9438,0.9438,0.9382,0.9382,match
+RAMOBoost,Ionosphere,0.7874,0.7874,0.7643,0.7643,match
+RAMOBoost,PID,0.729,0.729,0.7281,0.7281,match
+RAMOBoost,Wine,0.9813,0.9813,0.9804,0.9804,match
+RAMOBoost,German,0.6547,0.6547,0.6420,0.6420,match
+RAMOBoost,Phoneme,0.8222,0.8222,0.7942,0.7942,match
+RAMOBoost,Vehicle,0.956,0.956,0.9511,0.9511,match
+RAMOBoost,Texture,0.9981,0.9981,0.9916,0.9916,match
+RAMOBoost,Segment,0.9941,0.9941,0.9918,0.9918,match
+RAMOBoost,Page_Blocks,0.9349,0.9349,0.9118,0.9118,match
+RAMOBoost,Satimage,0.819,0.819,0.7465,0.7465,match
+RAMOBoost,Mf_Zernike,0.584,0.584,0.7356,0.7356,match
+RAMOBoost,Vowel,0.9962,0.9962,0.9599,0.9599,match
+RAMOBoost,Abalone,0.6808,0.6808,0.7166,0.7166,match
+RAMOBoost,Glass,0.8610,0.8610,0.9491,0.9491,match
+RAMOBoost,Yeast,0.6405,0.6405,0.7030,0.7030,match
+RAMOBoost,Letter,0.9827,0.9827,0.9391,0.9391,match
+RAMOBoost,Shuttle,0.9828,0.9828,0.9716,0.9716,match
+RBBoost,hddt boundary,0.1320,0.1320,0.3482,0.3482,match
+RBBoost,hddt breast-y,0.5454,0.5454,0.5462,0.5462,match
+RBBoost,hddt cam,0.2916,0.2916,0.4137,0.4137,match
+RBBoost,hddt compustat,0.5965,0.5965,0.7509,0.7509,match
+RBBoost,hddt covtype,0.9439,0.9439,0.9460,0.9460,match
+RBBoost,hddt credit-g,0.6334,0.6334,0.6170,0.6170,match
+RBBoost,hddt estate,0.2176,0.2176,0.5030,0.5030,match
+RBBoost,hddt german-numer,0.6438,0.6438,0.6434,0.6434,match
+RBBoost,hddt heart-v,0.5617,0.5617,0.5553,0.5553,match
+RBBoost,hddt hypo,0.9432,0.9432,0.9329,0.9329,match
+RBBoost,hddt ism,0.8308,0.8308,0.8709,0.8709,match
+RBBoost,hddt letter,0.9779,0.9779,0.9664,0.9664,match
+RBBoost,hddt oil,0.6679,0.6679,0.6819,0.6819,match
+RBBoost,hddt optdigits,0.9937,0.9937,0.9854,0.9854,match
+RBBoost,hddt page,0.9340,0.9340,0.9468,0.9468,match
+RBBoost,hddt pendigits,0.9921,0.9921,0.9799,0.9799,match
+RBBoost,hddt phoneme,0.8675,0.8675,0.8613,0.8613,match
+RBBoost,hddt PhosS,0.0300,0.0300,0.3153,0.3153,match
+RBBoost,hddt satimage,0.7929,0.7929,0.8174,0.8174,match
+RBBoost,hddt segment,0.9932,0.9932,0.9853,0.9853,match
+RBBoost,keel abalone19,0.1099,0.1099,0.3596,0.3596,match
+RBBoost,keel abalone9-18,0.5716,0.5716,0.6103,0.6103,match
+RBBoost,keel cleveland-0 vs 4,0.6754,0.6754,0.7143,0.7143,match
+RBBoost,keel ecoli-0-1-3-7 vs 2-6,0.6880,0.6880,0.6534,0.6534,match
+RBBoost,keel ecoli-0-1-4-6 vs 5,0.8912,0.8912,0.8063,0.8063,match
+RBBoost,keel ecoli-0-1-4-7 vs 2-3,0.8243,0.8243,0.8156,0.8156,match
+RBBoost,keel ecoli-0-1-4-7 vs 5-6,0.8635,0.8635,0.8533,0.8533,match
+RBBoost,keel ecoli-0-1 vs 2-3-5,0.8544,0.8544,0.8515,0.8515,match
+RBBoost,keel ecoli-0-1 vs 5,0.8506,0.8506,0.8037,0.8037,match
+RBBoost,keel ecoli-0-2-3-4 vs 5,0.8746,0.8746,0.8644,0.8644,match
+RBBoost,keel ecoli-0-2-6-7 vs 3-5,0.8553,0.8553,0.8427,0.8427,match
+RBBoost,keel ecoli-0-3-4-6 vs 5,0.8841,0.8841,0.8596,0.8596,match
+RBBoost,keel ecoli-0-3-4-7 vs 5-6,0.8706,0.8706,0.8506,0.8506,match
+RBBoost,keel ecoli-0-3-4 vs 5,0.8495,0.8495,0.7942,0.7942,match
+RBBoost,keel ecoli-0-4-6 vs 5,0.8254,0.8254,0.8150,0.8150,match
+RBBoost,keel ecoli-0-6-7 vs 3-5,0.8059,0.8059,0.8358,0.8358,match
+RBBoost,keel ecoli-0-6-7 vs 5,0.8953,0.8953,0.8969,0.8969,match
+RBBoost,keel ecoli-0 vs 1,0.9771,0.9771,0.9820,0.9820,match
+RBBoost,keel ecoli1,0.8538,0.8538,0.8693,0.8693,match
+RBBoost,keel ecoli2,0.8694,0.8694,0.8812,0.8812,match
+RBBoost,keel ecoli3,0.7162,0.7162,0.8086,0.8086,match
+RBBoost,keel ecoli4,0.8860,0.8860,0.8020,0.8020,match
+RBBoost,keel glass-0-1-2-3 vs 4-5,0.8867,0.8867,0.8849,0.8849,match
+RBBoost,keel glass-0-1-4-6 vs 2,0.4106,0.4106,0.5652,0.5652,match
+RBBoost,keel glass-0-1-5 vs 2,0.4377,0.4377,0.5817,0.5817,match
+RBBoost,keel glass-0-1-6 vs 2,0.3315,0.3315,0.4431,0.4431,match
+RBBoost,keel glass-0-1-6 vs 5,0.8161,0.8161,0.9227,0.9227,match
+RBBoost,keel glass-0-4 vs 5,0.9185,0.9185,0.9939,0.9939,match
+RBBoost,keel glass-0-6 vs 5,0.8719,0.8719,0.9485,0.9485,match
+RBBoost,keel glass0,0.7868,0.7868,0.7794,0.7794,match
+RBBoost,keel glass1,0.7602,0.7602,0.7057,0.7057,match
+RBBoost,keel glass2,0.3848,0.3848,0.6042,0.6042,match
+RBBoost,keel glass4,0.6551,0.6551,0.7379,0.7379,match
+RBBoost,keel glass5,0.7761,0.7761,0.9454,0.9454,match
+RBBoost,keel glass6,0.9109,0.9109,0.9070,0.9070,match
+RBBoost,keel haberman,0.4957,0.4957,0.6265,0.6265,match
+RBBoost,keel iris0,0.9816,0.9816,0.9816,0.9816,match
+RBBoost,keel led7digit-0-2-4-5-6-,0.8714,0.8714,0.9025,0.9025,match
+RBBoost,keel new-thyroid1,0.9546,0.9546,0.9332,0.9332,match
+RBBoost,keel new-thyroid2,0.9637,0.9637,0.9481,0.9481,match
+RBBoost,keel page-blocks-1-3 vs 4,0.9837,0.9837,0.9634,0.9634,match
+RBBoost,keel page-blocks0,0.9302,0.9302,0.9384,0.9384,match
+RBBoost,keel pima,0.7025,0.7025,0.7349,0.7349,match
+RBBoost,keel segment0,0.9919,0.9919,0.9856,0.9856,match
+RBBoost,keel shuttle-c0-vs-c4,1.0000,1.0000,1.0000,1.0000,match
+RBBoost,keel shuttle-c2-vs-c4,1.0000,1.0000,1.0000,1.0000,match
+RBBoost,keel vehicle0,0.9588,0.9588,0.9150,0.9150,match
+RBBoost,keel vehicle1,0.6830,0.6830,0.7301,0.7301,match
+RBBoost,keel vehicle2,0.9772,0.9772,0.9508,0.9508,match
+RBBoost,keel vehicle3,0.6647,0.6647,0.7218,0.7218,match
+RBBoost,keel vowel0,0.9817,0.9817,0.9575,0.9575,match
+RBBoost,keel wisconsin,0.9646,0.9646,0.9549,0.9549,match
+RBBoost,keel yeast-0-2-5-6 vs 3-7,0.7195,0.7195,0.7574,0.7574,match
+RBBoost,keel yeast-0-2-5-7-9 vs 3,0.8799,0.8799,0.8978,0.8978,match
+RBBoost,keel yeast-0-3-5-9 vs 7-8,0.5319,0.5319,0.6212,0.6212,match
+RBBoost,keel yeast-0-5-6-7-9 vs 4,0.6452,0.6452,0.7308,0.7308,match
+RBBoost,keel yeast-1-2-8-9 vs 7,0.4452,0.4452,0.5713,0.5713,match
+RBBoost,keel yeast-1-4-5-8 vs 7,0.2365,0.2365,0.4955,0.4955,match
+RBBoost,keel yeast-1 vs 7,0.5663,0.5663,0.5953,0.5953,match
+RBBoost,keel yeast-2 vs 4,0.8547,0.8547,0.8933,0.8933,match
+RBBoost,keel yeast-2 vs 8,0.7238,0.7238,0.7117,0.7117,match
+RBBoost,keel yeast1,0.6461,0.6461,0.6988,0.6988,match
+RBBoost,keel yeast3,0.8603,0.8603,0.9148,0.9148,match
+RBBoost,keel yeast4,0.5807,0.5807,0.7564,0.7564,match
+RBBoost,keel yeast5,0.8438,0.8438,0.9269,0.9269,match
+RBBoost,keel yeast6,0.6878,0.6878,0.7510,0.7510,match
+RSMOTE,avila,0.784,0.784,0.775,0.775,match
+RSMOTE,breast_tissue2,0.924,0.924,0.796,0.796,match
+RSMOTE,breastcancer,0.980,0.980,0.936,0.936,match
+RSMOTE,codrna,0.871,0.871,0.892,0.892,match
+RSMOTE,creditApproval,0.861,0.861,0.824,0.824,match
+RSMOTE,ecoli,0.988,0.988,0.751,0.751,match
+RSMOTE,heart,0.951,0.951,0.748,0.748,match
+RSMOTE,iris,0.954,0.954,0.919,0.919,match
+RSMOTE,isolet5,0.680,0.680,0.735,0.735,match
+RSMOTE,letter,0.836,0.836,0.797,0.797,match
+RSMOTE,libra,0.976,0.976,0.890,0.890,match
+RSMOTE,magic,0.810,0.810,0.802,0.802,match
+RSMOTE,mocap,0.886,0.886,0.895,0.895,match
+RSMOTE,mushrooms,1.000,1.000,0.998,0.998,match
+RSMOTE,nomao,0.935,0.935,0.942,0.942,match
+RSMOTE,pima,0.825,0.825,0.721,0.721,match
+RSMOTE,poker,0.310,0.310,0.240,0.240,match
+RSMOTE,segment,0.960,0.960,0.940,0.940,match
+RSMOTE,skin,0.980,0.980,0.978,0.978,match
+RSMOTE,splice,0.839,0.839,0.747,0.747,match
+RSMOTE,susy,0.732,0.732,0.729,0.729,match
+RSMOTE,svmguide1,0.964,0.964,0.954,0.954,match
+RSMOTE,svmguide3,0.673,0.673,0.652,0.652,match
+RSMOTE,vehicle,0.985,0.985,0.954,0.954,match
+RSMOTE,votes,0.906,0.906,0.976,0.976,match
+RSMOTE,wine,1.000,1.000,0.968,0.968,match
+RSMOTE,Online_Retail,0.993,0.993,0.995,0.995,match
+RUSBoost,CAR,0.9964,0.9964,0.9731,0.9731,match
+RUSBoost,CCCS12,0.9579,0.9579,0.8498,0.8498,match
+RUSBoost,CM1,0.7543,0.7543,0.6473,0.6473,match
+RUSBoost,CONTRACEPTIVE,0.6982,0.6982,0.6651,0.6651,match
+RUSBoost,ECOLI,0.9320,0.9320,0.8468,0.8468,match
+RUSBoost,GLASS,0.7620,0.7620,0.7508,0.7508,match
+RUSBoost,MAMMOGRAPHY,0.9356,0.9356,0.8408,0.8408,match
+RUSBoost,PC1,0.8466,0.8466,0.7224,0.7224,match
+RUSBoost,PENDIGITS,0.9996,0.9996,0.9798,0.9798,match
+RUSBoost,SATIMG,0.9471,0.9471,0.7818,0.7818,match
+RUSBoost,SEGMENT,0.9964,0.9964,0.9622,0.9622,match
+RUSBoost,SOLARFLARE,0.8824,0.8824,0.7651,0.7651,match
+RUSBoost,SP1,0.7790,0.7790,0.6141,0.6141,match
+RUSBoost,SP3,0.7704,0.7704,0.5163,0.5163,match
+RUSBoost,VEHICLE,0.8359,0.8359,0.7544,0.7544,match
+SCUT,Thyroid,0.980,0.980,0.989,0.989,match
+SCUT,Lympho.,0.936,0.936,0.909,0.909,match
+SCUT,Pageblock,0.975,0.975,0.975,0.975,match
+SCUT,Derma.,0.977,0.977,0.971,0.971,match
+SCUT,Autos,0.763,0.763,0.893,0.893,match
+SCUT,Ecoli,0.907,0.907,0.921,0.921,match
+SCUT,Wine,0.800,0.800,0.762,0.762,match
+SCUT,Yeast,0.828,0.828,0.766,0.766,match
+SHSampler,balance,0.2990,0.2990,0.3022,0.3022,match
+SHSampler,car,0.9263,0.9263,0.9468,0.9468,match
+SHSampler,cleveland,0.0591,0.0591,0.0000,0.0000,match
+SHSampler,ecoli,0.1506,0.1506,0.1182,0.1182,match
+SHSampler,glass,0.5125,0.5125,0.5393,0.5393,match
+SHSampler,hayes-roth,0.8594,0.8594,0.8308,0.8308,match
+SHSampler,led7digit,0.6746,0.6746,0.6800,0.6800,match
+SHSampler,lymphography,0.6432,0.6432,0.4370,0.4370,match
+SHSampler,newthyroid,0.9276,0.9276,0.9124,0.9124,match
+SHSampler,page-blocks,0.8883,0.8883,0.7955,0.7955,match
+SHSampler,PhishingData,0.8834,0.8834,0.8686,0.8686,match
+SHSampler,sensorReadings,0.9866,0.9866,0.9913,0.9913,match
+SHSampler,thyroid,0.9298,0.9298,0.9595,0.9595,match
+SHSampler,userknowledge,0.7713,0.7713,0.7525,0.7525,match
+SHSampler,vehicle,0.6964,0.6964,0.6724,0.6724,match
+SHSampler,vertebralColumn,0.7549,0.7549,0.7252,0.7252,match
+SHSampler,wine,0.9255,0.9255,0.9306,0.9306,match
+SHSampler,winequality,0.0000,0.0000,0.0000,0.0000,match
+SHSampler,yeast,0.3464,0.3464,0.0505,0.0505,match
+SHSampler,zoo,0.5777,0.5777,0.4340,0.4340,match
+SMOM,vehicle,0.9215,0.9215,0.922,0.922,match
+SMOM,sat,0.8528,0.8528,0.8493,0.8493,match
+SMOM,ecoli,0.7726,0.7726,0.7507,0.7507,match
+SMOM,automobile,0.8521,0.8521,0.8326,0.8326,match
+SMOM,voice9_6,0.0747,0.0747,0.074,0.074,match
+SMOM,vowel5,0.8876,0.8876,0.8742,0.8742,match
+SMOM,vowel7,0.847,0.847,0.8417,0.8417,match
+SMOM,robot,1,1,1,1,match
+SMOM,pendigits,0.9664,0.9664,0.967,0.967,match
+SMOM,page-blocks,0.9493,0.9493,0.9476,0.9476,match
+SMOM,housing5,0.7268,0.7268,0.7112,0.7112,match
+SMOM,SWD,0.503,0.503,0.4854,0.4854,match
+SMOM,wine-red,0.4381,0.4381,0.4195,0.4195,match
+SMOM,voice9_7,0.0121,0.0121,0.0264,0.0264,match
+SMOM,LEV,0.4823,0.4823,0.3917,0.3917,match
+SMOM,machine,0.072,0.072,0.069,0.069,match
+SMOM,abalone8,0.2647,0.2647,0.2544,0.2544,match
+SMOM,plates-faults5,0.7526,0.7526,0.7527,0.7527,match
+SMOM,plates-faults7,0.7552,0.7552,0.7425,0.7425,match
+SMOM,ESL,0.3413,0.3413,0.3494,0.3494,match
+SMOM,ERA,0.1112,0.1112,0.1113,0.1113,match
+SMOM,yeast5,0.3966,0.3966,0.3398,0.3398,match
+SMOM,ERA5,0.26,0.26,0.2576,0.2576,match
+SMOM,yeast7,0.3134,0.3134,0.3,0.3,match
+SMOM,abalone10,0.1055,0.1055,0.1054,0.1054,match
+SMOM,yeast8,0.4051,0.4051,0.4091,0.4091,match
+SMOM,housing10,0.1026,0.1026,0.0375,0.0375,match
+SMOTE-ENN,Pima,83.66,83.66,85.49,85.49,match
+SMOTE-ENN,German,80.91,80.91,80.74,80.74,match
+SMOTE-ENN,Post-operative,59.83,59.83,55.66,55.66,match
+SMOTE-ENN,Haberman,76.38,76.38,72.23,72.23,match
+SMOTE-ENN,Splice-ie,97.97,97.97,98.46,98.46,match
+SMOTE-ENN,Splice-ei,98.85,98.85,98.92,98.92,match
+SMOTE-ENN,Vehicle,97.92,97.92,98.96,98.96,match
+SMOTE-ENN,Letter-vowel,98.94,98.94,98.90,98.90,match
+SMOTE-ENN,New-thyroid,99.22,99.22,98.91,98.91,match
+SMOTE-ENN,E.Coli,95.29,95.29,95.49,95.49,match
+SMOTE-ENN,Satimage,95.67,95.67,95.43,95.43,match
+SMOTE-ENN,Flag,79.32,79.32,73.62,73.62,match
+SMOTE-ENN,Glass,92.90,92.90,91.40,91.40,match
+SMOTE-ENN,Letter-a,99.91,99.91,99.91,99.91,match
+SMOTE-ENN,Nursery,97.80,97.80,99.21,99.21,match
+SMOTE-IPF,acl,88.50,88.50,86.75,86.75,match
+SMOTE-IPF,breast,64.40,64.40,60.56,60.56,match
+SMOTE-IPF,bupa,67.53,67.53,66.88,66.88,match
+SMOTE-IPF,cleveland,62.82,62.82,54.85,54.85,match
+SMOTE-IPF,ecoli,86.55,86.55,82.16,82.16,match
+SMOTE-IPF,haberman,66.76,66.76,65.41,65.41,match
+SMOTE-IPF,hepatitis,72.25,72.25,71.38,71.38,match
+SMOTE-IPF,newthyroid,96.63,96.63,96.35,96.35,match
+SMOTE-IPF,pima,73.58,73.58,71.29,71.29,match
+SMOTEBoost,KDDCup-99 intrusion (U2R class),88.8,88.8,84.17,84.17,match
+SMOTEBoost,mammography,68.36,68.36,61.31,61.31,match
+SMOTEBoost,Satimage,70.12,70.12,59.97,59.97,match
+SMOTEBoost,phoneme,77.37,77.37,68.89,68.89,match
+SOS,Default,0.574,0.574,0.561,0.561,match
+SOS,Shoppers,0.673,0.673,0.648,0.648,match
+SOS,Surgical,0.714,0.714,0.678,0.678,match
+SOS,WeatherAUS,0.680,0.680,0.674,0.674,match
+SOS,Buddy,0.608,0.608,0.584,0.584,match
+SOS,Satimage,0.855,0.855,0.846,0.846,match
+SOUP,balance scale,0.585,0.585,0.080,0.080,match
+SOUP,car,0.941,0.941,0.897,0.897,match
+SOUP,cleveland 1,0.266,0.266,0.052,0.052,match
+SOUP,cleveland 2,0.303,0.303,0.037,0.037,match
+SOUP,cmc,0.535,0.535,0.452,0.452,match
+SOUP,dermatology,0.962,0.962,0.927,0.927,match
+SOUP,ecoli,0.735,0.735,0.738,0.738,match
+SOUP,flare,0.566,0.566,0.421,0.421,match
+SOUP,glass,0.667,0.667,0.322,0.322,match
+SOUP,hayes roth,0.835,0.835,0.835,0.835,match
+SOUP,led7digit,0.778,0.778,0.756,0.756,match
+SOUP,thyroid,0.922,0.922,0.879,0.879,match
+SOUP,vehicle,0.915,0.915,0.915,0.915,match
+SOUP,wine quality,0.471,0.471,0.356,0.356,match
+SOUP,yeast,0.451,0.451,0.184,0.184,match
+SOUP,art1,0.960,0.960,0.947,0.947,match
+SOUP,art2,0.777,0.777,0.741,0.741,match
+SOUP,art3,0.608,0.608,0.535,0.535,match
+SOUP,art4,0.899,0.899,0.856,0.856,match
+SPE,Credit Fraud (KNN),0.852,0.852,0.593,0.593,match
+SPE,Credit Fraud (DT),0.843,0.843,0.303,0.303,match
+SPE,Credit Fraud (MLP),0.828,0.828,0.665,0.665,match
+SPE,KDDCUP (DOS vs. PRB) (AdaBoost10),0.999,0.999,,---,match
+SPE,KDDCUP (DOS vs. R2L) (AdaBoost10),0.988,0.988,,---,match
+SPE,Record Linkage (GBDT10),0.998,0.998,,---,match
+SPE,Payment Simulation (GBDT10),0.885,0.885,,---,match
+SVDD-WSMOTE,Wine,0.806,0.806,0.789,0.789,match
+SVDD-WSMOTE,Iris,0.973,0.973,0.963,0.963,match
+SVDD-WSMOTE,Abalone,0.941,0.941,0.921,0.921,match
+SVDD-WSMOTE,Pima,0.707,0.707,0.679,0.679,match
+SVDD-WSMOTE,Ecoli,0.937,0.937,0.925,0.925,match
+SVDD-WSMOTE,Libra,0.993,0.993,0.960,0.960,match
+SVDD-WSMOTE,Vehicle,0.947,0.947,0.937,0.937,match
+SVDD-WSMOTE,Balance,0.595,0.595,0.481,0.481,match
+SVDD-WSMOTE,Haberman,0.610,0.610,0.602,0.602,match
+SVDD-WSMOTE,Car,0.989,0.989,0.976,0.976,match
+SVDD-WSMOTE,Liver,0.659,0.659,0.640,0.640,match
+SVDD-WSMOTE,Seed,0.927,0.927,0.898,0.898,match
+SVDD-WSMOTE,Spect (printed under repeated header 'Wine' in Table 3 (continued)),0.725,0.725,0.691,0.691,match
+SVDD-WSMOTE,Pageblock (printed under repeated header 'Iris' in Table 3 (continued)),0.937,0.937,0.921,0.921,match
+SVDD-WSMOTE,Pageblock1 (printed under repeated header 'Abalone' in Table 3 (continued)),0.953,0.953,0.946,0.946,match
+SVDD-WSMOTE,Yeast,0.719,0.719,0.698,0.698,match
+SVDD-WSMOTE,Yeast1,0.756,0.756,0.755,0.755,match
+SVDD-WSMOTE,Yeast2,0.913,0.913,0.896,0.896,match
+SVDD-WSMOTE,Yeast3,0.937,0.937,0.898,0.898,match
+SVDD-WSMOTE,Yeast4,0.957,0.957,0.917,0.917,match
+SVDD-WSMOTE,Yeast5,0.815,0.815,0.787,0.787,match
+SVDD-WSMOTE,Yeast6,0.821,0.821,0.718,0.718,match
+SVDD-WSMOTE,Yeast7,0.965,0.965,0.961,0.961,match
+SVDD-WSMOTE,Yeast8,0.875,0.875,0.841,0.841,match

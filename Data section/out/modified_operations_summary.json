@@ -1,0 +1,449 @@
+{
+ "unit": "dataset entry with category = modified (out/dataset_records.csv)",
+ "entries": 331,
+ "papers": 39,
+ "tag_entries": {
+  "CS": 175,
+  "US": 148,
+  "FM": 16,
+  "SF": 18,
+  "IM": 147,
+  "OT": 4,
+  "IS": 0
+ },
+ "tag_entries_note": "an entry can carry several tags; these counts sum to more than the number of entries",
+ "tag_papers": {
+  "CS": 29,
+  "US": 11,
+  "FM": 7,
+  "SF": 9,
+  "IM": 9,
+  "OT": 3,
+  "IS": 0
+ },
+ "combinations": {
+  "CS": 141,
+  "US;IM": 131,
+  "CS;IM": 11,
+  "CS;FM": 9,
+  "SF": 7,
+  "CS;US": 6,
+  "US": 5,
+  "CS;SF": 4,
+  "FM": 4,
+  "US;SF;IM": 3,
+  "FM;SF": 3,
+  "CS;OT": 2,
+  "CS;US;IM": 2,
+  "OT": 2,
+  "US;SF": 1
+ },
+ "combinations_note": "mutually exclusive; sums to the number of entries",
+ "entries_by_number_of_ops": {
+  "1": 159,
+  "2": 167,
+  "3": 5
+ },
+ "entries_multiple_ops": 172,
+ "papers_with_multiple_ops_entries": 17,
+ "entries_with_conditional_ops": 61,
+ "confidence": {
+  "explicitly reported": 311,
+  "supported by indirect evidence": 16,
+  "ambiguous": 4
+ },
+ "changes_task_entries": 177,
+ "changes_task_papers": 30,
+ "changes": {
+  "class_structure": 177,
+  "sample_composition": 202,
+  "feature_space": 16,
+  "imbalance": {
+   "changed as a consequence": 178,
+   "deliberately changed": 147,
+   "not changed by the reported operation": 6
+  }
+ },
+ "class_op_kind": {
+  "one-vs-rest": 84,
+  "class subset (two classes kept)": 6,
+  "class subset (small classes dropped)": 2,
+  "label construction": 2,
+  "threshold on target": 2,
+  "class subset (classes selected)": 5,
+  "class grouping (minority/majority sets)": 13,
+  "threshold on target or class choice": 6,
+  "class grouping (vowels vs consonants)": 1,
+  "class subset (named classes kept)": 1,
+  "one-vs-rest (class not stated)": 6,
+  "one-vs-rest or class subset": 13,
+  "class or threshold (not stated)": 1,
+  "one-vs-rest (class inferred from suffix)": 8,
+  "class merging": 11,
+  "class subset (classes dropped)": 3,
+  "one-vs-rest or class pair": 11
+ },
+ "purpose": {
+  "papers_with_stated_purpose": 15,
+  "papers": 39,
+  "entries_with_stated_purpose": 191,
+  "themes_by_paper": {
+   "two-class problems": 7,
+   "more extreme imbalance": 1,
+   "extreme imbalance": 1,
+   "higher imbalance": 4,
+   "imbalance study": 1,
+   "data-set size": 1
+  },
+  "papers_without": [
+   "A-SUWO",
+   "AMDO",
+   "Borderline-SMOTE",
+   "CISO",
+   "COG-OS",
+   "CTGAN / TVAE",
+   "Cluster-SMOTE",
+   "ClusterCentroids",
+   "DGOT",
+   "DLexiBoost",
+   "DSRBF / Static-SMOTE",
+   "EasyEnsemble / BalanceCascade",
+   "GAMO",
+   "GMMSampling",
+   "GOIO",
+   "INOS",
+   "LS",
+   "OSS",
+   "OVO-SMOTE",
+   "RACOG / wRACOG",
+   "SMOM",
+   "SMOTE-ENN / SMOTE-Tomek",
+   "SOUP",
+   "SPE"
+  ]
+ },
+ "missing_information": {
+  "characteristics not printed": 55,
+  "minority class not stated": 15,
+  "original class count not stated": 3,
+  "subset selection not described": 1,
+  "target IR not stated": 18,
+  "affected data sets not named": 2
+ },
+ "entries_with_missing_information": 93,
+ "by_paper": {
+  "A-SUWO": {
+   "entries": 12,
+   "ops": {
+    "CS": 12
+   },
+   "purpose": false
+  },
+  "ADASYN": {
+   "entries": 3,
+   "ops": {
+    "CS": 3,
+    "FM": 1
+   },
+   "purpose": true
+  },
+  "AMDO": {
+   "entries": 3,
+   "ops": {
+    "SF": 1,
+    "CS": 2
+   },
+   "purpose": false
+  },
+  "Borderline-SMOTE": {
+   "entries": 1,
+   "ops": {
+    "CS": 1
+   },
+   "purpose": false
+  },
+  "CISO": {
+   "entries": 4,
+   "ops": {
+    "CS": 4
+   },
+   "purpose": false
+  },
+  "COG-OS": {
+   "entries": 9,
+   "ops": {
+    "US": 6,
+    "SF": 4,
+    "IM": 6,
+    "CS": 2
+   },
+   "purpose": false
+  },
+  "CTGAN / TVAE": {
+   "entries": 2,
+   "ops": {
+    "FM": 2
+   },
+   "purpose": false
+  },
+  "Cluster-SMOTE": {
+   "entries": 2,
+   "ops": {
+    "CS": 2,
+    "OT": 2
+   },
+   "purpose": false
+  },
+  "ClusterCentroids": {
+   "entries": 1,
+   "ops": {
+    "SF": 1
+   },
+   "purpose": false
+  },
+  "DGOT": {
+   "entries": 2,
+   "ops": {
+    "CS": 2
+   },
+   "purpose": false
+  },
+  "DLexiBoost": {
+   "entries": 3,
+   "ops": {
+    "FM": 3,
+    "SF": 3
+   },
+   "purpose": false
+  },
+  "DSRBF / Static-SMOTE": {
+   "entries": 2,
+   "ops": {
+    "CS": 2
+   },
+   "purpose": false
+  },
+  "EasyEnsemble / BalanceCascade": {
+   "entries": 10,
+   "ops": {
+    "CS": 10
+   },
+   "purpose": false
+  },
+  "G-SMOTE": {
+   "entries": 42,
+   "ops": {
+    "US": 42,
+    "IM": 42
+   },
+   "purpose": true
+  },
+  "GAMO": {
+   "entries": 9,
+   "ops": {
+    "US": 4,
+    "IM": 2,
+    "CS": 5,
+    "FM": 5
+   },
+   "purpose": false
+  },
+  "GMMSampling": {
+   "entries": 11,
+   "ops": {
+    "CS": 11
+   },
+   "purpose": false
+  },
+  "GOIO": {
+   "entries": 6,
+   "ops": {
+    "CS": 6
+   },
+   "purpose": false
+  },
+  "HDE": {
+   "entries": 14,
+   "ops": {
+    "US": 14,
+    "IM": 14
+   },
+   "purpose": true
+  },
+  "INOS": {
+   "entries": 7,
+   "ops": {
+    "CS": 4,
+    "US": 7
+   },
+   "purpose": false
+  },
+  "LS": {
+   "entries": 2,
+   "ops": {
+    "CS": 2,
+    "SF": 1
+   },
+   "purpose": false
+  },
+  "MWMOTE": {
+   "entries": 18,
+   "ops": {
+    "CS": 18
+   },
+   "purpose": true
+  },
+  "NBU": {
+   "entries": 2,
+   "ops": {
+    "CS": 2,
+    "US": 2,
+    "IM": 2
+   },
+   "purpose": true
+  },
+  "OSS": {
+   "entries": 3,
+   "ops": {
+    "CS": 3,
+    "US": 2
+   },
+   "purpose": false
+  },
+  "OVO-SMOTE": {
+   "entries": 4,
+   "ops": {
+    "SF": 4
+   },
+   "purpose": false
+  },
+  "RACOG / wRACOG": {
+   "entries": 8,
+   "ops": {
+    "CS": 8,
+    "FM": 3,
+    "SF": 1
+   },
+   "purpose": false
+  },
+  "RAMOBoost": {
+   "entries": 13,
+   "ops": {
+    "CS": 13
+   },
+   "purpose": true
+  },
+  "ROS (Buda)": {
+   "entries": 3,
+   "ops": {
+    "US": 3,
+    "SF": 2,
+    "IM": 3
+   },
+   "purpose": true
+  },
+  "RSMOTE": {
+   "entries": 18,
+   "ops": {
+    "US": 18,
+    "IM": 18
+   },
+   "purpose": true
+  },
+  "RUSBoost": {
+   "entries": 9,
+   "ops": {
+    "CS": 9
+   },
+   "purpose": true
+  },
+  "SMOM": {
+   "entries": 14,
+   "ops": {
+    "CS": 14
+   },
+   "purpose": false
+  },
+  "SMOTE": {
+   "entries": 4,
+   "ops": {
+    "FM": 1,
+    "CS": 2,
+    "OT": 1
+   },
+   "purpose": true
+  },
+  "SMOTE-ENN / SMOTE-Tomek": {
+   "entries": 12,
+   "ops": {
+    "CS": 12
+   },
+   "purpose": false
+  },
+  "SMOTE-IPF": {
+   "entries": 2,
+   "ops": {
+    "OT": 1,
+    "FM": 1
+   },
+   "purpose": true
+  },
+  "SMOTEBoost": {
+   "entries": 2,
+   "ops": {
+    "US": 1,
+    "SF": 1,
+    "CS": 1
+   },
+   "purpose": true
+  },
+  "SOUP": {
+   "entries": 2,
+   "ops": {
+    "CS": 2
+   },
+   "purpose": false
+  },
+  "SPE": {
+   "entries": 2,
+   "ops": {
+    "CS": 2
+   },
+   "purpose": false
+  },
+  "SVDD-WSMOTE": {
+   "entries": 20,
+   "ops": {
+    "CS": 20,
+    "IM": 11
+   },
+   "purpose": true
+  },
+  "Safe-Level-SMOTE": {
+   "entries": 1,
+   "ops": {
+    "CS": 1
+   },
+   "purpose": true
+  },
+  "k-means SMOTE": {
+   "entries": 49,
+   "ops": {
+    "US": 49,
+    "IM": 49
+   },
+   "purpose": true
+  }
+ },
+ "im_entries_by_paper": {
+  "COG-OS": 6,
+  "G-SMOTE": 42,
+  "GAMO": 2,
+  "HDE": 14,
+  "NBU": 2,
+  "ROS (Buda)": 3,
+  "RSMOTE": 18,
+  "SVDD-WSMOTE": 11,
+  "k-means SMOTE": 49
+ }
+}

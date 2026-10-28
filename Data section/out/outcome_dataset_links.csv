@@ -1,0 +1,836 @@
+outcome_csv_line,paper,dataset,outcome_match,smote_kind,raw_sign,record_id,record_name,link_method,link_note,name_check
+2,A-SUWO,Vehicle,name,plain SMOTE,+,P031-D001,Vehicle,fields,,agrees
+3,A-SUWO,Ecoli,name,plain SMOTE,=,P031-D002,Ecoli,fields,,agrees
+4,A-SUWO,Pima,name,plain SMOTE,+,P031-D003,Pima,fields,,agrees
+5,A-SUWO,Balance,name,plain SMOTE,+,P031-D004,Balance,fields,,agrees
+6,A-SUWO,Liver,name,plain SMOTE,+,P031-D005,Liver,fields,,agrees
+7,A-SUWO,Wine,name,plain SMOTE,+,P031-D006,Wine,fields,,agrees
+8,A-SUWO,Breast,prefix,plain SMOTE,+,P031-D007,Breast Tissue,fields,,agrees
+9,A-SUWO,Libra,name,plain SMOTE,-,P031-D008,Libra,fields,,agrees
+10,A-SUWO,LEV,name,plain SMOTE,+,P031-D009,LEV,fields,,agrees
+11,A-SUWO,Iris,name,plain SMOTE,=,P031-D010,Iris,fields,,agrees
+12,A-SUWO,Heart,name,plain SMOTE,+,P031-D011,Heart,fields,,agrees
+13,A-SUWO,Glass,name,plain SMOTE,+,P031-D012,Glass,fields,,agrees
+14,A-SUWO,Haber,prefix,plain SMOTE,=,P031-D013,Haberman,fields,,agrees
+15,A-SUWO,Eucal.,prefix,plain SMOTE,+,P031-D014,Eucalyptus,fields,,agrees
+16,A-SUWO,Heating,name,plain SMOTE,+,P031-D015,Heating,fields,,agrees
+17,A-SUWO,Seg.,prefix,plain SMOTE,-,P031-D016,Segment,fields,,agrees
+18,AB-SMOTE,Abalone9-18 (Table IV),name,plain SMOTE,+,P044-D001,Abalone9-18,fields,,agrees
+19,AB-SMOTE,Customer Churn Wireless Telecom(Table V),prefix,plain SMOTE,-,P044-D002,Customer Churn Wireless Telecom,fields,,agrees (audited)
+20,AB-SMOTE,Harberman (Table VI),corrected 19 Oct 2026 (see out/outcome_mapping_audit.csv),plain SMOTE,-,P044-D004,Haberman,fields,,agrees (audited)
+21,AB-SMOTE,Employee Attrition (Table VII),corrected 19 Oct 2026 (see out/outcome_mapping_audit.csv),plain SMOTE,+,P044-D005,Employe Attrition,fields,,agrees (audited)
+22,AB-SMOTE,Telco Customer Churn (Table VIII),name,plain SMOTE,-,P044-D003,Telco Customer Churn,fields,,agrees (audited)
+23,AB-SMOTE,Flare (Table IX),name,plain SMOTE,-,P044-D006,Flare,fields,,agrees
+24,AB-SMOTE,Wine Quality (Table X),name,plain SMOTE,=,P044-D007,Wine Quality,fields,,agrees
+25,AB-SMOTE,Sales: Win Loss (Table XI),name,plain SMOTE,-,P044-D008,Sales: Win Loss,fields,,agrees
+26,ADASYN,Vehicle,name,plain SMOTE,+,P013-D001,Vehicle,fields,,agrees
+27,ADASYN,Pima Indian Diabetes,row order (check),plain SMOTE,+,P013-D002,Diabetes (PID),fields,,agrees (audited)
+28,ADASYN,Vowel recognition,prefix,plain SMOTE,+,P013-D003,Vowel,fields,,agrees
+29,ADASYN,Ionosphere,name,plain SMOTE,+,P013-D004,Ionosphere,fields,,agrees
+30,ADASYN,Abalone,name,plain SMOTE,+,P013-D005,Abalone,fields,,agrees
+31,AMDO,Balance,name,SMOTE variant (multiclass/ensemble wrapper),+,P035-D001,Balance,fields,,agrees
+32,AMDO,Hayes-roth,name,SMOTE variant (multiclass/ensemble wrapper),=,P035-D002,Hayes-roth,fields,,agrees
+33,AMDO,New-thyroid,name,SMOTE variant (multiclass/ensemble wrapper),+,P035-D003,New-thyroid,fields,,agrees
+34,AMDO,Page-blocks,name,SMOTE variant (multiclass/ensemble wrapper),-,P035-D004,Page-blocks,fields,,agrees
+35,AMDO,Dermatology,name,SMOTE variant (multiclass/ensemble wrapper),+,P035-D005,Dermatology,fields,,agrees
+36,AMDO,Breast-tissue,name,SMOTE variant (multiclass/ensemble wrapper),-,P035-D006,Breast-tissue,fields,,agrees
+37,AMDO,UKM,row order (check),SMOTE variant (multiclass/ensemble wrapper),+,P035-D007,User-knowledge-modelling (UKM),fields,,agrees (audited)
+38,AMDO,Vertebral-column,name,SMOTE variant (multiclass/ensemble wrapper),+,P035-D008,Vertebral-column,fields,,agrees
+39,AMDO,Ecoli,name,SMOTE variant (multiclass/ensemble wrapper),+,P035-D009,Ecoli,fields,,agrees
+40,AMDO,Pre2D,name,SMOTE variant (multiclass/ensemble wrapper),-,P035-D010,Pre2D,fields,,agrees
+41,AMDO,Contraceptive,name,SMOTE variant (multiclass/ensemble wrapper),+,P035-D011,Contraceptive,fields,,agrees
+42,AMDO,Flare,name,SMOTE variant (multiclass/ensemble wrapper),+,P035-D012,Flare,fields,,agrees
+43,AMDO,Thyroid,name,SMOTE variant (multiclass/ensemble wrapper),-,P035-D013,Thyroid,fields,,agrees
+44,AMDO,Car,name,SMOTE variant (multiclass/ensemble wrapper),+,P035-D014,Car,fields,,agrees
+45,AMDO,Nursery,name,SMOTE variant (multiclass/ensemble wrapper),+,P035-D015,Nursery,fields,,agrees
+46,AMDO,Splice,name,SMOTE variant (multiclass/ensemble wrapper),+,P035-D016,Splice,fields,,agrees
+47,AMDO,PreND,name,SMOTE variant (multiclass/ensemble wrapper),+,P035-D017,PreND,fields,,agrees
+48,CBHSID,Liver,row order (check),plain SMOTE,+,P055-D001,Liver,fields,,agrees (audited)
+49,CBHSID,Pima,name,plain SMOTE,+,P055-D002,Pima,fields,,agrees
+50,CBHSID,Cancer,name,plain SMOTE,+,P055-D003,Cancer,fields,,agrees
+51,CBHSID,Heart failure,name,plain SMOTE,+,P055-D004,Heart failure,fields,,agrees
+52,CBHSID,Yeast1,name,plain SMOTE,+,P055-D005,Yeast1,fields,,agrees
+53,CBHSID,Haberman,name,plain SMOTE,+,P055-D006,Haberman,fields,,agrees
+54,CBHSID,Vehicle1,name,plain SMOTE,-,P055-D007,Vehicle1,fields,,agrees
+55,CBHSID,Glass6,name,plain SMOTE,+,P055-D008,Glass6,fields,,agrees
+56,CBHSID,Yeast3,name,plain SMOTE,-,P055-D009,Yeast3,fields,,agrees
+57,CBHSID,Yeast4,name,plain SMOTE,+,P055-D010,Yeast4,fields,,agrees
+58,CBHSID,Yeast5,name,plain SMOTE,+,P055-D011,Yeast5,fields,,agrees
+59,CBHSID,Yeast6,name,plain SMOTE,+,P055-D012,Yeast6,fields,,agrees
+60,CBHSID,Penbased,name,plain SMOTE,+,P055-D013,Penbased,fields,,agrees
+61,CBHSID,Contraceptive,name,plain SMOTE,+,P055-D014,Contraceptive,fields,,agrees
+62,CBHSID,Dermatology,name,plain SMOTE,-,P055-D015,Dermatology,fields,,agrees
+63,CBHSID,Thyroid,name,plain SMOTE,+,P055-D016,Thyroid,fields,,agrees
+64,CGMOS,BankMarket,name,plain SMOTE,+,P032-D001,BankMarket,fields,,agrees
+65,CGMOS,BloodService,name,plain SMOTE,+,P032-D002,BloodService,fields,,agrees
+66,CGMOS,BreastCancer,name,plain SMOTE,=,P032-D003,BreastCancer,fields,,agrees
+67,CGMOS,BreastTissue,name,plain SMOTE,+,P032-D004,BreastTissue,fields,,agrees
+68,CGMOS,CarEvaluation,name,plain SMOTE,=,P032-D005,CarEvaluation,fields,,agrees
+69,CGMOS,Card’graphy,name,plain SMOTE,+,P032-D006,Card’graphy,fields,,agrees
+70,CGMOS,CharacterTraj,name,plain SMOTE,=,P032-D007,CharacterTraj,fields,,agrees
+71,CGMOS,Chess,name,plain SMOTE,+,P032-D008,Chess,fields,,agrees
+72,CGMOS,ClimateSim,name,plain SMOTE,+,P032-D009,ClimateSim,fields,,agrees
+73,CGMOS,Contraceptive,name,plain SMOTE,+,P032-D010,Contraceptive,fields,,agrees
+74,CGMOS,Fertility,name,plain SMOTE,+,P032-D011,Fertility,fields,,agrees
+75,CGMOS,Haberman,name,plain SMOTE,+,P032-D012,Haberman,fields,,agrees
+76,CGMOS,ILPD,name,plain SMOTE,-,P032-D013,ILPD,fields,,agrees
+77,CGMOS,ImgSeg,name,plain SMOTE,+,P032-D014,ImgSeg,fields+name,,agrees
+78,CGMOS,Leaf,name,plain SMOTE,+,P032-D015,Leaf,fields,,agrees
+79,CGMOS,Libras,name,plain SMOTE,+,P032-D016,Libras,fields,,agrees
+80,CGMOS,MultipleFs,name,plain SMOTE,=,P032-D017,MultipleFs,fields,,agrees
+81,CGMOS,Parkinson,name,plain SMOTE,+,P032-D018,Parkinson,fields,,agrees
+82,CGMOS,PlanRelax,name,plain SMOTE,+,P032-D019,PlanRelax,fields,,agrees
+83,CGMOS,QSAR,name,plain SMOTE,+,P032-D020,QSAR,fields,,agrees
+84,CGMOS,SPECT,name,plain SMOTE,+,P032-D021,SPECT,fields,,agrees
+85,CGMOS,SPECTF,name,plain SMOTE,+,P032-D022,SPECTF,fields,,agrees
+86,CGMOS,SeismicBumps,name,plain SMOTE,+,P032-D023,SeismicBumps,fields,,agrees
+87,CGMOS,Statlog,name,plain SMOTE,=,P032-D024,Statlog,fields+name,,agrees
+88,CGMOS,PlatesFaults,name,plain SMOTE,+,P032-D025,PlatesFaults,fields,,agrees
+89,CGMOS,TAEvaluation,name,plain SMOTE,+,P032-D026,TAEvaluation,fields,,agrees
+90,CGMOS,UserKnowledge,row order (check),plain SMOTE,+,P032-D027,UKnowledge,fields,,agrees (audited)
+91,CGMOS,Vertebral,name,plain SMOTE,+,P032-D028,Vertebral,fields,,agrees
+92,CGMOS,Customers,name,plain SMOTE,+,P032-D029,Customers,fields,,agrees
+93,CGMOS,Yeast,name,plain SMOTE,+,P032-D030,Yeast,fields,,agrees
+94,DGOT,satimage,name,plain SMOTE,-,P074-D001,satimage,fields,,agrees
+95,DGOT,students_dropout,name,plain SMOTE,+,P074-D002,students_dropout,fields,,agrees
+96,DGOT,default,name,plain SMOTE,+,P074-D003,default,fields,,agrees
+97,DGOT,Dry_Beans,name,plain SMOTE,+,P074-D004,Dry_Beans,fields,,agrees
+98,DGOT,bank_small,prefix,plain SMOTE,+,P074-D005,bank,fields,,agrees (audited)
+99,DGOT,optical_digits,name,plain SMOTE,+,P074-D013,optical_digits,fields,,agrees
+100,DGOT,satimage_4,name,plain SMOTE,+,P074-D014,satimage_4,fields,,agrees
+101,DGOT,pen_digits,name,plain SMOTE,+,P074-D015,pen_digits,fields,,agrees
+102,DGOT,sick_euthyroid,name,plain SMOTE,+,P074-D016,sick_euthyroid,fields,,agrees
+103,DGOT,isolet,name,plain SMOTE,+,P074-D017,isolet,fields,,agrees
+104,DGOT,nursery,name,plain SMOTE,+,P074-D006,nursery,fields,,agrees
+105,DGOT,thyroid_sick,name,plain SMOTE,+,P074-D018,thyroid_sick,fields,,agrees
+106,DGOT,abalone_15,name,plain SMOTE,+,P074-D007,abalone_15,fields,,agrees
+107,DGOT,coil_2000,name,plain SMOTE,=,P074-D019,coil_2000,fields,,agrees
+108,DGOT,abalone_6,name,plain SMOTE,+,P074-D008,abalone_6,fields,,agrees
+109,DGOT,wine_quality,name,plain SMOTE,+,P074-D020,wine_quality,fields,,agrees
+110,DGOT,letter_img,name,plain SMOTE,+,P074-D021,letter_img,fields,,agrees
+111,DGOT,bankruptcy,corrected 19 Oct 2026 (see out/outcome_mapping_audit.csv),plain SMOTE,-,P074-D009,polish_bankruptcy,fields,,agrees (audited)
+112,DGOT,avila,name,plain SMOTE,-,P074-D010,avila,fields,,agrees
+113,DGOT,abalone_19,name,plain SMOTE,+,P074-D022,abalone_19,fields,,agrees
+114,DGOT,page-blocks,name,plain SMOTE,+,P074-D011,page-blocks,fields,,agrees
+115,DGOT,firewall,name,plain SMOTE,+,P074-D012,firewall,fields,,agrees
+116,DSRBF / Static-SMOTE,Hepatitis,name,SMOTE variant (multiclass/ensemble wrapper),+,P022-D001,Hepatitis,fields,,agrees
+117,DSRBF / Static-SMOTE,BreastC,name,SMOTE variant (multiclass/ensemble wrapper),+,P022-D002,BreastC,fields,,agrees
+118,DSRBF / Static-SMOTE,Haberman,name,SMOTE variant (multiclass/ensemble wrapper),+,P022-D003,Haberman,fields,,agrees
+119,DSRBF / Static-SMOTE,CYTvsPOX,name,SMOTE variant (multiclass/ensemble wrapper),+,P022-D004,CYTvsPOX,fields,,agrees
+120,DSRBF / Static-SMOTE,ME2vsOther,name,SMOTE variant (multiclass/ensemble wrapper),+,P022-D005,ME2vsOther,fields,,agrees
+121,DSRBF / Static-SMOTE,Newthyroid,name,SMOTE variant (multiclass/ensemble wrapper),+,P022-D006,Newthyroid,fields,,agrees
+122,DSRBF / Static-SMOTE,Balance,name,SMOTE variant (multiclass/ensemble wrapper),+,P022-D007,Balance,fields,,agrees
+123,DSRBF / Static-SMOTE,Saureus4,name,SMOTE variant (multiclass/ensemble wrapper),+,P022-D008,Saureus4,fields,,agrees
+124,DSRBF / Static-SMOTE,Anneal,name,SMOTE variant (multiclass/ensemble wrapper),+,P022-D009,Anneal,fields,,agrees
+125,DSRBF / Static-SMOTE,Glass,name,SMOTE variant (multiclass/ensemble wrapper),+,P022-D010,Glass,fields,,agrees
+126,DSRBF / Static-SMOTE,Zoo,name,SMOTE variant (multiclass/ensemble wrapper),+,P022-D011,Zoo,fields,,agrees
+127,DSRBF / Static-SMOTE,E. coli,name,SMOTE variant (multiclass/ensemble wrapper),+,P022-D012,E. coli,fields,,agrees
+128,DSRBF / Static-SMOTE,Yeast,name,SMOTE variant (multiclass/ensemble wrapper),+,P022-D013,Yeast,fields,,agrees
+129,EMDO,Balance,name,SMOTE variant (multiclass/ensemble wrapper),+,P051-D001,Balance,fields,,agrees
+130,EMDO,Hayes-Roth,name,SMOTE variant (multiclass/ensemble wrapper),+,P051-D002,Hayes-Roth,fields,,agrees
+131,EMDO,New-Thyroid,name,SMOTE variant (multiclass/ensemble wrapper),+,P051-D003,New-Thyroid,fields,,agrees
+132,EMDO,Page-Blocks,name,SMOTE variant (multiclass/ensemble wrapper),+,P051-D004,Page-Blocks,fields,,agrees
+133,EMDO,Dermatology,name,SMOTE variant (multiclass/ensemble wrapper),+,P051-D005,Dermatology,fields,,agrees
+134,EMDO,Breast-Tissue,name,SMOTE variant (multiclass/ensemble wrapper),+,P051-D006,Breast-Tissue,fields,,agrees
+135,EMDO,UKM,row order (check),SMOTE variant (multiclass/ensemble wrapper),+,P051-D007,User-Knowledge-Modelling (UKM),fields,,agrees (audited)
+136,EMDO,Vertebral-Column,name,SMOTE variant (multiclass/ensemble wrapper),+,P051-D008,Vertebral-Column,fields,,agrees
+137,EMDO,Ecoli,name,SMOTE variant (multiclass/ensemble wrapper),+,P051-D009,Ecoli,fields,,agrees
+138,EasyEnsemble / BalanceCascade,car,name,SMOTE variant (multiclass/ensemble wrapper),-,P016-D003,car,fields,,agrees
+139,EasyEnsemble / BalanceCascade,ionosphere,name,SMOTE variant (multiclass/ensemble wrapper),-,P016-D007,ionosphere,fields,,agrees
+140,EasyEnsemble / BalanceCascade,letter,name,SMOTE variant (multiclass/ensemble wrapper),=,P016-D008,letter,fields,,agrees
+141,EasyEnsemble / BalanceCascade,phoneme,name,SMOTE variant (multiclass/ensemble wrapper),-,P016-D011,phoneme,fields,,agrees
+142,EasyEnsemble / BalanceCascade,sat,prefix,SMOTE variant (multiclass/ensemble wrapper),+,P016-D013,satimage,fields,,agrees
+143,EasyEnsemble / BalanceCascade,wdbc,name,SMOTE variant (multiclass/ensemble wrapper),-,P016-D015,wdbc,fields,,agrees
+144,EasyEnsemble / BalanceCascade,abalone,name,SMOTE variant (multiclass/ensemble wrapper),+,P016-D001,abalone,fields,,agrees
+145,EasyEnsemble / BalanceCascade,balance,name,SMOTE variant (multiclass/ensemble wrapper),+,P016-D002,balance,fields,,agrees
+146,EasyEnsemble / BalanceCascade,cmc,name,SMOTE variant (multiclass/ensemble wrapper),+,P016-D004,cmc,fields,,agrees
+147,EasyEnsemble / BalanceCascade,haberman,name,SMOTE variant (multiclass/ensemble wrapper),+,P016-D005,haberman,fields,,agrees
+148,EasyEnsemble / BalanceCascade,housing,name,SMOTE variant (multiclass/ensemble wrapper),+,P016-D006,housing,fields,,agrees
+149,EasyEnsemble / BalanceCascade,mf-morph,name,SMOTE variant (multiclass/ensemble wrapper),+,P016-D009,mf-morph,fields,,agrees
+150,EasyEnsemble / BalanceCascade,mf-zernike,name,SMOTE variant (multiclass/ensemble wrapper),+,P016-D010,mf-zernike,fields,,agrees
+151,EasyEnsemble / BalanceCascade,pima,name,SMOTE variant (multiclass/ensemble wrapper),+,P016-D012,pima,fields,,agrees
+152,EasyEnsemble / BalanceCascade,vehicle,name,SMOTE variant (multiclass/ensemble wrapper),+,P016-D014,vehicle,fields,,agrees
+153,EasyEnsemble / BalanceCascade,wpbc,name,SMOTE variant (multiclass/ensemble wrapper),+,P016-D016,wpbc,fields,,agrees
+154,FW-SMOTE,ldd1 (abalone7),name,plain SMOTE,+,P056-D001,abalone7,fields,,agrees
+155,FW-SMOTE,ldd2 (ecoli),name,plain SMOTE,+,P056-D002,ecoli,fields,,agrees
+156,FW-SMOTE,ldd3 (ecoli-0-1 vs 5),name,plain SMOTE,+,P056-D003,ecoli-0-1 vs 5,fields,,agrees
+157,FW-SMOTE,ldd4 (ecoli-0-1-4-6 vs 5),name,plain SMOTE,=,P056-D004,ecoli-0-1-4-6 vs 5,fields,,agrees
+158,FW-SMOTE,ldd5 (ecoli-0-1-4-7 vs 5–6),name,plain SMOTE,+,P056-D005,ecoli-0-1-4-7 vs 5–6,fields,,agrees
+159,FW-SMOTE,ldd6 (ecoli-0-2-3-4 vs 5),name,plain SMOTE,=,P056-D006,ecoli-0-2-3-4 vs 5,fields,,agrees
+160,FW-SMOTE,ldd7 (ecoli-0-2-6-7 vs 3–5),name,plain SMOTE,+,P056-D007,ecoli-0-2-6-7 vs 3–5,fields,,agrees
+161,FW-SMOTE,ldd8 (ecoli-0-3-4 vs 5),name,plain SMOTE,=,P056-D008,ecoli-0-3-4 vs 5,fields,,agrees
+162,FW-SMOTE,ldd9 (ecoli-0-3-4-6 vs 5),name,plain SMOTE,=,P056-D009,ecoli-0-3-4-6 vs 5,fields,,agrees
+163,FW-SMOTE,ldd10 (ecoli-0-3-4-7 vs 5–6),name,plain SMOTE,-,P056-D010,ecoli-0-3-4-7 vs 5–6,fields,,agrees
+164,FW-SMOTE,ldd11 (ecoli-0-4-6 vs 5),name,plain SMOTE,=,P056-D011,ecoli-0-4-6 vs 5,fields,,agrees
+165,FW-SMOTE,ldd12 (ecoli-0-6-7 vs 3–5),name,plain SMOTE,+,P056-D012,ecoli-0-6-7 vs 3–5,fields,,agrees
+166,FW-SMOTE,ldd13 (ecoli-0-6-7 vs 5),name,plain SMOTE,+,P056-D013,ecoli-0-6-7 vs 5,fields,,agrees
+167,FW-SMOTE,ldd14 (ecoli4),name,plain SMOTE,+,P056-D014,ecoli4,fields,,agrees
+168,FW-SMOTE,ldd15 (glass-0-1-6 vs 2),name,plain SMOTE,+,P056-D015,glass-0-1-6 vs 2,fields,,agrees
+169,FW-SMOTE,ldd16 (glass-0-4 vs 5),name,plain SMOTE,+,P056-D016,glass-0-4 vs 5,fields,,agrees
+170,FW-SMOTE,ldd17 (glass-0-6 vs 5),name,plain SMOTE,=,P056-D017,glass-0-6 vs 5,fields,,agrees
+171,FW-SMOTE,ldd18 (glass4),name,plain SMOTE,+,P056-D018,glass4,fields,,agrees
+172,FW-SMOTE,ldd19 (image1),name,plain SMOTE,+,P056-D019,image1,fields,,agrees
+173,FW-SMOTE,ldd20 (page-blocks-1-3 vs 4),name,plain SMOTE,+,P056-D020,page-blocks-1-3 vs 4,fields,,agrees
+174,FW-SMOTE,ldd21 (shuttle-c0-vs-c4),name,plain SMOTE,=,P056-D021,shuttle-c0-vs-c4,fields,,agrees
+175,FW-SMOTE,ldd22 (solar),name,plain SMOTE,+,P056-D022,solar,fields,,agrees
+176,FW-SMOTE,ldd23 (yeast-0-2-5-7-9 vs 3-6-8),name,plain SMOTE,+,P056-D023,yeast-0-2-5-7-9 vs 3-6-8,fields,,agrees
+177,FW-SMOTE,ldd24 (yeast-0-5-6-7-9 vs 4),name,plain SMOTE,+,P056-D024,yeast-0-5-6-7-9 vs 4,fields,,agrees
+178,FW-SMOTE,ldd25 (yeast-1 vs 7),name,plain SMOTE,+,P056-D025,yeast-1 vs 7,fields,,agrees
+179,FW-SMOTE,ldd26 (yeast-1-4-5-8 vs 7),name,plain SMOTE,+,P056-D026,yeast-1-4-5-8 vs 7,fields,,agrees
+180,FW-SMOTE,ldd27 (yeast-2 vs 4),name,plain SMOTE,+,P056-D027,yeast-2 vs 4,fields,,agrees
+181,FW-SMOTE,ldd28 (yeast3),name,plain SMOTE,+,P056-D028,yeast3,fields,,agrees
+182,FW-SMOTE,ldd29 (yeast4),name,plain SMOTE,+,P056-D029,yeast4,fields,,agrees
+183,FW-SMOTE,ldd30 (yeast5),name,plain SMOTE,+,P056-D030,yeast5,fields,,agrees
+184,FW-SMOTE,hdd1 (bhat1),name,plain SMOTE,=,P056-D031,bhat1,fields,,agrees
+185,FW-SMOTE,hdd2 (bhat2),name,plain SMOTE,=,P056-D032,bhat2,fields,,agrees
+186,FW-SMOTE,hdd3 (bhat3),name,plain SMOTE,+,P056-D033,bhat3,fields,,agrees
+187,FW-SMOTE,hdd4 (bhat4),name,plain SMOTE,=,P056-D034,bhat4,fields,,agrees
+188,FW-SMOTE,hdd5 (bullinger),name,plain SMOTE,+,P056-D035,bullinger,fields,,agrees
+189,FW-SMOTE,hdd6 (car1),name,plain SMOTE,+,P056-D036,car1,fields,,agrees
+190,FW-SMOTE,hdd7 (car2),name,plain SMOTE,+,P056-D037,car2,fields,,agrees
+191,FW-SMOTE,hdd8 (car3),name,plain SMOTE,+,P056-D038,car3,fields,,agrees
+192,FW-SMOTE,hdd9 (car4),name,plain SMOTE,+,P056-D039,car4,fields,,agrees
+193,FW-SMOTE,hdd10 (glioma),name,plain SMOTE,+,P056-D040,glioma,fields,,agrees
+194,FW-SMOTE,hdd11 (lung),name,plain SMOTE,=,P056-D041,lung,fields,,agrees
+195,FW-SMOTE,hdd12 (srbct),name,plain SMOTE,+,P056-D042,srbct,fields,,agrees
+196,GAMO,"MNIST (Table 1, LS, GM)",name,SMOTE variant (multiclass/ensemble wrapper),+,P041-D001,MNIST,fields,,agrees
+197,GAMO,"Fashion-MNIST (Table 1, LS, GM)",name,SMOTE variant (multiclass/ensemble wrapper),+,P041-D002,Fashion-MNIST,fields,,agrees
+198,GAMO,"CIFAR10 (Table 2, GM)",name,SMOTE variant (multiclass/ensemble wrapper),+,P041-D003,CIFAR10,fields+name,,agrees
+199,GAMO,"SVHN (Table 2, GM)",name,SMOTE variant (multiclass/ensemble wrapper),+,P041-D004,SVHN,fields+name,,agrees
+200,GAMO,"CelebA-Small (Table 3, During Testing, GM)",name,SMOTE variant (multiclass/ensemble wrapper),+,P041-D005,CelebA-Small,fields,,agrees
+201,GAMO,"CelebA-Large (Table 3, During Testing, GM)",name,SMOTE variant (multiclass/ensemble wrapper),+,P041-D006,CelebA-Large,fields,,agrees
+202,GAMO,"LSUN-Small (Table 3, During Testing, GM)",name,SMOTE variant (multiclass/ensemble wrapper),+,P041-D007,LSUN-Small,fields,,agrees
+203,GAMO,"LSUN-Large (Table 3, During Testing, GM)",name,SMOTE variant (multiclass/ensemble wrapper),+,P041-D008,LSUN-Large,fields,,agrees
+204,GAMO,"SUN397 (Table 4, GM)",name,SMOTE variant (multiclass/ensemble wrapper),+,P041-D009,SUN397,fields,,agrees
+205,GDHS,car,name,SMOTE variant (multiclass/ensemble wrapper),-,P070-D001,car,fields,,agrees
+206,GDHS,cleveland,name,SMOTE variant (multiclass/ensemble wrapper),+,P070-D002,cleveland,fields,,agrees
+207,GDHS,contraceptive,name,SMOTE variant (multiclass/ensemble wrapper),+,P070-D003,contraceptive,fields,,agrees
+208,GDHS,glass,name,SMOTE variant (multiclass/ensemble wrapper),+,P070-D004,glass,fields,,agrees
+209,GDHS,hayes-roth,name,SMOTE variant (multiclass/ensemble wrapper),-,P070-D005,hayes-roth,fields,,agrees
+210,GDHS,newthyroid,name,SMOTE variant (multiclass/ensemble wrapper),+,P070-D006,newthyroid,fields,,agrees
+211,GDHS,sensorReadings,name,SMOTE variant (multiclass/ensemble wrapper),+,P070-D007,sensorReadings,fields,,agrees
+212,GDHS,thyroid,name,SMOTE variant (multiclass/ensemble wrapper),-,P070-D008,thyroid,fields,,agrees
+213,GDHS,userknowledge,name,SMOTE variant (multiclass/ensemble wrapper),+,P070-D009,userknowledge,fields,,agrees
+214,GDHS,vehicle,name,SMOTE variant (multiclass/ensemble wrapper),+,P070-D010,vehicle,fields,,agrees
+215,GDHS,vertebralColumn,name,SMOTE variant (multiclass/ensemble wrapper),+,P070-D011,vertebralColumn,fields,,agrees
+216,GDHS,winequality-red,name,SMOTE variant (multiclass/ensemble wrapper),+,P070-D012,winequality-red,fields,,agrees
+217,GDHS,yeast,name,SMOTE variant (multiclass/ensemble wrapper),+,P070-D013,yeast,fields,,agrees
+218,GDHS,zoo,name,SMOTE variant (multiclass/ensemble wrapper),=,P070-D014,zoo,fields,,agrees
+219,GDHS,camel-1.4,name,SMOTE variant (multiclass/ensemble wrapper),+,P070-D015,camel-1.4,fields,,agrees
+220,GDHS,camel-1.6,name,SMOTE variant (multiclass/ensemble wrapper),-,P070-D016,camel-1.6,fields,,agrees
+221,GDHS,hive-0.12.0,name,SMOTE variant (multiclass/ensemble wrapper),+,P070-D017,hive-0.12.0,fields,,agrees
+222,GDHS,velocity-1.5,name,SMOTE variant (multiclass/ensemble wrapper),+,P070-D018,velocity-1.5,fields,,agrees
+223,GDHS,xalan-2.4,name,SMOTE variant (multiclass/ensemble wrapper),+,P070-D019,xalan-2.4,fields,,agrees
+224,GDHS,xerces-1.2,name,SMOTE variant (multiclass/ensemble wrapper),+,P070-D020,xerces-1.2,fields,,agrees
+225,GDO,glass1,name,plain SMOTE,+,P057-D001,glass1,fields,,agrees
+226,GDO,ecoli-0_vs_1,name,plain SMOTE,+,P057-D002,ecoli-0_vs_1,fields,,agrees
+227,GDO,wisconsin,name,plain SMOTE,+,P057-D003,wisconsin,fields,,agrees
+228,GDO,yeast1,name,plain SMOTE,+,P057-D004,yeast1,fields,,agrees
+229,GDO,haberman,name,plain SMOTE,+,P057-D005,haberman,fields,,agrees
+230,GDO,planningrelax,name,plain SMOTE,+,P057-D006,planningrelax,fields,,agrees
+231,GDO,ecoli1,name,plain SMOTE,+,P057-D007,ecoli1,fields,,agrees
+232,GDO,new-thyroid1,name,plain SMOTE,+,P057-D008,new-thyroid1,fields,,agrees
+233,GDO,ecoli2,name,plain SMOTE,-,P057-D009,ecoli2,fields,,agrees
+234,GDO,segment0,name,plain SMOTE,+,P057-D010,segment0,fields,,agrees
+235,GDO,yeast3,name,plain SMOTE,=,P057-D011,yeast3,fields,,agrees
+236,GDO,ecoli3,name,plain SMOTE,+,P057-D012,ecoli3,fields,,agrees
+237,GDO,yeast-2_vs_4,name,plain SMOTE,-,P057-D013,yeast-2_vs_4,fields,,agrees
+238,GDO,yeast-0-5-6-7-9_vs_4,name,plain SMOTE,+,P057-D014,yeast-0-5-6-7-9_vs_4,fields,,agrees
+239,GDO,vowel0,name,plain SMOTE,+,P057-D015,vowel0,fields,,agrees
+240,GDO,kr-vs-k-three_vs_eleven,name,plain SMOTE,+,P057-D016,kr-vs-k-three_vs_eleven,fields,,agrees
+241,GDO,glass2,name,plain SMOTE,+,P057-D017,glass2,fields,,agrees
+242,GDO,shuttle-c0-vs-c4,name,plain SMOTE,+,P057-D018,shuttle-c0-vs-c4,fields,,agrees
+243,GDO,yeast-1_vs_7,name,plain SMOTE,+,P057-D019,yeast-1_vs_7,fields,,agrees
+244,GDO,glass4,name,plain SMOTE,+,P057-D020,glass4,fields,,agrees
+245,GDO,ecoli4,name,plain SMOTE,-,P057-D021,ecoli4,fields+name,,agrees
+246,GDO,glass-0-1-6_vs_2,name,plain SMOTE,+,P057-D022,glass-0-1-6_vs_2,fields+name,,agrees
+247,GDO,bupa,name,plain SMOTE,-,P057-D023,bupa,fields,,agrees
+248,GDO,abalone9-18,name,plain SMOTE,+,P057-D024,abalone9-18,fields,,agrees
+249,GDO,glass-0-1-6_vs_5,name,plain SMOTE,+,P057-D025,glass-0-1-6_vs_5,fields,,agrees
+250,GDO,yeast-1-4-5-8_vs_7,name,plain SMOTE,+,P057-D026,yeast-1-4-5-8_vs_7,fields,,agrees
+251,GDO,glass5,name,plain SMOTE,+,P057-D027,glass5,fields,,agrees
+252,GDO,car-good,name,plain SMOTE,+,P057-D028,car-good,fields,,agrees
+253,GDO,car-vgood,name,plain SMOTE,+,P057-D029,car-vgood,fields,,agrees
+254,GDO,kr-vs-k-zero-one_vs_draw,name,plain SMOTE,+,P057-D030,kr-vs-k-zero-one_vs_draw,fields,,agrees
+255,GDO,kr-vs-k-one_vs_fifteen,name,plain SMOTE,-,P057-D031,kr-vs-k-one_vs_fifteen,fields,,agrees
+256,GDO,yeast4,name,plain SMOTE,+,P057-D032,yeast4,fields,,agrees
+257,GDO,breast-cancer-wisconsin,name,plain SMOTE,-,P057-D033,breast-cancer-wisconsin,fields,,agrees
+258,GDO,yeast5,name,plain SMOTE,+,P057-D034,yeast5,fields,,agrees
+259,GDO,glass-0-1-2-3_vs_4-5-6,name,plain SMOTE,+,P057-D035,glass-0-1-2-3_vs_4-5-6,fields,,agrees
+260,GDO,yeast6,name,plain SMOTE,+,P057-D036,yeast6,fields,,agrees
+261,GDO,abalone-3_vs_11,name,plain SMOTE,-,P057-D037,abalone-3_vs_11,fields,,agrees
+262,GDO,winequality-white-3_vs_7,name,plain SMOTE,+,P057-D038,winequality-white-3_vs_7,fields,,agrees
+263,GDO,australian,name,plain SMOTE,+,P057-D039,australian,fields,,agrees
+264,GDO,abalone19,name,plain SMOTE,+,P057-D040,abalone19,fields,,agrees
+265,GOIO,default,name,plain SMOTE,+,P071-D001,default,fields,,agrees
+266,GOIO,shoppers,name,plain SMOTE,+,P071-D002,shoppers,fields,,agrees
+267,GOIO,bank_full,name,plain SMOTE,+,P071-D003,bank_full,fields,,agrees
+268,GOIO,bank_small,name,plain SMOTE,+,P071-D004,bank_small,fields,,agrees
+269,GOIO,avila_0vs5,name,plain SMOTE,+,P071-D005,avila_0vs5,fields,,agrees
+270,GOIO,artificial_0.5_10,name,plain SMOTE,+,P071-D022,artificial_0.5_10,fields,,agrees
+271,GOIO,optical_digits,name,plain SMOTE,+,P071-D006,optical_digits,fields,,agrees
+272,GOIO,avila_0vs6,name,plain SMOTE,+,P071-D007,avila_0vs6,fields,,agrees
+273,GOIO,sick_euthyroid,name,plain SMOTE,-,P071-D008,sick_euthyroid,fields,,agrees
+274,GOIO,avila_0vs7,name,plain SMOTE,+,P071-D009,avila_0vs7,fields,,agrees
+275,GOIO,scene,name,plain SMOTE,+,P071-D010,scene,fields,,agrees
+276,GOIO,abalone_15,name,plain SMOTE,+,P071-D011,abalone_15,fields,,agrees
+277,GOIO,thyroid_sick,name,plain SMOTE,+,P071-D012,thyroid_sick,fields,,agrees
+278,GOIO,abalone_6,name,plain SMOTE,+,P071-D013,abalone_6,fields,,agrees
+279,GOIO,artificial_0.3_5,name,plain SMOTE,+,P071-D019,artificial_0.3_5,fields,,agrees
+280,GOIO,artificial_0.5_5,name,plain SMOTE,+,P071-D021,artificial_0.5_5,fields,,agrees
+281,GOIO,artificial_1_5,name,plain SMOTE,+,P071-D023,artificial_1_5,fields,,agrees
+282,GOIO,wine_quality,name,plain SMOTE,+,P071-D014,wine_quality,fields,,agrees
+283,GOIO,taiwanses,name,plain SMOTE,+,P071-D015,taiwanses,fields,,agrees
+284,GOIO,artificial_0.5_2.5,name,plain SMOTE,+,P071-D020,artificial_0.5_2.5,fields,,agrees
+285,GOIO,mammography,name,plain SMOTE,+,P071-D016,mammography,fields,,agrees
+286,GOIO,bankruptcy,name,plain SMOTE,+,P071-D017,bankruptcy,fields,,agrees
+287,GOIO,page-blocks_0vs3,name,plain SMOTE,+,P071-D018,page-blocks_0vs3,fields,,agrees
+288,INOS,Adiac,name,plain SMOTE,+,P023-D001,Adiac,fields,,agrees
+289,INOS,FaceAll,name,plain SMOTE,+,P023-D002,FaceAll,fields,,agrees
+290,INOS,50Words,name,plain SMOTE,+,P023-D003,50Words,fields,,agrees
+291,INOS,SLeaf,name,plain SMOTE,+,P023-D004,SLeaf,fields,,agrees
+292,INOS,TwoPats,name,plain SMOTE,+,P023-D005,TwoPats,fields,,agrees
+293,INOS,Wafer,name,plain SMOTE,+,P023-D006,Wafer,fields,,agrees
+294,INOS,Yoga,name,plain SMOTE,+,P023-D007,Yoga,fields,,agrees
+295,KNNOR,Mean over all 19 datasets (no per-dataset rows in paper),unmatched,plain SMOTE,+,,,not linked,outcome row marked unmatched in source,
+296,Loyalty-SMOTE,adult,name,plain SMOTE,+,P075-D001,adult,fields,,agrees
+297,Loyalty-SMOTE,ai4i2020,name,plain SMOTE,+,P075-D002,ai4i2020,fields,,agrees
+298,Loyalty-SMOTE,banknote,name,plain SMOTE,=,P075-D003,banknote,fields,,agrees
+299,Loyalty-SMOTE,drug,name,plain SMOTE,+,P075-D004,drug,fields,,agrees
+300,Loyalty-SMOTE,AIDS_5000,name,plain SMOTE,+,P075-D005,AIDS_5000,fields,,agrees
+301,Loyalty-SMOTE,Maternal,name,plain SMOTE,+,P075-D006,Maternal,fields,,agrees
+302,Loyalty-SMOTE,national,name,plain SMOTE,+,P075-D007,national,fields,,agrees
+303,Loyalty-SMOTE,occupancy,name,plain SMOTE,-,P075-D008,occupancy,fields,,agrees
+304,Loyalty-SMOTE,online,name,plain SMOTE,+,P075-D009,online,fields,,agrees
+305,Loyalty-SMOTE,Shoppers,name,plain SMOTE,+,P075-D010,Shoppers,fields,,agrees
+306,Loyalty-SMOTE,Academic,name,plain SMOTE,+,P075-D011,Academic,fields,,agrees
+307,Loyalty-SMOTE,AIDS_15000,name,plain SMOTE,+,P075-D012,AIDS_15000,fields,,agrees
+308,Loyalty-SMOTE,german,name,plain SMOTE,+,P075-D013,german,fields+name,,agrees
+309,Loyalty-SMOTE,statlog,name,plain SMOTE,+,P075-D014,statlog,fields+name,,agrees
+310,Loyalty-SMOTE,Shuttle,name,plain SMOTE,=,P075-D015,Shuttle,fields,,agrees
+311,Loyalty-SMOTE,Fault,name,plain SMOTE,+,P075-D016,Fault,fields,,agrees
+312,Loyalty-SMOTE,ICR,name,plain SMOTE,+,P075-D017,ICR,fields,,agrees
+313,Loyalty-SMOTE,breast,name,plain SMOTE,+,P075-D019,breast,fields,,agrees
+314,Loyalty-SMOTE,WDBC,name,plain SMOTE,+,P075-D020,wdbc,fields,,agrees
+315,Loyalty-SMOTE,WPBC,name,plain SMOTE,+,P075-D021,wpbc,fields,,agrees
+316,Loyalty-SMOTE,heart,name,plain SMOTE,-,P075-D022,heart,fields,,agrees
+317,Loyalty-SMOTE,ionosphere,name,plain SMOTE,+,P075-D023,ionosphere,fields,,agrees
+318,Loyalty-SMOTE,iris,name,plain SMOTE,=,P075-D024,iris,fields,,agrees
+319,Loyalty-SMOTE,bezdeiris,unmatched,plain SMOTE,=,,,not linked,outcome row marked unmatched in source,
+320,Loyalty-SMOTE,raisin,name,plain SMOTE,+,P075-D026,raisin,fields,,agrees
+321,Loyalty-SMOTE,glass5,name,plain SMOTE,=,P075-D027,glass5,fields,,agrees
+322,Loyalty-SMOTE,vowel0,name,plain SMOTE,=,P075-D028,vowel0,fields,,agrees
+323,Loyalty-SMOTE,ecoli-0-1-3-7_vs_2-6,name,plain SMOTE,+,P075-D029,ecoli-0-1-3-7_vs_2-6,fields,,agrees
+324,Loyalty-SMOTE,ecoli-0-1-4-6_vs_5,name,plain SMOTE,=,P075-D030,ecoli-0-1-4-6_vs_5,fields,,agrees
+325,Loyalty-SMOTE,yeast-0-3-5-9_vs_7-8,name,plain SMOTE,+,P075-D031,yeast-0-3-5-9_vs_7-8,fields,,agrees
+326,MBS,Pima,prefix,plain SMOTE,+,P046-D001,Pima Indian Diabetes,fields,,agrees
+327,MBS,Haberman,prefix,plain SMOTE,+,P046-D002,Haberman’s Survival,fields,,agrees
+328,MBS,Satimage,name,plain SMOTE,+,P046-D003,Satimage,fields,,agrees
+329,MBS,Ecoli,name,plain SMOTE,+,P046-D004,E.coli,fields,,agrees
+330,MBS,Shuttle,name,plain SMOTE,+,P046-D005,Shuttle,fields,,agrees
+331,MBS,Ionosphere,name,plain SMOTE,+,P046-D006,Ionosphere,fields,,agrees
+332,MBS,Vehicle,name,plain SMOTE,+,P046-D007,Vehicle,fields,,agrees
+333,MBS,Credit,row order (check),plain SMOTE,+,P046-D008,Give Me Some Credit,fields,,agrees (audited)
+334,MBS,Diabetes,name,plain SMOTE,+,P046-D009,Diabetes,fields,,agrees
+335,MBS,Hmeq,name,plain SMOTE,=,P046-D010,Hmeq,fields,,agrees
+336,MBS,Promotion,name,plain SMOTE,=,P046-D011,Promotion,fields,,agrees
+337,MBS,Bank,name,plain SMOTE,+,P046-D012,Bank,fields,,agrees
+338,MBS,Spambase,name,plain SMOTE,+,P046-D013,Spambase,fields,,agrees
+339,MC-CCR,Automobile,name,SMOTE variant (multiclass/ensemble wrapper),+,P047-D001,Automobile,fields,,agrees
+340,MC-CCR,Balance,name,SMOTE variant (multiclass/ensemble wrapper),+,P047-D002,Balance,fields,,agrees
+341,MC-CCR,Car,name,SMOTE variant (multiclass/ensemble wrapper),+,P047-D003,Car,fields,,agrees
+342,MC-CCR,Cleveland,name,SMOTE variant (multiclass/ensemble wrapper),+,P047-D004,Cleveland,fields,,agrees
+343,MC-CCR,Contraceptive,name,SMOTE variant (multiclass/ensemble wrapper),+,P047-D005,Contraceptive,fields,,agrees
+344,MC-CCR,Dermatology,name,SMOTE variant (multiclass/ensemble wrapper),+,P047-D006,Dermatology,fields,,agrees
+345,MC-CCR,Ecoli,name,SMOTE variant (multiclass/ensemble wrapper),+,P047-D007,Ecoli,fields,,agrees
+346,MC-CCR,Flare,name,SMOTE variant (multiclass/ensemble wrapper),+,P047-D008,Flare,fields,,agrees
+347,MC-CCR,Glass,name,SMOTE variant (multiclass/ensemble wrapper),+,P047-D009,Glass,fields,,agrees
+348,MC-CCR,Hayes-roth,name,SMOTE variant (multiclass/ensemble wrapper),+,P047-D010,Hayes-Roth,fields,,agrees
+349,MC-CCR,Led7digit,name,SMOTE variant (multiclass/ensemble wrapper),+,P047-D011,Led7digit,fields,,agrees
+350,MC-CCR,Lymphography,name,SMOTE variant (multiclass/ensemble wrapper),+,P047-D012,Lymphography,fields,,agrees
+351,MC-CCR,Newthyroid,name,SMOTE variant (multiclass/ensemble wrapper),+,P047-D013,New-thyroid,fields,,agrees
+352,MC-CCR,Pageblocks,name,SMOTE variant (multiclass/ensemble wrapper),+,P047-D014,Page-blocks,fields,,agrees
+353,MC-CCR,Thyroid,name,SMOTE variant (multiclass/ensemble wrapper),+,P047-D015,Thyroid,fields,,agrees
+354,MC-CCR,Vehicle,name,SMOTE variant (multiclass/ensemble wrapper),+,P047-D016,Vehicle,fields,,agrees
+355,MC-CCR,Wine,name,SMOTE variant (multiclass/ensemble wrapper),+,P047-D017,Wine,fields,,agrees
+356,MC-CCR,Winequality-red,name,SMOTE variant (multiclass/ensemble wrapper),+,P047-D018,Winequality-red,fields,,agrees
+357,MC-CCR,Yeast,name,SMOTE variant (multiclass/ensemble wrapper),+,P047-D019,Yeast,fields,,agrees
+358,MC-CCR,Zoo,name,SMOTE variant (multiclass/ensemble wrapper),+,P047-D020,Zoo,fields,,agrees
+359,MC-MBRC,automobile,name,plain SMOTE,+,P067-D001,automobile,fields,,agrees
+360,MC-MBRC,autos,name,plain SMOTE,+,P067-D002,autos,fields,,agrees
+361,MC-MBRC,car,name,plain SMOTE,+,P067-D003,car,fields,,agrees
+362,MC-MBRC,cleveland,name,plain SMOTE,+,P067-D004,cleveland,fields,,agrees
+363,MC-MBRC,cmc,name,plain SMOTE,-,P067-D005,cmc,fields,,agrees
+364,MC-MBRC,contraceptive,name,plain SMOTE,-,P067-D006,contraceptive,fields,,agrees
+365,MC-MBRC,Dry_Bean,name,plain SMOTE,+,P067-D007,Dry_Bean,fields,,agrees
+366,MC-MBRC,ecoli,name,plain SMOTE,+,P067-D008,ecoli,fields,,agrees
+367,MC-MBRC,flare,name,plain SMOTE,+,P067-D009,flare,fields,,agrees
+368,MC-MBRC,glass,name,plain SMOTE,+,P067-D010,glass,fields,,agrees
+369,MC-MBRC,lymphography,name,plain SMOTE,+,P067-D011,lymphography,fields,,agrees
+370,MC-MBRC,newthyroid,name,plain SMOTE,+,P067-D012,newthyroid,fields,,agrees
+371,MC-MBRC,page-blocks,name,plain SMOTE,+,P067-D013,page-blocks,fields,,agrees
+372,MC-MBRC,page,name,plain SMOTE,+,P067-D014,page,fields,,agrees
+373,MC-MBRC,shuttle,name,plain SMOTE,+,P067-D015,shuttle,fields,,agrees
+374,MC-MBRC,thyroid,name,plain SMOTE,+,P067-D016,thyroid,fields,,agrees
+375,MC-MBRC,winequality-red,name,plain SMOTE,+,P067-D017,winequality-red,fields,,agrees
+376,MC-MBRC,winequality-white,name,plain SMOTE,+,P067-D018,winequality-white,fields,,agrees
+377,MC-MBRC,yeast,name,plain SMOTE,+,P067-D019,yeast,fields,,agrees
+378,MC-MBRC,zoo,name,plain SMOTE,+,P067-D020,zoo,fields,,agrees
+379,MC-RBO,Automobile,name,SMOTE variant (multiclass/ensemble wrapper),+,P048-D001,Automobile,fields,,agrees
+380,MC-RBO,Balance,name,SMOTE variant (multiclass/ensemble wrapper),+,P048-D002,Balance,fields,,agrees
+381,MC-RBO,Car,name,SMOTE variant (multiclass/ensemble wrapper),+,P048-D003,Car,fields,,agrees
+382,MC-RBO,Cleveland,name,SMOTE variant (multiclass/ensemble wrapper),+,P048-D004,Cleveland,fields,,agrees
+383,MC-RBO,Contraceptive,name,SMOTE variant (multiclass/ensemble wrapper),+,P048-D005,Contraceptive,fields,,agrees
+384,MC-RBO,Dermatology,name,SMOTE variant (multiclass/ensemble wrapper),+,P048-D006,Dermatology,fields,,agrees
+385,MC-RBO,Ecoli,name,SMOTE variant (multiclass/ensemble wrapper),+,P048-D007,Ecoli,fields,,agrees
+386,MC-RBO,Flare,name,SMOTE variant (multiclass/ensemble wrapper),+,P048-D008,Flare,fields,,agrees
+387,MC-RBO,Glass,name,SMOTE variant (multiclass/ensemble wrapper),+,P048-D009,Glass,fields,,agrees
+388,MC-RBO,Hayes-roth,name,SMOTE variant (multiclass/ensemble wrapper),+,P048-D010,Hayes-Roth,fields,,agrees
+389,MC-RBO,Led7digit,name,SMOTE variant (multiclass/ensemble wrapper),+,P048-D011,Led7digit,fields,,agrees
+390,MC-RBO,Lymphography,name,SMOTE variant (multiclass/ensemble wrapper),+,P048-D012,Lymphography,fields,,agrees
+391,MC-RBO,Newthyroid,name,SMOTE variant (multiclass/ensemble wrapper),+,P048-D013,New-thyroid,fields,,agrees
+392,MC-RBO,Pageblocks,name,SMOTE variant (multiclass/ensemble wrapper),+,P048-D014,Page-blocks,fields,,agrees
+393,MC-RBO,Thyroid,name,SMOTE variant (multiclass/ensemble wrapper),+,P048-D015,Thyroid,fields,,agrees
+394,MC-RBO,Vehicle,name,SMOTE variant (multiclass/ensemble wrapper),+,P048-D016,Vehicle,fields,,agrees
+395,MC-RBO,Wine,name,SMOTE variant (multiclass/ensemble wrapper),+,P048-D017,Wine,fields,,agrees
+396,MC-RBO,Winequality-red,name,SMOTE variant (multiclass/ensemble wrapper),+,P048-D018,Winequality-red,fields,,agrees
+397,MC-RBO,Yeast,name,SMOTE variant (multiclass/ensemble wrapper),+,P048-D019,Yeast,fields,,agrees
+398,MC-RBO,Zoo,name,SMOTE variant (multiclass/ensemble wrapper),+,P048-D020,Zoo,fields,,agrees
+399,MKC-SMOTE,cmc,row order (check),plain SMOTE,+,P068-D001,Contraceptive Method Choice,fields,,agrees (audited)
+400,MKC-SMOTE,use,prefix,plain SMOTE,+,P068-D002,User Knowledge Modeling,fields,,agrees
+401,MKC-SMOTE,new,prefix,plain SMOTE,+,P068-D003,New-thyroid,fields,,agrees
+402,MKC-SMOTE,con,row order (check),plain SMOTE,+,P068-D004,Connect-4,fields,,agrees (audited)
+403,MKC-SMOTE,zoo,name,plain SMOTE,+,P068-D005,Zoo,fields,,agrees
+404,MKC-SMOTE,ctg,row order (check),plain SMOTE,+,P068-D006,Cardiotocography,fields,,agrees (audited)
+405,MKC-SMOTE,eco,prefix,plain SMOTE,+,P068-D007,Ecoli,fields,,agrees
+406,MKC-SMOTE,gla,prefix,plain SMOTE,+,P068-D008,Glass Identification,fields,,agrees
+407,MKC-SMOTE,abs,prefix,plain SMOTE,+,P068-D009,Absenteeism at work,fields,,agrees
+408,MKC-SMOTE,nur,prefix,plain SMOTE,+,P068-D010,Nursery,fields,,agrees
+409,MKC-SMOTE,let,prefix,plain SMOTE,-,P068-D011,Letter Recognition,fields,,agrees
+410,MKC-SMOTE,car,row order (check),plain SMOTE,-,P068-D012,Car Evaluation,fields,,agrees (audited)
+411,MKC-SMOTE,win,prefix,plain SMOTE,+,P068-D013,Wine Quality-White,fields,,agrees
+412,MKC-SMOTE,pok,prefix,plain SMOTE,+,P068-D014,Poker Hand,fields,,agrees
+413,MKC-SMOTE,hcv,name,plain SMOTE,+,P068-D015,HCV,fields,,agrees
+414,MKC-SMOTE,yea,prefix,plain SMOTE,+,P068-D016,Yeast,fields,,agrees
+415,MKC-SMOTE,cov,prefix,plain SMOTE,+,P068-D017,Covertype,fields,,agrees
+416,MKC-SMOTE,che,prefix,plain SMOTE,+,P068-D018,Chess (King-Rook vs. King),fields,,agrees
+417,MKC-SMOTE,aba,prefix,plain SMOTE,+,P068-D019,Abalone,fields,,agrees
+418,MKC-SMOTE,bar,prefix,plain SMOTE,+,P068-D020,Bar Crawl,fields,,agrees
+419,MKC-SMOTE,avi,prefix,plain SMOTE,+,P068-D021,Avila,fields,,agrees
+420,MLOS,Ozo,prefix,plain SMOTE,+,P073-D001,Ozone-Level,fields,,agrees
+421,MLOS,Phi,prefix,plain SMOTE,-,P073-D002,PhishingData,fields,,agrees
+422,MLOS,aba19,row order (check),plain SMOTE,+,P073-D003,abalone19,fields,,agrees (audited)
+423,MLOS,Cam,prefix,plain SMOTE,+,P073-D004,camel-1.0,fields,,agrees
+424,MLOS,cle,prefix,plain SMOTE,+,P073-D005,cleveland-0_vs_4,fields,,agrees
+425,MLOS,cli,prefix,plain SMOTE,+,P073-D006,climate,fields,,agrees
+426,MLOS,gla,prefix,plain SMOTE,+,P073-D007,glass5,fields,,agrees
+427,MLOS,ivy,prefix,plain SMOTE,+,P073-D008,ivy-1.4,fields,,agrees
+428,MLOS,jed,prefix,plain SMOTE,+,P073-D009,jedit-4.3,fields,,agrees
+429,MLOS,log,prefix,plain SMOTE,+,P073-D010,log4j-1.2,fields,,agrees
+430,MLOS,mov,prefix,plain SMOTE,-,P073-D011,movement_libras,fields,,agrees
+431,MLOS,pok,prefix,plain SMOTE,+,P073-D012,poker-8_vs_6,fields,,agrees
+432,MLOS,win35,row order (check),plain SMOTE,+,P073-D013,winequalityred3vs5,fields,,agrees (audited)
+433,MLOS,win,row order (check),plain SMOTE,+,P073-D014,winequality,fields,,agrees (audited)
+434,MLOS,xal,prefix,plain SMOTE,-,P073-D015,xalan-2.7,fields,,agrees
+435,MLOS,yea,prefix,plain SMOTE,+,P073-D016,yeast6,fields,,agrees
+436,MWMOTE,Abalone,name,plain SMOTE,-,P025-D002,Abalone,fields,,agrees
+437,MWMOTE,CTG,name,plain SMOTE,+,P025-D003,CTG,fields,,agrees
+438,MWMOTE,Semeion,name,plain SMOTE,+,P025-D006,Semeion,fields,,agrees
+439,MWMOTE,Statlandsat,name,plain SMOTE,+,P025-D005,Statlandsat,fields,,agrees
+440,MWMOTE,Bcancerorig,unmatched,plain SMOTE,-,,,not linked,outcome row marked unmatched in source,
+441,MWMOTE,Btissue,unmatched,plain SMOTE,+,,,not linked,outcome row marked unmatched in source,
+442,MWMOTE,Ecoli,name,plain SMOTE,-,P025-D011,Ecoli,fields,,agrees
+443,MWMOTE,Glass,name,plain SMOTE,+,P025-D012,Glass,fields,,agrees
+444,MWMOTE,Libra,name,plain SMOTE,+,P025-D008,Libra,fields,,agrees
+445,MWMOTE,Phoneme,name,plain SMOTE,+,P025-D016,Phoneme,fields,,agrees
+446,MWMOTE,Pima,name,plain SMOTE,+,P025-D020,Pima,fields,,agrees
+447,MWMOTE,Robot,name,plain SMOTE,-,P025-D010,Robot,fields,,agrees
+448,MWMOTE,Satimage,name,plain SMOTE,+,P025-D017,Satimage,fields,,agrees
+449,MWMOTE,Vehicle,name,plain SMOTE,+,P025-D013,Vehicle,fields,,agrees
+450,MWMOTE,Wine,name,plain SMOTE,+,P025-D014,Wine,fields,,agrees
+451,MWMOTE,Yeast,name,plain SMOTE,+,P025-D009,Yeast,fields,,agrees
+452,MWMOTE,Texture,name,plain SMOTE,+,P025-D015,Texture,fields,,agrees
+453,MWMOTE,Segment,name,plain SMOTE,+,P025-D007,Segment,fields,,agrees
+454,MWMOTE,OCR,name,plain SMOTE,-,P025-D004,OCR,fields,,agrees
+455,MWMOTE,Page-blocks,name,plain SMOTE,-,P025-D001,Pageblocks,fields,,agrees
+456,NBU,Wisconsin,name,plain SMOTE,+,P049-D002,Wisconsin,fields,,agrees
+457,NBU,Pima,name,plain SMOTE,-,P049-D003,Pima,fields,,agrees
+458,NBU,Glass0,name,plain SMOTE,+,P049-D004,Glass0,fields,,agrees
+459,NBU,Vehicle1,name,plain SMOTE,+,P049-D005,Vehicle1,fields,,agrees
+460,NBU,Vehicle0,name,plain SMOTE,+,P049-D006,Vehicle0,fields,,agrees
+461,NBU,Ecoli1,name,plain SMOTE,+,P049-D007,Ecoli1,fields,,agrees
+462,NBU,New-thyroid1,name,plain SMOTE,+,P049-D008,New-thyroid1,fields+name,,agrees
+463,NBU,New-thyroid2,name,plain SMOTE,-,P049-D009,New-thyroid2,fields+name,,agrees
+464,NBU,Ecoli2,name,plain SMOTE,+,P049-D010,Ecoli2,fields,,agrees
+465,NBU,Segmemt0,name,plain SMOTE,-,P049-D011,Segmemt0,fields,,agrees
+466,NBU,Yeast3,name,plain SMOTE,+,P049-D012,Yeast3,fields,,agrees
+467,NBU,Ecoli3,name,plain SMOTE,+,P049-D013,Ecoli3,fields,,agrees
+468,NBU,Yeast2vs4,name,plain SMOTE,+,P049-D014,Yeast2vs4,fields,,agrees
+469,NBU,Vowel0,name,plain SMOTE,+,P049-D015,Vowel0,fields,,agrees
+470,NBU,Glass2,name,plain SMOTE,+,P049-D016,Glass2,fields,,agrees
+471,NBU,Yeast1vs7,name,plain SMOTE,+,P049-D017,Yeast1vs7,fields,,agrees
+472,NBU,Glass4,name,plain SMOTE,=,P049-D018,Glass4,fields,,agrees
+473,NBU,Ecoli4,name,plain SMOTE,=,P049-D019,Ecoli4,fields,,agrees
+474,NBU,Page-blocks13vs2,name,plain SMOTE,-,P049-D020,Page-blocks13vs2,fields,,agrees
+475,NBU,Abalone09-18,name,plain SMOTE,+,P049-D021,Abalone09-18,fields,,agrees
+476,NBU,Glass5,name,plain SMOTE,=,P049-D022,Glass5,fields,,agrees
+477,NBU,Yeast4,name,plain SMOTE,+,P049-D023,Yeast4,fields,,agrees
+478,NBU,Ecoli0137vs26,name,plain SMOTE,=,P049-D024,Ecoli0137vs26,fields,,agrees
+479,NBU,Yeast6,name,plain SMOTE,-,P049-D025,Yeast6,fields,,agrees
+480,NROMM,Wine,name,SMOTE variant (multiclass/ensemble wrapper),+,P064-D001,Wine,fields,,agrees
+481,NROMM,Glass,name,SMOTE variant (multiclass/ensemble wrapper),+,P064-D002,Glass,fields,,agrees
+482,NROMM,New-thyroid,name,SMOTE variant (multiclass/ensemble wrapper),+,P064-D003,New-thyroid,fields,,agrees
+483,NROMM,Vehicle,name,SMOTE variant (multiclass/ensemble wrapper),+,P064-D004,Vehicle,fields,,agrees
+484,NROMM,Page-blocks,name,SMOTE variant (multiclass/ensemble wrapper),+,P064-D006,Page-blocks,fields,,agrees
+485,NROMM,Winequality-red,name,SMOTE variant (multiclass/ensemble wrapper),+,P064-D005,Winequality-red,fields,,agrees
+486,NROMM,Zoo,name,SMOTE variant (multiclass/ensemble wrapper),+,P064-D007,Zoo,fields,,agrees
+487,NROMM,Balance,name,SMOTE variant (multiclass/ensemble wrapper),+,P064-D012,Balance,fields,,agrees
+488,NROMM,Car,name,SMOTE variant (multiclass/ensemble wrapper),+,P064-D014,Car,fields,,agrees
+489,NROMM,Led7digit,name,SMOTE variant (multiclass/ensemble wrapper),+,P064-D011,Led7digit,fields,,agrees
+490,NROMM,Dermatology,name,SMOTE variant (multiclass/ensemble wrapper),+,P064-D010,Dermatology,fields,,agrees
+491,NROMM,Flare,name,SMOTE variant (multiclass/ensemble wrapper),+,P064-D013,Flare,fields,,agrees
+492,NROMM,Hayes-roth,name,SMOTE variant (multiclass/ensemble wrapper),+,P064-D009,Hayes-roth,fields,,agrees
+493,NROMM,Lymphography,name,SMOTE variant (multiclass/ensemble wrapper),+,P064-D008,Lymphography,fields,,agrees
+494,NROMM,Automobile,name,SMOTE variant (multiclass/ensemble wrapper),+,P064-D015,Automobile,fields,,agrees
+495,NROMM,Cleveland,name,SMOTE variant (multiclass/ensemble wrapper),+,P064-D016,Cleveland,fields,,agrees
+496,NROMM,Contraceptive,name,SMOTE variant (multiclass/ensemble wrapper),+,P064-D018,Contraceptive,fields,,agrees
+497,NROMM,Ecoli,name,SMOTE variant (multiclass/ensemble wrapper),+,P064-D017,Ecoli,fields,,agrees
+498,NROMM,Yeast,name,SMOTE variant (multiclass/ensemble wrapper),+,P064-D019,Yeast,fields,,agrees
+499,NROMM,Thyroid,name,SMOTE variant (multiclass/ensemble wrapper),+,P064-D020,Thyroid,fields,,agrees
+500,OREM-M,Vt (Vertebral),name,plain SMOTE,-,P065-D001,Vertebral,fields,,agrees
+501,OREM-M,Lg (Laryngeal),name,plain SMOTE,+,P065-D002,Laryngeal,fields,,agrees
+502,OREM-M,NT (New-thyroid),name,plain SMOTE,+,P065-D003,New-thyroid,fields,,agrees
+503,OREM-M,Toy (Toy),name,plain SMOTE,+,P065-D004,Toy,fields,,agrees
+504,OREM-M,Vi-3 (Voice3),name,plain SMOTE,-,P065-D005,Voice3,fields,,agrees
+505,OREM-M,W5 (Wisconsin5),name,plain SMOTE,-,P065-D006,Wisconsin5,fields,,agrees
+506,OREM-M,Cl (Cleveland),name,plain SMOTE,-,P065-D007,Cleveland,fields,,agrees
+507,OREM-M,Vi-6 (Voice6),name,plain SMOTE,-,P065-D008,Voice6,fields,,agrees
+508,OREM-M,Vw-5 (Vowel5),name,plain SMOTE,+,P065-D009,Vowel5,fields,,agrees
+509,OREM-M,Vw-4 (Vowel4),name,plain SMOTE,+,P065-D010,Vowel4,fields,,agrees
+510,OREM-M,Dto (Dermatology),name,plain SMOTE,+,P065-D011,Dermatology,fields,,agrees
+511,OREM-M,PB (Page-blocks),name,plain SMOTE,+,P065-D012,Page-blocks,fields,,agrees
+512,OREM-M,SWD (SWD),name,plain SMOTE,+,P065-D013,SWD,fields,,agrees
+513,OREM-M,Ye (Yeast),name,plain SMOTE,-,P065-D014,Yeast,fields,,agrees
+514,OREM-M,Au5 (Auto5),name,plain SMOTE,+,P065-D015,Auto5,fields,,agrees
+515,OREM-M,LEV (LEV),name,plain SMOTE,+,P065-D016,LEV,fields,,agrees
+516,OREM-M,LP (Leaves plant),name,plain SMOTE,+,P065-D017,Leaves plant,fields,,agrees
+517,OREM-M,S10 (Stock10),name,plain SMOTE,-,P065-D018,Stock10,fields,,agrees
+518,OREM-M,PF (Plates faults),name,plain SMOTE,+,P065-D019,Plates faults,fields,,agrees
+519,OREM-M,Ab (Abalone),name,plain SMOTE,-,P065-D020,Abalone,fields,,agrees
+520,OREM-M,H10 (Housing10),name,plain SMOTE,+,P065-D021,Housing10,fields,,agrees
+521,OVO-SMOTE,aut,prefix,SMOTE variant (multiclass/ensemble wrapper),-,P024-D001,Autos,fields,,agrees
+522,OVO-SMOTE,bal,prefix,SMOTE variant (multiclass/ensemble wrapper),-,P024-D002,Balance,fields,,agrees
+523,OVO-SMOTE,cle,prefix,SMOTE variant (multiclass/ensemble wrapper),+,P024-D003,Cleveland,fields,,agrees
+524,OVO-SMOTE,con,prefix,SMOTE variant (multiclass/ensemble wrapper),+,P024-D004,Contraceptive,fields,,agrees
+525,OVO-SMOTE,der,prefix,SMOTE variant (multiclass/ensemble wrapper),+,P024-D005,Dermatology,fields,,agrees
+526,OVO-SMOTE,eco,prefix,SMOTE variant (multiclass/ensemble wrapper),+,P024-D006,Ecoli,fields,,agrees
+527,OVO-SMOTE,fla,prefix,SMOTE variant (multiclass/ensemble wrapper),+,P024-D007,Flare,fields,,agrees
+528,OVO-SMOTE,gla,prefix,SMOTE variant (multiclass/ensemble wrapper),+,P024-D008,Glass,fields,,agrees
+529,OVO-SMOTE,hay,prefix,SMOTE variant (multiclass/ensemble wrapper),-,P024-D009,Hayes-Roth,fields,,agrees
+530,OVO-SMOTE,led,prefix,SMOTE variant (multiclass/ensemble wrapper),-,P024-D010,Led7digit,fields,,agrees
+531,OVO-SMOTE,lym,prefix,SMOTE variant (multiclass/ensemble wrapper),-,P024-D011,Lymphography,fields,,agrees
+532,OVO-SMOTE,new,prefix,SMOTE variant (multiclass/ensemble wrapper),+,P024-D012,New-thyroid,fields,,agrees
+533,OVO-SMOTE,nur,prefix,SMOTE variant (multiclass/ensemble wrapper),+,P024-D013,Nursery,fields,,agrees
+534,OVO-SMOTE,pag,prefix,SMOTE variant (multiclass/ensemble wrapper),+,P024-D014,Page-blocks,fields,,agrees
+535,OVO-SMOTE,pos,prefix,SMOTE variant (multiclass/ensemble wrapper),+,P024-D015,Post-operative,fields,,agrees
+536,OVO-SMOTE,sat,prefix,SMOTE variant (multiclass/ensemble wrapper),+,P024-D016,Satimage,fields,,agrees
+537,OVO-SMOTE,shu,prefix,SMOTE variant (multiclass/ensemble wrapper),+,P024-D017,Shuttle,fields,,agrees
+538,OVO-SMOTE,spl,prefix,SMOTE variant (multiclass/ensemble wrapper),+,P024-D018,Splice,fields,,agrees
+539,OVO-SMOTE,thy,prefix,SMOTE variant (multiclass/ensemble wrapper),+,P024-D019,Thyroid,fields,,agrees
+540,OVO-SMOTE,win,row order (check),SMOTE variant (multiclass/ensemble wrapper),-,P024-D020,Wine,fields,,agrees (audited)
+541,OVO-SMOTE,wqr,row order (check),SMOTE variant (multiclass/ensemble wrapper),+,P024-D021,Wine-Quality-Red,fields,,agrees (audited)
+542,OVO-SMOTE,wqw,row order (check),SMOTE variant (multiclass/ensemble wrapper),+,P024-D022,Wine-Quality-White,fields,,agrees (audited)
+543,OVO-SMOTE,yea,prefix,SMOTE variant (multiclass/ensemble wrapper),+,P024-D023,Yeast,fields,,agrees
+544,OVO-SMOTE,zoo,name,SMOTE variant (multiclass/ensemble wrapper),+,P024-D024,Zoo,fields,,agrees
+545,RACOG / wRACOG,prompting,name,plain SMOTE,+,P026-D001,prompting,fields,,agrees
+546,RACOG / wRACOG,abalone,name,plain SMOTE,-,P026-D002,abalone,fields,,agrees
+547,RACOG / wRACOG,car,name,plain SMOTE,=,P026-D003,car,fields,,agrees
+548,RACOG / wRACOG,nursery,name,plain SMOTE,+,P026-D004,nursery,fields,,agrees
+549,RACOG / wRACOG,letter,name,plain SMOTE,-,P026-D005,letter,fields,,agrees
+550,RACOG / wRACOG,connect-4,name,plain SMOTE,-,P026-D006,connect-4,fields,,agrees
+551,RACOG / wRACOG,ecoli1,name,plain SMOTE,-,P026-D007,ecoli1,fields,,agrees
+552,RACOG / wRACOG,haberman,name,plain SMOTE,-,P026-D008,haberman,fields,,agrees
+553,RACOG / wRACOG,yeast4,name,plain SMOTE,+,P026-D009,yeast4,fields,,agrees
+554,RACOG / wRACOG,yeast6,name,plain SMOTE,+,P026-D010,yeast6,fields,,agrees
+555,RAMOBoost,Sonar,name,plain SMOTE,+,P019-D001,Sonar,fields,,agrees
+556,RAMOBoost,Spambase,name,plain SMOTE,+,P019-D002,Spambase,fields,,agrees
+557,RAMOBoost,Ionosphere,name,plain SMOTE,+,P019-D003,Ionosphere,fields,,agrees
+558,RAMOBoost,PID,name,plain SMOTE,+,P019-D004,PID,fields,,agrees
+559,RAMOBoost,Wine,name,plain SMOTE,+,P019-D005,Wine,fields,,agrees
+560,RAMOBoost,German,name,plain SMOTE,+,P019-D006,German,fields,,agrees
+561,RAMOBoost,Phoneme,name,plain SMOTE,+,P019-D007,Phoneme,fields,,agrees
+562,RAMOBoost,Vehicle,name,plain SMOTE,+,P019-D008,Vehicle,fields,,agrees
+563,RAMOBoost,Texture,name,plain SMOTE,+,P019-D009,Texture,fields,,agrees
+564,RAMOBoost,Segment,name,plain SMOTE,+,P019-D010,Segment,fields,,agrees
+565,RAMOBoost,Page_Blocks,name,plain SMOTE,+,P019-D011,Page_Blocks,fields,,agrees
+566,RAMOBoost,Satimage,name,plain SMOTE,+,P019-D012,Satimage,fields,,agrees
+567,RAMOBoost,Mf_Zernike,name,plain SMOTE,-,P019-D013,Mf_Zernike,fields,,agrees
+568,RAMOBoost,Vowel,name,plain SMOTE,+,P019-D014,Vowel,fields,,agrees
+569,RAMOBoost,Abalone,name,plain SMOTE,-,P019-D015,Abalone,fields,,agrees
+570,RAMOBoost,Glass,name,plain SMOTE,-,P019-D016,Glass,fields,,agrees
+571,RAMOBoost,Yeast,name,plain SMOTE,-,P019-D017,Yeast,fields,,agrees
+572,RAMOBoost,Letter,name,plain SMOTE,+,P019-D018,Letter,fields,,agrees
+573,RAMOBoost,Shuttle,name,plain SMOTE,+,P019-D019,Shuttle,fields,,agrees
+574,RBBoost / Random Balance,hddt boundary,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D001,boundary,fields,,agrees
+575,RBBoost / Random Balance,hddt breast-y,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D002,breast-y,fields,,agrees
+576,RBBoost / Random Balance,hddt cam,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D003,cam,fields,,agrees
+577,RBBoost / Random Balance,hddt compustat,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D004,compustat,fields,,agrees
+578,RBBoost / Random Balance,hddt covtype,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D005,covtype,fields,,agrees
+579,RBBoost / Random Balance,hddt credit-g,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D006,credit-g,fields,,agrees
+580,RBBoost / Random Balance,hddt estate,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D007,estate,fields,,agrees
+581,RBBoost / Random Balance,hddt german-numer,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D008,german-numer,fields,,agrees
+582,RBBoost / Random Balance,hddt heart-v,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D009,heart-v,fields,,agrees
+583,RBBoost / Random Balance,hddt hypo,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D010,hypo,fields,,agrees
+584,RBBoost / Random Balance,hddt ism,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D011,ism,fields,,agrees
+585,RBBoost / Random Balance,hddt letter,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D012,letter,fields,,agrees
+586,RBBoost / Random Balance,hddt oil,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D013,oil,fields,,agrees
+587,RBBoost / Random Balance,hddt optdigits,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D014,optdigits,fields,,agrees
+588,RBBoost / Random Balance,hddt page,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D015,page,fields,,agrees
+589,RBBoost / Random Balance,hddt pendigits,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D016,pendigits,fields,,agrees
+590,RBBoost / Random Balance,hddt phoneme,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D017,phoneme,fields,,agrees
+591,RBBoost / Random Balance,hddt PhosS,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D018,PhosS,fields,,agrees
+592,RBBoost / Random Balance,hddt satimage,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D019,satimage,fields,,agrees
+593,RBBoost / Random Balance,hddt segment,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D020,segment,fields,,agrees
+594,RBBoost / Random Balance,keel abalone19,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D021,abalone19,fields,,agrees
+595,RBBoost / Random Balance,keel abalone9-18,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D022,abalone9-18,fields,,agrees
+596,RBBoost / Random Balance,keel cleveland-0 vs 4,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D023,cleveland-0_vs_4,fields,,agrees
+597,RBBoost / Random Balance,keel ecoli-0-1-3-7 vs 2-6,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D024,ecoli-0-1-3-7_vs_2-6,fields,,agrees
+598,RBBoost / Random Balance,keel ecoli-0-1-4-6 vs 5,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D025,ecoli-0-1-4-6_vs_5,fields,,agrees
+599,RBBoost / Random Balance,keel ecoli-0-1-4-7 vs 2-3,prefix,SMOTE variant (multiclass/ensemble wrapper),+,P027-D026,ecoli-0-1-4-7_vs_2-3-5-6,fields,,agrees (audited)
+600,RBBoost / Random Balance,keel ecoli-0-1-4-7 vs 5-6,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D027,ecoli-0-1-4-7_vs_5-6,fields,,agrees
+601,RBBoost / Random Balance,keel ecoli-0-1 vs 2-3-5,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D028,ecoli-0-1_vs_2-3-5,fields,,agrees
+602,RBBoost / Random Balance,keel ecoli-0-1 vs 5,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D029,ecoli-0-1_vs_5,fields,,agrees
+603,RBBoost / Random Balance,keel ecoli-0-2-3-4 vs 5,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D030,ecoli-0-2-3-4_vs_5,fields,,agrees
+604,RBBoost / Random Balance,keel ecoli-0-2-6-7 vs 3-5,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D031,ecoli-0-2-6-7_vs_3-5,fields,,agrees
+605,RBBoost / Random Balance,keel ecoli-0-3-4-6 vs 5,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D032,ecoli-0-3-4-6_vs_5,fields,,agrees
+606,RBBoost / Random Balance,keel ecoli-0-3-4-7 vs 5-6,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D033,ecoli-0-3-4-7_vs_5-6,fields,,agrees
+607,RBBoost / Random Balance,keel ecoli-0-3-4 vs 5,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D034,ecoli-0-3-4_vs_5,fields,,agrees
+608,RBBoost / Random Balance,keel ecoli-0-4-6 vs 5,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D035,ecoli-0-4-6_vs_5,fields,,agrees
+609,RBBoost / Random Balance,keel ecoli-0-6-7 vs 3-5,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D036,ecoli-0-6-7_vs_3-5,fields,,agrees
+610,RBBoost / Random Balance,keel ecoli-0-6-7 vs 5,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D037,ecoli-0-6-7_vs_5,fields,,agrees
+611,RBBoost / Random Balance,keel ecoli-0 vs 1,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D038,ecoli-0_vs_1,fields,,agrees
+612,RBBoost / Random Balance,keel ecoli1,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D039,ecoli1,fields,,agrees
+613,RBBoost / Random Balance,keel ecoli2,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D040,ecoli2,fields,,agrees
+614,RBBoost / Random Balance,keel ecoli3,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D041,ecoli3,fields,,agrees
+615,RBBoost / Random Balance,keel ecoli4,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D042,ecoli4,fields,,agrees
+616,RBBoost / Random Balance,keel glass-0-1-2-3 vs 4-5,row order (check),SMOTE variant (multiclass/ensemble wrapper),+,P027-D043,glass-0-1-2-3_vs_4-5-6,fields,,agrees (audited)
+617,RBBoost / Random Balance,keel glass-0-1-4-6 vs 2,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D044,glass-0-1-4-6_vs_2,fields,,agrees
+618,RBBoost / Random Balance,keel glass-0-1-5 vs 2,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D045,glass-0-1-5_vs_2,fields,,agrees
+619,RBBoost / Random Balance,keel glass-0-1-6 vs 2,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D046,glass-0-1-6_vs_2,fields,,agrees
+620,RBBoost / Random Balance,keel glass-0-1-6 vs 5,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D047,glass-0-1-6_vs_5,fields,,agrees
+621,RBBoost / Random Balance,keel glass-0-4 vs 5,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D048,glass-0-4_vs_5,fields,,agrees
+622,RBBoost / Random Balance,keel glass-0-6 vs 5,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D049,glass-0-6_vs_5,fields,,agrees
+623,RBBoost / Random Balance,keel glass0,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D050,glass0,fields,,agrees
+624,RBBoost / Random Balance,keel glass1,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D051,glass1,fields,,agrees
+625,RBBoost / Random Balance,keel glass2,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D052,glass2,fields,,agrees
+626,RBBoost / Random Balance,keel glass4,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D053,glass4,fields,,agrees
+627,RBBoost / Random Balance,keel glass5,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D054,glass5,fields,,agrees
+628,RBBoost / Random Balance,keel glass6,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D055,glass6,fields,,agrees
+629,RBBoost / Random Balance,keel haberman,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D056,haberman,fields,,agrees
+630,RBBoost / Random Balance,keel iris0,name,SMOTE variant (multiclass/ensemble wrapper),=,P027-D057,iris0,fields,,agrees
+631,RBBoost / Random Balance,keel led7digit-0-2-4-5-6-,prefix,SMOTE variant (multiclass/ensemble wrapper),-,P027-D058,led7digit-0-2-4-5-6-7-8-9_vs_1,fields,,agrees (audited)
+632,RBBoost / Random Balance,keel new-thyroid1,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D059,new-thyroid1,fields,,agrees
+633,RBBoost / Random Balance,keel new-thyroid2,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D060,new-thyroid2,fields,,agrees
+634,RBBoost / Random Balance,keel page-blocks-1-3 vs 4,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D061,page-blocks-1-3_vs_4,fields,,agrees
+635,RBBoost / Random Balance,keel page-blocks0,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D062,page-blocks0,fields,,agrees
+636,RBBoost / Random Balance,keel pima,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D063,pima,fields,,agrees
+637,RBBoost / Random Balance,keel segment0,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D064,segment0,fields,,agrees
+638,RBBoost / Random Balance,keel shuttle-c0-vs-c4,name,SMOTE variant (multiclass/ensemble wrapper),=,P027-D065,shuttle-c0-vs-c4,fields,,agrees
+639,RBBoost / Random Balance,keel shuttle-c2-vs-c4,name,SMOTE variant (multiclass/ensemble wrapper),=,P027-D066,shuttle-c2-vs-c4,fields,,agrees
+640,RBBoost / Random Balance,keel vehicle0,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D067,vehicle0,fields,,agrees
+641,RBBoost / Random Balance,keel vehicle1,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D068,vehicle1,fields,,agrees
+642,RBBoost / Random Balance,keel vehicle2,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D069,vehicle2,fields,,agrees
+643,RBBoost / Random Balance,keel vehicle3,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D070,vehicle3,fields,,agrees
+644,RBBoost / Random Balance,keel vowel0,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D071,vowel0,fields,,agrees
+645,RBBoost / Random Balance,keel wisconsin,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D072,wisconsin,fields,,agrees
+646,RBBoost / Random Balance,keel yeast-0-2-5-6 vs 3-7,prefix,SMOTE variant (multiclass/ensemble wrapper),-,P027-D073,yeast-0-2-5-6_vs_3-7-8-9,fields,,agrees (audited)
+647,RBBoost / Random Balance,keel yeast-0-2-5-7-9 vs 3,prefix,SMOTE variant (multiclass/ensemble wrapper),-,P027-D074,yeast-0-2-5-7-9_vs_3-6-8,fields,,agrees (audited)
+648,RBBoost / Random Balance,keel yeast-0-3-5-9 vs 7-8,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D075,yeast-0-3-5-9_vs_7-8,fields,,agrees
+649,RBBoost / Random Balance,keel yeast-0-5-6-7-9 vs 4,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D076,yeast-0-5-6-7-9_vs_4,fields,,agrees
+650,RBBoost / Random Balance,keel yeast-1-2-8-9 vs 7,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D077,yeast-1-2-8-9_vs_7,fields,,agrees
+651,RBBoost / Random Balance,keel yeast-1-4-5-8 vs 7,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D078,yeast-1-4-5-8_vs_7,fields,,agrees
+652,RBBoost / Random Balance,keel yeast-1 vs 7,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D079,yeast-1_vs_7,fields,,agrees
+653,RBBoost / Random Balance,keel yeast-2 vs 4,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D080,yeast-2_vs_4,fields,,agrees
+654,RBBoost / Random Balance,keel yeast-2 vs 8,name,SMOTE variant (multiclass/ensemble wrapper),+,P027-D081,yeast-2_vs_8,fields,,agrees
+655,RBBoost / Random Balance,keel yeast1,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D082,yeast1,fields,,agrees
+656,RBBoost / Random Balance,keel yeast3,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D083,yeast3,fields,,agrees
+657,RBBoost / Random Balance,keel yeast4,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D084,yeast4,fields,,agrees
+658,RBBoost / Random Balance,keel yeast5,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D085,yeast5,fields,,agrees
+659,RBBoost / Random Balance,keel yeast6,name,SMOTE variant (multiclass/ensemble wrapper),-,P027-D086,yeast6,fields,,agrees
+660,RSMOTE,avila,name,plain SMOTE,+,P053-D019,avila,fields,,agrees
+661,RSMOTE,breast_tissue2,name,plain SMOTE,+,P053-D001,breast_tissue2,fields,,agrees
+662,RSMOTE,breastcancer,name,plain SMOTE,+,P053-D011,breastcancer,fields,,agrees
+663,RSMOTE,codrna,name,plain SMOTE,-,P053-D018,codrna,fields,,agrees
+664,RSMOTE,creditApproval,name,plain SMOTE,+,P053-D012,creditApproval,fields,,agrees
+665,RSMOTE,ecoli,name,plain SMOTE,+,P053-D002,ecoli,fields,,agrees
+666,RSMOTE,heart,name,plain SMOTE,+,P053-D003,heart,fields,,agrees
+667,RSMOTE,iris,name,plain SMOTE,+,P053-D004,iris,fields,,agrees
+668,RSMOTE,isolet5,name,plain SMOTE,-,P053-D017,isolet5,fields,,agrees
+669,RSMOTE,letter,name,plain SMOTE,+,P053-D020,letter,fields,,agrees
+670,RSMOTE,libra,name,plain SMOTE,+,P053-D005,libra,fields,,agrees
+671,RSMOTE,magic,name,plain SMOTE,+,P053-D025,magic,fields,,agrees
+672,RSMOTE,mocap,name,plain SMOTE,-,P053-D022,mocap,fields,,agrees
+673,RSMOTE,mushrooms,name,plain SMOTE,+,P053-D016,mushrooms,fields,,agrees
+674,RSMOTE,nomao,name,plain SMOTE,-,P053-D024,nomao,fields,,agrees
+675,RSMOTE,pima,name,plain SMOTE,+,P053-D006,pima,fields,,agrees
+676,RSMOTE,poker,name,plain SMOTE,+,P053-D023,poker,fields,,agrees
+677,RSMOTE,segment,name,plain SMOTE,+,P053-D007,segment,fields,,agrees
+678,RSMOTE,skin,name,plain SMOTE,+,P053-D026,skin,fields,,agrees
+679,RSMOTE,splice,name,plain SMOTE,+,P053-D015,splice,fields,,agrees
+680,RSMOTE,susy,name,plain SMOTE,+,P053-D021,susy,fields,,agrees
+681,RSMOTE,svmguide1,name,plain SMOTE,+,P053-D010,svmguide1,fields,,agrees
+682,RSMOTE,svmguide3,name,plain SMOTE,+,P053-D014,svmguide3,fields,,agrees
+683,RSMOTE,vehicle,name,plain SMOTE,+,P053-D008,vehicle,fields,,agrees
+684,RSMOTE,votes,name,plain SMOTE,-,P053-D013,votes,fields,,agrees
+685,RSMOTE,wine,name,plain SMOTE,+,P053-D009,wine,fields,,agrees
+686,RSMOTE,Online_Retail,name,plain SMOTE,-,P053-D027,Online_Retail,fields,,agrees
+687,RUSBoost,CAR,prefix,plain SMOTE,+,P020-D004,CAR3,fields,,agrees (audited)
+688,RUSBoost,CCCS12,name,plain SMOTE,+,P020-D005,CCCS12,fields,,agrees
+689,RUSBoost,CM1,name,plain SMOTE,+,P020-D009,CM1,fields,,agrees
+690,RUSBoost,CONTRACEPTIVE,corrected 19 Oct 2026 (see out/outcome_mapping_audit.csv),plain SMOTE,+,P020-D014,CONTRA2,fields,,agrees (audited)
+691,RUSBoost,ECOLI,prefix,plain SMOTE,+,P020-D012,ECOLI4,fields,,agrees (audited)
+692,RUSBoost,GLASS,prefix,plain SMOTE,+,P020-D008,GLASS3,fields,,agrees (audited)
+693,RUSBoost,MAMMOGRAPHY,name,plain SMOTE,+,P020-D002,MAMMOGRAPHY,fields,,agrees
+694,RUSBoost,PC1,name,plain SMOTE,+,P020-D007,PC1,fields,,agrees
+695,RUSBoost,PENDIGITS,prefix,plain SMOTE,+,P020-D010,PENDIGITS5,fields,,agrees (audited)
+696,RUSBoost,SATIMG,corrected 19 Oct 2026 (see out/outcome_mapping_audit.csv),plain SMOTE,+,P020-D011,SATIMAGE4,fields,,agrees (audited)
+697,RUSBoost,SEGMENT,prefix,plain SMOTE,+,P020-D013,SEGMENT5,fields,,agrees (audited)
+698,RUSBoost,SOLARFLARE,prefix,plain SMOTE,+,P020-D003,SOLARFLAREF,fields,,agrees (audited)
+699,RUSBoost,SP1,name,plain SMOTE,+,P020-D006,SP1,fields,,agrees
+700,RUSBoost,SP3,name,plain SMOTE,+,P020-D001,SP3,fields,,agrees
+701,RUSBoost,VEHICLE,prefix,plain SMOTE,+,P020-D015,VEHICLE1,fields,,agrees (audited)
+702,SCUT,Thyroid,name,plain SMOTE,-,P028-D001,Thyroid,fields,,agrees
+703,SCUT,Lympho.,prefix,plain SMOTE,+,P028-D002,Lymphography,fields,,agrees
+704,SCUT,Pageblock,prefix,plain SMOTE,=,P028-D003,Pageblocks,fields,,agrees
+705,SCUT,Derma.,prefix,plain SMOTE,+,P028-D004,Dermatology,fields,,agrees
+706,SCUT,Autos,name,plain SMOTE,-,P028-D005,Autos,fields,,agrees
+707,SCUT,Ecoli,name,plain SMOTE,-,P028-D006,Ecoli,fields,,agrees
+708,SCUT,Wine,prefix,plain SMOTE,+,P028-D007,Wine Quality,fields,,agrees
+709,SCUT,Yeast,name,plain SMOTE,+,P028-D008,Yeast,fields,,agrees
+710,SHSampler,balance,name,SMOTE variant (multiclass/ensemble wrapper),-,P059-D001,balance,fields+name,,agrees
+711,SHSampler,car,name,SMOTE variant (multiclass/ensemble wrapper),-,P059-D002,car,fields+name,,agrees
+712,SHSampler,cleveland,name,SMOTE variant (multiclass/ensemble wrapper),+,P059-D003,cleveland,fields+name,,agrees
+713,SHSampler,ecoli,name,SMOTE variant (multiclass/ensemble wrapper),+,P059-D004,ecoli,fields+name,,agrees
+714,SHSampler,glass,name,SMOTE variant (multiclass/ensemble wrapper),-,P059-D005,glass,fields+name,,agrees
+715,SHSampler,hayes-roth,name,SMOTE variant (multiclass/ensemble wrapper),+,P059-D006,hayes-roth,fields+name,,agrees
+716,SHSampler,led7digit,name,SMOTE variant (multiclass/ensemble wrapper),-,P059-D007,led7digit,fields+name,,agrees
+717,SHSampler,lymphography,name,SMOTE variant (multiclass/ensemble wrapper),+,P059-D008,lymphography,fields+name,,agrees
+718,SHSampler,newthyroid,name,SMOTE variant (multiclass/ensemble wrapper),+,P059-D009,newthyroid,fields+name,,agrees
+719,SHSampler,page-blocks,name,SMOTE variant (multiclass/ensemble wrapper),+,P059-D010,page-blocks,fields+name,,agrees
+720,SHSampler,PhishingData,name,SMOTE variant (multiclass/ensemble wrapper),+,P059-D011,PhishingData,fields+name,,agrees
+721,SHSampler,sensorReadings,name,SMOTE variant (multiclass/ensemble wrapper),-,P059-D012,sensorReadings,fields+name,,agrees
+722,SHSampler,thyroid,name,SMOTE variant (multiclass/ensemble wrapper),-,P059-D013,thyroid,fields+name,,agrees
+723,SHSampler,userknowledge,name,SMOTE variant (multiclass/ensemble wrapper),+,P059-D014,userknowledge,fields+name,,agrees
+724,SHSampler,vehicle,name,SMOTE variant (multiclass/ensemble wrapper),+,P059-D015,vehicle,fields+name,,agrees
+725,SHSampler,vertebralColumn,name,SMOTE variant (multiclass/ensemble wrapper),+,P059-D016,vertebralColumn,fields+name,,agrees
+726,SHSampler,wine,name,SMOTE variant (multiclass/ensemble wrapper),-,P059-D017,wine,fields+name,,agrees
+727,SHSampler,winequality,name,SMOTE variant (multiclass/ensemble wrapper),=,P059-D018,winequality,fields+name,,agrees
+728,SHSampler,yeast,name,SMOTE variant (multiclass/ensemble wrapper),+,P059-D019,yeast,fields+name,,agrees
+729,SHSampler,zoo,name,SMOTE variant (multiclass/ensemble wrapper),+,P059-D020,zoo,fields+name,,agrees
+730,SMOM,vehicle,name,plain SMOTE,-,P034-D001,vehicle,fields,,agrees
+731,SMOM,sat,name,plain SMOTE,+,P034-D002,sat,fields,,agrees
+732,SMOM,ecoli,name,plain SMOTE,+,P034-D003,ecoli,fields,,agrees
+733,SMOM,automobile,name,plain SMOTE,+,P034-D004,automobile,fields,,agrees
+734,SMOM,voice9_6,name,plain SMOTE,+,P034-D005,voice9_6,fields,,agrees
+735,SMOM,vowel5,name,plain SMOTE,+,P034-D006,vowel5,fields,,agrees
+736,SMOM,vowel7,name,plain SMOTE,+,P034-D007,vowel7,fields,,agrees
+737,SMOM,robot,name,plain SMOTE,=,P034-D008,robot,fields,,agrees
+738,SMOM,pendigits,name,plain SMOTE,-,P034-D009,pendigits,fields,,agrees
+739,SMOM,page-blocks,name,plain SMOTE,+,P034-D010,page-blocks,fields,,agrees
+740,SMOM,housing5,name,plain SMOTE,+,P034-D011,housing5,fields,,agrees
+741,SMOM,SWD,name,plain SMOTE,+,P034-D012,SWD,fields,,agrees
+742,SMOM,wine-red,name,plain SMOTE,+,P034-D013,wine-red,fields,,agrees
+743,SMOM,voice9_7,name,plain SMOTE,-,P034-D014,voice9_7,fields,,agrees
+744,SMOM,LEV,name,plain SMOTE,+,P034-D015,LEV,fields,,agrees
+745,SMOM,machine,name,plain SMOTE,+,P034-D016,machine,fields,,agrees
+746,SMOM,abalone8,name,plain SMOTE,+,P034-D017,abalone8,fields,,agrees
+747,SMOM,plates-faults5,name,plain SMOTE,-,P034-D018,plates-faults5,fields,,agrees
+748,SMOM,plates-faults7,name,plain SMOTE,+,P034-D019,plates-faults7,fields,,agrees
+749,SMOM,ESL,name,plain SMOTE,-,P034-D020,ESL,fields,,agrees
+750,SMOM,ERA,name,plain SMOTE,-,P034-D021,ERA,fields,,agrees
+751,SMOM,yeast5,name,plain SMOTE,+,P034-D022,yeast5,fields,,agrees
+752,SMOM,ERA5,name,plain SMOTE,+,P034-D023,ERA5,fields,,agrees
+753,SMOM,yeast7,name,plain SMOTE,+,P034-D024,yeast7,fields,,agrees
+754,SMOM,abalone10,name,plain SMOTE,+,P034-D025,abalone10,fields,,agrees
+755,SMOM,yeast8,name,plain SMOTE,-,P034-D026,yeast8,fields,,agrees
+756,SMOM,housing10,name,plain SMOTE,+,P034-D027,housing10,fields,,agrees
+757,SMOTE-ENN / SMOTE-Tomek,Pima,name,plain SMOTE,-,P008-D001,Pima,fields,,agrees
+758,SMOTE-ENN / SMOTE-Tomek,German,name,plain SMOTE,+,P008-D002,German,fields,,agrees
+759,SMOTE-ENN / SMOTE-Tomek,Post-operative,name,plain SMOTE,+,P008-D003,Post-operative,fields,,agrees
+760,SMOTE-ENN / SMOTE-Tomek,Haberman,name,plain SMOTE,+,P008-D004,Haberman,fields,,agrees
+761,SMOTE-ENN / SMOTE-Tomek,Splice-ie,name,plain SMOTE,-,P008-D005,Splice-ie,fields,,agrees
+762,SMOTE-ENN / SMOTE-Tomek,Splice-ei,name,plain SMOTE,-,P008-D006,Splice-ei,fields,,agrees
+763,SMOTE-ENN / SMOTE-Tomek,Vehicle,name,plain SMOTE,-,P008-D007,Vehicle,fields,,agrees
+764,SMOTE-ENN / SMOTE-Tomek,Letter-vowel,name,plain SMOTE,+,P008-D008,Letter-vowel,fields,,agrees
+765,SMOTE-ENN / SMOTE-Tomek,New-thyroid,name,plain SMOTE,+,P008-D009,New-thyroid,fields,,agrees
+766,SMOTE-ENN / SMOTE-Tomek,E.Coli,name,plain SMOTE,-,P008-D010,E.Coli,fields,,agrees
+767,SMOTE-ENN / SMOTE-Tomek,Satimage,name,plain SMOTE,+,P008-D011,Satimage,fields,,agrees
+768,SMOTE-ENN / SMOTE-Tomek,Flag,name,plain SMOTE,+,P008-D012,Flag,fields,,agrees
+769,SMOTE-ENN / SMOTE-Tomek,Glass,name,plain SMOTE,+,P008-D013,Glass,fields,,agrees
+770,SMOTE-ENN / SMOTE-Tomek,Letter-a,name,plain SMOTE,=,P008-D014,Letter-a,fields,,agrees
+771,SMOTE-ENN / SMOTE-Tomek,Nursery,name,plain SMOTE,-,P008-D015,Nursery,fields,,agrees
+772,SMOTE-IPF,acl,name,plain SMOTE,+,P029-D031,acl,fields,,agrees
+773,SMOTE-IPF,breast,name,plain SMOTE,+,P029-D032,breast,fields,,agrees
+774,SMOTE-IPF,bupa,name,plain SMOTE,+,P029-D033,bupa,fields,,agrees
+775,SMOTE-IPF,cleveland,name,plain SMOTE,+,P029-D034,cleveland,fields,,agrees
+776,SMOTE-IPF,ecoli,name,plain SMOTE,+,P029-D035,ecoli,fields,,agrees
+777,SMOTE-IPF,haberman,name,plain SMOTE,+,P029-D036,haberman,fields,,agrees
+778,SMOTE-IPF,hepatitis,name,plain SMOTE,+,P029-D037,hepatitis,fields,,agrees
+779,SMOTE-IPF,newthyroid,name,plain SMOTE,+,P029-D038,newthyroid,fields,,agrees
+780,SMOTE-IPF,pima,name,plain SMOTE,+,P029-D039,pima,fields,,agrees
+781,SMOTEBoost,KDDCup-99 intrusion (U2R class),name,plain SMOTE,+,P007-D001,KDDCup-99 Intrusion,fields,,agrees
+782,SMOTEBoost,mammography,name,plain SMOTE,+,P007-D002,Mammography,fields,,agrees
+783,SMOTEBoost,Satimage,name,plain SMOTE,+,P007-D003,Satimage,fields,,agrees
+784,SMOTEBoost,phoneme,name,plain SMOTE,+,P007-D004,Phoneme,fields,,agrees
+785,SOS,Default,name,plain SMOTE,+,P060-D001,Default,fields+name,,agrees
+786,SOS,Shoppers,name,plain SMOTE,+,P060-D002,Shoppers,fields,,agrees
+787,SOS,Surgical,name,plain SMOTE,+,P060-D003,Surgical,fields+name,,agrees
+788,SOS,WeatherAUS,name,plain SMOTE,+,P060-D004,WeatherAUS,fields+name,,agrees
+789,SOS,Buddy,name,plain SMOTE,+,P060-D005,Buddy,fields,,agrees
+790,SOS,Satimage,name,plain SMOTE,+,P060-D006,Satimage,fields,,agrees
+791,SOUP,balance scale,name,SMOTE variant (multiclass/ensemble wrapper),+,P043-D001,balance-scale,fields,,agrees
+792,SOUP,car,name,SMOTE variant (multiclass/ensemble wrapper),+,P043-D002,car,fields,,agrees
+793,SOUP,cleveland 1,name,SMOTE variant (multiclass/ensemble wrapper),+,P043-D003,cleveland_1,fields+name,,agrees
+794,SOUP,cleveland 2,name,SMOTE variant (multiclass/ensemble wrapper),+,P043-D004,cleveland_2,fields+name,,agrees
+795,SOUP,cmc,name,SMOTE variant (multiclass/ensemble wrapper),+,P043-D005,cmc,fields,,agrees
+796,SOUP,dermatology,name,SMOTE variant (multiclass/ensemble wrapper),+,P043-D006,dermatology,fields,,agrees
+797,SOUP,ecoli,name,SMOTE variant (multiclass/ensemble wrapper),-,P043-D007,ecoli,fields,,agrees
+798,SOUP,flare,name,SMOTE variant (multiclass/ensemble wrapper),+,P043-D008,flare,fields,,agrees
+799,SOUP,glass,name,SMOTE variant (multiclass/ensemble wrapper),+,P043-D009,glass,fields,,agrees
+800,SOUP,hayes roth,name,SMOTE variant (multiclass/ensemble wrapper),=,P043-D010,hayes_roth,fields,,agrees
+801,SOUP,led7digit,name,SMOTE variant (multiclass/ensemble wrapper),+,P043-D011,led7digit,fields,,agrees
+802,SOUP,thyroid,row order (check),SMOTE variant (multiclass/ensemble wrapper),+,P043-D012,new_thyroid,fields,,agrees (audited)
+803,SOUP,vehicle,name,SMOTE variant (multiclass/ensemble wrapper),=,P043-D013,vehicle,fields,,agrees
+804,SOUP,wine quality,prefix,SMOTE variant (multiclass/ensemble wrapper),+,P043-D015,wine_quality_red,fields,,agrees
+805,SOUP,yeast,name,SMOTE variant (multiclass/ensemble wrapper),+,P043-D014,yeast,fields,,agrees
+806,SOUP,art1,name,SMOTE variant (multiclass/ensemble wrapper),+,P043-D016,art1,fields+name,,agrees
+807,SOUP,art2,name,SMOTE variant (multiclass/ensemble wrapper),+,P043-D017,art2,fields+name,,agrees
+808,SOUP,art3,name,SMOTE variant (multiclass/ensemble wrapper),+,P043-D018,art3,fields+name,,agrees
+809,SOUP,art4,name,SMOTE variant (multiclass/ensemble wrapper),+,P043-D019,art4,fields+name,,agrees
+810,SPE,Credit Fraud (KNN),name,plain SMOTE,+,P050-D002,Credit Fraud,fields,,agrees
+811,SPE,Credit Fraud (DT),name,plain SMOTE,+,P050-D002,Credit Fraud,fields,,agrees
+812,SPE,Credit Fraud (MLP),name,plain SMOTE,+,P050-D002,Credit Fraud,fields,,agrees
+813,SVDD-WSMOTE,Wine,name,plain SMOTE,+,P061-D001,Wine,fields,,agrees
+814,SVDD-WSMOTE,Iris,name,plain SMOTE,+,P061-D002,Iris,fields,,agrees
+815,SVDD-WSMOTE,Abalone,name,plain SMOTE,+,P061-D003,Abalone,fields,,agrees
+816,SVDD-WSMOTE,Pima,name,plain SMOTE,+,P061-D004,Pima,fields,,agrees
+817,SVDD-WSMOTE,Ecoli,name,plain SMOTE,+,P061-D005,Ecoli,fields,,agrees
+818,SVDD-WSMOTE,Libra,name,plain SMOTE,+,P061-D006,Libra,fields,,agrees
+819,SVDD-WSMOTE,Vehicle,name,plain SMOTE,+,P061-D007,Vehicle,fields,,agrees
+820,SVDD-WSMOTE,Balance,name,plain SMOTE,+,P061-D008,Balance,fields,,agrees
+821,SVDD-WSMOTE,Haberman,name,plain SMOTE,+,P061-D009,Haberman,fields,,agrees
+822,SVDD-WSMOTE,Car,name,plain SMOTE,+,P061-D010,Car,fields,,agrees
+823,SVDD-WSMOTE,Liver,name,plain SMOTE,+,P061-D011,Liver,fields,,agrees
+824,SVDD-WSMOTE,Seed,name,plain SMOTE,+,P061-D012,Seed,fields,,agrees
+825,SVDD-WSMOTE,Spect,name,plain SMOTE,+,P061-D013,Spect,fields,,agrees
+826,SVDD-WSMOTE,Pageblock,name,plain SMOTE,+,P061-D014,Pageblock,fields,,agrees
+827,SVDD-WSMOTE,Pageblock1,name,plain SMOTE,+,P061-D015,Pageblock1,fields,,agrees
+828,SVDD-WSMOTE,Yeast,name,plain SMOTE,+,P061-D016,Yeast,fields,,agrees
+829,SVDD-WSMOTE,Yeast1,name,plain SMOTE,+,P061-D017,Yeast1,fields,,agrees
+830,SVDD-WSMOTE,Yeast2,name,plain SMOTE,+,P061-D018,Yeast2,fields,,agrees
+831,SVDD-WSMOTE,Yeast3,name,plain SMOTE,+,P061-D019,Yeast3,fields,,agrees
+832,SVDD-WSMOTE,Yeast4,name,plain SMOTE,+,P061-D020,Yeast4,fields,,agrees
+833,SVDD-WSMOTE,Yeast5,name,plain SMOTE,+,P061-D021,Yeast5,fields,,agrees
+834,SVDD-WSMOTE,Yeast6,name,plain SMOTE,+,P061-D022,Yeast6,fields,,agrees
+835,SVDD-WSMOTE,Yeast7,name,plain SMOTE,+,P061-D023,Yeast7,fields,,agrees
+836,SVDD-WSMOTE,Yeast8,name,plain SMOTE,+,P061-D024,Yeast8,fields,,agrees

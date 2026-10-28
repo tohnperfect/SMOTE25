@@ -1,0 +1,103 @@
+{
+  "key": "Borderline-SMOTE",
+  "pdf_file_read": "Borderline-SMOTE - A New Over-Sampling Method in Imbalanced Data Sets Learning (ICIC 2005).pdf",
+  "task": "binary",
+  "n_datasets_claimed": 4,
+  "characteristics_table": "Table 2, p.6 (printed 883)",
+  "datasets": [
+    {
+      "name": "Circle(Simulation)",
+      "group": "",
+      "source_repo": "synthetic",
+      "n_instances": 1600,
+      "n_features": 2,
+      "n_classes": 2,
+      "n_minority": null,
+      "n_majority": null,
+      "class_distribution": "Class label (minority : majority) 1:0; Percentage of minority class 6.25%",
+      "ir_printed": null,
+      "how_obtained": "synthetic",
+      "how_obtained_detail": "simulated data set by the authors, depicted in Fig. 1 (p.6); generation procedure not stated in paper",
+      "in_results_table": "not applicable (no per-dataset results)",
+      "ref": "Table 2, p.6 (printed 883)"
+    },
+    {
+      "name": "Pima(UCI)",
+      "group": "",
+      "source_repo": "UCI",
+      "n_instances": 768,
+      "n_features": 8,
+      "n_classes": 2,
+      "n_minority": null,
+      "n_majority": null,
+      "class_distribution": "Class label (minority : majority) 1:0; Percentage of minority class 34.77%",
+      "ir_printed": null,
+      "how_obtained": "original",
+      "how_obtained_detail": "from UCI [24], natively two classes, minority class label 1",
+      "in_results_table": "not applicable (no per-dataset results)",
+      "ref": "Table 2, p.6 (printed 883)"
+    },
+    {
+      "name": "Satimage(UCI)",
+      "group": "",
+      "source_repo": "UCI",
+      "n_instances": 6435,
+      "n_features": 36,
+      "n_classes": 2,
+      "n_minority": null,
+      "n_majority": null,
+      "class_distribution": "Class label (minority : majority) 4:remainder; Percentage of minority class 9.73%",
+      "ir_printed": null,
+      "how_obtained": "modified",
+      "how_obtained_detail": "class label '4' chosen as minority, remaining classes merged as majority (stated in text p.6 and Table 2)",
+      "in_results_table": "not applicable (no per-dataset results)",
+      "ref": "Table 2, p.6 (printed 883)"
+    },
+    {
+      "name": "Haberman(UCI)",
+      "group": "",
+      "source_repo": "UCI",
+      "n_instances": 306,
+      "n_features": 3,
+      "n_classes": 2,
+      "n_minority": null,
+      "n_majority": null,
+      "class_distribution": "Class label (minority : majority) Die : Survive; Percentage of minority class 26.47%",
+      "ir_printed": null,
+      "how_obtained": "original",
+      "how_obtained_detail": "from UCI [24], natively two classes, minority = Die",
+      "in_results_table": "not applicable (no per-dataset results)",
+      "ref": "Table 2, p.6 (printed 883)"
+    }
+  ],
+  "ir_definition": "not stated in paper (only 'Percentage of minority class' is reported in Table 2)",
+  "ir_definition_ref": "p.6",
+  "outcome": {
+    "smote_in_baselines": "yes",
+    "smote_name_as_printed": "SMOTE (legend: 'smote')",
+    "baselines_all": ["SMOTE", "random over-sampling", "original (C4.5 on original data sets)"],
+    "results_granularity": "plots only",
+    "chosen": {
+      "table": "Fig. 2 (line plots, not digitised)",
+      "page": "p.8 (printed 885)",
+      "metric": "F-value (minority class, beta=1)",
+      "classifier": "C4.5",
+      "condition": "original data sets; average of three independent 10-fold cross-validations; x-axis = number of synthetic examples",
+      "higher_is_better": true,
+      "is_image": true
+    },
+    "rows": [],
+    "summary_rows": [],
+    "stat_test": "not stated in paper",
+    "win_claim": {
+      "quote": "For the minority class, experiments show that our approaches achieve better TP rate and F-value than SMOTE and random over-sampling methods.",
+      "page": "p.1 (printed 878)"
+    }
+  },
+  "uncertain": [
+    "Proposed method: paper presents two co-equal variants (borderline-SMOTE1 and borderline-SMOTE2) in abstract and conclusion; chosen as borderline-SMOTE1, p.1/p.8-9",
+    "Results exist only as line plots in Fig. 2 (p.8) versus number of synthetic examples; per-dataset numbers not extracted (not digitised by instruction)",
+    "Circle class labels '1:0' and how the data set was generated are not described beyond Fig. 1 (p.6)"
+  ],
+  "notes": "Proposed variants: borderline-SMOTE1 (chosen) and borderline-SMOTE2. Metrics reported: TP rate and F-value of the minority class only (no G-mean/AUC). Text p.7 (printed 884) gives only best improvements over the ORIGINAL data sets (not vs SMOTE), e.g. F-value improvements for borderline-SMOTE1/2: Circle 12.1/10.3, Pima 2.3/1.3, Satimage 2.3/1.4, Haberman 24.7/23.0 per cent; TP rate: Circle 20/22, Pima 21.3/20.5, Satimage 10.1/10.0, Haberman 45.2/45.2 per cent. m set so that DANGER is about half of the minority class; k=5. Table 2 read from PDF text extraction (clean); no supplementary file referenced."
+}

@@ -1,0 +1,119 @@
+{
+ "criteria": {
+  "frequent": "dataset papers >= 10 (datasets by rule T1-1: spellings that differ only by punctuation are one dataset; the 'datasets used by 10+ papers' set of Analysis C)",
+  "diversity": "dataset papers >= 3 and < 10, and every single-number value printed for it is >= 10,000 instances or every one is >= 100 features, printed in >= 2 papers; Analysis C found no entry of the 10+ set at or above these values",
+  "verification": "a listed candidate or pool name that meets neither rule, or whose printed values are too sparse or inconsistent to place it",
+  "not_used": "IR is not used to select candidates: definitions differ across papers (Analysis E); difficulty is not inferred from IR",
+  "pool": "the 11 names listed in the task + every name meeting the frequent or diversity rule",
+  "label_status": "provisional: group labels are proposed by the analyst (Claude) from the rules above and await Toon's review; they are not the authors' final selection",
+  "high_dim_note": "No dataset used by at least 3 papers is printed with 100 or more features every time it is reported. This is a statement about this rule, not a finding that the corpus lacks high-dimensional data sets.",
+  "family_note": "family = rule T1 (Toon, 28 Oct 2026): numbered or split versions belong to their main set; non-standard names are not merged; see build/family_rule.py",
+  "scope_note": "the rule covers use frequency and printed size/dimensionality only; it does not establish diversity in overlap, noise, sparsity, feature type or any other characteristic"
+ },
+ "listed_not_found": [],
+ "counts": {
+  "frequently used benchmark": 33,
+  "potential diversity candidate": 7,
+  "requires verification": 1
+ },
+ "frequent_set_size": 33,
+ "frequent_set_check_vs_C": 33,
+ "families": {
+  "total": 459,
+  "rule": "T1 (Toon, 28 Oct 2026): names differing only by '-', '_', spaces or dots are one dataset; numbered or split versions belong to their main set's family; non-standard names are not merged (build/family_rule.py)",
+  "flagged": 14,
+  "flagged_list": {
+   "aids": [
+    "aids 15000: stem_family",
+    "aids 50000: stem_family",
+    "aids 5000: stem_family"
+   ],
+   "art": [
+    "art1: stem_family",
+    "art2: stem_family",
+    "art3: stem_family",
+    "art4: stem_family"
+   ],
+   "artificial": [
+    "artificial 0.3 5: stem_family",
+    "artificial 0.5 10: stem_family",
+    "artificial 0.5 2.5: stem_family",
+    "artificial 0.5 5: stem_family",
+    "artificial 1 5: stem_family"
+   ],
+   "bhat": [
+    "bhat1: stem_family",
+    "bhat2: stem_family",
+    "bhat3: stem_family",
+    "bhat4: stem_family"
+   ],
+   "camel": [
+    "camel-1.0: stem_family",
+    "camel-1.4: stem_family",
+    "camel-1.6: stem_family"
+   ],
+   "clover": [
+    "clover-0: stem_family",
+    "clover-30: stem_family",
+    "clover-50: stem_family",
+    "clover-70: stem_family"
+   ],
+   "dsie": [
+    "dsie10d20: stem_family",
+    "dsie30d40: stem_family",
+    "dsie50d60: stem_family"
+   ],
+   "imagenet": [
+    "imagenet12: stem_family",
+    "imagenet8: stem_family",
+    "imagenet9: stem_family"
+   ],
+   "mandelon": [
+    "mandelon 1: stem_family",
+    "mandelon 2: stem_family"
+   ],
+   "paw": [
+    "paw-0: stem_family",
+    "paw-30: stem_family",
+    "paw-50: stem_family",
+    "paw-70: stem_family"
+   ],
+   "simulated": [
+    "simulated10: stem_family",
+    "simulated1: stem_family",
+    "simulated2: stem_family",
+    "simulated3: stem_family",
+    "simulated4: stem_family",
+    "simulated5: stem_family",
+    "simulated6: stem_family",
+    "simulated7: stem_family",
+    "simulated8: stem_family",
+    "simulated9: stem_family"
+   ],
+   "subclus": [
+    "subclus-0: stem_family",
+    "subclus-30: stem_family",
+    "subclus-50: stem_family",
+    "subclus-70: stem_family"
+   ],
+   "svmguide": [
+    "svmguide1: stem_family",
+    "svmguide2: stem_family",
+    "svmguide3: stem_family"
+   ],
+   "xalan": [
+    "xalan-2.4: stem_family",
+    "xalan-2.7: stem_family"
+   ]
+  }
+ },
+ "sources": [
+  "out/dataset_records.csv",
+  "out/benchmark_concentration.json",
+  "out/reconcile_counts.json",
+  "out/modified_operations_audit.csv",
+  "out/not_stated_audit.csv",
+  "out/difficulty_evidence.json",
+  "out/dataset_families.csv"
+ ]
+}

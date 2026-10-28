@@ -1,0 +1,156 @@
+{
+ "key": "SMOTEBoost",
+ "classifier": "RIPPER",
+ "condition": "SMOTE parameter N = 100 for both SMOTE and SMOTEBoost (KDDCup-99: Nu2r = 100, Nr2l = 100; U2R class); 25 boosting iterations aggregated",
+ "proposed_column": "SMOTE-Boost (N = 100; KDDCup-99 Nu2r=100 Nr2l=100)",
+ "smote_column": "SMOTE (applied with RIPPER, N = 100; KDDCup-99 Nu2r=100 Nr2l=100)",
+ "metrics": [
+  {
+   "metric": "Recall (minority class)",
+   "metric_family": "recall",
+   "table": "Tables 3, 4, 5, 6",
+   "page": "PDF page 7 (printed 113) for Tables 3-4; PDF page 8 (printed 114) for Tables 5-6",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "KDDCup-99 intrusion (U2R class)",
+     "proposed": "84.2",
+     "proposed_std": null,
+     "smote": "80.15",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "mammography",
+     "proposed": "61.73",
+     "proposed_std": null,
+     "smote": "58.04",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Satimage",
+     "proposed": "63.88",
+     "proposed_std": null,
+     "smote": "65.17",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "phoneme",
+     "proposed": "81.86",
+     "proposed_std": null,
+     "smote": "82.18",
+     "smote_std": null,
+     "marks": ""
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper (text: 'SMOTEBoost achieved higher F-values than the other presented methods including standard boosting, AdaCost, SMOTE with the RIPPER classifier and the standard RIPPER classifier'; best values in bold)",
+    "stat_test": "not stated in paper"
+   }
+  },
+  {
+   "metric": "Precision (minority class)",
+   "metric_family": "precision",
+   "table": "Tables 3, 4, 5, 6",
+   "page": "PDF page 7 (printed 113) for Tables 3-4; PDF page 8 (printed 114) for Tables 5-6",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "KDDCup-99 intrusion (U2R class)",
+     "proposed": "93.9",
+     "proposed_std": null,
+     "smote": "88.62",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "mammography",
+     "proposed": "76.59",
+     "proposed_std": null,
+     "smote": "64.96",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Satimage",
+     "proposed": "77.71",
+     "proposed_std": null,
+     "smote": "55.88",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "phoneme",
+     "proposed": "73.66",
+     "proposed_std": null,
+     "smote": "59.91",
+     "smote_std": null,
+     "marks": ""
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper (text: 'SMOTEBoost achieved higher F-values than the other presented methods including standard boosting, AdaCost, SMOTE with the RIPPER classifier and the standard RIPPER classifier'; best values in bold)",
+    "stat_test": "not stated in paper"
+   }
+  },
+  {
+   "metric": "F-value (minority class)",
+   "metric_family": "F-measure",
+   "table": "Tables 3, 4, 5, 6",
+   "page": "PDF page 7 (printed 113) for Tables 3-4; PDF page 8 (printed 114) for Tables 5-6",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "KDDCup-99 intrusion (U2R class)",
+     "proposed": "88.8",
+     "proposed_std": null,
+     "smote": "84.17",
+     "smote_std": null,
+     "marks": "SMOTEBoost F-value bold (88.8)"
+    },
+    {
+     "dataset_as_printed": "mammography",
+     "proposed": "68.36",
+     "proposed_std": null,
+     "smote": "61.31",
+     "smote_std": null,
+     "marks": "SMOTEBoost F-value bold (68.36)"
+    },
+    {
+     "dataset_as_printed": "Satimage",
+     "proposed": "70.12",
+     "proposed_std": null,
+     "smote": "59.97",
+     "smote_std": null,
+     "marks": "no bold in N=100 row (bold SMOTEBoost F-value is N=300: 70.19)"
+    },
+    {
+     "dataset_as_printed": "phoneme",
+     "proposed": "77.37",
+     "proposed_std": null,
+     "smote": "68.89",
+     "smote_std": null,
+     "marks": "SMOTEBoost F-value bold (77.37)"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper (text: 'SMOTEBoost achieved higher F-values than the other presented methods including standard boosting, AdaCost, SMOTE with the RIPPER classifier and the standard RIPPER classifier'; best values in bold)",
+    "stat_test": "not stated in paper"
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [],
+ "metrics_without_smote": [],
+ "notes": "Tables 3-6 have a text layer (pdftotext) and were verified against 200-dpi renders; values copied as printed (mixed decimals, e.g. 84.2, 93.9). Bold marks only on the best F-value per block; SMOTE never bold. Tables also report N = 200/300/500 (and Nu2r=300/500 for KDDCup) for both methods, not copied since N=100 is fixed. Figs. 2-4 show per-iteration curves without printed numbers."
+}

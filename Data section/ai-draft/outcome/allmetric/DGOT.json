@@ -1,0 +1,630 @@
+{
+ "key": "DGOT",
+ "classifier": "not stated in paper (five classifiers XGBoost, KNN, DTC, Logit, RFC used; tables Table IV-VI do not say which classifier or whether averaged)",
+ "condition": "original data, no added noise, 22 datasets; stratified 5-fold CV, 10 random seeds, mean±std with rank in brackets",
+ "proposed_column": "DGOT (Table IV); column header printed as 'BTDG' in Tables V and VI (last column, evidently DGOT; Table VII labels it DGOT with same average ranks 1.54 / 2)",
+ "smote_column": "SMOTE",
+ "metrics": [
+  {
+   "metric": "F1-score",
+   "metric_family": "F-measure",
+   "table": "Table V",
+   "page": "PDF page 10 (printed p.992)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "satimage",
+     "proposed": "0.8660",
+     "proposed_std": "0.0420",
+     "smote": "0.8693",
+     "smote_std": "0.0333",
+     "marks": "rank in brackets: DGOT (3), SMOTE (1); SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "students_dropout",
+     "proposed": "0.6632",
+     "proposed_std": "0.0408",
+     "smote": "0.6552",
+     "smote_std": "0.0517",
+     "marks": "rank in brackets: DGOT (1), SMOTE (4); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "default",
+     "proposed": "0.6690",
+     "proposed_std": "0.0274",
+     "smote": "0.6530",
+     "smote_std": "0.0290",
+     "marks": "rank in brackets: DGOT (1), SMOTE (5); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "Dry_Beans",
+     "proposed": "0.9327",
+     "proposed_std": "0.0080",
+     "smote": "0.9304",
+     "smote_std": "0.0108",
+     "marks": "rank in brackets: DGOT (1), SMOTE (5); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "bank_small",
+     "proposed": "0.6950",
+     "proposed_std": "0.0332",
+     "smote": "0.6764",
+     "smote_std": "0.0337",
+     "marks": "rank in brackets: DGOT (1), SMOTE (5); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "optical_digits",
+     "proposed": "0.9448",
+     "proposed_std": "0.0352",
+     "smote": "0.9429",
+     "smote_std": "0.0425",
+     "marks": "rank in brackets: DGOT (1), SMOTE (3); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "satimage_4",
+     "proposed": "0.7625",
+     "proposed_std": "0.1018",
+     "smote": "0.7297",
+     "smote_std": "0.1101",
+     "marks": "rank in brackets: DGOT (1), SMOTE (6); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "pen_digits",
+     "proposed": "0.9689",
+     "proposed_std": "0.0408",
+     "smote": "0.9601",
+     "smote_std": "0.0576",
+     "marks": "rank in brackets: DGOT (1), SMOTE (3); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "sick_euthyroid",
+     "proposed": "0.8754",
+     "proposed_std": "0.0657",
+     "smote": "0.8536",
+     "smote_std": "0.0801",
+     "marks": "rank in brackets: DGOT (1), SMOTE (3); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "isolet",
+     "proposed": "0.8844",
+     "proposed_std": "0.0539",
+     "smote": "0.8739",
+     "smote_std": "0.0659",
+     "marks": "rank in brackets: DGOT (2), SMOTE (5)"
+    },
+    {
+     "dataset_as_printed": "nursery",
+     "proposed": "0.8059",
+     "proposed_std": "0.2523",
+     "smote": "0.7853",
+     "smote_std": "0.2590",
+     "marks": "rank in brackets: DGOT (2), SMOTE (4)"
+    },
+    {
+     "dataset_as_printed": "thyroid_sick",
+     "proposed": "0.8813",
+     "proposed_std": "0.0692",
+     "smote": "0.8447",
+     "smote_std": "0.1044",
+     "marks": "rank in brackets: DGOT (1), SMOTE (4); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "abalone_15",
+     "proposed": "0.6624",
+     "proposed_std": "0.0473",
+     "smote": "0.6422",
+     "smote_std": "0.0248",
+     "marks": "rank in brackets: DGOT (1), SMOTE (4); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "coil_2000",
+     "proposed": "0.5254",
+     "proposed_std": "0.0207",
+     "smote": "0.5254",
+     "smote_std": "0.0255",
+     "marks": "rank in brackets: DGOT (4), SMOTE (5)"
+    },
+    {
+     "dataset_as_printed": "abalone_6",
+     "proposed": "0.9341",
+     "proposed_std": "0.0184",
+     "smote": "0.9078",
+     "smote_std": "0.0261",
+     "marks": "rank in brackets: DGOT (1), SMOTE (5); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "wine_quality",
+     "proposed": "0.6524",
+     "proposed_std": "0.0497",
+     "smote": "0.5817",
+     "smote_std": "0.0550",
+     "marks": "rank in brackets: DGOT (1), SMOTE (6); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "letter_img",
+     "proposed": "0.9618",
+     "proposed_std": "0.0389",
+     "smote": "0.9326",
+     "smote_std": "0.0830",
+     "marks": "rank in brackets: DGOT (1), SMOTE (4); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "bankruptcy",
+     "proposed": "0.5939",
+     "proposed_std": "0.0958",
+     "smote": "0.6104",
+     "smote_std": "0.1099",
+     "marks": "rank in brackets: DGOT (4), SMOTE (1); SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "avila",
+     "proposed": "0.8393",
+     "proposed_std": "0.2249",
+     "smote": "0.8472",
+     "smote_std": "0.2331",
+     "marks": "rank in brackets: DGOT (3), SMOTE (1); SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "abalone_19",
+     "proposed": "0.5277",
+     "proposed_std": "0.0463",
+     "smote": "0.5122",
+     "smote_std": "0.0473",
+     "marks": "rank in brackets: DGOT (1), SMOTE (2); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "page-blocks",
+     "proposed": "0.8405",
+     "proposed_std": "0.0210",
+     "smote": "0.7673",
+     "smote_std": "0.0899",
+     "marks": "rank in brackets: DGOT (1), SMOTE (4); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "firewall",
+     "proposed": "0.8468",
+     "proposed_std": "0.0940",
+     "smote": "0.7659",
+     "smote_std": "0.0488",
+     "marks": "rank in brackets: DGOT (1), SMOTE (7); DGOT bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average Rank",
+      "proposed": "1.54",
+      "smote": "3.95"
+     },
+     {
+      "label": "Table VII mean ranks F1",
+      "proposed": "1.54",
+      "smote": "3.95-"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper (text: DGOT best on 18 out of 22 for F1-score; SMOTE achieved the best F1-score once)",
+    "stat_test": "Friedman test (Table VII): critical value F(7,147)=2.07 (alpha=0.05); Actual value of F1-score: F_F=15.16 (reject). Bonferroni-Dunn test: CD=1.99, (k=8, alpha=0.05); '-' after a compared method's mean rank marks DGOT outperforming it. SMOTE F1 mean rank printed as '3.95-' (DGOT significantly better)."
+   }
+  },
+  {
+   "metric": "Accuracy",
+   "metric_family": "accuracy",
+   "table": "Table IV",
+   "page": "PDF page 10 (printed p.992)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "satimage",
+     "proposed": "0.8868",
+     "proposed_std": "0.0353",
+     "smote": "0.8852",
+     "smote_std": "0.0305",
+     "marks": "rank in brackets: DGOT (3), SMOTE (4)"
+    },
+    {
+     "dataset_as_printed": "students_dropout",
+     "proposed": "0.7320",
+     "proposed_std": "0.0376",
+     "smote": "0.7111",
+     "smote_std": "0.0549",
+     "marks": "rank in brackets: DGOT (2), SMOTE (7)"
+    },
+    {
+     "dataset_as_printed": "default",
+     "proposed": "0.7922",
+     "proposed_std": "0.0325",
+     "smote": "0.7606",
+     "smote_std": "0.0463",
+     "marks": "rank in brackets: DGOT (2), SMOTE (6)"
+    },
+    {
+     "dataset_as_printed": "Dry_Beans",
+     "proposed": "0.9220",
+     "proposed_std": "0.0086",
+     "smote": "0.9189",
+     "smote_std": "0.0122",
+     "marks": "rank in brackets: DGOT (1), SMOTE (4); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "bank_small",
+     "proposed": "0.8867",
+     "proposed_std": "0.0145",
+     "smote": "0.8534",
+     "smote_std": "0.0349",
+     "marks": "rank in brackets: DGOT (2), SMOTE (6)"
+    },
+    {
+     "dataset_as_printed": "optical_digits",
+     "proposed": "0.9811",
+     "proposed_std": "0.0123",
+     "smote": "0.9786",
+     "smote_std": "0.0172",
+     "marks": "rank in brackets: DGOT (1), SMOTE (3); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "satimage_4",
+     "proposed": "0.9261",
+     "proposed_std": "0.0269",
+     "smote": "0.8514",
+     "smote_std": "0.1104",
+     "marks": "rank in brackets: DGOT (2), SMOTE (7)"
+    },
+    {
+     "dataset_as_printed": "pen_digits",
+     "proposed": "0.9892",
+     "proposed_std": "0.0142",
+     "smote": "0.9837",
+     "smote_std": "0.0248",
+     "marks": "rank in brackets: DGOT (1), SMOTE (3); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "sick_euthyroid",
+     "proposed": "0.9604",
+     "proposed_std": "0.0198",
+     "smote": "0.9395",
+     "smote_std": "0.0405",
+     "marks": "rank in brackets: DGOT (1), SMOTE (4); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "isolet",
+     "proposed": "0.9694",
+     "proposed_std": "0.0143",
+     "smote": "0.9563",
+     "smote_std": "0.0306",
+     "marks": "rank in brackets: DGOT (1), SMOTE (6); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "nursery",
+     "proposed": "0.8447",
+     "proposed_std": "0.2401",
+     "smote": "0.8281",
+     "smote_std": "0.2591",
+     "marks": "rank in brackets: DGOT (3), SMOTE (4)"
+    },
+    {
+     "dataset_as_printed": "thyroid_sick",
+     "proposed": "0.9751",
+     "proposed_std": "0.0132",
+     "smote": "0.9510",
+     "smote_std": "0.0433",
+     "marks": "rank in brackets: DGOT (1), SMOTE (4); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "abalone_15",
+     "proposed": "0.9314",
+     "proposed_std": "0.0128",
+     "smote": "0.8779",
+     "smote_std": "0.0332",
+     "marks": "rank in brackets: DGOT (1), SMOTE (6); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "coil_2000",
+     "proposed": "0.9269",
+     "proposed_std": "0.0161",
+     "smote": "0.8211",
+     "smote_std": "0.0960",
+     "marks": "rank in brackets: DGOT (3), SMOTE (8)"
+    },
+    {
+     "dataset_as_printed": "abalone_6",
+     "proposed": "0.9868",
+     "proposed_std": "0.0036",
+     "smote": "0.9787",
+     "smote_std": "0.0073",
+     "marks": "rank in brackets: DGOT (1), SMOTE (5); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "wine_quality",
+     "proposed": "0.9622",
+     "proposed_std": "0.0076",
+     "smote": "0.8697",
+     "smote_std": "0.0779",
+     "marks": "rank in brackets: DGOT (1), SMOTE (6); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "letter_img",
+     "proposed": "0.9947",
+     "proposed_std": "0.0053",
+     "smote": "0.9861",
+     "smote_std": "0.0203",
+     "marks": "rank in brackets: DGOT (1), SMOTE (4); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "bankruptcy",
+     "proposed": "0.9774",
+     "proposed_std": "0.0050",
+     "smote": "0.8911",
+     "smote_std": "0.0978",
+     "marks": "rank in brackets: DGOT (1), SMOTE (7); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "avila",
+     "proposed": "0.8678",
+     "proposed_std": "0.1830",
+     "smote": "0.8532",
+     "smote_std": "0.2177",
+     "marks": "rank in brackets: DGOT (1), SMOTE (4); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "abalone_19",
+     "proposed": "0.9883",
+     "proposed_std": "0.0067",
+     "smote": "0.9220",
+     "smote_std": "0.0684",
+     "marks": "rank in brackets: DGOT (3), SMOTE (7)"
+    },
+    {
+     "dataset_as_printed": "page-blocks",
+     "proposed": "0.9691",
+     "proposed_std": "0.0088",
+     "smote": "0.9363",
+     "smote_std": "0.0388",
+     "marks": "rank in brackets: DGOT (1), SMOTE (5); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "firewall",
+     "proposed": "0.9900",
+     "proposed_std": "0.0145",
+     "smote": "0.9679",
+     "smote_std": "0.0406",
+     "marks": "rank in brackets: DGOT (3), SMOTE (5)"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average Rank",
+      "proposed": "1.63",
+      "smote": "5.23"
+     },
+     {
+      "label": "Table VII mean ranks Acc",
+      "proposed": "1.63",
+      "smote": "5.23-"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper (text: DGOT best on 14 out of 22 datasets concerning accuracy)",
+    "stat_test": "Friedman test (Table VII): critical value F(7,147)=2.07 (alpha=0.05); Actual value of Accuracy: F_F=23.65 (reject). Bonferroni-Dunn test: CD=1.99, (k=8, alpha=0.05); '-' after a compared method's mean rank marks DGOT outperforming it. SMOTE Acc mean rank printed as '5.23-' (DGOT significantly better)."
+   }
+  },
+  {
+   "metric": "MCC",
+   "metric_family": "MCC",
+   "table": "Table VI",
+   "page": "PDF page 11 (printed p.993)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "satimage",
+     "proposed": "0.8602",
+     "proposed_std": "0.0435",
+     "smote": "0.8594",
+     "smote_std": "0.0373",
+     "marks": "rank in brackets: DGOT (3), SMOTE (4)"
+    },
+    {
+     "dataset_as_printed": "students_dropout",
+     "proposed": "0.5580",
+     "proposed_std": "0.0623",
+     "smote": "0.5344",
+     "smote_std": "0.0843",
+     "marks": "rank in brackets: DGOT (2), SMOTE (7)"
+    },
+    {
+     "dataset_as_printed": "default",
+     "proposed": "0.3529",
+     "proposed_std": "0.0624",
+     "smote": "0.3216",
+     "smote_std": "0.0650",
+     "marks": "rank in brackets: DGOT (1), SMOTE (5); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "Dry_Beans",
+     "proposed": "0.9057",
+     "proposed_std": "0.0104",
+     "smote": "0.9020",
+     "smote_std": "0.0148",
+     "marks": "rank in brackets: DGOT (1), SMOTE (5); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "bank_small",
+     "proposed": "0.3991",
+     "proposed_std": "0.0652",
+     "smote": "0.3710",
+     "smote_std": "0.0727",
+     "marks": "rank in brackets: DGOT (2), SMOTE (5)"
+    },
+    {
+     "dataset_as_printed": "optical_digits",
+     "proposed": "0.8915",
+     "proposed_std": "0.0698",
+     "smote": "0.8886",
+     "smote_std": "0.0820",
+     "marks": "rank in brackets: DGOT (2), SMOTE (3)"
+    },
+    {
+     "dataset_as_printed": "satimage_4",
+     "proposed": "0.5339",
+     "proposed_std": "0.2001",
+     "smote": "0.5172",
+     "smote_std": "0.1555",
+     "marks": "rank in brackets: DGOT (1), SMOTE (3); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "pen_digits",
+     "proposed": "0.9379",
+     "proposed_std": "0.0815",
+     "smote": "0.9246",
+     "smote_std": "0.1064",
+     "marks": "rank in brackets: DGOT (1), SMOTE (4); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "sick_euthyroid",
+     "proposed": "0.7541",
+     "proposed_std": "0.1283",
+     "smote": "0.7233",
+     "smote_std": "0.1442",
+     "marks": "rank in brackets: DGOT (1), SMOTE (3); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "isolet",
+     "proposed": "0.7765",
+     "proposed_std": "0.1030",
+     "smote": "0.7629",
+     "smote_std": "0.1123",
+     "marks": "rank in brackets: DGOT (2), SMOTE (4)"
+    },
+    {
+     "dataset_as_printed": "nursery",
+     "proposed": "0.7844",
+     "proposed_std": "0.3281",
+     "smote": "0.7649",
+     "smote_std": "0.3480",
+     "marks": "rank in brackets: DGOT (3), SMOTE (4)"
+    },
+    {
+     "dataset_as_printed": "thyroid_sick",
+     "proposed": "0.7681",
+     "proposed_std": "0.1330",
+     "smote": "0.7096",
+     "smote_std": "0.1840",
+     "marks": "rank in brackets: DGOT (1), SMOTE (5); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "abalone_15",
+     "proposed": "0.3380",
+     "proposed_std": "0.0917",
+     "smote": "0.3229",
+     "smote_std": "0.0566",
+     "marks": "rank in brackets: DGOT (3), SMOTE (5)"
+    },
+    {
+     "dataset_as_printed": "coil_2000",
+     "proposed": "0.0873",
+     "proposed_std": "0.0383",
+     "smote": "0.1109",
+     "smote_std": "0.0482",
+     "marks": "rank in brackets: DGOT (4), SMOTE (3)"
+    },
+    {
+     "dataset_as_printed": "abalone_6",
+     "proposed": "0.8693",
+     "proposed_std": "0.0365",
+     "smote": "0.8238",
+     "smote_std": "0.0464",
+     "marks": "rank in brackets: DGOT (1), SMOTE (5); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "wine_quality",
+     "proposed": "0.3445",
+     "proposed_std": "0.0944",
+     "smote": "0.2262",
+     "smote_std": "0.0644",
+     "marks": "rank in brackets: DGOT (1), SMOTE (6); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "letter_img",
+     "proposed": "0.9240",
+     "proposed_std": "0.0776",
+     "smote": "0.8787",
+     "smote_std": "0.1406",
+     "marks": "rank in brackets: DGOT (1), SMOTE (4); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "bankruptcy",
+     "proposed": "0.2231",
+     "proposed_std": "0.1928",
+     "smote": "0.2997",
+     "smote_std": "0.1526",
+     "marks": "rank in brackets: DGOT (4), SMOTE (1); SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "avila",
+     "proposed": "0.8265",
+     "proposed_std": "0.2400",
+     "smote": "0.8280",
+     "smote_std": "0.2515",
+     "marks": "rank in brackets: DGOT (3), SMOTE (1); SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "abalone_19",
+     "proposed": "0.0649",
+     "proposed_std": "0.1057",
+     "smote": "0.0805",
+     "smote_std": "0.0904",
+     "marks": "rank in brackets: DGOT (3), SMOTE (1); SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "page-blocks",
+     "proposed": "0.8390",
+     "proposed_std": "0.0465",
+     "smote": "0.7535",
+     "smote_std": "0.1046",
+     "marks": "rank in brackets: DGOT (1), SMOTE (5); DGOT bold"
+    },
+    {
+     "dataset_as_printed": "firewall",
+     "proposed": "0.9833",
+     "proposed_std": "0.0238",
+     "smote": "0.9492",
+     "smote_std": "0.0619",
+     "marks": "rank in brackets: DGOT (3), SMOTE (5)"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average Rank",
+      "proposed": "2",
+      "smote": "4.00"
+     },
+     {
+      "label": "Table VII mean ranks MCC",
+      "proposed": "2",
+      "smote": "4.00-"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper (text: DGOT best on 12 out of 22 for MCC; SMOTE achieved the best MCC twice)",
+    "stat_test": "Friedman test (Table VII): critical value F(7,147)=2.07 (alpha=0.05); Actual value of MCC: F_F=16.11 (reject). Bonferroni-Dunn test: CD=1.99, (k=8, alpha=0.05); '-' after a compared method's mean rank marks DGOT outperforming it. SMOTE MCC mean rank printed as '4.00-' (DGOT significantly better). Wilcoxon (Table VIII) only vs SOS/IDENTITY, not SMOTE."
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [],
+ "metrics_without_smote": [
+  {
+   "metric": "F1-score ablation",
+   "table": "Table IX"
+  },
+  {
+   "metric": "Sensitivity on hyperparameters",
+   "table": "Table X"
+  }
+ ],
+ "notes": "All tables are images; transcribed from 300-dpi renders with SMOTE and last columns cropped side by side. Tables V/VI header says 'BTDG' not 'DGOT' (typo in paper). Classifier not stated per table (five classifiers used, apparently aggregated). Proposed vs SMOTE tie on coil_2000 F1 mean (0.5254 both; ranks 4 vs 5)."
+}

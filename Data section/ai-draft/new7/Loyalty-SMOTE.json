@@ -1,0 +1,167 @@
+{
+ "key": "Loyalty-SMOTE",
+ "pdf_title": "Loyalty-SMOTE: Data Synthesis Algorithm for Effective Imbalanced Data Classification",
+ "task": "both",
+ "n_datasets_claimed": 59,
+ "dataset_names": [
+  "adult",
+  "ai4i2020",
+  "banknote",
+  "drug",
+  "AIDS_5000",
+  "Maternal",
+  "national",
+  "occupancy",
+  "online",
+  "Shoppers",
+  "Academic",
+  "AIDS_15000",
+  "german",
+  "statlog",
+  "Shuttle",
+  "Fault",
+  "ICR",
+  "Bankruptcy",
+  "breast",
+  "wdbc",
+  "wpbc",
+  "heart",
+  "ionosphere",
+  "iris",
+  "bezediris",
+  "raisin",
+  "glass5",
+  "vowel0",
+  "ecoli-0-1-3-7_vs_2-6",
+  "ecoli-0-1-4-6_vs_5",
+  "yeast-0-3-5-9_vs_7-8",
+  "australia",
+  "Obesity",
+  "Gender",
+  "approval",
+  "spambase",
+  "magic04",
+  "covertype",
+  "Purchase",
+  "Satisfied",
+  "AIDS_50000",
+  "smoke",
+  "vertebal",
+  "parkinson",
+  "bank-full",
+  "yeast",
+  "HR",
+  "employee",
+  "Drug200",
+  "MEDV",
+  "Mushroom",
+  "Firewall",
+  "Cardiovascular",
+  "RT-IOT",
+  "Gender_by_name",
+  "Smartphone",
+  "darwin",
+  "toxicity",
+  "cnae"
+ ],
+ "sources": [
+  "UCI",
+  "KEEL",
+  "Kaggle"
+ ],
+ "srcdet": "Table 1 assigns sources per group only: group 1 (30 binary) 'UCI/KEEL' without per-dataset attribution (names such as glass5, vowel0, ecoli-0-1-3-7_vs_2-6, yeast-0-3-5-9_vs_7-8 match KEEL naming, but the paper does not say which come from which); group 2 (5), group 3 (9) and group 5 (10) from Kaggle; group 4 (5 multiclass) from UCI.",
+ "crit": "Only that the paper 'uses four groups of commonly used imbalanced datasets'; group 3 described as 'large-scale datasets and 2 small-scale datasets' (for runtime), group 5 as 'high-dimensional' and 'large-scale' datasets.",
+ "crit_type": "generic only (e.g. 'widely used benchmark')",
+ "benchmark_inherited_from": "not stated in paper",
+ "origin": [
+  "Natural"
+ ],
+ "imbalance_creation": "not stated in paper",
+ "minority_classes_stated": "no",
+ "modification_declared_where": "not declared",
+ "missing_values": "not stated in paper",
+ "nominal_features": "not stated in paper",
+ "normalisation": "not stated in paper",
+ "duplicates_or_filtering": "not stated in paper",
+ "split_protocol": "single 7:3 train/test split (no repetitions or CV stated)",
+ "resampling_inside_training_folds": "not stated in paper",
+ "characteristics_table": "yes (Tables 2, 3, 4, 5, 6; Table 1 gives sources)",
+ "characteristics_columns": [
+  "N",
+  "features",
+  "classes",
+  "IR"
+ ],
+ "ir_definition": "IR = N_majority / N_minority, where N_majority and N_minority are the sizes of the majority and minority classes (Eq. 14); for multiclass, the class with the most instances is majority and the class with the fewest is minority.",
+ "ir_print_format": "single ratio",
+ "data_availability": "repository named only",
+ "results_granularity": "per-dataset",
+ "evidence": [
+  {
+   "field": "task",
+   "page": "1",
+   "quote": "Our results demonstrate that Loyalty-SMOTE achieved superior performance across multiple metrics on both binary and multiclass UCI datasets. For 30 binary datasets, it achieved the highest scores in 26 datasets (87%) for F1-score"
+  },
+  {
+   "field": "crit",
+   "page": "8",
+   "quote": "To evaluate the performance of the Loyalty-SMOTE algorithm, this paper uses four groups of commonly used imbalanced datasets. The sources and details of these datasets are shown in Table 1."
+  },
+  {
+   "field": "sources",
+   "page": "8",
+   "quote": "group 1 UCI/KEEL 30 real-world imbalanced datasets group 2 Kaggle 5 popular imbalanced datasets group 3 Kaggle 7 large-scale datasets and 2 small-scale datasets group 4 UCI 5 multiclass datasets group 5 Kaggle"
+  },
+  {
+   "field": "n_datasets_claimed",
+   "page": "8",
+   "quote": "group 5 Kaggle 5 high-dimensional datasets and 5 large-scale datasets."
+  },
+  {
+   "field": "dataset_names",
+   "page": "8",
+   "quote": "glass5 213 9 22.6700 vowel0 988 13 9.9800 ecoli-0-1-3-7_vs_2-6 281 7 39.1400 ecoli-0-1-4-6_vs_5 280 6 13.0000 yeast-0-3-5-9_vs_7-8 506 8 9.1200"
+  },
+  {
+   "field": "split_protocol",
+   "page": "8",
+   "quote": "All datasets are divided into training and testing sets in the 7:3 ratios."
+  },
+  {
+   "field": "ir_definition",
+   "page": "8",
+   "quote": "The fourth column in the tables shows the imbalance rate (IR), which is defined by"
+  },
+  {
+   "field": "ir_definition",
+   "page": "13",
+   "quote": "For multi-class imbalanced datasets, the class with the highest num- ber of instances is considered the majority class, while the class with the fewest instances is considered the minority class."
+  },
+  {
+   "field": "characteristics_table",
+   "page": "8",
+   "quote": "Tables 2, 3, 4, and 5 provide the content description of the datasets in groups 1 to 4, respectively. The fourth column in the tables shows the imbalance rate (IR)"
+  },
+  {
+   "field": "characteristics_columns",
+   "page": "9",
+   "quote": "Table 5 Description of group 4 datasets. Dataset Instances Instances Attributes IR yeast 10 1485 9 77.3333"
+  },
+  {
+   "field": "results_granularity",
+   "page": "10",
+   "quote": "As listed from Table 9 to Table 12, the performance results of the six indicated algorithms (including F1-score, AUROC, Recall, and G-mean) on the group 1 datasets are shown."
+  },
+  {
+   "field": "dataset_names",
+   "page": "12",
+   "quote": "bank-full 0.1986 0.2313 0.1475 0.1808 1.5405 0.1994 magic04 0.1361"
+  },
+  {
+   "field": "srcdet",
+   "page": "14",
+   "quote": "we investigated the perfor- mance of the Loyalty-SMOTE algorithm on the five multi-class datasets from group 4 obtained from UCI"
+  }
+ ],
+ "notes": "Page numbers are printed journal page numbers (pages 1-16). Text says 'four groups' but Table 1 lists five groups. Table 1 says group 3 has 9 datasets (7 large + 2 small) and Section 4.4.3 says '9 datasets in group 3', but Table 4 lists only 8 (magic04, covertype, Purchase, Satisfied, AIDS_50000, smoke, vertebal, parkinson); runtime Table 14 lists bank-full (not in Table 4) and omits parkinson. n_datasets_claimed=59 is the sum of Table 1 group counts (30+5+9+5+10); 'Bankruptcy' appears in both group 1 and group 5. Table 5 header has 'Instances' twice; the first such column appears to be number of classes (e.g., yeast 10). Typos kept as printed: 'vertebal', 'bezediris', 'imbalanced Rate'. Inconsistency: 'Fault' (Table 2) vs 'faults' (Discussion). Table 6 label conflict: text calls confusion matrix Table 6, but the group-5 description is also Table 6 and confusion matrix is Table 7. Group 1 F1 (Table 9) and Recall (Table 11) baseline columns are largely identical, and G-mean (Table 12) baseline values often equal them too. No binarisation or class-selection procedure is described for any dataset (e.g., iris, bezediris). No code or data links given. Group 2 used only for parameter sensitivity (Figs. 8-9). Eq. 14 symbols were garbled in the text layer; IR formula read as majority size over minority size from the accompanying sentence."
+}

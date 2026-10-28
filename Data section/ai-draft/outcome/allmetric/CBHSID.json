@@ -1,0 +1,462 @@
+{
+ "key": "CBHSID",
+ "classifier": "SVM (simple SVM for binary; multi-class SVM one-vs-rest for multi-class)",
+ "condition": "original data, no added noise; 80:20 train/test split, 5 runs averaged, default parameters",
+ "proposed_column": "CBHSID",
+ "smote_column": "SMOTE",
+ "metrics": [
+  {
+   "metric": "G-Mean",
+   "metric_family": "G-mean",
+   "table": "Table 3",
+   "page": "PDF page 9 (printed p.118647)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "River",
+     "proposed": "0.6652",
+     "proposed_std": "0.043",
+     "smote": "0.6268",
+     "smote_std": "0.044",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Pima",
+     "proposed": "0.7546",
+     "proposed_std": "0.030",
+     "smote": "0.7326",
+     "smote_std": "0.025",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Cancer",
+     "proposed": "0.9656",
+     "proposed_std": "0.012",
+     "smote": "0.9602",
+     "smote_std": "0.012",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Heart failure",
+     "proposed": "0.7710",
+     "proposed_std": "0.074",
+     "smote": "0.7606",
+     "smote_std": "0.073",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Yeast1",
+     "proposed": "0.7336",
+     "proposed_std": "0.028",
+     "smote": "0.7158",
+     "smote_std": "0.025",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Haberman",
+     "proposed": "0.6906",
+     "proposed_std": "0.064",
+     "smote": "0.6488",
+     "smote_std": "0.029",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Vehicle1",
+     "proposed": "0.7660",
+     "proposed_std": "0.028",
+     "smote": "0.8090",
+     "smote_std": "0.025",
+     "marks": "ROS bold (0.8178±0.033)"
+    },
+    {
+     "dataset_as_printed": "Glass6",
+     "proposed": "0.9544",
+     "proposed_std": "0.037",
+     "smote": "0.9070",
+     "smote_std": "0.089",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Yeast3",
+     "proposed": "0.8496",
+     "proposed_std": "0.033",
+     "smote": "0.8734",
+     "smote_std": "0.032",
+     "marks": "Cluster-C bold (0.9262±0.018)"
+    },
+    {
+     "dataset_as_printed": "Yeast4",
+     "proposed": "0.8006",
+     "proposed_std": "0.056",
+     "smote": "0.6570",
+     "smote_std": "0.069",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Yeast5",
+     "proposed": "0.9680",
+     "proposed_std": "0.001",
+     "smote": "0.9262",
+     "smote_std": "0.063",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Yeast6",
+     "proposed": "0.9066",
+     "proposed_std": "0.048",
+     "smote": "0.8334",
+     "smote_std": "0.064",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Penbased",
+     "proposed": "0.9742",
+     "proposed_std": "0.011",
+     "smote": "0.9698",
+     "smote_std": "0.013",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Contraceptive",
+     "proposed": "0.5668",
+     "proposed_std": "0.024",
+     "smote": "0.5646",
+     "smote_std": "0.029",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Dermatology",
+     "proposed": "0.9814",
+     "proposed_std": "0.027",
+     "smote": "0.9852",
+     "smote_std": "0.020",
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Thyroid",
+     "proposed": "0.7246",
+     "proposed_std": "0.080",
+     "smote": "0.6818",
+     "smote_std": "0.098",
+     "marks": "CBHSID bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Table 7 mean rank (lower better) G-Mean",
+      "proposed": "1.91",
+      "smote": "4.34"
+     }
+    ],
+    "wtl_vs_smote": "Table 6 (G-Mean), SMOTE row (1 = CBHSID better than or equal, 0 otherwise), columns 1-16: 1 1 1 1 1 1 0 1 0 1 1 1 1 1 0 1, SUM 13",
+    "stat_test": "Table 8(c) Wilcoxon CBHSID vs SMOTE: G-mean (p=.02)** R+ 113, R- 23, I 0 (** = significant at 0.05). Text: 'Figure 4(a) ... CBHSID produced significantly better results than SMOTE, SMOTEENN, SMOTETomek, and Cluster-C over the G-mean metric' (Bonferroni-Dunn). Table 7 Friedman: X2(G-Mean): 20.774, p=0.002 (Reject Ho); X2(Recall): 45.969, p=0.000 (Reject Ho); X2(F1score): 53.232, p=0.000 (Reject Ho). Bonferroni-Dunn CD=2.014 (alpha=0.05)."
+   }
+  },
+  {
+   "metric": "Recall",
+   "metric_family": "recall",
+   "table": "Table 4",
+   "page": "PDF page 9 (printed p.118647)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Liver",
+     "proposed": "0.6668",
+     "proposed_std": "0.037",
+     "smote": "0.6378",
+     "smote_std": "0.042",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Pima",
+     "proposed": "0.7558",
+     "proposed_std": "0.032",
+     "smote": "0.7310",
+     "smote_std": "0.025",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Cancer",
+     "proposed": "0.9612",
+     "proposed_std": "0.015",
+     "smote": "0.9556",
+     "smote_std": "0.015",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Heart failure",
+     "proposed": "0.8032",
+     "proposed_std": "0.034",
+     "smote": "0.7866",
+     "smote_std": "0.052",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Yeast1",
+     "proposed": "0.7408",
+     "proposed_std": "0.021",
+     "smote": "0.7110",
+     "smote_std": "0.020",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Haberman",
+     "proposed": "0.7872",
+     "proposed_std": "0.042",
+     "smote": "0.6676",
+     "smote_std": "0.062",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Vehicle1",
+     "proposed": "0.7764",
+     "proposed_std": "0.023",
+     "smote": "0.7612",
+     "smote_std": "0.020",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Glass6",
+     "proposed": "0.9720",
+     "proposed_std": "0.020",
+     "smote": "0.9582",
+     "smote_std": "0.038",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Yeast3",
+     "proposed": "0.9346",
+     "proposed_std": "0.019",
+     "smote": "0.9278",
+     "smote_std": "0.015",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Yeast4",
+     "proposed": "0.8876",
+     "proposed_std": "0.006",
+     "smote": "0.8870",
+     "smote_std": "0.017",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Yeast5",
+     "proposed": "0.9392",
+     "proposed_std": "0.002",
+     "smote": "0.9664",
+     "smote_std": "0.005",
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Yeast6",
+     "proposed": "0.9400",
+     "proposed_std": "0.012",
+     "smote": "0.9494",
+     "smote_std": "0.013",
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Penbased",
+     "proposed": "0.9754",
+     "proposed_std": "0.013",
+     "smote": "0.9710",
+     "smote_std": "0.013",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Contraceptive",
+     "proposed": "0.5656",
+     "proposed_std": "0.025",
+     "smote": "0.5566",
+     "smote_std": "0.034",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Dermatology",
+     "proposed": "0.9836",
+     "proposed_std": "0.022",
+     "smote": "0.9864",
+     "smote_std": "0.019",
+     "marks": "SMOTE and ROS bold"
+    },
+    {
+     "dataset_as_printed": "Thyroid",
+     "proposed": "0.7518",
+     "proposed_std": "0.047",
+     "smote": "0.9334",
+     "smote_std": "0.014",
+     "marks": "SMOTE bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Table 7 mean rank (lower better) Recall",
+      "proposed": "1.66",
+      "smote": "3.03"
+     }
+    ],
+    "wtl_vs_smote": "Table 6 (Recall), SMOTE row (1 = CBHSID better than or equal, 0 otherwise), columns 1-16: 1 1 1 1 1 1 1 1 1 1 0 0 1 1 0 0, SUM 12",
+    "stat_test": "Table 8(c) Wilcoxon CBHSID vs SMOTE: Recall (p=.109) R+ 99, R- 37, I 0 (not significant). Bonferroni-Dunn: 'no significant change in the performance of CBHSID, ROS, and SMOTE' (Fig 4b). Table 7 Friedman: X2(G-Mean): 20.774, p=0.002 (Reject Ho); X2(Recall): 45.969, p=0.000 (Reject Ho); X2(F1score): 53.232, p=0.000 (Reject Ho). Bonferroni-Dunn CD=2.014 (alpha=0.05)."
+   }
+  },
+  {
+   "metric": "F1 score",
+   "metric_family": "F-measure",
+   "table": "Table 5",
+   "page": "PDF page 10 (printed p.118648)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Liver",
+     "proposed": "0.6676",
+     "proposed_std": "0.039",
+     "smote": "0.6370",
+     "smote_std": "0.044",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Pima",
+     "proposed": "0.7592",
+     "proposed_std": "0.031",
+     "smote": "0.7358",
+     "smote_std": "0.023",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Cancer",
+     "proposed": "0.9618",
+     "proposed_std": "0.014",
+     "smote": "0.9562",
+     "smote_std": "0.015",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Heart failure",
+     "proposed": "0.8026",
+     "proposed_std": "0.058",
+     "smote": "0.7870",
+     "smote_std": "0.041",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Yeast1",
+     "proposed": "0.7496",
+     "proposed_std": "0.022",
+     "smote": "0.7228",
+     "smote_std": "0.020",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Haberman",
+     "proposed": "0.7812",
+     "proposed_std": "0.046",
+     "smote": "0.6804",
+     "smote_std": "0.063",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Vehicle1",
+     "proposed": "0.7900",
+     "proposed_std": "0.022",
+     "smote": "0.7806",
+     "smote_std": "0.018",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Glass6",
+     "proposed": "0.9764",
+     "proposed_std": "0.017",
+     "smote": "0.9710",
+     "smote_std": "0.027",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Yeast3",
+     "proposed": "0.9360",
+     "proposed_std": "0.018",
+     "smote": "0.9318",
+     "smote_std": "0.014",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Yeast4",
+     "proposed": "0.9148",
+     "proposed_std": "0.006",
+     "smote": "0.9108",
+     "smote_std": "0.013",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Yeast5",
+     "proposed": "0.9546",
+     "proposed_std": "0.003",
+     "smote": "0.9722",
+     "smote_std": "0.004",
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Yeast6",
+     "proposed": "0.9570",
+     "proposed_std": "0.004",
+     "smote": "0.9614",
+     "smote_std": "0.011",
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Penbased",
+     "proposed": "0.9752",
+     "proposed_std": "0.010",
+     "smote": "0.9708",
+     "smote_std": "0.013",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Contraceptive",
+     "proposed": "0.5726",
+     "proposed_std": "0.022",
+     "smote": "0.5640",
+     "smote_std": "0.030",
+     "marks": "CBHSID bold"
+    },
+    {
+     "dataset_as_printed": "Dermatology",
+     "proposed": "0.9840",
+     "proposed_std": "0.022",
+     "smote": "0.9866",
+     "smote_std": "0.019",
+     "marks": "SMOTE and ROS bold"
+    },
+    {
+     "dataset_as_printed": "Thyroid",
+     "proposed": "0.8030",
+     "proposed_std": "0.043",
+     "smote": "0.9346",
+     "smote_std": "0.019",
+     "marks": "SMOTE bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Table 7 mean rank (lower better) F1score",
+      "proposed": "1.59",
+      "smote": "2.94"
+     }
+    ],
+    "wtl_vs_smote": "Table 6 (F1score), SMOTE row (1 = CBHSID better than or equal, 0 otherwise), columns 1-16: 1 1 1 1 1 1 1 1 1 1 0 0 1 1 0 0, SUM 12",
+    "stat_test": "Table 8(c) Wilcoxon CBHSID vs SMOTE: F1score (p=.066) R+ 103.5, R- 32.5, I 0 (not significant). Bonferroni-Dunn: no significant change among CBHSID, ROS, and SMOTE (Fig 4c). Table 7 Friedman: X2(G-Mean): 20.774, p=0.002 (Reject Ho); X2(Recall): 45.969, p=0.000 (Reject Ho); X2(F1score): 53.232, p=0.000 (Reject Ho). Bonferroni-Dunn CD=2.014 (alpha=0.05)."
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [],
+ "metrics_without_smote": [],
+ "notes": "All tables are images; read from 300-dpi renders. Table 3 prints first dataset as 'River' while Tables 4/5 print 'Liver' (same dataset). Bold marks: best value per row in bold. In Recall/F1 Dermatology row both ROS and SMOTE bold (ties). Table 6 marks 1 when CBHSID better than OR EQUAL. Tables 6-8 are on PDF pages 10-12."
+}

@@ -1,0 +1,53 @@
+{
+  "key": "AB-SMOTE",
+  "pdf_file_read": "2020 AB-SMOTE - Al Majzoub et al.pdf",
+  "task": "binary",
+  "n_datasets_claimed": null,
+  "characteristics_table": "Table I, p.3 (printed p.33)",
+  "datasets": [
+    {"name": "Abalone9-18", "group": "", "source_repo": "KEEL", "n_instances": 731, "n_features": null, "n_classes": null, "n_minority": 42, "n_majority": 689, "class_distribution": null, "ir_printed": "6%", "how_obtained": "repository-defined", "how_obtained_detail": "ref [13] is KEEL Datasets, Abalone9-18; paper does not say any modification", "in_results_table": "yes", "ref": "Table I, p.3 (printed p.33)"},
+    {"name": "Customer Churn Wireless Telecom", "group": "", "source_repo": "other: Crowd Analytix", "n_instances": 5000, "n_features": null, "n_classes": null, "n_minority": 707, "n_majority": 4293, "class_distribution": null, "ir_printed": "17%", "how_obtained": "not stated", "how_obtained_detail": "ref [14] Crowd Analytix contest page; no processing described", "in_results_table": "yes", "ref": "Table I, p.3 (printed p.33)"},
+    {"name": "Telco Customer Churn", "group": "", "source_repo": "other: IBM Analytics", "n_instances": 7043, "n_features": null, "n_classes": null, "n_minority": 1869, "n_majority": 5174, "class_distribution": null, "ir_printed": "36%", "how_obtained": "not stated", "how_obtained_detail": "ref [15] IBM Analytics Telco customer churn data set; no processing described", "in_results_table": "yes", "ref": "Table I, p.3 (printed p.33)"},
+    {"name": "Haberman", "group": "", "source_repo": "UCI", "n_instances": 306, "n_features": null, "n_classes": null, "n_minority": 81, "n_majority": 225, "class_distribution": null, "ir_printed": "36%", "how_obtained": "not stated", "how_obtained_detail": "ref [16] generic UCI repository URL; no processing described", "in_results_table": "yes", "ref": "Table I, p.3 (printed p.33)"},
+    {"name": "Employe Attrition", "group": "", "source_repo": "other: IBM Analytics", "n_instances": 1470, "n_features": null, "n_classes": null, "n_minority": 237, "n_majority": 1233, "class_distribution": null, "ir_printed": "19%", "how_obtained": "not stated", "how_obtained_detail": "ref [17] IBM Analytics sample datasets; no processing described", "in_results_table": "yes", "ref": "Table I, p.3 (printed p.33)"},
+    {"name": "Flare", "group": "", "source_repo": "KEEL", "n_instances": 1109, "n_features": null, "n_classes": null, "n_minority": 43, "n_majority": 1066, "class_distribution": null, "ir_printed": "4%", "how_obtained": "not stated", "how_obtained_detail": "ref [18] KEEL Datasets, Solar Flare; which KEEL file/class split is not stated", "in_results_table": "yes", "ref": "Table I, p.3 (printed p.33)"},
+    {"name": "Wine Quality", "group": "", "source_repo": "KEEL", "n_instances": 1493, "n_features": null, "n_classes": null, "n_minority": 53, "n_majority": 1546, "class_distribution": null, "ir_printed": "3.4%", "how_obtained": "not stated", "how_obtained_detail": "ref [4] KEEL Datasets, Wine Quality; which KEEL file/class split is not stated. Printed Total 1493 does not equal 53+1546 (printed as is)", "in_results_table": "yes", "ref": "Table I, p.3 (printed p.33)"},
+    {"name": "Sales: Win Loss", "group": "", "source_repo": "other: IBM Analytics", "n_instances": 78025, "n_features": null, "n_classes": null, "n_minority": 17627, "n_majority": 60398, "class_distribution": null, "ir_printed": "29.18%", "how_obtained": "not stated", "how_obtained_detail": "ref [19] IBM Analytics Win Loss sample dataset; no processing described. Results Table XI titled 'Telco Sales Win Loss'", "in_results_table": "yes", "ref": "Table I, p.3 (printed p.33)"}
+  ],
+  "ir_definition": "not stated in paper as a formula; Table I column 'IR Ratio' printed as percentages. Selection wording: 'if minority number of instances are less than 40% of the number of instances of the majority class, the dataset is considered unbalanced'",
+  "ir_definition_ref": "p.3 (printed p.33)",
+  "outcome": {
+    "smote_in_baselines": "yes",
+    "smote_name_as_printed": "2.0: SMOTE k=5",
+    "baselines_all": ["1.0: Original", "2.0: SMOTE k=5", "3.0: BSMOTE P' & P: M=5 k=5", "3.1: BSMOTE P' & P: M=5 k=8", "3.2: BSMOTE P' & P: M=8, k=5", "3.3: BSMOTE P' & P: M=8, k=8", "3.4: BSMOTE P' & N: M=5 k=5 G[0-0.5]"],
+    "results_granularity": "per-dataset",
+    "chosen": {"table": "Tables IV-XI (one per dataset)", "page": "p.4-5 (printed 34-35)", "metric": "F-measure (no G-mean or AUC reported; Recall also reported)", "classifier": "J48 decision tree (WEKA), 5-fold CV", "condition": "original data, SMOTE k=5 vs 4.0: AB-SMOTE P' & P': M=5 k=5 (first/default AB-SMOTE row; variants 4.1-4.3 not used here)", "higher_is_better": true, "is_image": false},
+    "rows": [
+      {"dataset_as_printed": "Abalone9-18 (Table IV)", "proposed": "0.493", "proposed_std": null, "smote": "0.474", "smote_std": null, "best_other_value": "0.524", "best_other_name": "3.2: BSMOTE P' & P: M=8, k=5", "marks": "paper says bolded best; best F in table is 4.3 AB-SMOTE M=8 K=8 = 0.559 (bold not visible in text extraction)"},
+      {"dataset_as_printed": "Customer Churn (Table V)", "proposed": "0.704", "proposed_std": null, "smote": "0.749", "smote_std": null, "best_other_value": "0.719", "best_other_name": "3.2: BSMOTE P' & P: M=8, k=5", "marks": "bold not visible in text extraction; text p.5 says 4.1 AB-SMOTE (0.72) outperformed and Original (0.748) was higher than other approaches in minority accuracy"},
+      {"dataset_as_printed": "Harberman (Table VI)", "proposed": "0.575", "proposed_std": null, "smote": "0.643", "smote_std": null, "best_other_value": "0.635", "best_other_name": "3.1: BSMOTE P' & P: M=5 k=8", "marks": "bold not visible in text extraction"},
+      {"dataset_as_printed": "Employee Attrition (Table VII)", "proposed": "0.603", "proposed_std": null, "smote": "0.58", "smote_std": null, "best_other_value": "0.871", "best_other_name": "3.1: BSMOTE P' & P: M=5 k=8", "marks": "0.871 printed as is but text says 3.1 got best F-measure; likely typo (neighbouring values 0.58-0.60); next BSMOTE value is 3.2 = 0.598"},
+      {"dataset_as_printed": "Telco Customer Churn (Table VIII)", "proposed": "0.678", "proposed_std": null, "smote": "0.731", "smote_std": null, "best_other_value": "0.677", "best_other_name": "3.0 and 3.1 BSMOTE (tie)", "marks": "bold not visible in text extraction"},
+      {"dataset_as_printed": "Flare (Table IX)", "proposed": "0.421", "proposed_std": null, "smote": "0.47", "smote_std": null, "best_other_value": "0.434", "best_other_name": "3.3: BSMOTE P' & P: M=8, k=8", "marks": "bold not visible in text extraction"},
+      {"dataset_as_printed": "Wine Quality (Table X)", "proposed": "0.215", "proposed_std": null, "smote": "0.215", "smote_std": null, "best_other_value": "0.215", "best_other_name": "3.0 and 3.2 BSMOTE (tie)", "marks": "paper text: tie between BSMOTE and AB-SMOTE"},
+      {"dataset_as_printed": "Sales: Win Loss (Table XI)", "proposed": "0.826", "proposed_std": null, "smote": "0.838", "smote_std": null, "best_other_value": "0.823", "best_other_name": "3.1: BSMOTE P' & P: M=5 k=8", "marks": "bold not visible in text extraction"}
+    ],
+    "summary_rows": [
+      {"label": "Table XII 'best results' count, Recall (BSMOTE vs AB-SMOTE, SMOTE not included), p.5 printed 35", "proposed": "6", "smote": "not applicable (BSMOTE = 3)"},
+      {"label": "Table XII 'best results' count, F-Measure (BSMOTE vs AB-SMOTE)", "proposed": "7", "smote": "not applicable (BSMOTE = 2)"}
+    ],
+    "stat_test": "none stated",
+    "win_claim": {"quote": "Experiments' results show the AB-SOMTE, when compared with BSMOTE, managed to produce the most accurate results in the majority of the test cases adopted in our study.", "page": "p.1 (printed p.31); also Conclusion"}
+  },
+  "uncertain": [
+    "Tables IV-XI text extraction is interleaved across columns/pages (esp. Tables V-XI on p.5); values were re-assembled by row labels; PDF page not rendered visually (22 MB file, cannot be saved to disk via the Drive tool), so is_image=false but bold marks are not visible (p.4-5)",
+    "Table XI (p.5): AB-SMOTE 4.0-4.2 Recall/F values were split in extraction ('0.804 ... 0.803 ... 0.798 0.826 0.826 0.822'); assigned 4.0=0.804/0.826, 4.1=0.803/0.826, 4.2=0.798/0.822",
+    "Table VII 3.1 BSMOTE F-measure printed 0.871 (probable typo, p.5)",
+    "Which AB-SMOTE variant is 'the proposed': paper has 4.0-4.3 (Mnn/Knn 5/8 combos), no single main one; 4.0 used as the default-parameter row",
+    "Page numbers: PDF p.3/4/5 inferred from printed page headers 33/34/35 in extraction; Table XII may sit on a later page",
+    "Table I Wine Quality: Total 1493 but Minority 53 + Majority 1546 = 1599 (printed as is, p.3)",
+    "how_obtained left 'not stated' for all but Abalone9-18; Haberman is natively 2-class but paper does not say (p.3)",
+    "Table III printed parameters garbled (e.g. 'GAP 0 - 1', 'Percentage 100'), not transcribed; 'Table V' Churn title 'Customer Churn' vs Table I 'Customer Churn Wireless Telecom'"
+  ],
+  "notes": "Compares only against Original, SMOTE (k=5, 100%) and Borderline-SMOTE variants (BSMOTE 3.0-3.4) on 8 datasets, J48 in WEKA, 5-fold CV; metrics Recall and F-measure only. Other AB-SMOTE variants (F-measure, Tables IV-XI): 4.1/4.2/4.3 — Abalone 0.529/0.519/0.559; Churn 0.72/0.698/0.698; Haberman 0.643/0.639/0.581; Employee 0.603/0.595/0.593; Telco churn 0.679/0.665/0.665; Flare 0.463/0.397/0.359; Wine 0.205/0.215/0.205; Sales 0.826/0.822/0.82. Paper text (Sec. V) admits SMOTE was better than BSMOTE/AB-SMOTE in one case (Table V). Gen = number of generated instances is also tabulated. Number of datasets not stated as a claim; 8 in Table I."
+}

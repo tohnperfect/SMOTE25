@@ -1,0 +1,32 @@
+{
+ "key": "CISO",
+ "smote_in_baselines": "yes",
+ "smote_name_as_printed": "SMOTE",
+ "baselines_all": ["No resampling", "Class weighting", "Random oversampling", "SMOTE", "Borderline-SMOTE", "ADASYN", "SMOTE-ENN", "SMOTE-Tomek", "KMeans-SMOTE", "Safe-Level-SMOTE", "G-SMOTE"],
+ "results_tables": [
+  {"table": "Table 3", "page": "20", "metric": "PR-AUC (mean rank, mean PR-AUC, W/T/L, Holm p)", "classifier": "LR, SVC, RF, HGB", "granularity": "aggregate only", "is_image": false},
+  {"table": "Table 4", "page": "22", "metric": "median per-dataset PR-AUC difference (CISO minus ablated variant)", "classifier": "LR, SVC, RF, HGB", "granularity": "aggregate only", "is_image": false},
+  {"table": "Table 5", "page": "23", "metric": "Spearman rho between certified fraction and PR-AUC advantage over SMOTE", "classifier": "LR, SVC, RF, HGB", "granularity": "aggregate only", "is_image": false},
+  {"table": "Table 6", "page": "27", "metric": "mean PR-AUC rank (scale suite, 8 UCI datasets)", "classifier": "LR, RF, HGB", "granularity": "ranking only", "is_image": false}
+ ],
+ "chosen": {"table": "Table 3", "page": "20", "metric": "PR-AUC", "classifier": "HGB (histogram-based gradient boosting)", "condition": "primary 37-dataset KEEL evaluation suite, frozen global hyperparameters", "higher_is_better": true, "why_this_choice": "Rule 3: no per-dataset table exists for any metric; G-mean and ROC-AUC are named as secondary metrics but no results table for them is printed, so PR-AUC (primary metric, Table 3, aggregate only) is the only option. Rule 4: abstract highlights gradient boosting ('ranks second of eleven under gradient boosting')."},
+ "rows": [],
+ "summary_rows": [
+  {"label": "Mean rank (HGB, lower is better)", "proposed": "5.11", "smote": "5.78"},
+  {"label": "Mean PR-AUC (HGB)", "proposed": "0.733", "smote": "0.731"},
+  {"label": "W/T/L of CISO vs method (HGB)", "proposed": "-", "smote": "15/10/12"},
+  {"label": "Holm-corrected Wilcoxon p, CISO vs method (HGB)", "proposed": "-", "smote": "1.000"},
+  {"label": "Mean rank (LR)", "proposed": "5.91", "smote": "5.34"},
+  {"label": "Mean PR-AUC (LR)", "proposed": "0.694", "smote": "0.702"},
+  {"label": "W/T/L (LR)", "proposed": "-", "smote": "11/10/16"},
+  {"label": "Mean rank (SVC)", "proposed": "5.34", "smote": "4.91"},
+  {"label": "Mean PR-AUC (SVC)", "proposed": "0.715", "smote": "0.711"},
+  {"label": "W/T/L (SVC)", "proposed": "-", "smote": "15/7/15"},
+  {"label": "Mean rank (RF)", "proposed": "5.74", "smote": "6.14"},
+  {"label": "Mean PR-AUC (RF)", "proposed": "0.729", "smote": "0.726"},
+  {"label": "W/T/L (RF)", "proposed": "-", "smote": "17/10/10"}
+ ],
+ "stat_test": "Friedman test per classifier over all methods (Friedman p: LR = 0.0006, SVC = 8.8e-10, RF = 1.9e-08, HGB = 0.0036), then Wilcoxon signed-rank test on per-dataset PR-AUC of CISO vs each competitor with Holm correction (control-vs-all); tie defined as |delta| < 10^-3",
+ "win_claim": {"quote": "CISO is statistically equivalent to SMOTE on precision-recall AUC, ranks second of eleven under gradient boosting, and completes every one of 11,460 fold-level evaluations without failure.", "page": "1"},
+ "notes": "No per-dataset results table in the paper (main text through p.39 checked; no appendix tables), so rows is empty; only aggregate Table 3 (p.20) and Fig. 2 (p.21, per-dataset rank distributions as a plot, not numbers). G-mean and ROC-AUC are declared secondary metrics (Sect. 5.4, p.17) but their results are not stated in paper. Best-other per dataset: not stated in paper. Aggregate best mean rank under HGB is Random oversampling (5.05). Suites: primary = 37 KEEL datasets (Table 1, p.16, top); scale suite = 8 large UCI datasets (Table 1 bottom; results Table 6, p.27, ranks only, SVC omitted; CISO - SMOTE median PR-AUC diff +0.0016 LR, -0.0004 RF, -0.0003 HGB; Wilcoxon p 0.383/0.641/0.547); tuning suite = 5 KEEL datasets (Table 2, p.18: glass0, haberman, ecoli3, yeast3, abalone19), excluded from evaluation. KEEL datasets 37 + UCI 8 = 45 evaluation datasets. KEEL suite results in Table 3 cover 37 datasets. KMeans-SMOTE listed as a Tier-2 baseline but excluded from the primary predictive comparison because it failed on 50.3% of folds across 23 datasets (Sect. 6.8); Table 3 shows 10 competitors. Table text was extracted fine (not images)."
+}

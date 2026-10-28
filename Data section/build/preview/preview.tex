@@ -1,0 +1,12 @@
+% Preview wrapper for manuscript/data-section-draft.tex (Data section only).
+% Same settings as the preview first compiled on 18-19 Oct 2026: US letter, 11pt,
+% 1in margins, Computer Modern. The draft defines its own colour macros
+% (\draftnum, \claudedraft, \evidence, \pcite, \toon) and needs only these packages.
+% Not part of the JAIR manuscript; main.tex is not used here.
+% Build with:  python3 build/preview/build_preview.py   (from Data section/)
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor,booktabs,amsmath,graphicx}
+\begin{document}
+\input{data-section-draft}
+\end{document}

@@ -1,0 +1,193 @@
+{
+ "key": "GAMO",
+ "classifier": "CN (classifier network M); LS (least-square) variant",
+ "condition": "main suite, induced imbalance as in Sec 4; mean over 10 repeats",
+ "proposed_column": "GAMO (Ours)",
+ "smote_column": "SMOTE+CN",
+ "metrics": [
+  {
+   "metric": "GM",
+   "metric_family": "G-mean",
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "MNIST (Table 1, LS, GM)",
+     "proposed": "0.90",
+     "proposed_std": "0.01",
+     "smote": "0.89",
+     "smote_std": "0.01",
+     "marks": "bold: GAMO (Ours)"
+    },
+    {
+     "dataset_as_printed": "Fashion-MNIST (Table 1, LS, GM)",
+     "proposed": "0.81",
+     "proposed_std": "0.01",
+     "smote": "0.77",
+     "smote_std": "0.01",
+     "marks": "bold: GAMO (Ours)"
+    },
+    {
+     "dataset_as_printed": "CIFAR10 (Table 2, GM)",
+     "proposed": "0.43",
+     "proposed_std": "0.02",
+     "smote": "0.4",
+     "smote_std": "0.02",
+     "marks": "bold: GAMO (Ours)"
+    },
+    {
+     "dataset_as_printed": "SVHN (Table 2, GM)",
+     "proposed": "0.75",
+     "proposed_std": "0.02",
+     "smote": "0.73",
+     "smote_std": "0.02",
+     "marks": "bold: GAMO (Ours)"
+    },
+    {
+     "dataset_as_printed": "CelebA-Small (Table 3, During Testing, GM)",
+     "proposed": "0.54",
+     "proposed_std": "0.02",
+     "smote": "0.48",
+     "smote_std": "0.03",
+     "marks": "bold: GAMO (Ours)"
+    },
+    {
+     "dataset_as_printed": "CelebA-Large (Table 3, During Testing, GM)",
+     "proposed": "0.70",
+     "proposed_std": "0.02",
+     "smote": "0.66",
+     "smote_std": "0.03",
+     "marks": "bold: GAMO (Ours)"
+    },
+    {
+     "dataset_as_printed": "LSUN-Small (Table 3, During Testing, GM)",
+     "proposed": "0.50",
+     "proposed_std": "0.02",
+     "smote": "0.40",
+     "smote_std": "0.02",
+     "marks": "bold: GAMO (Ours)"
+    },
+    {
+     "dataset_as_printed": "LSUN-Large (Table 3, During Testing, GM)",
+     "proposed": "0.68",
+     "proposed_std": "0.03",
+     "smote": "0.62",
+     "smote_std": "0.03",
+     "marks": "bold: GAMO (Ours)"
+    },
+    {
+     "dataset_as_printed": "SUN397 (Table 4, GM)",
+     "proposed": "0.24",
+     "proposed_std": "0.03",
+     "smote": "0.21",
+     "smote_std": "0.04",
+     "marks": "bold: GAMO (Ours)"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "not stated in paper"
+   },
+   "table": "Tables 1 (LS columns), 2, 3 (During Testing columns), 4",
+   "page": "PDF pages 6-7 (printed 1700-1701)",
+   "is_image": false,
+   "higher_is_better": true
+  },
+  {
+   "metric": "ACSA (Average Class Specific Accuracy)",
+   "metric_family": "balanced-accuracy",
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "MNIST (Table 1, LS, ACSA)",
+     "proposed": "0.91",
+     "proposed_std": "0.01",
+     "smote": "0.89",
+     "smote_std": "0.01",
+     "marks": "bold: GAMO (Ours)"
+    },
+    {
+     "dataset_as_printed": "Fashion-MNIST (Table 1, LS, ACSA)",
+     "proposed": "0.83",
+     "proposed_std": "0.01",
+     "smote": "0.80",
+     "smote_std": "0.01",
+     "marks": "bold: GAMO (Ours)"
+    },
+    {
+     "dataset_as_printed": "CIFAR10 (Table 2, ACSA)",
+     "proposed": "0.49",
+     "proposed_std": "0.01",
+     "smote": "0.46",
+     "smote_std": "0.02",
+     "marks": "bold: GAMO (Ours)"
+    },
+    {
+     "dataset_as_printed": "SVHN (Table 2, ACSA)",
+     "proposed": "0.76",
+     "proposed_std": "0.01",
+     "smote": "0.75",
+     "smote_std": "0.01",
+     "marks": "bold: GAMO (Ours)"
+    },
+    {
+     "dataset_as_printed": "CelebA-Small (Table 3, During Testing, ACSA)",
+     "proposed": "0.66",
+     "proposed_std": "0.01",
+     "smote": "0.62",
+     "smote_std": "0.02",
+     "marks": "bold: GAMO (Ours)"
+    },
+    {
+     "dataset_as_printed": "CelebA-Large (Table 3, During Testing, ACSA)",
+     "proposed": "0.75",
+     "proposed_std": "0.01",
+     "smote": "0.71",
+     "smote_std": "0.02",
+     "marks": "bold: GAMO (Ours)"
+    },
+    {
+     "dataset_as_printed": "LSUN-Small (Table 3, During Testing, ACSA)",
+     "proposed": "0.57",
+     "proposed_std": "0.01",
+     "smote": "0.50",
+     "smote_std": "0.01",
+     "marks": "bold: GAMO (Ours)"
+    },
+    {
+     "dataset_as_printed": "LSUN-Large (Table 3, During Testing, ACSA)",
+     "proposed": "0.70",
+     "proposed_std": "0.02",
+     "smote": "0.66",
+     "smote_std": "0.03",
+     "marks": "bold: GAMO (Ours)"
+    },
+    {
+     "dataset_as_printed": "SUN397 (Table 4, ACSA)",
+     "proposed": "0.32",
+     "proposed_std": "0.04",
+     "smote": "0.28",
+     "smote_std": "0.04",
+     "marks": "bold: GAMO (Ours)"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "not stated in paper"
+   },
+   "table": "Tables 1 (LS columns), 2, 3 (During Testing columns), 4",
+   "page": "PDF pages 6-7 (printed 1700-1701)",
+   "is_image": false,
+   "higher_is_better": true
+  }
+ ],
+ "metrics_other_classifier_only": [],
+ "metrics_without_smote": [
+  {
+   "metric": "FID",
+   "table": "Table 5 (GAMO2pix vs cDCGAN, image generation quality)"
+  }
+ ],
+ "notes": "Values shown as mean±std; std copied into *_std. Bold in every chosen cell is on GAMO (Ours) (best in column); verified visually on rendered pages 6-7. CE variant columns of Table 1 and 'During Training' columns of Table 3 excluded per fixed condition (Table 3 During Training SMOTE+CN ~0.99 vs GAMO 0.91-0.93, paper says SMOTE+CN overfits). Supplementary Table 8 (5 non-image datasets Abalone19, Chess, Cover Type, IJCNN1, Magic; 10-fold stratified CV; ACSA and GM; includes SMOTE+CN and GAMO; Average Performance row ACSA 0.66 vs 0.67, GM 0.57 vs 0.62) is a different suite/condition, so not copied. Table 2 SMOTE+CN CIFAR10 GM printed as '0.4±0.02' (one decimal)."
+}

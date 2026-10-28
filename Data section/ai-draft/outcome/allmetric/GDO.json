@@ -1,0 +1,684 @@
+{
+ "key": "GDO",
+ "classifier": "SVM (base learner; 10-fold CV)",
+ "condition": "40 KEEL data sets, original IR, main suite",
+ "proposed_column": "GDO",
+ "smote_column": "SMOTE",
+ "metrics": [
+  {
+   "metric": "G-mean",
+   "metric_family": "G-mean",
+   "table": "Table 7",
+   "page": "PDF page 9 (printed 675)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "glass1",
+     "proposed": "0.7392",
+     "proposed_std": null,
+     "smote": "0.7263",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ecoli-0_vs_1",
+     "proposed": "0.9516",
+     "proposed_std": null,
+     "smote": "0.9469",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "wisconsin",
+     "proposed": "0.9659",
+     "proposed_std": null,
+     "smote": "0.9653",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "yeast1",
+     "proposed": "0.6972",
+     "proposed_std": null,
+     "smote": "0.6966",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "haberman",
+     "proposed": "0.4328",
+     "proposed_std": null,
+     "smote": "0.3992",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "planningrelax",
+     "proposed": "0.5046",
+     "proposed_std": null,
+     "smote": "0.4042",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "ecoli1",
+     "proposed": "0.8925",
+     "proposed_std": null,
+     "smote": "0.8640",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "new-thyroid1",
+     "proposed": "0.8999",
+     "proposed_std": null,
+     "smote": "0.8013",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ecoli2",
+     "proposed": "0.8538",
+     "proposed_std": null,
+     "smote": "0.8899",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "segment0",
+     "proposed": "0.9196",
+     "proposed_std": null,
+     "smote": "0.8467",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "yeast3",
+     "proposed": "0.9058",
+     "proposed_std": null,
+     "smote": "0.9058",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ecoli3",
+     "proposed": "0.8867",
+     "proposed_std": null,
+     "smote": "0.8860",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "yeast-2_vs_4",
+     "proposed": "0.8745",
+     "proposed_std": null,
+     "smote": "0.8889",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "yeast-0-5-6-7-9_vs_4",
+     "proposed": "0.7941",
+     "proposed_std": null,
+     "smote": "0.7832",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "vowel0",
+     "proposed": "0.8905",
+     "proposed_std": null,
+     "smote": "0.1925",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "kr-vs-k-three_vs_eleven",
+     "proposed": "0.9934",
+     "proposed_std": null,
+     "smote": "0.9827",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "glass2",
+     "proposed": "0.7823",
+     "proposed_std": null,
+     "smote": "0.7260",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "shuttle-c0-vs-c4",
+     "proposed": "0.9246",
+     "proposed_std": null,
+     "smote": "0.8519",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "yeast-1_vs_7",
+     "proposed": "0.7464",
+     "proposed_std": null,
+     "smote": "0.7245",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "glass4",
+     "proposed": "0.9419",
+     "proposed_std": null,
+     "smote": "0.9033",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "ecoli4",
+     "proposed": "0.9132",
+     "proposed_std": null,
+     "smote": "0.9322",
+     "smote_std": null,
+     "marks": "SMOTE bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "glass-0-1-6_vs_2",
+     "proposed": "0.7012",
+     "proposed_std": null,
+     "smote": "0.6136",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "bupa",
+     "proposed": "0.6768",
+     "proposed_std": null,
+     "smote": "0.6805",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "abalone9-18",
+     "proposed": "0.7822",
+     "proposed_std": null,
+     "smote": "0.7474",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "glass-0-1-6_vs_5",
+     "proposed": "0.8428",
+     "proposed_std": null,
+     "smote": "0.4714",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "yeast-1-4-5-8_vs_7",
+     "proposed": "0.5980",
+     "proposed_std": null,
+     "smote": "0.5523",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "glass5",
+     "proposed": "0.8410",
+     "proposed_std": null,
+     "smote": "0.4714",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "car-good",
+     "proposed": "0.9277",
+     "proposed_std": null,
+     "smote": "0.7649",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "car-vgood",
+     "proposed": "0.8055",
+     "proposed_std": null,
+     "smote": "0.7273",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "kr-vs-k-zero-one_vs_draw",
+     "proposed": "0.9757",
+     "proposed_std": null,
+     "smote": "0.8588",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "kr-vs-k-one_vs_fifteen",
+     "proposed": "0.9998",
+     "proposed_std": null,
+     "smote": "1.0000",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "yeast4",
+     "proposed": "0.8518",
+     "proposed_std": null,
+     "smote": "0.8267",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "breast-cancer-wisconsin",
+     "proposed": "0.9602",
+     "proposed_std": null,
+     "smote": "0.9635",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "yeast5",
+     "proposed": "0.9634",
+     "proposed_std": null,
+     "smote": "0.9322",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "glass-0-1-2-3_vs_4-5-6",
+     "proposed": "0.9560",
+     "proposed_std": null,
+     "smote": "0.9474",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "yeast6",
+     "proposed": "0.8574",
+     "proposed_std": null,
+     "smote": "0.8066",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "abalone-3_vs_11",
+     "proposed": "0.9987",
+     "proposed_std": null,
+     "smote": "1.0000",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "winequality-white-3_vs_7",
+     "proposed": "0.7773",
+     "proposed_std": null,
+     "smote": "0.0000",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "australian",
+     "proposed": "0.8221",
+     "proposed_std": null,
+     "smote": "0.8098",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "abalone19",
+     "proposed": "0.6598",
+     "proposed_std": null,
+     "smote": "0.5481",
+     "smote_std": null,
+     "marks": ""
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated vs SMOTE specifically; text: GDO 'performs best for ... 16 of the 40 for G-mean' (winning times among all 8 methods, Fig. 7)",
+    "stat_test": "Table 10 (PDF p.10, printed 676), Wilcoxon signed rank test, GDO vs. SMOTE, G-mean: R+ = 1062, R- = 163, p-value = 1.82E-06; text: 'all the p-values are far lower than the standard significance level a=0.05'"
+   }
+  },
+  {
+   "metric": "AUC",
+   "metric_family": "AUC",
+   "table": "Table 6",
+   "page": "PDF page 9 (printed 675)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "glass1",
+     "proposed": "0.7392",
+     "proposed_std": null,
+     "smote": "0.7503",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ecoli-0_vs_1",
+     "proposed": "0.9520",
+     "proposed_std": null,
+     "smote": "0.9475",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "wisconsin",
+     "proposed": "0.9662",
+     "proposed_std": null,
+     "smote": "0.9654",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "yeast1",
+     "proposed": "0.6989",
+     "proposed_std": null,
+     "smote": "0.6968",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "haberman",
+     "proposed": "0.5101",
+     "proposed_std": null,
+     "smote": "0.5049",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "planningrelax",
+     "proposed": "0.5046",
+     "proposed_std": null,
+     "smote": "0.5132",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ecoli1",
+     "proposed": "0.8942",
+     "proposed_std": null,
+     "smote": "0.8641",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "new-thyroid1",
+     "proposed": "0.9007",
+     "proposed_std": null,
+     "smote": "0.8210",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ecoli2",
+     "proposed": "0.8572",
+     "proposed_std": null,
+     "smote": "0.8901",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "segment0",
+     "proposed": "0.9228",
+     "proposed_std": null,
+     "smote": "0.8584",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "yeast3",
+     "proposed": "0.9058",
+     "proposed_std": null,
+     "smote": "0.9063",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ecoli3",
+     "proposed": "0.8907",
+     "proposed_std": null,
+     "smote": "0.8862",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "yeast-2_vs_4",
+     "proposed": "0.8753",
+     "proposed_std": null,
+     "smote": "0.8898",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "yeast-0-5-6-7-9_vs_4",
+     "proposed": "0.7943",
+     "proposed_std": null,
+     "smote": "0.7838",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "vowel0",
+     "proposed": "0.8918",
+     "proposed_std": null,
+     "smote": "0.5185",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "kr-vs-k-three_vs_eleven",
+     "proposed": "0.9934",
+     "proposed_std": null,
+     "smote": "0.9828",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "glass2",
+     "proposed": "0.7850",
+     "proposed_std": null,
+     "smote": "0.7265",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "shuttle-c0-vs-c4",
+     "proposed": "0.9274",
+     "proposed_std": null,
+     "smote": "0.8629",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "yeast-1_vs_7",
+     "proposed": "0.7466",
+     "proposed_std": null,
+     "smote": "0.7257",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "glass4",
+     "proposed": "0.9429",
+     "proposed_std": null,
+     "smote": "0.9076",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "ecoli4",
+     "proposed": "0.9138",
+     "proposed_std": null,
+     "smote": "0.9328",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "glass-0-1-6_vs_2",
+     "proposed": "0.7017",
+     "proposed_std": null,
+     "smote": "0.6221",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "bupa",
+     "proposed": "0.6768",
+     "proposed_std": null,
+     "smote": "0.6829",
+     "smote_std": null,
+     "marks": "SMOTE bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "abalone9-18",
+     "proposed": "0.7822",
+     "proposed_std": null,
+     "smote": "0.7645",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "glass-0-1-6_vs_5",
+     "proposed": "0.8428",
+     "proposed_std": null,
+     "smote": "0.6111",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "yeast-1-4-5-8_vs_7",
+     "proposed": "0.5980",
+     "proposed_std": null,
+     "smote": "0.5754",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "glass5",
+     "proposed": "0.8410",
+     "proposed_std": null,
+     "smote": "0.6111",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "car-good",
+     "proposed": "0.9303",
+     "proposed_std": null,
+     "smote": "0.7818",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "car-vgood",
+     "proposed": "0.8071",
+     "proposed_std": null,
+     "smote": "0.7470",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "kr-vs-k-zero-one_vs_draw",
+     "proposed": "0.9758",
+     "proposed_std": null,
+     "smote": "0.8680",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "kr-vs-k-one_vs_fifteen",
+     "proposed": "0.9998",
+     "proposed_std": null,
+     "smote": "1.0000",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "yeast4",
+     "proposed": "0.8519",
+     "proposed_std": null,
+     "smote": "0.8275",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "breast-cancer-wisconsin",
+     "proposed": "0.9602",
+     "proposed_std": null,
+     "smote": "0.9638",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "yeast5",
+     "proposed": "0.9634",
+     "proposed_std": null,
+     "smote": "0.9333",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "glass-0-1-2-3_vs_4-5-6",
+     "proposed": "0.9564",
+     "proposed_std": null,
+     "smote": "0.9475",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "yeast6",
+     "proposed": "0.8574",
+     "proposed_std": null,
+     "smote": "0.8179",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "abalone-3_vs_11",
+     "proposed": "0.9987",
+     "proposed_std": null,
+     "smote": "1.0000",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "winequality-white-3_vs_7",
+     "proposed": "0.7816",
+     "proposed_std": null,
+     "smote": "0.4778",
+     "smote_std": null,
+     "marks": "GDO bold (best of row)"
+    },
+    {
+     "dataset_as_printed": "australian",
+     "proposed": "0.8221",
+     "proposed_std": null,
+     "smote": "0.8105",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "abalone19",
+     "proposed": "0.6598",
+     "proposed_std": null,
+     "smote": "0.6198",
+     "smote_std": null,
+     "marks": ""
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated vs SMOTE specifically; text: 'our proposal performs best for 14 of the 40 data sets with regard to AUC' (winning times among all 8 methods)",
+    "stat_test": "Table 10 (PDF p.10, printed 676), Wilcoxon signed rank test, GDO vs. SMOTE, AUC: R+ = 1012, R- = 213, p-value = 3.20E-05"
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [],
+ "metrics_without_smote": [],
+ "notes": "All tables are embedded images; read from 300 dpi renders. Bold = best of row across 8 methods. Tables 8 (AUC) and 9 (G-mean) on PDF p.10 give the same metrics with SMOTE for 10 large data sets (different condition, not copied). Runtime/memory tables 11-14 not performance metrics. Counted GDO bold: 16 (G-mean), 14 (AUC), matching paper text."
+}

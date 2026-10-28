@@ -17,7 +17,7 @@
     python3 build/make_atlas.py
 หน้าที่ publish เป็น Artifact คือ out/dataset-atlas.html (ไม่มี <html>/<body> เพราะ Artifact ใส่ให้ตอน publish)
 """
-import collections as C, csv, json, os, sys
+import collections as C, csv, json, os, re, sys
 import openpyxl
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -127,6 +127,8 @@ _ex = []
 for k in sorted(_diff, key=lambda k: (-len(_sz[k]), k))[:12]:
     sizes = sorted(set().union(*_sz[k].values()), key=lambda x: float(x.replace(",", "")) if x.replace(",", "").replace(".", "").isdigit() else 0)
     _ex.append(dict(name=k, papers=len(_sz[k]), sizes=sizes))
+if (len(_two), len(_diff)) != (_RCJ["size_variation"]["names"]["with_size_in_2plus_papers"], _RCJ["size_variation"]["names"]["with_more_than_one_size"]):
+    sys.exit("STOP: name-level size variation differs from reconcile_counts.json")
 _xc = [r for r in FO if not r["eligible"]]
 _typ = lambda L: {t: _tal([r for r in L if r["how_obtained"] == t]) for t in CATS + ["unmatched"] if any(r["how_obtained"] == t for r in L)}
 DASH = dict(
@@ -134,10 +136,13 @@ DASH = dict(
     entries=dict(total=len(FD), by_cat={c: _cat.get(c, 0) for c in CATS},
                  named=sum(1 for r in FD if (r["name"] or "") and not RC.PLACEHOLDER_RE.match(r["name"]))),
     names=dict(distinct=len(out_ds), single_paper=sum(1 for x in out_ds if len(x[2]) == 1),
-               families={f: dict(exact=v["exact_name_papers"], family=v["family_prefix_papers"])
+               datasets_t1=_RCJ["names"]["datasets_t1"], single_paper_datasets_t1=_RCJ["names"]["single_paper_datasets_t1"], families_t1=_RCJ["names"]["families_t1"],
+               families={f: dict(exact=v["exact_name_papers"], family=v["family_papers"])
                          for f, v in _RCJ["name_frequencies"].items() if isinstance(v, dict)}),
     provenance=dict(repos=_prov, mixed_group_level=_mixed),
-    size_variation=dict(names_with_size_in_2plus_papers=len(_two), names_with_more_than_one_size=len(_diff), examples=_ex),
+    size_variation=dict(names_with_size_in_2plus_papers=len(_two), names_with_more_than_one_size=len(_diff), examples=_ex,
+                        datasets_with_size_in_2plus_papers=_RCJ["size_variation"]["datasets_t1"]["with_size_in_2plus_papers"],
+                        datasets_with_more_than_one_size=_RCJ["size_variation"]["datasets_t1"]["with_more_than_one_size"]),
     granularity=dict(C.Counter(x["results_granularity"] for x in FS["papers"])), granularity_papers=len(FS["papers"]),
     baseline=dict(C.Counter(x["smote_kind"] for x in FS["papers"])),
     by_type=dict(plain=_typ([r for r in FO if r["eligible"] and r["smote_kind"] == RC.PLAIN]),
@@ -166,12 +171,174 @@ DX = dict(fields=DXF, rows=[[r[f] for f in DXF] for r in _DR], papers=_dxp,
           completeness=_DRS["completeness"], conflicts=_DRS["names_with_2plus_papers_and_differing_values"],
           ir_papers=_DRS["papers_ir_definition"], counts=_DRS["counts"], not_available=_DRS["fields_not_available"],
           source_sha256=_DRS["sources"]["datasets"]["sha256"])
+# ---- View A/B/C หลักฐาน (เพิ่ม 19 ต.ค. 2026 รอบ evidence-based visualizations) ----
+# B: แถว outcome ผูกกับ record_id ด้วย build/outcome_links.py (ลำดับแถวต้องตรงกับ verified_outcomes.csv)
+_LK = rcsv("out/outcome_dataset_links.csv")
+if len(_LK) != len(FO) or any(a["paper"] != b["paper"] or a["dataset"] != b["dataset"] for a, b in zip(_LK, FO)):
+    sys.exit("STOP: out/outcome_dataset_links.csv does not match verified_outcomes.csv row by row; rerun python3 build/outcome_links.py")
+_RID = {r["record_id"] for r in _DR}
+if any(l["record_id"] and l["record_id"] not in _RID for l in _LK):
+    sys.exit("STOP: outcome_dataset_links.csv names a record_id that is not in dataset_records.csv; rerun build/outcome_links.py")
+for r, l in zip(FO, _LK):
+    r["record_id"], r["link_method"], r["name_check"] = l["record_id"], l["link_method"], l["name_check"]
+keep += ["record_id", "link_method", "name_check", "dataset_as_printed", "dataset_table_name", "mapping_audit"]
+for r in FO:
+    for _c in ("dataset_as_printed", "dataset_table_name", "mapping_audit"): r.setdefault(_c, "")
+# A: ผลตรวจรายการ not stated (build/not_stated_audit.py) ไม่แก้ category เดิม
+_NSA = rcsv("out/not_stated_audit.csv")
+_ns_ids = {r["record_id"] for r in _DR if r["category"] == "not stated"}
+if len(_NSA) != DASH["entries"]["by_cat"]["not stated"] or {r["record_id"] for r in _NSA} != _ns_ids:
+    sys.exit("STOP: not_stated_audit.csv does not cover exactly the not-stated records; rerun python3 build/not_stated_audit.py")
+DX["nsa"] = {r["record_id"]: [r["assessment"], r["assessment_basis"], r["categories_of_matches"], r["matching_records"], r["other_records_same_name"]] for r in _NSA}
+# C: หลักฐานความยาก (build/difficulty_evidence.py ตรวจ quote กับ PDF แล้ว)
+_DF = json.load(open(p("out/difficulty_evidence.json"), encoding="utf-8"))
+for _f, _h in _DF["sources"].items():
+    if RC.sha(p(_f)) != _h:
+        sys.exit(f"STOP: {_f} changed since difficulty_evidence.py ran; rerun python3 build/difficulty_evidence.py")
+if any(x not in _RID for it in _DF["items"] for x in it["record_ids"]):
+    sys.exit("STOP: difficulty_evidence.json names a record_id that is not in dataset_records.csv")
 data = dict(datasets=out_ds, papers=pp, summary=S, dash=DASH, dx=DX,
             usage=dict(listed_total=len(FD), covered_by_aggregate=U["covered_by_aggregate"], aggregate_entry_count=U["aggregate_entry_count"]),
             outcome=dict(papers=FS["papers"], rows=[{k2: r[k2] for k2 in keep} for r in FO], eligibility=ELIG))
+data["diff"] = {k: _DF[k] for k in ("types", "confidence", "summary", "items", "papers")}
+# ---- แท็บ "Analyses A-F" (เพิ่ม 19 ต.ค. 2026 หลังรอบ A-F) ----
+# อ่านผลจากไฟล์ที่ build/*.py ของแต่ละ analysis เขียนไว้ ไม่พิมพ์ตัวเลขใหม่ในแม่แบบ; หยุดถ้าผลไม่ตรงกับข้อมูลที่ตรวจแล้ว
+def _md_bullets(path, heading):
+    out, on = [], False
+    for ln in open(p(path), encoding="utf-8").read().splitlines():
+        if ln.startswith("## ") or ln.startswith("Points that matter"):
+            on = ln.startswith("## " + heading) or ln.startswith(heading); continue
+        if on and ln.startswith("- "): out.append(ln[2:].strip())
+        elif on and out and ln.startswith("  ") and ln.strip(): out[-1] += " " + ln.strip()
+    return out
+def _md_finding(path, heading, part):
+    t = open(p(path), encoding="utf-8").read(); t = t[t.find(heading):]; t = t[:t.find("\n## ", 5)] if "\n## " in t[5:] else t
+    m = re.search(r"\*\*" + part + r"\.\*\*(.*?)(\n\*\*|\Z)", t, re.S); return re.sub(r"\s+", " ", m.group(1)).strip() if m else ""
+def _md_table(path):
+    rows = [ln for ln in open(p(path), encoding="utf-8").read().splitlines() if ln.startswith("|")]
+    cells = [[c.strip() for c in ln.strip().strip("|").split("|")] for ln in rows]
+    return cells[0], cells[2:]
+_MA = rcsv("out/modified_operations_audit.csv"); _MS = json.load(open(p("out/modified_operations_summary.json"), encoding="utf-8"))
+if len(_MA) != DASH["entries"]["by_cat"]["modified"] or sum(_MS["combinations"].values()) != len(_MA):
+    sys.exit("STOP: modified_operations outputs do not match the modified entries; rerun python3 build/modified_operations.py")
+_BPp = rcsv("out/baseline_provenance_papers.csv"); _BPs = json.load(open(p("out/baseline_provenance_summary.json"), encoding="utf-8"))
+_BPi = rcsv("out/baseline_identical_values.csv")
+if sum(_BPs["rows_by_partition_and_provenance"]["primary"].values()) != ELIG["plain"]["rows"] or sum(_BPs["rows_by_partition_and_provenance"]["wrapper"].values()) != ELIG["wrapper"]["rows"]:
+    sys.exit("STOP: baseline_provenance rows do not match the primary/wrapper partitions; rerun python3 build/baseline_provenance.py")
+_BC = json.load(open(p("out/benchmark_concentration.json"), encoding="utf-8"))
+_named = [r for r in _DR if r["is_placeholder"] == "no"]
+_uses = {}
+for r in _named: _uses.setdefault(r["normalized_name"], set()).add(r["paper_key"])
+if _BC["by_name"]["names"] != len(_uses) or _BC["by_name"]["uses"] != sum(len(v) for v in _uses.values()) or _BC["by_name"]["singletons"] != DASH["names"]["single_paper"]:
+    sys.exit("STOP: benchmark_concentration.json does not match dataset_records.csv; rerun python3 build/benchmark_concentration.py")
+_TC = json.load(open(p("out/temporal_comparison.json"), encoding="utf-8"))
+if sum(d["entries"] for d in _TC["by_period"].values()) != len(_named) or sum(d["primary_rows"] for d in _TC["by_period"].values()) != ELIG["plain"]["rows"]:
+    sys.exit("STOP: temporal_comparison.json does not add up to the verified totals; rerun python3 build/temporal_comparison.py")
+_CC = json.load(open(p("out/characteristics_coverage.json"), encoding="utf-8"))
+if _CC["n_instances"]["entries"]["of"] != len(_named):
+    sys.exit("STOP: characteristics_coverage.json denominator differs; rerun python3 build/characteristics_coverage.py")
+_CE = rcsv("out/claim_evidence_matrix.csv"); _CEs = json.load(open(p("out/claim_evidence_summary.json"), encoding="utf-8"))
+if len(_CE) != _CEs["claims"]:
+    sys.exit("STOP: claim_evidence_matrix.csv and its summary disagree; rerun python3 build/claim_evidence.py")
+_cat_head, _cat_rows = _md_table("analysis/category_decision_table.md")
+_MAF = ["record_id", "paper_key", "year", "name_as_reported", "ops", "ops_conditional", "class_op_kind", "changes_class_structure",
+        "changes_sample_composition", "changes_feature_space", "changes_imbalance_level", "what_changed", "evidence_ref",
+        "purpose_stated_by_authors", "missing_information", "confidence", "classification_note"]
+_E_md = open(p("analysis/E_characteristics_coverage.md"), encoding="utf-8").read()
+data["an"] = dict(
+    A=dict(fields=_MAF, rows=[[r[f] for f in _MAF] for r in _MA], summary=_MS,
+           interpretation=_md_bullets("analysis/A_modified_operations.md", "Interpretation"), limits=_md_bullets("analysis/A_modified_operations.md", "Limits")),
+    B=dict(papers=_BPp, summary=_BPs, identical=_BPi,
+           interpretation=[_md_finding("analysis/manuscript_ready_findings.md", "## F2.", "Interpretation")],
+           limits=_md_bullets("analysis/B_baseline_provenance.md", "Limits")),
+    C=dict(summary=_BC, names=sorted(([k, len(v)] for k, v in _uses.items()), key=lambda x: (-x[1], x[0])), top=rcsv("out/benchmark_top_names.csv"),
+           interpretation=_md_bullets("analysis/C_benchmark_concentration.md", "Answers"), limits=_md_bullets("analysis/C_benchmark_concentration.md", "Limits")),
+    D=dict(data=_TC, interpretation=_md_bullets("analysis/D_temporal_comparison.md", "Observations"), limits=_md_bullets("analysis/D_temporal_comparison.md", "Limits")),
+    E=dict(data=_CC, interpretation=_md_bullets("analysis/E_characteristics_coverage.md", "Conclusion"),
+           followup=[re.sub(r"\s+", " ", re.sub(r"^\d\.\s*", "", x)).strip() for x in re.split(r"\n(?=\d\. )", _E_md.split("## Recommended")[-1]) if re.match(r"\d\. ", x)]),
+    F=dict(rows=_CE, summary=_CEs, interpretation=_md_bullets("analysis/F_claim_evidence.md", "Points that matter"), limits=_md_bullets("analysis/F_claim_evidence.md", "Limits")),
+    G=dict(head=_cat_head, rows=_cat_rows,
+           notes=[l[2:] for l in open(p("analysis/category_decision_table.md"), encoding="utf-8").read().split("\nNotes")[-1].splitlines() if l.startswith("- ")]),
+    sources=dict(A="analysis/A_modified_operations.md", B="analysis/B_baseline_provenance.md", C="analysis/C_benchmark_concentration.md",
+                 D="analysis/D_temporal_comparison.md", E="analysis/E_characteristics_coverage.md", F="analysis/F_claim_evidence.md",
+                 G="analysis/category_decision_table.md"))
+for _k in ("A", "B", "C", "D", "E", "F"):
+    if not data["an"][_k]["interpretation"]: sys.exit(f"STOP: no interpretation text parsed for analysis {_k}")
 # แท็บร่าง manuscript (เพิ่ม 18 ต.ค. 23:55 ตามที่ Toon ขอ เพื่อนำเสนออาจารย์)
 sys.path.insert(0, p("build")); import tex2html
 _tex = open(p("manuscript/data-section-draft.tex"), encoding="utf-8").read()
+# แท็บ Landscape (19 ต.ค. 2026): อ่าน out/landscape_families.csv และ out/benchmark_candidates.* จาก build/landscape_candidates.py
+_LF = list(csv.DictReader(open(p("out/landscape_families.csv"), encoding="utf-8")))
+_LC = list(csv.DictReader(open(p("out/benchmark_candidates.csv"), encoding="utf-8")))
+_LS = json.load(open(p("out/benchmark_candidates.json"), encoding="utf-8"))
+if len(_LF) != _BC["by_name"]["names"] or len({r["family"] for r in _LF}) != _BC["by_family"]["names"]:
+    sys.exit("STOP: landscape_families.csv disagrees with benchmark_concentration.json (rerun build/landscape_candidates.py)")
+if {r["normalized_name"] for r in _LF} != {r["normalized_name"] for r in _DR if r["is_placeholder"] == "no"}:
+    sys.exit("STOP: landscape family names differ from dataset_records names")
+import families as _T1
+data["land"] = dict(fam={r["normalized_name"]: r["family"] for r in _LF}, dskey={r["normalized_name"]: r["dataset_key"] for r in _LF},
+                    famlabel={f: _T1.display(f) for f in {r["family"] for r in _LF}},
+                    famflags=_LS["families"]["flagged_list"],
+                    cand=[{k: v for k, v in r.items() if k != "record_ids"} for r in _LC], crit=_LS["criteria"], counts=_LS["counts"],
+                    r3={k: dict(exact=v["exact_name_papers"], dataset=v["dataset_papers"], prefix=v["family_papers"]) for k, v in json.load(open(p("out/reconcile_counts.json"), encoding="utf-8"))["name_frequencies"].items() if isinstance(v, dict)},
+                    sources=dict(families="out/landscape_families.csv", candidates="out/benchmark_candidates.csv", criteria="out/benchmark_candidates.json", script="build/landscape_candidates.py"))
+# ---- แท็บ "ความยากที่วัดได้" (28 ต.ค. 2026, Toon สั่ง): อ่านผลจาก difficulty/ ไม่คำนวณใหม่ในแม่แบบ ----
+# difficulty/measure.py (HVDM, k=5, Napierala rare rule) -> group_cited.py -> profile_final.py; projection.py -> projections.json
+_MZ_ROWS = list(csv.DictReader(open(p("difficulty/difficulty_profile_final.csv"), encoding="utf-8")))
+_MZ_SUM = json.load(open(p("difficulty/profile_final_summary.json"), encoding="utf-8"))
+_MZ_PROJ = json.load(open(p("difficulty/projections.json"), encoding="utf-8"))
+_MZ_DIM = json.load(open(p("difficulty/dimension_profile.json"), encoding="utf-8"))
+_TT = {"binary file": "binary", "binarised (rule reproduced)": "binarized", "one-vs-rest (ours)": "ovr"}
+for _r in _MZ_ROWS:
+    _r["task_type"] = _TT[_r["origin"]]
+    _r["key"] = "|".join([_r["file"], _r["source"], _r["task_type"], _r["minority_label"], _r["N"]])
+    for _c in ("small_disjuncts", "small_sample", "outlier_flag"):
+        _r[_c] = _r[_c] == "True"
+    # ตรวจธงซ้ำจากเกณฑ์ที่มีอ้างอิง (group_cited.py)
+    if _r["small_disjuncts"] != (float(_r["rare"]) >= 0.20) or _r["outlier_flag"] != (float(_r["outlier"]) > 0.20) \
+            or _r["small_sample"] != (float(_r["n_min_per_feature"]) < 10):
+        sys.exit(f"STOP: flags in difficulty_profile_final.csv disagree with the cited thresholds for {_r['key']}")
+_MZ_B = [r for r in _MZ_ROWS if r["task_type"] != "ovr"]
+if {r["key"] for r in _MZ_B} != set(_MZ_PROJ["real"]):
+    sys.exit("STOP: projections.json tasks differ from the binary/binarised rows of difficulty_profile_final.csv (rerun difficulty/projection.py)")
+if len(_MZ_B) != _MZ_SUM["tasks_binary_binarised"]["n"] or sum(int(r["entries"]) for r in _MZ_B) != _MZ_SUM["entries_binary_binarised"]["n"]:
+    sys.exit("STOP: profile_final_summary.json disagrees with difficulty_profile_final.csv (rerun difficulty/profile_final.py)")
+for _k, _v in _MZ_PROJ["real"].items():
+    _r = next(r for r in _MZ_B if r["key"] == _k)
+    if sum(_v["types"].values()) != int(_r["n_min"]) or abs(_v["types"]["O"] / int(_r["n_min"]) - float(_r["outlier"])) > 6e-4:
+        sys.exit(f"STOP: point types in projections.json disagree with difficulty_measures for {_k}")
+_keep = ("key", "file", "source", "task_type", "minority_label", "N", "n_min", "n_features_raw", "IR", "ir_band", "noise_index",
+         "borderline", "outlier", "rare", "safe", "n_min_per_feature", "small_disjuncts", "small_sample", "outlier_flag",
+         "profile", "entries", "papers", "version_note")
+data["mz"] = dict(rows=[{k: r[k] for k in _keep} for r in _MZ_ROWS], summary=_MZ_SUM,
+                  proj=_MZ_PROJ["real"], ill=_MZ_PROJ["illustrations"], proj_meta=_MZ_PROJ["meta"],
+                  dim=dict(entry=_MZ_DIM["entry_level"], name=_MZ_DIM["name_level"], tasks=_MZ_DIM["verified_tasks"]["raw"],
+                           verif=_MZ_DIM["verifiability_by_bin"], over100=_MZ_DIM["entries_over_100_features"],
+                           n_with=_MZ_DIM["entries_with_n_features"], n_without=_MZ_DIM["entries_without_n_features"]),
+                  sources=dict(rows="difficulty/difficulty_profile_final.csv", summary="difficulty/profile_final_summary.json",
+                               proj="difficulty/projections.json", dim="difficulty/dimension_profile.json",
+                               scripts="difficulty/measure.py, group_cited.py, profile_final.py, projection.py, dimension_profile.py"))
+# ผลตรวจการกระจุกตามตระกูล (28 ต.ค. 2026): build/family_dependence.py -> out/family_dependence.json
+_FD = json.load(open(p("out/family_dependence.json"), encoding="utf-8"))
+if _FD["rows"] != ELIG["plain"]["rows"]:
+    sys.exit("STOP: family_dependence.json was not computed on the primary set (rerun build/family_dependence.py)")
+data["famdep"] = dict(t1={k: _FD["t1"][k] for k in ("pairs", "same_sign", "perm_same_sign_mean", "p_same_sign", "rank_gap", "perm_rank_gap_mean",
+                                                   "p_rank_gap", "informative_papers", "informative_rows", "pairs_by_paper", "leave_one_paper_out")},
+                      sharing=_FD["t1_by_minority_sharing"], linked=_FD["rows_linked_to_records"], rows=_FD["rows"],
+                      source="out/family_dependence.json (build/family_dependence.py; families: out/dataset_families.csv, rule T1)")
+# ชนะ/แพ้ทุก metric ที่ paper รายงาน (28 ต.ค. 2026): build/winloss_allmetric.py -> out/winloss_allmetric_*.{json,csv}
+_WA = json.load(open(p("out/winloss_allmetric_summary.json"), encoding="utf-8"))
+if _WA["crosscheck_rule_A"].get("match", 0) != sum(_WA["crosscheck_rule_A"].values()):
+    sys.exit("STOP: all-metric copy of the rule-A metric does not match the earlier extraction")
+# Toon 28 Oct 2026: main = plain SMOTE, non-plain comparators apart, MC-MBRC excluded (guard: rows add up)
+_wa_np = _WA["non_plain_by_comparator"]
+if (_WA["plain_smote_only"]["overall_all_metrics"]["rows"] + sum(v["overall_all_metrics"]["rows"] for v in _wa_np.values())
+        != _WA["all_comparators"]["overall_all_metrics"]["rows"]) or "MC-MBRC" not in _WA["excluded"]:
+    sys.exit("STOP: all-metric split (plain / non-plain / excluded) does not add up")
+data["wl_all"] = dict(all=_WA["all_comparators"], plain=_WA["plain_smote_only"], ruleA=_WA["rule_A_metric_only"],
+                      nonplain=_wa_np, excluded=_WA["excluded"], decision=_WA["decision"],
+                      per_paper=_WA["per_paper"], rule=_WA["rule"], cross=_WA["crosscheck_rule_A"],
+                      source="out/winloss_allmetric_summary.json, _rows.csv, _paper_reported.csv (build/winloss_allmetric.py; raw: ai-draft/outcome/allmetric/*.json)")
 data["manuscript"] = dict(overview=json.load(open(p("manuscript/overview.json"), encoding="utf-8")),
                           html=tex2html.convert(_tex), tex=_tex)
 js = json.dumps(data, ensure_ascii=False, separators=(",", ":"))

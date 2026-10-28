@@ -1,0 +1,1039 @@
+{
+ "key": "SMOM",
+ "classifier": "C4.5",
+ "condition": "Experiment 1; default SMOTE k (5), SMOM k1=12; all classes oversampled to largest class size; avg of 10 runs x stratified 10-fold CV",
+ "proposed_column": "SMOM (C4.5 block)",
+ "smote_column": "SMOTE (C4.5 block)",
+ "metrics": [
+  {
+   "metric": "MG (geometric mean of per-class recalls)",
+   "metric_family": "G-mean",
+   "table": "Table S3 (Supplementary), C4.5 columns",
+   "page": "Supplementary PDF page 7 (printed 7)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "vehicle",
+     "proposed": "0.9215",
+     "proposed_std": null,
+     "smote": "0.922",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "sat",
+     "proposed": "0.8528",
+     "proposed_std": null,
+     "smote": "0.8493",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    },
+    {
+     "dataset_as_printed": "ecoli",
+     "proposed": "0.7726",
+     "proposed_std": null,
+     "smote": "0.7507",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    },
+    {
+     "dataset_as_printed": "automobile",
+     "proposed": "0.8521",
+     "proposed_std": null,
+     "smote": "0.8326",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    },
+    {
+     "dataset_as_printed": "voice9_6",
+     "proposed": "0.0747",
+     "proposed_std": null,
+     "smote": "0.074",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "vowel5",
+     "proposed": "0.8876",
+     "proposed_std": null,
+     "smote": "0.8742",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    },
+    {
+     "dataset_as_printed": "vowel7",
+     "proposed": "0.847",
+     "proposed_std": null,
+     "smote": "0.8417",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "robot",
+     "proposed": "1",
+     "proposed_std": null,
+     "smote": "1",
+     "smote_std": null,
+     "marks": "SMOM bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "pendigits",
+     "proposed": "0.9664",
+     "proposed_std": null,
+     "smote": "0.967",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "page-blocks",
+     "proposed": "0.9493",
+     "proposed_std": null,
+     "smote": "0.9476",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    },
+    {
+     "dataset_as_printed": "housing5",
+     "proposed": "0.7268",
+     "proposed_std": null,
+     "smote": "0.7112",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "SWD",
+     "proposed": "0.503",
+     "proposed_std": null,
+     "smote": "0.4854",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "wine-red",
+     "proposed": "0.4381",
+     "proposed_std": null,
+     "smote": "0.4195",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    },
+    {
+     "dataset_as_printed": "voice9_7",
+     "proposed": "0.0121",
+     "proposed_std": null,
+     "smote": "0.0264",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "LEV",
+     "proposed": "0.4823",
+     "proposed_std": null,
+     "smote": "0.3917",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "machine",
+     "proposed": "0.072",
+     "proposed_std": null,
+     "smote": "0.069",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    },
+    {
+     "dataset_as_printed": "abalone8",
+     "proposed": "0.2647",
+     "proposed_std": null,
+     "smote": "0.2544",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "plates-faults5",
+     "proposed": "0.7526",
+     "proposed_std": null,
+     "smote": "0.7527",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "plates-faults7",
+     "proposed": "0.7552",
+     "proposed_std": null,
+     "smote": "0.7425",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ESL",
+     "proposed": "0.3413",
+     "proposed_std": null,
+     "smote": "0.3494",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ERA",
+     "proposed": "0.1112",
+     "proposed_std": null,
+     "smote": "0.1113",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "yeast5",
+     "proposed": "0.3966",
+     "proposed_std": null,
+     "smote": "0.3398",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ERA5",
+     "proposed": "0.26",
+     "proposed_std": null,
+     "smote": "0.2576",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "yeast7",
+     "proposed": "0.3134",
+     "proposed_std": null,
+     "smote": "0.3",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    },
+    {
+     "dataset_as_printed": "abalone10",
+     "proposed": "0.1055",
+     "proposed_std": null,
+     "smote": "0.1054",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    },
+    {
+     "dataset_as_printed": "yeast8",
+     "proposed": "0.4051",
+     "proposed_std": null,
+     "smote": "0.4091",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "housing10",
+     "proposed": "0.1026",
+     "proposed_std": null,
+     "smote": "0.0375",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Avg-MG (Table S3)",
+      "proposed": "0.5247",
+      "smote": "0.5119"
+     },
+     {
+      "label": "Mean rank (Table S3)",
+      "proposed": "1.9444",
+      "smote": "2.8519"
+     },
+     {
+      "label": "Main paper Table 2, C4.5 Avg-MG (mean±SD)",
+      "proposed": "0.525±0.332",
+      "smote": "0.512±0.334"
+     },
+     {
+      "label": "Main paper Table 2, C4.5 Mean rank",
+      "proposed": "1.944",
+      "smote": "2.852"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Wilcoxon signed-ranks test (main paper Table 3): \"++\" (/\"--\") and \"+*\" (/\"-*\") denote that SMOM is statistically better (/worse) than the considered algorithm at the significance level of 0.05 and 0.1, respectively; \"+\" signifies that SMOM is only quantitatively better, whereas \"-\" implies the contrary. SMOM vs SMOTE, C4.5: R+ 316, R- 62, T 62(++) (bold)"
+   }
+  },
+  {
+   "metric": "MAUC",
+   "metric_family": "AUC",
+   "table": "Table S5 (Supplementary), C4.5 columns",
+   "page": "Supplementary PDF page 9 (printed 9)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "vehicle",
+     "proposed": "0.9763",
+     "proposed_std": null,
+     "smote": "0.9773",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "sat",
+     "proposed": "0.9628",
+     "proposed_std": null,
+     "smote": "0.9612",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    },
+    {
+     "dataset_as_printed": "ecoli",
+     "proposed": "0.9281",
+     "proposed_std": null,
+     "smote": "0.9211",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "automobile",
+     "proposed": "0.9467",
+     "proposed_std": null,
+     "smote": "0.9552",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "voice9_6",
+     "proposed": "0.6575",
+     "proposed_std": null,
+     "smote": "0.6591",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "vowel5",
+     "proposed": "0.9563",
+     "proposed_std": null,
+     "smote": "0.9524",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "vowel7",
+     "proposed": "0.9451",
+     "proposed_std": null,
+     "smote": "0.9438",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "robot",
+     "proposed": "1",
+     "proposed_std": null,
+     "smote": "1",
+     "smote_std": null,
+     "marks": "SMOM bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "pendigits",
+     "proposed": "0.9936",
+     "proposed_std": null,
+     "smote": "0.9936",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "page-blocks",
+     "proposed": "0.9825",
+     "proposed_std": null,
+     "smote": "0.9829",
+     "smote_std": null,
+     "marks": "SMOTE cell partially bold (only leading '0' printed bold)"
+    },
+    {
+     "dataset_as_printed": "housing5",
+     "proposed": "0.9075",
+     "proposed_std": null,
+     "smote": "0.9034",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "SWD",
+     "proposed": "0.7992",
+     "proposed_std": null,
+     "smote": "0.8006",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "wine-red",
+     "proposed": "0.74",
+     "proposed_std": null,
+     "smote": "0.7379",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    },
+    {
+     "dataset_as_printed": "voice9_7",
+     "proposed": "0.6585",
+     "proposed_std": null,
+     "smote": "0.6612",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "LEV",
+     "proposed": "0.8396",
+     "proposed_std": null,
+     "smote": "0.8318",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    },
+    {
+     "dataset_as_printed": "machine",
+     "proposed": "0.7948",
+     "proposed_std": null,
+     "smote": "0.7841",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "abalone8",
+     "proposed": "0.6974",
+     "proposed_std": null,
+     "smote": "0.6863",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "plates-faults5",
+     "proposed": "0.9336",
+     "proposed_std": null,
+     "smote": "0.9338",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "plates-faults7",
+     "proposed": "0.9438",
+     "proposed_std": null,
+     "smote": "0.9386",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ESL",
+     "proposed": "0.8538",
+     "proposed_std": null,
+     "smote": "0.8514",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ERA",
+     "proposed": "0.7335",
+     "proposed_std": null,
+     "smote": "0.7299",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    },
+    {
+     "dataset_as_printed": "yeast5",
+     "proposed": "0.8227",
+     "proposed_std": null,
+     "smote": "0.7967",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    },
+    {
+     "dataset_as_printed": "ERA5",
+     "proposed": "0.8015",
+     "proposed_std": null,
+     "smote": "0.7919",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    },
+    {
+     "dataset_as_printed": "yeast7",
+     "proposed": "0.8321",
+     "proposed_std": null,
+     "smote": "0.8121",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "abalone10",
+     "proposed": "0.6898",
+     "proposed_std": null,
+     "smote": "0.6807",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "yeast8",
+     "proposed": "0.8356",
+     "proposed_std": null,
+     "smote": "0.8294",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    },
+    {
+     "dataset_as_printed": "housing10",
+     "proposed": "0.7922",
+     "proposed_std": null,
+     "smote": "0.7733",
+     "smote_std": null,
+     "marks": ""
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Avg-MAUC (Table S5)",
+      "proposed": "0.8528",
+      "smote": "0.8478"
+     },
+     {
+      "label": "Mean rank (Table S5)",
+      "proposed": "2.2963",
+      "smote": "3.037"
+     },
+     {
+      "label": "Main paper Table 2, C4.5 Avg-MAUC (mean±SD)",
+      "proposed": "0.853±0.108",
+      "smote": "0.848±0.111"
+     },
+     {
+      "label": "Main paper Table 2, C4.5 Mean rank",
+      "proposed": "2.296",
+      "smote": "3.037"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Wilcoxon signed-ranks test (main paper Table 3): \"++\" (/\"--\") and \"+*\" (/\"-*\") denote that SMOM is statistically better (/worse) than the considered algorithm at the significance level of 0.05 and 0.1, respectively; \"+\" signifies that SMOM is only quantitatively better, whereas \"-\" implies the contrary. SMOM vs SMOTE, C4.5: R+ 316.5, R- 61.5, T 61.5(++) (bold)"
+   }
+  },
+  {
+   "metric": "Recall (of the smallest minority class)",
+   "metric_family": "recall",
+   "table": "Table S7 (Supplementary), C4.5 columns",
+   "page": "Supplementary PDF page 11 (printed 11)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "vehicle",
+     "proposed": "0.9071",
+     "proposed_std": null,
+     "smote": "0.9017",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    },
+    {
+     "dataset_as_printed": "sat",
+     "proposed": "0.7576",
+     "proposed_std": null,
+     "smote": "0.7537",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ecoli",
+     "proposed": "0.7008",
+     "proposed_std": null,
+     "smote": "0.6583",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    },
+    {
+     "dataset_as_printed": "automobile",
+     "proposed": "0.87",
+     "proposed_std": null,
+     "smote": "0.88",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "voice9_6",
+     "proposed": "0.16",
+     "proposed_std": null,
+     "smote": "0.1667",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "vowel5",
+     "proposed": "0.8678",
+     "proposed_std": null,
+     "smote": "0.8444",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    },
+    {
+     "dataset_as_printed": "vowel7",
+     "proposed": "0.9156",
+     "proposed_std": null,
+     "smote": "0.9233",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "robot",
+     "proposed": "1",
+     "proposed_std": null,
+     "smote": "1",
+     "smote_std": null,
+     "marks": "SMOM bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "pendigits",
+     "proposed": "0.9666",
+     "proposed_std": null,
+     "smote": "0.967",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "page-blocks",
+     "proposed": "0.99",
+     "proposed_std": null,
+     "smote": "0.9867",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "housing5",
+     "proposed": "0.8167",
+     "proposed_std": null,
+     "smote": "0.7925",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "SWD",
+     "proposed": "0.4953",
+     "proposed_std": null,
+     "smote": "0.462",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "wine-red",
+     "proposed": "0.2827",
+     "proposed_std": null,
+     "smote": "0.275",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    },
+    {
+     "dataset_as_printed": "voice9_7",
+     "proposed": "0.1767",
+     "proposed_std": null,
+     "smote": "0.2017",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "LEV",
+     "proposed": "0.5417",
+     "proposed_std": null,
+     "smote": "0.4017",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "machine",
+     "proposed": "0.6",
+     "proposed_std": null,
+     "smote": "0.6",
+     "smote_std": null,
+     "marks": "SMOM bold; SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "abalone8",
+     "proposed": "0.5877",
+     "proposed_std": null,
+     "smote": "0.5333",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    },
+    {
+     "dataset_as_printed": "plates-faults5",
+     "proposed": "0.814",
+     "proposed_std": null,
+     "smote": "0.8263",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "plates-faults7",
+     "proposed": "0.8147",
+     "proposed_std": null,
+     "smote": "0.7863",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ESL",
+     "proposed": "0.556",
+     "proposed_std": null,
+     "smote": "0.59",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ERA",
+     "proposed": "0.78",
+     "proposed_std": null,
+     "smote": "0.775",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "yeast5",
+     "proposed": "0.665",
+     "proposed_std": null,
+     "smote": "0.5733",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    },
+    {
+     "dataset_as_printed": "ERA5",
+     "proposed": "0.775",
+     "proposed_std": null,
+     "smote": "0.77",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "yeast7",
+     "proposed": "0.575",
+     "proposed_std": null,
+     "smote": "0.495",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    },
+    {
+     "dataset_as_printed": "abalone10",
+     "proposed": "0.5403",
+     "proposed_std": null,
+     "smote": "0.533",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "yeast8",
+     "proposed": "0.5633",
+     "proposed_std": null,
+     "smote": "0.5517",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    },
+    {
+     "dataset_as_printed": "housing10",
+     "proposed": "0.3429",
+     "proposed_std": null,
+     "smote": "0.3143",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Avg-Recall (Table S7)",
+      "proposed": "0.669",
+      "smote": "0.6505"
+     },
+     {
+      "label": "Mean rank (Table S7)",
+      "proposed": "2.3704",
+      "smote": "3.2593"
+     },
+     {
+      "label": "Main paper Table 2, C4.5 Avg-Recall (mean±SD)",
+      "proposed": "0.669±0.237",
+      "smote": "0.651±0.243"
+     },
+     {
+      "label": "Main paper Table 2, C4.5 Mean rank",
+      "proposed": "2.37",
+      "smote": "3.259"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Wilcoxon signed-ranks test (main paper Table 3): \"++\" (/\"--\") and \"+*\" (/\"-*\") denote that SMOM is statistically better (/worse) than the considered algorithm at the significance level of 0.05 and 0.1, respectively; \"+\" signifies that SMOM is only quantitatively better, whereas \"-\" implies the contrary. SMOM vs SMOTE, C4.5: R+ 284.5, R- 93.5, T 93.5(++) (bold)"
+   }
+  },
+  {
+   "metric": "Precision (of the smallest minority class)",
+   "metric_family": "precision",
+   "table": "Table S9 (Supplementary), C4.5 columns",
+   "page": "Supplementary PDF page 13 (printed 13)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "vehicle",
+     "proposed": "0.866",
+     "proposed_std": null,
+     "smote": "0.8643",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "sat",
+     "proposed": "0.6921",
+     "proposed_std": null,
+     "smote": "0.6937",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ecoli",
+     "proposed": "0.5894",
+     "proposed_std": null,
+     "smote": "0.5684",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "automobile",
+     "proposed": "0.8992",
+     "proposed_std": null,
+     "smote": "0.9093",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "voice9_6",
+     "proposed": "0.1209",
+     "proposed_std": null,
+     "smote": "0.1198",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "vowel5",
+     "proposed": "0.8572",
+     "proposed_std": null,
+     "smote": "0.8539",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    },
+    {
+     "dataset_as_printed": "vowel7",
+     "proposed": "0.9492",
+     "proposed_std": null,
+     "smote": "0.9481",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "robot",
+     "proposed": "0.9994",
+     "proposed_std": null,
+     "smote": "1",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "pendigits",
+     "proposed": "0.9456",
+     "proposed_std": null,
+     "smote": "0.9481",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "page-blocks",
+     "proposed": "0.995",
+     "proposed_std": null,
+     "smote": "0.9883",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "housing5",
+     "proposed": "0.7996",
+     "proposed_std": null,
+     "smote": "0.8153",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "SWD",
+     "proposed": "0.2428",
+     "proposed_std": null,
+     "smote": "0.2776",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "wine-red",
+     "proposed": "0.1021",
+     "proposed_std": null,
+     "smote": "0.1046",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "voice9_7",
+     "proposed": "0.1305",
+     "proposed_std": null,
+     "smote": "0.167",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "LEV",
+     "proposed": "0.2572",
+     "proposed_std": null,
+     "smote": "0.224",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    },
+    {
+     "dataset_as_printed": "machine",
+     "proposed": "0.3519",
+     "proposed_std": null,
+     "smote": "0.3571",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "abalone8",
+     "proposed": "0.4554",
+     "proposed_std": null,
+     "smote": "0.4183",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "plates-faults5",
+     "proposed": "0.6395",
+     "proposed_std": null,
+     "smote": "0.6652",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "plates-faults7",
+     "proposed": "0.6583",
+     "proposed_std": null,
+     "smote": "0.6773",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ESL",
+     "proposed": "0.6002",
+     "proposed_std": null,
+     "smote": "0.6487",
+     "smote_std": null,
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "ERA",
+     "proposed": "0.6901",
+     "proposed_std": null,
+     "smote": "0.6852",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "yeast5",
+     "proposed": "0.4621",
+     "proposed_std": null,
+     "smote": "0.3255",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ERA5",
+     "proposed": "0.6525",
+     "proposed_std": null,
+     "smote": "0.6967",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "yeast7",
+     "proposed": "0.359",
+     "proposed_std": null,
+     "smote": "0.2097",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "abalone10",
+     "proposed": "0.4006",
+     "proposed_std": null,
+     "smote": "0.3938",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "yeast8",
+     "proposed": "0.3531",
+     "proposed_std": null,
+     "smote": "0.2557",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "housing10",
+     "proposed": "0.413",
+     "proposed_std": null,
+     "smote": "0.337",
+     "smote_std": null,
+     "marks": "SMOM bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Avg-Precision (Table S9)",
+      "proposed": "0.5734",
+      "smote": "0.5612"
+     },
+     {
+      "label": "Mean rank (Table S9)",
+      "proposed": "4.5741",
+      "smote": "4.2222"
+     },
+     {
+      "label": "Main paper Table 2, C4.5 Avg-Precision (mean±SD)",
+      "proposed": "0.573±0.282",
+      "smote": "0.561±0.296"
+     },
+     {
+      "label": "Main paper Table 2, C4.5 Mean rank",
+      "proposed": "4.574",
+      "smote": "4.222"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Wilcoxon signed-ranks test (main paper Table 3): \"++\" (/\"--\") and \"+*\" (/\"-*\") denote that SMOM is statistically better (/worse) than the considered algorithm at the significance level of 0.05 and 0.1, respectively; \"+\" signifies that SMOM is only quantitatively better, whereas \"-\" implies the contrary. SMOM vs SMOTE, C4.5: R+ 207, R- 171, T 171(+) (not bold)"
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [
+  {
+   "metric": "MG, MAUC, Recall, Precision",
+   "table": "Tables S3/S5/S7/S9 AdaBoost(C4.5) columns; Tables S4/S6/S8/S10",
+   "classifiers": "AdaBoost.M1(C4.5), NB, MLP"
+  }
+ ],
+ "metrics_without_smote": [
+  {
+   "metric": "F-measure (SMOM vs SL-SMOTE only)",
+   "table": "Table S11, S12"
+  },
+  {
+   "metric": "MG parameter sensitivity",
+   "table": "Table S1, S2"
+  }
+ ],
+ "notes": "Supplementary tables are text; column mapping and bold marks verified on 300-dpi renders of the C4.5 SMOTE/SMOM columns. Main-paper Tables 2 and 3 are images (read visually). Experiment 2 Tables S13-S16 / main Tables 4-5 compare SMOM with SMOTE (k=12) -- a different SMOTE setting, not copied. Experiment 3 Table 6 / S17-S20 (recall_majs etc., SMOTE k=12) not copied. Dataset names voice9_6/voice9_7 printed with underscore in rendered table."
+}

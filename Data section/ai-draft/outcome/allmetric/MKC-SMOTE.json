@@ -1,0 +1,397 @@
+{
+ "key": "MKC-SMOTE",
+ "classifier": "CART",
+ "condition": "original data, 5-fold CV, k=5, dup_size=2",
+ "proposed_column": "MKCS",
+ "smote_column": "SMO",
+ "metrics": [
+  {
+   "metric": "MG",
+   "metric_family": "G-mean",
+   "table": "Table 4 (CART block)",
+   "page": "PDF page 7 (printed p.196935)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "cmc",
+     "proposed": "57.79",
+     "proposed_std": null,
+     "smote": "54.37",
+     "smote_std": null,
+     "marks": "MKCS bold"
+    },
+    {
+     "dataset_as_printed": "use",
+     "proposed": "93.52",
+     "proposed_std": null,
+     "smote": "92.47",
+     "smote_std": null,
+     "marks": "RMS bold"
+    },
+    {
+     "dataset_as_printed": "new",
+     "proposed": "94.93",
+     "proposed_std": null,
+     "smote": "93.58",
+     "smote_std": null,
+     "marks": "MCC bold"
+    },
+    {
+     "dataset_as_printed": "con",
+     "proposed": "84.39",
+     "proposed_std": null,
+     "smote": "77.55",
+     "smote_std": null,
+     "marks": "MKCS bold"
+    },
+    {
+     "dataset_as_printed": "zoo",
+     "proposed": "99.53",
+     "proposed_std": null,
+     "smote": "97.17",
+     "smote_std": null,
+     "marks": "MKCS bold"
+    },
+    {
+     "dataset_as_printed": "ctg",
+     "proposed": "95.13",
+     "proposed_std": null,
+     "smote": "95.09",
+     "smote_std": null,
+     "marks": "MCC bold"
+    },
+    {
+     "dataset_as_printed": "eco",
+     "proposed": "91.84",
+     "proposed_std": null,
+     "smote": "84.12",
+     "smote_std": null,
+     "marks": "MKCS bold"
+    },
+    {
+     "dataset_as_printed": "gla",
+     "proposed": "79.43",
+     "proposed_std": null,
+     "smote": "71.06",
+     "smote_std": null,
+     "marks": "MKCS bold"
+    },
+    {
+     "dataset_as_printed": "abs",
+     "proposed": "58.33",
+     "proposed_std": null,
+     "smote": "20.39",
+     "smote_std": null,
+     "marks": "MKCS bold"
+    },
+    {
+     "dataset_as_printed": "nur",
+     "proposed": "99.83",
+     "proposed_std": null,
+     "smote": "99.80",
+     "smote_std": null,
+     "marks": "MKCS bold"
+    },
+    {
+     "dataset_as_printed": "let",
+     "proposed": "97.01",
+     "proposed_std": null,
+     "smote": "97.06",
+     "smote_std": null,
+     "marks": "MCC bold"
+    },
+    {
+     "dataset_as_printed": "car",
+     "proposed": "91.73",
+     "proposed_std": null,
+     "smote": "92.91",
+     "smote_std": null,
+     "marks": "SMO bold"
+    },
+    {
+     "dataset_as_printed": "win",
+     "proposed": "62.25",
+     "proposed_std": null,
+     "smote": "41.41",
+     "smote_std": null,
+     "marks": "MKCS bold"
+    },
+    {
+     "dataset_as_printed": "pok",
+     "proposed": "8.73",
+     "proposed_std": null,
+     "smote": "0.00",
+     "smote_std": null,
+     "marks": "FIY bold"
+    },
+    {
+     "dataset_as_printed": "hcv",
+     "proposed": "95.16",
+     "proposed_std": null,
+     "smote": "88.72",
+     "smote_std": null,
+     "marks": "MCC bold"
+    },
+    {
+     "dataset_as_printed": "yea",
+     "proposed": "79.52",
+     "proposed_std": null,
+     "smote": "58.08",
+     "smote_std": null,
+     "marks": "MKCS bold"
+    },
+    {
+     "dataset_as_printed": "cov",
+     "proposed": "86.93",
+     "proposed_std": null,
+     "smote": "86.47",
+     "smote_std": null,
+     "marks": "MCC bold"
+    },
+    {
+     "dataset_as_printed": "che",
+     "proposed": "68.21",
+     "proposed_std": null,
+     "smote": "62.45",
+     "smote_std": null,
+     "marks": "MKCS bold"
+    },
+    {
+     "dataset_as_printed": "aba",
+     "proposed": "56.68",
+     "proposed_std": null,
+     "smote": "47.66",
+     "smote_std": null,
+     "marks": "MKCS bold"
+    },
+    {
+     "dataset_as_printed": "bar",
+     "proposed": "79.62",
+     "proposed_std": null,
+     "smote": "60.48",
+     "smote_std": null,
+     "marks": "MKCS bold"
+    },
+    {
+     "dataset_as_printed": "avi",
+     "proposed": "68.85",
+     "proposed_std": null,
+     "smote": "63.87",
+     "smote_std": null,
+     "marks": "FIY bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Avg.",
+      "proposed": "78.54",
+      "smote": "70.70"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Table 5 Wilcoxon, MG, CART, MKC-SMOTE vs.SMO: R+ 222, R- 9, p-value 0.0000157400* ('*' = statistical differences with alpha = 0.05; R+ ranks in favor of MKC-SMOTE)"
+   }
+  },
+  {
+   "metric": "MAUC",
+   "metric_family": "AUC",
+   "table": "Table 3 (CART block)",
+   "page": "PDF page 6 (printed p.196934)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "cmc",
+     "proposed": "70.79",
+     "proposed_std": null,
+     "smote": "66.42",
+     "smote_std": null,
+     "marks": "MKCS bold"
+    },
+    {
+     "dataset_as_printed": "use",
+     "proposed": "97.75",
+     "proposed_std": null,
+     "smote": "97.26",
+     "smote_std": null,
+     "marks": "RMS bold"
+    },
+    {
+     "dataset_as_printed": "new",
+     "proposed": "98.17",
+     "proposed_std": null,
+     "smote": "97.15",
+     "smote_std": null,
+     "marks": "MKCS bold"
+    },
+    {
+     "dataset_as_printed": "con",
+     "proposed": "88.24",
+     "proposed_std": null,
+     "smote": "82.98",
+     "smote_std": null,
+     "marks": "MKCS bold"
+    },
+    {
+     "dataset_as_printed": "zoo",
+     "proposed": "99.72",
+     "proposed_std": null,
+     "smote": "98.44",
+     "smote_std": null,
+     "marks": "MKCS bold"
+    },
+    {
+     "dataset_as_printed": "ctg",
+     "proposed": "96.36",
+     "proposed_std": null,
+     "smote": "96.33",
+     "smote_std": null,
+     "marks": "MCC bold"
+    },
+    {
+     "dataset_as_printed": "eco",
+     "proposed": "97.02",
+     "proposed_std": null,
+     "smote": "94.33",
+     "smote_std": null,
+     "marks": "MKCS bold"
+    },
+    {
+     "dataset_as_printed": "gla",
+     "proposed": "93.37",
+     "proposed_std": null,
+     "smote": "90.74",
+     "smote_std": null,
+     "marks": "MKCS bold"
+    },
+    {
+     "dataset_as_printed": "abs",
+     "proposed": "89.63",
+     "proposed_std": null,
+     "smote": "75.85",
+     "smote_std": null,
+     "marks": "MKCS bold"
+    },
+    {
+     "dataset_as_printed": "nur",
+     "proposed": "99.89",
+     "proposed_std": null,
+     "smote": "99.86",
+     "smote_std": null,
+     "marks": "MKCS bold"
+    },
+    {
+     "dataset_as_printed": "let",
+     "proposed": "98.35",
+     "proposed_std": null,
+     "smote": "98.38",
+     "smote_std": null,
+     "marks": "MCC bold"
+    },
+    {
+     "dataset_as_printed": "car",
+     "proposed": "97.65",
+     "proposed_std": null,
+     "smote": "97.61",
+     "smote_std": null,
+     "marks": "RMS bold"
+    },
+    {
+     "dataset_as_printed": "win",
+     "proposed": "88.75",
+     "proposed_std": null,
+     "smote": "76.02",
+     "smote_std": null,
+     "marks": "MKCS bold"
+    },
+    {
+     "dataset_as_printed": "pok",
+     "proposed": "88.17",
+     "proposed_std": null,
+     "smote": "69.97",
+     "smote_std": null,
+     "marks": "MKCS bold"
+    },
+    {
+     "dataset_as_printed": "hcv",
+     "proposed": "97.94",
+     "proposed_std": null,
+     "smote": "96.25",
+     "smote_std": null,
+     "marks": "MCC bold"
+    },
+    {
+     "dataset_as_printed": "yea",
+     "proposed": "95.67",
+     "proposed_std": null,
+     "smote": "87.82",
+     "smote_std": null,
+     "marks": "MKCS bold"
+    },
+    {
+     "dataset_as_printed": "cov",
+     "proposed": "92.75",
+     "proposed_std": null,
+     "smote": "92.37",
+     "smote_std": null,
+     "marks": "MCC bold"
+    },
+    {
+     "dataset_as_printed": "che",
+     "proposed": "93.94",
+     "proposed_std": null,
+     "smote": "91.36",
+     "smote_std": null,
+     "marks": "MKCS bold"
+    },
+    {
+     "dataset_as_printed": "aba",
+     "proposed": "81.56",
+     "proposed_std": null,
+     "smote": "74.16",
+     "smote_std": null,
+     "marks": "MKCS bold"
+    },
+    {
+     "dataset_as_printed": "bar",
+     "proposed": "90.07",
+     "proposed_std": null,
+     "smote": "79.42",
+     "smote_std": null,
+     "marks": "MKCS bold"
+    },
+    {
+     "dataset_as_printed": "avi",
+     "proposed": "94.42",
+     "proposed_std": null,
+     "smote": "92.44",
+     "smote_std": null,
+     "marks": "FIY bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Avg.",
+      "proposed": "92.87",
+      "smote": "88.34"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Table 5 Wilcoxon, MAUC, CART, MKC-SMOTE vs.SMO: R+ 228, R- 3, p-value 0.0000023840* ('*' = statistical differences with alpha = 0.05)"
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [],
+ "metrics_without_smote": [
+  {
+   "metric": "average MAUC and MG for k=3/5/7 (MKC-SMOTE only)",
+   "table": "Table 6"
+  }
+ ],
+ "notes": "Tables 3-5 are images; read from 300-dpi renders of CART block (columns ORI MKCS MDO SMO KSM RMS FIY MCC). Bold = best per dataset across all 8 methods; marks name the bold column. Same metrics also reported for SVM (right half of Tables 3/4), not copied."
+}

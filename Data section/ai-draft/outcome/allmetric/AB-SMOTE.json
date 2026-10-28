@@ -1,0 +1,177 @@
+{
+ "key": "AB-SMOTE",
+ "classifier": "J48 decision tree (WEKA), 5-fold CV",
+ "condition": "original data, SMOTE k=5 vs 4.0: AB-SMOTE P' & P': M=5 k=5",
+ "proposed_column": "row '4.0: AB-SMOTE P' & P': M=5 k=5'",
+ "smote_column": "row '2.0: SMOTE k=5'",
+ "metrics": [
+  {
+   "metric": "F-measure",
+   "metric_family": "F-measure",
+   "table": "Tables IV-XI (one per dataset)",
+   "page": "PDF pages 4-5 (printed 34-35)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "Abalone9-18 (Table IV)",
+     "proposed": "0.493",
+     "proposed_std": null,
+     "smote": "0.474",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Customer Churn (Table V)",
+     "proposed": "0.704",
+     "proposed_std": null,
+     "smote": "0.749",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Harberman (Table VI)",
+     "proposed": "0.575",
+     "proposed_std": null,
+     "smote": "0.643",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Employee Attrition (Table VII)",
+     "proposed": "0.603",
+     "proposed_std": null,
+     "smote": "0.58",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Telco Customer Churn (Table VIII)",
+     "proposed": "0.678",
+     "proposed_std": null,
+     "smote": "0.731",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Flare (Table IX)",
+     "proposed": "0.421",
+     "proposed_std": null,
+     "smote": "0.47",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Wine Quality (Table X)",
+     "proposed": "0.215",
+     "proposed_std": null,
+     "smote": "0.215",
+     "smote_std": null,
+     "marks": "AB-SMOTE 4.0 F-measure 0.215 bold (SMOTE 0.215 not bold)"
+    },
+    {
+     "dataset_as_printed": "Sales: Win Loss (Table XI)",
+     "proposed": "0.826",
+     "proposed_std": null,
+     "smote": "0.838",
+     "smote_std": null,
+     "marks": "AB-SMOTE 4.0 F-measure 0.826 bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper per row; text: 'BSMOTE and AB-SMOTE managed to provide better results than the original SMOTE approach except in one case in Table V.' (Table XII compares only best BSMOTE vs best AB-SMOTE across variants, not vs SMOTE)",
+    "stat_test": "not stated in paper"
+   }
+  },
+  {
+   "metric": "Recall",
+   "metric_family": "recall",
+   "table": "Tables IV-XI (one per dataset)",
+   "page": "PDF pages 4-5 (printed 34-35)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Abalone9-18 (Table IV)",
+     "proposed": "0.427",
+     "proposed_std": null,
+     "smote": "0.381",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Customer Churn (Table V)",
+     "proposed": "0.578",
+     "proposed_std": null,
+     "smote": "0.631",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Harberman (Table VI)",
+     "proposed": "0.527",
+     "proposed_std": null,
+     "smote": "0.617",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Employee Attrition (Table VII)",
+     "proposed": "0.533",
+     "proposed_std": null,
+     "smote": "0.519",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Telco Customer Churn (Table VIII)",
+     "proposed": "0.897",
+     "proposed_std": null,
+     "smote": "0.917",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Flare (Table IX)",
+     "proposed": "0.293",
+     "proposed_std": null,
+     "smote": "0.36",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Wine Quality (Table X)",
+     "proposed": "0.151",
+     "proposed_std": null,
+     "smote": "0.151",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Sales: Win Loss (Table XI)",
+     "proposed": "0.804",
+     "proposed_std": null,
+     "smote": "0.816",
+     "smote_std": null,
+     "marks": "AB-SMOTE 4.0 Recall 0.804 bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper per row; text: 'BSMOTE and AB-SMOTE managed to provide better results than the original SMOTE approach except in one case in Table V.' (Table XII compares only best BSMOTE vs best AB-SMOTE across variants, not vs SMOTE)",
+    "stat_test": "not stated in paper"
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [],
+ "metrics_without_smote": [
+  {
+   "metric": "Table XII best-result counts (Recall, F-Measure) BSMOTE vs AB-SMOTE",
+   "table": "Table XII"
+  }
+ ],
+ "notes": "Tables are text (verified visually p.4-5). Bold = best obtained value per table across all 11 rows. In Table XI the 4.0 AB-SMOTE row is bolded although SMOTE k=5 (0.816/0.838) is printed higher; copied marks as printed. Variants 4.1-4.3 often better than 4.0 but not used."
+}

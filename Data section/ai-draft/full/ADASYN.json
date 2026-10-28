@@ -1,0 +1,126 @@
+{
+  "key": "ADASYN",
+  "pdf_file_read": "ADASYN_Adaptive_synthetic_sampling_approach_for_imbalanced_learning.pdf (Drive id 1TSf938BSpsQUc_1q0OW3LWiBEyaJ_Ph3)",
+  "task": "binary",
+  "n_datasets_claimed": 5,
+  "characteristics_table": "Table I, p.3 (printed 1324)",
+  "datasets": [
+    {
+      "name": "Vehicle",
+      "group": "",
+      "source_repo": "UCI",
+      "n_instances": 846, "n_features": 18, "n_classes": 2,
+      "n_minority": 199, "n_majority": 647,
+      "class_distribution": "199/647",
+      "ir_printed": null,
+      "how_obtained": "modified",
+      "how_obtained_detail": "original 4 classes (opel, saab, bus, van); 'Van' chosen as minority, remaining classes collapsed into majority (p.3)",
+      "in_results_table": "yes",
+      "ref": "Table I, p.3 (printed 1324)"
+    },
+    {
+      "name": "Diabetes (PID)",
+      "group": "",
+      "source_repo": "UCI",
+      "n_instances": 768, "n_features": 8, "n_classes": 2,
+      "n_minority": 268, "n_majority": 500,
+      "class_distribution": "268/500",
+      "ir_printed": null,
+      "how_obtained": "original",
+      "how_obtained_detail": "native two-class Pima Indian Diabetes; positive cases used as minority (p.4)",
+      "in_results_table": "yes",
+      "ref": "Table I, p.3 (printed 1324)"
+    },
+    {
+      "name": "Vowel",
+      "group": "",
+      "source_repo": "UCI",
+      "n_instances": 990, "n_features": 10, "n_classes": 2,
+      "n_minority": 90, "n_majority": 900,
+      "class_distribution": "90/900",
+      "ir_printed": null,
+      "how_obtained": "modified",
+      "how_obtained_detail": "original 11 classes; first vowel chosen as minority, rest collapsed into majority (p.4)",
+      "in_results_table": "yes",
+      "ref": "Table I, p.3 (printed 1324)"
+    },
+    {
+      "name": "Ionosphere",
+      "group": "",
+      "source_repo": "UCI",
+      "n_instances": 351, "n_features": 34, "n_classes": 2,
+      "n_minority": 126, "n_majority": 225,
+      "class_distribution": "126/225",
+      "ir_printed": null,
+      "how_obtained": "original",
+      "how_obtained_detail": "native two-class; 'bad radar' as minority, 'good radar' as majority (p.4)",
+      "in_results_table": "yes",
+      "ref": "Table I, p.3 (printed 1324)"
+    },
+    {
+      "name": "Abalone",
+      "group": "",
+      "source_repo": "UCI",
+      "n_instances": 731, "n_features": 7, "n_classes": 2,
+      "n_minority": 42, "n_majority": 689,
+      "class_distribution": "42/689",
+      "ir_printed": null,
+      "how_obtained": "modified",
+      "how_obtained_detail": "original 4177 examples, 29 classes, 8 attributes; class '18' as minority vs class '9' as majority (as suggested in [17]); discrete feature 'sex' removed (p.4)",
+      "in_results_table": "yes",
+      "ref": "Table I, p.3 (printed 1324)"
+    },
+    {
+      "name": "artificial two-class imbalanced data set",
+      "group": "Fig. 1 illustration",
+      "source_repo": "synthetic",
+      "n_instances": null, "n_features": null, "n_classes": 2,
+      "n_minority": 50, "n_majority": 200,
+      "class_distribution": "50/200 (training); testing set 200 examples",
+      "ir_printed": null,
+      "how_obtained": "synthetic",
+      "how_obtained_detail": "multidimensional Gaussian distributions with different mean and covariance; used only for beta-vs-error plot (Fig. 1, p.3)",
+      "in_results_table": "no",
+      "ref": "Fig. 1, p.3 (printed 1324)"
+    }
+  ],
+  "ir_definition": "degree of class imbalance d = ms/ml (Eq. 1), where ms = # minority, ml = # majority, d in (0,1]",
+  "ir_definition_ref": "p.2 (printed 1323)",
+  "outcome": {
+    "smote_in_baselines": "yes",
+    "smote_name_as_printed": "SMOTE",
+    "baselines_all": ["Decision tree", "SMOTE"],
+    "results_granularity": "per-dataset",
+    "chosen": {
+      "table": "Table II",
+      "page": "p.5 (printed 1326)",
+      "metric": "G mean",
+      "classifier": "decision tree",
+      "condition": "average of 100 runs, random 50/50 train/test split; K=5 for both; SMOTE N=200; ADASYN beta=1, dth=0.75",
+      "higher_is_better": true,
+      "is_image": false
+    },
+    "rows": [
+      {"dataset_as_printed": "Vehicle", "proposed": "0.9168", "proposed_std": null, "smote": "0.9018", "smote_std": null, "best_other_value": "0.8834", "best_other_name": "Decision tree", "marks": "ADASYN bold"},
+      {"dataset_as_printed": "Pima Indian Diabetes", "proposed": "0.6625", "proposed_std": null, "smote": "0.6454", "smote_std": null, "best_other_value": "0.6430", "best_other_name": "Decision tree", "marks": "ADASYN bold"},
+      {"dataset_as_printed": "Vowel recognition", "proposed": "0.9622", "proposed_std": null, "smote": "0.9470", "smote_std": null, "best_other_value": "0.9256", "best_other_name": "Decision tree", "marks": "ADASYN bold"},
+      {"dataset_as_printed": "Ionosphere", "proposed": "0.8530", "proposed_std": null, "smote": "0.8489", "smote_std": null, "best_other_value": "0.8371", "best_other_name": "Decision tree", "marks": "ADASYN bold"},
+      {"dataset_as_printed": "Abalone", "proposed": "0.6291", "proposed_std": null, "smote": "0.5588", "smote_std": null, "best_other_value": "0.5227", "best_other_name": "Decision tree", "marks": "ADASYN bold"}
+    ],
+    "summary_rows": [
+      {"label": "Winning times (G mean column)", "proposed": "5", "smote": "0"},
+      {"label": "Winning times (OA / Precision / Recall / F measure)", "proposed": "3 / 0 / 4 / 3", "smote": "0 / 0 / 1 / 1"}
+    ],
+    "stat_test": "not stated in paper",
+    "win_claim": {
+      "quote": "Simulation results on five data sets based on various evaluation metrics show the effectiveness of this method.",
+      "page": "p.6 (printed 1327)"
+    }
+  },
+  "uncertain": [
+    "Vowel: text says 'each vowel in the original data set has 10 examples' yet minority = 90; values copied as printed (p.4)",
+    "Pima and Ionosphere classed 'original' (native two-class; authors only designate positive class) (p.4)",
+    "Table I header '# attributes' read as n_features; Abalone 7 after removing 'sex' (p.3-4)"
+  ],
+  "notes": "Tables are text-extractable (not images). Table II also reports OA, Precision, Recall, F measure for Decision tree (original data), SMOTE, ADASYN. Decision tree = learning on original imbalanced data, used as reference; base classifier is decision tree throughout. No std reported. Abstract claim: 'Simulation analyses on several machine learning data sets show the effectiveness of this method across five evaluation metrics.' (p.1). Paper misspells SMOTE as 'SMTOE' once (p.5)."
+}

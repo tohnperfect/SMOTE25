@@ -1,0 +1,214 @@
+{
+ "units": "entries = named data entries (1,653); papers = papers with named entries (72)",
+ "n_instances": {
+  "entries": {
+   "n": 1326,
+   "of": 1653,
+   "pct": 80.2
+  },
+  "papers_with_any": {
+   "n": 59,
+   "of": 72,
+   "pct": 81.9
+  }
+ },
+ "n_features": {
+  "entries": {
+   "n": 1254,
+   "of": 1653,
+   "pct": 75.9
+  },
+  "papers_with_any": {
+   "n": 57,
+   "of": 72,
+   "pct": 79.2
+  }
+ },
+ "n_classes": {
+  "entries": {
+   "n": 1280,
+   "of": 1653,
+   "pct": 77.4
+  },
+  "papers_with_any": {
+   "n": 61,
+   "of": 72,
+   "pct": 84.7
+  }
+ },
+ "n_minority": {
+  "entries": {
+   "n": 504,
+   "of": 1653,
+   "pct": 30.5
+  },
+  "papers_with_any": {
+   "n": 33,
+   "of": 72,
+   "pct": 45.8
+  }
+ },
+ "n_majority": {
+  "entries": {
+   "n": 428,
+   "of": 1653,
+   "pct": 25.9
+  },
+  "papers_with_any": {
+   "n": 31,
+   "of": 72,
+   "pct": 43.1
+  }
+ },
+ "class_distribution": {
+  "entries": {
+   "n": 586,
+   "of": 1653,
+   "pct": 35.5
+  },
+  "papers_with_any": {
+   "n": 43,
+   "of": 72,
+   "pct": 59.7
+  }
+ },
+ "class_proportions_any_form": {
+  "entries": {
+   "n": 939,
+   "of": 1653,
+   "pct": 56.8
+  },
+  "papers_with_any": {
+   "n": 54,
+   "of": 72,
+   "pct": 75.0
+  }
+ },
+ "feature_type": {
+  "field": "none (not extracted systematically)",
+  "entries_mentioning": {
+   "n": 128,
+   "of": 1653,
+   "pct": 7.7
+  },
+  "papers_mentioning": {
+   "n": 10,
+   "of": 72,
+   "pct": 13.9
+  },
+  "note": "mentions found in extraction notes only; absence means not extracted"
+ },
+ "overlap_noise_sparsity": {
+  "entries_with_measured_value": {
+   "n": 36,
+   "of": 1653,
+   "pct": 2.2
+  },
+  "entries_with_described_property": {
+   "n": 5,
+   "of": 1653,
+   "pct": 0.3
+  },
+  "papers_reporting_inherent_property": {
+   "n": 3,
+   "of": 72,
+   "pct": 4.2
+  },
+  "measures": {
+   "MLOS": "class overlap (augmented R-value)",
+   "GDHS": "class overlap (Fisher discriminant ratio, Fdr)"
+  },
+  "papers_with_injected_or_generated_difficulty": {
+   "n": 12,
+   "of": 72,
+   "pct": 16.7
+  },
+  "sparsity": "no statement found in the curated evidence",
+  "caveat": "curated items cover 14 papers; 59 papers have keyword hits not reviewed"
+ },
+ "evaluation_protocol_papers": {
+  "source": "ai-draft/full outcome.chosen.condition (extraction text, not separately verified)",
+  "counts": {
+   "not stated in extracted condition": {
+    "n": 26,
+    "of": 72,
+    "pct": 36.1
+   },
+   "repeated k-fold CV": {
+    "n": 21,
+    "of": 72,
+    "pct": 29.2
+   },
+   "k-fold CV": {
+    "n": 16,
+    "of": 72,
+    "pct": 22.2
+   },
+   "hold-out split (incl. repeated)": {
+    "n": 7,
+    "of": 72,
+    "pct": 9.7
+   },
+   "no results table / not applicable": {
+    "n": 2,
+    "of": 72,
+    "pct": 2.8
+   }
+  },
+  "with_ai_draft_fallback": {
+   "repeated k-fold CV": {
+    "n": 21,
+    "of": 72,
+    "pct": 29.2
+   },
+   "k-fold CV": {
+    "n": 16,
+    "of": 72,
+    "pct": 22.2
+   },
+   "not captured in either extraction": {
+    "n": 9,
+    "of": 72,
+    "pct": 12.5
+   },
+   "hold-out split (incl. repeated)": {
+    "n": 7,
+    "of": 72,
+    "pct": 9.7
+   },
+   "repeated k-fold CV [from ai_draft prep_text]": {
+    "n": 7,
+    "of": 72,
+    "pct": 9.7
+   },
+   "k-fold CV [from ai_draft prep_text]": {
+    "n": 5,
+    "of": 72,
+    "pct": 6.9
+   },
+   "hold-out split (incl. repeated) [from ai_draft prep_text]": {
+    "n": 5,
+    "of": 72,
+    "pct": 6.9
+   },
+   "no results table / not applicable": {
+    "n": 2,
+    "of": 72,
+    "pct": 2.8
+   }
+  }
+ },
+ "preprocessing_or_resampling_placement": {
+  "source": "out/data_handling_matrix.csv prep_text (ai_draft, unverified)",
+  "papers_mentioning": {
+   "n": 3,
+   "of": 72,
+   "pct": 4.2
+  },
+  "papers": [
+   "CISO",
+   "G-SMOTE",
+   "QC-SMOTE"
+  ]
+ }
+}

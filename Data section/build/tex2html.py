@@ -48,6 +48,18 @@ def convert(tex):
     for n, lab in enumerate(labels, 1):
         html = re.sub(r'(<a href="#' + re.escape(lab) + r'"[^>]*>)\[?' + re.escape(lab) + r'\]?(</a>)', r"\g<1>" + str(n) + r"\2", html)
         html = html.replace('<div id="' + lab + '">', '<div id="' + lab + '" class="tabwrap"><div class="tabno">Table ' + str(n) + '</div>', 1)
+    # รูป (เพิ่ม 28 ต.ค. 2026): ฝัง manuscript/figures/<ชื่อ>.png เป็น data URI เพราะหน้า Atlas เป็นไฟล์เดียว และใส่เลขรูป
+    import base64
+    figdir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "manuscript")
+    def emb(m):
+        png = os.path.join(figdir, m.group(1) + ".png")
+        if not os.path.exists(png): sys.exit(f"STOP: figure {png} not found (run difficulty/fig_manuscript.py)")
+        return 'src="data:image/png;base64,' + base64.b64encode(open(png, "rb").read()).decode() + '" style="max-width:100%;height:auto"'
+    html = re.sub(r'src="(figures/[^"]+?)(?:\.pdf)?"', emb, html)
+    figs = re.findall(r'<img [^>]*id="(fig:[^"]+)"', html)
+    for n, lab in enumerate(figs, 1):
+        html = re.sub(r'(<a href="#' + re.escape(lab) + r'"[^>]*>)\[?' + re.escape(lab) + r'\]?(</a>)', r"\g<1>" + str(n) + r"\2", html)
+        html = re.sub(r'(<img [^>]*id="' + re.escape(lab) + r'"[^>]*>)(<figcaption>)', r"\1\2<b>Figure " + str(n) + ":</b> ", html, count=1)
     return html
 if __name__ == "__main__":
     tex = open(sys.argv[1], encoding="utf-8").read(); print(convert(tex))

@@ -1,0 +1,736 @@
+[
+ {
+  "paper": "k-means SMOTE",
+  "ref_sub": "Figure 8",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "ชื่อ dataset ทุกตัวปรากฏเป็นป้ายแกนใน Figure 8 p.24 (ไม่มีตัวเลขคุณลักษณะให้ตรวจ)",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "MC-NCLWO",
+  "ref_sub": "Table 1, p.10",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "Table 1 p.10 อ่านจากภาพ ตรงทั้ง 23 แถว (N, F, คลาส, IR, การกระจายคลาส)",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "DGOT",
+  "ref_sub": "Table I, p.8",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "Table I p.8 ตรงทั้ง 22 แถว",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "MKC-SMOTE",
+  "ref_sub": "Table 1, p.5",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "Table 1 p.5 ตรงทั้ง 21 แถว",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "MC-RBO",
+  "ref_sub": "Table I, p.7",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "Table I p.7 ตรงทั้ง 20 แถว (ตารางเป็นภาพ อ่านจากภาพ 130 dpi)",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "GOIO",
+  "ref_sub": "p.7",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "Table I และ II p.7 ตรงทั้ง 23 แถว",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "EasyEnsemble / BalanceCascade",
+  "ref_sub": "Table II, p.4",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "Table II p.4 ตรงทั้ง 16 แถว (คอลัมน์ Attribute พิมพ์เป็นรหัส เช่น 1N,7C จึงไม่ได้ลง n_features)",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "CBHSID",
+  "ref_sub": "Table 1, p.8",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "Table 1 p.8 ตรงทั้ง 16 แถว",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "RUSBoost",
+  "ref_sub": "Table I, p.5",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "Table I p.5 ตรงทั้ง 15 แถว (%min พิมพ์ไว้แต่ไม่ได้ลง ir_printed; #attr รวมตัวแปรตาม)",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "OSS",
+  "ref_sub": "Table 3, p.5",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "Table 3 p.5 ตรงทั้ง 7 แถว ข้อสังเกต: g7 และ veh1 ผู้เขียนสุ่มทิ้งตัวอย่างบางส่วนเพื่อให้หารด้วย k ลงตัว (p.5)",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "SMOM",
+  "ref_sub": "Table 1, p.8",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "Table 1 p.8 ตรง 4 แถว SWD LEV ERA ERA5 (แถวอื่นผ่านอัตโนมัติ)",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "INOS",
+  "ref_sub": "Table 1, p.7",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "Table 1 p.7 อ่านจากภาพได้ ตรง 4 แถว (Adiac FaceAll 50Words SLeaf) ตารางนี้ handoff เคยบันทึกว่าอ่านไม่ได้ ตอนนี้อ่านได้จาก PDF ในเครื่อง",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "DLexiBoost",
+  "ref_sub": "Supplement Table 1, p.4",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "Supp Table 1 p.4 ตรง 3 แถว (ชื่อขึ้นสองบรรทัดจึงหาอัตโนมัติไม่เจอ)",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "SVDD-WSMOTE",
+  "ref_sub": "Table 8, p.33",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "Table 8 p.33 ชื่อ IF OF RF และชุดรวมตรง 7 แถว 36 features ตรง (p.33 text) ขนาดกลุ่มพิมพ์ในเนื้อความ: normal 2000, IF 100, OF 100, RF 100 เติมลง class_distribution",
+  "corrections": {
+   "Bearing IF": {
+    "class_distribution": "normal 2000 / IF 100 (p.33 text)"
+   },
+   "Bearing OF": {
+    "class_distribution": "normal 2000 / OF 100 (p.33 text)"
+   },
+   "Bearing RF": {
+    "class_distribution": "normal 2000 / RF 100 (p.33 text)"
+   },
+   "Bearing IF + OF": {
+    "class_distribution": "normal 2000 / IF 100 / OF 100 (p.33 text)"
+   },
+   "Bearing OF + RF": {
+    "class_distribution": "normal 2000 / OF 100 / RF 100 (p.33 text)"
+   },
+   "Bearing IF + RF": {
+    "class_distribution": "normal 2000 / IF 100 / RF 100 (p.33 text)"
+   },
+   "Bearing IF + OF + RF": {
+    "class_distribution": "normal 2000 / IF 100 / OF 100 / RF 100 (p.33 text)"
+   }
+  },
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "MDO",
+  "ref_sub": "Table 1, p.9",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "UKM ตรง (ชื่อขึ้นสองบรรทัด)",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "EMDO",
+  "ref_sub": "Table 1, p.13",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "UKM ตรงตามที่พิมพ์ ข้อสังเกต: paper พิมพ์ Classes = 5 แต่ Class Distribution มี 4 ค่า (50/102/129/122) ขัดกันในตัวเอง",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "Loyalty-SMOTE",
+  "ref_sub": "Table 4, p.8",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "Satisfied ตรง (ข้อความ PDF ไม่มีชั้นข้อความของคำนี้ อ่านจากภาพ)",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "NBU",
+  "ref_sub": "Section 5.2",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "ตัวเลข MNIST 3/5 และ Breast cancer ตรงกับเนื้อความ p.18 (ชื่อเป็นคำบรรยาย ไม่ใช่ป้าย) MNIST เป็นการ undersample คลาส 3 หรือ 5 เอง",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "AB-SMOTE",
+  "ref_sub": "Table I, p.3",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "ชื่อขึ้นสองบรรทัดใน Table I p.4 ตัวเลขตรง (ref หน้าจริงคือ PDF p.4)",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "SHRINK",
+  "ref_sub": "Table 2, p.11",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "41/896/937 ตรงกับ Table 2 p.11",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "SPE",
+  "ref_sub": "Section VI-A",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "checkerboard 4x4 16 Gaussian components ตรง p.6 ตัวเลข 1000/10000 อยู่ใน Table II",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "ADASYN",
+  "ref_sub": "Fig. 1, p.3",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "50/200 ตรงตามเนื้อความ p.3 (ชื่อเป็นคำบรรยาย)",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "ClusterCentroids",
+  "ref_sub": "Fig",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "ชุดสังเคราะห์ DS ตามรูป 5-8 ขนาด 10000 ตรงกับเนื้อความ (ชื่อกลุ่มเป็นคำบรรยาย)",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "DLexiBoost",
+  "ref_sub": "Sec 4.2, p.10",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "ชุดสังเคราะห์ family A/B ตรงตามเนื้อความ p.10",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "DLexiBoost",
+  "ref_sub": "Supplement Table 6",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "ImageNet 8/9/12 ตรงตามเนื้อความหลัก Sec 4.5 และ Supp Table 6",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "MWMOTE",
+  "ref_sub": "Sec 5.3",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "โดเมนสังเคราะห์ CxC grid C=3,5 IR 1:3 1:10 ตรงตาม p.12",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "SMOTE-IPF",
+  "ref_sub": "Section 4.2",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "ชุด noise ของ 9 ชุดจริงตามเนื้อความ p.8-9 (ชื่อเป็นคำบรรยาย)",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "SVDD-WSMOTE",
+  "ref_sub": "Sec 5.1",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "ชุดสังเคราะห์ A-D ตามเนื้อความ p.16-18",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "MWMOTE",
+  "ref_sub": "Table 5, p.12",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "Table 5 p.12 (ภาพ) ตรงทั้ง 20 แถวตามที่พิมพ์ รวมค่าที่พิมพ์ผิดซึ่งบันทึกใน mwmote-table5-audit.md",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "MWMOTE",
+  "ref_sub": "Table 5",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "ดูข้างบน",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "MC-RBO",
+  "ref_sub": "Table VI",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Table VI p.10 MC-RBO กับ SMOTE-all ตรงทั้ง 20 แถว",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "MWMOTE",
+  "ref_sub": "Table 6",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Table 6 p.13-14 G-mean Single NN MWMOTE กับ SMOTE ตรงทั้ง 20 แถว",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "GOIO",
+  "ref_sub": "Table V",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Table V p.10 F1 GOIO กับ SMOTE ตรงทั้ง 23 แถว",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "DGOT",
+  "ref_sub": "Table V",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Table V p.10 F1 ตรงทั้ง 22 แถว ข้อสังเกต: หัวคอลัมน์ของวิธีที่เสนอใน Table V พิมพ์ว่า BTDG ไม่ใช่ DGOT (Table IV พิมพ์ DGOT)",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "MKC-SMOTE",
+  "ref_sub": "Table 4",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Table 4 p.7 MG CART MKCS กับ SMO ตรงทั้ง 21 แถว",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "CBHSID",
+  "ref_sub": "Table 3",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Table 3 p.9 G-Mean ตรงทั้ง 16 แถว ข้อสังเกต: Table 3 พิมพ์ชื่อแถวแรกว่า River แต่ Table 1 และ Table 4 พิมพ์ Liver (พิมพ์ผิดใน paper)",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "AMDO",
+  "ref_sub": "Table 6",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Table 6 p.10 และ Table 9 p.11 MAUC AMDO กับ OSMOTE ตรงทั้ง 17 แถว",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "DSRBF / Static-SMOTE",
+  "ref_sub": "Table 6",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Table 6 p.10 C_G DSRBF กับ SmoteOS ตรงทั้ง 13 แถว",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "EMDO",
+  "ref_sub": "Table 5",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Table 5 p.15 MAUC EMDO กับ SSMOTE ตรงทั้ง 9 แถว ข้อสังเกตสำคัญ: คอลัมน์ Baseline SSMOTE GCS ABNC OSMOTE ใน Table 4-5 ของ EMDO ตรงกับ Table 6 ของ AMDO (2018) ทุกค่าที่ตรวจ เช่น Balance 67.29/68.79/67.49/71.75/68.39 คนละกลุ่มผู้เขียน น่าจะยกผล baseline มาจาก AMDO โดยไม่ได้รันใหม่ ต้องดูว่า EMDO บอกไว้ไหม",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "EasyEnsemble / BalanceCascade",
+  "ref_sub": "Table X",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Table X p.8 และ Table XI p.9 G-mean Easy กับ SMOTE ตรงทั้ง 16 แถว",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "RUSBoost",
+  "ref_sub": "Table IV",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Table IV p.9 A-ROC C4.5D RUSBoost กับ SMOTE ตรงทั้ง 15 แถว (ชื่อในตารางผลไม่มีเลขคลาสต่อท้ายเหมือน Table I เช่น PENDIGITS กับ PENDIGITS5)",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "RACOG / wRACOG",
+  "ref_sub": "Table 5",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Table 5 p.8 G-mean SVM คอลัมน์ wRACOG กับ SMOTE ตรงทั้ง 10 แถว (วิธีที่เสนอที่เลือกคือ wRACOG)",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "INOS",
+  "ref_sub": "Table 2",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Table 2 p.9 G-Mean INOS กับ SMOTE ตรงทั้ง 7 แถว",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "GDO",
+  "ref_sub": "Table 7",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Table 7 p.9 G-Mean GDO กับ SMOTE ตรงทั้ง 40 แถว",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "KNNOR",
+  "ref_sub": "Table 5",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Table 5 p.15 G-score SVM KNNOR .8363 SMOTE .8238 ตรง (ค่าเฉลี่ยทุกชุด) ข้อสังเกต: Table 6 p.15 หัวคอลัมน์ G, F1, P20 ดูสลับกับค่า (G=0.7041 ใกล้ F1 ใน Table 5, P20=0.8403 ใกล้ G)",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "RBBoost / Random Balance",
+  "ref_sub": "Supplementary",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "ตรวจแบบอ่านคอลัมน์จากชั้นข้อความ: Supp Table 11 p.17-18 คอลัมน์ RB-B และ Supp Table 3 p.3-5 คอลัมน์ ESM ตรงทั้ง 86 แถว (และดูภาพ p.17 ยืนยัน)",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "FW-SMOTE",
+  "ref_sub": "Table A.4",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Supp Table A.4 (PDF supp p.4, printed 32) k-NN G-mean FW-SMOTE กับ SMT ตรงทั้ง 42 แถว",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "SVDD-WSMOTE",
+  "ref_sub": "Table 3",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Table 3 p.24-25 G-M BPNN SVDDWSMOTE กับ SMOTE ตรงทั้ง 24 แถว ข้อสังเกต: หัวตาราง continued p.25 พิมพ์ซ้ำว่า Wine/Iris/Abalone ทั้งที่ข้อมูลคือ Spect/Pageblock/Pageblock1 (ชื่อจริงอยู่ท้าย p.24)",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "OREM-M",
+  "ref_sub": "S24",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Supp Table S24 (supp PDF p.40) MG C4.5 OREM-M กับ SMOTE ตรงทั้ง 21 แถว เติมเลขหน้า supp p.40",
+  "corrections": {
+   "_page": "supplementary PDF p.40"
+  },
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "RAMOBoost",
+  "ref_sub": "Table III",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Table III p.9-10 G-mean RAMOBoost กับ SMOTE ตรงทั้ง 19 แถว",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "MLOS",
+  "ref_sub": "Table 8",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Table 8 p.13 G-mean SVM MLOS กับ SMOTE ตรงทั้ง 16 แถว",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "NBU",
+  "ref_sub": "Table 4",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Table 4 PDF p.26 G-mean SVM คอลัมน์ NB-Comm กับ SMOTE ตรงทั้ง 24 แถว (Glass5 เป็น 0 ทุกวิธีและไม่ได้จัดอันดับ)",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "SMOTE-ENN / SMOTE-Tomek",
+  "ref_sub": "Table 4",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Table 4 p.7 AUC pruned=yes คอลัมน์ Smote+ENN กับ Smote ตรงทั้ง 15 แถว",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "ADASYN",
+  "ref_sub": "Table II",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Table II p.5 G_mean ADASYN กับ SMOTE ตรงทั้ง 5 แถว",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "SOS",
+  "ref_sub": "Table 2",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Table 2 p.7 Weighted F1 แถว Sub-VP กับ SMOTE ตรงทั้ง 6 แถว",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "SMOTEBoost",
+  "ref_sub": "Tables 3",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Tables 3-6 p.7-8 F-value N=100 SMOTEBoost กับ SMOTE ตรงทั้ง 4 แถว",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "SPE",
+  "ref_sub": "Table IV",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Table IV p.8 GM Credit Fraud SPE10 กับ SMOTE ตรงทั้ง 3 แถว (SMOTE ไม่ได้รันกับอีก 4 ชุดใหญ่ paper ให้เหตุผลว่าต้นทุนคำนวณสูง)",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "OVO-SMOTE",
+  "ref_sub": "Table 7",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Table 7 p.10 C4.5 คอลัมน์ SMT (OVO+SMOTE) กับ Static-SMT ตรงทั้ง 24 แถว",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "AB-SMOTE",
+  "ref_sub": "Tables IV",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Tables IV-XI p.4-5 F-measure config 4.0 (M=5,k=5) กับ SMOTE k=5 ตรงทั้ง 8 แถว ข้อสังเกตจาก paper: (1) Table I พิมพ์ Wine Quality total 1493 แต่ minority 53 + majority 1546 = 1599 (2) Table VII พิมพ์ F-measure 0.871 ตัวหนาให้ BSMOTE 3.1 ขณะที่แถวอื่นอยู่ราว 0.6 น่าจะพิมพ์ผิด (3) ข้อความ p.5 บอกว่า BSMOTE และ AB-SMOTE ดีกว่า SMOTE ทุกกรณียกเว้นหนึ่ง แต่ถ้าล็อก config 4.0 ตามกติกา SMOTE สูงกว่าใน 5 จาก 8 ชุด ข้อสรุปของ paper มาจากการเลือก config ที่ดีที่สุดรายชุด",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "GAMO",
+  "ref_sub": "Tables 1",
+  "kind": "outcomes",
+  "result": "ok",
+  "note": "Tables 1-4 p.6-7 GM (LS, During Testing) GAMO กับ SMOTE+CN ตรงทั้ง 9 แถว",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "SMOTE-IPF",
+  "ref_sub": "Section 4.1",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "ชุดสังเคราะห์ตามเนื้อความ p.7-8 ค่าตรง ชื่อรวมอยู่ในตาราง p.11",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "SPIDER2",
+  "ref_sub": "Table 2, p.7",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "ชุด subclus/clover/paw ตามเนื้อความและ Table 1-2 p.6-7 ค่าตรง",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "GAMO",
+  "ref_sub": "Sec 4",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "ชุดภาพตามเนื้อความ Sec 4 ค่าตรง (ดูภาพ p.6-7)",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "SMOTE",
+  "ref_sub": "Table 2, p.14",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "Table 2 p.14 ของ SMOTE 2002 ค่าตรง (ตารางพิมพ์คนละบรรทัดกับชื่อ)",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "k-means SMOTE",
+  "ref_sub": "Table 2",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "Table 2 p.15 ค่าตรง",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "SOS",
+  "ref_sub": "Section 4.1.1",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "เนื้อความ p.6 ค่าตรง",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "ROS (Buda)",
+  "ref_sub": "Table 1",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "เนื้อความและ Table 1 p.4 ค่าตรง",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "SPE",
+  "ref_sub": "Table",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "เนื้อความและ Table II/III ค่าตรง",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "GDO",
+  "ref_sub": "Sec 4.2.3",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "เนื้อความ p.8 ค่าตรง",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "ClusterCentroids",
+  "ref_sub": "Table 4",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "Table 4 p.8 ค่าตรง",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ },
+ {
+  "paper": "Tomek Links",
+  "ref_sub": "Fig. 6",
+  "kind": "datasets",
+  "result": "ok",
+  "note": "Fig. 6 caption p.3 (2 classes, uniform, 400 samples) และ p.4 (2 classes of 200 two-dimensional samples each) อ่านจากชั้นข้อความของ PDF ในเครื่อง",
+  "corrections": {},
+  "checked_by": "Claude (visual, rendered PDF page)",
+  "date": "2026-10-18"
+ }
+]

@@ -1,0 +1,98 @@
+paper_a,row_a,paper_b,row_b,dataset,field_a,field_b,value,metric_a,metric_b
+AMDO,31,EMDO,129,balance,best_other_value,best_other_value,71.75,"MAUC (%), mean with std (subscript)","MAUC (%), mean with std subscript"
+AMDO,32,EMDO,130,hayes-roth,best_other_value,best_other_value,89.00,"MAUC (%), mean with std (subscript)","MAUC (%), mean with std subscript"
+AMDO,33,EMDO,131,new-thyroid,proposed,best_other_value,97.40,"MAUC (%), mean with std (subscript)","MAUC (%), mean with std subscript"
+AMDO,34,EMDO,132,page-blocks,smote,best_other_value,93.51,"MAUC (%), mean with std (subscript)","MAUC (%), mean with std subscript"
+AMDO,35,EMDO,133,dermatology,best_other_value,proposed,98.26,"MAUC (%), mean with std (subscript)","MAUC (%), mean with std subscript"
+AMDO,35,EMDO,133,dermatology,best_other_value,best_other_value,98.26,"MAUC (%), mean with std (subscript)","MAUC (%), mean with std subscript"
+AMDO,36,EMDO,134,breast-tissue,best_other_value,best_other_value,81.27,"MAUC (%), mean with std (subscript)","MAUC (%), mean with std subscript"
+AMDO,37,EMDO,135,user-knowledge-modelling,best_other_value,best_other_value,96.32,"MAUC (%), mean with std (subscript)","MAUC (%), mean with std subscript"
+AMDO,38,EMDO,136,vertebral-column,proposed,best_other_value,86.42,"MAUC (%), mean with std (subscript)","MAUC (%), mean with std subscript"
+AMDO,38,EMDO,136,vertebral-column,best_other_value,smote,82.92,"MAUC (%), mean with std (subscript)","MAUC (%), mean with std subscript"
+AMDO,39,EMDO,137,ecoli,proposed,best_other_value,89.03,"MAUC (%), mean with std (subscript)","MAUC (%), mean with std subscript"
+MC-CCR,339,MC-RBO,379,automobile,smote,smote,51.86,mGM [%],mGM [%]
+MC-CCR,339,MC-RBO,379,automobile,best_other_value,best_other_value,78.75,mGM [%],mGM [%]
+MC-CCR,340,MC-RBO,380,balance,smote,smote,40.57,mGM [%],mGM [%]
+MC-CCR,341,MC-RBO,381,car,smote,smote,81.16,mGM [%],mGM [%]
+MC-CCR,342,MC-RBO,382,cleveland,smote,smote,18.00,mGM [%],mGM [%]
+MC-CCR,343,MC-RBO,383,contraceptive,smote,smote,38.15,mGM [%],mGM [%]
+MC-CCR,344,MC-RBO,384,dermatology,smote,smote,79.34,mGM [%],mGM [%]
+MC-CCR,344,MC-RBO,384,dermatology,best_other_value,best_other_value,95.23,mGM [%],mGM [%]
+MC-CCR,345,MC-RBO,385,ecoli,smote,smote,51.72,mGM [%],mGM [%]
+MC-CCR,345,MC-RBO,385,ecoli,best_other_value,best_other_value,67.54,mGM [%],mGM [%]
+MC-CCR,346,MC-RBO,386,flare,smote,smote,55.98,mGM [%],mGM [%]
+MC-CCR,347,MC-RBO,387,glass,smote,smote,55.41,mGM [%],mGM [%]
+MC-CCR,348,MC-RBO,388,hayes-roth,smote,smote,70.52,mGM [%],mGM [%]
+MC-CCR,349,MC-RBO,389,led7digit,smote,smote,57.85,mGM [%],mGM [%]
+MC-CCR,349,MC-RBO,389,led7digit,best_other_value,best_other_value,78.19,mGM [%],mGM [%]
+MC-CCR,350,MC-RBO,390,lymphography,smote,smote,40.60,mGM [%],mGM [%]
+MC-CCR,350,MC-RBO,390,lymphography,best_other_value,best_other_value,73.99,mGM [%],mGM [%]
+MC-CCR,351,MC-RBO,391,new-thyroid,smote,smote,80.69,mGM [%],mGM [%]
+MC-CCR,352,MC-RBO,392,page-blocks,smote,smote,71.64,mGM [%],mGM [%]
+MC-CCR,353,MC-RBO,393,thyroid,smote,smote,73.62,mGM [%],mGM [%]
+MC-CCR,354,MC-RBO,394,vehicle,smote,smote,59.57,mGM [%],mGM [%]
+MC-CCR,355,MC-RBO,395,wine,smote,smote,80.82,mGM [%],mGM [%]
+MC-CCR,355,MC-RBO,395,wine,best_other_value,best_other_value,93.41,mGM [%],mGM [%]
+MC-CCR,356,MC-RBO,396,winequality-red,smote,smote,17.80,mGM [%],mGM [%]
+MC-CCR,356,MC-RBO,396,winequality-red,best_other_value,best_other_value,42.56,mGM [%],mGM [%]
+MC-CCR,357,MC-RBO,397,yeast,smote,smote,43.83,mGM [%],mGM [%]
+MC-CCR,357,MC-RBO,397,yeast,best_other_value,best_other_value,52.91,mGM [%],mGM [%]
+MC-CCR,358,MC-RBO,398,zoo,smote,smote,55.61,mGM [%],mGM [%]
+MC-CCR,355,NROMM,480,wine,smote,smote,80.82,mGM [%],MG (multi-class G-mean)
+MC-CCR,347,NROMM,481,glass,smote,smote,55.41,mGM [%],MG (multi-class G-mean)
+MC-CCR,351,NROMM,482,new-thyroid,smote,smote,80.69,mGM [%],MG (multi-class G-mean)
+MC-CCR,354,NROMM,483,vehicle,smote,smote,59.57,mGM [%],MG (multi-class G-mean)
+MC-CCR,354,NROMM,483,vehicle,best_other_value,best_other_value,71.97,mGM [%],MG (multi-class G-mean)
+MC-CCR,352,NROMM,484,page-blocks,smote,smote,71.64,mGM [%],MG (multi-class G-mean)
+MC-CCR,356,NROMM,485,winequality-red,smote,smote,17.80,mGM [%],MG (multi-class G-mean)
+MC-CCR,358,NROMM,486,zoo,smote,smote,55.61,mGM [%],MG (multi-class G-mean)
+MC-CCR,340,NROMM,487,balance,smote,smote,40.57,mGM [%],MG (multi-class G-mean)
+MC-CCR,340,NROMM,487,balance,proposed,best_other_value,62.22,mGM [%],MG (multi-class G-mean)
+MC-CCR,341,NROMM,488,car,smote,smote,81.16,mGM [%],MG (multi-class G-mean)
+MC-CCR,349,NROMM,489,led7digit,smote,smote,57.85,mGM [%],MG (multi-class G-mean)
+MC-CCR,349,NROMM,489,led7digit,proposed,best_other_value,80.44,mGM [%],MG (multi-class G-mean)
+MC-CCR,344,NROMM,490,dermatology,smote,smote,79.34,mGM [%],MG (multi-class G-mean)
+MC-CCR,346,NROMM,491,flare,smote,smote,55.98,mGM [%],MG (multi-class G-mean)
+MC-CCR,348,NROMM,492,hayes-roth,smote,smote,70.52,mGM [%],MG (multi-class G-mean)
+MC-CCR,350,NROMM,493,lymphography,smote,smote,40.60,mGM [%],MG (multi-class G-mean)
+MC-CCR,339,NROMM,494,automobile,smote,smote,51.86,mGM [%],MG (multi-class G-mean)
+MC-CCR,339,NROMM,494,automobile,best_other_value,best_other_value,78.75,mGM [%],MG (multi-class G-mean)
+MC-CCR,342,NROMM,495,cleveland,smote,smote,18.00,mGM [%],MG (multi-class G-mean)
+MC-CCR,343,NROMM,496,contraceptive,smote,smote,38.15,mGM [%],MG (multi-class G-mean)
+MC-CCR,343,NROMM,496,contraceptive,best_other_value,best_other_value,52.60,mGM [%],MG (multi-class G-mean)
+MC-CCR,345,NROMM,497,ecoli,smote,smote,51.72,mGM [%],MG (multi-class G-mean)
+MC-CCR,357,NROMM,498,yeast,smote,smote,43.83,mGM [%],MG (multi-class G-mean)
+MC-CCR,353,NROMM,499,thyroid,smote,smote,73.62,mGM [%],MG (multi-class G-mean)
+MC-RBO,395,NROMM,480,wine,smote,smote,80.82,mGM [%],MG (multi-class G-mean)
+MC-RBO,387,NROMM,481,glass,smote,smote,55.41,mGM [%],MG (multi-class G-mean)
+MC-RBO,387,NROMM,481,glass,proposed,best_other_value,73.08,mGM [%],MG (multi-class G-mean)
+MC-RBO,391,NROMM,482,new-thyroid,smote,smote,80.69,mGM [%],MG (multi-class G-mean)
+MC-RBO,391,NROMM,482,new-thyroid,proposed,best_other_value,96.73,mGM [%],MG (multi-class G-mean)
+MC-RBO,394,NROMM,483,vehicle,smote,smote,59.57,mGM [%],MG (multi-class G-mean)
+MC-RBO,392,NROMM,484,page-blocks,smote,smote,71.64,mGM [%],MG (multi-class G-mean)
+MC-RBO,392,NROMM,484,page-blocks,proposed,best_other_value,87.27,mGM [%],MG (multi-class G-mean)
+MC-RBO,396,NROMM,485,winequality-red,smote,smote,17.80,mGM [%],MG (multi-class G-mean)
+MC-RBO,396,NROMM,485,winequality-red,proposed,best_other_value,48.33,mGM [%],MG (multi-class G-mean)
+MC-RBO,398,NROMM,486,zoo,smote,smote,55.61,mGM [%],MG (multi-class G-mean)
+MC-RBO,398,NROMM,486,zoo,proposed,best_other_value,85.01,mGM [%],MG (multi-class G-mean)
+MC-RBO,380,NROMM,487,balance,smote,smote,40.57,mGM [%],MG (multi-class G-mean)
+MC-RBO,381,NROMM,488,car,smote,smote,81.16,mGM [%],MG (multi-class G-mean)
+MC-RBO,381,NROMM,488,car,proposed,best_other_value,97.15,mGM [%],MG (multi-class G-mean)
+MC-RBO,389,NROMM,489,led7digit,smote,smote,57.85,mGM [%],MG (multi-class G-mean)
+MC-RBO,384,NROMM,490,dermatology,smote,smote,79.34,mGM [%],MG (multi-class G-mean)
+MC-RBO,384,NROMM,490,dermatology,proposed,best_other_value,95.72,mGM [%],MG (multi-class G-mean)
+MC-RBO,386,NROMM,491,flare,smote,smote,55.98,mGM [%],MG (multi-class G-mean)
+MC-RBO,386,NROMM,491,flare,proposed,best_other_value,65.50,mGM [%],MG (multi-class G-mean)
+MC-RBO,388,NROMM,492,hayes-roth,smote,smote,70.52,mGM [%],MG (multi-class G-mean)
+MC-RBO,390,NROMM,493,lymphography,smote,smote,40.60,mGM [%],MG (multi-class G-mean)
+MC-RBO,390,NROMM,493,lymphography,proposed,best_other_value,79.13,mGM [%],MG (multi-class G-mean)
+MC-RBO,379,NROMM,494,automobile,smote,smote,51.86,mGM [%],MG (multi-class G-mean)
+MC-RBO,379,NROMM,494,automobile,best_other_value,best_other_value,78.75,mGM [%],MG (multi-class G-mean)
+MC-RBO,382,NROMM,495,cleveland,smote,smote,18.00,mGM [%],MG (multi-class G-mean)
+MC-RBO,382,NROMM,495,cleveland,proposed,best_other_value,34.04,mGM [%],MG (multi-class G-mean)
+MC-RBO,383,NROMM,496,contraceptive,smote,smote,38.15,mGM [%],MG (multi-class G-mean)
+MC-RBO,385,NROMM,497,ecoli,smote,smote,51.72,mGM [%],MG (multi-class G-mean)
+MC-RBO,385,NROMM,497,ecoli,proposed,best_other_value,72.66,mGM [%],MG (multi-class G-mean)
+MC-RBO,397,NROMM,498,yeast,smote,smote,43.83,mGM [%],MG (multi-class G-mean)
+MC-RBO,397,NROMM,498,yeast,proposed,best_other_value,58.06,mGM [%],MG (multi-class G-mean)
+MC-RBO,393,NROMM,499,thyroid,smote,smote,73.62,mGM [%],MG (multi-class G-mean)

@@ -1,0 +1,143 @@
+{
+  "key": "ClusterCentroids",
+  "pdf_file_read": "ClusterCentroids (Yen-Lee) - Cluster-Based Under-Sampling Approaches for Imbalanced Data Distributions (ESWA 2009).pdf",
+  "task": "binary",
+  "n_datasets_claimed": null,
+  "characteristics_table": "none",
+  "datasets": [
+    {
+      "name": "DS4E10DN",
+      "group": "synthetic (DSiEjDk)",
+      "source_repo": "synthetic",
+      "n_instances": 10000, "n_features": null, "n_classes": null,
+      "n_minority": null, "n_majority": null,
+      "class_distribution": null,
+      "ir_printed": "9–1",
+      "how_obtained": "synthetic",
+      "how_obtained_detail": "authors' synthetic dataset generator; 10,000 samples, 5 numerical + 5 categorical attributes; 4 clusters, 10% exceptional samples, no disordered samples (p.6, printed 5723)",
+      "in_results_table": "no",
+      "ref": "Fig. 4, p.5 (printed 5722); text p.6 (printed 5723)"
+    },
+    {
+      "name": "DS4E10D20",
+      "group": "synthetic (DSiEjDk)",
+      "source_repo": "synthetic",
+      "n_instances": 10000, "n_features": null, "n_classes": null,
+      "n_minority": null, "n_majority": null,
+      "class_distribution": null,
+      "ir_printed": "9–1",
+      "how_obtained": "synthetic",
+      "how_obtained_detail": "authors' generator; 4 clusters, 10% exceptional samples, 20% disordered samples; 5 numerical + 5 categorical attributes",
+      "in_results_table": "no",
+      "ref": "Fig. 4, p.5 (printed 5722); text p.6 (printed 5723)"
+    },
+    {
+      "name": "DSiE10D20 (DS2, DS4, DS6, DS8, DS10, DS12, DS16)",
+      "group": "synthetic (DSiEjDk)",
+      "source_repo": "synthetic",
+      "n_instances": 10000, "n_features": null, "n_classes": null,
+      "n_minority": null, "n_majority": null,
+      "class_distribution": null,
+      "ir_printed": "9–1 (Fig. 6); 2:1, 4:1, 9:1, 18:1, 36:1, 72:1 (Fig. 5)",
+      "how_obtained": "synthetic",
+      "how_obtained_detail": "authors' generator; i clusters (i from 2 to 16), 10% exceptional, 20% disordered samples; Fig. 5 averages several such datasets per ratio",
+      "in_results_table": "no",
+      "ref": "Figs. 5-6, p.5-6 (printed 5722-5723); text p.7 (printed 5724)"
+    },
+    {
+      "name": "DSiE30D40 (DS2, DS4, DS6, DS8, DS10, DS12, DS16)",
+      "group": "synthetic (DSiEjDk)",
+      "source_repo": "synthetic",
+      "n_instances": 10000, "n_features": null, "n_classes": null,
+      "n_minority": null, "n_majority": null,
+      "class_distribution": null,
+      "ir_printed": null,
+      "how_obtained": "synthetic",
+      "how_obtained_detail": "authors' generator; i clusters (2 to 16), 30% exceptional, 40% disordered samples",
+      "in_results_table": "no",
+      "ref": "Fig. 7, p.6 (printed 5723); text p.7 (printed 5724)"
+    },
+    {
+      "name": "DSiE50D60 (DS2, DS4, DS6, DS8, DS10, DS12, DS16)",
+      "group": "synthetic (DSiEjDk)",
+      "source_repo": "synthetic",
+      "n_instances": 10000, "n_features": null, "n_classes": null,
+      "n_minority": null, "n_majority": null,
+      "class_distribution": null,
+      "ir_printed": null,
+      "how_obtained": "synthetic",
+      "how_obtained_detail": "authors' generator; i clusters (2 to 16), 50% exceptional, 60% disordered samples",
+      "in_results_table": "no",
+      "ref": "Fig. 8, p.7 (printed 5724)"
+    },
+    {
+      "name": "Census-Income Database",
+      "group": "real datasets",
+      "source_repo": "UCI",
+      "n_instances": 30162, "n_features": null, "n_classes": 2,
+      "n_minority": 7508, "n_majority": 22654,
+      "class_distribution": "22,654 majority (<50K) / 7508 minority (>=50K)",
+      "ir_printed": null,
+      "how_obtained": "original",
+      "how_obtained_detail": "'from UCI Knowledge Discovery in Databases Archive'; incomplete data removed by authors (30,162 after cleaning); income level <50K vs >=50K; 80% train / 20% test",
+      "in_results_table": "yes",
+      "ref": "Table 4, p.8 (printed 5725); text p.8"
+    },
+    {
+      "name": "Overdue Detection Database",
+      "group": "real datasets",
+      "source_repo": "private",
+      "n_instances": 62309, "n_features": null, "n_classes": 2,
+      "n_minority": 14602, "n_majority": 47707,
+      "class_distribution": "train: 47,707 good / 14,602 bad customers; test: 49,931 majority / 13,601 minority (63,532)",
+      "ir_printed": null,
+      "how_obtained": "original",
+      "how_obtained_detail": "bank dataset; training = November 2004 extract (62,309), testing = December 2004 extract (63,532); counts recorded are the training set",
+      "in_results_table": "no",
+      "ref": "Fig. 11, p.8 (printed 5725); text p.9 (printed 5726)"
+    }
+  ],
+  "ir_definition": "not stated in paper",
+  "ir_definition_ref": "p.3 (printed 5720) describes training ratio SizeMA:SizeMI = m:1 only",
+  "outcome": {
+    "smote_in_baselines": "no",
+    "smote_name_as_printed": "SMOTE (discussed in Related work only, p.2; not a baseline)",
+    "baselines_all": ["AT", "RT", "NearMiss-2"],
+    "results_granularity": "per-dataset partial",
+    "chosen": {
+      "table": "Table 4",
+      "page": "p.8 (printed 5725)",
+      "metric": "MI's F-measure",
+      "classifier": "artificial neural network (backpropagation; IBM Intelligent Miner for Data V8.1)",
+      "condition": "Census-Income Database, 80/20 split, SBC with k-means clustering",
+      "higher_is_better": true,
+      "is_image": false
+    },
+    "rows": [
+      {
+        "dataset_as_printed": "Census-Income Database",
+        "proposed": "62.15",
+        "proposed_std": null,
+        "smote": null,
+        "smote_std": null,
+        "best_other_value": "58.98",
+        "best_other_name": "NearMiss-2",
+        "marks": "none"
+      }
+    ],
+    "summary_rows": [],
+    "stat_test": "none reported",
+    "win_claim": {
+      "quote": "The experimental results show that our cluster-based under-sampling approaches outperform the other under-sampling techniques in the previous studies.",
+      "page": "p.1 (abstract)"
+    }
+  },
+  "uncertain": [
+    "Proposed method taken as SBC (named in abstract/conclusion as best); SBCMD also highlighted in conclusion for noisy data (p.9).",
+    "best_other chosen among external baselines AT/RT/NearMiss-2 only; proposed variant SBCMF has 59.04 in Table 4 (p.8).",
+    "Census-Income how_obtained set 'original' although authors removed incomplete records (p.8); could be read as 'modified'.",
+    "Overdue Detection n_instances/n_minority/n_majority are training-set counts; separate test set of 63,532 (p.9).",
+    "Synthetic datasets: n_classes not explicitly printed (two groups/classes per cluster, p.4); number of attributes printed as 5 numerical + 5 categorical, left n_features null (p.6)."
+  ],
+  "notes": "Under-sampling paper (SBC = under-sampling based on clustering). Proposed variants: SBC, SBCNM-1, SBCNM-2, SBCNM-3, SBCMD, SBCMF. Metrics: MI's precision, recall, F-measure (plus MA's for Census). No G-mean or AUC reported. Only Census-Income has numeric per-method table (Table 4, text-extractable, verified against rendered page 8). Synthetic results (Figs. 4-8) and Overdue Detection (Fig. 11) are bar/line plots only, no printed numbers. Execution times in Figs. 9, 10, 12. Paper refers to 'two real datasets'; number of synthetic datasets not stated. Classifier is a single ANN throughout; clustering by k-means. Table 4 other values (MI's F-measure): RT 46.47, AT 51.9, SBCNM-1 45.28, SBCNM-2 45.64, SBCNM-3 44.61, SBCMD 44.94, SBCMF 59.04."
+}

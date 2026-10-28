@@ -1,0 +1,660 @@
+{
+ "_about": "รหัสระดับ paper เรื่องการเลือกและจัดการข้อมูล ให้รหัสโดย Claude 16 ต.ค. 2026 จากข้อความในฟิลด์ crit/prep/srcdet/ev ของ papers.json (69 เรื่อง) ไม่ได้เปิด PDF ใหม่ สถานะ ai_draft ทุกค่า ต้องตรวจกับ paper ก่อนใช้ 7 เรื่องที่เหลือมาจาก ai-draft/new7/*.json ซึ่งอ่าน PDF ใหม่และมีเลขหน้า",
+ "_vocab": {
+  "crit_type": [
+   "own reason",
+   "cites prior work",
+   "generic only",
+   "not stated",
+   "n.a."
+  ],
+  "basis": [
+   "diversity",
+   "difficulty",
+   "method-target",
+   "application",
+   "prior-work",
+   "popularity",
+   "threshold rule",
+   "random draw",
+   "preregistered",
+   "replicability",
+   "analytic"
+  ],
+  "minority_rule": [
+   "explicit target listed",
+   "smallest class vs rest",
+   "mean-size or IR threshold",
+   "repository-defined",
+   "induced by authors",
+   "not defined",
+   "not stated",
+   "n.a."
+  ]
+ },
+ "codes": {
+  "ENN (Wilson)": [
+   "n.a.",
+   [
+    "analytic"
+   ],
+   "",
+   "n.a."
+  ],
+  "Tomek Links": [
+   "cites prior work",
+   [
+    "prior-work"
+   ],
+   "earlier reference (toy set)",
+   "n.a."
+  ],
+  "AdaBoost": [
+   "n.a.",
+   [],
+   "",
+   "n.a."
+  ],
+  "OSS": [
+   "own reason",
+   [
+    "application",
+    "replicability"
+   ],
+   "",
+   "explicit target listed"
+  ],
+  "SHRINK": [
+   "own reason",
+   [
+    "application"
+   ],
+   "",
+   "n.a."
+  ],
+  "SMOTE": [
+   "own reason",
+   [
+    "diversity",
+    "prior-work"
+   ],
+   "partial: Provost et al. (Satimage), Kubat et al. (Oil)",
+   "explicit target listed"
+  ],
+  "SMOTEBoost": [
+   "own reason",
+   [
+    "diversity"
+   ],
+   "",
+   "smallest class vs rest"
+  ],
+  "SMOTE-ENN / SMOTE-Tomek": [
+   "own reason",
+   [
+    "diversity",
+    "difficulty"
+   ],
+   "",
+   "explicit target listed"
+  ],
+  "Borderline-SMOTE": [
+   "not stated",
+   [],
+   "",
+   "explicit target listed"
+  ],
+  "Cluster-SMOTE": [
+   "own reason",
+   [
+    "application"
+   ],
+   "",
+   "n.a."
+  ],
+  "Global-CS (AAAI)": [
+   "own reason",
+   [
+    "method-target"
+   ],
+   "",
+   "not defined"
+  ],
+  "COG-OS": [
+   "own reason",
+   [
+    "diversity",
+    "method-target"
+   ],
+   "",
+   "not stated"
+  ],
+  "ADASYN": [
+   "cites prior work",
+   [
+    "prior-work",
+    "diversity"
+   ],
+   "partial: DataBoost-IM, Provost et al.",
+   "explicit target listed"
+  ],
+  "LS": [
+   "own reason",
+   [
+    "diversity",
+    "prior-work"
+   ],
+   "partial: SMOTE paper",
+   "smallest class vs rest"
+  ],
+  "ClusterCentroids": [
+   "own reason",
+   [
+    "difficulty",
+    "application"
+   ],
+   "",
+   "n.a."
+  ],
+  "EasyEnsemble / BalanceCascade": [
+   "own reason",
+   [
+    "diversity"
+   ],
+   "",
+   "explicit target listed"
+  ],
+  "Safe-Level-SMOTE": [
+   "not stated",
+   [],
+   "",
+   "explicit target listed"
+  ],
+  "Global-CS (journal)": [
+   "own reason",
+   [
+    "method-target"
+   ],
+   "own conference version (Global-CS AAAI)",
+   "not defined"
+  ],
+  "RAMOBoost": [
+   "own reason",
+   [
+    "diversity"
+   ],
+   "",
+   "explicit target listed"
+  ],
+  "RUSBoost": [
+   "own reason",
+   [
+    "diversity"
+   ],
+   "",
+   "explicit target listed"
+  ],
+  "SPIDER2": [
+   "own reason",
+   [
+    "difficulty",
+    "prior-work"
+   ],
+   "partial: authors' earlier SPIDER study",
+   "not stated"
+  ],
+  "DSRBF / Static-SMOTE": [
+   "own reason",
+   [
+    "method-target"
+   ],
+   "",
+   "explicit target listed"
+  ],
+  "OVO-SMOTE": [
+   "own reason",
+   [
+    "threshold rule",
+    "method-target"
+   ],
+   "",
+   "not defined"
+  ],
+  "MWMOTE": [
+   "own reason",
+   [
+    "diversity"
+   ],
+   "",
+   "explicit target listed"
+  ],
+  "RACOG / wRACOG": [
+   "own reason",
+   [
+    "application",
+    "diversity"
+   ],
+   "",
+   "not stated"
+  ],
+  "RBBoost / Random Balance": [
+   "cites prior work",
+   [
+    "prior-work"
+   ],
+   "HDDT collection [37] and KEEL binary collection",
+   "repository-defined"
+  ],
+  "SCUT": [
+   "own reason",
+   [
+    "diversity"
+   ],
+   "",
+   "mean-size or IR threshold"
+  ],
+  "SplitBal": [
+   "own reason",
+   [
+    "threshold rule",
+    "method-target"
+   ],
+   "",
+   "repository-defined"
+  ],
+  "A-SUWO": [
+   "not stated",
+   [],
+   "",
+   "not stated"
+  ],
+  "CGMOS": [
+   "own reason",
+   [
+    "random draw"
+   ],
+   "",
+   "smallest class vs rest"
+  ],
+  "MDO": [
+   "own reason",
+   [
+    "method-target",
+    "diversity"
+   ],
+   "",
+   "explicit target listed"
+  ],
+  "SMOM": [
+   "own reason",
+   [
+    "diversity"
+   ],
+   "",
+   "mean-size or IR threshold"
+  ],
+  "AMDO": [
+   "own reason",
+   [
+    "threshold rule",
+    "method-target"
+   ],
+   "",
+   "not defined"
+  ],
+  "OBU": [
+   "own reason",
+   [
+    "popularity",
+    "diversity"
+   ],
+   "",
+   "not stated"
+  ],
+  "ROS (Buda)": [
+   "own reason",
+   [
+    "difficulty"
+   ],
+   "",
+   "induced by authors"
+  ],
+  "k-means SMOTE": [
+   "generic only",
+   [
+    "popularity"
+   ],
+   "",
+   "smallest class vs rest"
+  ],
+  "CTGAN / TVAE": [
+   "own reason",
+   [
+    "method-target"
+   ],
+   "",
+   "n.a."
+  ],
+  "G-SMOTE": [
+   "own reason",
+   [
+    "diversity"
+   ],
+   "",
+   "not stated"
+  ],
+  "GAMO": [
+   "own reason",
+   [
+    "difficulty"
+   ],
+   "",
+   "induced by authors"
+  ],
+  "RBO": [
+   "own reason",
+   [
+    "diversity",
+    "replicability"
+   ],
+   "",
+   "repository-defined"
+  ],
+  "SOUP": [
+   "cites prior work",
+   [
+    "prior-work",
+    "diversity"
+   ],
+   "partial: Fernandez et al. 2013, Galar et al. 2011, Saez et al. 2016",
+   "explicit target listed"
+  ],
+  "AB-SMOTE": [
+   "cites prior work",
+   [
+    "threshold rule",
+    "popularity"
+   ],
+   "",
+   "n.a."
+  ],
+  "DLexiBoost": [
+   "own reason",
+   [
+    "difficulty",
+    "application"
+   ],
+   "",
+   "not stated"
+  ],
+  "MBS": [
+   "not stated",
+   [],
+   "",
+   "not stated"
+  ],
+  "MC-CCR": [
+   "cites prior work",
+   [
+    "prior-work",
+    "difficulty"
+   ],
+   "Saez et al.",
+   "not defined"
+  ],
+  "MC-RBO": [
+   "cites prior work",
+   [
+    "prior-work",
+    "difficulty"
+   ],
+   "authors' earlier study on instance-level difficulty",
+   "not defined"
+  ],
+  "NBU": [
+   "own reason",
+   [
+    "difficulty",
+    "application"
+   ],
+   "",
+   "explicit target listed"
+  ],
+  "SPE": [
+   "own reason",
+   [
+    "application"
+   ],
+   "",
+   "explicit target listed"
+  ],
+  "EMDO": [
+   "cites prior work",
+   [
+    "prior-work"
+   ],
+   "AMDO benchmark, reused for direct comparison",
+   "mean-size or IR threshold"
+  ],
+  "RSMOTE": [
+   "not stated",
+   [],
+   "",
+   "not stated"
+  ],
+  "Survey: SMOTE Review": [
+   "n.a.",
+   [],
+   "",
+   "n.a."
+  ],
+  "CBHSID": [
+   "own reason",
+   [
+    "diversity",
+    "popularity"
+   ],
+   "",
+   "not stated"
+  ],
+  "FW-SMOTE": [
+   "own reason",
+   [
+    "method-target",
+    "popularity"
+   ],
+   "partial: Maldonado et al. (12 microarray sets)",
+   "repository-defined"
+  ],
+  "GDO": [
+   "own reason",
+   [
+    "diversity",
+    "application"
+   ],
+   "",
+   "smallest class vs rest"
+  ],
+  "KNNOR": [
+   "cites prior work",
+   [
+    "prior-work",
+    "threshold rule",
+    "random draw"
+   ],
+   "partial: smote-variants benchmark",
+   "repository-defined"
+  ],
+  "SHSampler": [
+   "own reason",
+   [
+    "difficulty",
+    "diversity"
+   ],
+   "",
+   "mean-size or IR threshold"
+  ],
+  "SOS": [
+   "not stated",
+   [],
+   "",
+   "not stated"
+  ],
+  "SVDD-WSMOTE": [
+   "own reason",
+   [
+    "diversity"
+   ],
+   "",
+   "smallest class vs rest"
+  ],
+  "Survey: Stop Oversampling": [
+   "own reason",
+   [
+    "popularity",
+    "method-target"
+   ],
+   "",
+   "repository-defined"
+  ],
+  "GLOS": [
+   "generic only",
+   [
+    "popularity"
+   ],
+   "",
+   "not defined"
+  ],
+  "OREM-M": [
+   "own reason",
+   [
+    "diversity"
+   ],
+   "",
+   "explicit target listed"
+  ],
+  "GMMSampling": [
+   "cites prior work",
+   [
+    "prior-work",
+    "diversity"
+   ],
+   "SOUP paper and Lango & Stefanowski 2018",
+   "explicit target listed"
+  ],
+  "MC-MBRC": [
+   "own reason",
+   [
+    "difficulty"
+   ],
+   "partial: synthetic generator from Vuttipittayamongkol et al. 2020",
+   "mean-size or IR threshold"
+  ],
+  "MKC-SMOTE": [
+   "own reason",
+   [
+    "diversity"
+   ],
+   "",
+   "mean-size or IR threshold"
+  ],
+  "CISO": [
+   "own reason",
+   [
+    "preregistered",
+    "diversity"
+   ],
+   "",
+   "smallest class vs rest"
+  ],
+  "GDHS": [
+   "own reason",
+   [
+    "diversity",
+    "difficulty"
+   ],
+   "partial: 6 defect sets from a prior CBR paper",
+   "not stated"
+  ],
+  "MC-NCLWO": [
+   "cites prior work",
+   [
+    "prior-work",
+    "difficulty"
+   ],
+   "Saez et al.",
+   "not defined"
+  ],
+  "MLOS": [
+   "own reason",
+   [
+    "threshold rule",
+    "difficulty"
+   ],
+   "",
+   "repository-defined"
+  ],
+  "QC-SMOTE": [
+   "cites prior work",
+   [
+    "prior-work"
+   ],
+   "VS-SMOTE benchmark, adopted wholesale with its baseline results",
+   "repository-defined"
+  ]
+ },
+ "codes_new7_note": "basis และ minority_rule ของ 7 เรื่องนี้ Claude ให้รหัสจาก crit/imbalance_creation ใน ai-draft/new7/*.json ส่วน crit_type ใช้ค่าที่ subagent อ่านจาก PDF",
+ "codes_new7": {
+  "DGOT": [
+   [],
+   "",
+   "explicit target listed"
+  ],
+  "GOIO": [
+   [],
+   "",
+   "explicit target listed"
+  ],
+  "HDE": [
+   [
+    "popularity",
+    "method-target"
+   ],
+   "",
+   "not stated"
+  ],
+  "INOS": [
+   [
+    "method-target"
+   ],
+   "",
+   "not stated"
+  ],
+  "Loyalty-SMOTE": [
+   [
+    "popularity"
+   ],
+   "",
+   "not stated"
+  ],
+  "NROMM": [
+   [
+    "prior-work"
+   ],
+   "multi-class: Koziarski et al. RBU (PR 2020) and MC-CCR; binary: PA, FW-SMOTE, SVDD-WSMOTE",
+   "repository-defined"
+  ],
+  "SMOTE-IPF": [
+   [
+    "prior-work",
+    "difficulty"
+   ],
+   "Napierala, Stefanowski, Wilk (noisy and borderline examples)",
+   "explicit target listed"
+  ]
+ },
+ "_changes": [
+  "16 ต.ค. AB-SMOTE: เอา 'threshold from Fernandez et al. 2013' ออกจาก inherited_from เพราะยืมเกณฑ์ ไม่ได้ยืมรายชื่อ dataset เกณฑ์ยังอยู่ใน basis = threshold rule",
+  "18 ต.ค. (รอบตรวจครบ) Tomek Links: crit_type จาก n.a. เป็น cites prior work, basis เป็น prior-work เพราะ Fig. 6 caption p.3 เขียนว่า 'Example taken from [4]' และ Toon ตัดสินให้นับ Tomek เป็น paper ที่มีการประเมินผลบนข้อมูล (ตัวหาร 73) minority_rule คง n.a. เพราะสองคลาสเท่ากัน 200/200"
+ ]
+}

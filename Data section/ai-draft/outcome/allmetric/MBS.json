@@ -1,0 +1,145 @@
+{
+ "key": "MBS",
+ "classifier": "logistic regression",
+ "condition": "main suite, original data, MBS_linear, 100% over-sampling rate, k=5, 5 iterations",
+ "proposed_column": "MBS_linear",
+ "smote_column": "Smote",
+ "metrics": [
+  {
+   "metric": "AUC (Average AUC)",
+   "metric_family": "AUC",
+   "table": "Table 3",
+   "page": "PDF page 8 (printed p.1550)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "Pima",
+     "proposed": "0.8254",
+     "proposed_std": null,
+     "smote": "0.8238",
+     "smote_std": null,
+     "marks": "Table 4 rank: MBS_linear 1, Smote 5; MBS_linear bold+underlined (best)"
+    },
+    {
+     "dataset_as_printed": "Haberman",
+     "proposed": "0.6873",
+     "proposed_std": null,
+     "smote": "0.6825",
+     "smote_std": null,
+     "marks": "Table 4 rank: MBS_linear 1, Smote 5; MBS_linear bold+underlined (best)"
+    },
+    {
+     "dataset_as_printed": "Satimage",
+     "proposed": "0.7645",
+     "proposed_std": null,
+     "smote": "0.7613",
+     "smote_std": null,
+     "marks": "Table 4 rank: MBS_linear 2, Smote 5"
+    },
+    {
+     "dataset_as_printed": "Ecoli",
+     "proposed": "0.9296",
+     "proposed_std": null,
+     "smote": "0.9233",
+     "smote_std": null,
+     "marks": "Table 4 rank: MBS_linear 1, Smote 8; MBS_linear bold+underlined (best)"
+    },
+    {
+     "dataset_as_printed": "Shuttle",
+     "proposed": "0.8902",
+     "proposed_std": null,
+     "smote": "0.8684",
+     "smote_std": null,
+     "marks": "Table 4 rank: MBS_linear 1, Smote 11; MBS_linear bold+underlined (best)"
+    },
+    {
+     "dataset_as_printed": "Ionosphere",
+     "proposed": "0.8661",
+     "proposed_std": null,
+     "smote": "0.8373",
+     "smote_std": null,
+     "marks": "Table 4 rank: MBS_linear 1, Smote 10; MBS_linear bold+underlined (best)"
+    },
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "0.9882",
+     "proposed_std": null,
+     "smote": "0.9836",
+     "smote_std": null,
+     "marks": "Table 4 rank: MBS_linear 5, Smote 7"
+    },
+    {
+     "dataset_as_printed": "Credit",
+     "proposed": "0.7178",
+     "proposed_std": null,
+     "smote": "0.7003",
+     "smote_std": null,
+     "marks": "Table 4 rank: MBS_linear 1, Smote 6; MBS_linear bold+underlined (best)"
+    },
+    {
+     "dataset_as_printed": "Diabetes",
+     "proposed": "0.6348",
+     "proposed_std": null,
+     "smote": "0.6322",
+     "smote_std": null,
+     "marks": "Table 4 rank: MBS_linear 1, Smote 7; MBS_linear bold+underlined (best)"
+    },
+    {
+     "dataset_as_printed": "Hmeq",
+     "proposed": "0.7837",
+     "proposed_std": null,
+     "smote": "0.7837",
+     "smote_std": null,
+     "marks": "Table 4 rank: MBS_linear 3, Smote 5"
+    },
+    {
+     "dataset_as_printed": "Promotion",
+     "proposed": "0.6499",
+     "proposed_std": null,
+     "smote": "0.6499",
+     "smote_std": null,
+     "marks": "Table 4 rank: MBS_linear 4, Smote 3"
+    },
+    {
+     "dataset_as_printed": "Bank",
+     "proposed": "0.8600",
+     "proposed_std": null,
+     "smote": "0.8581",
+     "smote_std": null,
+     "marks": "Table 4 rank: MBS_linear 1, Smote 8; MBS_linear bold+underlined (best)"
+    },
+    {
+     "dataset_as_printed": "Spambase",
+     "proposed": "0.9712",
+     "proposed_std": null,
+     "smote": "0.9661",
+     "smote_std": null,
+     "marks": "Table 4 rank: MBS_linear 3, Smote 6"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper (text: \"Among the 13 datasets, MBS_linear achieves the best performances on 8 datasets, and gets the second place on one dataset.\")",
+    "stat_test": "Wilcoxon Signed-Rank Test (Table 5): \"MBS_linear vs. SMOTE  Rejected  0.0005\" (Hypothesis(a=0.05), p-value)"
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [],
+ "metrics_without_smote": [
+  {
+   "metric": "Average AUC for different variations of MBS",
+   "table": "Table 6"
+  },
+  {
+   "metric": "Average AUC ensemble methods (MBSBoost, RUSBoost, UnderBagging)",
+   "table": "Table 8"
+  },
+  {
+   "metric": "AUC mean and 95% CI bar plots Haberman/Shuttle (no printed numbers)",
+   "table": "Fig. 5"
+  }
+ ],
+ "notes": "AUC is the only metric in the paper. Table 3 is text; column mapping verified visually on rendered page 8. Best per row is bold+underlined; no Smote cell is marked. Ranks copied from Table 4."
+}

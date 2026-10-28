@@ -1,0 +1,22 @@
+{
+ "key": "KNNOR",
+ "smote_in_baselines": "yes",
+ "smote_name_as_printed": "SMOTE [18]",
+ "baselines_all": ["polynom-fit-SMOTE [25]", "ProWSyn [26]", "Lee [27]", "SMOBD [28]", "G-SMOTE [29]", "CCR [30]", "LVQ-SMOTE [31]", "Assembled SMOTE [32]", "SMOTE - Tomeklinks [33]", "SMOTE-IPF [22]", "SMOTE [18]", "No Oversampling"],
+ "results_tables": [
+  {"table": "Table 5", "page": "PDF p.15", "metric": "AUC, F1, P20, G (mean score over 19 datasets, top-9 oversamplers + BL rows)", "classifier": "SVM, DT, KNN, MLP", "granularity": "aggregate only", "is_image": false},
+  {"table": "Table 6", "page": "PDF p.15", "metric": "Average Rank plus aggregated AUC, G, F1, P20 values and ranks (averaged over classifiers)", "classifier": "averaged over SVM, DT, KNN, MLP", "granularity": "aggregate only", "is_image": false}
+ ],
+ "chosen": {"table": "Table 5", "page": "PDF p.15", "metric": "G (G-score, mean over 19 datasets)", "classifier": "SVM", "condition": "original datasets (no condition varied)", "higher_is_better": true, "why_this_choice": "No per-dataset table in the paper; rule 3 G-mean chosen from aggregate table; rule 4 abstract names no classifier, SVM is the first classifier column reported in the results table (note: Section 4.1 lists kNN first)."},
+ "rows": [],
+ "summary_rows": [
+  {"label": "Mean over 19 datasets (G, SVM, Table 5)", "proposed": ".8363", "smote": ".8238"},
+  {"label": "Mean over 19 datasets (AUC, SVM, Table 5)", "proposed": ".8892", "smote": ".8666"},
+  {"label": "Mean over 19 datasets (F1, SVM, Table 5)", "proposed": ".6775", "smote": ".6643"},
+  {"label": "Average Rank (Table 6, all metrics/classifiers)", "proposed": "1", "smote": "10.25"},
+  {"label": "Table 6 column 'G' (as printed)", "proposed": "0.7041", "smote": "0.6736"}
+ ],
+ "stat_test": "not stated in paper",
+ "win_claim": {"quote": "The experimental results on several common imbalanced datasets show that our method ranks first more consistently than the other state-of-art oversamplers.", "page": "PDF p.1, abstract"},
+ "notes": "Paper gives no per-dataset results ('The entire result is a part of the additional documents due to page limitations'; not available in Drive folder, not read). 19 KEEL/PROMISE datasets in Table 2 (p.11), incl. typo 'habarman'. Table 5/6 page rendered and checked visually; text matches print. Table 5 SVM G column: best printed is KNNOR at rank 1 (.8363); next polynom-fit-SMOTE [25] .834. Other classifiers G: DT KNNOR .823 / SMOTE .8198 (LVQ-SMOTE [31] .8356 top); KNN KNNOR .8512 / SMOTE .858 (polynom-fit-SMOTE .8611 top); MLP KNNOR .8508 / SMOTE .8342. Table 6 header columns appear mislabeled: values under 'G' (~0.70) look like F1, under 'F1' (~0.44) look like P20, under 'P20' (~0.84) look like G; copied as printed. Table 6 'Rank' column order does not follow 'Average Rank' values (e.g., CCR rank 2 with average rank 7.5). KNNOR bold/italic in Table 5 only as italics on its name; no significance marks."
+}

@@ -1,0 +1,102 @@
+{
+ "name": "shuttle",
+ "entries": 7,
+ "papers": 7,
+ "groups": [
+  {
+   "group": "S1",
+   "n_instances": "2175",
+   "papers": [
+    "MC-MBRC",
+    "MC-NCLWO"
+   ],
+   "status": "consistent in print across 2 papers (not proof of the same file)",
+   "n_classes": [
+    "5"
+   ],
+   "class_counts": [
+    [
+     2,
+     6,
+     123,
+     338,
+     1706
+    ]
+   ],
+   "minority_majority": []
+  },
+  {
+   "group": "S2",
+   "n_instances": "43500",
+   "papers": [
+    "MBS",
+    "RAMOBoost"
+   ],
+   "status": "consistent in print across 2 papers (not proof of the same file)",
+   "n_classes": [
+    "2"
+   ],
+   "class_counts": [
+    [
+     37,
+     43463
+    ]
+   ],
+   "minority_majority": [
+    [
+     "37",
+     "43463"
+    ]
+   ]
+  },
+  {
+   "group": "S3",
+   "n_instances": "14500",
+   "papers": [
+    "Loyalty-SMOTE"
+   ],
+   "status": "single paper: unresolved",
+   "n_classes": [],
+   "class_counts": [],
+   "minority_majority": []
+  },
+  {
+   "group": "S4",
+   "n_instances": "57999",
+   "papers": [
+    "OVO-SMOTE"
+   ],
+   "status": "single paper: unresolved",
+   "n_classes": [
+    "5"
+   ],
+   "class_counts": [
+    [
+     10,
+     13,
+     49,
+     171,
+     3267,
+     8903,
+     45586
+    ]
+   ],
+   "minority_majority": []
+  },
+  {
+   "group": "S5",
+   "n_instances": "",
+   "papers": [
+    "DLexiBoost"
+   ],
+   "status": "unresolved: size not printed",
+   "n_classes": [
+    "5"
+   ],
+   "class_counts": [],
+   "minority_majority": []
+  }
+ ],
+ "conclusion": "The exact name 'shuttle' covers at least 4 different printed versions; they are not pooled. No version is confirmed as a specific repository file from paper evidence alone.",
+ "rule": "group = identical printed n_instances; status from agreement of printed class counts; no external knowledge used"
+}

@@ -1,0 +1,186 @@
+{
+ "key": "SOUP",
+ "classifier": "J4.8 (J48) decision tree",
+ "condition": "main suite, 19 datasets, original data, stratified 10-fold CV, no added noise",
+ "proposed_column": "SOUP",
+ "smote_column": "Static SMOTE (Static-SMOTE, Fernández-Navarro et al.)",
+ "metrics": [
+  {
+   "metric": "G-mean",
+   "metric_family": "G-mean",
+   "table": "Table 6",
+   "page": "PDF page 11 (printed p.779)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "balance scale",
+     "proposed": "0.585",
+     "proposed_std": null,
+     "smote": "0.080",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "car",
+     "proposed": "0.941",
+     "proposed_std": null,
+     "smote": "0.897",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "cleveland 1",
+     "proposed": "0.266",
+     "proposed_std": null,
+     "smote": "0.052",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "cleveland 2",
+     "proposed": "0.303",
+     "proposed_std": null,
+     "smote": "0.037",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "cmc",
+     "proposed": "0.535",
+     "proposed_std": null,
+     "smote": "0.452",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "dermatology",
+     "proposed": "0.962",
+     "proposed_std": null,
+     "smote": "0.927",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ecoli",
+     "proposed": "0.735",
+     "proposed_std": null,
+     "smote": "0.738",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "flare",
+     "proposed": "0.566",
+     "proposed_std": null,
+     "smote": "0.421",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "glass",
+     "proposed": "0.667",
+     "proposed_std": null,
+     "smote": "0.322",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "hayes roth",
+     "proposed": "0.835",
+     "proposed_std": null,
+     "smote": "0.835",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "led7digit",
+     "proposed": "0.778",
+     "proposed_std": null,
+     "smote": "0.756",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "thyroid",
+     "proposed": "0.922",
+     "proposed_std": null,
+     "smote": "0.879",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "vehicle",
+     "proposed": "0.915",
+     "proposed_std": null,
+     "smote": "0.915",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "wine quality",
+     "proposed": "0.471",
+     "proposed_std": null,
+     "smote": "0.356",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "yeast",
+     "proposed": "0.451",
+     "proposed_std": null,
+     "smote": "0.184",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "art1",
+     "proposed": "0.960",
+     "proposed_std": null,
+     "smote": "0.947",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "art2",
+     "proposed": "0.777",
+     "proposed_std": null,
+     "smote": "0.741",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "art3",
+     "proposed": "0.608",
+     "proposed_std": null,
+     "smote": "0.535",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "art4",
+     "proposed": "0.899",
+     "proposed_std": null,
+     "smote": "0.856",
+     "smote_std": null,
+     "marks": ""
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper (text: 'It also yields better results than Static-SMOTE of about 11.6% on the average (median 5.7%).')",
+    "stat_test": "Table 7, paired Wilcoxon signed rank test between SOUP and other preprocessing methods on G-mean: SOUP vs Static-SMOTE p-values J4.8 < 0.001, PART < 0.001, kNN 0.002. Text: 'Using typical significance level α = 5%, one can reject the null hypothesis about the lack of differences between SOUP and other preprocessing methods.'"
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [
+  {
+   "metric": "G-mean and other measures (kNN, PART) - only on accompanying web page, not in paper",
+   "table": "n/a",
+   "classifiers": "kNN, PART"
+  }
+ ],
+ "metrics_without_smote": [],
+ "notes": "PROBLEM: no plain SMOTE in the paper; SMOTE column is Static-SMOTE (multiclass SMOTE variant), used to match existing extraction - flag if strict plain-SMOTE rule applies. Only G-mean is reported per-dataset in the paper (Table 6; Table 5 has Static SMOTE but not SOUP). No bold/underline marks in Table 6 (verified on rendered page 11). Dataset names printed with underscores (balance_scale, cleveland_1, hayes_roth, wine_quality); written here with spaces as in text layer/existing extraction. Table 6 header lists 'OVO SO' twice (second probably OVO SU per Table 8)."
+}

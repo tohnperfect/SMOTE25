@@ -1,0 +1,112 @@
+{
+ "key": "SMOTE-IPF",
+ "classifier": "C4.5",
+ "condition": "real-world datasets without added noise (Table 6)",
+ "proposed_column": "SMOTE–IPF",
+ "smote_column": "SMOTE",
+ "metrics": [
+  {
+   "metric": "AUC",
+   "metric_family": "AUC",
+   "table": "Table 6",
+   "page": "PDF page 12 (printed p.195)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "acl",
+     "proposed": "88.50",
+     "proposed_std": null,
+     "smote": "86.75",
+     "smote_std": null,
+     "marks": "B1-SMOTE bold (neither SMOTE-IPF nor SMOTE)"
+    },
+    {
+     "dataset_as_printed": "breast",
+     "proposed": "64.40",
+     "proposed_std": null,
+     "smote": "60.56",
+     "smote_std": null,
+     "marks": "SL-SMOTE bold (neither)"
+    },
+    {
+     "dataset_as_printed": "bupa",
+     "proposed": "67.53",
+     "proposed_std": null,
+     "smote": "66.88",
+     "smote_std": null,
+     "marks": "B1-SMOTE bold (neither)"
+    },
+    {
+     "dataset_as_printed": "cleveland",
+     "proposed": "62.82",
+     "proposed_std": null,
+     "smote": "54.85",
+     "smote_std": null,
+     "marks": "SMOTE-TL bold (neither)"
+    },
+    {
+     "dataset_as_printed": "ecoli",
+     "proposed": "86.55",
+     "proposed_std": null,
+     "smote": "82.16",
+     "smote_std": null,
+     "marks": "SMOTE-ENN bold (neither)"
+    },
+    {
+     "dataset_as_printed": "haberman",
+     "proposed": "66.76",
+     "proposed_std": null,
+     "smote": "65.41",
+     "smote_std": null,
+     "marks": "SL-SMOTE bold (neither)"
+    },
+    {
+     "dataset_as_printed": "hepatitis",
+     "proposed": "72.25",
+     "proposed_std": null,
+     "smote": "71.38",
+     "smote_std": null,
+     "marks": "SMOTE–IPF bold"
+    },
+    {
+     "dataset_as_printed": "newthyroid",
+     "proposed": "96.63",
+     "proposed_std": null,
+     "smote": "96.35",
+     "smote_std": null,
+     "marks": "B2-SMOTE bold (neither)"
+    },
+    {
+     "dataset_as_printed": "pima",
+     "proposed": "73.58",
+     "proposed_std": null,
+     "smote": "71.29",
+     "smote_std": null,
+     "marks": "SL-SMOTE bold (neither)"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Table 8 aligned Friedman rank (filtering group; SMOTE not in Table 8)",
+      "proposed": "6.89",
+      "smote": ""
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper (Table 7 gives Wilcoxon ranks: SMOTE–IPF vs. SMOTE R+ = 45.0, R- = 0.0)",
+    "stat_test": "Table 7: Wilcoxon's test, SMOTE–IPF (R+) versus SMOTE (R-) on real-world datasets, AUC by C4.5: R+ 45.0, R- 0.0, pWilcoxon 0.0039 (vs. None: R+ 44.0, R- 1.0, p 0.0078). Text: 'The Wilcoxon's test between SMOTE–IPF and None, and between SMOTE–IPF and SMOTE again clearly shows an improvement in the results obtained with respect to not preprocessing or applying SMOTE alone.'"
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [
+  {
+   "metric": "not reported numerically; text only says experiments with k-NN, SVM, RIPPER, PART 'provided similar results' (results not in paper)",
+   "table": "none (p.17 text)",
+   "classifiers": "k-NN, SVM, RIPPER, PART"
+  }
+ ],
+ "metrics_without_smote": [],
+ "notes": "Only metric is AUC (C4.5). Bold (best of 8 methods) read from PDF font names; SMOTE never bold, SMOTE–IPF bold only on hepatitis. Tables 3 (synthetic), 9 (noisy-modified real-world) also have SMOTE vs SMOTE–IPF AUC with C4.5 but are different conditions, not copied."
+}

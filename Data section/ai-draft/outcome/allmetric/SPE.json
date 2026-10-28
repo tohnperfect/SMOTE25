@@ -1,0 +1,315 @@
+{
+ "key": "SPE",
+ "classifier": "KNN first reported (Credit Fraud); DT and MLP rows also listed. Other datasets use their own Table III model, SMOTE missing there",
+ "condition": "original IR, main real-world suite, mean+-std of 10 runs, SPE10",
+ "proposed_column": "SPE10",
+ "smote_column": "SMOTE",
+ "metrics": [
+  {
+   "metric": "GM (G-mean)",
+   "metric_family": "G-mean",
+   "table": "Table IV",
+   "page": "PDF page 8 (printed p.848)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "Credit Fraud (KNN)",
+     "proposed": "0.852",
+     "proposed_std": "0.002",
+     "smote": "0.593",
+     "smote_std": "0.001",
+     "marks": "SPE10 mean bold"
+    },
+    {
+     "dataset_as_printed": "Credit Fraud (DT)",
+     "proposed": "0.843",
+     "proposed_std": "0.007",
+     "smote": "0.303",
+     "smote_std": "0.017",
+     "marks": "SPE10 mean bold"
+    },
+    {
+     "dataset_as_printed": "Credit Fraud (MLP)",
+     "proposed": "0.828",
+     "proposed_std": "0.003",
+     "smote": "0.665",
+     "smote_std": "0.060",
+     "marks": "SPE10 mean bold"
+    },
+    {
+     "dataset_as_printed": "KDDCUP (DOS vs. PRB) (AdaBoost10)",
+     "proposed": "0.999",
+     "proposed_std": "0.000",
+     "smote": "---",
+     "smote_std": null,
+     "marks": "SPE10 mean bold; SMOTE result missing (\"---\")"
+    },
+    {
+     "dataset_as_printed": "KDDCUP (DOS vs. R2L) (AdaBoost10)",
+     "proposed": "0.988",
+     "proposed_std": "0.004",
+     "smote": "---",
+     "smote_std": null,
+     "marks": "SPE10 mean bold; SMOTE result missing (\"---\")"
+    },
+    {
+     "dataset_as_printed": "Record Linkage (GBDT10)",
+     "proposed": "0.998",
+     "proposed_std": "0.000",
+     "smote": "---",
+     "smote_std": null,
+     "marks": "SPE10 mean bold; SMOTE result missing (\"---\")"
+    },
+    {
+     "dataset_as_printed": "Payment Simulation (GBDT10)",
+     "proposed": "0.885",
+     "proposed_std": "0.001",
+     "smote": "---",
+     "smote_std": null,
+     "marks": "SPE10 mean bold; SMOTE result missing (\"---\")"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper (text: \"SPE demonstrates the best performance on all tested real-world tasks using 5 classifiers over 4 evaluation criteria.\")",
+    "stat_test": "not stated in paper"
+   }
+  },
+  {
+   "metric": "AUCPRC (area under precision-recall curve)",
+   "metric_family": "other",
+   "table": "Table IV",
+   "page": "PDF page 8 (printed p.848)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Credit Fraud (KNN)",
+     "proposed": "0.752",
+     "proposed_std": "0.018",
+     "smote": "0.352",
+     "smote_std": "0.000",
+     "marks": "SPE10 mean bold"
+    },
+    {
+     "dataset_as_printed": "Credit Fraud (DT)",
+     "proposed": "0.783",
+     "proposed_std": "0.015",
+     "smote": "0.088",
+     "smote_std": "0.011",
+     "marks": "SPE10 mean bold"
+    },
+    {
+     "dataset_as_printed": "Credit Fraud (MLP)",
+     "proposed": "0.747",
+     "proposed_std": "0.011",
+     "smote": "0.527",
+     "smote_std": "0.017",
+     "marks": "SPE10 mean bold"
+    },
+    {
+     "dataset_as_printed": "KDDCUP (DOS vs. PRB) (AdaBoost10)",
+     "proposed": "1.000",
+     "proposed_std": "0.000",
+     "smote": "---",
+     "smote_std": null,
+     "marks": "SPE10 mean bold; SMOTE result missing (\"---\")"
+    },
+    {
+     "dataset_as_printed": "KDDCUP (DOS vs. R2L) (AdaBoost10)",
+     "proposed": "0.999",
+     "proposed_std": "0.001",
+     "smote": "---",
+     "smote_std": null,
+     "marks": "SPE10 mean bold; SMOTE result missing (\"---\")"
+    },
+    {
+     "dataset_as_printed": "Record Linkage (GBDT10)",
+     "proposed": "1.000",
+     "proposed_std": "0.000",
+     "smote": "---",
+     "smote_std": null,
+     "marks": "SPE10 mean bold; SMOTE result missing (\"---\")"
+    },
+    {
+     "dataset_as_printed": "Payment Simulation (GBDT10)",
+     "proposed": "0.944",
+     "proposed_std": "0.001",
+     "smote": "---",
+     "smote_std": null,
+     "marks": "SPE10 mean bold; SMOTE result missing (\"---\")"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper (text: \"SPE demonstrates the best performance on all tested real-world tasks using 5 classifiers over 4 evaluation criteria.\")",
+    "stat_test": "not stated in paper"
+   }
+  },
+  {
+   "metric": "F1-score",
+   "metric_family": "F-measure",
+   "table": "Table IV",
+   "page": "PDF page 8 (printed p.848)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Credit Fraud (KNN)",
+     "proposed": "0.843",
+     "proposed_std": "0.016",
+     "smote": "0.559",
+     "smote_std": "0.001",
+     "marks": "SPE10 mean bold"
+    },
+    {
+     "dataset_as_printed": "Credit Fraud (DT)",
+     "proposed": "0.838",
+     "proposed_std": "0.021",
+     "smote": "0.177",
+     "smote_std": "0.006",
+     "marks": "SPE10 mean bold"
+    },
+    {
+     "dataset_as_printed": "Credit Fraud (MLP)",
+     "proposed": "0.811",
+     "proposed_std": "0.010",
+     "smote": "0.725",
+     "smote_std": "0.013",
+     "marks": "SPE10 mean bold"
+    },
+    {
+     "dataset_as_printed": "KDDCUP (DOS vs. PRB) (AdaBoost10)",
+     "proposed": "0.999",
+     "proposed_std": "0.000",
+     "smote": "---",
+     "smote_std": null,
+     "marks": "SPE10 mean bold; SMOTE result missing (\"---\")"
+    },
+    {
+     "dataset_as_printed": "KDDCUP (DOS vs. R2L) (AdaBoost10)",
+     "proposed": "0.991",
+     "proposed_std": "0.003",
+     "smote": "---",
+     "smote_std": null,
+     "marks": "SPE10 mean bold; SMOTE result missing (\"---\")"
+    },
+    {
+     "dataset_as_printed": "Record Linkage (GBDT10)",
+     "proposed": "0.998",
+     "proposed_std": "0.000",
+     "smote": "---",
+     "smote_std": null,
+     "marks": "SPE10 mean bold; SMOTE result missing (\"---\")"
+    },
+    {
+     "dataset_as_printed": "Payment Simulation (GBDT10)",
+     "proposed": "0.885",
+     "proposed_std": "0.001",
+     "smote": "---",
+     "smote_std": null,
+     "marks": "SPE10 mean bold; SMOTE result missing (\"---\")"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper (text: \"SPE demonstrates the best performance on all tested real-world tasks using 5 classifiers over 4 evaluation criteria.\")",
+    "stat_test": "not stated in paper"
+   }
+  },
+  {
+   "metric": "MCC",
+   "metric_family": "MCC",
+   "table": "Table IV",
+   "page": "PDF page 8 (printed p.848)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Credit Fraud (KNN)",
+     "proposed": "0.855",
+     "proposed_std": "0.006",
+     "smote": "0.592",
+     "smote_std": "0.001",
+     "marks": "SPE10 mean bold"
+    },
+    {
+     "dataset_as_printed": "Credit Fraud (DT)",
+     "proposed": "0.831",
+     "proposed_std": "0.008",
+     "smote": "0.310",
+     "smote_std": "0.003",
+     "marks": "SPE10 mean bold"
+    },
+    {
+     "dataset_as_printed": "Credit Fraud (MLP)",
+     "proposed": "0.826",
+     "proposed_std": "0.008",
+     "smote": "0.718",
+     "smote_std": "0.006",
+     "marks": "SPE10 mean bold"
+    },
+    {
+     "dataset_as_printed": "KDDCUP (DOS vs. PRB) (AdaBoost10)",
+     "proposed": "0.999",
+     "proposed_std": "0.000",
+     "smote": "---",
+     "smote_std": null,
+     "marks": "SPE10 mean bold; SMOTE result missing (\"---\")"
+    },
+    {
+     "dataset_as_printed": "KDDCUP (DOS vs. R2L) (AdaBoost10)",
+     "proposed": "0.986",
+     "proposed_std": "0.004",
+     "smote": "---",
+     "smote_std": null,
+     "marks": "SPE10 mean bold; SMOTE result missing (\"---\")"
+    },
+    {
+     "dataset_as_printed": "Record Linkage (GBDT10)",
+     "proposed": "0.998",
+     "proposed_std": "0.000",
+     "smote": "---",
+     "smote_std": null,
+     "marks": "SPE10 mean bold; SMOTE result missing (\"---\")"
+    },
+    {
+     "dataset_as_printed": "Payment Simulation (GBDT10)",
+     "proposed": "0.876",
+     "proposed_std": "0.001",
+     "smote": "---",
+     "smote_std": null,
+     "marks": "SPE10 mean bold; SMOTE result missing (\"---\")"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper (text: \"SPE demonstrates the best performance on all tested real-world tasks using 5 classifiers over 4 evaluation criteria.\")",
+    "stat_test": "not stated in paper"
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [
+  {
+   "metric": "AUCPRC (Credit Fraud only, separate re-sampling experiment)",
+   "table": "Table V",
+   "classifiers": "LR, KNN, DT, AdaBoost10, GBDT10"
+  }
+ ],
+ "metrics_without_smote": [
+  {
+   "metric": "AUCPRC/F1/GM/MCC ensemble comparison (SMOTEBoost, SMOTEBagging, not plain SMOTE)",
+   "table": "Table VI"
+  },
+  {
+   "metric": "AUCPRC with missing values",
+   "table": "Table VII"
+  }
+ ],
+ "notes": "Followed existing_chosen: one row per (dataset, model) of Table IV; only the 3 Credit Fraud rows have SMOTE numbers, the other 4 rows print \"---\" for SMOTE (\"Some results of Clean and SMOTE are missing in Table IV due to lack of appropriate distance metric and unacceptable...\"). Table IV is text; column mapping verified visually on page 8. In Table IV every SPE10 mean is bold. Table V (Credit Fraud, AUCPRC, SMOTE vs SPE10 for LR/KNN/DT/AdaBoost10/GBDT10) is a separate experiment with different numbers (e.g. KNN SMOTE 0.362±0.005, SPE10 0.767±0.001), not copied as rows."
+}

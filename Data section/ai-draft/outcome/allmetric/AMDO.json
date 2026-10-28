@@ -1,0 +1,893 @@
+{
+ "key": "AMDO",
+ "classifier": "C4.5 (KEEL default settings)",
+ "condition": "main suite, original IR; 5-fold CV x 10 runs (Pre2D/PreND: fixed temporal train/test, 10 runs)",
+ "proposed_column": "AMDO",
+ "smote_column": "OSMOTE (OVO-SMOTE [40]: SMOTE as ad hoc approach after OVO decomposition), as in the earlier rule-A extraction; SSMOTE (Static-SMOTE [39]) values kept per row as ssmote_alt / ssmote_alt_std",
+ "metrics": [
+  {
+   "metric": "Pmin (%)",
+   "metric_family": "precision",
+   "table": "Table 5 + Table 8",
+   "page": "PDF page 10 (Tables 5-6) and PDF page 11 (Tables 8-9)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Balance",
+     "proposed": "10.22",
+     "proposed_std": "0.50",
+     "smote": "12.44",
+     "smote_std": "13.41",
+     "marks": "AMDO italic; OSMOTE bold",
+     "ssmote_alt": "8.44",
+     "ssmote_alt_std": "9.18"
+    },
+    {
+     "dataset_as_printed": "Hayes-roth",
+     "proposed": "100.00",
+     "proposed_std": "0.00",
+     "smote": "100.00",
+     "smote_std": "0.00",
+     "marks": "AMDO bold; OSMOTE bold; SSMOTE bold",
+     "ssmote_alt": "100.00",
+     "ssmote_alt_std": "0.00"
+    },
+    {
+     "dataset_as_printed": "New-thyroid",
+     "proposed": "100.00",
+     "proposed_std": "0.00",
+     "smote": "90.00",
+     "smote_std": "9.13",
+     "marks": "AMDO bold",
+     "ssmote_alt": "90.00",
+     "ssmote_alt_std": "14.91"
+    },
+    {
+     "dataset_as_printed": "Page-blocks",
+     "proposed": "96.67",
+     "proposed_std": "7.45",
+     "smote": "93.33",
+     "smote_std": "9.13",
+     "marks": "AMDO bold; OSMOTE italic",
+     "ssmote_alt": "78.67",
+     "ssmote_alt_std": "6.91"
+    },
+    {
+     "dataset_as_printed": "Dermatology",
+     "proposed": "100.00",
+     "proposed_std": "0.00",
+     "smote": "90.00",
+     "smote_std": "13.69",
+     "marks": "AMDO bold; SSMOTE italic",
+     "ssmote_alt": "95.00",
+     "ssmote_alt_std": "11.18"
+    },
+    {
+     "dataset_as_printed": "Breast-tissue",
+     "proposed": "60.00",
+     "proposed_std": "27.89",
+     "smote": "53.33",
+     "smote_std": "29.81",
+     "marks": "AMDO bold; OSMOTE italic",
+     "ssmote_alt": "40.00",
+     "ssmote_alt_std": "36.51"
+    },
+    {
+     "dataset_as_printed": "UKM",
+     "proposed": "94.00",
+     "proposed_std": "8.94",
+     "smote": "88.00",
+     "smote_std": "16.43",
+     "marks": "AMDO bold; SSMOTE italic",
+     "ssmote_alt": "92.00",
+     "ssmote_alt_std": "13.04"
+    },
+    {
+     "dataset_as_printed": "Vertebral-column",
+     "proposed": "86.67",
+     "proposed_std": "9.50",
+     "smote": "66.67",
+     "smote_std": "5.89",
+     "marks": "AMDO bold; OSMOTE italic",
+     "ssmote_alt": "65.00",
+     "ssmote_alt_std": "19.00"
+    },
+    {
+     "dataset_as_printed": "Ecoli",
+     "proposed": "90.00",
+     "proposed_std": "13.69",
+     "smote": "55.00",
+     "smote_std": "32.60",
+     "marks": "AMDO bold; SSMOTE italic",
+     "ssmote_alt": "70.00",
+     "ssmote_alt_std": "27.39"
+    },
+    {
+     "dataset_as_printed": "Pre2D",
+     "proposed": "48.65",
+     "proposed_std": "6.55",
+     "smote": "81.98",
+     "smote_std": "1.21",
+     "marks": "OSMOTE italic",
+     "ssmote_alt": "47.45",
+     "ssmote_alt_std": "6.23"
+    },
+    {
+     "dataset_as_printed": "Contraceptive",
+     "proposed": "45.36",
+     "proposed_std": "6.98",
+     "smote": "47.10",
+     "smote_std": "12.20",
+     "marks": "AMDO italic; OSMOTE bold",
+     "ssmote_alt": "38.12",
+     "ssmote_alt_std": "6.78"
+    },
+    {
+     "dataset_as_printed": "Flare",
+     "proposed": "25.56",
+     "proposed_std": "18.26",
+     "smote": "6.67",
+     "smote_std": "9.94",
+     "marks": "AMDO italic",
+     "ssmote_alt": "20.56",
+     "ssmote_alt_std": "14.65"
+    },
+    {
+     "dataset_as_printed": "Thyroid",
+     "proposed": "93.99",
+     "proposed_std": "2.97",
+     "smote": "98.81",
+     "smote_std": "1.64",
+     "marks": "OSMOTE bold",
+     "ssmote_alt": "97.01",
+     "ssmote_alt_std": "2.99"
+    },
+    {
+     "dataset_as_printed": "Car",
+     "proposed": "98.46",
+     "proposed_std": "3.44",
+     "smote": "61.54",
+     "smote_std": "26.09",
+     "marks": "AMDO bold",
+     "ssmote_alt": "61.54",
+     "ssmote_alt_std": "19.61"
+    },
+    {
+     "dataset_as_printed": "Nursery",
+     "proposed": "93.90",
+     "proposed_std": "2.85",
+     "smote": "64.36",
+     "smote_std": "6.46",
+     "marks": "AMDO bold",
+     "ssmote_alt": "68.64",
+     "ssmote_alt_std": "6.64"
+    },
+    {
+     "dataset_as_printed": "Splice",
+     "proposed": "94.51",
+     "proposed_std": "3.02",
+     "smote": "93.46",
+     "smote_std": "4.78",
+     "marks": "AMDO italic",
+     "ssmote_alt": "93.59",
+     "ssmote_alt_std": "3.96"
+    },
+    {
+     "dataset_as_printed": "PreND",
+     "proposed": "87.88",
+     "proposed_std": "1.53",
+     "smote": "85.54",
+     "smote_std": "2.65",
+     "marks": "AMDO bold",
+     "ssmote_alt": "77.41",
+     "ssmote_alt_std": "2.53"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average, numeric (Table 5)",
+      "proposed": "78.62",
+      "smote": "73.08",
+      "ssmote_alt": "68.66"
+     },
+     {
+      "label": "Mean rank, numeric (Table 5)",
+      "proposed": "1.75",
+      "smote": "3.60",
+      "ssmote_alt": "3.90"
+     },
+     {
+      "label": "Average, nominal/mixed (Table 8)",
+      "proposed": "77.09",
+      "smote": "65.35",
+      "ssmote_alt": "65.27"
+     },
+     {
+      "label": "Mean rank, nominal/mixed (Table 8)",
+      "proposed": "2.14",
+      "smote": "4.00",
+      "ssmote_alt": "4.14"
+     },
+     {
+      "label": "Table 11 all data sets: average (mean rank)",
+      "proposed": "77.99(1.79) [bold]",
+      "smote": "69.90(3.32)",
+      "ssmote_alt": "67.26(3.59)"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Table 7 (numeric): Friedman p=0.0344; Bonferroni-Dunn rank difference AMDO vs OSMOTE = 1.85 (CD=2.16, not significant) | Table 10 (nominal): Friedman p=0.0359; rank diff vs OSMOTE = 1.86 (CD=2.58, not significant) | Table 12 (all): Friedman p=0.0061; rank diff vs OSMOTE = 1.53 (bold; CD=1.35, significant) || (SSMOTE alt: Table 7 (numeric): Friedman p=0.0344; Bonferroni-Dunn rank difference AMDO vs SSMOTE = 2.15 (CD=2.16, not bold, i.e. not significant) | Table 10 (nominal): Friedman p=0.0359; Bonferroni-Dunn rank diff vs SSMOTE = 2.00 (CD=2.58, not significant) | Table 12 (all): Friedman p=0.0061; rank diff vs SSMOTE = 1.79 (bold; CD=1.35, significant))"
+   }
+  },
+  {
+   "metric": "Pavg (%)",
+   "metric_family": "precision",
+   "table": "Table 5 + Table 8",
+   "page": "PDF page 10 (Tables 5-6) and PDF page 11 (Tables 8-9)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Balance",
+     "proposed": "60.37",
+     "proposed_std": "2.06",
+     "smote": "57.86",
+     "smote_std": "2.78",
+     "marks": "AMDO italic",
+     "ssmote_alt": "58.38",
+     "ssmote_alt_std": "2.94"
+    },
+    {
+     "dataset_as_printed": "Hayes-roth",
+     "proposed": "84.97",
+     "proposed_std": "6.74",
+     "smote": "84.97",
+     "smote_std": "6.74",
+     "marks": "AMDO italic; OSMOTE italic",
+     "ssmote_alt": "84.67",
+     "ssmote_alt_std": "5.06"
+    },
+    {
+     "dataset_as_printed": "New-thyroid",
+     "proposed": "96.54",
+     "proposed_std": "2.99",
+     "smote": "92.54",
+     "smote_std": "6.61",
+     "marks": "AMDO bold",
+     "ssmote_alt": "91.08",
+     "ssmote_alt_std": "3.02"
+    },
+    {
+     "dataset_as_printed": "Page-blocks",
+     "proposed": "88.77",
+     "proposed_std": "1.92",
+     "smote": "89.61",
+     "smote_std": "2.98",
+     "marks": "AMDO italic; OSMOTE bold",
+     "ssmote_alt": "84.57",
+     "ssmote_alt_std": "1.88"
+    },
+    {
+     "dataset_as_printed": "Dermatology",
+     "proposed": "96.88",
+     "proposed_std": "0.26",
+     "smote": "95.31",
+     "smote_std": "2.45",
+     "marks": "AMDO italic",
+     "ssmote_alt": "95.73",
+     "ssmote_alt_std": "1.83"
+    },
+    {
+     "dataset_as_printed": "Breast-tissue",
+     "proposed": "63.22",
+     "proposed_std": "3.74",
+     "smote": "65.83",
+     "smote_std": "7.05",
+     "marks": "",
+     "ssmote_alt": "60.89",
+     "ssmote_alt_std": "3.94"
+    },
+    {
+     "dataset_as_printed": "UKM",
+     "proposed": "94.23",
+     "proposed_std": "2.14",
+     "smote": "91.78",
+     "smote_std": "2.32",
+     "marks": "AMDO italic",
+     "ssmote_alt": "92.57",
+     "ssmote_alt_std": "4.85"
+    },
+    {
+     "dataset_as_printed": "Vertebral-column",
+     "proposed": "81.89",
+     "proposed_std": "2.38",
+     "smote": "77.00",
+     "smote_std": "4.71",
+     "marks": "AMDO bold; SSMOTE italic",
+     "ssmote_alt": "77.22",
+     "ssmote_alt_std": "4.66"
+    },
+    {
+     "dataset_as_printed": "Ecoli",
+     "proposed": "82.44",
+     "proposed_std": "5.08",
+     "smote": "73.12",
+     "smote_std": "8.72",
+     "marks": "AMDO bold",
+     "ssmote_alt": "72.81",
+     "ssmote_alt_std": "12.01"
+    },
+    {
+     "dataset_as_printed": "Pre2D",
+     "proposed": "77.15",
+     "proposed_std": "4.88",
+     "smote": "87.13",
+     "smote_std": "1.70",
+     "marks": "OSMOTE italic",
+     "ssmote_alt": "78.01",
+     "ssmote_alt_std": "5.24"
+    },
+    {
+     "dataset_as_printed": "Contraceptive",
+     "proposed": "52.52",
+     "proposed_std": "2.09",
+     "smote": "51.86",
+     "smote_std": "3.04",
+     "marks": "AMDO bold",
+     "ssmote_alt": "48.30",
+     "ssmote_alt_std": "3.56"
+    },
+    {
+     "dataset_as_printed": "Flare",
+     "proposed": "63.45",
+     "proposed_std": "1.74",
+     "smote": "58.57",
+     "smote_std": "1.80",
+     "marks": "AMDO bold",
+     "ssmote_alt": "61.37",
+     "ssmote_alt_std": "3.40"
+    },
+    {
+     "dataset_as_printed": "Thyroid",
+     "proposed": "95.67",
+     "proposed_std": "0.98",
+     "smote": "97.72",
+     "smote_std": "0.81",
+     "marks": "OSMOTE bold",
+     "ssmote_alt": "96.96",
+     "ssmote_alt_std": "0.49"
+    },
+    {
+     "dataset_as_printed": "Car",
+     "proposed": "91.97",
+     "proposed_std": "1.31",
+     "smote": "80.37",
+     "smote_std": "9.40",
+     "marks": "AMDO bold",
+     "ssmote_alt": "76.81",
+     "ssmote_alt_std": "4.82"
+    },
+    {
+     "dataset_as_printed": "Nursery",
+     "proposed": "95.75",
+     "proposed_std": "1.20",
+     "smote": "89.31",
+     "smote_std": "1.86",
+     "marks": "AMDO bold",
+     "ssmote_alt": "90.32",
+     "ssmote_alt_std": "1.94"
+    },
+    {
+     "dataset_as_printed": "Splice",
+     "proposed": "94.79",
+     "proposed_std": "0.73",
+     "smote": "94.25",
+     "smote_std": "1.13",
+     "marks": "AMDO bold; OSMOTE italic",
+     "ssmote_alt": "93.97",
+     "ssmote_alt_std": "0.98"
+    },
+    {
+     "dataset_as_printed": "PreND",
+     "proposed": "95.58",
+     "proposed_std": "0.85",
+     "smote": "93.90",
+     "smote_std": "1.35",
+     "marks": "AMDO bold",
+     "ssmote_alt": "91.37",
+     "ssmote_alt_std": "1.99"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average, numeric (Table 5)",
+      "proposed": "82.65",
+      "smote": "81.52",
+      "ssmote_alt": "79.59"
+     },
+     {
+      "label": "Mean rank, numeric (Table 5)",
+      "proposed": "2.20",
+      "smote": "3.35",
+      "ssmote_alt": "3.90"
+     },
+     {
+      "label": "Average, nominal/mixed (Table 8)",
+      "proposed": "84.25",
+      "smote": "80.85",
+      "ssmote_alt": "79.87"
+     },
+     {
+      "label": "Mean rank, nominal/mixed (Table 8)",
+      "proposed": "1.71",
+      "smote": "3.43",
+      "ssmote_alt": "4.29"
+     },
+     {
+      "label": "Table 11 all data sets: average (mean rank)",
+      "proposed": "83.31(1.94) [bold]",
+      "smote": "81.24(3.03)",
+      "ssmote_alt": "79.71(3.71)"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Table 7: Friedman p=0.0661; post hoc '-' (not performed) | Table 10: Friedman p=0.0362; rank diff vs OSMOTE = 1.71 (CD=2.58, not significant) | Table 12: Friedman p=0.0205; rank diff vs OSMOTE = 1.09 (CD=1.35, not significant) || (SSMOTE alt: Table 7: Friedman p=0.0661; post hoc '-' (not performed) | Table 10: Friedman p=0.0362; rank diff vs SSMOTE = 2.57 (CD=2.58, not significant) | Table 12: Friedman p=0.0205; rank diff vs SSMOTE = 1.76 (bold, significant))"
+   }
+  },
+  {
+   "metric": "AUCm (%)",
+   "metric_family": "AUC",
+   "table": "Table 6 + Table 9",
+   "page": "PDF page 10 (Tables 5-6) and PDF page 11 (Tables 8-9)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Balance",
+     "proposed": "60.61",
+     "proposed_std": "1.24",
+     "smote": "58.58",
+     "smote_std": "3.18",
+     "marks": "AMDO bold",
+     "ssmote_alt": "58.12",
+     "ssmote_alt_std": "3.27"
+    },
+    {
+     "dataset_as_printed": "Hayes-roth",
+     "proposed": "94.36",
+     "proposed_std": "2.53",
+     "smote": "94.36",
+     "smote_std": "2.53",
+     "marks": "AMDO italic; OSMOTE italic",
+     "ssmote_alt": "94.25",
+     "ssmote_alt_std": "1.90"
+    },
+    {
+     "dataset_as_printed": "New-thyroid",
+     "proposed": "98.37",
+     "proposed_std": "1.41",
+     "smote": "94.04",
+     "smote_std": "5.11",
+     "marks": "AMDO bold",
+     "ssmote_alt": "93.90",
+     "ssmote_alt_std": "4.45"
+    },
+    {
+     "dataset_as_printed": "Page-blocks",
+     "proposed": "95.51",
+     "proposed_std": "2.07",
+     "smote": "94.96",
+     "smote_std": "3.16",
+     "marks": "AMDO bold; OSMOTE italic",
+     "ssmote_alt": "89.84",
+     "ssmote_alt_std": "2.16"
+    },
+    {
+     "dataset_as_printed": "Dermatology",
+     "proposed": "98.98",
+     "proposed_std": "0.26",
+     "smote": "96.09",
+     "smote_std": "4.09",
+     "marks": "AMDO italic",
+     "ssmote_alt": "97.39",
+     "ssmote_alt_std": "3.27"
+    },
+    {
+     "dataset_as_printed": "Breast-tissue",
+     "proposed": "76.80",
+     "proposed_std": "7.31",
+     "smote": "76.92",
+     "smote_std": "9.75",
+     "marks": "OSMOTE italic",
+     "ssmote_alt": "72.18",
+     "ssmote_alt_std": "10.10"
+    },
+    {
+     "dataset_as_printed": "UKM",
+     "proposed": "96.45",
+     "proposed_std": "3.02",
+     "smote": "94.01",
+     "smote_std": "4.64",
+     "marks": "AMDO bold",
+     "ssmote_alt": "94.94",
+     "ssmote_alt_std": "5.27"
+    },
+    {
+     "dataset_as_printed": "Vertebral-column",
+     "proposed": "86.04",
+     "proposed_std": "1.72",
+     "smote": "80.04",
+     "smote_std": "2.48",
+     "marks": "AMDO bold; OSMOTE italic",
+     "ssmote_alt": "79.96",
+     "ssmote_alt_std": "5.56"
+    },
+    {
+     "dataset_as_printed": "Ecoli",
+     "proposed": "91.59",
+     "proposed_std": "4.19",
+     "smote": "79.74",
+     "smote_std": "11.00",
+     "marks": "AMDO bold",
+     "ssmote_alt": "83.43",
+     "ssmote_alt_std": "10.88"
+    },
+    {
+     "dataset_as_printed": "Pre2D",
+     "proposed": "76.72",
+     "proposed_std": "5.21",
+     "smote": "88.19",
+     "smote_std": "1.33",
+     "marks": "OSMOTE italic",
+     "ssmote_alt": "77.25",
+     "ssmote_alt_std": "7.74"
+    },
+    {
+     "dataset_as_printed": "Contraceptive",
+     "proposed": "64.63",
+     "proposed_std": "2.39",
+     "smote": "64.04",
+     "smote_std": "3.10",
+     "marks": "AMDO bold",
+     "ssmote_alt": "60.41",
+     "ssmote_alt_std": "3.20"
+    },
+    {
+     "dataset_as_printed": "Flare",
+     "proposed": "69.53",
+     "proposed_std": "4.81",
+     "smote": "63.93",
+     "smote_std": "2.43",
+     "marks": "AMDO italic",
+     "ssmote_alt": "67.42",
+     "ssmote_alt_std": "4.40"
+    },
+    {
+     "dataset_as_printed": "Thyroid",
+     "proposed": "96.84",
+     "proposed_std": "1.07",
+     "smote": "98.82",
+     "smote_std": "0.66",
+     "marks": "OSMOTE bold",
+     "ssmote_alt": "98.08",
+     "ssmote_alt_std": "0.86"
+    },
+    {
+     "dataset_as_printed": "Car",
+     "proposed": "95.52",
+     "proposed_std": "1.08",
+     "smote": "82.94",
+     "smote_std": "9.49",
+     "marks": "AMDO bold",
+     "ssmote_alt": "81.08",
+     "ssmote_alt_std": "5.80"
+    },
+    {
+     "dataset_as_printed": "Nursery",
+     "proposed": "96.65",
+     "proposed_std": "1.20",
+     "smote": "87.42",
+     "smote_std": "2.24",
+     "marks": "AMDO bold",
+     "ssmote_alt": "88.82",
+     "ssmote_alt_std": "2.32"
+    },
+    {
+     "dataset_as_printed": "Splice",
+     "proposed": "95.99",
+     "proposed_std": "1.01",
+     "smote": "95.45",
+     "smote_std": "1.33",
+     "marks": "AMDO bold",
+     "ssmote_alt": "95.36",
+     "ssmote_alt_std": "1.21"
+    },
+    {
+     "dataset_as_printed": "PreND",
+     "proposed": "95.15",
+     "proposed_std": "0.55",
+     "smote": "93.74",
+     "smote_std": "1.99",
+     "marks": "AMDO bold",
+     "ssmote_alt": "90.84",
+     "ssmote_alt_std": "3.25"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average, numeric (Table 6)",
+      "proposed": "87.54",
+      "smote": "85.69",
+      "ssmote_alt": "84.13"
+     },
+     {
+      "label": "Mean rank, numeric (Table 6)",
+      "proposed": "1.80",
+      "smote": "3.45",
+      "ssmote_alt": "4.00"
+     },
+     {
+      "label": "Average, nominal/mixed (Table 9)",
+      "proposed": "87.76",
+      "smote": "83.76",
+      "ssmote_alt": "83.14"
+     },
+     {
+      "label": "Mean rank, nominal/mixed (Table 9)",
+      "proposed": "1.71",
+      "smote": "3.14",
+      "ssmote_alt": "3.57"
+     },
+     {
+      "label": "Table 11 all data sets: average (mean rank)",
+      "proposed": "87.63(1.74) [bold]",
+      "smote": "84.90(3.21)",
+      "ssmote_alt": "83.72(3.79)"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Table 7: Friedman p=0.0135; rank diff vs OSMOTE = 1.65 (CD=2.16, not significant) | Table 10: Friedman p=0.0863; post hoc '-' | Table 12: Friedman p=0.0034; rank diff vs OSMOTE = 1.47 (bold; CD=1.35, significant) || (SSMOTE alt: Table 7: Friedman p=0.0135; rank diff vs SSMOTE = 2.20 (bold; CD=2.16, significant) | Table 10: Friedman p=0.0863; post hoc '-' | Table 12: Friedman p=0.0034; rank diff vs SSMOTE = 2.06 (bold, significant))"
+   }
+  },
+  {
+   "metric": "MAUC (%)",
+   "metric_family": "AUC",
+   "table": "Table 6 + Table 9",
+   "page": "PDF page 10 (Tables 5-6) and PDF page 11 (Tables 8-9)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "Balance",
+     "proposed": "70.27",
+     "proposed_std": "1.54",
+     "smote": "68.39",
+     "smote_std": "2.09",
+     "marks": "AMDO italic",
+     "ssmote_alt": "68.79",
+     "ssmote_alt_std": "2.20"
+    },
+    {
+     "dataset_as_printed": "Hayes-roth",
+     "proposed": "88.73",
+     "proposed_std": "5.06",
+     "smote": "88.73",
+     "smote_std": "5.06",
+     "marks": "AMDO italic; OSMOTE italic",
+     "ssmote_alt": "88.50",
+     "ssmote_alt_std": "3.79"
+    },
+    {
+     "dataset_as_printed": "New-thyroid",
+     "proposed": "97.40",
+     "proposed_std": "2.24",
+     "smote": "94.40",
+     "smote_std": "4.96",
+     "marks": "AMDO bold",
+     "ssmote_alt": "93.31",
+     "ssmote_alt_std": "2.27"
+    },
+    {
+     "dataset_as_printed": "Page-blocks",
+     "proposed": "92.98",
+     "proposed_std": "1.20",
+     "smote": "93.51",
+     "smote_std": "1.86",
+     "marks": "AMDO italic; OSMOTE bold",
+     "ssmote_alt": "90.35",
+     "ssmote_alt_std": "1.18"
+    },
+    {
+     "dataset_as_printed": "Dermatology",
+     "proposed": "98.13",
+     "proposed_std": "0.16",
+     "smote": "97.19",
+     "smote_std": "1.47",
+     "marks": "AMDO italic",
+     "ssmote_alt": "97.44",
+     "ssmote_alt_std": "1.10"
+    },
+    {
+     "dataset_as_printed": "Breast-tissue",
+     "proposed": "77.93",
+     "proposed_std": "2.24",
+     "smote": "79.50",
+     "smote_std": "4.23",
+     "marks": "",
+     "ssmote_alt": "76.53",
+     "ssmote_alt_std": "2.36"
+    },
+    {
+     "dataset_as_printed": "UKM",
+     "proposed": "96.15",
+     "proposed_std": "1.42",
+     "smote": "94.52",
+     "smote_std": "1.54",
+     "marks": "AMDO italic",
+     "ssmote_alt": "95.05",
+     "ssmote_alt_std": "3.23"
+    },
+    {
+     "dataset_as_printed": "Vertebral-column",
+     "proposed": "86.42",
+     "proposed_std": "1.78",
+     "smote": "82.75",
+     "smote_std": "3.53",
+     "marks": "AMDO bold; SSMOTE italic",
+     "ssmote_alt": "82.92",
+     "ssmote_alt_std": "3.50"
+    },
+    {
+     "dataset_as_printed": "Ecoli",
+     "proposed": "89.03",
+     "proposed_std": "3.18",
+     "smote": "83.20",
+     "smote_std": "5.45",
+     "marks": "AMDO bold",
+     "ssmote_alt": "83.01",
+     "ssmote_alt_std": "7.50"
+    },
+    {
+     "dataset_as_printed": "Pre2D",
+     "proposed": "82.86",
+     "proposed_std": "4.99",
+     "smote": "90.35",
+     "smote_std": "1.46",
+     "marks": "OSMOTE italic",
+     "ssmote_alt": "83.51",
+     "ssmote_alt_std": "5.32"
+    },
+    {
+     "dataset_as_printed": "Contraceptive",
+     "proposed": "64.39",
+     "proposed_std": "1.56",
+     "smote": "63.89",
+     "smote_std": "2.28",
+     "marks": "AMDO bold",
+     "ssmote_alt": "61.22",
+     "ssmote_alt_std": "2.67"
+    },
+    {
+     "dataset_as_printed": "Flare",
+     "proposed": "78.07",
+     "proposed_std": "1.04",
+     "smote": "75.14",
+     "smote_std": "1.08",
+     "marks": "AMDO bold",
+     "ssmote_alt": "76.82",
+     "ssmote_alt_std": "2.04"
+    },
+    {
+     "dataset_as_printed": "Thyroid",
+     "proposed": "96.75",
+     "proposed_std": "0.73",
+     "smote": "98.29",
+     "smote_std": "0.60",
+     "marks": "OSMOTE bold",
+     "ssmote_alt": "97.72",
+     "ssmote_alt_std": "0.37"
+    },
+    {
+     "dataset_as_printed": "Car",
+     "proposed": "94.64",
+     "proposed_std": "0.87",
+     "smote": "86.92",
+     "smote_std": "6.27",
+     "marks": "AMDO bold",
+     "ssmote_alt": "84.54",
+     "ssmote_alt_std": "3.21"
+    },
+    {
+     "dataset_as_printed": "Nursery",
+     "proposed": "97.16",
+     "proposed_std": "0.80",
+     "smote": "92.87",
+     "smote_std": "1.24",
+     "marks": "AMDO bold",
+     "ssmote_alt": "93.54",
+     "ssmote_alt_std": "1.29"
+    },
+    {
+     "dataset_as_printed": "Splice",
+     "proposed": "96.09",
+     "proposed_std": "0.55",
+     "smote": "95.69",
+     "smote_std": "0.85",
+     "marks": "AMDO bold; OSMOTE italic",
+     "ssmote_alt": "95.47",
+     "ssmote_alt_std": "0.73"
+    },
+    {
+     "dataset_as_printed": "PreND",
+     "proposed": "96.70",
+     "proposed_std": "0.48",
+     "smote": "95.43",
+     "smote_std": "0.78",
+     "marks": "AMDO bold",
+     "ssmote_alt": "93.52",
+     "ssmote_alt_std": "2.53"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average, numeric (Table 6)",
+      "proposed": "87.99",
+      "smote": "87.25",
+      "ssmote_alt": "85.94"
+     },
+     {
+      "label": "Mean rank, numeric (Table 6)",
+      "proposed": "2.20",
+      "smote": "3.35",
+      "ssmote_alt": "3.90"
+     },
+     {
+      "label": "Average, nominal/mixed (Table 9)",
+      "proposed": "89.11",
+      "smote": "86.89",
+      "ssmote_alt": "86.12"
+     },
+     {
+      "label": "Mean rank, nominal/mixed (Table 9)",
+      "proposed": "1.71",
+      "smote": "3.43",
+      "ssmote_alt": "4.29"
+     },
+     {
+      "label": "Table 11 all data sets: average (mean rank)",
+      "proposed": "88.45(1.94) [bold]",
+      "smote": "87.10(3.03)",
+      "ssmote_alt": "86.01(3.71)"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Table 7: Friedman p=0.0661; post hoc '-' (not performed) | Table 10: Friedman p=0.0362; rank diff vs OSMOTE = 1.71 (CD=2.58, not significant) | Table 12: Friedman p=0.0205; rank diff vs OSMOTE = 1.09 (CD=1.35, not significant) || (SSMOTE alt: Table 7: Friedman p=0.0661; post hoc '-' (not performed) | Table 10: Friedman p=0.0362; rank diff vs SSMOTE = 2.57 (CD=2.58, not significant) | Table 12: Friedman p=0.0205; rank diff vs SSMOTE = 1.76 (bold, significant))"
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [],
+ "metrics_without_smote": [
+  {
+   "metric": "Pmin, Pavg (MDO vs MDO+ vs AMDO)",
+   "table": "Table 2"
+  },
+  {
+   "metric": "AUCm, MAUC (MDO vs MDO+ vs AMDO)",
+   "table": "Table 3"
+  },
+  {
+   "metric": "Wilcoxon tests AMDO vs MDO/MDO+",
+   "table": "Table 4"
+  }
+ ],
+ "notes": "Cells printed as mean with std subscript; pdftotext concatenates them (e.g. 68.792.20 -> 68.79 / 2.20); split verified against rendered pages 10-11 at 250 dpi. Marks: bold = best, italic = second best among 6 methods (Base, SSMOTE, GCS, ABNC, OSMOTE, AMDO); AMDO, OSMOTE and SSMOTE marks recorded. Table text is vector (not image). SMOTE comparator corrected to OSMOTE (OVO-SMOTE) to match the earlier rule-A extraction; SSMOTE kept as alt. Table 13 reports minimum sensitivity only as averages over all data sets (Base 52.94(4.47), SSMOTE 58.21(3.94), AMDO 65.18(2.09) bold) - no per-dataset table, so not included as a metric. Only C4.5 is used in the paper."
+}

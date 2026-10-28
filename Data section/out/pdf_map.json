@@ -1,0 +1,378 @@
+{
+ "A-SUWO": {
+  "main": "paper/Binary/2016 A-SUWO - Nekooeimehr (dissertation, ch.3 reprint).pdf",
+  "supp": [],
+  "record": "2016 A-SUWO - Nekooeimehr (dissertation, ch.3 reprint).pdf (Drive id 1OfwH1GejH2Ryj3nWqPH4Ia-cn2c85vYQ); Chapter 3 only, printed pp.24-46"
+ },
+ "AB-SMOTE": {
+  "main": "paper/Binary/2020 AB-SMOTE - Al Majzoub et al.pdf",
+  "supp": [],
+  "record": "2020 AB-SMOTE - Al Majzoub et al.pdf"
+ },
+ "ADASYN": {
+  "main": "paper/Binary/ADASYN_Adaptive_synthetic_sampling_approach_for_imbalanced_learning.pdf",
+  "supp": [],
+  "record": "ADASYN_Adaptive_synthetic_sampling_approach_for_imbalanced_learning.pdf (Drive id 1TSf938BSpsQUc_1q0OW3LWiBEyaJ_Ph3)"
+ },
+ "AMDO": {
+  "main": "paper/Multiclass/2018_AMDO_An Over-Sampling Technique for Multi-Class Imbalanced Problems.pdf",
+  "supp": [],
+  "record": "2018_AMDO_An Over-Sampling Technique for Multi-Class Imbalanced Problems.pdf (Drive id 1BQhzFFIr90ZfPvyDUjdop6hDMz_XS9Tv)"
+ },
+ "Borderline-SMOTE": {
+  "main": "paper/Both/Borderline-SMOTE - A New Over-Sampling Method in Imbalanced Data Sets Learning (ICIC 2005).pdf",
+  "supp": [],
+  "record": "Borderline-SMOTE - A New Over-Sampling Method in Imbalanced Data Sets Learning (ICIC 2005).pdf"
+ },
+ "CBHSID": {
+  "main": "paper/Both/CBHSID - A Hybrid Sampling Approach for Imbalanced Binary and Multi-Class Data Using Clustering Analysis (IEEE Access 2022).pdf",
+  "supp": [],
+  "record": "CBHSID - A Hybrid Sampling Approach for Imbalanced Binary and Multi-Class Data Using Clustering Analysis (IEEE Access 2022).pdf"
+ },
+ "CGMOS": {
+  "main": "paper/Binary/CGMOS Certainty Guided Minority OverSampling.pdf",
+  "supp": [],
+  "record": "CGMOS Certainty Guided Minority OverSampling.pdf (Drive id 1OwzELxOJ_DqE_oFqC3MyJj7x9sQx7YzB)"
+ },
+ "CISO": {
+  "main": "paper/Binary/CISO.pdf",
+  "supp": [],
+  "record": "CISO.pdf (Drive id 1kJZCKYe3QR2tSvb54AfOhHd5XNzkdJ6g), full text read"
+ },
+ "COG-OS": {
+  "main": "paper/Binary/2007 COG-OS - Wu, Xiong, Wu, Chen.pdf",
+  "supp": [],
+  "record": "2007 COG-OS - Wu, Xiong, Wu, Chen.pdf (Drive id 1zOM06qCMIDnpzxQk1T3n7xZhR03KEvOe); title 'Local Decomposition for Rare Class Analysis', KDD'07, printed pp.814-823 = PDF pp.1-10"
+ },
+ "CTGAN": {
+  "main": "paper/Both/CTGAN-TVAE - Modeling Tabular Data Using Conditional GAN (NeurIPS 2019).pdf",
+  "supp": [
+   "paper/Both/CTGAN-TVAE - Supplementary (NeurIPS 2019).pdf"
+  ],
+  "record": "CTGAN-TVAE - Modeling Tabular Data Using Conditional GAN (NeurIPS 2019).pdf; CTGAN-TVAE - Supplementary (NeurIPS 2019).pdf"
+ },
+ "Cluster-SMOTE": {
+  "main": "paper/Binary/2006 Cluster-SMOTE - Cieslak, Chawla, Striegel.pdf",
+  "supp": [],
+  "record": "2006 Cluster-SMOTE - Cieslak, Chawla, Striegel.pdf"
+ },
+ "ClusterCentroids": {
+  "main": "paper/Both/ClusterCentroids (Yen-Lee) - Cluster-Based Under-Sampling Approaches for Imbalanced Data Distributions (ESWA 2009).pdf",
+  "supp": [],
+  "record": "ClusterCentroids (Yen-Lee) - Cluster-Based Under-Sampling Approaches for Imbalanced Data Distributions (ESWA 2009).pdf"
+ },
+ "DGOT": {
+  "main": "paper/Both/DGOT - Diffusion GAN-Based Oversampling for Imbalanced Tabular Data (IEEE TKDE 2026).pdf",
+  "supp": [],
+  "record": "DGOT - Diffusion GAN-Based Oversampling for Imbalanced Tabular Data (IEEE TKDE 2026).pdf"
+ },
+ "DLexiBoost": {
+  "main": "paper/Both/DLexiBoost - Boosting with Lexicographic Programming Addressing Class Imbalance without Cost Tuning (IEEE TKDE 2020).pdf",
+  "supp": [
+   "paper/Both/DLexiBoost - Supplementary (IEEE TKDE 2020).pdf"
+  ],
+  "record": "DLexiBoost - Boosting with Lexicographic Programming Addressing Class Imbalance without Cost Tuning (IEEE TKDE 2020).pdf; DLexiBoost - Supplementary (IEEE TKDE 2020).pdf"
+ },
+ "DSRBF": {
+  "main": "paper/Both/Static-SMOTE - A Dynamic Over-Sampling Procedure Based on Sensitivity for Multi-Class Problems (Pattern Recognition 2011).pdf",
+  "supp": [],
+  "record": "Static-SMOTE - A Dynamic Over-Sampling Procedure Based on Sensitivity for Multi-Class Problems (Pattern Recognition 2011).pdf"
+ },
+ "EMDO": {
+  "main": "paper/Multiclass/2021_EMDO_Evolutionary Mahalanobis Distance-Based Oversampling for Multi-Class Imbalanced Data Classification.pdf",
+  "supp": [],
+  "record": "2021_EMDO_Evolutionary Mahalanobis Distance-Based Oversampling for Multi-Class Imbalanced Data Classification.pdf"
+ },
+ "EasyEnsemble": {
+  "main": "paper/Both/EasyEnsemble-BalanceCascade - Exploratory Undersampling for Class-Imbalance Learning (IEEE TSMC-B 2009).pdf",
+  "supp": [],
+  "record": "EasyEnsemble-BalanceCascade - Exploratory Undersampling for Class-Imbalance Learning (IEEE TSMC-B 2009).pdf (Drive id 1MOWXL4I6OT7pm5ZklAQfEpzap6dbsSaU)"
+ },
+ "FW-SMOTE": {
+  "main": "paper/Both/FW-SMOTE - A Feature-Weighted Oversampling Approach for Imbalanced Classification (Pattern Recognition 2022).pdf",
+  "supp": [
+   "paper/Both/FW-SMOTE - Supplementary (Pattern Recognition 2022).pdf"
+  ],
+  "record": "FW-SMOTE - A Feature-Weighted Oversampling Approach for Imbalanced Classification (Pattern Recognition 2022).pdf; plus FW-SMOTE - Supplementary (Pattern Recognition 2022).pdf"
+ },
+ "G-SMOTE": {
+  "main": "paper/Binary/2019 G-SMOTE - Douzas, Bacao (accepted manuscript).pdf",
+  "supp": [],
+  "record": "2019 G-SMOTE - Douzas, Bacao (accepted manuscript).pdf"
+ },
+ "GAMO": {
+  "main": "paper/Both/GAMO - Generative Adversarial Minority Oversampling (ICCV 2019).pdf",
+  "supp": [
+   "paper/Both/GAMO - Supplementary (ICCV 2019).pdf"
+  ],
+  "record": "GAMO - Generative Adversarial Minority Oversampling (ICCV 2019).pdf (+ GAMO - Supplementary (ICCV 2019).pdf)"
+ },
+ "GDHS": {
+  "main": "paper/Multiclass/2025_GDHS_An efficient hybrid sampling method for multi-class imbalanced data classification.pdf",
+  "supp": [],
+  "record": "2025_GDHS_An efficient hybrid sampling method for multi-class imbalanced data classification.pdf (Drive id 1HN7VjTMcK-1k2qneVgplL4ZfTVYqQiK5), full text read via read_file_content"
+ },
+ "GDO": {
+  "main": "paper/Both/GDO - Gaussian Distribution Based Oversampling for Imbalanced Data Classification (IEEE TKDE 2022).pdf",
+  "supp": [],
+  "record": "GDO - Gaussian Distribution Based Oversampling for Imbalanced Data Classification (IEEE TKDE 2022).pdf"
+ },
+ "GLOS": {
+  "main": "paper/Multiclass/2023_GLOS_Global-local information based oversampling for multi-class imbalanced data.pdf",
+  "supp": [],
+  "record": "2023_GLOS_Global-local information based oversampling for multi-class imbalanced data.pdf"
+ },
+ "GMMSampling": {
+  "main": "paper/Multiclass/2024_GMMSampling_A new model-based, data difficulty-driven resampling method for multi-class imbalanced data.pdf",
+  "supp": [],
+  "record": "2024_GMMSampling_A new model-based, data difficulty-driven resampling method for multi-class imbalanced data.pdf"
+ },
+ "GOIO": {
+  "main": "paper/Both/GOIO - Generative Oversampling Approach to Class Imbalance and Overlap of Tabular Data (IEEE TKDE 2025).pdf",
+  "supp": [],
+  "record": "GOIO - Generative Oversampling Approach to Class Imbalance and Overlap of Tabular Data (IEEE TKDE 2025).pdf"
+ },
+ "Global-CS-AAAI": {
+  "main": "paper/Multiclass/2006_Global-CS_On multi-class cost-sensitive learning (AAAI conference version).pdf",
+  "supp": [],
+  "record": "2006_Global-CS_On multi-class cost-sensitive learning (AAAI conference version).pdf"
+ },
+ "Global-CS-journal": {
+  "main": "paper/Multiclass/2010_Global-CS_On multi-class cost-sensitive learning.pdf",
+  "supp": [],
+  "record": "2010_Global-CS_On multi-class cost-sensitive learning.pdf (Drive id 1bReNAIswhhGIh5BdrWZg5GlfndPLLBBf), 26 PDF pages, all read"
+ },
+ "HDE": {
+  "main": "paper/Both/HDE - A Hybrid Data-Level Ensemble to Enable Learning from Highly Imbalanced Dataset (Information Sciences 2021).pdf",
+  "supp": [],
+  "record": "HDE - A Hybrid Data-Level Ensemble to Enable Learning from Highly Imbalanced Dataset (Information Sciences 2021).pdf"
+ },
+ "INOS": {
+  "main": "paper/Both/INOS - Integrated Oversampling for Imbalanced Time Series Classification (IEEE TKDE 2013).pdf",
+  "supp": [],
+  "record": "INOS - Integrated Oversampling for Imbalanced Time Series Classification (IEEE TKDE 2013).pdf"
+ },
+ "KNNOR": {
+  "main": "paper/Both/KNNOR - An Oversampling Technique for Imbalanced Datasets (Applied Soft Computing 2022).pdf",
+  "supp": [],
+  "record": "KNNOR - An Oversampling Technique for Imbalanced Datasets (Applied Soft Computing 2022).pdf"
+ },
+ "LS": {
+  "main": "paper/Binary/2008 LS (Local Sampling) - Cieslak, Chawla.pdf",
+  "supp": [],
+  "record": "2008 LS (Local Sampling) - Cieslak, Chawla.pdf"
+ },
+ "Loyalty-SMOTE": {
+  "main": "paper/Both/Loyalty-SMOTE - Data Synthesis Algorithm for Effective Imbalanced Data Classification (Neural Networks 2026).pdf",
+  "supp": [],
+  "record": "Loyalty-SMOTE - Data Synthesis Algorithm for Effective Imbalanced Data Classification (Neural Networks 2026).pdf"
+ },
+ "MBS": {
+  "main": "paper/Both/MBS - Model-Based Synthetic Sampling for Imbalanced Data (IEEE TKDE 2020).pdf",
+  "supp": [],
+  "record": "MBS - Model-Based Synthetic Sampling for Imbalanced Data (IEEE TKDE 2020).pdf"
+ },
+ "MC-CCR": {
+  "main": "paper/Both/MC-CCR - Combined Cleaning and Resampling Algorithm for Multi-Class Imbalanced Data with Label Noise (Knowledge-Based Systems 2020).pdf",
+  "supp": [],
+  "record": "MC-CCR - Combined Cleaning and Resampling Algorithm for Multi-Class Imbalanced Data with Label Noise (Knowledge-Based Systems 2020).pdf"
+ },
+ "MC-MBRC": {
+  "main": "paper/Multiclass/2024_MC-MBRC_A membership-based resampling and cleaning algorithm for multi-class imbalanced overlapping data.pdf",
+  "supp": [],
+  "record": "2024_MC-MBRC_A membership-based resampling and cleaning algorithm for multi-class imbalanced overlapping data.pdf (Drive id 1nmUNbBbii32I99xJcj6Ej2AX3iWnZN3c); Tables 9-10 page rendered and read visua"
+ },
+ "MC-NCLWO": {
+  "main": "paper/Multiclass/2025_MC-NCLWO_Newton’s Cooling Law-Based Oversampling Algorithm for Multi-Class Imbalanced Datasets With Feature Noise.pdf",
+  "supp": [],
+  "record": "2025_MC-NCLWO_Newton’s Cooling Law-Based Oversampling Algorithm for Multi-Class Imbalanced Datasets With Feature Noise.pdf"
+ },
+ "MC-RBO": {
+  "main": "paper/Both/MC-RBO - Radial-Based Oversampling for Multiclass Imbalanced Data Classification (IEEE TNNLS 2020).pdf",
+  "supp": [],
+  "record": "MC-RBO - Radial-Based Oversampling for Multiclass Imbalanced Data Classification (IEEE TNNLS 2020).pdf (local copy placed by Toon in Data section/, 17.4MB)"
+ },
+ "MDO": {
+  "main": "paper/Both/MDO - To Combat Multi-Class Imbalanced Problems by Means of Over-Sampling Techniques (IEEE TKDE 2016).pdf",
+  "supp": [],
+  "record": "MDO - To Combat Multi-Class Imbalanced Problems by Means of Over-Sampling Techniques (IEEE TKDE 2016).pdf"
+ },
+ "MKC-SMOTE": {
+  "main": "paper/Multiclass/2024_MKC-SMOTE_A Novel Synthetic Oversampling Method for Multi-Class Imbalanced Data Classification.pdf",
+  "supp": [],
+  "record": "2024_MKC-SMOTE_A Novel Synthetic Oversampling Method for Multi-Class Imbalanced Data Classification.pdf"
+ },
+ "MLOS": {
+  "main": "paper/Both/MLOS - Synthetic Oversampling with Mahalanobis Distance and Local Information for Highly Imbalanced Class-Overlapped Data (ESWA 2025).pdf",
+  "supp": [],
+  "record": "MLOS - Synthetic Oversampling with Mahalanobis Distance and Local Information for Highly Imbalanced Class-Overlapped Data (ESWA 2025).pdf"
+ },
+ "MWMOTE": {
+  "main": "paper/Both/MWMOTE - Majority Weighted Minority Oversampling Technique for Imbalanced Data Set Learning (IEEE TKDE 2014).pdf",
+  "supp": [],
+  "record": "MWMOTE - Majority Weighted Minority Oversampling Technique for Imbalanced Data Set Learning (IEEE TKDE 2014).pdf (Drive id 1AoUTjcCFpdz9liFQu2I65F9Tx3OrdJHv)"
+ },
+ "NBU": {
+  "main": "paper/Binary/2020 NBU - Vuttipittayamongkol, Elyan (accepted manuscript).pdf",
+  "supp": [],
+  "record": "2020 NBU - Vuttipittayamongkol, Elyan (accepted manuscript).pdf (Binary folder, full text read via Drive; Tables 1,3-13 are text)"
+ },
+ "NROMM": {
+  "main": "paper/Both/NROMM - Noise-Robust Oversampling for Imbalanced Data Classification (Pattern Recognition 2023).pdf",
+  "supp": [
+   "paper/Both/NROMM - Supplementary (Pattern Recognition 2023).pdf"
+  ],
+  "record": "NROMM - Noise-Robust Oversampling for Imbalanced Data Classification (Pattern Recognition 2023).pdf; NROMM - Supplementary (Pattern Recognition 2023).pdf"
+ },
+ "OBU": {
+  "main": "paper/Binary/2018 OBU - Vuttipittayamongkol et al (accepted manuscript).pdf",
+  "supp": [],
+  "record": "2018 OBU - Vuttipittayamongkol et al (accepted manuscript).pdf (Drive id 1gBhjMoQVtu1sk6-PqfO5RuHI7E11YCOk)"
+ },
+ "OREM-M": {
+  "main": "paper/Multiclass/2023_OREM-M_Oversampling With Reliably Expanding Minority Class Regions for Imbalanced Data Learning.pdf",
+  "supp": [
+   "paper/Both/OREM - Supplementary 54pp (IEEE TKDE 2023).pdf"
+  ],
+  "record": "2023_OREM-M_Oversampling With Reliably Expanding Minority Class Regions for Imbalanced Data Learning.pdf; plus OREM - Supplementary 54pp (IEEE TKDE 2023).pdf (Both folder)"
+ },
+ "OSS": {
+  "main": "paper/Binary/1997 One-sided selection - Kubat, Matwin.pdf",
+  "supp": [],
+  "record": "1997 One-sided selection - Kubat, Matwin.pdf"
+ },
+ "OVO-SMOTE": {
+  "main": "paper/Multiclass/2013_OVO-SMOTE_Analysing the classification of imbalanced data-sets with multiple classes - Binarization techniques and ad-hoc approaches.pdf",
+  "supp": [],
+  "record": "2013_OVO-SMOTE_Analysing the classification of imbalanced data-sets with multiple classes - Binarization techniques and ad-hoc approaches.pdf (Drive id 1zYDaE9DXkV9_GMfZRt9aJa_48pf7Usjc)"
+ },
+ "QC-SMOTE": {
+  "main": "paper/Binary/QC-SMOTE Quality-Controlled SMOTE for Imbalanced.pdf",
+  "supp": [],
+  "record": "QC-SMOTE Quality-Controlled SMOTE for Imbalanced.pdf (Drive id 1ic15ixamezP9A2bop_KHS6t0UcU3MpgY), read via read_file_content text"
+ },
+ "RACOG": {
+  "main": "paper/Both/RACOG-wRACOG - Two Probabilistic Oversampling Techniques (IEEE TKDE 2015).pdf",
+  "supp": [],
+  "record": "RACOG-wRACOG - Two Probabilistic Oversampling Techniques (IEEE TKDE 2015).pdf (Drive id 1xyZUzavvdWF2OsrM31uxugOEHpn0liE3)"
+ },
+ "RAMOBoost": {
+  "main": "paper/Binary/2010 RAMOBoost - Chen, He, Garcia.pdf",
+  "supp": [],
+  "record": "2010 RAMOBoost - Chen, He, Garcia.pdf"
+ },
+ "RBBoost": {
+  "main": "paper/Both/RBBoost - Random Balance Ensembles of Variable Priors Classifiers for Imbalanced Data (Knowledge-Based Systems 2015).pdf",
+  "supp": [
+   "paper/Both/RBBoost - Supplementary (Knowledge-Based Systems 2015).pdf"
+  ],
+  "record": "RBBoost - Random Balance Ensembles of Variable Priors Classifiers for Imbalanced Data (Knowledge-Based Systems 2015).pdf; RBBoost - Supplementary (Knowledge-Based Systems 2015).pdf"
+ },
+ "RBO": {
+  "main": "paper/Both/RBO - Radial-Based Oversampling for Noisy Imbalanced Data Classification (Neurocomputing 2019).pdf",
+  "supp": [],
+  "record": "RBO - Radial-Based Oversampling for Noisy Imbalanced Data Classification (Neurocomputing 2019).pdf"
+ },
+ "ROS-Buda": {
+  "main": "paper/Both/ROS (Buda) - A Systematic Study of the Class Imbalance Problem in Convolutional Neural Networks (Neural Networks 2018).pdf",
+  "supp": [],
+  "record": "ROS (Buda) - A Systematic Study of the Class Imbalance Problem in Convolutional Neural Networks (Neural Networks 2018).pdf (+ Supplementary 1 Appendix A Reshuffled Splits, plots only)"
+ },
+ "RSMOTE": {
+  "main": "paper/Binary/RSMOTE A self-adaptive robust SMOTE for imbalanced problems with label noise.pdf",
+  "supp": [],
+  "record": "RSMOTE A self-adaptive robust SMOTE for imbalanced problems with label noise.pdf"
+ },
+ "RUSBoost": {
+  "main": "paper/Both/RUSBoost - A Hybrid Approach to Alleviating Class Imbalance (IEEE TSMC-A 2010).pdf",
+  "supp": [],
+  "record": "RUSBoost - A Hybrid Approach to Alleviating Class Imbalance (IEEE TSMC-A 2010).pdf"
+ },
+ "SCUT": {
+  "main": "paper/Multiclass/2015_SCUT_Multi-Class Imbalanced Data Classification using SMOTE and Cluster-based Undersampling.pdf",
+  "supp": [],
+  "record": "2015_SCUT_Multi-Class Imbalanced Data Classification using SMOTE and Cluster-based Undersampling.pdf (Drive id 1ZIWXUhaCqxK_bGMQ6E0Awx_XKRK9pugY, 8 pages)"
+ },
+ "SHRINK": {
+  "main": "paper/Binary/1998 SHRINK - Kubat, Holte, Matwin.pdf",
+  "supp": [],
+  "record": "1998 SHRINK - Kubat, Holte, Matwin.pdf (Drive id 1W9DubnXJROPbPHHYcvOI1SXvE7I3OC6g; Kubat, Holte, Matwin, 'Machine Learning for the Detection of Oil Spills in Satellite Radar Images', Machine Learning"
+ },
+ "SHSampler": {
+  "main": "paper/Multiclass/2022_SHSampler_Combating Mutuality with Difficulty Factors in Multi-class Imbalanced Data - A Similarity-based Hybrid Sampling.pdf",
+  "supp": [],
+  "record": "2022_SHSampler_Combating Mutuality with Difficulty Factors in Multi-class Imbalanced Data - A Similarity-based Hybrid Sampling.pdf"
+ },
+ "SMOM": {
+  "main": "paper/Both/SMOM - Synthetic Minority Oversampling Technique for Multiclass Imbalance Problems (Pattern Recognition 2017).pdf",
+  "supp": [
+   "paper/Both/SMOM - Supplementary (Pattern Recognition 2017).pdf"
+  ],
+  "record": "SMOM - Synthetic Minority Oversampling Technique for Multiclass Imbalance Problems (Pattern Recognition 2017).pdf; SMOM - Supplementary (Pattern Recognition 2017).pdf"
+ },
+ "SMOTE-ENN": {
+  "main": "paper/Both/SMOTE-Tomek & SMOTE-ENN (Batista) - A Study of the Behavior of Several Methods for Balancing Machine Learning Training Data (SIGKDD Explorations 2004).pdf",
+  "supp": [],
+  "record": "SMOTE-Tomek & SMOTE-ENN (Batista) - A Study of the Behavior of Several Methods for Balancing Machine Learning Training Data (SIGKDD Explorations 2004).pdf"
+ },
+ "SMOTE-IPF": {
+  "main": "paper/Both/SMOTE-IPF - Addressing the Noisy and Borderline Examples Problem in Imbalanced Classification by a Re-Sampling Method with Filtering (Information Sciences 2015).pdf",
+  "supp": [],
+  "record": "SMOTE-IPF - Addressing the Noisy and Borderline Examples Problem in Imbalanced Classification by a Re-Sampling Method with Filtering (Information Sciences 2015).pdf (Drive id 1yGWVTPRefcNsLsRoUhyeS16S"
+ },
+ "SMOTE": {
+  "main": "paper/Both/SMOTE - Synthetic Minority Over-Sampling Technique (JAIR 2002).pdf",
+  "supp": [],
+  "record": "SMOTE - Synthetic Minority Over-Sampling Technique (JAIR 2002).pdf (Drive id 1xlt-DjX5xgyghFZOBng_MBCD9rpKnZ2h, folder Both)"
+ },
+ "SMOTEBoost": {
+  "main": "paper/Both/SMOTEBoost - Improving Prediction of the Minority Class in Boosting (PKDD 2003).pdf",
+  "supp": [],
+  "record": "SMOTEBoost - Improving Prediction of the Minority Class in Boosting (PKDD 2003).pdf"
+ },
+ "SOS": {
+  "main": "paper/Both/SOS - Score-Based Oversampling for Tabular Data (KDD 2022).pdf",
+  "supp": [],
+  "record": "SOS - Score-Based Oversampling for Tabular Data (KDD 2022).pdf"
+ },
+ "SOUP": {
+  "main": "paper/Multiclass/2019_SOUP_Using information on class interrelations to improve classification of multiclass imbalanced data - A new resampling algorithm.pdf",
+  "supp": [],
+  "record": "2019_SOUP_Using information on class interrelations to improve classification of multiclass imbalanced data - A new resampling algorithm.pdf"
+ },
+ "SPE": {
+  "main": "paper/Both/SPE - Self-Paced Ensemble for Highly Imbalanced Massive Data Classification (ICDE 2020).pdf",
+  "supp": [],
+  "record": "SPE - Self-Paced Ensemble for Highly Imbalanced Massive Data Classification (ICDE 2020).pdf (all 12 pages read via read_file_content)"
+ },
+ "SPIDER2": {
+  "main": "paper/Binary/2010 SPIDER2 - Napierala, Stefanowski, Wilk.pdf",
+  "supp": [],
+  "record": "2010 SPIDER2 - Napierala, Stefanowski, Wilk.pdf"
+ },
+ "SVDD-WSMOTE": {
+  "main": "paper/Binary/SVDD-based weighted oversampling technique for imbalanced.pdf",
+  "supp": [],
+  "record": "SVDD-based weighted oversampling technique for imbalanced.pdf"
+ },
+ "Safe-Level-SMOTE": {
+  "main": "paper/Both/Safe-Level-SMOTE - Safe-Level-Synthetic Minority Over-Sampling Technique for Handling the Class Imbalanced Problem (PAKDD 2009).pdf",
+  "supp": [],
+  "record": "Safe-Level-SMOTE - Safe-Level-Synthetic Minority Over-Sampling Technique for Handling the Class Imbalanced Problem (PAKDD 2009).pdf (Drive id 1ndf16oaQbwLU0sGsYhEznHyksAKS0lHy)"
+ },
+ "SplitBal": {
+  "main": "paper/Both/SplitBal - A Novel Ensemble Method for Classifying Imbalanced Data (Pattern Recognition 2015).pdf",
+  "supp": [],
+  "record": "SplitBal - A Novel Ensemble Method for Classifying Imbalanced Data (Pattern Recognition 2015).pdf"
+ },
+ "Stop-Oversampling": {
+  "main": "paper/Survey/90b9923d-25db-4077-bab6-59f3073325f4.pdf",
+  "supp": [],
+  "record": "90b9923d-25db-4077-bab6-59f3073325f4.pdf (full text read via read_file_content; tables were text, not images)"
+ },
+ "k-means-SMOTE": {
+  "main": "paper/Binary/2018 k-means SMOTE - Douzas, Bacao, Last (accepted manuscript).pdf",
+  "supp": [],
+  "record": "2018 k-means SMOTE - Douzas, Bacao, Last (accepted manuscript).pdf"
+ }
+}

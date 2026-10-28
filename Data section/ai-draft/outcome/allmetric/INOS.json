@@ -1,0 +1,415 @@
+{
+ "key": "INOS",
+ "classifier": "SVM (RBF kernel)",
+ "condition": "main suite; values averaged over each dataset's apportions; r=0.7",
+ "proposed_column": "Proposed INOS",
+ "smote_column": "SMOTE",
+ "metrics": [
+  {
+   "metric": "F-Value",
+   "metric_family": "F-measure",
+   "table": "Table 2",
+   "page": "PDF page 9 (printed 2817)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Adiac",
+     "proposed": ".800",
+     "proposed_std": ".0032",
+     "smote": ".732",
+     "smote_std": ".0022",
+     "marks": "INOS bold"
+    },
+    {
+     "dataset_as_printed": "FaceAll",
+     "proposed": ".936",
+     "proposed_std": ".0005",
+     "smote": ".907",
+     "smote_std": ".0004",
+     "marks": "INOS bold (tied with SPO bold)"
+    },
+    {
+     "dataset_as_printed": "50Words",
+     "proposed": ".778",
+     "proposed_std": ".0026",
+     "smote": ".783",
+     "smote_std": ".0010",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "SLeaf",
+     "proposed": ".904",
+     "proposed_std": ".0014",
+     "smote": ".890",
+     "smote_std": ".0010",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "TwoPats",
+     "proposed": ".546",
+     "proposed_std": ".0002",
+     "smote": ".358",
+     "smote_std": ".0020",
+     "marks": "INOS bold"
+    },
+    {
+     "dataset_as_printed": "Wafer",
+     "proposed": ".985",
+     "proposed_std": ".0015",
+     "smote": ".965",
+     "smote_std": ".0020",
+     "marks": "INOS bold"
+    },
+    {
+     "dataset_as_printed": "Yoga",
+     "proposed": ".724",
+     "proposed_std": ".0030",
+     "smote": ".684",
+     "smote_std": ".0020",
+     "marks": "INOS bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average (bold)",
+      "proposed": ".810±.0020",
+      "smote": ".760±.0015"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "not stated in paper (text only says INOS F-Value 0.81 and G-Mean 0.86 'are significantly better than all six existing oversampling methods', no test named)"
+   }
+  },
+  {
+   "metric": "G-Mean",
+   "metric_family": "G-mean",
+   "table": "Table 2",
+   "page": "PDF page 9 (printed 2817)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "Adiac",
+     "proposed": ".882",
+     "proposed_std": ".0023",
+     "smote": ".807",
+     "smote_std": ".0001",
+     "marks": "INOS bold"
+    },
+    {
+     "dataset_as_printed": "FaceAll",
+     "proposed": ".945",
+     "proposed_std": ".0004",
+     "smote": ".916",
+     "smote_std": ".0004",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "50Words",
+     "proposed": ".880",
+     "proposed_std": ".0006",
+     "smote": ".863",
+     "smote_std": ".0008",
+     "marks": "INOS bold"
+    },
+    {
+     "dataset_as_printed": "SLeaf",
+     "proposed": ".962",
+     "proposed_std": ".0008",
+     "smote": ".933",
+     "smote_std": ".0009",
+     "marks": "INOS bold"
+    },
+    {
+     "dataset_as_printed": "TwoPats",
+     "proposed": ".614",
+     "proposed_std": ".0020",
+     "smote": ".467",
+     "smote_std": ".0015",
+     "marks": "INOS bold"
+    },
+    {
+     "dataset_as_printed": "Wafer",
+     "proposed": ".985",
+     "proposed_std": ".0005",
+     "smote": ".966",
+     "smote_std": ".0010",
+     "marks": "INOS bold"
+    },
+    {
+     "dataset_as_printed": "Yoga",
+     "proposed": ".750",
+     "proposed_std": ".0030",
+     "smote": ".720",
+     "smote_std": ".0025",
+     "marks": "INOS bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average (bold)",
+      "proposed": ".860±.0014",
+      "smote": ".810±.0011"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "not stated in paper (text only says INOS F-Value 0.81 and G-Mean 0.86 'are significantly better than all six existing oversampling methods', no test named)"
+   }
+  },
+  {
+   "metric": "Precision",
+   "metric_family": "precision",
+   "table": "Table 2",
+   "page": "PDF page 9 (printed 2817)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Adiac",
+     "proposed": ".820",
+     "proposed_std": ".0022",
+     "smote": ".828",
+     "smote_std": ".0012",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "FaceAll",
+     "proposed": ".981",
+     "proposed_std": ".0004",
+     "smote": ".992",
+     "smote_std": ".0003",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "50Words",
+     "proposed": ".806",
+     "proposed_std": ".0014",
+     "smote": ".846",
+     "smote_std": ".0007",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "SLeaf",
+     "proposed": ".879",
+     "proposed_std": ".0008",
+     "smote": ".907",
+     "smote_std": ".0008",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "TwoPats",
+     "proposed": ".971",
+     "proposed_std": ".0015",
+     "smote": ".993",
+     "smote_std": ".0016",
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Wafer",
+     "proposed": ".996",
+     "proposed_std": ".0015",
+     "smote": ".999",
+     "smote_std": ".0018",
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Yoga",
+     "proposed": ".986",
+     "proposed_std": ".0026",
+     "smote": ".991",
+     "smote_std": ".0017",
+     "marks": ""
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average",
+      "proposed": ".920±.0015",
+      "smote": ".936±.0012"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "not stated in paper"
+   }
+  },
+  {
+   "metric": "Recall (or True Positive Rate)",
+   "metric_family": "recall",
+   "table": "Table 2",
+   "page": "PDF page 9 (printed 2817)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Adiac",
+     "proposed": ".792",
+     "proposed_std": ".0038",
+     "smote": ".673",
+     "smote_std": ".0018",
+     "marks": "INOS bold"
+    },
+    {
+     "dataset_as_printed": "FaceAll",
+     "proposed": ".896",
+     "proposed_std": ".0007",
+     "smote": ".843",
+     "smote_std": ".0005",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "50Words",
+     "proposed": ".794",
+     "proposed_std": ".0024",
+     "smote": ".763",
+     "smote_std": ".0013",
+     "marks": "INOS bold"
+    },
+    {
+     "dataset_as_printed": "SLeaf",
+     "proposed": ".935",
+     "proposed_std": ".0015",
+     "smote": ".876",
+     "smote_std": ".0009",
+     "marks": "INOS bold"
+    },
+    {
+     "dataset_as_printed": "TwoPats",
+     "proposed": ".386",
+     "proposed_std": ".0018",
+     "smote": ".219",
+     "smote_std": ".0015",
+     "marks": "INOS bold"
+    },
+    {
+     "dataset_as_printed": "Wafer",
+     "proposed": ".975",
+     "proposed_std": ".0020",
+     "smote": ".934",
+     "smote_std": ".0035",
+     "marks": "INOS bold"
+    },
+    {
+     "dataset_as_printed": "Yoga",
+     "proposed": ".573",
+     "proposed_std": ".0040",
+     "smote": ".522",
+     "smote_std": ".0025",
+     "marks": "INOS bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average (bold)",
+      "proposed": ".764±.0024",
+      "smote": ".690±.0018"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "not stated in paper"
+   }
+  },
+  {
+   "metric": "True Negative Rate",
+   "metric_family": "specificity",
+   "table": "Table 2",
+   "page": "PDF page 9 (printed 2817)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Adiac",
+     "proposed": ".995",
+     "proposed_std": ".0001",
+     "smote": ".996",
+     "smote_std": ".0001",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "FaceAll",
+     "proposed": ".998",
+     "proposed_std": "0",
+     "smote": ".999",
+     "smote_std": "0",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "50Words",
+     "proposed": ".986",
+     "proposed_std": ".0003",
+     "smote": ".991",
+     "smote_std": ".0001",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "SLeaf",
+     "proposed": ".991",
+     "proposed_std": ".0001",
+     "smote": ".994",
+     "smote_std": ".0001",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "TwoPats",
+     "proposed": ".994",
+     "proposed_std": ".0002",
+     "smote": ".999",
+     "smote_std": ".0001",
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Wafer",
+     "proposed": ".996",
+     "proposed_std": ".0004",
+     "smote": "1",
+     "smote_std": "0",
+     "marks": "SMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Yoga",
+     "proposed": ".983",
+     "proposed_std": ".0012",
+     "smote": ".991",
+     "smote_std": ".0005",
+     "marks": ""
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average",
+      "proposed": ".992±.0003",
+      "smote": ".996±.0001"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "not stated in paper"
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [],
+ "metrics_without_smote": [
+  {
+   "metric": "F-Value, G-Mean for integrated pairs (ESPO+REP, ESPO+SMO, ESPO+BoS, INOS, DB+ADA)",
+   "table": "Table 5 (ESPO+SMOTE hybrid, not plain SMOTE)"
+  },
+  {
+   "metric": "F-Value, G-Mean vs Easy, BalanceCascade, 1NN, 1NN-DTW",
+   "table": "Table 6"
+  },
+  {
+   "metric": "F-Value, G-Mean for ablation cases",
+   "table": "Fig. 6"
+  }
+ ],
+ "notes": "Table 2 is a raster image; read at 300 dpi. Bold = best per row among 7 oversampling methods (marks recorded only for SMOTE/INOS cells). Tables 3 (Adiac, 10 apportions P-CI 1-10) and 4 (Yoga, 2 apportions) give per-apportion F-Value and G-Mean incl. SMO (SMOTE) and INOS without std - a finer-grained view of the same SVM experiment; not copied here because the fixed condition is the per-dataset average over apportions (Table 2)."
+}

@@ -1,0 +1,132 @@
+file,file_src,verif,entries,papers
+abalone-17_vs_7-8-9-10,KEEL(keel_ds),V-binary_file,1,HDE
+abalone-3_vs_11,KEEL(keel_ds),V-binary_file,1,RBO
+abalone19,KEEL(keel_ds),V-binary_file,6,CISO; GDO; HDE; MLOS; OBU; RBBoost / Random Balance
+abalone9-18,KEEL(keel_ds),V-binary_file,9,AB-SMOTE; CISO; GDO; HDE; NBU; OBU; RBBoost / Random Balance; RBO; SplitBal
+adult,PMLB,V-binary_file; V-name_only_other,2,CTGAN / TVAE; SMOTE
+australian,KEEL(keel_ds),V-binary_file,1,GDO
+balance_scale,PMLB,V-name_only_other,1,SOUP
+bupa,KEEL(keel_ds),V-binary_file; V-keel_name_only,2,SMOTE-IPF; SPIDER2
+car-good,KEEL(keel_ds),V-binary_file,2,CISO; GDO
+car-vgood,KEEL(keel_ds),V-binary_file,1,GDO
+car_evaluation,PMLB,V-multiclass_asis,1,MKC-SMOTE
+cleveland-0_vs_4,KEEL(keel_ds),V-binary_file,4,KNNOR; MLOS; RBBoost / Random Balance; SplitBal
+coil2000,PMLB,V-binary_file,1,DGOT
+connect_4,PMLB,V-multiclass_asis,2,Global-CS (AAAI); Global-CS (journal)
+contraceptive,KEEL(keel_ds),V-keel_name_only; V-multiclass_asis,11,AMDO; CBHSID; DLexiBoost; GDHS; MC-CCR; MC-MBRC; MC-RBO; MDO; NROMM; OVO-SMOTE; RSMOTE
+dermatology,PMLB,V-multiclass_asis; V-name_only_other,5,CBHSID; GLOS; OREM-M; SCUT; SOUP
+dermatology-6,KEEL(keel_ds),V-binary_file,2,CISO; k-means SMOTE
+ecoli,PMLB,V-multiclass_asis; V-name_only_other,8,AMDO; DLexiBoost; EMDO; GLOS; MDO; SHSampler; SOUP; SPIDER2
+ecoli-0-1-3-7_vs_2-6,KEEL(keel_ds),V-binary_file,7,HDE; KNNOR; Loyalty-SMOTE; NBU; OBU; RBBoost / Random Balance; SplitBal
+ecoli-0-1-4-6_vs_5,KEEL(keel_ds),V-binary_file,4,FW-SMOTE; Loyalty-SMOTE; RBBoost / Random Balance; SplitBal
+ecoli-0-1-4-7_vs_2-3-5-6,KEEL(keel_ds),V-binary_file,3,KNNOR; RBBoost / Random Balance; SplitBal
+ecoli-0-1-4-7_vs_5-6,KEEL(keel_ds),V-binary_file,3,FW-SMOTE; RBBoost / Random Balance; SplitBal
+ecoli-0-1_vs_2-3-5,KEEL(keel_ds),V-binary_file,2,RBBoost / Random Balance; SplitBal
+ecoli-0-1_vs_5,KEEL(keel_ds),V-binary_file,3,FW-SMOTE; RBBoost / Random Balance; SplitBal
+ecoli-0-2-3-4_vs_5,KEEL(keel_ds),V-binary_file,3,FW-SMOTE; RBBoost / Random Balance; SplitBal
+ecoli-0-2-6-7_vs_3-5,KEEL(keel_ds),V-binary_file,3,FW-SMOTE; RBBoost / Random Balance; SplitBal
+ecoli-0-3-4-6_vs_5,KEEL(keel_ds),V-binary_file,3,FW-SMOTE; RBBoost / Random Balance; SplitBal
+ecoli-0-3-4-7_vs_5-6,KEEL(keel_ds),V-binary_file,4,FW-SMOTE; KNNOR; RBBoost / Random Balance; SplitBal
+ecoli-0-3-4_vs_5,KEEL(keel_ds),V-binary_file,4,FW-SMOTE; KNNOR; RBBoost / Random Balance; SplitBal
+ecoli-0-4-6_vs_5,KEEL(keel_ds),V-binary_file,3,FW-SMOTE; RBBoost / Random Balance; SplitBal
+ecoli-0-6-7_vs_3-5,KEEL(keel_ds),V-binary_file,4,FW-SMOTE; KNNOR; RBBoost / Random Balance; SplitBal
+ecoli-0-6-7_vs_5,KEEL(keel_ds),V-binary_file,3,FW-SMOTE; RBBoost / Random Balance; SplitBal
+ecoli-0_vs_1,KEEL(keel_ds),V-binary_file; V-keel_name_only,4,CISO; DLexiBoost; GDO; RBBoost / Random Balance
+ecoli1,KEEL(keel_ds),V-binary_file; V-keel_name_only,8,CISO; GDO; NBU; OBU; QC-SMOTE; RACOG / wRACOG; RBBoost / Random Balance; RBO
+ecoli2,KEEL(keel_ds),V-binary_file; V-keel_name_only,6,GDO; NBU; OBU; QC-SMOTE; RBBoost / Random Balance; RBO
+ecoli3,KEEL(keel_ds),V-binary_file; V-keel_name_only,10,CISO; DLexiBoost; GDO; KNNOR; NBU; OBU; QC-SMOTE; RBBoost / Random Balance; RBO; SplitBal
+ecoli4,KEEL(keel_ds),V-binary_file; V-keel_name_only,10,CISO; FW-SMOTE; GDO; HDE; NBU; OBU; QC-SMOTE; RBBoost / Random Balance; RBO; SplitBal
+flare-F,KEEL(keel_ds),V-binary_file,1,CISO
+german,KEEL(keel_ds),V-binary_file; V-keel_name_only,3,DLexiBoost; Loyalty-SMOTE; SMOTE-ENN / SMOTE-Tomek
+glass,imbalanced_databases(other fmt),V-name_only_other,2,SHSampler; SOUP
+glass-0-1-2-3_vs_4-5-6,KEEL(keel_ds),V-binary_file; V-keel_name_only,7,CISO; GDO; KNNOR; OBU; QC-SMOTE; RBBoost / Random Balance; RBO
+glass-0-1-4-6_vs_2,KEEL(keel_ds),V-binary_file,2,RBBoost / Random Balance; SplitBal
+glass-0-1-5_vs_2,KEEL(keel_ds),V-binary_file,2,RBBoost / Random Balance; SplitBal
+glass-0-1-6_vs_2,KEEL(keel_ds),V-binary_file,8,CISO; FW-SMOTE; HDE; KNNOR; OBU; RBBoost / Random Balance; RBO; SplitBal
+glass-0-1-6_vs_5,KEEL(keel_ds),V-binary_file,6,CISO; GDO; HDE; OBU; RBBoost / Random Balance; SplitBal
+glass-0-4_vs_5,KEEL(keel_ds),V-binary_file,3,FW-SMOTE; RBBoost / Random Balance; SplitBal
+glass-0-6_vs_5,KEEL(keel_ds),V-binary_file,3,FW-SMOTE; RBBoost / Random Balance; SplitBal
+glass0,KEEL(keel_ds),V-binary_file; V-keel_name_only,7,CISO; KNNOR; NBU; OBU; QC-SMOTE; RBBoost / Random Balance; RBO
+glass1,KEEL(keel_ds),V-binary_file; V-keel_name_only,7,CISO; GDO; KNNOR; OBU; QC-SMOTE; RBBoost / Random Balance; RBO
+glass2,KEEL(keel_ds),V-binary_file; V-keel_name_only,9,CISO; DLexiBoost; GDO; HDE; NBU; OBU; RBBoost / Random Balance; RBO; SplitBal
+glass4,KEEL(keel_ds),V-binary_file; V-keel_name_only,9,CISO; DLexiBoost; FW-SMOTE; GDO; KNNOR; NBU; OBU; RBBoost / Random Balance; SplitBal
+glass5,KEEL(keel_ds),V-binary_file; V-keel_name_only,9,CISO; DLexiBoost; GDO; HDE; MLOS; NBU; OBU; RBBoost / Random Balance; SplitBal
+glass6,KEEL(keel_ds),V-binary_file; V-keel_name_only,6,CBHSID; CISO; OBU; QC-SMOTE; RBBoost / Random Balance; RBO
+haberman,KEEL(keel_ds),V-binary_file; V-keel_name_only,21,A-SUWO; AB-SMOTE; Borderline-SMOTE; CBHSID; CGMOS; CISO; DSRBF / Static-SMOTE; EasyEnsemble / BalanceCascade; G-SMOTE; GDO; KNNOR; OBU; RACOG / wRACOG; RBBoost / Random Balance; RBO; SMOTE-ENN / SMOTE-Tomek; SMOTE-IPF; SPIDER2; SVDD-WSMOTE; Safe-Level-SMOTE; k-means SMOTE
+hayes-roth,KEEL(keel_ds),V-keel_name_only; V-multiclass_asis,9,DLexiBoost; GDHS; MC-CCR; MC-NCLWO; MC-RBO; NROMM; OVO-SMOTE; SHSampler; SOUP
+heart,KEEL(keel_ds),V-binary_file,4,A-SUWO; G-SMOTE; RSMOTE; k-means SMOTE
+hepatitis,PMLB,V-binary_file,2,DSRBF / Static-SMOTE; SMOTE-IPF
+hepatitis,imbalanced_databases(other fmt),V-name_only_other,1,SPIDER2
+ionosphere,KEEL(keel_ds),V-binary_file,4,ADASYN; EasyEnsemble / BalanceCascade; Loyalty-SMOTE; RAMOBoost
+iris0,KEEL(keel_ds),V-binary_file,2,OBU; RBBoost / Random Balance
+kddcup-buffer_overflow_vs_back,KEEL(keel_ds),V-binary_file,1,HDE
+kddcup-land_vs_satan,KEEL(keel_ds),V-binary_file,1,HDE
+kddcup-rootkit-imap_vs_back,KEEL(keel_ds),V-binary_file,1,HDE
+kr-vs-k-one_vs_fifteen,KEEL(keel_ds),V-binary_file,1,GDO
+kr-vs-k-three_vs_eleven,KEEL(keel_ds),V-binary_file,2,GDO; HDE
+kr-vs-k-zero-one_vs_draw,KEEL(keel_ds),V-binary_file,1,GDO
+kr-vs-k-zero_vs_eight,KEEL(keel_ds),V-binary_file,1,HDE
+kr-vs-k-zero_vs_fifteen,KEEL(keel_ds),V-binary_file,1,HDE
+led7digit,KEEL(keel_ds),V-keel_name_only; V-multiclass_asis,7,MC-CCR; MC-NCLWO; MC-RBO; NROMM; OVO-SMOTE; SHSampler; SOUP
+led7digit-0-2-4-5-6-7-8-9_vs_1,KEEL(keel_ds),V-binary_file,3,RBBoost / Random Balance; RBO; SplitBal
+letter,KEEL(keel_ds),V-multiclass_asis,2,COG-OS; MDO
+lymphography,PMLB,V-multiclass_asis; V-name_only_other,9,DLexiBoost; MC-CCR; MC-MBRC; MC-NCLWO; MC-RBO; NROMM; OVO-SMOTE; SCUT; SHSampler
+magic,KEEL(keel_ds),V-binary_file,1,GAMO
+new-thyroid1,KEEL(keel_ds),V-binary_file,9,CISO; G-SMOTE; GDO; KNNOR; NBU; OBU; RBBoost / Random Balance; RBO; k-means SMOTE
+new-thyroid2,KEEL(keel_ds),V-binary_file; V-keel_name_only,7,CISO; DLexiBoost; G-SMOTE; NBU; QC-SMOTE; RBBoost / Random Balance; k-means SMOTE
+new_thyroid,PMLB,V-binarized_rule_unique; V-multiclass_asis; V-name_only_other,17,AMDO; DLexiBoost; DSRBF / Static-SMOTE; EMDO; GDHS; MC-CCR; MC-MBRC; MC-NCLWO; MC-RBO; MDO; MKC-SMOTE; NROMM; OREM-M; OVO-SMOTE; SHSampler; SMOTE-IPF; SOUP
+nursery,PMLB,V-multiclass_asis,2,AMDO; DGOT
+optdigits,KEEL(keel_ds),V-keel_name_only,1,COG-OS
+page-blocks-1-3_vs_4,KEEL(keel_ds),V-binary_file; V-keel_name_only,6,FW-SMOTE; KNNOR; QC-SMOTE; RBBoost / Random Balance; RBO; SplitBal
+page-blocks0,KEEL(keel_ds),V-binary_file; V-keel_name_only,5,G-SMOTE; QC-SMOTE; RBBoost / Random Balance; SplitBal; k-means SMOTE
+page_blocks,PMLB,V-binarized_rule_unique; V-multiclass_asis; V-name_only_other,8,COG-OS; DGOT; DLexiBoost; MC-MBRC; MC-NCLWO; OREM-M; RAMOBoost; SHSampler
+penbased,KEEL(keel_ds),V-keel_name_only,1,CBHSID
+pendigits,PMLB,V-name_only_other,1,COG-OS
+phoneme,KEEL(keel_ds),V-binary_file; V-keel_name_only,6,EasyEnsemble / BalanceCascade; LS; RAMOBoost; RBBoost / Random Balance; SMOTE; SMOTEBoost
+pima,KEEL(keel_ds),V-binary_file; V-keel_name_only,20,A-SUWO; Borderline-SMOTE; CBHSID; CISO; EasyEnsemble / BalanceCascade; KNNOR; LS; MWMOTE; NBU; OBU; QC-SMOTE; RBBoost / Random Balance; RBO; RSMOTE; SMOTE; SMOTE-ENN / SMOTE-Tomek; SMOTE-IPF; SPIDER2; SVDD-WSMOTE; k-means SMOTE
+poker-8-9_vs_6,KEEL(keel_ds),V-binary_file,1,RBO
+poker-8_vs_6,KEEL(keel_ds),V-binary_file; V-keel_name_only,2,DLexiBoost; MLOS
+poker-9_vs_7,KEEL(keel_ds),V-binary_file; V-keel_name_only,3,KNNOR; RBO; k-means SMOTE
+satimage,KEEL(keel_ds),V-binarized_rule_unique; V-keel_name_only,7,COG-OS; EasyEnsemble / BalanceCascade; MBS; MWMOTE; RAMOBoost; SOS; Safe-Level-SMOTE
+segment,KEEL(keel_ds),V-multiclass_asis,3,GLOS; Global-CS (AAAI); Global-CS (journal)
+segment0,KEEL(keel_ds),V-binary_file; V-keel_name_only,7,CISO; GDO; NBU; OBU; QC-SMOTE; RBBoost / Random Balance; RBO
+shuttle,PMLB,V-name_only_other,1,DLexiBoost
+shuttle-2_vs_5,KEEL(keel_ds),V-binary_file,1,HDE
+shuttle-c0-vs-c4,KEEL(keel_ds),V-binary_file; V-keel_name_only,7,CISO; FW-SMOTE; GDO; HDE; QC-SMOTE; RBBoost / Random Balance; SplitBal
+shuttle-c2-vs-c4,KEEL(keel_ds),V-binary_file; V-keel_name_only,4,DLexiBoost; HDE; RBBoost / Random Balance; SplitBal
+sonar,KEEL(keel_ds),V-binary_file,1,RAMOBoost
+spambase,PMLB,V-binary_file,3,CISO; MBS; RAMOBoost
+spect,PMLB,V-name_only_other,1,SVDD-WSMOTE
+splice,KEEL(keel_ds),V-multiclass_asis,4,AMDO; Global-CS (AAAI); Global-CS (journal); OVO-SMOTE
+vehicle,KEEL(keel_ds),V-binarized_rule_unique; V-keel_name_only; V-multiclass_asis,15,A-SUWO; ADASYN; EasyEnsemble / BalanceCascade; G-SMOTE; GDHS; MC-CCR; MC-NCLWO; MC-RBO; MDO; NROMM; RAMOBoost; RSMOTE; SHSampler; SOUP; k-means SMOTE
+vehicle0,KEEL(keel_ds),V-binary_file; V-keel_name_only,5,CISO; NBU; QC-SMOTE; RBBoost / Random Balance; RBO
+vehicle1,KEEL(keel_ds),V-binary_file; V-keel_name_only,7,CBHSID; CISO; NBU; OBU; QC-SMOTE; RBBoost / Random Balance; RBO
+vehicle2,KEEL(keel_ds),V-binary_file; V-keel_name_only,5,CISO; OBU; QC-SMOTE; RBBoost / Random Balance; RBO
+vehicle3,KEEL(keel_ds),V-binary_file; V-keel_name_only,6,CISO; OBU; QC-SMOTE; RBBoost / Random Balance; RBO; Survey: Stop Oversampling
+vowel,KEEL(keel_ds),V-keel_name_only; V-multiclass_asis,3,COG-OS; Global-CS (AAAI); Global-CS (journal)
+vowel0,KEEL(keel_ds),V-binary_file; V-keel_name_only,11,CISO; GDO; HDE; Loyalty-SMOTE; NBU; OBU; QC-SMOTE; RBBoost / Random Balance; RBO; SplitBal; k-means SMOTE
+wdbc,KEEL(keel_ds),V-binary_file,1,EasyEnsemble / BalanceCascade
+wine,KEEL(keel_ds),V-binarized_rule_unique; V-keel_name_only; V-multiclass_asis,15,A-SUWO; DLexiBoost; G-SMOTE; GLOS; MC-CCR; MC-NCLWO; MC-RBO; MDO; MWMOTE; NROMM; OVO-SMOTE; RAMOBoost; RSMOTE; SHSampler; k-means SMOTE
+wine_quality_red,PMLB,V-multiclass_asis; V-name_only_other,9,GDHS; GLOS; MC-CCR; MC-MBRC; MC-NCLWO; MC-RBO; MDO; NROMM; SOUP
+wine_quality_white,PMLB,V-multiclass_asis,2,MC-MBRC; MDO
+winequality-red-3_vs_5,KEEL(keel_ds),V-binary_file,1,MLOS
+winequality-red-4,KEEL(keel_ds),V-binary_file,2,CISO; RBO
+winequality-red-8_vs_6-7,KEEL(keel_ds),V-keel_name_only,1,DLexiBoost
+winequality-white-3_vs_7,KEEL(keel_ds),V-binary_file,2,GDO; KNNOR
+winequality-white-9_vs_4,KEEL(keel_ds),V-binary_file,1,RBO
+wisconsin,KEEL(keel_ds),V-binary_file; V-keel_name_only,5,CISO; GDO; NBU; QC-SMOTE; RBBoost / Random Balance
+yeast,PMLB,V-multiclass_asis; V-name_only_other,5,DLexiBoost; GLOS; OREM-M; SHSampler; SOUP
+yeast-0-2-5-6_vs_3-7-8-9,KEEL(keel_ds),V-binary_file,2,RBBoost / Random Balance; SplitBal
+yeast-0-2-5-7-9_vs_3-6-8,KEEL(keel_ds),V-binary_file,3,FW-SMOTE; RBBoost / Random Balance; SplitBal
+yeast-0-3-5-9_vs_7-8,KEEL(keel_ds),V-binary_file,3,Loyalty-SMOTE; RBBoost / Random Balance; SplitBal
+yeast-0-5-6-7-9_vs_4,KEEL(keel_ds),V-binary_file; V-keel_name_only,8,CISO; FW-SMOTE; GDO; HDE; OBU; QC-SMOTE; RBBoost / Random Balance; SplitBal
+yeast-1-2-8-9_vs_7,KEEL(keel_ds),V-binary_file; V-keel_name_only,5,CISO; QC-SMOTE; RBBoost / Random Balance; RBO; SplitBal
+yeast-1-4-5-8_vs_7,KEEL(keel_ds),V-binary_file; V-keel_name_only,7,CISO; FW-SMOTE; GDO; QC-SMOTE; RBBoost / Random Balance; RBO; SplitBal
+yeast-1_vs_7,KEEL(keel_ds),V-binary_file; V-keel_name_only,8,CISO; FW-SMOTE; GDO; NBU; QC-SMOTE; RBBoost / Random Balance; RBO; SplitBal
+yeast-2_vs_4,KEEL(keel_ds),V-binary_file; V-keel_name_only,11,CISO; FW-SMOTE; GDO; HDE; NBU; OBU; QC-SMOTE; RBBoost / Random Balance; RBO; SplitBal; k-means SMOTE
+yeast-2_vs_8,KEEL(keel_ds),V-binary_file; V-keel_name_only,5,CISO; QC-SMOTE; RBBoost / Random Balance; SplitBal; k-means SMOTE
+yeast1,KEEL(keel_ds),V-binary_file; V-keel_name_only,9,CBHSID; CISO; G-SMOTE; GDO; OBU; QC-SMOTE; RBBoost / Random Balance; RBO; k-means SMOTE
+yeast3,KEEL(keel_ds),V-binary_file; V-keel_name_only,13,CBHSID; CISO; DLexiBoost; FW-SMOTE; G-SMOTE; GDO; NBU; OBU; QC-SMOTE; RBBoost / Random Balance; RBO; SplitBal; k-means SMOTE
+yeast4,KEEL(keel_ds),V-binary_file; V-keel_name_only,15,CBHSID; CISO; DLexiBoost; FW-SMOTE; G-SMOTE; GDO; NBU; OBU; QC-SMOTE; RACOG / wRACOG; RBBoost / Random Balance; RBO; SplitBal; Survey: Stop Oversampling; k-means SMOTE
+yeast5,KEEL(keel_ds),V-binary_file; V-keel_name_only,13,CBHSID; CISO; DLexiBoost; FW-SMOTE; G-SMOTE; GDO; HDE; OBU; QC-SMOTE; RBBoost / Random Balance; SplitBal; Survey: Stop Oversampling; k-means SMOTE
+yeast6,KEEL(keel_ds),V-binary_file; V-keel_name_only,12,CBHSID; CISO; G-SMOTE; GDO; HDE; MLOS; NBU; OBU; RACOG / wRACOG; RBBoost / Random Balance; SplitBal; Survey: Stop Oversampling

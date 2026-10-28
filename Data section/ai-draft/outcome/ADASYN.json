@@ -1,0 +1,31 @@
+{
+  "key": "ADASYN",
+  "smote_in_baselines": "yes",
+  "smote_name_as_printed": "SMOTE",
+  "baselines_all": ["Decision tree", "SMOTE"],
+  "results_tables": [
+    {"table": "TABLE II", "page": "PDF p.5 (printed p.1326)", "metric": "OA, Precision, Recall, F measure, G mean", "classifier": "decision tree", "granularity": "per-dataset", "is_image": false}
+  ],
+  "chosen": {
+    "table": "TABLE II",
+    "page": "PDF p.5 (printed p.1326)",
+    "metric": "G mean",
+    "classifier": "decision tree",
+    "condition": "average of 100 runs, random 50/50 train/test split; K = 5; SMOTE N = 200; ADASYN beta = 1, dth = 0.75",
+    "higher_is_better": true,
+    "why_this_choice": "Rule 3: G-mean is highest-priority metric and Table II has it per dataset for ADASYN and SMOTE; Rule 4: decision tree is the only classifier used"
+  },
+  "rows": [
+    {"dataset_as_printed": "Vehicle", "proposed": "0.9168", "proposed_std": null, "smote": "0.9018", "smote_std": null, "best_other_value": "0.8834", "best_other_name": "Decision tree", "marks": "ADASYN bold"},
+    {"dataset_as_printed": "Pima Indian Diabetes", "proposed": "0.6625", "proposed_std": null, "smote": "0.6454", "smote_std": null, "best_other_value": "0.6430", "best_other_name": "Decision tree", "marks": "ADASYN bold"},
+    {"dataset_as_printed": "Vowel recognition", "proposed": "0.9622", "proposed_std": null, "smote": "0.9470", "smote_std": null, "best_other_value": "0.9256", "best_other_name": "Decision tree", "marks": "ADASYN bold"},
+    {"dataset_as_printed": "Ionosphere", "proposed": "0.8530", "proposed_std": null, "smote": "0.8489", "smote_std": null, "best_other_value": "0.8371", "best_other_name": "Decision tree", "marks": "ADASYN bold"},
+    {"dataset_as_printed": "Abalone", "proposed": "0.6291", "proposed_std": null, "smote": "0.5588", "smote_std": null, "best_other_value": "0.5227", "best_other_name": "Decision tree", "marks": "ADASYN bold"}
+  ],
+  "summary_rows": [
+    {"label": "Winning times (G mean column)", "proposed": "5", "smote": "0"}
+  ],
+  "stat_test": "not stated in paper",
+  "win_claim": {"quote": "ADASYN algorithm also provides the best performance in terms of G-mean for all data sets.", "page": "PDF p.4 (printed p.1325)"},
+  "notes": "Abstract/conclusion only say 'show the effectiveness of this method'; the win_claim quote is from Section III-C results text, not abstract/conclusion. Only one non-SMOTE baseline (plain decision tree on original data), so best_other is always Decision tree. No std reported. Dataset names in Table II differ from Table I: Table I uses 'Diabetes (PID)' and 'Vowel', Table II uses 'Pima Indian Diabetes' and 'Vowel recognition'. Winning times row for Decision tree G mean = 0. Other metrics in Table II (OA, Precision, Recall, F measure) not copied. Table read from text extraction (not an image)."
+}

@@ -1,0 +1,397 @@
+{
+ "key": "SHSampler",
+ "classifier": "DT",
+ "condition": "original data, stratified 5-fold CV, no added noise",
+ "proposed_column": "SHSampler",
+ "smote_column": "OVO-SMO (OVO-SMOTE: SMOTE [32] within one-versus-one decomposition)",
+ "metrics": [
+  {
+   "metric": "mGM",
+   "metric_family": "G-mean",
+   "table": "Table II",
+   "page": "PDF page 7",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "balance",
+     "proposed": "0.2990",
+     "proposed_std": null,
+     "smote": "0.3022",
+     "smote_std": null,
+     "marks": "bold: SOUP"
+    },
+    {
+     "dataset_as_printed": "car",
+     "proposed": "0.9263",
+     "proposed_std": null,
+     "smote": "0.9468",
+     "smote_std": null,
+     "marks": "bold: OVO-SMO"
+    },
+    {
+     "dataset_as_printed": "cleveland",
+     "proposed": "0.0591",
+     "proposed_std": null,
+     "smote": "0.0000",
+     "smote_std": null,
+     "marks": "bold: Global-CS"
+    },
+    {
+     "dataset_as_printed": "ecoli",
+     "proposed": "0.1506",
+     "proposed_std": null,
+     "smote": "0.1182",
+     "smote_std": null,
+     "marks": "bold: SOUP"
+    },
+    {
+     "dataset_as_printed": "glass",
+     "proposed": "0.5125",
+     "proposed_std": null,
+     "smote": "0.5393",
+     "smote_std": null,
+     "marks": "bold: SOUP"
+    },
+    {
+     "dataset_as_printed": "hayes-roth",
+     "proposed": "0.8594",
+     "proposed_std": null,
+     "smote": "0.8308",
+     "smote_std": null,
+     "marks": "bold: MC-CCR"
+    },
+    {
+     "dataset_as_printed": "led7digit",
+     "proposed": "0.6746",
+     "proposed_std": null,
+     "smote": "0.6800",
+     "smote_std": null,
+     "marks": "bold: Global-CS"
+    },
+    {
+     "dataset_as_printed": "lymphography",
+     "proposed": "0.6432",
+     "proposed_std": null,
+     "smote": "0.4370",
+     "smote_std": null,
+     "marks": "bold: SHSampler"
+    },
+    {
+     "dataset_as_printed": "newthyroid",
+     "proposed": "0.9276",
+     "proposed_std": null,
+     "smote": "0.9124",
+     "smote_std": null,
+     "marks": "bold: SHSampler"
+    },
+    {
+     "dataset_as_printed": "page-blocks",
+     "proposed": "0.8883",
+     "proposed_std": null,
+     "smote": "0.7955",
+     "smote_std": null,
+     "marks": "bold: SHSampler"
+    },
+    {
+     "dataset_as_printed": "PhishingData",
+     "proposed": "0.8834",
+     "proposed_std": null,
+     "smote": "0.8686",
+     "smote_std": null,
+     "marks": "bold: Global-CS"
+    },
+    {
+     "dataset_as_printed": "sensorReadings",
+     "proposed": "0.9866",
+     "proposed_std": null,
+     "smote": "0.9913",
+     "smote_std": null,
+     "marks": "bold: Global-CS"
+    },
+    {
+     "dataset_as_printed": "thyroid",
+     "proposed": "0.9298",
+     "proposed_std": null,
+     "smote": "0.9595",
+     "smote_std": null,
+     "marks": "bold: SOUP"
+    },
+    {
+     "dataset_as_printed": "userknowledge",
+     "proposed": "0.7713",
+     "proposed_std": null,
+     "smote": "0.7525",
+     "smote_std": null,
+     "marks": "bold: MC-RBO"
+    },
+    {
+     "dataset_as_printed": "vehicle",
+     "proposed": "0.6964",
+     "proposed_std": null,
+     "smote": "0.6724",
+     "smote_std": null,
+     "marks": "bold: SHSampler"
+    },
+    {
+     "dataset_as_printed": "vertebralColumn",
+     "proposed": "0.7549",
+     "proposed_std": null,
+     "smote": "0.7252",
+     "smote_std": null,
+     "marks": "bold: SHSampler"
+    },
+    {
+     "dataset_as_printed": "wine",
+     "proposed": "0.9255",
+     "proposed_std": null,
+     "smote": "0.9306",
+     "smote_std": null,
+     "marks": "bold: OVO-SMO"
+    },
+    {
+     "dataset_as_printed": "winequality",
+     "proposed": "0.0000",
+     "proposed_std": null,
+     "smote": "0.0000",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "yeast",
+     "proposed": "0.3464",
+     "proposed_std": null,
+     "smote": "0.0505",
+     "smote_std": null,
+     "marks": "bold: SHSampler"
+    },
+    {
+     "dataset_as_printed": "zoo",
+     "proposed": "0.5777",
+     "proposed_std": null,
+     "smote": "0.4340",
+     "smote_std": null,
+     "marks": "bold: SHSampler"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "average [bold: SHSampler]",
+      "proposed": "0.6406",
+      "smote": "0.5973"
+     },
+     {
+      "label": "mean rank (Friedman mean rank, lower better) [bold: SHSampler]",
+      "proposed": "2.75",
+      "smote": "4.10"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Bayesian signed-rank test (rope 0.5%), Fig. 7 probability matrix (read from rendered figure): P(SHSampler exceeds OVO-SMO) = 1.00, P(OVO-SMO exceeds SHSampler) = 0.01 on DT. Text: 'the probability of SHSampler exceeding comparison methods is mostly close or equal to 1 on DT classifier'"
+   }
+  },
+  {
+   "metric": "MAUC",
+   "metric_family": "AUC",
+   "table": "Table I",
+   "page": "PDF page 7",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "balance",
+     "proposed": "0.6497",
+     "proposed_std": null,
+     "smote": "0.6562",
+     "smote_std": null,
+     "marks": "bold: SOUP"
+    },
+    {
+     "dataset_as_printed": "car",
+     "proposed": "0.9755",
+     "proposed_std": null,
+     "smote": "0.9832",
+     "smote_std": null,
+     "marks": "bold: OVO-SMO"
+    },
+    {
+     "dataset_as_printed": "cleveland",
+     "proposed": "0.4961",
+     "proposed_std": null,
+     "smote": "0.4186",
+     "smote_std": null,
+     "marks": "bold: Global-CS"
+    },
+    {
+     "dataset_as_printed": "ecoli",
+     "proposed": "0.6317",
+     "proposed_std": null,
+     "smote": "0.6387",
+     "smote_std": null,
+     "marks": "bold: MDO"
+    },
+    {
+     "dataset_as_printed": "glass",
+     "proposed": "0.8615",
+     "proposed_std": null,
+     "smote": "0.8839",
+     "smote_std": null,
+     "marks": "bold: SOUP"
+    },
+    {
+     "dataset_as_printed": "hayes-roth",
+     "proposed": "0.9353",
+     "proposed_std": null,
+     "smote": "0.9202",
+     "smote_std": null,
+     "marks": "bold: MC-CCR"
+    },
+    {
+     "dataset_as_printed": "led7digit",
+     "proposed": "0.9546",
+     "proposed_std": null,
+     "smote": "0.9549",
+     "smote_std": null,
+     "marks": "bold: Global-CS"
+    },
+    {
+     "dataset_as_printed": "lymphography",
+     "proposed": "0.7650",
+     "proposed_std": null,
+     "smote": "0.7003",
+     "smote_std": null,
+     "marks": "bold: SHSampler"
+    },
+    {
+     "dataset_as_printed": "newthyroid",
+     "proposed": "0.9643",
+     "proposed_std": null,
+     "smote": "0.9604",
+     "smote_std": null,
+     "marks": "bold: SHSampler"
+    },
+    {
+     "dataset_as_printed": "page-blocks",
+     "proposed": "0.9710",
+     "proposed_std": null,
+     "smote": "0.9496",
+     "smote_std": null,
+     "marks": "bold: SHSampler"
+    },
+    {
+     "dataset_as_printed": "PhishingData",
+     "proposed": "0.9399",
+     "proposed_std": null,
+     "smote": "0.9315",
+     "smote_std": null,
+     "marks": "bold: Global-CS"
+    },
+    {
+     "dataset_as_printed": "sensorReadings",
+     "proposed": "0.9955",
+     "proposed_std": null,
+     "smote": "0.9971",
+     "smote_std": null,
+     "marks": "bold: Global-CS"
+    },
+    {
+     "dataset_as_printed": "thyroid",
+     "proposed": "0.9684",
+     "proposed_std": null,
+     "smote": "0.9815",
+     "smote_std": null,
+     "marks": "bold: SOUP"
+    },
+    {
+     "dataset_as_printed": "userknowledge",
+     "proposed": "0.9422",
+     "proposed_std": null,
+     "smote": "0.9381",
+     "smote_std": null,
+     "marks": "bold: MC-RBO"
+    },
+    {
+     "dataset_as_printed": "vehicle",
+     "proposed": "0.8898",
+     "proposed_std": null,
+     "smote": "0.8819",
+     "smote_std": null,
+     "marks": "bold: SHSampler"
+    },
+    {
+     "dataset_as_printed": "vertebralColumn",
+     "proposed": "0.8759",
+     "proposed_std": null,
+     "smote": "0.8662",
+     "smote_std": null,
+     "marks": "bold: MC-RBO"
+    },
+    {
+     "dataset_as_printed": "wine",
+     "proposed": "0.9627",
+     "proposed_std": null,
+     "smote": "0.9649",
+     "smote_std": null,
+     "marks": "bold: OVO-SMO"
+    },
+    {
+     "dataset_as_printed": "winequality",
+     "proposed": "0.5118",
+     "proposed_std": null,
+     "smote": "0.5135",
+     "smote_std": null,
+     "marks": "bold: MC-CCR"
+    },
+    {
+     "dataset_as_printed": "yeast",
+     "proposed": "0.8733",
+     "proposed_std": null,
+     "smote": "0.7437",
+     "smote_std": null,
+     "marks": "bold: SHSampler"
+    },
+    {
+     "dataset_as_printed": "zoo",
+     "proposed": "0.8693",
+     "proposed_std": null,
+     "smote": "0.8369",
+     "smote_std": null,
+     "marks": "bold: SHSampler"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "average [bold: SHSampler]",
+      "proposed": "0.8517",
+      "smote": "0.8361"
+     },
+     {
+      "label": "mean rank (Friedman mean rank, lower better) [bold: SHSampler]",
+      "proposed": "2.80",
+      "smote": "3.48"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Bayesian signed-rank test (rope 0.5%), Fig. 7 probability matrix (read from rendered figure): P(SHSampler exceeds OVO-SMO) = 0.76, P(OVO-SMO exceeds SHSampler) = 0.01 on DT. Text: 'the probability of SHSampler exceeding comparison methods is mostly close or equal to 1 on DT classifier'"
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [
+  {
+   "metric": "AUC (MAUC), mGM",
+   "table": "Table IV (supplementary)",
+   "classifiers": "RF"
+  },
+  {
+   "metric": "AUC (MAUC), mGM",
+   "table": "Table V (supplementary)",
+   "classifiers": "NB"
+  }
+ ],
+ "metrics_without_smote": [],
+ "notes": "PROBLEM: the paper has no plain SMOTE column; the only SMOTE-based comparator is OVO-SMO (OVO-SMOTE decomposition). Used OVO-SMO as smote column to match the existing extraction; flag if strict plain-SMOTE rule should exclude this paper. Tables I/II have extractable text (not images); bold marks taken from NimbusRomNo9L-Medi font via pdfplumber and verified against rendered page 7. Bold = best of 7 methods per row."
+}

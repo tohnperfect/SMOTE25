@@ -1,0 +1,772 @@
+normalized_name,dataset_key,family,is_subset,parent,flag,median_features,papers,entries
+50words,50words,50words,False,,,270.0,1,1
+a1a,a1a,a1a,False,,,119.0,1,1
+abalone,abalone,abalone,False,,,8.0,11,11
+abalone 15,abalone15,abalone,True,abalone,,8.0,2,2
+abalone 19,abalone19,abalone,True,abalone,,8.0,1,1
+abalone 6,abalone6,abalone,True,abalone,,8.0,2,2
+abalone-17vs78910,abalone17vs78910,abalone,True,abalone,,8.0,1,1
+abalone-3 vs 11,abalone3vs11,abalone,True,abalone,,8.5,1,1
+abalone09-18,abalone0918,abalone,True,abalone,,8.0,2,2
+abalone10,abalone10,abalone,True,abalone,same_source_composition_differs,10.0,1,1
+abalone19,abalone19,abalone,True,abalone,,8.0,7,7
+abalone3vs11,abalone3vs11,abalone,True,abalone,,8.5,1,1
+abalone7,abalone7,abalone,True,abalone,,8.0,1,1
+abalone8,abalone8,abalone,True,abalone,same_source_composition_differs,10.0,1,1
+abalone9-18,abalone918,abalone,True,abalone,,8.0,5,5
+abalone918,abalone918,abalone,True,abalone,,8.0,2,2
+absenteeism at work,absenteeismatwork,absenteeismatwork,False,,,11.0,1,1
+academic,academic,academic,False,,,37.0,1,1
+acl,acl,acl,False,,,6.0,2,2
+adiac,adiac,adiac,False,,,176.0,1,1
+adult,adult,adult,False,,,14.0,3,3
+ai4i2020,ai4i2020,ai4i2020,False,,,5.0,1,1
+aids 15000,aids15000,aids,True,,stem_family,23.0,1,1
+aids 5000,aids5000,aids,True,,stem_family,23.0,1,1
+aids 50000,aids50000,aids,True,,stem_family,23.0,1,1
+alarm,alarm,alarm,False,,,,1,1
+ann,ann,ann,False,,,21.0,2,2
+anneal,anneal,anneal,False,,,59.0,1,1
+approval,approval,approval,False,,,7.0,1,1
+art1,art1,art,True,,stem_family,,2,2
+art2,art2,art,True,,stem_family,,2,2
+art3,art3,art,True,,stem_family,,2,2
+art4,art4,art,True,,stem_family,,2,2
+artificial 0.3 5,artificial035,artificial,True,,stem_family,25.0,1,1
+artificial 0.5 10,artificial0510,artificial,True,,stem_family,25.0,1,1
+artificial 0.5 2.5,artificial0525,artificial,True,,stem_family,25.0,1,1
+artificial 0.5 5,artificial055,artificial,True,,stem_family,25.0,1,1
+artificial 1 5,artificial15,artificial,True,,stem_family,25.0,1,1
+artificial c x c grid domain,artificialcxcgriddomain,artificialcxcgriddomain,False,,,2.0,1,1
+artificial family a,artificialfamilya,artificialfamilya,False,,,5.0,1,1
+artificial family b,artificialfamilyb,artificialfamilyb,False,,,5.0,1,1
+artificial two-class imbalanced data set,artificialtwoclassimbalanceddataset,artificialtwoclassimbalanceddataset,False,,,,1,1
+asia,asia,asia,False,,,,1,1
+attribute noise versions of the 9 real-world datasets,attributenoiseversionsofthe9realworlddatasets,attributenoiseversionsofthe9realworlddatasets,False,,,,1,1
+australia,australia,australia,False,,,15.0,1,1
+australian,australian,australian,False,,prefix_without_split_marker,14.5,2,2
+auto5,auto5,auto5,False,,,7.0,1,1
+automobile,automobile,automobile,False,,,25.0,6,6
+autos,autos,autos,False,,,25.0,4,4
+avila,avila,avila,False,,,10.0,3,3
+avila 0vs5,avila0vs5,avila,True,avila,,10.0,1,1
+avila 0vs6,avila0vs6,avila,True,avila,,10.0,1,1
+avila 0vs7,avila0vs7,avila,True,avila,,10.0,1,1
+balance,balance,balance,False,,,4.0,16,16
+balance-scale,balancescale,balancescale,False,,prefix_without_split_marker,,1,1
+bank,bank,bank,False,,,13.5,2,2
+bank full,bankfull,bankfull,False,,prefix_without_split_marker,16.0,1,1
+bank small,banksmall,banksmall,False,,prefix_without_split_marker,16.0,1,1
+bankmarket,bankmarket,bankmarket,False,,prefix_without_split_marker,17.0,1,1
+banknote,banknote,banknote,False,,prefix_without_split_marker,5.0,1,1
+bankruptcy,bankruptcy,bankruptcy,False,,prefix_without_split_marker,94.0,2,3
+bar crawl,barcrawl,barcrawl,False,,,4.0,1,1
+bearing if,bearingif,bearingif,False,,,36.0,1,1
+bearing if + of,bearingif+of,bearingif+of,False,,,36.0,1,1
+bearing if + of + rf,bearingif+of+rf,bearingif+of+rf,False,,,36.0,1,1
+bearing if + rf,bearingif+rf,bearingif+rf,False,,,36.0,1,1
+bearing of,bearingof,bearingof,False,,,36.0,1,1
+bearing of + rf,bearingof+rf,bearingof+rf,False,,,36.0,1,1
+bearing rf,bearingrf,bearingrf,False,,,36.0,1,1
+bezediris,bezediris,bezediris,False,,,5.0,1,1
+bhat1,bhat1,bhat,True,,stem_family,3312.0,1,1
+bhat2,bhat2,bhat,True,,stem_family,3312.0,1,1
+bhat3,bhat3,bhat,True,,stem_family,3312.0,1,1
+bhat4,bhat4,bhat,True,,stem_family,3312.0,1,1
+bloodservice,bloodservice,bloodservice,False,,,5.0,1,1
+boundary,boundary,boundary,False,,,174.0,2,2
+br,br,br,False,,,15.0,1,1
+breast,breast,breast,False,,,9.5,2,2
+breast can.,breastcan,breastcan,False,,prefix_without_split_marker,,1,1
+breast cancer,breastcancer,breastcancer,False,,prefix_without_split_marker,10.0,1,1
+breast tissue,breasttissue,breasttissue,False,,prefix_without_split_marker,9.0,3,4
+breast tissue2,breasttissue2,breasttissue,True,breasttissue,,9.0,2,2
+breast tissue4,breasttissue4,breasttissue,True,breasttissue,,,1,1
+breast-cancer,breastcancer,breastcancer,False,,prefix_without_split_marker,10.0,1,1
+breast-cancer-original,breastcanceroriginal,breastcanceroriginal,False,,prefix_without_split_marker,9.0,1,1
+breast-cancer-wisconsin,breastcancerwisconsin,breastcancerwisconsin,False,,prefix_without_split_marker,11.0,1,1
+breast-tissue,breasttissue,breasttissue,False,,prefix_without_split_marker,9.0,5,5
+breast-w,breastw,breastw,False,,prefix_without_split_marker,19.5,2,2
+breast-y,breasty,breasty,False,,prefix_without_split_marker,,1,1
+breastc,breastc,breastc,False,,prefix_without_split_marker,15.0,1,1
+breastcancer,breastcancer,breastcancer,False,,prefix_without_split_marker,10.0,2,2
+breasttissue,breasttissue,breasttissue,False,,prefix_without_split_marker,9.0,1,1
+buddy,buddy,buddy,False,,,,1,1
+bullinger,bullinger,bullinger,False,,,17404.0,1,1
+bupa,bupa,bupa,False,,,6.5,3,3
+calmodoulin,calmodoulin,calmodoulin,False,,,131.0,1,1
+cam,cam,cam,False,,,,1,1
+camel-1.0,camel10,camel,True,,stem_family,20.0,1,1
+camel-1.4,camel14,camel,True,,stem_family,20.0,1,1
+camel-1.6,camel16,camel,True,,stem_family,20.0,1,1
+can,can,can,False,,,,1,1
+cancer,cancer,cancer,False,,,10.0,1,1
+car,car,car,False,,,6.0,14,14
+car evaluation,carevaluation,carevaluation,False,,,6.0,1,1
+car-good,cargood,cargood,False,,,6.0,2,2
+car-vgood,carvgood,carvgood,False,,,6.0,1,1
+car1,car1,car1,False,,separate_different_dataset,9182.0,1,1
+car2,car2,car2,False,,separate_different_dataset,9182.0,1,1
+car3,car3,car3,False,,separate_different_dataset,4594.5,2,2
+car4,car4,car4,False,,separate_different_dataset,9182.0,1,1
+cardiotocography,cardiotocography,cardiotocography,False,,,28.0,2,2
+cardiovascular,cardiovascular,cardiovascular,False,,,10.0,1,1
+card’graphy,card’graphy,card’graphy,False,,,23.0,1,1
+carevaluation,carevaluation,carevaluation,False,,,6.0,1,1
+cccs12,cccs12,cccs12,False,,,9.0,1,1
+celeba-large,celebalarge,celebalarge,False,,,,1,1
+celeba-small,celebasmall,celebasmall,False,,,,1,1
+census,census,census,False,,,,1,1
+census-income database,censusincomedatabase,censusincomedatabase,False,,prefix_without_split_marker,,1,1
+charactertraj,charactertraj,charactertraj,False,,,3.0,1,1
+checkerboard,checkerboard,checkerboard,False,,,,1,1
+chess,chess,chess,False,,,6.0,3,3
+chesscking-rook vs. king,chessckingrookvsking,chessckingrookvsking,False,,,6.0,1,1
+child,child,child,False,,,,1,1
+cifar-10,cifar10,cifar10,False,,,,1,1
+cifar10,cifar10,cifar10,False,,,,1,1
+circle,circle,circle,False,,,2.0,1,1
+circles,circles,circles,False,,prefix_without_split_marker,2.0,1,1
+class noise versions of the 9 real-world datasets,classnoiseversionsofthe9realworlddatasets,classnoiseversionsofthe9realworlddatasets,False,,,,1,1
+cleveland,cleveland,cleveland,False,,,13.0,13,13
+cleveland 1,cleveland1,cleveland,True,cleveland,,,2,2
+cleveland 2,cleveland2,cleveland,True,cleveland,,,2,2
+cleveland-0,cleveland0,cleveland,True,cleveland,,13.0,1,1
+cleveland-0 vs 4,cleveland0vs4,cleveland,True,cleveland0,,13.5,2,2
+cleveland0vs4,cleveland0vs4,cleveland,True,cleveland0,,13.5,2,2
+climate,climate,climate,False,,,18.0,1,1
+climatesim,climatesim,climatesim,False,,prefix_without_split_marker,18.0,1,1
+"clover ir=5, dr=0","cloverir=5,dr=0","cloverir=5,dr=0",False,,,2.0,1,1
+"clover ir=5, dr=30","cloverir=5,dr=30","cloverir=5,dr=30",False,,,2.0,1,1
+"clover ir=5, dr=50","cloverir=5,dr=50","cloverir=5,dr=50",False,,,2.0,1,1
+"clover ir=5, dr=60","cloverir=5,dr=60","cloverir=5,dr=60",False,,,2.0,1,1
+"clover ir=5, dr=70","cloverir=5,dr=70","cloverir=5,dr=70",False,,,2.0,1,1
+"clover ir=7, dr=0","cloverir=7,dr=0","cloverir=7,dr=0",False,,,2.0,1,1
+"clover ir=7, dr=30","cloverir=7,dr=30","cloverir=7,dr=30",False,,,2.0,1,1
+"clover ir=7, dr=50","cloverir=7,dr=50","cloverir=7,dr=50",False,,,2.0,1,1
+"clover ir=7, dr=60","cloverir=7,dr=60","cloverir=7,dr=60",False,,,2.0,1,1
+"clover ir=7, dr=70","cloverir=7,dr=70","cloverir=7,dr=70",False,,,2.0,1,1
+clover-0,clover0,clover,True,,stem_family,2.0,1,1
+clover-30,clover30,clover,True,,stem_family,2.0,1,1
+clover-50,clover50,clover,True,,stem_family,2.0,1,1
+clover-70,clover70,clover,True,,stem_family,2.0,1,1
+clover-b,cloverb,cloverb,False,,,2.0,1,1
+clover-bc,cloverbc,cloverbc,False,,prefix_without_split_marker,2.0,1,1
+clover-c,cloverc,cloverc,False,,,2.0,1,1
+clover-safe,cloversafe,cloversafe,False,,,2.0,1,1
+cm1,cm1,cm1,False,,,16.0,2,2
+cmc,cmc,cmc,False,,,9.0,5,5
+cnae,cnae,cnae,False,,,312.0,1,1
+cod,cod,cod,False,,,8.0,1,1
+codrna,codrna,codrna,False,,,8.0,1,1
+coil 2000,coil2000,coil2000,False,,,85.0,1,1
+compustat,compustat,compustat,False,,,20.0,2,2
+connect-4,connect4,connect4,False,,,42.0,2,2
+connect4,connect4,connect4,False,,,42.0,2,2
+contra2,contra2,contra2,False,,,10.0,1,1
+contraceptive,contraceptive,contraceptive,False,,,9.0,13,13
+contraceptive method choice,contraceptivemethodchoice,contraceptivemethodchoice,False,,prefix_without_split_marker,9.0,1,1
+contraceptivel,contraceptivel,contraceptivel,False,,prefix_without_split_marker,9.0,1,1
+cover type,covertype,covertype,False,,,54.0,1,1
+covertype,covertype,covertype,False,,,54.0,3,3
+covtype,covtype,covtype,False,,,,1,1
+credit,credit,credit,False,,,,1,1
+credit fraud,creditfraud,creditfraud,False,,prefix_without_split_marker,31.0,1,1
+credit-g,creditg,creditg,False,,prefix_without_split_marker,,1,1
+creditapproval,creditapproval,creditapproval,False,,prefix_without_split_marker,15.0,1,1
+ctg,ctg,ctg,False,,,21.0,1,1
+customer churn wireless telecom,customerchurnwirelesstelecom,customerchurnwirelesstelecom,False,,,,1,1
+customers,customers,customers,False,,,8.0,1,1
+cytvspox,cytvspox,cytvspox,False,,,8.0,1,1
+d1 yeast5,d1yeast5,d1yeast5,False,,,,1,1
+d10 page-blocks-4 vs 1-3,d10pageblocks4vs13,d10pageblocks4vs13,False,,,,1,1
+d2 yeast-8 vs 2,d2yeast8vs2,d2yeast8vs2,False,,,,1,1
+d3 yeast4,d3yeast4,d3yeast4,False,,,,1,1
+d4 yeast-4 vs 2,d4yeast4vs2,d4yeast4vs2,False,,,,1,1
+d5 yeast6,d5yeast6,d5yeast6,False,,,,1,1
+d6 ecoli-5 vs 0-6-7,d6ecoli5vs067,d6ecoli5vs067,False,,,,1,1
+d7 ecoli-3-5 vs 0-6-7,d7ecoli35vs067,d7ecoli35vs067,False,,,,1,1
+d8 ecoli-3-5 vs 0-2-6-7,d8ecoli35vs0267,d8ecoli35vs0267,False,,,,1,1
+d9 ecoli4,d9ecoli4,d9ecoli4,False,,,,1,1
+darwin,darwin,darwin,False,,,423.0,1,1
+default,default,default,False,,,23.0,3,3
+dermatology,dermatology,dermatology,False,,,34.0,13,13
+dermatology-6,dermatology6,dermatology,True,dermatology,,34.0,2,2
+destinations,destinations,destinations,False,,,25.0,1,1
+diabetes,diabetes,diabetes,False,,,8.0,3,3
+drug,drug,drug,False,,,13.0,1,1
+drug200,drug200,drug200,False,,separate_different_dataset,5.0,1,1
+dry bean,drybean,drybean,False,,,313.5,1,1
+dry beans,drybeans,drybeans,False,,prefix_without_split_marker,16.0,1,1
+dry-bean,drybean,drybean,False,,,313.5,1,1
+ds4e10d20,ds4e10d20,ds4e10d20,False,,,,1,1
+ds4e10dn,ds4e10dn,ds4e10dn,False,,,,1,1
+dsie10d20,dsie10d20,dsie,True,,stem_family,,1,1
+dsie30d40,dsie30d40,dsie,True,,stem_family,,1,1
+dsie50d60,dsie50d60,dsie,True,,stem_family,,1,1
+e-state,estate,estate,False,,,12.0,2,2
+e. coli,ecoli,ecoli,False,,,7.0,1,1
+e.coli,ecoli,ecoli,False,,,7.0,2,2
+ecoli,ecoli,ecoli,False,,,7.0,26,28
+ecoli-0 vs 1,ecoli0vs1,ecoli,True,ecoli,,7.0,3,3
+ecoli-0-1 vs 2-3-5,ecoli01vs235,ecoli,True,ecoli,,8.0,1,1
+ecoli-0-1 vs 5,ecoli01vs5,ecoli,True,ecoli,,6.5,2,2
+ecoli-0-1-3-7 vs 2-6,ecoli0137vs26,ecoli,True,ecoli,,7.0,2,2
+ecoli-0-1-4-6 vs 5,ecoli0146vs5,ecoli,True,ecoli,,6.0,3,3
+ecoli-0-1-4-7 vs 2-3-5-6,ecoli0147vs2356,ecoli,True,ecoli,,8.0,1,1
+ecoli-0-1-4-7 vs 5-6,ecoli0147vs56,ecoli,True,ecoli,,7.0,1,1
+ecoli-0-1-4-7 vs 5–6,ecoli0147vs5–6,ecoli,True,ecoli,,6.0,1,1
+ecoli-0-2-3-4 vs 5,ecoli0234vs5,ecoli,True,ecoli,,7.5,2,2
+ecoli-0-2-6-7 vs 3-5,ecoli0267vs35,ecoli,True,ecoli,,8.0,1,1
+ecoli-0-2-6-7 vs 3–5,ecoli0267vs3–5,ecoli,True,ecoli,,7.0,1,1
+ecoli-0-3-4 vs 5,ecoli034vs5,ecoli,True,ecoli,,7.5,2,2
+ecoli-0-3-4-6 vs 5,ecoli0346vs5,ecoli,True,ecoli,,7.5,2,2
+ecoli-0-3-4-7 vs 5-6,ecoli0347vs56,ecoli,True,ecoli,,8.0,1,1
+ecoli-0-3-4-7 vs 5–6,ecoli0347vs5–6,ecoli,True,ecoli,,7.0,1,1
+ecoli-0-4-6 vs 5,ecoli046vs5,ecoli,True,ecoli,,6.5,2,2
+ecoli-0-6-7 vs 3-5,ecoli067vs35,ecoli,True,ecoli,,8.0,1,1
+ecoli-0-6-7 vs 3–5,ecoli067vs3–5,ecoli,True,ecoli,,7.0,1,1
+ecoli-0-6-7 vs 5,ecoli067vs5,ecoli,True,ecoli,,6.5,2,2
+ecoli0137vs26,ecoli0137vs26,ecoli,True,ecoli,,7.0,5,5
+ecoli0146vs5,ecoli0146vs5,ecoli,True,ecoli,,6.0,1,1
+ecoli0147vs2356,ecoli0147vs2356,ecoli,True,ecoli,,8.0,2,2
+ecoli0147vs56,ecoli0147vs56,ecoli,True,ecoli,,7.0,1,1
+ecoli01vs235,ecoli01vs235,ecoli,True,ecoli,,8.0,1,1
+ecoli01vs5,ecoli01vs5,ecoli,True,ecoli,,6.5,1,1
+ecoli0234vs5,ecoli0234vs5,ecoli,True,ecoli,,7.5,1,1
+ecoli0267vs35,ecoli0267vs35,ecoli,True,ecoli,,8.0,1,1
+ecoli0346vs5,ecoli0346vs5,ecoli,True,ecoli,,7.5,1,1
+ecoli0347vs56,ecoli0347vs56,ecoli,True,ecoli,,8.0,2,2
+ecoli034vs5,ecoli034vs5,ecoli,True,ecoli,,7.5,2,2
+ecoli046vs5,ecoli046vs5,ecoli,True,ecoli,,6.5,1,1
+ecoli067vs35,ecoli067vs35,ecoli,True,ecoli,,8.0,2,2
+ecoli067vs5,ecoli067vs5,ecoli,True,ecoli,,6.5,1,1
+ecoli0vs1,ecoli0vs1,ecoli,True,ecoli,,7.0,1,1
+ecoli1,ecoli1,ecoli,True,ecoli,,7.0,8,8
+ecoli2,ecoli2,ecoli,True,ecoli,,7.0,7,7
+ecoli3,ecoli3,ecoli,True,ecoli,,7.0,10,10
+ecoli4,ecoli4,ecoli,True,ecoli,,7.0,12,12
+ecoli6,ecoli6,ecoli,True,ecoli,,,1,1
+employe attrition,employeattrition,employeattrition,False,,,,1,1
+employee,employee,employee,False,,,7.0,1,1
+era,era,era,False,,,4.0,1,1
+era5,era5,era,True,era,,4.0,1,1
+esl,esl,esl,False,,,4.0,1,1
+esophageal cancer patient data set,esophagealcancerpatientdataset,esophagealcancerpatientdataset,False,,,750.0,1,1
+estate,estate,estate,False,,,12.0,1,1
+eucalyptus,eucalyptus,eucalyptus,False,,,8.0,2,4
+faceall,faceall,faceall,False,,,131.0,1,1
+fashion-mnist,fashionmnist,fashionmnist,False,,,,1,1
+fault,fault,fault,False,,,28.0,1,1
+fertility,fertility,fertility,False,,,10.0,1,1
+firewall,firewall,firewall,False,,,11.0,2,2
+flag,flag,flag,False,,,28.0,1,1
+flare,flare,flare,False,,,11.0,9,9
+flare-f,flaref,flaref,False,,prefix_without_split_marker,11.0,1,1
+forest cover,forestcover,forestcover,False,,,,1,1
+fourclass,fourclass,fourclass,False,,,2.0,2,2
+g7,g7,g7,False,,,10.0,1,1
+gender,gender,gender,False,,,18.0,1,1
+gender by name,genderbyname,genderbyname,False,,prefix_without_split_marker,4.0,1,1
+german,german,german,False,,,22.5,5,5
+german-numer,germannumer,germannumer,False,,prefix_without_split_marker,24.0,1,1
+german.numer,germannumer,germannumer,False,,prefix_without_split_marker,24.0,2,2
+gesturephasesegmentationprocessed,gesturephasesegmentationprocessed,gesturephasesegmentationprocessed,False,,,32.0,1,1
+gisette,gisette,gisette,False,,,5000.0,1,1
+give me some credit,givemesomecredit,givemesomecredit,False,,,10.0,1,1
+glass,glass,glass,False,,,9.0,19,21
+glass identification,glassidentification,glassidentification,False,,prefix_without_split_marker,9.0,1,1
+glass-0-1-2-3 vs 4-5-6,glass0123vs456,glass,True,glass,,9.0,4,4
+glass-0-1-4-6 vs 2,glass0146vs2,glass,True,glass,,10.0,1,1
+glass-0-1-5 vs 2,glass015vs2,glass,True,glass,,10.0,1,1
+glass-0-1-6 vs 2,glass016vs2,glass,True,glass,,9.0,4,4
+glass-0-1-6 vs 5,glass016vs5,glass,True,glass,,9.0,3,3
+glass-0-4 vs 5,glass04vs5,glass,True,glass,,9.5,2,2
+glass-0-6 vs 5,glass06vs5,glass,True,glass,,9.5,2,2
+glass0,glass0,glass,True,glass,,9.0,7,7
+glass0123vs456,glass0123vs456,glass,True,glass,,9.0,3,3
+glass0146vs2,glass0146vs2,glass,True,glass,,10.0,1,1
+glass015vs2,glass015vs2,glass,True,glass,,10.0,1,1
+glass016vs2,glass016vs2,glass,True,glass,,9.0,5,5
+glass016vs5,glass016vs5,glass,True,glass,,9.0,3,3
+glass04vs5,glass04vs5,glass,True,glass,,9.5,1,1
+glass06vs5,glass06vs5,glass,True,glass,,9.5,1,1
+glass1,glass1,glass,True,glass,,9.0,7,7
+glass2,glass2,glass,True,glass,,9.0,10,10
+glass3,glass3,glass,True,glass,,10.0,1,1
+glass4,glass4,glass,True,glass,,9.0,10,10
+glass5,glass5,glass,True,glass,,9.0,10,10
+glass6,glass6,glass,True,glass,,9.0,7,7
+glioma,glioma,glioma,False,,,4434.0,1,1
+grid,grid,grid,False,,,,1,1
+gridr,gridr,gridr,False,,prefix_without_split_marker,,1,1
+habarman,habarman,habarman,False,,,,1,1
+haberman,haberman,haberman,False,,,3.0,20,22
+haberman10,haberman10,haberman,True,haberman,,,1,1
+haberman2,haberman2,haberman,True,haberman,,,1,1
+haberman4,haberman4,haberman,True,haberman,,,1,1
+haberman6,haberman6,haberman,True,haberman,,,1,1
+haberman’s survival,haberman’ssurvival,haberman’ssurvival,False,,,3.0,1,1
+hayes roth,hayesroth,hayesroth,False,,,4.0,2,2
+hayes-roth,hayesroth,hayesroth,False,,,4.0,11,11
+hayesroth,hayesroth,hayesroth,False,,,4.0,1,1
+hcv,hcv,hcv,False,,,12.0,1,1
+healthy older people2,healthyolderpeople2,healthyolderpeople2,False,,,8.0,1,1
+heart,heart,heart,False,,,13.0,5,7
+heart failure,heartfailure,heartfailure,False,,prefix_without_split_marker,12.0,1,1
+heart-v,heartv,heartv,False,,prefix_without_split_marker,,1,1
+heart10,heart10,heart,True,heart,,,1,1
+heart15,heart15,heart,True,heart,,,1,1
+heart2,heart2,heart,True,heart,,,1,1
+heart4,heart4,heart,True,heart,,,1,1
+heart6,heart6,heart,True,heart,,,1,1
+heating,heating,heating,False,,,8.0,1,1
+hepatitis,hepatitis,hepatitis,False,,,19.0,3,3
+hive-0.12.0,hive0120,hive0120,False,,,54.0,1,1
+hmeq,hmeq,hmeq,False,,,10.0,1,1
+housing,housing,housing,False,,,,1,1
+housing10,housing10,housing,True,housing,,13.0,2,2
+housing5,housing5,housing,True,housing,,13.0,1,1
+hr,hr,hr,False,,,21.0,1,1
+htru2,htru2,htru2,False,,,8.5,2,2
+hypo,hypo,hypo,False,,,,1,1
+icr,icr,icr,False,,,33.0,1,1
+ijcnn,ijcnn,ijcnn,False,,,22.0,1,1
+ijcnn1,ijcnn1,ijcnn,True,ijcnn,,22.0,1,1
+ilpd,ilpd,ilpd,False,,,10.0,1,1
+ilsvrc-2012,ilsvrc2012,ilsvrc2012,False,,,,1,1
+image1,image1,image1,False,,,19.0,1,1
+imagenet12,imagenet12,imagenet,True,,stem_family,2048.0,1,1
+imagenet8,imagenet8,imagenet,True,,stem_family,2048.0,1,1
+imagenet9,imagenet9,imagenet,True,,stem_family,2048.0,1,1
+imgseg,imgseg,imgseg,False,,,19.0,1,1
+indian pines,indianpines,indianpines,False,,,,1,1
+insurance,insurance,insurance,False,,,,1,1
+internet video traffic data set,internetvideotrafficdataset,internetvideotrafficdataset,False,,,,1,1
+intrusion,intrusion,intrusion,False,,,41.0,2,2
+ionosphere,ionosphere,ionosphere,False,,,33.5,5,5
+iris,iris,iris,False,,,4.0,6,8
+iris0,iris0,iris,True,iris,,4.0,2,2
+iris2,iris2,iris,True,iris,,,1,1
+iris4,iris4,iris,True,iris,,,1,1
+iris6,iris6,iris,True,iris,,,1,1
+ism,ism,ism,False,,,,1,1
+isolet,isolet,isolet,False,,,617.0,2,2
+isolet5,isolet5,isolet,True,isolet,,617.0,1,1
+ivy-1.4,ivy14,ivy14,False,,,20.0,1,1
+jasper ridge,jasperridge,jasperridge,False,,,,1,1
+jedit-4.3,jedit43,jedit43,False,,,20.0,1,1
+k1b,k1b,k1b,False,,,21839.0,1,1
+kddbufferoverflowvsback,kddbufferoverflowvsback,kddbufferoverflowvsback,False,,,41.0,1,1
+kddcup,kddcup,kddcup,False,,,42.0,1,2
+kddcup-99 intrusion,kddcup99intrusion,kddcup,True,kddcup,,,1,1
+kddcup99data,kddcup99data,kddcup,True,kddcup,,41.0,1,1
+kddlandvssatan,kddlandvssatan,kddlandvssatan,False,,,41.0,1,1
+kddrootkitvsback,kddrootkitvsback,kddrootkitvsback,False,,,41.0,1,1
+kr,kr,kr,False,,,15.0,1,1
+kr-vs-k-one vs fifteen,krvskonevsfifteen,krvsk,True,,separate_different_dataset,6.0,1,1
+kr-vs-k-three vs eleven,krvskthreevseleven,krvsk,True,,separate_different_dataset,6.0,1,1
+kr-vs-k-zero-one vs draw,krvskzeroonevsdraw,krvsk,True,,separate_different_dataset,6.0,1,1
+krvsk0vs15,krvsk0vs15,krvsk,True,,separate_different_dataset,6.0,1,1
+krvsk0vs8,krvsk0vs8,krvsk,True,,separate_different_dataset,6.0,1,1
+krvsk3vs11,krvsk3vs11,krvsk,True,,separate_different_dataset,6.0,1,1
+ksc,ksc,ksc,False,,,,1,1
+la12,la12,la12,False,,,31472.0,1,1
+laryngeal,laryngeal,laryngeal,False,,,16.0,1,1
+leaf,leaf,leaf,False,,,16.0,1,1
+leaves plant,leavesplant,leavesplant,False,,,64.0,1,1
+led,led,led,False,,,7.0,1,2
+led7digit,led7digit,led,True,led,,7.0,8,8
+led7digit-0-2-4-5-6-7-8-9 vs 1,led7digit02456789vs1,led,True,led7digit,,7.5,1,1
+led7digit02456789vs1,led7digit02456789vs1,led,True,led7digit,,7.5,2,2
+letter,letter,letter,False,,,16.0,9,9
+letter img,letterimg,letterimg,False,,prefix_without_split_marker,16.0,1,1
+letter recognition,letterrecognition,letterrecognition,False,,prefix_without_split_marker,16.0,1,1
+letter-a,lettera,lettera,False,,prefix_without_split_marker,16.0,1,1
+letter-recognition,letterrecognition,letterrecognition,False,,prefix_without_split_marker,16.0,1,1
+letter-vowel,lettervowel,lettervowel,False,,prefix_without_split_marker,16.0,1,1
+lev,lev,lev,False,,,4.0,3,3
+libra,libra,libra,False,,,90.0,5,5
+libra2,libra2,libra,True,libra,,,1,1
+libra4,libra4,libra,True,libra,,,1,1
+libra6,libra6,libra,True,libra,,,1,1
+libras,libras,libras,False,,prefix_without_split_marker,90.5,2,2
+liver,liver,liver,False,,,6.0,4,6
+liver disorders,liverdisorders,liverdisorders,False,,prefix_without_split_marker,6.0,1,1
+liver disorders10,liverdisorders10,liverdisorders,True,liverdisorders,,,1,1
+liver disorders15,liverdisorders15,liverdisorders,True,liverdisorders,,,1,1
+liver disorders2,liverdisorders2,liverdisorders,True,liverdisorders,,,1,1
+liver disorders4,liverdisorders4,liverdisorders,True,liverdisorders,,,1,1
+liver disorders6,liverdisorders6,liverdisorders,True,liverdisorders,,,1,1
+log4j-1.2,log4j12,log4j12,False,,,20.0,1,1
+lsun-large,lsunlarge,lsunlarge,False,,,,1,1
+lsun-small,lsunsmall,lsunsmall,False,,,,1,1
+lung,lung,lung,False,,,12533.0,1,1
+lymphography,lymphography,lymphography,False,,,18.0,9,9
+machine,machine,machine,False,,,6.0,1,1
+madelon,madelon,madelon,False,,,500.0,1,1
+mafalda,mafalda,mafalda,False,,,14.0,1,1
+magic,magic,magic,False,,,10.0,2,2
+magic04,magic04,magic,True,magic,,11.0,1,1
+mammography,mammography,mammography,False,,,6.0,5,5
+mandelon 1,mandelon1,mandelon,True,,stem_family,20.0,1,3
+mandelon 2,mandelon2,mandelon,True,,stem_family,200.0,1,3
+maternal,maternal,maternal,False,,,7.0,1,1
+me2vsother,me2vsother,me2vsother,False,,,8.0,1,1
+medv,medv,medv,False,,,13.0,1,1
+mf zernike,mfzernike,mfzernike,False,,,47.0,1,1
+mf-morph,mfmorph,mfmorph,False,,,,1,1
+mf-zernike,mfzernike,mfzernike,False,,,47.0,1,1
+mfeat-fouri,mfeatfouri,mfeatfouri,False,,,76.0,2,2
+mnist,mnist,mnist,False,,,,2,2
+mnist 3,mnist3,mnist,True,mnist,,784.0,1,1
+mnist 5,mnist5,mnist,True,mnist,,784.0,1,1
+mnist12,mnist12,mnist,True,mnist,,,1,1
+mnist28,mnist28,mnist,True,mnist,,,1,1
+mocap,mocap,mocap,False,,,33.0,1,1
+moons,moons,moons,False,,,2.0,1,1
+movement libras,movementlibras,movementlibras,False,,,90.0,1,1
+multiplefs,multiplefs,multiplefs,False,,,649.0,1,1
+mushroom,mushroom,mushroom,False,,,12.0,1,1
+mushrooms,mushrooms,mushrooms,False,,prefix_without_split_marker,112.0,2,2
+musk,musk,musk,False,,,167.0,2,2
+national,national,national,False,,,9.0,1,1
+new thyr.,newthyr,newthyr,False,,,,1,1
+new thyroid,newthyroid,newthyroid,False,,prefix_without_split_marker,5.0,2,2
+new thyroid 1,newthyroid1,newthyroid,True,newthyroid,,5.0,1,2
+new thyroid 2,newthyroid2,newthyroid,True,newthyroid,,5.0,1,2
+new-thyroid,newthyroid,newthyroid,False,,prefix_without_split_marker,5.0,12,12
+new-thyroid1,newthyroid1,newthyroid,True,newthyroid,,5.0,6,6
+new-thyroid2,newthyroid2,newthyroid,True,newthyroid,,5.0,4,4
+news,news,news,False,,,,1,1
+newthyroid,newthyroid,newthyroid,False,,prefix_without_split_marker,5.0,5,5
+newthyroid1,newthyroid1,newthyroid,True,newthyroid,,5.0,2,2
+newthyroid2,newthyroid2,newthyroid,True,newthyroid,,5.0,2,2
+nomao,nomao,nomao,False,,,119.0,1,1
+nursery,nursery,nursery,False,,,8.0,7,7
+obesity,obesity,obesity,False,,,17.0,1,1
+obs,obs,obs,False,,,21.0,1,1
+occupancy,occupancy,occupancy,False,,,7.0,1,1
+ocr,ocr,ocr,False,,,64.0,1,1
+oil,oil,oil,False,,,49.0,3,3
+oil spill,oilspill,oilspill,False,,,49.0,1,1
+oil1,oil1,oil,True,oil,same_source_composition_differs,44.0,1,1
+oil2,oil2,oil,True,oil,same_source_composition_differs,39.0,1,1
+online,online,online,False,,,38.0,1,1
+online retail,onlineretail,onlineretail,False,,prefix_without_split_marker,7.0,1,1
+online shoppers,onlineshoppers,onlineshoppers,False,,prefix_without_split_marker,17.0,1,1
+optdigits,optdigits,optdigits,False,,,64.0,2,2
+optical digits,opticaldigits,opticaldigits,False,,,64.0,2,2
+overdue detection database,overduedetectiondatabase,overduedetectiondatabase,False,,,,1,1
+ozone-level,ozonelevel,ozonelevel,False,,,72.0,1,1
+packets,packets,packets,False,,,43.0,1,1
+page,page,page,False,,,10.0,5,5
+page blocks,pageblocks,pageblocks,False,,prefix_without_split_marker,10.0,2,2
+page blocks 0,pageblocks0,pageblocks,True,pageblocks,,10.0,1,3
+page blocks 1 3,pageblocks13,pageblocks,True,pageblocks,,10.0,1,1
+page-block0,pageblocks0,pageblocks,True,pageblocks,,10.0,1,1
+page-blocks,pageblocks,pageblocks,False,,prefix_without_split_marker,10.0,13,13
+page-blocks 0vs3,pageblocks0vs3,pageblocks,True,pageblocks0,,10.0,1,1
+page-blocks-1-3,pageblocks13,pageblocks,True,pageblocks,,10.0,1,1
+page-blocks-1-3 vs 4,pageblocks13vs4,pageblocks,True,pageblocks13,,10.0,3,3
+page-blocks0,pageblocks0,pageblocks,True,pageblocks,,10.0,3,3
+page-blocks13vs2,pageblocks13vs2,pageblocks,True,pageblocks13,,10.0,2,2
+pageblock,pageblocks,pageblocks,False,,prefix_without_split_marker,10.0,2,2
+pageblock1,pageblocks1,pageblocks,True,pageblocks,,10.0,1,1
+pageblocks,pageblocks,pageblocks,False,,prefix_without_split_marker,10.0,5,5
+pageblocks0,pageblocks0,pageblocks,True,pageblocks,,10.0,1,1
+pageblocks13vs4,pageblocks13vs4,pageblocks,True,pageblocks13,,10.0,3,3
+parkinson,parkinson,parkinson,False,,,390.5,2,2
+parkinsons telemonitoring,parkinsonstelemonitoring,parkinsonstelemonitoring,False,,prefix_without_split_marker,26.0,1,1
+"paw ir=5, dr=0","pawir=5,dr=0","pawir=5,dr=0",False,,,2.0,1,1
+"paw ir=5, dr=30","pawir=5,dr=30","pawir=5,dr=30",False,,,2.0,1,1
+"paw ir=5, dr=50","pawir=5,dr=50","pawir=5,dr=50",False,,,2.0,1,1
+"paw ir=5, dr=60","pawir=5,dr=60","pawir=5,dr=60",False,,,2.0,1,1
+"paw ir=5, dr=70","pawir=5,dr=70","pawir=5,dr=70",False,,,2.0,1,1
+"paw ir=7, dr=0","pawir=7,dr=0","pawir=7,dr=0",False,,,2.0,1,1
+"paw ir=7, dr=30","pawir=7,dr=30","pawir=7,dr=30",False,,,2.0,1,1
+"paw ir=7, dr=50","pawir=7,dr=50","pawir=7,dr=50",False,,,2.0,1,1
+"paw ir=7, dr=60","pawir=7,dr=60","pawir=7,dr=60",False,,,2.0,1,1
+"paw ir=7, dr=70","pawir=7,dr=70","pawir=7,dr=70",False,,,2.0,1,1
+paw-0,paw0,paw,True,,stem_family,2.0,1,1
+paw-30,paw30,paw,True,,stem_family,2.0,1,1
+paw-50,paw50,paw,True,,stem_family,2.0,1,1
+paw-70,paw70,paw,True,,stem_family,2.0,1,1
+paw-b,pawb,pawb,False,,,2.0,1,1
+paw-bc,pawbc,pawbc,False,,prefix_without_split_marker,2.0,1,1
+paw-c,pawc,pawc,False,,,2.0,1,1
+paw-safe,pawsafe,pawsafe,False,,,2.0,1,1
+payment simulation,paymentsimulation,paymentsimulation,False,,,11.0,1,1
+pc1,pc1,pc1,False,,,16.0,1,1
+pen digits,pendigits,pendigits,False,,,16.0,1,1
+penbased,penbased,penbased,False,,,16.0,2,2
+pendigits,pendigits,pendigits,False,,,16.0,4,4
+pendigits5,pendigits5,pendigits,True,pendigits,,17.0,1,1
+phishing,phishing,phishing,False,,,68.0,1,1
+phishingdata,phishingdata,phishingdata,False,,prefix_without_split_marker,8.5,3,3
+phoneme,phoneme,phoneme,False,,,5.0,7,7
+phoss,phoss,phoss,False,,,479.0,2,2
+pid,pid,pid,False,,,8.0,1,1
+pima,pima,pima,False,,,8.0,21,23
+pima indian diabetes,pimaindiandiabetes,pimaindiandiabetes,False,,prefix_without_split_marker,8.0,1,1
+pima-diabetes,pimadiabetes,pimadiabetes,False,,prefix_without_split_marker,8.0,1,1
+pima10,pima10,pima,True,pima,,,1,1
+pima15,pima15,pima,True,pima,,,1,1
+pima2,pima2,pima,True,pima,,,1,1
+pima20,pima20,pima,True,pima,,,1,1
+pima4,pima4,pima,True,pima,,,1,1
+pima6,pima6,pima,True,pima,,,1,1
+planningrelax,planningrelax,planningrelax,False,,,13.0,1,1
+planrelax,planrelax,planrelax,False,,,13.0,1,1
+plates faults,platesfaults,platesfaults,False,,,27.0,1,1
+plates-faults5,platesfaults5,platesfaults,True,platesfaults,,27.0,1,1
+plates-faults7,platesfaults7,platesfaults,True,platesfaults,,27.0,1,1
+platesfaults,platesfaults,platesfaults,False,,,27.0,1,1
+poker,poker,poker,False,,,10.0,1,1
+poker hand,pokerhand,pokerhand,False,,prefix_without_split_marker,10.0,1,1
+poker-8 vs 6,poker8vs6,poker,True,poker,,10.0,1,1
+poker-9 vs 7,poker9vs7,poker,True,poker,,10.0,1,1
+poker89vs5,poker89vs5,poker,True,poker,,10.0,1,1
+poker89vs6,poker89vs6,poker,True,poker,,10.0,1,1
+poker8vs6,poker8vs6,poker,True,poker,,10.0,2,2
+poker9vs7,poker9vs7,poker,True,poker,,10.0,2,2
+polish bankruptcy,polishbankruptcy,polishbankruptcy,False,,,64.0,1,1
+post-operative,postoperative,postoperative,False,,,8.0,2,2
+pre2d,pre2d,pre2d,False,,,2.0,1,1
+prend,prend,prend,False,,,21.0,1,1
+probe binary,probebinary,probebinary,False,,,41.0,1,1
+promotion,promotion,promotion,False,,,4.0,1,1
+prompting,prompting,prompting,False,,,17.0,1,1
+purchase,purchase,purchase,False,,,18.0,1,1
+qsar,qsar,qsar,False,,,41.0,1,1
+r2l binary,r2lbinary,r2lbinary,False,,,41.0,1,1
+raisin,raisin,raisin,False,,,8.0,1,1
+record linkage,recordlinkage,recordlinkage,False,,,12.0,1,1
+ring,ring,ring,False,,,,1,1
+robot,robot,robot,False,,,14.0,2,2
+rt-iot,rtiot,rtiot,False,,,53.0,1,1
+sales: win loss,sales:winloss,sales:winloss,False,,,,1,1
+salinas a,salinasa,salinasa,False,,,,1,1
+samson,samson,samson,False,,,,1,1
+sat,sat,sat,False,,,36.0,2,2
+satellite,satellite,satellite,False,,,36.0,2,2
+satimage,satimage,satimage,False,,,36.0,15,15
+satimage 4,satimage4,satimage,True,satimage,,36.5,1,1
+satimage4,satimage4,satimage,True,satimage,,36.5,1,1
+satisfied,satisfied,satisfied,False,,,21.0,1,1
+saureus4,saureus4,saureus4,False,,,3.0,1,1
+scene,scene,scene,False,,,294.0,1,1
+seed,seed,seed,False,,,7.0,1,1
+segmemt0,segmemt0,segmemt0,False,,,19.0,2,2
+segment,segment,segment,False,,,18.0,10,10
+segment 2,segment2,segment,True,segment,,18.0,1,1
+segment 6,segment6,segment,True,segment,,18.0,1,1
+segment0,segment0,segment,True,segment,,19.0,5,5
+segment10,segment10,segment,True,segment,,,1,1
+segment15,segment15,segment,True,segment,,,1,1
+segment2,segment2,segment,True,segment,,18.0,1,1
+segment20,segment20,segment,True,segment,,,1,1
+segment4,segment4,segment,True,segment,,,1,1
+segment5,segment5,segment,True,segment,same_source_composition_differs,20.0,1,1
+segment6,segment6,segment,True,segment,,18.0,1,1
+segmentation,segmentation,segmentation,False,,prefix_without_split_marker,16.0,1,3
+seismicbumps,seismicbumps,seismicbumps,False,,,19.0,1,1
+semeion,semeion,semeion,False,,,265.0,1,1
+sensorreadings,sensorreadings,sensorreadings,False,,,24.0,3,3
+shoppers,shoppers,shoppers,False,,,13.5,3,3
+shuttle,shuttle,shuttle,False,,,9.0,7,7
+shuttle-c0-vs-c4,shuttlec0vsc4,shuttle,True,shuttle,,9.0,5,5
+shuttle-c2-vs-c4,shuttlec2vsc4,shuttle,True,shuttle,,9.5,1,1
+shuttle-c2vsc4,shuttlec2vsc4,shuttle,True,shuttle,,9.5,1,1
+shuttle2vs4,shuttle2vs4,shuttle,True,shuttle,,9.0,1,1
+shuttle2vs5,shuttle2vs5,shuttle,True,shuttle,,9.0,1,1
+shuttlec0vsc4,shuttlec0vsc4,shuttle,True,shuttle,,9.0,2,2
+shuttlec2vsc4,shuttlec2vsc4,shuttle,True,shuttle,,9.5,2,2
+sick euthyroid,sickeuthyroid,sickeuthyroid,False,,,42.0,2,2
+sick2,sick2,sick2,False,,,,1,1
+simulated binary datasets,simulatedbinarydatasets,simulatedbinarydatasets,False,,,,1,1
+simulated dataset a,simulateddataseta,simulateddataseta,False,,,2.0,1,1
+simulated dataset b,simulateddatasetb,simulateddatasetb,False,,,2.0,1,1
+simulated dataset c,simulateddatasetc,simulateddatasetc,False,,,2.0,1,1
+simulated dataset d,simulateddatasetd,simulateddatasetd,False,,,2.0,1,1
+simulated1,simulated1,simulated,True,,stem_family,20.0,1,1
+simulated10,simulated10,simulated,True,,stem_family,200.0,1,1
+simulated2,simulated2,simulated,True,,stem_family,20.0,1,1
+simulated3,simulated3,simulated,True,,stem_family,20.0,1,1
+simulated4,simulated4,simulated,True,,stem_family,20.0,1,1
+simulated5,simulated5,simulated,True,,stem_family,20.0,1,1
+simulated6,simulated6,simulated,True,,stem_family,200.0,1,1
+simulated7,simulated7,simulated,True,,stem_family,200.0,1,1
+simulated8,simulated8,simulated,True,,stem_family,200.0,1,1
+simulated9,simulated9,simulated,True,,stem_family,200.0,1,1
+skin,skin,skin,False,,,3.0,1,1
+skinnonskin,skinnonskin,skinnonskin,False,,prefix_without_split_marker,3.0,1,1
+sleaf,sleaf,sleaf,False,,,128.0,1,1
+smartphone,smartphone,smartphone,False,,,536.0,1,1
+smoke,smoke,smoke,False,,,14.0,1,1
+solar,solar,solar,False,,,10.0,1,1
+solarflare2,solarflare2,solarflare2,False,,,11.0,2,2
+solarflaref,solarflaref,solarflaref,False,,prefix_without_split_marker,13.0,1,1
+sonar,sonar,sonar,False,,,60.0,1,1
+soybean12,soybean12,soybean12,False,,,,1,1
+sp1,sp1,sp1,False,,,43.0,1,1
+sp3,sp3,sp3,False,,,43.0,1,1
+spambase,spambase,spambase,False,,,57.0,4,4
+spect,spect,spect,False,,,22.0,2,2
+spectf,spectf,spectf,False,,prefix_without_split_marker,44.0,1,1
+splice,splice,splice,False,,,60.0,7,7
+splice-ei,spliceei,spliceei,False,,prefix_without_split_marker,60.0,1,1
+splice-ie,spliceie,spliceie,False,,prefix_without_split_marker,60.0,1,1
+srbct,srbct,srbct,False,,,2308.0,1,1
+statlandsat,statlandsat,statlandsat,False,,,37.0,1,1
+statlog,statlog,statlog,False,,,20.0,4,4
+stock10,stock10,stock10,False,,,9.0,1,1
+students dropout,studentsdropout,studentsdropout,False,,,36.0,1,1
+"sub-cluster ir=5, dr=0","subclusterir=5,dr=0","subclusterir=5,dr=0",False,,,2.0,1,1
+"sub-cluster ir=5, dr=30","subclusterir=5,dr=30","subclusterir=5,dr=30",False,,,2.0,1,1
+"sub-cluster ir=5, dr=50","subclusterir=5,dr=50","subclusterir=5,dr=50",False,,,2.0,1,1
+"sub-cluster ir=5, dr=60","subclusterir=5,dr=60","subclusterir=5,dr=60",False,,,2.0,1,1
+"sub-cluster ir=5, dr=70","subclusterir=5,dr=70","subclusterir=5,dr=70",False,,,2.0,1,1
+"sub-cluster ir=7, dr=0","subclusterir=7,dr=0","subclusterir=7,dr=0",False,,,2.0,1,1
+"sub-cluster ir=7, dr=30","subclusterir=7,dr=30","subclusterir=7,dr=30",False,,,2.0,1,1
+"sub-cluster ir=7, dr=50","subclusterir=7,dr=50","subclusterir=7,dr=50",False,,,2.0,1,1
+"sub-cluster ir=7, dr=60","subclusterir=7,dr=60","subclusterir=7,dr=60",False,,,2.0,1,1
+"sub-cluster ir=7, dr=70","subclusterir=7,dr=70","subclusterir=7,dr=70",False,,,2.0,1,1
+subcl-b,subclb,subclb,False,,,2.0,1,1
+subcl-bc,subclbc,subclbc,False,,prefix_without_split_marker,2.0,1,1
+subcl-c,subclc,subclc,False,,,2.0,1,1
+subcl-safe,subclsafe,subclsafe,False,,,2.0,1,1
+subclus-0,subclus0,subclus,True,,stem_family,2.0,1,1
+subclus-30,subclus30,subclus,True,,stem_family,2.0,1,1
+subclus-50,subclus50,subclus,True,,stem_family,2.0,1,1
+subclus-70,subclus70,subclus,True,,stem_family,2.0,1,1
+sun397,sun397,sun397,False,,,,1,1
+surgical,surgical,surgical,False,,,,1,1
+susy,susy,susy,False,,,18.0,1,1
+svhn,svhn,svhn,False,,,,1,1
+svmguide1,svmguide1,svmguide,True,,stem_family,4.0,4,4
+svmguide2,svmguide2,svmguide,True,,stem_family,20.0,1,1
+svmguide3,svmguide3,svmguide,True,,stem_family,22.0,2,2
+swd,swd,swd,False,,,4.0,2,2
+syn-a,syna,syna,False,,,2.0,2,2
+syn-b,synb,synb,False,,,2.0,2,2
+syn-c,sync,sync,False,,,2.0,2,2
+syn-d,synd,synd,False,,,2.0,2,2
+syn-e,syne,syne,False,,,2.0,2,2
+syn-f,synf,synf,False,,,2.0,2,2
+taevaluation,taevaluation,taevaluation,False,,,5.0,1,1
+taiwanses,taiwanses,taiwanses,False,,,94.0,1,1
+telco customer churn,telcocustomerchurn,telcocustomerchurn,False,,,,1,1
+texture,texture,texture,False,,,40.0,3,3
+texture l,texturel,texturel,False,,prefix_without_split_marker,40.0,1,1
+texture s,textures,textures,False,,prefix_without_split_marker,40.0,1,1
+thyroid,thyroid,thyroid,False,,,21.0,12,12
+thyroid sick,thyroidsick,thyroidsick,False,,prefix_without_split_marker,52.0,2,2
+toxicity,toxicity,toxicity,False,,,1171.0,1,1
+toy,toy,toy,False,,,2.0,1,1
+toy dataset a,toydataseta,toydataseta,False,,,2.0,1,1
+toy dataset b,toydatasetb,toydatasetb,False,,,2.0,1,1
+toy dataset c,toydatasetc,toydatasetc,False,,,2.0,1,1
+twopats,twopats,twopats,False,,,128.0,1,1
+uknowledge,uknowledge,uknowledge,False,,,5.0,1,1
+user knowledge modeling,userknowledgemodeling,userknowledgemodeling,False,,prefix_without_split_marker,5.0,2,2
+user knowledge-modelling,userknowledgemodelling,userknowledgemodelling,False,,prefix_without_split_marker,5.0,1,1
+user-knowledge-modelling,userknowledgemodelling,userknowledgemodelling,False,,prefix_without_split_marker,5.0,2,2
+userknowledge,userknowledge,userknowledge,False,,,5.0,3,3
+veh1,veh1,veh1,False,,,19.0,1,1
+vehicle,vehicle,vehicle,False,,,18.0,21,23
+vehicle0,vehicle0,vehicle,True,vehicle,,18.0,5,5
+vehicle1,vehicle1,vehicle,True,vehicle,,18.0,8,8
+vehicle10,vehicle10,vehicle,True,vehicle,,,1,1
+vehicle15,vehicle15,vehicle,True,vehicle,,,1,1
+vehicle2,vehicle2,vehicle,True,vehicle,,18.0,6,6
+vehicle20,vehicle20,vehicle,True,vehicle,,,1,1
+vehicle3,vehicle3,vehicle,True,vehicle,,18.0,6,6
+vehicle4,vehicle4,vehicle,True,vehicle,,,1,1
+vehicle6,vehicle6,vehicle,True,vehicle,,,1,1
+velocity-1.5,velocity15,velocity15,False,,,20.0,1,1
+vertebal,vertebal,vertebal,False,,,7.0,1,1
+vertebral,vertebral,vertebral,False,,,6.0,2,2
+vertebral-column,vertebralcolumn,vertebralcolumn,False,,prefix_without_split_marker,6.0,3,3
+vertebralcolumn,vertebralcolumn,vertebralcolumn,False,,prefix_without_split_marker,6.0,3,3
+voice,voice,voice,False,,,9.0,1,1
+voice3,voice3,voice,True,voice,,10.0,1,1
+voice6,voice6,voice,True,voice,,10.0,1,1
+voice9 6,voice96,voice,True,voice,,10.0,1,1
+voice9 7,voice97,voice,True,voice,,10.0,1,1
+votes,votes,votes,False,,,16.0,1,1
+vowel,vowel,vowel,False,,,13.0,6,8
+vowel0,vowel0,vowel,True,vowel,,13.0,11,11
+vowel4,vowel4,vowel,True,vowel,same_source_composition_differs,10.0,1,1
+vowel5,vowel5,vowel,True,vowel,same_source_composition_differs,10.0,2,2
+vowel7,vowel7,vowel,True,vowel,same_source_composition_differs,10.0,1,1
+vw0,vw0,vw0,False,,,10.0,1,1
+wafer,wafer,wafer,False,,,152.0,1,1
+waveform,waveform,waveform,False,,,30.5,4,4
+wdbc,wdbc,wdbc,False,,,31.0,2,2
+weatheraus,weatheraus,weatheraus,False,,,,1,1
+wine,wine,wine,False,,,13.0,16,18
+wine quality,winequality,winequality,False,,prefix_without_split_marker,11.0,5,5
+wine quality red,winequalityred,winequalityred,False,,prefix_without_split_marker,11.0,1,1
+wine quality-white,winequalitywhite,winequalitywhite,False,,prefix_without_split_marker,11.0,1,1
+wine-quality-red,winequalityred,winequalityred,False,,prefix_without_split_marker,11.0,1,1
+wine-quality-white,winequalitywhite,winequalitywhite,False,,prefix_without_split_marker,11.0,1,1
+wine-red,winered,winered,False,,prefix_without_split_marker,11.0,1,1
+wine2,wine2,wine,True,wine,,,1,1
+wine4,wine4,wine,True,wine,,,1,1
+wine6,wine6,wine,True,wine,,,1,1
+winequality,winequality,winequality,False,,prefix_without_split_marker,11.0,2,2
+winequality-red,winequalityred,winequalityred,False,,prefix_without_split_marker,11.0,8,8
+winequality-red-4,winequalityred4,winequalityred,True,winequalityred,,11.0,1,1
+winequality-red8vs67,winequalityred8vs67,winequalityred,True,winequalityred,,,1,1
+winequality-white,winequalitywhite,winequalitywhite,False,,prefix_without_split_marker,11.0,3,3
+winequality-white-3 vs 7,winequalitywhite3vs7,winequalitywhite,True,winequalitywhite,,11.0,1,1
+winequalityred3vs5,winequalityred3vs5,winequalityred,True,winequalityred,,11.0,1,1
+winequalityred4,winequalityred4,winequalityred,True,winequalityred,,11.0,1,1
+winequalitywhite3vs7,winequalitywhite3vs7,winequalitywhite,True,winequalitywhite,,11.0,1,1
+winequalitywhite9vs4,winequalitywhite9vs4,winequalitywhite,True,winequalitywhite,,11.0,1,1
+wisconsin,wisconsin,wisconsin,False,,,9.0,5,5
+wisconsin5,wisconsin5,wisconsin5,False,,separate_different_dataset,32.0,1,1
+wpbc,wpbc,wpbc,False,,,34.0,2,2
+xalan-2.4,xalan24,xalan,True,,stem_family,20.0,1,1
+xalan-2.7,xalan27,xalan,True,,stem_family,20.0,1,1
+xerces-1.2,xerces12,xerces12,False,,,20.0,1,1
+yeast,yeast,yeast,False,,,8.0,22,22
+yeast 1,yeast1,yeast,True,yeast,,8.0,1,3
+yeast 3,yeast3,yeast,True,yeast,,8.0,1,3
+yeast 4,yeast4,yeast,True,yeast,,8.0,1,3
+yeast 5,yeast5,yeast,True,yeast,,8.0,1,2
+yeast 6,yeast6,yeast,True,yeast,,8.0,1,2
+yeast-0-2-5-6,yeast0256,yeast,True,yeast,,8.0,1,1
+yeast-0-2-5-6 vs 3-7-8-9,yeast0256vs3789,yeast,True,yeast0256,,9.0,1,1
+yeast-0-2-5-7-9,yeast02579,yeast,True,yeast,,8.0,1,1
+yeast-0-2-5-7-9 vs 3-6-8,yeast02579vs368,yeast,True,yeast02579,,8.5,2,2
+yeast-0-3-5-9,yeast0359,yeast,True,yeast,,8.0,1,1
+yeast-0-3-5-9 vs 7-8,yeast0359vs78,yeast,True,yeast0359,,8.5,2,2
+yeast-0-5-6-7-9,yeast05679,yeast,True,yeast,,8.0,1,1
+yeast-0-5-6-7-9 vs 4,yeast05679vs4,yeast,True,yeast05679,,8.0,5,5
+yeast-1 vs 7,yeast1vs7,yeast,True,yeast1,,7.0,5,5
+yeast-1-2-8-9,yeast1289,yeast,True,yeast,,8.0,1,1
+yeast-1-2-8-9 vs 7,yeast1289vs7,yeast,True,yeast1289,,8.0,3,3
+yeast-1-4-5-8 vs 7,yeast1458vs7,yeast,True,yeast,,8.0,5,5
+yeast-2 vs 4,yeast2vs4,yeast,True,yeast2,,8.0,6,6
+yeast-2 vs 8,yeast2vs8,yeast,True,yeast2,,8.0,4,4
+yeast0256vs3789,yeast0256vs3789,yeast,True,yeast0256,,9.0,1,1
+yeast02579vs368,yeast02579vs368,yeast,True,yeast02579,,8.5,1,1
+yeast0359vs78,yeast0359vs78,yeast,True,yeast0359,,8.5,1,1
+yeast05679vs4,yeast05679vs4,yeast,True,yeast05679,,8.0,3,3
+yeast1,yeast1,yeast,True,yeast,,8.0,9,9
+yeast1289vs7,yeast1289vs7,yeast,True,yeast1289,,8.0,4,4
+yeast1458vs7,yeast1458vs7,yeast,True,yeast,,8.0,4,4
+yeast1vs7,yeast1vs7,yeast,True,yeast1,,7.0,4,4
+yeast2,yeast2,yeast,True,yeast,,8.0,2,2
+yeast2vs4,yeast2vs4,yeast,True,yeast2,,8.0,5,5
+yeast2vs8,yeast2vs8,yeast,True,yeast2,,8.0,1,1
+yeast3,yeast3,yeast,True,yeast,,8.0,13,13
+yeast4,yeast4,yeast,True,yeast,,8.0,15,15
+yeast5,yeast5,yeast,True,yeast,,8.0,14,14
+yeast6,yeast6,yeast,True,yeast,,8.0,12,12
+yeast7,yeast7,yeast,True,yeast,,8.0,2,2
+yeast8,yeast8,yeast,True,yeast,,8.0,2,2
+yoga,yoga,yoga,False,,,426.0,1,1
+zoo,zoo,zoo,False,,,16.0,10,10

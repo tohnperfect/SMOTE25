@@ -37,6 +37,7 @@
   standard = how_obtained เป็น original หรือ repository-defined
 """
 import argparse, csv, hashlib, json, os, re, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from collections import Counter, defaultdict
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -65,7 +66,9 @@ CROSS_TABLE_REVIEW = {
 EXPECTED = {
     "entries_total": 1654, "entries_named": 1653, "distinct_names": 771, "single_paper_names": 546,
     "distinct_names_incl_placeholder": 772, "single_paper_names_incl_placeholder": 547,
-    "yeast_family_papers": 39, "ecoli_family_papers": 39, "glass_family_papers": 36,
+    "yeast_family_papers": 39, "ecoli_family_papers": 42, "glass_family_papers": 35,  # T1 (28 Oct 2026); prefix rule gave 39/39/36
+    "datasets_t1": 680, "families_t1": 459,  # T1 + Toon follow-up 28 Oct (pageblock = pageblocks; 8 same-source names joined)
+    "size_var_names_2plus": 198, "size_var_names_multi": 78, "size_var_datasets_2plus": 192, "size_var_datasets_multi": 90,
     "outcome_rows_all": 835, "outcome_rows_plain_incl_aggregate": 542, "outcome_papers_plain_incl_aggregate": 31,
     "plain_per_dataset_rows": 541, "plain_per_dataset_papers": 30,
     "paper_level_plain": 44, "paper_level_wrapper": 13, "paper_level_none": 16,
@@ -130,6 +133,26 @@ def main():
         "distinct_if_all_punctuation_removed": len({re.sub(r"[^a-z0-9]", "", k) for k in m_named}),
         "norm_definition": "lower-case; drop text in parentheses; collapse underscores and whitespace; hyphens and dots kept",
     }
+    # T1 (Toon 28 Oct 2026): datasets (rule 1) and source families (rules 2-3) from out/dataset_families.csv
+    import families as T1
+    m_ds, m_fam = defaultdict(set), defaultdict(set)
+    for k, v in m_named.items():
+        m_ds[T1.dataset_key(k)] |= v; m_fam[T1.family_of(k)] |= v
+    # size variation (same name / same dataset printed with different sizes), names and T1 datasets (28 Oct 2026)
+    def size_var(keyf):
+        sz = defaultdict(lambda: defaultdict(set))
+        for r in named:
+            if r["n_instances"] in ("", "None", None): continue
+            sz[keyf(A.norm(r["name"]))][r["paper"]].add(str(r["n_instances"]).strip())
+        two = sorted(k for k, v in sz.items() if len(v) >= 2)
+        diff = [k for k in two if len(set().union(*sz[k].values())) > 1]
+        ex = {k: {"papers": len(sz[k]), "sizes": sorted(set().union(*sz[k].values()), key=lambda x: float(x.replace(",", "")) if x.replace(",", "").replace(".", "").isdigit() else 0),
+                  "papers_per_size": {z: sorted(p for p, zs in sz[k].items() if z in zs) for z in set().union(*sz[k].values())}}
+              for k in ("thyroid", "dermatology", "ecoli", "pima")}
+        return dict(with_size_in_2plus_papers=len(two), with_more_than_one_size=len(diff), examples=ex)
+    R["size_variation"] = dict(names=size_var(lambda k: k), datasets_t1=size_var(lambda k: T1.dataset_key(k)))
+    R["names"].update(t1_rule=T1.RULE, datasets_t1=len(m_ds), single_paper_datasets_t1=sum(len(v) == 1 for v in m_ds.values()),
+                      families_t1=len(m_fam), single_paper_families_t1=sum(len(v) == 1 for v in m_fam.values()))
 
     # ---------------- 2. name frequencies (R3) ----------------
     fam = {}
@@ -137,9 +160,14 @@ def main():
         keys = sorted(k for k in m_named if k.startswith(f))
         exact = sorted(m_named.get(f, set()))
         prefix = sorted(set().union(*[m_named[k] for k in keys])) if keys else []
-        fam[f] = {"exact_name_papers": len(exact), "family_prefix_papers": len(prefix), "prefix_name_keys": keys,
-                  "papers_exact": exact, "papers_only_via_prefix": sorted(set(prefix) - set(exact))}
-    R["name_frequencies"] = {"rule": "R3: papers per name; exact = norm(name)==f, family = norm(name).startswith(f)", **fam}
+        fam_names = sorted(k for k in m_named if T1.family_of(k) == f)
+        famp = sorted(m_fam.get(f, set()))
+        fam[f] = {"exact_name_papers": len(exact), "dataset_papers": len(m_ds.get(f, set())), "family_papers": len(famp),
+                  "family_name_keys": fam_names, "papers_exact": exact, "papers_only_via_family": sorted(set(famp) - set(exact)),
+                  "family_prefix_papers_superseded": len(prefix)}
+    R["name_frequencies"] = {"rule": "R3 (revised 28 Oct 2026, rule T1): exact = norm(name)==f; dataset = same T1 dataset key (punctuation ignored); "
+                                     "family = T1 family (split versions included, non-standard names excluded); the earlier prefix count is kept as "
+                                     "family_prefix_papers_superseded", **fam}
 
     # ---------------- 3. outcome rows (R4, R5) ----------------
     agg = [r for r in O if AGG_RE.match(r["dataset"] or "")]
@@ -242,8 +270,11 @@ def main():
         "distinct_names": R["names"]["distinct_names"], "single_paper_names": R["names"]["single_paper_names"],
         "distinct_names_incl_placeholder": R["names"]["distinct_names_incl_placeholder"],
         "single_paper_names_incl_placeholder": R["names"]["single_paper_names_incl_placeholder"],
-        "yeast_family_papers": fam["yeast"]["family_prefix_papers"], "ecoli_family_papers": fam["ecoli"]["family_prefix_papers"],
-        "glass_family_papers": fam["glass"]["family_prefix_papers"],
+        "yeast_family_papers": fam["yeast"]["family_papers"], "ecoli_family_papers": fam["ecoli"]["family_papers"],
+        "glass_family_papers": fam["glass"]["family_papers"],
+        "datasets_t1": R["names"]["datasets_t1"], "families_t1": R["names"]["families_t1"],
+        "size_var_names_2plus": R["size_variation"]["names"]["with_size_in_2plus_papers"], "size_var_names_multi": R["size_variation"]["names"]["with_more_than_one_size"],
+        "size_var_datasets_2plus": R["size_variation"]["datasets_t1"]["with_size_in_2plus_papers"], "size_var_datasets_multi": R["size_variation"]["datasets_t1"]["with_more_than_one_size"],
         "outcome_rows_all": len(O), "outcome_rows_plain_incl_aggregate": len(plain),
         "outcome_papers_plain_incl_aggregate": len({r["paper"] for r in plain}),
         "plain_per_dataset_rows": len(plain_ds), "plain_per_dataset_papers": len(papers_plain_ds),

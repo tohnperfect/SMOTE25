@@ -1,0 +1,673 @@
+{
+ "key": "GOIO",
+ "classifier": "not stated per table: table titled 'Average Performance on 23 Datasets'; paper uses GNB, KNN, DTC, SVM, RFC (p.9) with no highlighted one",
+ "condition": "original IR, main suite (18 real + 5 artificial); stratified 5-fold CV, 10 seeds",
+ "proposed_column": "GOIO",
+ "smote_column": "SMOTE",
+ "metrics": [
+  {
+   "metric": "F1-score",
+   "metric_family": "F-measure",
+   "table": "Table V",
+   "page": "PDF page 10 (printed p.6459)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "default",
+     "proposed": "0.6597",
+     "proposed_std": "0.04",
+     "smote": "0.6095",
+     "smote_std": "0.11",
+     "marks": "rank in parentheses: GOIO (1), SMOTE (6); bold (best rank): GOIO"
+    },
+    {
+     "dataset_as_printed": "shoppers",
+     "proposed": "0.7244",
+     "proposed_std": "0.05",
+     "smote": "0.6923",
+     "smote_std": "0.11",
+     "marks": "rank in parentheses: GOIO (1), SMOTE (8); bold (best rank): GOIO"
+    },
+    {
+     "dataset_as_printed": "bank_full",
+     "proposed": "0.7161",
+     "proposed_std": "0.04",
+     "smote": "0.7008",
+     "smote_std": "0.04",
+     "marks": "rank in parentheses: GOIO (1), SMOTE (5); bold (best rank): GOIO"
+    },
+    {
+     "dataset_as_printed": "bank_small",
+     "proposed": "0.6742",
+     "proposed_std": "0.04",
+     "smote": "0.6642",
+     "smote_std": "0.03",
+     "marks": "rank in parentheses: GOIO (2), SMOTE (6)"
+    },
+    {
+     "dataset_as_printed": "avila_0vs5",
+     "proposed": "0.8595",
+     "proposed_std": "0.12",
+     "smote": "0.7777",
+     "smote_std": "0.19",
+     "marks": "rank in parentheses: GOIO (1), SMOTE (5); bold (best rank): GOIO"
+    },
+    {
+     "dataset_as_printed": "artificial_0.5_10",
+     "proposed": "0.6197",
+     "proposed_std": "0.04",
+     "smote": "0.5710",
+     "smote_std": "0.09",
+     "marks": "rank in parentheses: GOIO (2), SMOTE (5)"
+    },
+    {
+     "dataset_as_printed": "optical_digits",
+     "proposed": "0.8696",
+     "proposed_std": "0.16",
+     "smote": "0.8350",
+     "smote_std": "0.25",
+     "marks": "rank in parentheses: GOIO (2), SMOTE (5)"
+    },
+    {
+     "dataset_as_printed": "avila_0vs6",
+     "proposed": "0.7926",
+     "proposed_std": "0.18",
+     "smote": "0.7202",
+     "smote_std": "0.25",
+     "marks": "rank in parentheses: GOIO (2), SMOTE (6)"
+    },
+    {
+     "dataset_as_printed": "sick_euthyroid",
+     "proposed": "0.7151",
+     "proposed_std": "0.20",
+     "smote": "0.7305",
+     "smote_std": "0.20",
+     "marks": "rank in parentheses: GOIO (5), SMOTE (3)"
+    },
+    {
+     "dataset_as_printed": "avila_0vs7",
+     "proposed": "0.8220",
+     "proposed_std": "0.18",
+     "smote": "0.7237",
+     "smote_std": "0.29",
+     "marks": "rank in parentheses: GOIO (2), SMOTE (7)"
+    },
+    {
+     "dataset_as_printed": "scene",
+     "proposed": "0.5645",
+     "proposed_std": "0.04",
+     "smote": "0.5373",
+     "smote_std": "0.05",
+     "marks": "rank in parentheses: GOIO (1), SMOTE (5); bold (best rank): GOIO"
+    },
+    {
+     "dataset_as_printed": "abalone_15",
+     "proposed": "0.6441",
+     "proposed_std": "0.06",
+     "smote": "0.5999",
+     "smote_std": "0.08",
+     "marks": "rank in parentheses: GOIO (1), SMOTE (5); bold (best rank): GOIO"
+    },
+    {
+     "dataset_as_printed": "thyroid_sick",
+     "proposed": "0.7564",
+     "proposed_std": "0.16",
+     "smote": "0.7168",
+     "smote_std": "0.22",
+     "marks": "rank in parentheses: GOIO (1), SMOTE (5); bold (best rank): GOIO"
+    },
+    {
+     "dataset_as_printed": "abalone_6",
+     "proposed": "0.9164",
+     "proposed_std": "0.04",
+     "smote": "0.8931",
+     "smote_std": "0.03",
+     "marks": "rank in parentheses: GOIO (1), SMOTE (4); bold (best rank): GOIO"
+    },
+    {
+     "dataset_as_printed": "artificial_0.3_5",
+     "proposed": "0.5253",
+     "proposed_std": "0.02",
+     "smote": "0.4753",
+     "smote_std": "0.06",
+     "marks": "rank in parentheses: GOIO (1), SMOTE (7); bold (best rank): GOIO"
+    },
+    {
+     "dataset_as_printed": "artificial_0.5_5",
+     "proposed": "0.5912",
+     "proposed_std": "0.04",
+     "smote": "0.5422",
+     "smote_std": "0.04",
+     "marks": "rank in parentheses: GOIO (1), SMOTE (4); bold (best rank): GOIO"
+    },
+    {
+     "dataset_as_printed": "artificial_1_5",
+     "proposed": "0.6992",
+     "proposed_std": "0.04",
+     "smote": "0.6383",
+     "smote_std": "0.06",
+     "marks": "rank in parentheses: GOIO (1), SMOTE (6); bold (best rank): GOIO"
+    },
+    {
+     "dataset_as_printed": "wine_quality",
+     "proposed": "0.6286",
+     "proposed_std": "0.05",
+     "smote": "0.5653",
+     "smote_std": "0.05",
+     "marks": "rank in parentheses: GOIO (1), SMOTE (7); bold (best rank): GOIO"
+    },
+    {
+     "dataset_as_printed": "taiwanses",
+     "proposed": "0.6030",
+     "proposed_std": "0.06",
+     "smote": "0.5809",
+     "smote_std": "0.13",
+     "marks": "rank in parentheses: GOIO (1), SMOTE (4); bold (best rank): GOIO"
+    },
+    {
+     "dataset_as_printed": "artificial_0.5_2.5",
+     "proposed": "0.5344",
+     "proposed_std": "0.03",
+     "smote": "0.4946",
+     "smote_std": "0.03",
+     "marks": "rank in parentheses: GOIO (2), SMOTE (5)"
+    },
+    {
+     "dataset_as_printed": "mammography",
+     "proposed": "0.8023",
+     "proposed_std": "0.03",
+     "smote": "0.6976",
+     "smote_std": "0.09",
+     "marks": "rank in parentheses: GOIO (1), SMOTE (7); bold (best rank): GOIO"
+    },
+    {
+     "dataset_as_printed": "bankruptcy",
+     "proposed": "0.5295",
+     "proposed_std": "0.04",
+     "smote": "0.4715",
+     "smote_std": "0.19",
+     "marks": "rank in parentheses: GOIO (2), SMOTE (6)"
+    },
+    {
+     "dataset_as_printed": "page-blocks_0vs3",
+     "proposed": "0.9075",
+     "proposed_std": "0.04",
+     "smote": "0.8043",
+     "smote_std": "0.14",
+     "marks": "rank in parentheses: GOIO (2), SMOTE (7)"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average Rank",
+      "proposed": "1.52",
+      "smote": "5.57"
+     },
+     {
+      "label": "Average Value",
+      "proposed": "0.7024",
+      "smote": "0.6540"
+     },
+     {
+      "label": "Table VIII mean rank (F1)",
+      "proposed": "1.52",
+      "smote": "5.57-"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Table VIII: Friedman test, critical value F(6,132)=2.07 (alpha=0.05); actual F_F = 11.73 (reject); Bonferroni-Dunn CD=1.94 (k=8, alpha=0.05). SMOTE mean rank printed with '-' sign ('5.57-'), which per text means GOIO outperforms SMOTE (gap larger than CD). Wilcoxon Table IX does not include SMOTE."
+   }
+  },
+  {
+   "metric": "MCC",
+   "metric_family": "MCC",
+   "table": "Table VI",
+   "page": "PDF page 10 (printed p.6459)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "default",
+     "proposed": "0.3260",
+     "proposed_std": "0.07",
+     "smote": "0.2940",
+     "smote_std": "0.10",
+     "marks": "rank in parentheses: GOIO (2), SMOTE (7)"
+    },
+    {
+     "dataset_as_printed": "shoppers",
+     "proposed": "0.4547",
+     "proposed_std": "0.09",
+     "smote": "0.4363",
+     "smote_std": "0.14",
+     "marks": "rank in parentheses: GOIO (2), SMOTE (7)"
+    },
+    {
+     "dataset_as_printed": "bank_full",
+     "proposed": "0.4396",
+     "proposed_std": "0.08",
+     "smote": "0.4266",
+     "smote_std": "0.06",
+     "marks": "rank in parentheses: GOIO (2), SMOTE (5)"
+    },
+    {
+     "dataset_as_printed": "bank_small",
+     "proposed": "0.3543",
+     "proposed_std": "0.08",
+     "smote": "0.3530",
+     "smote_std": "0.06",
+     "marks": "rank in parentheses: GOIO (4), SMOTE (6)"
+    },
+    {
+     "dataset_as_printed": "avila_0vs5",
+     "proposed": "0.7294",
+     "proposed_std": "0.23",
+     "smote": "0.6378",
+     "smote_std": "0.30",
+     "marks": "rank in parentheses: GOIO (1), SMOTE (5); bold (best rank): GOIO"
+    },
+    {
+     "dataset_as_printed": "artificial_0.5_10",
+     "proposed": "0.2595",
+     "proposed_std": "0.07",
+     "smote": "0.2220",
+     "smote_std": "0.09",
+     "marks": "rank in parentheses: GOIO (2), SMOTE (4)"
+    },
+    {
+     "dataset_as_printed": "optical_digits",
+     "proposed": "0.7838",
+     "proposed_std": "0.23",
+     "smote": "0.7748",
+     "smote_std": "0.30",
+     "marks": "rank in parentheses: GOIO (3), SMOTE (4)"
+    },
+    {
+     "dataset_as_printed": "avila_0vs6",
+     "proposed": "0.6255",
+     "proposed_std": "0.32",
+     "smote": "0.5745",
+     "smote_std": "0.36",
+     "marks": "rank in parentheses: GOIO (3), SMOTE (6)"
+    },
+    {
+     "dataset_as_printed": "sick_euthyroid",
+     "proposed": "0.5185",
+     "proposed_std": "0.29",
+     "smote": "0.5730",
+     "smote_std": "0.24",
+     "marks": "rank in parentheses: GOIO (6), SMOTE (2)"
+    },
+    {
+     "dataset_as_printed": "avila_0vs7",
+     "proposed": "0.6596",
+     "proposed_std": "0.36",
+     "smote": "0.6084",
+     "smote_std": "0.35",
+     "marks": "rank in parentheses: GOIO (4), SMOTE (5)"
+    },
+    {
+     "dataset_as_printed": "scene",
+     "proposed": "0.1612",
+     "proposed_std": "0.08",
+     "smote": "0.1701",
+     "smote_std": "0.06",
+     "marks": "rank in parentheses: GOIO (5), SMOTE (4)"
+    },
+    {
+     "dataset_as_printed": "abalone_15",
+     "proposed": "0.3161",
+     "proposed_std": "0.10",
+     "smote": "0.2928",
+     "smote_std": "0.08",
+     "marks": "rank in parentheses: GOIO (2), SMOTE (4)"
+    },
+    {
+     "dataset_as_printed": "thyroid_sick",
+     "proposed": "0.5668",
+     "proposed_std": "0.23",
+     "smote": "0.5485",
+     "smote_std": "0.27",
+     "marks": "rank in parentheses: GOIO (1), SMOTE (4); bold (best rank): GOIO"
+    },
+    {
+     "dataset_as_printed": "abalone_6",
+     "proposed": "0.8387",
+     "proposed_std": "0.06",
+     "smote": "0.7989",
+     "smote_std": "0.05",
+     "marks": "rank in parentheses: GOIO (1), SMOTE (4); bold (best rank): GOIO"
+    },
+    {
+     "dataset_as_printed": "artificial_0.3_5",
+     "proposed": "0.0612",
+     "proposed_std": "0.04",
+     "smote": "0.0544",
+     "smote_std": "0.05",
+     "marks": "rank in parentheses: GOIO (3), SMOTE (5)"
+    },
+    {
+     "dataset_as_printed": "artificial_0.5_5",
+     "proposed": "0.1966",
+     "proposed_std": "0.07",
+     "smote": "0.1535",
+     "smote_std": "0.06",
+     "marks": "rank in parentheses: GOIO (1), SMOTE (4); bold (best rank): GOIO"
+    },
+    {
+     "dataset_as_printed": "artificial_1_5",
+     "proposed": "0.4065",
+     "proposed_std": "0.08",
+     "smote": "0.3336",
+     "smote_std": "0.10",
+     "marks": "rank in parentheses: GOIO (1), SMOTE (5); bold (best rank): GOIO"
+    },
+    {
+     "dataset_as_printed": "wine_quality",
+     "proposed": "0.2879",
+     "proposed_std": "0.11",
+     "smote": "0.2058",
+     "smote_std": "0.06",
+     "marks": "rank in parentheses: GOIO (1), SMOTE (6); bold (best rank): GOIO"
+    },
+    {
+     "dataset_as_printed": "taiwanses",
+     "proposed": "0.2365",
+     "proposed_std": "0.10",
+     "smote": "0.2879",
+     "smote_std": "0.11",
+     "marks": "rank in parentheses: GOIO (4), SMOTE (1); bold (best rank): SMOTE"
+    },
+    {
+     "dataset_as_printed": "artificial_0.5_2.5",
+     "proposed": "0.0845",
+     "proposed_std": "0.07",
+     "smote": "0.0650",
+     "smote_std": "0.05",
+     "marks": "rank in parentheses: GOIO (2), SMOTE (5)"
+    },
+    {
+     "dataset_as_printed": "mammography",
+     "proposed": "0.6118",
+     "proposed_std": "0.07",
+     "smote": "0.4616",
+     "smote_std": "0.12",
+     "marks": "rank in parentheses: GOIO (1), SMOTE (7); bold (best rank): GOIO"
+    },
+    {
+     "dataset_as_printed": "bankruptcy",
+     "proposed": "0.1720",
+     "proposed_std": "0.08",
+     "smote": "0.1787",
+     "smote_std": "0.10",
+     "marks": "rank in parentheses: GOIO (3), SMOTE (1); bold (best rank): SMOTE"
+    },
+    {
+     "dataset_as_printed": "page-blocks_0vs3",
+     "proposed": "0.8178",
+     "proposed_std": "0.08",
+     "smote": "0.6625",
+     "smote_std": "0.21",
+     "marks": "rank in parentheses: GOIO (2), SMOTE (6)"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average Rank",
+      "proposed": "2.43",
+      "smote": "4.65"
+     },
+     {
+      "label": "Average Value",
+      "proposed": "0.4308",
+      "smote": "0.3962"
+     },
+     {
+      "label": "Table VIII mean rank (MCC)",
+      "proposed": "2.43",
+      "smote": "4.65-"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Table VIII: Friedman test, critical value F(6,132)=2.07 (alpha=0.05); actual F_F = 6.46 (reject); Bonferroni-Dunn CD=1.94 (k=8, alpha=0.05). SMOTE mean rank printed with '-' sign ('4.65-'), which per text means GOIO outperforms SMOTE (gap larger than CD). Wilcoxon Table IX does not include SMOTE."
+   }
+  },
+  {
+   "metric": "Accuracy",
+   "metric_family": "accuracy",
+   "table": "Table VII",
+   "page": "PDF page 11 (printed p.6460)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "default",
+     "proposed": "0.7657",
+     "proposed_std": "0.03",
+     "smote": "0.6991",
+     "smote_std": "0.15",
+     "marks": "rank in parentheses: GOIO (3), SMOTE (6)"
+    },
+    {
+     "dataset_as_printed": "shoppers",
+     "proposed": "0.8601",
+     "proposed_std": "0.02",
+     "smote": "0.7928",
+     "smote_std": "0.13",
+     "marks": "rank in parentheses: GOIO (3), SMOTE (7)"
+    },
+    {
+     "dataset_as_printed": "bank_full",
+     "proposed": "0.8705",
+     "proposed_std": "0.02",
+     "smote": "0.8507",
+     "smote_std": "0.05",
+     "marks": "rank in parentheses: GOIO (3), SMOTE (6)"
+    },
+    {
+     "dataset_as_printed": "bank_small",
+     "proposed": "0.8633",
+     "proposed_std": "0.02",
+     "smote": "0.8351",
+     "smote_std": "0.04",
+     "marks": "rank in parentheses: GOIO (2), SMOTE (7)"
+    },
+    {
+     "dataset_as_printed": "avila_0vs5",
+     "proposed": "0.9359",
+     "proposed_std": "0.07",
+     "smote": "0.8438",
+     "smote_std": "0.15",
+     "marks": "rank in parentheses: GOIO (1), SMOTE (5); bold (best rank): GOIO"
+    },
+    {
+     "dataset_as_printed": "artificial_0.5_10",
+     "proposed": "0.8266",
+     "proposed_std": "0.04",
+     "smote": "0.7519",
+     "smote_std": "0.14",
+     "marks": "rank in parentheses: GOIO (4), SMOTE (7)"
+    },
+    {
+     "dataset_as_printed": "optical_digits",
+     "proposed": "0.9180",
+     "proposed_std": "0.14",
+     "smote": "0.8583",
+     "smote_std": "0.26",
+     "marks": "rank in parentheses: GOIO (2), SMOTE (5)"
+    },
+    {
+     "dataset_as_printed": "avila_0vs6",
+     "proposed": "0.8886",
+     "proposed_std": "0.12",
+     "smote": "0.7809",
+     "smote_std": "0.22",
+     "marks": "rank in parentheses: GOIO (2), SMOTE (7)"
+    },
+    {
+     "dataset_as_printed": "sick_euthyroid",
+     "proposed": "0.8507",
+     "proposed_std": "0.19",
+     "smote": "0.8155",
+     "smote_std": "0.22",
+     "marks": "rank in parentheses: GOIO (2), SMOTE (6)"
+    },
+    {
+     "dataset_as_printed": "avila_0vs7",
+     "proposed": "0.9438",
+     "proposed_std": "0.05",
+     "smote": "0.7879",
+     "smote_std": "0.29",
+     "marks": "rank in parentheses: GOIO (1), SMOTE (7); bold (best rank): GOIO"
+    },
+    {
+     "dataset_as_printed": "scene",
+     "proposed": "0.8634",
+     "proposed_std": "0.05",
+     "smote": "0.7652",
+     "smote_std": "0.12",
+     "marks": "rank in parentheses: GOIO (1), SMOTE (7); bold (best rank): GOIO"
+    },
+    {
+     "dataset_as_printed": "abalone_15",
+     "proposed": "0.8772",
+     "proposed_std": "0.05",
+     "smote": "0.8078",
+     "smote_std": "0.12",
+     "marks": "rank in parentheses: GOIO (2), SMOTE (7)"
+    },
+    {
+     "dataset_as_printed": "thyroid_sick",
+     "proposed": "0.8918",
+     "proposed_std": "0.14",
+     "smote": "0.8260",
+     "smote_std": "0.24",
+     "marks": "rank in parentheses: GOIO (1), SMOTE (7); bold (best rank): GOIO"
+    },
+    {
+     "dataset_as_printed": "abalone_6",
+     "proposed": "0.9821",
+     "proposed_std": "0.01",
+     "smote": "0.9742",
+     "smote_std": "0.01",
+     "marks": "rank in parentheses: GOIO (2), SMOTE (4)"
+    },
+    {
+     "dataset_as_printed": "artificial_0.3_5",
+     "proposed": "0.8793",
+     "proposed_std": "0.04",
+     "smote": "0.7402",
+     "smote_std": "0.15",
+     "marks": "rank in parentheses: GOIO (3), SMOTE (7)"
+    },
+    {
+     "dataset_as_printed": "artificial_0.5_5",
+     "proposed": "0.8937",
+     "proposed_std": "0.03",
+     "smote": "0.8191",
+     "smote_std": "0.07",
+     "marks": "rank in parentheses: GOIO (3), SMOTE (6)"
+    },
+    {
+     "dataset_as_printed": "artificial_1_5",
+     "proposed": "0.9379",
+     "proposed_std": "0.02",
+     "smote": "0.8785",
+     "smote_std": "0.05",
+     "marks": "rank in parentheses: GOIO (2), SMOTE (7)"
+    },
+    {
+     "dataset_as_printed": "wine_quality",
+     "proposed": "0.9166",
+     "proposed_std": "0.02",
+     "smote": "0.8521",
+     "smote_std": "0.07",
+     "marks": "rank in parentheses: GOIO (3), SMOTE (7)"
+    },
+    {
+     "dataset_as_printed": "taiwanses",
+     "proposed": "0.9619",
+     "proposed_std": "0.01",
+     "smote": "0.8243",
+     "smote_std": "0.19",
+     "marks": "rank in parentheses: GOIO (1), SMOTE (8); bold (best rank): GOIO"
+    },
+    {
+     "dataset_as_printed": "artificial_0.5_2.5",
+     "proposed": "0.9285",
+     "proposed_std": "0.02",
+     "smote": "0.8375",
+     "smote_std": "0.08",
+     "marks": "rank in parentheses: GOIO (3), SMOTE (6)"
+    },
+    {
+     "dataset_as_printed": "mammography",
+     "proposed": "0.9827",
+     "proposed_std": "0.00",
+     "smote": "0.9335",
+     "smote_std": "0.06",
+     "marks": "rank in parentheses: GOIO (2), SMOTE (6)"
+    },
+    {
+     "dataset_as_printed": "bankruptcy",
+     "proposed": "0.8585",
+     "proposed_std": "0.07",
+     "smote": "0.7106",
+     "smote_std": "0.31",
+     "marks": "rank in parentheses: GOIO (3), SMOTE (7)"
+    },
+    {
+     "dataset_as_printed": "page-blocks_0vs3",
+     "proposed": "0.9933",
+     "proposed_std": "0.00",
+     "smote": "0.9618",
+     "smote_std": "0.05",
+     "marks": "rank in parentheses: GOIO (2), SMOTE (6)"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average Rank",
+      "proposed": "2.22",
+      "smote": "6.43"
+     },
+     {
+      "label": "Average Value",
+      "proposed": "0.8996",
+      "smote": "0.8238"
+     },
+     {
+      "label": "Table VIII mean rank (ACC)",
+      "proposed": "2.22",
+      "smote": "6.43-"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Table VIII: Friedman test, critical value F(6,132)=2.07 (alpha=0.05); actual F_F = 29.76 (reject); Bonferroni-Dunn CD=1.94 (k=8, alpha=0.05). SMOTE mean rank printed with '-' sign ('6.43-'), which per text means GOIO outperforms SMOTE (gap larger than CD). Wilcoxon Table IX does not include SMOTE."
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [],
+ "metrics_without_smote": [
+  {
+   "metric": "F1-score (ablation)",
+   "table": "Table X"
+  },
+  {
+   "metric": "F1-score and MCC (hyperparameter sensitivity)",
+   "table": "Table XII"
+  },
+  {
+   "metric": "Wilcoxon p-values (GOIO vs IDENTITY/GAMO for ACC, vs SOS for MCC)",
+   "table": "Table IX"
+  }
+ ],
+ "notes": "Tables V-VII are vector-drawn (no extractable text); transcribed from 330-dpi renders of SMOTE and GOIO columns with header visible. Cells printed as mean\u00b1std(rank); std copied in std fields, rank in marks. Table VII image shows a stray ')' glyph between SMOTE and BSMOTE columns (render artifact), ignored. Classifier averaging over the 5 classifiers is implied but not stated."
+}

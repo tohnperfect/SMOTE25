@@ -1,0 +1,119 @@
+{
+ "key": "KNNOR",
+ "classifier": "SVM (first classifier listed; abstract highlights none)",
+ "condition": "original IR, main suite",
+ "proposed_column": "KNNOR",
+ "smote_column": "SMOTE [18] (BL row)",
+ "metrics": [
+  {
+   "metric": "G-score (G)",
+   "metric_family": "G-mean",
+   "table": "Table 5 (G-score (G) block, SVM column)",
+   "page": "PDF page 15 (printed p.15)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "Mean over all 19 datasets (no per-dataset rows in paper)",
+     "proposed": ".8363",
+     "proposed_std": null,
+     "smote": ".8238",
+     "smote_std": null,
+     "marks": "KNNOR rank 1; SMOTE [18] listed in BL (BaseLine) row, not in top 9"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "not stated in paper"
+   }
+  },
+  {
+   "metric": "AUC",
+   "metric_family": "AUC",
+   "table": "Table 5 (AUC block, SVM column)",
+   "page": "PDF page 15 (printed p.15)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Mean over all 19 datasets (no per-dataset rows in paper)",
+     "proposed": ".8892",
+     "proposed_std": null,
+     "smote": ".8666",
+     "smote_std": null,
+     "marks": "KNNOR rank 1; SMOTE [18] listed in BL (BaseLine) row, not in top 9"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "not stated in paper"
+   }
+  },
+  {
+   "metric": "F1-score (F1)",
+   "metric_family": "F-measure",
+   "table": "Table 5 (F1-score (F1) block, SVM column)",
+   "page": "PDF page 15 (printed p.15)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Mean over all 19 datasets (no per-dataset rows in paper)",
+     "proposed": ".6775",
+     "proposed_std": null,
+     "smote": ".6643",
+     "smote_std": null,
+     "marks": "KNNOR rank 2; SMOTE [18] listed in BL (BaseLine) row, not in top 9"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "not stated in paper"
+   }
+  },
+  {
+   "metric": "P20 (Precision at top 20%)",
+   "metric_family": "precision",
+   "table": "Table 5 (P20 (Precision at top 20%) block, SVM column)",
+   "page": "PDF page 15 (printed p.15)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Mean over all 19 datasets (no per-dataset rows in paper)",
+     "proposed": ".4481",
+     "proposed_std": null,
+     "smote": ".4336",
+     "smote_std": null,
+     "marks": "KNNOR rank 1; SMOTE [18] listed in BL (BaseLine) row, not in top 9"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "not stated in paper"
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [
+  {
+   "metric": "AUC, F1, P20, G (mean over datasets)",
+   "table": "Table 5",
+   "classifiers": "DT, KNN, MLP columns (not copied)"
+  },
+  {
+   "metric": "AUC, G, F1, P20 averaged over classifiers with ranks",
+   "table": "Table 6",
+   "classifiers": "average over SVM, DT, KNN, MLP (not copied; KNNOR 0.8888/0.7041/0.4544/0.8403 vs SMOTE 0.8728/0.6736/0.4397/0.834 for AUC/G/F1/P20 columns as printed)"
+  }
+ ],
+ "metrics_without_smote": [],
+ "notes": "Paper gives no per-dataset results ('The entire result is a part of the additional documents due to page limitations'); only means over the 19 datasets, one row per metric. Table 5 values verified visually on rendered page. Table 6 column labelled G (0.7041) and P20 (0.8403) values look inconsistent with Table 5 scales (possibly columns mislabelled in paper), copied as printed in other-classifier note only. No stat tests vs SMOTE."
+}

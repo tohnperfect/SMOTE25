@@ -1,0 +1,1423 @@
+{
+ "key": "NBU",
+ "classifier": "SVM (RBF kernel; first reported)",
+ "condition": "Experiment II, 24 UCI/KEEL sets, original IR, no added noise; 10-fold CV on 80% train, 20% test",
+ "proposed_column": "NB-Comm (one of four NB variants; chosen because the paper concludes 'NB-Comm on average ranked best in F1-score (Table 6) and G-mean'); other variants NB-Basic, NB-Tomek, NB-Rec given per row in other_variants",
+ "smote_column": "SMOTE",
+ "metrics": [
+  {
+   "metric": "G-mean",
+   "metric_family": "G-mean",
+   "table": "Table 4",
+   "page": "PDF page 26 (printed 25)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "Wisconsin",
+     "proposed": "97.12",
+     "proposed_std": null,
+     "smote": "96.66",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 4",
+     "other_variants": {
+      "NB-Basic": "97.12",
+      "NB-Tomek": "97.12",
+      "NB-Rec": "95.35"
+     }
+    },
+    {
+     "dataset_as_printed": "Pima",
+     "proposed": "55.24",
+     "proposed_std": null,
+     "smote": "60.02",
+     "smote_std": null,
+     "marks": "NB-Comm rank 6; SMOTE rank 5",
+     "other_variants": {
+      "NB-Basic": "47.5",
+      "NB-Tomek": "52.83",
+      "NB-Rec": "0"
+     }
+    },
+    {
+     "dataset_as_printed": "Glass0",
+     "proposed": "73.19",
+     "proposed_std": null,
+     "smote": "68.14",
+     "smote_std": null,
+     "marks": "NB-Comm rank 3; SMOTE rank 6",
+     "other_variants": {
+      "NB-Basic": "67.76",
+      "NB-Tomek": "69.99",
+      "NB-Rec": "72.14"
+     }
+    },
+    {
+     "dataset_as_printed": "Vehicle1",
+     "proposed": "55.92",
+     "proposed_std": null,
+     "smote": "48.93",
+     "smote_std": null,
+     "marks": "NB-Comm rank 2; SMOTE rank 7",
+     "other_variants": {
+      "NB-Basic": "40",
+      "NB-Tomek": "46.48",
+      "NB-Rec": "51.67"
+     }
+    },
+    {
+     "dataset_as_printed": "Vehicle0",
+     "proposed": "87.16",
+     "proposed_std": null,
+     "smote": "84.07",
+     "smote_std": null,
+     "marks": "NB-Comm rank 6; SMOTE rank 9",
+     "other_variants": {
+      "NB-Basic": "85.82",
+      "NB-Tomek": "89.94",
+      "NB-Rec": "87.88"
+     }
+    },
+    {
+     "dataset_as_printed": "Ecoli1",
+     "proposed": "87.67",
+     "proposed_std": null,
+     "smote": "70.11",
+     "smote_std": null,
+     "marks": "NB-Comm rank 4; SMOTE rank 10",
+     "other_variants": {
+      "NB-Basic": "91.82",
+      "NB-Tomek": "88.71",
+      "NB-Rec": "82.45"
+     }
+    },
+    {
+     "dataset_as_printed": "New-thyroid1",
+     "proposed": "95.74",
+     "proposed_std": null,
+     "smote": "75.59",
+     "smote_std": null,
+     "marks": "NB-Comm rank 2; SMOTE rank 7",
+     "other_variants": {
+      "NB-Basic": "82.13",
+      "NB-Tomek": "82.13",
+      "NB-Rec": "94.28"
+     }
+    },
+    {
+     "dataset_as_printed": "New-thyroid2",
+     "proposed": "95.74",
+     "proposed_std": null,
+     "smote": "100",
+     "smote_std": null,
+     "marks": "NB-Comm rank 4; SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "95.74",
+      "NB-Tomek": "95.74",
+      "NB-Rec": "88.19"
+     }
+    },
+    {
+     "dataset_as_printed": "Ecoli2",
+     "proposed": "94.02",
+     "proposed_std": null,
+     "smote": "83.67",
+     "smote_std": null,
+     "marks": "NB-Comm rank 2; SMOTE rank 9",
+     "other_variants": {
+      "NB-Basic": "94.02",
+      "NB-Tomek": "94.02",
+      "NB-Rec": "93.16"
+     }
+    },
+    {
+     "dataset_as_printed": "Segmemt0",
+     "proposed": "94",
+     "proposed_std": null,
+     "smote": "97.54",
+     "smote_std": null,
+     "marks": "NB-Comm rank 6; SMOTE rank 5",
+     "other_variants": {
+      "NB-Basic": "87.58",
+      "NB-Tomek": "92.91",
+      "NB-Rec": "87.15"
+     }
+    },
+    {
+     "dataset_as_printed": "Yeast3",
+     "proposed": "91.08",
+     "proposed_std": null,
+     "smote": "67.68",
+     "smote_std": null,
+     "marks": "NB-Comm rank 2; SMOTE rank 10",
+     "other_variants": {
+      "NB-Basic": "90.66",
+      "NB-Tomek": "93.74",
+      "NB-Rec": "73.85"
+     }
+    },
+    {
+     "dataset_as_printed": "Ecoli3",
+     "proposed": "94.87",
+     "proposed_std": null,
+     "smote": "52.55",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 8",
+     "other_variants": {
+      "NB-Basic": "92.2",
+      "NB-Tomek": "93.09",
+      "NB-Rec": "93.09"
+     }
+    },
+    {
+     "dataset_as_printed": "Yeast2vs4",
+     "proposed": "81.83",
+     "proposed_std": null,
+     "smote": "62.9",
+     "smote_std": null,
+     "marks": "NB-Comm rank 5; SMOTE rank 9",
+     "other_variants": {
+      "NB-Basic": "86.98",
+      "NB-Tomek": "82.29",
+      "NB-Rec": "72.23"
+     }
+    },
+    {
+     "dataset_as_printed": "Vowel0",
+     "proposed": "99.72",
+     "proposed_std": null,
+     "smote": "84.98",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 10",
+     "other_variants": {
+      "NB-Basic": "94.28",
+      "NB-Tomek": "94.28",
+      "NB-Rec": "98.31"
+     }
+    },
+    {
+     "dataset_as_printed": "Glass2",
+     "proposed": "73.96",
+     "proposed_std": null,
+     "smote": "57.74",
+     "smote_std": null,
+     "marks": "NB-Comm rank 2; SMOTE rank 6",
+     "other_variants": {
+      "NB-Basic": "73.96",
+      "NB-Tomek": "76.24",
+      "NB-Rec": "71.61"
+     }
+    },
+    {
+     "dataset_as_printed": "Yeast1vs7",
+     "proposed": "51.64",
+     "proposed_std": null,
+     "smote": "0",
+     "smote_std": null,
+     "marks": "NB-Comm rank 4; SMOTE rank 7",
+     "other_variants": {
+      "NB-Basic": "57.9",
+      "NB-Tomek": "36.78",
+      "NB-Rec": "61.83"
+     }
+    },
+    {
+     "dataset_as_printed": "Glass4",
+     "proposed": "70.71",
+     "proposed_std": null,
+     "smote": "70.71",
+     "smote_std": null,
+     "marks": "NB-Comm rank 3; SMOTE rank 3",
+     "other_variants": {
+      "NB-Basic": "70.71",
+      "NB-Tomek": "70.71",
+      "NB-Rec": "82.16"
+     }
+    },
+    {
+     "dataset_as_printed": "Ecoli4",
+     "proposed": "100",
+     "proposed_std": null,
+     "smote": "100",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "99.2",
+      "NB-Tomek": "99.2",
+      "NB-Rec": "98.4"
+     }
+    },
+    {
+     "dataset_as_printed": "Page-blocks13vs2",
+     "proposed": "97.7",
+     "proposed_std": null,
+     "smote": "100",
+     "smote_std": null,
+     "marks": "NB-Comm rank 5; SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "97.7",
+      "NB-Tomek": "97.7",
+      "NB-Rec": "89.19"
+     }
+    },
+    {
+     "dataset_as_printed": "Abalone09-18",
+     "proposed": "64.5",
+     "proposed_std": null,
+     "smote": "35.1",
+     "smote_std": null,
+     "marks": "NB-Comm rank 3; SMOTE rank 7",
+     "other_variants": {
+      "NB-Basic": "56.35",
+      "NB-Tomek": "52.84",
+      "NB-Rec": "64.5"
+     }
+    },
+    {
+     "dataset_as_printed": "Glass5",
+     "proposed": "0",
+     "proposed_std": null,
+     "smote": "0",
+     "smote_std": null,
+     "marks": "NB-Comm rank -; SMOTE rank -",
+     "other_variants": {
+      "NB-Basic": "0",
+      "NB-Tomek": "0",
+      "NB-Rec": "0"
+     }
+    },
+    {
+     "dataset_as_printed": "Yeast4",
+     "proposed": "84.29",
+     "proposed_std": null,
+     "smote": "54.29",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 7",
+     "other_variants": {
+      "NB-Basic": "81.42",
+      "NB-Tomek": "83.79",
+      "NB-Rec": "77.19"
+     }
+    },
+    {
+     "dataset_as_printed": "Ecoli0137vs26",
+     "proposed": "100",
+     "proposed_std": null,
+     "smote": "100",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "98.13",
+      "NB-Tomek": "98.13",
+      "NB-Rec": "99.07"
+     }
+    },
+    {
+     "dataset_as_printed": "Yeast6",
+     "proposed": "74.54",
+     "proposed_std": null,
+     "smote": "75.46",
+     "smote_std": null,
+     "marks": "NB-Comm rank 7; SMOTE rank 5",
+     "other_variants": {
+      "NB-Basic": "90.97",
+      "NB-Tomek": "91.13",
+      "NB-Rec": "90.97"
+     }
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average (rank, 10 methods)",
+      "proposed": "3.13",
+      "smote": "6"
+     },
+     {
+      "label": "Average rank NB-Basic (other proposed variant)",
+      "proposed": "4.52",
+      "smote": "6"
+     },
+     {
+      "label": "Average rank NB-Tomek (other proposed variant)",
+      "proposed": "4",
+      "smote": "6"
+     },
+     {
+      "label": "Average rank NB-Rec (other proposed variant)",
+      "proposed": "5.43",
+      "smote": "6"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Table 7 (PDF p.27, printed 26), Wilcoxon Signed Rank Test p-values, SVM, G-mean, vs SMOTE: NB-Basic 2.48E-01, NB-Tomek 2.65E-01, NB-Comm 1.60E-01, NB-Rec 2.70E-01 (bold = significant)"
+   }
+  },
+  {
+   "metric": "Sensitivity",
+   "metric_family": "recall",
+   "table": "Table 3",
+   "page": "PDF page 25 (printed 24)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Wisconsin",
+     "proposed": "100",
+     "proposed_std": null,
+     "smote": "97.87",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 6",
+     "other_variants": {
+      "NB-Basic": "100",
+      "NB-Tomek": "100",
+      "NB-Rec": "100"
+     }
+    },
+    {
+     "dataset_as_printed": "Pima",
+     "proposed": "92.45",
+     "proposed_std": null,
+     "smote": "43.4",
+     "smote_std": null,
+     "marks": "NB-Comm rank 5; SMOTE rank 10",
+     "other_variants": {
+      "NB-Basic": "98.11",
+      "NB-Tomek": "96.23",
+      "NB-Rec": "100"
+     }
+    },
+    {
+     "dataset_as_printed": "Glass0",
+     "proposed": "71.43",
+     "proposed_std": null,
+     "smote": "50",
+     "smote_std": null,
+     "marks": "NB-Comm rank 6; SMOTE rank 8",
+     "other_variants": {
+      "NB-Basic": "85.71",
+      "NB-Tomek": "85.71",
+      "NB-Rec": "85.71"
+     }
+    },
+    {
+     "dataset_as_printed": "Vehicle1",
+     "proposed": "95.35",
+     "proposed_std": null,
+     "smote": "25.58",
+     "smote_std": null,
+     "marks": "NB-Comm rank 3; SMOTE rank 10",
+     "other_variants": {
+      "NB-Basic": "100",
+      "NB-Tomek": "100",
+      "NB-Rec": "95.35"
+     }
+    },
+    {
+     "dataset_as_printed": "Vehicle0",
+     "proposed": "100",
+     "proposed_std": null,
+     "smote": "71.79",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 10",
+     "other_variants": {
+      "NB-Basic": "100",
+      "NB-Tomek": "94.87",
+      "NB-Rec": "94.87"
+     }
+    },
+    {
+     "dataset_as_printed": "Ecoli1",
+     "proposed": "93.33",
+     "proposed_std": null,
+     "smote": "53.33",
+     "smote_std": null,
+     "marks": "NB-Comm rank 3; SMOTE rank 10",
+     "other_variants": {
+      "NB-Basic": "100",
+      "NB-Tomek": "93.33",
+      "NB-Rec": "86.67"
+     }
+    },
+    {
+     "dataset_as_printed": "New-thyroid1",
+     "proposed": "100",
+     "proposed_std": null,
+     "smote": "57.14",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 7",
+     "other_variants": {
+      "NB-Basic": "71.43",
+      "NB-Tomek": "71.43",
+      "NB-Rec": "100"
+     }
+    },
+    {
+     "dataset_as_printed": "New-thyroid2",
+     "proposed": "100",
+     "proposed_std": null,
+     "smote": "100",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "100",
+      "NB-Tomek": "100",
+      "NB-Rec": "100"
+     }
+    },
+    {
+     "dataset_as_printed": "Ecoli2",
+     "proposed": "90",
+     "proposed_std": null,
+     "smote": "70",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 10",
+     "other_variants": {
+      "NB-Basic": "90",
+      "NB-Tomek": "90",
+      "NB-Rec": "90"
+     }
+    },
+    {
+     "dataset_as_printed": "Segmemt0",
+     "proposed": "100",
+     "proposed_std": null,
+     "smote": "95.38",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 8",
+     "other_variants": {
+      "NB-Basic": "100",
+      "NB-Tomek": "100",
+      "NB-Rec": "100"
+     }
+    },
+    {
+     "dataset_as_printed": "Yeast3",
+     "proposed": "100",
+     "proposed_std": null,
+     "smote": "46.88",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 10",
+     "other_variants": {
+      "NB-Basic": "96.88",
+      "NB-Tomek": "100",
+      "NB-Rec": "100"
+     }
+    },
+    {
+     "dataset_as_printed": "Ecoli3",
+     "proposed": "100",
+     "proposed_std": null,
+     "smote": "28.57",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 8",
+     "other_variants": {
+      "NB-Basic": "100",
+      "NB-Tomek": "100",
+      "NB-Rec": "100"
+     }
+    },
+    {
+     "dataset_as_printed": "Yeast2vs4",
+     "proposed": "70",
+     "proposed_std": null,
+     "smote": "40",
+     "smote_std": null,
+     "marks": "NB-Comm rank 3; SMOTE rank 8",
+     "other_variants": {
+      "NB-Basic": "80",
+      "NB-Tomek": "70",
+      "NB-Rec": "60"
+     }
+    },
+    {
+     "dataset_as_printed": "Vowel0",
+     "proposed": "100",
+     "proposed_std": null,
+     "smote": "72.22",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 10",
+     "other_variants": {
+      "NB-Basic": "88.89",
+      "NB-Tomek": "88.89",
+      "NB-Rec": "100"
+     }
+    },
+    {
+     "dataset_as_printed": "Glass2",
+     "proposed": "66.67",
+     "proposed_std": null,
+     "smote": "33.33",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 7",
+     "other_variants": {
+      "NB-Basic": "66.67",
+      "NB-Tomek": "66.67",
+      "NB-Rec": "66.67"
+     }
+    },
+    {
+     "dataset_as_printed": "Yeast1vs7",
+     "proposed": "33.33",
+     "proposed_std": null,
+     "smote": "0",
+     "smote_std": null,
+     "marks": "NB-Comm rank 4; SMOTE rank 7",
+     "other_variants": {
+      "NB-Basic": "50",
+      "NB-Tomek": "16.67",
+      "NB-Rec": "83.33"
+     }
+    },
+    {
+     "dataset_as_printed": "Glass4",
+     "proposed": "50",
+     "proposed_std": null,
+     "smote": "50",
+     "smote_std": null,
+     "marks": "NB-Comm rank 3; SMOTE rank 3",
+     "other_variants": {
+      "NB-Basic": "50",
+      "NB-Tomek": "50",
+      "NB-Rec": "100"
+     }
+    },
+    {
+     "dataset_as_printed": "Ecoli4",
+     "proposed": "100",
+     "proposed_std": null,
+     "smote": "100",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "100",
+      "NB-Tomek": "100",
+      "NB-Rec": "100"
+     }
+    },
+    {
+     "dataset_as_printed": "Page-blocks13vs2",
+     "proposed": "100",
+     "proposed_std": null,
+     "smote": "100",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "100",
+      "NB-Tomek": "100",
+      "NB-Rec": "100"
+     }
+    },
+    {
+     "dataset_as_printed": "Abalone09-18",
+     "proposed": "50",
+     "proposed_std": null,
+     "smote": "12.5",
+     "smote_std": null,
+     "marks": "NB-Comm rank 4; SMOTE rank 7",
+     "other_variants": {
+      "NB-Basic": "50",
+      "NB-Tomek": "37.5",
+      "NB-Rec": "75"
+     }
+    },
+    {
+     "dataset_as_printed": "Glass5",
+     "proposed": "0",
+     "proposed_std": null,
+     "smote": "0",
+     "smote_std": null,
+     "marks": "NB-Comm rank -; SMOTE rank -",
+     "other_variants": {
+      "NB-Basic": "0",
+      "NB-Tomek": "0",
+      "NB-Rec": "0"
+     }
+    },
+    {
+     "dataset_as_printed": "Yeast4",
+     "proposed": "80",
+     "proposed_std": null,
+     "smote": "30",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 7",
+     "other_variants": {
+      "NB-Basic": "80",
+      "NB-Tomek": "80",
+      "NB-Rec": "80"
+     }
+    },
+    {
+     "dataset_as_printed": "Ecoli0137vs26",
+     "proposed": "100",
+     "proposed_std": null,
+     "smote": "100",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "100",
+      "NB-Tomek": "100",
+      "NB-Rec": "100"
+     }
+    },
+    {
+     "dataset_as_printed": "Yeast6",
+     "proposed": "57.14",
+     "proposed_std": null,
+     "smote": "57.14",
+     "smote_std": null,
+     "marks": "NB-Comm rank 5; SMOTE rank 5",
+     "other_variants": {
+      "NB-Basic": "85.71",
+      "NB-Tomek": "85.71",
+      "NB-Rec": "85.71"
+     }
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average (rank, 10 methods)",
+      "proposed": "2.17",
+      "smote": "6.74"
+     },
+     {
+      "label": "Average rank NB-Basic (other proposed variant)",
+      "proposed": "1.74",
+      "smote": "6.74"
+     },
+     {
+      "label": "Average rank NB-Tomek (other proposed variant)",
+      "proposed": "2.22",
+      "smote": "6.74"
+     },
+     {
+      "label": "Average rank NB-Rec (other proposed variant)",
+      "proposed": "1.61",
+      "smote": "6.74"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Table 7 (PDF p.27, printed 26), Wilcoxon Signed Rank Test p-values, SVM, Sensitivity, vs SMOTE: NB-Basic 2.71E-03 (bold), NB-Tomek 1.04E-02 (bold), NB-Comm 5.16E-03 (bold), NB-Rec 3.99E-04 (bold) (bold = significant)"
+   }
+  },
+  {
+   "metric": "Precision",
+   "metric_family": "precision",
+   "table": "Table 5",
+   "page": "PDF page 26 (printed 25)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Wisconsin",
+     "proposed": "91.77",
+     "proposed_std": null,
+     "smote": "92.06",
+     "smote_std": null,
+     "marks": "NB-Comm rank 7; SMOTE rank 2",
+     "other_variants": {
+      "NB-Basic": "91.18",
+      "NB-Tomek": "91.1",
+      "NB-Rec": "92.15"
+     }
+    },
+    {
+     "dataset_as_printed": "Pima",
+     "proposed": "81.13",
+     "proposed_std": null,
+     "smote": "57.77",
+     "smote_std": null,
+     "marks": "NB-Comm rank 4; SMOTE rank 5",
+     "other_variants": {
+      "NB-Basic": "91.33",
+      "NB-Tomek": "83.4",
+      "NB-Rec": "98.17"
+     }
+    },
+    {
+     "dataset_as_printed": "Glass0",
+     "proposed": "69.57",
+     "proposed_std": null,
+     "smote": "77.29",
+     "smote_std": null,
+     "marks": "NB-Comm rank 6; SMOTE rank 4",
+     "other_variants": {
+      "NB-Basic": "76.36",
+      "NB-Tomek": "65.12",
+      "NB-Rec": "66.7"
+     }
+    },
+    {
+     "dataset_as_printed": "Vehicle1",
+     "proposed": "69.37",
+     "proposed_std": null,
+     "smote": "57.96",
+     "smote_std": null,
+     "marks": "NB-Comm rank 3; SMOTE rank 7",
+     "other_variants": {
+      "NB-Basic": "72.39",
+      "NB-Tomek": "68.51",
+      "NB-Rec": "87.47"
+     }
+    },
+    {
+     "dataset_as_printed": "Vehicle0",
+     "proposed": "66",
+     "proposed_std": null,
+     "smote": "93.44",
+     "smote_std": null,
+     "marks": "NB-Comm rank 8; SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "64.03",
+      "NB-Tomek": "74.11",
+      "NB-Rec": "76.83"
+     }
+    },
+    {
+     "dataset_as_printed": "Ecoli1",
+     "proposed": "69.05",
+     "proposed_std": null,
+     "smote": "66.91",
+     "smote_std": null,
+     "marks": "NB-Comm rank 9; SMOTE rank 10",
+     "other_variants": {
+      "NB-Basic": "72.49",
+      "NB-Tomek": "70.28",
+      "NB-Rec": "74.12"
+     }
+    },
+    {
+     "dataset_as_printed": "New-thyroid1",
+     "proposed": "76.89",
+     "proposed_std": null,
+     "smote": "100",
+     "smote_std": null,
+     "marks": "NB-Comm rank 7; SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "75.31",
+      "NB-Tomek": "75.31",
+      "NB-Rec": "83.44"
+     }
+    },
+    {
+     "dataset_as_printed": "New-thyroid2",
+     "proposed": "76.54",
+     "proposed_std": null,
+     "smote": "100",
+     "smote_std": null,
+     "marks": "NB-Comm rank 5; SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "74.01",
+      "NB-Tomek": "73.68",
+      "NB-Rec": "70.79"
+     }
+    },
+    {
+     "dataset_as_printed": "Ecoli2",
+     "proposed": "91.41",
+     "proposed_std": null,
+     "smote": "100",
+     "smote_std": null,
+     "marks": "NB-Comm rank 7; SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "94.21",
+      "NB-Tomek": "92.32",
+      "NB-Rec": "87.3"
+     }
+    },
+    {
+     "dataset_as_printed": "Segmemt0",
+     "proposed": "65.29",
+     "proposed_std": null,
+     "smote": "98.43",
+     "smote_std": null,
+     "marks": "NB-Comm rank 6; SMOTE rank 3",
+     "other_variants": {
+      "NB-Basic": "52.22",
+      "NB-Tomek": "62.07",
+      "NB-Rec": "51.49"
+     }
+    },
+    {
+     "dataset_as_printed": "Yeast3",
+     "proposed": "52.58",
+     "proposed_std": null,
+     "smote": "71.79",
+     "smote_std": null,
+     "marks": "NB-Comm rank 9; SMOTE rank 4",
+     "other_variants": {
+      "NB-Basic": "57.27",
+      "NB-Tomek": "60.79",
+      "NB-Rec": "56.05"
+     }
+    },
+    {
+     "dataset_as_printed": "Ecoli3",
+     "proposed": "56.68",
+     "proposed_std": null,
+     "smote": "49.92",
+     "smote_std": null,
+     "marks": "NB-Comm rank 3; SMOTE rank 7",
+     "other_variants": {
+      "NB-Basic": "50.22",
+      "NB-Tomek": "51.47",
+      "NB-Rec": "51.34"
+     }
+    },
+    {
+     "dataset_as_printed": "Yeast2vs4",
+     "proposed": "69.04",
+     "proposed_std": null,
+     "smote": "80.21",
+     "smote_std": null,
+     "marks": "NB-Comm rank 7; SMOTE rank 5",
+     "other_variants": {
+      "NB-Basic": "68.85",
+      "NB-Tomek": "74.58",
+      "NB-Rec": "54.41"
+     }
+    },
+    {
+     "dataset_as_printed": "Vowel0",
+     "proposed": "96.1",
+     "proposed_std": null,
+     "smote": "100",
+     "smote_std": null,
+     "marks": "NB-Comm rank 9; SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "100",
+      "NB-Tomek": "100",
+      "NB-Rec": "89.65"
+     }
+    },
+    {
+     "dataset_as_printed": "Glass2",
+     "proposed": "31.9",
+     "proposed_std": null,
+     "smote": "100",
+     "smote_std": null,
+     "marks": "NB-Comm rank 6; SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "44.07",
+      "NB-Tomek": "41.41",
+      "NB-Rec": "33.58"
+     }
+    },
+    {
+     "dataset_as_printed": "Yeast1vs7",
+     "proposed": "15.44",
+     "proposed_std": null,
+     "smote": "0",
+     "smote_std": null,
+     "marks": "NB-Comm rank 4; SMOTE rank 7",
+     "other_variants": {
+      "NB-Basic": "17.91",
+      "NB-Tomek": "8.88",
+      "NB-Rec": "25.15"
+     }
+    },
+    {
+     "dataset_as_printed": "Glass4",
+     "proposed": "100",
+     "proposed_std": null,
+     "smote": "100",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "100",
+      "NB-Tomek": "100",
+      "NB-Rec": "39.89"
+     }
+    },
+    {
+     "dataset_as_printed": "Ecoli4",
+     "proposed": "100",
+     "proposed_std": null,
+     "smote": "100",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "82.62",
+      "NB-Tomek": "82.35",
+      "NB-Rec": "72.31"
+     }
+    },
+    {
+     "dataset_as_printed": "Page-blocks13vs2",
+     "proposed": "63.57",
+     "proposed_std": null,
+     "smote": "100",
+     "smote_std": null,
+     "marks": "NB-Comm rank 6; SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "62.09",
+      "NB-Tomek": "61.78",
+      "NB-Rec": "33.32"
+     }
+    },
+    {
+     "dataset_as_printed": "Abalone09-18",
+     "proposed": "21.62",
+     "proposed_std": null,
+     "smote": "34.29",
+     "smote_std": null,
+     "marks": "NB-Comm rank 2; SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "14.85",
+      "NB-Tomek": "14.77",
+      "NB-Rec": "19.66"
+     }
+    },
+    {
+     "dataset_as_printed": "Glass5",
+     "proposed": "0",
+     "proposed_std": null,
+     "smote": "0",
+     "smote_std": null,
+     "marks": "NB-Comm rank -; SMOTE rank -",
+     "other_variants": {
+      "NB-Basic": "0",
+      "NB-Tomek": "0",
+      "NB-Rec": "0"
+     }
+    },
+    {
+     "dataset_as_printed": "Yeast4",
+     "proposed": "24.22",
+     "proposed_std": null,
+     "smote": "37.92",
+     "smote_std": null,
+     "marks": "NB-Comm rank 4; SMOTE rank 2",
+     "other_variants": {
+      "NB-Basic": "19.63",
+      "NB-Tomek": "23.57",
+      "NB-Rec": "21.01"
+     }
+    },
+    {
+     "dataset_as_printed": "Ecoli0137vs26",
+     "proposed": "100",
+     "proposed_std": null,
+     "smote": "100",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "47.93",
+      "NB-Tomek": "46.69",
+      "NB-Rec": "66.67"
+     }
+    },
+    {
+     "dataset_as_printed": "Yeast6",
+     "proposed": "35.37",
+     "proposed_std": null,
+     "smote": "79.96",
+     "smote_std": null,
+     "marks": "NB-Comm rank 8; SMOTE rank 2",
+     "other_variants": {
+      "NB-Basic": "42.41",
+      "NB-Tomek": "43.23",
+      "NB-Rec": "46.56"
+     }
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average (rank, 10 methods)",
+      "proposed": "5.35",
+      "smote": "3"
+     },
+     {
+      "label": "Average rank NB-Basic (other proposed variant)",
+      "proposed": "5.52",
+      "smote": "3"
+     },
+     {
+      "label": "Average rank NB-Tomek (other proposed variant)",
+      "proposed": "5.87",
+      "smote": "3"
+     },
+     {
+      "label": "Average rank NB-Rec (other proposed variant)",
+      "proposed": "6.13",
+      "smote": "3"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Table 7 (PDF p.27, printed 26), Wilcoxon Signed Rank Test p-values, SVM, Precision, vs SMOTE: NB-Basic 4.31E-02 (bold), NB-Tomek 4.76E-02 (bold), NB-Comm 7.39E-02, NB-Rec 1.00E-02 (bold) (bold = significant)"
+   }
+  },
+  {
+   "metric": "F1-score",
+   "metric_family": "F-measure",
+   "table": "Table 6",
+   "page": "PDF page 27 (printed 26)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Wisconsin",
+     "proposed": "94.95",
+     "proposed_std": null,
+     "smote": "94.85",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 4",
+     "other_variants": {
+      "NB-Basic": "94.95",
+      "NB-Tomek": "94.95",
+      "NB-Rec": "92.16"
+     }
+    },
+    {
+     "dataset_as_printed": "Pima",
+     "proposed": "57.99",
+     "proposed_std": null,
+     "smote": "49.46",
+     "smote_std": null,
+     "marks": "NB-Comm rank 3; SMOTE rank 10",
+     "other_variants": {
+      "NB-Basic": "57.14",
+      "NB-Tomek": "58.29",
+      "NB-Rec": "51.46"
+     }
+    },
+    {
+     "dataset_as_printed": "Glass0",
+     "proposed": "64.52",
+     "proposed_std": null,
+     "smote": "60.87",
+     "smote_std": null,
+     "marks": "NB-Comm rank 4; SMOTE rank 8",
+     "other_variants": {
+      "NB-Basic": "61.54",
+      "NB-Tomek": "63.16",
+      "NB-Rec": "64.86"
+     }
+    },
+    {
+     "dataset_as_printed": "Vehicle1",
+     "proposed": "48.81",
+     "proposed_std": null,
+     "smote": "35.48",
+     "smote_std": null,
+     "marks": "NB-Comm rank 2; SMOTE rank 10",
+     "other_variants": {
+      "NB-Basic": "45.03",
+      "NB-Tomek": "46.74",
+      "NB-Rec": "47.13"
+     }
+    },
+    {
+     "dataset_as_printed": "Vehicle0",
+     "proposed": "71.56",
+     "proposed_std": null,
+     "smote": "81.16",
+     "smote_std": null,
+     "marks": "NB-Comm rank 8; SMOTE rank 4",
+     "other_variants": {
+      "NB-Basic": "69.64",
+      "NB-Tomek": "77.89",
+      "NB-Rec": "74"
+     }
+    },
+    {
+     "dataset_as_printed": "Ecoli1",
+     "proposed": "73.68",
+     "proposed_std": null,
+     "smote": "59.26",
+     "smote_std": null,
+     "marks": "NB-Comm rank 8; SMOTE rank 10",
+     "other_variants": {
+      "NB-Basic": "78.95",
+      "NB-Tomek": "75.68",
+      "NB-Rec": "66.67"
+     }
+    },
+    {
+     "dataset_as_printed": "New-thyroid1",
+     "proposed": "82.35",
+     "proposed_std": null,
+     "smote": "72.73",
+     "smote_std": null,
+     "marks": "NB-Comm rank 2; SMOTE rank 4",
+     "other_variants": {
+      "NB-Basic": "71.43",
+      "NB-Tomek": "71.43",
+      "NB-Rec": "77.78"
+     }
+    },
+    {
+     "dataset_as_printed": "New-thyroid2",
+     "proposed": "82.35",
+     "proposed_std": null,
+     "smote": "100",
+     "smote_std": null,
+     "marks": "NB-Comm rank 5; SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "82.35",
+      "NB-Tomek": "82.35",
+      "NB-Rec": "63.64"
+     }
+    },
+    {
+     "dataset_as_printed": "Ecoli2",
+     "proposed": "90",
+     "proposed_std": null,
+     "smote": "82.35",
+     "smote_std": null,
+     "marks": "NB-Comm rank 2; SMOTE rank 8",
+     "other_variants": {
+      "NB-Basic": "90",
+      "NB-Tomek": "90",
+      "NB-Rec": "85.71"
+     }
+    },
+    {
+     "dataset_as_printed": "Segmemt0",
+     "proposed": "73.86",
+     "proposed_std": null,
+     "smote": "96.88",
+     "smote_std": null,
+     "marks": "NB-Comm rank 6; SMOTE rank 4",
+     "other_variants": {
+      "NB-Basic": "58.56",
+      "NB-Tomek": "70.65",
+      "NB-Rec": "57.78"
+     }
+    },
+    {
+     "dataset_as_printed": "Yeast3",
+     "proposed": "58.72",
+     "proposed_std": null,
+     "smote": "56.6",
+     "smote_std": null,
+     "marks": "NB-Comm rank 8; SMOTE rank 9",
+     "other_variants": {
+      "NB-Basic": "60.19",
+      "NB-Tomek": "66.67",
+      "NB-Rec": "34.78"
+     }
+    },
+    {
+     "dataset_as_printed": "Ecoli3",
+     "proposed": "70",
+     "proposed_std": null,
+     "smote": "36.36",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 8",
+     "other_variants": {
+      "NB-Basic": "60.87",
+      "NB-Tomek": "63.64",
+      "NB-Rec": "63.64"
+     }
+    },
+    {
+     "dataset_as_printed": "Yeast2vs4",
+     "proposed": "66.67",
+     "proposed_std": null,
+     "smote": "53.33",
+     "smote_std": null,
+     "marks": "NB-Comm rank 5; SMOTE rank 8",
+     "other_variants": {
+      "NB-Basic": "69.57",
+      "NB-Tomek": "70",
+      "NB-Rec": "42.86"
+     }
+    },
+    {
+     "dataset_as_printed": "Vowel0",
+     "proposed": "97.3",
+     "proposed_std": null,
+     "smote": "83.87",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 10",
+     "other_variants": {
+      "NB-Basic": "94.12",
+      "NB-Tomek": "94.12",
+      "NB-Rec": "85.71"
+     }
+    },
+    {
+     "dataset_as_printed": "Glass2",
+     "proposed": "33.33",
+     "proposed_std": null,
+     "smote": "50",
+     "smote_std": null,
+     "marks": "NB-Comm rank 4; SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "33.33",
+      "NB-Tomek": "40",
+      "NB-Rec": "28.57"
+     }
+    },
+    {
+     "dataset_as_printed": "Yeast1vs7",
+     "proposed": "16",
+     "proposed_std": null,
+     "smote": "0",
+     "smote_std": null,
+     "marks": "NB-Comm rank 4; SMOTE rank 7",
+     "other_variants": {
+      "NB-Basic": "16.22",
+      "NB-Tomek": "8.7",
+      "NB-Rec": "17.54"
+     }
+    },
+    {
+     "dataset_as_printed": "Glass4",
+     "proposed": "66.67",
+     "proposed_std": null,
+     "smote": "66.67",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "66.67",
+      "NB-Tomek": "66.67",
+      "NB-Rec": "23.53"
+     }
+    },
+    {
+     "dataset_as_printed": "Ecoli4",
+     "proposed": "100",
+     "proposed_std": null,
+     "smote": "100",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "88.89",
+      "NB-Tomek": "88.89",
+      "NB-Rec": "80"
+     }
+    },
+    {
+     "dataset_as_printed": "Page-blocks13vs2",
+     "proposed": "71.43",
+     "proposed_std": null,
+     "smote": "100",
+     "smote_std": null,
+     "marks": "NB-Comm rank 6; SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "71.43",
+      "NB-Tomek": "71.43",
+      "NB-Rec": "35.71"
+     }
+    },
+    {
+     "dataset_as_printed": "Abalone09-18",
+     "proposed": "22.86",
+     "proposed_std": null,
+     "smote": "18.18",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 3",
+     "other_variants": {
+      "NB-Basic": "12.9",
+      "NB-Tomek": "13.04",
+      "NB-Rec": "16"
+     }
+    },
+    {
+     "dataset_as_printed": "Glass5",
+     "proposed": "0",
+     "proposed_std": null,
+     "smote": "0",
+     "smote_std": null,
+     "marks": "NB-Comm rank -; SMOTE rank -",
+     "other_variants": {
+      "NB-Basic": "0",
+      "NB-Tomek": "0",
+      "NB-Rec": "0"
+     }
+    },
+    {
+     "dataset_as_printed": "Yeast4",
+     "proposed": "32",
+     "proposed_std": null,
+     "smote": "33.33",
+     "smote_std": null,
+     "marks": "NB-Comm rank 3; SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "23.88",
+      "NB-Tomek": "30.19",
+      "NB-Rec": "17.58"
+     }
+    },
+    {
+     "dataset_as_printed": "Ecoli0137vs26",
+     "proposed": "100",
+     "proposed_std": null,
+     "smote": "100",
+     "smote_std": null,
+     "marks": "NB-Comm rank 1 (bold); SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "50",
+      "NB-Tomek": "50",
+      "NB-Rec": "66.67"
+     }
+    },
+    {
+     "dataset_as_printed": "Yeast6",
+     "proposed": "42.11",
+     "proposed_std": null,
+     "smote": "66.67",
+     "smote_std": null,
+     "marks": "NB-Comm rank 7; SMOTE rank 1 (bold)",
+     "other_variants": {
+      "NB-Basic": "52.17",
+      "NB-Tomek": "54.55",
+      "NB-Rec": "52.17"
+     }
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average (rank, 10 methods)",
+      "proposed": "3.65",
+      "smote": "5"
+     },
+     {
+      "label": "Average rank NB-Basic (other proposed variant)",
+      "proposed": "4.87",
+      "smote": "5"
+     },
+     {
+      "label": "Average rank NB-Tomek (other proposed variant)",
+      "proposed": "4.17",
+      "smote": "5"
+     },
+     {
+      "label": "Average rank NB-Rec (other proposed variant)",
+      "proposed": "6.91",
+      "smote": "5"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Table 7 (PDF p.27, printed 26), Wilcoxon Signed Rank Test p-values, SVM, F1-score, vs SMOTE: NB-Basic 3.82E-01, NB-Tomek 5.32E-01, NB-Comm 8.02E-01, NB-Rec 7.45E-02 (bold = significant)"
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [
+  {
+   "metric": "Sensitivity, G-mean, Precision, F1-score (per dataset, with SMOTE)",
+   "table": "Tables 8-11 (Wilcoxon Table 12)",
+   "classifiers": "Random Forest"
+  }
+ ],
+ "metrics_without_smote": [
+  {
+   "metric": "Sensitivity/G-mean/precision/F1 etc. on large high-dimensional datasets (no SMOTE column)",
+   "table": "Table 13"
+  },
+  {
+   "metric": "Average results Experiment I (simulated data, averages only)",
+   "table": "Table 2"
+  }
+ ],
+ "notes": "Values from pdftotext -raw, verified visually against rendered pages 25-27 (Tables 3-7). Each cell prints value and rank; bold = rank 1. All values in %. Existing extraction did not record which NB variant was used; NB-Comm chosen (best average rank on G-mean 3.13 and F1). If the earlier extraction used another variant, use other_variants field. Glass5 all methods 0 with rank '-'."
+}

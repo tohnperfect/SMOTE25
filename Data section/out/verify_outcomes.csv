@@ -1,0 +1,836 @@
+﻿paper,dataset,table,page,proposed,smote,status,detail
+A-SUWO,Vehicle,Table 3.2,printed p.38 (PDF index not determined),0.976,0.969,"row match, other page",name:elsewhere@33; proposed:elsewhere@50; smote:elsewhere@50; _row:row@50
+A-SUWO,Ecoli,Table 3.2,printed p.38 (PDF index not determined),0.940,0.940,"row match, other page",name:elsewhere@47; proposed:elsewhere@50; smote:elsewhere@50; _row:row@50
+A-SUWO,Pima,Table 3.2,printed p.38 (PDF index not determined),0.734,0.678,"row match, other page",name:elsewhere@47; proposed:elsewhere@50; smote:elsewhere@50; _row:row@50
+A-SUWO,Balance,Table 3.2,printed p.38 (PDF index not determined),0.548,0.358,"row match, other page",name:elsewhere@1; proposed:elsewhere@50; smote:elsewhere@50; _row:row@50
+A-SUWO,Liver,Table 3.2,printed p.38 (PDF index not determined),0.659,0.655,"row match, other page",name:elsewhere@27; proposed:elsewhere@50; smote:elsewhere@50; _row:row@50
+A-SUWO,Wine,Table 3.2,printed p.38 (PDF index not determined),0.981,0.978,"row match, other page",name:elsewhere@47; proposed:elsewhere@50; smote:elsewhere@50; _row:row@50
+A-SUWO,Breast,Table 3.2,printed p.38 (PDF index not determined),0.748,0.722,"row match, other page",name:elsewhere@47; proposed:elsewhere@50; smote:elsewhere@50; _row:row@50
+A-SUWO,Libra,Table 3.2,printed p.38 (PDF index not determined),0.723,0.756,"row match, other page",name:elsewhere@47; proposed:elsewhere@50; smote:elsewhere@50; _row:row@50
+A-SUWO,LEV,Table 3.2,printed p.38 (PDF index not determined),0.804,0.746,"row match, other page",name:elsewhere@23; proposed:elsewhere@50; smote:elsewhere@50; _row:row@50
+A-SUWO,Iris,Table 3.2,printed p.38 (PDF index not determined),0.972,0.972,"row match, other page",name:elsewhere@47; proposed:elsewhere@50; smote:elsewhere@50; _row:row@50
+A-SUWO,Heart,Table 3.2,printed p.38 (PDF index not determined),0.829,0.816,"row match, other page",name:elsewhere@21; proposed:elsewhere@50; smote:elsewhere@50; _row:row@50
+A-SUWO,Glass,Table 3.2,printed p.38 (PDF index not determined),0.828,0.813,"row match, other page",name:elsewhere@47; proposed:elsewhere@50; smote:elsewhere@50; _row:row@50
+A-SUWO,Haber,Table 3.2,printed p.38 (PDF index not determined),0.571,0.571,"row match, other page",name:elsewhere@47; proposed:elsewhere@50; smote:elsewhere@50; _row:row@50
+A-SUWO,Eucal.,Table 3.2,printed p.38 (PDF index not determined),0.617,0.335,"row match, other page",name:elsewhere@47; proposed:elsewhere@50; smote:elsewhere@50; _row:row@50
+A-SUWO,Heating,Table 3.2,printed p.38 (PDF index not determined),0.865,0.690,"row match, other page",name:elsewhere@47; proposed:elsewhere@50; smote:elsewhere@50; _row:row@50
+A-SUWO,Seg.,Table 3.2,printed p.38 (PDF index not determined),0.948,0.956,"row match, other page",name:elsewhere@5; proposed:elsewhere@50; smote:elsewhere@50; _row:row@50
+AB-SMOTE,Abalone9-18 (Table IV),Tables IV-XI (one per dataset),p.4-5 (printed 34-35),0.493,0.474,partly missing,name:missing; proposed:cited@4; smote:cited@4
+AB-SMOTE,Customer Churn (Table V),Tables IV-XI (one per dataset),p.4-5 (printed 34-35),0.704,0.749,partly missing,name:missing; proposed:cited@5; smote:cited@5
+AB-SMOTE,Harberman (Table VI),Tables IV-XI (one per dataset),p.4-5 (printed 34-35),0.575,0.643,partly missing,name:missing; proposed:cited@5; smote:cited@5
+AB-SMOTE,Employee Attrition (Table VII),Tables IV-XI (one per dataset),p.4-5 (printed 34-35),0.603,0.58,partly missing,name:missing; proposed:cited@5; smote:cited@5
+AB-SMOTE,Telco Customer Churn (Table VIII),Tables IV-XI (one per dataset),p.4-5 (printed 34-35),0.678,0.731,partly missing,name:missing; proposed:cited@5; smote:cited@5
+AB-SMOTE,Flare (Table IX),Tables IV-XI (one per dataset),p.4-5 (printed 34-35),0.421,0.47,partly missing,name:missing; proposed:cited@5; smote:cited@5
+AB-SMOTE,Wine Quality (Table X),Tables IV-XI (one per dataset),p.4-5 (printed 34-35),0.215,0.215,"values on one line, name not on that line: row match on cited page",proposed:cited@5; smote:cited@5; _row:row@5
+AB-SMOTE,Sales: Win Loss (Table XI),Tables IV-XI (one per dataset),p.4-5 (printed 34-35),0.826,0.838,partly missing,name:missing; proposed:cited@5; smote:cited@5
+ADASYN,Vehicle,Table II,p.5 (printed 1326),0.9168,0.9018,ok on cited page,name:cited@5; proposed:cited@5; smote:cited@5
+ADASYN,Pima Indian Diabetes,Table II,p.5 (printed 1326),0.6625,0.6454,ok on cited page,name:cited@5; proposed:cited@5; smote:cited@5
+ADASYN,Vowel recognition,Table II,p.5 (printed 1326),0.9622,0.9470,ok on cited page,name:cited@5; proposed:cited@5; smote:cited@5
+ADASYN,Ionosphere,Table II,p.5 (printed 1326),0.8530,0.8489,ok on cited page,name:cited@5; proposed:cited@5; smote:cited@5
+ADASYN,Abalone,Table II,p.5 (printed 1326),0.6291,0.5588,ok on cited page,name:cited@5; proposed:cited@5; smote:cited@5
+AMDO,Balance,Table 6 (10 numeric data sets) + Table 9 (7 nominal/mixed-type data sets),p.10 and p.11,70.27,68.39,partly missing,name:cited@10; proposed:missing; smote:missing
+AMDO,Hayes-roth,Table 6 (10 numeric data sets) + Table 9 (7 nominal/mixed-type data sets),p.10 and p.11,88.73,88.73,partly missing,name:cited@10; proposed:missing; smote:missing
+AMDO,New-thyroid,Table 6 (10 numeric data sets) + Table 9 (7 nominal/mixed-type data sets),p.10 and p.11,97.40,94.40,partly missing,name:cited@10; proposed:missing; smote:missing
+AMDO,Page-blocks,Table 6 (10 numeric data sets) + Table 9 (7 nominal/mixed-type data sets),p.10 and p.11,92.98,93.51,partly missing,name:cited@10; proposed:missing; smote:missing
+AMDO,Dermatology,Table 6 (10 numeric data sets) + Table 9 (7 nominal/mixed-type data sets),p.10 and p.11,98.13,97.19,partly missing,name:cited@10; proposed:missing; smote:missing
+AMDO,Breast-tissue,Table 6 (10 numeric data sets) + Table 9 (7 nominal/mixed-type data sets),p.10 and p.11,77.93,79.50,partly missing,name:cited@10; proposed:missing; smote:missing
+AMDO,UKM,Table 6 (10 numeric data sets) + Table 9 (7 nominal/mixed-type data sets),p.10 and p.11,96.15,94.52,partly missing,name:cited@10; proposed:missing; smote:missing
+AMDO,Vertebral-column,Table 6 (10 numeric data sets) + Table 9 (7 nominal/mixed-type data sets),p.10 and p.11,86.42,82.75,partly missing,name:cited@10; proposed:missing; smote:missing
+AMDO,Ecoli,Table 6 (10 numeric data sets) + Table 9 (7 nominal/mixed-type data sets),p.10 and p.11,89.03,83.20,partly missing,name:cited@10; proposed:missing; smote:missing
+AMDO,Pre2D,Table 6 (10 numeric data sets) + Table 9 (7 nominal/mixed-type data sets),p.10 and p.11,82.86,90.35,partly missing,name:cited@10; proposed:missing; smote:missing
+AMDO,Contraceptive,Table 6 (10 numeric data sets) + Table 9 (7 nominal/mixed-type data sets),p.10 and p.11,64.39,63.89,partly missing,name:cited@11; proposed:missing; smote:missing
+AMDO,Flare,Table 6 (10 numeric data sets) + Table 9 (7 nominal/mixed-type data sets),p.10 and p.11,78.07,75.14,partly missing,name:cited@11; proposed:missing; smote:missing
+AMDO,Thyroid,Table 6 (10 numeric data sets) + Table 9 (7 nominal/mixed-type data sets),p.10 and p.11,96.75,98.29,partly missing,name:cited@10; proposed:missing; smote:missing
+AMDO,Car,Table 6 (10 numeric data sets) + Table 9 (7 nominal/mixed-type data sets),p.10 and p.11,94.64,86.92,partly missing,name:cited@10; proposed:missing; smote:missing
+AMDO,Nursery,Table 6 (10 numeric data sets) + Table 9 (7 nominal/mixed-type data sets),p.10 and p.11,97.16,92.87,partly missing,name:cited@11; proposed:missing; smote:missing
+AMDO,Splice,Table 6 (10 numeric data sets) + Table 9 (7 nominal/mixed-type data sets),p.10 and p.11,96.09,95.69,partly missing,name:cited@11; proposed:missing; smote:missing
+AMDO,PreND,Table 6 (10 numeric data sets) + Table 9 (7 nominal/mixed-type data sets),p.10 and p.11,96.70,95.43,partly missing,name:cited@11; proposed:missing; smote:missing
+CBHSID,River,Table 3,p.9 (printed 118647),0.6652,0.6268,not in text,name:missing; proposed:missing; smote:missing
+CBHSID,Pima,Table 3,p.9 (printed 118647),0.7546,0.7326,partly missing,name:elsewhere@11; proposed:missing; smote:missing
+CBHSID,Cancer,Table 3,p.9 (printed 118647),0.9656,0.9602,partly missing,name:elsewhere@11; proposed:missing; smote:missing
+CBHSID,Heart failure,Table 3,p.9 (printed 118647),0.7710,0.7606,partly missing,name:elsewhere@11; proposed:missing; smote:missing
+CBHSID,Yeast1,Table 3,p.9 (printed 118647),0.7336,0.7158,partly missing,name:elsewhere@11; proposed:missing; smote:missing
+CBHSID,Haberman,Table 3,p.9 (printed 118647),0.6906,0.6488,partly missing,name:elsewhere@11; proposed:missing; smote:missing
+CBHSID,Vehicle1,Table 3,p.9 (printed 118647),0.7660,0.8090,not in text,name:missing; proposed:missing; smote:missing
+CBHSID,Glass6,Table 3,p.9 (printed 118647),0.9544,0.9070,partly missing,name:cited@10; proposed:missing; smote:missing
+CBHSID,Yeast3,Table 3,p.9 (printed 118647),0.8496,0.8734,partly missing,name:cited@10; proposed:missing; smote:missing
+CBHSID,Yeast4,Table 3,p.9 (printed 118647),0.8006,0.6570,partly missing,name:elsewhere@11; proposed:missing; smote:missing
+CBHSID,Yeast5,Table 3,p.9 (printed 118647),0.9680,0.9262,partly missing,name:cited@9; proposed:missing; smote:missing
+CBHSID,Yeast6,Table 3,p.9 (printed 118647),0.9066,0.8334,partly missing,name:cited@9; proposed:missing; smote:missing
+CBHSID,Penbased,Table 3,p.9 (printed 118647),0.9742,0.9698,partly missing,name:cited@9; proposed:missing; smote:missing
+CBHSID,Contraceptive,Table 3,p.9 (printed 118647),0.5668,0.5646,partly missing,name:cited@9; proposed:missing; smote:missing
+CBHSID,Dermatology,Table 3,p.9 (printed 118647),0.9814,0.9852,partly missing,name:cited@9; proposed:missing; smote:missing
+CBHSID,Thyroid,Table 3,p.9 (printed 118647),0.7246,0.6818,partly missing,name:cited@9; proposed:missing; smote:missing
+CGMOS,BankMarket,Table 3,p.7 (printed 1629),0.728,0.718,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,BloodService,Table 3,p.7 (printed 1629),0.733,0.649,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,BreastCancer,Table 3,p.7 (printed 1629),0.992,0.992,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,BreastTissue,Table 3,p.7 (printed 1629),0.984,0.932,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,CarEvaluation,Table 3,p.7 (printed 1629),0.997,0.997,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,Card’graphy,Table 3,p.7 (printed 1629),0.977,0.962,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,CharacterTraj,Table 3,p.7 (printed 1629),0.985,0.985,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,Chess,Table 3,p.7 (printed 1629),0.977,0.973,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,ClimateSim,Table 3,p.7 (printed 1629),0.908,0.902,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,Contraceptive,Table 3,p.7 (printed 1629),0.724,0.712,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,Fertility,Table 3,p.7 (printed 1629),0.673,0.634,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,Haberman,Table 3,p.7 (printed 1629),0.651,0.600,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,ILPD,Table 3,p.7 (printed 1629),0.707,0.715,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,ImgSeg,Table 3,p.7 (printed 1629),0.999,0.997,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,Leaf,Table 3,p.7 (printed 1629),0.908,0.852,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,Libras,Table 3,p.7 (printed 1629),0.945,0.929,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,MultipleFs,Table 3,p.7 (printed 1629),0.998,0.998,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,Parkinson,Table 3,p.7 (printed 1629),0.841,0.834,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,PlanRelax,Table 3,p.7 (printed 1629),0.472,0.469,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,QSAR,Table 3,p.7 (printed 1629),0.901,0.895,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,SPECT,Table 3,p.7 (printed 1629),0.820,0.808,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,SPECTF,Table 3,p.7 (printed 1629),0.819,0.805,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,SeismicBumps,Table 3,p.7 (printed 1629),0.743,0.727,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,Statlog,Table 3,p.7 (printed 1629),0.998,0.998,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,PlatesFaults,Table 3,p.7 (printed 1629),0.956,0.954,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,TAEvaluation,Table 3,p.7 (printed 1629),0.748,0.703,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,UserKnowledge,Table 3,p.7 (printed 1629),0.958,0.953,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,Vertebral,Table 3,p.7 (printed 1629),0.890,0.855,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,Customers,Table 3,p.7 (printed 1629),0.952,0.946,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+CGMOS,Yeast,Table 3,p.7 (printed 1629),0.925,0.907,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+DGOT,satimage,Table V (F1-score),p.10 (printed p.992),0.8660,0.8693,not in text,name:missing; proposed:missing; smote:missing
+DGOT,students_dropout,Table V (F1-score),p.10 (printed p.992),0.6632,0.6552,not in text,name:missing; proposed:missing; smote:missing
+DGOT,default,Table V (F1-score),p.10 (printed p.992),0.6690,0.6530,partly missing,name:elsewhere@6; proposed:missing; smote:missing
+DGOT,Dry_Beans,Table V (F1-score),p.10 (printed p.992),0.9327,0.9304,not in text,name:missing; proposed:missing; smote:missing
+DGOT,bank_small,Table V (F1-score),p.10 (printed p.992),0.6950,0.6764,not in text,name:missing; proposed:missing; smote:missing
+DGOT,optical_digits,Table V (F1-score),p.10 (printed p.992),0.9448,0.9429,not in text,name:missing; proposed:missing; smote:missing
+DGOT,satimage_4,Table V (F1-score),p.10 (printed p.992),0.7625,0.7297,not in text,name:missing; proposed:missing; smote:missing
+DGOT,pen_digits,Table V (F1-score),p.10 (printed p.992),0.9689,0.9601,not in text,name:missing; proposed:missing; smote:missing
+DGOT,sick_euthyroid,Table V (F1-score),p.10 (printed p.992),0.8754,0.8536,not in text,name:missing; proposed:missing; smote:missing
+DGOT,isolet,Table V (F1-score),p.10 (printed p.992),0.8844,0.8739,not in text,name:missing; proposed:missing; smote:missing
+DGOT,nursery,Table V (F1-score),p.10 (printed p.992),0.8059,0.7853,not in text,name:missing; proposed:missing; smote:missing
+DGOT,thyroid_sick,Table V (F1-score),p.10 (printed p.992),0.8813,0.8447,not in text,name:missing; proposed:missing; smote:missing
+DGOT,abalone_15,Table V (F1-score),p.10 (printed p.992),0.6624,0.6422,not in text,name:missing; proposed:missing; smote:missing
+DGOT,coil_2000,Table V (F1-score),p.10 (printed p.992),0.5254,0.5254,partly missing,name:elsewhere@12; proposed:missing; smote:missing
+DGOT,abalone_6,Table V (F1-score),p.10 (printed p.992),0.9341,0.9078,not in text,name:missing; proposed:missing; smote:missing
+DGOT,wine_quality,Table V (F1-score),p.10 (printed p.992),0.6524,0.5817,not in text,name:missing; proposed:missing; smote:missing
+DGOT,letter_img,Table V (F1-score),p.10 (printed p.992),0.9618,0.9326,not in text,name:missing; proposed:missing; smote:missing
+DGOT,bankruptcy,Table V (F1-score),p.10 (printed p.992),0.5939,0.6104,not in text,name:missing; proposed:missing; smote:missing
+DGOT,avila,Table V (F1-score),p.10 (printed p.992),0.8393,0.8472,not in text,name:missing; proposed:missing; smote:missing
+DGOT,abalone_19,Table V (F1-score),p.10 (printed p.992),0.5277,0.5122,not in text,name:missing; proposed:missing; smote:missing
+DGOT,page-blocks,Table V (F1-score),p.10 (printed p.992),0.8405,0.7673,partly missing,name:cited@10; proposed:missing; smote:missing
+DGOT,firewall,Table V (F1-score),p.10 (printed p.992),0.8468,0.7659,not in text,name:missing; proposed:missing; smote:missing
+DSRBF / Static-SMOTE,Hepatitis,Table 6,p.10 (printed 1830),83.30,80.05,partly missing,name:cited@10; proposed:missing; smote:missing
+DSRBF / Static-SMOTE,BreastC,Table 6,p.10 (printed 1830),67.53,63.26,partly missing,name:cited@10; proposed:missing; smote:missing
+DSRBF / Static-SMOTE,Haberman,Table 6,p.10 (printed 1830),69.48,61.56,partly missing,name:cited@10; proposed:missing; smote:missing
+DSRBF / Static-SMOTE,CYTvsPOX,Table 6,p.10 (printed 1830),96.49,84.41,partly missing,name:cited@10; proposed:missing; smote:missing
+DSRBF / Static-SMOTE,ME2vsOther,Table 6,p.10 (printed 1830),95.54,83.83,partly missing,name:cited@10; proposed:missing; smote:missing
+DSRBF / Static-SMOTE,Newthyroid,Table 6,p.10 (printed 1830),97.60,97.44,partly missing,name:cited@10; proposed:missing; smote:missing
+DSRBF / Static-SMOTE,Balance,Table 6,p.10 (printed 1830),93.86,88.28,partly missing,name:cited@10; proposed:missing; smote:missing
+DSRBF / Static-SMOTE,Saureus4,Table 6,p.10 (printed 1830),72.93,62.03,partly missing,name:cited@10; proposed:missing; smote:missing
+DSRBF / Static-SMOTE,Anneal,Table 6,p.10 (printed 1830),98.82,91.48,partly missing,name:cited@10; proposed:missing; smote:missing
+DSRBF / Static-SMOTE,Glass,Table 6,p.10 (printed 1830),65.60,55.96,partly missing,name:cited@10; proposed:missing; smote:missing
+DSRBF / Static-SMOTE,Zoo,Table 6,p.10 (printed 1830),95.81,90.12,partly missing,name:cited@10; proposed:missing; smote:missing
+DSRBF / Static-SMOTE,E. coli,Table 6,p.10 (printed 1830),85.91,85.02,partly missing,name:cited@10; proposed:missing; smote:missing
+DSRBF / Static-SMOTE,Yeast,Table 6,p.10 (printed 1830),55.42,49.56,partly missing,name:cited@10; proposed:missing; smote:missing
+EMDO,Balance,Table 5,p.15,73.13,68.79,partly missing,name:cited@15; proposed:missing; smote:missing
+EMDO,Hayes-Roth,Table 5,p.15,89.15,88.50,partly missing,name:cited@15; proposed:missing; smote:missing
+EMDO,New-Thyroid,Table 5,p.15,97.76,93.31,partly missing,name:cited@15; proposed:missing; smote:missing
+EMDO,Page-Blocks,Table 5,p.15,93.85,90.35,partly missing,name:cited@15; proposed:missing; smote:missing
+EMDO,Dermatology,Table 5,p.15,98.26,97.44,partly missing,name:cited@15; proposed:missing; smote:missing
+EMDO,Breast-Tissue,Table 5,p.15,84.07,76.53,partly missing,name:cited@15; proposed:missing; smote:missing
+EMDO,UKM,Table 5,p.15,96.91,95.05,partly missing,name:cited@15; proposed:missing; smote:missing
+EMDO,Vertebral-Column,Table 5,p.15,89.05,82.92,partly missing,name:cited@15; proposed:missing; smote:missing
+EMDO,Ecoli,Table 5,p.15,90.82,83.01,partly missing,name:cited@15; proposed:missing; smote:missing
+EasyEnsemble / BalanceCascade,car,Table X ('easy' tasks) + Table XI ('hard' tasks),p.8 (printed 546) and p.9 (printed 547),.958,.969,partly missing,name:elsewhere@1; proposed:missing; smote:elsewhere@12
+EasyEnsemble / BalanceCascade,ionosphere,Table X ('easy' tasks) + Table XI ('hard' tasks),p.8 (printed 546) and p.9 (printed 547),.919,.922,partly missing,name:elsewhere@6; proposed:missing; smote:missing
+EasyEnsemble / BalanceCascade,letter,Table X ('easy' tasks) + Table XI ('hard' tasks),p.8 (printed 546) and p.9 (printed 547),.995,.995,partly missing,name:elsewhere@6; proposed:missing; smote:missing
+EasyEnsemble / BalanceCascade,phoneme,Table X ('easy' tasks) + Table XI ('hard' tasks),p.8 (printed 546) and p.9 (printed 547),.892,.899,partly missing,name:elsewhere@6; proposed:missing; smote:missing
+EasyEnsemble / BalanceCascade,sat,Table X ('easy' tasks) + Table XI ('hard' tasks),p.8 (printed 546) and p.9 (printed 547),.876,.862,partly missing,name:elsewhere@3; proposed:missing; smote:missing
+EasyEnsemble / BalanceCascade,wdbc,Table X ('easy' tasks) + Table XI ('hard' tasks),p.8 (printed 546) and p.9 (printed 547),.962,.964,partly missing,name:elsewhere@6; proposed:missing; smote:missing
+EasyEnsemble / BalanceCascade,abalone,Table X ('easy' tasks) + Table XI ('hard' tasks),p.8 (printed 546) and p.9 (printed 547),.785,.742,not in text,name:missing; proposed:missing; smote:missing
+EasyEnsemble / BalanceCascade,balance,Table X ('easy' tasks) + Table XI ('hard' tasks),p.8 (printed 546) and p.9 (printed 547),.577,.465,partly missing,name:cited@7; proposed:missing; smote:missing
+EasyEnsemble / BalanceCascade,cmc,Table X ('easy' tasks) + Table XI ('hard' tasks),p.8 (printed 546) and p.9 (printed 547),.646,.605,not in text,name:missing; proposed:missing; smote:missing
+EasyEnsemble / BalanceCascade,haberman,Table X ('easy' tasks) + Table XI ('hard' tasks),p.8 (printed 546) and p.9 (printed 547),.615,.562,not in text,name:missing; proposed:missing; smote:missing
+EasyEnsemble / BalanceCascade,housing,Table X ('easy' tasks) + Table XI ('hard' tasks),p.8 (printed 546) and p.9 (printed 547),.739,.710,not in text,name:missing; proposed:missing; smote:missing
+EasyEnsemble / BalanceCascade,mf-morph,Table X ('easy' tasks) + Table XI ('hard' tasks),p.8 (printed 546) and p.9 (printed 547),.914,.841,not in text,name:missing; proposed:missing; smote:missing
+EasyEnsemble / BalanceCascade,mf-zernike,Table X ('easy' tasks) + Table XI ('hard' tasks),p.8 (printed 546) and p.9 (printed 547),.869,.813,not in text,name:missing; proposed:missing; smote:missing
+EasyEnsemble / BalanceCascade,pima,Table X ('easy' tasks) + Table XI ('hard' tasks),p.8 (printed 546) and p.9 (printed 547),.734,.708,not in text,name:missing; proposed:missing; smote:missing
+EasyEnsemble / BalanceCascade,vehicle,Table X ('easy' tasks) + Table XI ('hard' tasks),p.8 (printed 546) and p.9 (printed 547),.781,.743,not in text,name:missing; proposed:missing; smote:missing
+EasyEnsemble / BalanceCascade,wpbc,Table X ('easy' tasks) + Table XI ('hard' tasks),p.8 (printed 546) and p.9 (printed 547),.623,.610,partly missing,name:elsewhere@10; proposed:missing; smote:missing
+FW-SMOTE,ldd1 (abalone7),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),71.6,68.3,"values on one line, name not on that line: row match, other page",proposed:elsewhere@4; smote:elsewhere@1; _row:row@4
+FW-SMOTE,ldd2 (ecoli),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),87.5,83.5,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@2; _row:row@4
+FW-SMOTE,ldd3 (ecoli-0-1 vs 5),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),91.1,90.7,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@1; _row:row@4
+FW-SMOTE,ldd4 (ecoli-0-1-4-6 vs 5),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),91.0,91.0,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@1; _row:row@1
+FW-SMOTE,ldd5 (ecoli-0-1-4-7 vs 5–6),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),90.5,88.0,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@1; _row:row@4
+FW-SMOTE,ldd6 (ecoli-0-2-3-4 vs 5),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),90.7,90.7,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@1; _row:row@1
+FW-SMOTE,ldd7 (ecoli-0-2-6-7 vs 3–5),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),86.7,80.1,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@2; _row:row@4
+FW-SMOTE,ldd8 (ecoli-0-3-4 vs 5),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),90.9,90.9,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@1; _row:row@1
+FW-SMOTE,ldd9 (ecoli-0-3-4-6 vs 5),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),90.9,90.9,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@1; _row:row@1
+FW-SMOTE,ldd10 (ecoli-0-3-4-7 vs 5–6),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),90.1,91.2,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@1; _row:row@4
+FW-SMOTE,ldd11 (ecoli-0-4-6 vs 5),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),90.9,90.9,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@1; _row:row@1
+FW-SMOTE,ldd12 (ecoli-0-6-7 vs 3–5),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),81.5,78.9,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@1; _row:row@4
+FW-SMOTE,ldd13 (ecoli-0-6-7 vs 5),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),88.0,87.6,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@1; _row:row@4
+FW-SMOTE,ldd14 (ecoli4),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),87.0,79.8,"values on one line, name not on that line: row match, other page",proposed:elsewhere@4; smote:elsewhere@1; _row:row@4
+FW-SMOTE,ldd15 (glass-0-1-6 vs 2),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),72.3,68.4,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@1; _row:row@4
+FW-SMOTE,ldd16 (glass-0-4 vs 5),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),98.8,87.5,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@1; _row:row@4
+FW-SMOTE,ldd17 (glass-0-6 vs 5),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),0.0,0.0,"values on one line, name not on that line: row match, other page",proposed:elsewhere@4; smote:elsewhere@4; _row:row@4
+FW-SMOTE,ldd18 (glass4),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),95.2,94.7,"values on one line, name not on that line: row match, other page",proposed:elsewhere@4; smote:elsewhere@1; _row:row@4
+FW-SMOTE,ldd19 (image1),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),99.7,99.4,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@1; _row:row@1
+FW-SMOTE,ldd20 (page-blocks-1-3 vs 4),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),97.8,92.2,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@1; _row:row@4
+FW-SMOTE,ldd21 (shuttle-c0-vs-c4),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),99.6,99.6,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@1; _row:row@1
+FW-SMOTE,ldd22 (solar),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),62.4,51.4,"values on one line, name not on that line: row match, other page",proposed:elsewhere@4; smote:elsewhere@4; _row:row@4
+FW-SMOTE,ldd23 (yeast-0-2-5-7-9 vs 3-6-8),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),89.8,88.9,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@1; _row:row@4
+FW-SMOTE,ldd24 (yeast-0-5-6-7-9 vs 4),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),84.7,82.6,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@2; _row:row@4
+FW-SMOTE,ldd25 (yeast-1 vs 7),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),58.7,51.3,"values on one line, name not on that line: row match, other page",proposed:elsewhere@4; smote:elsewhere@3; _row:row@4
+FW-SMOTE,ldd26 (yeast-1-4-5-8 vs 7),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),51.2,49.0,"values on one line, name not on that line: row match, other page",proposed:elsewhere@3; smote:elsewhere@4; _row:row@4
+FW-SMOTE,ldd27 (yeast-2 vs 4),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),92.0,88.7,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@1; _row:row@4
+FW-SMOTE,ldd28 (yeast3),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),90.3,88.6,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@1; _row:row@2
+FW-SMOTE,ldd29 (yeast4),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),71.7,70.9,"values on one line, name not on that line: row match, other page",proposed:elsewhere@3; smote:elsewhere@1; _row:row@4
+FW-SMOTE,ldd30 (yeast5),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),95.6,94.4,"values on one line, name not on that line: row match, other page",proposed:elsewhere@4; smote:elsewhere@3; _row:row@4
+FW-SMOTE,hdd1 (bhat1),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),99.7,99.7,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@1; _row:row@1
+FW-SMOTE,hdd2 (bhat2),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),98.5,98.5,"values on one line, name not on that line: row match, other page",proposed:elsewhere@3; smote:elsewhere@3; _row:row@3
+FW-SMOTE,hdd3 (bhat3),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),96.0,76.5,"values on one line, name not on that line: row match, other page",proposed:elsewhere@3; smote:elsewhere@3; _row:row@4
+FW-SMOTE,hdd4 (bhat4),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),99.7,99.7,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@1; _row:row@1
+FW-SMOTE,hdd5 (bullinger),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),76.7,74.8,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@2; _row:row@4
+FW-SMOTE,hdd6 (car1),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),98.1,89.7,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@1; _row:row@4
+FW-SMOTE,hdd7 (car2),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),89.6,85.9,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@2; _row:row@4
+FW-SMOTE,hdd8 (car3),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),100,92.7,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@1; _row:row@4
+FW-SMOTE,hdd9 (car4),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),98.8,96.3,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@4; _row:row@4
+FW-SMOTE,hdd10 (glioma),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),92.8,90.4,"values on one line, name not on that line: row match, other page",proposed:elsewhere@4; smote:elsewhere@1; _row:row@4
+FW-SMOTE,hdd11 (lung),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),99.7,99.7,"values on one line, name not on that line: row match, other page",proposed:elsewhere@1; smote:elsewhere@1; _row:row@1
+FW-SMOTE,hdd12 (srbct),"Table A.4 (Supplementary, Appendix A; k-NN, G-mean, without feature selection)",supplementary printed p.32 (PDF index within supplementary file not verified),98.6,98.2,"values on one line, name not on that line: row match, other page",proposed:elsewhere@4; smote:elsewhere@3; _row:row@4
+GAMO,"MNIST (Table 1, LS, GM)","Tables 1 (LS columns), 2, 3 (During Testing columns), 4","p.6 (Tables 1,2), p.7 (Tables 3,4); printed 1700-1701",0.90,0.89,"values on one line, name not on that line: row match on cited page",proposed:cited@6; smote:cited@6; _row:row@6
+GAMO,"Fashion-MNIST (Table 1, LS, GM)","Tables 1 (LS columns), 2, 3 (During Testing columns), 4","p.6 (Tables 1,2), p.7 (Tables 3,4); printed 1700-1701",0.81,0.77,partly missing,name:missing; proposed:cited@6; smote:cited@6
+GAMO,"CIFAR10 (Table 2, GM)","Tables 1 (LS columns), 2, 3 (During Testing columns), 4","p.6 (Tables 1,2), p.7 (Tables 3,4); printed 1700-1701",0.43,0.4,partly missing,name:missing; proposed:cited@6; smote:cited@6
+GAMO,"SVHN (Table 2, GM)","Tables 1 (LS columns), 2, 3 (During Testing columns), 4","p.6 (Tables 1,2), p.7 (Tables 3,4); printed 1700-1701",0.75,0.73,"values on one line, name not on that line: row match on cited page",proposed:cited@6; smote:cited@6; _row:row@6
+GAMO,"CelebA-Small (Table 3, During Testing, GM)","Tables 1 (LS columns), 2, 3 (During Testing columns), 4","p.6 (Tables 1,2), p.7 (Tables 3,4); printed 1700-1701",0.54,0.48,partly missing,name:missing; proposed:cited@7; smote:cited@7
+GAMO,"CelebA-Large (Table 3, During Testing, GM)","Tables 1 (LS columns), 2, 3 (During Testing columns), 4","p.6 (Tables 1,2), p.7 (Tables 3,4); printed 1700-1701",0.70,0.66,"values on one line, name not on that line: row match on cited page",proposed:cited@7; smote:cited@6; _row:row@7
+GAMO,"LSUN-Small (Table 3, During Testing, GM)","Tables 1 (LS columns), 2, 3 (During Testing columns), 4","p.6 (Tables 1,2), p.7 (Tables 3,4); printed 1700-1701",0.50,0.40,"values on one line, name not on that line: row match on cited page",proposed:cited@7; smote:cited@6; _row:row@7
+GAMO,"LSUN-Large (Table 3, During Testing, GM)","Tables 1 (LS columns), 2, 3 (During Testing columns), 4","p.6 (Tables 1,2), p.7 (Tables 3,4); printed 1700-1701",0.68,0.62,"values on one line, name not on that line: row match on cited page",proposed:cited@6; smote:cited@7; _row:row@7
+GAMO,"SUN397 (Table 4, GM)","Tables 1 (LS columns), 2, 3 (During Testing columns), 4","p.6 (Tables 1,2), p.7 (Tables 3,4); printed 1700-1701",0.24,0.21,partly missing,name:missing; proposed:cited@7; smote:cited@7
+GDHS,car,Table 5,11,0.9490,0.9504,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+GDHS,cleveland,Table 5,11,0.1210,0.0307,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+GDHS,contraceptive,Table 5,11,0.4801,0.4305,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+GDHS,glass,Table 5,11,0.6094,0.4389,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+GDHS,hayes-roth,Table 5,11,0.8236,0.8293,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+GDHS,newthyroid,Table 5,11,0.9231,0.9193,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+GDHS,sensorReadings,Table 5,11,0.9925,0.9916,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+GDHS,thyroid,Table 5,11,0.9302,0.9362,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+GDHS,userknowledge,Table 5,11,0.7379,0.7242,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+GDHS,vehicle,Table 5,11,0.6746,0.6720,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+GDHS,vertebralColumn,Table 5,11,0.7501,0.7239,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+GDHS,winequality-red,Table 5,11,0.0620,0.0216,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+GDHS,yeast,Table 5,11,0.2220,0.0694,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+GDHS,zoo,Table 5,11,0.5811,0.5811,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+GDHS,camel-1.4,Table 5,11,0.5679,0.5292,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+GDHS,camel-1.6,Table 5,11,0.5551,0.5610,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+GDHS,hive-0.12.0,Table 5,11,0.6037,0.5778,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+GDHS,velocity-1.5,Table 5,11,0.7032,0.6699,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+GDHS,xalan-2.4,Table 5,11,0.6508,0.5834,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+GDHS,xerces-1.2,Table 5,11,0.6253,0.6028,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+GDO,glass1,Table 7,9 (printed 675),0.7392,0.7263,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,ecoli-0_vs_1,Table 7,9 (printed 675),0.9516,0.9469,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,wisconsin,Table 7,9 (printed 675),0.9659,0.9653,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,yeast1,Table 7,9 (printed 675),0.6972,0.6966,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,haberman,Table 7,9 (printed 675),0.4328,0.3992,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,planningrelax,Table 7,9 (printed 675),0.5046,0.4042,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,ecoli1,Table 7,9 (printed 675),0.8925,0.8640,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,new-thyroid1,Table 7,9 (printed 675),0.8999,0.8013,partly missing,name:cited@10; proposed:missing; smote:missing
+GDO,ecoli2,Table 7,9 (printed 675),0.8538,0.8899,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,segment0,Table 7,9 (printed 675),0.9196,0.8467,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,yeast3,Table 7,9 (printed 675),0.9058,0.9058,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,ecoli3,Table 7,9 (printed 675),0.8867,0.8860,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,yeast-2_vs_4,Table 7,9 (printed 675),0.8745,0.8889,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,yeast-0-5-6-7-9_vs_4,Table 7,9 (printed 675),0.7941,0.7832,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,vowel0,Table 7,9 (printed 675),0.8905,0.1925,partly missing,name:cited@9; proposed:missing; smote:missing
+GDO,kr-vs-k-three_vs_eleven,Table 7,9 (printed 675),0.9934,0.9827,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,glass2,Table 7,9 (printed 675),0.7823,0.7260,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,shuttle-c0-vs-c4,Table 7,9 (printed 675),0.9246,0.8519,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,yeast-1_vs_7,Table 7,9 (printed 675),0.7464,0.7245,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,glass4,Table 7,9 (printed 675),0.9419,0.9033,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,ecoli4,Table 7,9 (printed 675),0.9132,0.9322,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,glass-0-1-6_vs_2,Table 7,9 (printed 675),0.7012,0.6136,partly missing,name:cited@9; proposed:missing; smote:missing
+GDO,bupa,Table 7,9 (printed 675),0.6768,0.6805,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,abalone9-18,Table 7,9 (printed 675),0.7822,0.7474,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,glass-0-1-6_vs_5,Table 7,9 (printed 675),0.8428,0.4714,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,yeast-1-4-5-8_vs_7,Table 7,9 (printed 675),0.5980,0.5523,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,glass5,Table 7,9 (printed 675),0.8410,0.4714,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,car-good,Table 7,9 (printed 675),0.9277,0.7649,partly missing,name:cited@10; proposed:missing; smote:missing
+GDO,car-vgood,Table 7,9 (printed 675),0.8055,0.7273,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,kr-vs-k-zero-one_vs_draw,Table 7,9 (printed 675),0.9757,0.8588,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,kr-vs-k-one_vs_fifteen,Table 7,9 (printed 675),0.9998,1.0000,partly missing,name:elsewhere@7; proposed:missing; smote:cited@9
+GDO,yeast4,Table 7,9 (printed 675),0.8518,0.8267,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,breast-cancer-wisconsin,Table 7,9 (printed 675),0.9602,0.9635,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,yeast5,Table 7,9 (printed 675),0.9634,0.9322,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,glass-0-1-2-3_vs_4-5-6,Table 7,9 (printed 675),0.9560,0.9474,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,yeast6,Table 7,9 (printed 675),0.8574,0.8066,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,abalone-3_vs_11,Table 7,9 (printed 675),0.9987,1.0000,partly missing,name:elsewhere@7; proposed:missing; smote:cited@9
+GDO,winequality-white-3_vs_7,Table 7,9 (printed 675),0.7773,0.0000,partly missing,name:cited@9; proposed:missing; smote:cited@9
+GDO,australian,Table 7,9 (printed 675),0.8221,0.8098,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GDO,abalone19,Table 7,9 (printed 675),0.6598,0.5481,partly missing,name:elsewhere@7; proposed:missing; smote:missing
+GOIO,default,Table V,p.10 (printed 6459),0.6597,0.6095,partly missing,name:elsewhere@12; proposed:missing; smote:missing
+GOIO,shoppers,Table V,p.10 (printed 6459),0.7244,0.6923,not in text,name:missing; proposed:missing; smote:missing
+GOIO,bank_full,Table V,p.10 (printed 6459),0.7161,0.7008,not in text,name:missing; proposed:missing; smote:missing
+GOIO,bank_small,Table V,p.10 (printed 6459),0.6742,0.6642,partly missing,name:cited@10; proposed:missing; smote:missing
+GOIO,avila_0vs5,Table V,p.10 (printed 6459),0.8595,0.7777,not in text,name:missing; proposed:missing; smote:missing
+GOIO,artificial_0.5_10,Table V,p.10 (printed 6459),0.6197,0.5710,not in text,name:missing; proposed:missing; smote:missing
+GOIO,optical_digits,Table V,p.10 (printed 6459),0.8696,0.8350,not in text,name:missing; proposed:missing; smote:missing
+GOIO,avila_0vs6,Table V,p.10 (printed 6459),0.7926,0.7202,not in text,name:missing; proposed:missing; smote:missing
+GOIO,sick_euthyroid,Table V,p.10 (printed 6459),0.7151,0.7305,not in text,name:missing; proposed:missing; smote:missing
+GOIO,avila_0vs7,Table V,p.10 (printed 6459),0.8220,0.7237,not in text,name:missing; proposed:missing; smote:missing
+GOIO,scene,Table V,p.10 (printed 6459),0.5645,0.5373,partly missing,name:cited@10; proposed:missing; smote:missing
+GOIO,abalone_15,Table V,p.10 (printed 6459),0.6441,0.5999,partly missing,name:elsewhere@12; proposed:elsewhere@12; smote:missing
+GOIO,thyroid_sick,Table V,p.10 (printed 6459),0.7564,0.7168,not in text,name:missing; proposed:missing; smote:missing
+GOIO,abalone_6,Table V,p.10 (printed 6459),0.9164,0.8931,not in text,name:missing; proposed:missing; smote:missing
+GOIO,artificial_0.3_5,Table V,p.10 (printed 6459),0.5253,0.4753,partly missing,name:elsewhere@12; proposed:missing; smote:missing
+GOIO,artificial_0.5_5,Table V,p.10 (printed 6459),0.5912,0.5422,not in text,name:missing; proposed:missing; smote:missing
+GOIO,artificial_1_5,Table V,p.10 (printed 6459),0.6992,0.6383,not in text,name:missing; proposed:missing; smote:missing
+GOIO,wine_quality,Table V,p.10 (printed 6459),0.6286,0.5653,not in text,name:missing; proposed:missing; smote:missing
+GOIO,taiwanses,Table V,p.10 (printed 6459),0.6030,0.5809,not in text,name:missing; proposed:missing; smote:missing
+GOIO,artificial_0.5_2.5,Table V,p.10 (printed 6459),0.5344,0.4946,not in text,name:missing; proposed:missing; smote:missing
+GOIO,mammography,Table V,p.10 (printed 6459),0.8023,0.6976,not in text,name:missing; proposed:missing; smote:missing
+GOIO,bankruptcy,Table V,p.10 (printed 6459),0.5295,0.4715,not in text,name:missing; proposed:missing; smote:missing
+GOIO,page-blocks_0vs3,Table V,p.10 (printed 6459),0.9075,0.8043,partly missing,name:elsewhere@12; proposed:missing; smote:missing
+INOS,Adiac,Table 2,p.9 (printed 2817),.882,.807,partly missing,name:cited@8; proposed:missing; smote:missing
+INOS,FaceAll,Table 2,p.9 (printed 2817),.945,.916,partly missing,name:cited@8; proposed:missing; smote:missing
+INOS,50Words,Table 2,p.9 (printed 2817),.880,.863,partly missing,name:cited@8; proposed:missing; smote:missing
+INOS,SLeaf,Table 2,p.9 (printed 2817),.962,.933,partly missing,name:cited@8; proposed:missing; smote:missing
+INOS,TwoPats,Table 2,p.9 (printed 2817),.614,.467,partly missing,name:elsewhere@11; proposed:missing; smote:missing
+INOS,Wafer,Table 2,p.9 (printed 2817),.985,.966,partly missing,name:cited@8; proposed:missing; smote:missing
+INOS,Yoga,Table 2,p.9 (printed 2817),.750,.720,partly missing,name:cited@8; proposed:missing; smote:missing
+KNNOR,Mean over all 19 datasets (no per-dataset rows in paper),Table 5 (G-score block),15,.8363,.8238,partly missing,name:missing; proposed:cited@15; smote:cited@15
+Loyalty-SMOTE,adult,Table 12,12,0.8485,0.8409,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,ai4i2020,Table 12,12,0.9685,0.8219,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,banknote,Table 12,12,1,1,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,drug,Table 12,12,0.9973,0.7261,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,AIDS_5000,Table 12,12,0.8532,0.7433,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,Maternal,Table 12,12,0.9368,0.8786,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,national,Table 12,12,0.9914,0.9884,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,occupancy,Table 12,12,0.9846,0.9904,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,online,Table 12,12,0.5980,0.4480,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,Shoppers,Table 12,12,0.8294,0.7756,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,Academic,Table 12,12,0.9556,0.8611,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,AIDS_15000,Table 12,12,0.8734,0.7373,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,german,Table 12,12,0.8946,0.7962,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,statlog,Table 12,12,9100,0.8020,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,Shuttle,Table 12,12,0.9965,0.9965,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,Fault,Table 12,12,0.9844,0.8370,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,ICR,Table 12,12,0.9955,0.9321,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,breast,Table 12,12,0.9882,0.9793,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,WDBC,Table 12,12,0.9904,0.9741,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,WPBC,Table 12,12,0.9011,0.7674,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,heart,Table 12,12,0.8663,0.8878,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,ionosphere,Table 12,12,0.9836,0.9558,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,iris,Table 12,12,1,1,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,bezdeiris,Table 12,12,1,1,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,raisin,Table 12,12,0.9336,0.8931,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,glass5,Table 12,12,0.8165,0.8165,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,vowel0,Table 12,12,1,1,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,ecoli-0-1-3-7_vs_2-6,Table 12,12,1,0.9879,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,ecoli-0-1-4-6_vs_5,Table 12,12,0.9129,0.9129,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+Loyalty-SMOTE,yeast-0-3-5-9_vs_7-8,Table 12,12,0.7128,0.6835,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+MBS,Pima,Table 3 Average AUC Results,p.8 (printed 1550),0.8254,0.8238,row match on cited page,name:cited@8; proposed:cited@8; smote:cited@8; _row:row@8
+MBS,Haberman,Table 3 Average AUC Results,p.8 (printed 1550),0.6873,0.6825,row match on cited page,name:cited@8; proposed:cited@8; smote:cited@8; _row:row@8
+MBS,Satimage,Table 3 Average AUC Results,p.8 (printed 1550),0.7645,0.7613,row match on cited page,name:cited@8; proposed:cited@8; smote:cited@8; _row:row@8
+MBS,Ecoli,Table 3 Average AUC Results,p.8 (printed 1550),0.9296,0.9233,row match on cited page,name:cited@8; proposed:cited@8; smote:cited@8; _row:row@8
+MBS,Shuttle,Table 3 Average AUC Results,p.8 (printed 1550),0.8902,0.8684,row match on cited page,name:cited@8; proposed:cited@8; smote:cited@8; _row:row@8
+MBS,Ionosphere,Table 3 Average AUC Results,p.8 (printed 1550),0.8661,0.8373,row match on cited page,name:cited@8; proposed:cited@8; smote:cited@8; _row:row@8
+MBS,Vehicle,Table 3 Average AUC Results,p.8 (printed 1550),0.9882,0.9836,row match on cited page,name:cited@8; proposed:cited@8; smote:cited@8; _row:row@8
+MBS,Credit,Table 3 Average AUC Results,p.8 (printed 1550),0.7178,0.7003,row match on cited page,name:cited@8; proposed:cited@8; smote:cited@8; _row:row@8
+MBS,Diabetes,Table 3 Average AUC Results,p.8 (printed 1550),0.6348,0.6322,row match on cited page,name:cited@8; proposed:cited@8; smote:cited@8; _row:row@8
+MBS,Hmeq,Table 3 Average AUC Results,p.8 (printed 1550),0.7837,0.7837,row match on cited page,name:cited@8; proposed:cited@8; smote:cited@8; _row:row@8
+MBS,Promotion,Table 3 Average AUC Results,p.8 (printed 1550),0.6499,0.6499,row match on cited page,name:cited@8; proposed:cited@8; smote:cited@8; _row:row@8
+MBS,Bank,Table 3 Average AUC Results,p.8 (printed 1550),0.8600,0.8581,row match on cited page,name:cited@8; proposed:cited@8; smote:cited@8; _row:row@8
+MBS,Spambase,Table 3 Average AUC Results,p.8 (printed 1550),0.9712,0.9661,row match on cited page,name:cited@8; proposed:cited@8; smote:cited@8; _row:row@8
+MC-CCR,Automobile,Table 6,p.10,75.68,51.86,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-CCR,Balance,Table 6,p.10,62.22,40.57,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-CCR,Car,Table 6,p.10,95.03,81.16,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-CCR,Cleveland,Table 6,p.10,30.98,18.00,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-CCR,Contraceptive,Table 6,p.10,49.72,38.15,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-CCR,Dermatology,Table 6,p.10,94.88,79.34,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-CCR,Ecoli,Table 6,p.10,70.98,51.72,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-CCR,Flare,Table 6,p.10,64.71,55.98,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-CCR,Glass,Table 6,p.10,71.06,55.41,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-CCR,Hayes-roth,Table 6,p.10,85.16,70.52,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-CCR,Led7digit,Table 6,p.10,80.44,57.85,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-CCR,Lymphography,Table 6,p.10,77.36,40.60,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-CCR,Newthyroid,Table 6,p.10,92.17,80.69,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-CCR,Pageblocks,Table 6,p.10,82.55,71.64,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-CCR,Thyroid,Table 6,p.10,81.48,73.62,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-CCR,Vehicle,Table 6,p.10,70.35,59.57,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-CCR,Wine,Table 6,p.10,92.87,80.82,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-CCR,Winequality-red,Table 6,p.10,46.66,17.80,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-CCR,Yeast,Table 6,p.10,56.91,43.83,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-CCR,Zoo,Table 6,p.10,84.29,55.61,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-MBRC,automobile,Table 10,10,55.15,49.17,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-MBRC,autos,Table 10,10,54.62,45.88,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-MBRC,car,Table 10,10,77.38,64.99,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-MBRC,cleveland,Table 10,10,30.24,18.19,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-MBRC,cmc,Table 10,10,42.61,46.15,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-MBRC,contraceptive,Table 10,10,37.63,47.06,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-MBRC,Dry_Bean,Table 10,10,92.32,71.22,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-MBRC,ecoli,Table 10,10,57.76,50.19,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-MBRC,flare,Table 10,10,57.74,28.28,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-MBRC,glass,Table 10,10,57.55,57.39,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-MBRC,lymphography,Table 10,10,62.02,48.24,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-MBRC,newthyroid,Table 10,10,90.96,78.98,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-MBRC,page-blocks,Table 10,10,68.2,40.05,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-MBRC,page,Table 10,10,47.54,32.53,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-MBRC,shuttle,Table 10,10,75.41,37.24,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-MBRC,thyroid,Table 10,10,68.98,16.18,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-MBRC,winequality-red,Table 10,10,32.97,30.16,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-MBRC,winequality-white,Table 10,10,31.34,26.84,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-MBRC,yeast,Table 10,10,48.18,31.83,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-MBRC,zoo,Table 10,10,90.09,78.86,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+MC-RBO,Automobile,Table VI,p.10 (printed p.2827),77.20,51.86,not in text,name:missing; proposed:missing; smote:missing
+MC-RBO,Balance,Table VI,p.10 (printed p.2827),61.93,40.57,partly missing,name:cited@10; proposed:missing; smote:missing
+MC-RBO,Car,Table VI,p.10 (printed p.2827),97.15,81.16,partly missing,name:elsewhere@1; proposed:missing; smote:missing
+MC-RBO,Cleveland,Table VI,p.10 (printed p.2827),34.04,18.00,partly missing,name:missing; proposed:missing; smote:elsewhere@2
+MC-RBO,Contraceptive,Table VI,p.10 (printed p.2827),50.99,38.15,not in text,name:missing; proposed:missing; smote:missing
+MC-RBO,Dermatology,Table VI,p.10 (printed p.2827),95.72,79.34,not in text,name:missing; proposed:missing; smote:missing
+MC-RBO,Ecoli,Table VI,p.10 (printed p.2827),72.66,51.72,not in text,name:missing; proposed:missing; smote:missing
+MC-RBO,Flare,Table VI,p.10 (printed p.2827),65.50,55.98,not in text,name:missing; proposed:missing; smote:missing
+MC-RBO,Glass,Table VI,p.10 (printed p.2827),73.08,55.41,not in text,name:missing; proposed:missing; smote:missing
+MC-RBO,Hayes-roth,Table VI,p.10 (printed p.2827),81.93,70.52,not in text,name:missing; proposed:missing; smote:missing
+MC-RBO,Led7digit,Table VI,p.10 (printed p.2827),75.02,57.85,not in text,name:missing; proposed:missing; smote:missing
+MC-RBO,Lymphography,Table VI,p.10 (printed p.2827),79.13,40.60,not in text,name:missing; proposed:missing; smote:missing
+MC-RBO,Newthyroid,Table VI,p.10 (printed p.2827),96.73,80.69,not in text,name:missing; proposed:missing; smote:missing
+MC-RBO,Pageblocks,Table VI,p.10 (printed p.2827),87.27,71.64,not in text,name:missing; proposed:missing; smote:missing
+MC-RBO,Thyroid,Table VI,p.10 (printed p.2827),86.94,73.62,not in text,name:missing; proposed:missing; smote:missing
+MC-RBO,Vehicle,Table VI,p.10 (printed p.2827),70.47,59.57,not in text,name:missing; proposed:missing; smote:missing
+MC-RBO,Wine,Table VI,p.10 (printed p.2827),91.73,80.82,not in text,name:missing; proposed:missing; smote:missing
+MC-RBO,Winequality-red,Table VI,p.10 (printed p.2827),48.33,17.80,not in text,name:missing; proposed:missing; smote:missing
+MC-RBO,Yeast,Table VI,p.10 (printed p.2827),58.06,43.83,not in text,name:missing; proposed:missing; smote:missing
+MC-RBO,Zoo,Table VI,p.10 (printed p.2827),85.01,55.61,not in text,name:missing; proposed:missing; smote:missing
+MKC-SMOTE,cmc,Table 4,p.7 (printed 196935),57.79,54.37,not in text,name:missing; proposed:missing; smote:missing
+MKC-SMOTE,use,Table 4,p.7 (printed 196935),93.52,92.47,partly missing,name:cited@7; proposed:missing; smote:missing
+MKC-SMOTE,new,Table 4,p.7 (printed 196935),94.93,93.58,partly missing,name:cited@7; proposed:missing; smote:missing
+MKC-SMOTE,con,Table 4,p.7 (printed 196935),84.39,77.55,partly missing,name:cited@7; proposed:missing; smote:missing
+MKC-SMOTE,zoo,Table 4,p.7 (printed 196935),99.53,97.17,not in text,name:missing; proposed:missing; smote:missing
+MKC-SMOTE,ctg,Table 4,p.7 (printed 196935),95.13,95.09,not in text,name:missing; proposed:missing; smote:missing
+MKC-SMOTE,eco,Table 4,p.7 (printed 196935),91.84,84.12,partly missing,name:cited@7; proposed:missing; smote:missing
+MKC-SMOTE,gla,Table 4,p.7 (printed 196935),79.43,71.06,not in text,name:missing; proposed:missing; smote:missing
+MKC-SMOTE,abs,Table 4,p.7 (printed 196935),58.33,20.39,partly missing,name:elsewhere@1; proposed:missing; smote:missing
+MKC-SMOTE,nur,Table 4,p.7 (printed 196935),99.83,99.80,not in text,name:missing; proposed:missing; smote:missing
+MKC-SMOTE,let,Table 4,p.7 (printed 196935),97.01,97.06,partly missing,name:cited@7; proposed:missing; smote:missing
+MKC-SMOTE,car,Table 4,p.7 (printed 196935),91.73,92.91,partly missing,name:cited@7; proposed:missing; smote:missing
+MKC-SMOTE,win,Table 4,p.7 (printed 196935),62.25,41.41,partly missing,name:elsewhere@9; proposed:missing; smote:missing
+MKC-SMOTE,pok,Table 4,p.7 (printed 196935),8.73,0.00,partly missing,name:missing; proposed:missing; smote:cited@7
+MKC-SMOTE,hcv,Table 4,p.7 (printed 196935),95.16,88.72,not in text,name:missing; proposed:missing; smote:missing
+MKC-SMOTE,yea,Table 4,p.7 (printed 196935),79.52,58.08,not in text,name:missing; proposed:missing; smote:missing
+MKC-SMOTE,cov,Table 4,p.7 (printed 196935),86.93,86.47,partly missing,name:cited@7; proposed:missing; smote:missing
+MKC-SMOTE,che,Table 4,p.7 (printed 196935),68.21,62.45,partly missing,name:elsewhere@1; proposed:missing; smote:missing
+MKC-SMOTE,aba,Table 4,p.7 (printed 196935),56.68,47.66,partly missing,name:elsewhere@9; proposed:missing; smote:missing
+MKC-SMOTE,bar,Table 4,p.7 (printed 196935),79.62,60.48,not in text,name:missing; proposed:missing; smote:missing
+MKC-SMOTE,avi,Table 4,p.7 (printed 196935),68.85,63.87,not in text,name:missing; proposed:missing; smote:missing
+MLOS,Ozo,Table 8,13,0.8307,0.7907,ok on cited page,name:cited@13; proposed:cited@13; smote:cited@13
+MLOS,Phi,Table 8,13,0.8371,0.8792,ok on cited page,name:cited@13; proposed:cited@13; smote:cited@13
+MLOS,aba19,Table 8,13,0.7409,0.6943,ok on cited page,name:cited@13; proposed:cited@13; smote:cited@13
+MLOS,Cam,Table 8,13,0.5347,0.3768,ok on cited page,name:cited@13; proposed:cited@13; smote:cited@13
+MLOS,cle,Table 8,13,0.9209,0.7564,ok on cited page,name:cited@13; proposed:cited@13; smote:cited@13
+MLOS,cli,Table 8,13,0.8528,0.6362,ok on cited page,name:cited@13; proposed:cited@13; smote:cited@13
+MLOS,gla,Table 8,13,0.9199,0.8121,ok on cited page,name:cited@13; proposed:cited@13; smote:cited@13
+MLOS,ivy,Table 8,13,0.4897,0.3004,ok on cited page,name:cited@13; proposed:cited@13; smote:cited@13
+MLOS,jed,Table 8,13,0.4520,0.4386,ok on cited page,name:cited@13; proposed:cited@13; smote:cited@13
+MLOS,log,Table 8,13,0.4001,0.3972,ok on cited page,name:cited@13; proposed:cited@13; smote:cited@13
+MLOS,mov,Table 8,13,0.8941,0.9154,ok on cited page,name:cited@13; proposed:cited@13; smote:cited@13
+MLOS,pok,Table 8,13,0.9339,0.8050,ok on cited page,name:cited@13; proposed:cited@13; smote:cited@13
+MLOS,win35,Table 8,13,0.4299,0.3508,ok on cited page,name:cited@13; proposed:cited@13; smote:cited@13
+MLOS,win,Table 8,13,0.7531,0.7134,ok on cited page,name:cited@13; proposed:cited@13; smote:cited@13
+MLOS,xal,Table 8,13,0.6446,0.6477,ok on cited page,name:cited@13; proposed:cited@13; smote:cited@13
+MLOS,yea,Table 8,13,0.8727,0.8683,ok on cited page,name:cited@13; proposed:cited@13; smote:cited@13
+MWMOTE,Abalone,Table 6 (and Table 6 continued),p.13-14 (printed p.417-418),0.51451,0.62356,not in text,name:missing; proposed:missing; smote:missing
+MWMOTE,CTG,Table 6 (and Table 6 continued),p.13-14 (printed p.417-418),0.7232,0.70765,partly missing,name:elsewhere@20; proposed:missing; smote:missing
+MWMOTE,Semeion,Table 6 (and Table 6 continued),p.13-14 (printed p.417-418),0.92444,0.91312,not in text,name:missing; proposed:missing; smote:missing
+MWMOTE,Statlandsat,Table 6 (and Table 6 continued),p.13-14 (printed p.417-418),0.73219,0.68017,not in text,name:missing; proposed:missing; smote:missing
+MWMOTE,Bcancerorig,Table 6 (and Table 6 continued),p.13-14 (printed p.417-418),0.97432,0.97438,not in text,name:missing; proposed:missing; smote:missing
+MWMOTE,Btissue,Table 6 (and Table 6 continued),p.13-14 (printed p.417-418),0.77634,0.7156,not in text,name:missing; proposed:missing; smote:missing
+MWMOTE,Ecoli,Table 6 (and Table 6 continued),p.13-14 (printed p.417-418),0.85931,0.87041,not in text,name:missing; proposed:missing; smote:missing
+MWMOTE,Glass,Table 6 (and Table 6 continued),p.13-14 (printed p.417-418),0.93611,0.87774,partly missing,name:elsewhere@15; proposed:missing; smote:missing
+MWMOTE,Libra,Table 6 (and Table 6 continued),p.13-14 (printed p.417-418),0.95059,0.88706,partly missing,name:elsewhere@15; proposed:missing; smote:missing
+MWMOTE,Phoneme,Table 6 (and Table 6 continued),p.13-14 (printed p.417-418),0.76618,0.75935,not in text,name:missing; proposed:missing; smote:missing
+MWMOTE,Pima,Table 6 (and Table 6 continued),p.13-14 (printed p.417-418),0.74088,0.73159,partly missing,name:elsewhere@15; proposed:missing; smote:missing
+MWMOTE,Robot,Table 6 (and Table 6 continued),p.13-14 (printed p.417-418),0.80073,0.80532,partly missing,name:elsewhere@20; proposed:missing; smote:missing
+MWMOTE,Satimage,Table 6 (and Table 6 continued),p.13-14 (printed p.417-418),0.818,0.81077,partly missing,name:elsewhere@15; proposed:missing; smote:missing
+MWMOTE,Vehicle,Table 6 (and Table 6 continued),p.13-14 (printed p.417-418),0.9661,0.96321,partly missing,name:elsewhere@15; proposed:missing; smote:missing
+MWMOTE,Wine,Table 6 (and Table 6 continued),p.13-14 (printed p.417-418),0.99215,0.97483,not in text,name:missing; proposed:missing; smote:missing
+MWMOTE,Yeast,Table 6 (and Table 6 continued),p.13-14 (printed p.417-418),0.83093,0.82486,partly missing,name:elsewhere@15; proposed:missing; smote:missing
+MWMOTE,Texture,Table 6 (and Table 6 continued),p.13-14 (printed p.417-418),0.93872,0.93126,not in text,name:missing; proposed:missing; smote:missing
+MWMOTE,Segment,Table 6 (and Table 6 continued),p.13-14 (printed p.417-418),0.79108,0.77089,partly missing,name:elsewhere@4; proposed:missing; smote:missing
+MWMOTE,OCR,Table 6 (and Table 6 continued),p.13-14 (printed p.417-418),0.98861,0.99255,partly missing,name:elsewhere@2; proposed:missing; smote:missing
+MWMOTE,Page-blocks,Table 6 (and Table 6 continued),p.13-14 (printed p.417-418),0.97259,0.99032,not in text,name:missing; proposed:missing; smote:missing
+NBU,Wisconsin,Table 4,26,97.12,96.66,row match on cited page,name:cited@26; proposed:cited@26; smote:cited@26; _row:row@26
+NBU,Pima,Table 4,26,55.24,60.02,row match on cited page,name:cited@26; proposed:cited@26; smote:cited@26; _row:row@26
+NBU,Glass0,Table 4,26,73.19,68.14,row match on cited page,name:cited@26; proposed:cited@26; smote:cited@26; _row:row@26
+NBU,Vehicle1,Table 4,26,55.92,48.93,row match on cited page,name:cited@26; proposed:cited@26; smote:cited@26; _row:row@26
+NBU,Vehicle0,Table 4,26,87.16,84.07,ok on cited page,name:cited@26; proposed:cited@26; smote:cited@26
+NBU,Ecoli1,Table 4,26,87.67,70.11,ok on cited page,name:cited@26; proposed:cited@26; smote:cited@26
+NBU,New-thyroid1,Table 4,26,95.74,75.59,row match on cited page,name:cited@26; proposed:cited@26; smote:cited@26; _row:row@26
+NBU,New-thyroid2,Table 4,26,95.74,100,"values on one line, name not on that line: row match on cited page",proposed:cited@26; smote:cited@26; _row:row@26
+NBU,Ecoli2,Table 4,26,94.02,83.67,ok on cited page,name:cited@26; proposed:cited@26; smote:cited@26
+NBU,Segmemt0,Table 4,26,94,97.54,row match on cited page,name:cited@26; proposed:cited@26; smote:cited@26; _row:row@26
+NBU,Yeast3,Table 4,26,91.08,67.68,row match on cited page,name:cited@26; proposed:cited@26; smote:cited@26; _row:row@26
+NBU,Ecoli3,Table 4,26,94.87,52.55,row match on cited page,name:cited@26; proposed:cited@26; smote:cited@26; _row:row@26
+NBU,Yeast2vs4,Table 4,26,81.83,62.9,ok on cited page,name:cited@26; proposed:cited@26; smote:cited@26
+NBU,Vowel0,Table 4,26,99.72,84.98,ok on cited page,name:cited@26; proposed:cited@26; smote:cited@26
+NBU,Glass2,Table 4,26,73.96,57.74,row match on cited page,name:cited@26; proposed:cited@26; smote:cited@26; _row:row@26
+NBU,Yeast1vs7,Table 4,26,51.64,0,ok on cited page,name:cited@26; proposed:cited@26; smote:cited@26
+NBU,Glass4,Table 4,26,70.71,70.71,"row match, other page",name:cited@26; proposed:cited@26; smote:cited@26; _row:row@29
+NBU,Ecoli4,Table 4,26,100,100,row match on cited page,name:cited@26; proposed:cited@26; smote:cited@26; _row:row@26
+NBU,Page-blocks13vs2,Table 4,26,97.7,100,row match on cited page,name:cited@26; proposed:cited@26; smote:cited@26; _row:row@26
+NBU,Abalone09-18,Table 4,26,64.5,35.1,row match on cited page,name:cited@26; proposed:cited@26; smote:cited@26; _row:row@26
+NBU,Glass5,Table 4,26,0,0,row match on cited page,name:cited@26; proposed:cited@26; smote:cited@26; _row:row@27
+NBU,Yeast4,Table 4,26,84.29,54.29,ok on cited page,name:cited@26; proposed:cited@26; smote:cited@26
+NBU,Ecoli0137vs26,Table 4,26,100,100,row match on cited page,name:cited@26; proposed:cited@26; smote:cited@26; _row:row@26
+NBU,Yeast6,Table 4,26,74.54,75.46,ok on cited page,name:cited@26; proposed:cited@26; smote:cited@26
+NROMM,Wine,"Supplementary Table 8 (MG [%], C5.0); 7 of the 20 rows also in main Table 3",supp p.24,97.05,80.82,row match on cited page,name:cited@24; proposed:cited@24; smote:cited@24; _row:row@24
+NROMM,Glass,"Supplementary Table 8 (MG [%], C5.0); 7 of the 20 rows also in main Table 3",supp p.24,79.74,55.41,row match on cited page,name:cited@24; proposed:cited@24; smote:cited@24; _row:row@24
+NROMM,New-thyroid,"Supplementary Table 8 (MG [%], C5.0); 7 of the 20 rows also in main Table 3",supp p.24,97.73,80.69,row match on cited page,name:cited@24; proposed:cited@24; smote:cited@24; _row:row@24
+NROMM,Vehicle,"Supplementary Table 8 (MG [%], C5.0); 7 of the 20 rows also in main Table 3",supp p.24,71.68,59.57,row match on cited page,name:cited@24; proposed:cited@24; smote:cited@24; _row:row@24
+NROMM,Page-blocks,"Supplementary Table 8 (MG [%], C5.0); 7 of the 20 rows also in main Table 3",supp p.24,88.20,71.64,row match on cited page,name:cited@24; proposed:cited@24; smote:cited@24; _row:row@24
+NROMM,Winequality-red,"Supplementary Table 8 (MG [%], C5.0); 7 of the 20 rows also in main Table 3",supp p.24,47.89,17.80,row match on cited page,name:cited@24; proposed:cited@24; smote:cited@24; _row:row@24
+NROMM,Zoo,"Supplementary Table 8 (MG [%], C5.0); 7 of the 20 rows also in main Table 3",supp p.24,96.86,55.61,row match on cited page,name:cited@24; proposed:cited@24; smote:cited@24; _row:row@24
+NROMM,Balance,"Supplementary Table 8 (MG [%], C5.0); 7 of the 20 rows also in main Table 3",supp p.24,66.74,40.57,row match on cited page,name:cited@24; proposed:cited@24; smote:cited@24; _row:row@24
+NROMM,Car,"Supplementary Table 8 (MG [%], C5.0); 7 of the 20 rows also in main Table 3",supp p.24,94.46,81.16,row match on cited page,name:cited@24; proposed:cited@24; smote:cited@24; _row:row@24
+NROMM,Led7digit,"Supplementary Table 8 (MG [%], C5.0); 7 of the 20 rows also in main Table 3",supp p.24,78.60,57.85,row match on cited page,name:cited@24; proposed:cited@24; smote:cited@24; _row:row@24
+NROMM,Dermatology,"Supplementary Table 8 (MG [%], C5.0); 7 of the 20 rows also in main Table 3",supp p.24,96.42,79.34,row match on cited page,name:cited@24; proposed:cited@24; smote:cited@24; _row:row@24
+NROMM,Flare,"Supplementary Table 8 (MG [%], C5.0); 7 of the 20 rows also in main Table 3",supp p.24,64.04,55.98,row match on cited page,name:cited@24; proposed:cited@24; smote:cited@24; _row:row@24
+NROMM,Hayes-roth,"Supplementary Table 8 (MG [%], C5.0); 7 of the 20 rows also in main Table 3",supp p.24,91.16,70.52,row match on cited page,name:cited@24; proposed:cited@24; smote:cited@24; _row:row@24
+NROMM,Lymphography,"Supplementary Table 8 (MG [%], C5.0); 7 of the 20 rows also in main Table 3",supp p.24,88.22,40.60,row match on cited page,name:cited@24; proposed:cited@24; smote:cited@24; _row:row@24
+NROMM,Automobile,"Supplementary Table 8 (MG [%], C5.0); 7 of the 20 rows also in main Table 3",supp p.24,91.78,51.86,row match on cited page,name:cited@24; proposed:cited@24; smote:cited@24; _row:row@24
+NROMM,Cleveland,"Supplementary Table 8 (MG [%], C5.0); 7 of the 20 rows also in main Table 3",supp p.24,36.02,18.00,row match on cited page,name:cited@24; proposed:cited@24; smote:cited@24; _row:row@24
+NROMM,Contraceptive,"Supplementary Table 8 (MG [%], C5.0); 7 of the 20 rows also in main Table 3",supp p.24,52.79,38.15,row match on cited page,name:cited@24; proposed:cited@24; smote:cited@24; _row:row@24
+NROMM,Ecoli,"Supplementary Table 8 (MG [%], C5.0); 7 of the 20 rows also in main Table 3",supp p.24,71.72,51.72,row match on cited page,name:cited@24; proposed:cited@24; smote:cited@24; _row:row@24
+NROMM,Yeast,"Supplementary Table 8 (MG [%], C5.0); 7 of the 20 rows also in main Table 3",supp p.24,55.85,43.83,row match on cited page,name:cited@24; proposed:cited@24; smote:cited@24; _row:row@24
+NROMM,Thyroid,"Supplementary Table 8 (MG [%], C5.0); 7 of the 20 rows also in main Table 3",supp p.24,96.05,73.62,row match on cited page,name:cited@24; proposed:cited@24; smote:cited@24; _row:row@24
+OREM-M,Vt (Vertebral),Table S24 (supplementary),"supplementary page not identified (main paper has only Table 7 p-values, p.12)",0.7615,0.7667,"values on one line, name not on that line: row match, other page",proposed:elsewhere@19; smote:elsewhere@18; _row:row@40
+OREM-M,Lg (Laryngeal),Table S24 (supplementary),"supplementary page not identified (main paper has only Table 7 p-values, p.12)",0.6184,0.5985,"values on one line, name not on that line: row match, other page",proposed:elsewhere@22; smote:elsewhere@40; _row:row@40
+OREM-M,NT (New-thyroid),Table S24 (supplementary),"supplementary page not identified (main paper has only Table 7 p-values, p.12)",0.9122,0.901,"values on one line, name not on that line: row match, other page",proposed:elsewhere@19; smote:elsewhere@23; _row:row@40
+OREM-M,Toy (Toy),Table S24 (supplementary),"supplementary page not identified (main paper has only Table 7 p-values, p.12)",0.8581,0.8574,"values on one line, name not on that line: row match, other page",proposed:elsewhere@37; smote:elsewhere@19; _row:row@40
+OREM-M,Vi-3 (Voice3),Table S24 (supplementary),"supplementary page not identified (main paper has only Table 7 p-values, p.12)",0.2161,0.2262,"values on one line, name not on that line: row match, other page",proposed:elsewhere@40; smote:elsewhere@40; _row:row@40
+OREM-M,W5 (Wisconsin5),Table S24 (supplementary),"supplementary page not identified (main paper has only Table 7 p-values, p.12)",0.0954,0.0998,"values on one line, name not on that line: row match, other page",proposed:elsewhere@40; smote:elsewhere@40; _row:row@40
+OREM-M,Cl (Cleveland),Table S24 (supplementary),"supplementary page not identified (main paper has only Table 7 p-values, p.12)",0.2646,0.2793,"values on one line, name not on that line: row match, other page",proposed:elsewhere@40; smote:elsewhere@40; _row:row@40
+OREM-M,Vi-6 (Voice6),Table S24 (supplementary),"supplementary page not identified (main paper has only Table 7 p-values, p.12)",0.1524,0.1538,"values on one line, name not on that line: row match, other page",proposed:elsewhere@40; smote:elsewhere@40; _row:row@40
+OREM-M,Vw-5 (Vowel5),Table S24 (supplementary),"supplementary page not identified (main paper has only Table 7 p-values, p.12)",0.8664,0.8623,"values on one line, name not on that line: row match, other page",proposed:elsewhere@25; smote:elsewhere@18; _row:row@40
+OREM-M,Vw-4 (Vowel4),Table S24 (supplementary),"supplementary page not identified (main paper has only Table 7 p-values, p.12)",0.8057,0.8021,"values on one line, name not on that line: row match, other page",proposed:elsewhere@24; smote:elsewhere@30; _row:row@40
+OREM-M,Dto (Dermatology),Table S24 (supplementary),"supplementary page not identified (main paper has only Table 7 p-values, p.12)",0.9534,0.9514,"values on one line, name not on that line: row match, other page",proposed:elsewhere@19; smote:elsewhere@19; _row:row@19
+OREM-M,PB (Page-blocks),Table S24 (supplementary),"supplementary page not identified (main paper has only Table 7 p-values, p.12)",0.9445,0.9373,"values on one line, name not on that line: row match, other page",proposed:elsewhere@40; smote:elsewhere@26; _row:row@40
+OREM-M,SWD (SWD),Table S24 (supplementary),"supplementary page not identified (main paper has only Table 7 p-values, p.12)",0.5473,0.489,"values on one line, name not on that line: row match, other page",proposed:elsewhere@40; smote:elsewhere@23; _row:row@40
+OREM-M,Ye (Yeast),Table S24 (supplementary),"supplementary page not identified (main paper has only Table 7 p-values, p.12)",0.5413,0.5414,"values on one line, name not on that line: row match, other page",proposed:elsewhere@18; smote:elsewhere@30; _row:row@40
+OREM-M,Au5 (Auto5),Table S24 (supplementary),"supplementary page not identified (main paper has only Table 7 p-values, p.12)",0.3834,0.2922,"values on one line, name not on that line: row match, other page",proposed:elsewhere@40; smote:elsewhere@40; _row:row@40
+OREM-M,LEV (LEV),Table S24 (supplementary),"supplementary page not identified (main paper has only Table 7 p-values, p.12)",0.5551,0.477,"values on one line, name not on that line: row match, other page",proposed:elsewhere@40; smote:elsewhere@40; _row:row@40
+OREM-M,LP (Leaves plant),Table S24 (supplementary),"supplementary page not identified (main paper has only Table 7 p-values, p.12)",0.5388,0.5134,"values on one line, name not on that line: row match, other page",proposed:elsewhere@18; smote:elsewhere@40; _row:row@40
+OREM-M,S10 (Stock10),Table S24 (supplementary),"supplementary page not identified (main paper has only Table 7 p-values, p.12)",0.7536,0.7597,"values on one line, name not on that line: row match, other page",proposed:elsewhere@23; smote:elsewhere@18; _row:row@40
+OREM-M,PF (Plates faults),Table S24 (supplementary),"supplementary page not identified (main paper has only Table 7 p-values, p.12)",0.7428,0.7384,"values on one line, name not on that line: row match, other page",proposed:elsewhere@23; smote:elsewhere@25; _row:row@40
+OREM-M,Ab (Abalone),Table S24 (supplementary),"supplementary page not identified (main paper has only Table 7 p-values, p.12)",0.2654,0.2683,"values on one line, name not on that line: row match, other page",proposed:elsewhere@40; smote:elsewhere@40; _row:row@40
+OREM-M,H10 (Housing10),Table S24 (supplementary),"supplementary page not identified (main paper has only Table 7 p-values, p.12)",0.0795,0.0503,"values on one line, name not on that line: row match, other page",proposed:elsewhere@40; smote:elsewhere@40; _row:row@40
+OVO-SMOTE,aut,Table 7,p.10 (printed 106),80.11,82.04,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+OVO-SMOTE,bal,Table 7,p.10 (printed 106),54.29,55.30,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+OVO-SMOTE,cle,Table 7,p.10 (printed 106),33.89,24.91,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+OVO-SMOTE,con,Table 7,p.10 (printed 106),50.09,47.19,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+OVO-SMOTE,der,Table 7,p.10 (printed 106),95.61,94.83,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+OVO-SMOTE,eco,Table 7,p.10 (printed 106),70.99,65.15,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+OVO-SMOTE,fla,Table 7,p.10 (printed 106),64.74,64.01,"values on one line, name not on that line: row match on cited page",proposed:cited@10; smote:cited@10; _row:row@10
+OVO-SMOTE,gla,Table 7,p.10 (printed 106),70.84,63.71,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+OVO-SMOTE,hay,Table 7,p.10 (printed 106),83.49,86.03,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+OVO-SMOTE,led,Table 7,p.10 (printed 106),71.64,72.55,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+OVO-SMOTE,lym,Table 7,p.10 (printed 106),60.91,67.81,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+OVO-SMOTE,new,Table 7,p.10 (printed 106),92.50,90.56,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+OVO-SMOTE,nur,Table 7,p.10 (printed 106),94.07,87.76,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+OVO-SMOTE,pag,Table 7,p.10 (printed 106),90.24,85.55,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+OVO-SMOTE,pos,Table 7,p.10 (printed 106),48.33,21.34,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+OVO-SMOTE,sat,Table 7,p.10 (printed 106),84.18,83.19,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+OVO-SMOTE,shu,Table 7,p.10 (printed 106),96.84,95.05,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+OVO-SMOTE,spl,Table 7,p.10 (printed 106),94.88,94.33,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+OVO-SMOTE,thy,Table 7,p.10 (printed 106),99.28,98.65,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+OVO-SMOTE,win,Table 7,p.10 (printed 106),92.02,94.24,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+OVO-SMOTE,wqr,Table 7,p.10 (printed 106),34.01,31.87,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+OVO-SMOTE,wqw,Table 7,p.10 (printed 106),42.35,38.78,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+OVO-SMOTE,yea,Table 7,p.10 (printed 106),52.10,51.77,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+OVO-SMOTE,zoo,Table 7,p.10 (printed 106),88.45,87.64,row match on cited page,name:cited@10; proposed:cited@10; smote:cited@10; _row:row@10
+RACOG / wRACOG,prompting,"Table 5 (Results for SVM), G-mean block",p.8 (printed 229),0.7913,0.7317,partly missing,name:cited@8; proposed:missing; smote:missing
+RACOG / wRACOG,abalone,"Table 5 (Results for SVM), G-mean block",p.8 (printed 229),0.8621,0.8968,partly missing,name:cited@8; proposed:missing; smote:missing
+RACOG / wRACOG,car,"Table 5 (Results for SVM), G-mean block",p.8 (printed 229),0.9622,0.9622,partly missing,name:cited@8; proposed:missing; smote:missing
+RACOG / wRACOG,nursery,"Table 5 (Results for SVM), G-mean block",p.8 (printed 229),0.9775,0.976,partly missing,name:cited@8; proposed:missing; smote:missing
+RACOG / wRACOG,letter,"Table 5 (Results for SVM), G-mean block",p.8 (printed 229),0.9394,0.9424,partly missing,name:cited@8; proposed:missing; smote:missing
+RACOG / wRACOG,connect-4,"Table 5 (Results for SVM), G-mean block",p.8 (printed 229),0.585,0.7372,partly missing,name:cited@8; proposed:missing; smote:missing
+RACOG / wRACOG,ecoli1,"Table 5 (Results for SVM), G-mean block",p.8 (printed 229),0.8378,0.8888,partly missing,name:cited@8; proposed:missing; smote:missing
+RACOG / wRACOG,haberman,"Table 5 (Results for SVM), G-mean block",p.8 (printed 229),0.00,0.5032,partly missing,name:cited@8; proposed:cited@8; smote:missing
+RACOG / wRACOG,yeast4,"Table 5 (Results for SVM), G-mean block",p.8 (printed 229),0.8106,0.7082,partly missing,name:cited@8; proposed:missing; smote:missing
+RACOG / wRACOG,yeast6,"Table 5 (Results for SVM), G-mean block",p.8 (printed 229),0.8999,0.8721,partly missing,name:cited@8; proposed:missing; smote:missing
+RAMOBoost,Sonar,Table III,p.9-10 (printed 1632-1633),0.7796,0.7605,ok on cited page,name:cited@9; proposed:cited@9; smote:cited@9
+RAMOBoost,Spambase,Table III,p.9-10 (printed 1632-1633),0.9438,0.9382,ok on cited page,name:cited@9; proposed:cited@9; smote:cited@9
+RAMOBoost,Ionosphere,Table III,p.9-10 (printed 1632-1633),0.7874,0.7643,ok on cited page,name:cited@9; proposed:cited@9; smote:cited@9
+RAMOBoost,PID,Table III,p.9-10 (printed 1632-1633),0.729,0.7281,ok on cited page,name:cited@9; proposed:cited@9; smote:cited@9
+RAMOBoost,Wine,Table III,p.9-10 (printed 1632-1633),0.9813,0.9804,ok on cited page,name:cited@9; proposed:cited@9; smote:cited@9
+RAMOBoost,German,Table III,p.9-10 (printed 1632-1633),0.6547,0.6420,ok on cited page,name:cited@9; proposed:cited@9; smote:cited@9
+RAMOBoost,Phoneme,Table III,p.9-10 (printed 1632-1633),0.8222,0.7942,ok on cited page,name:cited@9; proposed:cited@9; smote:cited@9
+RAMOBoost,Vehicle,Table III,p.9-10 (printed 1632-1633),0.956,0.9511,ok on cited page,name:cited@9; proposed:cited@9; smote:cited@9
+RAMOBoost,Texture,Table III,p.9-10 (printed 1632-1633),0.9981,0.9916,ok on cited page,name:cited@9; proposed:cited@9; smote:cited@9
+RAMOBoost,Segment,Table III,p.9-10 (printed 1632-1633),0.9941,0.9918,ok on cited page,name:cited@9; proposed:cited@9; smote:cited@9
+RAMOBoost,Page_Blocks,Table III,p.9-10 (printed 1632-1633),0.9349,0.9118,ok on cited page,name:cited@8; proposed:cited@10; smote:cited@10
+RAMOBoost,Satimage,Table III,p.9-10 (printed 1632-1633),0.819,0.7465,ok on cited page,name:cited@8; proposed:cited@10; smote:cited@10
+RAMOBoost,Mf_Zernike,Table III,p.9-10 (printed 1632-1633),0.584,0.7356,ok on cited page,name:cited@8; proposed:cited@10; smote:cited@10
+RAMOBoost,Vowel,Table III,p.9-10 (printed 1632-1633),0.9962,0.9599,ok on cited page,name:cited@8; proposed:cited@10; smote:cited@10
+RAMOBoost,Abalone,Table III,p.9-10 (printed 1632-1633),0.6808,0.7166,ok on cited page,name:cited@8; proposed:cited@10; smote:cited@10
+RAMOBoost,Glass,Table III,p.9-10 (printed 1632-1633),0.8610,0.9491,ok on cited page,name:cited@8; proposed:cited@10; smote:cited@10
+RAMOBoost,Yeast,Table III,p.9-10 (printed 1632-1633),0.6405,0.7030,ok on cited page,name:cited@8; proposed:cited@10; smote:cited@10
+RAMOBoost,Letter,Table III,p.9-10 (printed 1632-1633),0.9827,0.9391,ok on cited page,name:cited@8; proposed:cited@10; smote:cited@10
+RAMOBoost,Shuttle,Table III,p.9-10 (printed 1632-1633),0.9828,0.9716,ok on cited page,name:cited@8; proposed:cited@10; smote:cited@10
+RBBoost / Random Balance,hddt boundary,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.1320,0.3482,"ok, other page",name:cited@17; proposed:cited@17; smote:elsewhere@3
+RBBoost / Random Balance,hddt breast-y,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.5454,0.5462,"ok, other page",name:cited@17; proposed:cited@17; smote:elsewhere@3
+RBBoost / Random Balance,hddt cam,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.2916,0.4137,ok on cited page,name:cited@17; proposed:cited@17; smote:cited@16
+RBBoost / Random Balance,hddt compustat,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.5965,0.7509,"ok, other page",name:cited@17; proposed:cited@17; smote:elsewhere@3
+RBBoost / Random Balance,hddt covtype,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.9439,0.9460,"ok, other page",name:cited@17; proposed:cited@17; smote:elsewhere@3
+RBBoost / Random Balance,hddt credit-g,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.6334,0.6170,"ok, other page",name:cited@17; proposed:cited@17; smote:elsewhere@3
+RBBoost / Random Balance,hddt estate,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.2176,0.5030,"ok, other page",name:cited@17; proposed:cited@17; smote:elsewhere@3
+RBBoost / Random Balance,hddt german-numer,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.6438,0.6434,ok on cited page,name:cited@17; proposed:cited@17; smote:cited@18
+RBBoost / Random Balance,hddt heart-v,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.5617,0.5553,"ok, other page",name:cited@17; proposed:cited@17; smote:elsewhere@3
+RBBoost / Random Balance,hddt hypo,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.9432,0.9329,"ok, other page",name:cited@17; proposed:cited@17; smote:elsewhere@1
+RBBoost / Random Balance,hddt ism,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.8308,0.8709,ok on cited page,name:cited@17; proposed:cited@17; smote:cited@17
+RBBoost / Random Balance,hddt letter,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.9779,0.9664,"ok, other page",name:cited@17; proposed:cited@17; smote:elsewhere@3
+RBBoost / Random Balance,hddt oil,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.6679,0.6819,"ok, other page",name:cited@17; proposed:cited@17; smote:elsewhere@4
+RBBoost / Random Balance,hddt optdigits,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.9937,0.9854,ok on cited page,name:cited@17; proposed:cited@17; smote:cited@16
+RBBoost / Random Balance,hddt page,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.9340,0.9468,"row match, other page",name:cited@17; proposed:cited@17; smote:elsewhere@1; _row:row@4
+RBBoost / Random Balance,hddt pendigits,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.9921,0.9799,ok on cited page,name:cited@17; proposed:cited@17; smote:cited@18
+RBBoost / Random Balance,hddt phoneme,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.8675,0.8613,"ok, other page",name:cited@17; proposed:cited@17; smote:elsewhere@4
+RBBoost / Random Balance,hddt PhosS,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.0300,0.3153,"ok, other page",name:cited@17; proposed:cited@17; smote:elsewhere@4
+RBBoost / Random Balance,hddt satimage,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.7929,0.8174,ok on cited page,name:cited@17; proposed:cited@17; smote:cited@16
+RBBoost / Random Balance,hddt segment,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.9932,0.9853,"ok, other page",name:cited@17; proposed:cited@17; smote:elsewhere@4
+RBBoost / Random Balance,keel abalone19,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.1099,0.3596,"ok, other page",name:cited@17; proposed:cited@17; smote:elsewhere@4
+RBBoost / Random Balance,keel abalone9-18,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.5716,0.6103,"ok, other page",name:cited@17; proposed:cited@17; smote:elsewhere@4
+RBBoost / Random Balance,keel cleveland-0 vs 4,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.6754,0.7143,ok on cited page,name:cited@17; proposed:cited@17; smote:cited@16
+RBBoost / Random Balance,keel ecoli-0-1-3-7 vs 2-6,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.6880,0.6534,"ok, other page",name:cited@17; proposed:cited@17; smote:elsewhere@4
+RBBoost / Random Balance,keel ecoli-0-1-4-6 vs 5,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.8912,0.8063,ok on cited page,name:cited@17; proposed:cited@17; smote:cited@16
+RBBoost / Random Balance,keel ecoli-0-1-4-7 vs 2-3,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.8243,0.8156,ok on cited page,name:cited@17; proposed:cited@17; smote:cited@16
+RBBoost / Random Balance,keel ecoli-0-1-4-7 vs 5-6,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.8635,0.8533,ok on cited page,name:cited@17; proposed:cited@17; smote:cited@18
+RBBoost / Random Balance,keel ecoli-0-1 vs 2-3-5,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.8544,0.8515,"ok, other page",name:cited@17; proposed:cited@17; smote:elsewhere@4
+RBBoost / Random Balance,keel ecoli-0-1 vs 5,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.8506,0.8037,"ok, other page",name:cited@17; proposed:cited@17; smote:elsewhere@4
+RBBoost / Random Balance,keel ecoli-0-2-3-4 vs 5,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.8746,0.8644,"ok, other page",name:cited@17; proposed:cited@17; smote:elsewhere@4
+RBBoost / Random Balance,keel ecoli-0-2-6-7 vs 3-5,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.8553,0.8427,"ok, other page",name:cited@17; proposed:cited@17; smote:elsewhere@4
+RBBoost / Random Balance,keel ecoli-0-3-4-6 vs 5,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.8841,0.8596,ok on cited page,name:cited@17; proposed:cited@17; smote:cited@17
+RBBoost / Random Balance,keel ecoli-0-3-4-7 vs 5-6,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.8706,0.8506,ok on cited page,name:cited@17; proposed:cited@17; smote:cited@17
+RBBoost / Random Balance,keel ecoli-0-3-4 vs 5,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.8495,0.7942,"ok, other page",name:cited@16; proposed:cited@18; smote:elsewhere@4
+RBBoost / Random Balance,keel ecoli-0-4-6 vs 5,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.8254,0.8150,"ok, other page",name:cited@16; proposed:cited@18; smote:elsewhere@4
+RBBoost / Random Balance,keel ecoli-0-6-7 vs 3-5,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.8059,0.8358,"ok, other page",name:cited@16; proposed:cited@16; smote:elsewhere@4
+RBBoost / Random Balance,keel ecoli-0-6-7 vs 5,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.8953,0.8969,"ok, other page",name:cited@16; proposed:cited@18; smote:elsewhere@4
+RBBoost / Random Balance,keel ecoli-0 vs 1,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.9771,0.9820,"ok, other page",name:cited@16; proposed:cited@18; smote:elsewhere@2
+RBBoost / Random Balance,keel ecoli1,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.8538,0.8693,"ok, other page",name:cited@16; proposed:cited@17; smote:elsewhere@4
+RBBoost / Random Balance,keel ecoli2,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.8694,0.8812,"ok, other page",name:cited@16; proposed:cited@17; smote:elsewhere@1
+RBBoost / Random Balance,keel ecoli3,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.7162,0.8086,ok on cited page,name:cited@16; proposed:cited@18; smote:cited@16
+RBBoost / Random Balance,keel ecoli4,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.8860,0.8020,"ok, other page",name:cited@16; proposed:cited@18; smote:elsewhere@4
+RBBoost / Random Balance,keel glass-0-1-2-3 vs 4-5,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.8867,0.8849,"ok, other page",name:cited@16; proposed:cited@18; smote:elsewhere@4
+RBBoost / Random Balance,keel glass-0-1-4-6 vs 2,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.4106,0.5652,"ok, other page",name:cited@16; proposed:cited@18; smote:elsewhere@4
+RBBoost / Random Balance,keel glass-0-1-5 vs 2,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.4377,0.5817,"ok, other page",name:cited@16; proposed:cited@18; smote:elsewhere@4
+RBBoost / Random Balance,keel glass-0-1-6 vs 2,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.3315,0.4431,"ok, other page",name:cited@16; proposed:cited@18; smote:elsewhere@4
+RBBoost / Random Balance,keel glass-0-1-6 vs 5,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.8161,0.9227,"ok, other page",name:cited@16; proposed:cited@18; smote:elsewhere@4
+RBBoost / Random Balance,keel glass-0-4 vs 5,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.9185,0.9939,row match on cited page,name:cited@16; proposed:cited@18; smote:cited@18; _row:row@18
+RBBoost / Random Balance,keel glass-0-6 vs 5,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.8719,0.9485,"ok, other page",name:cited@16; proposed:cited@18; smote:elsewhere@2
+RBBoost / Random Balance,keel glass0,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.7868,0.7794,ok on cited page,name:cited@16; proposed:cited@18; smote:cited@16
+RBBoost / Random Balance,keel glass1,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.7602,0.7057,"ok, other page",name:cited@16; proposed:cited@16; smote:elsewhere@1
+RBBoost / Random Balance,keel glass2,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.3848,0.6042,"ok, other page",name:cited@16; proposed:cited@18; smote:elsewhere@4
+RBBoost / Random Balance,keel glass4,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.6551,0.7379,"ok, other page",name:cited@16; proposed:cited@18; smote:elsewhere@4
+RBBoost / Random Balance,keel glass5,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.7761,0.9454,ok on cited page,name:cited@17; proposed:cited@18; smote:cited@16
+RBBoost / Random Balance,keel glass6,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.9109,0.9070,"ok, other page",name:cited@17; proposed:cited@18; smote:elsewhere@4
+RBBoost / Random Balance,keel haberman,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.4957,0.6265,row match on cited page,name:cited@17; proposed:cited@18; smote:cited@18; _row:row@18
+RBBoost / Random Balance,keel iris0,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.9816,0.9816,row match on cited page,name:cited@17; proposed:cited@18; smote:cited@18; _row:row@18
+RBBoost / Random Balance,keel led7digit-0-2-4-5-6-,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.8714,0.9025,ok on cited page,name:cited@17; proposed:cited@18; smote:cited@16
+RBBoost / Random Balance,keel new-thyroid1,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.9546,0.9332,"ok, other page",name:cited@17; proposed:cited@17; smote:elsewhere@1
+RBBoost / Random Balance,keel new-thyroid2,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.9637,0.9481,"ok, other page",name:cited@17; proposed:cited@18; smote:elsewhere@2
+RBBoost / Random Balance,keel page-blocks-1-3 vs 4,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.9837,0.9634,"ok, other page",name:cited@17; proposed:cited@18; smote:elsewhere@4
+RBBoost / Random Balance,keel page-blocks0,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.9302,0.9384,"ok, other page",name:cited@17; proposed:cited@17; smote:elsewhere@4
+RBBoost / Random Balance,keel pima,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.7025,0.7349,ok on cited page,name:cited@17; proposed:cited@18; smote:cited@17
+RBBoost / Random Balance,keel segment0,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.9919,0.9856,"ok, other page",name:cited@17; proposed:cited@18; smote:elsewhere@2
+RBBoost / Random Balance,keel shuttle-c0-vs-c4,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",1.0000,1.0000,row match on cited page,name:cited@17; proposed:cited@17; smote:cited@17; _row:row@17
+RBBoost / Random Balance,keel shuttle-c2-vs-c4,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",1.0000,1.0000,row match on cited page,name:cited@17; proposed:cited@17; smote:cited@17; _row:row@17
+RBBoost / Random Balance,keel vehicle0,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.9588,0.9150,ok on cited page,name:cited@17; proposed:cited@18; smote:cited@16
+RBBoost / Random Balance,keel vehicle1,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.6830,0.7301,"ok, other page",name:cited@17; proposed:cited@18; smote:elsewhere@4
+RBBoost / Random Balance,keel vehicle2,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.9772,0.9508,"ok, other page",name:cited@17; proposed:cited@17; smote:elsewhere@3
+RBBoost / Random Balance,keel vehicle3,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.6647,0.7218,"ok, other page",name:cited@17; proposed:cited@18; smote:elsewhere@4
+RBBoost / Random Balance,keel vowel0,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.9817,0.9575,"ok, other page",name:cited@17; proposed:cited@18; smote:elsewhere@4
+RBBoost / Random Balance,keel wisconsin,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.9646,0.9549,"ok, other page",name:cited@17; proposed:cited@18; smote:elsewhere@4
+RBBoost / Random Balance,keel yeast-0-2-5-6 vs 3-7,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.7195,0.7574,"ok, other page",name:cited@17; proposed:cited@18; smote:elsewhere@4
+RBBoost / Random Balance,keel yeast-0-2-5-7-9 vs 3,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.8799,0.8978,"ok, other page",name:cited@17; proposed:cited@18; smote:elsewhere@1
+RBBoost / Random Balance,keel yeast-0-3-5-9 vs 7-8,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.5319,0.6212,"ok, other page",name:cited@17; proposed:cited@18; smote:elsewhere@4
+RBBoost / Random Balance,keel yeast-0-5-6-7-9 vs 4,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.6452,0.7308,"ok, other page",name:cited@17; proposed:cited@18; smote:elsewhere@4
+RBBoost / Random Balance,keel yeast-1-2-8-9 vs 7,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.4452,0.5713,"ok, other page",name:cited@17; proposed:cited@18; smote:elsewhere@4
+RBBoost / Random Balance,keel yeast-1-4-5-8 vs 7,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.2365,0.4955,"ok, other page",name:cited@17; proposed:cited@18; smote:elsewhere@4
+RBBoost / Random Balance,keel yeast-1 vs 7,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.5663,0.5953,"ok, other page",name:cited@17; proposed:cited@18; smote:elsewhere@4
+RBBoost / Random Balance,keel yeast-2 vs 4,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.8547,0.8933,ok on cited page,name:cited@17; proposed:cited@16; smote:cited@16
+RBBoost / Random Balance,keel yeast-2 vs 8,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.7238,0.7117,ok on cited page,name:cited@17; proposed:cited@18; smote:cited@16
+RBBoost / Random Balance,keel yeast1,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.6461,0.6988,"ok, other page",name:cited@17; proposed:cited@18; smote:elsewhere@4
+RBBoost / Random Balance,keel yeast3,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.8603,0.9148,ok on cited page,name:cited@17; proposed:cited@18; smote:cited@16
+RBBoost / Random Balance,keel yeast4,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.5807,0.7564,ok on cited page,name:cited@17; proposed:cited@17; smote:cited@16
+RBBoost / Random Balance,keel yeast5,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.8438,0.9269,"ok, other page",name:cited@17; proposed:cited@18; smote:elsewhere@1
+RBBoost / Random Balance,keel yeast6,"Supplementary Table 11 (Geometric Mean, Boosting family) for RB-B and best_other; Supplementary Table 3 (Geometric Mean, Data-processing family) for ESM; RB-B values also in main Table 7, p.10-11","Supplementary pp.17-18 (Table 11), pp.3-5 (Table 3)",0.6878,0.7510,"ok, other page",name:cited@17; proposed:cited@18; smote:elsewhere@5
+RSMOTE,avila,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),0.784,0.775,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RSMOTE,breast_tissue2,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),0.924,0.796,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RSMOTE,breastcancer,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),0.980,0.936,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RSMOTE,codrna,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),0.871,0.892,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RSMOTE,creditApproval,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),0.861,0.824,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RSMOTE,ecoli,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),0.988,0.751,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RSMOTE,heart,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),0.951,0.748,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RSMOTE,iris,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),0.954,0.919,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RSMOTE,isolet5,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),0.680,0.735,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RSMOTE,letter,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),0.836,0.797,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RSMOTE,libra,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),0.976,0.890,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RSMOTE,magic,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),0.810,0.802,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RSMOTE,mocap,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),0.886,0.895,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RSMOTE,mushrooms,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),1.000,0.998,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RSMOTE,nomao,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),0.935,0.942,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RSMOTE,pima,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),0.825,0.721,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RSMOTE,poker,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),0.310,0.240,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RSMOTE,segment,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),0.960,0.940,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RSMOTE,skin,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),0.980,0.978,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RSMOTE,splice,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),0.839,0.747,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RSMOTE,susy,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),0.732,0.729,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RSMOTE,svmguide1,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),0.964,0.954,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RSMOTE,svmguide3,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),0.673,0.652,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RSMOTE,vehicle,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),0.985,0.954,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RSMOTE,votes,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),0.906,0.976,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RSMOTE,wine,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),1.000,0.968,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RSMOTE,Online_Retail,"Table 3 (binary, c = 0), G-mean block",14 (printed 410),0.993,0.995,row match on cited page,name:cited@14; proposed:cited@14; smote:cited@14; _row:row@14
+RUSBoost,CAR,Table IV,p.9 (printed 193),0.9964,0.9731,partly missing,name:cited@10; proposed:missing; smote:missing
+RUSBoost,CCCS12,Table IV,p.9 (printed 193),0.9579,0.8498,partly missing,name:elsewhere@5; proposed:missing; smote:missing
+RUSBoost,CM1,Table IV,p.9 (printed 193),0.7543,0.6473,partly missing,name:elsewhere@5; proposed:missing; smote:missing
+RUSBoost,CONTRACEPTIVE,Table IV,p.9 (printed 193),0.6982,0.6651,partly missing,name:cited@9; proposed:missing; smote:missing
+RUSBoost,ECOLI,Table IV,p.9 (printed 193),0.9320,0.8468,not in text,name:missing; proposed:missing; smote:missing
+RUSBoost,GLASS,Table IV,p.9 (printed 193),0.7620,0.7508,partly missing,name:cited@10; proposed:missing; smote:missing
+RUSBoost,MAMMOGRAPHY,Table IV,p.9 (printed 193),0.9356,0.8408,partly missing,name:cited@9; proposed:missing; smote:missing
+RUSBoost,PC1,Table IV,p.9 (printed 193),0.8466,0.7224,partly missing,name:elsewhere@5; proposed:missing; smote:missing
+RUSBoost,PENDIGITS,Table IV,p.9 (printed 193),0.9996,0.9798,not in text,name:missing; proposed:missing; smote:missing
+RUSBoost,SATIMG,Table IV,p.9 (printed 193),0.9471,0.7818,partly missing,name:cited@10; proposed:missing; smote:missing
+RUSBoost,SEGMENT,Table IV,p.9 (printed 193),0.9964,0.9622,partly missing,name:elsewhere@4; proposed:missing; smote:missing
+RUSBoost,SOLARFLARE,Table IV,p.9 (printed 193),0.8824,0.7651,partly missing,name:cited@9; proposed:missing; smote:missing
+RUSBoost,SP1,Table IV,p.9 (printed 193),0.7790,0.6141,partly missing,name:cited@9; proposed:missing; smote:missing
+RUSBoost,SP3,Table IV,p.9 (printed 193),0.7704,0.5163,partly missing,name:cited@9; proposed:missing; smote:missing
+RUSBoost,VEHICLE,Table IV,p.9 (printed 193),0.8359,0.7544,partly missing,name:elsewhere@5; proposed:missing; smote:missing
+SCUT,Thyroid,Table 2: G-mean values for J48.,p.5,0.980,0.989,row match on cited page,name:cited@5; proposed:cited@5; smote:cited@5; _row:row@5
+SCUT,Lympho.,Table 2: G-mean values for J48.,p.5,0.936,0.909,row match on cited page,name:cited@5; proposed:cited@5; smote:cited@5; _row:row@5
+SCUT,Pageblock,Table 2: G-mean values for J48.,p.5,0.975,0.975,row match on cited page,name:cited@5; proposed:cited@5; smote:cited@5; _row:row@5
+SCUT,Derma.,Table 2: G-mean values for J48.,p.5,0.977,0.971,row match on cited page,name:cited@5; proposed:cited@5; smote:cited@5; _row:row@5
+SCUT,Autos,Table 2: G-mean values for J48.,p.5,0.763,0.893,row match on cited page,name:cited@5; proposed:cited@5; smote:cited@5; _row:row@5
+SCUT,Ecoli,Table 2: G-mean values for J48.,p.5,0.907,0.921,row match on cited page,name:cited@5; proposed:cited@5; smote:cited@5; _row:row@5
+SCUT,Wine,Table 2: G-mean values for J48.,p.5,0.800,0.762,row match on cited page,name:cited@5; proposed:cited@5; smote:cited@5; _row:row@5
+SCUT,Yeast,Table 2: G-mean values for J48.,p.5,0.828,0.766,row match on cited page,name:cited@5; proposed:cited@5; smote:cited@5; _row:row@5
+SHSampler,balance,Table II,7,0.2990,0.3022,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SHSampler,car,Table II,7,0.9263,0.9468,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SHSampler,cleveland,Table II,7,0.0591,0.0000,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SHSampler,ecoli,Table II,7,0.1506,0.1182,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SHSampler,glass,Table II,7,0.5125,0.5393,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SHSampler,hayes-roth,Table II,7,0.8594,0.8308,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SHSampler,led7digit,Table II,7,0.6746,0.6800,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SHSampler,lymphography,Table II,7,0.6432,0.4370,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SHSampler,newthyroid,Table II,7,0.9276,0.9124,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SHSampler,page-blocks,Table II,7,0.8883,0.7955,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SHSampler,PhishingData,Table II,7,0.8834,0.8686,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SHSampler,sensorReadings,Table II,7,0.9866,0.9913,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SHSampler,thyroid,Table II,7,0.9298,0.9595,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SHSampler,userknowledge,Table II,7,0.7713,0.7525,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SHSampler,vehicle,Table II,7,0.6964,0.6724,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SHSampler,vertebralColumn,Table II,7,0.7549,0.7252,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SHSampler,wine,Table II,7,0.9255,0.9306,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SHSampler,winequality,Table II,7,0.0000,0.0000,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SHSampler,yeast,Table II,7,0.3464,0.0505,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SHSampler,zoo,Table II,7,0.5777,0.4340,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,vehicle,Table S3 (Supplementary),Supplementary p.7 (printed 7),0.9215,0.922,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,sat,Table S3 (Supplementary),Supplementary p.7 (printed 7),0.8528,0.8493,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,ecoli,Table S3 (Supplementary),Supplementary p.7 (printed 7),0.7726,0.7507,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,automobile,Table S3 (Supplementary),Supplementary p.7 (printed 7),0.8521,0.8326,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,voice9_6,Table S3 (Supplementary),Supplementary p.7 (printed 7),0.0747,0.074,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,vowel5,Table S3 (Supplementary),Supplementary p.7 (printed 7),0.8876,0.8742,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,vowel7,Table S3 (Supplementary),Supplementary p.7 (printed 7),0.847,0.8417,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,robot,Table S3 (Supplementary),Supplementary p.7 (printed 7),1,1,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,pendigits,Table S3 (Supplementary),Supplementary p.7 (printed 7),0.9664,0.967,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,page-blocks,Table S3 (Supplementary),Supplementary p.7 (printed 7),0.9493,0.9476,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,housing5,Table S3 (Supplementary),Supplementary p.7 (printed 7),0.7268,0.7112,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,SWD,Table S3 (Supplementary),Supplementary p.7 (printed 7),0.503,0.4854,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,wine-red,Table S3 (Supplementary),Supplementary p.7 (printed 7),0.4381,0.4195,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,voice9_7,Table S3 (Supplementary),Supplementary p.7 (printed 7),0.0121,0.0264,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,LEV,Table S3 (Supplementary),Supplementary p.7 (printed 7),0.4823,0.3917,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,machine,Table S3 (Supplementary),Supplementary p.7 (printed 7),0.072,0.069,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,abalone8,Table S3 (Supplementary),Supplementary p.7 (printed 7),0.2647,0.2544,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,plates-faults5,Table S3 (Supplementary),Supplementary p.7 (printed 7),0.7526,0.7527,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,plates-faults7,Table S3 (Supplementary),Supplementary p.7 (printed 7),0.7552,0.7425,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,ESL,Table S3 (Supplementary),Supplementary p.7 (printed 7),0.3413,0.3494,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,ERA,Table S3 (Supplementary),Supplementary p.7 (printed 7),0.1112,0.1113,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,yeast5,Table S3 (Supplementary),Supplementary p.7 (printed 7),0.3966,0.3398,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,ERA5,Table S3 (Supplementary),Supplementary p.7 (printed 7),0.26,0.2576,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,yeast7,Table S3 (Supplementary),Supplementary p.7 (printed 7),0.3134,0.3,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,abalone10,Table S3 (Supplementary),Supplementary p.7 (printed 7),0.1055,0.1054,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,yeast8,Table S3 (Supplementary),Supplementary p.7 (printed 7),0.4051,0.4091,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOM,housing10,Table S3 (Supplementary),Supplementary p.7 (printed 7),0.1026,0.0375,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOTE-ENN / SMOTE-Tomek,Pima,"Table 4 (best_other also searched in Table 5, pruned rows)",p.7 (printed p.26); Table 5 p.8 (printed p.27),83.66,85.49,"values on one line, name not on that line: row match on cited page",proposed:cited@7; smote:cited@7; _row:row@7
+SMOTE-ENN / SMOTE-Tomek,German,"Table 4 (best_other also searched in Table 5, pruned rows)",p.7 (printed p.26); Table 5 p.8 (printed p.27),80.91,80.74,"values on one line, name not on that line: row match on cited page",proposed:cited@7; smote:cited@7; _row:row@7
+SMOTE-ENN / SMOTE-Tomek,Post-operative,"Table 4 (best_other also searched in Table 5, pruned rows)",p.7 (printed p.26); Table 5 p.8 (printed p.27),59.83,55.66,"values on one line, name not on that line: row match on cited page",proposed:cited@7; smote:cited@7; _row:row@7
+SMOTE-ENN / SMOTE-Tomek,Haberman,"Table 4 (best_other also searched in Table 5, pruned rows)",p.7 (printed p.26); Table 5 p.8 (printed p.27),76.38,72.23,"values on one line, name not on that line: row match on cited page",proposed:cited@7; smote:cited@7; _row:row@7
+SMOTE-ENN / SMOTE-Tomek,Splice-ie,"Table 4 (best_other also searched in Table 5, pruned rows)",p.7 (printed p.26); Table 5 p.8 (printed p.27),97.97,98.46,"values on one line, name not on that line: row match on cited page",proposed:cited@7; smote:cited@7; _row:row@7
+SMOTE-ENN / SMOTE-Tomek,Splice-ei,"Table 4 (best_other also searched in Table 5, pruned rows)",p.7 (printed p.26); Table 5 p.8 (printed p.27),98.85,98.92,"values on one line, name not on that line: row match on cited page",proposed:cited@7; smote:cited@7; _row:row@7
+SMOTE-ENN / SMOTE-Tomek,Vehicle,"Table 4 (best_other also searched in Table 5, pruned rows)",p.7 (printed p.26); Table 5 p.8 (printed p.27),97.92,98.96,"values on one line, name not on that line: row match on cited page",proposed:cited@7; smote:cited@7; _row:row@7
+SMOTE-ENN / SMOTE-Tomek,Letter-vowel,"Table 4 (best_other also searched in Table 5, pruned rows)",p.7 (printed p.26); Table 5 p.8 (printed p.27),98.94,98.90,"values on one line, name not on that line: row match on cited page",proposed:cited@7; smote:cited@7; _row:row@7
+SMOTE-ENN / SMOTE-Tomek,New-thyroid,"Table 4 (best_other also searched in Table 5, pruned rows)",p.7 (printed p.26); Table 5 p.8 (printed p.27),99.22,98.91,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOTE-ENN / SMOTE-Tomek,E.Coli,"Table 4 (best_other also searched in Table 5, pruned rows)",p.7 (printed p.26); Table 5 p.8 (printed p.27),95.29,95.49,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOTE-ENN / SMOTE-Tomek,Satimage,"Table 4 (best_other also searched in Table 5, pruned rows)",p.7 (printed p.26); Table 5 p.8 (printed p.27),95.67,95.43,"values on one line, name not on that line: row match on cited page",proposed:cited@7; smote:cited@7; _row:row@7
+SMOTE-ENN / SMOTE-Tomek,Flag,"Table 4 (best_other also searched in Table 5, pruned rows)",p.7 (printed p.26); Table 5 p.8 (printed p.27),79.32,73.62,"values on one line, name not on that line: row match on cited page",proposed:cited@7; smote:cited@7; _row:row@7
+SMOTE-ENN / SMOTE-Tomek,Glass,"Table 4 (best_other also searched in Table 5, pruned rows)",p.7 (printed p.26); Table 5 p.8 (printed p.27),92.90,91.40,"values on one line, name not on that line: row match on cited page",proposed:cited@7; smote:cited@7; _row:row@7
+SMOTE-ENN / SMOTE-Tomek,Letter-a,"Table 4 (best_other also searched in Table 5, pruned rows)",p.7 (printed p.26); Table 5 p.8 (printed p.27),99.91,99.91,row match on cited page,name:cited@7; proposed:cited@7; smote:cited@7; _row:row@7
+SMOTE-ENN / SMOTE-Tomek,Nursery,"Table 4 (best_other also searched in Table 5, pruned rows)",p.7 (printed p.26); Table 5 p.8 (printed p.27),97.80,99.21,"values on one line, name not on that line: row match on cited page",proposed:cited@7; smote:cited@7; _row:row@7
+SMOTE-IPF,acl,Table 6,p.12 (printed 195),88.50,86.75,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+SMOTE-IPF,breast,Table 6,p.12 (printed 195),64.40,60.56,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+SMOTE-IPF,bupa,Table 6,p.12 (printed 195),67.53,66.88,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+SMOTE-IPF,cleveland,Table 6,p.12 (printed 195),62.82,54.85,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+SMOTE-IPF,ecoli,Table 6,p.12 (printed 195),86.55,82.16,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+SMOTE-IPF,haberman,Table 6,p.12 (printed 195),66.76,65.41,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+SMOTE-IPF,hepatitis,Table 6,p.12 (printed 195),72.25,71.38,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+SMOTE-IPF,newthyroid,Table 6,p.12 (printed 195),96.63,96.35,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+SMOTE-IPF,pima,Table 6,p.12 (printed 195),73.58,71.29,row match on cited page,name:cited@12; proposed:cited@12; smote:cited@12; _row:row@12
+SMOTEBoost,KDDCup-99 intrusion (U2R class),"Tables 3, 4, 5, 6",p.7 (printed 113) for Tables 3-4; p.8 (printed 114) for Tables 5-6,88.8,84.17,"values on one line, name not on that line: row match on cited page",proposed:cited@7; smote:cited@7; _row:row@7
+SMOTEBoost,mammography,"Tables 3, 4, 5, 6",p.7 (printed 113) for Tables 3-4; p.8 (printed 114) for Tables 5-6,68.36,61.31,"values on one line, name not on that line: row match on cited page",proposed:cited@7; smote:cited@7; _row:row@7
+SMOTEBoost,Satimage,"Tables 3, 4, 5, 6",p.7 (printed 113) for Tables 3-4; p.8 (printed 114) for Tables 5-6,70.12,59.97,"values on one line, name not on that line: row match on cited page",proposed:cited@8; smote:cited@8; _row:row@8
+SMOTEBoost,phoneme,"Tables 3, 4, 5, 6",p.7 (printed 113) for Tables 3-4; p.8 (printed 114) for Tables 5-6,77.37,68.89,"values on one line, name not on that line: row match on cited page",proposed:cited@8; smote:cited@8; _row:row@8
+SOS,Default,Table 2,7,0.574,0.561,ok on cited page,name:cited@7; proposed:cited@7; smote:cited@7
+SOS,Shoppers,Table 2,7,0.673,0.648,ok on cited page,name:cited@7; proposed:cited@7; smote:cited@7
+SOS,Surgical,Table 2,7,0.714,0.678,ok on cited page,name:cited@7; proposed:cited@7; smote:cited@7
+SOS,WeatherAUS,Table 2,7,0.680,0.674,ok on cited page,name:cited@7; proposed:cited@7; smote:cited@7
+SOS,Buddy,Table 2,7,0.608,0.584,ok on cited page,name:cited@7; proposed:cited@7; smote:cited@7
+SOS,Satimage,Table 2,7,0.855,0.846,ok on cited page,name:cited@7; proposed:cited@7; smote:cited@7
+SOUP,balance scale,Table 6,p.11 (printed 779),0.585,0.080,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+SOUP,car,Table 6,p.11 (printed 779),0.941,0.897,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+SOUP,cleveland 1,Table 6,p.11 (printed 779),0.266,0.052,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+SOUP,cleveland 2,Table 6,p.11 (printed 779),0.303,0.037,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+SOUP,cmc,Table 6,p.11 (printed 779),0.535,0.452,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+SOUP,dermatology,Table 6,p.11 (printed 779),0.962,0.927,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+SOUP,ecoli,Table 6,p.11 (printed 779),0.735,0.738,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+SOUP,flare,Table 6,p.11 (printed 779),0.566,0.421,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+SOUP,glass,Table 6,p.11 (printed 779),0.667,0.322,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+SOUP,hayes roth,Table 6,p.11 (printed 779),0.835,0.835,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+SOUP,led7digit,Table 6,p.11 (printed 779),0.778,0.756,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+SOUP,thyroid,Table 6,p.11 (printed 779),0.922,0.879,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+SOUP,vehicle,Table 6,p.11 (printed 779),0.915,0.915,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+SOUP,wine quality,Table 6,p.11 (printed 779),0.471,0.356,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+SOUP,yeast,Table 6,p.11 (printed 779),0.451,0.184,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+SOUP,art1,Table 6,p.11 (printed 779),0.960,0.947,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+SOUP,art2,Table 6,p.11 (printed 779),0.777,0.741,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+SOUP,art3,Table 6,p.11 (printed 779),0.608,0.535,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+SOUP,art4,Table 6,p.11 (printed 779),0.899,0.856,row match on cited page,name:cited@11; proposed:cited@11; smote:cited@11; _row:row@11
+SPE,Credit Fraud (KNN),Table IV,p.8,0.852,0.593,"values on one line, name not on that line: row match on cited page",proposed:cited@8; smote:cited@8; _row:row@8
+SPE,Credit Fraud (DT),Table IV,p.8,0.843,0.303,row match on cited page,name:cited@8; proposed:cited@8; smote:cited@8; _row:row@8
+SPE,Credit Fraud (MLP),Table IV,p.8,0.828,0.665,"values on one line, name not on that line: row match on cited page",proposed:cited@8; smote:cited@8; _row:row@8
+SVDD-WSMOTE,Wine,Table 3 (and continued),24-25,0.806,0.789,ok on cited page,name:cited@24; proposed:cited@24; smote:cited@24
+SVDD-WSMOTE,Iris,Table 3 (and continued),24-25,0.973,0.963,"values on one line, name not on that line: row match on cited page",proposed:cited@24; smote:cited@24; _row:row@24
+SVDD-WSMOTE,Abalone,Table 3 (and continued),24-25,0.941,0.921,ok on cited page,name:cited@24; proposed:cited@24; smote:cited@24
+SVDD-WSMOTE,Pima,Table 3 (and continued),24-25,0.707,0.679,ok on cited page,name:cited@24; proposed:cited@24; smote:cited@24
+SVDD-WSMOTE,Ecoli,Table 3 (and continued),24-25,0.937,0.925,ok on cited page,name:cited@24; proposed:cited@24; smote:cited@24
+SVDD-WSMOTE,Libra,Table 3 (and continued),24-25,0.993,0.960,ok on cited page,name:cited@24; proposed:cited@24; smote:cited@24
+SVDD-WSMOTE,Vehicle,Table 3 (and continued),24-25,0.947,0.937,ok on cited page,name:cited@24; proposed:cited@24; smote:cited@24
+SVDD-WSMOTE,Balance,Table 3 (and continued),24-25,0.595,0.481,ok on cited page,name:cited@24; proposed:cited@24; smote:cited@24
+SVDD-WSMOTE,Haberman,Table 3 (and continued),24-25,0.610,0.602,ok on cited page,name:cited@24; proposed:cited@24; smote:cited@24
+SVDD-WSMOTE,Car,Table 3 (and continued),24-25,0.989,0.976,ok on cited page,name:cited@24; proposed:cited@24; smote:cited@24
+SVDD-WSMOTE,Liver,Table 3 (and continued),24-25,0.659,0.640,ok on cited page,name:cited@24; proposed:cited@24; smote:cited@24
+SVDD-WSMOTE,Seed,Table 3 (and continued),24-25,0.927,0.898,ok on cited page,name:cited@24; proposed:cited@24; smote:cited@24
+SVDD-WSMOTE,Spect,Table 3 (and continued),24-25,0.725,0.691,ok on cited page,name:cited@24; proposed:cited@25; smote:cited@25
+SVDD-WSMOTE,Pageblock,Table 3 (and continued),24-25,0.937,0.921,ok on cited page,name:cited@24; proposed:cited@24; smote:cited@24
+SVDD-WSMOTE,Pageblock1,Table 3 (and continued),24-25,0.953,0.946,ok on cited page,name:cited@24; proposed:cited@24; smote:cited@24
+SVDD-WSMOTE,Yeast,Table 3 (and continued),24-25,0.719,0.698,ok on cited page,name:cited@23; proposed:cited@25; smote:cited@25
+SVDD-WSMOTE,Yeast1,Table 3 (and continued),24-25,0.756,0.755,ok on cited page,name:cited@23; proposed:cited@25; smote:cited@25
+SVDD-WSMOTE,Yeast2,Table 3 (and continued),24-25,0.913,0.896,ok on cited page,name:cited@23; proposed:cited@24; smote:cited@25
+SVDD-WSMOTE,Yeast3,Table 3 (and continued),24-25,0.937,0.898,ok on cited page,name:cited@23; proposed:cited@24; smote:cited@24
+SVDD-WSMOTE,Yeast4,Table 3 (and continued),24-25,0.957,0.917,ok on cited page,name:cited@23; proposed:cited@25; smote:cited@25
+SVDD-WSMOTE,Yeast5,Table 3 (and continued),24-25,0.815,0.787,ok on cited page,name:cited@23; proposed:cited@25; smote:cited@25
+SVDD-WSMOTE,Yeast6,Table 3 (and continued),24-25,0.821,0.718,ok on cited page,name:cited@23; proposed:cited@25; smote:cited@25
+SVDD-WSMOTE,Yeast7,Table 3 (and continued),24-25,0.965,0.961,ok on cited page,name:cited@23; proposed:cited@24; smote:cited@25
+SVDD-WSMOTE,Yeast8,Table 3 (and continued),24-25,0.875,0.841,ok on cited page,name:cited@23; proposed:cited@25; smote:cited@24

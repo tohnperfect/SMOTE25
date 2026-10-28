@@ -1241,6 +1241,425 @@ sha256 ของ CSV และ JSON ต้นทางทั้งสามต�
 - นิยาม IR เป็นข้อความอิสระระดับ paper ยังไม่ได้เข้ารหัส · การกระจายคลาสพิมพ์หลายรูปแบบ
 - record_id ขึ้นกับลำดับแถวของ verified_datasets.csv ถ้าแก้ CSV ต้นทางต้องทำ mapping ID เก่า-ใหม่
 
+### 19 ตุลาคม 2026 commit งาน Dataset Atlas (ยังไม่ push)
+
+- commit `67dd820` "Add dataset-only Atlas explorer and traceable dataset records" บน `main` (Kanvara001) 19 ไฟล์ใต้ `Data section/` เท่านั้น: Atlas 7 ไฟล์ + ไฟล์ที่ make_atlas.py ต้องใช้ rebuild + handoff.md (Toon เลือกขอบเขตนี้)
+- ตรวจก่อน commit: reconcile 40/40, dataset_records 11/11, build_preview --check ผ่าน, make_atlas รันซ้ำได้ sha256 เท่าเดิม, Playwright 44 + 55 + 30 ข้อผ่าน, CSV ต้นทาง sha256 เท่าเดิม
+- ไม่ได้ commit: README.md, SMOTE25_data_extraction.xlsx, ai-draft/README.md, build/make_workbook.py, dataset-usage-recon.md, decisions-pending.md, workplan.md (แก้แล้วยังไม่ commit) และไฟล์ใหม่อื่น ๆ รวม `Claude outputs/` ที่ระดับบนสุด, `build/preview/`, `build/__pycache__/`, `.gitignore` ของโฟลเดอร์
+- **push ไม่ได้จาก Claude**: origin/main มี `5bc37e5` ของ P ที่ local ไม่มี (rename HTML ของ Section 7 ที่ root) และ VM ไม่มี credential GitHub
+  Toon รันบน Windows: `git pull --no-rebase origin main` แล้ว `git push origin main`
+- ขอสิทธิ์ลบไฟล์ใน `D:\SMOTE25` เพื่อให้ git ลบ lock ของตัวเองได้ หลัง commit ไม่มี `.lock` ค้าง `.git/stale-maintenance-lock` ยังอยู่ ไม่ได้แตะ
+- line ending: `core.autocrlf=true` git เก็บใน repo เป็น LF checkout บน Windows ได้ CRLF ตรงกับไฟล์ปัจจุบัน ถ้า checkout บน Linux/macOS (autocrlf ปิด) sha256 ของ verified_*.csv จะต่างจากที่บันทึกใน summary และ make_atlas จะหยุด ต้องรัน reconcile_counts.py กับ dataset_records.py ใหม่ก่อน
+
+### 19 ตุลาคม 2026 (รอบ evidence-based visualizations) เพิ่ม View A/B/C ใน Dataset Atlas
+
+**สถานะ: completed and verified (Playwright + guard ใน make_atlas)** ไม่ได้ commit/push/publish ไม่ได้แก้ไฟล์ต้นทาง (hash ของ verified_datasets/verified_outcomes/full_summary ตรงกับ ~/pre10.sha)
+
+**ไฟล์ใหม่**
+- `build/outcome_links.py` -> `out/outcome_dataset_links.csv` ผูก outcome 835 แถวกับ record_id: fields 792, fields+name 39, ไม่ผูก 4 (KNNOR aggregate, Loyalty-SMOTE bezdeiris, MWMOTE Bcancerorig/Btissue)
+  name_check: agrees 807, differs 24 (ส่วนใหญ่เป็นตัวย่อ แต่ AB-SMOTE, RUSBoost CONTRACEPTIVE/SATIMG, DGOT bank_small/bankruptcy, CBHSID River->Liver ดูเหมือน source จับคู่ด้วย row order ผิดแถว **ยังไม่ได้แก้ verified_outcomes ต้องให้ Toon ตรวจ**)
+- `build/difficulty_candidates.py` -> `out/difficulty_candidates.csv` ค้นคำใน PDF 4,242 ข้อความ 68 paper (ตัวเลือกเท่านั้น)
+- `ai-draft/difficulty/evidence.json` คัดด้วยมือ 26 รายการ 14 paper (Claude อ่าน, Toon ยังไม่ได้ทบทวน) + `build/difficulty_evidence.py` ตรวจ quote ทุกข้อกับข้อความ PDF และค่าตาราง MLOS R-value 16 ชุด, GDHS Fdr 20 ชุด -> `out/difficulty_evidence.json`
+  ประเภท: injected 17, inherent 5, selection rationale 3, not reported 1 · explicit 20, partial 6 · paper อื่น 59 เรื่อง = ยังไม่ทบทวน (unresolved ไม่ใช่ "ไม่มี")
+  4 paper ที่ขอให้ดู: MC-CCR (label noise 0-25%), SMOTE-IPF (cleveland 22 noisy/13 borderline, haberman 51/20/10 จาก ref [37]; เลือกข้อมูลเพราะ noisy/borderline; class/attribute noise 20/40%; synthetic DR 0-70%), RBO (label 0-20%, feature 0-0.5), MC-MBRC (synthetic overlap 0-90%, label noise 0-30%, ไม่วัด overlap ของข้อมูลจริง)
+  แถวผลเทียบ SMOTE ทั้งหมดมาจากเงื่อนไขไม่ใส่ noise (chosen.condition)
+- `build/not_stated_audit.py` -> `out/not_stated_audit.csv` 199 entry: partial 32, mismatch 27, unresolved 140 ไม่เปลี่ยน category เดิม confirmed ใช้ไม่ได้ (ไม่มีขนาดอ้างอิงภายนอก)
+
+**แก้** `build/make_atlas.py` (guard: links ตรงแถวต่อแถว, audit ครบ 199, sha ของ evidence) และ `build/atlas_template.html`; regenerate `out/explorer_data.json`, `out/dataset-atlas.html`
+- View A (แท็บสำรวจ dataset): คอลัมน์ majority, หลักฐาน, handling + ป้ายผลตรวจ not stated, การ์ดผลตรวจกดกรองได้, รายละเอียดแสดงแถวผลที่ผูกและหลักฐาน noise
+- View B (แท็บใหม่ "ลักษณะ dataset กับผล"): plain 541 / wrapper 207 แยก, box+จุด log scale (instance, feature, minority, majority, IR ตัวเลขเดี่ยว), แท่งสำหรับคลาสและชนิด, ตารางค่าที่หาย, การ์ดการกระจุกตาม paper, กดจุด/กล่อง/แท่งดูแถว ไม่มี significance test
+  ค่าตรวจ: plain instance มีค่า 341/38/66 (445), ไม่พิมพ์ 76, ชื่อไม่ตรง 17, ไม่ผูก 3
+- View C (แท็บใหม่ "Noise / overlap"): ตารางหลักฐาน กรองประเภท/ความมั่นใจ/paper, ตาราง 73 paper พร้อมเงื่อนไขของแถวผล
+
+**ตรวจ** Playwright 1280/768/390: vbc 0 fail, dx 44, full 55, align 30 ผ่าน; reconcile 40/40; dataset_records 11/11
+
+**ค้าง (pending)** Toon ทบทวน evidence.json และ 24 แถว name_check=differs; ทบทวน keyword passage ของ 59 paper ที่เหลือถ้าต้องการ
+
+### 19 ตุลาคม 2026 (รอบตรวจการจับคู่ outcome กับ dataset ตามที่ Toon ตรวจตาราง) **blocked: ยังไม่ได้เขียน verified_outcomes.csv**
+
+- verified_outcomes.csv ในโฟลเดอร์ยังเป็นฉบับ 18 ต.ค. (sha 5b39338d…) ยังไม่มีการแก้ชื่อที่ Toon บอกว่าแก้แล้ว (CBHSID ยังเป็น River) และไฟล์ถูก lock เขียนไม่ได้ (Permission denied; ไฟล์อื่นใน out/ เขียนได้) น่าจะเปิดค้างใน Excel
+- ตรวจกับ PDF แล้ว (ภาพหน้า Table I/IV/V/VI-VIII/1/3/4):
+  - แก้จริง 5 แถว (characteristics ลอกมาจาก entry อื่น คะแนนและ raw_sign ถูก): AB-SMOTE Harberman -> Haberman (306), Employee Attrition -> Employe Attrition (1470, how_obtained original -> not stated), RUSBoost CONTRACEPTIVE -> CONTRA2, SATIMG -> SATIMAGE4, DGOT bankruptcy -> polish_bankruptcy
+  - ชื่อย่อ/สะกดต่างแต่ถูก: CBHSID River (Liver), DGOT bank_small, AB-SMOTE Customer Churn, Telco, RUSBoost CAR/PENDIGITS/ECOLI/GLASS/SEGMENT/SOLARFLARE/VEHICLE
+  - unresolved: ไม่มี
+- เตรียม `build/apply_outcome_mapping_audit.py` (เพิ่มคอลัมน์ dataset_table_name, mapping_audit; เขียน out/outcome_mapping_audit.csv; หยุดถ้าค่าเดิมไม่ตรง จึงไม่ทับการแก้ของ Toon) สำรองฉบับเดิมไว้ที่ VM ~/verified_outcomes.pre_audit_19oct.csv
+- ข้อสังเกต: DGOT wine_quality #T ใน PDF Table I พิมพ์ '≤4' แต่รายการที่ Toon ส่งมาเขียน '<4' ไม่ได้แก้ verified_datasets
+- รอ Toon save/ปิดไฟล์ แล้วรันต่อ: apply -> outcome_links -> reconcile_counts --overwrite -> make_atlas
+
+### 19 ตุลาคม 2026 (ต่อ) ใช้ผลตรวจการจับคู่ outcome แล้ว **completed and verified**
+
+- Toon save verified_outcomes.csv จาก Excel แล้ว: Excel เปลี่ยน 468 ช่อง ในนั้นเป็นการแก้ของ Toon 2 ช่อง (แถว 19 AB-SMOTE `Customer Churn (Table V)` -> `Customer Churn Wireless Telecom(Table V)`, แถว 48 CBHSID `River` -> `Liver`) ที่เหลือ 466 ช่องเป็นผลข้างเคียงของ Excel (ratio เช่น 1:3.25 กลายเป็นเวลา 01:03.2 จำนวน 39 ช่อง, ตัด 0 ท้ายทศนิยม 426, รูปแบบ % 1) คืนค่าเดิมทั้งหมด เก็บการแก้ของ Toon ไว้
+  สำรองไว้ใน `out/audit_backup/` (ฉบับก่อนแก้, ฉบับที่ Excel save, `excel_save_review_2026-10-19.csv` รายการทั้ง 468 ช่อง)
+- `build/apply_outcome_mapping_audit.py` แก้ 5 แถวที่ค่าลักษณะลอกมาผิด entry (แถว 20, 21, 111, 690, 696) ไม่แตะคะแนนหรือ raw_sign เพิ่มคอลัมน์ dataset_as_printed, dataset_table_name, mapping_audit ใน 16 แถวที่ตรวจ บันทึกทุกช่องใน `out/outcome_mapping_audit.csv` (73 แถว)
+- `build/outcome_links.py` ใช้ dataset_table_name: name_check agrees 802, agrees (audited) 16, differs 13 (ชื่อย่อที่ยังไม่ได้ตรวจ: ADASYN, CGMOS, MKC-SMOTE x2, MLOS x2, OVO-SMOTE x2, RBBoost x5) Atlas เปลี่ยนป้ายเป็น "ชื่อต่าง (ยังไม่ตรวจ)"
+- reconcile_counts.json เขียนใหม่ (--overwrite) 40/40 ok; ตัวเลขที่เปลี่ยน: plain by type original 167 -> 166 (สูงกว่า 133 -> 132), not stated 104 -> 105 (82 -> 83), ชุดมาตรฐาน 286 -> 285 (สูงกว่า 223 -> 222); 541/207/87 และ 420/39/82 ไม่เปลี่ยน
+- **manuscript ยังเป็นเลขเดิม** data-section-draft.tex บรรทัด 269, 273, 306 และ overview.json บรรทัด 60 (286) ยังไม่ได้แก้ รอ Toon ตัดสิน
+- View B: plain instance มีค่า 347/38/70 (455) จากเดิม 445
+- ทดสอบ Playwright vbc 0 fail, dx 44, full 55, align 30; dataset_records 11/11; verified_datasets/full_summary hash ไม่เปลี่ยน
+- workbook SMOTE25_data_extraction.xlsx (ชีต outcomes_verified) ยังเป็นค่าเดิม ไม่ได้สร้างใหม่
+
+### 19 ตุลาคม 2026 (ต่อ) อัปเดตเอกสารตามผลตรวจการจับคู่ outcome **completed and verified**
+
+- `manuscript/data-section-draft.tex`: Table wins-by-type Original 167/133 -> 166/132, Cannot be told 104/82 -> 105/83; บรรทัด 306 standard 286 -> 285 (ไม่แตะช่อง \toon{} หรือ \claudedraft{})
+- `manuscript/overview.json`: "บนชุดมาตรฐาน 285 แถว"
+- `research-thinking-handoff.md` ข้อ 9.2: เพิ่มกล่อง Update 19 Oct (outcome-mapping audit) เก็บตารางเดิมไว้เป็นประวัติ
+- `SMOTE25_data_extraction.xlsx`: เขียนชีต outcomes_verified ใหม่จาก verified_outcomes.csv ปัจจุบัน (835 แถว + 3 คอลัมน์ audit) ชีตอื่นไม่แตะ สำรองเดิมที่ `out/audit_backup/SMOTE25_data_extraction.before_2026-10-19.xlsx`
+- `build/apply_verification.py`: เพิ่ม guard หยุดถ้า verified_outcomes.csv มีคอลัมน์ mapping_audit (รันซ้ำจะเขียนทับการแก้จาก full_outcome_rows.csv ที่ยังเป็นค่าเดิม) ใช้ --force-rebuild ถ้าตั้งใจ
+- DGOT wine_quality #T = '≤4' ตามที่ Toon ยืนยัน: verified_datasets.csv และชีต datasets_verified เป็น '≤4' อยู่แล้ว ไม่ต้องแก้
+- สร้าง PDF preview ใหม่ (6 หน้า, overfull 12, underfull 9, undefined refs 0) และ Atlas ใหม่ (แท็บร่าง manuscript แสดงเลขใหม่)
+- ตรวจ: reconcile 40/40, Playwright vbc 0 fail, dx 44, full 55, align 30
+- ข้อจำกัดที่เหลือ: out/full_outcome_rows.csv (ต้นทางชั้นก่อน) ยังมีค่าลอกผิดเดิม; 13 แถวชื่อย่อยังไม่ได้ตรวจกับ paper
+
+### 19 ตุลาคม 2026 (ต่อ) ตรวจชื่อย่อที่เหลือ, ไล่ pipeline ของ full_outcome_rows.csv, ตรวจความสอดคล้องข้ามไฟล์ **completed and verified**
+
+**1. ชื่อย่อ 13 แถว (ตรวจกับ PDF; ทุกแถว Verified, ไม่มี Ambiguous/Unresolved)**
+| แถว | paper | ชื่อในตารางผล | ชื่อเต็ม | หลักฐาน | วิธียืนยัน |
+|---|---|---|---|---|---|
+| 27 | ADASYN | Pima Indian Diabetes | Diabetes (PID) | Table I p.3, text p.4, Table II p.5 | text บอกตรง |
+| 90 | CGMOS | UserKnowledge | UKnowledge | Table 1 p.5, Table 3 p.7 | ตัดออกทีละคู่ 29/30 ชื่อตรง (ไม่มีคีย์ย่อ) |
+| 399, 404 | MKC-SMOTE | cmc, ctg | Contraceptive Method Choice, Cardiotocography | Table 1 p.5 คอลัมน์ ID (ภาพ) | คีย์ย่อในตาราง |
+| 422, 432 | MLOS | aba19, win35 | abalone19, winequalityred3vs5 | Table 1 p.9 คอลัมน์ Abbr | คีย์ย่อในตาราง |
+| 541, 542 | OVO-SMOTE | wqr, wqw | Wine-Quality-Red, Wine-Quality-White | Table 2 p.6 | คีย์ย่อในตาราง |
+| 599, 616, 631, 646, 647 | RBBoost | ชื่อ keel ที่ถูกตัด | ecoli-0-1-4-7_vs_2-3-5-6, glass-0-1-2-3_vs_4-5-6, led7digit-0-2-4-5-6-7-8-9_vs_1, yeast-0-2-5-6_vs_3-7-8-9, yeast-0-2-5-7-9_vs_3-6-8 | Supp Table 11/3, main Table 3 p.8 | prefix ไม่ซ้ำใน 86 ชื่อ (แถวเหล่านี้ถูกตัดตาม R6 อยู่แล้ว) |
+- พบเพิ่ม: 8 แถวที่ full_extraction จับคู่ด้วย row order แต่ชื่อคล้ายจึงไม่ถูกตั้งธง ตรวจแล้ว Verified ทั้งหมด: AMDO UKM, EMDO UKM (Table 1 พิมพ์ UKM), MKC-SMOTE con/car (ID), MLOS win, OVO-SMOTE win (Abbr), MBS Credit -> Give Me Some Credit, SOUP thyroid -> new_thyroid (ตัดออกทีละคู่)
+- บันทึกใน `build/apply_outcome_mapping_audit.py` (AUDIT รอบ 2) -> verified_outcomes.csv เพิ่มเฉพาะ 3 คอลัมน์ audit ใน 21 แถว ไม่มีค่าอื่นเปลี่ยน; audit trail 37 แถวใน `out/outcome_mapping_audit.csv`; name_check differs เหลือ 0
+- ผลต่อตัวเลข: ตัวนับหลักไม่เปลี่ยน (reconcile เปลี่ยนแค่ sha) View B นับแถวเพิ่ม plain instance 455 -> 461, wrapper 136 -> 138
+
+**2. ทำไม out/full_outcome_rows.csv ยังเป็นค่าเดิม (ตั้งใจ ไม่ใช่ bug)**
+- pipeline: `ai-draft/full/<key>.json` -> `build/full_extraction.py` -> `out/full_outcome_rows.csv`, `full_datasets.csv`, `full_summary.json` -> `build/verify_pdf.py` -> `out/verify_outcomes.csv` -> `build/apply_verification.py` (+ `out/visual_checks.json`) -> `out/verified_outcomes.csv` -> [19 ต.ค.] `build/apply_outcome_mapping_audit.py` -> outcome_links / reconcile / make_atlas / workbook
+- full_outcome_rows.csv เป็นชั้นกลางของ 18 ต.ค. ต่างจาก verified_outcomes.csv เฉพาะ 7 แถว (19, 20, 21, 48, 111, 690, 696) + คอลัมน์ audit; ไม่มีสคริปต์ปลายทางใดอ่านไฟล์นี้แล้วนอกจาก verify_pdf/apply_verification (make_atlas แค่ docstring ค้าง)
+- ต้นเหตุ: `full_extraction.match()` ถ้าชื่อไม่ตรงและ prefix ไม่ unique จะใช้ลำดับแถว (`row order (check)`) ถ้าลำดับตารางผลต่างจากตาราง dataset ค่าที่ลอกจะมาจาก entry ผิด; verify_pdf ตรวจคะแนน ไม่ได้ตรวจค่าที่ลอก จึงไม่จับ
+- **แหล่งความจริงของค่าที่แก้แล้ว = `out/verified_outcomes.csv`** + กติกาใน `build/apply_outcome_mapping_audit.py` (หลักฐานต่อแถว) + `out/outcome_mapping_audit.csv`
+- ทดสอบ replay: รัน apply_outcome_mapping_audit.py บนฉบับ 18 ต.ค. ในโฟลเดอร์ชั่วคราว ได้ไฟล์ sha เดียวกับปัจจุบัน (370abda7…) รวมชื่อที่ Toon แก้ 2 ช่อง (เพิ่มให้สคริปต์ทำซ้ำการแก้ชื่อนี้)
+- ไม่ได้รัน --force-rebuild ไม่ได้แก้ full_outcome_rows.csv
+
+**3. ตรวจความสอดคล้อง** `build/consistency_check.py` (อ่านอย่างเดียว) 31/31 ok: sha ต้นทางของ reconcile/dataset_records/difficulty, links ตรงแถว, audit ครอบทุกแถว, ตาราง wins และประโยคใน tex, overview.json, preview PDF, ชีต outcomes_verified และ datasets_verified ตรง CSV ทุกช่อง, Atlas ฝัง JSON ปัจจุบัน และ eligibility ตรง reconcile; Playwright vbc 0 fail, dx 44, full 55, align 30; reconcile 40/40
+
+**ไฟล์ที่แก้รอบนี้** build/apply_outcome_mapping_audit.py, build/consistency_check.py (ใหม่), out/verified_outcomes.csv (คอลัมน์ audit), out/outcome_mapping_audit.csv, out/outcome_dataset_links.csv, out/reconcile_counts.json, out/explorer_data.json, out/dataset-atlas.html, SMOTE25_data_extraction.xlsx (ชีต outcomes_verified), สำรองที่ out/audit_backup/verified_outcomes.before_round2_2026-10-19.csv
+
+**ค้าง / ขั้นต่อไปที่ปลอดภัย**
+- (ตัดสินใจ) จะเก็บการแก้ไว้ที่ verified_outcomes.csv + audit script ต่อไป หรือย้ายลงต้นทาง (เพิ่มตารางชื่อ alias ให้ full_extraction.match อ่าน) เพื่อให้ rebuild เต็มสายได้ถูกเอง
+- ถ้าจะ rebuild ทั้งสาย: full_extraction -> verify_pdf -> apply_verification --force-rebuild -> apply_outcome_mapping_audit -> outcome_links -> reconcile --overwrite -> make_atlas -> consistency_check (replay ทดสอบแล้วว่าได้ไฟล์เดิม)
+- docstring ของ make_atlas.py ยังอ้าง full_outcome_rows.csv (ไม่มีผลต่อการทำงาน)
+- difficulty evidence (Claude คัด) ยังรอ Toon ทบทวน
+
+### 19 ตุลาคม 2026 Analysis A: แยกชนิดการดัดแปลงของ 331 entry modified **completed (Toon ยังไม่ทบทวน)**
+
+- ทำไมต้องทำใหม่: ยังไม่มีการแยกชนิดระดับ entry มาก่อน (มีแค่ระดับ paper ใน data_handling_matrix ที่เป็น ai_draft) ใช้ notes ที่ตรวจกับ PDF แล้วเป็นฐาน ไม่ได้อ่าน paper ใหม่ทั้งหมด
+- ไฟล์: `build/modified_operations.py` (ใหม่), `out/modified_operations_audit.csv` (331 แถว), `out/modified_operations_summary.json`, `analysis/A_modified_operations.md`
+- ผล (หน่วย entry 331 / paper 39; ป้ายซ้อนได้): CS 175 (29 paper), US 148 (11), IM 147 (9), SF 18 (9), FM 16 (7), OT 4 (3), IS 0; หลายป้าย 172 entry (17 paper) ส่วนใหญ่ US+IM 131
+- IM 147 entry มาจาก 9 paper โดย 5 paper ให้ 134 (k-means SMOTE 49, G-SMOTE 42, RSMOTE 18, HDE 14, SVDD-WSMOTE 11)
+- เปลี่ยนนิยาม task 177 entry (30 paper); พบประโยคบอกเหตุผล 15/39 paper (two-class 7, IR สูงขึ้น 7, ลดขนาด 1) ทุก quote ตรวจกับข้อความ PDF แล้ว
+- ข้อมูลขาด 93 entry (characteristics ของชุดที่ดัดแปลงไม่พิมพ์ 55, target IR ไม่บอก 18, minority class ไม่บอก/อนุมานจากชื่อ 15 ...)
+- ใน primary 541 แถว: แถวบน modified 143 = CS ล้วน 110, IM 29, อื่น 4
+- ไม่ได้เปลี่ยน category ใด ไม่ได้แตะ manuscript หรือ Atlas
+
+### 19 ตุลาคม 2026 Analysis B: ที่มาของค่า SMOTE baseline **completed (Toon ยังไม่ทบทวน)**
+
+- ทำไมต้องทำ: มีแค่ข้อสังเกต 3 กรณี (research-thinking 10.2, ai_draft) ยังไม่มี field provenance และยังไม่ตรวจกับ PDF
+- ไฟล์: `build/baseline_provenance.py` (ใหม่), `out/baseline_provenance_papers.csv` (57 paper), `out/baseline_identical_values.csv`, `out/baseline_provenance_summary.json`, `analysis/B_baseline_provenance.md`
+- ป้าย (paper 57): B1 บอกวิธีรัน SMOTE 23, B2 ไม่พบ 29, B3 นำเข้าค่าที่ตีพิมพ์ (ระบุเอง) 1 = QC-SMOTE, B4 ค่าซ้ำกับ paper อื่นโดยไม่อธิบาย 4 = MC-CCR, MC-RBO, NROMM, EMDO
+- **แก้ข้อสังเกตเดิม**: EMDO ซ้ำกับ AMDO จริงทุกคอลัมน์ (Base, SSMOTE, GCS, ABNC, OSMOTE, AMDO ครบ 9/9 ชุด) ที่ notes เดิมบอกว่าไม่ซ้ำเพราะดูแค่คอลัมน์ SMOTE ที่สกัด (AMDO ใช้ OSMOTE, EMDO ใช้ SSMOTE); **พบใหม่**: NROMM SMOTE-all ซ้ำกับ MC-CCR/MC-RBO 20/20
+- แถว primary 541: B1 253 (13 paper), B2 288 (17 paper), ไม่มี B3/B4; กรณีค่าซ้ำทั้งหมดอยู่ในชุด wrapper (69 แถว ทุกแถว proposed สูงกว่า)
+- ระดับหลักฐาน (นิยามใน report): primary + B1 + รู้ที่มาข้อมูล = 216/541 แถว 13/30 paper; B2 แบบเดียวกัน 217; ที่มาข้อมูลไม่ทราบ 108
+- ไม่ได้แก้ manuscript หรือ Atlas
+
+### 19 ตุลาคม 2026 Analysis C: การกระจุกตัวของ benchmark **completed (descriptive; Toon ยังไม่ทบทวน)**
+
+- ทำไมคำนวณใหม่: `out/dataset_usage_draft.json` และ `family_usage.json` มาจากโหมด draft (papers.json) ไม่ใช่ข้อมูลที่ตรวจแล้ว ใช้ `out/dataset_records.csv` แทน
+- ไฟล์: `build/benchmark_concentration.py` (ใหม่), `out/benchmark_concentration.json`, `out/benchmark_top_names.csv`, `analysis/C_benchmark_concentration.md`
+- ผล (use = คู่ paper กับชื่อ 1,609 คู่): 546/771 ชื่อใช้ paper เดียว (34% ของ use); ต้องใช้ 104 ชื่อจึงครอบครึ่งหนึ่งของ use; effective number 264; ระดับ family (heuristic) 41 family ครอบครึ่ง, top-20 = 36%
+- 30 ชื่อที่ใช้ >= 10 paper: ไม่มีชุดใดมี >= 10,000 instance หรือ >= 100 feature (ทั้ง corpus มี 9.1% และ 4.7%)
+- ไม่ได้แก้ manuscript หรือ Atlas
+
+### 19 ตุลาคม 2026 Analysis D: เทียบตามช่วงเวลา **completed (descriptive; Toon ยังไม่ทบทวน)**
+
+- ใช้ช่วงเดิม 1972-2009 / 2010-2019 / 2020-2026 (paper 14/26/32) ปีจาก dataset_records.csv
+- ไฟล์: `build/temporal_comparison.py`, `out/temporal_comparison.json`, `analysis/D_temporal_comparison.md`
+- ผลหลัก: modified 38.5% -> 26.9% -> 10.5% ของ entry, repository-defined 0 -> 28.1 -> 33.5%; รายงาน IR 15% -> 92% ของ entry แต่ขนาด minority 45% -> 25%; ไม่บอกที่มา 5% -> 15%; B3/B4 อยู่ในช่วง 2020-2026 ทั้งหมด
+- crit_type (เหตุผลการเลือก) ยังเป็น ai_draft แสดงแยกพร้อมธง
+- ไม่ได้แก้ manuscript หรือ Atlas
+
+### 19 ตุลาคม 2026 Analysis E และตารางนิยาม category **completed (Toon ยังไม่ทบทวน)**
+
+- E: `build/characteristics_coverage.py`, `out/characteristics_coverage.json`, `analysis/E_characteristics_coverage.md`
+  ขนาด/feature/คลาส มีค่า 76-80% ของ entry; สัดส่วนคลาสในรูปใดรูปหนึ่ง 56.8%; ชนิด feature ไม่มี field (พูดถึง 7.7%);
+  overlap วัดได้ 36 entry ใน 2 paper (คนละสเกล), noise/borderline 5 entry, sparsity 0 -> **ไม่วิเคราะห์ความยากระดับ corpus** และไม่ใช้ IR แทน
+  protocol ระดับ paper: repeated k-fold 28, k-fold 21, hold-out 12, ไม่ได้สกัด 9, ไม่มีตาราง 2 (17 paper มาจาก prep_text ที่เป็น ai_draft)
+- ตารางนิยาม: `analysis/category_decision_table.md` บันทึกกติกาที่ใช้อยู่ (rule A 56, multiclass common-name 192, KEEL file-name 108, rule B 1) ไม่ได้เปลี่ยน category ใด
+- ระหว่างทำ การเชื่อมต่อกับเครื่องหลุดชั่วคราว ไฟล์สองไฟล์นี้เขียนใน cloud ก่อนแล้วคัดลอกกลับ (ตรวจแล้วว่าอยู่ใน `analysis/`)
+
+### 19 ตุลาคม 2026 Analysis F: เงื่อนไขข้อมูลที่ประกาศ vs ข้อมูลที่ประเมิน **completed สำหรับ subset (Toon ยังไม่ทบทวน)**
+
+- subset: paper ที่มีคู่ผลรายชุด (42) และชื่อเรื่องระบุเงื่อนไขข้อมูล = 22 paper, 27 claim (ใช้ชื่อเรื่อง ไม่อนุมานจากชื่ออัลกอริทึม ไม่ได้อ่าน abstract)
+- ไฟล์: `build/claim_evidence.py`, `out/claim_evidence_matrix.csv`, `out/claim_evidence_summary.json`, `analysis/F_claim_evidence.md`
+- ผล: multi-class aligned 10/14, partially 2 (DSRBF, GDHS), insufficient 2; overlap aligned 5/5 แต่ 4 ใน 5 เป็นข้อมูลที่สร้างหรือใส่ overlap เอง มีแค่ MLOS ที่วัดบนข้อมูลจริง; noise aligned 3/4 (NROMM ไม่พบการทดลอง noise)
+- ข้อสังเกตหลัก: การทดลอง noise/overlap แยกจากคู่ผลกับ SMOTE ที่เราสกัด (คู่ผลมาจากเงื่อนไขข้อมูลเดิม)
+- ไม่ได้แก้ manuscript หรือ Atlas
+
+### 19 ตุลาคม 2026 สรุปรอบ A-F: ร่างข้อความภาษาอังกฤษและการตรวจ **completed (ยังไม่ใส่ manuscript)**
+
+- ร่างย่อหน้า F1-F5 สำหรับ Data Section: `analysis/manuscript_ready_findings.md` (แยก finding / interpretation / limitation, ไม่แตะ `\toon{}`)
+- ตรวจ: `build/phase2_checks.py` 14/14 (ตัวเลขผูกกับ 331 / 541 / 207 / 771 / 546 / 1,653 และ hash ต้นทาง), `build/consistency_check.py` 31/31
+- ไม่ได้แก้ manuscript, Atlas, workbook หรือไฟล์ verified ใด
+- **ต่อจากนี้ (ลำดับ)**: (1) Toon ทบทวนกติกาต่อ paper ใน `build/modified_operations.py` และป้าย B2 ใน `out/baseline_provenance_papers.csv`; (2) ตัดสินว่าจะใส่ F1-F5 ใน manuscript ส่วนไหน; (3) follow-up ของ E ถ้าต้องการ; (4) ถ้าใส่ manuscript ให้รัน preview + consistency_check และขยาย consistency_check ให้ตรวจตัวเลขใหม่
+
+### 19 ต.ค. 2026 — เพิ่มแท็บ Analyses A–F ใน Atlas (Claude)
+- `build/make_atlas.py`: สร้าง `data["an"]` จาก `out/` (A–F) และ `analysis/*.md` (ข้อความตีความ / ข้อจำกัด / ตาราง category) มี guard `sys.exit("STOP")` ถ้าจำนวนแถวไม่ตรง dashboard/ELIG/ไฟล์ out
+- `build/atlas_template.html`: แท็บ `t-an` "Analyses A–F" (`#analyses`) 7 ส่วน: A modified operations, B baseline provenance, C concentration, D temporal, E coverage, F claim–evidence, G category definitions; ตัวเลขคำนวณจาก `D.an` ตอนแสดงผล; ป้าย รายงานโดย paper / ป้ายของผู้ตรวจ / ตีความ; บรรทัดหน่วย+ตัวหารทุกส่วน; เพิ่ม `window.dxOpenName`
+- ไม่ได้เปลี่ยน category, verified outcomes, manuscript, workbook; ไม่ได้ commit/push/publish; ไม่ใช้ `--force-rebuild`
+- Test (Playwright, cloud scratchpad `at/`): ใหม่ `an_test.js` 56 PASS / 0 FAIL (ค่าที่แสดง = ค่าที่คำนวณใหม่จาก D.an และ summary json, ตัวกรอง, ลิงก์ไป dx/df/paper, ไม่ล้นที่ 1280/768/390, ไม่มี JS error); เดิม vbc 0 fail (เพิ่ม `an` ใน loop แท็บ), dx 44, full 55, align 30 PASS
+- Check ใหม่ `build/atlas_analysis_checks.py` (D.an เทียบไฟล์ใน out/ + ค่า recompute; อ่านอย่างเดียว) 24/24; `consistency_check.py` 31/31; `phase2_checks.py` 14/14
+- สำเนา template ก่อนแก้: `~/atlas_template.bak` ใน VM (ไม่อยู่ใน repo)
+
+### 19 ต.ค. 2026 — Dataset Landscape Explorer (แท็บ Landscape ใน Atlas) (Claude)
+- Reuse: `out/dataset_records.csv` (ผ่าน D.dx), `benchmark_concentration.json` (C, กฎ family heuristic `fam()`), `reconcile_counts.json` (R3 yeast/ecoli/glass), `modified_operations_audit.csv` (A), `characteristics_coverage.json` (E), `difficulty_evidence.json`, `not_stated_audit.csv`, `category_decision_table.md`; ไม่ได้ re-extract หรือวิเคราะห์ A–F ซ้ำ ไม่ได้เปลี่ยน category หรือ normalisation
+- ใหม่ (คำนวณแคบ): `build/landscape_candidates.py` → `out/landscape_families.csv` (family ต่อชื่อด้วย `fam()` ของ C ตามตัวอักษร + ธงจุดน่าสงสัย 82 family: ต่างกันแค่เครื่องหมาย เช่น page-blocks/pageblocks, ลงท้ายอักษรเดี่ยว เช่น shuttle-c, glass 35 vs R3 36 เพราะ "glass identification"; ไม่ได้รวมหรือแก้), `out/benchmark_candidates.csv/.json` (38 ชื่อ: ใช้บ่อย ≥10 paper 30, อาจเพิ่มความหลากหลาย 7 = letter, nursery, mammography, adult, avila, default, shoppers [3–9 paper และทุกค่าที่พิมพ์ ≥10,000 instance], ต้องตรวจ 1 = shuttle [ขนาดที่พิมพ์ 2,175–57,999]); เกณฑ์ตัวเลขทั้งหมดมาจาก C; ไม่ใช้ IR; guard assert ตรงกับ C
+- Atlas: `build/make_atlas.py` เพิ่ม `data["land"]` + guard; `build/atlas_template.html` แท็บ `t-ln` "Landscape" (`#landscape`) 6 มุมมอง (ความนิยม name/family + R3, ลักษณะ scatter/bins, คลาส/IR/minority/op A, category × basis, หลักฐานความยาก, ผู้สมัคร) + ตาราง record ที่เลือก (17 คอลัมน์, ค้น/เรียง/กรอง, Not reported แยกจากศูนย์, ลิงก์ไป dx/paper/Analyses)
+- Manuscript: ไม่แก้ `data-section-draft.tex`; ข้อเสนอ `manuscript/proposal_dataset_landscape.tex` (ตำแหน่ง: ท้าย \subsection{The Benchmark Landscape}; ตาราง 18 แถว + ย่อหน้าข้อจำกัด + สเปกรูป) รอ Toon
+- Test: `ln_test.js` 62 PASS 0 FAIL (1280/768/390); `an_test.js`, vbc (+tab ln), full 55, dx 44, align 30 ไม่มี fail; `build/atlas_analysis_checks.py` 33/33 (เพิ่ม 9 check ของ land); `consistency_check.py` 31/31; `phase2_checks.py` 14/14
+- ค้าง/ต้องตัดสิน: (1) กฎ family ทั่ว corpus ยังเป็น heuristic — ต้องการกฎที่ยืนยันแล้วไหม (2) shuttle: paper ใช้ version ไหน (3) ผู้สมัครด้านมิติสูง (≥100 feature) ไม่มีในชื่อที่ใช้ ≥3 paper
+
+### 19 ต.ค. 2026 — รวม Dataset Landscape เข้า manuscript tab + แยกประเด็นรอ Toon (Claude)
+- **ไฟล์ต้นทางที่แก้:** `manuscript/data-section-draft.tex` เพิ่มท้าย \subsection{The Benchmark Landscape} (ก่อน "How Datasets Are Chosen and Modified"; ไม่สร้าง subsection ใหม่): \paragraph{Candidate benchmarks...} + \paragraph ข้อจำกัด family/shuttle + \claudedraft 2 ส่วน + ตาราง `tab:data-candidates` (18 แถว, แถวเขียนโดย `build/landscape_manuscript.py` ระหว่าง marker) + \toon{} ช่องอนุมัติป้ายกลุ่ม + \evidence; `manuscript/overview.json` เพิ่ม found 1 ข้อและ status ของหัวข้อนี้; `proposal_dataset_landscape.tex` ติดป้าย SUPERSEDED. ไม่แตะ \toon/\claudedraft เดิม. ตารางใหม่เป็น Table 1 ใน preview (ตารางเดิมเลื่อนเลข; อ้างด้วย \ref จึงไม่เสีย)
+- **Shuttle:** `build/shuttle_versions.py` → `out/shuttle_versions.csv/.json` จากค่าที่ตรวจแล้วเท่านั้น: S1 2,175 (MC-MBRC, MC-NCLWO; ขนาดและการกระจายคลาสตรงกัน), S2 43,500 (MBS, RAMOBoost; 37/43,463 ตรงกัน), S3 14,500 (Loyalty-SMOTE เดี่ยว), S4 57,999 (OVO-SMOTE เดี่ยว; ตรวจ PDF p.6: Table 2 พิมพ์ 5 คลาส แต่ Table 3 มี 7 คลาส C1–C7 รวม 57,999 = ความไม่สอดคล้องใน paper เอง), S5 ไม่พิมพ์ขนาด (DLexiBoost) → unresolved, ไม่รวมกัน, ไม่ระบุว่าเป็นไฟล์ไหนของคลัง; ผู้สมัคร shuttle ยังเป็น "requires verification"
+- `build/landscape_candidates.py`: criteria เพิ่ม `label_status` (provisional), `high_dim_note`, `family_note`, `scope_note`; คอลัมน์ `label_status`; caveat ของ shuttle อ้าง S1–S5. ผลกลุ่มไม่เปลี่ยน (30/7/1)
+- **Atlas:** `build/atlas_template.html` แปลงโค้ด Landscape เป็น `makeLand(prefix, host)` ใช้ 2 instance: แท็บ Landscape (`ln-*`) และใน manuscript tab มุมมอง "เนื้อหา manuscript" แทรกหลังตาราง/ข้อจำกัด ก่อน subsection ถัดไป (`msl-*`) ไม่มี id ซ้ำ; มีปุ่ม "เปิดการเลือกนี้ในแท็บ Landscape" (ส่งการเลือกไป) และปุ่มไปแท็บสำรวจ dataset; ข้อความผู้สมัครแสดง provisional / high-dim note / scope note / family note. Build: `python3 build/landscape_candidates.py && python3 build/landscape_manuscript.py && python3 build/make_atlas.py && python3 build/preview/build_preview.py`
+- **Test:** `ms_ln_test.js` 37 PASS 0 FAIL (1280/390); `ln_test.js` 62/0 (แก้ regex เป็นถ้อยคำ provisional); an_test 61/0; vbc 123/0; full 55/0; dx 44/0; align 30/0; `atlas_analysis_checks.py` 41/41 (+8 check M); `consistency_check.py` 31/31; `phase2_checks.py` 14/14; preview 7 หน้า undefined refs 0 (overfull 12 ไม่ได้เทียบกับรอบก่อน)
+
+#### ประเด็นที่รอ Toon ตัดสิน (งานอื่นทำต่อได้)
+| # | ประเด็น | สถานะตอนนี้ | มีผลต่อข้อสรุปใด | ต้องตัดสินก่อน |
+|---|---|---|---|---|
+| T1 | กฎ family ทั่ว corpus | `fam()` ของ C เป็น heuristic/provisional ใช้สำรวจเท่านั้น; 82 family ติดธง ไม่รวม/ไม่แก้; ตัวเลข family ที่ยืนยันมีแค่ R3 (yeast/ecoli/glass) | คอลัมน์ Family papers ($^c$) ในตาราง candidates, มุมมอง family ใน Atlas, ข้อความ "Report the source family" ในคำแนะนำ | ก่อนใช้ตัวเลข family นอก R3 ในข้อความหลักหรือ recommendations |
+| T2 | shuttle version | S1–S5 แยกกัน unresolved ไม่รวม | กลุ่มของ shuttle (V) และการจะใช้ shuttle เป็น benchmark ขนาดใหญ่ | ก่อนตัดสินว่ารวม shuttle ในชุด benchmark |
+| T3 | ป้ายกลุ่ม F/D/V | provisional (ผู้วิเคราะห์เสนอ) มี \toon ช่องอนุมัติในร่าง | ตาราง `tab:data-candidates` และ \claudedraft เรื่อง "frequent set เล็ก" | ก่อนอ้างตารางใน recommendations หรือส่งอาจารย์ |
+| T4 | เกณฑ์ high-dim (≥100 feature ทุกครั้งที่รายงาน, ≥3 paper) | ไม่พบชื่อที่เข้าเกณฑ์; เขียนว่าเป็นคุณสมบัติของเกณฑ์ ไม่ใช่ข้อสรุปว่า corpus ไม่มีข้อมูลมิติสูง | ประโยคใน \paragraph{Candidate benchmarks...} | ถ้าต้องการผู้สมัครด้านมิติสูง ต้องเลือกเกณฑ์อื่นก่อน (ไม่ได้ทำ) |
+
+### 28 ต.ค. 2026 ทบทวนโครง manuscript ที่ Toon เสนอ (ข้อมูล / insight ความยาก / การจัดการข้อมูล) (Claude, อ่านอย่างเดียว)
+- ไม่แก้ CSV, draft, Atlas, ไม่ทำ git; ไม่เขียนสคริปต์ใหม่ ตัวเลขด้านล่างเป็นการคำนวณสำรวจ ต้องทำเป็นสคริปต์ใน build/ ก่อนใช้
+- metric ใน primary 541 แถว: G-mean ~376 แถว (19 paper), AUC ~161 แถว (10 paper), F 4 -> ประโยค "ตัวเลข AUC" ต้องแก้เป็น metric ที่รายงาน
+- อัตราแพ้ (raw_sign "-") ตามช่วง ir_printed ใน 541 แถว: 0-1.5 11% · 1.5-3 20% · 3-9 11% · 9-20 16% · 20-50 20% · >=50 16% · ไม่พิมพ์ IR 18% (56 แถว)
+  ไม่มีแนวโน้มตาม IR แต่ ir_printed ปนนิยาม (เช่น 0.04 = สัดส่วน minority, "1:2.00") ช่วง 0-1.5 จึงใช้ไม่ได้ ต้อง normalise IR ก่อน และ IR ปนกับ category (มัธยฐาน modified 15 / repo-def 10.3 / original 7.6)
+- H1 ดิบใน primary: original 80%, repository-defined 76%, modified 76% ชนะ -> ไม่ไปทางที่ H1 คาด (ยังไม่ได้รัน mixed-effects)
+- ข้อเสนอโครง: แยกกรอบความยากจากวรรณกรรม (ต้องมีอ้างอิง) ออกจากสิ่งที่ corpus รายงาน (Analysis E/F); หัวข้อ fold/dataset shift, leakage, ประเมินข้อมูลสังเคราะห์, ข้อมูลมีโครงสร้าง ยังไม่มี field หลักฐาน
+- รอ Toon: จะคำนวณ data complexity เองบนไฟล์ dataset จริงไหม (งานใหม่ นอกขอบเขต Analysis E)
+- **คำตัดสินของ Toon 28 ต.ค.** ตัดหัวข้อ 3.3 (แบ่ง fold กัน dataset shift), 3.6 (ประเมินข้อมูลสังเคราะห์โดยซ่อนข้อมูลจริง), 3.7 (ข้อมูลมีโครงสร้าง) ออกจากโครง เพราะไม่มี field หลักฐานใน corpus
+- **คำตัดสินของ Toon 28 ต.ค. (ต่อ)** ตัดหัวข้อ leakage (ลำดับการแบ่งข้อมูล) ออกด้วย ข้อ 3 เหลือ 3.1 binarize/รวมคลาส · 3.2 synthetic ควบคุมตัวแปร · 3.3 ทำความสะอาดก่อนใช้
+- **คำตัดสินของ Toon 28 ต.ค. (ต่อ)** พักเรื่อง win/loss ทั้งหมด (H1, ผลชนะตามประเภท, mixed-effects) ไว้ก่อน ลำดับใหม่: วัดลักษณะ dataset เอง (overlap, noise, small disjuncts, small sample size/data rarity) แล้วค่อยจัดกลุ่ม · ขอบเขต dataset และชุดตัวชี้วัดยังไม่ตัดสิน
+- **คำตัดสินของ Toon 28 ต.ค. (ต่อ)** ใช้โครงเก่าใน draft เป็นแกน แทรกส่วนวัดความยากให้เหมาะสม · รวม overlap เข้ากับ noise (เหลือ noise) · วัดเฉพาะ dataset ที่ตรวจสอบได้จริง ที่เหลือเว้นไว้และรายงานจำนวน
+
+### 28 ต.ค. 2026 ตรวจว่า dataset ไหนตรวจสอบได้จริง (Claude, Toon ยังไม่ทบทวน) → โฟลเดอร์ `difficulty/`
+- เว็บ KEEL/UCI/OpenML เข้าไม่ได้ทั้ง cloud และเครื่อง ใช้ mirror: keel-ds 0.2.5 + imbalanced-databases 0.1.1 (KEEL imbalanced 100 ชุด สองแพ็กเกจขนาดตรงกันทุกชุด), keel-ds ชุดทั่วไป 43, PMLB (ไฟล์ LFS จาก media.githubusercontent.com)
+- นิยามและผลอยู่ใน `difficulty/README.md` สรุป: ตรวจได้ 534/1,653 entry (49 paper) = 130 task (binary 101, multiclass ตามเดิม 20, binarize แบบสร้างซ้ำได้ 9); เว้นไว้ 1,119 entry (ไม่มีไฟล์ 646, ขนาดไม่ตรง 182, ไม่พิมพ์ขนาด 137, synthetic 119, สร้าง task ซ้ำไม่ได้ 25, กำกวม 8, minority ไม่ตรง 2)
+- สคริปต์รันใน cloud scratchpad (ต้องมีไฟล์ mirror ใน src/) ยังไม่ได้ย้ายเข้า build/ และยังไม่ได้วัดตัวชี้วัดใด
+- ข้อสังเกตระหว่างทาง: HDE/OBU บางแถวขนาดสลับชื่อกัน (yeast1vs7 / yeast1458vs7 / yeast1289vs7, poker8vs6 / poker89vs5) ยังไม่ได้เปิด PDF ตรวจ
+
+### 28 ต.ค. 2026 นับเพิ่มตามคำตัดสิน และวัดลักษณะความยาก (Claude, Toon ยังไม่ทบทวน) → `difficulty/`
+- **คำตัดสินของ Toon** entry ที่ไม่พิมพ์ขนาดแต่ชื่อตรงกับไฟล์ KEEL นับว่าตรวจได้ · ไฟล์ multiclass วัดทุกคลาสแบบ one-vs-rest
+- จาก 137 entry ที่ไม่พิมพ์ขนาด มีแค่ 99 ที่ชื่อตรงกับไฟล์ KEEL (อีก 38 เป็นไฟล์ PMLB/อื่น) และ Claude ไม่นับ 19 ที่เป็น modified (ผู้เขียนดัดแปลงไฟล์แล้ว) จึงเพิ่ม 80 entry **ให้ Toon ยืนยันการไม่นับ 19 แถวนี้**
+- ตรวจได้รวม 614/1,653 entry (59 paper, 189 ชื่อ, 125 ไฟล์) เว้นไว้ 1,039
+- `measure.py` วัด 263 task (binary 102, OvR 152 จาก 23 ไฟล์, binarize 9): Napierala safe/borderline/rare/outlier k=5, kDN, noise_index = borderline + outlier, sub-concept ของ minority (connected component), N, n_min, n_min/feature, IR นิยามเดียว
+  ค่าตั้งต้น k=5, min-max + one-hot, Euclidean ยังไม่ได้ทบทวน · 6 task OvR มีคลาส ≥ 50% (IR < 1) ติดธง `min_share_ge_half`
+- ตรวจเบื้องต้น yeast4/glass2/abalone19 ขนาดและ IR ตรงกับค่าที่ KEEL ประกาศ
+- `difficulty/verified_tasks.csv` (รอบแรก 130 task) **ล้าสมัย** ใช้ `verified_files.csv` และ `difficulty_measures.csv` แทน
+- ยังไม่จัดกลุ่ม
+
+### 28 ต.ค. 2026 ดึงไฟล์ที่ไม่ใช่ KEEL, เพิ่ม density, จัดกลุ่มชั่วคราว (Claude, Toon ยังไม่ทบทวน) → `difficulty/`
+- **คำตัดสินของ Toon** ไฟล์ที่เหลือถ้าดึงได้ให้วิเคราะห์และบอกแหล่ง ดึงไม่ได้เว้นไว้ · จัดกลุ่มตามที่ Claude เสนอ · ถามเรื่อง density
+- ดึงได้ครบ: PMLB 12 ไฟล์ (26 entry), ไฟล์ UCI ต้นฉบับใน imbalanced-databases 2 ไฟล์ (glass, hepatitis 3 entry) · ไม่นับ modified 9 entry · ตรวจได้รวม 643 entry 61 paper
+- ติดธง version_risk 7 ไฟล์ (ecoli, yeast, dermatology, shuttle, adult, spect, balance_scale) = 31 task · hepatitis ตัดแถวค่าหาย 75/155
+- เพิ่ม density/มิติ: T2, T4, min_sparsity_ratio · measures 291 task
+- จัดกลุ่ม (`group.py`): safe ถ้า safe ≥ 0.5 ไม่งั้นใช้ประเภทเด่นใน borderline/rare/outlier + small sample (minority/feature < 5) · 284 task (ตัด 7 ที่ minority ≥ 50%): safe 184, borderline 65, outlier 25, rare 10 · เฉพาะ binary+binarize 113 task: safe 59, borderline 35, outlier 13, rare 6
+- เกณฑ์ 0.5 และ 5 เป็นค่าที่ Claude ตั้ง ยังไม่มีการวิเคราะห์ความไวต่อเกณฑ์
+
+### 28 ต.ค. 2026 ยุบ overlap เป็น noise ในการจัดกลุ่ม + ทดสอบความไวต่อเกณฑ์ (Claude)
+- **คำตัดสินของ Toon** ยุบ overlap เป็น noise ไปเลย ไม่ใช่ข้อจำกัด ห้ามเขียนเป็นข้อจำกัดใน manuscript
+- `group.py` ประเภท safe / noise (borderline + outlier) / rare: 284 task = safe 184, noise 97, rare 3; binary+binarize 113 = safe 59, noise 52, rare 2
+- ความไว (`group_sensitivity.csv`): safe 0.4–0.6 ประเภทเปลี่ยน ≤ 5.6%; small sample 3/5/10 ได้ 53/84/149 task (เกณฑ์นี้มีผลมาก)
+- `version_note` แทน `version_risk`: 21 task (ecoli, dermatology, yeast, adult) มี paper อื่นพิมพ์ขนาดตรงกับไฟล์แล้ว · 10 task (shuttle, balance_scale, spect) มีแค่ entry ที่จับคู่ด้วยชื่อ · รอ Toon ตัดสิน
+- **คำตัดสินของ Toon 28 ต.ค.** เก็บ task ที่ติดธงไว้ทั้งสองกลุ่ม ถ้า paper ไม่บอกโครงสร้างของ dataset ให้ใช้โครงสร้างของไฟล์ตามชื่อที่ยกมา และจดว่า paper บอกแค่ชื่อ ไม่บอกขนาด/สัดส่วน
+  ทำแล้ว: `difficulty_groups.csv` คอลัมน์ `version_note`, `verifiability_entries.csv` คอลัมน์ `note_structure` (109 entry)
+
+### 28 ต.ค. 2026 แยก small disjuncts เป็นแกนของตัวเอง (Claude)
+- **คำตัดสินของ Toon** แยก small disjuncts เป็นแกน · ถามคำแนะนำเกณฑ์ small sample
+- `group.py` เปลี่ยนเป็น 3 แกนอิสระ: noise (borderline+outlier ≥ 0.5), small disjuncts (rare ≥ 0.2), small sample (minority/feature < 5); ไม่ติดแกนใด = safe
+  284 task: noise 80, small disjuncts 52, small sample 84, safe 155 · binary+binarize 113: 43 / 29 / 57 / 37
+- ความไว: rare 0.1/0.2/0.3 → small disjuncts 103/52/19 task (ไวมาก เกณฑ์ 0.2 เป็นของ Claude ยังไม่มีอ้างอิง)
+- ข้อเสนอเกณฑ์ small sample: 10 ตัวอย่างต่อ feature ต่อคลาส ตาม Jain, Duin & Mao (2000, IEEE TPAMI) ที่อ้าง Raudys & Jain (1991) **ยังไม่ได้เปิด PDF ยืนยันถ้อยคำและหน้า** · รอ Toon เลือก
+- **คำสั่งของ Toon 28 ต.ค.** ห้ามตั้งเกณฑ์เอง เกณฑ์ 0.5 (noise), 0.2 (rare), 5 (small sample) ที่ Claude ตั้งไว้ต้องเปลี่ยนเป็นเกณฑ์ที่มีอ้างอิง หรือรายงานเป็นค่าต่อเนื่อง · ยังไม่ได้แก้ไฟล์
+- อ่าน Napierala & Stefanowski 2016 (JIIS, doi 10.1007/s10844-015-0368-1) จาก Springer:
+  - 5.2.1 กติกา k=5: S 5:0/4:1, B 3:2/2:3, R 1:4 **มีเงื่อนไขเพิ่มว่าเพื่อนบ้านคลาสเดียวกันตัวนั้นต้องมีสัดส่วนแบบ 0:5 หรือ 1:4 ด้วย** (ไม่งั้นเป็น B), O 0:5 → `measure.py` ยังไม่ได้ใส่เงื่อนไขนี้ ต้องแก้
+  - 6.2 จัดกลุ่ม dataset ตามประเภทที่เด่น ไม่มีเกณฑ์ตัวเลขทางการ แต่บรรยายกลุ่ม rare ว่า "about 20% or more of rare examples" และกลุ่ม outlier ว่า "more than 20%"
+  - 3 outlier ไม่ใช่ noise: อาจเป็น "a rare but valid subconcept" และ "should not be removed or re-labeled"
+
+### 28 ต.ค. 2026 ทบทวนโครง manuscript รอบ 2 (ข้อมูล / insight / การจัดการข้อมูล) เทียบกับคำตัดสินล่าสุด (Claude, Toon ยังไม่ทบทวน)
+- git pull: ต้นทางมีแค่ `SMOTE25_Method_Map_1.html` เปลี่ยน (ไม่เกี่ยว Data section) pull ไม่สำเร็จเพราะ VM ลบไฟล์ไม่ได้ HEAD ยังเป็น 373ca42 ไม่มีไฟล์เสีย ย้าย lock ที่ค้างไปเป็น `.git/stale-index-lock-claude`
+- สคริปต์ใหม่ `difficulty/structure_check.py` → `difficulty/structure_check.json` (อ่าน dataset_records.csv + difficulty_groups.csv เท่านั้น ไม่ใช้ win/loss)
+  - entry 1,654: instance พิมพ์ 1,325 มัธยฐาน 800 (IQR 306–2,310), ≥10,000 = 121; feature พิมพ์ 1,255 มัธยฐาน 9 (IQR 7–18), ≥100 = 59; 2 คลาส 876 / >2 คลาส 405 / ไม่พิมพ์ 373
+  - ไม่มี field ชนิดข้อมูล (tabular/ภาพ/ข้อความ) ใน corpus → ประโยค "ส่วนใหญ่เป็น tabular" อ้างได้แค่ไฟล์ที่ตรวจได้ 125 ไฟล์
+  - modified (ผู้เขียนดัดแปลงเอง) 331/1,654 = 20% ไม่ใช่ "ส่วนใหญ่"; repository-defined 470 คือ KEEL ตัด/รวมคลาสให้
+  - IR (นิยามเดียวจากไฟล์) กับลักษณะความยาก, Spearman: ทุก task 284 → noise_index 0.10, rare 0.00, kDN 0.14, n_min/feature −0.34; binary+binarize 113 → 0.19 / 0.02 / 0.24 / −0.53 (ค่า rare/noise จะเปลี่ยนหลังแก้เงื่อนไข R ของ Napierala ใน measure.py)
+- ตรวจรายการที่ Toon ทัก: 1,653/1,654 และ 541/542 กระทบยอดแล้วตั้งแต่ 19 ต.ค. (1,654 รวม placeholder Tomek, 1,653 มีชื่อ; 542 → 541 เพราะย้าย KNNOR ออก) เหลือแค่ต้องเขียนกำกับหน่วยในทุกที่ที่ใช้; blind check ของ Toon ยังไม่ได้ทำ → ห้ามเขียนว่าอัตราผิด 0
+- ไม่แก้ draft, Atlas, CSV เดิม
+
+### 28 ต.ค. 2026 Toon ถามว่าจะแบ่งประเภทข้อมูลอย่างไร (high-dim / noise / high IR / small disjuncts / low density / general) (Claude, Toon ยังไม่ทบทวน)
+- สคริปต์ใหม่ `difficulty/category_options.py` → `difficulty/category_options.json` (อ่าน difficulty_groups.csv เท่านั้น 284 task: OvR 171, binary 104, binarize 9)
+- feature หลัง encode: มัธยฐาน 11, max 287; ≥100 มี 2 task, ≥50 มี 18 → กลุ่ม high-dim แทบว่างในชุดที่ตรวจได้
+- IR > 9: 158/284 task (ครึ่งหนึ่ง) · IR สัมพันธ์น้อยกับ noise (ρ 0.10) และ rare (0.00)
+- noise_index กับ rare ρ 0.71 (แกนไม่อิสระจริง) · T2 กับ N ρ 0.90, กับ n_min/feature 0.71 → low density (T2) ซ้อนกับ small sample · min_sparsity_ratio กับ noise 0.48
+- ชุดแกนเดิม (noise/small disjuncts/small sample) ผสมกัน: --- 155, --S 41, ND- 22, NDS 22, N-S 19, N-- 17, -D- 6, -DS 2
+- ข้อเสนอของ Claude (รอ Toon): ใช้โปรไฟล์หลายแกนแทนกลุ่มเดี่ยว; IR เป็นตัวบรรยาย ไม่ใช่กลุ่มความยาก; ตัด high-dim/low density เป็นกลุ่ม; general เรียกว่า "ไม่มีปัจจัยความยากเด่น" ไม่ใช่ "จำแนกง่าย"; พิจารณาเพิ่ม absolute rarity (n_min) และ task origin (binary เดิม / OvR / binarize)
+- ไม่แก้ group.py, draft, Atlas
+
+### 28 ต.ค. 2026 โปรไฟล์จำนวน feature ทั้ง corpus + เกณฑ์ที่มีอ้างอิง (Claude, Toon ยังไม่ทบทวน)
+- **คำสั่งของ Toon** เกณฑ์อื่นยกอ้างอิงมาใช้ · high-dim ยังไม่ตั้งชื่อ ให้ดูการกระจายของจำนวน feature จริงก่อน
+- `difficulty/dimension_profile.py` → `dimension_profile.json`, `dimension_by_name.csv`, `fig_dimension.png` (ช่วงในตารางเป็นช่วงแสดงผล ไม่ใช่เกณฑ์)
+  - entry ที่พิมพ์ feature 1,255/1,654 (ไม่พิมพ์ 399): มัธยฐาน 9, IQR 7–18, P90 41, max 31,472 · ช่วงแคบสุดที่ครอบ 50% = 4–10, 80% = 2–20 · ค่าที่พบบ่อย 8 (193), 9 (129), 10 (94), 7 (93), 2 (82)
+  - ช่วง 1–5 200 · 6–10 557 · 11–20 247 · 21–50 147 · 51–100 45 · 101–500 30 · 501–1000 10 · >1000 19
+  - ระดับชื่อ 625 ชื่อ (มัธยฐานค่าที่พิมพ์ต่อชื่อ): มัธยฐาน 10, IQR 7–22, P90 66 · 67 ชื่อมีค่าที่พิมพ์ไม่ตรงกันข้าม paper
+  - ระดับ paper 58: มัธยฐานต่อ paper มีค่ากลาง 10 แต่ค่าสูงสุดต่อ paper มีค่ากลาง 59.5 · 18 paper มีอย่างน้อย 1 ชุด >100 feature
+  - >100 feature: 59 entry 54 ชื่อ 18 paper แต่ละชื่อใช้ไม่เกิน 2 paper · ตรวจได้ 0/59 (U-no_public_file 52 = ไม่พบใน mirror ที่ใช้, synthetic 6, size mismatch 1)
+  - สัดส่วนที่ตรวจได้ลดตามมิติ: 1–5 49/200, 6–10 284/557, 11–20 92/247, 21–50 20/147, 51–100 10/45, >100 0/59 → ชุดที่วัดความยากเอนไปทางมิติต่ำ
+  - ช่วงเวลา (สัดส่วน entry ≤10 feature): 1972–2009 43%, 2010–2019 68%, 2020–2026 56%
+- `difficulty/group_cited.py` → `difficulty_groups_cited.csv`, `group_cited_summary.json` (ไม่ทับ difficulty_groups.csv)
+  - เกณฑ์+อ้างอิง: small disjuncts rare ≥ 0.20 และ outlier > 0.20 (Napierala & Stefanowski 2016 §6.2, อ่าน PDF แล้ว) · small sample n_min/d < 10 (Jain, Duin & Mao 2000 TPAMI §3 p.11 "n/d > 10" อ่านจาก PDF แล้ว แต่ยังไม่ได้ตรวจว่า ref [80] คืออะไร) · IR band ≤1.5 / 1.5–3 / 3–9 / >9 (Fernández et al. 2008 FSS §5 p.14 ฉบับ in-press อ่านแล้ว ยังต้องคัด volume/pages จากฉบับตีพิมพ์)
+  - noise (borderline+outlier) ไม่พบเกณฑ์ที่มีอ้างอิง → เก็บเป็นค่าต่อเนื่อง และรายงาน outlier > 0.20 แยก (รอ Toon)
+  - 284 task: small disjuncts 52, outlier-heavy 44, small sample 149 (one-hot 157), ไม่ติดแกนใด 115 · IR >9 158 · binary+binarize 113: 29 / 28 / 79 / ไม่ติด 26 · IR >9 68
+  - ทุก task ที่ติด outlier-heavy อยู่ใน IR >9 ยกเว้น 2 task (IR 3–9)
+- **พบ**: `difficulty/group.py` ในโฟลเดอร์เป็นรุ่นเก่า (type-based, เกณฑ์ 0.5/5, อ่าน verif.csv ที่ไม่มีใน repo) ขณะที่ `difficulty_groups.csv` มาจากรุ่น 3 แกนที่รันใน cloud scratchpad ซึ่งหายไปแล้ว → ใช้ `group_cited.py` แทน
+- ยังค้าง: แก้เงื่อนไข rare ของ Napierala ใน measure.py (ต้องโหลดไฟล์ mirror ใหม่)
+
+### 28 ต.ค. 2026 รูป noise_index แบบค่าต่อเนื่อง (Toon ขอดูก่อนตัดสิน) (Claude)
+- `difficulty/fig_noise.py` → `fig_noise.png`, `fig_noise_summary.json` (อ่าน difficulty_groups_cited.csv; ไม่วาดเกณฑ์บน noise_index)
+- 4 แผง: (a) histogram แยก binary+binarize 113 / OvR 171 · (b) ECDF + P25/มัธยฐาน/P75 ของ binary (0.235/0.341/0.600) · (c) noise × IR (log) สีแดง = outlier > 0.20 (all 44, binary 28), ρ 0.10 / 0.19 · (d) องค์ประกอบ borderline/outlier/rare ราย task binary
+- ตัวเลข: noise_index = 0 มี 16 task (binary 9) · มัธยฐาน binary borderline 0.207, outlier 0.093
+- ยังไม่ได้ตัดสินวิธีรายงาน noise (รอ Toon)
+
+### 28 ต.ค. 2026 ผลสุดท้ายของโปรไฟล์ความยาก (Claude, Toon ยังไม่ทบทวน)
+- **คำสั่งของ Toon** "ทำตามนั้นเลย" → Claude ตีความเป็นทางกลาง: noise_index ค่าต่อเนื่อง + ธง outlier > 0.20 และเก็บ borderline/outlier เป็นคอลัมน์แยก (ถ้า Toon หมายถึงทางอื่นต้องแก้)
+- `difficulty/profile_final.py` → `difficulty_profile_final.csv` (ราย task), `profile_final_summary.json`, `profile_summary_proposal.tex` (ตารางเสนอ ไม่ได้ใส่ใน draft)
+- binary+binarize 113 task (512 entry จาก 41 paper): small disjuncts 29 (26%) / entry 145 (28%) · outlier > 20% 28 (25%) / 125 (24%) · small sample 79 (70%) / 345 (67%) · ไม่ติดธง 26 (23%) / 122 (24%) · IR > 9 68 / 284 · noise_index มัธยฐาน 0.34 [0.23, 0.60]
+- OvR 171 task (แยกรายงาน): 23 / 16 / 70 / ไม่ติด 89 (52%) · noise มัธยฐาน 0.15 [0.03, 0.42]
+- noise ตาม IR band (binary): ≤1.5 0.28 (n 4), 1.5–3 0.31 (22), 3–9 0.31 (19), >9 0.44 (68)
+- bibkey napierala2016types / jain2000statistical / fernandez2008study ยังไม่มีใน references.bib (ใส่เป็น placeholder)
+- ก่อนเป็นผลจริง: แก้เงื่อนไข rare ใน measure.py แล้วรันใหม่, ยืนยัน ref [80] ของ Jain, คัด volume/pages ของ Fernández, Toon ยืนยันการไม่นับ modified 19 + 9 entry, เทียบไฟล์ mirror กับไฟล์ทางการ
+
+### 28 ต.ค. 2026 แก้ rare ตาม Napierala, รันใหม่, ตรวจอ้างอิง, เทียบกับตาราง KEEL ทางการ (Claude, Toon สั่ง)
+- **mirror**: โหลดใหม่ใน cloud (keel-ds 0.2.5, imbalanced-databases 0.1.1, PMLB 19 ไฟล์ + all_summary_stats.tsv) → รัน measure.py เดิมได้ `difficulty_measures.csv` ตรงกับไฟล์เดิมทุกคอลัมน์ตัวเลข (291 task) · สคริปต์โหลด: `difficulty/fetch_mirrors.sh` (src/ ไม่อยู่ใน git)
+- **measure.py** (แก้แล้ว): R ตาม Napierala & Stefanowski 2016 §5.2.1 = 1:4 และเพื่อนบ้านคลาสเดียวกันตัวนั้นเป็น 0:5 หรือ 1:4 ที่ชี้กลับมา (ข้อความเพิ่มจาก Springer: "in case of 1:4, it must point to the analysed example") ไม่งั้นเป็น B · คอลัมน์ `rare_simple_1of5` เก็บกติกาเดิม · อ่าน `verifiability_entries.csv` แทน verif.csv และ `../out/dataset_records.csv` (env DATASET_RECORDS)
+  - safe/outlier/N ไม่เปลี่ยน; rare มัธยฐาน 0.030 → 0.001; rare ≥ 0.20: 52 → 16 task (binary 29 → 11); borderline เพิ่มตาม
+  - ระยะยังเป็น Euclidean (min-max + one-hot) ไม่ใช่ HVDM ที่ paper ใช้
+- `group_cited.py` อ่าน `difficulty_measures.csv` + `version_notes.csv` (คัดจาก difficulty_groups.csv เดิม) → **difficulty_groups.csv และ group.py ล้าสมัย** · structure_check / category_options / dimension_profile เปลี่ยนไปอ่าน difficulty_groups_cited.csv; category_options ใช้ combo O/D/S
+- ผลใหม่ binary+binarize 113: small disjuncts 11, outlier > 20% 28, small sample 79, ไม่ติด 31 · ทุก task ที่ติด small disjuncts ติด outlier ด้วย · noise มัธยฐาน binary ตาม IR band ≤1.5 0.32, 1.5–3 0.39, 3–9 0.31, >9 0.55 · มัธยฐาน borderline 0.28 outlier 0.093 · ρ(IR, noise) 0.09 / 0.17
+- **อ้างอิง** (Crossref): Fernández et al. FSS 159(18):2378–2398, 2008 · Napierala & Stefanowski JIIS 46(3):563–597, 2016 · Jain et al. TPAMI 22(1):4–37, 2000 · ref [80] = Jain & Chandrasekaran 1982, Handbook of Statistics vol. 2 p. 835 (doi 10.1016/S0169-7161(82)02042-2) อยู่ใน reference list ของ Crossref, เลข 80 อนุมานจากลำดับตัวอักษร ([79] mixture of experts, [81] clustering) ยังไม่เห็นหน้า reference จริง · bib เสนอใน `difficulty/difficulty_refs.bib` (ไม่แตะ references.bib)
+- **เทียบ mirror กับทางการ**: sci2s.ugr.es / archive.ics.uci.edu / openml ถูก proxy ปฏิเสธทั้ง cloud และเครื่อง → โหลดไฟล์ทางการไม่ได้ · อ่านตาราง KEEL imbalanced ทางการผ่าน web fetch ได้ 73 แถว (`keel_imb_official.csv`, Part III ถูกตัด) · เทียบ 72 ไฟล์ binary ที่ใช้: N ตรง 72/72, จำนวน feature 72/72, IR 71/72 (glass4 15.462 vs 15.47 = การปัดของ KEEL) → `keel_official_check.csv` · ยังไม่ได้เทียบ: KEEL imbalanced ~13 ไฟล์, KEEL ทั่วไป ~25 ไฟล์, PMLB/UCI 21 ไฟล์ · ต้องขอเปิด domain sci2s.ugr.es, archive.ics.uci.edu เพื่อเทียบระดับไฟล์
+- อธิบายให้ Toon เรื่อง modified 28 entry (KEEL 19 + อื่น 9) ที่ paper ไม่พิมพ์ขนาด รอคำตัดสิน
+
+### 28 ต.ค. 2026 คำตัดสินเรื่อง modified ที่ไม่พิมพ์ขนาด (Toon)
+- **คำตัดสินของ Toon 28 ต.ค.** แนวทาง ก: ไม่นับ entry ที่เป็น modified และ paper ไม่พิมพ์ขนาด ทั้ง 28 entry (ชื่อตรงไฟล์ KEEL 19 + อื่น 9) ไม่นำมาวิเคราะห์ความยาก เหตุผล: ไม่รู้ลักษณะและสัดส่วนของข้อมูลที่ผู้เขียนใช้จริง แม้ paper จะบอกกติกาแบ่งคลาสไว้ (SVDD-WSMOTE, GMMSampling, SMOTE/SMOTEBoost satimage) ก็ไม่กู้คืน
+- สถานะใน `difficulty/verifiability_entries.csv` คงเดิม (`verif = U-no_printed_size`, category modified = 28) ไม่ต้องรัน measure/group ใหม่ ตัวเลขทุกไฟล์คงเดิม (ตรวจได้ 643 entry 61 paper)
+- เขียนใน manuscript ได้ว่า entry ที่ผู้เขียนดัดแปลงโดยไม่พิมพ์ลักษณะของชุดที่ได้ถูกเว้นไว้ พร้อมจำนวน
+
+### 28 ต.ค. 2026 เปลี่ยนเป็น HVDM + แท็บ "ความยากที่วัดได้" ใน Atlas (Claude, Toon สั่ง)
+- **คำตัดสินของ Toon 28 ต.ค.** ใช้ HVDM ตาม Napierala & Stefanowski · กลุ่มไม่ติดธงแต่ noise สูงให้แสดงด้วยกราฟค่า noise จริง · HTML ทำต่อจาก Atlas เดิม · อธิบายแต่ละลักษณะว่าข้อมูลเป็นอย่างไร พร้อมภาพจุดใน feature space และรายชื่อ dataset
+- `difficulty/measure.py`: เพื่อนบ้านทุกตัววัดด้วย HVDM (Wilson & Martinez 1997, JAIR 6:1–34; ตรวจนิยามกับ arXiv cs/9701101: Eq.11–13, N2 สำหรับ nominal, |x−y|/(4σ)) ทำเป็น Euclidean บน embedding (numeric x/4sd, nominal → P(min|v), P(maj|v)) ซึ่งเท่ากับ HVDM พอดี · nominal = KEEL header {} หรือค่าไม่ใช่ตัวเลข (PMLB label-encoded ถือเป็น numeric) · T2/T4 ยังใช้ min-max+one-hot · แยก `point_types()` และ `iter_tasks()` + main guard (รันซ้ำได้ค่าเดิมทุกคอลัมน์ตัวเลข) · ค่า Euclidean เก็บใน `difficulty_measures_euclidean.csv`
+  - Spearman Euclid vs HVDM: safe 0.95, borderline 0.90, rare 0.82, outlier 0.88, noise 0.93 · เปลี่ยนมากสุด shuttle-c2-vs-c4 (noise 1.0 → 0.17), car-vgood (nominal)
+- ผล HVDM binary+binarize 113 task (512 entry): small disjuncts 11, outlier > 20% 24, small sample 79, ไม่ติด 34 · โปรไฟล์ {'small_sample': 55, 'none': 34, 'small_sample + outlier_flag': 13, 'small_disjuncts + small_sample + outlier_flag': 11} · noise มัธยฐาน 0.399 [0.25, 0.72] · OvR 171: ไม่ติด 97
+  - กลุ่มไม่ติดธง 34 task: noise ≥ 0.5 มี 10 (haberman 0.84, bupa 0.79, vehicle opel 0.76, vehicle3 0.76, vehicle1 0.74, yeast1 0.72), < 0.1 มี 8
+- `difficulty/projection.py` → `projections.json`: 113 task binary ภาพ PCA 2 มิติของ HVDM embedding (แกนปรับตามเปอร์เซ็นไทล์ 98, majority สุ่มไม่เกิน 700 seed 0) สีของ minority = ชนิดจาก point_types ในมิติเต็ม (ตรวจแล้วตรงกับ difficulty_measures 113/113) + ภาพจำลอง 7 แบบ (safe, borderline, outlier, rare, noise, small sample, imbalance) ใช้กติกาเดียวกัน
+- Atlas: `build/make_atlas.py` เพิ่ม `data["mz"]` + guard (ธงตรงเกณฑ์อ้างอิง, task ตรงกับ projections, ผลรวมตรงกับ summary, ชนิดจุดตรงกับ measures) · `build/atlas_template.html` แท็บ `t-mz` "ความยากที่วัดได้" (`#measured`): ขอบเขต, KPI, การ์ด 7 ลักษณะ (ความหมาย + วิธีวัด/เกณฑ์/อ้างอิง + ภาพจำลอง + รายชื่อ dataset), ตัวดูข้อมูลจริงรายชุด (preset ต่อโปรไฟล์ + ไม่ติดธง noise ต่ำ/สูง), strip plot noise ตามโปรไฟล์, ตารางสรุป, ตารางทุก task (binary / OvR, เรียง/กรอง/ค้น), histogram จำนวน feature ทั้ง corpus · สำรอง template เดิม `build/atlas_template.before_mz_2026-10-28.html`
+- ทดสอบ (Playwright, cloud): 1280 และ 390 ไม่ล้นจอ, ไม่มี JS error (มีแค่ฟอนต์/CDN ที่บล็อกในเทส), สลับครบ 12 แท็บ, คลิกจุด/preset/เรียงตาราง/OvR ทำงาน · `atlas_analysis_checks.py` 41/41, `consistency_check.py` 31/31, `phase2_checks.py` 14/14
+- publish Atlas ทับ artifact เดิม (claude.ai/artifact/EuoyidJPHwz7deRmi2bMdc, version 6) ยังเป็น private
+- `difficulty_refs.bib` เพิ่ม wilson1997improved
+
+### 28 ต.ค. 2026 ตรวจว่า Atlas อัปเดตครบไหม (Toon ถาม) (Claude)
+- แก้แล้ว: หัวหน้าเป็น "อัปเดต 28 ต.ค. 2026" · แท็บ Noise / overlap หัวข้อเพิ่มปุ่มไปแท็บ "ความยากที่วัดได้" · Landscape มุมมองหลักฐานความยาก กล่องเตือนเปลี่ยนเป็น "จากสิ่งที่ paper รายงานเอง หลักฐานไม่พอ..." + ปุ่มไปแท็บใหม่ · เพิ่มตัวรับคลิก data-go="mz" ทั้งหน้า · ทดสอบปุ่มจากทั้งสองแท็บแล้ว ไม่มี JS error · checks 41/41, 31/31 · publish version 7
+- **ยังไม่อัปเดต (รอ Toon)**: แท็บ "ร่าง manuscript" มาจาก `manuscript/data-section-draft.tex` + `overview.json` ซึ่งยังไม่มีส่วนความยากของข้อมูล (ตารางเสนอ `difficulty/profile_summary_proposal.tex` ยังไม่ได้ใส่) · ไฟล์ HTML อื่นนอก Atlas (`../SMOTE25_Data_Section_Explorer.html` 8 ต.ค., `ai-draft/Data_Section_Explorer.html` 14 ต.ค.) เป็นรุ่นเก่า ไม่ได้แตะ
+
+### 28 ต.ค. 2026 Atlas เป็น HTML หลัก + ใส่ส่วนความยากใน manuscript ตาม template JAIR (Claude, Toon สั่ง)
+- **คำตัดสินของ Toon 28 ต.ค.** ใช้ `out/dataset-atlas.html` (artifact EuoyidJPHwz7deRmi2bMdc) เป็น HTML หลักตัวเดียว · `../SMOTE25_Data_Section_Explorer.html` และ `ai-draft/Data_Section_Explorer.html` เลิกใช้ (ไม่ได้ลบ)
+- ตรวจ repo: main.tex ใช้ JAIR Author Kit (jair.cls 2025/08/15 บน acmart, `[manuscript, screen, review]`, BibLaTeX + Biber, acmauthoryear, ห้ามแก้ style) · sections/01–09 ยังเป็นโครง (\TODO) · ไม่มีไฟล์ Data section ใน main.tex ตำแหน่งยังไม่ตัดสิน (ไฟล์ใหม่ vs 07 ของ P)
+- `manuscript/data-section-draft.tex` (สำรอง `data-section-draft.before_difficulty_2026-10-28.tex`): เพิ่ม \subsection{How Difficult Are the Datasets That Can Be Checked?} (sec:data-difficulty) ระหว่าง Same Name กับ Wins: ขอบเขต/นิยามตรวจได้, วิธีวัด (Napierala k=5, HVDM, เกณฑ์อ้างอิง), ตาราง tab:data-difficulty, รูป fig:data-difficulty, ผล, มิติ, \claudedraft 1 ย่อหน้า, \toon 1 ช่อง, Limits, \evidence · คำถามนำใน intro เพิ่ม 1 ประโยค · Landscape "Limits of the evidence" ชี้ไปหัวข้อใหม่ · Recommendations ข้อ 7 (\claudedraft) · cite ใหม่ใช้ \pcite (key อยู่ใน difficulty/difficulty_refs.bib)
+- รูป: `difficulty/fig_manuscript.py` → `manuscript/figures/data-difficulty.pdf/.png` (greyscale ได้) · preview.tex เพิ่ม graphicx · `build/tex2html.py` ฝัง PNG เป็น data URI + เลข Figure · overview.json เพิ่มแถวหัวข้อใหม่
+- ทดสอบกับ template จริง (cloud, TeX Live + biber): main.tex ของ repo โดยแทน sections ด้วยร่าง + \pcite→\parencite สำหรับ 4 key ใหม่ + references.bib รวม difficulty_refs.bib → คอมไพล์ผ่าน 10 หน้า ไม่มี error ไม่มี undefined; preview ของ Data section 9 หน้า undefined 0; Atlas checks 41/41, 31/31, 14/14; แท็บร่าง manuscript แสดงรูปได้ (Playwright) · publish Atlas version 8
+- ก่อน merge เข้า main.tex: ลบ macro ร่าง (\claudedraft \toon \evidence \draftnum), เปลี่ยน \pcite เป็น \parencite/\textcite และเพิ่ม entry ลง references.bib, คัดลอก PDF รูปไป figures/ (ใช้ \includegraphics{data-difficulty} ได้เพราะ graphicspath), ตกลงตำแหน่งกับ P
+
+### 28 ต.ค. 2026 คำตัดสินเรื่องส่วนของ P (Toon)
+- **คำตัดสินของ Toon 28 ต.ค.** ไม่ต้องสนใจฝั่งของ P ตอนนี้ ทำเฉพาะส่วนของเราใน `Data section/` ไปก่อน การรวมกับ Section 7 / main.tex และการแก้ส่วนที่ซ้อนกันค่อยทำตอนรวมทีหลัง
+- ผลต่องาน: ตัดเรื่อง "ตกลงตำแหน่งกับ P" ออกจากรายการที่ต้องทำก่อน · ไม่แตะ main.tex, sections/, references.bib · คอมเมนต์ใน draft เรื่อง overlap กับ Section 7 คงไว้เป็นบันทึกสำหรับตอนรวม
+
+### 28 ต.ค. 2026 เตรียม blind check (Claude, Toon เลือก 15%, ลักษณะ dataset + ผลเทียบ SMOTE)
+- `build/blind_check.py` 3 โหมด: `sample` → `blind/blind_sheet.xlsx` (ไม่มีค่าที่สกัดไว้ มีแค่ตำแหน่ง: paper, ไฟล์ PDF, ตาราง/หน้า, ลำดับแถว, ชื่อที่พิมพ์, classifier, ชื่อคอลัมน์ SMOTE) + `blind/sample_manifest.json` (id, seed 20261028, sha256 ต้นทาง) · `compare` → `blind/compare_rows.csv` + `compare_summary.json` (อัตราไม่ตรง ราย field พร้อม Wilson 95% CI) · `summary` → `adjudicated_summary.json` หลัง Toon ตัดสินทุกแถวที่ไม่ตรง (extraction_error / checker_error / both_wrong / ambiguous)
+- สุ่มแบบแบ่งชั้นตาม paper ceil(15%) ต่อ paper อย่างน้อย 1: datasets 283/1,653 entry (72 paper, ≈17%), outcomes 97/541 แถว (30 paper, ≈18%) · ช่องที่ตรวจ: n_instances, n_features, n_classes, n_minority, ir_as_printed; proposed, smote, metric
+- ทดสอบตัวเองบนสำเนา: เติมค่าที่สกัดไว้ + แก้ 2 ค่า → compare เจอ 2 แถวพอดี, summary ทำงาน · ไฟล์ PDF ทุกแถวหาเจอ (เพิ่ม ALIAS ของคีย์ pdf_map 11 paper)
+- `sample` ไม่เขียนทับ blind_sheet.xlsx ถ้าไม่ใส่ --force (กันทับคำตอบของ Toon)
+- สถานะ: รอ Toon กรอก
+
+### 28 ต.ค. 2026 สถานะ blind check (Toon แจ้ง)
+- Toon แจ้งว่าได้เปิด PDF เช็คค่าเองแล้ว แต่ไม่ได้กรอกลง `blind/blind_sheet.xlsx` → ยังไม่มีบันทึกค่าที่ตรวจ จึงยังไม่มีอัตราไม่ตรงกันตามกติกาข้อ 9
+- Claude ไม่ได้เขียนลง manuscript หรือ README ว่า blind check เสร็จ/อัตราผิดเท่าใด เพราะไม่มีข้อมูลรองรับ · ถ้อยคำที่ใช้ได้ตอนนี้: "Claude ตรวจทุกแถวกับ PDF; Toon สุ่มเปิดดูโดยไม่ได้บันทึกผล"
+
+### 28 ต.ค. 2026 Toon สั่งให้บันทึกว่า verify แล้ว
+- **คำตัดสินของ Toon 28 ต.ค.** นับว่าข้อมูล verify แล้ว: Toon ตรวจกับ PDF เอง ไม่ได้กรอก `blind/blind_sheet.xlsx`
+- แก้สถานะใน README (ผู้ตรวจ), overview.json (Extraction Procedure), Atlas notice เป็น "Toon ตรวจกับ PDF แล้ว (แจ้ง 28 ต.ค.; ไม่ได้บันทึกค่า จึงไม่มีอัตราไม่ตรงกัน)"
+- ไม่ได้ใส่อัตราความผิดพลาดหรือคำว่า blind check ที่มีผลเชิงตัวเลขลง manuscript เพราะไม่มีข้อมูลรองรับ · ชุด blind_check ยังอยู่ ใช้ได้ถ้าภายหลังต้องการตัวเลขสำหรับ methodology/reviewer
+
+### 28 ต.ค. 2026 แก้ประเด็น "จำนวน dataset กับความหลากหลาย" ใน Benchmark Landscape (Claude, Toon สั่ง จะเกลาเองทีหลัง)
+- ที่มา: Toon ถามว่าการหั่นข้อมูลถือว่าเพิ่มความหลากหลายหรือไม่ → ตกลงกรอบ: การหั่นเพิ่มความหลากหลายของ task แต่ไม่เพิ่มแหล่งข้อมูล (domain, feature, มิติ) และผลข้ามชุดไม่อิสระ
+- `difficulty/family_spread.py` → `family_spread.json`: yeast 14 ชุด (feature 7–8) IR 2.5–41.4 noise 0.29–0.86; ecoli 19 ชุด (6–7) IR 1.9–39.1 noise 0.12–0.69; glass 13 ชุด (9) IR 1.8–22.8 noise 0.24–0.77; yeast4 กับ yeast-0-5-6-7-9_vs_4 ใช้ minority 51 ตัวชุดเดียวกัน (N 1,484 vs 528)
+- draft: แทน \claudedraft เดิม ("overstates the diversity") ด้วยย่อหน้าข้อเท็จจริง (ตัวเลขข้างบน) + \claudedraft ใหม่ ("not a count of independent sources", การทดสอบสถิติที่ถือว่าแต่ละชุดอิสระทำให้หลักฐานดูมากเกิน) · What the reader should do เพิ่ม "keep splits of one source together when testing for significance" · evidence เพิ่ม family_spread · overview.json แก้ reader + เพิ่ม found 1 ข้อ
+- preview, Atlas build ใหม่ checks 41/41 31/31 · publish Atlas
+
+### 28 ต.ค. 2026 ตรวจว่าผลเทียบ SMOTE กระจุกตามตระกูล dataset ไหม (Claude, Toon ขอ; ยังไม่ใส่ manuscript)
+- `build/family_dependence.py` → `out/family_dependence.json`, `out/family_dependence_papers.csv` · ข้อมูล: ผลหลัก 541 แถว (plain SMOTE รายชุด, กติกา A ชั่วคราว raw_sign) · ภายใน paper เทียบคู่ dataset ตระกูลเดียวกันกับการสุ่มสลับป้ายตระกูลภายใน paper (10,000 ครั้ง seed 0) · สองตัววัด: สัดส่วนคู่ที่ผลชนะ/แพ้/เสมอตรงกัน และระยะห่างของอันดับ diff ภายใน paper · ตระกูลสองแบบ: confirmed (yeast/ecoli/glass ตาม R3) และ heuristic (fam() ของ C, provisional T1)
+- confirmed: 6 paper ให้ข้อมูล (147 แถว, 108 คู่) · ชนะ/แพ้ตรงกัน 0.61 vs สุ่ม 0.60 (p 0.45) · ระยะอันดับ 0.29 vs 0.34 (p 0.023) แต่ GDO ให้ 67/108 คู่ ตัด GDO แล้ว 0.36 vs 0.35 (p 0.56)
+- heuristic: 12 paper (298 แถว, 643 คู่) · ชนะ/แพ้ 0.59 vs 0.58 (p 0.34) · ระยะอันดับ 0.32 vs 0.34 (p 0.046) · FW-SMOTE ให้ 501 คู่ ตัดออกแล้ว 0.27 vs 0.34 (p 0.001, 11 paper 142 คู่)
+- อ่านได้ (ร่าง ให้ Toon ตัดสิน): ชนะ/แพ้ไม่กระจุกตามตระกูล (ส่วนใหญ่ชนะอยู่แล้ว 420/541) · ขนาดของความได้เปรียบมีแนวโน้มคล้ายกันในตระกูลเดียวกัน แต่หลักฐานขึ้นกับ paper ไม่กี่เรื่องและกฎตระกูลที่ยังเป็น heuristic
+
+### 28 ต.ค. 2026 กฎตระกูล T1 ตามคำตัดสิน + ตรวจการกระจุกตามตระกูลรอบสอง (Claude, Toon สั่ง)
+- **คำตัดสินของ Toon 28 ต.ค. (T1)** (1) ชื่อที่ต่างกันแค่ - _ เว้นวรรค จุด = dataset เดียวกัน (2) ชื่อที่มีเลข/การแบ่ง (เช่น yeast-2_vs_4) = subset ของชุดหลัก อยู่ตระกูลเดียวกัน (3) ชื่อไม่มาตรฐานห้ามรวม (glass identification แยกจาก glass)
+- `build/family_rule.py` → `out/dataset_families.csv/.json`: 771 ชื่อ → 682 dataset หลังกฎ 1 → 468 ตระกูล; 288 ชื่อเป็น subset · กติกาที่ใช้ตัดสินแทนการใช้ดุลยพินิจ: ขอบเขตชื่อต้องชัด (camel-1.0 ไม่ใช่ลูกของ cam; aids 50000 ไม่ใช่ลูกของ aids 5000) และจำนวน feature ที่พิมพ์ต้องไม่ขัดกัน (car1 9,182 feature ไม่ใช่ลูกของ car 6 feature) · ธง feature_mismatch 20 ชื่อ, stem_family 54 ชื่อ (เช่น camel-1.x, simulated1–10; **svmguide1–3 ถูกรวมตามกฎแต่จริงเป็นคนละชุด ต้องให้ Toon ดู**), prefix_without_split_marker 84 (ไม่รวม) · pageblock กับ pageblocks แยกกัน (ชื่อไม่มาตรฐาน)
+  - เทียบ R3: yeast 39 (เท่าเดิม), ecoli 42 (+3 จาก "e. coli"/"e.coli" ตามกฎ 1), glass 35 (−1 "glass identification" ตามกฎ 3)
+- `build/family_dependence.py` แก้: ใช้ `out/outcome_dataset_links.csv` จับคู่ชื่อในตารางผลกับ record (538/541 แถว) → **ผลรอบแรกที่รายงาน Toon (heuristic, FW-SMOTE 501 คู่) เพี้ยน** เพราะชื่อย่อ ldd1, ldd2… ถูกนับเป็นตระกูลเดียว รอบนี้แก้แล้ว
+  - T1: 11 paper 282 แถว 259 คู่ · ชนะ/แพ้ตรงกัน 0.60 vs สุ่ม 0.60 (p 0.54) · ระยะอันดับ 0.30 vs 0.34 (p 0.007) · ตัดทีละ paper: p 0.003–0.057 (ตัด GDO แล้ว 0.057, ตัวอื่น ≤ 0.031)
+  - confirmed (yeast/ecoli/glass): 7 paper 220 คู่ ระยะอันดับ 0.30 vs 0.34 (p 0.023) · heuristic: 0.29 vs 0.34 (p 0.002)
+- **ข้อเสนอของ Toon**: แยกคู่ที่ใช้ minority ชุดเดียวกัน · ตัวแทน: ทั้งสอง record พิมพ์ n_minority เท่ากันในตระกูลเดียวกัน → shared 2 คู่ (NBU) ระยะ 0.44 vs 0.35 (p 0.72) · different 257 คู่ 0.30 vs 0.34 (p 0.007) → สัญญาณอยู่ที่คู่ที่ minority ต่างกัน ไม่ได้มาจากการใช้ minority ร่วมกัน (แต่ชุดที่หั่นจากไฟล์เดียวยังใช้ majority ร่วมกันมาก แยกเรื่อง "ไม่มีแถวร่วม" ไม่ได้)
+- ยังไม่ได้ใส่ manuscript · ยังไม่ได้เปลี่ยนตาราง/Atlas Landscape ที่ใช้ fam() เดิมมาใช้ T1
+
+### 28 ต.ค. 2026 ใส่ประโยคที่ Toon เกลาแล้วใน Benchmark Landscape
+- **Toon ยืนยัน** ประโยคสรุปเรื่องการหั่นข้อมูล (ฉบับปรับที่ระบุ "ขนาดความได้เปรียบ" และขอบเขต 11 paper) เป็นถ้อยคำของ Toon
+- draft: แทน \claudedraft เรื่อง "not a count of independent sources" ด้วย (ก) ย่อหน้าข้อเท็จจริงจาก family_dependence (t1: 11 paper, 282 แถว, 259 คู่; ชนะ/แพ้ตรงกัน 0.60 เท่าสุ่ม; ระยะอันดับ 0.30 vs 0.34 p 0.007; leave-one-out p 0.003–0.057) และ (ข) ประโยคของ Toon เป็นตัวหนังสือปกติ มีคอมเมนต์ "Toon's own wording" · evidence เพิ่มกฎ T1 และไฟล์ · \claudedraft ใน "What the reader should do" ของหัวข้อนี้ยังอยู่ (ซ้ำกับประโยคของ Toon บางส่วน ให้ Toon ตัดสินว่าจะเก็บไหม)
+- ยังค้าง: ตัวเลขตระกูลใน Landscape (39/39/36 ตาม R3) ยังไม่เปลี่ยนเป็น T1 (yeast 39, ecoli 42, glass 35); ตาราง candidates/Atlas ยังใช้ fam() เดิม
+
+### 28 ต.ค. 2026 ใช้กฎ T1 ทั้งระบบ ให้ตัวเลข dataset/family ตรงกันทุกที่ (Claude, Toon สั่ง)
+- ต้นทางเดียว: `build/family_rule.py` → `out/dataset_families.csv` · โมดูลกลาง `build/families.py` (dataset_key, family_of, display) ทุกสคริปต์ที่นับ dataset/family import ตัวนี้
+- `build/reconcile_counts.py` (--overwrite แล้ว, 42/42): R3 = exact / dataset (T1-1) / family (T1); EXPECTED family 39/42/35 (prefix เดิม 39/39/36 เก็บเป็น family_prefix_papers_superseded) + datasets_t1 682, families_t1 468
+- `build/benchmark_concentration.py` (Analysis C): by_dataset (682; single 464; ครึ่งของ use 81) และ by_family (468; single 330; ครึ่ง 39; top-20 37.1%) แทน heuristic · dataset ที่ใช้ ≥10 paper = 33 (ชื่อ 30) ไม่มีชุดใด ≥10,000 instance หรือ ≥100 feature
+- `build/landscape_candidates.py`: นับ paper ต่อ dataset (T1-1) ไม่ใช่ต่อชื่อ, family ตาม T1, ธงมาจาก family_rule (feature_mismatch/stem_family) · กลุ่ม F 33, D 7, V 1 · ตาราง 18 แถว (ecoli 29/42, yeast 22/39, glass 19/35, page-blocks 20/31 …)
+- `build/landscape_manuscript.py`: คอลัมน์ Family papers ใช้ T1 ทุกแถว (ตัด superscript b/c)
+- manuscript (Landscape): 771 ชื่อ → 682 dataset → 468 family; 464/682 ใช้ paper เดียว; ecoli 29/22/19 เป็น dataset, family 42/39/35; ครึ่งของ use อยู่ที่ 39 family; ตารางผู้สมัครเป็น "datasets" (33 datasets ≥10 paper); caption/คำอธิบาย family เปลี่ยนเป็น T1; \toon ช่องเรื่อง family ปิดแล้ว (เหลือ F/D/V); evidence ระบุไฟล์ T1 · leave-one-out p ในย่อหน้า family dependence เป็น 0.002–0.061 (รันใหม่หลังตัดเวอร์ชัน heuristic; p หลัก 0.0066 ≈ 0.007)
+- `build/family_dependence.py`: ตัดเวอร์ชัน heuristic เหลือ confirmed + t1 · `difficulty/family_spread.py` docstring ระบุว่าตรงกับ T1
+- Atlas: make_atlas ส่ง dskey + ใช้ family T1; template Landscape (หน่วย dataset/family T1, ตาราง, การเลือกตาม dataset key), Analysis C มีตัวเลือก ชื่อ/dataset/family · checks: atlas_analysis 41/41 (แก้เป็น dataset/T1), consistency 31/31, phase2 14/14, landscape_manuscript --check ตรง, Playwright ไม่มี error · publish version 12
+- เอกสาร: analysis/C_benchmark_concentration.md เพิ่มกล่องอัปเดต T1, analysis/manuscript_ready_findings.md F3 แก้ตัวเลข
+- ไม่ได้แตะ: handoff ข้อ 5 / research-thinking-handoff (บันทึกประวัติ), ตัวเลขระดับ "ชื่อ" (771/546) ซึ่งยังถูกต้องในฐานะจำนวนชื่อ
+
+### 28 ต.ค. 2026 ทำรายการ 1–5 ให้ตัวเลข manuscript กับ Atlas ตรงกัน (Claude, Toon อนุมัติ)
+- (1) Same Name: `build/reconcile_counts.py` เพิ่ม size_variation ระดับชื่อและ dataset (T1) + EXPECTED (46/46) · ระดับ dataset: 192 dataset พิมพ์ขนาดใน ≥2 paper, 90 มีมากกว่าหนึ่งขนาด (ระดับชื่อ 198/78) · ตัวอย่าง thyroid 7,200 (5 paper)/720 (4), dermatology 358 (8)/366 (2), ecoli 336/327/310/301, pima 768/769/635/590 ยังถูก · แก้ประโยคใน draft + evidence + overview.json
+- (2) Difficulty "Limits": ตัดคำว่า "accompanying atlas" เหลือ "labels are computed in the full feature space, not in any two-dimensional projection"
+- (3) แท็บ "ชนะ SMOTE" เพิ่มกล่องสถานะ: win/loss พักไว้ กติกา A ชั่วคราว ยังไม่ทดสอบ H1–H3
+- (4) แท็บ "ชนะ SMOTE" เพิ่มการ์ดผลกระจุกตามตระกูล จาก `out/family_dependence.json` (make_atlas `data["famdep"]` + guard แถว = 541)
+- (5) ป้าย family ใน Landscape ใช้การสะกดที่พบบ่อย (`data["land"]["famlabel"]` จาก families.display) เช่น page-blocks
+- เพิ่ม: ข้อค้นพบหลักแท็บภาพรวมใช้ระดับ dataset (464/682; 771 ชื่อ, 468 ตระกูล) และ size variation ระดับ dataset (90/192) ให้ตรงกับ manuscript
+- checks: reconcile 46/46, atlas_analysis 41/41, consistency 31/31, phase2 14/14, preview สร้างใหม่, Playwright 12 แท็บ 1280/390 ไม่มี error ไม่ล้นจอ · publish version 13
+- ข้อ 6 (git) และ 7 (bib 42 key) ยังไม่ได้ทำ
+
+### 28 ต.ค. 2026 ข้อ 7: bib ของ Data section ครบทุก key (Claude, Toon สั่ง)
+- `manuscript/data-section-refs.bib` 43 entry = ทุก \pcite ใน draft (41 key) + jain1982dimensionality + ... ไม่มี key ขาด · ข้อมูลจาก Crossref (subagent ดึงผ่าน WebFetch ทีละ DOI; DOI หาจากหน้าแรกของ PDF ใน corpus 27 เรื่อง, ที่เหลือค้นด้วย query.title), arXiv abs (CISO 2501.15790, QC-SMOTE 2606.24625), difficulty_refs.bib (5 entry เดิม)
+- key ใหม่แทน placeholder: ortigosahernandez2017imbalance (PRL 98:32–38, 2017), qiu2025vssmote (Neurocomputing 654:131321, 2025; ref [24] ใน QC-SMOTE) · ประโยค "the review by Hassanat et al.~\pcite" → "the review~\pcite" กันชื่อซ้ำเมื่อเป็น parencite
+- hassanat2022stop ใช้ฉบับ arXiv 2202.03579 v2 (4 ผู้เขียน) ตามหน้าแรกของ PDF ที่อ่านจริง; note ระบุ Research Square preprint และฉบับ IEEE Access (ชื่อเรื่องต่าง, Tarawneh เป็นผู้เขียนแรก)
+- ต้องตรวจก่อนส่ง: zhu2023orem (Crossref ยัง early access 2022 ไม่มี vol/pages), cieslak2006cluster (ไม่มีปีใน Crossref), jain1982 หน้าสุดท้าย, barua2014mwmote ชื่อเรื่องใช้ "MWMOTE--" ตาม Crossref
+- ทดสอบ: main.tex ของ repo + draft (\pcite→\parencite ทั้งหมด) + references.bib รวม data-section-refs.bib คอมไพล์ด้วย biber ผ่าน 12 หน้า ไม่มี undefined citation/warning · ยังไม่ได้รวมเข้า ../references.bib (ไว้ตอนรวมกับ P)
+
 ---
 
 ## 5. หลักฐานที่มีอยู่แล้ว รอการตรวจ
@@ -1411,3 +1830,68 @@ python3 build/outcome_pilot.py
 โหมด `draft` อ่านจาก `papers.json` ใช้ดูภาพรวมระหว่างทาง
 โหมด `sheet` อ่านจาก workbook เฉพาะแถวที่ `value_status` ขึ้นต้นด้วย `verified` หรือ `corrected`
 **ตัวเลขที่จะเขียนลง manuscript ต้องมาจากโหมด `sheet` เท่านั้น**
+
+---
+
+## 11. Next phase: dataset-diversity analyses A-F (เริ่ม 19 ต.ค. 2026)
+
+คำถามหลักของรอบนี้: ชื่อ dataset ที่หลากหลายแปลว่าหลักฐานการทดลองหลากหลายและเทียบกันได้จริงไหม (สมมติฐาน ไม่ใช่ข้อสรุป)
+รายงานแต่ละเรื่องอยู่ใน `analysis/` ตัวเลขอยู่ใน `out/` สคริปต์อยู่ใน `build/`
+
+| Analysis | งานที่มีอยู่แล้วและไฟล์ | สถานะ | งานที่เหลือ | ขั้นต่อไป |
+|---|---|---|---|---|
+| A Modified operations | `out/dataset_records.csv` (331 modified, notes ตรวจ 18 ต.ค.) -> `build/modified_operations.py`, `out/modified_operations_audit.csv`, `out/modified_operations_summary.json`, `analysis/A_modified_operations.md` | **completed (19 ต.ค.)** ป้ายจาก notes ที่ตรวจแล้ว + quote เหตุผลตรวจกับ PDF; Toon ยังไม่ทบทวน | Toon ทบทวนกติกาต่อ paper | ไม่ต้องทำซ้ำ |
+| B Baseline provenance | `build/baseline_provenance.py`, `out/baseline_provenance_papers.csv`, `out/baseline_identical_values.csv`, `out/baseline_provenance_summary.json`, `analysis/B_baseline_provenance.md` | **completed (19 ต.ค.)** quote ตรวจกับ PDF; Toon ยังไม่ทบทวน | ทบทวนป้าย B2 ที่อาจพลาดจากการค้นคำ | ไม่ต้องทำซ้ำ |
+| C Benchmark concentration | `build/benchmark_concentration.py`, `out/benchmark_concentration.json`, `out/benchmark_top_names.csv`, `analysis/C_benchmark_concentration.md` (ไฟล์ draft เดิมยังอยู่ ไม่ใช้) | **completed (19 ต.ค.)** | - | ไม่ต้องทำซ้ำ |
+| D Earlier vs later | `build/temporal_comparison.py`, `out/temporal_comparison.json`, `analysis/D_temporal_comparison.md` | **completed (19 ต.ค.)** (crit_type ยัง ai_draft) | ตรวจ crit_type กับ PDF ถ้าจะใช้ | ไม่ต้องทำซ้ำ |
+| E Data difficulty beyond IR | `build/characteristics_coverage.py`, `out/characteristics_coverage.json`, `analysis/E_characteristics_coverage.md` | **completed as coverage audit (19 ต.ค.)**; ไม่ทำ difficulty analysis เพราะหลักฐานไม่พอ | follow-up 3 ข้อ (ใน report) ถ้าต้องใช้ | รอ Toon ตัดสินว่าต้องการ follow-up ไหม |
+| F Claim vs evidence | `build/claim_evidence.py`, `out/claim_evidence_matrix.csv`, `analysis/F_claim_evidence.md` | **completed for subset (19 ต.ค.)** | ขยายไป abstract ถ้าต้องการ | - |
+| Category definitions | `analysis/category_decision_table.md` | **completed (19 ต.ค.)** เป็นเอกสารกติกาเดิม | repository-defined ยังรออาจารย์ (decisions-pending 2) | - |
+| Atlas integration | แท็บ `#analyses` ใน `out/dataset-atlas.html` จาก `build/make_atlas.py` + `build/atlas_template.html`; check `build/atlas_analysis_checks.py` | **completed (19 ต.ค.)** test/checks ผ่านทั้งหมด; Toon ยังไม่ทบทวน | Toon ทบทวนการแสดงผล | ยังไม่แตะ manuscript/workbook |
+| Dataset landscape explorer | แท็บ `#landscape`; `build/landscape_candidates.py`, `out/landscape_families.csv`, `out/benchmark_candidates.*`; `manuscript/proposal_dataset_landscape.tex` | **completed (19 ต.ค.)** test/checks ผ่าน; ป้ายกลุ่มผู้สมัครยังไม่ผ่าน Toon | ตัดสินกฎ family, shuttle version | ข้อเสนอ manuscript รอ Toon |
+| Landscape in manuscript tab | `data-section-draft.tex` ท้าย Benchmark Landscape + instance `msl-*` ใน manuscript tab; `build/landscape_manuscript.py`, `build/shuttle_versions.py` | **completed (19 ต.ค.)** test/checks ผ่าน | รอ Toon: T1–T4 (ตารางประเด็นในบันทึก 19 ต.ค.) | ไม่ต้องทำซ้ำ |
+
+## 2026-10-28 (late) — Family decisions by Toon, Extraction status, Jain pages
+- Toon decided: svmguide1–3 = same family, not same dataset; pageblock = pageblocks; feature-mismatch names: same name/source → same family + flag `same_source_composition_differs` (abalone8/10, oil1/2, segment5, vowel4/5/7); different dataset → separate + flag `separate_different_dataset` (car1–4 FW-SMOTE microarray, drug200, wisconsin5=WDBC, 6 kr-vs-k names; krvsk stem family only).
+- build/family_rule.py: KEY_ALIAS `^pageblock(?!s)`→pageblocks; FEATURE_MISMATCH_DECISION table; boundary check now `r[0].isdigit()`.
+- Results (out/dataset_families.csv): 771 names → 680 datasets → 459 families; 296 subset names. 463/680 datasets single-paper; 81 datasets / 37 families cover half of uses; top-20 families 37.8%; 33 datasets used by ≥10 papers. Families yeast 39, ecoli 42, glass 35, page-blocks 34.
+- Size variation: name level 198/78, dataset level 192/90.
+- Family dependence (family_dependence.py, t1): 11 papers, 282 rows, 262 pairs; same sign 0.603 vs 0.603 (p 0.50); rank gap 0.295 vs 0.340 (p 0.0049); leave-one-paper-out p 0.002–0.0475; shared-minority 2 pairs (p 0.72), different-minority 260 (p 0.004).
+- Manuscript: Landscape/Same Name/candidates updated to T1; Extraction \toon box removed, status = "checked by Toon against PDFs (28 Oct 2026)" with no agreement rate.
+- Checks: reconcile 46/46, atlas_analysis 41/41, consistency 31/31, phase2 14/14. Atlas republished (artifact v15).
+- Jain, Duin & Mao (2000) small-sample citation: Crossref confirms Jain & Chandrasekaran 1982, Handbook of Statistics vol. 2, pp. 835–855, and that it is in the Jain 2000 reference list. The number [80] is inferred from alphabetical order only — real reference page not yet seen (needs the TPAMI PDF).
+- Pending: win/loss re-extraction for all reported metrics (scope question to Toon); item 15 reference collection (no experiments); git pull needs delete permission.
+
+## 2026-10-28 (late 2) — Win/loss for every metric the paper reports (Toon: per-metric + all-metric totals)
+- Scope chosen by Toon: every metric, classifier/condition fixed by rule A (not every classifier).
+- Raw copies: ai-draft/outcome/allmetric/<KEY>.json (44 papers that compare with SMOTE per dataset), schema ai-draft/outcome/allmetric/SCHEMA_ALLMETRIC.md. Extracted from the local PDFs in paper/ (text layer + 150–300 dpi renders for image tables).
+- Comparator fixed to match rule A: AMDO = OSMOTE (OVO-SMOTE; SSMOTE kept as ssmote_alt), MC-RBO = SMOTE-all (OVO version kept as ovo_smote_alt), RACOG proposed = wRACOG (RACOG kept as racog_alt).
+- Cross-check: the rule-A metric was re-copied independently and matches the earlier copy on 839/839 rows (out/winloss_allmetric_crosscheck.csv).
+- build/winloss_allmetric.py → out/winloss_allmetric_rows.csv (2,497 rows = dataset × metric), _paper_reported.csv (paper's own marks/WTL/tests), _summary.json. Rule: compare printed numbers in the metric's direction; equal printed = tie; non-numeric = not comparable. Metric groups only merge names listed in METRIC_GROUP.
+- Totals, all 44 papers: win 1,903 / tie 125 / loss 453 / not comparable 16. Plain SMOTE only (35 papers, 2,116 rows): 1,604 / 114 / 382 / 16. Per group in summary json (e.g. G-mean 29 papers 611 rows 442/37/128; Precision 8 papers 114 rows 63/5/46).
+- Comparator ≠ plain SMOTE (shown separately): Static-SMOTE (EMDO, SOUP, OVO-SMOTE), OVO-SMOTE (AMDO, GDHS, SHSampler), MC-MBRC (SMOTE column inferred: printed header says "MDO"), DSRBF (SMOTE+MLP vs RBF), EasyEnsemble (SMOTE+AdaBoost).
+- Other notes from extraction: KNNOR has only means over 19 datasets (1 row per metric); SPE has SMOTE for 3 rows only; NBU proposed = NB-Comm (earlier copy did not name the variant; values match); Loyalty-SMOTE prints statlog G-mean as "9100" (copied as printed).
+- Atlas: new card #wn-allm in the wins tab (selector: all / plain / rule-A only; per-paper view). make_atlas stops if the cross-check is not 100%. Checks 41/41, 31/31, 14/14. Artifact v16. Template backup: build/atlas_template.before_allmetric_2026-10-28.html.
+- Not done: manuscript text not changed (win/loss still marked paused); item 15 reference collection.
+
+## 2026-10-28 (late 3) — Item 15: reference collection of verified tasks (Claude; Toon has not reviewed; no experiments)
+- Script `difficulty/reference_collection.py` → `difficulty/reference_collection.csv` (27 rows), `reference_collection_summary.json`, `reference_collection_proposal.tex` (proposed table `tab:data-reference`, **NOT inserted** into data-section-draft.tex; compiles with booktabs). Independent check `difficulty/reference_collection_check.py` (pandas recompute of the selection + every copied value vs `difficulty_profile_final.csv` and `keel_official_check.csv`): PASS 27/27.
+- Universe: the 113 binary + binarised tasks in `difficulty_profile_final.csv` (OvR 171 excluded: our construction, no paper evaluated them).
+- Selection rule, **no threshold of our own**: cell = flag profile (cited flags: Napierala & Stefanowski 2016 §6.2; Jain, Duin & Mao 2000 §3) × IR band (Fernández et al. 2008 §5) → 10 non-empty cells. Per cell: core = most corpus entries (ties: more papers, then name) for comparability with the literature; low / high = lowest / highest noise_index for spread. A task picked twice is one row.
+- Result: 27 tasks (10 core), 155 entries, all 10 cells, 18 T1 families; noise_index range 0.00–1.00 (same as all 113); IR 1.14–68.1 (all: up to 129.4); N 150–48,842; d 3–60 (all: up to 85). Sources KEEL 25, PMLB 2. 17 rows match the official KEEL table (N/d/IR), 10 not compared (not in the 73 official rows read). 1 row has version_note (adult: paper prints only the name; structure from PMLB file).
+- Core per cell: bupa (none, ≤1.5), haberman (none, 1.5–3), yeast3 (none, 3–9), shuttle-c0-vs-c4 (none, >9), heart (S, ≤1.5), glass0 (S, 1.5–3), ecoli3 (S, 3–9), yeast5 (S, >9), yeast4 (S+O, >9), glass2 (D+S+O, >9).
+- Fix during build: hepatitis appears as two tasks (PMLB 155 rows; UCI via imbalanced-databases 80 rows after dropping missing values) → task label carries source and N when a file name is duplicated (selected: PMLB, N=155).
+- Points for Toon before use: (1) family repetition yeast 5, ecoli 3, glass 3, winequality-red 2 tasks — the Landscape finding says splits of one source are not independent; a "one task per family" rule is possible but would be a new rule, not applied; (2) several high/low picks are used by only 1 paper (australian, kr-vs-k-one_vs_fifteen, sonar, wine[1], winequality-red-3_vs_5, winequality-red-8_vs_6-7) and two high picks have noise 1.0 with n_min 10–13 (cleveland-0_vs_4, winequality-red-3_vs_5); (3) whether to cite the table in Recommendations / Atlas.
+- Not touched: manuscript, Atlas, workbook, git. Item 2 decisions (non-plain SMOTE comparators, MC-MBRC, F/D/V) and item 3 (Wins with all-metric) still wait for Toon.
+- Numbers prepared for item 2 (from out/winloss_allmetric_rows.csv): rows with a non-plain comparator = 381 (2,497 − 2,116): Static-SMOTE (EMDO, SOUP, OVO-SMOTE) 79 rows 69/3/7 · OVO-SMOTE (AMDO, GDHS, SHSampler) 148 rows 101/6/41 · wrapped (DSRBF SMOTE+MLP, EasyEnsemble SMOTE+AdaBoost) 74 rows 53/2/19 · MC-MBRC 80 rows 76/0/4 (comparator column printed "MDO", SMOTE inferred).
+- **คำตัดสินของ Toon 28 ต.ค. (ข้อ 2)** (a) แถวที่ตัวเทียบไม่ใช่ plain SMOTE (Static-SMOTE, OVO-SMOTE, SMOTE แบบห่อ classifier) **แยกรายงาน**: ผลหลัก = plain SMOTE 35 paper, กลุ่มเหล่านี้เป็นตารางแยก · (b) **MC-MBRC ตัดออก** (หัวคอลัมน์พิมพ์ "MDO" ไม่มีข้อความยืนยันว่าเป็น SMOTE) · (c) **ป้าย F/D/V อนุมัติตามเดิม** · (ข้อ 4) ขอสิทธิ์ลบแล้ว git pull + commit (ยังไม่ push)
+
+## 2026-10-28 (late 4) — ทำตามคำตัดสินข้อ 2 + git (Claude, Toon สั่ง)
+- **2a/2b all-metric** `build/winloss_allmetric.py` (สำรอง `build/winloss_allmetric.before_decision_2026-10-28.py`, ผลเดิม `out/winloss_allmetric_summary.before_decision_2026-10-28.json`): เพิ่ม `COMPARATOR_GROUP`, `EXCLUDED` (MC-MBRC), คอลัมน์ `comparator_group`, `in_analysis` ใน `_rows.csv` (แถว MC-MBRC ยังอยู่ในไฟล์ดิบ ติด in_analysis=False) · summary ใหม่: `decision`, `plain_smote_only` (ผลหลัก ไม่เปลี่ยน 35 paper 2,116 แถว 1,604/114/382/16), `non_plain_by_comparator` (Static-SMOTE EMDO/OVO-SMOTE/SOUP 79 แถว 69/3/7 · OVO-SMOTE AMDO/GDHS/SHSampler 148 แถว 101/6/41 · SMOTE wrapped DSRBF/EasyEnsemble 74 แถว 53/2/19), `excluded` (MC-MBRC 80 แถว 76/0/4 + เหตุผล), `all_comparators` = ไม่รวม MC-MBRC (43 paper 2,417 แถว 1,827/125/449/16), `rule_A_metric_only` ไม่รวม MC-MBRC (819 แถว) · assert ผลรวม plain + non-plain = kept, kept + excluded = 2,497 · cross-check กติกา A ยัง 839/839
+- **ยังไม่ได้ทำ (ต้องให้ Toon ยืนยันขอบเขต)**: MC-MBRC ยังอยู่ในชุดผลหลักเดิม 541 แถว (กติกา A, `out/outcome_dataset_links.csv` 20 แถว) ซึ่งใช้ใน family_dependence และแท็บชนะ SMOTE เดิม คำตัดสินรอบนี้ใช้กับ all-metric เท่านั้น ถ้าจะตัดจาก 541 ด้วย ตัวเลข 541/family dependence/manuscript จะเปลี่ยน
+- Atlas: `make_atlas.py` ส่ง `nonplain`, `excluded`, `decision` + guard (หยุดถ้าผลรวมไม่ตรงหรือไม่มี MC-MBRC ใน excluded) · template การ์ด `#wn-allm` (สำรอง `build/atlas_template.before_wl_decision_2026-10-28.html`): ค่าเริ่มต้น = ผลหลัก plain, ตัวเลือก "แยกรายงาน" 3 กลุ่ม, "plain + SMOTE แบบอื่น (ไม่รวมที่ตัดออก)", กติกา A; รายชื่อ paper ติดป้าย (ตัดออก)/(แยกรายงาน); บรรทัดคำตัดสินของ Toon
+- **2c F/D/V อนุมัติ**: draft (สำรอง `manuscript/data-section-draft.before_fdv_2026-10-28.tex`) ตัดคำว่า provisional ในย่อหน้าและ caption, ลบกล่อง \toon F/D/V (แทนด้วยคอมเมนต์), evidence "approval status" · overview.json (สำรอง .before_fdv) · `build/landscape_candidates.py` label_status = approved by Toon (รันใหม่: ต่างจากเดิมเฉพาะ label_status, ตรวจด้วย json เทียบแล้ว; สำรอง `out/benchmark_candidates.before_fdv_2026-10-28.*`) · template Landscape/manuscript tab เลิกเขียน provisional · `atlas_analysis_checks.py` เปลี่ยน check "approval slot present" เป็น "F/D/V approved: slot removed"
+- checks: atlas_analysis 41/41, consistency 31/31 (หลังสร้าง preview ใหม่ 10 หน้า undefined 0), phase2 14/14, landscape_manuscript --check ตรง, reconcile 46/46 · Playwright (cloud) 1280/390: ตัวเลือก 6 แบบให้แถว 2,116/148/74/79/2,417/819 ตรง summary, MC-MBRC แสดง "ตัดออก", ไม่มี JS error ไม่ล้นจอ · publish Atlas version 17
+- ข้อสังเกต: `reconcile_counts.py` เขียน json ได้ลำดับ key ต่างกันในแต่ละรัน (เนื้อหาเท่ากันเมื่อไม่สนลำดับ ตรวจแล้ว) จึงขึ้น STOP "different content" ถ้าไม่ใส่ --overwrite · คืนไฟล์เดิมไว้ ไม่ได้เขียนทับ
+- git: Toon อนุมัติ → ขอสิทธิ์ลบ D:\SMOTE25 ได้แล้ว · `git pull --ff-only` 373ca42 → 92be361 (ต้นทางเปลี่ยนแค่ SMOTE25_Method_Map_1.html + Method section/binary-multiclass-summary.html) · ลบ `.git/stale-index-lock-claude`, `.git/stale-maintenance-lock` (ของ Claude รอบก่อน) · `Data section/.gitignore` เพิ่ม __pycache__/*.pyc · commit เฉพาะ `Data section/` (ไม่รวม `Claude outputs/`) ยังไม่ push
+- commit `7585569` (ก่อน amend เพื่อใส่บรรทัดนี้; hash สุดท้ายดูจาก `git log -1`) บน 92be361, 316 ไฟล์ใน Data section, ยังไม่ push · `Claude outputs/` ไม่ได้ commit (อยู่นอก Data section)

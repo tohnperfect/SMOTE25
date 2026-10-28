@@ -1,0 +1,161 @@
+{
+  "entry_level": {
+    "entries_total": 1654,
+    "instances": {
+      "reported": 1325,
+      "q25_q50_q75": [
+        306.0,
+        800.0,
+        2310.0
+      ],
+      "lt_1000": 758,
+      "1000_9999": 446,
+      "ge_10000": 121
+    },
+    "features": {
+      "reported": 1255,
+      "q25_q50_q75": [
+        7.0,
+        9.0,
+        18.0
+      ],
+      "lt_20": 982,
+      "20_99": 214,
+      "ge_100": 59
+    },
+    "classes": {
+      "eq_2": 876,
+      "gt_2": 405,
+      "not_reported": 373
+    },
+    "category_counts": {
+      "original": 534,
+      "repository-defined": 470,
+      "modified": 331,
+      "not stated": 199,
+      "synthetic": 120
+    },
+    "category_by_classes": {
+      "modified": {
+        "more": 40,
+        "not_reported": 86,
+        "two": 205
+      },
+      "not stated": {
+        "more": 0,
+        "not_reported": 104,
+        "two": 95
+      },
+      "original": {
+        "more": 349,
+        "not_reported": 94,
+        "two": 91
+      },
+      "repository-defined": {
+        "more": 4,
+        "not_reported": 69,
+        "two": 397
+      },
+      "synthetic": {
+        "more": 12,
+        "not_reported": 20,
+        "two": 88
+      }
+    }
+  },
+  "task_level": {
+    "all_tasks": {
+      "n_tasks": 284,
+      "task_types": {
+        "ovr": 171,
+        "binary": 104,
+        "binarized": 9
+      },
+      "spearman_with_IR": {
+        "noise_index": 0.066,
+        "rare": 0.005,
+        "kDN_min": 0.114,
+        "n_min_per_feature": -0.342,
+        "safe": -0.097
+      },
+      "by_IR_bin": {
+        "(3.0, 9.0]": {
+          "n": 74,
+          "noise_median": 0.231,
+          "safe_median": 0.767,
+          "rare_median": 0.002
+        },
+        "(0.0, 3.0]": {
+          "n": 52,
+          "noise_median": 0.424,
+          "safe_median": 0.574,
+          "rare_median": 0.018
+        },
+        "(9.0, 20.0]": {
+          "n": 75,
+          "noise_median": 0.293,
+          "safe_median": 0.7,
+          "rare_median": 0.0
+        },
+        "(20.0, 50.0]": {
+          "n": 61,
+          "noise_median": 0.272,
+          "safe_median": 0.717,
+          "rare_median": 0.003
+        },
+        "(50.0, inf]": {
+          "n": 22,
+          "noise_median": 0.31,
+          "safe_median": 0.546,
+          "rare_median": 0.015
+        }
+      }
+    },
+    "binary_and_binarized": {
+      "n_tasks": 113,
+      "task_types": {
+        "binary": 104,
+        "binarized": 9
+      },
+      "spearman_with_IR": {
+        "noise_index": 0.145,
+        "rare": 0.014,
+        "kDN_min": 0.199,
+        "n_min_per_feature": -0.53,
+        "safe": -0.163
+      },
+      "by_IR_bin": {
+        "(3.0, 9.0]": {
+          "n": 19,
+          "noise_median": 0.314,
+          "safe_median": 0.686,
+          "rare_median": 0.012
+        },
+        "(0.0, 3.0]": {
+          "n": 26,
+          "noise_median": 0.383,
+          "safe_median": 0.592,
+          "rare_median": 0.021
+        },
+        "(9.0, 20.0]": {
+          "n": 36,
+          "noise_median": 0.471,
+          "safe_median": 0.488,
+          "rare_median": 0.032
+        },
+        "(20.0, 50.0]": {
+          "n": 22,
+          "noise_median": 0.644,
+          "safe_median": 0.337,
+          "rare_median": 0.0
+        },
+        "(50.0, inf]": {
+          "n": 10,
+          "noise_median": 0.211,
+          "safe_median": 0.752,
+          "rare_median": 0.0
+        }
+      }
+    }
+  }
+}

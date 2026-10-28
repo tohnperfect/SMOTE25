@@ -1,0 +1,85 @@
+{
+ "key": "SOS",
+ "classifier": "average over Decision Tree, Logistic Regression, AdaBoost, MLP (Sec 4.1.4)",
+ "condition": "main suite, original data, 5 seeds mean±std",
+ "proposed_column": "SOS Sub-VP (variant with most bold cells; text: 'our method with Sub-VP achieves 0.574')",
+ "smote_column": "SMOTE",
+ "metrics": [
+  {
+   "metric": "Weighted F1",
+   "metric_family": "F-measure",
+   "table": "Table 2",
+   "page": "PDF page 7 (printed p.767)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "Default",
+     "proposed": "0.574",
+     "proposed_std": "0.003",
+     "smote": "0.561",
+     "smote_std": "0.025",
+     "marks": "Sub-VP bold"
+    },
+    {
+     "dataset_as_printed": "Shoppers",
+     "proposed": "0.673",
+     "proposed_std": "0.002",
+     "smote": "0.648",
+     "smote_std": "0.004",
+     "marks": "VE bold (0.675±0.004)"
+    },
+    {
+     "dataset_as_printed": "Surgical",
+     "proposed": "0.714",
+     "proposed_std": "0.001",
+     "smote": "0.678",
+     "smote_std": "0.008",
+     "marks": "Sub-VP bold"
+    },
+    {
+     "dataset_as_printed": "WeatherAUS",
+     "proposed": "0.680",
+     "proposed_std": "0.003",
+     "smote": "0.674",
+     "smote_std": "0.025",
+     "marks": "Sub-VP bold"
+    },
+    {
+     "dataset_as_printed": "Buddy",
+     "proposed": "0.608",
+     "proposed_std": "0.002",
+     "smote": "0.584",
+     "smote_std": "0.005",
+     "marks": "Sub-VP bold"
+    },
+    {
+     "dataset_as_printed": "Satimage",
+     "proposed": "0.855",
+     "proposed_std": "0.004",
+     "smote": "0.846",
+     "smote_std": "0.005",
+     "marks": "VP bold (0.857±0.006)"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "not stated in paper"
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [],
+ "metrics_without_smote": [
+  {
+   "metric": "Accuracy and F1 for full fake tabular data synthesis (no SMOTE)",
+   "table": "Table 9"
+  },
+  {
+   "metric": "Weighted F1 ablations (hyperparameters, boundary vs regular, predictor, fine-tuning; SOS only)",
+   "table": "Tables 3-6"
+  }
+ ],
+ "notes": "Only one metric table includes SMOTE. Bold = best over all methods (ties broken at 4th decimal). Other SOS variants as printed: VE 0.571±0.003 0.675±0.004 0.709±0.003 0.672±0.002 0.607±0.007 0.854±0.002; VP 0.559±0.006 0.658±0.003 0.712±0.002 0.680±0.002 0.607±0.011 0.857±0.006 (Default..Satimage). Verified against rendered page."
+}

@@ -1,0 +1,99 @@
+{
+ "yeast": {
+  "tasks": 14,
+  "n_features": [
+   7,
+   8
+  ],
+  "IR": [
+   2.5,
+   41.4
+  ],
+  "noise": [
+   0.29,
+   0.86
+  ],
+  "lowest_noise": [
+   "yeast-0-2-5-7-9_vs_3-6-8",
+   0.29
+  ],
+  "highest_noise": [
+   "yeast4",
+   0.86
+  ],
+  "profiles": {
+   "small_sample + outlier_flag": 6,
+   "none": 4,
+   "small_disjuncts + small_sample + outlier_flag": 2,
+   "small_sample": 2
+  }
+ },
+ "ecoli": {
+  "tasks": 19,
+  "n_features": [
+   6,
+   7
+  ],
+  "IR": [
+   1.9,
+   39.1
+  ],
+  "noise": [
+   0.12,
+   0.69
+  ],
+  "lowest_noise": [
+   "ecoli-0_vs_1",
+   0.12
+  ],
+  "highest_noise": [
+   "ecoli3",
+   0.69
+  ],
+  "profiles": {
+   "small_sample": 16,
+   "none": 2,
+   "small_sample + outlier_flag": 1
+  }
+ },
+ "glass": {
+  "tasks": 13,
+  "n_features": [
+   9
+  ],
+  "IR": [
+   1.8,
+   22.8
+  ],
+  "noise": [
+   0.24,
+   0.77
+  ],
+  "lowest_noise": [
+   "glass6",
+   0.24
+  ],
+  "highest_noise": [
+   "glass-0-1-6_vs_2",
+   0.77
+  ],
+  "profiles": {
+   "small_sample": 9,
+   "small_disjuncts + small_sample + outlier_flag": 4
+  }
+ },
+ "shared_minority_example": [
+  {
+   "file": "yeast4",
+   "N": 1484,
+   "n_min": 51,
+   "noise_index": 0.863
+  },
+  {
+   "file": "yeast-0-5-6-7-9_vs_4",
+   "N": 528,
+   "n_min": 51,
+   "noise_index": 0.824
+  }
+ ]
+}

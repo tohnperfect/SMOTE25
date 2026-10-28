@@ -1,0 +1,743 @@
+{
+ "key": "MC-CCR",
+ "classifier": "C5.0",
+ "condition": "no added label noise (original data)",
+ "proposed_column": "MC-CCR",
+ "smote_column": "SMOTE-all",
+ "metrics": [
+  {
+   "metric": "mGM [%]",
+   "metric_family": "G-mean",
+   "table": "Table 6",
+   "page": "PDF page 10",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "Automobile",
+     "proposed": "75.68",
+     "proposed_std": null,
+     "smote": "51.86",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Balance",
+     "proposed": "62.22",
+     "proposed_std": null,
+     "smote": "40.57",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Car",
+     "proposed": "95.03",
+     "proposed_std": null,
+     "smote": "81.16",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Cleveland",
+     "proposed": "30.98",
+     "proposed_std": null,
+     "smote": "18.00",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Contraceptive",
+     "proposed": "49.72",
+     "proposed_std": null,
+     "smote": "38.15",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Dermatology",
+     "proposed": "94.88",
+     "proposed_std": null,
+     "smote": "79.34",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Ecoli",
+     "proposed": "70.98",
+     "proposed_std": null,
+     "smote": "51.72",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Flare",
+     "proposed": "64.71",
+     "proposed_std": null,
+     "smote": "55.98",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Glass",
+     "proposed": "71.06",
+     "proposed_std": null,
+     "smote": "55.41",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Hayes-roth",
+     "proposed": "85.16",
+     "proposed_std": null,
+     "smote": "70.52",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Led7digit",
+     "proposed": "80.44",
+     "proposed_std": null,
+     "smote": "57.85",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Lymphography",
+     "proposed": "77.36",
+     "proposed_std": null,
+     "smote": "40.60",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Newthyroid",
+     "proposed": "92.17",
+     "proposed_std": null,
+     "smote": "80.69",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Pageblocks",
+     "proposed": "82.55",
+     "proposed_std": null,
+     "smote": "71.64",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Thyroid",
+     "proposed": "81.48",
+     "proposed_std": null,
+     "smote": "73.62",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "70.35",
+     "proposed_std": null,
+     "smote": "59.57",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Wine",
+     "proposed": "92.87",
+     "proposed_std": null,
+     "smote": "80.82",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Winequality-red",
+     "proposed": "46.66",
+     "proposed_std": null,
+     "smote": "17.80",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Yeast",
+     "proposed": "56.91",
+     "proposed_std": null,
+     "smote": "43.83",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Zoo",
+     "proposed": "84.29",
+     "proposed_std": null,
+     "smote": "55.61",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Avg. rank (6 methods)",
+      "proposed": "1.80",
+      "smote": "5.45"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper as numbers (Fig. 5 colour-coded pairwise combined 10-fold CV F-test better/similar/worse over 20 datasets, no printed counts)",
+    "stat_test": "Table 8 (PDF p.14), Friedman ranking test with Shaffer post-hoc, alpha=0.05, C5.0, mGM, MC-CCR vs. SMOTE-all: > (0.0001) ('>' = MC-CCR statistically superior)"
+   }
+  },
+  {
+   "metric": "AvAcc [%]",
+   "metric_family": "balanced-accuracy",
+   "table": "Table 4",
+   "page": "PDF page 9",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Automobile",
+     "proposed": "76.98",
+     "proposed_std": null,
+     "smote": "80.12",
+     "smote_std": null,
+     "marks": "SMOTE-all bold"
+    },
+    {
+     "dataset_as_printed": "Balance",
+     "proposed": "82.87",
+     "proposed_std": null,
+     "smote": "55.06",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Car",
+     "proposed": "97.12",
+     "proposed_std": null,
+     "smote": "89.84",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Cleveland",
+     "proposed": "37.88",
+     "proposed_std": null,
+     "smote": "28.92",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Contraceptive",
+     "proposed": "53.18",
+     "proposed_std": null,
+     "smote": "50.63",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Dermatology",
+     "proposed": "94.29",
+     "proposed_std": null,
+     "smote": "95.72",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Ecoli",
+     "proposed": "74.07",
+     "proposed_std": null,
+     "smote": "64.68",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Flare",
+     "proposed": "68.92",
+     "proposed_std": null,
+     "smote": "71.86",
+     "smote_std": null,
+     "marks": "SMOTE-all bold"
+    },
+    {
+     "dataset_as_printed": "Hayes-roth",
+     "proposed": "92.11",
+     "proposed_std": null,
+     "smote": "86.45",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Led7digit",
+     "proposed": "70.48",
+     "proposed_std": null,
+     "smote": "72.39",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Lymphography",
+     "proposed": "79.60",
+     "proposed_std": null,
+     "smote": "73.02",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Newthyroid",
+     "proposed": "96.18",
+     "proposed_std": null,
+     "smote": "94.70",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Pageblocks",
+     "proposed": "83.71",
+     "proposed_std": null,
+     "smote": "75.83",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Thyroid",
+     "proposed": "80.52",
+     "proposed_std": null,
+     "smote": "80.02",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "72.71",
+     "proposed_std": null,
+     "smote": "73.49",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Wine",
+     "proposed": "95.28",
+     "proposed_std": null,
+     "smote": "92.53",
+     "smote_std": null,
+     "marks": "SMOTE-all bold"
+    },
+    {
+     "dataset_as_printed": "Winequality-red",
+     "proposed": "46.93",
+     "proposed_std": null,
+     "smote": "37.41",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Yeast",
+     "proposed": "58.39",
+     "proposed_std": null,
+     "smote": "51.03",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Zoo",
+     "proposed": "85.92",
+     "proposed_std": null,
+     "smote": "82.61",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Avg. rank (6 methods)",
+      "proposed": "1.95",
+      "smote": "5.55"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper as numbers (Fig. 5 colour-coded pairwise combined 10-fold CV F-test better/similar/worse over 20 datasets, no printed counts)",
+    "stat_test": "Table 8 (PDF p.14), Friedman ranking test with Shaffer post-hoc, alpha=0.05, C5.0, AvACC, MC-CCR vs. SMOTE-all: > (0.0000) ('>' = MC-CCR statistically superior)"
+   }
+  },
+  {
+   "metric": "CBA [%]",
+   "metric_family": "other",
+   "table": "Table 5",
+   "page": "PDF page 9",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Automobile",
+     "proposed": "77.93",
+     "proposed_std": null,
+     "smote": "54.47",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Balance",
+     "proposed": "64.92",
+     "proposed_std": null,
+     "smote": "45.79",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Car",
+     "proposed": "95.87",
+     "proposed_std": null,
+     "smote": "85.25",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Cleveland",
+     "proposed": "33.91",
+     "proposed_std": null,
+     "smote": "24.09",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Contraceptive",
+     "proposed": "50.01",
+     "proposed_std": null,
+     "smote": "41.63",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Dermatology",
+     "proposed": "96.19",
+     "proposed_std": null,
+     "smote": "86.30",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Ecoli",
+     "proposed": "68.33",
+     "proposed_std": null,
+     "smote": "56.07",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Flare",
+     "proposed": "61.85",
+     "proposed_std": null,
+     "smote": "58.59",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Glass",
+     "proposed": "69.89",
+     "proposed_std": null,
+     "smote": "60.63",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Hayes-roth",
+     "proposed": "90.03",
+     "proposed_std": null,
+     "smote": "77.48",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Led7digit",
+     "proposed": "84.07",
+     "proposed_std": null,
+     "smote": "63.94",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Lymphography",
+     "proposed": "80.66",
+     "proposed_std": null,
+     "smote": "43.21",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Newthyroid",
+     "proposed": "90.14",
+     "proposed_std": null,
+     "smote": "85.04",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Pageblocks",
+     "proposed": "84.63",
+     "proposed_std": null,
+     "smote": "78.60",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Thyroid",
+     "proposed": "81.99",
+     "proposed_std": null,
+     "smote": "80.58",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "71.74",
+     "proposed_std": null,
+     "smote": "62.18",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Wine",
+     "proposed": "92.89",
+     "proposed_std": null,
+     "smote": "84.30",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Winequality-red",
+     "proposed": "40.37",
+     "proposed_std": null,
+     "smote": "24.76",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Yeast",
+     "proposed": "57.83",
+     "proposed_std": null,
+     "smote": "46.44",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Zoo",
+     "proposed": "81.52",
+     "proposed_std": null,
+     "smote": "60.83",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Avg. rank (6 methods)",
+      "proposed": "1.65",
+      "smote": "5.75"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper as numbers (Fig. 5 colour-coded pairwise combined 10-fold CV F-test better/similar/worse over 20 datasets, no printed counts)",
+    "stat_test": "Table 8 (PDF p.14), Friedman ranking test with Shaffer post-hoc, alpha=0.05, C5.0, CBA, MC-CCR vs. SMOTE-all: > (0.0004) ('>' = MC-CCR statistically superior)"
+   }
+  },
+  {
+   "metric": "CEN",
+   "metric_family": "other",
+   "table": "Table 7",
+   "page": "PDF page 10",
+   "is_image": false,
+   "higher_is_better": false,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Automobile",
+     "proposed": "0.25",
+     "proposed_std": null,
+     "smote": "0.56",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Balance",
+     "proposed": "0.41",
+     "proposed_std": null,
+     "smote": "0.64",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Car",
+     "proposed": "0.09",
+     "proposed_std": null,
+     "smote": "0.26",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Cleveland",
+     "proposed": "0.62",
+     "proposed_std": null,
+     "smote": "0.87",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Contraceptive",
+     "proposed": "0.51",
+     "proposed_std": null,
+     "smote": "0.69",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Dermatology",
+     "proposed": "0.06",
+     "proposed_std": null,
+     "smote": "0.27",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Ecoli",
+     "proposed": "0.32",
+     "proposed_std": null,
+     "smote": "0.53",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Flare",
+     "proposed": "0.31",
+     "proposed_std": null,
+     "smote": "0.51",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Glass",
+     "proposed": "0.38",
+     "proposed_std": null,
+     "smote": "0.53",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Hayes-roth",
+     "proposed": "0.16",
+     "proposed_std": null,
+     "smote": "0.34",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Led7digit",
+     "proposed": "0.15",
+     "proposed_std": null,
+     "smote": "0.20",
+     "smote_std": null,
+     "marks": "SMOTE-all bold"
+    },
+    {
+     "dataset_as_printed": "Lymphography",
+     "proposed": "0.26",
+     "proposed_std": null,
+     "smote": "0.68",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Newthyroid",
+     "proposed": "0.08",
+     "proposed_std": null,
+     "smote": "0.28",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Pageblocks",
+     "proposed": "0.13",
+     "proposed_std": null,
+     "smote": "0.34",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Thyroid",
+     "proposed": "0.17",
+     "proposed_std": null,
+     "smote": "0.34",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "0.35",
+     "proposed_std": null,
+     "smote": "0.47",
+     "smote_std": null,
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Wine",
+     "proposed": "0.11",
+     "proposed_std": null,
+     "smote": "0.25",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Winequality-red",
+     "proposed": "0.49",
+     "proposed_std": null,
+     "smote": "0.86",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Yeast",
+     "proposed": "0.45",
+     "proposed_std": null,
+     "smote": "0.62",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    },
+    {
+     "dataset_as_printed": "Zoo",
+     "proposed": "0.19",
+     "proposed_std": null,
+     "smote": "0.48",
+     "smote_std": null,
+     "marks": "MC-CCR bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Avg. rank (6 methods)",
+      "proposed": "1.25",
+      "smote": "5.70"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper as numbers (Fig. 5 colour-coded pairwise combined 10-fold CV F-test better/similar/worse over 20 datasets, no printed counts)",
+    "stat_test": "Table 8 (PDF p.14), Friedman ranking test with Shaffer post-hoc, alpha=0.05, C5.0, CEN, MC-CCR vs. SMOTE-all: > (0.0007) ('>' = MC-CCR statistically superior)"
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [
+  {
+   "metric": "AvAcc, CBA, mGM, CEN (MC-CCR parameter variants only, no SMOTE)",
+   "table": "Table 3",
+   "classifiers": "C5.0, MLP, k-NN, NB"
+  }
+ ],
+ "metrics_without_smote": [
+  {
+   "metric": "AvAcc/CBA/mGM/CEN parameter study",
+   "table": "Table 3"
+  }
+ ],
+ "notes": "Text tables; column mapping verified visually on PDF pp.9-10. SMOTE-all = SMOTE with all-class decomposition (k=5). Table 4 (AvAcc) has only 19 rows: Glass is missing in the printed table. Table 7 CEN is lower-is-better; in row Led7digit SMOTE-all 0.20 is printed bold although MC-CCR 0.15 is lower (copied as printed). Bold = best of row. Noise-level results only in figures (Figs. 5-7) and Table 9 p-values (5%/25% noise), not copied."
+}

@@ -1,0 +1,413 @@
+{
+ "key": "EMDO",
+ "classifier": "C4.5",
+ "condition": "Example 1 main suite, 5-fold CV x 10 runs, no added noise",
+ "proposed_column": "EMDO",
+ "smote_column": "SSMOTE (Static-SMOTE [60])",
+ "metrics": [
+  {
+   "metric": "Pmin (%)",
+   "metric_family": "recall",
+   "table": "Table 2",
+   "page": "PDF page 14 (printed 14 of 19)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Balance",
+     "proposed": "20.41",
+     "proposed_std": "10.95",
+     "smote": "8.44",
+     "smote_std": "9.18",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "Hayes-Roth",
+     "proposed": "100.00",
+     "proposed_std": "0.00",
+     "smote": "100.00",
+     "smote_std": "0.00",
+     "marks": "EMDO bold; SSMOTE bold (tie, all methods 100.00 bold)"
+    },
+    {
+     "dataset_as_printed": "New-Thyroid",
+     "proposed": "100.00",
+     "proposed_std": "0.00",
+     "smote": "90.00",
+     "smote_std": "14.91",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "Page-Blocks",
+     "proposed": "96.67",
+     "proposed_std": "5.33",
+     "smote": "78.67",
+     "smote_std": "6.91",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "Dermatology",
+     "proposed": "100.00",
+     "proposed_std": "0.00",
+     "smote": "95.00",
+     "smote_std": "11.18",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "Breast-Tissue",
+     "proposed": "73.36",
+     "proposed_std": "13.32",
+     "smote": "40.00",
+     "smote_std": "36.51",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "UKM",
+     "proposed": "96.00",
+     "proposed_std": "5.76",
+     "smote": "92.00",
+     "smote_std": "13.04",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "Vertebral-Column",
+     "proposed": "90.67",
+     "proposed_std": "6.02",
+     "smote": "65.00",
+     "smote_std": "19.00",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "Ecoli",
+     "proposed": "90.00",
+     "proposed_std": "12.40",
+     "smote": "70.00",
+     "smote_std": "27.39",
+     "marks": "EMDO bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average",
+      "proposed": "85.23",
+      "smote": "71.01"
+     },
+     {
+      "label": "Rank Avg.",
+      "proposed": "1.78",
+      "smote": "5.89"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper (caption: 'The best result is in bold face.')",
+    "stat_test": "not stated in paper"
+   }
+  },
+  {
+   "metric": "Pavg (%)",
+   "metric_family": "balanced-accuracy",
+   "table": "Table 3",
+   "page": "PDF page 14 (printed 14 of 19)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Balance",
+     "proposed": "64.38",
+     "proposed_std": "3.59",
+     "smote": "58.38",
+     "smote_std": "2.94",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "Hayes-Roth",
+     "proposed": "85.61",
+     "proposed_std": "2.39",
+     "smote": "84.67",
+     "smote_std": "5.06",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "New-Thyroid",
+     "proposed": "96.60",
+     "proposed_std": "2.05",
+     "smote": "91.08",
+     "smote_std": "3.02",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "Page-Blocks",
+     "proposed": "90.15",
+     "proposed_std": "1.87",
+     "smote": "84.57",
+     "smote_std": "1.88",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "Dermatology",
+     "proposed": "97.13",
+     "proposed_std": "0.20",
+     "smote": "95.73",
+     "smote_std": "1.83",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "Breast-Tissue",
+     "proposed": "70.60",
+     "proposed_std": "6.28",
+     "smote": "60.89",
+     "smote_std": "3.94",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "UKM",
+     "proposed": "95.24",
+     "proposed_std": "1.37",
+     "smote": "92.57",
+     "smote_std": "4.85",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "Vertebral-Column",
+     "proposed": "85.77",
+     "proposed_std": "1.53",
+     "smote": "77.22",
+     "smote_std": "4.66",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "Ecoli",
+     "proposed": "85.31",
+     "proposed_std": "1.62",
+     "smote": "72.81",
+     "smote_std": "12.01",
+     "marks": "EMDO bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average",
+      "proposed": "85.65",
+      "smote": "79.77"
+     },
+     {
+      "label": "Rank Avg.",
+      "proposed": "1.00",
+      "smote": "6.11"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper (caption: 'The best result is in bold face.')",
+    "stat_test": "not stated in paper"
+   }
+  },
+  {
+   "metric": "AUCm (%)",
+   "metric_family": "AUC",
+   "table": "Table 4",
+   "page": "PDF page 15 (printed 15 of 19)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Balance",
+     "proposed": "65.61",
+     "proposed_std": "4.30",
+     "smote": "58.12",
+     "smote_std": "3.27",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "Hayes-Roth",
+     "proposed": "94.67",
+     "proposed_std": "2.81",
+     "smote": "94.25",
+     "smote_std": "1.90",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "New-Thyroid",
+     "proposed": "98.55",
+     "proposed_std": "1.23",
+     "smote": "93.90",
+     "smote_std": "4.45",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "Page-Blocks",
+     "proposed": "96.07",
+     "proposed_std": "2.24",
+     "smote": "89.84",
+     "smote_std": "2.16",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "Dermatology",
+     "proposed": "99.06",
+     "proposed_std": "0.22",
+     "smote": "97.39",
+     "smote_std": "3.27",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "Breast-Tissue",
+     "proposed": "82.37",
+     "proposed_std": "3.77",
+     "smote": "72.18",
+     "smote_std": "10.10",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "UKM",
+     "proposed": "97.26",
+     "proposed_std": "2.49",
+     "smote": "94.94",
+     "smote_std": "5.27",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "Vertebral-Column",
+     "proposed": "89.07",
+     "proposed_std": "2.00",
+     "smote": "79.96",
+     "smote_std": "5.56",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "Ecoli",
+     "proposed": "92.91",
+     "proposed_std": "2.92",
+     "smote": "83.43",
+     "smote_std": "10.88",
+     "marks": "EMDO bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average",
+      "proposed": "90.62",
+      "smote": "84.89"
+     },
+     {
+      "label": "Rank Avg.",
+      "proposed": "1.00",
+      "smote": "6.22"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper (caption: 'The best result is in bold face.')",
+    "stat_test": "not stated in paper"
+   }
+  },
+  {
+   "metric": "MAUC (%)",
+   "metric_family": "AUC",
+   "table": "Table 5",
+   "page": "PDF page 15 (printed 15 of 19)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "Balance",
+     "proposed": "73.13",
+     "proposed_std": "2.77",
+     "smote": "68.79",
+     "smote_std": "2.20",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "Hayes-Roth",
+     "proposed": "89.15",
+     "proposed_std": "4.86",
+     "smote": "88.50",
+     "smote_std": "3.79",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "New-Thyroid",
+     "proposed": "97.76",
+     "proposed_std": "2.14",
+     "smote": "93.31",
+     "smote_std": "2.27",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "Page-Blocks",
+     "proposed": "93.85",
+     "proposed_std": "1.17",
+     "smote": "90.35",
+     "smote_std": "1.18",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "Dermatology",
+     "proposed": "98.26",
+     "proposed_std": "0.16",
+     "smote": "97.44",
+     "smote_std": "1.10",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "Breast-Tissue",
+     "proposed": "84.07",
+     "proposed_std": "5.16",
+     "smote": "76.53",
+     "smote_std": "2.36",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "UKM",
+     "proposed": "96.91",
+     "proposed_std": "1.05",
+     "smote": "95.05",
+     "smote_std": "3.23",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "Vertebral-Column",
+     "proposed": "89.05",
+     "proposed_std": "1.33",
+     "smote": "82.92",
+     "smote_std": "3.50",
+     "marks": "EMDO bold"
+    },
+    {
+     "dataset_as_printed": "Ecoli",
+     "proposed": "90.82",
+     "proposed_std": "1.01",
+     "smote": "83.01",
+     "smote_std": "7.50",
+     "marks": "EMDO bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average",
+      "proposed": "90.33",
+      "smote": "86.21"
+     },
+     {
+      "label": "Rank Avg.",
+      "proposed": "1.06",
+      "smote": "6.11"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper (caption: 'The best result is in bold face.')",
+    "stat_test": "not stated in paper"
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [],
+ "metrics_without_smote": [
+  {
+   "metric": "Pmin, Pavg, AUCm, MAUC (Example 2: Statlog (Shuttle), Mafalda; w/ EMDO vs w/o EMDO only)",
+   "table": "Table 7"
+  }
+ ],
+ "notes": "Only SMOTE-family column is 'SSMOTE' = Static-SMOTE [60] (multi-class SMOTE variant applied iteratively to the smallest class), not literally Chawla 2002; also OSMOTE = OVO-SMOTE [63]. SSMOTE used as smote column to match earlier extraction. Means with std as subscripts; split verified on rendered pages 14-15 (mean and std both 2 decimals). Text says EMDO outperforms all others on every dataset for all four metrics. Pmin = accuracy of smallest minority class (recall family); Pavg = average class accuracy. Tables are vector text (not images) in this PDF."
+}

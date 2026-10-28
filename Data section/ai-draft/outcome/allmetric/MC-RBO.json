@@ -1,0 +1,915 @@
+{
+ "key": "MC-RBO",
+ "classifier": "C5.0",
+ "condition": "no added noise",
+ "proposed_column": "MC-RBO",
+ "smote_column": "SMOTE-all (SMOTE with round-robin approach for simple class balancing; 'Multi-class sampling approaches' group), as in the earlier rule-A extraction; OVO decomposition + SMOTE [5] (column 'SMOTE', 'OVO-SMOTE' in Table VIII) kept per row as ovo_smote_alt",
+ "metrics": [
+  {
+   "metric": "AvAcc [%]",
+   "metric_family": "accuracy",
+   "table": "Table IV",
+   "page": "PDF page 10 (printed 2827)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Automobile",
+     "proposed": "77.11",
+     "proposed_std": null,
+     "smote": "80.12",
+     "smote_std": null,
+     "marks": "",
+     "ovo_smote_alt": "78.94",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Balance",
+     "proposed": "85.32",
+     "proposed_std": null,
+     "smote": "55.06",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "56.99",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Car",
+     "proposed": "96.43",
+     "proposed_std": null,
+     "smote": "89.84",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "91.93",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Cleveland",
+     "proposed": "35.01",
+     "proposed_std": null,
+     "smote": "28.92",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "30.07",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Contraceptive",
+     "proposed": "51.93",
+     "proposed_std": null,
+     "smote": "50.63",
+     "smote_std": null,
+     "marks": "",
+     "ovo_smote_alt": "48.76",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Dermatology",
+     "proposed": "96.11",
+     "proposed_std": null,
+     "smote": "95.72",
+     "smote_std": null,
+     "marks": "",
+     "ovo_smote_alt": "95.37",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Ecoli",
+     "proposed": "72.06",
+     "proposed_std": null,
+     "smote": "64.68",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "66.78",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Flare",
+     "proposed": "70.63",
+     "proposed_std": null,
+     "smote": "63.73",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "61.90",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Glass",
+     "proposed": "71.86",
+     "proposed_std": null,
+     "smote": "71.52",
+     "smote_std": null,
+     "marks": "",
+     "ovo_smote_alt": "68.86",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Hayes-roth",
+     "proposed": "91.88",
+     "proposed_std": null,
+     "smote": "86.45",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "86.60",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Led7digit",
+     "proposed": "71.53",
+     "proposed_std": null,
+     "smote": "72.39",
+     "smote_std": null,
+     "marks": "",
+     "ovo_smote_alt": "70.34",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Lymphography",
+     "proposed": "81.22",
+     "proposed_std": null,
+     "smote": "73.02",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "70.16",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Newthyroid",
+     "proposed": "95.76",
+     "proposed_std": null,
+     "smote": "94.70",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "90.47",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Pageblocks",
+     "proposed": "83.71",
+     "proposed_std": null,
+     "smote": "75.83",
+     "smote_std": null,
+     "marks": "",
+     "ovo_smote_alt": "86.28",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Thyroid",
+     "proposed": "89.43",
+     "proposed_std": null,
+     "smote": "80.02",
+     "smote_std": null,
+     "marks": "",
+     "ovo_smote_alt": "90.02",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "79.48",
+     "proposed_std": null,
+     "smote": "73.49",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "70.19",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Wine",
+     "proposed": "97.57",
+     "proposed_std": null,
+     "smote": "92.53",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "91.93",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Winequality-red",
+     "proposed": "44.12",
+     "proposed_std": null,
+     "smote": "37.41",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "34.51",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Yeast",
+     "proposed": "60.39",
+     "proposed_std": null,
+     "smote": "51.03",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "47.77",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Zoo",
+     "proposed": "88.56",
+     "proposed_std": null,
+     "smote": "82.61",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "72.81",
+     "ovo_smote_alt_std": null
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Avg. rank (MC-RBO bold)",
+      "proposed": "2.70",
+      "smote": "6.32",
+      "ovo_smote_alt": "7.18"
+     }
+    ],
+    "wtl_vs_smote": "not stated numerically (Fig. 7(a) shows per-comparison counts of data sets where MC-RBO is significantly better/similar/worse via combined 5x2 CV F-test, as bar charts without printed numbers)",
+    "stat_test": "Table VIII, Shaffer's post hoc test (C5.0), p-values; '>' = MC-RBO statistically superior: AvACC vs. OVO-SMOTE > (0.0102); vs. SMOTE-all > (0.0000)"
+   }
+  },
+  {
+   "metric": "CBA [%]",
+   "metric_family": "balanced-accuracy",
+   "table": "Table V",
+   "page": "PDF page 10 (printed 2827)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Automobile",
+     "proposed": "80.48",
+     "proposed_std": null,
+     "smote": "54.47",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "74.59",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Balance",
+     "proposed": "69.12",
+     "proposed_std": null,
+     "smote": "45.79",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "50.03",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Car",
+     "proposed": "96.53",
+     "proposed_std": null,
+     "smote": "87.25",
+     "smote_std": null,
+     "marks": "",
+     "ovo_smote_alt": "88.45",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Cleveland",
+     "proposed": "35.01",
+     "proposed_std": null,
+     "smote": "24.09",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "26.59",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Contraceptive",
+     "proposed": "52.77",
+     "proposed_std": null,
+     "smote": "41.63",
+     "smote_std": null,
+     "marks": "",
+     "ovo_smote_alt": "43.54",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Dermatology",
+     "proposed": "94.22",
+     "proposed_std": null,
+     "smote": "86.30",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "90.15",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Ecoli",
+     "proposed": "72.01",
+     "proposed_std": null,
+     "smote": "56.07",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "63.30",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Flare",
+     "proposed": "63.56",
+     "proposed_std": null,
+     "smote": "58.59",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "56.68",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Glass",
+     "proposed": "75.03",
+     "proposed_std": null,
+     "smote": "60.63",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "61.90",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Hayes-roth",
+     "proposed": "88.64",
+     "proposed_std": null,
+     "smote": "77.48",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "83.12",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Led7digit",
+     "proposed": "75.12",
+     "proposed_std": null,
+     "smote": "63.94",
+     "smote_std": null,
+     "marks": "",
+     "ovo_smote_alt": "65.12",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Lymphography",
+     "proposed": "79.02",
+     "proposed_std": null,
+     "smote": "43.21",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "64.07",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Newthyroid",
+     "proposed": "92.84",
+     "proposed_std": null,
+     "smote": "85.04",
+     "smote_std": null,
+     "marks": "",
+     "ovo_smote_alt": "84.38",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Pageblocks",
+     "proposed": "86.73",
+     "proposed_std": null,
+     "smote": "78.60",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "81.06",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Thyroid",
+     "proposed": "84.11",
+     "proposed_std": null,
+     "smote": "80.58",
+     "smote_std": null,
+     "marks": "",
+     "ovo_smote_alt": "85.67",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "78.05",
+     "proposed_std": null,
+     "smote": "62.18",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "64.10",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Wine",
+     "proposed": "94.01",
+     "proposed_std": null,
+     "smote": "84.30",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "87.58",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Winequality-red",
+     "proposed": "47.66",
+     "proposed_std": null,
+     "smote": "24.76",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "31.03",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Yeast",
+     "proposed": "57.97",
+     "proposed_std": null,
+     "smote": "46.44",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "41.68",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Zoo",
+     "proposed": "82.51",
+     "proposed_std": null,
+     "smote": "60.83",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "68.46",
+     "ovo_smote_alt_std": null
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Avg. rank (MC-RBO bold)",
+      "proposed": "1.70",
+      "smote": "10.62",
+      "ovo_smote_alt": "7.80"
+     }
+    ],
+    "wtl_vs_smote": "not stated numerically (Fig. 7(a) shows per-comparison counts of data sets where MC-RBO is significantly better/similar/worse via combined 5x2 CV F-test, as bar charts without printed numbers)",
+    "stat_test": "Table VIII, Shaffer's post hoc test (C5.0), p-values; '>' = MC-RBO statistically superior: CBA vs. OVO-SMOTE > (0.0020); vs. SMOTE-all > (0.0000)"
+   }
+  },
+  {
+   "metric": "mGM [%]",
+   "metric_family": "G-mean",
+   "table": "Table VI",
+   "page": "PDF page 10 (printed 2827)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "Automobile",
+     "proposed": "77.20",
+     "proposed_std": null,
+     "smote": "51.86",
+     "smote_std": null,
+     "marks": "",
+     "ovo_smote_alt": "73.72",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Balance",
+     "proposed": "61.93",
+     "proposed_std": null,
+     "smote": "40.57",
+     "smote_std": null,
+     "marks": "",
+     "ovo_smote_alt": "47.42",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Car",
+     "proposed": "97.15",
+     "proposed_std": null,
+     "smote": "81.16",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "84.10",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Cleveland",
+     "proposed": "34.04",
+     "proposed_std": null,
+     "smote": "18.00",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "26.59",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Contraceptive",
+     "proposed": "50.99",
+     "proposed_std": null,
+     "smote": "38.15",
+     "smote_std": null,
+     "marks": "",
+     "ovo_smote_alt": "42.67",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Dermatology",
+     "proposed": "95.72",
+     "proposed_std": null,
+     "smote": "79.34",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "85.80",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Ecoli",
+     "proposed": "72.66",
+     "proposed_std": null,
+     "smote": "51.72",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "62.43",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Flare",
+     "proposed": "65.50",
+     "proposed_std": null,
+     "smote": "55.98",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "56.68",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Glass",
+     "proposed": "73.08",
+     "proposed_std": null,
+     "smote": "55.41",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "57.55",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Hayes-roth",
+     "proposed": "81.93",
+     "proposed_std": null,
+     "smote": "70.52",
+     "smote_std": null,
+     "marks": "",
+     "ovo_smote_alt": "81.38",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Led7digit",
+     "proposed": "75.02",
+     "proposed_std": null,
+     "smote": "57.85",
+     "smote_std": null,
+     "marks": "",
+     "ovo_smote_alt": "65.99",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Lymphography",
+     "proposed": "79.13",
+     "proposed_std": null,
+     "smote": "40.60",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "62.33",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Newthyroid",
+     "proposed": "96.73",
+     "proposed_std": null,
+     "smote": "80.69",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "80.90",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Pageblocks",
+     "proposed": "87.27",
+     "proposed_std": null,
+     "smote": "71.64",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "80.19",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Thyroid",
+     "proposed": "86.94",
+     "proposed_std": null,
+     "smote": "73.62",
+     "smote_std": null,
+     "marks": "",
+     "ovo_smote_alt": "85.67",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "70.47",
+     "proposed_std": null,
+     "smote": "59.57",
+     "smote_std": null,
+     "marks": "",
+     "ovo_smote_alt": "62.36",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Wine",
+     "proposed": "91.73",
+     "proposed_std": null,
+     "smote": "80.82",
+     "smote_std": null,
+     "marks": "",
+     "ovo_smote_alt": "84.10",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Winequality-red",
+     "proposed": "48.33",
+     "proposed_std": null,
+     "smote": "17.80",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "28.42",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Yeast",
+     "proposed": "58.06",
+     "proposed_std": null,
+     "smote": "43.83",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "42.55",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Zoo",
+     "proposed": "85.01",
+     "proposed_std": null,
+     "smote": "55.61",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "67.59",
+     "ovo_smote_alt_std": null
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Avg. rank (MC-RBO bold)",
+      "proposed": "2.35",
+      "smote": "11.55",
+      "ovo_smote_alt": "7.87"
+     }
+    ],
+    "wtl_vs_smote": "not stated numerically (Fig. 7(a) shows per-comparison counts of data sets where MC-RBO is significantly better/similar/worse via combined 5x2 CV F-test, as bar charts without printed numbers)",
+    "stat_test": "Table VIII, Shaffer's post hoc test (C5.0), p-values; '>' = MC-RBO statistically superior: mGM vs. OVO-SMOTE > (0.0214); vs. SMOTE-all > (0.0000)"
+   }
+  },
+  {
+   "metric": "CEN",
+   "metric_family": "other",
+   "table": "Table VII",
+   "page": "PDF page 11 (printed 2828)",
+   "is_image": true,
+   "higher_is_better": false,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Automobile",
+     "proposed": "0.23",
+     "proposed_std": null,
+     "smote": "0.56",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "0.48",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Balance",
+     "proposed": "0.37",
+     "proposed_std": null,
+     "smote": "0.64",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "0.55",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Car",
+     "proposed": "0.10",
+     "proposed_std": null,
+     "smote": "0.26",
+     "smote_std": null,
+     "marks": "",
+     "ovo_smote_alt": "0.19",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Cleveland",
+     "proposed": "0.65",
+     "proposed_std": null,
+     "smote": "0.87",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "0.94",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Contraceptive",
+     "proposed": "0.50",
+     "proposed_std": null,
+     "smote": "0.69",
+     "smote_std": null,
+     "marks": "",
+     "ovo_smote_alt": "0.72",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Dermatology",
+     "proposed": "0.04",
+     "proposed_std": null,
+     "smote": "0.27",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "0.20",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Ecoli",
+     "proposed": "0.30",
+     "proposed_std": null,
+     "smote": "0.53",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "0.51",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Flare",
+     "proposed": "0.36",
+     "proposed_std": null,
+     "smote": "0.51",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "0.54",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Glass",
+     "proposed": "0.36",
+     "proposed_std": null,
+     "smote": "0.53",
+     "smote_std": null,
+     "marks": "",
+     "ovo_smote_alt": "0.48",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Hayes-roth",
+     "proposed": "0.19",
+     "proposed_std": null,
+     "smote": "0.34",
+     "smote_std": null,
+     "marks": "",
+     "ovo_smote_alt": "0.27",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Led7digit",
+     "proposed": "0.16",
+     "proposed_std": null,
+     "smote": "0.51",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "0.39",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Lymphography",
+     "proposed": "0.26",
+     "proposed_std": null,
+     "smote": "0.68",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "0.52",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Newthyroid",
+     "proposed": "0.06",
+     "proposed_std": null,
+     "smote": "0.28",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "0.24",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Pageblocks",
+     "proposed": "0.15",
+     "proposed_std": null,
+     "smote": "0.34",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "0.29",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Thyroid",
+     "proposed": "0.09",
+     "proposed_std": null,
+     "smote": "0.34",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "0.28",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "0.28",
+     "proposed_std": null,
+     "smote": "0.47",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "0.40",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Wine",
+     "proposed": "0.07",
+     "proposed_std": null,
+     "smote": "0.25",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "0.26",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Winequality-red",
+     "proposed": "0.53",
+     "proposed_std": null,
+     "smote": "0.86",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "0.87",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Yeast",
+     "proposed": "0.42",
+     "proposed_std": null,
+     "smote": "0.62",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "0.67",
+     "ovo_smote_alt_std": null
+    },
+    {
+     "dataset_as_printed": "Zoo",
+     "proposed": "0.21",
+     "proposed_std": null,
+     "smote": "0.48",
+     "smote_std": null,
+     "marks": "MC-RBO bold (best)",
+     "ovo_smote_alt": "0.40",
+     "ovo_smote_alt_std": null
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Avg. rank (MC-RBO bold)",
+      "proposed": "1.45",
+      "smote": "11.42",
+      "ovo_smote_alt": "10.35"
+     }
+    ],
+    "wtl_vs_smote": "not stated numerically (Fig. 7(a) shows per-comparison counts of data sets where MC-RBO is significantly better/similar/worse via combined 5x2 CV F-test, as bar charts without printed numbers)",
+    "stat_test": "Table VIII, Shaffer's post hoc test (C5.0), p-values; '>' = MC-RBO statistically superior: CEN vs. OVO-SMOTE > (0.0000); vs. SMOTE-all > (0.0000)"
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [
+  {
+   "metric": "AvACC, CBA, mGM, CEN - Shaffer's test p-values only (no per-dataset values)",
+   "table": "Tables IX (MLP), X (k-NN), XI (NB); Fig. 7(b)-(d)",
+   "classifiers": "MLP, k-NN, NB"
+  }
+ ],
+ "metrics_without_smote": [
+  {
+   "metric": "Shaffer's tests MC-RBO OVA+ vs OVO/OVA",
+   "table": "Table III"
+  }
+ ],
+ "notes": "Tables are raster images; values obtained by OCR of 300-dpi renders and checked visually against the images (OCR glitches corrected: 77AL->77.11, 7748->77.48, 44,12->44.12, 718->7.18, 046->0.46). No std printed. Bold = best per row among 13 methods; SMOTE and SMOTE-all are never bold. CEN: lower is better (MC-RBO has lowest avg. rank 1.45). Comparator set to SMOTE-all to match the earlier rule-A extraction; OVO-SMOTE (column 'SMOTE') kept as ovo_smote_alt."
+}

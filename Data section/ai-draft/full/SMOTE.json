@@ -1,0 +1,281 @@
+{
+ "key": "SMOTE",
+ "pdf_file_read": "SMOTE - Synthetic Minority Over-Sampling Technique (JAIR 2002).pdf (Drive id 1xlt-DjX5xgyghFZOBng_MBCD9rpKnZ2h, folder Both)",
+ "task": "binary",
+ "n_datasets_claimed": 9,
+ "characteristics_table": "Table 2, p.14 (printed 334)",
+ "datasets": [
+  {
+   "name": "Pima",
+   "group": "",
+   "source_repo": "UCI",
+   "n_instances": 768,
+   "n_features": null,
+   "n_classes": 2,
+   "n_minority": 268,
+   "n_majority": 500,
+   "class_distribution": null,
+   "ir_printed": null,
+   "how_obtained": "original",
+   "how_obtained_detail": "Pima Indian Diabetes (Blake & Merz, 1998), 2 classes, 768 samples, 268 positive (text p.13, printed 333); n_features not stated",
+   "in_results_table": "yes",
+   "ref": "Table 2, p.14 (printed 334)"
+  },
+  {
+   "name": "Phoneme",
+   "group": "",
+   "source_repo": "other: ELENA project",
+   "n_instances": null,
+   "n_features": 5,
+   "n_classes": 2,
+   "n_minority": 1586,
+   "n_majority": 3818,
+   "class_distribution": "3,818 samples in class 0 and 1,586 samples in class 1",
+   "ir_printed": null,
+   "how_obtained": "original",
+   "how_obtained_detail": "nasal (class 0) vs oral (class 1); 5 features (text p.13, printed 333)",
+   "in_results_table": "yes",
+   "ref": "Table 2, p.14 (printed 334)"
+  },
+  {
+   "name": "Adult",
+   "group": "",
+   "source_repo": "UCI",
+   "n_instances": 48842,
+   "n_features": null,
+   "n_classes": 2,
+   "n_minority": 11687,
+   "n_majority": 37155,
+   "class_distribution": null,
+   "ir_printed": null,
+   "how_obtained": "modified",
+   "how_obtained_detail": "For SMOTE the authors extracted only the continuous features (6 continuous of 6 continuous + 8 nominal); SMOTE-NC run on full mixed features (text p.13 and Sec 6.1)",
+   "in_results_table": "no",
+   "ref": "Table 2, p.14 (printed 334)"
+  },
+  {
+   "name": "E-state",
+   "group": "",
+   "source_repo": "private",
+   "n_instances": 53220,
+   "n_features": null,
+   "n_classes": 2,
+   "n_minority": 6351,
+   "n_majority": 46869,
+   "class_distribution": null,
+   "ir_printed": null,
+   "how_obtained": "not stated",
+   "how_obtained_detail": "Provided by Steven Eschrich (footnote 4); NCI Yeast Anti-Cancer drug screen; active = at least one yeast strain inhibited >70%, else inactive; not stated who defined this split (text p.13)",
+   "in_results_table": "yes",
+   "ref": "Table 2, p.14 (printed 334)"
+  },
+  {
+   "name": "Satimage",
+   "group": "",
+   "source_repo": "UCI",
+   "n_instances": null,
+   "n_features": null,
+   "n_classes": 2,
+   "n_minority": 626,
+   "n_majority": 5809,
+   "class_distribution": null,
+   "ir_printed": null,
+   "how_obtained": "modified",
+   "how_obtained_detail": "6 classes originally; smallest class chosen as minority and rest collapsed into one, as in Provost et al. 1998 (text p.13); n_instances not printed",
+   "in_results_table": "yes",
+   "ref": "Table 2, p.14 (printed 334)"
+  },
+  {
+   "name": "Forest Cover",
+   "group": "",
+   "source_repo": "UCI",
+   "n_instances": null,
+   "n_features": null,
+   "n_classes": 2,
+   "n_minority": 2747,
+   "n_majority": 35754,
+   "class_distribution": null,
+   "ir_printed": null,
+   "how_obtained": "modified",
+   "how_obtained_detail": "Original 7 classes, 581,012 samples; authors extracted two classes, Ponderosa Pine (35,754) and Cottonwood/Willow (2,747), ignored the rest (text p.13-14)",
+   "in_results_table": "yes",
+   "ref": "Table 2, p.14 (printed 334)"
+  },
+  {
+   "name": "Oil",
+   "group": "",
+   "source_repo": "private",
+   "n_instances": null,
+   "n_features": null,
+   "n_classes": 2,
+   "n_minority": 41,
+   "n_majority": 896,
+   "class_distribution": "41 oil slick samples and 896 non-oil slick samples",
+   "ir_printed": null,
+   "how_obtained": "original",
+   "how_obtained_detail": "Provided by Robert Holte, used in Kubat et al. 1998 (text p.14)",
+   "in_results_table": "yes",
+   "ref": "Table 2, p.14 (printed 334)"
+  },
+  {
+   "name": "Mammography",
+   "group": "",
+   "source_repo": "other: USF Intelligent Systems Lab (Woods et al., 1993)",
+   "n_instances": 11183,
+   "n_features": null,
+   "n_classes": 2,
+   "n_minority": 260,
+   "n_majority": 10923,
+   "class_distribution": null,
+   "ir_printed": null,
+   "how_obtained": "original",
+   "how_obtained_detail": "11,183 samples with 260 calcifications; footnote 1 says data available from USF Intelligent Systems Lab (p.8 printed 328, p.14)",
+   "in_results_table": "yes",
+   "ref": "Table 2, p.14 (printed 334)"
+  },
+  {
+   "name": "Can",
+   "group": "",
+   "source_repo": "other: generated from Can ExodusII data (AVATAR version of Mustafa Visualization tool)",
+   "n_instances": 443872,
+   "n_features": null,
+   "n_classes": 2,
+   "n_minority": 8360,
+   "n_majority": 435512,
+   "class_distribution": null,
+   "ir_printed": null,
+   "how_obtained": "modified",
+   "how_obtained_detail": "Dataset generated by authors from Can ExodusII simulation data; portion of can being crushed marked 'very interesting', rest 'unknown' (text p.14)",
+   "in_results_table": "yes",
+   "ref": "Table 2, p.14 (printed 334)"
+  }
+ ],
+ "ir_definition": "not stated in paper",
+ "ir_definition_ref": "p.13 (printed 333): datasets listed 'in order of increasing imbalance' without a formula",
+ "outcome": {
+  "smote_in_baselines": "no",
+  "smote_name_as_printed": "SMOTE (the proposed method itself; columns '50 SMOTE' ... '500 SMOTE' in Table 3 = SMOTE at N% combined with majority under-sampling)",
+  "baselines_all": [
+   "Under (plain majority under-sampling, Under-C4.5 / Under-Ripper)",
+   "Loss Ratio (varying Ripper loss ratio 0.9 to 0.001)",
+   "Naive Bayes (varying minority class priors up to 50x)",
+   "Varying C4.5 decision thresholds at leaves (Phoneme only, Fig 24)",
+   "Replicate (minority over-sampling with replacement, Mammography only, Figs 4,5,19)",
+   "SHRINK and One-sided selection (Oil only, results quoted from Kubat et al. 1998, Table 4)"
+  ],
+  "results_granularity": "per-dataset partial",
+  "chosen": {
+   "table": "Table 3",
+   "page": "p.25 (printed 345)",
+   "metric": "AUC (printed as 4-digit integers, e.g. 7242)",
+   "classifier": "C4.5",
+   "condition": "original data; SMOTE at stated % combined with majority under-sampling; 10-fold CV; AUC by trapezoid rule over ROC curve",
+   "higher_is_better": true,
+   "is_image": true
+  },
+  "rows": [
+   {
+    "dataset_as_printed": "Pima",
+    "proposed": "7307",
+    "proposed_std": null,
+    "smote": null,
+    "smote_std": null,
+    "best_other_value": "7242",
+    "best_other_name": "Under",
+    "marks": "proposed = column '100 SMOTE' (bold in paper = best in row); all SMOTE columns as printed: 100 SMOTE=7307; Under not bold"
+   },
+   {
+    "dataset_as_printed": "Phoneme",
+    "proposed": "8661",
+    "proposed_std": null,
+    "smote": null,
+    "smote_std": null,
+    "best_other_value": "8622",
+    "best_other_name": "Under",
+    "marks": "proposed = column '200 SMOTE' (bold in paper = best in row); all SMOTE columns as printed: 100=8644; 200=8661; Under not bold"
+   },
+   {
+    "dataset_as_printed": "Satimage",
+    "proposed": "8979",
+    "proposed_std": null,
+    "smote": null,
+    "smote_std": null,
+    "best_other_value": "8900",
+    "best_other_name": "Under",
+    "marks": "proposed = column '200 SMOTE' (bold in paper = best in row); all SMOTE columns as printed: 100=8957; 200=8979; 300=8963; 400=8975; 500=8960; Under not bold"
+   },
+   {
+    "dataset_as_printed": "Forest Cover",
+    "proposed": "9849",
+    "proposed_std": null,
+    "smote": null,
+    "smote_std": null,
+    "best_other_value": "9807",
+    "best_other_name": "Under",
+    "marks": "proposed = column '300 SMOTE' (bold in paper = best in row); all SMOTE columns as printed: 100=9832; 200=9834; 300=9849; 400=9841; 500=9842; Under not bold"
+   },
+   {
+    "dataset_as_printed": "Oil",
+    "proposed": "8537",
+    "proposed_std": null,
+    "smote": null,
+    "smote_std": null,
+    "best_other_value": "8524",
+    "best_other_name": "Under",
+    "marks": "proposed = column '500 SMOTE' (bold in paper = best in row); all SMOTE columns as printed: 100=8523; 200=8368; 300=8161; 400=8339; 500=8537; Under not bold"
+   },
+   {
+    "dataset_as_printed": "Mammography",
+    "proposed": "9330",
+    "proposed_std": null,
+    "smote": null,
+    "smote_std": null,
+    "best_other_value": "9260",
+    "best_other_name": "Under",
+    "marks": "proposed = column '400 SMOTE' (bold in paper = best in row); all SMOTE columns as printed: 100=9250; 200=9265; 300=9311; 400=9330; 500=9304; Under not bold"
+   },
+   {
+    "dataset_as_printed": "E-state",
+    "proposed": "6828",
+    "proposed_std": null,
+    "smote": null,
+    "smote_std": null,
+    "best_other_value": "6811",
+    "best_other_name": "Under",
+    "marks": "proposed = column '200 SMOTE' (bold in paper = best in row); all SMOTE columns as printed: 100=6792; 200=6828; 300=6784; 400=6788; 500=6779; Under not bold"
+   },
+   {
+    "dataset_as_printed": "Can",
+    "proposed": "9560",
+    "proposed_std": null,
+    "smote": null,
+    "smote_std": null,
+    "best_other_value": "9535",
+    "best_other_name": "Under",
+    "marks": "proposed = column '50 SMOTE' (bold in paper = best in row); all SMOTE columns as printed: 50=9560; 100=9505; 200=9505; 300=9494; 400=9472; 500=9470; Under not bold"
+   }
+  ],
+  "summary_rows": [
+   {
+    "label": "Text claim (ROC convex hull, all classifiers, p.32 printed 352)",
+    "proposed": "Out of a total of 48 experiments performed, SMOTE-classifier does not perform the best only for 4 experiments.",
+    "smote": null
+   }
+  ],
+  "stat_test": "none",
+  "win_claim": {
+   "quote": "a combination of our method of over-sampling the minority (abnormal) class and under-sampling the majority (normal) class can achieve better classifier performance (in ROC space) than only under-sampling the majority class.",
+   "page": "p.1 (printed 321), abstract"
+  }
+ },
+ "uncertain": [
+  "Choice of proposed value per row: Table 3 has several SMOTE amounts (50-500%); I used the bold (paper-marked best) column per dataset, all columns listed in marks (p.25)",
+  "Table 3 AUC values printed as 4-digit integers (e.g. 7242), presumably AUC x 10^4; copied as printed (p.25)",
+  "Can dataset how_obtained set to 'modified' (labels assigned by authors from simulation data); could also be considered synthetic (p.14)",
+  "E-state source_repo set to 'private' (provided by Steven Eschrich); who defined the active/inactive split is not clear (p.13)",
+  "Mammography source_repo: footnote points to USF Intelligent Systems Lab URL; not a standard repository (p.8)",
+  "Forest Cover and Satimage n_instances left null: only original totals (581,012; 6 classes) or per-class counts printed (p.13-14)",
+  "Adult appears only in ROC figures (Figs 26-28), not in Table 3; marked in_results_table 'no' (p.29-30)"
+ ],
+ "notes": "Paper IS SMOTE; there is no plain-SMOTE baseline. Proposed method as presented = SMOTE (k=5 nearest neighbours) combined with random majority under-sampling; ROC curves built by varying under-sampling at fixed SMOTE %. Comparisons: Under-C4.5 and Under-Ripper (plain under-sampling), Ripper Loss Ratio, Naive Bayes with varied priors (compared against SMOTE-C4.5), C4.5 decision thresholds (Phoneme), replication over-sampling (Mammography), SHRINK/one-sided selection (Oil, Tables 4-5, Acc+/Acc-). Only Table 3 gives per-dataset numbers (AUC, C4.5 only); Ripper and Naive Bayes results are ROC plots only (Figs 7-29) and AUCs for Ripper/Naive Bayes are explicitly not included. Table 5 (p.27, printed 347) gives Acc+/Acc- for 500% SMOTE + under-sampling 10%-800% on Oil vs Table 4 SHRINK 82.5%/60.9% and One-sided selection 76.0%/86.6%. Variants also introduced: SMOTE-NC (tested on Adult) and SMOTE-N (proposed, not tested). Paper notes exceptions: Pima (Naive Bayes dominates SMOTE-C4.5), Oil (Under-Ripper dominates SMOTE-Ripper), Can (overlap). A copy 'SMOTE (Original).pdf' exists in Binary folder; not read. Page indices are PDF page numbers; printed page = PDF page + 320."
+}

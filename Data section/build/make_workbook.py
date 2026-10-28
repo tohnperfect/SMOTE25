@@ -284,7 +284,9 @@ def build(papers_json, dsrows_json, out):
             for h,i in eidx.items():
                 v = vals.get(h)
                 # Excel อ่านข้อความที่ขึ้นต้นด้วย = + - @ เป็นสูตร ยกเว้นสูตรที่เราตั้งใจใส่เอง
-                if isinstance(v, str) and v[:1] in "=+-@" and h != "method_name":
+                # ต้องเช็ก v ไม่ว่างก่อน เพราะ ""[:1] คือ "" และ "" in "=+-@" เป็น True เสมอใน Python
+                # (บั๊ก 16 ต.ค. ทำให้ช่องว่าง 1,705 ช่องกลายเป็น ' ตัวเดียว แก้ 16 ต.ค.)
+                if isinstance(v, str) and v and v[0] in "=+-@" and h != "method_name":
                     v = "'" + v
                 c = we.cell(row=row, column=i, value=v)
                 c.font = BODY; c.border = BORDER

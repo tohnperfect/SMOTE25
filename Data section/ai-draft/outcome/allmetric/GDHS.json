@@ -1,0 +1,399 @@
+{
+ "key": "GDHS",
+ "classifier": "Decision tree (DT)",
+ "condition": "main suite, 20 datasets, original IR, mean of 10 runs of 5-fold stratified CV",
+ "proposed_column": "GDHS_LC (GDHS with self-inner class overlapping cleaning)",
+ "smote_column": "OVO (OVO-SMOTE: SMOTE [22] applied in one-vs-one decomposition) -- NO plain SMOTE column exists in this paper",
+ "metrics": [
+  {
+   "metric": "mGM",
+   "metric_family": "G-mean",
+   "table": "Table 5",
+   "page": "PDF page 11 (printed p.11)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "car",
+     "proposed": "0.9490",
+     "proposed_std": null,
+     "smote": "0.9504",
+     "smote_std": null,
+     "marks": "rank (Table 7): GDHS_LC 2, OVO 1"
+    },
+    {
+     "dataset_as_printed": "cleveland",
+     "proposed": "0.1210",
+     "proposed_std": null,
+     "smote": "0.0307",
+     "smote_std": null,
+     "marks": "rank (Table 7): GDHS_LC 1, OVO 13"
+    },
+    {
+     "dataset_as_printed": "contraceptive",
+     "proposed": "0.4801",
+     "proposed_std": null,
+     "smote": "0.4305",
+     "smote_std": null,
+     "marks": "rank (Table 7): GDHS_LC 2, OVO 15"
+    },
+    {
+     "dataset_as_printed": "glass",
+     "proposed": "0.6094",
+     "proposed_std": null,
+     "smote": "0.4389",
+     "smote_std": null,
+     "marks": "rank (Table 7): GDHS_LC 3, OVO 11"
+    },
+    {
+     "dataset_as_printed": "hayes-roth",
+     "proposed": "0.8236",
+     "proposed_std": null,
+     "smote": "0.8293",
+     "smote_std": null,
+     "marks": "rank (Table 7): GDHS_LC 13, OVO 9.5"
+    },
+    {
+     "dataset_as_printed": "newthyroid",
+     "proposed": "0.9231",
+     "proposed_std": null,
+     "smote": "0.9193",
+     "smote_std": null,
+     "marks": "rank (Table 7): GDHS_LC 5, OVO 7"
+    },
+    {
+     "dataset_as_printed": "sensorReadings",
+     "proposed": "0.9925",
+     "proposed_std": null,
+     "smote": "0.9916",
+     "smote_std": null,
+     "marks": "rank (Table 7): GDHS_LC 5, OVO 6"
+    },
+    {
+     "dataset_as_printed": "thyroid",
+     "proposed": "0.9302",
+     "proposed_std": null,
+     "smote": "0.9362",
+     "smote_std": null,
+     "marks": "rank (Table 7): GDHS_LC 6, OVO 4"
+    },
+    {
+     "dataset_as_printed": "userknowledge",
+     "proposed": "0.7379",
+     "proposed_std": null,
+     "smote": "0.7242",
+     "smote_std": null,
+     "marks": "rank (Table 7): GDHS_LC 2, OVO 7"
+    },
+    {
+     "dataset_as_printed": "vehicle",
+     "proposed": "0.6746",
+     "proposed_std": null,
+     "smote": "0.6720",
+     "smote_std": null,
+     "marks": "rank (Table 7): GDHS_LC 14, OVO 15"
+    },
+    {
+     "dataset_as_printed": "vertebralColumn",
+     "proposed": "0.7501",
+     "proposed_std": null,
+     "smote": "0.7239",
+     "smote_std": null,
+     "marks": "rank (Table 7): GDHS_LC 3, OVO 11"
+    },
+    {
+     "dataset_as_printed": "winequality-red",
+     "proposed": "0.0620",
+     "proposed_std": null,
+     "smote": "0.0216",
+     "smote_std": null,
+     "marks": "rank (Table 7): GDHS_LC 3, OVO 7"
+    },
+    {
+     "dataset_as_printed": "yeast",
+     "proposed": "0.2220",
+     "proposed_std": null,
+     "smote": "0.0694",
+     "smote_std": null,
+     "marks": "rank (Table 7): GDHS_LC 5, OVO 8"
+    },
+    {
+     "dataset_as_printed": "zoo",
+     "proposed": "0.5811",
+     "proposed_std": null,
+     "smote": "0.5811",
+     "smote_std": null,
+     "marks": "rank (Table 7): GDHS_LC 4.5, OVO 4.5"
+    },
+    {
+     "dataset_as_printed": "camel-1.4",
+     "proposed": "0.5679",
+     "proposed_std": null,
+     "smote": "0.5292",
+     "smote_std": null,
+     "marks": "rank (Table 7): GDHS_LC 3, OVO 7"
+    },
+    {
+     "dataset_as_printed": "camel-1.6",
+     "proposed": "0.5551",
+     "proposed_std": null,
+     "smote": "0.5610",
+     "smote_std": null,
+     "marks": "rank (Table 7): GDHS_LC 6, OVO 5"
+    },
+    {
+     "dataset_as_printed": "hive-0.12.0",
+     "proposed": "0.6037",
+     "proposed_std": null,
+     "smote": "0.5778",
+     "smote_std": null,
+     "marks": "rank (Table 7): GDHS_LC 2, OVO 5"
+    },
+    {
+     "dataset_as_printed": "velocity-1.5",
+     "proposed": "0.7032",
+     "proposed_std": null,
+     "smote": "0.6699",
+     "smote_std": null,
+     "marks": "rank (Table 7): GDHS_LC 3, OVO 8"
+    },
+    {
+     "dataset_as_printed": "xalan-2.4",
+     "proposed": "0.6508",
+     "proposed_std": null,
+     "smote": "0.5834",
+     "smote_std": null,
+     "marks": "rank (Table 7): GDHS_LC 4, OVO 6"
+    },
+    {
+     "dataset_as_printed": "xerces-1.2",
+     "proposed": "0.6253",
+     "proposed_std": null,
+     "smote": "0.6028",
+     "smote_std": null,
+     "marks": "rank (Table 7): GDHS_LC 6, OVO 9"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average",
+      "proposed": "0.6281",
+      "smote": "0.5922"
+     },
+     {
+      "label": "Mean rank (Table 7)",
+      "proposed": "4.63",
+      "smote": "7.95"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Bayesian signed-rank test, rope 0.5% (Fig. 7, probability matrix): P(GDHS_LC exceeds OVO by 0.5%) = 1; P(OVO exceeds GDHS_LC) = 0. Only bold in table is the Average of GDHS_BA (0.6493 mGM)."
+   }
+  },
+  {
+   "metric": "MAUC",
+   "metric_family": "AUC",
+   "table": "Table 6",
+   "page": "PDF page 11 (printed p.11)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "car",
+     "proposed": "0.9831",
+     "proposed_std": null,
+     "smote": "0.9842",
+     "smote_std": null,
+     "marks": "rank (Table 8): GDHS_LC 2, OVO 1"
+    },
+    {
+     "dataset_as_printed": "cleveland",
+     "proposed": "0.5458",
+     "proposed_std": null,
+     "smote": "0.4840",
+     "smote_std": null,
+     "marks": "rank (Table 8): GDHS_LC 2, OVO 12"
+    },
+    {
+     "dataset_as_printed": "contraceptive",
+     "proposed": "0.6534",
+     "proposed_std": null,
+     "smote": "0.6173",
+     "smote_std": null,
+     "marks": "rank (Table 8): GDHS_LC 2, OVO 14"
+    },
+    {
+     "dataset_as_printed": "glass",
+     "proposed": "0.9033",
+     "proposed_std": null,
+     "smote": "0.8370",
+     "smote_std": null,
+     "marks": "rank (Table 8): GDHS_LC 3, OVO 12"
+    },
+    {
+     "dataset_as_printed": "hayes-roth",
+     "proposed": "0.9192",
+     "proposed_std": null,
+     "smote": "0.9231",
+     "smote_std": null,
+     "marks": "rank (Table 8): GDHS_LC 13, OVO 8.5"
+    },
+    {
+     "dataset_as_printed": "newthyroid",
+     "proposed": "0.9628",
+     "proposed_std": null,
+     "smote": "0.9621",
+     "smote_std": null,
+     "marks": "rank (Table 8): GDHS_LC 4, OVO 6"
+    },
+    {
+     "dataset_as_printed": "sensorReadings",
+     "proposed": "0.9975",
+     "proposed_std": null,
+     "smote": "0.9972",
+     "smote_std": null,
+     "marks": "rank (Table 8): GDHS_LC 5, OVO 6"
+    },
+    {
+     "dataset_as_printed": "thyroid",
+     "proposed": "0.9690",
+     "proposed_std": null,
+     "smote": "0.9705",
+     "smote_std": null,
+     "marks": "rank (Table 8): GDHS_LC 6.5, OVO 5"
+    },
+    {
+     "dataset_as_printed": "userknowledge",
+     "proposed": "0.9321",
+     "proposed_std": null,
+     "smote": "0.9303",
+     "smote_std": null,
+     "marks": "rank (Table 8): GDHS_LC 6, OVO 7"
+    },
+    {
+     "dataset_as_printed": "vehicle",
+     "proposed": "0.8792",
+     "proposed_std": null,
+     "smote": "0.8777",
+     "smote_std": null,
+     "marks": "rank (Table 8): GDHS_LC 14, OVO 16"
+    },
+    {
+     "dataset_as_printed": "vertebralColumn",
+     "proposed": "0.8753",
+     "proposed_std": null,
+     "smote": "0.8625",
+     "smote_std": null,
+     "marks": "rank (Table 8): GDHS_LC 3, OVO 9"
+    },
+    {
+     "dataset_as_printed": "winequality-red",
+     "proposed": "0.5640",
+     "proposed_std": null,
+     "smote": "0.5157",
+     "smote_std": null,
+     "marks": "rank (Table 8): GDHS_LC 3, OVO 8"
+    },
+    {
+     "dataset_as_printed": "yeast",
+     "proposed": "0.8006",
+     "proposed_std": null,
+     "smote": "0.7505",
+     "smote_std": null,
+     "marks": "rank (Table 8): GDHS_LC 6, OVO 7"
+    },
+    {
+     "dataset_as_printed": "zoo",
+     "proposed": "0.8905",
+     "proposed_std": null,
+     "smote": "0.8793",
+     "smote_std": null,
+     "marks": "rank (Table 8): GDHS_LC 3, OVO 5"
+    },
+    {
+     "dataset_as_printed": "camel-1.4",
+     "proposed": "0.5814",
+     "proposed_std": null,
+     "smote": "0.5895",
+     "smote_std": null,
+     "marks": "rank (Table 8): GDHS_LC 11, OVO 8"
+    },
+    {
+     "dataset_as_printed": "camel-1.6",
+     "proposed": "0.5903",
+     "proposed_std": null,
+     "smote": "0.5980",
+     "smote_std": null,
+     "marks": "rank (Table 8): GDHS_LC 12, OVO 5"
+    },
+    {
+     "dataset_as_printed": "hive-0.12.0",
+     "proposed": "0.6372",
+     "proposed_std": null,
+     "smote": "0.6412",
+     "smote_std": null,
+     "marks": "rank (Table 8): GDHS_LC 4, OVO 3"
+    },
+    {
+     "dataset_as_printed": "velocity-1.5",
+     "proposed": "0.7089",
+     "proposed_std": null,
+     "smote": "0.6875",
+     "smote_std": null,
+     "marks": "rank (Table 8): GDHS_LC 3, OVO 5"
+    },
+    {
+     "dataset_as_printed": "xalan-2.4",
+     "proposed": "0.6664",
+     "proposed_std": null,
+     "smote": "0.6260",
+     "smote_std": null,
+     "marks": "rank (Table 8): GDHS_LC 4, OVO 7"
+    },
+    {
+     "dataset_as_printed": "xerces-1.2",
+     "proposed": "0.6590",
+     "proposed_std": null,
+     "smote": "0.6537",
+     "smote_std": null,
+     "marks": "rank (Table 8): GDHS_LC 6, OVO 8"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average",
+      "proposed": "0.7860",
+      "smote": "0.7694"
+     },
+     {
+      "label": "Mean rank (Table 8)",
+      "proposed": "5.63",
+      "smote": "7.63"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Bayesian signed-rank test, rope 0.5% (Fig. 8, probability matrix): P(GDHS_LC exceeds OVO by 0.5%) = 0.9; P(OVO exceeds GDHS_LC) = 0. Only bold in table is the Average of GDHS_BA (0.6493 mGM)."
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [],
+ "metrics_without_smote": [
+  {
+   "metric": "mGM and MAUC under three safe factors",
+   "table": "Table 4"
+  },
+  {
+   "metric": "parameter sensitivity",
+   "table": "Table 2, Table 3"
+  },
+  {
+   "metric": "mGM/MAUC ablation",
+   "table": "Table 9, Table 10"
+  }
+ ],
+ "notes": "IMPORTANT: The paper does not compare against plain SMOTE; the closest is 'OVO-SMOTE (OVO)' (decomposition strategy group: 'OVO performs better than OVA, and SMOTE [22] is a classic binary sampling algorithm'). Copied the OVO column as the SMOTE stand-in; caller must decide whether to accept. Tables are text; column mapping verified against rendered page 11. Ranks from Tables 7/8 (ties as e.g. 4.5). No bold per row except Average of GDHS_BA."
+}

@@ -1,0 +1,436 @@
+src,name,n,f,classes,minority,dist,key
+KEEL(keel_ds),satimage,6435.0,36.0,6.0,626.0,"[626, 703, 707, 1358, 1508, 1533]",satimage
+KEEL(keel_ds),penbased,10992.0,16.0,10.0,1055.0,"[1055, 1055, 1055, 1055, 1056, 1142, 1143, 1143, 1144, 1144]",penbased
+KEEL(keel_ds),saheart,462.0,9.0,2.0,160.0,"[160, 302]",saheart
+KEEL(keel_ds),mushroom,5644.0,22.0,2.0,2156.0,"[2156, 3488]",mushroom
+KEEL(keel_ds),crx,653.0,15.0,2.0,296.0,"[296, 357]",crx
+KEEL(keel_ds),magic,19020.0,10.0,2.0,6688.0,"[6688, 12332]",magic
+KEEL(keel_ds),letter,20000.0,16.0,26.0,734.0,"[734, 734, 736, 739, 747, 748, 752, 753, 755, 758, 761, 764, 766, 768, 773, 775, 783, 783, 786, 787, 789, 792, 796, 803, 805, 813]",letter
+KEEL(keel_ds),tae,151.0,5.0,3.0,49.0,"[49, 50, 52]",tae
+KEEL(keel_ds),ionosphere,351.0,33.0,2.0,126.0,"[126, 225]",ionosphere
+KEEL(keel_ds),tic-tac-toe,958.0,9.0,2.0,332.0,"[332, 626]",tictactoe
+KEEL(keel_ds),marketing,6876.0,13.0,9.0,505.0,"[505, 527, 529, 618, 743, 784, 846, 1069, 1255]",marketing
+KEEL(keel_ds),monk-2,432.0,6.0,2.0,204.0,"[204, 228]",monk2
+KEEL(keel_ds),optdigits,5620.0,64.0,10.0,554.0,"[554, 554, 557, 558, 558, 562, 566, 568, 571, 572]",optdigits
+KEEL(keel_ds),german,1000.0,20.0,2.0,300.0,"[300, 700]",german
+KEEL(keel_ds),movement_libras,360.0,90.0,15.0,24.0,"[24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24]",movementlibras
+KEEL(keel_ds),banana,5300.0,2.0,2.0,2376.0,"[2376, 2924]",banana
+KEEL(keel_ds),australian,690.0,14.0,2.0,307.0,"[307, 383]",australian
+KEEL(keel_ds),hayes-roth,160.0,4.0,3.0,31.0,"[31, 64, 65]",hayesroth
+KEEL(keel_ds),chess,3196.0,36.0,2.0,1527.0,"[1527, 1669]",chess
+KEEL(keel_ds),ring,7400.0,20.0,2.0,3664.0,"[3664, 3736]",ring
+KEEL(keel_ds),iris,150.0,4.0,3.0,50.0,"[50, 50, 50]",iris
+KEEL(keel_ds),twonorm,7400.0,20.0,2.0,3697.0,"[3697, 3703]",twonorm
+KEEL(keel_ds),segment,2310.0,19.0,7.0,330.0,"[330, 330, 330, 330, 330, 330, 330]",segment
+KEEL(keel_ds),texture,5500.0,40.0,11.0,500.0,"[500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500]",texture
+KEEL(keel_ds),led7digit,500.0,7.0,10.0,37.0,"[37, 45, 47, 49, 51, 52, 52, 53, 57, 57]",led7digit
+KEEL(keel_ds),wdbc,569.0,30.0,2.0,212.0,"[212, 357]",wdbc
+KEEL(keel_ds),vehicle,846.0,18.0,4.0,199.0,"[199, 212, 217, 218]",vehicle
+KEEL(keel_ds),phoneme,5404.0,5.0,2.0,1586.0,"[1586, 3818]",phoneme
+KEEL(keel_ds),spambase,4597.0,57.0,2.0,1812.0,"[1812, 2785]",spambase
+KEEL(keel_ds),bands,365.0,19.0,2.0,135.0,"[135, 230]",bands
+KEEL(keel_ds),wisconsin,683.0,9.0,2.0,239.0,"[239, 444]",wisconsin
+KEEL(keel_ds),mammographic,830.0,5.0,2.0,403.0,"[403, 427]",mammographic
+KEEL(keel_ds),wine,178.0,13.0,3.0,48.0,"[48, 59, 71]",wine
+KEEL(keel_ds),sonar,208.0,60.0,2.0,97.0,"[97, 111]",sonar
+KEEL(keel_ds),pima,768.0,8.0,2.0,268.0,"[268, 500]",pima
+KEEL(keel_ds),bupa,345.0,6.0,2.0,145.0,"[145, 200]",bupa
+KEEL(keel_ds),contraceptive,1473.0,9.0,3.0,333.0,"[333, 511, 629]",contraceptive
+KEEL(keel_ds),titanic,2201.0,3.0,2.0,711.0,"[711, 1490]",titanic
+KEEL(keel_ds),heart,270.0,13.0,2.0,120.0,"[120, 150]",heart
+KEEL(keel_ds),splice,3190.0,60.0,3.0,767.0,"[767, 768, 1655]",splice
+KEEL(keel_ds),breast,277.0,9.0,2.0,81.0,"[81, 196]",breast
+KEEL(keel_ds),housevotes,232.0,16.0,2.0,108.0,"[108, 124]",housevotes
+KEEL(keel_ds),vowel,990.0,13.0,11.0,90.0,"[90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90]",vowel
+KEEL(keel_ds),winequality-red-8_vs_6,656.0,11.0,2.0,18.0,"[18, 638]",winequalityred8vs6
+KEEL(keel_ds),glass4,214.0,9.0,2.0,13.0,"[13, 201]",glass4
+KEEL(keel_ds),vehicle2,846.0,18.0,2.0,218.0,"[218, 628]",vehicle2
+KEEL(keel_ds),glass2,214.0,9.0,2.0,17.0,"[17, 197]",glass2
+KEEL(keel_ds),abalone-21_vs_8,581.0,8.0,2.0,14.0,"[14, 567]",abalone21vs8
+KEEL(keel_ds),iris0,150.0,4.0,2.0,50.0,"[50, 100]",iris0
+KEEL(keel_ds),glass-0-1-5_vs_2,172.0,9.0,2.0,17.0,"[17, 155]",glass015vs2
+KEEL(keel_ds),new-thyroid1,215.0,5.0,2.0,35.0,"[35, 180]",newthyroid1
+KEEL(keel_ds),segment0,2308.0,19.0,2.0,329.0,"[329, 1979]",segment0
+KEEL(keel_ds),ecoli-0-2-3-4_vs_5,202.0,7.0,2.0,20.0,"[20, 182]",ecoli0234vs5
+KEEL(keel_ds),ecoli-0-1-4-6_vs_5,280.0,6.0,2.0,20.0,"[20, 260]",ecoli0146vs5
+KEEL(keel_ds),glass1,214.0,9.0,2.0,76.0,"[76, 138]",glass1
+KEEL(keel_ds),yeast-1_vs_7,459.0,7.0,2.0,30.0,"[30, 429]",yeast1vs7
+KEEL(keel_ds),glass-0-1-2-3_vs_4-5-6,214.0,9.0,2.0,51.0,"[51, 163]",glass0123vs456
+KEEL(keel_ds),kr-vs-k-one_vs_fifteen,2244.0,6.0,2.0,78.0,"[78, 2166]",krvsk1vs15
+KEEL(keel_ds),shuttle-2_vs_5,3316.0,9.0,2.0,49.0,"[49, 3267]",shuttle2vs5
+KEEL(keel_ds),abalone-19_vs_10-11-12-13,1622.0,8.0,2.0,32.0,"[32, 1590]",abalone19vs10111213
+KEEL(keel_ds),ecoli-0-1_vs_2-3-5,244.0,7.0,2.0,24.0,"[24, 220]",ecoli01vs235
+KEEL(keel_ds),kr-vs-k-zero_vs_fifteen,2193.0,6.0,2.0,27.0,"[27, 2166]",krvsk0vs15
+KEEL(keel_ds),car-good,1728.0,6.0,2.0,69.0,"[69, 1659]",cargood
+KEEL(keel_ds),ecoli-0-6-7_vs_5,220.0,6.0,2.0,20.0,"[20, 200]",ecoli067vs5
+KEEL(keel_ds),kddcup-rootkit-imap_vs_back,2225.0,41.0,2.0,22.0,"[22, 2203]",kddrootkitvsback
+KEEL(keel_ds),led7digit-0-2-4-5-6-7-8-9_vs_1,443.0,7.0,2.0,37.0,"[37, 406]",led7digit02456789vs1
+KEEL(keel_ds),ecoli-0_vs_1,220.0,7.0,2.0,77.0,"[77, 143]",ecoli0vs1
+KEEL(keel_ds),abalone19,4174.0,8.0,2.0,32.0,"[32, 4142]",abalone19
+KEEL(keel_ds),page-blocks0,5472.0,10.0,2.0,559.0,"[559, 4913]",pageblocks0
+KEEL(keel_ds),kr-vs-k-zero-one_vs_draw,2901.0,6.0,2.0,105.0,"[105, 2796]",krvsk01vsdraw
+KEEL(keel_ds),kddcup-land_vs_portsweep,1061.0,41.0,2.0,21.0,"[21, 1040]",kddlandvsportsweep
+KEEL(keel_ds),glass-0-1-6_vs_2,192.0,9.0,2.0,17.0,"[17, 175]",glass016vs2
+KEEL(keel_ds),lymphography-normal-fibrosis,148.0,18.0,2.0,6.0,"[6, 142]",lymphographynormalfibrosis
+KEEL(keel_ds),haberman,306.0,3.0,2.0,81.0,"[81, 225]",haberman
+KEEL(keel_ds),ecoli-0-1-4-7_vs_2-3-5-6,336.0,7.0,2.0,29.0,"[29, 307]",ecoli0147vs2356
+KEEL(keel_ds),abalone-17_vs_7-8-9-10,2338.0,8.0,2.0,58.0,"[58, 2280]",abalone17vs78910
+KEEL(keel_ds),page-blocks-1-3_vs_4,472.0,10.0,2.0,28.0,"[28, 444]",pageblocks13vs4
+KEEL(keel_ds),poker-8-9_vs_5,2075.0,10.0,2.0,25.0,"[25, 2050]",poker89vs5
+KEEL(keel_ds),shuttle-c0-vs-c4,1829.0,9.0,2.0,123.0,"[123, 1706]",shuttlec0vsc4
+KEEL(keel_ds),glass-0-6_vs_5,108.0,9.0,2.0,9.0,"[9, 99]",glass06vs5
+KEEL(keel_ds),ecoli4,336.0,7.0,2.0,20.0,"[20, 316]",ecoli4
+KEEL(keel_ds),winequality-red-3_vs_5,691.0,11.0,2.0,10.0,"[10, 681]",winequalityred3vs5
+KEEL(keel_ds),vehicle1,846.0,18.0,2.0,217.0,"[217, 629]",vehicle1
+KEEL(keel_ds),ecoli3,336.0,7.0,2.0,35.0,"[35, 301]",ecoli3
+KEEL(keel_ds),yeast-2_vs_4,514.0,8.0,2.0,51.0,"[51, 463]",yeast2vs4
+KEEL(keel_ds),poker-8_vs_6,1477.0,10.0,2.0,17.0,"[17, 1460]",poker8vs6
+KEEL(keel_ds),ecoli-0-1-4-7_vs_5-6,332.0,6.0,2.0,25.0,"[25, 307]",ecoli0147vs56
+KEEL(keel_ds),glass-0-1-6_vs_5,184.0,9.0,2.0,9.0,"[9, 175]",glass016vs5
+KEEL(keel_ds),new-thyroid2,215.0,5.0,2.0,35.0,"[35, 180]",newthyroid2
+KEEL(keel_ds),glass-0-4_vs_5,92.0,9.0,2.0,9.0,"[9, 83]",glass04vs5
+KEEL(keel_ds),yeast3,1484.0,8.0,2.0,163.0,"[163, 1321]",yeast3
+KEEL(keel_ds),winequality-red-4,1599.0,11.0,2.0,53.0,"[53, 1546]",winequalityred4
+KEEL(keel_ds),abalone-20_vs_8-9-10,1916.0,8.0,2.0,26.0,"[26, 1890]",abalone20vs8910
+KEEL(keel_ds),dermatology-6,358.0,34.0,2.0,20.0,"[20, 338]",dermatology6
+KEEL(keel_ds),vehicle3,846.0,18.0,2.0,212.0,"[212, 634]",vehicle3
+KEEL(keel_ds),winequality-red-8_vs_6-7,855.0,11.0,2.0,18.0,"[18, 837]",winequalityred8vs67
+KEEL(keel_ds),glass0,214.0,9.0,2.0,70.0,"[70, 144]",glass0
+KEEL(keel_ds),ecoli-0-1_vs_5,240.0,6.0,2.0,20.0,"[20, 220]",ecoli01vs5
+KEEL(keel_ds),yeast-0-5-6-7-9_vs_4,528.0,8.0,2.0,51.0,"[51, 477]",yeast05679vs4
+KEEL(keel_ds),kr-vs-k-zero_vs_eight,1460.0,6.0,2.0,27.0,"[27, 1433]",krvsk0vs8
+KEEL(keel_ds),yeast-1-4-5-8_vs_7,693.0,8.0,2.0,30.0,"[30, 663]",yeast1458vs7
+KEEL(keel_ds),ecoli-0-3-4_vs_5,200.0,7.0,2.0,20.0,"[20, 180]",ecoli034vs5
+KEEL(keel_ds),poker-9_vs_7,244.0,10.0,2.0,8.0,"[8, 236]",poker9vs7
+KEEL(keel_ds),zoo-3,101.0,16.0,2.0,5.0,"[5, 96]",zoo3
+KEEL(keel_ds),ecoli-0-6-7_vs_3-5,222.0,7.0,2.0,22.0,"[22, 200]",ecoli067vs35
+KEEL(keel_ds),winequality-white-9_vs_4,168.0,11.0,2.0,5.0,"[5, 163]",winequalitywhite9vs4
+KEEL(keel_ds),wisconsin,683.0,9.0,2.0,239.0,"[239, 444]",wisconsin
+KEEL(keel_ds),ecoli-0-2-6-7_vs_3-5,224.0,7.0,2.0,22.0,"[22, 202]",ecoli0267vs35
+KEEL(keel_ds),glass5,214.0,9.0,2.0,9.0,"[9, 205]",glass5
+KEEL(keel_ds),flare-F,1066.0,11.0,2.0,43.0,"[43, 1023]",flaref
+KEEL(keel_ds),ecoli1,336.0,7.0,2.0,77.0,"[77, 259]",ecoli1
+KEEL(keel_ds),ecoli-0-3-4-6_vs_5,205.0,7.0,2.0,20.0,"[20, 185]",ecoli0346vs5
+KEEL(keel_ds),shuttle-c2-vs-c4,129.0,9.0,2.0,6.0,"[6, 123]",shuttlec2vsc4
+KEEL(keel_ds),yeast4,1484.0,8.0,2.0,51.0,"[51, 1433]",yeast4
+KEEL(keel_ds),abalone9-18,731.0,8.0,2.0,42.0,"[42, 689]",abalone918
+KEEL(keel_ds),poker-8-9_vs_6,1485.0,10.0,2.0,25.0,"[25, 1460]",poker89vs6
+KEEL(keel_ds),yeast-0-2-5-6_vs_3-7-8-9,1004.0,8.0,2.0,99.0,"[99, 905]",yeast0256vs3789
+KEEL(keel_ds),yeast-0-3-5-9_vs_7-8,506.0,8.0,2.0,50.0,"[50, 456]",yeast0359vs78
+KEEL(keel_ds),abalone-3_vs_11,502.0,8.0,2.0,15.0,"[15, 487]",abalone3vs11
+KEEL(keel_ds),kddcup-buffer_overflow_vs_back,2233.0,41.0,2.0,30.0,"[30, 2203]",kddbufferoverflowvsback
+KEEL(keel_ds),ecoli2,336.0,7.0,2.0,52.0,"[52, 284]",ecoli2
+KEEL(keel_ds),cleveland-0_vs_4,177.0,13.0,2.0,13.0,"[13, 164]",cleveland0vs4
+KEEL(keel_ds),pima,768.0,8.0,2.0,268.0,"[268, 500]",pima
+KEEL(keel_ds),yeast-0-2-5-7-9_vs_3-6-8,1004.0,8.0,2.0,99.0,"[99, 905]",yeast02579vs368
+KEEL(keel_ds),vehicle0,846.0,18.0,2.0,199.0,"[199, 647]",vehicle0
+KEEL(keel_ds),yeast-2_vs_8,482.0,8.0,2.0,20.0,"[20, 462]",yeast2vs8
+KEEL(keel_ds),yeast6,1484.0,8.0,2.0,35.0,"[35, 1449]",yeast6
+KEEL(keel_ds),ecoli-0-4-6_vs_5,203.0,6.0,2.0,20.0,"[20, 183]",ecoli046vs5
+KEEL(keel_ds),kddcup-land_vs_satan,1610.0,41.0,2.0,21.0,"[21, 1589]",kddlandvssatan
+KEEL(keel_ds),yeast-1-2-8-9_vs_7,947.0,8.0,2.0,30.0,"[30, 917]",yeast1289vs7
+KEEL(keel_ds),winequality-white-3_vs_7,900.0,11.0,2.0,20.0,"[20, 880]",winequalitywhite3vs7
+KEEL(keel_ds),glass-0-1-4-6_vs_2,205.0,9.0,2.0,17.0,"[17, 188]",glass0146vs2
+KEEL(keel_ds),shuttle-6_vs_2-3,230.0,9.0,2.0,10.0,"[10, 220]",shuttle6vs23
+KEEL(keel_ds),ecoli-0-1-3-7_vs_2-6,281.0,7.0,2.0,7.0,"[7, 274]",ecoli0137vs26
+KEEL(keel_ds),car-vgood,1728.0,6.0,2.0,65.0,"[65, 1663]",carvgood
+KEEL(keel_ds),kddcup-guess_passwd_vs_satan,1642.0,41.0,2.0,53.0,"[53, 1589]",kddguesspasswdvssatan
+KEEL(keel_ds),yeast5,1484.0,8.0,2.0,44.0,"[44, 1440]",yeast5
+KEEL(keel_ds),winequality-white-3-9_vs_5,1482.0,11.0,2.0,25.0,"[25, 1457]",winequalitywhite39vs5
+KEEL(keel_ds),yeast1,1484.0,8.0,2.0,429.0,"[429, 1055]",yeast1
+KEEL(keel_ds),ecoli-0-3-4-7_vs_5-6,257.0,7.0,2.0,25.0,"[25, 232]",ecoli0347vs56
+KEEL(keel_ds),vowel0,988.0,13.0,2.0,90.0,"[90, 898]",vowel0
+KEEL(keel_ds),glass6,214.0,9.0,2.0,29.0,"[29, 185]",glass6
+KEEL(keel_ds),kr-vs-k-three_vs_eleven,2935.0,6.0,2.0,81.0,"[81, 2854]",krvsk3vs11
+KEEL(imbalanced_databases),yeast-1_vs_7,459.0,7.0,2.0,30.0,"[30, 429]",yeast1vs7
+KEEL(imbalanced_databases),glass-0-4_vs_5,92.0,9.0,2.0,9.0,"[9, 83]",glass04vs5
+KEEL(imbalanced_databases),yeast5,1484.0,8.0,2.0,44.0,"[44, 1440]",yeast5
+KEEL(imbalanced_databases),glass-0-6_vs_5,108.0,9.0,2.0,9.0,"[9, 99]",glass06vs5
+KEEL(imbalanced_databases),car-vgood,1728.0,6.0,2.0,65.0,"[65, 1663]",carvgood
+imbalanced_databases(other fmt),cm1,,,,,,cm1
+KEEL(imbalanced_databases),vehicle0,846.0,18.0,2.0,199.0,"[199, 647]",vehicle0
+imbalanced_databases(other fmt),satimage,,,,,,satimage
+KEEL(imbalanced_databases),ecoli-0-1-4-7_vs_5-6,332.0,6.0,2.0,25.0,"[25, 307]",ecoli0147vs56
+KEEL(imbalanced_databases),ecoli-0-1-4-6_vs_5,280.0,6.0,2.0,20.0,"[20, 260]",ecoli0146vs5
+KEEL(imbalanced_databases),ecoli-0-1_vs_5,240.0,6.0,2.0,20.0,"[20, 220]",ecoli01vs5
+KEEL(imbalanced_databases),kddcup-rootkit-imap_vs_back,2225.0,41.0,2.0,22.0,"[22, 2203]",kddrootkitvsback
+KEEL(imbalanced_databases),abalone-20_vs_8-9-10,1916.0,8.0,2.0,26.0,"[26, 1890]",abalone20vs8910
+imbalanced_databases(other fmt),sylva,,,,,,sylva
+KEEL(imbalanced_databases),yeast-1-2-8-9_vs_7,947.0,8.0,2.0,30.0,"[30, 917]",yeast1289vs7
+KEEL(imbalanced_databases),page-blocks-1-3_vs_4,472.0,10.0,2.0,28.0,"[28, 444]",pageblocks13vs4
+KEEL(imbalanced_databases),abalone-19_vs_10-11-12-13,1622.0,8.0,2.0,32.0,"[32, 1590]",abalone19vs10111213
+KEEL(imbalanced_databases),kr-vs-k-three_vs_eleven,2935.0,6.0,2.0,81.0,"[81, 2854]",krvsk3vs11
+KEEL(imbalanced_databases),yeast-1-4-5-8_vs_7,693.0,8.0,2.0,30.0,"[30, 663]",yeast1458vs7
+KEEL(imbalanced_databases),kddcup-land_vs_portsweep,1061.0,41.0,2.0,21.0,"[21, 1040]",kddlandvsportsweep
+KEEL(imbalanced_databases),kr-vs-k-zero-one_vs_draw,2901.0,6.0,2.0,105.0,"[105, 2796]",krvsk01vsdraw
+KEEL(imbalanced_databases),winequality-red-3_vs_5,691.0,11.0,2.0,10.0,"[10, 681]",winequalityred3vs5
+KEEL(imbalanced_databases),glass-0-1-6_vs_5,184.0,9.0,2.0,9.0,"[9, 175]",glass016vs5
+KEEL(imbalanced_databases),shuttle-c0-vs-c4,1829.0,9.0,2.0,123.0,"[123, 1706]",shuttlec0vsc4
+imbalanced_databases(other fmt),hypothyroid,,,,,,hypothyroid
+KEEL(imbalanced_databases),zoo-3,101.0,16.0,2.0,5.0,"[5, 96]",zoo3
+KEEL(imbalanced_databases),glass6,214.0,9.0,2.0,29.0,"[29, 185]",glass6
+KEEL(imbalanced_databases),ecoli-0-1-4-7_vs_2-3-5-6,336.0,7.0,2.0,29.0,"[29, 307]",ecoli0147vs2356
+KEEL(imbalanced_databases),ecoli-0-2-6-7_vs_3-5,224.0,7.0,2.0,22.0,"[22, 202]",ecoli0267vs35
+KEEL(imbalanced_databases),ecoli-0-4-6_vs_5,203.0,6.0,2.0,20.0,"[20, 183]",ecoli046vs5
+KEEL(imbalanced_databases),segment0,2308.0,19.0,2.0,329.0,"[329, 1979]",segment0
+KEEL(imbalanced_databases),kr-vs-k-one_vs_fifteen,2244.0,6.0,2.0,78.0,"[78, 2166]",krvsk1vs15
+KEEL(imbalanced_databases),ecoli-0-3-4-6_vs_5,205.0,7.0,2.0,20.0,"[20, 185]",ecoli0346vs5
+KEEL(imbalanced_databases),lymphography-normal-fibrosis,148.0,18.0,2.0,6.0,"[6, 142]",lymphographynormalfibrosis
+KEEL(imbalanced_databases),poker-8-9_vs_6,1485.0,10.0,2.0,25.0,"[25, 1460]",poker89vs6
+KEEL(imbalanced_databases),page-blocks0,5472.0,10.0,2.0,559.0,"[559, 4913]",pageblocks0
+KEEL(imbalanced_databases),abalone9-18,731.0,8.0,2.0,42.0,"[42, 689]",abalone918
+KEEL(imbalanced_databases),kddcup-buffer_overflow_vs_back,2233.0,41.0,2.0,30.0,"[30, 2203]",kddbufferoverflowvsback
+KEEL(imbalanced_databases),haberman,306.0,3.0,2.0,81.0,"[81, 225]",haberman
+KEEL(imbalanced_databases),yeast-0-5-6-7-9_vs_4,528.0,8.0,2.0,51.0,"[51, 477]",yeast05679vs4
+KEEL(imbalanced_databases),vehicle2,846.0,18.0,2.0,218.0,"[218, 628]",vehicle2
+KEEL(imbalanced_databases),kddcup-land_vs_satan,1610.0,41.0,2.0,21.0,"[21, 1589]",kddlandvssatan
+KEEL(imbalanced_databases),new_thyroid2,215.0,5.0,2.0,35.0,"[35, 180]",newthyroid2
+KEEL(imbalanced_databases),yeast-0-3-5-9_vs_7-8,506.0,8.0,2.0,50.0,"[50, 456]",yeast0359vs78
+KEEL(imbalanced_databases),poker-8_vs_6,1477.0,10.0,2.0,17.0,"[17, 1460]",poker8vs6
+KEEL(imbalanced_databases),glass-0-1-5_vs_2,172.0,9.0,2.0,17.0,"[17, 155]",glass015vs2
+KEEL(imbalanced_databases),kr-vs-k-zero_vs_fifteen,2193.0,6.0,2.0,27.0,"[27, 2166]",krvsk0vs15
+KEEL(imbalanced_databases),winequality-red-8_vs_6-7,855.0,11.0,2.0,18.0,"[18, 837]",winequalityred8vs67
+KEEL(imbalanced_databases),shuttle-2_vs_5,3316.0,9.0,2.0,49.0,"[49, 3267]",shuttle2vs5
+KEEL(imbalanced_databases),ecoli-0-3-4_vs_5,200.0,7.0,2.0,20.0,"[20, 180]",ecoli034vs5
+KEEL(imbalanced_databases),kr-vs-k-zero_vs_eight,1460.0,6.0,2.0,27.0,"[27, 1433]",krvsk0vs8
+imbalanced_databases(other fmt),hepatitis,,,,,,hepatitis
+KEEL(imbalanced_databases),ecoli-0-2-3-4_vs_5,202.0,7.0,2.0,20.0,"[20, 182]",ecoli0234vs5
+KEEL(imbalanced_databases),shuttle-c2-vs-c4,129.0,9.0,2.0,6.0,"[6, 123]",shuttlec2vsc4
+KEEL(imbalanced_databases),iris0,150.0,4.0,2.0,50.0,"[50, 100]",iris0
+KEEL(imbalanced_databases),wisconsin,683.0,9.0,2.0,239.0,"[239, 444]",wisconsin
+KEEL(imbalanced_databases),new_thyroid1,215.0,5.0,2.0,35.0,"[35, 180]",newthyroid1
+KEEL(imbalanced_databases),vehicle1,846.0,18.0,2.0,217.0,"[217, 629]",vehicle1
+KEEL(imbalanced_databases),abalone19,4174.0,8.0,2.0,32.0,"[32, 4142]",abalone19
+KEEL(imbalanced_databases),ecoli-0-6-7_vs_5,220.0,6.0,2.0,20.0,"[20, 200]",ecoli067vs5
+KEEL(imbalanced_databases),car-good,1728.0,6.0,2.0,69.0,"[69, 1659]",cargood
+KEEL(imbalanced_databases),winequality-white-3-9_vs_5,1482.0,11.0,2.0,25.0,"[25, 1457]",winequalitywhite39vs5
+KEEL(imbalanced_databases),vehicle3,846.0,18.0,2.0,212.0,"[212, 634]",vehicle3
+imbalanced_databases(other fmt),pc1,,,,,,pc1
+KEEL(imbalanced_databases),glass4,214.0,9.0,2.0,13.0,"[13, 201]",glass4
+KEEL(imbalanced_databases),yeast-0-2-5-7-9_vs_3-6-8,1004.0,8.0,2.0,99.0,"[99, 905]",yeast02579vs368
+KEEL(imbalanced_databases),glass-0-1-2-3_vs_4-5-6,214.0,9.0,2.0,51.0,"[51, 163]",glass0123vs456
+KEEL(imbalanced_databases),winequality-red-4,1599.0,11.0,2.0,53.0,"[53, 1546]",winequalityred4
+KEEL(imbalanced_databases),dermatology-6,358.0,34.0,2.0,20.0,"[20, 338]",dermatology6
+KEEL(imbalanced_databases),yeast6,1484.0,8.0,2.0,35.0,"[35, 1449]",yeast6
+KEEL(imbalanced_databases),yeast4,1484.0,8.0,2.0,51.0,"[51, 1433]",yeast4
+KEEL(imbalanced_databases),winequality-white-3_vs_7,900.0,11.0,2.0,20.0,"[20, 880]",winequalitywhite3vs7
+KEEL(imbalanced_databases),flare-F,1066.0,11.0,2.0,43.0,"[43, 1023]",flaref
+KEEL(imbalanced_databases),ecoli4,336.0,7.0,2.0,20.0,"[20, 316]",ecoli4
+KEEL(imbalanced_databases),ecoli-0-1-3-7_vs_2-6,281.0,7.0,2.0,7.0,"[7, 274]",ecoli0137vs26
+KEEL(imbalanced_databases),poker-9_vs_7,244.0,10.0,2.0,8.0,"[8, 236]",poker9vs7
+imbalanced_databases(other fmt),ada,,,,,,ada
+imbalanced_databases(other fmt),glass,,,,,,glass
+KEEL(imbalanced_databases),yeast3,1484.0,8.0,2.0,163.0,"[163, 1321]",yeast3
+imbalanced_databases(other fmt),hiva,,,,,,hiva
+imbalanced_databases(other fmt),spect_f,,,,,,spectf
+KEEL(imbalanced_databases),abalone-3_vs_11,502.0,8.0,2.0,15.0,"[15, 487]",abalone3vs11
+KEEL(imbalanced_databases),led7digit-0-2-4-5-6-7-8-9_vs_1,443.0,7.0,2.0,37.0,"[37, 406]",led7digit02456789vs1
+KEEL(imbalanced_databases),glass1,214.0,9.0,2.0,76.0,"[76, 138]",glass1
+KEEL(imbalanced_databases),glass2,214.0,9.0,2.0,17.0,"[17, 197]",glass2
+imbalanced_databases(other fmt),kc1,,,,,,kc1
+KEEL(imbalanced_databases),ecoli-0_vs_1,220.0,7.0,2.0,77.0,"[77, 143]",ecoli0vs1
+KEEL(imbalanced_databases),poker-8-9_vs_5,2075.0,10.0,2.0,25.0,"[25, 2050]",poker89vs5
+KEEL(imbalanced_databases),yeast1,1484.0,8.0,2.0,429.0,"[429, 1055]",yeast1
+KEEL(imbalanced_databases),vowel0,988.0,13.0,2.0,90.0,"[90, 898]",vowel0
+KEEL(imbalanced_databases),glass-0-1-4-6_vs_2,205.0,9.0,2.0,17.0,"[17, 188]",glass0146vs2
+KEEL(imbalanced_databases),glass5,214.0,9.0,2.0,9.0,"[9, 205]",glass5
+KEEL(imbalanced_databases),kddcup-guess_passwd_vs_satan,1642.0,41.0,2.0,53.0,"[53, 1589]",kddguesspasswdvssatan
+imbalanced_databases(other fmt),vehicle,,,,,,vehicle
+KEEL(imbalanced_databases),glass0,214.0,9.0,2.0,70.0,"[70, 144]",glass0
+KEEL(imbalanced_databases),ecoli1,336.0,7.0,2.0,77.0,"[77, 259]",ecoli1
+KEEL(imbalanced_databases),winequality-white-9_vs_4,168.0,11.0,2.0,5.0,"[5, 163]",winequalitywhite9vs4
+KEEL(imbalanced_databases),winequality-red-8_vs_6,656.0,11.0,2.0,18.0,"[18, 638]",winequalityred8vs6
+KEEL(imbalanced_databases),shuttle-6_vs_2-3,230.0,9.0,2.0,10.0,"[10, 220]",shuttle6vs23
+KEEL(imbalanced_databases),yeast-2_vs_8,482.0,8.0,2.0,20.0,"[20, 462]",yeast2vs8
+KEEL(imbalanced_databases),abalone-17_vs_7-8-9-10,2338.0,8.0,2.0,58.0,"[58, 2280]",abalone17vs78910
+KEEL(imbalanced_databases),ecoli-0-1_vs_2-3-5,244.0,7.0,2.0,24.0,"[24, 220]",ecoli01vs235
+imbalanced_databases(other fmt),german,,,,,,german
+KEEL(imbalanced_databases),ecoli3,336.0,7.0,2.0,35.0,"[35, 301]",ecoli3
+KEEL(imbalanced_databases),abalone-21_vs_8,581.0,8.0,2.0,14.0,"[14, 567]",abalone21vs8
+KEEL(imbalanced_databases),ecoli-0-3-4-7_vs_5-6,257.0,7.0,2.0,25.0,"[25, 232]",ecoli0347vs56
+KEEL(imbalanced_databases),ecoli2,336.0,7.0,2.0,52.0,"[52, 284]",ecoli2
+KEEL(imbalanced_databases),cleveland-0_vs_4,177.0,13.0,2.0,13.0,"[13, 164]",cleveland0vs4
+KEEL(imbalanced_databases),yeast-0-2-5-6_vs_3-7-8-9,1004.0,8.0,2.0,99.0,"[99, 905]",yeast0256vs3789
+KEEL(imbalanced_databases),ecoli-0-6-7_vs_3-5,222.0,7.0,2.0,22.0,"[22, 200]",ecoli067vs35
+KEEL(imbalanced_databases),pima,768.0,8.0,2.0,268.0,"[268, 500]",pima
+KEEL(imbalanced_databases),glass-0-1-6_vs_2,192.0,9.0,2.0,17.0,"[17, 175]",glass016vs2
+KEEL(imbalanced_databases),yeast-2_vs_4,514.0,8.0,2.0,51.0,"[51, 463]",yeast2vs4
+PMLB,GAMETES_Epistasis_2_Way_1000atts_0.4H_EDM_1_EDM_1_1,1600.0,1000.0,2.0,,,gametesepistasis2way1000atts04hedm1edm11
+PMLB,GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1,1600.0,20.0,2.0,,,gametesepistasis2way20atts01hedm11
+PMLB,GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1,1600.0,20.0,2.0,,,gametesepistasis2way20atts04hedm11
+PMLB,GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1,1600.0,20.0,2.0,,,gametesepistasis3way20atts02hedm11
+PMLB,GAMETES_Heterogeneity_20atts_1600_Het_0.4_0.2_50_EDM_2_001,1600.0,20.0,2.0,,,gametesheterogeneity20atts1600het040250edm2001
+PMLB,GAMETES_Heterogeneity_20atts_1600_Het_0.4_0.2_75_EDM_2_001,1600.0,20.0,2.0,,,gametesheterogeneity20atts1600het040275edm2001
+PMLB,Hill_Valley_with_noise,1212.0,100.0,2.0,,,hillvalleywithnoise
+PMLB,Hill_Valley_without_noise,1212.0,100.0,2.0,,,hillvalleywithoutnoise
+PMLB,_deprecated_australian,690.0,14.0,2.0,,,deprecatedaustralian
+PMLB,_deprecated_auto,202.0,25.0,5.0,,,deprecatedauto
+PMLB,_deprecated_breast,699.0,10.0,2.0,,,deprecatedbreast
+PMLB,_deprecated_breast_cancer_wisconsin,569.0,30.0,2.0,,,deprecatedbreastcancerwisconsin
+PMLB,_deprecated_breast_w,699.0,9.0,2.0,,,deprecatedbreastw
+PMLB,_deprecated_buggyCrx,690.0,15.0,2.0,,,deprecatedbuggycrx
+PMLB,_deprecated_car,1728.0,6.0,4.0,,,deprecatedcar
+PMLB,_deprecated_car_evaluation,1728.0,21.0,4.0,,,deprecatedcarevaluation
+PMLB,_deprecated_cleve,303.0,13.0,2.0,,,deprecatedcleve
+PMLB,_deprecated_cleveland,303.0,13.0,5.0,,,deprecatedcleveland
+PMLB,_deprecated_cleveland_nominal,303.0,7.0,5.0,,,deprecatedclevelandnominal
+PMLB,_deprecated_cmc,1473.0,9.0,3.0,,,deprecatedcmc
+PMLB,_deprecated_colic,368.0,22.0,2.0,,,deprecatedcolic
+PMLB,_deprecated_contraceptive,1473.0,9.0,3.0,,,deprecatedcontraceptive
+PMLB,_deprecated_credit_a,690.0,15.0,2.0,,,deprecatedcredita
+PMLB,_deprecated_credit_g,1000.0,20.0,2.0,,,deprecatedcreditg
+PMLB,_deprecated_crx,690.0,15.0,2.0,,,deprecatedcrx
+PMLB,_deprecated_diabetes,768.0,8.0,2.0,,,deprecateddiabetes
+PMLB,_deprecated_flare,1066.0,10.0,2.0,,,deprecatedflare
+PMLB,_deprecated_german,1000.0,20.0,2.0,,,deprecatedgerman
+PMLB,_deprecated_glass,205.0,9.0,5.0,,,deprecatedglass
+PMLB,_deprecated_heart_c,303.0,13.0,2.0,,,deprecatedheartc
+PMLB,_deprecated_heart_h,294.0,13.0,2.0,,,deprecatedhearth
+PMLB,_deprecated_heart_statlog,270.0,13.0,2.0,,,deprecatedheartstatlog
+PMLB,_deprecated_horse_colic,368.0,22.0,2.0,,,deprecatedhorsecolic
+PMLB,_deprecated_house_votes_84,435.0,16.0,2.0,,,deprecatedhousevotes84
+PMLB,_deprecated_hungarian,294.0,13.0,2.0,,,deprecatedhungarian
+PMLB,_deprecated_pima,768.0,8.0,2.0,,,deprecatedpima
+PMLB,_deprecated_prnn_fglass,205.0,9.0,5.0,,,deprecatedprnnfglass
+PMLB,_deprecated_solar_flare_1,315.0,12.0,5.0,,,deprecatedsolarflare1
+PMLB,_deprecated_solar_flare_2,1066.0,12.0,6.0,,,deprecatedsolarflare2
+PMLB,_deprecated_vote,435.0,16.0,2.0,,,deprecatedvote
+PMLB,_deprecated_wdbc,569.0,30.0,2.0,,,deprecatedwdbc
+PMLB,adult,48842.0,14.0,2.0,,,adult
+PMLB,agaricus_lepiota,8145.0,22.0,2.0,,,agaricuslepiota
+PMLB,allbp,3772.0,29.0,3.0,,,allbp
+PMLB,allhyper,3771.0,29.0,4.0,,,allhyper
+PMLB,allhypo,3770.0,29.0,3.0,,,allhypo
+PMLB,allrep,3772.0,29.0,4.0,,,allrep
+PMLB,analcatdata_aids,50.0,4.0,2.0,,,analcatdataaids
+PMLB,analcatdata_asbestos,83.0,3.0,2.0,,,analcatdataasbestos
+PMLB,analcatdata_authorship,841.0,70.0,4.0,,,analcatdataauthorship
+PMLB,analcatdata_bankruptcy,50.0,6.0,2.0,,,analcatdatabankruptcy
+PMLB,analcatdata_boxing1,120.0,3.0,2.0,,,analcatdataboxing1
+PMLB,analcatdata_boxing2,132.0,3.0,2.0,,,analcatdataboxing2
+PMLB,analcatdata_creditscore,100.0,6.0,2.0,,,analcatdatacreditscore
+PMLB,analcatdata_cyyoung8092,97.0,10.0,2.0,,,analcatdatacyyoung8092
+PMLB,analcatdata_cyyoung9302,92.0,10.0,2.0,,,analcatdatacyyoung9302
+PMLB,analcatdata_dmft,797.0,4.0,6.0,,,analcatdatadmft
+PMLB,analcatdata_fraud,42.0,11.0,2.0,,,analcatdatafraud
+PMLB,analcatdata_germangss,400.0,5.0,4.0,,,analcatdatagermangss
+PMLB,analcatdata_happiness,60.0,3.0,3.0,,,analcatdatahappiness
+PMLB,analcatdata_japansolvent,52.0,9.0,2.0,,,analcatdatajapansolvent
+PMLB,analcatdata_lawsuit,264.0,4.0,2.0,,,analcatdatalawsuit
+PMLB,ann_thyroid,7200.0,21.0,3.0,,,annthyroid
+PMLB,appendicitis,106.0,7.0,2.0,,,appendicitis
+PMLB,auto_insurance_symboling,205.0,24.0,6.0,,,autoinsurancesymboling
+PMLB,backache,180.0,32.0,2.0,,,backache
+PMLB,balance_scale,625.0,4.0,3.0,,,balancescale
+PMLB,banana,5300.0,2.0,2.0,,,banana
+PMLB,biomed,209.0,8.0,2.0,,,biomed
+PMLB,breast_cancer,286.0,9.0,2.0,,,breastcancer
+PMLB,breast_cancer_wisconsin_diagnostic,569.0,30.0,2.0,,,breastcancerwisconsindiagnostic
+PMLB,breast_cancer_wisconsin_original,699.0,9.0,2.0,,,breastcancerwisconsinoriginal
+PMLB,bupa,345.0,5.0,2.0,,,bupa
+PMLB,calendarDOW,399.0,32.0,5.0,,,calendardow
+PMLB,car_evaluation,1728.0,6.0,4.0,,,carevaluation
+PMLB,cars,392.0,8.0,3.0,,,cars
+PMLB,chess,3196.0,36.0,2.0,,,chess
+PMLB,churn,5000.0,20.0,2.0,,,churn
+PMLB,clean1,476.0,168.0,2.0,,,clean1
+PMLB,clean2,6598.0,168.0,2.0,,,clean2
+PMLB,cloud,108.0,7.0,4.0,,,cloud
+PMLB,coil2000,9822.0,85.0,2.0,,,coil2000
+PMLB,collins,485.0,23.0,13.0,,,collins
+PMLB,confidence,72.0,3.0,6.0,,,confidence
+PMLB,congressional_voting_records,435.0,16.0,2.0,,,congressionalvotingrecords
+PMLB,connect_4,67557.0,42.0,3.0,,,connect4
+PMLB,contraceptive_method,1473.0,9.0,3.0,,,contraceptivemethod
+PMLB,corral,160.0,6.0,2.0,,,corral
+PMLB,credit_approval_australia,690.0,15.0,2.0,,,creditapprovalaustralia
+PMLB,credit_approval_germany,1000.0,20.0,2.0,,,creditapprovalgermany
+PMLB,dermatology,366.0,34.0,6.0,,,dermatology
+PMLB,dis,3772.0,29.0,2.0,,,dis
+PMLB,dna,3186.0,180.0,3.0,,,dna
+PMLB,ecoli,327.0,7.0,5.0,,,ecoli
+PMLB,fars,100968.0,29.0,8.0,,,fars
+PMLB,flags,178.0,43.0,5.0,,,flags
+PMLB,glass2,163.0,9.0,2.0,,,glass2
+PMLB,haberman,306.0,3.0,2.0,,,haberman
+PMLB,hayes_roth,160.0,4.0,3.0,,,hayesroth
+PMLB,heart_disease_cleveland,303.0,13.0,2.0,,,heartdiseasecleveland
+PMLB,heart_disease_hungarian,294.0,13.0,2.0,,,heartdiseasehungarian
+PMLB,heart_disease_va_long_beach,200.0,13.0,2.0,,,heartdiseasevalongbeach
+PMLB,heart_disease_zurich,123.0,12.0,2.0,,,heartdiseasezurich
+PMLB,hepatitis,155.0,19.0,2.0,,,hepatitis
+PMLB,horse_colic_lesion_type,368.0,20.0,5.0,,,horsecoliclesiontype
+PMLB,horse_colic_outcome,366.0,21.0,3.0,,,horsecolicoutcome
+PMLB,horse_colic_surgery,368.0,20.0,2.0,,,horsecolicsurgery
+PMLB,hypothyroid,3163.0,25.0,2.0,,,hypothyroid
+PMLB,ionosphere,351.0,34.0,2.0,,,ionosphere
+PMLB,iris,150.0,4.0,3.0,,,iris
+PMLB,irish,500.0,5.0,2.0,,,irish
+PMLB,kddcup,494020.0,41.0,23.0,,,kdd
+PMLB,kr_vs_kp,3196.0,36.0,2.0,,,krvskp
+PMLB,krkopt,28056.0,6.0,18.0,,,krkopt
+PMLB,labor,57.0,16.0,2.0,,,labor
+PMLB,led24,3200.0,24.0,10.0,,,led24
+PMLB,led7,3200.0,7.0,10.0,,,led7
+PMLB,letter,20000.0,16.0,26.0,,,letter
+PMLB,lupus,87.0,3.0,2.0,,,lupus
+PMLB,lymphography,148.0,18.0,4.0,,,lymphography
+PMLB,magic,19020.0,10.0,2.0,,,magic
+PMLB,mfeat_factors,2000.0,216.0,10.0,,,mfeatfactors
+PMLB,mfeat_fourier,2000.0,76.0,10.0,,,mfeatfourier
+PMLB,mfeat_karhunen,2000.0,64.0,10.0,,,mfeatkarhunen
+PMLB,mfeat_morphological,2000.0,6.0,10.0,,,mfeatmorphological
+PMLB,mfeat_pixel,2000.0,240.0,10.0,,,mfeatpixel
+PMLB,mfeat_zernike,2000.0,47.0,10.0,,,mfeatzernike
+PMLB,mnist,70000.0,784.0,10.0,,,mnist
+PMLB,mofn_3_7_10,1324.0,10.0,2.0,,,mofn3710
+PMLB,molecular_biology_promoters,106.0,57.0,2.0,,,molecularbiologypromoters
+PMLB,monk1,556.0,6.0,2.0,,,monk1
+PMLB,monk2,601.0,6.0,2.0,,,monk2
+PMLB,monk3,554.0,6.0,2.0,,,monk3
+PMLB,movement_libras,360.0,90.0,15.0,,,movementlibras
+PMLB,mushroom,8124.0,22.0,2.0,,,mushroom
+PMLB,mux6,128.0,6.0,2.0,,,mux6
+PMLB,new_thyroid,215.0,5.0,3.0,,,newthyroid
+PMLB,nursery,12958.0,8.0,4.0,,,nursery
+PMLB,optdigits,5620.0,64.0,10.0,,,optdigits
+PMLB,page_blocks,5473.0,10.0,5.0,,,pageblocks
+PMLB,parity5,32.0,5.0,2.0,,,parity5
+PMLB,parity5+5,1124.0,10.0,2.0,,,parity55
+PMLB,pendigits,10992.0,16.0,10.0,,,pendigits
+PMLB,penguins,344.0,7.0,3.0,,,penguins
+PMLB,phoneme,5404.0,5.0,2.0,,,phoneme
+PMLB,poker,1025010.0,10.0,10.0,,,poker
+PMLB,postoperative_patient_data,88.0,8.0,2.0,,,postoperativepatientdata
+PMLB,prnn_crabs,200.0,7.0,2.0,,,prnncrabs
+PMLB,prnn_synth,250.0,2.0,2.0,,,prnnsynth
+PMLB,profb,672.0,9.0,2.0,,,profb
+PMLB,ring,7400.0,20.0,2.0,,,ring
+PMLB,saheart,462.0,9.0,2.0,,,saheart
+PMLB,satimage,6435.0,36.0,6.0,,,satimage
+PMLB,schizo,340.0,14.0,3.0,,,schizo
+PMLB,segmentation,2310.0,19.0,7.0,,,segmentation
+PMLB,shuttle,58000.0,9.0,7.0,,,shuttle
+PMLB,sleep,105908.0,13.0,5.0,,,sleep
+PMLB,sonar,208.0,60.0,2.0,,,sonar
+PMLB,soybean,675.0,35.0,18.0,,,soybean
+PMLB,spambase,4601.0,57.0,2.0,,,spambase
+PMLB,spect,267.0,22.0,2.0,,,spect
+PMLB,spectf,349.0,44.0,2.0,,,spectf
+PMLB,splice,3188.0,60.0,3.0,,,splice
+PMLB,tae,151.0,5.0,3.0,,,tae
+PMLB,texture,5500.0,40.0,11.0,,,texture
+PMLB,threeOf9,512.0,9.0,2.0,,,threeof9
+PMLB,tic_tac_toe,958.0,9.0,2.0,,,tictactoe
+PMLB,titanic,2207.0,8.0,2.0,,,titanic
+PMLB,tokyo1,959.0,44.0,2.0,,,tokyo1
+PMLB,twonorm,7400.0,20.0,2.0,,,twonorm
+PMLB,vehicle,846.0,18.0,4.0,,,vehicle
+PMLB,vowel,990.0,13.0,11.0,,,vowel
+PMLB,waveform_21,5000.0,21.0,3.0,,,waveform21
+PMLB,waveform_40,5000.0,40.0,3.0,,,waveform40
+PMLB,wine_quality_red,1599.0,11.0,6.0,,,winequalityred
+PMLB,wine_quality_white,4898.0,11.0,7.0,,,winequalitywhite
+PMLB,wine_recognition,178.0,13.0,3.0,,,winerecognition
+PMLB,xd6,973.0,9.0,2.0,,,xd6
+PMLB,yeast,1479.0,8.0,9.0,,,yeast

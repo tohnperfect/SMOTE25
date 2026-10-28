@@ -1,0 +1,212 @@
+{
+ "key": "SOS",
+ "pdf_file_read": "SOS - Score-Based Oversampling for Tabular Data (KDD 2022).pdf",
+ "task": "both",
+ "n_datasets_claimed": 6,
+ "characteristics_table": "none",
+ "datasets": [
+  {
+   "name": "Default",
+   "group": "Single Minority",
+   "source_repo": "not stated in paper",
+   "n_instances": null,
+   "n_features": null,
+   "n_classes": 2,
+   "n_minority": 6636,
+   "n_majority": 23364,
+   "class_distribution": "23,364 (77.9%) / 6,636 (22.1%)",
+   "ir_printed": null,
+   "how_obtained": "not stated",
+   "how_obtained_detail": "paper describes target column only (text); no statement of how classes were chosen or modified",
+   "in_results_table": "yes",
+   "ref": "Section 4.1.1, p.6"
+  },
+  {
+   "name": "Shoppers",
+   "group": "Single Minority",
+   "source_repo": "not stated in paper",
+   "n_instances": 12330,
+   "n_features": null,
+   "n_classes": 2,
+   "n_minority": 1908,
+   "n_majority": 10422,
+   "class_distribution": "10,422 (84.5%) / 1,908 (15.5%)",
+   "ir_printed": null,
+   "how_obtained": "not stated",
+   "how_obtained_detail": "paper describes target column only (text); no statement of how classes were chosen or modified",
+   "in_results_table": "yes",
+   "ref": "Section 4.1.1, p.6"
+  },
+  {
+   "name": "Surgical",
+   "group": "Single Minority",
+   "source_repo": "not stated in paper",
+   "n_instances": null,
+   "n_features": null,
+   "n_classes": 2,
+   "n_minority": 3690,
+   "n_majority": 10945,
+   "class_distribution": "10,945 (74.8%) / 3,690 (25.2%)",
+   "ir_printed": null,
+   "how_obtained": "not stated",
+   "how_obtained_detail": "paper describes target column only (text); no statement of how classes were chosen or modified",
+   "in_results_table": "yes",
+   "ref": "Section 4.1.1, p.6"
+  },
+  {
+   "name": "WeatherAUS",
+   "group": "Single Minority",
+   "source_repo": "not stated in paper",
+   "n_instances": null,
+   "n_features": null,
+   "n_classes": 2,
+   "n_minority": 12427,
+   "n_majority": 43993,
+   "class_distribution": "43,993 (78.0%) / 12,427 (22.0%)",
+   "ir_printed": null,
+   "how_obtained": "not stated",
+   "how_obtained_detail": "paper describes target column only (text); no statement of how classes were chosen or modified",
+   "in_results_table": "yes",
+   "ref": "Section 4.1.1, p.6"
+  },
+  {
+   "name": "Buddy",
+   "group": "Multiple Minority",
+   "source_repo": "not stated in paper",
+   "n_instances": null,
+   "n_features": null,
+   "n_classes": 3,
+   "n_minority": null,
+   "n_majority": 10643,
+   "class_distribution": "10,643 (56.5%) / 7,021 (37.3%) / 1,170 (6.2%)",
+   "ir_printed": null,
+   "how_obtained": "not stated",
+   "how_obtained_detail": "paper describes target column only (text); no statement of how classes were chosen or modified",
+   "in_results_table": "yes",
+   "ref": "Section 4.1.1, p.6"
+  },
+  {
+   "name": "Satimage",
+   "group": "Multiple Minority",
+   "source_repo": "not stated in paper",
+   "n_instances": null,
+   "n_features": null,
+   "n_classes": 6,
+   "n_minority": null,
+   "n_majority": 2282,
+   "class_distribution": "2,282 (35.8%) / 1,336 (21.0%) / 1,080 (16.9%) / 562 (8.8%) / 573 (9.0%) / 539 (8.5%)",
+   "ir_printed": null,
+   "how_obtained": "not stated",
+   "how_obtained_detail": "paper describes target column only (text); no statement of how classes were chosen or modified",
+   "in_results_table": "yes",
+   "ref": "Section 4.1.1, p.6"
+  }
+ ],
+ "ir_definition": "not stated in paper",
+ "ir_definition_ref": "not stated in paper",
+ "outcome": {
+  "smote_in_baselines": "yes",
+  "smote_name_as_printed": "SMOTE",
+  "baselines_all": [
+   "Identity",
+   "SMOTE",
+   "B-SMOTE",
+   "Adasyn",
+   "MedGAN",
+   "VEEGAN",
+   "TableGAN",
+   "TVAE",
+   "CTGAN",
+   "OCT-GAN",
+   "BAGAN"
+  ],
+  "results_granularity": "per-dataset",
+  "chosen": {
+   "table": "Table 2",
+   "page": "7",
+   "metric": "Weighted F1 (only metric in main table; G-mean/AUC not reported)",
+   "classifier": "average over Decision Tree, Logistic Regression, AdaBoost, MLP (Sec 4.1.4)",
+   "condition": "main suite, original data, 5 seeds mean±std",
+   "higher_is_better": true,
+   "is_image": false
+  },
+  "rows": [
+   {
+    "dataset_as_printed": "Default",
+    "proposed": "0.574",
+    "proposed_std": "0.003",
+    "smote": "0.561",
+    "smote_std": "0.025",
+    "best_other_value": "0.561",
+    "best_other_name": "B-SMOTE (tie with SMOTE)",
+    "marks": "boldface marks not visible in text extraction"
+   },
+   {
+    "dataset_as_printed": "Shoppers",
+    "proposed": "0.673",
+    "proposed_std": "0.002",
+    "smote": "0.648",
+    "smote_std": "0.004",
+    "best_other_value": "0.640",
+    "best_other_name": "B-SMOTE",
+    "marks": "boldface marks not visible in text extraction"
+   },
+   {
+    "dataset_as_printed": "Surgical",
+    "proposed": "0.714",
+    "proposed_std": "0.001",
+    "smote": "0.678",
+    "smote_std": "0.008",
+    "best_other_value": "0.704",
+    "best_other_name": "TableGAN",
+    "marks": "boldface marks not visible in text extraction"
+   },
+   {
+    "dataset_as_printed": "WeatherAUS",
+    "proposed": "0.680",
+    "proposed_std": "0.003",
+    "smote": "0.674",
+    "smote_std": "0.025",
+    "best_other_value": "0.663",
+    "best_other_name": "B-SMOTE (tie with BAGAN)",
+    "marks": "boldface marks not visible in text extraction"
+   },
+   {
+    "dataset_as_printed": "Buddy",
+    "proposed": "0.608",
+    "proposed_std": "0.002",
+    "smote": "0.584",
+    "smote_std": "0.005",
+    "best_other_value": "0.608",
+    "best_other_name": "Adasyn",
+    "marks": "boldface marks not visible in text extraction"
+   },
+   {
+    "dataset_as_printed": "Satimage",
+    "proposed": "0.855",
+    "proposed_std": "0.004",
+    "smote": "0.846",
+    "smote_std": "0.005",
+    "best_other_value": "0.846",
+    "best_other_name": "TVAE (tie with SMOTE)",
+    "marks": "boldface marks not visible in text extraction"
+   }
+  ],
+  "summary_rows": [],
+  "stat_test": "none stated in paper",
+  "win_claim": {
+   "quote": "In our experiments with 6 datasets and 10 baselines, our method outperforms other oversampling methods in all cases.",
+   "page": "1"
+  }
+ },
+ "uncertain": [
+  "Proposed variant: abstract/conclusion name only SOS; Sub-VP chosen because text (p.7) highlights it; VE and VP also in Table 2 (p.7)",
+  "Boldface not visible in text extraction, so marks not recorded (p.7)",
+  "n_instances for Default, Surgical, WeatherAUS, Buddy, Satimage not printed as totals; left null (p.6)",
+  "n_features not printed in main text (p.6); appendix tables not checked beyond hyperparameters",
+  "source_repo only given as citation numbers (p.6)",
+  "Buddy/Satimage minority counts are per-class in class_distribution; n_minority null (p.6)",
+  "Best-other chosen among baselines excluding SMOTE and SOS variants (p.7)"
+ ],
+ "notes": "Other SOS variants (Table 2, p.7), VE: 0.571/0.675/0.709/0.672/0.607/0.854; VP: 0.559/0.658/0.712/0.680/0.607/0.857 for Default/Shoppers/Surgical/WeatherAUS/Buddy/Satimage. Datasets split in paper as Single Minority (Default, Shoppers, Surgical, WeatherAUS) vs Multiple Minority (Buddy, Satimage). Code and data at https://github.com/JayoungKim408/SOS (not fetched). Table 9 (p.11) is full-synthesis experiment with Acc/F1, not used."
+}

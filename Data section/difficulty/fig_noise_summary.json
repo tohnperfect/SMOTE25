@@ -1,0 +1,33 @@
+{
+  "n_all": 284,
+  "n_binary_binarised": 113,
+  "n_ovr": 171,
+  "quantiles": {
+    "all tasks (n=284)": {
+      "0.25": 0.078,
+      "0.5": 0.283,
+      "0.75": 0.631
+    },
+    "binary + binarised (n=113)": {
+      "0.25": 0.25,
+      "0.5": 0.399,
+      "0.75": 0.72
+    }
+  },
+  "spearman_IR_noise": {
+    "all": 0.066,
+    "binary": 0.145
+  },
+  "outlier_heavy": {
+    "all": 38,
+    "binary": 24
+  },
+  "noise_eq_0": {
+    "all": 11,
+    "binary": 7
+  },
+  "binary_borderline_vs_outlier_median": {
+    "borderline": 0.273,
+    "outlier": 0.104
+  }
+}

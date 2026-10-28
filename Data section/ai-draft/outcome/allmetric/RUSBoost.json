@@ -1,0 +1,165 @@
+{
+ "key": "RUSBoost",
+ "classifier": "C4.5D (Weka J48, default parameters)",
+ "condition": "all 15 data sets; mean of 10 runs of 10-fold CV; sampling target class distribution not stated for this table (35/50/65% were all run)",
+ "proposed_column": "RUSBoost",
+ "smote_column": "SMOTE",
+ "metrics": [
+  {
+   "metric": "A-ROC (area under ROC curve)",
+   "metric_family": "AUC",
+   "table": "Table IV",
+   "page": "PDF page 9 (printed 193)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "CAR",
+     "proposed": "0.9964",
+     "proposed_std": null,
+     "smote": "0.9731",
+     "smote_std": null,
+     "marks": "HSD group: RUSBoost A; SMOTE B"
+    },
+    {
+     "dataset_as_printed": "CCCS12",
+     "proposed": "0.9579",
+     "proposed_std": null,
+     "smote": "0.8498",
+     "smote_std": null,
+     "marks": "HSD group: RUSBoost A; SMOTE B"
+    },
+    {
+     "dataset_as_printed": "CM1",
+     "proposed": "0.7543",
+     "proposed_std": null,
+     "smote": "0.6473",
+     "smote_std": null,
+     "marks": "HSD group: RUSBoost A; SMOTE C"
+    },
+    {
+     "dataset_as_printed": "CONTRACEPTIVE",
+     "proposed": "0.6982",
+     "proposed_std": null,
+     "smote": "0.6651",
+     "smote_std": null,
+     "marks": "HSD group: RUSBoost A; SMOTE CD"
+    },
+    {
+     "dataset_as_printed": "ECOLI",
+     "proposed": "0.9320",
+     "proposed_std": null,
+     "smote": "0.8468",
+     "smote_std": null,
+     "marks": "HSD group: RUSBoost A; SMOTE B"
+    },
+    {
+     "dataset_as_printed": "GLASS",
+     "proposed": "0.7620",
+     "proposed_std": null,
+     "smote": "0.7508",
+     "smote_std": null,
+     "marks": "HSD group: RUSBoost AB; SMOTE B"
+    },
+    {
+     "dataset_as_printed": "MAMMOGRAPHY",
+     "proposed": "0.9356",
+     "proposed_std": null,
+     "smote": "0.8408",
+     "smote_std": null,
+     "marks": "HSD group: RUSBoost A; SMOTE D"
+    },
+    {
+     "dataset_as_printed": "PC1",
+     "proposed": "0.8466",
+     "proposed_std": null,
+     "smote": "0.7224",
+     "smote_std": null,
+     "marks": "HSD group: RUSBoost A; SMOTE C"
+    },
+    {
+     "dataset_as_printed": "PENDIGITS",
+     "proposed": "0.9996",
+     "proposed_std": null,
+     "smote": "0.9798",
+     "smote_std": null,
+     "marks": "HSD group: RUSBoost A; SMOTE B"
+    },
+    {
+     "dataset_as_printed": "SATIMG",
+     "proposed": "0.9471",
+     "proposed_std": null,
+     "smote": "0.7818",
+     "smote_std": null,
+     "marks": "HSD group: RUSBoost A; SMOTE C"
+    },
+    {
+     "dataset_as_printed": "SEGMENT",
+     "proposed": "0.9964",
+     "proposed_std": null,
+     "smote": "0.9622",
+     "smote_std": null,
+     "marks": "HSD group: RUSBoost A; SMOTE B"
+    },
+    {
+     "dataset_as_printed": "SOLARFLARE",
+     "proposed": "0.8824",
+     "proposed_std": null,
+     "smote": "0.7651",
+     "smote_std": null,
+     "marks": "HSD group: RUSBoost A; SMOTE C"
+    },
+    {
+     "dataset_as_printed": "SP1",
+     "proposed": "0.7790",
+     "proposed_std": null,
+     "smote": "0.6141",
+     "smote_std": null,
+     "marks": "HSD group: RUSBoost A; SMOTE D"
+    },
+    {
+     "dataset_as_printed": "SP3",
+     "proposed": "0.7704",
+     "proposed_std": null,
+     "smote": "0.5163",
+     "smote_std": null,
+     "marks": "HSD group: RUSBoost A; SMOTE D"
+    },
+    {
+     "dataset_as_printed": "VEHICLE",
+     "proposed": "0.8359",
+     "proposed_std": null,
+     "smote": "0.7544",
+     "smote_std": null,
+     "marks": "HSD group: RUSBoost A; SMOTE B"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Average / # A's",
+      "proposed": "0.8729 / 15",
+      "smote": "0.7780 / 0"
+     }
+    ],
+    "wtl_vs_smote": "not stated as W/T/L; per-row HSD letter groups (Tukey HSD, 95% confidence; same letter = not significantly different; A = best group). RUSBoost in group A for all 15 data sets; 'SMOTE was not in group A for any data set'. By letters, RUSBoost and SMOTE share no group in 14 of 15 rows; on GLASS (RUSBoost AB, SMOTE B) they share B, i.e. not significantly different.",
+    "stat_test": "Tukey's HSD test (95% confidence) per data set, letters in HSD columns; Table VI (number of data sets in group A, A-ROC, C4.5D): RUSBoost 15, SMOTE 0"
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [
+  {
+   "metric": "A-PRC (per data set, with HSD groups)",
+   "table": "Table V",
+   "classifiers": "RIPPER"
+  }
+ ],
+ "metrics_without_smote": [
+  {
+   "metric": "t-test RUSBoost vs SMOTEBoost",
+   "table": "Table VII"
+  }
+ ],
+ "notes": "Table IV is a raster image; values via OCR of 300-dpi render, verified visually against the page (OCR CMI/PCI/SPI = CM1/PC1/SP1, 'Cc' = C). Only one per-dataset table exists for C4.5D. For C4.5D the paper gives only summary info for other metrics: Table VI number of data sets in HSD group A (C4.5D): K-S RUSBoost 15 / SMOTE 1; A-PRC 14 / 1; F-Measure 15 / 9; Tables II-III give averages across data sets (no per-dataset values)."
+}

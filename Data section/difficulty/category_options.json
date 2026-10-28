@@ -1,0 +1,301 @@
+{
+  "n_tasks": 284,
+  "task_types": {
+    "ovr": 171,
+    "binary": 104,
+    "binarized": 9
+  },
+  "sources": {
+    "KEEL(keel_ds)": 200,
+    "PMLB": 77,
+    "imbalanced_databases(other fmt)": 7
+  },
+  "quantiles": {
+    "n_features_raw": {
+      "0.1": 6.0,
+      "0.25": 8.0,
+      "0.5": 11.0,
+      "0.75": 16.0,
+      "0.9": 34.0
+    },
+    "n_features_encoded": {
+      "0.1": 7.0,
+      "0.25": 8.0,
+      "0.5": 11.0,
+      "0.75": 16.0,
+      "0.9": 36.0
+    },
+    "T2_points_per_dim": {
+      "0.1": 17.164,
+      "0.25": 43.0,
+      "0.5": 87.215,
+      "0.75": 445.27,
+      "0.9": 1250.0
+    },
+    "T4_pca95_share": {
+      "0.1": 0.333,
+      "0.25": 0.562,
+      "0.5": 0.714,
+      "0.75": 0.857,
+      "0.9": 1.0
+    },
+    "min_sparsity_ratio": {
+      "0.1": 0.88,
+      "0.25": 1.006,
+      "0.5": 1.222,
+      "0.75": 1.96,
+      "0.9": 3.274
+    },
+    "N": {
+      "0.1": 209.8,
+      "0.25": 342.75,
+      "0.5": 1478.0,
+      "0.75": 5620.0,
+      "0.9": 20000.0
+    },
+    "n_min": {
+      "0.1": 18.6,
+      "0.25": 35.0,
+      "0.5": 90.0,
+      "0.75": 626.75,
+      "0.9": 1055.7
+    },
+    "IR": {
+      "0.1": 2.017,
+      "0.25": 4.465,
+      "0.5": 9.213,
+      "0.75": 24.158,
+      "0.9": 39.26
+    },
+    "n_min_per_feature": {
+      "0.1": 1.64,
+      "0.25": 3.888,
+      "0.5": 8.75,
+      "0.75": 45.88,
+      "0.9": 65.94
+    },
+    "safe": {
+      "0.1": 0.023,
+      "0.25": 0.333,
+      "0.5": 0.702,
+      "0.75": 0.922,
+      "0.9": 0.989
+    },
+    "noise_index": {
+      "0.1": 0.009,
+      "0.25": 0.078,
+      "0.5": 0.283,
+      "0.75": 0.631,
+      "0.9": 0.772
+    },
+    "rare": {
+      "0.1": 0.0,
+      "0.25": 0.0,
+      "0.5": 0.003,
+      "0.75": 0.059,
+      "0.9": 0.118
+    },
+    "outlier": {
+      "0.1": 0.0,
+      "0.25": 0.002,
+      "0.5": 0.03,
+      "0.75": 0.126,
+      "0.9": 0.338
+    },
+    "borderline": {
+      "0.1": 0.005,
+      "0.25": 0.055,
+      "0.5": 0.168,
+      "0.75": 0.372,
+      "0.9": 0.556
+    },
+    "n_subconcepts": {
+      "0.1": 1.0,
+      "0.25": 3.0,
+      "0.5": 6.5,
+      "0.75": 16.0,
+      "0.9": 39.7
+    },
+    "largest_subconcept_share": {
+      "0.1": 0.2,
+      "0.25": 0.419,
+      "0.5": 0.782,
+      "0.75": 0.972,
+      "0.9": 1.0
+    }
+  },
+  "max": {
+    "n_features_raw": 85.0,
+    "n_features_encoded": 287.0,
+    "T2_points_per_dim": 6444.44,
+    "T4_pca95_share": 1.0,
+    "min_sparsity_ratio": 142.161,
+    "N": 67557.0,
+    "n_min": 16635.0,
+    "IR": 5799.0,
+    "n_min_per_feature": 989.22,
+    "safe": 1.0,
+    "noise_index": 1.0,
+    "rare": 1.0,
+    "outlier": 1.0,
+    "borderline": 1.0,
+    "n_subconcepts": 3064.0,
+    "largest_subconcept_share": 1.0
+  },
+  "candidate_counts": {
+    "features_encoded_ge_100": 2,
+    "features_encoded_ge_50": 18,
+    "IR_gt_9": 158,
+    "IR_ge_50": 22,
+    "rare_ge_0.2": 18,
+    "outlier_gt_0.2": 38,
+    "safe_ge_0.5": 188,
+    "n_min_per_feature_lt_10": 149,
+    "n_min_lt_20": 29,
+    "min_sparsity_ratio_gt_1": 212,
+    "has_nominal_features": 18
+  },
+  "axis_combinations_all": {
+    "---": 131,
+    "--S": 113,
+    "O-S": 20,
+    "ODS": 14,
+    "-DS": 2,
+    "O--": 2,
+    "OD-": 2
+  },
+  "axis_combinations_binary_binarized": {
+    "--S": 55,
+    "---": 34,
+    "O-S": 13,
+    "ODS": 11
+  },
+  "spearman": {
+    "IR": {
+      "n_features_raw": -0.071,
+      "n_features_encoded": 0.027,
+      "T2_points_per_dim": 0.287,
+      "T4_pca95_share": 0.015,
+      "min_sparsity_ratio": 0.439,
+      "N": 0.287,
+      "n_min": -0.345,
+      "IR": 1.0,
+      "n_min_per_feature": -0.342,
+      "safe": -0.097,
+      "noise_index": 0.066,
+      "rare": 0.005,
+      "outlier": 0.138,
+      "borderline": -0.174,
+      "n_subconcepts": -0.004,
+      "largest_subconcept_share": -0.394
+    },
+    "noise_index": {
+      "n_features_raw": -0.374,
+      "n_features_encoded": -0.415,
+      "T2_points_per_dim": -0.181,
+      "T4_pca95_share": 0.368,
+      "min_sparsity_ratio": 0.417,
+      "N": -0.354,
+      "n_min": -0.44,
+      "IR": 0.066,
+      "n_min_per_feature": -0.326,
+      "safe": -0.974,
+      "noise_index": 1.0,
+      "rare": 0.533,
+      "outlier": 0.76,
+      "borderline": 0.82,
+      "n_subconcepts": 0.384,
+      "largest_subconcept_share": -0.367
+    },
+    "rare": {
+      "n_features_raw": -0.102,
+      "n_features_encoded": -0.123,
+      "T2_points_per_dim": 0.035,
+      "T4_pca95_share": 0.147,
+      "min_sparsity_ratio": 0.241,
+      "N": -0.045,
+      "n_min": -0.059,
+      "IR": 0.005,
+      "n_min_per_feature": -0.004,
+      "safe": -0.608,
+      "noise_index": 0.533,
+      "rare": 1.0,
+      "outlier": 0.571,
+      "borderline": 0.379,
+      "n_subconcepts": 0.581,
+      "largest_subconcept_share": -0.446
+    },
+    "n_features_encoded": {
+      "n_features_raw": 0.89,
+      "n_features_encoded": 1.0,
+      "T2_points_per_dim": 0.075,
+      "T4_pca95_share": -0.643,
+      "min_sparsity_ratio": -0.344,
+      "N": 0.444,
+      "n_min": 0.435,
+      "IR": 0.027,
+      "n_min_per_feature": 0.16,
+      "safe": 0.406,
+      "noise_index": -0.415,
+      "rare": -0.123,
+      "outlier": -0.357,
+      "borderline": -0.328,
+      "n_subconcepts": -0.041,
+      "largest_subconcept_share": 0.181
+    },
+    "T2_points_per_dim": {
+      "n_features_raw": 0.115,
+      "n_features_encoded": 0.075,
+      "T2_points_per_dim": 1.0,
+      "T4_pca95_share": -0.047,
+      "min_sparsity_ratio": -0.149,
+      "N": 0.901,
+      "n_min": 0.659,
+      "IR": 0.287,
+      "n_min_per_feature": 0.71,
+      "safe": 0.205,
+      "noise_index": -0.181,
+      "rare": 0.035,
+      "outlier": -0.15,
+      "borderline": -0.193,
+      "n_subconcepts": 0.431,
+      "largest_subconcept_share": -0.263
+    },
+    "min_sparsity_ratio": {
+      "n_features_raw": -0.457,
+      "n_features_encoded": -0.344,
+      "T2_points_per_dim": -0.149,
+      "T4_pca95_share": 0.129,
+      "min_sparsity_ratio": 1.0,
+      "N": -0.221,
+      "n_min": -0.576,
+      "IR": 0.439,
+      "n_min_per_feature": -0.468,
+      "safe": -0.429,
+      "noise_index": 0.417,
+      "rare": 0.241,
+      "outlier": 0.47,
+      "borderline": 0.227,
+      "n_subconcepts": 0.051,
+      "largest_subconcept_share": -0.276
+    },
+    "n_min_per_feature": {
+      "n_features_raw": 0.169,
+      "n_features_encoded": 0.16,
+      "T2_points_per_dim": 0.71,
+      "T4_pca95_share": -0.086,
+      "min_sparsity_ratio": -0.468,
+      "N": 0.679,
+      "n_min": 0.926,
+      "IR": -0.342,
+      "n_min_per_feature": 1.0,
+      "safe": 0.357,
+      "noise_index": -0.326,
+      "rare": -0.004,
+      "outlier": -0.333,
+      "borderline": -0.124,
+      "n_subconcepts": 0.392,
+      "largest_subconcept_share": 0.029
+    }
+  }
+}

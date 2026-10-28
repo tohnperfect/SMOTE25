@@ -1,0 +1,347 @@
+{
+ "key": "ADASYN",
+ "classifier": "decision tree",
+ "condition": "average of 100 runs, random 50/50 train/test split; K=5 for both; SMOTE N=200; ADASYN beta=1, dth=0.75",
+ "proposed_column": "ADASYN",
+ "smote_column": "SMOTE",
+ "metrics": [
+  {
+   "metric": "OA",
+   "metric_family": "accuracy",
+   "table": "Table II",
+   "page": "PDF page 5 (printed p.1326)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "0.9257",
+     "proposed_std": null,
+     "smote": "0.9239",
+     "smote_std": null,
+     "marks": "ADASYN bold+underlined (best of DT/SMOTE/ADASYN)"
+    },
+    {
+     "dataset_as_printed": "Pima Indian Diabetes",
+     "proposed": "0.6837",
+     "proposed_std": null,
+     "smote": "0.6557",
+     "smote_std": null,
+     "marks": "ADASYN bold+underlined (best of DT/SMOTE/ADASYN)"
+    },
+    {
+     "dataset_as_printed": "Vowel recognition",
+     "proposed": "0.9678",
+     "proposed_std": null,
+     "smote": "0.9753",
+     "smote_std": null,
+     "marks": "Decision tree (no resampling) bold+underlined; neither ADASYN nor SMOTE marked"
+    },
+    {
+     "dataset_as_printed": "Ionosphere",
+     "proposed": "0.8686",
+     "proposed_std": null,
+     "smote": "0.8646",
+     "smote_std": null,
+     "marks": "ADASYN bold+underlined (best of DT/SMOTE/ADASYN)"
+    },
+    {
+     "dataset_as_printed": "Abalone",
+     "proposed": "0.8659",
+     "proposed_std": null,
+     "smote": "0.9121",
+     "smote_std": null,
+     "marks": "Decision tree (no resampling) bold+underlined; neither ADASYN nor SMOTE marked"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Winning times",
+      "proposed": "3",
+      "smote": "0"
+     },
+     {
+      "label": "Winning times, Decision tree (no resampling) row = 2",
+      "proposed": "",
+      "smote": ""
+     }
+    ],
+    "wtl_vs_smote": "Winning times row counts wins among Decision tree / SMOTE / ADASYN (three-way, not pairwise vs SMOTE).",
+    "stat_test": "not stated in paper"
+   }
+  },
+  {
+   "metric": "Precision",
+   "metric_family": "precision",
+   "table": "Table II",
+   "page": "PDF page 5 (printed p.1326)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "0.8067",
+     "proposed_std": null,
+     "smote": "0.8236",
+     "smote_std": null,
+     "marks": "Decision tree (no resampling) bold+underlined; neither ADASYN nor SMOTE marked"
+    },
+    {
+     "dataset_as_printed": "Pima Indian Diabetes",
+     "proposed": "0.5412",
+     "proposed_std": null,
+     "smote": "0.5049",
+     "smote_std": null,
+     "marks": "Decision tree (no resampling) bold+underlined; neither ADASYN nor SMOTE marked"
+    },
+    {
+     "dataset_as_printed": "Vowel recognition",
+     "proposed": "0.7603",
+     "proposed_std": null,
+     "smote": "0.8365",
+     "smote_std": null,
+     "marks": "Decision tree (no resampling) bold+underlined; neither ADASYN nor SMOTE marked"
+    },
+    {
+     "dataset_as_printed": "Ionosphere",
+     "proposed": "0.8298",
+     "proposed_std": null,
+     "smote": "0.8211",
+     "smote_std": null,
+     "marks": "Decision tree (no resampling) bold+underlined; neither ADASYN nor SMOTE marked"
+    },
+    {
+     "dataset_as_printed": "Abalone",
+     "proposed": "0.2073",
+     "proposed_std": null,
+     "smote": "0.2876",
+     "smote_std": null,
+     "marks": "Decision tree (no resampling) bold+underlined; neither ADASYN nor SMOTE marked"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Winning times",
+      "proposed": "0",
+      "smote": "0"
+     },
+     {
+      "label": "Winning times, Decision tree (no resampling) row = 5",
+      "proposed": "",
+      "smote": ""
+     }
+    ],
+    "wtl_vs_smote": "Winning times row counts wins among Decision tree / SMOTE / ADASYN (three-way, not pairwise vs SMOTE).",
+    "stat_test": "not stated in paper"
+   }
+  },
+  {
+   "metric": "Recall",
+   "metric_family": "recall",
+   "table": "Table II",
+   "page": "PDF page 5 (printed p.1326)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "0.9015",
+     "proposed_std": null,
+     "smote": "0.8638",
+     "smote_std": null,
+     "marks": "ADASYN bold+underlined (best of DT/SMOTE/ADASYN)"
+    },
+    {
+     "dataset_as_printed": "Pima Indian Diabetes",
+     "proposed": "0.6097",
+     "proposed_std": null,
+     "smote": "0.6201",
+     "smote_std": null,
+     "marks": "SMOTE bold+underlined (best of DT/SMOTE/ADASYN)"
+    },
+    {
+     "dataset_as_printed": "Vowel recognition",
+     "proposed": "0.9560",
+     "proposed_std": null,
+     "smote": "0.9147",
+     "smote_std": null,
+     "marks": "ADASYN bold+underlined (best of DT/SMOTE/ADASYN)"
+    },
+    {
+     "dataset_as_printed": "Ionosphere",
+     "proposed": "0.8095",
+     "proposed_std": null,
+     "smote": "0.8032",
+     "smote_std": null,
+     "marks": "ADASYN bold+underlined (best of DT/SMOTE/ADASYN)"
+    },
+    {
+     "dataset_as_printed": "Abalone",
+     "proposed": "0.4538",
+     "proposed_std": null,
+     "smote": "0.3414",
+     "smote_std": null,
+     "marks": "ADASYN bold+underlined (best of DT/SMOTE/ADASYN)"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Winning times",
+      "proposed": "4",
+      "smote": "1"
+     },
+     {
+      "label": "Winning times, Decision tree (no resampling) row = 0",
+      "proposed": "",
+      "smote": ""
+     }
+    ],
+    "wtl_vs_smote": "Winning times row counts wins among Decision tree / SMOTE / ADASYN (three-way, not pairwise vs SMOTE).",
+    "stat_test": "not stated in paper"
+   }
+  },
+  {
+   "metric": "F_measure",
+   "metric_family": "F-measure",
+   "table": "Table II",
+   "page": "PDF page 5 (printed p.1326)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "0.8505",
+     "proposed_std": null,
+     "smote": "0.8418",
+     "smote_std": null,
+     "marks": "ADASYN bold+underlined (best of DT/SMOTE/ADASYN)"
+    },
+    {
+     "dataset_as_printed": "Pima Indian Diabetes",
+     "proposed": "0.5726",
+     "proposed_std": null,
+     "smote": "0.5556",
+     "smote_std": null,
+     "marks": "ADASYN bold+underlined (best of DT/SMOTE/ADASYN)"
+    },
+    {
+     "dataset_as_printed": "Vowel recognition",
+     "proposed": "0.8453",
+     "proposed_std": null,
+     "smote": "0.8717",
+     "smote_std": null,
+     "marks": "SMOTE bold+underlined (best of DT/SMOTE/ADASYN)"
+    },
+    {
+     "dataset_as_printed": "Ionosphere",
+     "proposed": "0.8162",
+     "proposed_std": null,
+     "smote": "0.8101",
+     "smote_std": null,
+     "marks": "ADASYN bold+underlined (best of DT/SMOTE/ADASYN)"
+    },
+    {
+     "dataset_as_printed": "Abalone",
+     "proposed": "0.2805",
+     "proposed_std": null,
+     "smote": "0.3060",
+     "smote_std": null,
+     "marks": "Decision tree (no resampling) bold+underlined; neither ADASYN nor SMOTE marked"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Winning times",
+      "proposed": "3",
+      "smote": "1"
+     },
+     {
+      "label": "Winning times, Decision tree (no resampling) row = 1",
+      "proposed": "",
+      "smote": ""
+     }
+    ],
+    "wtl_vs_smote": "Winning times row counts wins among Decision tree / SMOTE / ADASYN (three-way, not pairwise vs SMOTE).",
+    "stat_test": "not stated in paper"
+   }
+  },
+  {
+   "metric": "G_mean",
+   "metric_family": "G-mean",
+   "table": "Table II",
+   "page": "PDF page 5 (printed p.1326)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "0.9168",
+     "proposed_std": null,
+     "smote": "0.9018",
+     "smote_std": null,
+     "marks": "ADASYN bold+underlined (best of DT/SMOTE/ADASYN)"
+    },
+    {
+     "dataset_as_printed": "Pima Indian Diabetes",
+     "proposed": "0.6625",
+     "proposed_std": null,
+     "smote": "0.6454",
+     "smote_std": null,
+     "marks": "ADASYN bold+underlined (best of DT/SMOTE/ADASYN)"
+    },
+    {
+     "dataset_as_printed": "Vowel recognition",
+     "proposed": "0.9622",
+     "proposed_std": null,
+     "smote": "0.9470",
+     "smote_std": null,
+     "marks": "ADASYN bold+underlined (best of DT/SMOTE/ADASYN)"
+    },
+    {
+     "dataset_as_printed": "Ionosphere",
+     "proposed": "0.8530",
+     "proposed_std": null,
+     "smote": "0.8489",
+     "smote_std": null,
+     "marks": "ADASYN bold+underlined (best of DT/SMOTE/ADASYN)"
+    },
+    {
+     "dataset_as_printed": "Abalone",
+     "proposed": "0.6291",
+     "proposed_std": null,
+     "smote": "0.5588",
+     "smote_std": null,
+     "marks": "ADASYN bold+underlined (best of DT/SMOTE/ADASYN)"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "Winning times",
+      "proposed": "5",
+      "smote": "0"
+     },
+     {
+      "label": "Winning times, Decision tree (no resampling) row = 0",
+      "proposed": "",
+      "smote": ""
+     }
+    ],
+    "wtl_vs_smote": "Winning times row counts wins among Decision tree / SMOTE / ADASYN (three-way, not pairwise vs SMOTE). Text: 'ADASYN algorithm also provides the best performance in terms of G-mean for all data sets.'",
+    "stat_test": "not stated in paper"
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [],
+ "metrics_without_smote": [],
+ "notes": "Single table; all five metrics for decision tree only. Bold+underline marks the best of three rows (Decision tree, SMOTE, ADASYN) per dataset; the 'Decision tree' row is no resampling. Header printed as F_measure and G_mean in rendered image (pdftotext shows 'F measure', 'G mean')."
+}

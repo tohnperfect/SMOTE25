@@ -1,0 +1,71 @@
+{
+  "key": "Cluster-SMOTE",
+  "pdf_file_read": "2006 Cluster-SMOTE - Cieslak, Chawla, Striegel.pdf",
+  "task": "binary",
+  "n_datasets_claimed": 2,
+  "characteristics_table": "Table I, p.2",
+  "datasets": [
+    {
+      "name": "Destinations",
+      "group": "",
+      "source_repo": "private",
+      "n_instances": 4080,
+      "n_features": 25,
+      "n_classes": 2,
+      "n_minority": 147,
+      "n_majority": 3933,
+      "class_distribution": "alerts 147 / non-alerts 3933",
+      "ir_printed": null,
+      "how_obtained": "modified",
+      "how_obtained_detail": "Built by authors from University of Notre Dame network traffic (summer 2004), aggregated per destination host; hosts receiving SNORT-flagged packets labeled compromised; SNORT attack types collapsed into a 2-class problem (intrusive vs not) (p.2)",
+      "in_results_table": "not applicable (no per-dataset results)",
+      "ref": "Table I, p.2"
+    },
+    {
+      "name": "Packets",
+      "group": "",
+      "source_repo": "private",
+      "n_instances": 346620,
+      "n_features": 43,
+      "n_classes": 2,
+      "n_minority": 2106,
+      "n_majority": 344514,
+      "class_distribution": "alerts 2106 / non-alerts 344,514",
+      "ir_printed": null,
+      "how_obtained": "modified",
+      "how_obtained_detail": "Built by authors from University of Notre Dame network packets (summer 2004) with SNORT labels; attack types collapsed into a 2-class problem (intrusive vs not) (p.2)",
+      "in_results_table": "not applicable (no per-dataset results)",
+      "ref": "Table I, p.2"
+    }
+  ],
+  "ir_definition": "not stated in paper",
+  "ir_definition_ref": "",
+  "outcome": {
+    "smote_in_baselines": "yes",
+    "smote_name_as_printed": "500 SMOTE",
+    "baselines_all": ["SMOTE (various amounts, e.g. 500 SMOTE)", "Replication (random oversampling, e.g. 500 Replication, 100 Replication)", "RIPPER Loss Ratio", "RIPPER + Undersampling"],
+    "results_granularity": "plots only",
+    "chosen": {
+      "table": "Fig. 4 (ROC curves; no numeric table)",
+      "page": "5",
+      "metric": "ROC curve (%TP vs %FP); no G-mean/AUC/F1/accuracy values printed",
+      "classifier": "RIPPER",
+      "condition": "Packets dataset, 75/25 train/test split, majority undersampled to sweep ROC; Cluster-SMOTE with 3 and 5 k-means clusters vs 500 SMOTE",
+      "higher_is_better": true,
+      "is_image": true
+    },
+    "rows": [],
+    "summary_rows": [],
+    "stat_test": "not stated in paper",
+    "win_claim": {
+      "quote": "we establish that our clustering based approach is more suitable for the detecting intrusions and is able to provide additional improvement over just synthetic generation of instances.",
+      "page": "1"
+    }
+  },
+  "uncertain": [
+    "how_obtained set to 'modified' because authors constructed the datasets and collapsed SNORT alert types into 2 classes; could alternatively be considered 'original' (p.2)",
+    "Cluster-SMOTE was compared to SMOTE only on Packets (Fig. 4, p.5); on Destinations clustering yielded a single cluster so no Cluster-SMOTE comparison exists (p.6)",
+    "No numeric per-dataset results; comparison is ROC plots plus a convex-hull statement ('all but one point within this convex hull come from classifiers based on the Cluster-SMOTE method', p.5); figure not digitized"
+  ],
+  "notes": "Paper title in PDF: 'Combating Imbalance in Network Intrusion Datasets'. Proposed method: Cluster-SMOTE (k-means on minority class, SMOTE applied per cluster; variants '500 3 clusters SMOTE' and '500 5 clusters SMOTE' in Fig. 4). Evaluation: Packets 75%/25% stratified split; Destinations 10-fold CV with TP/FP rates averaged (p.5). Undersampling levels {1%MAJ, 5%MAJ, 10%MAJ, 20%MAJ, ..., 100%MAJ} (p.4). Loss ratio varied from 1 to .01 (p.5). Results only as ROC curves in Figs. 2-5; no supplementary file referenced."
+}

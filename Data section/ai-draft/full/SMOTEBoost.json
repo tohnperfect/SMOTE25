@@ -1,0 +1,112 @@
+{
+  "key": "SMOTEBoost",
+  "pdf_file_read": "SMOTEBoost - Improving Prediction of the Minority Class in Boosting (PKDD 2003).pdf",
+  "task": "both",
+  "n_datasets_claimed": 4,
+  "characteristics_table": "Table 2, p.6 (printed 112)",
+  "datasets": [
+    {
+      "name": "KDDCup-99 Intrusion",
+      "group": "",
+      "source_repo": "other: KDD-Cup 1999 (ref [20], http://kdd.ics.uci.edu/databases/kddcup99/task.html)",
+      "n_instances": null,
+      "n_features": null,
+      "n_classes": 5,
+      "n_minority": null,
+      "n_majority": null,
+      "class_distribution": "DoS 13027 / Probe 2445 / Normal 17400 (majority); U2R 136 / R2L 1982 (minority)",
+      "ir_printed": null,
+      "how_obtained": "modified",
+      "how_obtained_detail": "Original train and test merged; 69,980 connections sampled, sampling only from majority classes (normal, DoS) while Probe, U2R, R2L kept intact; randomly split into equal-size train/test. Table 2 gives the distribution of the new test set (p.6). U2R and R2L treated as minority classes; only U2R results reported (Table 3).",
+      "in_results_table": "yes",
+      "ref": "Table 2, p.6 (printed 112)"
+    },
+    {
+      "name": "Mammography",
+      "group": "",
+      "source_repo": "other: ref [1] (Chawla et al., SMOTE, JAIR 2002)",
+      "n_instances": null,
+      "n_features": null,
+      "n_classes": 2,
+      "n_minority": 260,
+      "n_majority": 10923,
+      "class_distribution": "10923/260",
+      "ir_printed": null,
+      "how_obtained": "not stated",
+      "how_obtained_detail": "cited to [1]; all continuous features; no class manipulation described (p.6)",
+      "in_results_table": "yes",
+      "ref": "Table 2, p.6 (printed 112)"
+    },
+    {
+      "name": "Satimage",
+      "group": "",
+      "source_repo": "UCI",
+      "n_instances": null,
+      "n_features": null,
+      "n_classes": 2,
+      "n_minority": 626,
+      "n_majority": 5809,
+      "class_distribution": "5809/626",
+      "ir_printed": null,
+      "how_obtained": "modified",
+      "how_obtained_detail": "smallest class chosen as minority, remaining classes collapsed into one class, as done in [24] (ELENA project) (stated p.6)",
+      "in_results_table": "yes",
+      "ref": "Table 2, p.6 (printed 112)"
+    },
+    {
+      "name": "Phoneme",
+      "group": "",
+      "source_repo": "other: ref [23] (Provost, Fawcett, Kohavi, ICML 1998)",
+      "n_instances": null,
+      "n_features": null,
+      "n_classes": 2,
+      "n_minority": 1586,
+      "n_majority": 3818,
+      "class_distribution": "3818/1586",
+      "ir_printed": null,
+      "how_obtained": "not stated",
+      "how_obtained_detail": "cited to [23]; all continuous features; no class manipulation described (p.6)",
+      "in_results_table": "yes",
+      "ref": "Table 2, p.6 (printed 112)"
+    }
+  ],
+  "ir_definition": "not stated in paper",
+  "ir_definition_ref": "",
+  "outcome": {
+    "smote_in_baselines": "yes",
+    "smote_name_as_printed": "SMOTE",
+    "baselines_all": ["Standard RIPPER", "Standard Boosting", "SMOTE", "First SMOTE then Boost", "AdaCost"],
+    "results_granularity": "per-dataset",
+    "chosen": {
+      "table": "Tables 3, 4, 5, 6",
+      "page": "p.7 (printed 113) for Tables 3-4; p.8 (printed 114) for Tables 5-6",
+      "metric": "F-value (minority class)",
+      "classifier": "RIPPER",
+      "condition": "SMOTE parameter N = 100 for both SMOTE and SMOTEBoost (KDDCup-99: Nu2r = 100, Nr2l = 100; U2R class); 25 boosting iterations aggregated",
+      "higher_is_better": true,
+      "is_image": true
+    },
+    "rows": [
+      {"dataset_as_printed": "KDDCup-99 intrusion (U2R class)", "proposed": "88.8", "proposed_std": null, "smote": "84.17", "smote_std": null, "best_other_value": "89.3", "best_other_name": "AdaCost (c = 2)", "marks": "88.8 bold; 89.3 (AdaCost) bold; 86.01 (First SMOTE then Boost) bold"},
+      {"dataset_as_printed": "mammography", "proposed": "68.36", "proposed_std": null, "smote": "61.31", "smote_std": null, "best_other_value": "67.25", "best_other_name": "First SMOTE then Boost (N = 100)", "marks": "68.36 bold; 67.25 bold; 63.01 (AdaCost 2) bold"},
+      {"dataset_as_printed": "Satimage", "proposed": "70.12", "proposed_std": null, "smote": "59.97", "smote_std": null, "best_other_value": "68.65", "best_other_name": "First SMOTE then Boost (N = 100)", "marks": "SMOTEBoost N = 300 (70.19) bold, not N = 100; 68.65 bold; 58.2 (AdaCost 2) bold"},
+      {"dataset_as_printed": "phoneme", "proposed": "77.37", "proposed_std": null, "smote": "68.89", "smote_std": null, "best_other_value": "76.89", "best_other_name": "First SMOTE then Boost (N = 100)", "marks": "77.37 bold; 76.89 bold; 75.99 (AdaCost 2) bold"}
+    ],
+    "summary_rows": [],
+    "stat_test": "none",
+    "win_claim": {
+      "quote": "SMOTEBoost applied to several highly and moderately imbalanced data sets shows improvement in prediction performance on the minority class and overall improved F-values.",
+      "page": "p.1 (abstract)"
+    }
+  },
+  "uncertain": [
+    "Condition choice: SMOTE and SMOTEBoost are each reported at N = 100/200/300/500 (KDD: Nu2r = 100/300/500); no single N designated main. Chose N = 100 for both (first reported). Pp.7-8.",
+    "best_other_value taken as max printed F-value over Standard RIPPER, Standard Boosting, First SMOTE then Boost (all N) and AdaCost (all c), not restricted to N = 100. Pp.7-8.",
+    "KDDCup-99: Table 2 counts are the new test set distribution (p.6); n_instances left null (69,980 is the sampled total before splitting, not printed in Table 2).",
+    "KDDCup-99 has two minority classes (U2R, R2L); n_minority/n_majority left null; only U2R results reported (R2L omitted 'due to space limitations', p.7).",
+    "Mammography and Phoneme source_repo/how_obtained: paper only cites [1] and [23]; no repository or class construction stated (p.6).",
+    "Tables 3-6 were interleaved in text extraction; values read from rendered pages 7-8 (is_image set true for that reason, though PDF has a text layer).",
+    "Task labelled 'both' because KDDCup-99 is 5-class while others are 2-class; results reported per minority class only (p.6-7)."
+  ],
+  "notes": "Proposed method SMOTEBoost (variant of AdaBoost.M2 with SMOTE in each round), base learner RIPPER. Evaluation: 10-fold CV for mammography, satimage, phoneme; separate test set for KDDCup-99 (p.6). Only recall, precision, F-value for minority class are reported; no G-mean or AUC. Precision and recall also reported per setting in Tables 3-6. SMOTE parameter N ranged 100-500. Text p.10 gives relative F-value improvements of SMOTEBoost over AdaBoost.M1: U2R ~4%, R2L 0.61%, mammography 2.2%, satimage 3.4%, phoneme 1.4% (vs boosting, not SMOTE). Figs 2-4 plot precision/recall/F-value over boosting rounds (incl. 'SMOTE applied on RIPPER' line). n_features not printed for any dataset."
+}

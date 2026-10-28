@@ -1,0 +1,61 @@
+version,paper,rows,families_with_2plus,rows_in_those,signs,all_same_sign,by_family
+confirmed,A-SUWO,16,0,0,"{'+': 11, '=': 3, '-': 2}",False,{}
+confirmed,AB-SMOTE,8,0,0,"{'+': 2, '-': 5, '=': 1}",False,{}
+confirmed,ADASYN,5,0,0,{'+': 5},True,{}
+confirmed,CBHSID,16,1,5,"{'+': 13, '-': 3}",False,"{'yeast': {'+': 4, '-': 1}}"
+confirmed,CGMOS,30,0,0,"{'+': 24, '=': 5, '-': 1}",False,{}
+confirmed,DGOT,22,0,0,"{'-': 3, '+': 18, '=': 1}",False,{}
+confirmed,FW-SMOTE,42,3,25,"{'+': 30, '=': 11, '-': 1}",False,"{'ecoli': {'+': 7, '=': 5, '-': 1}, 'yeast': {'+': 8}, 'glass': {'+': 3, '=': 1}}"
+confirmed,GDO,40,3,21,"{'+': 32, '-': 7, '=': 1}",False,"{'yeast': {'+': 7, '=': 1, '-': 1}, 'glass': {'+': 7}, 'ecoli': {'+': 3, '-': 2}}"
+confirmed,GOIO,23,0,0,"{'+': 22, '-': 1}",False,{}
+confirmed,INOS,7,0,0,{'+': 7},True,{}
+confirmed,Loyalty-SMOTE,30,1,2,"{'+': 21, '=': 7, '-': 2}",False,"{'ecoli': {'+': 1, '=': 1}}"
+confirmed,MBS,13,0,0,"{'+': 11, '=': 2}",False,{}
+confirmed,MC-MBRC,20,0,0,"{'+': 18, '-': 2}",False,{}
+confirmed,MKC-SMOTE,21,0,0,"{'+': 19, '-': 2}",False,{}
+confirmed,MLOS,16,0,0,"{'+': 13, '-': 3}",False,{}
+confirmed,MWMOTE,20,0,0,"{'-': 6, '+': 14}",False,{}
+confirmed,NBU,24,3,14,"{'+': 15, '-': 5, '=': 4}",False,"{'ecoli': {'+': 3, '=': 2}, 'yeast': {'+': 4, '-': 1}, 'glass': {'+': 2, '=': 2}}"
+confirmed,OREM-M,21,0,0,"{'-': 8, '+': 13}",False,{}
+confirmed,RACOG / wRACOG,10,1,2,"{'+': 4, '-': 5, '=': 1}",False,{'yeast': {'+': 2}}
+confirmed,RAMOBoost,19,0,0,"{'+': 15, '-': 4}",False,{}
+confirmed,RSMOTE,27,0,0,"{'+': 21, '-': 6}",False,{}
+confirmed,RUSBoost,15,0,0,{'+': 15},True,{}
+confirmed,SCUT,8,0,0,"{'-': 3, '+': 4, '=': 1}",False,{}
+confirmed,SMOM,27,1,3,"{'-': 7, '+': 19, '=': 1}",False,"{'yeast': {'+': 2, '-': 1}}"
+confirmed,SMOTE-ENN / SMOTE-Tomek,15,0,0,"{'-': 6, '+': 8, '=': 1}",False,{}
+confirmed,SMOTE-IPF,9,0,0,{'+': 9},True,{}
+confirmed,SMOTEBoost,4,0,0,{'+': 4},True,{}
+confirmed,SOS,6,0,0,{'+': 6},True,{}
+confirmed,SPE,3,1,3,{'+': 3},True,{'own:credit fraud': {'+': 3}}
+confirmed,SVDD-WSMOTE,24,1,9,{'+': 24},True,{'yeast': {'+': 9}}
+t1,A-SUWO,16,0,0,"{'+': 11, '=': 3, '-': 2}",False,{}
+t1,AB-SMOTE,8,0,0,"{'+': 2, '-': 5, '=': 1}",False,{}
+t1,ADASYN,5,0,0,{'+': 5},True,{}
+t1,CBHSID,16,1,5,"{'+': 13, '-': 3}",False,"{'yeast': {'+': 4, '-': 1}}"
+t1,CGMOS,30,0,0,"{'+': 24, '=': 5, '-': 1}",False,{}
+t1,DGOT,22,2,5,"{'-': 3, '+': 18, '=': 1}",False,"{'abalone': {'+': 3}, 'satimage': {'-': 1, '+': 1}}"
+t1,FW-SMOTE,42,4,29,"{'+': 30, '=': 11, '-': 1}",False,"{'ecoli': {'+': 7, '=': 5, '-': 1}, 'yeast': {'+': 8}, 'bhat': {'=': 3, '+': 1}, 'glass': {'+': 3, '=': 1}}"
+t1,GDO,40,5,27,"{'+': 32, '-': 7, '=': 1}",False,"{'yeast': {'+': 7, '=': 1, '-': 1}, 'glass': {'+': 7}, 'ecoli': {'+': 3, '-': 2}, 'krvsk': {'+': 2, '-': 1}, 'abalone': {'+': 2, '-': 1}}"
+t1,GOIO,23,3,10,"{'+': 22, '-': 1}",False,"{'artificial': {'+': 5}, 'avila': {'+': 3}, 'abalone': {'+': 2}}"
+t1,INOS,7,0,0,{'+': 7},True,{}
+t1,Loyalty-SMOTE,30,2,4,"{'+': 21, '=': 7, '-': 2}",False,"{'aids': {'+': 2}, 'ecoli': {'+': 1, '=': 1}}"
+t1,MBS,13,0,0,"{'+': 11, '=': 2}",False,{}
+t1,MC-MBRC,20,0,0,"{'+': 18, '-': 2}",False,{}
+t1,MKC-SMOTE,21,0,0,"{'+': 19, '-': 2}",False,{}
+t1,MLOS,16,0,0,"{'+': 13, '-': 3}",False,{}
+t1,MWMOTE,20,0,0,"{'-': 6, '+': 14}",False,{}
+t1,NBU,24,5,18,"{'+': 15, '-': 5, '=': 4}",False,"{'ecoli': {'+': 3, '=': 2}, 'yeast': {'+': 4, '-': 1}, 'glass': {'+': 2, '=': 2}, 'newthyroid': {'+': 1, '-': 1}, 'vehicle': {'+': 2}}"
+t1,OREM-M,21,2,4,"{'-': 8, '+': 13}",False,"{'voice': {'-': 2}, 'vowel': {'+': 2}}"
+t1,RACOG / wRACOG,10,1,2,"{'+': 4, '-': 5, '=': 1}",False,{'yeast': {'+': 2}}
+t1,RAMOBoost,19,0,0,"{'+': 15, '-': 4}",False,{}
+t1,RSMOTE,27,1,2,"{'+': 21, '-': 6}",False,{'svmguide': {'+': 2}}
+t1,RUSBoost,15,0,0,{'+': 15},True,{}
+t1,SCUT,8,0,0,"{'-': 3, '+': 4, '=': 1}",False,{}
+t1,SMOM,27,7,15,"{'-': 7, '+': 19, '=': 1}",False,"{'yeast': {'+': 2, '-': 1}, 'voice': {'+': 1, '-': 1}, 'housing': {'+': 2}, 'era': {'-': 1, '+': 1}, 'platesfaults': {'-': 1, '+': 1}, 'abalone': {'+': 2}, 'vowel': {'+': 2}}"
+t1,SMOTE-ENN / SMOTE-Tomek,15,0,0,"{'-': 6, '+': 8, '=': 1}",False,{}
+t1,SMOTE-IPF,9,0,0,{'+': 9},True,{}
+t1,SMOTEBoost,4,0,0,{'+': 4},True,{}
+t1,SOS,6,0,0,{'+': 6},True,{}
+t1,SPE,3,1,3,{'+': 3},True,{'creditfraud': {'+': 3}}
+t1,SVDD-WSMOTE,24,2,11,{'+': 24},True,"{'yeast': {'+': 9}, 'pageblocks': {'+': 2}}"

@@ -1,0 +1,661 @@
+{
+ "key": "SVDD-WSMOTE",
+ "classifier": "BPNN",
+ "condition": "UCI datasets, original IR, 5-fold stratified CV x 3 runs, mean \u00b1 std",
+ "proposed_column": "SVDDWSMOTE",
+ "smote_column": "SMOTE",
+ "metrics": [
+  {
+   "metric": "G-M (G-mean)",
+   "metric_family": "G-mean",
+   "table": "Table 3 (and continued)",
+   "page": "PDF pages 24-25 (printed 36-37)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "Wine",
+     "proposed": "0.806",
+     "proposed_std": "0.011",
+     "smote": "0.789",
+     "smote_std": "0.060",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Iris",
+     "proposed": "0.973",
+     "proposed_std": "0.023",
+     "smote": "0.963",
+     "smote_std": "0.038",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Abalone",
+     "proposed": "0.941",
+     "proposed_std": "0.035",
+     "smote": "0.921",
+     "smote_std": "0.041",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Pima",
+     "proposed": "0.707",
+     "proposed_std": "0.031",
+     "smote": "0.679",
+     "smote_std": "0.021",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Ecoli",
+     "proposed": "0.937",
+     "proposed_std": "0.022",
+     "smote": "0.925",
+     "smote_std": "0.033",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Libra",
+     "proposed": "0.993",
+     "proposed_std": "0.001",
+     "smote": "0.960",
+     "smote_std": "0.064",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "0.947",
+     "proposed_std": "0.031",
+     "smote": "0.937",
+     "smote_std": "0.030",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Balance",
+     "proposed": "0.595",
+     "proposed_std": "0.071",
+     "smote": "0.481",
+     "smote_std": "0.180",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Haberman",
+     "proposed": "0.610",
+     "proposed_std": "0.057",
+     "smote": "0.602",
+     "smote_std": "0.078",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Car",
+     "proposed": "0.989",
+     "proposed_std": "0.005",
+     "smote": "0.976",
+     "smote_std": "0.026",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Liver",
+     "proposed": "0.659",
+     "proposed_std": "0.062",
+     "smote": "0.640",
+     "smote_std": "0.042",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Seed",
+     "proposed": "0.927",
+     "proposed_std": "0.055",
+     "smote": "0.898",
+     "smote_std": "0.059",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Spect (printed under repeated header 'Wine' in Table 3 (continued))",
+     "proposed": "0.725",
+     "proposed_std": "0.032",
+     "smote": "0.691",
+     "smote_std": "0.071",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Pageblock (printed under repeated header 'Iris' in Table 3 (continued))",
+     "proposed": "0.937",
+     "proposed_std": "0.009",
+     "smote": "0.921",
+     "smote_std": "0.010",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Pageblock1 (printed under repeated header 'Abalone' in Table 3 (continued))",
+     "proposed": "0.953",
+     "proposed_std": "0.012",
+     "smote": "0.946",
+     "smote_std": "0.015",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Yeast",
+     "proposed": "0.719",
+     "proposed_std": "0.020",
+     "smote": "0.698",
+     "smote_std": "0.026",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Yeast1",
+     "proposed": "0.756",
+     "proposed_std": "0.015",
+     "smote": "0.755",
+     "smote_std": "0.041",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Yeast2",
+     "proposed": "0.913",
+     "proposed_std": "0.021",
+     "smote": "0.896",
+     "smote_std": "0.035",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Yeast3",
+     "proposed": "0.937",
+     "proposed_std": "0.031",
+     "smote": "0.898",
+     "smote_std": "0.039",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Yeast4",
+     "proposed": "0.957",
+     "proposed_std": "0.011",
+     "smote": "0.917",
+     "smote_std": "0.085",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Yeast5",
+     "proposed": "0.815",
+     "proposed_std": "0.037",
+     "smote": "0.787",
+     "smote_std": "0.070",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Yeast6",
+     "proposed": "0.821",
+     "proposed_std": "0.057",
+     "smote": "0.718",
+     "smote_std": "0.058",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Yeast7",
+     "proposed": "0.965",
+     "proposed_std": "0.027",
+     "smote": "0.961",
+     "smote_std": "0.032",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Yeast8",
+     "proposed": "0.875",
+     "proposed_std": "0.025",
+     "smote": "0.841",
+     "smote_std": "0.082",
+     "marks": ""
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper (mean rankings only shown in Fig. 16 for BPNN, no printed numbers)",
+    "stat_test": "Table 7 (PDF p.23), Friedman test + post-hoc Holm's test with SVDDWSMOTE as control, BPNN, SMOTE row, G-Means: alpha0.05 = 0.0253, p-value = 3.2863e-08; text: 'the null hypothesis is rejected for all pairwise comparisons at least at a significance level of a = 0.05'"
+   }
+  },
+  {
+   "metric": "F-M (F-measure)",
+   "metric_family": "F-measure",
+   "table": "Table 3 (and continued)",
+   "page": "PDF pages 24-25 (printed 36-37)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Wine",
+     "proposed": "0.689",
+     "proposed_std": "0.037",
+     "smote": "0.668",
+     "smote_std": "0.076",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Iris",
+     "proposed": "0.963",
+     "proposed_std": "0.029",
+     "smote": "0.952",
+     "smote_std": "0.035",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Abalone",
+     "proposed": "0.865",
+     "proposed_std": "0.045",
+     "smote": "0.850",
+     "smote_std": "0.065",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Pima",
+     "proposed": "0.607",
+     "proposed_std": "0.033",
+     "smote": "0.595",
+     "smote_std": "0.044",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Ecoli",
+     "proposed": "0.885",
+     "proposed_std": "0.066",
+     "smote": "0.806",
+     "smote_std": "0.065",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Libra",
+     "proposed": "0.893",
+     "proposed_std": "0.051",
+     "smote": "0.848",
+     "smote_std": "0.112",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "0.859",
+     "proposed_std": "0.043",
+     "smote": "0.851",
+     "smote_std": "0.043",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Balance",
+     "proposed": "0.221",
+     "proposed_std": "0.062",
+     "smote": "0.173",
+     "smote_std": "0.108",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Haberman",
+     "proposed": "0.457",
+     "proposed_std": "0.007",
+     "smote": "0.443",
+     "smote_std": "0.107",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Car",
+     "proposed": "0.921",
+     "proposed_std": "0.037",
+     "smote": "0.856",
+     "smote_std": "0.066",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Liver",
+     "proposed": "0.609",
+     "proposed_std": "0.053",
+     "smote": "0.600",
+     "smote_std": "0.052",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Seed",
+     "proposed": "0.862",
+     "proposed_std": "0.035",
+     "smote": "0.852",
+     "smote_std": "0.071",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Spect (printed under repeated header 'Wine' in Table 3 (continued))",
+     "proposed": "0.515",
+     "proposed_std": "0.053",
+     "smote": "0.482",
+     "smote_std": "0.131",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Pageblock (printed under repeated header 'Iris' in Table 3 (continued))",
+     "proposed": "0.809",
+     "proposed_std": "0.011",
+     "smote": "0.787",
+     "smote_std": "0.026",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Pageblock1 (printed under repeated header 'Abalone' in Table 3 (continued))",
+     "proposed": "0.843",
+     "proposed_std": "0.013",
+     "smote": "0.813",
+     "smote_std": "0.023",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Yeast",
+     "proposed": "0.587",
+     "proposed_std": "0.016",
+     "smote": "0.573",
+     "smote_std": "0.025",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Yeast1",
+     "proposed": "0.589",
+     "proposed_std": "0.021",
+     "smote": "0.514",
+     "smote_std": "0.042",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Yeast2",
+     "proposed": "0.771",
+     "proposed_std": "0.031",
+     "smote": "0.699",
+     "smote_std": "0.047",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Yeast3",
+     "proposed": "0.767",
+     "proposed_std": "0.013",
+     "smote": "0.701",
+     "smote_std": "0.037",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Yeast4",
+     "proposed": "0.879",
+     "proposed_std": "0.030",
+     "smote": "0.720",
+     "smote_std": "0.072",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Yeast5",
+     "proposed": "0.645",
+     "proposed_std": "0.050",
+     "smote": "0.275",
+     "smote_std": "0.072",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Yeast6",
+     "proposed": "0.733",
+     "proposed_std": "0.033",
+     "smote": "0.213",
+     "smote_std": "0.081",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Yeast7",
+     "proposed": "0.677",
+     "proposed_std": "0.033",
+     "smote": "0.615",
+     "smote_std": "0.101",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Yeast8",
+     "proposed": "0.559",
+     "proposed_std": "0.021",
+     "smote": "0.293",
+     "smote_std": "0.076",
+     "marks": "SVDDWSMOTE bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper (mean rankings only shown in Fig. 16 for BPNN, no printed numbers)",
+    "stat_test": "Table 7 (PDF p.23), Friedman test + post-hoc Holm's test with SVDDWSMOTE as control, BPNN, SMOTE row, F-measure: alpha0.05 = 0.0169, p-value = 7.6267e-09; text: 'the null hypothesis is rejected for all pairwise comparisons at least at a significance level of a = 0.05'"
+   }
+  },
+  {
+   "metric": "AUC",
+   "metric_family": "AUC",
+   "table": "Table 3 (and continued)",
+   "page": "PDF pages 24-25 (printed 36-37)",
+   "is_image": false,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Wine",
+     "proposed": "0.835",
+     "proposed_std": "0.032",
+     "smote": "0.816",
+     "smote_std": "0.053",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Iris",
+     "proposed": "0.987",
+     "proposed_std": "0.011",
+     "smote": "0.982",
+     "smote_std": "0.018",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Abalone",
+     "proposed": "0.976",
+     "proposed_std": "0.017",
+     "smote": "0.972",
+     "smote_std": "0.027",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Pima",
+     "proposed": "0.763",
+     "proposed_std": "0.032",
+     "smote": "0.743",
+     "smote_std": "0.021",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Ecoli",
+     "proposed": "0.953",
+     "proposed_std": "0.015",
+     "smote": "0.941",
+     "smote_std": "0.029",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Libra",
+     "proposed": "0.997",
+     "proposed_std": "0.007",
+     "smote": "0.991",
+     "smote_std": "0.006",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "0.981",
+     "proposed_std": "0.009",
+     "smote": "0.978",
+     "smote_std": "0.011",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Balance",
+     "proposed": "0.687",
+     "proposed_std": "0.032",
+     "smote": "0.646",
+     "smote_std": "0.102",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Haberman",
+     "proposed": "0.697",
+     "proposed_std": "0.011",
+     "smote": "0.662",
+     "smote_std": "0.070",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Car",
+     "proposed": "0.998",
+     "proposed_std": "0.003",
+     "smote": "0.994",
+     "smote_std": "0.006",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Liver",
+     "proposed": "0.685",
+     "proposed_std": "0.038",
+     "smote": "0.676",
+     "smote_std": "0.054",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Seed",
+     "proposed": "0.977",
+     "proposed_std": "0.015",
+     "smote": "0.967",
+     "smote_std": "0.024",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Spect (printed under repeated header 'Wine' in Table 3 (continued))",
+     "proposed": "0.771",
+     "proposed_std": "0.061",
+     "smote": "0.740",
+     "smote_std": "0.059",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Pageblock (printed under repeated header 'Iris' in Table 3 (continued))",
+     "proposed": "0.969",
+     "proposed_std": "0.003",
+     "smote": "0.954",
+     "smote_std": "0.010",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Pageblock1 (printed under repeated header 'Abalone' in Table 3 (continued))",
+     "proposed": "0.970",
+     "proposed_std": "0.015",
+     "smote": "0.965",
+     "smote_std": "0.013",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Yeast",
+     "proposed": "0.783",
+     "proposed_std": "0.017",
+     "smote": "0.755",
+     "smote_std": "0.025",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Yeast1",
+     "proposed": "0.837",
+     "proposed_std": "0.020",
+     "smote": "0.818",
+     "smote_std": "0.040",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Yeast2",
+     "proposed": "0.945",
+     "proposed_std": "0.013",
+     "smote": "0.938",
+     "smote_std": "0.025",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Yeast3",
+     "proposed": "0.949",
+     "proposed_std": "0.020",
+     "smote": "0.943",
+     "smote_std": "0.029",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Yeast4",
+     "proposed": "0.967",
+     "proposed_std": "0.021",
+     "smote": "0.941",
+     "smote_std": "0.079",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Yeast5",
+     "proposed": "0.887",
+     "proposed_std": "0.045",
+     "smote": "0.858",
+     "smote_std": "0.089",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Yeast6",
+     "proposed": "0.897",
+     "proposed_std": "0.030",
+     "smote": "0.841",
+     "smote_std": "0.093",
+     "marks": "SVDDWSMOTE bold"
+    },
+    {
+     "dataset_as_printed": "Yeast7",
+     "proposed": "0.990",
+     "proposed_std": "0.003",
+     "smote": "0.988",
+     "smote_std": "0.005",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Yeast8",
+     "proposed": "0.951",
+     "proposed_std": "0.020",
+     "smote": "0.913",
+     "smote_std": "0.065",
+     "marks": "SVDDWSMOTE bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper (mean rankings only shown in Fig. 16 for BPNN, no printed numbers)",
+    "stat_test": "Table 7 (PDF p.23), Friedman test + post-hoc Holm's test with SVDDWSMOTE as control, BPNN, SMOTE row, AUC: alpha0.05 = 0.0102, p-value = 1.8132e-09; text: 'the null hypothesis is rejected for all pairwise comparisons at least at a significance level of a = 0.05'"
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [
+  {
+   "metric": "G-M, F-M, AUC per dataset with SMOTE",
+   "table": "Table 4",
+   "classifiers": "LDA"
+  },
+  {
+   "metric": "G-M, F-M, AUC per dataset with SMOTE",
+   "table": "Table 5",
+   "classifiers": "SVM"
+  },
+  {
+   "metric": "G-M, F-M, AUC on real-world bearing datasets with SMOTE",
+   "table": "Table 8",
+   "classifiers": "LDA"
+  }
+ ],
+ "metrics_without_smote": [
+  {
+   "metric": "computation time",
+   "table": "Table 6"
+  },
+  {
+   "metric": "Holm's test vs class-overlap methods SPIDER/NBU/OBU",
+   "table": "Table 9"
+  }
+ ],
+ "notes": "Text extraction verified visually against rendered PDF pp.24-25. Bold = best per cell column across 10 methods; SMOTE row never bold in Table 3. Table 3 (continued) on p.25 repeats the header 'Wine / Iris / Abalone' over its first block, but values differ from the true Wine/Iris/Abalone block on p.24, and p.24 ends with the header 'Spect / Pageblock / Pageblock1'; this block was assigned to Spect, Pageblock, Pageblock1 (consistent with existing dataset list). One printed value '0.420 \u00b1 0. 075' (RandomO, Yeast5) has a space; not SMOTE/proposed."
+}

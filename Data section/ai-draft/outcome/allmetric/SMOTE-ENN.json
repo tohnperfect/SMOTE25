@@ -1,0 +1,157 @@
+{
+ "key": "SMOTE-ENN",
+ "classifier": "C4.5 release 8",
+ "condition": "pruned trees (Pruning = yes), balanced 50/50 class distribution, original data sets",
+ "proposed_column": "Smote+ENN",
+ "smote_column": "Smote",
+ "metrics": [
+  {
+   "metric": "AUC (%) mean(std), 10-fold CV",
+   "metric_family": "AUC",
+   "table": "Table 4",
+   "page": "PDF page 7 (printed p.26)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "Pima",
+     "proposed": "83.66",
+     "proposed_std": "4.77",
+     "smote": "85.49",
+     "smote_std": "5.17",
+     "marks": "Smote bold; Table 6 rank: Smt 1º, Smt+ENN 4º"
+    },
+    {
+     "dataset_as_printed": "German",
+     "proposed": "80.91",
+     "proposed_std": "4.36",
+     "smote": "80.74",
+     "smote_std": "5.43",
+     "marks": "Table 6 rank: Smt 4º, Smt+ENN 3º"
+    },
+    {
+     "dataset_as_printed": "Post-operative",
+     "proposed": "59.83",
+     "proposed_std": "33.91",
+     "smote": "55.66",
+     "smote_std": "24.66",
+     "marks": "Table 6 rank: Smt 3º, Smt+ENN 2º"
+    },
+    {
+     "dataset_as_printed": "Haberman",
+     "proposed": "76.38",
+     "proposed_std": "5.51",
+     "smote": "72.23",
+     "smote_std": "9.82",
+     "marks": "Smote+ENN bold; Table 6 rank: Smt 3º, Smt+ENN 1º"
+    },
+    {
+     "dataset_as_printed": "Splice-ie",
+     "proposed": "97.97",
+     "proposed_std": "0.74",
+     "smote": "98.46",
+     "smote_std": "0.87",
+     "marks": "Table 6 rank: Smt 4º, Smt+ENN 8º (Smt+ENN*)"
+    },
+    {
+     "dataset_as_printed": "Splice-ei",
+     "proposed": "98.85",
+     "proposed_std": "0.60",
+     "smote": "98.92",
+     "smote_std": "0.44",
+     "marks": "Smote bold; Table 6 rank: Smt 1º, Smt+ENN 3º"
+    },
+    {
+     "dataset_as_printed": "Vehicle",
+     "proposed": "97.92",
+     "proposed_std": "1.09",
+     "smote": "98.96",
+     "smote_std": "0.98",
+     "marks": "Table 6 rank: Smt 2º, Smt+ENN 10º (Smt+ENN*)"
+    },
+    {
+     "dataset_as_printed": "Letter-vowel",
+     "proposed": "98.94",
+     "proposed_std": "0.22",
+     "smote": "98.90",
+     "smote_std": "0.20",
+     "marks": "Smote+ENN bold; Table 6 rank: Smt 3º, Smt+ENN 1º"
+    },
+    {
+     "dataset_as_printed": "New-thyroid",
+     "proposed": "99.22",
+     "proposed_std": "1.72",
+     "smote": "98.91",
+     "smote_std": "1.84",
+     "marks": "Smote+ENN bold; Table 6 rank: Smt 3º, Smt+ENN 1º"
+    },
+    {
+     "dataset_as_printed": "E.Coli",
+     "proposed": "95.29",
+     "proposed_std": "3.79",
+     "smote": "95.49",
+     "smote_std": "4.30",
+     "marks": "Table 6 rank: Smt 2º, Smt+ENN 3º"
+    },
+    {
+     "dataset_as_printed": "Satimage",
+     "proposed": "95.67",
+     "proposed_std": "1.18",
+     "smote": "95.43",
+     "smote_std": "1.03",
+     "marks": "Smote+ENN bold; Table 6 rank: Smt 2º, Smt+ENN 1º"
+    },
+    {
+     "dataset_as_printed": "Flag",
+     "proposed": "79.32",
+     "proposed_std": "28.83",
+     "smote": "73.62",
+     "smote_std": "30.16",
+     "marks": "Table 6 rank: Smt 5º, Smt+ENN 2º"
+    },
+    {
+     "dataset_as_printed": "Glass",
+     "proposed": "92.90",
+     "proposed_std": "7.30",
+     "smote": "91.40",
+     "smote_std": "8.24",
+     "marks": "Smote+ENN bold; Table 6 rank: Smt 4º, Smt+ENN 1º"
+    },
+    {
+     "dataset_as_printed": "Letter-a",
+     "proposed": "99.91",
+     "proposed_std": "0.12",
+     "smote": "99.91",
+     "smote_std": "0.12",
+     "marks": "Smote bold; Smote+ENN bold (also Smote+Tomek bold); Table 6 rank: Smt 3º, Smt+ENN 2º"
+    },
+    {
+     "dataset_as_printed": "Nursery",
+     "proposed": "97.80",
+     "proposed_std": "1.07",
+     "smote": "99.21",
+     "smote_std": "0.55",
+     "marks": "Table 6 rank: Smt 8º (Smt*), Smt+ENN 10º (Smt+ENN*)"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [],
+    "wtl_vs_smote": "not stated in paper; Table 6 (PDF p.8, printed p.27) gives per-dataset rank positions of all 11 methods for pruned trees (copied into marks)",
+    "stat_test": "Hsu's Multiple Comparison with the Best (MCB) test, 95% confidence, best ranked method vs remaining; Table 6: 'methods marked with an asterisk obtained statistically inferior results when compared to the top ranked method'. Asterisks for pruned trees: Smt+ENN* on Splice-ie, Vehicle, Nursery; Smt* on Nursery. No direct Smote+ENN vs Smote test."
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [],
+ "metrics_without_smote": [
+  {
+   "metric": "AUC for under-sampling methods (no Smote column)",
+   "table": "Table 5"
+  },
+  {
+   "metric": "mean number of induced rules / conditions per rule (syntactic complexity, unpruned trees)",
+   "table": "Tables 8-9 (not a performance metric)"
+  }
+ ],
+ "notes": "Only AUC is reported per dataset. Table 4 is an embedded image region rendered at 300 dpi; pruned ('yes') rows only. Bold = best value in row across Table 4 columns. Unpruned ('no') rows exist (different condition, not copied). Proposed = Smote+ENN (the paper proposes both Smote+Tomek and Smote+ENN)."
+}

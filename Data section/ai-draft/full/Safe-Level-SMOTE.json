@@ -1,0 +1,72 @@
+{
+  "key": "Safe-Level-SMOTE",
+  "pdf_file_read": "Safe-Level-SMOTE - Safe-Level-Synthetic Minority Over-Sampling Technique for Handling the Class Imbalanced Problem (PAKDD 2009).pdf (Drive id 1ndf16oaQbwLU0sGsYhEznHyksAKS0lHy)",
+  "task": "binary",
+  "n_datasets_claimed": 2,
+  "characteristics_table": "Table 3, p.6 (printed p.480)",
+  "datasets": [
+    {
+      "name": "Satimage",
+      "group": "",
+      "source_repo": "UCI",
+      "n_instances": 6435,
+      "n_features": 37,
+      "n_classes": null,
+      "n_minority": 626,
+      "n_majority": 5809,
+      "class_distribution": "Positive 626 / Negative 5,809",
+      "ir_printed": null,
+      "how_obtained": "modified",
+      "how_obtained_detail": "class label 4 selected as minority, remaining classes merged as majority (stated in text, p.6 / printed p.480); Table 3 prints % Minority 9.73",
+      "in_results_table": "not applicable (no per-dataset results)",
+      "ref": "Table 3, p.6 (printed p.480)"
+    },
+    {
+      "name": "Haberman",
+      "group": "",
+      "source_repo": "UCI",
+      "n_instances": 306,
+      "n_features": 4,
+      "n_classes": null,
+      "n_minority": 81,
+      "n_majority": 225,
+      "class_distribution": "Positive 81 / Negative 225",
+      "ir_printed": null,
+      "how_obtained": "original",
+      "how_obtained_detail": "UCI dataset used as is; text: 'the minority class is about one quarter of the whole dataset' (p.6); Table 3 prints % Minority 26.47",
+      "in_results_table": "not applicable (no per-dataset results)",
+      "ref": "Table 3, p.6 (printed p.480)"
+    }
+  ],
+  "ir_definition": "not stated in paper (Table 3 reports '% Minority' instead of an IR)",
+  "ir_definition_ref": "p.6",
+  "outcome": {
+    "smote_in_baselines": "yes",
+    "smote_name_as_printed": "SMOTE",
+    "baselines_all": ["ORG (original dataset)", "SMOTE", "Borderline-SMOTE (BORD)"],
+    "results_granularity": "plots only",
+    "chosen": {
+      "table": "Fig. 2 (line plots only; not digitised)",
+      "page": "p.6-7 (printed p.480-481)",
+      "metric": "AUC (only shown in Fig. 2(d), Haberman, SVMs); no G-mean reported",
+      "classifier": "SVMs (only classifier plotted with AUC); first reported classifier is C4.5",
+      "condition": "x-axis = over-sampling percent on minority class; k=5; 10-fold CV",
+      "higher_is_better": true,
+      "is_image": true
+    },
+    "rows": [],
+    "summary_rows": [],
+    "stat_test": "not stated in paper",
+    "win_claim": {
+      "quote": "By synthesizing the minority instances more around larger safe level, we achieve a better accuracy performance than SMOTE and Borderline-SMOTE.",
+      "page": "p.1 (abstract)"
+    }
+  },
+  "uncertain": [
+    "n_features copied as printed 'Attribute' column (Satimage 37, Haberman 4); likely includes the class attribute, but paper does not say (p.6)",
+    "n_classes set null: Table 3 does not print it; paper says only two-class case is studied (p.1, p.6)",
+    "Metric/classifier choice: AUC exists only for Haberman+SVMs (Fig. 2(d)); C4.5 (first classifier) is plotted only for precision (Haberman) and F-value (Satimage) (p.6-7)",
+    "PDF page indices assume 8-page PDF matching printed pp.475-482 (p.6 = printed 480)"
+  ],
+  "notes": "Results are only line plots (Fig. 2 a-d: precision C4.5 Haberman; recall Naive Bayes Satimage; F-value C4.5 Satimage; AUC SVMs Haberman) vs over-sampling percent; not digitised per instructions. Each panel shows a different dataset/classifier/metric combination; no tables of numeric results. Metrics used: precision, recall, F-value (beta=1), AUC. Classifiers: C4.5, Naive Bayes, SVMs. Text claims Safe-Level-SMOTE and SMOTE show similar AUC on Haberman with SVMs (p.6). No supplementary material referenced."
+}

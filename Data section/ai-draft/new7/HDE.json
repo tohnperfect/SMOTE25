@@ -1,0 +1,160 @@
+{
+ "key": "HDE",
+ "pdf_title": "A hybrid data-level ensemble to enable learning from highly imbalanced dataset",
+ "task": "binary",
+ "n_datasets_claimed": 42,
+ "dataset_names": [
+  "yeast2vs4",
+  "yeast05679vs4",
+  "vowel0",
+  "glass016vs2",
+  "glass2",
+  "german",
+  "shuttlec0vsc4",
+  "yeast1458vs7",
+  "ecoli4",
+  "abalone9-18",
+  "madelon",
+  "svmguide3",
+  "glass016vs5",
+  "shuttlec2vsc4",
+  "yeast1289vs7",
+  "glass5",
+  "breast-cancer",
+  "yeast1vs7",
+  "yeast5",
+  "diabetes",
+  "krvsk3vs11",
+  "svmguide1",
+  "ecoli0137vs26",
+  "abalone-17vs78910",
+  "gisette",
+  "yeast6",
+  "australian",
+  "a1a",
+  "mushrooms",
+  "krvsk0vs8",
+  "shuttle2vs5",
+  "kddbufferoverflowvsback",
+  "kddlandvssatan",
+  "krvsk0vs15",
+  "poker8vs6",
+  "poker89vs5",
+  "kddrootkitvsback",
+  "abalone19",
+  "phishing",
+  "skinnonskin",
+  "cod",
+  "ijcnn"
+ ],
+ "sources": [
+  "KEEL",
+  "LibSVM"
+ ],
+ "srcdet": "28 datasets taken from the KEEL repository; 14 taken from the LibSVM website (vowel0, german, svmguide3, breast-cancer, diabetes, svmguide1, gisette, australian, a1a, mushrooms, phishing, skinnonskin, cod, ijcnn), from which the authors randomly removed minority instances to raise IR. Source column of Table 1 gives the repository per dataset.",
+ "crit": "KEEL is 'a repository containing imbalanced datasets that have been constantly used as benchmark datasets in this field'; because 'the highest IR in KEEL is approximately 100', 14 LibSVM datasets were made highly imbalanced 'to evaluate the proposed HD-Ensemble for extreme case', and a pre-experiment confirmed 'significantly different classification rates across different classes' on these 14.",
+ "crit_type": "own reason",
+ "benchmark_inherited_from": "not stated in paper",
+ "origin": [
+  "Natural",
+  "Undersampled"
+ ],
+ "imbalance_creation": "KEEL datasets used as distributed (paper describes no modification). For the 14 LibSVM datasets the authors 'randomly removed some minority instances from each dataset' so all have IR > 9 and 4 have IR > 400; which class is minority for each LibSVM dataset is not stated.",
+ "minority_classes_stated": "no",
+ "modification_declared_where": "data/experimental section",
+ "missing_values": "not stated in paper",
+ "nominal_features": "not stated in paper",
+ "normalisation": "not stated in paper",
+ "duplicates_or_filtering": "Experiment 2 only: cod, gisette and skinnonskin were removed for computational feasibility. No duplicate handling stated.",
+ "split_protocol": "5-fold stratified cross validation repeated 10 times (5 x 10 CV)",
+ "resampling_inside_training_folds": "yes, stated",
+ "characteristics_table": "yes (Table 1)",
+ "characteristics_columns": [
+  "N",
+  "features",
+  "IR",
+  "other"
+ ],
+ "ir_definition": "the ratio of majority instances to minority instances",
+ "ir_print_format": "single ratio",
+ "data_availability": "link given (https://github.com/smallcube/HD-Ensemble)",
+ "results_granularity": "per-dataset",
+ "evidence": [
+  {
+   "field": "task",
+   "page": "159 (printed; PDF page 3)",
+   "quote": "In this study, the concerns are the binary classification tasks, in which there is a majority (negative) class with significant more instances, and a minority (positive) class with much less instances."
+  },
+  {
+   "field": "n_datasets_claimed / sources",
+   "page": "165 (printed; PDF page 9)",
+   "quote": "42 highly imbalanced binary datasets were employed as the benchmark datasets. 28 of them were extracted from KEEL [1], which is a repository containing imbalanced datasets that have been constantly used as benchmark datasets in this field."
+  },
+  {
+   "field": "crit / imbalance_creation",
+   "page": "165 (printed; PDF page 9)",
+   "quote": "However, the highest IR in KEEL is approximately 100. To evaluate the proposed HD-Ensemble for extreme case, we manually created 14 highly imbalanced datasets."
+  },
+  {
+   "field": "sources / origin / imbalance_creation",
+   "page": "165 (printed; PDF page 9)",
+   "quote": "Specifically, 14 datasets were extracted from the LibSVM website,1 and we randomly removed some minority instances from each dataset. In this way, all 14 datasets exhibited high imbalance ratio (IR > 9) and 4 of them exhibited an extremely high imbalance ratio (IR > 400)."
+  },
+  {
+   "field": "crit",
+   "page": "165 (printed; PDF page 9)",
+   "quote": "we conducted a pre-experiment on these 14 datasets with standard learning algorithms, and significantly different classification rates across different classes were detected on all the datasets."
+  },
+  {
+   "field": "data_availability",
+   "page": "165 (printed; PDF page 9)",
+   "quote": "All the 42 datasets adopted in our experiments have been uploaded to GitHub,2 and the source code of HD-Ensemble will be uploaded to the same repository once this paper has been published."
+  },
+  {
+   "field": "data_availability",
+   "page": "165 (printed; PDF page 9)",
+   "quote": "2 https://github.com/smallcube/HD-Ensemble."
+  },
+  {
+   "field": "sources",
+   "page": "165 (printed; PDF page 9)",
+   "quote": "1 https://www.csie.ntu.edu.tw/ cjlin/libsvmtools/datasets/."
+  },
+  {
+   "field": "characteristics_table",
+   "page": "165 (printed; PDF page 9)",
+   "quote": "All the involved datasets are summarized in Table 1, ordered by their increasing IR. One can easily observe that the data-sets exhibit a considerable variety in the number of samples (#Ex, ranging from 129 to 20,034), number of features (#Atts,"
+  },
+  {
+   "field": "characteristics_columns",
+   "page": "166 (printed; PDF page 10)",
+   "quote": "Table 1 Summary of the 42 highly imbalanced datasets. Datasets Abbreviation #Ex #Atts #IR Source"
+  },
+  {
+   "field": "split_protocol",
+   "page": "165 (printed; PDF page 9)",
+   "quote": "each ensemble followed a 5-fold stratified cross validation procedure (5-CV). Some of the ensembles use randomness in their learning process, thus, to eliminate the effect of randomness, the 5-CV procedure was repeated 10 times"
+  },
+  {
+   "field": "resampling_inside_training_folds",
+   "page": "164 (printed; PDF page 8)",
+   "quote": "when constructing the first ensemble member C0, the training set is firstly bootstrapped from the original training set, and then, random undersampling is performed on the bootstrapped dataset to select q% of the majority instances."
+  },
+  {
+   "field": "ir_definition",
+   "page": "158 (printed; PDF page 2)",
+   "quote": "an imbalance ratio (IR, the ratio of majority instances to minority instances) of 9"
+  },
+  {
+   "field": "results_granularity",
+   "page": "165 (printed; PDF page 9)",
+   "quote": "the bold-face type indicates the best performance for each dataset, while the worst performance for each dataset is underlined."
+  },
+  {
+   "field": "duplicates_or_filtering",
+   "page": "173 (printed; PDF page 17)",
+   "quote": "instance number and feature number (i.e., cod, gisette and skinnonskin) were removed from experiment 2."
+  }
+ ],
+ "notes": "Table 1 lists madelon with Source 'KEEL' although madelon is usually a LibSVM/NIPS dataset; Table 1 thus has 28 KEEL and 14 Libsvm rows, matching the text. Table 1 dataset names in lowercase (e.g. 'glass016vs2' abbreviated 'g012', 'glass016vs5' as 'g015'). Group-2 comparisons (Tables 7-9, vs CBIS, SNGEIP, sNED) use results copied from the original papers and list datasets not in Table 1 (e.g. 'Glass6'); those tables are per-dataset on partial subsets. Resampling-in-training-fold is stated at the level of the ensemble training set; the CV link is not explicitly worded. Multiplication sign in '5 x 10 x 40' renders as a garbled glyph in the extracted text."
+}

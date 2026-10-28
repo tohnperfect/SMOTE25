@@ -1,0 +1,486 @@
+{
+ "key": "EasyEnsemble",
+ "classifier": "AdaBoost ensembles with CART weak learners (40 weak classifiers; Easy: T=4, si=10)",
+ "condition": "original data sets (16 UCI), 5 x tenfold stratified CV, each fold repeated 10 times; split into 6 'easy' and 10 'hard' tasks by AdaBoost AUC > / < 0.95",
+ "proposed_column": "Easy (EasyEnsemble)",
+ "smote_column": "SMOTE (SMOTE + AdaBoost, k=5, 40 iterations; SMOTE-NC for nominal attributes)",
+ "metrics": [
+  {
+   "metric": "AUC",
+   "metric_family": "AUC",
+   "table": "Table IV (easy) + Table V (hard)",
+   "page": "PDF page 6 (printed 544) and PDF page 7 (printed 545)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "car",
+     "proposed": ".994",
+     "proposed_std": ".000",
+     "smote": ".995",
+     "smote_std": ".000",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ionosphere",
+     "proposed": ".974",
+     "proposed_std": ".002",
+     "smote": ".978",
+     "smote_std": ".002",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "letter",
+     "proposed": "1.000",
+     "proposed_std": ".000",
+     "smote": "1.000",
+     "smote_std": ".000",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "phoneme",
+     "proposed": ".958",
+     "proposed_std": ".000",
+     "smote": ".964",
+     "smote_std": ".000",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "sat",
+     "proposed": ".947",
+     "proposed_std": ".000",
+     "smote": ".946",
+     "smote_std": ".001",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "wdbc",
+     "proposed": ".993",
+     "proposed_std": ".000",
+     "smote": ".994",
+     "smote_std": ".001",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "abalone",
+     "proposed": ".847",
+     "proposed_std": ".002",
+     "smote": ".831",
+     "smote_std": ".001",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "balance",
+     "proposed": ".633",
+     "proposed_std": ".008",
+     "smote": ".617",
+     "smote_std": ".015",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "cmc",
+     "proposed": ".704",
+     "proposed_std": ".008",
+     "smote": ".680",
+     "smote_std": ".008",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "haberman",
+     "proposed": ".668",
+     "proposed_std": ".011",
+     "smote": ".647",
+     "smote_std": ".017",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "housing",
+     "proposed": ".825",
+     "proposed_std": ".008",
+     "smote": ".816",
+     "smote_std": ".008",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "mf-morph",
+     "proposed": ".918",
+     "proposed_std": ".002",
+     "smote": ".912",
+     "smote_std": ".001",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "mf-zernike",
+     "proposed": ".904",
+     "proposed_std": ".001",
+     "smote": ".862",
+     "smote_std": ".004",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "pima",
+     "proposed": ".809",
+     "proposed_std": ".004",
+     "smote": ".792",
+     "smote_std": ".003",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "vehicle",
+     "proposed": ".859",
+     "proposed_std": ".004",
+     "smote": ".858",
+     "smote_std": ".004",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "wpbc",
+     "proposed": ".707",
+     "proposed_std": ".009",
+     "smote": ".709",
+     "smote_std": ".004",
+     "marks": ""
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "avg. (easy tasks)",
+      "proposed": ".978±.020",
+      "smote": ".979±.019"
+     },
+     {
+      "label": "avg. (hard tasks)",
+      "proposed": ".787±.096",
+      "smote": ".772±.097"
+     }
+    ],
+    "wtl_vs_smote": "Table VI (t-test, significance level 0.05; win-tie-lose of row method vs column method): upper triangle (6 easy tasks) row SMOTE vs column Easy = 4-1-1; lower triangle (10 hard tasks) row Easy vs column SMOTE = 8-2-0",
+    "stat_test": "Table VI: t-test with significance level at 0.05, per-data-set win-tie-lose counts (see wtl_vs_smote)"
+   }
+  },
+  {
+   "metric": "F-measure",
+   "metric_family": "F-measure",
+   "table": "Table VII (easy) + Table VIII (hard)",
+   "page": "PDF page 7 (printed 545) and PDF page 8 (printed 546)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "car",
+     "proposed": ".880",
+     "proposed_std": ".002",
+     "smote": ".930",
+     "smote_std": ".004",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ionosphere",
+     "proposed": ".901",
+     "proposed_std": ".005",
+     "smote": ".907",
+     "smote_std": ".003",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "letter",
+     "proposed": ".910",
+     "proposed_std": ".002",
+     "smote": ".954",
+     "smote_std": ".002",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "phoneme",
+     "proposed": ".821",
+     "proposed_std": ".002",
+     "smote": ".847",
+     "smote_std": ".002",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "sat",
+     "proposed": ".554",
+     "proposed_std": ".001",
+     "smote": ".610",
+     "smote_std": ".003",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "wdbc",
+     "proposed": ".951",
+     "proposed_std": ".004",
+     "smote": ".957",
+     "smote_std": ".003",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "abalone",
+     "proposed": ".382",
+     "proposed_std": ".003",
+     "smote": ".379",
+     "smote_std": ".005",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "balance",
+     "proposed": ".184",
+     "proposed_std": ".007",
+     "smote": ".149",
+     "smote_std": ".011",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "cmc",
+     "proposed": ".454",
+     "proposed_std": ".008",
+     "smote": ".421",
+     "smote_std": ".007",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "haberman",
+     "proposed": ".466",
+     "proposed_std": ".013",
+     "smote": ".405",
+     "smote_std": ".016",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "housing",
+     "proposed": ".543",
+     "proposed_std": ".007",
+     "smote": ".532",
+     "smote_std": ".017",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "mf-morph",
+     "proposed": ".624",
+     "proposed_std": ".002",
+     "smote": ".560",
+     "smote_std": ".005",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "mf-zernike",
+     "proposed": ".564",
+     "proposed_std": ".002",
+     "smote": ".538",
+     "smote_std": ".007",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "pima",
+     "proposed": ".660",
+     "proposed_std": ".005",
+     "smote": ".627",
+     "smote_std": ".004",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "vehicle",
+     "proposed": ".638",
+     "proposed_std": ".007",
+     "smote": ".615",
+     "smote_std": ".006",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "wpbc",
+     "proposed": ".452",
+     "proposed_std": ".014",
+     "smote": ".459",
+     "smote_std": ".009",
+     "marks": ""
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "avg. (easy tasks)",
+      "proposed": ".836±.132",
+      "smote": ".867±.121"
+     },
+     {
+      "label": "avg. (hard tasks)",
+      "proposed": ".497±.136",
+      "smote": ".468±.134"
+     }
+    ],
+    "wtl_vs_smote": "Table IX (t-test, significance level 0.05; win-tie-lose of row method vs column method): upper triangle (6 easy tasks) row SMOTE vs column Easy = 6-0-0; lower triangle (10 hard tasks) row Easy vs column SMOTE = 8-2-0",
+    "stat_test": "Table IX: t-test with significance level at 0.05, per-data-set win-tie-lose counts (see wtl_vs_smote)"
+   }
+  },
+  {
+   "metric": "G-mean",
+   "metric_family": "G-mean",
+   "table": "Table X (easy) + Table XI (hard)",
+   "page": "PDF page 8 (printed 546) and PDF page 9 (printed 547)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "car",
+     "proposed": ".958",
+     "proposed_std": ".001",
+     "smote": ".969",
+     "smote_std": ".002",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "ionosphere",
+     "proposed": ".919",
+     "proposed_std": ".003",
+     "smote": ".922",
+     "smote_std": ".002",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "letter",
+     "proposed": ".995",
+     "proposed_std": ".000",
+     "smote": ".995",
+     "smote_std": ".001",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "phoneme",
+     "proposed": ".892",
+     "proposed_std": ".001",
+     "smote": ".899",
+     "smote_std": ".001",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "sat",
+     "proposed": ".876",
+     "proposed_std": ".001",
+     "smote": ".862",
+     "smote_std": ".003",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "wdbc",
+     "proposed": ".962",
+     "proposed_std": ".003",
+     "smote": ".964",
+     "smote_std": ".003",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "abalone",
+     "proposed": ".785",
+     "proposed_std": ".004",
+     "smote": ".742",
+     "smote_std": ".006",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "balance",
+     "proposed": ".577",
+     "proposed_std": ".015",
+     "smote": ".465",
+     "smote_std": ".027",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "cmc",
+     "proposed": ".646",
+     "proposed_std": ".007",
+     "smote": ".605",
+     "smote_std": ".006",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "haberman",
+     "proposed": ".615",
+     "proposed_std": ".012",
+     "smote": ".562",
+     "smote_std": ".016",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "housing",
+     "proposed": ".739",
+     "proposed_std": ".006",
+     "smote": ".710",
+     "smote_std": ".014",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "mf-morph",
+     "proposed": ".914",
+     "proposed_std": ".001",
+     "smote": ".841",
+     "smote_std": ".006",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "mf-zernike",
+     "proposed": ".869",
+     "proposed_std": ".003",
+     "smote": ".813",
+     "smote_std": ".007",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "pima",
+     "proposed": ".734",
+     "proposed_std": ".004",
+     "smote": ".708",
+     "smote_std": ".003",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "vehicle",
+     "proposed": ".781",
+     "proposed_std": ".005",
+     "smote": ".743",
+     "smote_std": ".005",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "wpbc",
+     "proposed": ".623",
+     "proposed_std": ".014",
+     "smote": ".610",
+     "smote_std": ".009",
+     "marks": ""
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "avg. (easy tasks)",
+      "proposed": ".934±.042",
+      "smote": ".935±.046"
+     },
+     {
+      "label": "avg. (hard tasks)",
+      "proposed": ".728±.107",
+      "smote": ".680±.111"
+     }
+    ],
+    "wtl_vs_smote": "Table XII (t-test, significance level 0.05; win-tie-lose of row method vs column method): upper triangle (6 easy tasks) row SMOTE vs column Easy = 2-3-1; lower triangle (10 hard tasks) row Easy vs column SMOTE = 10-0-0",
+    "stat_test": "Table XII: t-test with significance level at 0.05, per-data-set win-tie-lose counts (see wtl_vs_smote)"
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [],
+ "metrics_without_smote": [
+  {
+   "metric": "AUC, stacking vs original ensemble strategy for Easy/Cascade",
+   "table": "Table XIII"
+  },
+  {
+   "metric": "Running time (s) (not a performance metric; includes SMOTE)",
+   "table": "Table III"
+  }
+ ],
+ "notes": "All tables are raster images; values read from 300-dpi renders. Values printed as mean ± std without leading zero (e.g. .979 ± .019); copied as printed. No bold marks per row in Tables IV-XII. Win-tie-lose from t-test tables: note orientation - easy-task counts are in the upper triangle (row SMOTE, column Easy, i.e. counted from SMOTE's perspective), hard-task counts in the lower triangle (row Easy, column SMOTE)."
+}

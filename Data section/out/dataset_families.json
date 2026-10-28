@@ -1,0 +1,782 @@
+{
+ "rule": "Toon T1, 28 Oct 2026 (see docstring of build/family_rule.py)",
+ "names": 771,
+ "datasets_after_rule1": 680,
+ "families": 459,
+ "subset_names": 296,
+ "merged_by_rule1": [
+  [
+   "abalone 19",
+   "abalone19"
+  ],
+  [
+   "abalone-3 vs 11",
+   "abalone3vs11"
+  ],
+  [
+   "abalone9-18",
+   "abalone918"
+  ],
+  [
+   "breast cancer",
+   "breast-cancer",
+   "breastcancer"
+  ],
+  [
+   "breast tissue",
+   "breast-tissue",
+   "breasttissue"
+  ],
+  [
+   "car evaluation",
+   "carevaluation"
+  ],
+  [
+   "cifar-10",
+   "cifar10"
+  ],
+  [
+   "cleveland-0 vs 4",
+   "cleveland0vs4"
+  ],
+  [
+   "connect-4",
+   "connect4"
+  ],
+  [
+   "cover type",
+   "covertype"
+  ],
+  [
+   "dry bean",
+   "dry-bean"
+  ],
+  [
+   "e-state",
+   "estate"
+  ],
+  [
+   "e. coli",
+   "e.coli",
+   "ecoli"
+  ],
+  [
+   "ecoli-0 vs 1",
+   "ecoli0vs1"
+  ],
+  [
+   "ecoli-0-1 vs 2-3-5",
+   "ecoli01vs235"
+  ],
+  [
+   "ecoli-0-1 vs 5",
+   "ecoli01vs5"
+  ],
+  [
+   "ecoli-0-1-3-7 vs 2-6",
+   "ecoli0137vs26"
+  ],
+  [
+   "ecoli-0-1-4-6 vs 5",
+   "ecoli0146vs5"
+  ],
+  [
+   "ecoli-0-1-4-7 vs 2-3-5-6",
+   "ecoli0147vs2356"
+  ],
+  [
+   "ecoli-0-1-4-7 vs 5-6",
+   "ecoli0147vs56"
+  ],
+  [
+   "ecoli-0-2-3-4 vs 5",
+   "ecoli0234vs5"
+  ],
+  [
+   "ecoli-0-2-6-7 vs 3-5",
+   "ecoli0267vs35"
+  ],
+  [
+   "ecoli-0-3-4 vs 5",
+   "ecoli034vs5"
+  ],
+  [
+   "ecoli-0-3-4-6 vs 5",
+   "ecoli0346vs5"
+  ],
+  [
+   "ecoli-0-3-4-7 vs 5-6",
+   "ecoli0347vs56"
+  ],
+  [
+   "ecoli-0-4-6 vs 5",
+   "ecoli046vs5"
+  ],
+  [
+   "ecoli-0-6-7 vs 3-5",
+   "ecoli067vs35"
+  ],
+  [
+   "ecoli-0-6-7 vs 5",
+   "ecoli067vs5"
+  ],
+  [
+   "german-numer",
+   "german.numer"
+  ],
+  [
+   "glass-0-1-2-3 vs 4-5-6",
+   "glass0123vs456"
+  ],
+  [
+   "glass-0-1-4-6 vs 2",
+   "glass0146vs2"
+  ],
+  [
+   "glass-0-1-5 vs 2",
+   "glass015vs2"
+  ],
+  [
+   "glass-0-1-6 vs 2",
+   "glass016vs2"
+  ],
+  [
+   "glass-0-1-6 vs 5",
+   "glass016vs5"
+  ],
+  [
+   "glass-0-4 vs 5",
+   "glass04vs5"
+  ],
+  [
+   "glass-0-6 vs 5",
+   "glass06vs5"
+  ],
+  [
+   "hayes roth",
+   "hayes-roth",
+   "hayesroth"
+  ],
+  [
+   "led7digit-0-2-4-5-6-7-8-9 vs 1",
+   "led7digit02456789vs1"
+  ],
+  [
+   "letter recognition",
+   "letter-recognition"
+  ],
+  [
+   "mf zernike",
+   "mf-zernike"
+  ],
+  [
+   "new thyroid",
+   "new-thyroid",
+   "newthyroid"
+  ],
+  [
+   "new thyroid 1",
+   "new-thyroid1",
+   "newthyroid1"
+  ],
+  [
+   "new thyroid 2",
+   "new-thyroid2",
+   "newthyroid2"
+  ],
+  [
+   "page blocks",
+   "page-blocks",
+   "pageblock",
+   "pageblocks"
+  ],
+  [
+   "page blocks 0",
+   "page-block0",
+   "page-blocks0",
+   "pageblocks0"
+  ],
+  [
+   "page blocks 1 3",
+   "page-blocks-1-3"
+  ],
+  [
+   "page-blocks-1-3 vs 4",
+   "pageblocks13vs4"
+  ],
+  [
+   "pen digits",
+   "pendigits"
+  ],
+  [
+   "plates faults",
+   "platesfaults"
+  ],
+  [
+   "poker-8 vs 6",
+   "poker8vs6"
+  ],
+  [
+   "poker-9 vs 7",
+   "poker9vs7"
+  ],
+  [
+   "satimage 4",
+   "satimage4"
+  ],
+  [
+   "segment 2",
+   "segment2"
+  ],
+  [
+   "segment 6",
+   "segment6"
+  ],
+  [
+   "shuttle-c0-vs-c4",
+   "shuttlec0vsc4"
+  ],
+  [
+   "shuttle-c2-vs-c4",
+   "shuttle-c2vsc4",
+   "shuttlec2vsc4"
+  ],
+  [
+   "user knowledge-modelling",
+   "user-knowledge-modelling"
+  ],
+  [
+   "vertebral-column",
+   "vertebralcolumn"
+  ],
+  [
+   "wine quality",
+   "winequality"
+  ],
+  [
+   "wine quality red",
+   "wine-quality-red",
+   "winequality-red"
+  ],
+  [
+   "wine quality-white",
+   "wine-quality-white",
+   "winequality-white"
+  ],
+  [
+   "winequality-red-4",
+   "winequalityred4"
+  ],
+  [
+   "winequality-white-3 vs 7",
+   "winequalitywhite3vs7"
+  ],
+  [
+   "yeast 1",
+   "yeast1"
+  ],
+  [
+   "yeast 3",
+   "yeast3"
+  ],
+  [
+   "yeast 4",
+   "yeast4"
+  ],
+  [
+   "yeast 5",
+   "yeast5"
+  ],
+  [
+   "yeast 6",
+   "yeast6"
+  ],
+  [
+   "yeast-0-2-5-6 vs 3-7-8-9",
+   "yeast0256vs3789"
+  ],
+  [
+   "yeast-0-2-5-7-9 vs 3-6-8",
+   "yeast02579vs368"
+  ],
+  [
+   "yeast-0-3-5-9 vs 7-8",
+   "yeast0359vs78"
+  ],
+  [
+   "yeast-0-5-6-7-9 vs 4",
+   "yeast05679vs4"
+  ],
+  [
+   "yeast-1 vs 7",
+   "yeast1vs7"
+  ],
+  [
+   "yeast-1-2-8-9 vs 7",
+   "yeast1289vs7"
+  ],
+  [
+   "yeast-1-4-5-8 vs 7",
+   "yeast1458vs7"
+  ],
+  [
+   "yeast-2 vs 4",
+   "yeast2vs4"
+  ],
+  [
+   "yeast-2 vs 8",
+   "yeast2vs8"
+  ]
+ ],
+ "flags": {
+  "same_source_composition_differs": 8,
+  "prefix_without_split_marker": 84,
+  "separate_different_dataset": 12,
+  "stem_family": 54
+ },
+ "flagged": {
+  "same_source_composition_differs": [
+   "abalone10",
+   "abalone8",
+   "oil1",
+   "oil2",
+   "segment5",
+   "vowel4",
+   "vowel5",
+   "vowel7"
+  ],
+  "separate_different_dataset": [
+   "car1",
+   "car2",
+   "car3",
+   "car4",
+   "drug200",
+   "kr-vs-k-one vs fifteen",
+   "kr-vs-k-three vs eleven",
+   "kr-vs-k-zero-one vs draw",
+   "krvsk0vs15",
+   "krvsk0vs8",
+   "krvsk3vs11",
+   "wisconsin5"
+  ],
+  "stem_family": [
+   "aids 15000",
+   "aids 5000",
+   "aids 50000",
+   "art1",
+   "art2",
+   "art3",
+   "art4",
+   "artificial 0.3 5",
+   "artificial 0.5 10",
+   "artificial 0.5 2.5",
+   "artificial 0.5 5",
+   "artificial 1 5",
+   "bhat1",
+   "bhat2",
+   "bhat3",
+   "bhat4",
+   "camel-1.0",
+   "camel-1.4",
+   "camel-1.6",
+   "clover-0",
+   "clover-30",
+   "clover-50",
+   "clover-70",
+   "dsie10d20",
+   "dsie30d40",
+   "dsie50d60",
+   "imagenet12",
+   "imagenet8",
+   "imagenet9",
+   "mandelon 1",
+   "mandelon 2",
+   "paw-0",
+   "paw-30",
+   "paw-50",
+   "paw-70",
+   "simulated1",
+   "simulated10",
+   "simulated2",
+   "simulated3",
+   "simulated4",
+   "simulated5",
+   "simulated6",
+   "simulated7",
+   "simulated8",
+   "simulated9",
+   "subclus-0",
+   "subclus-30",
+   "subclus-50",
+   "subclus-70",
+   "svmguide1",
+   "svmguide2",
+   "svmguide3",
+   "xalan-2.4",
+   "xalan-2.7"
+  ],
+  "prefix_without_split_marker": [
+   "australian",
+   "balance-scale",
+   "bank full",
+   "bank small",
+   "bankmarket",
+   "banknote",
+   "bankruptcy",
+   "breast can.",
+   "breast cancer",
+   "breast tissue",
+   "breast-cancer",
+   "breast-cancer-original",
+   "breast-cancer-wisconsin",
+   "breast-tissue",
+   "breast-w",
+   "breast-y",
+   "breastc",
+   "breastcancer",
+   "breasttissue",
+   "census-income database",
+   "circles",
+   "climatesim",
+   "clover-bc",
+   "contraceptive method choice",
+   "contraceptivel",
+   "credit fraud",
+   "credit-g",
+   "creditapproval",
+   "dry beans",
+   "flare-f",
+   "gender by name",
+   "german-numer",
+   "german.numer",
+   "glass identification",
+   "gridr",
+   "heart failure",
+   "heart-v",
+   "letter img",
+   "letter recognition",
+   "letter-a",
+   "letter-recognition",
+   "letter-vowel",
+   "libras",
+   "liver disorders",
+   "mushrooms",
+   "new thyroid",
+   "new-thyroid",
+   "newthyroid",
+   "online retail",
+   "online shoppers",
+   "page blocks",
+   "page-blocks",
+   "pageblock",
+   "pageblocks",
+   "parkinsons telemonitoring",
+   "paw-bc",
+   "phishingdata",
+   "pima indian diabetes",
+   "pima-diabetes",
+   "poker hand",
+   "segmentation",
+   "skinnonskin",
+   "solarflaref",
+   "spectf",
+   "splice-ei",
+   "splice-ie",
+   "subcl-bc",
+   "texture l",
+   "texture s",
+   "thyroid sick",
+   "user knowledge modeling",
+   "user knowledge-modelling",
+   "user-knowledge-modelling",
+   "vertebral-column",
+   "vertebralcolumn",
+   "wine quality",
+   "wine quality red",
+   "wine quality-white",
+   "wine-quality-red",
+   "wine-quality-white",
+   "wine-red",
+   "winequality",
+   "winequality-red",
+   "winequality-white"
+  ]
+ },
+ "families_by_papers": [
+  [
+   "ecoli",
+   42
+  ],
+  [
+   "yeast",
+   39
+  ],
+  [
+   "glass",
+   35
+  ],
+  [
+   "pageblocks",
+   34
+  ],
+  [
+   "vehicle",
+   30
+  ],
+  [
+   "newthyroid",
+   29
+  ],
+  [
+   "abalone",
+   26
+  ],
+  [
+   "pima",
+   21
+  ],
+  [
+   "cleveland",
+   20
+  ],
+  [
+   "haberman",
+   20
+  ],
+  [
+   "vowel",
+   19
+  ],
+  [
+   "balance",
+   16
+  ],
+  [
+   "satimage",
+   16
+  ],
+  [
+   "wine",
+   16
+  ],
+  [
+   "dermatology",
+   15
+  ],
+  [
+   "segment",
+   15
+  ],
+  [
+   "shuttle",
+   15
+  ],
+  [
+   "car",
+   14
+  ],
+  [
+   "hayesroth",
+   14
+  ],
+  [
+   "winequalityred",
+   14
+  ],
+  [
+   "contraceptive",
+   13
+  ],
+  [
+   "led",
+   12
+  ],
+  [
+   "thyroid",
+   12
+  ],
+  [
+   "breasttissue",
+   10
+  ],
+  [
+   "zoo",
+   10
+  ],
+  [
+   "flare",
+   9
+  ],
+  [
+   "letter",
+   9
+  ],
+  [
+   "lymphography",
+   9
+  ],
+  [
+   "iris",
+   8
+  ],
+  [
+   "winequalitywhite",
+   8
+  ],
+  [
+   "nursery",
+   7
+  ],
+  [
+   "phoneme",
+   7
+  ],
+  [
+   "poker",
+   7
+  ],
+  [
+   "splice",
+   7
+  ],
+  [
+   "winequality",
+   7
+  ],
+  [
+   "automobile",
+   6
+  ],
+  [
+   "pendigits",
+   6
+  ],
+  [
+   "vertebralcolumn",
+   6
+  ],
+  [
+   "cmc",
+   5
+  ],
+  [
+   "german",
+   5
+  ]
+ ],
+ "feature_mismatch_decisions": {
+  "abalone8": {
+   "action": "join",
+   "family": "abalone",
+   "basis": "SMOM: UCI abalone subset, 10 features after encoding sex"
+  },
+  "abalone10": {
+   "action": "join",
+   "family": "abalone",
+   "basis": "SMOM: UCI abalone subset, 10 features after encoding sex"
+  },
+  "oil1": {
+   "action": "join",
+   "family": "oil",
+   "basis": "OSS (Kubat & Matwin): oil-spill data, 44 of the attributes"
+  },
+  "oil2": {
+   "action": "join",
+   "family": "oil",
+   "basis": "OSS (Kubat & Matwin): oil-spill data, 39 of the attributes"
+  },
+  "segment5": {
+   "action": "join",
+   "family": "segment",
+   "basis": "RUSBoost: UCI segment, 2,310 instances, 20 features printed"
+  },
+  "vowel4": {
+   "action": "join",
+   "family": "vowel",
+   "basis": "OREM-M: vowel, 10 features (UCI version; KEEL vowel0 has 13)"
+  },
+  "vowel5": {
+   "action": "join",
+   "family": "vowel",
+   "basis": "OREM-M/SMOM: UCI vowel 990 instances, 10 features"
+  },
+  "vowel7": {
+   "action": "join",
+   "family": "vowel",
+   "basis": "SMOM: UCI vowel 990 instances, 10 features"
+  },
+  "car1": {
+   "action": "separate",
+   "family": "car1",
+   "basis": "FW-SMOTE: microarray data, 174 instances, 9,182 features; not UCI car"
+  },
+  "car2": {
+   "action": "separate",
+   "family": "car2",
+   "basis": "FW-SMOTE: microarray data, 174 instances, 9,182 features; not UCI car"
+  },
+  "car3": {
+   "action": "separate",
+   "family": "car3",
+   "basis": "FW-SMOTE: microarray data (174, 9,182); RUSBoost's car3 (1,728, 7) is UCI car but shares the name"
+  },
+  "car4": {
+   "action": "separate",
+   "family": "car4",
+   "basis": "FW-SMOTE: microarray data, 174 instances, 9,182 features; not UCI car"
+  },
+  "drug200": {
+   "action": "separate",
+   "family": "drug200",
+   "basis": "Loyalty-SMOTE: drug200 (413, 5 features), a different set from drug consumption (1,886, 13)"
+  },
+  "wisconsin5": {
+   "action": "separate",
+   "family": "wisconsin5",
+   "basis": "OREM-M: 32 features = Wisconsin diagnostic (WDBC), not the 9-feature Wisconsin original"
+  },
+  "kr-vs-k-one vs fifteen": {
+   "action": "separate",
+   "family": "krvskonevsfifteen",
+   "basis": "KEEL chess King-Rook vs King split (6 features); not the 15-feature 'kr' of OSS; family = krvsk (stem)"
+  },
+  "kr-vs-k-three vs eleven": {
+   "action": "separate",
+   "family": "krvskthreevseleven",
+   "basis": "KEEL chess King-Rook vs King split (6 features); not the 15-feature 'kr' of OSS; family = krvsk (stem)"
+  },
+  "kr-vs-k-zero-one vs draw": {
+   "action": "separate",
+   "family": "krvskzeroonevsdraw",
+   "basis": "KEEL chess King-Rook vs King split (6 features); not the 15-feature 'kr' of OSS; family = krvsk (stem)"
+  },
+  "krvsk0vs15": {
+   "action": "separate",
+   "family": "krvsk0vs15",
+   "basis": "KEEL chess King-Rook vs King split (6 features); not the 15-feature 'kr' of OSS; family = krvsk (stem)"
+  },
+  "krvsk0vs8": {
+   "action": "separate",
+   "family": "krvsk0vs8",
+   "basis": "KEEL chess King-Rook vs King split (6 features); not the 15-feature 'kr' of OSS; family = krvsk (stem)"
+  },
+  "krvsk3vs11": {
+   "action": "separate",
+   "family": "krvsk3vs11",
+   "basis": "KEEL chess King-Rook vs King split (6 features); not the 15-feature 'kr' of OSS; family = krvsk (stem)"
+  }
+ },
+ "r3_comparison": {
+  "this_rule": {
+   "yeast": 39,
+   "ecoli": 42,
+   "glass": 35
+  },
+  "r3_prefix": {
+   "yeast": 39,
+   "ecoli": 39,
+   "glass": 36
+  },
+  "note": "ecoli +3: 'e. coli'/'e.coli' merged by rule 1; glass -1: 'glass identification' not merged (rule 3)"
+ }
+}

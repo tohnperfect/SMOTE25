@@ -1,0 +1,44 @@
+{
+ "_about": "ชนิดข้อมูลรายแถวของ pilot outcome ให้โดย Claude 18 ต.ค. 2026 จากข้อความใน papers.json / new7 และความรู้เรื่อง repository (ไม่ได้เปิด paper ใหม่) ai_draft ต้องตรวจ",
+ "_categories": {
+  "Original": "ใช้ตามที่แจกมา และเป็นสองคลาสหรือหลายคลาสโดยกำเนิด ผู้เขียนไม่ได้เลือกคลาสเอง",
+  "Repository-defined": "repository เป็นผู้ binarize ไว้แล้ว (KEEL หรือ imbalanced-learn) ผู้เขียนใช้ตามนั้น ขึ้นกับ decisions-pending เรื่องที่ 2",
+  "Modified": "ผู้เขียนเลือกคลาส ตั้ง threshold หรือเลือกคลาสย่อยเอง",
+  "Synthetic": "ผู้เขียนสร้างข้อมูลเอง"
+ },
+ "rows": {
+  "ADASYN": {
+   "Vehicle": ["Modified", "papers.json prep: Vehicle Van vs rest"],
+   "Pima Indian Diabetes": ["Original", "สองคลาสโดยกำเนิด"],
+   "Vowel recognition": ["Modified", "papers.json prep: Vowel first vowel vs rest"],
+   "Ionosphere": ["Original", "สองคลาสโดยกำเนิด (bad radar เป็น minority)"],
+   "Abalone": ["Modified", "papers.json prep: Abalone c18 vs c9 เลือกสองคลาสจาก 29 ตาม DataBoost-IM"]
+  },
+  "MC-CCR": {"*": ["Original", "papers.json srcdet: ทั้ง 20 ชุดจาก KEEL multiclass ใช้ตามที่แจก ไม่มีการเลือกคลาส"]},
+  "GOIO": {
+   "default": ["Original", "#T = minority, UCI สองคลาสโดยกำเนิด"],
+   "shoppers": ["Original", "#T = minority, UCI สองคลาสโดยกำเนิด"],
+   "bank_full": ["Original", "#T = minority, UCI สองคลาสโดยกำเนิด"],
+   "bank_small": ["Original", "#T = minority, UCI bank ฉบับย่อ"],
+   "taiwanses": ["Original", "#T = minority, UCI สองคลาสโดยกำเนิด (สะกดตามที่พิมพ์)"],
+   "bankruptcy": ["Original", "#T = minority, สองคลาสโดยกำเนิด"],
+   "sick_euthyroid": ["Repository-defined", "ชุดใน imbalanced-learn"],
+   "thyroid_sick": ["Repository-defined", "ชุดใน imbalanced-learn"],
+   "mammography": ["Repository-defined", "ชุดใน imbalanced-learn"],
+   "optical_digits": ["Repository-defined", "#T = 8 ตรงกับนิยามของ imbalanced-learn"],
+   "scene": ["Repository-defined", "#T >= 1 ตรงกับนิยามของ imbalanced-learn"],
+   "wine_quality": ["Repository-defined", "#T <= 4 ตรงกับนิยามของ imbalanced-learn"],
+   "abalone_15": ["Modified", "#T >= 15 ผู้เขียนตั้ง threshold เอง (imbalanced-learn ใช้ abalone_19)"],
+   "abalone_6": ["Modified", "#T พิมพ์ว่า <= 15 ไม่ตรงกับชื่อ ผู้เขียนตั้ง threshold เอง"],
+   "avila_0vs5": ["Modified", "ผู้เขียนเลือกคลาส 0 vs 5"],
+   "avila_0vs6": ["Modified", "ผู้เขียนเลือกคลาส 0 vs 6"],
+   "avila_0vs7": ["Modified", "ผู้เขียนเลือกคลาส 0 vs 7"],
+   "page-blocks_0vs3": ["Modified", "ผู้เขียนเลือกคลาส 0 vs 3"],
+   "artificial_0.5_10": ["Synthetic", "Gaussian สองชุด ตาม Table II"],
+   "artificial_0.3_5": ["Synthetic", "Gaussian สองชุด ตาม Table II"],
+   "artificial_0.5_5": ["Synthetic", "Gaussian สองชุด ตาม Table II"],
+   "artificial_1_5": ["Synthetic", "Gaussian สองชุด ตาม Table II"],
+   "artificial_0.5_2.5": ["Synthetic", "Gaussian สองชุด ตาม Table II"]
+  }
+ }
+}

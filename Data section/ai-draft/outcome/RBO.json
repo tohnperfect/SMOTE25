@@ -1,0 +1,27 @@
+{
+ "key": "RBO",
+ "smote_in_baselines": "yes",
+ "smote_name_as_printed": "SMOTE",
+ "baselines_all": ["Base", "SMOTE", "ADASYN", "Bord", "SMOTE+TL", "SMOTE+ENN", "NCL"],
+ "results_tables": [
+  {"table": "Table 2", "page": "PDF p.9 (journal p.27)", "metric": "Precision, Recall, F-measure, AUC, G-mean (average Friedman ranks, no added noise)", "classifier": "CART, k-NN, SVM, NB", "granularity": "ranking only", "is_image": false},
+  {"table": "Table 3", "page": "PDF p.9 (journal p.27)", "metric": "Precision, Recall, F-measure, AUC, G-mean (average ranks, label noise 0.00-0.20)", "classifier": "CART", "granularity": "ranking only", "is_image": false},
+  {"table": "Table 4", "page": "PDF p.10 (journal p.28)", "metric": "same five metrics (average ranks, label noise)", "classifier": "k-NN", "granularity": "ranking only", "is_image": false},
+  {"table": "Table 5", "page": "PDF p.10 (journal p.28)", "metric": "same five metrics (average ranks, label noise)", "classifier": "SVM", "granularity": "ranking only", "is_image": false},
+  {"table": "Table 6", "page": "PDF p.11 (journal p.29)", "metric": "same five metrics (average ranks, label noise)", "classifier": "NB", "granularity": "ranking only", "is_image": false},
+  {"table": "Table 7", "page": "PDF p.11 (journal p.29)", "metric": "same five metrics (average ranks, feature noise 0.0-0.5)", "classifier": "CART", "granularity": "ranking only", "is_image": false},
+  {"table": "Table 8", "page": "PDF p.12 (journal p.30)", "metric": "same five metrics (average ranks, feature noise)", "classifier": "k-NN", "granularity": "ranking only", "is_image": false},
+  {"table": "Table 9", "page": "PDF p.12 (journal p.30)", "metric": "same five metrics (average ranks, feature noise)", "classifier": "SVM", "granularity": "ranking only", "is_image": false},
+  {"table": "Table 10", "page": "PDF p.13 (journal p.31)", "metric": "same five metrics (average ranks, feature noise)", "classifier": "NB", "granularity": "ranking only", "is_image": false}
+ ],
+ "chosen": {"table": "Table 2", "page": "PDF p.9 (journal p.27)", "metric": "G-mean (average rank over 24 datasets)", "classifier": "CART", "condition": "baseline case, no noise added (0% label/feature noise)", "higher_is_better": false, "why_this_choice": "No per-dataset table exists in the paper; rule 3 G-mean chosen from the ranking table; rule 4 abstract names no classifier so first reported (CART); rule 5 no-noise condition. higher_is_better=false inferred from bold marking lowest ranks and text 'highest average rank' for NB where RBO has lowest value; ranks are 1=best."},
+ "rows": [],
+ "summary_rows": [
+  {"label": "Avg rank (G-mean, CART, no noise, Table 2)", "proposed": "5.1667", "smote": "4.1667"},
+  {"label": "Avg rank (AUC, CART, no noise, Table 2)", "proposed": "5.0000", "smote": "4.0417"},
+  {"label": "Avg rank (F-measure, CART, no noise, Table 2)", "proposed": "4.1250", "smote": "5.0000"}
+ ],
+ "stat_test": "Friedman test average ranks; Shaffer's post-hoc test at 0.05 comparing RBO vs each reference method (subscript +/- in tables)",
+ "win_claim": {"quote": "Experimental results on diverse set of benchmark datasets with and without noise proved that our RBO algorithm could be an useful alternative for SMOTE-based solutions, especially when dealing with complex data distributions.", "page": "PDF p.14 (journal p.32), Section 6 Conclusions"},
+ "notes": "No per-dataset results in the paper: all results tables (2-10) are average rankings over 24 KEEL datasets (final analysis, Table 1 bottom; 10 others used only for preliminary parameter study). Complete per-dataset results stated to be at https://github.com/michalkoziarski/RBO (not read). Table 2 page rendered and checked visually; text extraction matched. In Table 2 CART G-mean, best (lowest) rank printed bold is ADASYN 2.9167 with '-' subscript (significantly better than RBO); SMOTE G-mean rank for CART has no significance mark. G-mean ranks for other classifiers (Table 2): k-NN RBO 4.9167 / SMOTE 2.5000(-, bold); SVM RBO 4.0833 / SMOTE 3.7500 (ADASYN 2.6667 bold); NB RBO 3.0000 (bold) / SMOTE 4.3750. Table 3 level 0.00 row repeats Table 2 CART values. Other conditions: label noise {0.05,0.1,0.15,0.20} (Tables 3-6), feature noise {0.1..0.5} (Tables 7-10). Text extraction rendered zeros as '4.0 0 0 0' etc.; normalized to printed '4.0000'."
+}

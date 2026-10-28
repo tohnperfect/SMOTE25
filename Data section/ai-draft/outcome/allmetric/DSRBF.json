@@ -1,0 +1,279 @@
+{
+ "key": "DSRBF",
+ "classifier": "DSRBF: RBFNN trained by memetic algorithm; SmoteOS: MLP trained by RProp (CSNN package) - classifiers differ",
+ "condition": "original datasets, 10-fold CV x10 repetitions (Saureus4: fixed split, 30 runs)",
+ "proposed_column": "DSRBF",
+ "smote_column": "SmoteOS",
+ "metrics": [
+  {
+   "metric": "CG (%) accuracy, generalization",
+   "metric_family": "accuracy",
+   "table": "Table 6",
+   "page": "PDF page 10 (printed 1830)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": true,
+   "rows": [
+    {
+     "dataset_as_printed": "Hepatitis",
+     "proposed": "83.30",
+     "proposed_std": "7.44",
+     "smote": "80.05",
+     "smote_std": "8.39",
+     "marks": "DSRBF bold"
+    },
+    {
+     "dataset_as_printed": "BreastC",
+     "proposed": "67.53",
+     "proposed_std": "7.74",
+     "smote": "63.26",
+     "smote_std": "8.78",
+     "marks": "DSRBF bold"
+    },
+    {
+     "dataset_as_printed": "Haberman",
+     "proposed": "69.48",
+     "proposed_std": "6.90",
+     "smote": "61.56",
+     "smote_std": "14.08",
+     "marks": "DSRBF bold"
+    },
+    {
+     "dataset_as_printed": "CYTvsPOX",
+     "proposed": "96.49",
+     "proposed_std": "3.30",
+     "smote": "84.41",
+     "smote_std": "14.57",
+     "marks": "DSRBF italic"
+    },
+    {
+     "dataset_as_printed": "ME2vsOther",
+     "proposed": "95.54",
+     "proposed_std": "0.59",
+     "smote": "83.83",
+     "smote_std": "9.36",
+     "marks": "DSRBF italic"
+    },
+    {
+     "dataset_as_printed": "Newthyroid",
+     "proposed": "97.60",
+     "proposed_std": "2.75",
+     "smote": "97.44",
+     "smote_std": "2.90",
+     "marks": "DSRBF bold"
+    },
+    {
+     "dataset_as_printed": "Balance",
+     "proposed": "93.86",
+     "proposed_std": "3.12",
+     "smote": "88.28",
+     "smote_std": "5.22",
+     "marks": "DSRBF bold"
+    },
+    {
+     "dataset_as_printed": "Saureus4",
+     "proposed": "72.93",
+     "proposed_std": "3.24",
+     "smote": "62.03",
+     "smote_std": "6.58",
+     "marks": "DSRBF italic"
+    },
+    {
+     "dataset_as_printed": "Anneal",
+     "proposed": "98.82",
+     "proposed_std": "2.57",
+     "smote": "91.48",
+     "smote_std": "11.17",
+     "marks": "DSRBF bold"
+    },
+    {
+     "dataset_as_printed": "Glass",
+     "proposed": "65.60",
+     "proposed_std": "9.28",
+     "smote": "55.96",
+     "smote_std": "10.26",
+     "marks": "DSRBF bold"
+    },
+    {
+     "dataset_as_printed": "Zoo",
+     "proposed": "95.81",
+     "proposed_std": "6.53",
+     "smote": "90.12",
+     "smote_std": "11.42",
+     "marks": "DSRBF bold"
+    },
+    {
+     "dataset_as_printed": "E. coli",
+     "proposed": "85.91",
+     "proposed_std": "8.53",
+     "smote": "85.02",
+     "smote_std": "10.40",
+     "marks": "DSRBF italic"
+    },
+    {
+     "dataset_as_printed": "Yeast",
+     "proposed": "55.42",
+     "proposed_std": "4.48",
+     "smote": "49.56",
+     "smote_std": "4.87",
+     "marks": ""
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "mean (C̄G / M̄SG) (%)",
+      "proposed": "82.94",
+      "smote": "76.38"
+     },
+     {
+      "label": "R̄ (mean ranking, 6 methods)",
+      "proposed": "1.46",
+      "smote": "5.23"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Table 7, Bonferroni-Dunn test with DSRBF as control, CG: DSRBF vs SmoteOS = 3.76 marked '•+' (statistically different with alpha=0.05, in favour of control method DSRBF); Nemenyi SmoteOS vs DSRBF 3.76 '•+'. CD_Nemenyi(0.1)=1.89,(0.05)=2.09; CD_BD(0.1)=1.70,(0.05)=1.89."
+   }
+  },
+  {
+   "metric": "MSG (%) minimum sensitivity, generalization",
+   "metric_family": "other",
+   "table": "Table 6",
+   "page": "PDF page 10 (printed 1830)",
+   "is_image": true,
+   "higher_is_better": true,
+   "is_existing_chosen": false,
+   "rows": [
+    {
+     "dataset_as_printed": "Hepatitis",
+     "proposed": "60.50",
+     "proposed_std": "21.35",
+     "smote": "51.08",
+     "smote_std": "24.20",
+     "marks": "DSRBF bold"
+    },
+    {
+     "dataset_as_printed": "BreastC",
+     "proposed": "51.75",
+     "proposed_std": "13.72",
+     "smote": "40.50",
+     "smote_std": "15.88",
+     "marks": "SmoteOS italic; DSRBF bold"
+    },
+    {
+     "dataset_as_printed": "Haberman",
+     "proposed": "44.83",
+     "proposed_std": "11.32",
+     "smote": "31.11",
+     "smote_std": "14.94",
+     "marks": "DSRBF bold"
+    },
+    {
+     "dataset_as_printed": "CYTvsPOX",
+     "proposed": "55.11",
+     "proposed_std": "28.63",
+     "smote": "52.80",
+     "smote_std": "24.32",
+     "marks": "DSRBF bold"
+    },
+    {
+     "dataset_as_printed": "ME2vsOther",
+     "proposed": "66.63",
+     "proposed_std": "3.70",
+     "smote": "69.25",
+     "smote_std": "12.28",
+     "marks": "SmoteOS bold; DSRBF italic"
+    },
+    {
+     "dataset_as_printed": "Newthyroid",
+     "proposed": "91.47",
+     "proposed_std": "12.47",
+     "smote": "91.45",
+     "smote_std": "11.53",
+     "marks": "SmoteOS italic; DSRBF bold"
+    },
+    {
+     "dataset_as_printed": "Balance",
+     "proposed": "79.39",
+     "proposed_std": "17.60",
+     "smote": "75.09",
+     "smote_std": "15.85",
+     "marks": "DSRBF bold"
+    },
+    {
+     "dataset_as_printed": "Saureus4",
+     "proposed": "20.32",
+     "proposed_std": "9.41",
+     "smote": "21.57",
+     "smote_std": "8.97",
+     "marks": "SmoteOS bold; DSRBF italic"
+    },
+    {
+     "dataset_as_printed": "Anneal",
+     "proposed": "77.60",
+     "proposed_std": "20.22",
+     "smote": "66.96",
+     "smote_std": "36.80",
+     "marks": "DSRBF bold"
+    },
+    {
+     "dataset_as_printed": "Glass",
+     "proposed": "16.61",
+     "proposed_std": "22.00",
+     "smote": "14.18",
+     "smote_std": "18.92",
+     "marks": "SmoteOS italic; DSRBF bold"
+    },
+    {
+     "dataset_as_printed": "Zoo",
+     "proposed": "67.00",
+     "proposed_std": "47.26",
+     "smote": "46.25",
+     "smote_std": "49.03",
+     "marks": "DSRBF bold"
+    },
+    {
+     "dataset_as_printed": "E. coli",
+     "proposed": "34.10",
+     "proposed_std": "33.75",
+     "smote": "35.72",
+     "smote_std": "37.15",
+     "marks": ""
+    },
+    {
+     "dataset_as_printed": "Yeast",
+     "proposed": "5.80",
+     "proposed_std": "11.12",
+     "smote": "5.75",
+     "smote_std": "9.83",
+     "marks": "SmoteOS italic; DSRBF bold"
+    }
+   ],
+   "paper_reported": {
+    "summary_rows": [
+     {
+      "label": "mean (C̄G / M̄SG) (%)",
+      "proposed": "51.62",
+      "smote": "46.28"
+     },
+     {
+      "label": "R̄ (mean ranking, 6 methods)",
+      "proposed": "1.53",
+      "smote": "2.84"
+     }
+    ],
+    "wtl_vs_smote": "not stated in paper",
+    "stat_test": "Table 7, Bonferroni-Dunn test with DSRBF as control, MSG: DSRBF vs SmoteOS = 1.30 (no significance mark); Nemenyi SmoteOS vs DSRBF 1.30 (no mark)."
+   }
+  }
+ ],
+ "metrics_other_classifier_only": [],
+ "metrics_without_smote": [
+  {
+   "metric": "CG (%) and MSG (%) MRBF/SSRBF/DSRBF (SSRBF = static SMOTE + RBFNN, not plain SmoteOS)",
+   "table": "Table 4"
+  }
+ ],
+ "notes": "Table 6 read from 300dpi render; subscripts are SD. Marks: bold = best, italic = second best across 6 methods (caption). For row mark indices: marks list SmoteOS/DSRBF formatting for the given metric. Table 4 contains SSRBF (static SMOTE oversampling inside the same RBFNN memetic training), which could be considered a same-classifier SMOTE baseline; not used to keep consistency with existing extraction."
+}

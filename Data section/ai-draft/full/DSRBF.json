@@ -1,0 +1,426 @@
+{
+ "key": "DSRBF / Static-SMOTE",
+ "pdf_file_read": "Static-SMOTE - A Dynamic Over-Sampling Procedure Based on Sensitivity for Multi-Class Problems (Pattern Recognition 2011).pdf",
+ "task": "both",
+ "n_datasets_claimed": 13,
+ "characteristics_table": "Table 3, p.8 (printed 1828)",
+ "datasets": [
+  {
+   "name": "Hepatitis",
+   "group": "binary",
+   "source_repo": "UCI",
+   "n_instances": 155,
+   "n_features": 19,
+   "n_classes": 2,
+   "n_minority": 32,
+   "n_majority": 123,
+   "class_distribution": "(32, 123)",
+   "ir_printed": null,
+   "how_obtained": "original",
+   "how_obtained_detail": "used as distributed (UCI); p*=0.206 (Table 3)",
+   "in_results_table": "yes",
+   "ref": "Table 3, p.8 (printed 1828)"
+  },
+  {
+   "name": "BreastC",
+   "group": "binary",
+   "source_repo": "UCI",
+   "n_instances": 286,
+   "n_features": 15,
+   "n_classes": 2,
+   "n_minority": 85,
+   "n_majority": 201,
+   "class_distribution": "(201, 85)",
+   "ir_printed": null,
+   "how_obtained": "original",
+   "how_obtained_detail": "breast-cancer (footnote Table 3), used as distributed (UCI); p*=0.297 (Table 3)",
+   "in_results_table": "yes",
+   "ref": "Table 3, p.8 (printed 1828)"
+  },
+  {
+   "name": "Haberman",
+   "group": "binary",
+   "source_repo": "UCI",
+   "n_instances": 306,
+   "n_features": 3,
+   "n_classes": 2,
+   "n_minority": 81,
+   "n_majority": 225,
+   "class_distribution": "(225, 81)",
+   "ir_printed": null,
+   "how_obtained": "original",
+   "how_obtained_detail": "used as distributed (UCI); p*=0.264 (Table 3)",
+   "in_results_table": "yes",
+   "ref": "Table 3, p.8 (printed 1828)"
+  },
+  {
+   "name": "CYTvsPOX",
+   "group": "binary",
+   "source_repo": "UCI",
+   "n_instances": 482,
+   "n_features": 8,
+   "n_classes": 2,
+   "n_minority": 19,
+   "n_majority": 463,
+   "class_distribution": "(463, 19)",
+   "ir_printed": null,
+   "how_obtained": "modified",
+   "how_obtained_detail": "Yeast dataset considering only patterns from CYT and POX classes (p.7); p*=0.039 (Table 3)",
+   "in_results_table": "yes",
+   "ref": "Table 3, p.8 (printed 1828)"
+  },
+  {
+   "name": "ME2vsOther",
+   "group": "binary",
+   "source_repo": "UCI",
+   "n_instances": 1484,
+   "n_features": 8,
+   "n_classes": 2,
+   "n_minority": 51,
+   "n_majority": 1433,
+   "class_distribution": "(1433, 51)",
+   "ir_printed": null,
+   "how_obtained": "modified",
+   "how_obtained_detail": "Yeast dataset, ME2 patterns vs the remaining patterns (p.7); p*=0.034 (Table 3)",
+   "in_results_table": "yes",
+   "ref": "Table 3, p.8 (printed 1828)"
+  },
+  {
+   "name": "Newthyroid",
+   "group": "multi-class",
+   "source_repo": "UCI",
+   "n_instances": 215,
+   "n_features": 5,
+   "n_classes": 3,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": "(150, 35, 30)",
+   "ir_printed": null,
+   "how_obtained": "original",
+   "how_obtained_detail": "used as distributed (UCI); p*=0.139 (Table 3)",
+   "in_results_table": "yes",
+   "ref": "Table 3, p.8 (printed 1828)"
+  },
+  {
+   "name": "Balance",
+   "group": "multi-class",
+   "source_repo": "UCI",
+   "n_instances": 625,
+   "n_features": 4,
+   "n_classes": 3,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": "(288, 49, 288)",
+   "ir_printed": null,
+   "how_obtained": "original",
+   "how_obtained_detail": "used as distributed (UCI); p*=0.078 (Table 3)",
+   "in_results_table": "yes",
+   "ref": "Table 3, p.8 (printed 1828)"
+  },
+  {
+   "name": "Saureus4",
+   "group": "multi-class",
+   "source_repo": "other: real predictive microbiology data (S. aureus growth/no growth) from refs [57,58]",
+   "n_instances": 287,
+   "n_features": 3,
+   "n_classes": 4,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": "(117, 45, 12, 113)",
+   "ir_printed": null,
+   "how_obtained": "original",
+   "how_obtained_detail": "taken from [57,58]; 4 classes from growth probability (p=0; 0<p<=0.5; 0.5<p<1; p=1); fixed split 146 training / 141 generalization, 30 runs (Sec. 4.2, p.9); p*=0.042 (Table 3)",
+   "in_results_table": "yes",
+   "ref": "Table 3, p.8 (printed 1828)"
+  },
+  {
+   "name": "Anneal",
+   "group": "multi-class",
+   "source_repo": "UCI",
+   "n_instances": 898,
+   "n_features": 59,
+   "n_classes": 5,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": "(8, 99, 684, 67, 40)",
+   "ir_printed": null,
+   "how_obtained": "original",
+   "how_obtained_detail": "used as distributed (UCI); nominal variables transformed to binary (59 inputs); p*=0.009 (Table 3)",
+   "in_results_table": "yes",
+   "ref": "Table 3, p.8 (printed 1828)"
+  },
+  {
+   "name": "Glass",
+   "group": "multi-class",
+   "source_repo": "UCI",
+   "n_instances": 214,
+   "n_features": 9,
+   "n_classes": 6,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": "(70, 76, 17, 13, 9, 29)",
+   "ir_printed": null,
+   "how_obtained": "original",
+   "how_obtained_detail": "used as distributed (UCI); p*=0.042 (Table 3)",
+   "in_results_table": "yes",
+   "ref": "Table 3, p.8 (printed 1828)"
+  },
+  {
+   "name": "Zoo",
+   "group": "multi-class",
+   "source_repo": "UCI",
+   "n_instances": 101,
+   "n_features": 16,
+   "n_classes": 7,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": "(41, 20, 5, 13, 4, 8, 10)",
+   "ir_printed": null,
+   "how_obtained": "original",
+   "how_obtained_detail": "used as distributed (UCI); p*=0.049 (Table 3)",
+   "in_results_table": "yes",
+   "ref": "Table 3, p.8 (printed 1828)"
+  },
+  {
+   "name": "E. coli",
+   "group": "multi-class",
+   "source_repo": "UCI",
+   "n_instances": 336,
+   "n_features": 7,
+   "n_classes": 8,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": "(143, 77, 52, 35, 20, 5, 2, 2)",
+   "ir_printed": null,
+   "how_obtained": "original",
+   "how_obtained_detail": "used as distributed (UCI); p*=0.006 (Table 3)",
+   "in_results_table": "yes",
+   "ref": "Table 3, p.8 (printed 1828)"
+  },
+  {
+   "name": "Yeast",
+   "group": "multi-class",
+   "source_repo": "UCI",
+   "n_instances": 1484,
+   "n_features": 8,
+   "n_classes": 10,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": "(463, 429, 30, 163, 51, 44, 35, 244, 20, 5)",
+   "ir_printed": null,
+   "how_obtained": "original",
+   "how_obtained_detail": "used as distributed (UCI); p*=0.003 (Table 3)",
+   "in_results_table": "yes",
+   "ref": "Table 3, p.8 (printed 1828)"
+  }
+ ],
+ "ir_definition": "not stated in paper (no IR defined; paper reports p* = minimum of the estimated prior probabilities, p* = min{f_i/N}, used in Eq. (8) and Table 3)",
+ "ir_definition_ref": "p.6 (printed 1826), Eq. (8)",
+ "outcome": {
+  "smote_in_baselines": "yes",
+  "smote_name_as_printed": "SmoteOS (SmoteOver-Sampling)",
+  "baselines_all": [
+   "MRBF",
+   "SSRBF",
+   "OS",
+   "SmoteOS",
+   "TMNN",
+   "SE",
+   "HE"
+  ],
+  "results_granularity": "per-dataset",
+  "chosen": {
+   "table": "Table 6",
+   "page": "p.10 (printed 1830)",
+   "metric": "accuracy CG (%) on generalization set, mean (SD)",
+   "classifier": "DSRBF: RBFNN trained by memetic algorithm; SmoteOS: MLP trained by RProp (CSNN package) - classifiers differ",
+   "condition": "original datasets, 10-fold CV x10 repetitions (Saureus4: fixed split, 30 runs)",
+   "higher_is_better": true,
+   "is_image": true
+  },
+  "rows": [
+   {
+    "dataset_as_printed": "Hepatitis",
+    "proposed": "83.30",
+    "proposed_std": "7.44",
+    "smote": "80.05",
+    "smote_std": "8.39",
+    "best_other_value": "80.67",
+    "best_other_name": "OS",
+    "marks": "DSRBF bold; OS italic (second best)"
+   },
+   {
+    "dataset_as_printed": "BreastC",
+    "proposed": "67.53",
+    "proposed_std": "7.74",
+    "smote": "63.26",
+    "smote_std": "8.78",
+    "best_other_value": "65.02",
+    "best_other_name": "HE",
+    "marks": "DSRBF bold; HE italic"
+   },
+   {
+    "dataset_as_printed": "Haberman",
+    "proposed": "69.48",
+    "proposed_std": "6.90",
+    "smote": "61.56",
+    "smote_std": "14.08",
+    "best_other_value": "68.94",
+    "best_other_name": "TMNN",
+    "marks": "DSRBF bold; TMNN italic"
+   },
+   {
+    "dataset_as_printed": "CYTvsPOX",
+    "proposed": "96.49",
+    "proposed_std": "3.30",
+    "smote": "84.41",
+    "smote_std": "14.57",
+    "best_other_value": "97.53",
+    "best_other_name": "TMNN",
+    "marks": "TMNN bold; DSRBF italic"
+   },
+   {
+    "dataset_as_printed": "ME2vsOther",
+    "proposed": "95.54",
+    "proposed_std": "0.59",
+    "smote": "83.83",
+    "smote_std": "9.36",
+    "best_other_value": "96.31",
+    "best_other_name": "TMNN",
+    "marks": "TMNN bold; DSRBF italic"
+   },
+   {
+    "dataset_as_printed": "Newthyroid",
+    "proposed": "97.60",
+    "proposed_std": "2.75",
+    "smote": "97.44",
+    "smote_std": "2.90",
+    "best_other_value": "97.52",
+    "best_other_name": "SE",
+    "marks": "DSRBF bold; SE italic"
+   },
+   {
+    "dataset_as_printed": "Balance",
+    "proposed": "93.86",
+    "proposed_std": "3.12",
+    "smote": "88.28",
+    "smote_std": "5.22",
+    "best_other_value": "92.29",
+    "best_other_name": "SE",
+    "marks": "DSRBF bold; SE italic"
+   },
+   {
+    "dataset_as_printed": "Saureus4",
+    "proposed": "72.93",
+    "proposed_std": "3.24",
+    "smote": "62.03",
+    "smote_std": "6.58",
+    "best_other_value": "75.77",
+    "best_other_name": "TMNN",
+    "marks": "TMNN bold; DSRBF italic"
+   },
+   {
+    "dataset_as_printed": "Anneal",
+    "proposed": "98.82",
+    "proposed_std": "2.57",
+    "smote": "91.48",
+    "smote_std": "11.17",
+    "best_other_value": "97.78",
+    "best_other_name": "SE",
+    "marks": "DSRBF bold; SE italic"
+   },
+   {
+    "dataset_as_printed": "Glass",
+    "proposed": "65.60",
+    "proposed_std": "9.28",
+    "smote": "55.96",
+    "smote_std": "10.26",
+    "best_other_value": "65.49",
+    "best_other_name": "TMNN",
+    "marks": "DSRBF bold; TMNN italic"
+   },
+   {
+    "dataset_as_printed": "Zoo",
+    "proposed": "95.81",
+    "proposed_std": "6.53",
+    "smote": "90.12",
+    "smote_std": "11.42",
+    "best_other_value": "93.40",
+    "best_other_name": "HE",
+    "marks": "DSRBF bold; HE italic"
+   },
+   {
+    "dataset_as_printed": "E. coli",
+    "proposed": "85.91",
+    "proposed_std": "8.53",
+    "smote": "85.02",
+    "smote_std": "10.40",
+    "best_other_value": "86.93",
+    "best_other_name": "TMNN",
+    "marks": "TMNN bold; DSRBF italic"
+   },
+   {
+    "dataset_as_printed": "Yeast",
+    "proposed": "55.42",
+    "proposed_std": "4.48",
+    "smote": "49.56",
+    "smote_std": "4.87",
+    "best_other_value": "58.64",
+    "best_other_name": "TMNN",
+    "marks": "TMNN bold; SE italic; DSRBF unmarked"
+   }
+  ],
+  "summary_rows": [
+   {
+    "label": "Mean CG (%)",
+    "proposed": "82.94 (bold)",
+    "smote": "76.38"
+   },
+   {
+    "label": "Mean rank R (CG)",
+    "proposed": "1.46 (bold)",
+    "smote": "5.23"
+   },
+   {
+    "label": "Mean MS_G (%)",
+    "proposed": "51.62 (bold)",
+    "smote": "46.28 (italic)"
+   },
+   {
+    "label": "Mean rank R (MS_G)",
+    "proposed": "1.53 (bold)",
+    "smote": "2.84 (italic)"
+   },
+   {
+    "label": "Nemenyi rank difference SmoteOS vs DSRBF, CG (Table 7)",
+    "proposed": "3.76 marked significant at alpha=0.05, + (CD 0.05 = 2.09)",
+    "smote": ""
+   },
+   {
+    "label": "Nemenyi rank difference SmoteOS vs DSRBF, MS_G (Table 7)",
+    "proposed": "1.30 (not marked)",
+    "smote": ""
+   },
+   {
+    "label": "Bonferroni-Dunn DSRBF control vs SmoteOS (Table 7)",
+    "proposed": "CG 3.76 marked significant +; MS_G 1.30 not marked (CD 0.05 = 1.89, 0.1 = 1.70)",
+    "smote": ""
+   }
+  ],
+  "stat_test": "Friedman test on ranks (alpha=0.05; F=19.03 for CG, 14.88 for MS_G, F0.05=2.36) followed by Nemenyi and Bonferroni-Dunn post-hoc tests with DSRBF as control (Table 7, p.10; text p.11-12)",
+  "win_claim": {
+   "quote": "The approach has been compared with other neural network learning algorithms specifically designed for dealing with imbalanced datasets, and the results obtained show the competitiveness of the proposal.",
+   "page": "p.12 (printed 1832), Conclusions"
+  }
+ },
+ "uncertain": [
+  "Metric: paper reports only accuracy CG and minimum sensitivity MS_G; MS is not in the schema priority list, so accuracy CG was chosen; MS_G rows for DSRBF vs SmoteOS are in notes (Table 6, p.10).",
+  "SMOTE baseline: SmoteOS (from CSNN [15]) is plain SMOTE preprocessing but with an MLP classifier, while DSRBF uses RBFNN; SSRBF (Table 4, p.8) is SMOTE with the same RBFNN but uses the authors' iterative per-class doubling scheme, so it was not recorded as plain SMOTE.",
+  "Balance DSRBF CG printed 93.86 in Table 6 (p.10) but 93.85 in Table 4 (p.8); Glass DSRBF MS SD 22.00 in Table 6 vs 21.99 in Table 4. Copied Table 6 values.",
+  "Table 2 (p.6) labels its example the 'zoo' dataset but the initial class counts (70, 76, 17, 13, 9, 29) match Glass in Table 3 (p.8).",
+  "Saureus4 source_repo/how_obtained: data taken from refs [57,58] (not UCI); classed as original with 'other' repo (p.9).",
+  "Abstract says 13 benchmark datasets plus one microbial growth problem; Sec. 4.1 and conclusions say 12 UCI + 1 (Saureus4) = 13 total; Table 3 lists 13 (pp.1, 7, 12).",
+  "n_minority/n_majority filled only for binary datasets from NPPC; left null for multi-class (p.8)."
+ ],
+ "notes": "Proposed = DSRBF (dynamic SMOTE radial basis function); SSRBF (static SMOTE) is the authors' second proposed variant and appears with MRBF in Table 4 (p.8) as justification. best_other taken from Table 6 baselines OS, TMNN, SE, HE only (SmoteOS excluded). Datasets and partitions said to be on http://www.uco.es/grupos/ayrna/index.php?lang=en (Datasets section) - not fetched. Text extraction glued mean and SD; values read from rendered page 10 at 300 dpi. Table 6 MS_G (%) mean(SD), DSRBF vs SmoteOS: Hepatitis 60.50(21.35) bold vs 51.08(24.20); BreastC 51.75(13.72) bold vs 40.50(15.88) italic; Haberman 44.83(11.32) bold vs 31.11(14.94); CYTvsPOX 55.11(28.63) bold vs 52.80(24.32); ME2vsOther 66.63(3.70) italic vs 69.25(12.28) bold; Newthyroid 91.47(12.47) bold vs 91.45(11.53) italic; Balance 79.39(17.60) bold vs 75.09(15.85); Saureus4 20.32(9.41) italic vs 21.57(8.97) bold; Anneal 77.60(20.22) bold vs 66.96(36.80); Glass 16.61(22.00) bold vs 14.18(18.92) italic; Zoo 67.00(47.26) bold vs 46.25(49.03); E. coli 34.10(33.75) vs 35.72(37.15) (SE 38.41 bold, HE 37.42 italic); Yeast 5.80(11.12) bold vs 5.75(9.83) italic; mean MS_G 51.62 bold vs 46.28 italic; mean rank 1.53 bold vs 2.84 italic."
+}

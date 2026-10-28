@@ -1,0 +1,299 @@
+{
+ "key": "MC-CCR",
+ "smote_in_baselines": "yes",
+ "smote_name_as_printed": "SMOTE-all",
+ "baselines_all": [
+  "SMOTE-all",
+  "S-SMOTE",
+  "MDO",
+  "SMOM",
+  "SMOTE-IPF"
+ ],
+ "results_tables": [
+  {
+   "table": "Table 3",
+   "page": "PDF p.9 (journal p.9)",
+   "metric": "AvAcc, CBA, mGM, CEN (MC-CCR parameter variants, averaged over datasets)",
+   "classifier": "C5.0, MLP, k-NN, NB",
+   "granularity": "aggregate only",
+   "is_image": false
+  },
+  {
+   "table": "Table 4",
+   "page": "PDF p.9",
+   "metric": "AvAcc [%]",
+   "classifier": "C5.0",
+   "granularity": "per-dataset",
+   "is_image": false
+  },
+  {
+   "table": "Table 5",
+   "page": "PDF p.9",
+   "metric": "CBA [%]",
+   "classifier": "C5.0",
+   "granularity": "per-dataset",
+   "is_image": false
+  },
+  {
+   "table": "Table 6",
+   "page": "PDF p.10",
+   "metric": "mGM [%]",
+   "classifier": "C5.0",
+   "granularity": "per-dataset",
+   "is_image": false
+  },
+  {
+   "table": "Table 7",
+   "page": "PDF p.10",
+   "metric": "CEN",
+   "classifier": "C5.0",
+   "granularity": "per-dataset",
+   "is_image": false
+  },
+  {
+   "table": "Table 8",
+   "page": "PDF p.14",
+   "metric": "AvACC, CBA, mGM, CEN (Shaffer post-hoc p-values)",
+   "classifier": "C5.0, MLP, k-NN, NB",
+   "granularity": "aggregate only",
+   "is_image": false
+  },
+  {
+   "table": "Table 9",
+   "page": "PDF p.14",
+   "metric": "AvACC, CBA, mGM, CEN (Shaffer p-values at 5% and 25% label noise)",
+   "classifier": "C5.0, MLP, k-NN, NB",
+   "granularity": "aggregate only",
+   "is_image": false
+  }
+ ],
+ "chosen": {
+  "table": "Table 6",
+  "page": "PDF p.10 (journal p.10)",
+  "metric": "mGM [%] (multi-class geometric mean of recalls)",
+  "classifier": "C5.0",
+  "condition": "no added label noise (0%; Section 4.3 comparison)",
+  "higher_is_better": true,
+  "why_this_choice": "Rule 3: mGM counts as G-mean and Table 6 is a per-dataset table with MC-CCR and SMOTE-all (no AUC/MAUC reported). Rule 4: abstract highlights no classifier; C5.0 is first reported and the only classifier with per-dataset tables. Rule 5: Tables 4-7 are the no-noise comparison; noise results are in Figs. 5-7 and Table 9."
+ },
+ "rows": [
+  {
+   "dataset_as_printed": "Automobile",
+   "proposed": "75.68",
+   "proposed_std": null,
+   "smote": "51.86",
+   "smote_std": null,
+   "best_other_value": "78.75",
+   "best_other_name": "SMOM",
+   "marks": "bold: SMOM"
+  },
+  {
+   "dataset_as_printed": "Balance",
+   "proposed": "62.22",
+   "proposed_std": null,
+   "smote": "40.57",
+   "smote_std": null,
+   "best_other_value": "58.65",
+   "best_other_name": "SMOM",
+   "marks": "bold: MC-CCR"
+  },
+  {
+   "dataset_as_printed": "Car",
+   "proposed": "95.03",
+   "proposed_std": null,
+   "smote": "81.16",
+   "smote_std": null,
+   "best_other_value": "95.73",
+   "best_other_name": "MDO",
+   "marks": "bold: MDO"
+  },
+  {
+   "dataset_as_printed": "Cleveland",
+   "proposed": "30.98",
+   "proposed_std": null,
+   "smote": "18.00",
+   "smote_std": null,
+   "best_other_value": "26.45",
+   "best_other_name": "MDO",
+   "marks": "bold: MC-CCR"
+  },
+  {
+   "dataset_as_printed": "Contraceptive",
+   "proposed": "49.72",
+   "proposed_std": null,
+   "smote": "38.15",
+   "smote_std": null,
+   "best_other_value": "52.60",
+   "best_other_name": "SMOM",
+   "marks": "bold: SMOM"
+  },
+  {
+   "dataset_as_printed": "Dermatology",
+   "proposed": "94.88",
+   "proposed_std": null,
+   "smote": "79.34",
+   "smote_std": null,
+   "best_other_value": "95.23",
+   "best_other_name": "S-SMOTE",
+   "marks": "bold: MC-CCR"
+  },
+  {
+   "dataset_as_printed": "Ecoli",
+   "proposed": "70.98",
+   "proposed_std": null,
+   "smote": "51.72",
+   "smote_std": null,
+   "best_other_value": "67.54",
+   "best_other_name": "S-SMOTE",
+   "marks": "bold: MC-CCR"
+  },
+  {
+   "dataset_as_printed": "Flare",
+   "proposed": "64.71",
+   "proposed_std": null,
+   "smote": "55.98",
+   "smote_std": null,
+   "best_other_value": "61.92",
+   "best_other_name": "S-SMOTE",
+   "marks": "bold: MC-CCR"
+  },
+  {
+   "dataset_as_printed": "Glass",
+   "proposed": "71.06",
+   "proposed_std": null,
+   "smote": "55.41",
+   "smote_std": null,
+   "best_other_value": "67.97",
+   "best_other_name": "MDO / SMOM",
+   "marks": "bold: MC-CCR"
+  },
+  {
+   "dataset_as_printed": "Hayes-roth",
+   "proposed": "85.16",
+   "proposed_std": null,
+   "smote": "70.52",
+   "smote_std": null,
+   "best_other_value": "86.82",
+   "best_other_name": "SMOM",
+   "marks": "bold: MC-CCR"
+  },
+  {
+   "dataset_as_printed": "Led7digit",
+   "proposed": "80.44",
+   "proposed_std": null,
+   "smote": "57.85",
+   "smote_std": null,
+   "best_other_value": "78.19",
+   "best_other_name": "MDO",
+   "marks": "bold: MC-CCR"
+  },
+  {
+   "dataset_as_printed": "Lymphography",
+   "proposed": "77.36",
+   "proposed_std": null,
+   "smote": "40.60",
+   "smote_std": null,
+   "best_other_value": "73.99",
+   "best_other_name": "SMOM",
+   "marks": "bold: MC-CCR"
+  },
+  {
+   "dataset_as_printed": "Newthyroid",
+   "proposed": "92.17",
+   "proposed_std": null,
+   "smote": "80.69",
+   "smote_std": null,
+   "best_other_value": "93.46",
+   "best_other_name": "SMOM",
+   "marks": "bold: SMOM"
+  },
+  {
+   "dataset_as_printed": "Pageblocks",
+   "proposed": "82.55",
+   "proposed_std": null,
+   "smote": "71.64",
+   "smote_std": null,
+   "best_other_value": "79.06",
+   "best_other_name": "MDO",
+   "marks": "bold: MC-CCR"
+  },
+  {
+   "dataset_as_printed": "Thyroid",
+   "proposed": "81.48",
+   "proposed_std": null,
+   "smote": "73.62",
+   "smote_std": null,
+   "best_other_value": "81.86",
+   "best_other_name": "S-SMOTE",
+   "marks": "bold: S-SMOTE"
+  },
+  {
+   "dataset_as_printed": "Vehicle",
+   "proposed": "70.35",
+   "proposed_std": null,
+   "smote": "59.57",
+   "smote_std": null,
+   "best_other_value": "71.97",
+   "best_other_name": "S-SMOTE",
+   "marks": "bold: MDO, SMOM"
+  },
+  {
+   "dataset_as_printed": "Wine",
+   "proposed": "92.87",
+   "proposed_std": null,
+   "smote": "80.82",
+   "smote_std": null,
+   "best_other_value": "93.41",
+   "best_other_name": "S-SMOTE",
+   "marks": "bold: S-SMOTE"
+  },
+  {
+   "dataset_as_printed": "Winequality-red",
+   "proposed": "46.66",
+   "proposed_std": null,
+   "smote": "17.80",
+   "smote_std": null,
+   "best_other_value": "42.56",
+   "best_other_name": "SMOM",
+   "marks": "bold: MC-CCR"
+  },
+  {
+   "dataset_as_printed": "Yeast",
+   "proposed": "56.91",
+   "proposed_std": null,
+   "smote": "43.83",
+   "smote_std": null,
+   "best_other_value": "52.91",
+   "best_other_name": "SMOM",
+   "marks": "bold: MC-CCR"
+  },
+  {
+   "dataset_as_printed": "Zoo",
+   "proposed": "84.29",
+   "proposed_std": null,
+   "smote": "55.61",
+   "smote_std": null,
+   "best_other_value": "78.55",
+   "best_other_name": "SMOTE-IPF",
+   "marks": "bold: MC-CCR"
+  }
+ ],
+ "summary_rows": [
+  {
+   "label": "Avg. rank (Table 6, mGM, C5.0)",
+   "proposed": "1.80",
+   "smote": "5.45"
+  },
+  {
+   "label": "Shaffer post-hoc MC-CCR vs. SMOTE-all (Table 8, mGM, C5.0)",
+   "proposed": "control",
+   "smote": "> (0.0001)"
+  }
+ ],
+ "stat_test": "Friedman ranking test with Shaffer post-hoc (alpha = 0.05), MC-CCR vs each reference method per metric and classifier (Table 8; Table 9 for 5% and 25% noise); plus combined 10-fold CV F-test for pairwise per-dataset win/tie/loss (Fig. 4, Fig. 6). For mGM/C5.0 vs SMOTE-all: '> (0.0001)'.",
+ "win_claim": {
+  "quote": "Based on the results of experimental research carried out for many multi-class imbalanced benchmark datasets, the high robust of the proposed approach to noise was shown, as well as its high quality compared to the state-of-art methods.",
+  "page": "PDF p.1 (abstract)"
+ },
+ "notes": "Source: KBS 204 (2020) 106223 version (Drive 'Both' folder, file 'MC-CCR - Combined Cleaning...'); the Multiclass-folder copy '2020_MC-CCR_...' is the arXiv 2004.03406v1 preprint with identical Table 6 numbers. SMOTE-all = 'SMOTE algorithm using round-robin decomposition strategy' (plain SMOTE applied multi-class); S-SMOTE = STATIC-SMOTE, not plain SMOTE. MDO is printed in text as 'Mahalanobis Distance Oversampling (MBO)' but 'MDO' in tables. best_other = best of S-SMOTE, MDO, SMOM, SMOTE-IPF (SMOTE-all excluded); ties listed with '/'. Page 10 rendered to read bold marks: bold does not always mark the row maximum - Dermatology (MC-CCR 94.88 bold, S-SMOTE 95.23 not bold), Hayes-roth (MC-CCR 85.16 bold, SMOM 86.82 not bold), Vehicle (MDO/SMOM 70.65 bold, S-SMOTE 71.97 not bold). No std reported. Dataset names differ from Table 1 (PDF p.8): Hayes-Roth vs Hayes-roth, New-thyroid vs Newthyroid, Page-blocks vs Pageblocks; Table 1 Hayes-Roth lists 3 classes but a 4-value distribution. Table 4 (AvAcc) omits the Glass row (19 datasets). Other classifiers (MLP, k-NN, NB) only as win/tie/loss figures and Shaffer p-values. Noise levels {0.05,0.1,0.15,0.20,0.25} reported only in figures/Table 9."
+}
