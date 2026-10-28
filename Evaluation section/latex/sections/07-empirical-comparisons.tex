@@ -1,0 +1,264 @@
+%% Section 7. Empirical comparisons and benchmarks reported in the literature
+%% Generated 2026-10-28 from the SMOTE25 evaluation draft page (76 coded papers, 71 empirical).
+%% Numbers are filled from the coded data; regenerate instead of editing them by hand.
+%% Figures: figures/empirical-*.pdf (sources in figures/src/). Tables: tables/empirical-*.tex.
+%% Cite keys follow references.bib style (e.g. chawla2002smote); entries still to add are in notes/empirical-bib-candidates.bib.
+\section{Empirical Comparisons and Benchmarks}
+\label{sec:empirical}
+
+A method in the SMOTE family is judged through an evaluation design: the data it is tested on, the learners trained on its output, the competitors it is compared with, the measures, the protocol that separates fitting from testing, and the statistics used to compare results. This section analyses those designs across the 71 empirical studies in our corpus. Every study is listed with its coded design in the evaluation map of Appendix B (Table~\ref{tab:empirical-map}).
+
+Each study reports that its proposal works, but the evidence is rarely read across studies, and the designs differ enough that their numbers cannot be pooled. The analysis below supports one thesis:
+
+\begin{quote}
+  \emph{Evaluation in this literature has broadened over 25 years, but the steps that most often decide a comparison (how settings are chosen, how measures are defined and how baselines are run) have not become more rigorous.}
+\end{quote}
+
+We organise the evidence around six questions:
+
+\begin{description}
+  \item[RQ1.] On which data are methods compared, and why those data? (Section~\ref{sec:empirical-data})
+  \item[RQ2.] Against which learners and competitors, and why those learners? (Section~\ref{sec:empirical-learners})
+  \item[RQ3.] Which measures are reported, are they defined consistently, and is anything measured without a classifier? (Section~\ref{sec:empirical-measures})
+  \item[RQ4.] How are training and test data separated, and how, and by which measure, are settings chosen? (Section~\ref{sec:empirical-protocol})
+  \item[RQ5.] How is a difference shown to be significant, and how are results reported? (Section~\ref{sec:empirical-stats})
+  \item[RQ6.] What do the comparisons conclude, and do the conclusions agree across studies? (Section~\ref{sec:empirical-outcomes})
+\end{description}
+
+For each question we also ask whether studies that follow a practice are cited more often than studies of the same age that do not; Section~\ref{sec:empirical-corpus} explains how.
+
+Section~\ref{sec:empirical-corpus} describes the corpus and the coding. Section~\ref{sec:empirical-data} to Section~\ref{sec:empirical-outcomes} answer the six questions in turn, with Section~\ref{sec:empirical-notation} fixing the notation just before the measures are examined; Section~\ref{sec:empirical-threats} states the limits of this analysis, and Section~\ref{sec:empirical-standard} turns the findings into a minimum evaluation standard.
+
+\subsection{Corpus and Coding Scheme}
+\label{sec:empirical-corpus}
+
+The corpus is the SMOTE25 collection selected for this survey (\TODO{point to the selection procedure in Section 3}): 76 papers after duplicate copies were merged. Of these, 71 report an empirical evaluation on imbalanced data; the other 5 are two surveys~\parencite{pradipta2021smote,hassanat2022stop} and three foundational works that predate imbalance-aware evaluation~\parencite{wilson1972asymptotic,tomek1976modifications,freund1997adaboost}. Among the empirical studies, 39 evaluate binary problems, 19 multi-class problems and 13 both, and their number has grown with each period (Figure~\ref{fig:empirical-corpus}). Percentages in this section refer to the 71 empirical studies.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{empirical-corpus}
+  \caption{Empirical Studies in the Corpus by Publication Period and Problem Setting}
+  \Description{Stacked columns for seven publication periods from 1997 to 2026; each column splits the empirical studies of that period into binary, multi-class and both.}
+  \label{fig:empirical-corpus}
+\end{figure}
+
+For each study we coded, from the full text and supplementary files, the benchmark data, base learners, competing methods, measures with their exact definitions, the validation protocol, how hyperparameters were chosen, the statistical tests, and the form in which results are reported. A field the paper does not state was coded as not reported and never inferred. Four derived codes involve judgement: the protocol class, the hyperparameter-selection class, the flags for measure-definition problems and the outcome class of Section~\ref{sec:empirical-outcomes}. Sixteen of the most consequential codings were re-checked against the PDFs in a second pass, and all sixteen were confirmed.
+
+For this version, a second pass over the 71 empirical studies recorded why each study made its choices: the reasons it gives for its data, base learners and measures; the measure and the data used to choose its settings; the methodological sources it cites for its tests; and any evidence about the resampled data that does not come from the score of a classifier. Every code from this pass carries a page reference and a verbatim quote of at most 30 words, so it can be checked against the paper. Where the two passes disagreed on how settings were chosen, the page-referenced reading was kept (Section~\ref{sec:empirical-protocol}). The second-pass codes have not yet been checked by a second reader \TODO{a co-author to verify the pass-2 quotes against the cited pages before submission}.
+
+To see whether careful evaluation is rewarded, we took citation counts from OpenAlex on 18 October 2026; 75 of the 76 papers have a record. Older papers have had longer to be cited, and in this corpus each additional year of age multiplies the expected count by 1.19. We therefore compare practices with a regression of log(1 + citations) on publication year and an indicator of the practice, fitted to the 62 empirical studies published up to 2024 that have a record; the 8 studies from 2025 and 2026 are too recent for their counts to mean much. The exponentiated coefficient is a citation ratio: studies that follow a practice are cited that many times as often as studies of the same age that do not (Figure~\ref{fig:empirical-influence}). The ratios describe association only. Venue, the novelty of the idea and the authors also drive citations and are not controlled, and with 24 comparisons about one interval would exclude 1 by chance.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{empirical-influence}
+  \caption{Citation Ratio of Studies That Follow Each Evaluation Practice, Adjusted for Publication Year}
+  \Description{Forest plot. One row per evaluation practice, grouped by topic. A dot marks the citation ratio of studies that follow the practice relative to studies of the same age that do not, on a log scale from 0.1 to 10, with a horizontal line for the 95 percent interval and a vertical reference line at 1. The number of studies following the practice, out of the eligible studies, is given at the right.}
+  \label{fig:empirical-influence}
+\end{figure}
+
+The most cited studies are not the most carefully evaluated. Of the ten most cited empirical studies, 7 were published before 2010; they used a median of 8 real datasets, 4 ran a significance test and 1 released code. The other 52 studies used a median of 19.5 datasets and tested in 40 of 52 (77\%). Once age is taken into account, one practice has an interval that excludes 1: studies with a measure-definition problem are cited about a third as often as others (0.33 (95\% CI 0.14 to 0.74)). Releasing code (2.01 (95\% CI 0.98 to 4.14)) and including SMOTE as a competitor (1.89 (95\% CI 0.96 to 3.72)) come close. No practice of protocol, tuning or testing is associated with citations, so a study gains no visible credit for the steps that this section most often finds missing.
+
+\subsection{Benchmark Data (RQ1)}
+\label{sec:empirical-data}
+
+Benchmark data are the datasets on which a method is fitted and scored, together with the imbalance they carry. Evaluation relies almost entirely on public tabular benchmarks (Table~\ref{tab:empirical-sources}). UCI datasets are used in 53 of 71 studies (75\%) and the KEEL repository in 33 of 71 studies (46\%); most KEEL imbalanced sets are binarised versions of UCI data \TODO{confirm this origin in the KEEL data-set paper (Alcalá-Fdez et al. 2011, cited below) and cite it here, or drop the clause}. 29 of 71 studies (41\%) add synthetic data, mainly to show where a sampler places new points near the class boundary. Only 6 studies go beyond tabular data, to images, time series, text or mixed data~\parencite{buda2018systematic,mullick2019gamo,cao2013inos,wu2007cogos}.
+
+\input{tables/empirical-sources}
+
+The number of real datasets per study has a median of 18 (interquartile range 9 to 30; range 1 to 86) and has grown steadily, from a median of 6 before 2010 to 21.5 since 2021 (Figure~\ref{fig:empirical-datasets}). Early method papers were often shown on two to four datasets~\parencite{chawla2003smoteboost,han2005borderline,bunkhumpornpat2009safelevel}, while recent large comparisons use 50 to 90~\parencite{diezpastor2015randombalance,douzas2018kmeans,douzas2019gsmote}. 58 of 71 studies (82\%) report the imbalance ratio (IR) of their benchmarks.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{empirical-datasets}
+  \caption{Number of Real Benchmark Datasets per Study, by Publication Year and Problem Setting}
+  \Description{Scatter plot with publication year on the horizontal axis and the number of real datasets on the vertical axis; one marker per study, shaped by problem setting.}
+  \label{fig:empirical-datasets}
+\end{figure}
+
+Most studies say why they chose their data (58 of 71 studies (82\%)), and the reasons concern coverage more than relevance to a task (Table~\ref{tab:empirical-reasons}): a range of imbalance ratios, sizes or dimensions (30 studies), a target level of imbalance (19), the set-up of a named earlier study (18), known difficulty factors such as overlap, noise or small disjuncts (17), comparability with published results (14) and public availability (12). Reuse is how particular collections spread. The multi-class KEEL sets selected in an earlier study of instance-level difficulty \TODO{cite Sáez, Krawczyk and Woźniak (2016)} were taken over by MC-RBO and MC-CCR and then by NROMM~\parencite{krawczyk2020mcrbo,koziarski2020mcccr,liu2023nromm}; EMDO reuses the AMDO sets in its first experiment~\parencite{yao2021emdo,yang2018amdo}, and SMOTE-IPF takes its real datasets from the SPIDER2 study of noisy and borderline examples~\parencite{saez2015smoteipf,napierala2010spider2}.
+
+\input{tables/empirical-reasons}
+
+Being public is not the same as being reproducible. The data are entirely public in 53 of 71 studies (75\%), a table gives the source of each dataset in 42 studies, and links or repository identifiers appear in 42. However, 52 studies changed their data by binarising classes, merging them, injecting noise or subsampling, and only 10 of these released the changed versions. The others cannot be re-run on the same data even when the original repository is named.
+
+The repositories themselves are among the most cited works in the field. The KEEL software and data-set papers have 1,505 and 2,337 citations in OpenAlex~\parencite{alcalafdez2009keel,alcalafdez2011keel}, and the main record of the UCI repository has 23,780~\parencite{asuncion2007uci}, more than any method in this corpus except SMOTE (32,518). The credit stays with the repositories. Studies that use KEEL data are cited about as often as studies of the same age that do not (1.12 (95\% CI 0.54 to 2.32)), and the same holds for UCI data (0.97 (95\% CI 0.46 to 2.02)), for using at least the median number of datasets (0.99 (95\% CI 0.48 to 2.02)) and for stating why the data were chosen (0.97 (95\% CI 0.42 to 2.20)).
+
+\subsection{Base Learners and Competing Methods (RQ2)}
+\label{sec:empirical-learners}
+
+A base learner is the classifier trained on the resampled data, and a resampler is judged only through it. C4.5/C5.0 trees are the most common learner (33 of 71 studies, 46\%), followed by k-NN (28 of 71 studies, 39\%), SVM (28 of 71 studies, 39\%), CART (17 of 71 studies, 24\%) and multilayer perceptrons (17 of 71 studies, 24\%) (Figure~\ref{fig:empirical-learners}). Random forests and gradient boosting appear in 2 of 27 studies before 2016 but in 33\% (8 of 24) since 2021, while the use of C4.5 has declined. The median study uses 3 learners, yet 25 of 71 studies (35\%) rely on a single one. That share has not fallen and stands at 38\% (9 of 24) since 2021. With one learner, the effect of a sampler cannot be separated from its interaction with that learner. A recent pre-registered comparison found that a new oversampler was not significantly better than class weighting, random oversampling or no resampling across four learners that include random forest and gradient boosting~\parencite{yadav2025ciso}.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{empirical-learners}
+  \caption{Base Learner Families Used in the Empirical Studies}
+  \Description{Horizontal bars giving, for each family of base learner, the number of studies that use it.}
+  \label{fig:empirical-learners}
+\end{figure}
+
+A competing method is any alternative run on the same benchmarks. Studies compare against a median of 7 competitors. SMOTE itself is a competitor in 50 of 71 studies (70\%), and an untreated reference without resampling is included in 52 of 71 studies (73\%). The remaining 19 studies report only gains of one sampler over another, so a reader cannot tell whether resampling helps at all on those benchmarks. In 6 studies some or all competitor results were copied from earlier publications instead of being re-run on the same folds~\parencite{chawla2002smote,wu2007cogos,sun2015splitbal,chen2021hde,liu2023nromm}. In the most extreme case only the proposed method was run, and every competitor score was taken from a published benchmark~\parencite{upman2026qcsmote}.
+
+Studies say less about their learners than about their data: 49 of 71 studies (69\%) give a reason (Table~\ref{tab:empirical-reasons}). The usual reason is that a learner is widely used or well known (22 studies), followed by covering different learning paradigms (15), following a named earlier study (11), simplicity (10) and using the same learner for every method (8). Only 4 studies choose a learner because it is sensitive to class imbalance, the property that makes it a meaningful test of a resampler~\parencite{napierala2010spider2,yan2025gdhs}, and 4 because it fits how the method works. Following earlier work keeps C4.5 in use: SPE keeps it for a fair comparison with earlier ensembles, EMDO because its results are deterministic for fixed settings, and NROMM adopts the learners, folds and measures of MC-CCR and MC-RBO~\parencite{liu2020spe,yao2021emdo,liu2023nromm}.
+
+Learner choices are not associated with citations either. Using more than one learner (1.02 (95\% CI 0.52 to 2.02)), a random forest or boosting learner (1.36 (95\% CI 0.66 to 2.77)) or an untreated baseline (0.89 (95\% CI 0.43 to 1.83)) all give intervals that include 1. Studies that include SMOTE as a competitor are cited more (1.89 (95\% CI 0.96 to 3.72)), but that interval also reaches 1.
+
+\subsection{Notation and Measures}
+\label{sec:empirical-notation}
+
+A measure summarises a confusion matrix, or a ranking of scores, into one number. For a binary problem we treat the minority class as positive and write TP, FN, FP and TN for the cells of the confusion matrix. The single-class rates are
+\begin{equation}
+  \mathrm{TPR}=\frac{TP}{TP+FN},\qquad \mathrm{TNR}=\frac{TN}{TN+FP},\qquad \mathrm{Prec}=\frac{TP}{TP+FP}
+  \label{eq:empirical-rates}
+\end{equation}
+where TPR is also called recall or sensitivity and TNR specificity. Measures that combine these rates at one decision threshold are
+\begin{equation}
+  F_\beta=\frac{(1+\beta^2)\,\mathrm{Prec}\cdot\mathrm{TPR}}{\beta^2\,\mathrm{Prec}+\mathrm{TPR}}
+  \label{eq:empirical-fbeta}
+\end{equation}
+\begin{equation}
+  \text{G-mean}=\sqrt{\mathrm{TPR}\cdot\mathrm{TNR}},\qquad \mathrm{BA}=\frac{\mathrm{TPR}+\mathrm{TNR}}{2}
+  \label{eq:empirical-gmean}
+\end{equation}
+\begin{equation}
+  \mathrm{MCC}=\frac{TP\cdot TN-FP\cdot FN}{\sqrt{(TP+FP)(TP+FN)(TN+FP)(TN+FN)}}
+  \label{eq:empirical-mcc}
+\end{equation}
+where $\beta$ weights recall against precision ($\beta$ = 1 gives F1) and BA is balanced accuracy. The area under the ROC curve does not depend on a threshold. For a scoring function s it is the probability that a random positive example is ranked above a random negative one,
+\begin{equation}
+  \mathrm{AUC}=\Pr\bigl(s(x^{+})>s(x^{-})\bigr)
+  \label{eq:empirical-auc}
+\end{equation}
+where ties count one half. For C classes, let $R_i$ be the recall of class i and $m_{ij}$ the number of class-i examples predicted as class j. The multi-class measures used in the corpus are
+\begin{equation}
+  \mathrm{MG}=\Bigl(\prod_{i=1}^{C}R_i\Bigr)^{1/C},\qquad \mathrm{AvAcc}=\frac{1}{C}\sum_{i=1}^{C}R_i
+  \label{eq:empirical-mg}
+\end{equation}
+\begin{equation}
+  \mathrm{MAUC}=\frac{2}{C(C-1)}\sum_{i<j}\frac{A(i\mid j)+A(j\mid i)}{2}
+  \label{eq:empirical-mauc}
+\end{equation}
+\begin{equation}
+  \mathrm{CBA}=\frac{1}{C}\sum_{i=1}^{C}\frac{m_{ii}}{\max\bigl(\sum_{j}m_{ij},\ \sum_{j}m_{ji}\bigr)}
+  \label{eq:empirical-cba}
+\end{equation}
+where MG is the class-wise geometric mean, AvAcc the average class accuracy, $A(i\mid j)$ the AUC of separating class i from class j using the scores for class i, and CBA the class balance accuracy. MAUC follows Hand and Till~\parencite{hand2001simple} \TODO{cite the original sources of CBA (Mosley 2013) and confusion entropy (Wei et al. 2010)}. Table~\ref{tab:empirical-measures} groups the measures into families and lists what each family captures \TODO{cite methodological sources for the advantages and limitations listed in this table}.
+
+\input{tables/empirical-measures}
+
+\subsection{Performance Measures in Use (RQ3)}
+\label{sec:empirical-measures}
+
+Overall accuracy or error rate appears in only 13 of 71 studies (18\%), and never as the only measure. G-mean is the most used measure (41 of 71 studies, 58\%), followed by AUC (33 of 71 studies, 46\%), recall (29 of 71 studies, 41\%), F1 (24 of 71 studies, 34\%) and precision (20 of 71 studies, 28\%); a typical study reports 4 measures (Figure~\ref{fig:empirical-measures}). Binary and multi-class studies use different vocabularies. Binary studies centre on AUC, G-mean, and minority-class recall and F1. Multi-class studies use MG, MAUC (12 of 71 studies, 17\%), AvAcc and, in a group of recent papers, CBA and confusion entropy~\parencite{krawczyk2020mcrbo,koziarski2020mcccr,ma2024mcmbrc}.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{empirical-measures}
+  \caption{Measures Used in at Least Three Empirical Studies, Split by Problem Setting}
+  \Description{Horizontal stacked bars, one per measure, sorted by the number of studies; each bar is split into binary, multi-class and both studies.}
+  \label{fig:empirical-measures}
+\end{figure}
+
+Threshold-free measures (ROC-AUC, MAUC or PR-AUC) appear in 46 of 71 studies (65\%). The other 25 studies judge samplers only at the default decision threshold of the classifier, which mixes the quality of the synthetic data with the calibration of the classifier. Precision-recall summaries are rare, although they are more informative than ROC curves when positives are rare~\parencite{saito2015precision}: PR-AUC is reported in 5 studies and MCC in 4, nearly all published since 2018~\parencite{liu2020spe,yadav2025ciso,naglik2024gmmsampling}.
+
+The same name does not always denote the quantity defined in Section~\ref{sec:empirical-notation}. We found definition problems in 14 studies (Table~\ref{tab:empirical-measuredefs}). Two report as AUC the single-threshold value (TPR + TNR)/2, which is BA in Equation (\ref{eq:empirical-gmean}) and not the area of Equation (\ref{eq:empirical-auc})~\parencite{xie2022gdo,datta2020dlexiboost}. Two compute MAUC from hard-label confusion matrices instead of scores~\parencite{zheng2022shsampler,yan2025gdhs}. Two define AvAcc as the mean one-versus-rest accuracy, which true negatives inflate~\parencite{ma2024mcmbrc,tao2025mcnclwo}. G-mean is sometimes the geometric mean of recall and precision instead of TPR and TNR~\parencite{liu2020spe,zhang2016cgmos}, and some studies never state how binary measures are averaged over classes~\parencite{agrawal2015scut,palli2022cbhsid}. Values that share a name are therefore not comparable across studies.
+
+\input{tables/empirical-measuredefs}
+
+Nearly every study justifies its measures (70 of 71 studies (99\%)), with the standard arguments (Table~\ref{tab:empirical-reasons}): accuracy misleads under imbalance (39 studies), the measure is standard in imbalanced learning (40), it focuses on the minority class (25), it does not depend on the threshold (18) or it suits several classes (18). These reasons explain why accuracy fell out of use, but not why one imbalance-aware measure is preferred to another, and only 7 studies relate their measures to the costs of an application. Measure-definition problems are the one practice clearly associated with fewer citations (0.33 (95\% CI 0.14 to 0.74)); reporting accuracy (1.11 (95\% CI 0.47 to 2.59)) or a threshold-free measure (1.39 (95\% CI 0.72 to 2.67)) shows no association.
+
+Every study judges a resampler through the scores of a classifier, and none evaluates resampling without one. Other evidence is common but mostly visual or analytical (Table~\ref{tab:empirical-beyond}): 33 studies plot where synthetic points fall or project the resampled data, and 31 give theorems, bounds or big-O costs. Model diagnostics that do not use a score, such as the size of trees learned from the resampled data or the diversity of ensemble members, appear in 5~\parencite{chawla2002smote,batista2004study,diezpastor2015randombalance}. Direct measurement of the resampled data is rare (6 of 71 studies (8\%)): distances or likelihoods between real and synthetic distributions~\parencite{xu2019ctgan,mullick2019gamo,yadav2025ciso}, the share of synthetic examples later removed as noise~\parencite{saez2015smoteipf}, and the composition of safe, borderline and hard examples after resampling~\parencite{liu2020spe,han2023glos}. Such measures can show why a sampler helps or fails on a dataset, which a score cannot. The remaining 23 studies offer classifier scores only. The few studies that measure the data directly are cited more (2.30 (95\% CI 0.73 to 7.26)), but only 5 of them are old enough to compare and the interval is wide.
+
+\input{tables/empirical-beyond}
+
+\subsection{Validation Protocol and Hyperparameter Selection (RQ4)}
+\label{sec:empirical-protocol}
+
+A validation protocol decides which examples are used to fit the resampler and the learner and which are used to score them. Stratified k-fold cross-validation is the norm (Table~\ref{tab:empirical-protocols}; \TODO{cite a methodological source for the advantages and limitations of each protocol}): 33 of 71 studies (46\%) repeat it and 16 of 71 studies (23\%) run it once, with k = 10 (23 studies) and k = 5 (20) as the usual choices. Hold-out designs remain common, and 3 deep or generative studies use fixed benchmark splits~\parencite{buda2018systematic,xu2019ctgan,mullick2019gamo}. One study does not describe its protocol at all~\parencite{datta2020dlexiboost}. Overall, 43 of 71 studies (61\%) average results over repeated partitions; the rest report one estimate per dataset.
+
+\input{tables/empirical-protocols}
+
+Figure~\ref{fig:empirical-pipeline} places the remaining decisions in one run of an experiment. Resampling and tuning belong inside the training part. Only 34 of 71 studies (48\%) state or describe unambiguously that resampling was confined to training data, and 36 studies do not say. For one study the reported numbers of synthetic samples equal the full minority-class size, which implies that the whole dataset was oversampled before 5-fold CV~\parencite{almajzoub2020absmote}; another appears to normalise features before splitting~\parencite{tao2025mcnclwo}.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{empirical-pipeline}
+  \caption{Where Evaluation Decisions Sit in One Run of a Resampling Experiment}
+  \Description{Flow diagram. Benchmark data are split into a training part and a test part. Resampling, tuning and fitting sit inside a dashed boundary marking the training part; the fitted model scores the untouched test part, and scores are aggregated and compared. Two highlighted shortcuts cross the boundary: resampling before the split, and choosing settings from test scores. Each step carries the share of studies that handle it correctly.}
+  \label{fig:empirical-pipeline}
+\end{figure}
+
+Hyperparameter selection is the weakest step (Figure~\ref{fig:empirical-tuning}). Only 9 of 71 studies (13\%) tune parameters inside the training data, through nested CV or a disjoint set of tuning datasets~\parencite{cieslak2008ls,nekooeimehr2016asuwo,krawczyk2020mcrbo,yadav2025ciso}. 20 of 71 studies (28\%) use fixed or default settings for every method, which is even-handed but can penalise methods with poor defaults. In 35 of 71 studies (49\%), the reported configuration of the proposed method, or the amount of resampling, was chosen by looking at results on the evaluation data, typically by reporting the best point of a grid evaluated on the same folds; the remaining 7 do not say how settings were chosen. Search budgets are often unequal: G-SMOTE is selected from 294 configurations against 2 for SMOTE~\parencite{douzas2019gsmote}, and k-means SMOTE keeps, for each measure, the best cross-validated score over its grid~\parencite{douzas2018kmeans}. This share rose from 36\% (5 of 14) before 2010 to 54\% (13 of 24) since 2021, over the same period in which statistical testing became common (Section~\ref{sec:empirical-stats}).
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{empirical-tuning}
+  \caption{How Hyperparameters Were Selected, by Period}
+  \Description{One 100 percent stacked bar per period showing the shares of studies that tune inside the training data, use fixed settings, do not say, or choose settings on the evaluation data.}
+  \label{fig:empirical-tuning}
+\end{figure}
+
+The page-referenced second pass separates two kinds of evidence for choosing settings on evaluation data. In 25 studies the paper says so, for example by keeping the best value of a grid run on the reported folds. In 10 more, values were selected after preliminary runs or enumerated to obtain the best result, and no separate validation data are described~\parencite{barua2014mwmote,abdi2016mdo,chen2021rsmote}. The counts above combine both; the first pass had coded 29. Choosing a model on the data that are then used to estimate its performance biases the estimate upwards~\parencite{cawley2010overfitting}.
+
+Which measure decides the setting? Of the 54 studies that select a parameter value, variant or resampling amount, 33 name the measure used, 4 use an internal criterion of the method such as a likelihood, and 17 do not say (Table~\ref{tab:empirical-reasons}). G-mean (15 studies) and AUC (12) are the usual criteria, followed by F1 (8) and AvAcc (4). Sensitivity alone decides the selection in only 2 studies, both inside an internal stopping or model-choice rule~\parencite{das2015racog,vuttipittayamongkol2018obu}, so selecting on recall is not the norm. In 33 of 33 studies that name a criterion, it is also one of the measures they report, so when selection uses the evaluation folds the proposal is tuned on exactly the number the reader sees.
+
+Choosing settings on evaluation data carries no citation penalty (1.15 (95\% CI 0.61 to 2.16)), and neither repeated partitions (0.99 (95\% CI 0.52 to 1.87)) nor a statement of train-only resampling (1.25 (95\% CI 0.67 to 2.35)) is associated with citations.
+
+\subsection{Statistical Testing (RQ5)}
+\label{sec:empirical-stats}
+
+A significance test asks whether a difference in scores across datasets is larger than chance would produce. 52 of 71 studies (73\%) use one. The Wilcoxon signed-rank test (26 studies) and the Friedman test (25) dominate, with Holm (10), Bonferroni--Dunn (6), Shaffer (4) and Nemenyi (4) as post-hoc procedures. Grouped by what they control (Figure~\ref{fig:empirical-tests}): 27 of 71 studies (38\%) apply a corrected multiple-comparison procedure, in 23 cases Friedman followed by a post-hoc test against the proposed method; 19 of 71 studies (27\%) use only pairwise tests without correction, although they compare the proposal with a median of 6 competitors; 3 stop at an omnibus test; 3 use Bayesian signed-rank tests~\parencite{zheng2022shsampler,yan2025mlos,yan2025gdhs}; and 19 of 71 studies (27\%) report no test.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{empirical-tests}
+  \caption{Statistical Testing by Period}
+  \Description{One 100 percent stacked bar per period showing the shares of studies with no test, uncorrected pairwise tests, an omnibus test only, a corrected multiple-comparison procedure, or a Bayesian test.}
+  \label{fig:empirical-tests}
+\end{figure}
+
+The share of studies with any test rose from 36\% (5 of 14) before 2010 to 83\% (20 of 24) since 2021, and the share with corrected or Bayesian procedures from 14\% (2 of 14) to 58\% (14 of 24). Inconsistencies remain, such as a Nemenyi diagram drawn after a non-significant Friedman test~\parencite{janicka2019soup}, a Nemenyi test without an omnibus test~\parencite{ma2024mcmbrc}, and two different post-hoc procedures named for the same analysis~\parencite{tao2025mcnclwo}. Tests are also run on the folds used to pick hyperparameters (Section~\ref{sec:empirical-protocol}), so a significant result does not remove selection bias.
+
+25 of 71 studies (35\%) cite a methodological source for their tests. The most cited is Demšar's comparison of classifiers over multiple datasets (19 studies)~\parencite{demsar2006statistical}, which has 11,043 citations in OpenAlex. Later tutorials supply the Holm, Shaffer and aligned-rank procedures~\parencite{garcia2008extension,garcia2010advanced,derrac2011practical}, and the Bayesian tests follow Benavoli et al.~\parencite{benavoli2017time}. Some cited sources do not describe the test that was run: one study cites the design of a variable-selection benchmark for its Friedman and Holm tests~\parencite{douzas2019gsmote}, and another cites a guide to normality tests for its Wilcoxon test~\parencite{palli2022cbhsid}. Testing is not associated with citations: the ratio is 0.69 (95\% CI 0.34 to 1.43) for any test, 1.22 (95\% CI 0.63 to 2.36) for a corrected or Bayesian procedure and 1.02 (95\% CI 0.51 to 2.04) for citing a methodology.
+
+\subsection{Reporting of Results (RQ5)}
+\label{sec:empirical-reporting}
+
+Reporting is the form in which scores reach the reader. Results are mostly given as per-dataset tables (58 of 71 studies, 82\%), usually with the best value in bold, and summarised by average ranks (38 of 71 studies, 54\%) and tables of p-values (32 of 71 studies, 45\%); win/tie/loss counts appear in 19 studies. Variability is less visible: only 24 of 71 studies (34\%) give standard deviations with their means. Visual evidence is common, with 2-D plots of synthetic samples in 25 studies, parameter-sensitivity curves in 26 and ablation studies in 23. ROC curves (6), box plots (6) and critical-difference diagrams (4) are rare.
+
+Cost and reproducibility receive less attention. Only 14 of 71 studies (20\%) measure running time, although many proposals add clustering, optimisation or generative training on top of SMOTE. Code is available for 27 of 71 studies (38\%), rising from none before 2010 to 65\% (13 of 20) in 2016 to 2020 and 50\% (12 of 24) since 2021 (Figure~\ref{fig:empirical-trend}). 18 studies move per-dataset results to supplementary files, and some main texts show only ranks~\parencite{abdi2016mdo,koziarski2019rbo} or only figures~\parencite{han2023glos}, which prevents re-analysis. We also found tables that contradict the text of the same paper~\parencite{chawla2003smoteboost,batista2004study,hu2026loyalty}.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{empirical-trend}
+  \caption{Reporting Practices by Period}
+  \Description{Four lines over four periods giving the share of studies that average over repeated partitions, report standard deviations, measure running time and release code.}
+  \label{fig:empirical-trend}
+\end{figure}
+
+Code release is the reporting practice most closely associated with citations: studies that release code are cited about twice as often as studies of the same age (2.01 (95\% CI 0.98 to 4.14)), although the interval reaches 1. A released implementation also makes a method easier to include as a competitor in later studies. Reporting standard deviations (0.91 (95\% CI 0.46 to 1.79)) or running time (0.95 (95\% CI 0.40 to 2.23)) shows no association.
+
+\subsection{What the Comparisons Conclude (RQ6)}
+\label{sec:empirical-outcomes}
+
+An outcome is what a study concludes about its own proposal. We coded it into four classes (Table~\ref{tab:empirical-outcomes}). Of the 69 studies that propose a method, 68 report it as the best overall: 27 with no stated exception and 41 with an exception the authors state themselves, such as a measure, learner, competitor or data condition where the proposal is not better or not significantly better. Only one reports no advantage over simple baselines~\parencite{yadav2025ciso}, and that study is also the only one that pre-registered its protocol.
+
+\input{tables/empirical-outcomes}
+
+These wins do not add up to a ranking. A method that leads in one study is placed below the proposal in every later study that includes it: MDO is a competitor in 13 later studies and MC-CCR in 7, and each of those studies reports its own method ahead on its main summary measure~\parencite{naglik2024gmmsampling,yan2025gdhs,ma2024mcmbrc}. Because each comparison uses its own folds, settings and measure definitions, the corpus cannot say which of these methods is better, only that each is better under the protocol of the paper that proposed it.
+
+Modest conclusions are not penalised: studies that state where their proposal is not better are cited about as often as studies that claim an unqualified win (0.65 (95\% CI 0.34 to 1.25)).
+
+\subsection{Threats to Validity}
+\label{sec:empirical-threats}
+
+Six limits apply to the counts above. First, the corpus is the collection assembled for this survey, not an exhaustive sample, so shares describe these 71 studies and may not hold for the whole literature \TODO{align with the selection procedure in Section 3}. Second, coding was done by one extraction pass per paper; the four judgement codes were not double-coded, although the sixteen codings that the argument relies on most were re-checked against the PDFs. Third, some tables are images in the PDFs, so a few counts of datasets, classes or imbalance ratios are missing, and missing values were left empty rather than estimated. Fourth, each study is counted once per attribute, so a study that reports one measure in a footnote counts the same as one that builds its argument on it. Fifth, the reasons, selection criteria and evidence codes of the second pass come from one reading per paper; each carries a quote and a page, but a second reader has not yet checked them. Sixth, citation counts come from one index on one date. OpenAlex splits some papers over several records and indexes some only as preprints; we merged one split record and used the journal record where the corpus holds a dissertation chapter. Its counts are also lower than those of Google Scholar. The citation ratios are associations in a small corpus, not effects of the practices.
+
+\subsection{A Minimum Evaluation Standard}
+\label{sec:empirical-standard}
+
+The analysis answers its six questions as follows. Methods are compared on more data and with more learners than before (RQ1, RQ2), but a third still use one learner and a quarter omit the untreated baseline. Measures share names without sharing definitions (RQ3). Settings are often chosen on the evaluation data, and this has become more common (RQ4), so the wider use of statistical tests (RQ5) does not make the reported gains safer. Nearly every study concludes that its proposal is best, and those conclusions do not form a consistent ranking (RQ6). Most studies say why they chose their data, fewer why they chose their learners, and settings are tuned and reported on the same measure. Influence does not follow rigour: the most cited studies used few datasets and seldom tested, and after adjusting for age no practice of protocol, tuning or testing is associated with citations. Table~\ref{tab:empirical-remedies} pairs each observed problem with a remedy. We recommend that every new SMOTE-family method be evaluated to this standard.
+
+\input{tables/empirical-remedies}
+
+A shared benchmark that fixes the folds, the tuning budget and the measure definitions, and that is re-run when a new method appears, would let these comparisons accumulate instead of restarting with each paper \TODO{link to the future-work agenda in Section 8}.
+

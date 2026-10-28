@@ -1,0 +1,22 @@
+%% Table: evidence other than classifier scores (input from sections/07-empirical-comparisons.tex).
+%% JAIR style: caption above the table, booktabs rules, \midrule only below the header.
+%% Generated 2026-10-28 from the SMOTE25 evaluation draft page (76 coded papers, 71 empirical).
+%% Numbers are filled from the coded data; regenerate instead of editing them by hand.
+\begin{table}[t]
+  \caption{Evidence Other Than Classifier Scores}
+  \label{tab:empirical-beyond}
+  \footnotesize
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}p{0.2\linewidth}p{0.44\linewidth}rp{0.17\linewidth}@{}}
+    \toprule
+    Evidence & What it shows & Studies & Examples\\
+    \midrule
+    Visual inspection & 2-D plots of where synthetic points fall; PCA or t-SNE projections; histograms of real and synthetic columns & 33 & \parencite{han2005borderline,liu2020mbs,kim2022sos}\\
+    Analytical properties & Theorems or bounds on the sampler; big-O time or memory & 31 & \parencite{mullick2019gamo,abdi2016mdo,yadav2025ciso}\\
+    Model diagnostics without a score & Size of trees or rule sets learned from the resampled data; diversity of ensemble members & 5 & \parencite{chawla2002smote,batista2004study,diezpastor2015randombalance}\\
+    Direct measurement of the resampled data & Distance or likelihood between real and synthetic distributions (MMD, FID, likelihood fitness); share of synthetic examples removed as noise; safe, borderline, rare and outlier composition & 6 & \parencite{xu2019ctgan,saez2015smoteipf,liu2020spe}\\
+    Classifier scores only & No evidence of any of the kinds above & 23 & \parencite{he2008adasyn,barua2014mwmote,maldonado2022fwsmote}\\
+    \bottomrule
+  \end{tabular}
+  \par\smallskip\raggedright\scriptsize A study can provide several kinds of evidence; the counts overlap.
+\end{table}

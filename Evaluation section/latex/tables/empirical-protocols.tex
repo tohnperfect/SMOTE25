@@ -1,0 +1,22 @@
+%% Table: validation protocols (input from sections/07-empirical-comparisons.tex).
+%% JAIR style: caption above the table, booktabs rules, \midrule only below the header.
+%% Generated 2026-10-28 from the SMOTE25 evaluation draft page (76 coded papers, 71 empirical).
+%% Numbers are filled from the coded data; regenerate instead of editing them by hand.
+\begin{table}[t]
+  \caption{Validation Protocols}
+  \label{tab:empirical-protocols}
+  \footnotesize
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}p{0.14\linewidth}p{0.16\linewidth}p{0.18\linewidth}p{0.2\linewidth}rp{0.14\linewidth}@{}}
+    \toprule
+    Protocol & Description & Advantages & Limitations & Studies & Examples\\
+    \midrule
+    Repeated k-fold CV & k folds, reshuffled and repeated & Uses all data; variance can be estimated & Costly; folds overlap across repeats & 33 & \parencite{napierala2010spider2,krawczyk2020mcrbo,naglik2024gmmsampling}\\
+    Single k-fold CV & One run of k folds & Uses all data once & One estimate per dataset; sensitive to the split & 16 & \parencite{chawla2002smote,fernandez2013analysing,maldonado2022fwsmote}\\
+    5$\times$2 CV & Five repeats of two folds & Suits paired tests on each dataset & Half the data for training & 4 & \parencite{cieslak2008ls,koziarski2019rbo}\\
+    Repeated hold-out & Several random train/test splits & Simple; variance can be estimated & Test sets overlap; few minority test examples & 6 & \parencite{he2008adasyn,chen2021rsmote}\\
+    Single hold-out & One train/test split & Cheap for large data & One estimate; high variance & 8 & \parencite{vuttipittayamongkol2020nbu,hu2026loyalty}\\
+    Fixed benchmark split & The split shipped with the dataset & Comparable with other work on that benchmark & One split; imbalance often induced artificially & 3 & \parencite{buda2018systematic,mullick2019gamo}\\
+    \bottomrule
+  \end{tabular}
+\end{table}

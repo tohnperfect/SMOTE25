@@ -1,0 +1,31 @@
+%% Table: observed problems and recommended practice (input from sections/07-empirical-comparisons.tex).
+%% JAIR style: caption above the table, booktabs rules, \midrule only below the header.
+%% Generated 2026-10-28 from the SMOTE25 evaluation draft page (76 coded papers, 71 empirical).
+%% Numbers are filled from the coded data; regenerate instead of editing them by hand.
+\begin{table}[t]
+  \caption{Observed Problems and Recommended Practice}
+  \label{tab:empirical-remedies}
+  \footnotesize
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}p{0.3\linewidth}rp{0.52\linewidth}@{}}
+    \toprule
+    Observed problem & Studies & Recommended practice\\
+    \midrule
+    One base learner & 25 & Use at least three learners from different families, including a strong ensemble such as random forest or gradient boosting.\\
+    No untreated baseline & 19 & Include no resampling, class weighting, random oversampling and SMOTE.\\
+    Reasons for learners not stated & 22 & Say why each learner was chosen, preferably for its sensitivity to class imbalance or to cover distinct learning paradigms.\\
+    Changed datasets not released & 42 & Release binarised, merged, subsampled or noise-injected versions together with their fold assignments.\\
+    Copied competitor results & 6 & Re-run every competitor on identical folds.\\
+    Threshold-dependent measures only & 25 & Report one threshold-free measure computed from scores and one class-balanced threshold measure.\\
+    Non-standard measure definitions & 14 & Give the formula of every measure and the multi-class averaging rule.\\
+    Train-only resampling not stated & 37 & State that resampling, scaling and imputation are fitted on training folds only.\\
+    Selection criterion not named & 17 & Name the measure and the data used to select every setting, and report results on data not used for selection.\\
+    Settings chosen on evaluation data & 35 & Tune every method with nested CV or a disjoint tuning suite under the same search budget.\\
+    Classifier scores only & 65 & Add one direct check of the resampled data, such as a distance between real and synthetic distributions or the share of synthetic examples that fall in majority regions.\\
+    No test, or uncorrected pairwise tests & 38 & Use the Friedman test with Holm or Shaffer post-hoc correction, or Bayesian tests, and report effect sizes.\\
+    No variability reported & 47 & Publish per-dataset means and standard deviations.\\
+    No runtime or no code & 57 / 44 & Report running time and release code and random seeds.\\
+    \bottomrule
+  \end{tabular}
+  \par\smallskip\raggedright\scriptsize Studies: number of the 71 empirical studies showing the problem.
+\end{table}

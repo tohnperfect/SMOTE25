@@ -1,0 +1,96 @@
+%% Appendix B. Evaluation map of the empirical studies (form: one row per study, as in a per-method evaluation table).
+%% Generated 2026-10-28 from the SMOTE25 evaluation draft page (76 coded papers, 71 empirical).
+%% Numbers are filled from the coded data; regenerate instead of editing them by hand.
+%% Requires \usepackage{longtable} in main.tex, and \input{sections/appendix-empirical-map} after the reproducibility appendix.
+\section{Evaluation Map of the Empirical Studies}
+\label{app:empirical-map}
+
+Table~\ref{tab:empirical-map} lists the coded evaluation design of each of the 71 empirical studies analysed in Section~\ref{sec:empirical}, grouped by problem setting and ordered by year.
+
+\begingroup\scriptsize\setlength{\tabcolsep}{2.5pt}
+\begin{longtable}{@{}p{0.13\linewidth}lllp{0.06\linewidth}p{0.15\linewidth}p{0.2\linewidth}p{0.08\linewidth}p{0.11\linewidth}l@{}}
+\caption{Evaluation Map of the Empirical Studies}\label{tab:empirical-map}\\
+\toprule
+Study & Year & Set. & DS & Classes & Base learners & Measures & Protocol & Test & Out.\\
+\midrule
+\endfirsthead
+\toprule
+Study & Year & Set. & DS & Classes & Base learners & Measures & Protocol & Test & Out.\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+OSS~\parencite{kubat1997oss} & 1997 & B & 7 & 2 & k-NN, C4.5/C5.0 & G-mean, Recall/TPR, Specificity/TNR, Accuracy/Error & k-CV & none & B\\
+SHRINK~\parencite{kubat1998shrink} & 1998 & B & 1 & 2 & C4.5/C5.0, k-NN & G-mean, Recall/TPR, Specificity/TNR, ROC curve & rep. 10-CV & t-test & B\\
+SMOTE~\parencite{chawla2002smote} & 2002 & B & 9 & 2 & C4.5/C5.0, Rule learner, Naive Bayes & AUC, ROC curve, Recall/TPR, Specificity/TNR & 10-CV & none & A\\
+Batista et al.~\parencite{batista2004study} & 2004 & B & 15 & 2 & C4.5/C5.0 & AUC, ROC curve & 10-CV & Hsu MCB & B\\
+Borderline-SMOTE~\parencite{han2005borderline} & 2005 & B & 3 & 2 & C4.5/C5.0 & Recall/TPR, F1 & rep. 10-CV & none & B\\
+Cluster-SMOTE~\parencite{cieslak2006cluster} & 2006 & B & 2 & 2 & Rule learner & ROC curve, Recall/TPR, FPR & hold-out & none & B\\
+ADASYN~\parencite{he2008adasyn} & 2008 & B & 5 & 2 & CART/DT & Accuracy/Error, Precision, Recall/TPR, F1, G-mean & rep. hold-out & none & B\\
+LS~\parencite{cieslak2008ls} & 2008 & B & 20 & 2 & C4.5/C5.0, SVM & AUC & 5$\times$2 CV & CV F-test, Friedman, Holm & A\\
+EasyEnsemble~\parencite{liu2009easyensemble} & 2009 & B & 16 & 2 & Boosting ensemble, Random Forest & AUC, F1, G-mean, Runtime & rep. 10-CV & t-test & B\\
+Safe-Level-SMOTE~\parencite{bunkhumpornpat2009safelevel} & 2009 & B & 2 & 2 & C4.5/C5.0, Naive Bayes, SVM & Precision, Recall/TPR, F1, AUC & 10-CV & none & B\\
+SBC~\parencite{yen2009sbc} & 2009 & B & 2 & 2 & MLP/NN & Precision, Recall/TPR, F1, Runtime & hold-out & none & A\\
+RAMOBoost~\parencite{chen2010ramoboost} & 2010 & B & 19 & 2 & MLP/NN & Accuracy/Error, Precision, Recall/TPR, F-measure, G-mean, ROC curve, AUC, Runtime & rep. hold-out & Wilcoxon signed-rank & B\\
+RUSBoost~\parencite{seiffert2010rusboost} & 2010 & B & 15 & 2 & C4.5/C5.0, Rule learner, Naive Bayes & AUC, AUPRC, F1 & rep. 10-CV & ANOVA, Tukey HSD, t-test & B\\
+SPIDER2~\parencite{napierala2010spider2} & 2010 & B & 9 & 2 & Rule learner, C4.5/C5.0 & Recall/TPR, Specificity/TNR, G-mean, Accuracy/Error & rep. 10-CV & Wilcoxon signed-rank & B\\
+INOS~\parencite{cao2013inos} & 2013 & B & 7 & 2 & SVM & F1, G-mean, Precision, Recall/TPR, Specificity/TNR, Runtime & rep. hold-out & none & B\\
+MWMOTE~\parencite{barua2014mwmote} & 2014 & B & 20 & 2 & MLP/NN, Boosting ensemble, k-NN, C4.5/C5.0 & Accuracy/Error, Precision, Recall/TPR, F1, G-mean, AUC, ROC curve & 10-CV & Wilcoxon signed-rank & B\\
+RACOG~\parencite{das2015racog} & 2015 & B & 10 & 2 & C4.5/C5.0, SVM, k-NN, Logistic Regression & Recall/TPR, G-mean, AUC & 5-CV & t-test & B\\
+Random Balance~\parencite{diezpastor2015randombalance} & 2015 & B & 86 & 2 & C4.5/C5.0, k-NN, SVM & AUC, F1, G-mean, Accuracy/Error, Kappa & 5$\times$2 CV & Friedman, Iman-Davenport, Hochberg, t-test & B\\
+SMOTE-IPF~\parencite{saez2015smoteipf} & 2015 & B & 9 & 2 & C4.5/C5.0 & AUC & rep. 5-CV & Wilcoxon signed-rank, Friedman aligned ranks, Hochberg & A\\
+SplitBal~\parencite{sun2015splitbal} & 2015 & B & 46 & 2 & Naive Bayes, C4.5/C5.0, Rule learner, Random Forest, SVM, k-NN & AUC & rep. 10-CV & Wilcoxon signed-rank, Friedman, Nemenyi & B\\
+A-SUWO~\parencite{nekooeimehr2016asuwo} & 2016 & B & 16 & 2 & SVM, Logistic Regression, k-NN, LDA & F-measure, G-mean, AUC, Precision, Recall/TPR & rep. k-CV & Friedman, Holm & B\\
+CGMOS~\parencite{zhang2016cgmos} & 2016 & B & 30 & 2 & Other, k-NN, SVM, MLP/NN, Random Forest, Boosting ensemble & Precision, Recall/TPR, F1, G-score (P,R), AUC, ROC curve & rep. 10-CV & Wilcoxon signed-rank & A\\
+k-means SMOTE~\parencite{douzas2018kmeans} & 2018 & B & 80 & 2 & Logistic Regression, k-NN, Gradient boosting & G-mean, F1, AUPRC & rep. 5-CV & Friedman, Holm & A\\
+OBU~\parencite{vuttipittayamongkol2018obu} & 2018 & B & 36 & 2 & Random Forest & Recall/TPR, Balanced accuracy & hold-out & Wilcoxon signed-rank & B\\
+G-SMOTE~\parencite{douzas2019gsmote} & 2019 & B & 63 & 2 & Logistic Regression, k-NN, CART/DT, Gradient boosting & AUC, F1, G-mean & rep. 5-CV & Friedman, Holm & A\\
+RBO~\parencite{koziarski2019rbo} & 2019 & B & 34 & 2 & CART/DT, k-NN, SVM, Naive Bayes & Precision, Recall/TPR, F-measure, AUC, G-mean & 5$\times$2 CV & Friedman, Shaffer & B\\
+AB-SMOTE~\parencite{almajzoub2020absmote} & 2020 & B & 8 & 2 & C4.5/C5.0 & Recall/TPR, F1 & 5-CV & none & A\\
+MBS~\parencite{liu2020mbs} & 2020 & B & 13 & 2 & Logistic Regression, Boosting ensemble & AUC & rep. hold-out & Wilcoxon signed-rank & A\\
+NBU~\parencite{vuttipittayamongkol2020nbu} & 2020 & B & 26 & 2 & SVM, Random Forest & Recall/TPR, G-mean, Precision, F1 & hold-out & Wilcoxon signed-rank & B\\
+SPE~\parencite{liu2020spe} & 2020 & B & 5 & 2 & k-NN, CART/DT, SVM, MLP/NN, Boosting ensemble, Random Forest, Gradient boosting, Logistic Regression, C4.5/C5.0 & AUPRC, F1, G-mean, MCC, Recall/TPR, Precision, Runtime & hold-out & none & A\\
+HDE~\parencite{chen2021hde} & 2021 & B & 42 & 2 & C4.5/C5.0 & AUC, G-mean & rep. 5-CV & Friedman, Holm, Wilcoxon signed-rank & A\\
+FW-SMOTE~\parencite{maldonado2022fwsmote} & 2022 & B & 42 & 2 & k-NN, SVM, Logistic Regression & AUC, G-mean & 10-CV & Friedman, Iman-Davenport, Holm & B\\
+GDO~\parencite{xie2022gdo} & 2022 & B & 52 & 2 & SVM & AUC, G-mean, Runtime & 10-CV & Wilcoxon signed-rank & A\\
+KNNOR~\parencite{islam2022knnor} & 2022 & B & 19 & 2 & SVM, k-NN, CART/DT, MLP/NN & AUC, F1, G-mean & rep. 5-CV & none & A\\
+SVDD-WSMOTE~\parencite{tao2022svddw} & 2022 & B & 31 & 2 & MLP/NN, LDA, SVM & G-mean, F-measure, AUC, Runtime & rep. 5-CV & Friedman, Holm & A\\
+CISO~\parencite{yadav2025ciso} & 2025 & B & 50 & 2 & Logistic Regression, SVM, Random Forest, Gradient boosting & AUPRC, AUC, G-mean, Fidelity/likelihood, Runtime & k-CV & Friedman, Holm, Wilcoxon signed-rank & C\\
+GOIO~\parencite{ren2025goio} & 2025 & B & 18 & 2 & Naive Bayes, k-NN, CART/DT, SVM, Random Forest & F1, MCC, Accuracy/Error, Runtime & rep. 5-CV & Friedman, Bonferroni-Dunn, Wilcoxon signed-rank & B\\
+MLOS~\parencite{yan2025mlos} & 2025 & B & 16 & 2 & SVM & AUC, G-mean, Recall/TPR & rep. 5-CV & Bayesian test & A\\
+QC-SMOTE~\parencite{upman2026qcsmote} & 2026 & B & 30 & 2 & Gradient boosting & AUC, Macro-F1, Runtime & rep. k-CV & Wilcoxon signed-rank & A\\
+Global-CS~\parencite{zhou2006globalcs} & 2006 & M & 14 & 3-11 & C4.5/C5.0 & Cost, MAUC & rep. 10-CV & t-test & A\\
+Global-CS~\parencite{zhou2010globalcs} & 2010 & M & 14 & 3-11 & C4.5/C5.0, MLP/NN, Boosting ensemble & Cost, MAUC & rep. 10-CV & t-test & B\\
+Fernandez et al.~\parencite{fernandez2013analysing} & 2013 & M & 24 & 3-11 & C4.5/C5.0, SVM, k-NN & AvAcc, F-measure & 10-CV & Wilcoxon signed-rank & D\\
+SCUT~\parencite{agrawal2015scut} & 2015 & M & 8 & 3-10 & C4.5/C5.0, SVM, Naive Bayes, k-NN & G-mean, F-measure, AUC & 10-CV & Friedman & B\\
+MDO~\parencite{abdi2016mdo} & 2016 & M & 20 & 3-26 & C4.5/C5.0, Rule learner, k-NN & MAUC, G-mean, Precision, Recall/TPR, F-measure & rep. 5-CV & Iman-Davenport, Bonferroni-Dunn & B\\
+SMOM~\parencite{zhu2017smom} & 2017 & M & 27 & 3-10 & C4.5/C5.0, Boosting ensemble, MLP/NN, Naive Bayes & G-mean, MAUC, Recall/TPR, Precision, F-measure, Per-class recall, Runtime & rep. 10-CV & Wilcoxon signed-rank & B\\
+AMDO~\parencite{yang2018amdo} & 2018 & M & 17 & 3-6 & C4.5/C5.0 & Precision, Macro-precision, MAUC, AUCm, Min-sensitivity & rep. 5-CV & Wilcoxon signed-rank, Friedman, Bonferroni-Dunn & B\\
+Buda et al.~\parencite{buda2018systematic} & 2018 & M & 3 & 10-1000 & CNN & AUC, ROC curve, Accuracy/Error & fixed split & none & D\\
+GAMO~\parencite{mullick2019gamo} & 2019 & M & 7 & 5-50 (image); 2-18 (supplement tabular) & CNN & AvAcc, G-mean, Fidelity/likelihood & fixed split & none & A\\
+SOUP~\parencite{janicka2019soup} & 2019 & M & 15 & 3-9 (counted from Table 2) & C4.5/C5.0, Rule learner, k-NN & G-mean, Per-class recall, Macro-F1 & 10-CV & Friedman, Nemenyi, Wilcoxon signed-rank & B\\
+MC-CCR~\parencite{koziarski2020mcccr} & 2020 & M & 20 & 3-10 & C4.5/C5.0, MLP/NN, k-NN, Naive Bayes & AvAcc, CBA, G-mean, CEN & rep. 10-CV & CV F-test, Friedman, Shaffer & A\\
+MC-RBO~\parencite{krawczyk2020mcrbo} & 2020 & M & 20 & n/a & C4.5/C5.0, MLP/NN, k-NN, Naive Bayes & AvAcc, CBA, G-mean, CEN & rep. 10-CV & CV F-test, Friedman, Shaffer & B\\
+EMDO~\parencite{yao2021emdo} & 2021 & M & 11 & 3-7 & C4.5/C5.0 & Precision, Macro-precision, AUC, MAUC & rep. 5-CV & none & A\\
+SHSampler~\parencite{zheng2022shsampler} & 2022 & M & 20 & 3-10 & CART/DT, Random Forest, Naive Bayes & MAUC, G-mean & 5-CV & Friedman, Bayesian test & B\\
+GLOS~\parencite{han2023glos} & 2023 & M & 21 & 3-11 & C4.5/C5.0 & G-mean, Precision, Per-class recall, CBA & rep. 5-CV & Wilcoxon signed-rank & B\\
+GMMSampling~\parencite{naglik2024gmmsampling} & 2024 & M & 11 & 3-9 & CART/DT, Naive Bayes, k-NN, Random Forest, Gradient boosting & Balanced accuracy, Macro-F1, G-mean, MCC, AUPRC & rep. 5-CV & Friedman, Wilcoxon signed-rank & B\\
+MC-MBRC~\parencite{ma2024mcmbrc} & 2024 & M & 20 & 3-10 & Random Forest, CART/DT, MLP/NN, k-NN & AvAcc, F-measure, CBA, CEN & rep. 2-CV & Nemenyi & B\\
+MKC-SMOTE~\parencite{wang2024mkc} & 2024 & M & 21 & n/a & CART/DT, SVM & MAUC, G-mean & 5-CV & Wilcoxon signed-rank & A\\
+MC-NCLWO~\parencite{tao2025mcnclwo} & 2025 & M & 23 & n/a & k-NN, CART/DT, Naive Bayes, SVM & F-measure, AvAcc, CBA, CEN & rep. k-CV & Holm & B\\
+SMOTEBoost~\parencite{chawla2003smoteboost} & 2003 & B+M & 4 & 2-5 & Rule learner & Precision, Recall/TPR, F-measure & 10-CV & none & A\\
+COG-OS~\parencite{wu2007cogos} & 2007 & B+M & 15 & 2-26 & SVM, Logistic Regression, C4.5/C5.0, Rule learner & Precision, Recall/TPR, F1, Accuracy/Error, Per-class recall & hold-out & none & B\\
+DSRBF~\parencite{fernandeznavarro2011dsrbf} & 2011 & B+M & 13 & 2-10 & MLP/NN & Accuracy/Error, Min-sensitivity & rep. 10-CV & Friedman, Nemenyi, Bonferroni-Dunn & B\\
+CTGAN~\parencite{xu2019ctgan} & 2019 & B+M & 8 & binary and multiclass labels (class counts not stated); 1 regression task & CART/DT, SVM, MLP/NN, Boosting ensemble, Logistic Regression & Fidelity/likelihood, F1, Macro-F1, Accuracy/Error & fixed split & none & A\\
+DLexiBoost~\parencite{datta2020dlexiboost} & 2020 & B+M & 33 & 2-16 & C4.5/C5.0, k-NN & G-mean, AUC, MAUC, Runtime & n.s. & Friedman, Wilcoxon signed-rank, Kruskal-Wallis, Mann-Whitney & B\\
+RSMOTE~\parencite{chen2021rsmote} & 2021 & B+M & 35 & 2-5 & Boosting ensemble, Logistic Regression, CART/DT, k-NN, Gradient boosting, Other & Precision, Recall/TPR, AUC, F1, G-mean, Macro-F1, Macro-precision, Macro-recall & rep. hold-out & Friedman, Iman-Davenport, Holm & B\\
+CBHSID~\parencite{palli2022cbhsid} & 2022 & B+M & 16 & 2-10 & SVM & G-mean, Recall/TPR, F1 & rep. hold-out & Friedman, Bonferroni-Dunn, Wilcoxon signed-rank & B\\
+SOS~\parencite{kim2022sos} & 2022 & B+M & 6 & 2-6 & CART/DT, Logistic Regression, Boosting ensemble, MLP/NN & Weighted-F1, Accuracy/Error, Runtime & hold-out & none & A\\
+NROMM~\parencite{liu2023nromm} & 2023 & B+M & 30 & 2-10 & C4.5/C5.0, MLP/NN, k-NN, Naive Bayes, SVM & AvAcc, G-mean, CBA, CEN, AUC, Pmin, Macro-precision, AUCm, MAUC & 5$\times$2 CV & Friedman, Shaffer, Wilcoxon signed-rank & B\\
+OREM~\parencite{zhu2023orem} & 2023 & B+M & 49 & 2-10 & C4.5/C5.0, MLP/NN, SVM, CART/DT & F1, G-mean, AUC, Macro-F1, MAUC, Recall/TPR, Precision, Balanced accuracy & rep. 5-CV & Wilcoxon signed-rank & B\\
+GDHS~\parencite{yan2025gdhs} & 2025 & B+M & 20 & 2-10 & CART/DT & G-mean, MAUC & rep. 5-CV & Bayesian test & A\\
+DGOT~\parencite{ren2026dgot} & 2026 & B+M & 22 & n/a & Gradient boosting, k-NN, CART/DT, Logistic Regression, Random Forest & Accuracy/Error, F1, Macro-F1, MCC & rep. 5-CV & Friedman, Bonferroni-Dunn, Wilcoxon signed-rank & A\\
+Loyalty-SMOTE~\parencite{hu2026loyalty} & 2026 & B+M & 59 & 2-10 & SVM & F1, AUC, Recall/TPR, G-mean, Runtime & hold-out & none & A\\
+\end{longtable}
+\par\noindent B = binary, M = multi-class; DS = number of real datasets; k-CV = k-fold cross-validation; rep. = repeated; n.s. = not stated; Out. = outcome class of Table~\ref{tab:empirical-outcomes}.
+\endgroup

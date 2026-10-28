@@ -1,0 +1,19 @@
+%% Source of figures/empirical-datasets.pdf. Compile: pdflatex empirical-datasets.tex
+%% Generated 2026-10-28 from the SMOTE25 evaluation draft page (76 coded papers, 71 empirical).
+%% Numbers are filled from the coded data; regenerate instead of editing them by hand.
+\documentclass[border=4pt]{standalone}
+\usepackage[scaled]{helvet}\renewcommand{\familydefault}{\sfdefault}
+\usepackage{pgfplots}\pgfplotsset{compat=1.18}
+\definecolor{sOne}{HTML}{2A78D6}\definecolor{sTwo}{HTML}{EB6834}\definecolor{sThree}{HTML}{1BAF7A}\definecolor{sFour}{HTML}{EDA100}
+\definecolor{oZero}{HTML}{A3ABB4}\definecolor{oOne}{HTML}{5598E7}\definecolor{oTwo}{HTML}{1C5CAB}\definecolor{oThree}{HTML}{0D366B}\definecolor{inkTwo}{HTML}{465462}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[width=13cm,height=6.2cm,xmin=1996,xmax=2027,ymin=0,ymax=90,xlabel={Publication year},ylabel={Real datasets per study},xtick={2000,2005,2010,2015,2020,2025},
+  xticklabel style={/pgf/number format/1000 sep={}},tick label style={font=\footnotesize},legend cell align=left,legend style={font=\footnotesize,at={(0.02,0.98)},anchor=north west,draw=none},grid=major,grid style={gray!20}]
+\addplot[only marks,mark=*,mark size=2.4pt,color=sOne,mark options={draw=white,line width=0.3pt,fill=sOne}] coordinates {(1997,7) (2002,9) (1998,1) (2004,15) (2005,3) (2006,2) (2008,20) (2008,5) (2009,2) (2009,2) (2009,16) (2010,19) (2010,9) (2010,15) (2014,20) (2013,7) (2015,10) (2015,9) (2015,86) (2015,46) (2016,16) (2018,36) (2018,80) (2019,63) (2019,34) (2020,26) (2020,8) (2020,13) (2020,5) (2021,42) (2022,19) (2022,42) (2022,52) (2025,16) (2025,18) (2025,50) (2022,31) (2026,30) (2016,30)};
+\addplot[only marks,mark=square*,mark size=2.4pt,color=sTwo,mark options={draw=white,line width=0.3pt,fill=sTwo}] coordinates {(2018,3) (2019,7) (2006,14) (2010,14) (2013,24) (2015,8) (2016,20) (2018,17) (2017,27) (2019,15) (2020,20) (2020,20) (2021,11) (2022,20) (2023,21) (2024,21) (2024,20) (2024,11) (2025,23)};
+\addplot[only marks,mark=triangle*,mark size=2.4pt,color=sThree,mark options={draw=white,line width=0.3pt,fill=sThree}] coordinates {(2003,4) (2007,15) (2020,33) (2019,8) (2022,6) (2023,30) (2026,22) (2026,59) (2021,35) (2011,13) (2022,16) (2023,49) (2025,20)};
+\legend{{Binary},{Multi-class},{Both}}
+\end{axis}
+\end{tikzpicture}
+\end{document}

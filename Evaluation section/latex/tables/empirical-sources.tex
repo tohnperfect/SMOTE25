@@ -1,0 +1,23 @@
+%% Table: sources of benchmark data (input from sections/07-empirical-comparisons.tex).
+%% JAIR style: caption above the table, booktabs rules, \midrule only below the header.
+%% Generated 2026-10-28 from the SMOTE25 evaluation draft page (76 coded papers, 71 empirical).
+%% Numbers are filled from the coded data; regenerate instead of editing them by hand.
+\begin{table}[t]
+  \caption{Sources of Benchmark Data}
+  \label{tab:empirical-sources}
+  \footnotesize
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}p{0.26\linewidth}rrp{0.5\linewidth}@{}}
+    \toprule
+    Source & Studies & Share & Typical use\\
+    \midrule
+    UCI repository & 53 & 75\% & Original source of most tabular benchmarks\\
+    KEEL repository & 33 & 46\% & Pre-binarised imbalanced sets with fixed folds\\
+    Synthetic data & 29 & 41\% & Controlled overlap, noise or class shapes\\
+    Private or application data & 15 & 21\% & Case studies in one domain\\
+    Image benchmarks & 6 & 8\% & Imbalance induced in balanced image sets\\
+    Other repositories & 13 & 18\% & Kaggle, OpenML, imbalanced-learn, LIBSVM, UCR, PROMISE\\
+    \bottomrule
+  \end{tabular}
+  \par\smallskip\raggedright\scriptsize A study can draw on several sources.
+\end{table}

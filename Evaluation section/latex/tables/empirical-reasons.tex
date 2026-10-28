@@ -1,0 +1,21 @@
+%% Table: reasons given for evaluation choices (input from sections/07-empirical-comparisons.tex).
+%% JAIR style: caption above the table, booktabs rules, \midrule only below the header.
+%% Generated 2026-10-28 from the SMOTE25 evaluation draft page (76 coded papers, 71 empirical).
+%% Numbers are filled from the coded data; regenerate instead of editing them by hand.
+\begin{table}[t]
+  \caption{Reasons Given for Evaluation Choices}
+  \label{tab:empirical-reasons}
+  \footnotesize
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}p{0.17\linewidth}rp{0.46\linewidth}p{0.17\linewidth}@{}}
+    \toprule
+    Choice & Reason given & Reasons given (studies) & Examples\\
+    \midrule
+    Benchmark data & 58 of 71 & range of IR, size or dimension (30); a target imbalance level (19); set-up of a named earlier study (18); overlap, noise or small disjuncts (17); comparability with published results (14); public availability (12); an application domain (11) & \parencite{barua2014mwmote,saez2015smoteipf,koziarski2020mcccr}\\
+    Base learners & 49 of 71 & widely used or well known (22); different learning paradigms (15); set-up of a named earlier study (11); simple, fast or interpretable (10); same learner for all methods (8); sensitive to imbalance (4); matches how the method works (4) & \parencite{napierala2010spider2,liu2023nromm,yan2025gdhs}\\
+    Measures & 70 of 71 & standard in the literature (40); accuracy misleads under imbalance (39); focus on the minority class (25); independent of the threshold (18); suits several classes (18); costs of an application (7) & \parencite{kubat1997oss,sun2015splitbal,yadav2025ciso}\\
+    Measure used to select settings & 33 of 54 & G-mean (15); AUC (12); F1 (8); AvAcc (4); sensitivity (recall) (4); MAUC (3) & \parencite{kubat1998shrink,cieslak2008ls,das2015racog}\\
+    \bottomrule
+  \end{tabular}
+  \par\smallskip\raggedright\scriptsize A study can give several reasons. Selection criterion: studies that select a parameter value, variant or resampling amount.
+\end{table}

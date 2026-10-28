@@ -1,0 +1,30 @@
+%% Table: measure-definition problems found in the corpus (input from sections/07-empirical-comparisons.tex).
+%% JAIR style: caption above the table, booktabs rules, \midrule only below the header.
+%% Generated 2026-10-28 from the SMOTE25 evaluation draft page (76 coded papers, 71 empirical).
+%% Numbers are filled from the coded data; regenerate instead of editing them by hand.
+\begin{table}[t]
+  \caption{Measure-Definition Problems Found in the Corpus}
+  \label{tab:empirical-measuredefs}
+  \footnotesize
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}llp{0.6\linewidth}@{}}
+    \toprule
+    Study & Setting & Problem\\
+    \midrule
+    SCUT~\parencite{agrawal2015scut} & multiclass & multi-class averaging of G-mean, F-measure and AUC not defined\\
+    CGMOS~\parencite{zhang2016cgmos} & binary & 'G-score' = sqrt(Precision x Recall), reported for both classes as positive\\
+    AMDO~\parencite{yang2018amdo} & multiclass & Pavg described as precision but equated with average accuracy\\
+    DLexiBoost~\parencite{datta2020dlexiboost} & both & 'AUC' computed from crisp predictions as (1+TPR-FPR)/2 (= balanced accuracy)\\
+    SPE~\parencite{liu2020spe} & binary & G-mean defined as sqrt(Recall x Precision) instead of sqrt(TPR x TNR)\\
+    EMDO~\parencite{yao2021emdo} & multiclass & per-class precision called 'accuracy' (Pmin/Pavg)\\
+    GDO~\parencite{xie2022gdo} & binary & 'AUC' defined as (Sens+Spec)/2, i.e. single-threshold balanced accuracy\\
+    SOS~\parencite{kim2022sos} & both & weighted-F1 (majority-dominated) as the sole main metric\\
+    SHSampler~\parencite{zheng2022shsampler} & multiclass & MAUC computed from hard-label confusion matrices, not scores\\
+    CBHSID~\parencite{palli2022cbhsid} & both & multi-class averaging of Recall/F1 not stated; F1 misdefined\\
+    MC-MBRC~\parencite{ma2024mcmbrc} & multiclass & AvAcc defined as mean one-vs-rest accuracy (inflated by true negatives)\\
+    GDHS~\parencite{yan2025gdhs} & both & MAUC computed from hard-label confusion matrices, not scores\\
+    MC-NCLWO~\parencite{tao2025mcnclwo} & multiclass & AvAcc defined as mean one-vs-rest accuracy (inflated by true negatives)\\
+    Loyalty-SMOTE~\parencite{hu2026loyalty} & both & implausible AUC values (e.g. 0) and averages inconsistent with tables\\
+    \bottomrule
+  \end{tabular}
+\end{table}

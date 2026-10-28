@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SMOTE25 Evaluation Primer</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Noto+Serif+Thai:wght@400;600&family=STIX+Two+Text:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* Layout: a reading sheet beside a sticky contents rail, in the same visual family as the Section 7 page
+   and the roadmap. Formula boxes, worked examples and "watch out" notes are the only set-off blocks. */
+:root{
+  --bg:#eef1f4; --paper:#ffffff; --ink:#15202b; --ink-2:#465462; --muted:#6c7986;
+  --rule:#d9dfe5; --rule-2:#ebeff3; --tint:#f6f8fa;
+  --accent:#1f5fbf; --accent-soft:#e7eefa; --good:#1d6f3c; --good-soft:#e4f2e8; --warn:#9c3f0c; --warn-soft:#fbeee4;
+  --c1:#2a78d6; --c2:#eb6834; --c3:#5f6b77;
+  --f-serif:"STIX Two Text","Noto Serif Thai",Georgia,serif;
+  --f-ui:"IBM Plex Sans Thai",system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1317; --paper:#161b20; --ink:#e7ecf0; --ink-2:#b4bfc9; --muted:#8b97a3;
+    --rule:#2a323a; --rule-2:#20272e; --tint:#1b2127;
+    --accent:#6ea6f2; --accent-soft:#1a2a40; --good:#6cc58c; --good-soft:#173022; --warn:#f0a06a; --warn-soft:#3a2416;
+    --c1:#3987e5; --c2:#d95926; --c3:#8b97a3;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1317; --paper:#161b20; --ink:#e7ecf0; --ink-2:#b4bfc9; --muted:#8b97a3;
+  --rule:#2a323a; --rule-2:#20272e; --tint:#1b2127;
+  --accent:#6ea6f2; --accent-soft:#1a2a40; --good:#6cc58c; --good-soft:#173022; --warn:#f0a06a; --warn-soft:#3a2416;
+  --c1:#3987e5; --c2:#d95926; --c3:#8b97a3;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-ui);font-size:15px;line-height:1.75;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 56px}
+.wrap{max-width:1200px;margin:0 auto}
+header.top{padding-block:28px 18px;display:grid;gap:6px}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--f-serif);font-weight:600;font-size:clamp(26px,3.2vw,34px);line-height:1.3;margin:0;text-wrap:balance}
+.lede{max-width:72ch;color:var(--ink-2);margin:4px 0 0}
+.layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:28px;align-items:start}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px);max-height:calc(100vh - 24px);overflow:auto;font-size:13px;line-height:1.45;padding-right:4px}
+nav.toc details{border:0}
+nav.toc summary{list-style:none;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;cursor:default}
+nav.toc summary::-webkit-details-marker{display:none}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+nav.toc a{display:grid;grid-template-columns:24px minmax(0,1fr);gap:4px;text-decoration:none;color:var(--ink-2);padding:4px 6px;border-radius:6px}
+nav.toc a:hover{background:var(--paper);color:var(--ink)}
+nav.toc a:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+nav.toc a span:first-child{font-family:var(--f-mono);font-size:11.5px;color:var(--muted);padding-top:1px}
+.sheet{background:var(--paper);border:1px solid var(--rule);border-radius:12px;padding:8px clamp(18px,4vw,48px) 40px;min-width:0}
+section.s{padding-top:30px;border-top:1px solid var(--rule-2);margin-top:30px;display:grid;gap:14px;min-width:0}
+section.s:first-child{border-top:0;margin-top:0}
+h2{font-family:var(--f-serif);font-size:24px;line-height:1.35;margin:0;font-weight:600;text-wrap:balance;display:flex;gap:12px;align-items:baseline}
+h2 .n{font-family:var(--f-mono);font-size:13px;color:var(--accent);border:1px solid var(--accent);border-radius:5px;padding:0 6px;flex:none;position:relative;top:-3px}
+h2 .en{font-family:var(--f-ui);font-size:13px;font-weight:400;color:var(--muted)}
+h3{font-size:17px;margin:8px 0 0;line-height:1.4;text-wrap:balance}
+h3 .en{font-weight:400;font-size:13px;color:var(--muted);margin-left:6px}
+p{margin:0;max-width:74ch}
+.used{font-size:12.5px;color:var(--muted)}
+.used b{font-weight:600;color:var(--ink-2)}
+ul.list{margin:0;padding-left:20px;display:grid;gap:6px;max-width:74ch}
+.box{border:1px solid var(--rule);border-radius:10px;padding:12px 16px;background:var(--tint);display:grid;gap:8px;min-width:0}
+.box > b:first-child{font-size:12.5px;letter-spacing:.04em;color:var(--ink-2)}
+.box.warn{background:var(--warn-soft);border-color:transparent}
+.box.warn > b:first-child{color:var(--warn)}
+.box.key{background:var(--accent-soft);border-color:transparent}
+.box.key > b:first-child{color:var(--accent)}
+.formula{padding:4px 0;min-width:0}
+.mathd{overflow-x:auto;overflow-y:hidden;max-width:100%;padding:2px 0}
+math{font-family:"STIX Two Math","Cambria Math","Latin Modern Math","STIX Two Text",serif;font-size:1.08em}
+math[display="block"]{font-size:1.15em;margin:6px 0}
+code,.mono{font-family:var(--f-mono);font-size:.88em}
+.scroll{overflow-x:auto;min-width:0}
+table.t{border-collapse:collapse;width:100%;font-size:13.5px;line-height:1.5;font-variant-numeric:tabular-nums}
+.t th{font-size:12px;color:var(--muted);font-weight:600;text-align:left;padding:7px 10px;border-bottom:1px solid var(--rule);vertical-align:bottom}
+.t td{padding:8px 10px;border-bottom:1px solid var(--rule-2);vertical-align:top}
+.t td.r,.t th.r{text-align:right}
+.t td.c,.t th.c{text-align:center}
+.t .win{font-weight:600;color:var(--good)}
+.t .bad{color:var(--warn);font-weight:600}
+.t.wide{min-width:680px}
+.cm{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.cmx{border:1px solid var(--rule);border-radius:10px;padding:10px 12px;display:grid;gap:6px}
+.cmx h4{margin:0;font-size:14px}
+.cmx p{font-size:13px;color:var(--ink-2)}
+.cmx table{border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums;width:100%}
+.cmx td,.cmx th{border:1px solid var(--rule-2);padding:4px 6px;text-align:center}
+.cmx th{font-weight:600;color:var(--muted);font-size:11.5px}
+.cmx td.tp,.cmx td.tn{background:var(--good-soft)} .cmx td.fp,.cmx td.fn{background:var(--warn-soft)}
+.metric{border-top:1px solid var(--rule-2);padding-top:14px;display:grid;gap:8px}
+.metric h3{margin:0}
+dl.mx{display:grid;grid-template-columns:118px minmax(0,1fr);gap:6px 14px;margin:0}
+dl.mx dt{font-size:12.5px;color:var(--muted);font-weight:600;padding-top:2px}
+dl.mx dd{margin:0;min-width:0}
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;font-size:13px}
+.flow .st{border:1px solid var(--rule);border-radius:8px;padding:8px 10px;background:var(--paper);display:grid;gap:2px;min-width:0;flex:1 1 140px}
+.flow .st b{font-size:13.5px}
+.flow .st.train{background:var(--good-soft);border-color:transparent}
+.flow .st.test{background:var(--accent-soft);border-color:transparent}
+.flow .ar{align-self:center;color:var(--muted)}
+.calc{border:1px solid var(--rule);border-radius:12px;padding:14px 16px;display:grid;gap:12px}
+.calc .inputs{display:flex;flex-wrap:wrap;gap:10px;align-items:end}
+.calc label{display:grid;gap:2px;font-size:12px;color:var(--muted);font-weight:600}
+.calc input{font:inherit;font-size:15px;width:84px;padding:5px 8px;border:1px solid var(--rule);border-radius:6px;background:var(--paper);color:var(--ink);font-variant-numeric:tabular-nums}
+.calc .presets{display:flex;flex-wrap:wrap;gap:6px}
+.calc button{font:inherit;font-size:13px;border:1px solid var(--rule);background:var(--paper);color:var(--ink-2);border-radius:999px;padding:4px 12px;cursor:pointer}
+.calc button[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft);color:var(--accent);font-weight:600}
+.cout{display:grid;gap:5px;font-variant-numeric:tabular-nums}
+.crow{display:grid;grid-template-columns:150px minmax(0,1fr) 62px;gap:10px;align-items:center;font-size:13px}
+.crow .bt{height:10px;background:var(--rule-2);border-radius:3px;position:relative;overflow:hidden}
+.crow .bt i{position:absolute;top:0;bottom:0;left:0;background:var(--c1);border-radius:0 3px 3px 0}
+.crow .bt i.neg{background:var(--c2)}
+.crow .v{text-align:right;font-weight:600}
+.cnote{font-size:12.5px;color:var(--muted)}
+.map td:first-child{white-space:nowrap;font-family:var(--f-mono);font-size:12.5px}
+.map a{color:var(--accent)}
+a{color:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12px;border-radius:999px;padding:1px 10px;background:var(--tint);border:1px solid var(--rule-2);color:var(--ink-2);white-space:nowrap}
+#gfilter{font:inherit;font-size:14px;padding:7px 10px;border:1px solid var(--rule);border-radius:8px;width:min(100%,360px);background:var(--paper);color:var(--ink)}
+.gl td:first-child{font-weight:600;white-space:nowrap}
+.gl td:nth-child(2){color:var(--ink-2)}
+.foot{font-size:12.5px;color:var(--muted);padding-top:20px;display:grid;gap:4px}
+@media (max-width:900px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  nav.toc{position:static;max-height:none;background:var(--paper);border:1px solid var(--rule);border-radius:10px;padding:10px 12px}
+  nav.toc summary{cursor:pointer;margin:0;color:var(--accent);font-weight:600}
+  nav.toc details[open] summary{margin-bottom:8px}
+}
+@media (max-width:640px){
+  dl.mx{grid-template-columns:minmax(0,1fr);gap:2px}
+  dl.mx dd{margin-bottom:6px}
+  .crow{grid-template-columns:110px minmax(0,1fr) 54px}
+  h2{font-size:21px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<header class="top">
+  <div class="eyebrow">SMOTE25 · อ่านก่อนหัวข้อที่ 7 (Empirical Comparisons and Benchmarks)</div>
+  <h1>พื้นฐานที่ต้องรู้ก่อนอ่านหัวข้อการประเมินผล</h1>
+  <p class="lede">สรุปแนวคิดทุกเรื่องที่หัวข้อที่ 7 ใช้ ตั้งแต่ข้อมูลไม่สมดุล ตัวชี้วัดแต่ละตัววัดอะไรและต่างกันอย่างไร การแบ่งข้อมูล การเลือกค่าพารามิเตอร์ การทดสอบทางสถิติ ไปจนถึงการวิเคราะห์ยอดอ้างอิง ทุกตัวชี้วัดคำนวณจากตัวอย่างชุดเดียวกัน จึงเทียบกันได้ตรง ๆ</p>
+</header>
+<div class="layout">
+<nav class="toc" aria-label="สารบัญ"><details id="tocd" open><summary>สารบัญ</summary><ol>
+  <li><a href="#map"><span>0</span><span>หัวข้อที่ 7 ใช้อะไรบ้าง</span></a></li>
+  <li><a href="#imbalance"><span>1</span><span>ข้อมูลไม่สมดุล</span></a></li>
+  <li><a href="#smote"><span>2</span><span>SMOTE และวิธีในตระกูล</span></a></li>
+  <li><a href="#pipeline"><span>3</span><span>การทดลองหนึ่งรอบ</span></a></li>
+  <li><a href="#confusion"><span>4</span><span>Confusion matrix และค่าเกณฑ์</span></a></li>
+  <li><a href="#binary"><span>5</span><span>ตัวชี้วัดแบบสองคลาส</span></a></li>
+  <li><a href="#ranking"><span>6</span><span>ROC-AUC และ PR-AUC</span></a></li>
+  <li><a href="#multiclass"><span>7</span><span>ตัวชี้วัดแบบหลายคลาส</span></a></li>
+  <li><a href="#pitfalls"><span>8</span><span>นิยามที่มักเขียนผิด</span></a></li>
+  <li><a href="#choose"><span>9</span><span>ตารางเทียบตัวชี้วัด</span></a></li>
+  <li><a href="#data"><span>10</span><span>ข้อมูลที่ใช้ทดสอบ</span></a></li>
+  <li><a href="#learners"><span>11</span><span>ตัวจำแนกพื้นฐานและคู่เทียบ</span></a></li>
+  <li><a href="#protocol"><span>12</span><span>การแบ่งข้อมูลฝึกและทดสอบ</span></a></li>
+  <li><a href="#tuning"><span>13</span><span>การเลือกค่าพารามิเตอร์</span></a></li>
+  <li><a href="#stats"><span>14</span><span>การทดสอบทางสถิติ</span></a></li>
+  <li><a href="#reporting"><span>15</span><span>การรายงานผล</span></a></li>
+  <li><a href="#beyond"><span>16</span><span>หลักฐานนอกจากคะแนน</span></a></li>
+  <li><a href="#citations"><span>17</span><span>ยอดอ้างอิงและตัวคูณ</span></a></li>
+  <li><a href="#outcomes"><span>18</span><span>ผลลัพธ์ ข้อจำกัด และมาตรฐานขั้นต่ำ</span></a></li>
+  <li><a href="#glossary"><span>19</span><span>อภิธานศัพท์</span></a></li>
+</ol></details></nav>
+<main class="sheet">
+
+<section class="s" id="map">
+  <h2><span class="n">0</span><span>หัวข้อที่ 7 ใช้อะไรบ้าง <span class="en">How to use this primer</span></span></h2>
+  <p>หัวข้อที่ 7 อ่านงานเชิงทดลอง 71 เรื่องในคลังบทความ แล้วตอบคำถาม 6 ข้อ (RQ1 ถึง RQ6) ว่างานตระกูล SMOTE ประเมินผลกันอย่างไร ตารางนี้บอกว่าแต่ละหัวข้อย่อยต้องรู้พื้นฐานเรื่องใดก่อน ถ้าอ่านเฉพาะบางหัวข้อ ให้อ่านหัวข้อในคอลัมน์ขวาก่อน</p>
+  <div class="scroll"><table class="t map wide">
+    <thead><tr><th>หัวข้อ</th><th>เนื้อหา</th><th>ควรอ่านก่อน</th></tr></thead>
+    <tbody>
+      <tr><td>7.1</td><td>คลังบทความ การลงรหัส และการวิเคราะห์ยอดอ้างอิง</td><td><a href="#citations">17</a>, <a href="#outcomes">18</a></td></tr>
+      <tr><td>7.2</td><td>ข้อมูลที่ใช้ทดสอบ (RQ1)</td><td><a href="#imbalance">1</a>, <a href="#data">10</a></td></tr>
+      <tr><td>7.3</td><td>ตัวจำแนกพื้นฐานและวิธีคู่เทียบ (RQ2)</td><td><a href="#pipeline">3</a>, <a href="#learners">11</a></td></tr>
+      <tr><td>7.4</td><td>สัญลักษณ์และสูตรของตัวชี้วัด</td><td><a href="#confusion">4</a> ถึง <a href="#multiclass">7</a></td></tr>
+      <tr><td>7.5</td><td>ตัวชี้วัดที่ใช้จริง นิยามที่ผิด และหลักฐานนอกจากคะแนน (RQ3)</td><td><a href="#binary">5</a> ถึง <a href="#choose">9</a>, <a href="#beyond">16</a></td></tr>
+      <tr><td>7.6</td><td>การแบ่งข้อมูลและการเลือกค่าพารามิเตอร์ (RQ4)</td><td><a href="#protocol">12</a>, <a href="#tuning">13</a></td></tr>
+      <tr><td>7.7</td><td>การทดสอบทางสถิติ (RQ5)</td><td><a href="#stats">14</a></td></tr>
+      <tr><td>7.8</td><td>การรายงานผล (RQ5)</td><td><a href="#reporting">15</a></td></tr>
+      <tr><td>7.9</td><td>ข้อสรุปของการเปรียบเทียบ (RQ6)</td><td><a href="#outcomes">18</a></td></tr>
+      <tr><td>7.10</td><td>ข้อจำกัดของการวิเคราะห์ (threats to validity)</td><td><a href="#citations">17</a>, <a href="#outcomes">18</a></td></tr>
+      <tr><td>7.11</td><td>มาตรฐานขั้นต่ำของการประเมินผล</td><td><a href="#outcomes">18</a></td></tr>
+    </tbody></table></div>
+  <p class="used">ศัพท์อังกฤษถูกเก็บไว้ในวงเล็บเพื่อให้จับคู่กับต้นฉบับได้ อภิธานศัพท์ท้ายหน้า (หัวข้อ <a href="#glossary">19</a>) ค้นได้ทั้งไทยและอังกฤษ</p>
+</section>
+
+<section class="s" id="imbalance">
+  <h2><span class="n">1</span><span>ข้อมูลไม่สมดุล <span class="en">Class imbalance</span></span></h2>
+  <p><b>ข้อมูลไม่สมดุล</b> คือข้อมูลที่คลาสหนึ่งมีตัวอย่างน้อยกว่าคลาสอื่นมาก เช่น ธุรกรรมฉ้อโกง 1 รายการต่อธุรกรรมปกติ 99 รายการ หรือผู้ป่วย 10 คนต่อคนปกติ 90 คน คลาสที่มีน้อยเรียกว่า <b>คลาสส่วนน้อย</b> (minority class) และมักเป็นคลาสที่เราสนใจ ในงานสองคลาสจึงเรียกคลาสนี้ว่า <b>คลาสบวก</b> (positive) ส่วนคลาสที่มีมากเรียกว่า <b>คลาสส่วนมาก</b> (majority class) หรือคลาสลบ (negative)</p>
+  <div class="box"><b>อัตราส่วนความไม่สมดุล (imbalance ratio, IR)</b>
+    <div class="formula"><div class="mathd"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mi mathvariant="normal">I</mi><mi mathvariant="normal">R</mi></mrow><mo>=</mo><mfrac><mtext>จำนวนตัวอย่างของคลาสส่วนมาก</mtext><mtext>จำนวนตัวอย่างของคลาสส่วนน้อย</mtext></mfrac></mrow><annotation encoding="application/x-tex">\mathrm{IR}=\frac{\text{จำนวนตัวอย่างของคลาสส่วนมาก}}{\text{จำนวนตัวอย่างของคลาสส่วนน้อย}}</annotation></semantics></math></span></div></div>
+    <p>ข้อมูลที่มีคลาสลบ 90 ตัวและคลาสบวก 10 ตัว มี IR = 9 ในงานหลายคลาส IR มักหมายถึงคลาสที่ใหญ่ที่สุดหารด้วยคลาสที่เล็กที่สุด IR บอกแค่สัดส่วน ไม่ได้บอกว่าข้อมูลยากแค่ไหน</p>
+  </div>
+  <h3>ทำไมความไม่สมดุลเป็นปัญหา</h3>
+  <p>ตัวจำแนกส่วนใหญ่ถูกฝึกให้ทำผิดรวมน้อยที่สุด เมื่อคลาสส่วนมากมีมากกว่า การทายเป็นคลาสส่วนมากจึงคุ้มกว่าเสมอ ตัวจำแนกที่ทายว่าทุกตัวอย่างเป็นคลาสลบในข้อมูลข้างบนถูก 90% แต่ไม่พบคลาสบวกเลยสักตัว นี่คือเหตุที่งานในคลังแทบทั้งหมดไม่ใช้ accuracy ตัวเดียว (ดูตัวอย่าง B ในหัวข้อ <a href="#binary">5</a>)</p>
+  <h3>สองคลาสและหลายคลาส <span class="en">Binary and multi-class</span></h3>
+  <p>งานสองคลาส (binary) มีคลาสบวกหนึ่งคลาสกับคลาสลบหนึ่งคลาส งานหลายคลาส (multi-class) มีหลายคลาสพร้อมกัน บางคลาสอาจเป็นส่วนน้อยเมื่อเทียบกับคลาสหนึ่ง แต่เป็นส่วนมากเมื่อเทียบกับอีกคลาส การปรับสมดุลและการวัดผลจึงซับซ้อนกว่า และใช้ตัวชี้วัดคนละชุด (หัวข้อ <a href="#multiclass">7</a>)</p>
+  <h3>ความยากที่ไม่ได้มาจาก IR <span class="en">Difficulty factors</span></h3>
+  <p>ข้อมูลที่ IR เท่ากันอาจยากต่างกันมาก งานในคลังหลายเรื่องเลือกข้อมูลเพราะมีปัจจัยเหล่านี้</p>
+  <ul class="list">
+    <li><b>การซ้อนทับ</b> (overlap): สองคลาสอยู่ปนกันในบริเวณเดียวกันของพื้นที่ฟีเจอร์ แยกด้วยเส้นใดก็ผิดบางส่วน</li>
+    <li><b>กลุ่มย่อยเล็ก ๆ</b> (small disjuncts): คลาสส่วนน้อยกระจายเป็นกระจุกเล็กหลายกระจุก แต่ละกระจุกมีตัวอย่างไม่กี่ตัว ตัวจำแนกจึงมองว่าเป็นสัญญาณรบกวน</li>
+    <li><b>สัญญาณรบกวน</b> (noise): ตัวอย่างที่ป้ายผิด หรืออยู่ผิดที่ผิดทาง</li>
+  </ul>
+  <div class="box"><b>ประเภทของตัวอย่างคลาสส่วนน้อย (safe, borderline, rare, outlier)</b>
+    <p>ดูเพื่อนบ้านที่ใกล้ที่สุด 5 ตัวของตัวอย่างคลาสส่วนน้อยแต่ละตัว ถ้าเพื่อนบ้านเป็นคลาสเดียวกัน 4 ถึง 5 ตัว เรียกว่า <b>safe</b> (ปลอดภัย) 2 ถึง 3 ตัวเรียกว่า <b>borderline</b> (อยู่ใกล้ขอบ) 1 ตัวเรียกว่า <b>rare</b> (โดดเดี่ยว) และ 0 ตัวเรียกว่า <b>outlier</b> ข้อมูลที่มีตัวอย่าง borderline และ rare มากจะยากกว่าข้อมูลที่ IR สูงแต่ตัวอย่างส่วนใหญ่ safe งาน SPE และ GLOS ในคลังนับสัดส่วนประเภทเหล่านี้หลังปรับสมดุลเพื่ออธิบายผล</p>
+  </div>
+</section>
+
+<section class="s" id="smote">
+  <h2><span class="n">2</span><span>SMOTE และวิธีในตระกูล <span class="en">The SMOTE family in brief</span></span></h2>
+  <p>การปรับสมดุลข้อมูล (resampling) คือการเปลี่ยนข้อมูลฝึกให้สัดส่วนคลาสใกล้กันขึ้นก่อนฝึกตัวจำแนก วิธีง่ายที่สุดคือ <b>การสุ่มเพิ่ม</b> (random oversampling, ROS) ซึ่งคัดลอกตัวอย่างคลาสส่วนน้อยซ้ำ แต่การคัดลอกซ้ำทำให้ตัวจำแนกจำตัวอย่างเดิมจนเกินไป (overfitting) และ <b>การสุ่มตัด</b> (random undersampling, RUS) ซึ่งทิ้งตัวอย่างคลาสส่วนมากบางส่วน แต่เสียข้อมูล</p>
+  <div class="box key"><b>SMOTE (Chawla et al. 2002) สร้างตัวอย่างใหม่บนเส้นตรงระหว่างเพื่อนบ้าน</b>
+    <div class="formula"><div class="mathd"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>x</mi><mtext>new</mtext></msub><mo>=</mo><msub><mi>x</mi><mi>i</mi></msub><mo>+</mo><mi>λ</mi><mtext> </mtext><mo stretchy="false">(</mo><msub><mi>x</mi><mrow><mi>n</mi><mi>n</mi></mrow></msub><mo>−</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo><mo separator="true">,</mo><mspace width="2em"/><mi>λ</mi><mo>∼</mo><mi>U</mi><mo stretchy="false">(</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">x_{\text{new}}=x_i+\lambda\,(x_{nn}-x_i),\qquad \lambda\sim U(0,1)</annotation></semantics></math></span></div></div>
+    <p>เลือกตัวอย่างคลาสส่วนน้อย <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">x_i</annotation></semantics></math></span> สุ่มเพื่อนบ้านคลาสเดียวกัน <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mrow><mi>n</mi><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">x_{nn}</annotation></semantics></math></span> หนึ่งตัวจาก <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span> ตัวที่ใกล้ที่สุด (ปกติ <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">k = 5</annotation></semantics></math></span>) แล้ววางจุดใหม่ที่ตำแหน่งสุ่มบนเส้นที่เชื่อมสองจุด ค่าที่ผู้ใช้ต้องตั้งมีสองค่าหลัก คือ <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span> และปริมาณที่จะสร้าง (sampling rate เช่น 100% 200% หรือจนสองคลาสเท่ากัน) สองค่านี้คือ "ค่าพารามิเตอร์" ที่หัวข้อ 7.6 ตรวจว่าแต่ละงานเลือกอย่างไร</p>
+  </div>
+  <p>วิธีอื่นในตระกูลแก้จุดอ่อนของ SMOTE ในทางต่าง ๆ</p>
+  <div class="scroll"><table class="t wide">
+    <thead><tr><th>กลุ่ม</th><th>แนวคิด</th><th>ตัวอย่างในคลัง</th></tr></thead>
+    <tbody>
+      <tr><td>เลือกตำแหน่งที่จะสร้าง</td><td>สร้างเฉพาะใกล้ขอบ สร้างมากขึ้นตรงที่ยาก หรือหลบบริเวณของคลาสส่วนมาก</td><td>Borderline-SMOTE, ADASYN, Safe-Level-SMOTE, MWMOTE</td></tr>
+      <tr><td>จัดกลุ่มก่อนสร้าง</td><td>แบ่งข้อมูลเป็นกลุ่มแล้วสร้างในกลุ่มที่เหมาะ</td><td>k-means SMOTE, A-SUWO, Cluster-SMOTE</td></tr>
+      <tr><td>สร้างแล้วทำความสะอาด (hybrid)</td><td>ใช้ตัวกรองลบตัวอย่างที่ดูเป็นสัญญาณรบกวนหลังสร้าง</td><td>SMOTE+ENN, SMOTE+Tomek links, SMOTE-IPF</td></tr>
+      <tr><td>ตัดคลาสส่วนมาก (undersampling)</td><td>ลบตัวอย่างคลาสส่วนมากที่ซ้ำซ้อนหรืออยู่ใกล้ขอบ</td><td>OSS, Tomek links, ENN, SBC</td></tr>
+      <tr><td>รวมกับ ensemble</td><td>ปรับสมดุลในแต่ละรอบของ boosting หรือ bagging</td><td>SMOTEBoost, RUSBoost, EasyEnsemble</td></tr>
+      <tr><td>โมเดลสร้างข้อมูล</td><td>เรียนการแจกแจงของคลาสส่วนน้อยแล้วสุ่มตัวอย่างใหม่</td><td>CTGAN, GAMO (GAN)</td></tr>
+      <tr><td>ไม่แตะข้อมูล</td><td>ให้น้ำหนักความผิดของคลาสส่วนน้อยมากขึ้น (class weighting, cost-sensitive learning)</td><td>ใช้เป็นคู่เทียบอย่างง่าย</td></tr>
+    </tbody></table></div>
+  <h3>งานหลายคลาส <span class="en">Decomposition</span></h3>
+  <p>วิธีสองคลาสใช้กับงานหลายคลาสได้โดยแยกปัญหา แบบ <b>OVO</b> (one-versus-one) จับคู่ทีละสองคลาส แบบ <b>OVA</b> หรือ OvR (one-versus-all หรือ one-versus-rest) ให้คลาสหนึ่งเป็นบวกและคลาสที่เหลือรวมกันเป็นลบ อีกทางคือวิธีหลายคลาสโดยตรง เช่น MDO, MC-CCR และ MC-RBO</p>
+</section>
+
+<section class="s" id="pipeline">
+  <h2><span class="n">3</span><span>การทดลองหนึ่งรอบ <span class="en">One run of an experiment</span></span></h2>
+  <p>ทุกงานในคลังตัดสินวิธีปรับสมดุลผ่านขั้นตอนเดียวกัน ข้อมูลที่ใช้ทดสอบต้องไม่ถูกแตะระหว่างการฝึก</p>
+  <div class="flow" role="img" aria-label="Flow of one run: split the data, resample the training part, train a classifier, predict the untouched test part, score">
+    <div class="st"><b>1 แบ่งข้อมูล</b><span>แยกเป็นข้อมูลฝึกและข้อมูลทดสอบ</span></div><span class="ar">→</span>
+    <div class="st train"><b>2 ปรับสมดุล</b><span>ใช้ SMOTE ฯลฯ กับข้อมูลฝึกเท่านั้น</span></div><span class="ar">→</span>
+    <div class="st train"><b>3 ฝึกตัวจำแนก</b><span>เช่น C4.5 หรือ SVM บนข้อมูลที่ปรับแล้ว</span></div><span class="ar">→</span>
+    <div class="st test"><b>4 ทำนาย</b><span>บนข้อมูลทดสอบที่ไม่ได้ปรับ</span></div><span class="ar">→</span>
+    <div class="st test"><b>5 วัดคะแนน</b><span>G-mean, AUC ฯลฯ</span></div>
+  </div>
+  <p>การทดลองหนึ่งรอบให้คะแนนหนึ่งค่าต่อชุดข้อมูล ต่อการแบ่งข้อมูล ต่อวิธี และต่อตัวจำแนก งานหนึ่งเรื่องจึงมีตัวเลขหลายพันค่าที่ต้องสรุป (หัวข้อ <a href="#stats">14</a> และ <a href="#reporting">15</a>)</p>
+  <dl class="mx">
+    <dt>ตัวจำแนกพื้นฐาน</dt><dd><b>base learner</b> คือตัวจำแนกที่ฝึกบนข้อมูลหลังปรับสมดุล วิธีปรับสมดุลถูกตัดสินผ่านตัวจำแนกนี้เสมอ ผลจึงขึ้นกับว่าใช้ตัวจำแนกอะไร (หัวข้อ <a href="#learners">11</a>)</dd>
+    <dt>วิธีคู่เทียบ</dt><dd><b>competitor</b> คือวิธีปรับสมดุลอื่นที่รันบนข้อมูลชุดเดียวกัน เช่น SMOTE, ADASYN</dd>
+    <dt>เส้นฐาน</dt><dd><b>untreated baseline</b> คือการฝึกบนข้อมูลเดิมโดยไม่ปรับสมดุล ถ้าไม่มีเส้นฐานนี้ ผู้อ่านจะไม่รู้ว่าการปรับสมดุลช่วยได้จริงหรือไม่ รู้แค่ว่าวิธีหนึ่งดีกว่าอีกวิธี เส้นฐานอย่างง่ายอื่นที่ควรมีคือ class weighting, ROS และ SMOTE</dd>
+  </dl>
+</section>
+
+<section class="s" id="confusion">
+  <h2><span class="n">4</span><span>Confusion matrix และค่าเกณฑ์ <span class="en">Confusion matrix and threshold</span></span></h2>
+  <p>ตัวชี้วัดเกือบทุกตัวคำนวณจากตาราง 2 × 2 ที่นับว่าทายถูกและผิดแบบไหนกี่ตัว แถวคือคลาสจริง คอลัมน์คือคลาสที่ทาย</p>
+  <div class="scroll"><table class="t" style="max-width:560px">
+    <thead><tr><th></th><th class="c">ทายว่าบวก</th><th class="c">ทายว่าลบ</th></tr></thead>
+    <tbody>
+      <tr><th>จริงเป็นบวก (คลาสส่วนน้อย)</th><td class="c"><b>TP</b> true positive<br><span class="used">จับได้ถูก</span></td><td class="c"><b>FN</b> false negative<br><span class="used">พลาด ไม่ได้จับ</span></td></tr>
+      <tr><th>จริงเป็นลบ (คลาสส่วนมาก)</th><td class="c"><b>FP</b> false positive<br><span class="used">เตือนผิด</span></td><td class="c"><b>TN</b> true negative<br><span class="used">ปล่อยผ่านถูก</span></td></tr>
+    </tbody></table></div>
+  <h3>ค่าเกณฑ์ <span class="en">Decision threshold</span></h3>
+  <p>ตัวจำแนกส่วนใหญ่ให้ <b>คะแนน</b> (score) เช่น ความน่าจะเป็นที่ตัวอย่างนี้เป็นคลาสบวก แล้วตัดสินว่าเป็นบวกเมื่อคะแนนไม่ต่ำกว่า <b>ค่าเกณฑ์</b> (threshold) ซึ่งปกติคือ 0.5 ถ้าลดค่าเกณฑ์ จะจับคลาสบวกได้มากขึ้นแต่เตือนผิดมากขึ้นด้วย ค่า TP FN FP TN จึงเปลี่ยนตามค่าเกณฑ์</p>
+  <ul class="list">
+    <li>ตัวชี้วัดที่คำนวณจากตาราง 2 × 2 เรียกว่า <b>ขึ้นกับค่าเกณฑ์</b> (threshold-dependent) เช่น F1, G-mean</li>
+    <li>ตัวชี้วัดที่ใช้คะแนนทุกค่าเกณฑ์ เรียกว่า <b>ไม่ขึ้นกับค่าเกณฑ์</b> (threshold-free) เช่น ROC-AUC, PR-AUC (หัวข้อ <a href="#ranking">6</a>)</li>
+  </ul>
+  <p>หัวข้อ 7.5 ชี้ว่างานที่ใช้แต่ตัวชี้วัดแบบขึ้นกับค่าเกณฑ์ที่ 0.5 กำลังวัดสองเรื่องปนกัน คือคุณภาพของข้อมูลที่สร้าง และการที่ค่าเกณฑ์ 0.5 เหมาะกับตัวจำแนกนั้นหรือไม่</p>
+  <h3>ตัวอย่างที่ใช้ตลอดเอกสารนี้</h3>
+  <p>ข้อมูลทดสอบ 100 ตัว เป็นคลาสบวก 10 ตัวและคลาสลบ 90 ตัว (IR = 9) ตัวจำแนกสามตัวให้ผลดังนี้</p>
+  <div class="cm">
+    <div class="cmx"><h4>A: สมดุลพอใช้</h4><table><tr><th></th><th>ทายบวก</th><th>ทายลบ</th></tr><tr><th>บวก</th><td class="tp">TP 6</td><td class="fn">FN 4</td></tr><tr><th>ลบ</th><td class="fp">FP 9</td><td class="tn">TN 81</td></tr></table><p>จับได้ 6 ใน 10 เตือนผิด 9 ครั้ง</p></div>
+    <div class="cmx"><h4>B: ทายลบทั้งหมด</h4><table><tr><th></th><th>ทายบวก</th><th>ทายลบ</th></tr><tr><th>บวก</th><td class="tp">TP 0</td><td class="fn">FN 10</td></tr><tr><th>ลบ</th><td class="fp">FP 0</td><td class="tn">TN 90</td></tr></table><p>ไร้ประโยชน์ ไม่จับคลาสบวกเลย</p></div>
+    <div class="cmx"><h4>C: ทายบวกมากเกินไป</h4><table><tr><th></th><th>ทายบวก</th><th>ทายลบ</th></tr><tr><th>บวก</th><td class="tp">TP 9</td><td class="fn">FN 1</td></tr><tr><th>ลบ</th><td class="fp">FP 30</td><td class="tn">TN 60</td></tr></table><p>จับได้ 9 ใน 10 แต่เตือนผิด 30 ครั้ง เหมือนผลหลัง oversampling แรง ๆ</p></div>
+  </div>
+</section>
+
+<section class="s" id="binary">
+  <h2><span class="n">5</span><span>ตัวชี้วัดแบบสองคลาส <span class="en">Binary measures</span></span></h2>
+  <p>ทุกตัวในหัวข้อนี้คำนวณจากตาราง 2 × 2 จึงขึ้นกับค่าเกณฑ์ ตัวเลขในแถว "ตัวอย่าง" คือค่าของตัวจำแนก A, B และ C จากหัวข้อ <a href="#confusion">4</a></p>
+
+  <div class="metric" id="m-acc"><h3>Accuracy และ error rate <span class="en">ความถูกต้องรวม และอัตราความผิดพลาด</span></h3>
+    <dl class="mx">
+      <dt>วัดอะไร</dt><dd>สัดส่วนที่ทายถูกจากทั้งหมด error rate คือ 1 − accuracy</dd>
+      <dt>สูตร</dt><dd><div class="mathd"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">c</mi></mrow><mo>=</mo><mfrac><mrow><mi>T</mi><mi>P</mi><mo>+</mo><mi>T</mi><mi>N</mi></mrow><mrow><mi>T</mi><mi>P</mi><mo>+</mo><mi>F</mi><mi>N</mi><mo>+</mo><mi>F</mi><mi>P</mi><mo>+</mo><mi>T</mi><mi>N</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\mathrm{Acc}=\frac{TP+TN}{TP+FN+FP+TN}</annotation></semantics></math></span></div></dd>
+      <dt>ช่วงค่า</dt><dd>0 ถึง 1 ยิ่งสูงยิ่งดี</dd>
+      <dt>ตัวอย่าง</dt><dd>A 0.87 · <b>B 0.90</b> · C 0.69</dd>
+      <dt>ระวัง</dt><dd>คลาสส่วนมากครอบงำค่านี้ B ซึ่งไม่จับคลาสบวกเลยได้คะแนนสูงสุด ทายคลาสส่วนมากทั้งหมดได้ accuracy เท่ากับสัดส่วนคลาสส่วนมากเสมอ ในคลังมีแค่ 13 จาก 71 เรื่องที่รายงานค่านี้ และไม่มีเรื่องใดใช้เป็นตัวชี้วัดเดียว</dd>
+    </dl></div>
+
+  <div class="metric" id="m-tpr"><h3>Recall, TPR หรือ sensitivity <span class="en">อัตราการจับคลาสบวกได้</span></h3>
+    <dl class="mx">
+      <dt>วัดอะไร</dt><dd>ในคลาสบวกทั้งหมด จับได้กี่ส่วน สามชื่อนี้คือค่าเดียวกัน (TPR = true positive rate)</dd>
+      <dt>สูตร</dt><dd><div class="mathd"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mi mathvariant="normal">T</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">R</mi></mrow><mo>=</mo><mfrac><mrow><mi>T</mi><mi>P</mi></mrow><mrow><mi>T</mi><mi>P</mi><mo>+</mo><mi>F</mi><mi>N</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\mathrm{TPR}=\frac{TP}{TP+FN}</annotation></semantics></math></span></div></dd>
+      <dt>ช่วงค่า</dt><dd>0 ถึง 1</dd>
+      <dt>ตัวอย่าง</dt><dd>A 0.60 · B 0 · <b>C 0.90</b></dd>
+      <dt>ระวัง</dt><dd>ไม่สนใจว่าเตือนผิดกี่ครั้ง ทายว่าทุกตัวเป็นบวกจะได้ 1 เสมอ จึงใช้ตัวเดียวไม่ได้ ในงานหลายคลาส recall ของคลาส i เขียนว่า <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">R_i</annotation></semantics></math></span></dd>
+    </dl></div>
+
+  <div class="metric" id="m-tnr"><h3>Specificity หรือ TNR <span class="en">อัตราการปล่อยคลาสลบผ่านถูก</span></h3>
+    <dl class="mx">
+      <dt>วัดอะไร</dt><dd>ในคลาสลบทั้งหมด ทายถูกกี่ส่วน เป็นคู่ของ recall ฝั่งคลาสส่วนมาก อัตราเตือนผิด (FPR) คือ 1 − TNR</dd>
+      <dt>สูตร</dt><dd><div class="mathd"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mi mathvariant="normal">T</mi><mi mathvariant="normal">N</mi><mi mathvariant="normal">R</mi></mrow><mo>=</mo><mfrac><mrow><mi>T</mi><mi>N</mi></mrow><mrow><mi>T</mi><mi>N</mi><mo>+</mo><mi>F</mi><mi>P</mi></mrow></mfrac><mo separator="true">,</mo><mspace width="2em"/><mrow><mi mathvariant="normal">F</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">R</mi></mrow><mo>=</mo><mn>1</mn><mo>−</mo><mrow><mi mathvariant="normal">T</mi><mi mathvariant="normal">N</mi><mi mathvariant="normal">R</mi></mrow></mrow><annotation encoding="application/x-tex">\mathrm{TNR}=\frac{TN}{TN+FP},\qquad \mathrm{FPR}=1-\mathrm{TNR}</annotation></semantics></math></span></div></dd>
+      <dt>ตัวอย่าง</dt><dd>A 0.90 · <b>B 1.00</b> · C 0.67</dd>
+      <dt>ระวัง</dt><dd>ทายลบทั้งหมดได้ 1 ใช้ตัวเดียวไม่ได้เช่นกัน</dd>
+    </dl></div>
+
+  <div class="metric" id="m-prec"><h3>Precision <span class="en">ความแม่นของการทายว่าบวก</span></h3>
+    <dl class="mx">
+      <dt>วัดอะไร</dt><dd>ในตัวที่ทายว่าบวก ถูกจริงกี่ส่วน ตอบคำถามว่า "เมื่อระบบเตือน เชื่อได้แค่ไหน"</dd>
+      <dt>สูตร</dt><dd><div class="mathd"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mi mathvariant="normal">P</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">c</mi></mrow><mo>=</mo><mfrac><mrow><mi>T</mi><mi>P</mi></mrow><mrow><mi>T</mi><mi>P</mi><mo>+</mo><mi>F</mi><mi>P</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\mathrm{Prec}=\frac{TP}{TP+FP}</annotation></semantics></math></span></div></dd>
+      <dt>ตัวอย่าง</dt><dd><b>A 0.40</b> · B คำนวณไม่ได้ (0/0) · C 0.23</dd>
+      <dt>ต่างจาก recall</dt><dd>recall ดูจากฝั่งคลาสจริง precision ดูจากฝั่งที่ทาย ทั้งสองดึงกันไปคนละทาง ลดค่าเกณฑ์แล้ว recall ขึ้นแต่ precision มักลง</dd>
+      <dt>ระวัง</dt><dd>ขึ้นกับสัดส่วนคลาสในข้อมูลทดสอบ ยิ่งคลาสบวกหายาก precision ยิ่งต่ำง่าย แม้ตัวจำแนกเก่งเท่าเดิม</dd>
+    </dl></div>
+
+  <div class="metric" id="m-f"><h3>F1 และ F<sub>β</sub> <span class="en">F-measure</span></h3>
+    <dl class="mx">
+      <dt>วัดอะไร</dt><dd>รวม precision กับ recall เป็นค่าเดียวด้วยค่าเฉลี่ยฮาร์มอนิก ซึ่งต่ำตามตัวที่ต่ำกว่า β กำหนดน้ำหนัก β = 1 คือ F1 (เท่ากัน) β = 2 คือ F2 (ให้ recall สำคัญกว่า)</dd>
+      <dt>สูตร</dt><dd><div class="mathd"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>F</mi><mi>β</mi></msub><mo>=</mo><mfrac><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><msup><mi>β</mi><mn>2</mn></msup><mo stretchy="false">)</mo><mtext> </mtext><mrow><mi mathvariant="normal">P</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">c</mi></mrow><mo>⋅</mo><mrow><mi mathvariant="normal">T</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">R</mi></mrow></mrow><mrow><msup><mi>β</mi><mn>2</mn></msup><mtext> </mtext><mrow><mi mathvariant="normal">P</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">c</mi></mrow><mo>+</mo><mrow><mi mathvariant="normal">T</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">R</mi></mrow></mrow></mfrac></mrow><annotation encoding="application/x-tex">F_\beta=\frac{(1+\beta^2)\,\mathrm{Prec}\cdot\mathrm{TPR}}{\beta^2\,\mathrm{Prec}+\mathrm{TPR}}</annotation></semantics></math></span></div><div class="mathd"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>F</mi><mn>1</mn></msub><mo>=</mo><mfrac><mrow><mn>2</mn><mtext> </mtext><mi>T</mi><mi>P</mi></mrow><mrow><mn>2</mn><mtext> </mtext><mi>T</mi><mi>P</mi><mo>+</mo><mi>F</mi><mi>P</mi><mo>+</mo><mi>F</mi><mi>N</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">F_1=\frac{2\,TP}{2\,TP+FP+FN}</annotation></semantics></math></span></div></dd>
+      <dt>ตัวอย่าง</dt><dd>F1: <b>A 0.48</b> · B 0 · C 0.37 &nbsp;&nbsp; F2: A 0.55 · B 0 · <b>C 0.57</b></dd>
+      <dt>ต่างจากตัวอื่น</dt><dd>ไม่ใช้ TN เลย จึงไม่สนใจว่าคลาสลบถูกปล่อยผ่านกี่ตัว และเปลี่ยนค่าถ้าสลับว่าคลาสไหนเป็น "บวก" ตัวอย่างนี้แสดงว่าแค่เปลี่ยน β ผู้ชนะก็เปลี่ยน</dd>
+      <dt>ระวัง</dt><dd>ในงานหลายคลาสต้องบอกว่าเฉลี่ยแบบไหน (หัวข้อ <a href="#multiclass">7</a>) weighted F1 ถูกคลาสส่วนมากครอบงำ</dd>
+    </dl></div>
+
+  <div class="metric" id="m-gmean"><h3>G-mean <span class="en">ค่าเฉลี่ยเรขาคณิตของ TPR และ TNR</span></h3>
+    <dl class="mx">
+      <dt>วัดอะไร</dt><dd>ความสมดุลระหว่างการจับคลาสบวกกับการปล่อยคลาสลบผ่านถูก เป็นตัวชี้วัดที่ใช้มากที่สุดในคลังนี้</dd>
+      <dt>สูตร</dt><dd><div class="mathd"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>G-mean</mtext><mo>=</mo><msqrt><mrow><mrow><mi mathvariant="normal">T</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">R</mi></mrow><mo>⋅</mo><mrow><mi mathvariant="normal">T</mi><mi mathvariant="normal">N</mi><mi mathvariant="normal">R</mi></mrow></mrow></msqrt></mrow><annotation encoding="application/x-tex">\text{G-mean}=\sqrt{\mathrm{TPR}\cdot\mathrm{TNR}}</annotation></semantics></math></span></div></dd>
+      <dt>ช่วงค่า</dt><dd>0 ถึง 1 เป็น 0 ทันทีถ้าคลาสใดคลาสหนึ่งผิดทั้งหมด</dd>
+      <dt>ตัวอย่าง</dt><dd>A 0.73 · B 0 · <b>C 0.77</b></dd>
+      <dt>ต่างจาก F1</dt><dd>G-mean ใช้ TN และไม่ใช้ precision จึงลงโทษการเตือนผิดเพียงผ่าน TNR ซึ่งหารด้วยจำนวนคลาสลบที่มีมาก FP 30 ครั้งของ C ลด TNR จาก 1 ลงเหลือ 0.67 เท่านั้น C จึงชนะ A ทั้งที่ precision ต่ำกว่าเกือบครึ่ง</dd>
+      <dt>ระวัง</dt><dd>บางงานนิยามผิดเป็นรากที่สองของ recall × precision (หัวข้อ <a href="#pitfalls">8</a>) ซึ่งเป็นค่าคนละตัว</dd>
+    </dl></div>
+
+  <div class="metric" id="m-ba"><h3>Balanced accuracy (BA) <span class="en">ความถูกต้องแบบถ่วงสมดุล</span></h3>
+    <dl class="mx">
+      <dt>วัดอะไร</dt><dd>ค่าเฉลี่ยของ recall ของแต่ละคลาส ทุกคลาสมีน้ำหนักเท่ากันไม่ว่าจะใหญ่เล็กแค่ไหน</dd>
+      <dt>สูตร</dt><dd><div class="mathd"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mi mathvariant="normal">B</mi><mi mathvariant="normal">A</mi></mrow><mo>=</mo><mfrac><mrow><mrow><mi mathvariant="normal">T</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">R</mi></mrow><mo>+</mo><mrow><mi mathvariant="normal">T</mi><mi mathvariant="normal">N</mi><mi mathvariant="normal">R</mi></mrow></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\mathrm{BA}=\frac{\mathrm{TPR}+\mathrm{TNR}}{2}</annotation></semantics></math></span></div></dd>
+      <dt>ตัวอย่าง</dt><dd>A 0.75 · B 0.50 · <b>C 0.78</b></dd>
+      <dt>ต่างจาก G-mean</dt><dd>ใช้ค่าเฉลี่ยเลขคณิตแทนเรขาคณิต จึงไม่ตกถึง 0 เมื่อคลาสหนึ่งพลาดหมด การทายสุ่มหรือทายคลาสเดียวได้ 0.5 อ่านง่ายกว่า ในงานหลายคลาส BA คือ AvAcc</dd>
+      <dt>ระวัง</dt><dd>ค่านี้เท่ากับ "AUC" ที่คำนวณจากผลทำนายแบบตัดสินแล้วจุดเดียว มีงานในคลังที่รายงาน BA ในชื่อ AUC (หัวข้อ <a href="#ranking">6</a>)</dd>
+    </dl></div>
+
+  <div class="metric" id="m-mcc"><h3>MCC <span class="en">Matthews correlation coefficient</span></h3>
+    <dl class="mx">
+      <dt>วัดอะไร</dt><dd>สหสัมพันธ์ระหว่างคลาสจริงกับคลาสที่ทาย ใช้ครบทั้ง 4 ช่อง</dd>
+      <dt>สูตร</dt><dd><div class="mathd"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mi mathvariant="normal">M</mi><mi mathvariant="normal">C</mi><mi mathvariant="normal">C</mi></mrow><mo>=</mo><mfrac><mrow><mi>T</mi><mi>P</mi><mo>⋅</mo><mi>T</mi><mi>N</mi><mo>−</mo><mi>F</mi><mi>P</mi><mo>⋅</mo><mi>F</mi><mi>N</mi></mrow><msqrt><mrow><mo stretchy="false">(</mo><mi>T</mi><mi>P</mi><mo>+</mo><mi>F</mi><mi>P</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>T</mi><mi>P</mi><mo>+</mo><mi>F</mi><mi>N</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>T</mi><mi>N</mi><mo>+</mo><mi>F</mi><mi>P</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>T</mi><mi>N</mi><mo>+</mo><mi>F</mi><mi>N</mi><mo stretchy="false">)</mo></mrow></msqrt></mfrac></mrow><annotation encoding="application/x-tex">\mathrm{MCC}=\frac{TP\cdot TN-FP\cdot FN}{\sqrt{(TP+FP)(TP+FN)(TN+FP)(TN+FN)}}</annotation></semantics></math></span></div></dd>
+      <dt>ช่วงค่า</dt><dd>−1 ถึง 1 ค่า 0 คือไม่ดีกว่าการเดา ค่าลบคือทายกลับด้าน</dd>
+      <dt>ตัวอย่าง</dt><dd><b>A 0.42</b> · B 0 · C 0.35</dd>
+      <dt>ต่างจากตัวอื่น</dt><dd>ต่างจาก F1 ตรงที่ใช้ TN และให้ค่าเดิมเมื่อสลับคลาสบวกกับลบ ต่างจาก G-mean ตรงที่ลงโทษ FP ผ่าน precision ด้วย จึงเลือก A</dd>
+      <dt>ระวัง</dt><dd>เมื่อแถวหรือคอลัมน์ใดเป็นศูนย์ ตัวหารเป็นศูนย์ และมักกำหนดให้ MCC = 0</dd>
+    </dl></div>
+
+  <div class="metric" id="m-kappa"><h3>Cohen's kappa <span class="en">ความถูกต้องที่เกินกว่าความบังเอิญ</span></h3>
+    <dl class="mx">
+      <dt>วัดอะไร</dt><dd>accuracy ที่หักส่วนที่คาดว่าจะถูกโดยบังเอิญออก <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mi>o</mi></msub></mrow><annotation encoding="application/x-tex">p_o</annotation></semantics></math></span> คือ accuracy ที่ได้ <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">p_e</annotation></semantics></math></span> คือ accuracy ที่คาดหวังถ้าทายสุ่มตามสัดส่วนการทายของตัวจำแนกเอง</dd>
+      <dt>สูตร</dt><dd><div class="mathd"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>κ</mi><mo>=</mo><mfrac><mrow><msub><mi>p</mi><mi>o</mi></msub><mo>−</mo><msub><mi>p</mi><mi>e</mi></msub></mrow><mrow><mn>1</mn><mo>−</mo><msub><mi>p</mi><mi>e</mi></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">\kappa=\frac{p_o-p_e}{1-p_e}</annotation></semantics></math></span></div></dd>
+      <dt>ตัวอย่าง</dt><dd><b>A 0.41</b> · B 0 · C 0.25</dd>
+      <dt>ระวัง</dt><dd>อ่านความหมายคล้าย MCC และให้ผลไปทางเดียวกันในตัวอย่างนี้ ในคลังพบน้อย</dd>
+    </dl></div>
+
+  <h3>ตัวชี้วัดต่างตัว เลือกผู้ชนะต่างคน</h3>
+  <div class="scroll"><table class="t wide">
+    <thead><tr><th>ตัวชี้วัด</th><th class="r">A</th><th class="r">B</th><th class="r">C</th><th>ผู้ชนะ</th><th>เพราะอะไร</th></tr></thead>
+    <tbody>
+      <tr><td>Accuracy</td><td class="r">0.87</td><td class="r win">0.90</td><td class="r">0.69</td><td class="bad">B</td><td>คลาสลบ 90 ตัวครอบงำ</td></tr>
+      <tr><td>Recall (TPR)</td><td class="r">0.60</td><td class="r">0</td><td class="r win">0.90</td><td>C</td><td>นับแต่คลาสบวกที่จับได้</td></tr>
+      <tr><td>Precision</td><td class="r win">0.40</td><td class="r">n/a</td><td class="r">0.23</td><td>A</td><td>นับแต่ความแม่นของการเตือน</td></tr>
+      <tr><td>F1</td><td class="r win">0.48</td><td class="r">0</td><td class="r">0.37</td><td>A</td><td>precision และ recall น้ำหนักเท่ากัน</td></tr>
+      <tr><td>F2</td><td class="r">0.55</td><td class="r">0</td><td class="r win">0.57</td><td>C</td><td>ให้ recall สำคัญกว่า</td></tr>
+      <tr><td>G-mean</td><td class="r">0.73</td><td class="r">0</td><td class="r win">0.77</td><td>C</td><td>FP กระทบแค่ TNR ซึ่งหารด้วย 90</td></tr>
+      <tr><td>BA</td><td class="r">0.75</td><td class="r">0.50</td><td class="r win">0.78</td><td>C</td><td>เหตุผลเดียวกับ G-mean</td></tr>
+      <tr><td>MCC</td><td class="r win">0.42</td><td class="r">0</td><td class="r">0.35</td><td>A</td><td>ใช้ครบ 4 ช่อง ลงโทษ FP ด้วย</td></tr>
+      <tr><td>Kappa</td><td class="r win">0.41</td><td class="r">0</td><td class="r">0.25</td><td>A</td><td>หักส่วนที่ถูกโดยบังเอิญ</td></tr>
+    </tbody></table></div>
+  <div class="box key"><b>สิ่งที่ตารางนี้บอก</b>
+    <ul class="list">
+      <li>ผลการทำนายชุดเดียวกัน ตัวชี้วัดต่างตัวตัดสินต่างกันได้ จึงต้องเลือกตัวชี้วัดตามต้นทุนของงาน คือการพลาดคลาสบวกหนึ่งตัวเสียหายแค่ไหนเมื่อเทียบกับการเตือนผิดหนึ่งครั้ง หัวข้อ 7.5 พบว่ามีไม่กี่งานที่ผูกตัวชี้วัดกับต้นทุนแบบนี้</li>
+      <li>G-mean, BA และ recall ให้รางวัลกับการทายบวกมากเกินไป วิธี oversampling ที่สร้างตัวอย่างจำนวนมากมักผลักผลไปทาง C จึงได้ G-mean สูง F1 และ MCC ลงโทษการเตือนผิดมากกว่า</li>
+      <li>รายงานอย่างน้อยหนึ่งตัวที่ไม่ขึ้นกับค่าเกณฑ์ (หัวข้อถัดไป) คู่กับหนึ่งตัวที่ถ่วงสมดุลคลาส จะช่วยให้ผู้อ่านเห็นภาพครบกว่า</li>
+    </ul></div>
+
+  <h3>ลองคำนวณเอง</h3>
+  <div class="calc" id="calc">
+    <div class="presets" role="group" aria-label="ตัวอย่าง"><button type="button" data-p="6,4,9,81" aria-pressed="true">ตัวอย่าง A</button><button type="button" data-p="0,10,0,90" aria-pressed="false">ตัวอย่าง B</button><button type="button" data-p="9,1,30,60" aria-pressed="false">ตัวอย่าง C</button></div>
+    <div class="inputs">
+      <label for="iTP">TP<input id="iTP" type="number" min="0" step="1" value="6"></label>
+      <label for="iFN">FN<input id="iFN" type="number" min="0" step="1" value="4"></label>
+      <label for="iFP">FP<input id="iFP" type="number" min="0" step="1" value="9"></label>
+      <label for="iTN">TN<input id="iTN" type="number" min="0" step="1" value="81"></label>
+    </div>
+    <div class="cout" id="cout" aria-live="polite"></div>
+    <p class="cnote">แท่งแสดงค่า 0 ถึง 1 สำหรับ MCC และ kappa แท่งสีส้มคือค่าติดลบ ลองเพิ่ม FP ทีละ 10 แล้วดูว่า G-mean ลดช้ากว่า F1 และ MCC แค่ไหน</p>
+  </div>
+</section>
+
+<section class="s" id="ranking">
+  <h2><span class="n">6</span><span>ROC-AUC และ PR-AUC <span class="en">Threshold-free measures</span></span></h2>
+  <p>สองตัวนี้ไม่ได้ดูผลที่ค่าเกณฑ์เดียว แต่ดูว่าตัวจำแนก <b>เรียงลำดับคะแนน</b> ได้ดีแค่ไหน คือให้คะแนนคลาสบวกสูงกว่าคลาสลบหรือไม่ จึงต้องคำนวณจากคะแนน ไม่ใช่จากป้ายที่ตัดสินแล้ว</p>
+  <h3>ROC curve และ ROC-AUC</h3>
+  <p>เส้นโค้ง ROC พล็อต TPR (แกนตั้ง) กับ FPR (แกนนอน) ทุกค่าเกณฑ์ ค่าเกณฑ์สูงมากอยู่ที่มุม (0, 0) ค่าเกณฑ์ต่ำมากอยู่ที่ (1, 1) พื้นที่ใต้เส้นโค้งเรียกว่า AUC และมีความหมายตรงไปตรงมา</p>
+  <div class="box"><b>AUC คือความน่าจะเป็นที่ตัวอย่างบวกได้คะแนนสูงกว่าตัวอย่างลบ</b>
+    <div class="formula"><div class="mathd"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">U</mi><mi mathvariant="normal">C</mi></mrow><mo>=</mo><mi>Pr</mi><mo>⁡</mo><mo fence="true" stretchy="true" minsize="1.2em" maxsize="1.2em">(</mo><mi>s</mi><mo stretchy="false">(</mo><msup><mi>x</mi><mo lspace="0em" rspace="0em">+</mo></msup><mo stretchy="false">)</mo><mo>&gt;</mo><mi>s</mi><mo stretchy="false">(</mo><msup><mi>x</mi><mo lspace="0em" rspace="0em">−</mo></msup><mo stretchy="false">)</mo><mo fence="true" stretchy="true" minsize="1.2em" maxsize="1.2em">)</mo></mrow><annotation encoding="application/x-tex">\mathrm{AUC}=\Pr\bigl(s(x^{+})&gt;s(x^{-})\bigr)</annotation></semantics></math></span></div></div>
+    <p>สุ่มตัวอย่างบวก <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mo lspace="0em" rspace="0em">+</mo></msup></mrow><annotation encoding="application/x-tex">x^{+}</annotation></semantics></math></span> หนึ่งตัวและตัวอย่างลบ <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mo lspace="0em" rspace="0em">−</mo></msup></mrow><annotation encoding="application/x-tex">x^{-}</annotation></semantics></math></span> หนึ่งตัว AUC คือโอกาสที่ <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo stretchy="false">(</mo><msup><mi>x</mi><mo lspace="0em" rspace="0em">+</mo></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">s(x^{+})</annotation></semantics></math></span> สูงกว่า (คะแนนเท่ากันนับครึ่ง) ค่า 0.5 เท่ากับการเดา ค่า 1 คือแยกได้สมบูรณ์</p>
+  </div>
+  <div class="scroll"><table class="t" style="max-width:640px">
+    <thead><tr><th>คลาส</th><th>คะแนนที่ได้</th><th>ชนะคลาสลบกี่ตัว (จาก 4)</th></tr></thead>
+    <tbody>
+      <tr><td>บวก</td><td>0.9</td><td>4 (ชนะ 0.8, 0.5, 0.3, 0.2)</td></tr>
+      <tr><td>บวก</td><td>0.7</td><td>3 (แพ้ 0.8)</td></tr>
+      <tr><td>บวก</td><td>0.4</td><td>2 (แพ้ 0.8 และ 0.5)</td></tr>
+      <tr><td>ลบ</td><td>0.8, 0.5, 0.3, 0.2</td><td></td></tr>
+      <tr><td colspan="2"><b>รวม</b></td><td><b>9 จาก 3 × 4 = 12 คู่ ได้ AUC = 0.75</b></td></tr>
+    </tbody></table></div>
+  <ul class="list">
+    <li><b>ข้อดี</b> แยกคุณภาพการจัดอันดับออกจากการตั้งค่าเกณฑ์ และไม่เปลี่ยนตามสัดส่วนคลาสในข้อมูลทดสอบ</li>
+    <li><b>ข้อระวัง</b> เมื่อคลาสบวกหายากมาก AUC อาจดูดีแม้เตือนผิดเยอะ เพราะ FPR หารด้วยจำนวนคลาสลบซึ่งมีมาก</li>
+  </ul>
+  <h3>PR curve และ PR-AUC</h3>
+  <p>เส้นโค้ง precision-recall พล็อต precision (แกนตั้ง) กับ recall (แกนนอน) ทุกค่าเกณฑ์ พื้นที่ใต้เส้นเรียกว่า PR-AUC หรือ average precision ตัวจำแนกที่เดาสุ่มได้ PR-AUC ประมาณสัดส่วนคลาสบวก (0.1 ในตัวอย่าง) ไม่ใช่ 0.5 จึงไวต่อการเตือนผิดเมื่อคลาสบวกหายาก และให้ข้อมูลมากกว่า ROC ในสถานการณ์นั้น (Saito and Rehmsmeier 2015) แต่เทียบข้ามชุดข้อมูลที่สัดส่วนคลาสต่างกันได้ยาก ในคลังมีเพียง 5 เรื่องที่รายงาน</p>
+  <div class="box warn"><b>"AUC" ที่คำนวณจากป้ายทายจุดเดียวคือ BA</b>
+    <p>ถ้ามีแค่ป้ายที่ตัดสินแล้ว เส้น ROC จะมีจุดเดียวที่ (FPR, TPR) พื้นที่ใต้เส้นที่ลากจาก (0, 0) ผ่านจุดนั้นไป (1, 1) เท่ากับ</p>
+    <div class="formula"><div class="mathd"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mrow><mi mathvariant="normal">T</mi><mi mathvariant="normal">P</mi><mi mathvariant="normal">R</mi></mrow><mo>+</mo><mrow><mi mathvariant="normal">T</mi><mi mathvariant="normal">N</mi><mi mathvariant="normal">R</mi></mrow></mrow><mn>2</mn></mfrac><mo>=</mo><mrow><mi mathvariant="normal">B</mi><mi mathvariant="normal">A</mi></mrow></mrow><annotation encoding="application/x-tex">\frac{\mathrm{TPR}+\mathrm{TNR}}{2}=\mathrm{BA}</annotation></semantics></math></span></div></div>
+    <p>ตัวจำแนก A ได้ (0.60 + 0.90)/2 = 0.75 ซึ่งคือ balanced accuracy ไม่ใช่ AUC งาน GDO และ DLexiBoost ในคลังรายงานค่านี้ในชื่อ AUC</p>
+  </div>
+</section>
+
+<section class="s" id="multiclass">
+  <h2><span class="n">7</span><span>ตัวชี้วัดแบบหลายคลาส <span class="en">Multi-class measures</span></span></h2>
+  <p>เมื่อมี C คลาส ตารางกลายเป็น C × C ให้ <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">m_{ij}</annotation></semantics></math></span> คือจำนวนตัวอย่างของคลาส i ที่ถูกทายเป็นคลาส j และ <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">R_i</annotation></semantics></math></span> คือ recall ของคลาส i ตัวอย่างข้างล่างมี 3 คลาส คลาส 1 มี 70 ตัว คลาส 2 มี 20 ตัว คลาส 3 มี 10 ตัว</p>
+  <div class="scroll"><table class="t" style="max-width:620px">
+    <thead><tr><th>จริง \ ทาย</th><th class="r">คลาส 1</th><th class="r">คลาส 2</th><th class="r">คลาส 3</th><th class="r">รวม</th><th class="r">recall <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">R_i</annotation></semantics></math></span></th><th class="r">precision</th></tr></thead>
+    <tbody>
+      <tr><td>คลาส 1</td><td class="r"><b>60</b></td><td class="r">8</td><td class="r">2</td><td class="r">70</td><td class="r">0.857</td><td class="r">0.882</td></tr>
+      <tr><td>คลาส 2</td><td class="r">5</td><td class="r"><b>13</b></td><td class="r">2</td><td class="r">20</td><td class="r">0.650</td><td class="r">0.542</td></tr>
+      <tr><td>คลาส 3</td><td class="r">3</td><td class="r">3</td><td class="r"><b>4</b></td><td class="r">10</td><td class="r">0.400</td><td class="r">0.500</td></tr>
+      <tr><td>ทายเป็นคลาสนี้รวม</td><td class="r">68</td><td class="r">24</td><td class="r">8</td><td class="r">100</td><td></td><td></td></tr>
+    </tbody></table></div>
+
+  <div class="metric"><h3>AvAcc หรือ macro recall <span class="en">Average accuracy</span></h3>
+    <dl class="mx"><dt>วัดอะไร</dt><dd>ค่าเฉลี่ยของ recall ทุกคลาส คลาสเล็กมีน้ำหนักเท่าคลาสใหญ่ เป็น BA ของงานหลายคลาส</dd>
+      <dt>สูตร</dt><dd><div class="mathd"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mi mathvariant="normal">A</mi><mi mathvariant="normal">v</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">c</mi><mi mathvariant="normal">c</mi></mrow><mo>=</mo><mfrac><mn>1</mn><mi>C</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>C</mi></munderover><msub><mi>R</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\mathrm{AvAcc}=\frac{1}{C}\sum_{i=1}^{C}R_i</annotation></semantics></math></span></div></dd>
+      <dt>ตัวอย่าง</dt><dd>(0.857 + 0.650 + 0.400)/3 = <b>0.636</b> ขณะที่ accuracy รวมได้ 0.77</dd></dl></div>
+
+  <div class="metric"><h3>MG <span class="en">Multi-class geometric mean</span></h3>
+    <dl class="mx"><dt>วัดอะไร</dt><dd>ค่าเฉลี่ยเรขาคณิตของ recall ทุกคลาส เป็น G-mean ของงานหลายคลาส</dd>
+      <dt>สูตร</dt><dd><div class="mathd"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mi mathvariant="normal">M</mi><mi mathvariant="normal">G</mi></mrow><mo>=</mo><mo fence="true" stretchy="true" minsize="1.8em" maxsize="1.8em">(</mo><munderover><mo>∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>C</mi></munderover><msub><mi>R</mi><mi>i</mi></msub><msup><mo fence="true" stretchy="true" minsize="1.8em" maxsize="1.8em">)</mo><mrow><mn>1</mn><mi mathvariant="normal">/</mi><mi>C</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\mathrm{MG}=\Bigl(\prod_{i=1}^{C}R_i\Bigr)^{1/C}</annotation></semantics></math></span></div></dd>
+      <dt>ตัวอย่าง</dt><dd>(0.857 × 0.650 × 0.400)<sup>1/3</sup> = <b>0.606</b></dd>
+      <dt>ระวัง</dt><dd>ถ้าคลาสใดมี recall = 0 ค่า MG เป็น 0 ทันที ไม่ว่าคลาสอื่นดีแค่ไหน</dd></dl></div>
+
+  <div class="metric"><h3>CBA <span class="en">Class balance accuracy</span></h3>
+    <dl class="mx"><dt>วัดอะไร</dt><dd>สำหรับแต่ละคลาส นำจำนวนที่ทายถูกหารด้วยค่าที่มากกว่าระหว่าง "จำนวนจริงของคลาสนั้น" กับ "จำนวนที่ถูกทายเป็นคลาสนั้น" แล้วเฉลี่ย จึงลงโทษทั้งการพลาดคลาสและการทายคลาสนั้นมากเกินไป</dd>
+      <dt>สูตร</dt><dd><div class="mathd"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mi mathvariant="normal">C</mi><mi mathvariant="normal">B</mi><mi mathvariant="normal">A</mi></mrow><mo>=</mo><mfrac><mn>1</mn><mi>C</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>C</mi></munderover><mfrac><msub><mi>m</mi><mrow><mi>i</mi><mi>i</mi></mrow></msub><mrow><mi>max</mi><mo>⁡</mo><mo fence="true" stretchy="true" minsize="1.2em" maxsize="1.2em">(</mo><munder><mo>∑</mo><mi>j</mi></munder><msub><mi>m</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo separator="true">,</mo><mtext> </mtext><munder><mo>∑</mo><mi>j</mi></munder><msub><mi>m</mi><mrow><mi>j</mi><mi>i</mi></mrow></msub><mo fence="true" stretchy="true" minsize="1.2em" maxsize="1.2em">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\mathrm{CBA}=\frac{1}{C}\sum_{i=1}^{C}\frac{m_{ii}}{\max\bigl(\sum_{j}m_{ij},\ \sum_{j}m_{ji}\bigr)}</annotation></semantics></math></span></div></dd>
+      <dt>ตัวอย่าง</dt><dd>คลาส 2: 13 / max(20, 24) = 0.542 รวมสามคลาสได้ <b>0.600</b></dd>
+      <dt>ต่างจาก AvAcc</dt><dd>AvAcc ไม่สนใจว่าคลาส 2 ถูกทายเกินไป 4 ตัว CBA สนใจ</dd></dl></div>
+
+  <div class="metric"><h3>MAUC <span class="en">Multi-class AUC (Hand and Till 2001)</span></h3>
+    <dl class="mx"><dt>วัดอะไร</dt><dd>ค่าเฉลี่ยของ AUC ทุกคู่คลาส <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo stretchy="false">(</mo><mi>i</mi><mo>∣</mo><mi>j</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">A(i\mid j)</annotation></semantics></math></span> คือ AUC ของการแยกคลาส i จากคลาส j โดยใช้คะแนนของคลาส i</dd>
+      <dt>สูตร</dt><dd><div class="mathd"><span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mi mathvariant="normal">M</mi><mi mathvariant="normal">A</mi><mi mathvariant="normal">U</mi><mi mathvariant="normal">C</mi></mrow><mo>=</mo><mfrac><mn>2</mn><mrow><mi>C</mi><mo stretchy="false">(</mo><mi>C</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mfrac><munder><mo>∑</mo><mrow><mi>i</mi><mo>&lt;</mo><mi>j</mi></mrow></munder><mfrac><mrow><mi>A</mi><mo stretchy="false">(</mo><mi>i</mi><mo>∣</mo><mi>j</mi><mo stretchy="false">)</mo><mo>+</mo><mi>A</mi><mo stretchy="false">(</mo><mi>j</mi><mo>∣</mo><mi>i</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\mathrm{MAUC}=\frac{2}{C(C-1)}\sum_{i&lt;j}\frac{A(i\mid j)+A(j\mid i)}{2}</annotation></semantics></math></span></div></dd>
+      <dt>ระวัง</dt><dd>ต้องใช้คะแนนของทุกคลาส คำนวณจากตาราง C × C ไม่ได้ ถ้าทำแบบนั้นจะได้ค่าคล้าย BA รายคู่ ไม่ใช่ MAUC</dd></dl></div>
+
+  <div class="metric"><h3>การเฉลี่ยตัวชี้วัดสองคลาสข้ามหลายคลาส <span class="en">Macro, weighted, micro</span></h3>
+    <dl class="mx"><dt>macro</dt><dd>คำนวณ F1 ของแต่ละคลาส (ให้คลาสนั้นเป็นบวก) แล้วเฉลี่ยเท่ากัน: (0.870 + 0.591 + 0.444)/3 = <b>0.635</b> เหมาะกับข้อมูลไม่สมดุล</dd>
+      <dt>weighted</dt><dd>เฉลี่ยโดยถ่วงด้วยขนาดคลาส: 0.7 × 0.870 + 0.2 × 0.591 + 0.1 × 0.444 = <b>0.771</b> คลาสใหญ่ครอบงำ เกือบเท่า accuracy</dd>
+      <dt>micro</dt><dd>รวม TP FP FN ของทุกคลาสก่อนคำนวณ ในงานที่แต่ละตัวอย่างมีป้ายเดียว micro-F1 เท่ากับ accuracy (0.77)</dd>
+      <dt>CEN</dt><dd>confusion entropy วัดว่าความผิดพลาดกระจายไปหลายคลาสแค่ไหน ยิ่งต่ำยิ่งดี พบในงานหลายคลาสกลุ่มหนึ่ง</dd></dl></div>
+
+  <div class="box warn"><b>ค่าเฉลี่ยของ accuracy แบบ one-vs-rest ไม่ใช่ AvAcc</b>
+    <p>ถ้ามองทีละคลาสแบบหนึ่งต่อที่เหลือ แล้วคำนวณ accuracy ของตาราง 2 × 2 จะได้ 0.82, 0.82 และ 0.90 เฉลี่ย 0.847 สูงกว่าตัวชี้วัดอื่นทั้งหมด เพราะ TN ซึ่งมีมากในทุกคลาสถูกนับซ้ำ สองงานในคลัง (MC-MBRC, MC-NCLWO) นิยาม AvAcc แบบนี้</p>
+  </div>
+</section>
+
+<section class="s" id="pitfalls">
+  <h2><span class="n">8</span><span>นิยามที่มักเขียนผิด <span class="en">Measure-definition problems</span></span></h2>
+  <p>หัวข้อ 7.5 พบปัญหาด้านนิยามใน 14 จาก 71 เรื่อง ชื่อตัวชี้วัดเดียวกันจึงอาจเป็นคนละค่า ก่อนเทียบตัวเลขข้ามบทความ ต้องดูสูตรในบทความนั้นก่อน</p>
+  <div class="scroll"><table class="t wide">
+    <thead><tr><th>ที่เขียนไว้</th><th>จริง ๆ คือ</th><th>ผลที่ตามมา</th><th>ตัวอย่างในคลัง</th></tr></thead>
+    <tbody>
+      <tr><td>"AUC" = (TPR + TNR)/2</td><td>BA ที่ค่าเกณฑ์เดียว</td><td>ไม่ได้วัดการจัดอันดับ เทียบกับ AUC จริงไม่ได้</td><td>GDO 2022, DLexiBoost 2020</td></tr>
+      <tr><td>MAUC จากตาราง C × C</td><td>ค่าคล้าย BA รายคู่</td><td>ไม่ได้ใช้คะแนน จึงไม่ใช่ MAUC</td><td>SHSampler 2022, GDHS 2025</td></tr>
+      <tr><td>AvAcc = ค่าเฉลี่ย accuracy แบบ one-vs-rest</td><td>ค่าที่ TN ทำให้สูงเกินจริง</td><td>ดูดีกว่า AvAcc จริงมาก</td><td>MC-MBRC 2024, MC-NCLWO 2025</td></tr>
+      <tr><td>G-mean = √(recall × precision)</td><td>ดัชนี Fowlkes–Mallows</td><td>ไม่ใช้ TN วัดคนละเรื่องกับ G-mean</td><td>SPE 2020, CGMOS 2016</td></tr>
+      <tr><td>ไม่บอกวิธีเฉลี่ยข้ามคลาส</td><td>macro, weighted หรือ micro ก็ได้</td><td>ค่าอาจต่างกันมาก (0.635 กับ 0.771 ในหัวข้อ 7)</td><td>SCUT 2015, CBHSID 2022</td></tr>
+      <tr><td>weighted F1 เป็นตัวชี้วัดหลักตัวเดียว</td><td>ค่าที่คลาสใหญ่ครอบงำ</td><td>มองไม่เห็นผลต่อคลาสส่วนน้อย</td><td>SOS 2022</td></tr>
+    </tbody></table></div>
+  <p class="used">หัวข้อ 7.1 ยังพบว่างานที่มีปัญหานี้ถูกอ้างอิงประมาณหนึ่งในสามของงานอายุเท่ากัน ดูหัวข้อ <a href="#citations">17</a></p>
+</section>
+
+<section class="s" id="choose">
+  <h2><span class="n">9</span><span>ตารางเทียบตัวชี้วัด <span class="en">Which measure measures what</span></span></h2>
+  <div class="scroll"><table class="t wide">
+    <thead><tr><th>ตัวชี้วัด</th><th>ขึ้นกับค่าเกณฑ์</th><th>ใช้ TN</th><th>เปลี่ยนตามสัดส่วนคลาส</th><th>ค่าของตัวจำแนกที่ไร้ประโยชน์</th><th>เหมาะกับ</th></tr></thead>
+    <tbody>
+      <tr><td>Accuracy</td><td>ใช่</td><td>ใช่</td><td>ใช่</td><td>สัดส่วนคลาสส่วนมาก (0.90)</td><td>ข้อมูลที่สมดุล</td></tr>
+      <tr><td>Recall (TPR)</td><td>ใช่</td><td>ไม่</td><td>ไม่</td><td>0 หรือ 1</td><td>ใช้คู่กับตัวอื่นเท่านั้น</td></tr>
+      <tr><td>Precision</td><td>ใช่</td><td>ไม่</td><td>ใช่</td><td>ประมาณสัดส่วนคลาสบวก</td><td>งานที่การเตือนผิดมีต้นทุนสูง</td></tr>
+      <tr><td>F1 / F<sub>β</sub></td><td>ใช่</td><td>ไม่</td><td>ใช่</td><td>0 หรือค่าต่ำ</td><td>สนใจคลาสบวกเป็นหลัก</td></tr>
+      <tr><td>G-mean</td><td>ใช่</td><td>ใช่</td><td>ไม่</td><td>0</td><td>สมดุลระหว่างสองคลาส</td></tr>
+      <tr><td>BA / AvAcc</td><td>ใช่</td><td>ใช่</td><td>ไม่</td><td>0.5 (สองคลาส) หรือ 1/C</td><td>สมดุลระหว่างคลาส อ่านง่าย</td></tr>
+      <tr><td>MCC / kappa</td><td>ใช่</td><td>ใช่</td><td>ใช่</td><td>0</td><td>ภาพรวมที่ใช้ครบ 4 ช่อง</td></tr>
+      <tr><td>ROC-AUC / MAUC</td><td>ไม่</td><td>ใช่ (ผ่าน FPR)</td><td>ไม่</td><td>0.5</td><td>คุณภาพการจัดอันดับคะแนน</td></tr>
+      <tr><td>PR-AUC</td><td>ไม่</td><td>ไม่</td><td>ใช่</td><td>ประมาณสัดส่วนคลาสบวก</td><td>คลาสบวกหายากมาก</td></tr>
+    </tbody></table></div>
+  <p class="used">"เปลี่ยนตามสัดส่วนคลาส" หมายถึง ตัวจำแนกเก่งเท่าเดิมทุกคลาส แต่ข้อมูลทดสอบมีสัดส่วนคลาสต่างไป ค่าที่ได้จะเปลี่ยนหรือไม่ ตัวที่เปลี่ยนเทียบข้ามชุดข้อมูลที่ IR ต่างกันได้ยากกว่า</p>
+</section>
+
+<section class="s" id="data">
+  <h2><span class="n">10</span><span>ข้อมูลที่ใช้ทดสอบ <span class="en">Benchmark data</span></span></h2>
+  <p><b>ข้อมูลทดสอบ</b> (benchmark data) คือชุดข้อมูลที่ใช้ฝึกและวัดผลวิธี งานในคลังใช้ข้อมูลตารางสาธารณะเกือบทั้งหมด ค่ากลางของจำนวนชุดข้อมูลจริงต่องานคือ 18 ชุด</p>
+  <dl class="mx">
+    <dt>UCI</dt><dd>UCI Machine Learning Repository คลังข้อมูลเก่าแก่ของ University of California, Irvine มีชุดคลาสสิกอย่าง ecoli, yeast, glass, vehicle, abalone ใช้ใน 53 จาก 71 เรื่อง</dd>
+    <dt>KEEL</dt><dd>คลังจากสเปนที่มีหมวดข้อมูลไม่สมดุลโดยเฉพาะ ใช้ใน 33 เรื่อง ชื่อชุดบอกวิธีสร้างความไม่สมดุล เช่น <code>ecoli-0_vs_1</code> คือคลาส 0 เทียบกับคลาส 1 และ <code>glass-0-1-6_vs_5</code> คือรวมคลาส 0, 1, 6 เป็นคลาสลบเทียบกับคลาส 5 KEEL มีการแบ่ง 5 fold ให้ใช้ร่วมกันด้วย ซึ่งช่วยให้ผลเทียบข้ามงานได้</dd>
+    <dt>ข้อมูลสังเคราะห์</dt><dd>synthetic หรือ artificial data คือข้อมูลที่สร้างจากการแจกแจงที่กำหนดเอง ใช้ใน 29 เรื่อง เพื่อควบคุมปัจจัยอย่างการซ้อนทับหรือ IR และเพื่อแสดงว่าวิธีวางจุดใหม่ที่ไหน</dd>
+    <dt>การแบ่งที่ตายตัว</dt><dd>fixed benchmark split คือการแบ่งข้อมูลฝึกและทดสอบที่มากับชุดข้อมูล เช่น ชุดภาพที่ถูกทำให้ไม่สมดุลโดยตั้งใจ พบในงาน deep learning หรือ GAN</dd>
+  </dl>
+  <h3>การดัดแปลงข้อมูล <span class="en">Modified data</span></h3>
+  <p>52 เรื่องเปลี่ยนข้อมูลก่อนใช้ เช่น <b>แปลงเป็นสองคลาส</b> (binarise: เลือกคลาสหนึ่งเป็นบวก ที่เหลือเป็นลบ) <b>รวมคลาส</b> <b>สุ่มตัดคลาสส่วนน้อยเพื่อเพิ่ม IR</b> หรือ <b>เติมสัญญาณรบกวน</b> (เปลี่ยนป้ายบางตัวให้ผิด) แต่มีแค่ 10 เรื่องที่ปล่อยชุดที่ดัดแปลงแล้ว</p>
+  <div class="box key"><b>เปิดเผย ไม่ได้แปลว่าทำซ้ำได้</b>
+    <p>ใครก็โหลดชุดต้นฉบับจาก UCI ได้ แต่ถ้าบทความสุ่มตัดตัวอย่างออกเพื่อเพิ่ม IR และไม่ปล่อยชุดที่ได้ ผู้อ่านจะไม่รู้ว่าตัวอย่างไหนถูกตัด จึงสร้างข้อมูลให้ตรงกับในบทความไม่ได้ ในหัวข้อ 7.2 คำนี้แยกระหว่าง public (ข้อมูลเปิดเผย) กับ reproducible (ทำซ้ำได้)</p>
+  </div>
+  <h3>เหตุผลที่ใช้เลือกข้อมูล</h3>
+  <p>หัวข้อ 7.2 นับเฉพาะเหตุผลที่บทความเขียนไว้ เช่น ให้ครอบคลุม IR ขนาดและจำนวนมิติที่ต่างกัน ได้ระดับ IR ที่ต้องการ ใช้ตามการทดลองของบทความก่อนหน้า มีปัจจัยความยาก เทียบกับผลที่ตีพิมพ์แล้วได้ หรือโหลดได้สาธารณะ การใช้ชุดข้อมูลตามบทความก่อนหน้าทำให้ชุดข้อมูลถูก <b>ส่งต่อเป็นสาย</b> จากงานหนึ่งไปอีกงาน</p>
+</section>
+
+<section class="s" id="learners">
+  <h2><span class="n">11</span><span>ตัวจำแนกพื้นฐานและคู่เทียบ <span class="en">Base learners and competitors</span></span></h2>
+  <p>วิธีปรับสมดุลถูกตัดสินผ่านตัวจำแนกเสมอ ตัวจำแนกแต่ละแบบตอบสนองต่อความไม่สมดุลต่างกัน ผลของวิธีปรับสมดุลจึงขึ้นกับตัวจำแนกที่ใช้</p>
+  <div class="scroll"><table class="t wide">
+    <thead><tr><th>ตัวจำแนก</th><th>หลักการโดยย่อ</th><th>ความไม่สมดุลกระทบอย่างไร</th></tr></thead>
+    <tbody>
+      <tr><td>C4.5 / C5.0</td><td>ต้นไม้ตัดสินใจ แบ่งข้อมูลด้วย information gain ratio แล้วตัดกิ่ง</td><td>การตัดกิ่งมักลบกฎที่ครอบคลุมคลาสส่วนน้อยไม่กี่ตัวทิ้ง ใช้มากที่สุดในคลัง (33 เรื่อง) และให้ผลคงที่เมื่อตั้งค่าเดิม</td></tr>
+      <tr><td>CART</td><td>ต้นไม้ตัดสินใจที่แบ่งด้วย Gini index</td><td>คล้าย C4.5</td></tr>
+      <tr><td>k-NN</td><td>ทายตามคลาสส่วนใหญ่ของเพื่อนบ้าน k ตัวที่ใกล้ที่สุด</td><td>ในบริเวณซ้อนทับ เพื่อนบ้านส่วนใหญ่มาจากคลาสส่วนมาก ใช้หลักเพื่อนบ้านแบบเดียวกับ SMOTE</td></tr>
+      <tr><td>SVM</td><td>หาเส้นแบ่งที่มีระยะขอบกว้างที่สุด</td><td>เส้นแบ่งเลื่อนเข้าหาคลาสส่วนน้อย</td></tr>
+      <tr><td>Naive Bayes</td><td>ใช้ความน่าจะเป็นโดยสมมติว่าฟีเจอร์อิสระต่อกัน</td><td>ความน่าจะเป็นก่อนหน้า (prior) ของคลาสส่วนมากสูงกว่า</td></tr>
+      <tr><td>Logistic regression</td><td>โมเดลเชิงเส้นที่ให้ความน่าจะเป็น</td><td>ความน่าจะเป็นถูกต้อง แต่ค่าเกณฑ์ 0.5 มักไม่เหมาะ</td></tr>
+      <tr><td>MLP</td><td>โครงข่ายประสาทเทียมหลายชั้น</td><td>เกรเดียนต์ส่วนใหญ่มาจากคลาสส่วนมาก</td></tr>
+      <tr><td>Random forest</td><td>ต้นไม้หลายต้นจากข้อมูลที่สุ่มซ้ำ (bagging) แล้วโหวต</td><td>ค่อนข้างแข็งแรง ปรับน้ำหนักคลาสได้</td></tr>
+      <tr><td>Boosting</td><td>AdaBoost, gradient boosting (เช่น XGBoost, LightGBM, CatBoost) สร้างโมเดลต่อกันโดยเน้นตัวที่ทายผิด</td><td>ตัวจำแนกที่แข็ง มักลดประโยชน์ของการปรับสมดุลลง</td></tr>
+    </tbody></table></div>
+  <ul class="list">
+    <li><b>ใช้ตัวจำแนกตัวเดียว</b> (25 จาก 71 เรื่อง) แยกไม่ได้ว่าผลมาจากวิธีปรับสมดุล หรือจากการที่วิธีนั้นเข้ากับตัวจำแนกตัวนั้นพอดี</li>
+    <li><b>เหตุผลที่เลือกตัวจำแนก</b> ที่ดีคือเลือกเพราะไวต่อความไม่สมดุล หรือเพื่อให้ครอบคลุมหลักการเรียนรู้ต่างแบบ ในคลังเหตุผลที่พบบ่อยที่สุดคือ "เป็นที่นิยม"</li>
+    <li><b>คู่เทียบ</b> ค่ากลางคือ 7 วิธีต่องาน SMOTE เป็นคู่เทียบใน 50 เรื่อง และมีเส้นฐานที่ไม่ปรับสมดุลใน 52 เรื่อง</li>
+    <li><b>ผลคู่เทียบที่คัดลอกมา</b> (copied results) คือการนำคะแนนของวิธีอื่นจากบทความเก่ามาใส่ตารางแทนการรันใหม่ (6 เรื่อง) ตัวเลขที่ได้จึงมาจากการแบ่งข้อมูล การตั้งค่า และบางครั้งนิยามตัวชี้วัดคนละแบบ</li>
+  </ul>
+</section>
+
+<section class="s" id="protocol">
+  <h2><span class="n">12</span><span>การแบ่งข้อมูลฝึกและทดสอบ <span class="en">Validation protocol</span></span></h2>
+  <p><b>โปรโตคอลการตรวจสอบ</b> (validation protocol) กำหนดว่าตัวอย่างไหนใช้ฝึก ตัวอย่างไหนใช้วัดผล เป้าหมายคือประมาณว่าวิธีจะทำได้ดีแค่ไหนกับข้อมูลที่ไม่เคยเห็น</p>
+  <div class="scroll"><table class="t wide">
+    <thead><tr><th>โปรโตคอล</th><th>ทำอย่างไร</th><th>ข้อดี</th><th>ข้อจำกัด</th></tr></thead>
+    <tbody>
+      <tr><td>Hold-out</td><td>แบ่งครั้งเดียว เช่น ฝึก 70% ทดสอบ 30%</td><td>ถูก เหมาะกับข้อมูลใหญ่</td><td>ได้ค่าเดียว ผลแกว่งตามการสุ่ม คลาสส่วนน้อยในชุดทดสอบมีไม่กี่ตัว</td></tr>
+      <tr><td>Repeated hold-out</td><td>แบ่งสุ่มหลายครั้งแล้วเฉลี่ย</td><td>ประมาณความแปรปรวนได้</td><td>ชุดทดสอบของแต่ละรอบซ้อนกัน</td></tr>
+      <tr><td>k-fold CV</td><td>แบ่งเป็น k ส่วน (fold) แต่ละรอบใช้ 1 ส่วนทดสอบ อีก k − 1 ส่วนฝึก ครบ k รอบ</td><td>ทุกตัวอย่างได้เป็นข้อมูลทดสอบหนึ่งครั้ง</td><td>รอบเดียวได้ค่าเดียวต่อชุดข้อมูล ขึ้นกับการแบ่ง</td></tr>
+      <tr><td>Stratified k-fold</td><td>k-fold ที่รักษาสัดส่วนคลาสในทุก fold</td><td>ทุก fold มีคลาสส่วนน้อย</td><td>เป็นมาตรฐานของสายนี้ k = 10 (23 เรื่อง) และ k = 5 (20 เรื่อง)</td></tr>
+      <tr><td>Repeated k-fold CV</td><td>สุ่มแบ่ง k-fold ใหม่หลายรอบแล้วเฉลี่ย</td><td>ใช้ข้อมูลครบ ประมาณความแปรปรวนได้</td><td>ใช้เวลามาก (33 เรื่อง)</td></tr>
+      <tr><td>5 × 2 CV</td><td>แบ่งครึ่ง 2 fold ทำซ้ำ 5 รอบ</td><td>เหมาะกับการทดสอบแบบจับคู่บนชุดข้อมูลเดียว</td><td>ฝึกด้วยข้อมูลแค่ครึ่งเดียว</td></tr>
+      <tr><td>Fixed split</td><td>ใช้การแบ่งที่มากับชุดข้อมูล</td><td>เทียบกับงานอื่นบนชุดนั้นได้</td><td>มีการแบ่งแบบเดียว</td></tr>
+    </tbody></table></div>
+  <div class="box warn"><b>การรั่วของข้อมูล (data leakage)</b>
+    <p>ทุกอย่างที่ "เรียนจากข้อมูล" ต้องทำภายในข้อมูลฝึกของแต่ละ fold เท่านั้น ได้แก่ การปรับสมดุล การปรับสเกลฟีเจอร์ การเติมค่าที่หาย การเลือกฟีเจอร์ และการเลือกค่าพารามิเตอร์ ถ้าใช้ SMOTE กับข้อมูลทั้งหมดก่อนแบ่ง fold จุดสังเคราะห์ที่สร้างจากตัวอย่างทดสอบจะอยู่ในข้อมูลฝึก ตัวจำแนกจึงเคยเห็นตัวอย่างที่อยู่ติดกับข้อสอบ คะแนนจะสูงเกินจริง</p>
+    <p>ในคลัง มี 34 จาก 71 เรื่องที่บอกชัดว่าปรับสมดุลเฉพาะข้อมูลฝึก อีก 36 เรื่องไม่บอก มีงานหนึ่งที่จำนวนตัวอย่างสังเคราะห์บ่งว่าปรับทั้งชุดก่อนแบ่ง (AB-SMOTE) และอีกงานดูเหมือนปรับสเกลก่อนแบ่ง (MC-NCLWO)</p>
+  </div>
+</section>
+
+<section class="s" id="tuning">
+  <h2><span class="n">13</span><span>การเลือกค่าพารามิเตอร์ <span class="en">Hyperparameter selection</span></span></h2>
+  <p><b>ไฮเปอร์พารามิเตอร์</b> (hyperparameter) คือค่าที่ผู้ใช้ต้องตั้งก่อนรัน เช่น <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span> และปริมาณการสังเคราะห์ของ SMOTE ความลึกของต้นไม้ หรือค่า C ของ SVM ต่างจาก <b>พารามิเตอร์</b> ที่โมเดลเรียนเองจากข้อมูล การตั้งค่าที่ต่างกันให้ผลต่างกันมาก วิธีเลือกจึงสำคัญ</p>
+  <dl class="mx">
+    <dt>ค่าคงที่</dt><dd>ใช้ค่าปริยาย (default) หรือค่าที่กำหนดไว้กับทุกวิธี (20 เรื่อง) ยุติธรรม แต่วิธีที่ค่าปริยายไม่ดีจะเสียเปรียบ</dd>
+    <dt>เลือกบนข้อมูลทดสอบ</dt><dd>ลองหลายค่าแล้วรายงานค่าที่ดีที่สุดบน fold เดียวกับที่ใช้รายงานผล (35 เรื่อง: 25 เรื่องบอกตรง ๆ อีก 10 เรื่องบอกเป็นนัย) ให้ผลที่สูงเกินจริง</dd>
+    <dt>Nested CV</dt><dd>มีสองวง วงนอกแบ่งข้อมูลเพื่อวัดผล วงในแบ่งข้อมูลฝึกของวงนอกอีกชั้นเพื่อเลือกค่า ข้อมูลทดสอบของวงนอกไม่เคยถูกใช้เลือกค่า (9 เรื่อง รวมงานที่ใช้ชุดข้อมูลสำหรับปรับจูนแยกต่างหาก)</dd>
+    <dt>ไม่บอก</dt><dd>7 เรื่องไม่บอกว่าเลือกค่าอย่างไร</dd>
+  </dl>
+  <div class="box key"><b>ทำไมการเลือกบนข้อมูลทดสอบจึงให้ผลสูงเกินจริง</b>
+    <p>คะแนนที่วัดได้แต่ละครั้งมีความคลาดเคลื่อนจากการสุ่ม สมมติว่าทุกค่าที่ลองมีคะแนนจริงเท่ากันที่ 0.80 และคะแนนที่วัดได้แกว่ง ±0.02 (ส่วนเบี่ยงเบนมาตรฐาน) ถ้าลอง 2 ค่าแล้วเลือกตัวที่สูงสุด จะได้เฉลี่ยประมาณ 0.811 ถ้าลอง 294 ค่าจะได้ประมาณ 0.857 ทั้งที่ไม่มีค่าไหนดีกว่าจริงเลย ส่วนที่เกินมาคือโชคที่ถูกเลือกเข้ามา</p>
+    <p>นี่คือเหตุที่หัวข้อ 7.6 ชี้ว่า <b>งบการค้นหาที่ไม่เท่ากัน</b> เอื้อวิธีที่เสนอ เช่น G-SMOTE ถูกเลือกจาก 294 ค่ากำหนด เทียบกับ 2 ค่าของ SMOTE เหมือนนักเรียนที่สอบซ้ำได้หลายครั้งแล้วรายงานครั้งที่ดีที่สุด เทียบกับคนที่สอบได้ครั้งเดียว</p>
+  </div>
+  <p>หัวข้อ 7.6 ยังถามว่าใช้ <b>ตัวชี้วัดอะไรเลือก</b> ใน 54 เรื่องที่มีการเลือกค่า มี 33 เรื่องที่บอก ส่วนใหญ่ใช้ G-mean และ AUC และตัวที่ใช้เลือกเป็นตัวเดียวกับที่รายงานผลเสมอ เมื่อเลือกบน fold ทดสอบด้วย วิธีที่เสนอจึงถูกปรับให้ดีบนตัวเลขเดียวกับที่ผู้อ่านเห็น</p>
+</section>
+
+<section class="s" id="stats">
+  <h2><span class="n">14</span><span>การทดสอบทางสถิติ <span class="en">Significance testing</span></span></h2>
+  <p>วิธีหนึ่งชนะอีกวิธีบนชุดข้อมูลหลายชุด อาจเพราะดีกว่าจริงหรือเพราะบังเอิญ การทดสอบทางสถิติช่วยแยกสองกรณีนี้ ในการเปรียบเทียบตัวจำแนก หน่วยของการทดสอบคือ <b>ชุดข้อมูล</b> แต่ละชุดให้คะแนนหนึ่งค่าต่อวิธี และทุกวิธีรันบนชุดข้อมูลเดียวกัน จึงเป็นการทดสอบแบบ <b>จับคู่</b> (paired) แนวทางนี้มาจาก Demšar (2006) ซึ่งเป็นแหล่งอ้างอิงด้านนี้ที่ถูกอ้างมากที่สุดในคลัง</p>
+  <dl class="mx">
+    <dt>p-value</dt><dd>ความน่าจะเป็นที่จะเห็นความต่างขนาดนี้หรือมากกว่า ถ้าความจริงไม่มีความต่างเลย p &lt; 0.05 มักเรียกว่า "มีนัยสำคัญ" p-value ไม่ได้บอกว่าความต่างใหญ่แค่ไหน และไม่ใช่ความน่าจะเป็นที่สมมติฐานเป็นจริง</dd>
+    <dt>Wilcoxon signed-rank</dt><dd>เทียบ <b>สองวิธี</b> บน N ชุดข้อมูล เรียงขนาดของผลต่างแต่ละชุด แล้วดูว่าผลต่างฝั่งบวกมีอันดับรวมมากกว่าฝั่งลบชัดเจนหรือไม่ ไม่ต้องสมมติว่าข้อมูลแจกแจงปกติ (26 เรื่อง)</dd>
+    <dt>Friedman</dt><dd>เทียบ <b>หลายวิธีพร้อมกัน</b> ในแต่ละชุดข้อมูลให้อันดับ 1 กับวิธีที่ดีที่สุด แล้วเฉลี่ยอันดับข้ามชุดข้อมูล (average rank) ทดสอบว่าอันดับเฉลี่ยต่างกันจริงหรือไม่ (25 เรื่อง) เป็นการทดสอบรวม (omnibus) ถ้ามีนัยสำคัญ จึงทำการทดสอบภายหลัง Iman–Davenport คือรุ่นที่ปรับให้แม่นขึ้น</dd>
+    <dt>Post-hoc</dt><dd>การทดสอบภายหลังว่าคู่ไหนต่างกัน <b>Nemenyi</b> เทียบทุกคู่ เข้มงวด (4 เรื่อง) <b>Bonferroni–Dunn</b> เทียบทุกวิธีกับวิธีควบคุมหนึ่งตัว (6) <b>Holm</b> เทียบกับวิธีควบคุมแบบเป็นขั้น มีอำนาจมากกว่า (10) <b>Shaffer</b> เทียบทุกคู่โดยใช้ความสัมพันธ์เชิงตรรกะของสมมติฐาน (4)</dd>
+    <dt>Bayesian signed-rank</dt><dd>แทนที่จะให้ p-value ให้ความน่าจะเป็นสามค่า คือ A ดีกว่า, เท่ากันในทางปฏิบัติ (อยู่ในช่วง ROPE เช่น ±0.01) และ B ดีกว่า (Benavoli et al. 2017; 3 เรื่อง)</dd>
+    <dt>CD diagram</dt><dd>critical difference diagram วางวิธีบนแกนอันดับเฉลี่ย แล้วลากเส้นเชื่อมวิธีที่ต่างกันไม่ถึงระยะวิกฤต (ต่างกันอย่างไม่มีนัยสำคัญ)</dd>
+  </dl>
+  <div class="box key"><b>ปัญหาการเปรียบเทียบหลายครั้ง (multiple comparisons)</b>
+    <p>ถ้าทดสอบแต่ละคู่ที่ระดับ 0.05 โอกาสที่จะได้ผล "มีนัยสำคัญ" ผิด ๆ อย่างน้อยหนึ่งครั้งเพิ่มตามจำนวนครั้ง <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><mn>0.9</mn><msup><mn>5</mn><mi>k</mi></msup></mrow><annotation encoding="application/x-tex">1-0.95^{k}</annotation></semantics></math></span>: 5 คู่ได้ 23% 10 คู่ได้ 40% 24 คู่ได้ 71% การทดสอบแบบปรับแก้ (Holm, Shaffer ฯลฯ) จึงจำเป็นเมื่อเทียบวิธีที่เสนอกับคู่เทียบหลายตัว ในคลังมีงานที่ใช้ Wilcoxon รายคู่โดยไม่ปรับแก้ ทั้งที่เทียบกับคู่เทียบหลายวิธี</p>
+  </div>
+  <ul class="list">
+    <li><b>ความผิดพลาดที่พบในคลัง</b> วาด Nemenyi ทั้งที่ Friedman ไม่มีนัยสำคัญ ใช้ Nemenyi โดยไม่มีการทดสอบรวม และระบุชื่อการทดสอบภายหลังสองแบบสำหรับการวิเคราะห์เดียวกัน</li>
+    <li><b>นัยสำคัญไม่ได้แก้อคติจากการเลือกค่า</b> ถ้าคะแนนที่นำมาทดสอบมาจาก fold ที่ใช้เลือกค่าพารามิเตอร์ (หัวข้อ <a href="#tuning">13</a>) การทดสอบก็ยืนยันความได้เปรียบที่เกินจริงนั้น</li>
+    <li><b>ขนาดของผล</b> (effect size) ควรรายงานคู่กับ p-value เพราะความต่าง 0.001 ก็มีนัยสำคัญได้ถ้ามีชุดข้อมูลมากพอ</li>
+  </ul>
+</section>
+
+<section class="s" id="reporting">
+  <h2><span class="n">15</span><span>การรายงานผล <span class="en">Reporting</span></span></h2>
+  <dl class="mx">
+    <dt>ตารางรายชุดข้อมูล</dt><dd>per-dataset table คะแนนของทุกวิธีบนทุกชุดข้อมูล มักทำตัวหนาที่ค่าดีที่สุด (58 เรื่อง) จำเป็นสำหรับการวิเคราะห์ซ้ำ</dd>
+    <dt>ค่าเฉลี่ย ± SD</dt><dd>ส่วนเบี่ยงเบนมาตรฐานบอกว่าผลแกว่งแค่ไหนระหว่าง fold หรือรอบ ถ้าไม่มี ผู้อ่านแยกความต่างจริงกับความแกว่งไม่ได้ (24 เรื่องรายงาน)</dd>
+    <dt>อันดับเฉลี่ย</dt><dd>average rank สรุปผลข้ามชุดข้อมูลโดยไม่ให้ชุดที่ค่าสูงครอบงำ (38 เรื่อง)</dd>
+    <dt>Win/tie/loss</dt><dd>นับว่าวิธีที่เสนอชนะ เสมอ แพ้คู่เทียบกี่ชุดข้อมูล (19 เรื่อง)</dd>
+    <dt>Ablation</dt><dd>ถอดส่วนประกอบของวิธีออกทีละส่วนเพื่อดูว่าแต่ละส่วนช่วยแค่ไหน</dd>
+    <dt>Parameter sensitivity</dt><dd>เส้นกราฟคะแนนเมื่อเปลี่ยนค่าพารามิเตอร์ บอกว่าวิธีไวต่อการตั้งค่าแค่ไหน</dd>
+    <dt>เวลาประมวลผล</dt><dd>running time สำคัญเพราะหลายวิธีเพิ่มการจัดกลุ่ม การหาค่าเหมาะสม หรือการฝึก GAN บน SMOTE (14 เรื่องรายงาน)</dd>
+    <dt>โค้ดและ seed</dt><dd>ปล่อยโค้ดและค่าเริ่มต้นการสุ่ม (random seed) ทำให้คนอื่นรันซ้ำและนำไปเป็นคู่เทียบได้ (27 เรื่อง)</dd>
+  </dl>
+</section>
+
+<section class="s" id="beyond">
+  <h2><span class="n">16</span><span>หลักฐานนอกจากคะแนนของตัวจำแนก <span class="en">Evidence beyond classifier scores</span></span></h2>
+  <p>คะแนนของตัวจำแนกบอกว่าผลสุดท้ายดีขึ้นหรือไม่ แต่ไม่บอกว่าทำไม หัวข้อ 7.5 จึงนับหลักฐานอื่นที่บอกเรื่องข้อมูลหลังปรับสมดุล ไม่มีงานใดในคลังประเมินโดยไม่ใช้ตัวจำแนกเลย</p>
+  <h3>วัดข้อมูลหลังปรับสมดุลโดยตรง (6 เรื่อง)</h3>
+  <dl class="mx">
+    <dt>MMD</dt><dd>maximum mean discrepancy ระยะห่างระหว่างการแจกแจงสองชุด คำนวณผ่านฟังก์ชันเคอร์เนล ค่า 0 คือแจกแจงเหมือนกัน ใช้เทียบตัวอย่างสังเคราะห์กับตัวอย่างจริงที่กันไว้ (CISO)</dd>
+    <dt>FID</dt><dd>Fréchet Inception Distance ระยะห่างระหว่างภาพจริงกับภาพที่สร้าง วัดบนฟีเจอร์จากโครงข่าย Inception ยิ่งต่ำยิ่งเหมือน (GAMO)</dd>
+    <dt>Likelihood</dt><dd>บนข้อมูลจำลองที่รู้การแจกแจงจริง วัดว่าแถวที่สังเคราะห์มีความน่าจะเป็นสูงแค่ไหนภายใต้การแจกแจงจริง (CTGAN)</dd>
+    <dt>Two-sample test ด้วยตัวจำแนก</dt><dd>ฝึกตัวจำแนกให้แยกของจริงกับของสังเคราะห์ ถ้า AUC ใกล้ 0.5 แปลว่าแยกไม่ออก (CISO)</dd>
+    <dt>สัดส่วนที่ถูกลบเป็น noise</dt><dd>นับว่าตัวอย่างสังเคราะห์ถูกตัวกรองลบทิ้งกี่เปอร์เซ็นต์ บอกว่าวิธีสร้างจุดในที่ผิดบ่อยแค่ไหน (SMOTE-IPF)</dd>
+    <dt>สัดส่วนประเภทตัวอย่าง</dt><dd>นับตัวอย่าง safe, borderline และตัวอย่างยากหลังปรับสมดุล (SPE, GLOS; ดูหัวข้อ <a href="#imbalance">1</a>)</dd>
+  </dl>
+  <h3>หลักฐานแบบอื่น</h3>
+  <ul class="list">
+    <li><b>กราฟ 2 มิติ</b> ของจุดสังเคราะห์บนข้อมูลตัวอย่าง (33 เรื่องรวมภาพแบบอื่น) ช่วยให้เห็นว่าจุดไปตกที่ไหน แต่ไม่ได้ให้ตัวเลขบนข้อมูลจริง</li>
+    <li><b>ภาพฉาย PCA หรือ t-SNE</b> ย่อข้อมูลหลายมิติลงสองมิติ t-SNE รักษาความใกล้ชิดเฉพาะที่ ระยะห่างระหว่างกลุ่มในภาพจึงตีความไม่ได้</li>
+    <li><b>ทฤษฎีบท ขอบเขต และ big-O</b> (31 เรื่อง) บอกว่าวิธีถูกต้องตามหลักและใช้เวลาเท่าไร ไม่ได้บอกว่าข้อมูลที่ได้ดีแค่ไหน big-O เช่น <span class="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span> บอกว่าเวลาเพิ่มเป็นกำลังสองของจำนวนตัวอย่าง</li>
+    <li><b>ลักษณะของโมเดล</b> (5 เรื่อง) เช่น ขนาดต้นไม้ จำนวนกฎ หรือความหลากหลายของสมาชิก ensemble</li>
+  </ul>
+</section>
+
+<section class="s" id="citations">
+  <h2><span class="n">17</span><span>ยอดอ้างอิงและตัวคูณการอ้างอิง <span class="en">Citation analysis</span></span></h2>
+  <p>หัวข้อที่ 7 ถามด้วยว่างานที่ประเมินผลรัดกุมได้รับการอ้างอิงมากกว่าหรือไม่ ศัพท์ที่ใช้มีดังนี้</p>
+  <dl class="mx">
+    <dt>OpenAlex</dt><dd>ฐานข้อมูลบรรณานุกรมแบบเปิด ใช้นับยอดอ้างอิง (ดึงวันที่ 18 ต.ค. 2026) ยอดต่ำกว่า Google Scholar และบางบทความถูกแยกเป็นหลายระเบียน</dd>
+    <dt>ผลของอายุ</dt><dd>บทความเก่ามีเวลาถูกอ้างอิงนานกว่า ในคลังนี้บทความที่เก่ากว่า 1 ปี ได้ยอดที่คาดไว้มากขึ้นประมาณ 1.19 เท่า จึงเทียบยอดดิบข้ามปีไม่ได้</dd>
+    <dt>log(1 + ยอด)</dt><dd>ยอดอ้างอิงเบ้มาก (SMOTE มีหลายหมื่น งานใหม่มีไม่กี่สิบ) การใช้ลอการิทึมบีบให้เทียบกันได้ และ +1 ทำให้ใช้กับบทความที่ยอดเป็น 0 ได้</dd>
+    <dt>ตัวคูณการอ้างอิง</dt><dd>citation ratio ได้จากการถดถอยของ log(1 + ยอด) บนปีที่ตีพิมพ์และตัวแปรว่าทำแนวปฏิบัตินั้นหรือไม่ ค่าที่ได้บอกว่างานที่ทำแนวปฏิบัตินั้นถูกอ้างอิงกี่เท่าของงานอายุเท่ากันที่ไม่ได้ทำ ×1 คือเท่ากัน ×2 คือสองเท่า ×0.5 คือครึ่งเดียว ใช้เฉพาะ 62 เรื่องที่ตีพิมพ์ถึงปี 2024</dd>
+    <dt>ช่วงความเชื่อมั่น 95%</dt><dd>ช่วงที่ค่าจริงน่าจะอยู่ ถ้าช่วงคร่อม ×1 แปลว่าข้อมูลไม่พอจะบอกว่าต่าง</dd>
+    <dt>การเทียบหลายครั้ง</dt><dd>หัวข้อที่ 7 คำนวณตัวคูณของ 24 แนวปฏิบัติ ต่อให้ไม่มีผลจริงเลย ก็คาดได้ว่าราว 1 ช่วงจะไม่คร่อม ×1 โดยบังเอิญ</dd>
+    <dt>ความสัมพันธ์ ไม่ใช่สาเหตุ</dt><dd>ตัวคูณบอกว่าสองอย่างเกิดคู่กัน ไม่ได้บอกว่าอย่างหนึ่งทำให้เกิดอีกอย่าง แหล่งตีพิมพ์ ความใหม่ของแนวคิด และผู้เขียนก็มีผล แต่ไม่ได้ควบคุม</dd>
+  </dl>
+  <p class="used">หน้า SMOTE Evaluation Roadmap อธิบายการวิเคราะห์นี้ทีละขั้นพร้อมตัวอย่างตัวเลข</p>
+</section>
+
+<section class="s" id="outcomes">
+  <h2><span class="n">18</span><span>ผลลัพธ์ ข้อจำกัด และมาตรฐานขั้นต่ำ <span class="en">Outcomes, threats, standard</span></span></h2>
+  <h3>ประเภทของข้อสรุป (หัวข้อ 7.9)</h3>
+  <div class="scroll"><table class="t wide">
+    <thead><tr><th>ประเภท</th><th>ความหมาย</th><th class="r">จำนวน</th></tr></thead>
+    <tbody>
+      <tr><td>A</td><td>วิธีที่เสนอดีที่สุดทุกตัวชี้วัดและทุกตัวจำแนก โดยไม่ระบุข้อยกเว้น</td><td class="r">27</td></tr>
+      <tr><td>B</td><td>ดีที่สุดโดยรวม แต่ผู้เขียนระบุกรณีที่ไม่ดีกว่า เช่น ตัวชี้วัด ตัวจำแนก หรือชุดข้อมูลบางแบบ</td><td class="r">41</td></tr>
+      <tr><td>C</td><td>ไม่ดีกว่าเส้นฐานอย่างง่าย (ไม่ปรับสมดุล class weighting หรือ ROS)</td><td class="r">1 (CISO)</td></tr>
+      <tr><td>D</td><td>งานเปรียบเทียบ ไม่ได้เสนอวิธีใหม่</td><td class="r">2</td></tr>
+    </tbody></table></div>
+  <p>68 จาก 69 งานที่เสนอวิธีใหม่สรุปว่าวิธีของตนดีที่สุด แต่ชัยชนะเหล่านี้รวมกันเป็นการจัดอันดับไม่ได้ เพราะแต่ละงานใช้การแบ่งข้อมูล การตั้งค่า และนิยามตัวชี้วัดของตัวเอง วิธีที่ชนะในงานหนึ่งจึงแพ้ในงานถัดไปที่เอาไปเป็นคู่เทียบ</p>
+  <h3>ข้อจำกัดของการวิเคราะห์ <span class="en">Threats to validity</span></h3>
+  <p>คือการบอกล่วงหน้าว่าข้อสรุปของการวิเคราะห์อาจผิดได้ตรงไหน หัวข้อ 7.10 ระบุ 6 ข้อ: คลังบทความไม่ใช่ตัวอย่างของงานทั้งหมด การลงรหัสทำโดยคนเดียวต่อบทความ บางตารางในบทความเป็นภาพทำให้ข้อมูลขาด งานหนึ่งนับหนึ่งครั้งต่อคุณลักษณะไม่ว่าจะใช้มากหรือน้อย รหัสรอบที่สองยังไม่มีผู้ตรวจคนที่สอง และยอดอ้างอิงมาจากฐานข้อมูลเดียวในวันเดียว</p>
+  <h3>มาตรฐานขั้นต่ำ (หัวข้อ 7.11)</h3>
+  <ul class="list">
+    <li>ใช้ตัวจำแนกอย่างน้อย 3 ตระกูล รวม random forest หรือ gradient boosting และบอกเหตุผลที่เลือก</li>
+    <li>มีเส้นฐาน: ไม่ปรับสมดุล class weighting, ROS และ SMOTE รันใหม่ทุกวิธีบน fold เดียวกัน</li>
+    <li>ปล่อยชุดข้อมูลที่ดัดแปลงพร้อมการแบ่ง fold</li>
+    <li>รายงานตัวชี้วัดที่ไม่ขึ้นกับค่าเกณฑ์หนึ่งตัว และตัวที่ถ่วงสมดุลคลาสหนึ่งตัว พร้อมสูตรและวิธีเฉลี่ยข้ามคลาส</li>
+    <li>บอกว่าปรับสมดุล ปรับสเกล และเติมค่าที่หาย เฉพาะในข้อมูลฝึก</li>
+    <li>เลือกค่าพารามิเตอร์ด้วย nested CV หรือชุดปรับจูนแยก ด้วยงบการค้นหาเท่ากันทุกวิธี และบอกตัวชี้วัดที่ใช้เลือก</li>
+    <li>เพิ่มการตรวจข้อมูลหลังปรับสมดุลโดยตรงอย่างน้อยหนึ่งแบบ</li>
+    <li>ใช้ Friedman กับ Holm หรือ Shaffer หรือการทดสอบแบบเบย์ และรายงานขนาดของผล</li>
+    <li>รายงานค่าเฉลี่ยกับส่วนเบี่ยงเบนมาตรฐานรายชุดข้อมูล เวลาประมวลผล ปล่อยโค้ดและ seed</li>
+  </ul>
+</section>
+
+<section class="s" id="glossary">
+  <h2><span class="n">19</span><span>อภิธานศัพท์ <span class="en">Glossary</span></span></h2>
+  <label for="gfilter" class="used">ค้นหาคำ (ไทยหรืออังกฤษ)</label>
+  <input id="gfilter" type="search" placeholder="เช่น recall, ค่าเกณฑ์, nested" autocomplete="off">
+  <div class="scroll"><table class="t gl wide" id="gtable">
+    <thead><tr><th>คำ</th><th>ภาษาไทย</th><th>ความหมายสั้น ๆ</th><th>หัวข้อ</th></tr></thead>
+    <tbody>
+      <tr><td>Imbalance ratio (IR)</td><td>อัตราส่วนความไม่สมดุล</td><td>จำนวนคลาสส่วนมากหารด้วยจำนวนคลาสส่วนน้อย</td><td><a href="#imbalance">1</a></td></tr>
+      <tr><td>Minority / majority class</td><td>คลาสส่วนน้อย / คลาสส่วนมาก</td><td>คลาสที่มีตัวอย่างน้อย / มาก</td><td><a href="#imbalance">1</a></td></tr>
+      <tr><td>Positive / negative class</td><td>คลาสบวก / คลาสลบ</td><td>ในงานสองคลาส คลาสส่วนน้อยถือเป็นคลาสบวก</td><td><a href="#confusion">4</a></td></tr>
+      <tr><td>Overlap</td><td>การซ้อนทับ</td><td>สองคลาสอยู่ปนกันในบริเวณเดียวกัน</td><td><a href="#imbalance">1</a></td></tr>
+      <tr><td>Small disjuncts</td><td>กลุ่มย่อยเล็ก ๆ</td><td>คลาสส่วนน้อยแตกเป็นกระจุกเล็กหลายกระจุก</td><td><a href="#imbalance">1</a></td></tr>
+      <tr><td>Noise</td><td>สัญญาณรบกวน</td><td>ตัวอย่างที่ป้ายผิดหรืออยู่ผิดที่</td><td><a href="#imbalance">1</a></td></tr>
+      <tr><td>Safe / borderline / rare / outlier</td><td>ประเภทตัวอย่าง</td><td>แบ่งตามจำนวนเพื่อนบ้าน 5 ตัวที่เป็นคลาสเดียวกัน (4–5, 2–3, 1, 0)</td><td><a href="#imbalance">1</a></td></tr>
+      <tr><td>Resampling</td><td>การปรับสมดุลข้อมูล</td><td>เปลี่ยนข้อมูลฝึกให้สัดส่วนคลาสใกล้กันขึ้น</td><td><a href="#smote">2</a></td></tr>
+      <tr><td>Random oversampling (ROS)</td><td>การสุ่มเพิ่ม</td><td>คัดลอกตัวอย่างคลาสส่วนน้อยซ้ำ</td><td><a href="#smote">2</a></td></tr>
+      <tr><td>Random undersampling (RUS)</td><td>การสุ่มตัด</td><td>ทิ้งตัวอย่างคลาสส่วนมากบางส่วน</td><td><a href="#smote">2</a></td></tr>
+      <tr><td>SMOTE</td><td>-</td><td>สร้างตัวอย่างใหม่บนเส้นตรงระหว่างตัวอย่างคลาสส่วนน้อยกับเพื่อนบ้าน</td><td><a href="#smote">2</a></td></tr>
+      <tr><td>Sampling rate</td><td>ปริมาณการสังเคราะห์</td><td>จำนวนตัวอย่างที่สร้างเพิ่ม เช่น 200% หรือจนสมดุล</td><td><a href="#smote">2</a></td></tr>
+      <tr><td>ENN, Tomek links</td><td>ตัวกรองทำความสะอาด</td><td>ลบตัวอย่างที่เพื่อนบ้านส่วนใหญ่ต่างคลาส หรือคู่ต่างคลาสที่ใกล้กันที่สุด</td><td><a href="#smote">2</a></td></tr>
+      <tr><td>Class weighting / cost-sensitive learning</td><td>การถ่วงน้ำหนักคลาส</td><td>ให้ความผิดของคลาสส่วนน้อยมีน้ำหนักมากขึ้นโดยไม่แตะข้อมูล</td><td><a href="#smote">2</a></td></tr>
+      <tr><td>OVO / OVA (OvR)</td><td>หนึ่งต่อหนึ่ง / หนึ่งต่อที่เหลือ</td><td>แยกปัญหาหลายคลาสเป็นปัญหาสองคลาสหลายปัญหา</td><td><a href="#smote">2</a></td></tr>
+      <tr><td>Base learner</td><td>ตัวจำแนกพื้นฐาน</td><td>ตัวจำแนกที่ฝึกบนข้อมูลหลังปรับสมดุล</td><td><a href="#learners">11</a></td></tr>
+      <tr><td>Competitor</td><td>วิธีคู่เทียบ</td><td>วิธีปรับสมดุลอื่นที่รันบนข้อมูลเดียวกัน</td><td><a href="#learners">11</a></td></tr>
+      <tr><td>Untreated baseline</td><td>เส้นฐานที่ไม่ปรับสมดุล</td><td>ผลของการฝึกบนข้อมูลเดิม</td><td><a href="#pipeline">3</a></td></tr>
+      <tr><td>Confusion matrix</td><td>ตารางความสับสน</td><td>ตารางนับการทายถูกและผิดแยกตามคลาสจริงและคลาสที่ทาย</td><td><a href="#confusion">4</a></td></tr>
+      <tr><td>TP, FN, FP, TN</td><td>-</td><td>จับถูก, พลาด, เตือนผิด, ปล่อยผ่านถูก</td><td><a href="#confusion">4</a></td></tr>
+      <tr><td>Threshold</td><td>ค่าเกณฑ์</td><td>ค่าคะแนนที่ใช้ตัดสินว่าเป็นคลาสบวก ปกติ 0.5</td><td><a href="#confusion">4</a></td></tr>
+      <tr><td>Threshold-free</td><td>ไม่ขึ้นกับค่าเกณฑ์</td><td>ตัวชี้วัดที่ใช้คะแนนทุกค่าเกณฑ์ เช่น ROC-AUC</td><td><a href="#ranking">6</a></td></tr>
+      <tr><td>Accuracy / error rate</td><td>ความถูกต้องรวม / อัตราความผิดพลาด</td><td>สัดส่วนที่ทายถูก / ผิด</td><td><a href="#binary">5</a></td></tr>
+      <tr><td>Recall, TPR, sensitivity</td><td>อัตราการจับคลาสบวกได้</td><td>TP / (TP + FN)</td><td><a href="#binary">5</a></td></tr>
+      <tr><td>Specificity, TNR</td><td>อัตราการปล่อยคลาสลบผ่านถูก</td><td>TN / (TN + FP)</td><td><a href="#binary">5</a></td></tr>
+      <tr><td>FPR</td><td>อัตราการเตือนผิด</td><td>1 − TNR</td><td><a href="#binary">5</a></td></tr>
+      <tr><td>Precision</td><td>ความแม่นของการทายว่าบวก</td><td>TP / (TP + FP)</td><td><a href="#binary">5</a></td></tr>
+      <tr><td>F1, F<sub>β</sub></td><td>F-measure</td><td>ค่าเฉลี่ยฮาร์มอนิกของ precision และ recall</td><td><a href="#binary">5</a></td></tr>
+      <tr><td>G-mean</td><td>ค่าเฉลี่ยเรขาคณิต</td><td>√(TPR × TNR)</td><td><a href="#binary">5</a></td></tr>
+      <tr><td>Balanced accuracy (BA)</td><td>ความถูกต้องแบบถ่วงสมดุล</td><td>(TPR + TNR)/2</td><td><a href="#binary">5</a></td></tr>
+      <tr><td>MCC</td><td>สัมประสิทธิ์สหสัมพันธ์ของ Matthews</td><td>สหสัมพันธ์ระหว่างคลาสจริงกับคลาสที่ทาย −1 ถึง 1</td><td><a href="#binary">5</a></td></tr>
+      <tr><td>Cohen's kappa</td><td>แคปปา</td><td>ความถูกต้องที่เกินกว่าความบังเอิญ</td><td><a href="#binary">5</a></td></tr>
+      <tr><td>ROC curve, ROC-AUC</td><td>เส้นโค้ง ROC, พื้นที่ใต้เส้นโค้ง</td><td>โอกาสที่ตัวอย่างบวกได้คะแนนสูงกว่าตัวอย่างลบ</td><td><a href="#ranking">6</a></td></tr>
+      <tr><td>PR curve, PR-AUC</td><td>เส้นโค้ง precision-recall</td><td>พื้นที่ใต้เส้น precision เทียบ recall ค่าฐานเท่ากับสัดส่วนคลาสบวก</td><td><a href="#ranking">6</a></td></tr>
+      <tr><td>AvAcc</td><td>ค่าเฉลี่ย recall รายคลาส</td><td>BA ของงานหลายคลาส</td><td><a href="#multiclass">7</a></td></tr>
+      <tr><td>MG</td><td>ค่าเฉลี่ยเรขาคณิตหลายคลาส</td><td>G-mean ของงานหลายคลาส เป็น 0 ถ้าคลาสใดพลาดหมด</td><td><a href="#multiclass">7</a></td></tr>
+      <tr><td>CBA</td><td>class balance accuracy</td><td>ลงโทษทั้งการพลาดคลาสและการทายคลาสนั้นเกิน</td><td><a href="#multiclass">7</a></td></tr>
+      <tr><td>MAUC</td><td>AUC หลายคลาส</td><td>ค่าเฉลี่ย AUC ทุกคู่คลาส (Hand and Till 2001) ต้องใช้คะแนน</td><td><a href="#multiclass">7</a></td></tr>
+      <tr><td>Macro / weighted / micro</td><td>วิธีเฉลี่ยข้ามคลาส</td><td>เฉลี่ยเท่ากัน / ถ่วงด้วยขนาดคลาส / รวมจำนวนก่อนคำนวณ</td><td><a href="#multiclass">7</a></td></tr>
+      <tr><td>CEN</td><td>confusion entropy</td><td>ความกระจายของความผิดพลาดไปยังคลาสต่าง ๆ ยิ่งต่ำยิ่งดี</td><td><a href="#multiclass">7</a></td></tr>
+      <tr><td>Fowlkes–Mallows index</td><td>-</td><td>√(precision × recall) ซึ่งบางงานเรียกผิดว่า G-mean</td><td><a href="#pitfalls">8</a></td></tr>
+      <tr><td>Benchmark data</td><td>ข้อมูลทดสอบ</td><td>ชุดข้อมูลที่ใช้ฝึกและวัดผลวิธี</td><td><a href="#data">10</a></td></tr>
+      <tr><td>UCI, KEEL</td><td>คลังข้อมูล</td><td>แหล่งชุดข้อมูลสาธารณะหลักของสายนี้</td><td><a href="#data">10</a></td></tr>
+      <tr><td>Binarise</td><td>แปลงเป็นสองคลาส</td><td>เลือกคลาสหนึ่งเป็นบวก ที่เหลือเป็นลบ</td><td><a href="#data">10</a></td></tr>
+      <tr><td>Synthetic data</td><td>ข้อมูลสังเคราะห์</td><td>ข้อมูลที่สร้างจากการแจกแจงที่กำหนดเอง</td><td><a href="#data">10</a></td></tr>
+      <tr><td>Hold-out</td><td>การแบ่งครั้งเดียว</td><td>แบ่งข้อมูลฝึกและทดสอบครั้งเดียว</td><td><a href="#protocol">12</a></td></tr>
+      <tr><td>k-fold CV</td><td>การตรวจสอบไขว้ k ส่วน</td><td>แบ่ง k ส่วน สลับกันเป็นข้อมูลทดสอบ</td><td><a href="#protocol">12</a></td></tr>
+      <tr><td>Stratified</td><td>แบบรักษาสัดส่วนคลาส</td><td>ทุก fold มีสัดส่วนคลาสเท่าข้อมูลเดิม</td><td><a href="#protocol">12</a></td></tr>
+      <tr><td>5 × 2 CV</td><td>-</td><td>แบ่งครึ่ง 2 fold ทำซ้ำ 5 รอบ</td><td><a href="#protocol">12</a></td></tr>
+      <tr><td>Data leakage</td><td>การรั่วของข้อมูล</td><td>ข้อมูลทดสอบหลุดเข้าไปมีผลต่อการฝึก ทำให้คะแนนสูงเกินจริง</td><td><a href="#protocol">12</a></td></tr>
+      <tr><td>Hyperparameter</td><td>ไฮเปอร์พารามิเตอร์</td><td>ค่าที่ผู้ใช้ตั้งก่อนรัน เช่น k ของ SMOTE</td><td><a href="#tuning">13</a></td></tr>
+      <tr><td>Grid search</td><td>การค้นหาแบบตาราง</td><td>ลองทุกค่าผสมจากรายการค่าที่กำหนด</td><td><a href="#tuning">13</a></td></tr>
+      <tr><td>Nested CV</td><td>การตรวจสอบไขว้ซ้อน</td><td>วงในเลือกค่า วงนอกวัดผล ข้อมูลทดสอบไม่ถูกใช้เลือก</td><td><a href="#tuning">13</a></td></tr>
+      <tr><td>Selection bias</td><td>อคติจากการเลือก</td><td>คะแนนสูงเกินจริงเพราะเลือกค่าที่ดีที่สุดบนข้อมูลเดียวกับที่รายงาน</td><td><a href="#tuning">13</a></td></tr>
+      <tr><td>Search budget</td><td>งบการค้นหา</td><td>จำนวนค่าที่ลองต่อวิธี</td><td><a href="#tuning">13</a></td></tr>
+      <tr><td>p-value</td><td>ค่าพี</td><td>โอกาสเห็นความต่างขนาดนี้ถ้าไม่มีความต่างจริง</td><td><a href="#stats">14</a></td></tr>
+      <tr><td>Paired test</td><td>การทดสอบแบบจับคู่</td><td>เทียบสองวิธีบนชุดข้อมูลเดียวกัน</td><td><a href="#stats">14</a></td></tr>
+      <tr><td>Wilcoxon signed-rank</td><td>-</td><td>ทดสอบสองวิธีด้วยอันดับของผลต่าง</td><td><a href="#stats">14</a></td></tr>
+      <tr><td>Friedman, average rank</td><td>อันดับเฉลี่ย</td><td>ทดสอบหลายวิธีด้วยอันดับเฉลี่ยข้ามชุดข้อมูล</td><td><a href="#stats">14</a></td></tr>
+      <tr><td>Omnibus test</td><td>การทดสอบรวม</td><td>ถามว่ามีวิธีใดต่างกันบ้างไหม ก่อนดูรายคู่</td><td><a href="#stats">14</a></td></tr>
+      <tr><td>Post-hoc (Nemenyi, Holm, Shaffer, Bonferroni–Dunn)</td><td>การทดสอบภายหลัง</td><td>หาว่าคู่ไหนต่างกัน หลังการทดสอบรวม</td><td><a href="#stats">14</a></td></tr>
+      <tr><td>Multiple comparisons</td><td>การเปรียบเทียบหลายครั้ง</td><td>ยิ่งทดสอบหลายครั้ง ยิ่งมีโอกาสได้ผลบวกลวง</td><td><a href="#stats">14</a></td></tr>
+      <tr><td>Bayesian signed-rank, ROPE</td><td>การทดสอบแบบเบย์</td><td>ความน่าจะเป็นที่ A ดีกว่า เท่ากัน หรือ B ดีกว่า</td><td><a href="#stats">14</a></td></tr>
+      <tr><td>CD diagram</td><td>แผนภาพระยะวิกฤต</td><td>แสดงอันดับเฉลี่ยและกลุ่มที่ต่างกันไม่มีนัยสำคัญ</td><td><a href="#stats">14</a></td></tr>
+      <tr><td>Effect size</td><td>ขนาดของผล</td><td>ความต่างใหญ่แค่ไหน ไม่ใช่แค่มีหรือไม่มี</td><td><a href="#stats">14</a></td></tr>
+      <tr><td>Win/tie/loss</td><td>ชนะ/เสมอ/แพ้</td><td>นับจำนวนชุดข้อมูลที่วิธีที่เสนอชนะ เสมอ แพ้</td><td><a href="#reporting">15</a></td></tr>
+      <tr><td>Ablation</td><td>การถอดส่วนประกอบ</td><td>ตัดส่วนหนึ่งของวิธีออกเพื่อดูผลของส่วนนั้น</td><td><a href="#reporting">15</a></td></tr>
+      <tr><td>MMD</td><td>maximum mean discrepancy</td><td>ระยะห่างระหว่างการแจกแจงสองชุด</td><td><a href="#beyond">16</a></td></tr>
+      <tr><td>FID</td><td>Fréchet Inception Distance</td><td>ระยะห่างระหว่างภาพจริงกับภาพที่สร้าง</td><td><a href="#beyond">16</a></td></tr>
+      <tr><td>PCA, t-SNE</td><td>ภาพฉาย</td><td>ย่อข้อมูลหลายมิติลงสองมิติเพื่อดูด้วยตา</td><td><a href="#beyond">16</a></td></tr>
+      <tr><td>big-O</td><td>ความซับซ้อนเชิงเวลา</td><td>เวลาเพิ่มขึ้นอย่างไรเมื่อข้อมูลมากขึ้น</td><td><a href="#beyond">16</a></td></tr>
+      <tr><td>OpenAlex</td><td>-</td><td>ฐานข้อมูลบรรณานุกรมแบบเปิดที่ใช้นับยอดอ้างอิง</td><td><a href="#citations">17</a></td></tr>
+      <tr><td>Citation ratio</td><td>ตัวคูณการอ้างอิง</td><td>งานที่ทำแนวปฏิบัติหนึ่งถูกอ้างอิงกี่เท่าของงานอายุเท่ากันที่ไม่ได้ทำ</td><td><a href="#citations">17</a></td></tr>
+      <tr><td>Confidence interval</td><td>ช่วงความเชื่อมั่น</td><td>ช่วงที่ค่าจริงน่าจะอยู่</td><td><a href="#citations">17</a></td></tr>
+      <tr><td>Pre-registration</td><td>การลงทะเบียนแผนล่วงหน้า</td><td>ประกาศแผนการทดลองก่อนเห็นผล มีงานเดียวในคลังที่ทำ (CISO)</td><td><a href="#outcomes">18</a></td></tr>
+      <tr><td>Threats to validity</td><td>ข้อจำกัดของการวิเคราะห์</td><td>จุดที่ข้อสรุปของการวิเคราะห์อาจผิดได้</td><td><a href="#outcomes">18</a></td></tr>
+    </tbody></table></div>
+  <p class="used" id="gempty" hidden>ไม่พบคำที่ค้น</p>
+</section>
+<div class="foot">
+  <span>ตัวเลขทั้งหมดมาจากข้อมูลที่ลงรหัสไว้สำหรับหัวข้อที่ 7 (คลังบทความ SMOTE25 76 เรื่อง มีการทดลอง 71 เรื่อง) และยอดอ้างอิงจาก OpenAlex ณ 18 ต.ค. 2026</span>
+  <span>ใช้คู่กับ SMOTE25_Evaluation_Section และหน้า SMOTE Evaluation Roadmap · ปรับปรุง 29 ต.ค. 2026</span>
+</div>
+</main>
+</div>
+</div>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  // contents rail: open on wide screens, folded on narrow ones
+  var toc = $('tocd'), mq = window.matchMedia('(max-width:900px)');
+  function syncToc() { toc.open = !mq.matches; }
+  syncToc();
+  if (mq.addEventListener) mq.addEventListener('change', syncToc);
+  toc.querySelector('summary').addEventListener('click', function (e) { if (!mq.matches) e.preventDefault(); });
+  toc.addEventListener('click', function (e) { if (e.target.closest('a') && mq.matches) toc.open = false; });
+
+  // confusion-matrix calculator
+  var ids = ['iTP', 'iFN', 'iFP', 'iTN'];
+  function num(id) { var v = parseInt($(id).value, 10); return isFinite(v) && v > 0 ? v : 0; }
+  function f3(v) { return isFinite(v) ? v.toFixed(3) : 'n/a'; }
+  function calc() {
+    var TP = num('iTP'), FN = num('iFN'), FP = num('iFP'), TN = num('iTN');
+    var P = TP + FN, N = FP + TN, n = P + N;
+    var tpr = P ? TP / P : NaN, tnr = N ? TN / N : NaN, prec = TP + FP ? TP / (TP + FP) : NaN;
+    var acc = n ? (TP + TN) / n : NaN;
+    var f1 = (2 * TP + FP + FN) ? 2 * TP / (2 * TP + FP + FN) : NaN;
+    var f2 = (5 * TP + 4 * FN + FP) ? 5 * TP / (5 * TP + 4 * FN + FP) : NaN;
+    var den = Math.sqrt((TP + FP) * (TP + FN) * (TN + FP) * (TN + FN));
+    var mcc = den ? (TP * TN - FP * FN) / den : 0;
+    var pe = n ? ((TP + FP) * P + (FN + TN) * N) / (n * n) : NaN;
+    var kap = pe < 1 ? (acc - pe) / (1 - pe) : 0;
+    var rows = [['Accuracy', acc], ['Recall (TPR)', tpr], ['Specificity (TNR)', tnr], ['Precision', prec], ['F1', f1], ['F2', f2],
+      ['G-mean', Math.sqrt(tpr * tnr)], ['Balanced accuracy', (tpr + tnr) / 2], ['MCC', mcc], ["Cohen's kappa", kap]];
+    $('cout').innerHTML = rows.map(function (r) {
+      var v = r[1], w = isFinite(v) ? Math.min(100, Math.abs(v) * 100) : 0;
+      return '<div class="crow"><span>' + r[0] + '</span><span class="bt"><i class="' + (v < 0 ? 'neg' : '') + '" style="width:' + w.toFixed(1) + '%"></i></span><span class="v">' + f3(v) + '</span></div>';
+    }).join('');
+  }
+  ids.forEach(function (id) { $(id).addEventListener('input', function () {
+    document.querySelectorAll('#calc [data-p]').forEach(function (b) { b.setAttribute('aria-pressed', 'false'); }); calc(); }); });
+  document.querySelectorAll('#calc [data-p]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var v = b.getAttribute('data-p').split(',');
+      ids.forEach(function (id, i) { $(id).value = v[i]; });
+      document.querySelectorAll('#calc [data-p]').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+      calc();
+    });
+  });
+  calc();
+
+  // glossary filter
+  var rowsG = Array.prototype.slice.call(document.querySelectorAll('#gtable tbody tr'));
+  $('gfilter').addEventListener('input', function () {
+    var q = this.value.trim().toLowerCase(), shown = 0;
+    rowsG.forEach(function (tr) { var hit = !q || tr.textContent.toLowerCase().indexOf(q) >= 0; tr.hidden = !hit; if (hit) shown++; });
+    $('gempty').hidden = shown > 0;
+  });
+})();
+</script>
+
+</body>
+</html>

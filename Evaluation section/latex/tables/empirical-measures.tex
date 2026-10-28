@@ -1,0 +1,21 @@
+%% Table: families of performance measures (input from sections/07-empirical-comparisons.tex).
+%% JAIR style: caption above the table, booktabs rules, \midrule only below the header.
+%% Generated 2026-10-28 from the SMOTE25 evaluation draft page (76 coded papers, 71 empirical).
+%% Numbers are filled from the coded data; regenerate instead of editing them by hand.
+\begin{table}[t]
+  \caption{Families of Performance Measures}
+  \label{tab:empirical-measures}
+  \footnotesize
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}p{0.12\linewidth}p{0.17\linewidth}p{0.16\linewidth}p{0.22\linewidth}rp{0.12\linewidth}@{}}
+    \toprule
+    Family & Measures & Advantages & Limitations & Studies & Examples\\
+    \midrule
+    Overall & Accuracy, error rate & Simple; comparable with older work & Dominated by the majority class & 13 & \parencite{buda2018systematic,ren2025goio}\\
+    Single-class rates & Recall (TPR), specificity (TNR), precision & Interpretable per class & Trade off against each other; one rate alone rewards over-predicting the minority & 32 & \parencite{vuttipittayamongkol2020nbu,vuttipittayamongkol2018obu}\\
+    Threshold composites & F1, F$\beta$, G-mean, BA, MCC, kappa & One class-sensitive number & Depend on the decision threshold; F ignores true negatives & 56 & \parencite{han2005borderline,he2008adasyn,naglik2024gmmsampling}\\
+    Threshold-free ranking & ROC-AUC, PR-AUC, ROC curves & Independent of the threshold & ROC-AUC can look favourable under severe imbalance; PR-AUC depends on prevalence & 46 & \parencite{chawla2002smote,cieslak2008ls,yadav2025ciso}\\
+    Multi-class aggregates & MG, AvAcc, MAUC, macro-F1, CBA, CEN & Weights every class equally & The averaging rule changes the result; MG is zero if one class has zero recall & 21 & \parencite{abdi2016mdo,koziarski2020mcccr,yan2025gdhs}\\
+    \bottomrule
+  \end{tabular}
+\end{table}
