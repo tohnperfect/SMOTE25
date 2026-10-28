@@ -41,8 +41,16 @@
 %    P's Section 7 counts 71 empirical studies: it excludes Tomek links and also
 %    treats Hassanat et al. 2022 as a survey. State both numbers when the sections meet.
 %  * Data-type labels: original / repository-defined (kept separate, Toon 23:34) /
-%    modified / synthetic / not stated. Win, tie, loss: interim rule A of
-%    decisions-pending (Toon 18 Oct), pending the supervisor.
+%    modified / synthetic / not stated. Win, tie, loss (Toon 28 Oct 2026): every metric the
+%    paper reports with a SMOTE column, printed values compared, equal printed = tie; the
+%    single-metric rule A is kept as a robustness check.
+% Revised 29 Oct 2026 (Claude; Toon delegated every open decision and asked for a finished
+% section): Wins rewritten with the all-metric results and tests of H1-H3
+% (build/hypotheses.py, build/difficulty_outcomes.py); every \claudedraft adopted as final
+% text and every [Toon] slot filled, each marked with a comment
+% "% Claude 29 Oct 2026 (Toon delegated all open decisions)"; reference collection
+% (tab:data-reference) inserted; H3 paragraph in sec:data-verifiability; recommendations
+% point to their sections. Merge-ready copy: manuscript/data-section-final.tex.
 % Overlap with P's Section 7 draft (section07-empirical-comparisons-draft.html),
 % left as is here; to settle with P before merging:
 %  * Extraction Procedure  ~ Sec 7 "Corpus and Coding Scheme" and Sec 3.3
@@ -69,18 +77,23 @@ compared? How broad is the evidence behind the benchmarks the field relies on?
 How difficult, beyond the imbalance ratio, are the datasets that can be
 checked? When a paper reports that its method beats SMOTE, on what kind of data does
 that happen, and can a reader check it? This section answers these questions
-from the 1,654 dataset entries and 835 comparisons with SMOTE
-(834 per dataset and one average over datasets) that we extracted from the 76 papers of
-our corpus. Three of them (ENN, AdaBoost and one review) contain no
+from the 1,654 dataset entries and the comparisons with SMOTE that we extracted from the
+76 papers of our corpus: 835 under one fixed metric per paper (834 per dataset and one
+average over datasets) and 2,497 over every metric the papers report. Three of them (ENN, AdaBoost and one review) contain no
 evaluation on data, so counts below use the 73 papers with an
 evaluation on data; Tomek links is kept because it illustrates its method on
 one synthetic two-class set.
 
-\claudedraft{The central observation is that the evidence for a new oversampler
-is only as interpretable as the description of its data, and in this
-literature that description is often incomplete: the same name can denote
-different tasks, modifications are frequently undeclared, and a sizeable share
-of papers report results that cannot be traced back to individual datasets.}
+% Claude 29 Oct 2026 (Toon delegated all open decisions): final wording (was \claudedraft)
+The central observation is that the evidence for a new oversampler is only as
+interpretable as the description of its data, and in this literature that
+description is often incomplete: the same name can denote different tasks, many
+modifications are not described well enough to be repeated, and 14 of the 57 papers
+that use SMOTE as a baseline give no per-dataset pair of scores against it. Where
+per-dataset results exist, the proposed method beats plain SMOTE in about four of five
+decided comparisons. These wins are not more frequent on data the authors modified,
+but they are more frequent on data whose minority examples are borderline or isolated,
+and they are much less consistent on precision and specificity than on the other metrics.
 
 % ---------------------------------------------------------------------
 \subsection{Extraction Procedure}
@@ -110,7 +123,10 @@ method and of SMOTE from one results table selected by a fixed rule:
 G-mean, else AUC, else F-measure, else accuracy; the classifier highlighted
 in the abstract, else the first reported; the unperturbed condition. We
 recorded values rather than wins so that any definition of a win can be
-applied later. Plain SMOTE was distinguished from SMOTE embedded in a
+applied later. From the same table setting we then copied every other metric that the
+paper reports for both methods (2,497 dataset-by-metric values in 44 papers); the
+fixed-metric values were copied a second time in this pass, independently, and agree
+on all 839 rows that both copies contain. Plain SMOTE was distinguished from SMOTE embedded in a
 multiclass or ensemble wrapper (Static-SMOTE, OVO-SMOTE~\pcite{fernandez2013analysing}, SMOTE-all,
 SMOTE+AdaBoost). Values printed in a paper are never overwritten; corrections
 against the source repository are stored beside them with their justification.
@@ -118,7 +134,8 @@ Every extracted value was then checked against the PDF a second time: a value
 was accepted when the dataset name and its numbers appear on the same line of
 the cited page, and every table that is printed as an image or whose text layer
 is garbled was read from the rendered page instead. All 1,654 dataset entries
-and 835 comparisons passed this check.
+and 835 fixed-metric comparisons passed this check; the values of the other metrics
+were read once, from the text layer or the rendered page.
 
 \evidence{ai-draft/full/SCHEMA.md; build/full\_extraction.py; KEEL and
 multiclass rules approved by Toon 18 Oct, rules A and B 18 Oct; 454 extraction notes in
@@ -178,10 +195,12 @@ than between families. Papers should therefore report the number of source
 families alongside the number of datasets, and should not treat each split as
 independent evidence.
 
-\paragraph{What the reader should do.} \claudedraft{Report the source family
+\paragraph{What the reader should do.} %
+% Claude 29 Oct 2026 (Toon delegated all open decisions): adopted (was \claudedraft)
+Report the source family
 of each dataset alongside the count, so that readers can see how many
 independent sources stand behind a claim, and keep splits of one source
-together when testing for significance.}
+together when testing for significance.
 
 \evidence{out/verified\_datasets.csv; counts reproduced by build/reconcile\_counts.py
 (out/reconcile\_counts.json): rule R1 sets aside the Tomek links placeholder (row 1558,
@@ -220,11 +239,13 @@ Two pairs of papers print matching sizes and class counts; the other versions
 are single reports, and OVO-SMOTE prints five classes in one table and seven
 class counts in another. The versions are therefore kept apart and not pooled.
 
-\claudedraft{The frequently used benchmarks are small: among the entries that
+%
+% Claude 29 Oct 2026 (Toon delegated all open decisions): adopted (was \claudedraft)
+The frequently used benchmarks are small: among the entries that
 print a size, half have 800 or fewer instances and half have nine or fewer
 features. Names printed with 10,000 or more instances in every paper are used
 by three to nine papers each, so a comparison across method families that
-wants to cover data size has to look beyond the frequent set.}
+wants to cover data size has to look beyond the frequent set.
 
 \begin{table}[t]
 \centering\small
@@ -270,9 +291,11 @@ Size, dimensionality and the number of classes are printed for 80.2\%, 75.9\%
 and 77.4\% of the 1,653 named entries, and class proportions in some form for
 56.8\%. A measured class overlap exists for 36 entries in two papers, on two
 incompatible scales, and the curated evidence contains no statement about
-sparsity. \claudedraft{What the papers print therefore cannot show which ranges of
+sparsity. %
+% Claude 29 Oct 2026 (Toon delegated all open decisions): adopted (was \claudedraft)
+What the papers print therefore cannot show which ranges of
 overlap, noise or sparsity the benchmarks cover; the candidates in
-Table~\ref{tab:data-candidates} are chosen on use and size only.}
+Table~\ref{tab:data-candidates} are chosen on use and size only.
 Section~\ref{sec:data-difficulty} measures these properties directly for the
 entries whose files can be identified.
 
@@ -319,19 +342,32 @@ authors themselves, and for 199 the paper does not let a reader
 tell how the data were obtained. Eleven papers give no reason for their
 choice of datasets or only call them widely used.
 
-\claudedraft{Modification is not a fault in itself: binarising a multiclass
+%
+% Claude 29 Oct 2026 (Toon delegated all open decisions): adopted (was \claudedraft)
+Modification is not a fault in itself: binarising a multiclass
 set or raising the imbalance ratio are legitimate ways to probe a method.
 What matters for the reader is whether the modification is declared where a
 reader looks for it. A KEEL file name such as \texttt{yeast-0-5-6-7-9\_vs\_4}
 declares its split; a paper that prints only ``Yeast'' after choosing its own
-minority classes does not.}
+minority classes does not.
 
-\toon{This is where your axis ``declared vs undeclared'' belongs. Evidence
-for where each paper declares its modification exists for the 7 papers
-re-read on 16 Oct and in how\_obtained\_detail of the full re-read.}
+% Claude 29 Oct 2026 (Toon delegated all open decisions): replaces the [Toon] slot on declared vs undeclared modification
+Modifications differ in how completely they are described. Of the 331 modified
+entries (39 papers), 177 in 30 papers change the class structure, most often by
+keeping one class against the rest (84 entries), and 147 in 9 papers raise the
+imbalance ratio on purpose, almost always by removing minority examples at random
+(131 entries). A purpose for the change is stated in 15 of the 39 papers. For 93 of
+the 331 entries, information needed to repeat the change is missing: the
+characteristics of the modified set are not printed for 55, the target imbalance
+ratio for 18 and the minority class for 15. At the paper level, 8 of the 37 papers
+that binarise data do not state which class becomes the minority. Entries modified
+without printed characteristics cannot be matched to any public file, and 28 of them
+are therefore left out of the difficulty measurement (Section~\ref{sec:data-difficulty}).
 
-\evidence{out/data\_handling\_summary.json (paper-level codes);
-out/full\_summary.json how\_obtained\_all (entry level, with rules).}
+\evidence{out/data\_handling\_summary.json (paper-level codes; binarised\_without\_stated\_rule,
+minority\_rule\_among\_binarised); out/full\_summary.json how\_obtained\_all (entry level, with rules);
+operations, purposes and missing information: build/modified\_operations.py $\rightarrow$
+out/modified\_operations\_audit.csv and out/modified\_operations\_summary.json (Analysis A).}
 
 % ---------------------------------------------------------------------
 \subsection{The Same Name Is Not the Same Data}
@@ -373,13 +409,17 @@ Not stated (values equal $N_{\max}/N_{\min}$) & n/a & MC-CCR~\pcite{koziarski202
 \end{tabular}
 \end{table}
 
-\claudedraft{Errors also travel with shared benchmark tables: MC-CCR and
+%
+% Claude 29 Oct 2026 (Toon delegated all open decisions): adopted (was \claudedraft)
+Errors also travel with shared benchmark tables: MC-CCR and
 MC-RBO both print an IR of 1.17 for vehicle, a value no definition produces
-from its class counts.}
+from its class counts.
 
-\paragraph{What the reader should do.} \claudedraft{Compare results across
+\paragraph{What the reader should do.} %
+% Claude 29 Oct 2026 (Toon delegated all open decisions): adopted (was \claudedraft)
+Compare results across
 papers only after mapping each name to its exact file and class split, and
-report the IR formula together with its values.}
+report the IR formula together with its values.
 
 \evidence{out/verified\_datasets.csv: names normalised, printed n\_instances compared across
 papers (192 datasets, rule T1, with a printed size in two or more papers; 198 if spellings are kept apart;
@@ -473,15 +513,70 @@ than 100 features come from 54 names in 18 papers, no name is used by more than 
 papers, and none of them could be verified; the verified tasks have at most 85
 features (median 9).
 
-\claudedraft{The imbalance ratio, the one difficulty-related number most papers
+%
+% Claude 29 Oct 2026 (Toon delegated all open decisions): adopted (was \claudedraft)
+The imbalance ratio, the one difficulty-related number most papers
 print, says little about where the minority examples lie: tasks with a low ratio
 can be as mixed as tasks with a high one, and a task without any flag is not
 necessarily easy. Conclusions drawn from the common benchmarks speak mainly for
-small, low-dimensional tables with few minority examples per feature.}
+small, low-dimensional tables with few minority examples per feature.
 
-\toon{Write the interpretation in your own words. Decide whether the difficulty
-profile should be reported per paper (which papers evaluate only on flag-free or
-only on small-sample tasks) once the win/loss analysis resumes.}
+% Claude 29 Oct 2026 (Toon delegated all open decisions): replaces the [Toon] slot on per-paper profiles
+Most papers mix these profiles. Of the 29 papers with at least three verifiable tasks,
+26 include both flagged and flag-free tasks, two (SMOTE~\pcite{chawla2002smote} and
+SMOTE-ENN) use only flag-free tasks and one (MLOS) only flagged ones.
+Section~\ref{sec:data-wins} relates the measured profiles to the reported wins.
+
+\paragraph{A reference collection.} For readers who need a small benchmark that covers
+the measured range, Table~\ref{tab:data-reference} selects 27 of the 113 tasks by a
+fixed rule with no threshold of our own. Each combination of flag profile and
+imbalance-ratio band that occurs (ten combinations) contributes the task that the
+corpus uses most, for comparability with earlier results, and the tasks with the
+lowest and the highest noise index, for spread. The collection spans noise indices from
+0 to 1, imbalance ratios from 1.1 to 68 and sizes from 150 to 48,842 instances, and 17
+of its files match the official KEEL table. Its tasks are not independent of one
+another: it holds five yeast, three ecoli and three glass splits, which should be
+grouped by source when results are tested.
+
+% Table generated by difficulty/reference_collection.py (do not edit by hand); in data-section-draft.tex since 29 Oct 2026.
+\begin{table}[t]\centering\small
+\caption{A Reference Collection of Verifiable Two-Class Tasks. One row per selected task; Role: core = most used task in its cell, low/high = lowest/highest noise index in its cell. Profile: S small sample, O outliers, D small disjuncts; Noise: noise index; Entries: corpus entries that use the task.}
+\label{tab:data-reference}
+\begin{tabular}{@{}llllrrrrrr@{}}
+\toprule
+Task & Role & Profile & IR band & $N$ & $N_{\min}$ & $d$ & IR & Noise & Entries\\
+\midrule
+\texttt{australian} & low & none & $\leq$1.5 & 690 & 307 & 14 & 1.2 & 0.29 & 1\\
+\texttt{bupa} & core+high & none & $\leq$1.5 & 345 & 145 & 6 & 1.4 & 0.79 & 2\\
+\texttt{iris0} & low & none & 1.5--3 & 150 & 50 & 4 & 2.0 & 0.02 & 2\\
+\texttt{haberman} & core+high & none & 1.5--3 & 306 & 81 & 3 & 2.8 & 0.84 & 21\\
+\texttt{segment0} & low & none & 3--9 & 2,308 & 329 & 19 & 6.0 & 0.02 & 7\\
+\texttt{yeast3} & core & none & 3--9 & 1,484 & 163 & 8 & 8.1 & 0.40 & 13\\
+\texttt{adult} & high & none & 3--9 & 48,842 & 11,687 & 14 & 3.2 & 0.54 & 2\\
+\texttt{kr-vs-k-one\_vs\_fifteen} & low & none & $>$9 & 2,244 & 78 & 6 & 27.8 & 0.00 & 1\\
+\texttt{shuttle-c0-vs-c4} & core & none & $>$9 & 1,829 & 123 & 9 & 13.9 & 0.01 & 7\\
+\texttt{yeast-0-2-5-6\_vs\_3-7-8-9} & high & none & $>$9 & 1,004 & 99 & 8 & 9.1 & 0.57 & 2\\
+\texttt{heart} & core+low & S & $\leq$1.5 & 270 & 120 & 13 & 1.2 & 0.33 & 4\\
+\texttt{sonar} & high & S & $\leq$1.5 & 208 & 97 & 60 & 1.1 & 0.40 & 1\\
+\texttt{wine [minority: 1]} & low & S & 1.5--3 & 178 & 59 & 13 & 2.0 & 0.00 & 1\\
+\texttt{glass0} & core & S & 1.5--3 & 214 & 70 & 9 & 2.1 & 0.44 & 7\\
+\texttt{glass1} & high & S & 1.5--3 & 214 & 76 & 9 & 1.8 & 0.47 & 7\\
+\texttt{ecoli2} & low & S & 3--9 & 336 & 52 & 7 & 5.5 & 0.23 & 6\\
+\texttt{ecoli3} & core & S & 3--9 & 336 & 35 & 7 & 8.6 & 0.69 & 10\\
+\texttt{hepatitis (PMLB, N=155)} & high & S & 3--9 & 155 & 32 & 19 & 3.8 & 0.75 & 2\\
+\texttt{dermatology-6} & low & S & $>$9 & 358 & 20 & 34 & 16.9 & 0.00 & 2\\
+\texttt{yeast5} & core & S & $>$9 & 1,484 & 44 & 8 & 32.7 & 0.66 & 13\\
+\texttt{cleveland-0\_vs\_4} & high & S & $>$9 & 177 & 13 & 13 & 12.6 & 1.00 & 4\\
+\texttt{ecoli-0-1-3-7\_vs\_2-6} & low & S+O & $>$9 & 281 & 7 & 7 & 39.1 & 0.29 & 7\\
+\texttt{yeast4} & core & S+O & $>$9 & 1,484 & 51 & 8 & 28.1 & 0.86 & 15\\
+\texttt{winequality-red-3\_vs\_5} & high & S+O & $>$9 & 691 & 10 & 11 & 68.1 & 1.00 & 1\\
+\texttt{yeast-1-4-5-8\_vs\_7} & low & D+S+O & $>$9 & 693 & 30 & 8 & 22.1 & 0.60 & 7\\
+\texttt{glass2} & core & D+S+O & $>$9 & 214 & 17 & 9 & 11.6 & 0.65 & 9\\
+\texttt{winequality-red-8\_vs\_6-7} & high & D+S+O & $>$9 & 855 & 18 & 11 & 46.5 & 0.78 & 1\\
+\bottomrule
+\end{tabular}
+\end{table}
+
 
 \paragraph{Limits of the measurement.} The files come from mirrors of the
 repositories (the keel-ds and imbalanced-databases packages and PMLB); for the
@@ -496,89 +591,175 @@ projection.
 rare examples) $\rightarrow$ difficulty\_measures.csv; group\_cited.py
 $\rightarrow$ difficulty\_groups\_cited.csv; profile\_final.py $\rightarrow$
 profile\_final\_summary.json (Table~\ref{tab:data-difficulty}); fig\_noise\_summary.json
-(rank correlation); dimension\_profile.json; keel\_official\_check.csv; figure:
+(rank correlation); dimension\_profile.json; keel\_official\_check.csv; per-paper profiles:
+paper\_profile\_mix.py $\rightarrow$ paper\_profile\_mix.json; reference collection:
+reference\_collection.py $\rightarrow$ reference\_collection.csv (rule and coverage in
+reference\_collection\_summary.json; independent check reference\_collection\_check.py); figure:
 difficulty/fig\_manuscript.py; reported properties: out/characteristics\_coverage.json
 (Analysis E).}
 
 % ---------------------------------------------------------------------
 \subsection{Where Reported Wins over SMOTE Come From}
 \label{sec:data-wins}
+% Rewritten 29 Oct 2026 (Claude; Toon delegated every remaining decision on 29 Oct).
+% Win/loss definition decided by Toon (28 Oct 2026): every metric the paper reports
+% with a SMOTE column, classifier and condition fixed by rule A, printed values
+% compared in the metric's direction, equal printed values = tie. Numbers:
+% out/winloss_allmetric_summary.json, out/hypotheses.json, out/difficulty_outcomes.json.
+At the paper level, 44 of the 73 papers use plain SMOTE as a baseline,
+13 use SMOTE inside a multiclass or ensemble scheme, and 16 do not compare with
+SMOTE at all. Fewer papers give scores a reader can pair: 29 papers print
+per-dataset scores for the proposed method and plain SMOTE in the same table.
+For these papers we compared the printed values on every metric that the table
+reports for both methods, with the classifier and condition fixed as in
+Section~\ref{sec:data-method}; a win means the proposed method's printed value is
+better in the metric's direction, and equal printed values count as a tie. This
+gives 1,511 comparisons on 524 datasets (one to six metrics per paper, median
+three); 16 cannot be decided because a value is not printed as a number. Of the
+other 1,495 (520 datasets), the proposed method wins 1,107, ties 102 and loses 286, a
+win in 79.5\% of the decided comparisons (95\% CI 77.3 to 81.5). Twenty-three of the 29
+papers report at least one comparison that SMOTE wins.
 
 \begin{table}[t]
 \centering\small
-\caption{Per-Dataset Comparisons of the Proposed Method with Plain SMOTE,
-by How the Dataset Was Obtained. Wins, ties and losses compare printed values
-under interim rule A (one metric fixed per paper; equal at the printed precision is a tie);
-scores are not comparable across papers. KNNOR's single row, a mean over its 19 datasets,
-is not a per-dataset comparison and is reported in the text instead.}
-\label{tab:wins-by-type}
-\begin{tabular}{lrrrrr}
+\caption{Comparisons of the Proposed Method with Plain SMOTE by Metric (29 Papers).
+A row is one dataset and one metric in one paper; printed values are compared in the
+direction of the metric, equal printed values are ties, and n.c.\ counts values not
+printed as numbers. Scores are not comparable across papers.}
+\label{tab:wins-by-metric}
+\begin{tabular}{lrrrrrr}
 \toprule
-How obtained & Rows & Papers & Proposed wins & SMOTE wins & Ties\\
+Metric & Papers & Rows & Proposed wins & Ties & SMOTE wins & n.c.\\
 \midrule
-Original & 146 & 25 & 114 & 27 & 5\\
-Repository-defined & 119 & 9 & 90 & 13 & 16\\
-Modified & 143 & 14 & 109 & 30 & 4\\
-Synthetic & 5 & 1 & 5 & 0 & 0\\
-Cannot be told & 105 & 13 & 83 & 9 & 13\\
-Result row not matched to a dataset & 3 & 2 & 1 & 1 & 1\\
+AUC & 19 & 403 & 309 & 30 & 64 & 0\\
+G-mean & 19 & 380 & 283 & 29 & 64 & 4\\
+F-measure & 18 & 287 & 217 & 16 & 50 & 4\\
+Recall (sensitivity) & 12 & 193 & 130 & 21 & 42 & 0\\
+Precision & 7 & 113 & 62 & 5 & 46 & 0\\
+Accuracy & 4 & 69 & 62 & 1 & 6 & 0\\
+MCC & 3 & 52 & 40 & 0 & 8 & 4\\
+AUC-PR & 1 & 7 & 3 & 0 & 0 & 4\\
+Specificity & 1 & 7 & 1 & 0 & 6 & 0\\
 \addlinespace
-All & 521 & 29 & 402 & 80 & 39\\
+All metrics & 29 & 1,511 & 1,107 & 102 & 286 & 16\\
 \bottomrule
 \end{tabular}
 \end{table}
 
-At the paper level, 44 of the 73 papers use plain SMOTE as a baseline,
-13 use SMOTE inside a wrapper, and 16 do not compare with SMOTE at all.
-Fewer papers give rows that can be compared: 29 papers print per-dataset
-scores for both the proposed method and plain SMOTE in the same table, giving
-521 comparisons (Table~\ref{tab:wins-by-type}). In these, the
-proposed method wins in 402 rows, ties in 39 and loses in 80.
-MC-MBRC~\pcite{ma2024mcmbrc} names SMOTE as a baseline, but the column headers of
-its per-dataset tables do not say which column is SMOTE; its 20 rows are kept in
-our data and left out of every comparison set.
-KNNOR~\pcite{islam2022knnor} prints only a mean over its 19 datasets
-(G-score .8363 for KNNOR and .8238 for SMOTE); we report it here as an
-aggregate result and do not count it as a per-dataset comparison.
+Table~\ref{tab:wins-by-metric} shows that the margin is not the same on every metric.
+On AUC, G-mean, F-measure and recall the proposed method wins 76 to 83\% of the decided
+comparisons, and on accuracy and MCC 91 and 83\%; on precision the split is only 62 to
+46, and on specificity SMOTE wins six of seven. Counting one result per dataset
+(the majority over its metrics) gives 409 wins, 35 ties and 76 losses on 520 datasets,
+and the earlier single-metric rule (G-mean, else AUC, else F-measure, else accuracy)
+gives 521 comparisons, in which the proposed method wins in 402 rows, ties in 39 and
+loses in 80.
 
-Comparisons with SMOTE inside a wrapper are kept apart and are not pooled
-with Table~\ref{tab:wins-by-type}: all 13 wrapper papers print per-dataset
-pairs, giving 293 rows. In one of them, RBBoost~\pcite{diezpastor2015randombalance},
-the extracted pairs do not meet the same-table rule. The scores of its
-RB-Boost come from the Boosting-family table of its supplement
+\begin{table}[t]
+\centering\small
+\caption{Comparisons with Plain SMOTE by How the Dataset Was Obtained (All Metrics,
+29 Papers). Win share is the share of wins among decided comparisons (ties left out),
+with a 95\% Wilson interval. Sixteen comparisons not printed as numbers are left out.}
+\label{tab:wins-by-type}
+\begin{tabular}{lrrrrrrl}
+\toprule
+How obtained & Datasets & Papers & Rows & Wins & Ties & Losses & Win share (\%)\\
+\midrule
+Original & 144 & 25 & 425 & 329 & 10 & 86 & 79.3 (75.1--82.9)\\
+Repository-defined & 119 & 9 & 315 & 220 & 44 & 51 & 81.2 (76.1--85.4)\\
+Modified & 143 & 14 & 495 & 356 & 20 & 119 & 74.9 (70.9--78.6)\\
+Synthetic & 5 & 1 & 15 & 15 & 0 & 0 & 100 (79.6--100)\\
+Cannot be told & 105 & 13 & 234 & 184 & 24 & 26 & 87.6 (82.5--91.4)\\
+Not matched to a dataset & 4 & 3 & 11 & 3 & 4 & 4 & 42.9 (15.8--75.0)\\
+\addlinespace
+All & 520 & 29 & 1,495 & 1,107 & 102 & 286 & 79.5 (77.3--81.5)\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+We tested the hypothesis that motivated this analysis: that proposed methods win
+more often on data the authors modified or generated than on original data. The data
+do not support it (Table~\ref{tab:wins-by-type}). Modified and synthetic data give a
+win in 75.7\% of decided comparisons (371 of 490) against 79.3\% on original data.
+Because the comparisons of one paper are not independent, we estimated the
+difference with the paper as the unit of clustering: a logistic model with
+paper-level clustering (generalised estimating equations) gives an odds ratio of 0.68
+(95\% CI 0.43 to 1.08, $p = 0.10$) for modified or synthetic against original data;
+a conditional logistic model that compares the two kinds of data only inside the 11
+papers that use both and report both outcomes gives 0.61 (0.38 to 0.97, $p = 0.04$);
+and a mixed model with random effects for paper and for dataset gives 0.75 (0.58 to
+0.97). The direction is therefore the opposite of the hypothesis, but it is not
+stable: with one result per dataset the two clustered estimates are 0.64 ($p = 0.15$)
+and 0.46 ($p = 0.13$), and under the single-metric rule 0.80 ($p = 0.47$) and 0.61
+($p = 0.31$). Paper by paper, among the 13 papers with both kinds of data, the win
+share is higher on modified or synthetic data in 3, higher on standard data in 7 and
+equal in 3 (sign test $p = 0.34$). Repository-defined splits do not differ from
+original data (odds ratio 1.19, $p = 0.61$), and the comparisons whose data origin
+cannot be told show the highest raw win share apart from the single paper with
+synthetic data, a difference that disappears once papers are taken into account (odds ratio 0.99, $p = 0.98$).
+
+The second hypothesis concerned papers that add a single standard dataset to data of
+another kind. Two papers fit this pattern: MWMOTE (one standard and 19 other
+datasets) and RUSBoost~\pcite{seiffert2010rusboost} (one and 14). Both win on their
+standard dataset; on their modified datasets and those of unstated origin they win 52
+of 65 decided comparisons (80.0\%; two MWMOTE datasets that could not be matched to a
+record are left out), the same share as on such data in the 21 papers that have at
+least two standard datasets and also report other data (482 of 600, 80.3\%). Five papers compare with SMOTE only on standard data and one
+(INOS) only on modified data. Two papers are too few for a test, and nothing in them
+suggests that the standard dataset serves a different purpose from the rest.
+
+Measured difficulty says more about where the wins fall than the origin of the data.
+For the 72 verifiable two-class files (Section~\ref{sec:data-difficulty}) that appear
+in these comparisons (20 papers, 374 comparisons), the chance that the proposed method
+beats SMOTE rises with the noise index: the odds ratio per 0.1 of noise index is 1.15
+(95\% CI 1.04 to 1.26, $p = 0.005$) with paper-level clustering and 1.19 (1.04 to 1.35,
+$p = 0.01$) within papers, and 1.16 (0.98 to 1.36, $p = 0.08$) with one result per file
+and paper. The imbalance ratio shows no such relation (odds ratio 0.92 per doubling,
+$p = 0.61$), nor do the small-sample, outlier and small-disjunct flags taken one at a
+time. This analysis is exploratory: it covers the files that could be verified, which
+are mostly small and low-dimensional.
+
+Comparisons with SMOTE inside another scheme are kept apart and are not pooled with
+Tables~\ref{tab:wins-by-metric} and~\ref{tab:wins-by-type}. Twelve papers contribute
+558 comparisons: Static-SMOTE (EMDO~\pcite{yao2021emdo}, OVO-SMOTE, SOUP) 79, with 69
+wins, 3 ties and 7 losses; SMOTE after one-versus-one decomposition (AMDO~\pcite{yang2018amdo}, GDHS~\pcite{yan2025gdhs},
+SHSampler~\pcite{zheng2022shsampler}) 148, with 101, 6 and 41; SMOTE applied to all
+classes (MC-CCR~\pcite{koziarski2020mcccr}, MC-RBO~\pcite{krawczyk2020mcrbo}, NROMM) 239,
+with 231, 0 and 8; and SMOTE combined with another learner (DSRBF~\pcite{fernandeznavarro2011dsrbf}, EasyEnsemble, GAMO) 92,
+with 71, 2 and 19. Three papers are left out of every comparison set. KNNOR~\pcite{islam2022knnor}
+prints only means over its 19 datasets (G-score .8363 for KNNOR and .8238 for SMOTE).
+MC-MBRC~\pcite{ma2024mcmbrc} names SMOTE as a baseline, but the column headers of its
+per-dataset tables do not say which column is SMOTE. In RBBoost~\pcite{diezpastor2015randombalance},
+the scores of its RB-Boost come from the Boosting-family table of its supplement
 (Supplementary Table~11) and those of its SMOTE ensemble (ESM) from the
-data-processing-family table (Supplementary Table~3). Both tables report G-mean under one protocol (J48 with Laplace
-smoothing, ensembles of 100, stratified $5\times2$-fold cross-validation), but
-the paper compares methods only within each family and never compares
-RB-Boost with ESM directly. Its 86 rows, 63 of them on repository-defined
-data, are kept in our data for audit and excluded from every comparison set
-reported here; the other 12 wrapper papers contribute 207 rows.
+data-processing-family table (Supplementary Table~3); both report the same protocol
+(J48 with Laplace smoothing, ensembles of 100, stratified $5\times2$-fold
+cross-validation), but the paper compares methods only within each family and never
+compares RB-Boost with ESM directly. Its 86 datasets, 63 of them repository-defined,
+are kept in our data for audit.
 
-Split by data type, 28 of the 29 papers include at least
-one standard dataset (original or repository-defined) in the comparison, and
-on these 265 standard rows SMOTE wins in 40 and ties in 21. One paper reports its per-dataset comparison with SMOTE
-only on modified, synthetic or unidentifiable data (INOS~\pcite{cao2013inos}); KNNOR, whose only comparison is the aggregate above, is not counted here.
-Conversely, five papers compare only on standard data (GDO~\pcite{xie2022gdo},
-MKC-SMOTE, OREM-M, SCUT~\pcite{agrawal2015scut}, SPE~\pcite{liu2020spe}).
+\paragraph{What the reader should do.} Read a reported win over SMOTE together with
+the metric: precision and specificity often favour SMOTE even when the other metrics
+do not. Expect wins over SMOTE to be more frequent on data
+whose minority examples are borderline or isolated, and less informative on clean
+data. Whether the data were modified does not, on this evidence, inflate the win
+rate; whether they are described well enough to be identified matters more for the
+reader (Sections~\ref{sec:data-names} and~\ref{sec:data-verifiability}).
 
-\toon{Your hypothesis H1 lives here. Look at the shares of ``SMOTE higher''
-per row of Table~\ref{tab:wins-by-type} and at the per-paper split in the
-Atlas (fourth tab, wins over SMOTE by data type). What you conclude, and how strongly,
-is yours; the within-paper comparison (standard vs modified rows of the same
-paper) is the strongest test because it holds the paper constant.}
-
-\claudedraft{A method that wins on unmodified standard benchmarks gives the
-reader evidence that does not depend on choices the authors made about the
-data. Reporting the standard and the modified datasets separately would let
-readers see this directly.}
-
-\evidence{out/verified\_outcomes.csv (smote\_kind = plain SMOTE; KNNOR's aggregate,
-row 295, set aside by rule R4); counts reproduced by build/reconcile\_counts.py
-(out/reconcile\_counts.json); MC-MBRC's 20 rows (Table 10, p.10; SMOTE named only in Appendix A.1 and Table 8, column headers of Tables 9--12 do not name it) set aside by rule R8. Of the 521 rows, 3 could not be matched to a dataset
-entry and 15 were matched by row order only (over all 835 rows: 4 and 22). Paper-level
-baselines: out/full\_summary.json, papers, smote\_kind. RBBoost: rows 574--659;
-supplement Table~3 pp.3--5 and Table~11 pp.17--18; protocol p.101 and family design
-p.102 of the paper; review recorded in CROSS\_TABLE\_REVIEW of build/reconcile\_counts.py.}
+\evidence{Rows: out/winloss\_allmetric\_rows.csv (2,497 dataset-by-metric rows from
+ai-draft/outcome/allmetric/*.json, 44 papers; the single-metric values re-copied
+independently and identical on 839 of 839 rows, out/winloss\_allmetric\_crosscheck.csv);
+build/winloss\_allmetric.py $\rightarrow$ out/winloss\_allmetric\_summary.json (plain,
+non-plain groups, exclusions R4, R6, R8; paper classes aligned with
+build/reconcile\_counts.py on 29 Oct 2026). Data types: build/allmetric\_links.py
+$\rightarrow$ out/allmetric\_links.csv (2,496 of 2,497 rows linked to a record). Tests:
+build/hypotheses.py $\rightarrow$ out/hypotheses.json, out/hypotheses\_paper\_split.csv
+(statsmodels 0.15: GEE exchangeable, ConditionalLogit, BinomialBayesMixedGLM variational
+fit). Single-metric set: out/verified\_outcomes.csv, out/reconcile\_counts.json (521 rows,
+rules R4, R6, R8). Difficulty: build/difficulty\_outcomes.py $\rightarrow$
+out/difficulty\_outcomes.json. RBBoost: supplement Table~3 pp.3--5 and Table~11
+pp.17--18; protocol p.101 and family design p.102. MC-MBRC: SMOTE named in Appendix A.1
+and Table~8 only; Tables 9--12, p.10--11.}
 
 % ---------------------------------------------------------------------
 \subsection{Can the Reported Results Be Checked?}
@@ -608,6 +789,17 @@ MC-NCLWO~\pcite{tao2025mcnclwo}), and the review~\pcite{hassanat2022stop}\ compa
 rather than classifiers. A fourteenth paper, KNNOR, prints its pair of scores only
 as a mean over its datasets.
 
+% Claude 29 Oct 2026 (Toon delegated all open decisions): hypothesis H3 (listed but not compared), out/hypotheses.json H3b
+Even where per-dataset tables exist, they do not always cover the datasets a paper
+lists. In the 43 papers with per-dataset comparisons with SMOTE, 119 of the 952 listed
+dataset entries (12.5\%, 95\% CI 10.5 to 14.8) have no row in the table that compares
+the proposed method with SMOTE, and 12 papers account for all of them, most of all
+SMOTE-IPF~\pcite{saez2015smoteipf} (32 of 41) and Loyalty-SMOTE (30 of 59). The gap is
+largest for synthetic sets (38 of 47) and for entries whose origin cannot be told
+(44 of 166), and smallest for modified and repository-defined data (5 of 180 and 7 of
+189). Some of these datasets appear in other results tables of the same paper; what is
+missing for them is the pair of scores against SMOTE.
+
 Baseline results are also reused across papers. QC-SMOTE copies its baseline
 numbers from the VS-SMOTE paper~\pcite{qiu2025vssmote}, and every SMOTE-all value in MC-CCR's Table~6
 is identical, to two decimals and on all 20 datasets, to the SMOTE-all
@@ -616,42 +808,51 @@ The same pattern appears across research groups: the Baseline, SSMOTE, GCS,
 ABNC, OSMOTE and AMDO columns of EMDO's Table~5~\pcite{yao2021emdo} repeat, value for value on all
 nine shared datasets, the MAUC results of AMDO's Table~6~\pcite{yang2018amdo}; EMDO states that it
 uses the same datasets as AMDO but not that the baseline results were copied.
-\claudedraft{Reusing a baseline is efficient, but unless it is stated, a reader
-cannot tell whether the comparison was run under identical conditions.}
+%
+% Claude 29 Oct 2026 (Toon delegated all open decisions): adopted (was \claudedraft)
+Reusing a baseline is efficient, but unless it is stated, a reader
+cannot tell whether the comparison was run under identical conditions.
 Several of these papers place per-dataset results on GitHub or in material
 outside the paper. Where only ranks are given, the paper's own table can
 still be informative: in RBO's Table~2 (CART, no added noise) SMOTE has the
 better mean G-mean rank, and CISO reports itself statistically equivalent to
 SMOTE.
 
-\claudedraft{For these papers the headline claim cannot be falsified from what
+%
+% Claude 29 Oct 2026 (Toon delegated all open decisions): adopted (was \claudedraft)
+For these papers the headline claim cannot be falsified from what
 is published. This does not mean the claims are wrong; it means a reader
 cannot tell whether an average improvement comes from consistent gains or
-from large gains on a few datasets.}
+from large gains on a few datasets.
 
 \evidence{out/full\_summary.json granularity and per-paper notes; MC-RBO
-Table VI p.10 vs MC-CCR Table 6 p.10 (ai-draft/full/MC-RBO.json notes).
+Table VI p.10 vs MC-CCR Table 6 p.10 (ai-draft/full/MC-RBO.json notes). Listed but
+not compared: build/hypotheses.py $\rightarrow$ out/h3\_entries.csv and out/hypotheses.json
+(H3b; dataset records linked to the fixed-metric and all-metric comparison rows).
 MWMOTE Table 5 audit: of 15 checkable rows, minority counts exact in 13, four
 rows with wrong N or majority (single paper, case only).}
 
 % ---------------------------------------------------------------------
 \subsection{Recommendations for Reporting Data}
 \label{sec:data-recommendations}
+% Claude 29 Oct 2026 (Toon delegated all open decisions): final list; each item points to the finding it rests on
 \begin{enumerate}
 \item Name the repository and version of every dataset, and whether the full
-      set or a training file was used.
+      set or a training file was used (Section~\ref{sec:data-names}).
 \item State which class or classes form the minority and why, in the text and
-      not only in a table.
+      not only in a table (Section~\ref{sec:data-handling}).
 \item Declare every modification (binarisation, class merging,
-      undersampling, noise, dropped attributes) in the data section.
-\item Give the imbalance-ratio formula, not only its values.
-\item Report per-dataset results for the proposed method and plain SMOTE,
-      and report standard and modified datasets separately.
+      undersampling, noise, dropped attributes) in the data section, and print the
+      size and class counts of the data actually used (Section~\ref{sec:data-handling}).
+\item Give the imbalance-ratio formula, not only its values (Section~\ref{sec:data-names}).
+\item Report the number of source families alongside the number of datasets, and keep
+      splits of one source together when testing for significance (Section~\ref{sec:data-landscape}).
+\item Report per-dataset results for the proposed method and plain SMOTE on every
+      metric used, with standard and modified datasets shown separately
+      (Sections~\ref{sec:data-wins} and~\ref{sec:data-verifiability}).
 \item Separate tuning datasets from evaluation datasets, as CISO and LS~\pcite{cieslak2008ls} do,
-      and run the baselines rather than copying their numbers.
-\item \claudedraft{Report at least one measure of where the minority examples lie
-      (for example the shares of safe, borderline, rare and outlier examples) next to
-      the imbalance ratio.}
+      and run the baselines rather than copying their numbers (Section~\ref{sec:data-verifiability}).
+\item Report at least one measure of where the minority examples lie (for example the
+      shares of safe, borderline, rare and outlier examples) next to the imbalance ratio
+      (Sections~\ref{sec:data-difficulty} and~\ref{sec:data-wins}).
 \end{enumerate}
-
-\toon{Keep, cut or reword; each item should point back to a finding above.}

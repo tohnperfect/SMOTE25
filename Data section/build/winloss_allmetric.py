@@ -43,6 +43,8 @@ METRIC_GROUP = {
 }
 # comparator actually used as the "SMOTE" column (from the extraction notes)
 COMPARATOR = {
+ 'MC-CCR':'SMOTE-all','MC-RBO':'SMOTE-all (OVO-SMOTE kept as ovo_smote_alt)','NROMM':'SMOTE-all','GAMO':'SMOTE+CN (SMOTE with a classifier network)',
+ 'RBBoost':'ESM (ensemble with SMOTE)','KNNOR':'SMOTE (means over 19 datasets only)',
  'AMDO':'OVO-SMOTE','EMDO':'Static-SMOTE','SOUP':'Static-SMOTE','OVO-SMOTE':'Static-SMOTE (Static-SMT)',
  'GDHS':'OVO-SMOTE','SHSampler':'OVO-SMOTE',
  'MC-MBRC':'uncertain: column printed "MDO", inferred to be SMOTE',
@@ -52,8 +54,15 @@ def comparator(k): return COMPARATOR.get(k, 'plain SMOTE')
 # Toon 28 Oct 2026: non-plain comparators are reported apart (main result = plain SMOTE); MC-MBRC is excluded
 COMPARATOR_GROUP = {'EMDO':'Static-SMOTE','SOUP':'Static-SMOTE','OVO-SMOTE':'Static-SMOTE',
  'AMDO':'OVO-SMOTE','GDHS':'OVO-SMOTE','SHSampler':'OVO-SMOTE',
- 'DSRBF':'SMOTE wrapped with another classifier','EasyEnsemble':'SMOTE wrapped with another classifier'}
-EXCLUDED = {'MC-MBRC':'Toon 28 Oct 2026: excluded; the comparator column is printed "MDO" and no text confirms it is SMOTE'}
+ # 29 Oct 2026 (Claude, delegated by Toon): same paper classes as the rule-A set (reconcile_counts.py R5).
+ # The rule-A extraction labelled these comparators "SMOTE variant (multiclass/ensemble wrapper)"; the all-metric
+ # copy had left them as plain. Same columns in both copies; only the label was inconsistent.
+ 'MC-CCR':'SMOTE-all (multiclass, all classes)','MC-RBO':'SMOTE-all (multiclass, all classes)','NROMM':'SMOTE-all (multiclass, all classes)',
+ 'DSRBF':'SMOTE wrapped with another classifier','EasyEnsemble':'SMOTE wrapped with another classifier',
+ 'GAMO':'SMOTE wrapped with another classifier'}
+EXCLUDED = {'MC-MBRC':'R8 (Toon 28/29 Oct 2026): the comparator column is printed "MDO" and no text confirms it is SMOTE',
+ 'RBBoost':'R6 cross-table: RB-B and ESM come from different supplementary tables (families) that the paper never compares directly',
+ 'KNNOR':'R4 aggregate: only means over 19 datasets are printed, no per-dataset pairs'}
 def comparator_group(k): return 'excluded' if k in EXCLUDED else COMPARATOR_GROUP.get(k, 'plain SMOTE')
 
 def num(s):
@@ -128,7 +137,7 @@ def main():
             by_metric={m: tally([r for r in sel if r['metric_printed'] == m]) for m in dict.fromkeys(r['metric_printed'] for r in sel)})
     xcc = collections.Counter(x['status'] for x in xc)
     summ = dict(rule=__doc__.split('Result rule')[1].split('Metric groups')[0].strip(),
-        decision='Toon 28 Oct 2026: main result = plain SMOTE; non-plain comparators reported apart; MC-MBRC excluded',
+        decision='Toon 28 Oct 2026: main result = plain SMOTE; non-plain comparators reported apart; MC-MBRC excluded. 29 Oct (Claude, delegated): paper classes aligned with the rule-A set (R4 KNNOR, R6 RBBoost excluded; GAMO, MC-CCR, MC-RBO, NROMM non-plain)',
         all_comparators=block(kept), plain_smote_only=block(plain),
         non_plain_by_comparator={g: dict(papers_list=sorted({r['paper'] for r in kept if r['comparator_group'] == g}),
                                          **block([r for r in kept if r['comparator_group'] == g])) for g in groups},

@@ -342,6 +342,14 @@ data["wl_all"] = dict(all=_WA["all_comparators"], plain=_WA["plain_smote_only"],
                       nonplain=_wa_np, excluded=_WA["excluded"], decision=_WA["decision"],
                       per_paper=_WA["per_paper"], rule=_WA["rule"], cross=_WA["crosscheck_rule_A"],
                       source="out/winloss_allmetric_summary.json, _rows.csv, _paper_reported.csv (build/winloss_allmetric.py; raw: ai-draft/outcome/allmetric/*.json)")
+# H1-H3 and measured difficulty (29 Oct 2026): build/hypotheses.py, build/difficulty_outcomes.py
+_HY = json.load(open(p("out/hypotheses.json"), encoding="utf-8")); _DO = json.load(open(p("out/difficulty_outcomes.json"), encoding="utf-8"))
+if _HY["all_metric_plain"]["overall"]["rows"] + sum(1 for _ in []) != _WA["plain_smote_only"]["overall_all_metrics"]["rows"] - _WA["plain_smote_only"]["overall_all_metrics"]["not_comparable"]:
+    sys.exit("STOP: hypotheses.json rows differ from the all-metric plain rows")
+data["hyp"] = dict(main=_HY["all_metric_plain"], r1=_HY["robust_R1_dataset_majority"], r2=_HY["robust_R2_ruleA"],
+                   within=_HY["H1_within_paper_descriptive"], h2=_HY["H2"], h3a=_HY["H3a_granularity"], h3b=_HY["H3b_listed_not_compared"],
+                   diff=dict(_DO, robust=_DO["robust_task_majority_noise_per_0.1"]),
+                   source="out/hypotheses.json (build/hypotheses.py), out/difficulty_outcomes.json (build/difficulty_outcomes.py)")
 data["manuscript"] = dict(overview=json.load(open(p("manuscript/overview.json"), encoding="utf-8")),
                           html=tex2html.convert(_tex), tex=_tex)
 js = json.dumps(data, ensure_ascii=False, separators=(",", ":"))

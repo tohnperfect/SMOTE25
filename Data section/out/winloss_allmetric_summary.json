@@ -1,23 +1,23 @@
 {
  "rule": "(no threshold): compare the printed numbers. win = proposed better in the\nmetric's direction, loss = worse, tie = printed values equal. Rows with a non-numeric value\non either side (\"---\", unreadable) are counted as 'not comparable'.",
- "decision": "Toon 28 Oct 2026: main result = plain SMOTE; non-plain comparators reported apart; MC-MBRC excluded",
+ "decision": "Toon 28 Oct 2026: main result = plain SMOTE; non-plain comparators reported apart; MC-MBRC excluded. 29 Oct (Claude, delegated): paper classes aligned with the rule-A set (R4 KNNOR, R6 RBBoost excluded; GAMO, MC-CCR, MC-RBO, NROMM non-plain)",
  "all_comparators": {
   "overall_all_metrics": {
-   "win": 1827,
-   "tie": 125,
-   "loss": 449,
+   "win": 1579,
+   "tie": 113,
+   "loss": 361,
    "not_comparable": 16,
-   "rows": 2417,
-   "papers": 43
+   "rows": 2069,
+   "papers": 41
   },
   "by_metric_group": {
    "AUC": {
-    "win": 461,
-    "tie": 36,
-    "loss": 101,
+    "win": 387,
+    "tie": 33,
+    "loss": 91,
     "not_comparable": 0,
-    "rows": 598,
-    "papers": 26
+    "rows": 511,
+    "papers": 24
    },
    "AUC-PR": {
     "win": 3,
@@ -28,12 +28,12 @@
     "papers": 1
    },
    "Accuracy": {
-    "win": 153,
-    "tie": 4,
-    "loss": 11,
+    "win": 75,
+    "tie": 1,
+    "loss": 6,
     "not_comparable": 0,
-    "rows": 168,
-    "papers": 6
+    "rows": 82,
+    "papers": 5
    },
    "Average class accuracy": {
     "win": 99,
@@ -60,20 +60,20 @@
     "papers": 3
    },
    "F-measure": {
-    "win": 285,
-    "tie": 19,
-    "loss": 82,
+    "win": 226,
+    "tie": 16,
+    "loss": 57,
     "not_comparable": 4,
-    "rows": 390,
-    "papers": 21
+    "rows": 303,
+    "papers": 19
    },
    "G-mean": {
-    "win": 442,
-    "tie": 37,
-    "loss": 128,
+    "win": 406,
+    "tie": 34,
+    "loss": 80,
     "not_comparable": 4,
-    "rows": 611,
-    "papers": 29
+    "rows": 524,
+    "papers": 27
    },
    "MCC": {
     "win": 40,
@@ -92,12 +92,12 @@
     "papers": 3
    },
    "Precision": {
-    "win": 63,
+    "win": 62,
     "tie": 5,
     "loss": 46,
     "not_comparable": 0,
-    "rows": 114,
-    "papers": 8
+    "rows": 113,
+    "papers": 7
    },
    "Recall/sensitivity": {
     "win": 130,
@@ -119,21 +119,21 @@
  },
  "plain_smote_only": {
   "overall_all_metrics": {
-   "win": 1604,
-   "tie": 114,
-   "loss": 382,
+   "win": 1107,
+   "tie": 102,
+   "loss": 286,
    "not_comparable": 16,
-   "rows": 2116,
-   "papers": 35
+   "rows": 1511,
+   "papers": 29
   },
   "by_metric_group": {
    "AUC": {
-    "win": 383,
-    "tie": 33,
-    "loss": 74,
+    "win": 309,
+    "tie": 30,
+    "loss": 64,
     "not_comparable": 0,
-    "rows": 490,
-    "papers": 21
+    "rows": 403,
+    "papers": 19
    },
    "AUC-PR": {
     "win": 3,
@@ -144,52 +144,28 @@
     "papers": 1
    },
    "Accuracy": {
-    "win": 140,
-    "tie": 4,
-    "loss": 11,
+    "win": 62,
+    "tie": 1,
+    "loss": 6,
     "not_comparable": 0,
-    "rows": 155,
-    "papers": 5
-   },
-   "Average class accuracy": {
-    "win": 60,
-    "tie": 0,
-    "loss": 8,
-    "not_comparable": 0,
-    "rows": 68,
+    "rows": 69,
     "papers": 4
    },
-   "CBA": {
-    "win": 60,
-    "tie": 0,
-    "loss": 0,
-    "not_comparable": 0,
-    "rows": 60,
-    "papers": 3
-   },
-   "CEN": {
-    "win": 60,
-    "tie": 0,
-    "loss": 0,
-    "not_comparable": 0,
-    "rows": 60,
-    "papers": 3
-   },
    "F-measure": {
-    "win": 276,
-    "tie": 19,
-    "loss": 75,
+    "win": 217,
+    "tie": 16,
+    "loss": 50,
     "not_comparable": 4,
-    "rows": 374,
-    "papers": 20
+    "rows": 287,
+    "papers": 18
    },
    "G-mean": {
-    "win": 388,
-    "tie": 32,
-    "loss": 112,
+    "win": 283,
+    "tie": 29,
+    "loss": 64,
     "not_comparable": 4,
-    "rows": 536,
-    "papers": 25
+    "rows": 380,
+    "papers": 19
    },
    "MCC": {
     "win": 40,
@@ -200,12 +176,12 @@
     "papers": 3
    },
    "Precision": {
-    "win": 63,
+    "win": 62,
     "tie": 5,
     "loss": 46,
     "not_comparable": 0,
-    "rows": 114,
-    "papers": 8
+    "rows": 113,
+    "papers": 7
    },
    "Recall/sensitivity": {
     "win": 130,
@@ -278,15 +254,16 @@
   "SMOTE wrapped with another classifier": {
    "papers_list": [
     "DSRBF",
-    "EasyEnsemble"
+    "EasyEnsemble",
+    "GAMO"
    ],
    "overall_all_metrics": {
-    "win": 53,
+    "win": 71,
     "tie": 2,
     "loss": 19,
     "not_comparable": 0,
-    "rows": 74,
-    "papers": 2
+    "rows": 92,
+    "papers": 3
    },
    "by_metric_group": {
     "AUC": {
@@ -305,6 +282,14 @@
      "rows": 13,
      "papers": 1
     },
+    "Average class accuracy": {
+     "win": 9,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 9,
+     "papers": 1
+    },
     "F-measure": {
      "win": 9,
      "tie": 0,
@@ -314,12 +299,12 @@
      "papers": 1
     },
     "G-mean": {
-     "win": 11,
+     "win": 20,
      "tie": 1,
      "loss": 4,
      "not_comparable": 0,
-     "rows": 16,
-     "papers": 1
+     "rows": 25,
+     "papers": 2
     },
     "Minimum class recall": {
      "win": 10,
@@ -328,6 +313,55 @@
      "not_comparable": 0,
      "rows": 13,
      "papers": 1
+    }
+   }
+  },
+  "SMOTE-all (multiclass, all classes)": {
+   "papers_list": [
+    "MC-CCR",
+    "MC-RBO",
+    "NROMM"
+   ],
+   "overall_all_metrics": {
+    "win": 231,
+    "tie": 0,
+    "loss": 8,
+    "not_comparable": 0,
+    "rows": 239,
+    "papers": 3
+   },
+   "by_metric_group": {
+    "Average class accuracy": {
+     "win": 51,
+     "tie": 0,
+     "loss": 8,
+     "not_comparable": 0,
+     "rows": 59,
+     "papers": 3
+    },
+    "CBA": {
+     "win": 60,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 60,
+     "papers": 3
+    },
+    "CEN": {
+     "win": 60,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 60,
+     "papers": 3
+    },
+    "G-mean": {
+     "win": 60,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 60,
+     "papers": 3
     }
    }
   },
@@ -383,23 +417,41 @@
  },
  "excluded": {
   "MC-MBRC": {
-   "reason": "Toon 28 Oct 2026: excluded; the comparator column is printed \"MDO\" and no text confirms it is SMOTE",
+   "reason": "R8 (Toon 28/29 Oct 2026): the comparator column is printed \"MDO\" and no text confirms it is SMOTE",
    "win": 76,
    "tie": 0,
    "loss": 4,
    "not_comparable": 0,
    "rows": 80,
    "papers": 1
+  },
+  "RBBoost": {
+   "reason": "R6 cross-table: RB-B and ESM come from different supplementary tables (families) that the paper never compares directly",
+   "win": 244,
+   "tie": 12,
+   "loss": 88,
+   "not_comparable": 0,
+   "rows": 344,
+   "papers": 1
+  },
+  "KNNOR": {
+   "reason": "R4 aggregate: only means over 19 datasets are printed, no per-dataset pairs",
+   "win": 4,
+   "tie": 0,
+   "loss": 0,
+   "not_comparable": 0,
+   "rows": 4,
+   "papers": 1
   }
  },
  "rule_A_metric_only": {
   "overall_all_metrics": {
-   "win": 613,
-   "tie": 48,
-   "loss": 154,
+   "win": 577,
+   "tie": 45,
+   "loss": 106,
    "not_comparable": 4,
-   "rows": 819,
-   "papers": 43
+   "rows": 732,
+   "papers": 41
   },
   "by_metric_group": {
    "AUC": {
@@ -435,12 +487,12 @@
     "papers": 5
    },
    "G-mean": {
-    "win": 442,
-    "tie": 37,
-    "loss": 128,
+    "win": 406,
+    "tie": 34,
+    "loss": 80,
     "not_comparable": 4,
-    "rows": 611,
-    "papers": 29
+    "rows": 524,
+    "papers": 27
    }
   }
  },
@@ -867,8 +919,8 @@
    }
   },
   "GAMO": {
-   "comparator": "plain SMOTE",
-   "comparator_group": "plain SMOTE",
+   "comparator": "SMOTE+CN (SMOTE with a classifier network)",
+   "comparator_group": "SMOTE wrapped with another classifier",
    "excluded": "",
    "all_metrics": {
     "win": 18,
@@ -1054,9 +1106,9 @@
    }
   },
   "KNNOR": {
-   "comparator": "plain SMOTE",
-   "comparator_group": "plain SMOTE",
-   "excluded": "",
+   "comparator": "SMOTE (means over 19 datasets only)",
+   "comparator_group": "excluded",
+   "excluded": "R4 aggregate: only means over 19 datasets are printed, no per-dataset pairs",
    "all_metrics": {
     "win": 4,
     "tie": 0,
@@ -1171,8 +1223,8 @@
    }
   },
   "MC-CCR": {
-   "comparator": "plain SMOTE",
-   "comparator_group": "plain SMOTE",
+   "comparator": "SMOTE-all",
+   "comparator_group": "SMOTE-all (multiclass, all classes)",
    "excluded": "",
    "all_metrics": {
     "win": 74,
@@ -1220,7 +1272,7 @@
   "MC-MBRC": {
    "comparator": "uncertain: column printed \"MDO\", inferred to be SMOTE",
    "comparator_group": "excluded",
-   "excluded": "Toon 28 Oct 2026: excluded; the comparator column is printed \"MDO\" and no text confirms it is SMOTE",
+   "excluded": "R8 (Toon 28/29 Oct 2026): the comparator column is printed \"MDO\" and no text confirms it is SMOTE",
    "all_metrics": {
     "win": 76,
     "tie": 0,
@@ -1265,8 +1317,8 @@
    }
   },
   "MC-RBO": {
-   "comparator": "plain SMOTE",
-   "comparator_group": "plain SMOTE",
+   "comparator": "SMOTE-all (OVO-SMOTE kept as ovo_smote_alt)",
+   "comparator_group": "SMOTE-all (multiclass, all classes)",
    "excluded": "",
    "all_metrics": {
     "win": 78,
@@ -1468,8 +1520,8 @@
    }
   },
   "NROMM": {
-   "comparator": "plain SMOTE",
-   "comparator_group": "plain SMOTE",
+   "comparator": "SMOTE-all",
+   "comparator_group": "SMOTE-all (multiclass, all classes)",
    "excluded": "",
    "all_metrics": {
     "win": 79,
@@ -1679,9 +1731,9 @@
    }
   },
   "RBBoost": {
-   "comparator": "plain SMOTE",
-   "comparator_group": "plain SMOTE",
-   "excluded": "",
+   "comparator": "ESM (ensemble with SMOTE)",
+   "comparator_group": "excluded",
+   "excluded": "R6 cross-table: RB-B and ESM come from different supplementary tables (families) that the paper never compares directly",
    "all_metrics": {
     "win": 244,
     "tie": 12,
@@ -2139,6 +2191,12 @@
   }
  },
  "comparator_notes": {
+  "MC-CCR": "SMOTE-all",
+  "MC-RBO": "SMOTE-all (OVO-SMOTE kept as ovo_smote_alt)",
+  "NROMM": "SMOTE-all",
+  "GAMO": "SMOTE+CN (SMOTE with a classifier network)",
+  "RBBoost": "ESM (ensemble with SMOTE)",
+  "KNNOR": "SMOTE (means over 19 datasets only)",
   "AMDO": "OVO-SMOTE",
   "EMDO": "Static-SMOTE",
   "SOUP": "Static-SMOTE",

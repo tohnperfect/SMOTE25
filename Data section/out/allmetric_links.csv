@@ -1,0 +1,2498 @@
+allmetric_csv_line,paper,dataset_as_printed,metric_group,comparator_group,result,link,record_id,how_obtained
+2,A-SUWO,Vehicle,G-mean,plain SMOTE,win,L1,P031-D001,modified
+3,A-SUWO,Ecoli,G-mean,plain SMOTE,tie,L1,P031-D002,modified
+4,A-SUWO,Pima,G-mean,plain SMOTE,win,L1,P031-D003,original
+5,A-SUWO,Balance,G-mean,plain SMOTE,win,L1,P031-D004,modified
+6,A-SUWO,Liver,G-mean,plain SMOTE,win,L1,P031-D005,original
+7,A-SUWO,Wine,G-mean,plain SMOTE,win,L1,P031-D006,modified
+8,A-SUWO,Breast,G-mean,plain SMOTE,win,L1,P031-D007,modified
+9,A-SUWO,Libra,G-mean,plain SMOTE,loss,L1,P031-D008,modified
+10,A-SUWO,LEV,G-mean,plain SMOTE,win,L1,P031-D009,modified
+11,A-SUWO,Iris,G-mean,plain SMOTE,tie,L1,P031-D010,modified
+12,A-SUWO,Heart,G-mean,plain SMOTE,win,L1,P031-D011,original
+13,A-SUWO,Glass,G-mean,plain SMOTE,win,L1,P031-D012,modified
+14,A-SUWO,Haber,G-mean,plain SMOTE,tie,L1,P031-D013,original
+15,A-SUWO,Eucal.,G-mean,plain SMOTE,win,L1,P031-D014,modified
+16,A-SUWO,Heating,G-mean,plain SMOTE,win,L1,P031-D015,modified
+17,A-SUWO,Seg.,G-mean,plain SMOTE,loss,L1,P031-D016,modified
+18,A-SUWO,,F-measure,plain SMOTE,win,unmatched,,unmatched
+19,A-SUWO,Vehicle,F-measure,plain SMOTE,tie,L1,P031-D001,modified
+20,A-SUWO,Ecoli,F-measure,plain SMOTE,win,L1,P031-D002,modified
+21,A-SUWO,Pima,F-measure,plain SMOTE,win,L1,P031-D003,original
+22,A-SUWO,Balance,F-measure,plain SMOTE,loss,L1,P031-D004,modified
+23,A-SUWO,Liver,F-measure,plain SMOTE,win,L1,P031-D005,original
+24,A-SUWO,Wine,F-measure,plain SMOTE,win,L1,P031-D006,modified
+25,A-SUWO,Breast,F-measure,plain SMOTE,win,L1,P031-D007,modified
+26,A-SUWO,Libra,F-measure,plain SMOTE,win,L1,P031-D008,modified
+27,A-SUWO,LEV,F-measure,plain SMOTE,tie,L1,P031-D009,modified
+28,A-SUWO,Iris,F-measure,plain SMOTE,win,L1,P031-D010,modified
+29,A-SUWO,Heart,F-measure,plain SMOTE,win,L1,P031-D011,original
+30,A-SUWO,Glass,F-measure,plain SMOTE,win,L1,P031-D012,modified
+31,A-SUWO,Haber,F-measure,plain SMOTE,win,L1,P031-D013,original
+32,A-SUWO,Eucal.,F-measure,plain SMOTE,win,L1,P031-D014,modified
+33,A-SUWO,Heating,F-measure,plain SMOTE,loss,L1,P031-D015,modified
+34,A-SUWO,Vehicle,AUC,plain SMOTE,win,L1,P031-D001,modified
+35,A-SUWO,Ecoli,AUC,plain SMOTE,win,L1,P031-D002,modified
+36,A-SUWO,Pima,AUC,plain SMOTE,win,L1,P031-D003,original
+37,A-SUWO,Balance,AUC,plain SMOTE,win,L1,P031-D004,modified
+38,A-SUWO,Liver,AUC,plain SMOTE,loss,L1,P031-D005,original
+39,A-SUWO,Wine,AUC,plain SMOTE,tie,L1,P031-D006,modified
+40,A-SUWO,Breast,AUC,plain SMOTE,win,L1,P031-D007,modified
+41,A-SUWO,Libra,AUC,plain SMOTE,win,L1,P031-D008,modified
+42,A-SUWO,LEV,AUC,plain SMOTE,win,L1,P031-D009,modified
+43,A-SUWO,Iris,AUC,plain SMOTE,tie,L1,P031-D010,modified
+44,A-SUWO,Heart,AUC,plain SMOTE,win,L1,P031-D011,original
+45,A-SUWO,Glass,AUC,plain SMOTE,loss,L1,P031-D012,modified
+46,A-SUWO,Haber,AUC,plain SMOTE,win,L1,P031-D013,original
+47,A-SUWO,Eucal.,AUC,plain SMOTE,win,L1,P031-D014,modified
+48,A-SUWO,Heating,AUC,plain SMOTE,win,L1,P031-D015,modified
+49,A-SUWO,Seg.,AUC,plain SMOTE,loss,L1,P031-D016,modified
+50,AB-SMOTE,Abalone9-18 (Table IV),F-measure,plain SMOTE,win,L1,P044-D001,repository-defined
+51,AB-SMOTE,Customer Churn (Table V),F-measure,plain SMOTE,loss,L1,P044-D002,not stated
+52,AB-SMOTE,Harberman (Table VI),F-measure,plain SMOTE,loss,L1,P044-D004,original
+53,AB-SMOTE,Employee Attrition (Table VII),F-measure,plain SMOTE,win,L1,P044-D005,not stated
+54,AB-SMOTE,Telco Customer Churn (Table VIII),F-measure,plain SMOTE,loss,L1,P044-D003,original
+55,AB-SMOTE,Flare (Table IX),F-measure,plain SMOTE,loss,L1,P044-D006,not stated
+56,AB-SMOTE,Wine Quality (Table X),F-measure,plain SMOTE,tie,L1,P044-D007,not stated
+57,AB-SMOTE,Sales: Win Loss (Table XI),F-measure,plain SMOTE,loss,L1,P044-D008,not stated
+58,AB-SMOTE,Abalone9-18 (Table IV),Recall/sensitivity,plain SMOTE,win,L1,P044-D001,repository-defined
+59,AB-SMOTE,Customer Churn (Table V),Recall/sensitivity,plain SMOTE,loss,L1,P044-D002,not stated
+60,AB-SMOTE,Harberman (Table VI),Recall/sensitivity,plain SMOTE,loss,L1,P044-D004,original
+61,AB-SMOTE,Employee Attrition (Table VII),Recall/sensitivity,plain SMOTE,win,L1,P044-D005,not stated
+62,AB-SMOTE,Telco Customer Churn (Table VIII),Recall/sensitivity,plain SMOTE,loss,L1,P044-D003,original
+63,AB-SMOTE,Flare (Table IX),Recall/sensitivity,plain SMOTE,loss,L1,P044-D006,not stated
+64,AB-SMOTE,Wine Quality (Table X),Recall/sensitivity,plain SMOTE,tie,L1,P044-D007,not stated
+65,AB-SMOTE,Sales: Win Loss (Table XI),Recall/sensitivity,plain SMOTE,loss,L1,P044-D008,not stated
+66,ADASYN,Vehicle,Accuracy,plain SMOTE,win,L1,P013-D001,modified
+67,ADASYN,Pima Indian Diabetes,Accuracy,plain SMOTE,win,L1,P013-D002,original
+68,ADASYN,Vowel recognition,Accuracy,plain SMOTE,loss,L1,P013-D003,modified
+69,ADASYN,Ionosphere,Accuracy,plain SMOTE,win,L1,P013-D004,original
+70,ADASYN,Abalone,Accuracy,plain SMOTE,loss,L1,P013-D005,modified
+71,ADASYN,Vehicle,Precision,plain SMOTE,loss,L1,P013-D001,modified
+72,ADASYN,Pima Indian Diabetes,Precision,plain SMOTE,win,L1,P013-D002,original
+73,ADASYN,Vowel recognition,Precision,plain SMOTE,loss,L1,P013-D003,modified
+74,ADASYN,Ionosphere,Precision,plain SMOTE,win,L1,P013-D004,original
+75,ADASYN,Abalone,Precision,plain SMOTE,loss,L1,P013-D005,modified
+76,ADASYN,Vehicle,Recall/sensitivity,plain SMOTE,win,L1,P013-D001,modified
+77,ADASYN,Pima Indian Diabetes,Recall/sensitivity,plain SMOTE,loss,L1,P013-D002,original
+78,ADASYN,Vowel recognition,Recall/sensitivity,plain SMOTE,win,L1,P013-D003,modified
+79,ADASYN,Ionosphere,Recall/sensitivity,plain SMOTE,win,L1,P013-D004,original
+80,ADASYN,Abalone,Recall/sensitivity,plain SMOTE,win,L1,P013-D005,modified
+81,ADASYN,Vehicle,F-measure,plain SMOTE,win,L1,P013-D001,modified
+82,ADASYN,Pima Indian Diabetes,F-measure,plain SMOTE,win,L1,P013-D002,original
+83,ADASYN,Vowel recognition,F-measure,plain SMOTE,loss,L1,P013-D003,modified
+84,ADASYN,Ionosphere,F-measure,plain SMOTE,win,L1,P013-D004,original
+85,ADASYN,Abalone,F-measure,plain SMOTE,loss,L1,P013-D005,modified
+86,ADASYN,Vehicle,G-mean,plain SMOTE,win,L1,P013-D001,modified
+87,ADASYN,Pima Indian Diabetes,G-mean,plain SMOTE,win,L1,P013-D002,original
+88,ADASYN,Vowel recognition,G-mean,plain SMOTE,win,L1,P013-D003,modified
+89,ADASYN,Ionosphere,G-mean,plain SMOTE,win,L1,P013-D004,original
+90,ADASYN,Abalone,G-mean,plain SMOTE,win,L1,P013-D005,modified
+91,AMDO,Balance,Minimum class recall,OVO-SMOTE,loss,L1,P035-D001,original
+92,AMDO,Hayes-roth,Minimum class recall,OVO-SMOTE,tie,L1,P035-D002,original
+93,AMDO,New-thyroid,Minimum class recall,OVO-SMOTE,win,L1,P035-D003,original
+94,AMDO,Page-blocks,Minimum class recall,OVO-SMOTE,win,L1,P035-D004,original
+95,AMDO,Dermatology,Minimum class recall,OVO-SMOTE,win,L1,P035-D005,modified
+96,AMDO,Breast-tissue,Minimum class recall,OVO-SMOTE,win,L1,P035-D006,original
+97,AMDO,UKM,Minimum class recall,OVO-SMOTE,win,L1,P035-D007,original
+98,AMDO,Vertebral-column,Minimum class recall,OVO-SMOTE,win,L1,P035-D008,original
+99,AMDO,Ecoli,Minimum class recall,OVO-SMOTE,win,L1,P035-D009,modified
+100,AMDO,Pre2D,Minimum class recall,OVO-SMOTE,loss,L1,P035-D010,original
+101,AMDO,Contraceptive,Minimum class recall,OVO-SMOTE,loss,L1,P035-D011,original
+102,AMDO,Flare,Minimum class recall,OVO-SMOTE,win,L1,P035-D012,original
+103,AMDO,Thyroid,Minimum class recall,OVO-SMOTE,loss,L1,P035-D013,original
+104,AMDO,Car,Minimum class recall,OVO-SMOTE,win,L1,P035-D014,original
+105,AMDO,Nursery,Minimum class recall,OVO-SMOTE,win,L1,P035-D015,modified
+106,AMDO,Splice,Minimum class recall,OVO-SMOTE,win,L1,P035-D016,original
+107,AMDO,PreND,Minimum class recall,OVO-SMOTE,win,L1,P035-D017,original
+108,AMDO,Balance,Average class accuracy,OVO-SMOTE,win,L1,P035-D001,original
+109,AMDO,Hayes-roth,Average class accuracy,OVO-SMOTE,tie,L1,P035-D002,original
+110,AMDO,New-thyroid,Average class accuracy,OVO-SMOTE,win,L1,P035-D003,original
+111,AMDO,Page-blocks,Average class accuracy,OVO-SMOTE,loss,L1,P035-D004,original
+112,AMDO,Dermatology,Average class accuracy,OVO-SMOTE,win,L1,P035-D005,modified
+113,AMDO,Breast-tissue,Average class accuracy,OVO-SMOTE,loss,L1,P035-D006,original
+114,AMDO,UKM,Average class accuracy,OVO-SMOTE,win,L1,P035-D007,original
+115,AMDO,Vertebral-column,Average class accuracy,OVO-SMOTE,win,L1,P035-D008,original
+116,AMDO,Ecoli,Average class accuracy,OVO-SMOTE,win,L1,P035-D009,modified
+117,AMDO,Pre2D,Average class accuracy,OVO-SMOTE,loss,L1,P035-D010,original
+118,AMDO,Contraceptive,Average class accuracy,OVO-SMOTE,win,L1,P035-D011,original
+119,AMDO,Flare,Average class accuracy,OVO-SMOTE,win,L1,P035-D012,original
+120,AMDO,Thyroid,Average class accuracy,OVO-SMOTE,loss,L1,P035-D013,original
+121,AMDO,Car,Average class accuracy,OVO-SMOTE,win,L1,P035-D014,original
+122,AMDO,Nursery,Average class accuracy,OVO-SMOTE,win,L1,P035-D015,modified
+123,AMDO,Splice,Average class accuracy,OVO-SMOTE,win,L1,P035-D016,original
+124,AMDO,PreND,Average class accuracy,OVO-SMOTE,win,L1,P035-D017,original
+125,AMDO,Balance,AUC,OVO-SMOTE,win,L1,P035-D001,original
+126,AMDO,Hayes-roth,AUC,OVO-SMOTE,tie,L1,P035-D002,original
+127,AMDO,New-thyroid,AUC,OVO-SMOTE,win,L1,P035-D003,original
+128,AMDO,Page-blocks,AUC,OVO-SMOTE,win,L1,P035-D004,original
+129,AMDO,Dermatology,AUC,OVO-SMOTE,win,L1,P035-D005,modified
+130,AMDO,Breast-tissue,AUC,OVO-SMOTE,loss,L1,P035-D006,original
+131,AMDO,UKM,AUC,OVO-SMOTE,win,L1,P035-D007,original
+132,AMDO,Vertebral-column,AUC,OVO-SMOTE,win,L1,P035-D008,original
+133,AMDO,Ecoli,AUC,OVO-SMOTE,win,L1,P035-D009,modified
+134,AMDO,Pre2D,AUC,OVO-SMOTE,loss,L1,P035-D010,original
+135,AMDO,Contraceptive,AUC,OVO-SMOTE,win,L1,P035-D011,original
+136,AMDO,Flare,AUC,OVO-SMOTE,win,L1,P035-D012,original
+137,AMDO,Thyroid,AUC,OVO-SMOTE,loss,L1,P035-D013,original
+138,AMDO,Car,AUC,OVO-SMOTE,win,L1,P035-D014,original
+139,AMDO,Nursery,AUC,OVO-SMOTE,win,L1,P035-D015,modified
+140,AMDO,Splice,AUC,OVO-SMOTE,win,L1,P035-D016,original
+141,AMDO,PreND,AUC,OVO-SMOTE,win,L1,P035-D017,original
+142,AMDO,Balance,AUC,OVO-SMOTE,win,L1,P035-D001,original
+143,AMDO,Hayes-roth,AUC,OVO-SMOTE,tie,L1,P035-D002,original
+144,AMDO,New-thyroid,AUC,OVO-SMOTE,win,L1,P035-D003,original
+145,AMDO,Page-blocks,AUC,OVO-SMOTE,loss,L1,P035-D004,original
+146,AMDO,Dermatology,AUC,OVO-SMOTE,win,L1,P035-D005,modified
+147,AMDO,Breast-tissue,AUC,OVO-SMOTE,loss,L1,P035-D006,original
+148,AMDO,UKM,AUC,OVO-SMOTE,win,L1,P035-D007,original
+149,AMDO,Vertebral-column,AUC,OVO-SMOTE,win,L1,P035-D008,original
+150,AMDO,Ecoli,AUC,OVO-SMOTE,win,L1,P035-D009,modified
+151,AMDO,Pre2D,AUC,OVO-SMOTE,loss,L1,P035-D010,original
+152,AMDO,Contraceptive,AUC,OVO-SMOTE,win,L1,P035-D011,original
+153,AMDO,Flare,AUC,OVO-SMOTE,win,L1,P035-D012,original
+154,AMDO,Thyroid,AUC,OVO-SMOTE,loss,L1,P035-D013,original
+155,AMDO,Car,AUC,OVO-SMOTE,win,L1,P035-D014,original
+156,AMDO,Nursery,AUC,OVO-SMOTE,win,L1,P035-D015,modified
+157,AMDO,Splice,AUC,OVO-SMOTE,win,L1,P035-D016,original
+158,AMDO,PreND,AUC,OVO-SMOTE,win,L1,P035-D017,original
+159,CBHSID,River,G-mean,plain SMOTE,win,L1,P055-D001,original
+160,CBHSID,Pima,G-mean,plain SMOTE,win,L1,P055-D002,original
+161,CBHSID,Cancer,G-mean,plain SMOTE,win,L1,P055-D003,not stated
+162,CBHSID,Heart failure,G-mean,plain SMOTE,win,L1,P055-D004,not stated
+163,CBHSID,Yeast1,G-mean,plain SMOTE,win,L1,P055-D005,repository-defined
+164,CBHSID,Haberman,G-mean,plain SMOTE,win,L1,P055-D006,original
+165,CBHSID,Vehicle1,G-mean,plain SMOTE,loss,L1,P055-D007,repository-defined
+166,CBHSID,Glass6,G-mean,plain SMOTE,win,L1,P055-D008,repository-defined
+167,CBHSID,Yeast3,G-mean,plain SMOTE,loss,L1,P055-D009,repository-defined
+168,CBHSID,Yeast4,G-mean,plain SMOTE,win,L1,P055-D010,repository-defined
+169,CBHSID,Yeast5,G-mean,plain SMOTE,win,L1,P055-D011,repository-defined
+170,CBHSID,Yeast6,G-mean,plain SMOTE,win,L1,P055-D012,repository-defined
+171,CBHSID,Penbased,G-mean,plain SMOTE,win,L1,P055-D013,original
+172,CBHSID,Contraceptive,G-mean,plain SMOTE,win,L1,P055-D014,original
+173,CBHSID,Dermatology,G-mean,plain SMOTE,loss,L1,P055-D015,original
+174,CBHSID,Thyroid,G-mean,plain SMOTE,win,L1,P055-D016,original
+175,CBHSID,Liver,Recall/sensitivity,plain SMOTE,win,L1,P055-D001,original
+176,CBHSID,Pima,Recall/sensitivity,plain SMOTE,win,L1,P055-D002,original
+177,CBHSID,Cancer,Recall/sensitivity,plain SMOTE,win,L1,P055-D003,not stated
+178,CBHSID,Heart failure,Recall/sensitivity,plain SMOTE,win,L1,P055-D004,not stated
+179,CBHSID,Yeast1,Recall/sensitivity,plain SMOTE,win,L1,P055-D005,repository-defined
+180,CBHSID,Haberman,Recall/sensitivity,plain SMOTE,win,L1,P055-D006,original
+181,CBHSID,Vehicle1,Recall/sensitivity,plain SMOTE,win,L1,P055-D007,repository-defined
+182,CBHSID,Glass6,Recall/sensitivity,plain SMOTE,win,L1,P055-D008,repository-defined
+183,CBHSID,Yeast3,Recall/sensitivity,plain SMOTE,win,L1,P055-D009,repository-defined
+184,CBHSID,Yeast4,Recall/sensitivity,plain SMOTE,win,L1,P055-D010,repository-defined
+185,CBHSID,Yeast5,Recall/sensitivity,plain SMOTE,loss,L1,P055-D011,repository-defined
+186,CBHSID,Yeast6,Recall/sensitivity,plain SMOTE,loss,L1,P055-D012,repository-defined
+187,CBHSID,Penbased,Recall/sensitivity,plain SMOTE,win,L1,P055-D013,original
+188,CBHSID,Contraceptive,Recall/sensitivity,plain SMOTE,win,L1,P055-D014,original
+189,CBHSID,Dermatology,Recall/sensitivity,plain SMOTE,loss,L1,P055-D015,original
+190,CBHSID,Thyroid,Recall/sensitivity,plain SMOTE,loss,L1,P055-D016,original
+191,CBHSID,Liver,F-measure,plain SMOTE,win,L1,P055-D001,original
+192,CBHSID,Pima,F-measure,plain SMOTE,win,L1,P055-D002,original
+193,CBHSID,Cancer,F-measure,plain SMOTE,win,L1,P055-D003,not stated
+194,CBHSID,Heart failure,F-measure,plain SMOTE,win,L1,P055-D004,not stated
+195,CBHSID,Yeast1,F-measure,plain SMOTE,win,L1,P055-D005,repository-defined
+196,CBHSID,Haberman,F-measure,plain SMOTE,win,L1,P055-D006,original
+197,CBHSID,Vehicle1,F-measure,plain SMOTE,win,L1,P055-D007,repository-defined
+198,CBHSID,Glass6,F-measure,plain SMOTE,win,L1,P055-D008,repository-defined
+199,CBHSID,Yeast3,F-measure,plain SMOTE,win,L1,P055-D009,repository-defined
+200,CBHSID,Yeast4,F-measure,plain SMOTE,win,L1,P055-D010,repository-defined
+201,CBHSID,Yeast5,F-measure,plain SMOTE,loss,L1,P055-D011,repository-defined
+202,CBHSID,Yeast6,F-measure,plain SMOTE,loss,L1,P055-D012,repository-defined
+203,CBHSID,Penbased,F-measure,plain SMOTE,win,L1,P055-D013,original
+204,CBHSID,Contraceptive,F-measure,plain SMOTE,win,L1,P055-D014,original
+205,CBHSID,Dermatology,F-measure,plain SMOTE,loss,L1,P055-D015,original
+206,CBHSID,Thyroid,F-measure,plain SMOTE,loss,L1,P055-D016,original
+207,CGMOS,BankMarket,AUC,plain SMOTE,win,L1,P032-D001,not stated
+208,CGMOS,BloodService,AUC,plain SMOTE,win,L1,P032-D002,not stated
+209,CGMOS,BreastCancer,AUC,plain SMOTE,tie,L1,P032-D003,original
+210,CGMOS,BreastTissue,AUC,plain SMOTE,win,L1,P032-D004,not stated
+211,CGMOS,CarEvaluation,AUC,plain SMOTE,tie,L1,P032-D005,not stated
+212,CGMOS,Card’graphy,AUC,plain SMOTE,win,L1,P032-D006,not stated
+213,CGMOS,CharacterTraj,AUC,plain SMOTE,tie,L1,P032-D007,not stated
+214,CGMOS,Chess,AUC,plain SMOTE,win,L1,P032-D008,not stated
+215,CGMOS,ClimateSim,AUC,plain SMOTE,win,L1,P032-D009,not stated
+216,CGMOS,Contraceptive,AUC,plain SMOTE,win,L1,P032-D010,not stated
+217,CGMOS,Fertility,AUC,plain SMOTE,win,L1,P032-D011,not stated
+218,CGMOS,Haberman,AUC,plain SMOTE,win,L1,P032-D012,original
+219,CGMOS,ILPD,AUC,plain SMOTE,loss,L1,P032-D013,not stated
+220,CGMOS,ImgSeg,AUC,plain SMOTE,win,L1,P032-D014,not stated
+221,CGMOS,Leaf,AUC,plain SMOTE,win,L1,P032-D015,not stated
+222,CGMOS,Libras,AUC,plain SMOTE,win,L1,P032-D016,not stated
+223,CGMOS,MultipleFs,AUC,plain SMOTE,tie,L1,P032-D017,not stated
+224,CGMOS,Parkinson,AUC,plain SMOTE,win,L1,P032-D018,not stated
+225,CGMOS,PlanRelax,AUC,plain SMOTE,win,L1,P032-D019,not stated
+226,CGMOS,QSAR,AUC,plain SMOTE,win,L1,P032-D020,not stated
+227,CGMOS,SPECT,AUC,plain SMOTE,win,L1,P032-D021,original
+228,CGMOS,SPECTF,AUC,plain SMOTE,win,L1,P032-D022,original
+229,CGMOS,SeismicBumps,AUC,plain SMOTE,win,L1,P032-D023,not stated
+230,CGMOS,Statlog,AUC,plain SMOTE,tie,L1,P032-D024,not stated
+231,CGMOS,PlatesFaults,AUC,plain SMOTE,win,L1,P032-D025,not stated
+232,CGMOS,TAEvaluation,AUC,plain SMOTE,win,L1,P032-D026,not stated
+233,CGMOS,UserKnowledge,AUC,plain SMOTE,win,L1,P032-D027,not stated
+234,CGMOS,Vertebral,AUC,plain SMOTE,win,L1,P032-D028,not stated
+235,CGMOS,Customers,AUC,plain SMOTE,win,L1,P032-D029,not stated
+236,CGMOS,Yeast,AUC,plain SMOTE,win,L1,P032-D030,not stated
+237,DGOT,satimage,F-measure,plain SMOTE,loss,L1,P074-D001,original
+238,DGOT,students_dropout,F-measure,plain SMOTE,win,L1,P074-D002,original
+239,DGOT,default,F-measure,plain SMOTE,win,L1,P074-D003,original
+240,DGOT,Dry_Beans,F-measure,plain SMOTE,win,L1,P074-D004,original
+241,DGOT,bank_small,F-measure,plain SMOTE,win,L1,P074-D005,original
+242,DGOT,optical_digits,F-measure,plain SMOTE,win,L1,P074-D013,repository-defined
+243,DGOT,satimage_4,F-measure,plain SMOTE,win,L1,P074-D014,repository-defined
+244,DGOT,pen_digits,F-measure,plain SMOTE,win,L1,P074-D015,repository-defined
+245,DGOT,sick_euthyroid,F-measure,plain SMOTE,win,L1,P074-D016,repository-defined
+246,DGOT,isolet,F-measure,plain SMOTE,win,L1,P074-D017,repository-defined
+247,DGOT,nursery,F-measure,plain SMOTE,win,L1,P074-D006,original
+248,DGOT,thyroid_sick,F-measure,plain SMOTE,win,L1,P074-D018,repository-defined
+249,DGOT,abalone_15,F-measure,plain SMOTE,win,L1,P074-D007,modified
+250,DGOT,coil_2000,F-measure,plain SMOTE,tie,L1,P074-D019,repository-defined
+251,DGOT,abalone_6,F-measure,plain SMOTE,win,L1,P074-D008,modified
+252,DGOT,wine_quality,F-measure,plain SMOTE,win,L1,P074-D020,repository-defined
+253,DGOT,letter_img,F-measure,plain SMOTE,win,L1,P074-D021,repository-defined
+254,DGOT,bankruptcy,F-measure,plain SMOTE,loss,L1,P074-D009,original
+255,DGOT,avila,F-measure,plain SMOTE,loss,L1,P074-D010,original
+256,DGOT,abalone_19,F-measure,plain SMOTE,win,L1,P074-D022,repository-defined
+257,DGOT,page-blocks,F-measure,plain SMOTE,win,L1,P074-D011,original
+258,DGOT,firewall,F-measure,plain SMOTE,win,L1,P074-D012,original
+259,DGOT,satimage,Accuracy,plain SMOTE,win,L1,P074-D001,original
+260,DGOT,students_dropout,Accuracy,plain SMOTE,win,L1,P074-D002,original
+261,DGOT,default,Accuracy,plain SMOTE,win,L1,P074-D003,original
+262,DGOT,Dry_Beans,Accuracy,plain SMOTE,win,L1,P074-D004,original
+263,DGOT,bank_small,Accuracy,plain SMOTE,win,L1,P074-D005,original
+264,DGOT,optical_digits,Accuracy,plain SMOTE,win,L1,P074-D013,repository-defined
+265,DGOT,satimage_4,Accuracy,plain SMOTE,win,L1,P074-D014,repository-defined
+266,DGOT,pen_digits,Accuracy,plain SMOTE,win,L1,P074-D015,repository-defined
+267,DGOT,sick_euthyroid,Accuracy,plain SMOTE,win,L1,P074-D016,repository-defined
+268,DGOT,isolet,Accuracy,plain SMOTE,win,L1,P074-D017,repository-defined
+269,DGOT,nursery,Accuracy,plain SMOTE,win,L1,P074-D006,original
+270,DGOT,thyroid_sick,Accuracy,plain SMOTE,win,L1,P074-D018,repository-defined
+271,DGOT,abalone_15,Accuracy,plain SMOTE,win,L1,P074-D007,modified
+272,DGOT,coil_2000,Accuracy,plain SMOTE,win,L1,P074-D019,repository-defined
+273,DGOT,abalone_6,Accuracy,plain SMOTE,win,L1,P074-D008,modified
+274,DGOT,wine_quality,Accuracy,plain SMOTE,win,L1,P074-D020,repository-defined
+275,DGOT,letter_img,Accuracy,plain SMOTE,win,L1,P074-D021,repository-defined
+276,DGOT,bankruptcy,Accuracy,plain SMOTE,win,L1,P074-D009,original
+277,DGOT,avila,Accuracy,plain SMOTE,win,L1,P074-D010,original
+278,DGOT,abalone_19,Accuracy,plain SMOTE,win,L1,P074-D022,repository-defined
+279,DGOT,page-blocks,Accuracy,plain SMOTE,win,L1,P074-D011,original
+280,DGOT,firewall,Accuracy,plain SMOTE,win,L1,P074-D012,original
+281,DGOT,satimage,MCC,plain SMOTE,win,L1,P074-D001,original
+282,DGOT,students_dropout,MCC,plain SMOTE,win,L1,P074-D002,original
+283,DGOT,default,MCC,plain SMOTE,win,L1,P074-D003,original
+284,DGOT,Dry_Beans,MCC,plain SMOTE,win,L1,P074-D004,original
+285,DGOT,bank_small,MCC,plain SMOTE,win,L1,P074-D005,original
+286,DGOT,optical_digits,MCC,plain SMOTE,win,L1,P074-D013,repository-defined
+287,DGOT,satimage_4,MCC,plain SMOTE,win,L1,P074-D014,repository-defined
+288,DGOT,pen_digits,MCC,plain SMOTE,win,L1,P074-D015,repository-defined
+289,DGOT,sick_euthyroid,MCC,plain SMOTE,win,L1,P074-D016,repository-defined
+290,DGOT,isolet,MCC,plain SMOTE,win,L1,P074-D017,repository-defined
+291,DGOT,nursery,MCC,plain SMOTE,win,L1,P074-D006,original
+292,DGOT,thyroid_sick,MCC,plain SMOTE,win,L1,P074-D018,repository-defined
+293,DGOT,abalone_15,MCC,plain SMOTE,win,L1,P074-D007,modified
+294,DGOT,coil_2000,MCC,plain SMOTE,loss,L1,P074-D019,repository-defined
+295,DGOT,abalone_6,MCC,plain SMOTE,win,L1,P074-D008,modified
+296,DGOT,wine_quality,MCC,plain SMOTE,win,L1,P074-D020,repository-defined
+297,DGOT,letter_img,MCC,plain SMOTE,win,L1,P074-D021,repository-defined
+298,DGOT,bankruptcy,MCC,plain SMOTE,loss,L1,P074-D009,original
+299,DGOT,avila,MCC,plain SMOTE,loss,L1,P074-D010,original
+300,DGOT,abalone_19,MCC,plain SMOTE,loss,L1,P074-D022,repository-defined
+301,DGOT,page-blocks,MCC,plain SMOTE,win,L1,P074-D011,original
+302,DGOT,firewall,MCC,plain SMOTE,win,L1,P074-D012,original
+303,DSRBF,Hepatitis,Accuracy,SMOTE wrapped with another classifier,win,L1,P022-D001,original
+304,DSRBF,BreastC,Accuracy,SMOTE wrapped with another classifier,win,L1,P022-D002,original
+305,DSRBF,Haberman,Accuracy,SMOTE wrapped with another classifier,win,L1,P022-D003,original
+306,DSRBF,CYTvsPOX,Accuracy,SMOTE wrapped with another classifier,win,L1,P022-D004,modified
+307,DSRBF,ME2vsOther,Accuracy,SMOTE wrapped with another classifier,win,L1,P022-D005,modified
+308,DSRBF,Newthyroid,Accuracy,SMOTE wrapped with another classifier,win,L1,P022-D006,original
+309,DSRBF,Balance,Accuracy,SMOTE wrapped with another classifier,win,L1,P022-D007,original
+310,DSRBF,Saureus4,Accuracy,SMOTE wrapped with another classifier,win,L1,P022-D008,original
+311,DSRBF,Anneal,Accuracy,SMOTE wrapped with another classifier,win,L1,P022-D009,original
+312,DSRBF,Glass,Accuracy,SMOTE wrapped with another classifier,win,L1,P022-D010,original
+313,DSRBF,Zoo,Accuracy,SMOTE wrapped with another classifier,win,L1,P022-D011,original
+314,DSRBF,E. coli,Accuracy,SMOTE wrapped with another classifier,win,L1,P022-D012,original
+315,DSRBF,Yeast,Accuracy,SMOTE wrapped with another classifier,win,L1,P022-D013,original
+316,DSRBF,Hepatitis,Minimum class recall,SMOTE wrapped with another classifier,win,L1,P022-D001,original
+317,DSRBF,BreastC,Minimum class recall,SMOTE wrapped with another classifier,win,L1,P022-D002,original
+318,DSRBF,Haberman,Minimum class recall,SMOTE wrapped with another classifier,win,L1,P022-D003,original
+319,DSRBF,CYTvsPOX,Minimum class recall,SMOTE wrapped with another classifier,win,L1,P022-D004,modified
+320,DSRBF,ME2vsOther,Minimum class recall,SMOTE wrapped with another classifier,loss,L1,P022-D005,modified
+321,DSRBF,Newthyroid,Minimum class recall,SMOTE wrapped with another classifier,win,L1,P022-D006,original
+322,DSRBF,Balance,Minimum class recall,SMOTE wrapped with another classifier,win,L1,P022-D007,original
+323,DSRBF,Saureus4,Minimum class recall,SMOTE wrapped with another classifier,loss,L1,P022-D008,original
+324,DSRBF,Anneal,Minimum class recall,SMOTE wrapped with another classifier,win,L1,P022-D009,original
+325,DSRBF,Glass,Minimum class recall,SMOTE wrapped with another classifier,win,L1,P022-D010,original
+326,DSRBF,Zoo,Minimum class recall,SMOTE wrapped with another classifier,win,L1,P022-D011,original
+327,DSRBF,E. coli,Minimum class recall,SMOTE wrapped with another classifier,loss,L1,P022-D012,original
+328,DSRBF,Yeast,Minimum class recall,SMOTE wrapped with another classifier,win,L1,P022-D013,original
+329,EMDO,Balance,Minimum class recall,Static-SMOTE,win,L1,P051-D001,original
+330,EMDO,Hayes-Roth,Minimum class recall,Static-SMOTE,tie,L1,P051-D002,original
+331,EMDO,New-Thyroid,Minimum class recall,Static-SMOTE,win,L1,P051-D003,original
+332,EMDO,Page-Blocks,Minimum class recall,Static-SMOTE,win,L1,P051-D004,original
+333,EMDO,Dermatology,Minimum class recall,Static-SMOTE,win,L1,P051-D005,original
+334,EMDO,Breast-Tissue,Minimum class recall,Static-SMOTE,win,L1,P051-D006,original
+335,EMDO,UKM,Minimum class recall,Static-SMOTE,win,L1,P051-D007,original
+336,EMDO,Vertebral-Column,Minimum class recall,Static-SMOTE,win,L1,P051-D008,original
+337,EMDO,Ecoli,Minimum class recall,Static-SMOTE,win,L1,P051-D009,original
+338,EMDO,Balance,Average class accuracy,Static-SMOTE,win,L1,P051-D001,original
+339,EMDO,Hayes-Roth,Average class accuracy,Static-SMOTE,win,L1,P051-D002,original
+340,EMDO,New-Thyroid,Average class accuracy,Static-SMOTE,win,L1,P051-D003,original
+341,EMDO,Page-Blocks,Average class accuracy,Static-SMOTE,win,L1,P051-D004,original
+342,EMDO,Dermatology,Average class accuracy,Static-SMOTE,win,L1,P051-D005,original
+343,EMDO,Breast-Tissue,Average class accuracy,Static-SMOTE,win,L1,P051-D006,original
+344,EMDO,UKM,Average class accuracy,Static-SMOTE,win,L1,P051-D007,original
+345,EMDO,Vertebral-Column,Average class accuracy,Static-SMOTE,win,L1,P051-D008,original
+346,EMDO,Ecoli,Average class accuracy,Static-SMOTE,win,L1,P051-D009,original
+347,EMDO,Balance,AUC,Static-SMOTE,win,L1,P051-D001,original
+348,EMDO,Hayes-Roth,AUC,Static-SMOTE,win,L1,P051-D002,original
+349,EMDO,New-Thyroid,AUC,Static-SMOTE,win,L1,P051-D003,original
+350,EMDO,Page-Blocks,AUC,Static-SMOTE,win,L1,P051-D004,original
+351,EMDO,Dermatology,AUC,Static-SMOTE,win,L1,P051-D005,original
+352,EMDO,Breast-Tissue,AUC,Static-SMOTE,win,L1,P051-D006,original
+353,EMDO,UKM,AUC,Static-SMOTE,win,L1,P051-D007,original
+354,EMDO,Vertebral-Column,AUC,Static-SMOTE,win,L1,P051-D008,original
+355,EMDO,Ecoli,AUC,Static-SMOTE,win,L1,P051-D009,original
+356,EMDO,Balance,AUC,Static-SMOTE,win,L1,P051-D001,original
+357,EMDO,Hayes-Roth,AUC,Static-SMOTE,win,L1,P051-D002,original
+358,EMDO,New-Thyroid,AUC,Static-SMOTE,win,L1,P051-D003,original
+359,EMDO,Page-Blocks,AUC,Static-SMOTE,win,L1,P051-D004,original
+360,EMDO,Dermatology,AUC,Static-SMOTE,win,L1,P051-D005,original
+361,EMDO,Breast-Tissue,AUC,Static-SMOTE,win,L1,P051-D006,original
+362,EMDO,UKM,AUC,Static-SMOTE,win,L1,P051-D007,original
+363,EMDO,Vertebral-Column,AUC,Static-SMOTE,win,L1,P051-D008,original
+364,EMDO,Ecoli,AUC,Static-SMOTE,win,L1,P051-D009,original
+365,EasyEnsemble,car,AUC,SMOTE wrapped with another classifier,loss,L1,P016-D003,modified
+366,EasyEnsemble,ionosphere,AUC,SMOTE wrapped with another classifier,loss,L1,P016-D007,original
+367,EasyEnsemble,letter,AUC,SMOTE wrapped with another classifier,tie,L1,P016-D008,modified
+368,EasyEnsemble,phoneme,AUC,SMOTE wrapped with another classifier,loss,L1,P016-D011,original
+369,EasyEnsemble,sat,AUC,SMOTE wrapped with another classifier,win,L1,P016-D013,modified
+370,EasyEnsemble,wdbc,AUC,SMOTE wrapped with another classifier,loss,L1,P016-D015,original
+371,EasyEnsemble,abalone,AUC,SMOTE wrapped with another classifier,win,L1,P016-D001,modified
+372,EasyEnsemble,balance,AUC,SMOTE wrapped with another classifier,win,L1,P016-D002,modified
+373,EasyEnsemble,cmc,AUC,SMOTE wrapped with another classifier,win,L1,P016-D004,modified
+374,EasyEnsemble,haberman,AUC,SMOTE wrapped with another classifier,win,L1,P016-D005,original
+375,EasyEnsemble,housing,AUC,SMOTE wrapped with another classifier,win,L1,P016-D006,modified
+376,EasyEnsemble,mf-morph,AUC,SMOTE wrapped with another classifier,win,L1,P016-D009,modified
+377,EasyEnsemble,mf-zernike,AUC,SMOTE wrapped with another classifier,win,L1,P016-D010,modified
+378,EasyEnsemble,pima,AUC,SMOTE wrapped with another classifier,win,L1,P016-D012,original
+379,EasyEnsemble,vehicle,AUC,SMOTE wrapped with another classifier,win,L1,P016-D014,modified
+380,EasyEnsemble,wpbc,AUC,SMOTE wrapped with another classifier,loss,L1,P016-D016,original
+381,EasyEnsemble,car,F-measure,SMOTE wrapped with another classifier,loss,L1,P016-D003,modified
+382,EasyEnsemble,ionosphere,F-measure,SMOTE wrapped with another classifier,loss,L1,P016-D007,original
+383,EasyEnsemble,letter,F-measure,SMOTE wrapped with another classifier,loss,L1,P016-D008,modified
+384,EasyEnsemble,phoneme,F-measure,SMOTE wrapped with another classifier,loss,L1,P016-D011,original
+385,EasyEnsemble,sat,F-measure,SMOTE wrapped with another classifier,loss,L1,P016-D013,modified
+386,EasyEnsemble,wdbc,F-measure,SMOTE wrapped with another classifier,loss,L1,P016-D015,original
+387,EasyEnsemble,abalone,F-measure,SMOTE wrapped with another classifier,win,L1,P016-D001,modified
+388,EasyEnsemble,balance,F-measure,SMOTE wrapped with another classifier,win,L1,P016-D002,modified
+389,EasyEnsemble,cmc,F-measure,SMOTE wrapped with another classifier,win,L1,P016-D004,modified
+390,EasyEnsemble,haberman,F-measure,SMOTE wrapped with another classifier,win,L1,P016-D005,original
+391,EasyEnsemble,housing,F-measure,SMOTE wrapped with another classifier,win,L1,P016-D006,modified
+392,EasyEnsemble,mf-morph,F-measure,SMOTE wrapped with another classifier,win,L1,P016-D009,modified
+393,EasyEnsemble,mf-zernike,F-measure,SMOTE wrapped with another classifier,win,L1,P016-D010,modified
+394,EasyEnsemble,pima,F-measure,SMOTE wrapped with another classifier,win,L1,P016-D012,original
+395,EasyEnsemble,vehicle,F-measure,SMOTE wrapped with another classifier,win,L1,P016-D014,modified
+396,EasyEnsemble,wpbc,F-measure,SMOTE wrapped with another classifier,loss,L1,P016-D016,original
+397,EasyEnsemble,car,G-mean,SMOTE wrapped with another classifier,loss,L1,P016-D003,modified
+398,EasyEnsemble,ionosphere,G-mean,SMOTE wrapped with another classifier,loss,L1,P016-D007,original
+399,EasyEnsemble,letter,G-mean,SMOTE wrapped with another classifier,tie,L1,P016-D008,modified
+400,EasyEnsemble,phoneme,G-mean,SMOTE wrapped with another classifier,loss,L1,P016-D011,original
+401,EasyEnsemble,sat,G-mean,SMOTE wrapped with another classifier,win,L1,P016-D013,modified
+402,EasyEnsemble,wdbc,G-mean,SMOTE wrapped with another classifier,loss,L1,P016-D015,original
+403,EasyEnsemble,abalone,G-mean,SMOTE wrapped with another classifier,win,L1,P016-D001,modified
+404,EasyEnsemble,balance,G-mean,SMOTE wrapped with another classifier,win,L1,P016-D002,modified
+405,EasyEnsemble,cmc,G-mean,SMOTE wrapped with another classifier,win,L1,P016-D004,modified
+406,EasyEnsemble,haberman,G-mean,SMOTE wrapped with another classifier,win,L1,P016-D005,original
+407,EasyEnsemble,housing,G-mean,SMOTE wrapped with another classifier,win,L1,P016-D006,modified
+408,EasyEnsemble,mf-morph,G-mean,SMOTE wrapped with another classifier,win,L1,P016-D009,modified
+409,EasyEnsemble,mf-zernike,G-mean,SMOTE wrapped with another classifier,win,L1,P016-D010,modified
+410,EasyEnsemble,pima,G-mean,SMOTE wrapped with another classifier,win,L1,P016-D012,original
+411,EasyEnsemble,vehicle,G-mean,SMOTE wrapped with another classifier,win,L1,P016-D014,modified
+412,EasyEnsemble,wpbc,G-mean,SMOTE wrapped with another classifier,win,L1,P016-D016,original
+413,FW-SMOTE,ldd1,AUC,plain SMOTE,win,L2,P056-D001,repository-defined
+414,FW-SMOTE,ldd2,AUC,plain SMOTE,win,L2,P056-D002,not stated
+415,FW-SMOTE,ldd3,AUC,plain SMOTE,win,L2,P056-D003,repository-defined
+416,FW-SMOTE,ldd4,AUC,plain SMOTE,win,L2,P056-D004,repository-defined
+417,FW-SMOTE,ldd5,AUC,plain SMOTE,win,L2,P056-D005,repository-defined
+418,FW-SMOTE,ldd6,AUC,plain SMOTE,win,L2,P056-D006,repository-defined
+419,FW-SMOTE,ldd7,AUC,plain SMOTE,tie,L2,P056-D007,repository-defined
+420,FW-SMOTE,ldd8,AUC,plain SMOTE,win,L2,P056-D008,repository-defined
+421,FW-SMOTE,ldd9,AUC,plain SMOTE,win,L2,P056-D009,repository-defined
+422,FW-SMOTE,ldd10,AUC,plain SMOTE,win,L2,P056-D010,repository-defined
+423,FW-SMOTE,ldd11,AUC,plain SMOTE,win,L2,P056-D011,repository-defined
+424,FW-SMOTE,ldd12,AUC,plain SMOTE,win,L2,P056-D012,repository-defined
+425,FW-SMOTE,ldd13,AUC,plain SMOTE,win,L2,P056-D013,repository-defined
+426,FW-SMOTE,ldd14,AUC,plain SMOTE,win,L2,P056-D014,repository-defined
+427,FW-SMOTE,ldd15,AUC,plain SMOTE,win,L2,P056-D015,repository-defined
+428,FW-SMOTE,ldd16,AUC,plain SMOTE,win,L2,P056-D016,repository-defined
+429,FW-SMOTE,ldd17,AUC,plain SMOTE,win,L2,P056-D017,repository-defined
+430,FW-SMOTE,ldd18,AUC,plain SMOTE,win,L2,P056-D018,repository-defined
+431,FW-SMOTE,ldd19,AUC,plain SMOTE,win,L2,P056-D019,not stated
+432,FW-SMOTE,ldd20,AUC,plain SMOTE,win,L2,P056-D020,repository-defined
+433,FW-SMOTE,ldd21,AUC,plain SMOTE,tie,L2,P056-D021,repository-defined
+434,FW-SMOTE,ldd22,AUC,plain SMOTE,win,L2,P056-D022,not stated
+435,FW-SMOTE,ldd23,AUC,plain SMOTE,win,L2,P056-D023,repository-defined
+436,FW-SMOTE,ldd24,AUC,plain SMOTE,win,L2,P056-D024,repository-defined
+437,FW-SMOTE,ldd25,AUC,plain SMOTE,win,L2,P056-D025,repository-defined
+438,FW-SMOTE,ldd26,AUC,plain SMOTE,win,L2,P056-D026,repository-defined
+439,FW-SMOTE,ldd27,AUC,plain SMOTE,win,L2,P056-D027,repository-defined
+440,FW-SMOTE,ldd28,AUC,plain SMOTE,win,L2,P056-D028,repository-defined
+441,FW-SMOTE,ldd29,AUC,plain SMOTE,win,L2,P056-D029,repository-defined
+442,FW-SMOTE,ldd30,AUC,plain SMOTE,win,L2,P056-D030,repository-defined
+443,FW-SMOTE,hdd1,AUC,plain SMOTE,tie,L2,P056-D031,not stated
+444,FW-SMOTE,hdd2,AUC,plain SMOTE,tie,L2,P056-D032,not stated
+445,FW-SMOTE,hdd3,AUC,plain SMOTE,win,L2,P056-D033,not stated
+446,FW-SMOTE,hdd4,AUC,plain SMOTE,win,L2,P056-D034,not stated
+447,FW-SMOTE,hdd5,AUC,plain SMOTE,win,L2,P056-D035,not stated
+448,FW-SMOTE,hdd6,AUC,plain SMOTE,win,L2,P056-D036,not stated
+449,FW-SMOTE,hdd7,AUC,plain SMOTE,win,L2,P056-D037,not stated
+450,FW-SMOTE,hdd8,AUC,plain SMOTE,win,L2,P056-D038,not stated
+451,FW-SMOTE,hdd9,AUC,plain SMOTE,win,L2,P056-D039,not stated
+452,FW-SMOTE,hdd10,AUC,plain SMOTE,win,L2,P056-D040,not stated
+453,FW-SMOTE,hdd11,AUC,plain SMOTE,tie,L2,P056-D041,not stated
+454,FW-SMOTE,hdd12,AUC,plain SMOTE,win,L2,P056-D042,not stated
+455,FW-SMOTE,ldd1,G-mean,plain SMOTE,win,L2,P056-D001,repository-defined
+456,FW-SMOTE,ldd2,G-mean,plain SMOTE,win,L2,P056-D002,not stated
+457,FW-SMOTE,ldd3,G-mean,plain SMOTE,win,L2,P056-D003,repository-defined
+458,FW-SMOTE,ldd4,G-mean,plain SMOTE,tie,L2,P056-D004,repository-defined
+459,FW-SMOTE,ldd5,G-mean,plain SMOTE,win,L2,P056-D005,repository-defined
+460,FW-SMOTE,ldd6,G-mean,plain SMOTE,tie,L2,P056-D006,repository-defined
+461,FW-SMOTE,ldd7,G-mean,plain SMOTE,win,L2,P056-D007,repository-defined
+462,FW-SMOTE,ldd8,G-mean,plain SMOTE,tie,L2,P056-D008,repository-defined
+463,FW-SMOTE,ldd9,G-mean,plain SMOTE,tie,L2,P056-D009,repository-defined
+464,FW-SMOTE,ldd10,G-mean,plain SMOTE,loss,L2,P056-D010,repository-defined
+465,FW-SMOTE,ldd11,G-mean,plain SMOTE,tie,L2,P056-D011,repository-defined
+466,FW-SMOTE,ldd12,G-mean,plain SMOTE,win,L2,P056-D012,repository-defined
+467,FW-SMOTE,ldd13,G-mean,plain SMOTE,win,L2,P056-D013,repository-defined
+468,FW-SMOTE,ldd14,G-mean,plain SMOTE,win,L2,P056-D014,repository-defined
+469,FW-SMOTE,ldd15,G-mean,plain SMOTE,win,L2,P056-D015,repository-defined
+470,FW-SMOTE,ldd16,G-mean,plain SMOTE,win,L2,P056-D016,repository-defined
+471,FW-SMOTE,ldd17,G-mean,plain SMOTE,tie,L2,P056-D017,repository-defined
+472,FW-SMOTE,ldd18,G-mean,plain SMOTE,win,L2,P056-D018,repository-defined
+473,FW-SMOTE,ldd19,G-mean,plain SMOTE,win,L2,P056-D019,not stated
+474,FW-SMOTE,ldd20,G-mean,plain SMOTE,win,L2,P056-D020,repository-defined
+475,FW-SMOTE,ldd21,G-mean,plain SMOTE,tie,L2,P056-D021,repository-defined
+476,FW-SMOTE,ldd22,G-mean,plain SMOTE,win,L2,P056-D022,not stated
+477,FW-SMOTE,ldd23,G-mean,plain SMOTE,win,L2,P056-D023,repository-defined
+478,FW-SMOTE,ldd24,G-mean,plain SMOTE,win,L2,P056-D024,repository-defined
+479,FW-SMOTE,ldd25,G-mean,plain SMOTE,win,L2,P056-D025,repository-defined
+480,FW-SMOTE,ldd26,G-mean,plain SMOTE,win,L2,P056-D026,repository-defined
+481,FW-SMOTE,ldd27,G-mean,plain SMOTE,win,L2,P056-D027,repository-defined
+482,FW-SMOTE,ldd28,G-mean,plain SMOTE,win,L2,P056-D028,repository-defined
+483,FW-SMOTE,ldd29,G-mean,plain SMOTE,win,L2,P056-D029,repository-defined
+484,FW-SMOTE,ldd30,G-mean,plain SMOTE,win,L2,P056-D030,repository-defined
+485,FW-SMOTE,hdd1,G-mean,plain SMOTE,tie,L2,P056-D031,not stated
+486,FW-SMOTE,hdd2,G-mean,plain SMOTE,tie,L2,P056-D032,not stated
+487,FW-SMOTE,hdd3,G-mean,plain SMOTE,win,L2,P056-D033,not stated
+488,FW-SMOTE,hdd4,G-mean,plain SMOTE,tie,L2,P056-D034,not stated
+489,FW-SMOTE,hdd5,G-mean,plain SMOTE,win,L2,P056-D035,not stated
+490,FW-SMOTE,hdd6,G-mean,plain SMOTE,win,L2,P056-D036,not stated
+491,FW-SMOTE,hdd7,G-mean,plain SMOTE,win,L2,P056-D037,not stated
+492,FW-SMOTE,hdd8,G-mean,plain SMOTE,win,L2,P056-D038,not stated
+493,FW-SMOTE,hdd9,G-mean,plain SMOTE,win,L2,P056-D039,not stated
+494,FW-SMOTE,hdd10,G-mean,plain SMOTE,win,L2,P056-D040,not stated
+495,FW-SMOTE,hdd11,G-mean,plain SMOTE,tie,L2,P056-D041,not stated
+496,FW-SMOTE,hdd12,G-mean,plain SMOTE,win,L2,P056-D042,not stated
+497,GAMO,"MNIST (Table 1, LS, GM)",G-mean,SMOTE wrapped with another classifier,win,L1,P041-D001,modified
+498,GAMO,"Fashion-MNIST (Table 1, LS, GM)",G-mean,SMOTE wrapped with another classifier,win,L1,P041-D002,modified
+499,GAMO,"CIFAR10 (Table 2, GM)",G-mean,SMOTE wrapped with another classifier,win,L1,P041-D003,modified
+500,GAMO,"SVHN (Table 2, GM)",G-mean,SMOTE wrapped with another classifier,win,L1,P041-D004,modified
+501,GAMO,"CelebA-Small (Table 3, During Testing, GM)",G-mean,SMOTE wrapped with another classifier,win,L1,P041-D005,modified
+502,GAMO,"CelebA-Large (Table 3, During Testing, GM)",G-mean,SMOTE wrapped with another classifier,win,L1,P041-D006,modified
+503,GAMO,"LSUN-Small (Table 3, During Testing, GM)",G-mean,SMOTE wrapped with another classifier,win,L1,P041-D007,modified
+504,GAMO,"LSUN-Large (Table 3, During Testing, GM)",G-mean,SMOTE wrapped with another classifier,win,L1,P041-D008,modified
+505,GAMO,"SUN397 (Table 4, GM)",G-mean,SMOTE wrapped with another classifier,win,L1,P041-D009,modified
+506,GAMO,"MNIST (Table 1, LS, ACSA)",Average class accuracy,SMOTE wrapped with another classifier,win,L2,P041-D001,modified
+507,GAMO,"Fashion-MNIST (Table 1, LS, ACSA)",Average class accuracy,SMOTE wrapped with another classifier,win,L2,P041-D002,modified
+508,GAMO,"CIFAR10 (Table 2, ACSA)",Average class accuracy,SMOTE wrapped with another classifier,win,L2,P041-D003,modified
+509,GAMO,"SVHN (Table 2, ACSA)",Average class accuracy,SMOTE wrapped with another classifier,win,L2,P041-D004,modified
+510,GAMO,"CelebA-Small (Table 3, During Testing, ACSA)",Average class accuracy,SMOTE wrapped with another classifier,win,L2,P041-D005,modified
+511,GAMO,"CelebA-Large (Table 3, During Testing, ACSA)",Average class accuracy,SMOTE wrapped with another classifier,win,L2,P041-D006,modified
+512,GAMO,"LSUN-Small (Table 3, During Testing, ACSA)",Average class accuracy,SMOTE wrapped with another classifier,win,L2,P041-D007,modified
+513,GAMO,"LSUN-Large (Table 3, During Testing, ACSA)",Average class accuracy,SMOTE wrapped with another classifier,win,L2,P041-D008,modified
+514,GAMO,"SUN397 (Table 4, ACSA)",Average class accuracy,SMOTE wrapped with another classifier,win,L2,P041-D009,modified
+515,GDHS,car,G-mean,OVO-SMOTE,loss,L1,P070-D001,original
+516,GDHS,cleveland,G-mean,OVO-SMOTE,win,L1,P070-D002,original
+517,GDHS,contraceptive,G-mean,OVO-SMOTE,win,L1,P070-D003,original
+518,GDHS,glass,G-mean,OVO-SMOTE,win,L1,P070-D004,original
+519,GDHS,hayes-roth,G-mean,OVO-SMOTE,loss,L1,P070-D005,original
+520,GDHS,newthyroid,G-mean,OVO-SMOTE,win,L1,P070-D006,original
+521,GDHS,sensorReadings,G-mean,OVO-SMOTE,win,L1,P070-D007,original
+522,GDHS,thyroid,G-mean,OVO-SMOTE,loss,L1,P070-D008,original
+523,GDHS,userknowledge,G-mean,OVO-SMOTE,win,L1,P070-D009,original
+524,GDHS,vehicle,G-mean,OVO-SMOTE,win,L1,P070-D010,original
+525,GDHS,vertebralColumn,G-mean,OVO-SMOTE,win,L1,P070-D011,original
+526,GDHS,winequality-red,G-mean,OVO-SMOTE,win,L1,P070-D012,original
+527,GDHS,yeast,G-mean,OVO-SMOTE,win,L1,P070-D013,original
+528,GDHS,zoo,G-mean,OVO-SMOTE,tie,L1,P070-D014,original
+529,GDHS,camel-1.4,G-mean,OVO-SMOTE,win,L1,P070-D015,original
+530,GDHS,camel-1.6,G-mean,OVO-SMOTE,loss,L1,P070-D016,original
+531,GDHS,hive-0.12.0,G-mean,OVO-SMOTE,win,L1,P070-D017,original
+532,GDHS,velocity-1.5,G-mean,OVO-SMOTE,win,L1,P070-D018,original
+533,GDHS,xalan-2.4,G-mean,OVO-SMOTE,win,L1,P070-D019,original
+534,GDHS,xerces-1.2,G-mean,OVO-SMOTE,win,L1,P070-D020,original
+535,GDHS,car,AUC,OVO-SMOTE,loss,L1,P070-D001,original
+536,GDHS,cleveland,AUC,OVO-SMOTE,win,L1,P070-D002,original
+537,GDHS,contraceptive,AUC,OVO-SMOTE,win,L1,P070-D003,original
+538,GDHS,glass,AUC,OVO-SMOTE,win,L1,P070-D004,original
+539,GDHS,hayes-roth,AUC,OVO-SMOTE,loss,L1,P070-D005,original
+540,GDHS,newthyroid,AUC,OVO-SMOTE,win,L1,P070-D006,original
+541,GDHS,sensorReadings,AUC,OVO-SMOTE,win,L1,P070-D007,original
+542,GDHS,thyroid,AUC,OVO-SMOTE,loss,L1,P070-D008,original
+543,GDHS,userknowledge,AUC,OVO-SMOTE,win,L1,P070-D009,original
+544,GDHS,vehicle,AUC,OVO-SMOTE,win,L1,P070-D010,original
+545,GDHS,vertebralColumn,AUC,OVO-SMOTE,win,L1,P070-D011,original
+546,GDHS,winequality-red,AUC,OVO-SMOTE,win,L1,P070-D012,original
+547,GDHS,yeast,AUC,OVO-SMOTE,win,L1,P070-D013,original
+548,GDHS,zoo,AUC,OVO-SMOTE,win,L1,P070-D014,original
+549,GDHS,camel-1.4,AUC,OVO-SMOTE,loss,L1,P070-D015,original
+550,GDHS,camel-1.6,AUC,OVO-SMOTE,loss,L1,P070-D016,original
+551,GDHS,hive-0.12.0,AUC,OVO-SMOTE,loss,L1,P070-D017,original
+552,GDHS,velocity-1.5,AUC,OVO-SMOTE,win,L1,P070-D018,original
+553,GDHS,xalan-2.4,AUC,OVO-SMOTE,win,L1,P070-D019,original
+554,GDHS,xerces-1.2,AUC,OVO-SMOTE,win,L1,P070-D020,original
+555,GDO,glass1,G-mean,plain SMOTE,win,L1,P057-D001,repository-defined
+556,GDO,ecoli-0_vs_1,G-mean,plain SMOTE,win,L1,P057-D002,repository-defined
+557,GDO,wisconsin,G-mean,plain SMOTE,win,L1,P057-D003,repository-defined
+558,GDO,yeast1,G-mean,plain SMOTE,win,L1,P057-D004,repository-defined
+559,GDO,haberman,G-mean,plain SMOTE,win,L1,P057-D005,repository-defined
+560,GDO,planningrelax,G-mean,plain SMOTE,win,L1,P057-D006,repository-defined
+561,GDO,ecoli1,G-mean,plain SMOTE,win,L1,P057-D007,repository-defined
+562,GDO,new-thyroid1,G-mean,plain SMOTE,win,L1,P057-D008,repository-defined
+563,GDO,ecoli2,G-mean,plain SMOTE,loss,L1,P057-D009,repository-defined
+564,GDO,segment0,G-mean,plain SMOTE,win,L1,P057-D010,repository-defined
+565,GDO,yeast3,G-mean,plain SMOTE,tie,L1,P057-D011,repository-defined
+566,GDO,ecoli3,G-mean,plain SMOTE,win,L1,P057-D012,repository-defined
+567,GDO,yeast-2_vs_4,G-mean,plain SMOTE,loss,L1,P057-D013,repository-defined
+568,GDO,yeast-0-5-6-7-9_vs_4,G-mean,plain SMOTE,win,L1,P057-D014,repository-defined
+569,GDO,vowel0,G-mean,plain SMOTE,win,L1,P057-D015,repository-defined
+570,GDO,kr-vs-k-three_vs_eleven,G-mean,plain SMOTE,win,L1,P057-D016,repository-defined
+571,GDO,glass2,G-mean,plain SMOTE,win,L1,P057-D017,repository-defined
+572,GDO,shuttle-c0-vs-c4,G-mean,plain SMOTE,win,L1,P057-D018,repository-defined
+573,GDO,yeast-1_vs_7,G-mean,plain SMOTE,win,L1,P057-D019,repository-defined
+574,GDO,glass4,G-mean,plain SMOTE,win,L1,P057-D020,repository-defined
+575,GDO,ecoli4,G-mean,plain SMOTE,loss,L1,P057-D021,repository-defined
+576,GDO,glass-0-1-6_vs_2,G-mean,plain SMOTE,win,L1,P057-D022,repository-defined
+577,GDO,bupa,G-mean,plain SMOTE,loss,L1,P057-D023,repository-defined
+578,GDO,abalone9-18,G-mean,plain SMOTE,win,L1,P057-D024,repository-defined
+579,GDO,glass-0-1-6_vs_5,G-mean,plain SMOTE,win,L1,P057-D025,repository-defined
+580,GDO,yeast-1-4-5-8_vs_7,G-mean,plain SMOTE,win,L1,P057-D026,repository-defined
+581,GDO,glass5,G-mean,plain SMOTE,win,L1,P057-D027,repository-defined
+582,GDO,car-good,G-mean,plain SMOTE,win,L1,P057-D028,repository-defined
+583,GDO,car-vgood,G-mean,plain SMOTE,win,L1,P057-D029,repository-defined
+584,GDO,kr-vs-k-zero-one_vs_draw,G-mean,plain SMOTE,win,L1,P057-D030,repository-defined
+585,GDO,kr-vs-k-one_vs_fifteen,G-mean,plain SMOTE,loss,L1,P057-D031,repository-defined
+586,GDO,yeast4,G-mean,plain SMOTE,win,L1,P057-D032,repository-defined
+587,GDO,breast-cancer-wisconsin,G-mean,plain SMOTE,loss,L1,P057-D033,repository-defined
+588,GDO,yeast5,G-mean,plain SMOTE,win,L1,P057-D034,repository-defined
+589,GDO,glass-0-1-2-3_vs_4-5-6,G-mean,plain SMOTE,win,L1,P057-D035,repository-defined
+590,GDO,yeast6,G-mean,plain SMOTE,win,L1,P057-D036,repository-defined
+591,GDO,abalone-3_vs_11,G-mean,plain SMOTE,loss,L1,P057-D037,repository-defined
+592,GDO,winequality-white-3_vs_7,G-mean,plain SMOTE,win,L1,P057-D038,repository-defined
+593,GDO,australian,G-mean,plain SMOTE,win,L1,P057-D039,repository-defined
+594,GDO,abalone19,G-mean,plain SMOTE,win,L1,P057-D040,repository-defined
+595,GDO,glass1,AUC,plain SMOTE,loss,L1,P057-D001,repository-defined
+596,GDO,ecoli-0_vs_1,AUC,plain SMOTE,win,L1,P057-D002,repository-defined
+597,GDO,wisconsin,AUC,plain SMOTE,win,L1,P057-D003,repository-defined
+598,GDO,yeast1,AUC,plain SMOTE,win,L1,P057-D004,repository-defined
+599,GDO,haberman,AUC,plain SMOTE,win,L1,P057-D005,repository-defined
+600,GDO,planningrelax,AUC,plain SMOTE,loss,L1,P057-D006,repository-defined
+601,GDO,ecoli1,AUC,plain SMOTE,win,L1,P057-D007,repository-defined
+602,GDO,new-thyroid1,AUC,plain SMOTE,win,L1,P057-D008,repository-defined
+603,GDO,ecoli2,AUC,plain SMOTE,loss,L1,P057-D009,repository-defined
+604,GDO,segment0,AUC,plain SMOTE,win,L1,P057-D010,repository-defined
+605,GDO,yeast3,AUC,plain SMOTE,loss,L1,P057-D011,repository-defined
+606,GDO,ecoli3,AUC,plain SMOTE,win,L1,P057-D012,repository-defined
+607,GDO,yeast-2_vs_4,AUC,plain SMOTE,loss,L1,P057-D013,repository-defined
+608,GDO,yeast-0-5-6-7-9_vs_4,AUC,plain SMOTE,win,L1,P057-D014,repository-defined
+609,GDO,vowel0,AUC,plain SMOTE,win,L1,P057-D015,repository-defined
+610,GDO,kr-vs-k-three_vs_eleven,AUC,plain SMOTE,win,L1,P057-D016,repository-defined
+611,GDO,glass2,AUC,plain SMOTE,win,L1,P057-D017,repository-defined
+612,GDO,shuttle-c0-vs-c4,AUC,plain SMOTE,win,L1,P057-D018,repository-defined
+613,GDO,yeast-1_vs_7,AUC,plain SMOTE,win,L1,P057-D019,repository-defined
+614,GDO,glass4,AUC,plain SMOTE,win,L1,P057-D020,repository-defined
+615,GDO,ecoli4,AUC,plain SMOTE,loss,L1,P057-D021,repository-defined
+616,GDO,glass-0-1-6_vs_2,AUC,plain SMOTE,win,L1,P057-D022,repository-defined
+617,GDO,bupa,AUC,plain SMOTE,loss,L1,P057-D023,repository-defined
+618,GDO,abalone9-18,AUC,plain SMOTE,win,L1,P057-D024,repository-defined
+619,GDO,glass-0-1-6_vs_5,AUC,plain SMOTE,win,L1,P057-D025,repository-defined
+620,GDO,yeast-1-4-5-8_vs_7,AUC,plain SMOTE,win,L1,P057-D026,repository-defined
+621,GDO,glass5,AUC,plain SMOTE,win,L1,P057-D027,repository-defined
+622,GDO,car-good,AUC,plain SMOTE,win,L1,P057-D028,repository-defined
+623,GDO,car-vgood,AUC,plain SMOTE,win,L1,P057-D029,repository-defined
+624,GDO,kr-vs-k-zero-one_vs_draw,AUC,plain SMOTE,win,L1,P057-D030,repository-defined
+625,GDO,kr-vs-k-one_vs_fifteen,AUC,plain SMOTE,loss,L1,P057-D031,repository-defined
+626,GDO,yeast4,AUC,plain SMOTE,win,L1,P057-D032,repository-defined
+627,GDO,breast-cancer-wisconsin,AUC,plain SMOTE,loss,L1,P057-D033,repository-defined
+628,GDO,yeast5,AUC,plain SMOTE,win,L1,P057-D034,repository-defined
+629,GDO,glass-0-1-2-3_vs_4-5-6,AUC,plain SMOTE,win,L1,P057-D035,repository-defined
+630,GDO,yeast6,AUC,plain SMOTE,win,L1,P057-D036,repository-defined
+631,GDO,abalone-3_vs_11,AUC,plain SMOTE,loss,L1,P057-D037,repository-defined
+632,GDO,winequality-white-3_vs_7,AUC,plain SMOTE,win,L1,P057-D038,repository-defined
+633,GDO,australian,AUC,plain SMOTE,win,L1,P057-D039,repository-defined
+634,GDO,abalone19,AUC,plain SMOTE,win,L1,P057-D040,repository-defined
+635,GOIO,default,F-measure,plain SMOTE,win,L1,P071-D001,original
+636,GOIO,shoppers,F-measure,plain SMOTE,win,L1,P071-D002,original
+637,GOIO,bank_full,F-measure,plain SMOTE,win,L1,P071-D003,original
+638,GOIO,bank_small,F-measure,plain SMOTE,win,L1,P071-D004,original
+639,GOIO,avila_0vs5,F-measure,plain SMOTE,win,L1,P071-D005,modified
+640,GOIO,artificial_0.5_10,F-measure,plain SMOTE,win,L1,P071-D022,synthetic
+641,GOIO,optical_digits,F-measure,plain SMOTE,win,L1,P071-D006,not stated
+642,GOIO,avila_0vs6,F-measure,plain SMOTE,win,L1,P071-D007,modified
+643,GOIO,sick_euthyroid,F-measure,plain SMOTE,loss,L1,P071-D008,original
+644,GOIO,avila_0vs7,F-measure,plain SMOTE,win,L1,P071-D009,modified
+645,GOIO,scene,F-measure,plain SMOTE,win,L1,P071-D010,not stated
+646,GOIO,abalone_15,F-measure,plain SMOTE,win,L1,P071-D011,modified
+647,GOIO,thyroid_sick,F-measure,plain SMOTE,win,L1,P071-D012,original
+648,GOIO,abalone_6,F-measure,plain SMOTE,win,L1,P071-D013,modified
+649,GOIO,artificial_0.3_5,F-measure,plain SMOTE,win,L1,P071-D019,synthetic
+650,GOIO,artificial_0.5_5,F-measure,plain SMOTE,win,L1,P071-D021,synthetic
+651,GOIO,artificial_1_5,F-measure,plain SMOTE,win,L1,P071-D023,synthetic
+652,GOIO,wine_quality,F-measure,plain SMOTE,win,L1,P071-D014,not stated
+653,GOIO,taiwanses,F-measure,plain SMOTE,win,L1,P071-D015,original
+654,GOIO,artificial_0.5_2.5,F-measure,plain SMOTE,win,L1,P071-D020,synthetic
+655,GOIO,mammography,F-measure,plain SMOTE,win,L1,P071-D016,original
+656,GOIO,bankruptcy,F-measure,plain SMOTE,win,L1,P071-D017,original
+657,GOIO,page-blocks_0vs3,F-measure,plain SMOTE,win,L1,P071-D018,modified
+658,GOIO,default,MCC,plain SMOTE,win,L1,P071-D001,original
+659,GOIO,shoppers,MCC,plain SMOTE,win,L1,P071-D002,original
+660,GOIO,bank_full,MCC,plain SMOTE,win,L1,P071-D003,original
+661,GOIO,bank_small,MCC,plain SMOTE,win,L1,P071-D004,original
+662,GOIO,avila_0vs5,MCC,plain SMOTE,win,L1,P071-D005,modified
+663,GOIO,artificial_0.5_10,MCC,plain SMOTE,win,L1,P071-D022,synthetic
+664,GOIO,optical_digits,MCC,plain SMOTE,win,L1,P071-D006,not stated
+665,GOIO,avila_0vs6,MCC,plain SMOTE,win,L1,P071-D007,modified
+666,GOIO,sick_euthyroid,MCC,plain SMOTE,loss,L1,P071-D008,original
+667,GOIO,avila_0vs7,MCC,plain SMOTE,win,L1,P071-D009,modified
+668,GOIO,scene,MCC,plain SMOTE,loss,L1,P071-D010,not stated
+669,GOIO,abalone_15,MCC,plain SMOTE,win,L1,P071-D011,modified
+670,GOIO,thyroid_sick,MCC,plain SMOTE,win,L1,P071-D012,original
+671,GOIO,abalone_6,MCC,plain SMOTE,win,L1,P071-D013,modified
+672,GOIO,artificial_0.3_5,MCC,plain SMOTE,win,L1,P071-D019,synthetic
+673,GOIO,artificial_0.5_5,MCC,plain SMOTE,win,L1,P071-D021,synthetic
+674,GOIO,artificial_1_5,MCC,plain SMOTE,win,L1,P071-D023,synthetic
+675,GOIO,wine_quality,MCC,plain SMOTE,win,L1,P071-D014,not stated
+676,GOIO,taiwanses,MCC,plain SMOTE,loss,L1,P071-D015,original
+677,GOIO,artificial_0.5_2.5,MCC,plain SMOTE,win,L1,P071-D020,synthetic
+678,GOIO,mammography,MCC,plain SMOTE,win,L1,P071-D016,original
+679,GOIO,bankruptcy,MCC,plain SMOTE,loss,L1,P071-D017,original
+680,GOIO,page-blocks_0vs3,MCC,plain SMOTE,win,L1,P071-D018,modified
+681,GOIO,default,Accuracy,plain SMOTE,win,L1,P071-D001,original
+682,GOIO,shoppers,Accuracy,plain SMOTE,win,L1,P071-D002,original
+683,GOIO,bank_full,Accuracy,plain SMOTE,win,L1,P071-D003,original
+684,GOIO,bank_small,Accuracy,plain SMOTE,win,L1,P071-D004,original
+685,GOIO,avila_0vs5,Accuracy,plain SMOTE,win,L1,P071-D005,modified
+686,GOIO,artificial_0.5_10,Accuracy,plain SMOTE,win,L1,P071-D022,synthetic
+687,GOIO,optical_digits,Accuracy,plain SMOTE,win,L1,P071-D006,not stated
+688,GOIO,avila_0vs6,Accuracy,plain SMOTE,win,L1,P071-D007,modified
+689,GOIO,sick_euthyroid,Accuracy,plain SMOTE,win,L1,P071-D008,original
+690,GOIO,avila_0vs7,Accuracy,plain SMOTE,win,L1,P071-D009,modified
+691,GOIO,scene,Accuracy,plain SMOTE,win,L1,P071-D010,not stated
+692,GOIO,abalone_15,Accuracy,plain SMOTE,win,L1,P071-D011,modified
+693,GOIO,thyroid_sick,Accuracy,plain SMOTE,win,L1,P071-D012,original
+694,GOIO,abalone_6,Accuracy,plain SMOTE,win,L1,P071-D013,modified
+695,GOIO,artificial_0.3_5,Accuracy,plain SMOTE,win,L1,P071-D019,synthetic
+696,GOIO,artificial_0.5_5,Accuracy,plain SMOTE,win,L1,P071-D021,synthetic
+697,GOIO,artificial_1_5,Accuracy,plain SMOTE,win,L1,P071-D023,synthetic
+698,GOIO,wine_quality,Accuracy,plain SMOTE,win,L1,P071-D014,not stated
+699,GOIO,taiwanses,Accuracy,plain SMOTE,win,L1,P071-D015,original
+700,GOIO,artificial_0.5_2.5,Accuracy,plain SMOTE,win,L1,P071-D020,synthetic
+701,GOIO,mammography,Accuracy,plain SMOTE,win,L1,P071-D016,original
+702,GOIO,bankruptcy,Accuracy,plain SMOTE,win,L1,P071-D017,original
+703,GOIO,page-blocks_0vs3,Accuracy,plain SMOTE,win,L1,P071-D018,modified
+704,INOS,Adiac,F-measure,plain SMOTE,win,L1,P023-D001,modified
+705,INOS,FaceAll,F-measure,plain SMOTE,win,L1,P023-D002,modified
+706,INOS,50Words,F-measure,plain SMOTE,loss,L1,P023-D003,modified
+707,INOS,SLeaf,F-measure,plain SMOTE,win,L1,P023-D004,modified
+708,INOS,TwoPats,F-measure,plain SMOTE,win,L1,P023-D005,modified
+709,INOS,Wafer,F-measure,plain SMOTE,win,L1,P023-D006,modified
+710,INOS,Yoga,F-measure,plain SMOTE,win,L1,P023-D007,modified
+711,INOS,Adiac,G-mean,plain SMOTE,win,L1,P023-D001,modified
+712,INOS,FaceAll,G-mean,plain SMOTE,win,L1,P023-D002,modified
+713,INOS,50Words,G-mean,plain SMOTE,win,L1,P023-D003,modified
+714,INOS,SLeaf,G-mean,plain SMOTE,win,L1,P023-D004,modified
+715,INOS,TwoPats,G-mean,plain SMOTE,win,L1,P023-D005,modified
+716,INOS,Wafer,G-mean,plain SMOTE,win,L1,P023-D006,modified
+717,INOS,Yoga,G-mean,plain SMOTE,win,L1,P023-D007,modified
+718,INOS,Adiac,Precision,plain SMOTE,loss,L1,P023-D001,modified
+719,INOS,FaceAll,Precision,plain SMOTE,loss,L1,P023-D002,modified
+720,INOS,50Words,Precision,plain SMOTE,loss,L1,P023-D003,modified
+721,INOS,SLeaf,Precision,plain SMOTE,loss,L1,P023-D004,modified
+722,INOS,TwoPats,Precision,plain SMOTE,loss,L1,P023-D005,modified
+723,INOS,Wafer,Precision,plain SMOTE,loss,L1,P023-D006,modified
+724,INOS,Yoga,Precision,plain SMOTE,loss,L1,P023-D007,modified
+725,INOS,Adiac,Recall/sensitivity,plain SMOTE,win,L1,P023-D001,modified
+726,INOS,FaceAll,Recall/sensitivity,plain SMOTE,win,L1,P023-D002,modified
+727,INOS,50Words,Recall/sensitivity,plain SMOTE,win,L1,P023-D003,modified
+728,INOS,SLeaf,Recall/sensitivity,plain SMOTE,win,L1,P023-D004,modified
+729,INOS,TwoPats,Recall/sensitivity,plain SMOTE,win,L1,P023-D005,modified
+730,INOS,Wafer,Recall/sensitivity,plain SMOTE,win,L1,P023-D006,modified
+731,INOS,Yoga,Recall/sensitivity,plain SMOTE,win,L1,P023-D007,modified
+732,INOS,Adiac,Specificity,plain SMOTE,loss,L1,P023-D001,modified
+733,INOS,FaceAll,Specificity,plain SMOTE,loss,L1,P023-D002,modified
+734,INOS,50Words,Specificity,plain SMOTE,loss,L1,P023-D003,modified
+735,INOS,SLeaf,Specificity,plain SMOTE,loss,L1,P023-D004,modified
+736,INOS,TwoPats,Specificity,plain SMOTE,loss,L1,P023-D005,modified
+737,INOS,Wafer,Specificity,plain SMOTE,win,L1,P023-D006,modified
+738,INOS,Yoga,Specificity,plain SMOTE,loss,L1,P023-D007,modified
+739,KNNOR,Mean over all 19 datasets (no per-dataset rows in paper),G-mean,excluded,win,L1,,unmatched
+740,KNNOR,Mean over all 19 datasets (no per-dataset rows in paper),AUC,excluded,win,L1,,unmatched
+741,KNNOR,Mean over all 19 datasets (no per-dataset rows in paper),F-measure,excluded,win,L1,,unmatched
+742,KNNOR,Mean over all 19 datasets (no per-dataset rows in paper),Precision,excluded,win,L1,,unmatched
+743,Loyalty-SMOTE,adult,F-measure,plain SMOTE,loss,L1,P075-D001,original
+744,Loyalty-SMOTE,ai4i2020,F-measure,plain SMOTE,win,L1,P075-D002,not stated
+745,Loyalty-SMOTE,banknote,F-measure,plain SMOTE,tie,L1,P075-D003,original
+746,Loyalty-SMOTE,drug,F-measure,plain SMOTE,win,L1,P075-D004,not stated
+747,Loyalty-SMOTE,AIDS_5000,F-measure,plain SMOTE,win,L1,P075-D005,not stated
+748,Loyalty-SMOTE,Maternal,F-measure,plain SMOTE,win,L1,P075-D006,not stated
+749,Loyalty-SMOTE,national,F-measure,plain SMOTE,win,L1,P075-D007,not stated
+750,Loyalty-SMOTE,occupancy,F-measure,plain SMOTE,tie,L1,P075-D008,not stated
+751,Loyalty-SMOTE,online,F-measure,plain SMOTE,win,L1,P075-D009,not stated
+752,Loyalty-SMOTE,Shoppers,F-measure,plain SMOTE,win,L1,P075-D010,original
+753,Loyalty-SMOTE,Academic,F-measure,plain SMOTE,win,L1,P075-D011,not stated
+754,Loyalty-SMOTE,AIDS_15000,F-measure,plain SMOTE,win,L1,P075-D012,not stated
+755,Loyalty-SMOTE,german,F-measure,plain SMOTE,win,L1,P075-D013,original
+756,Loyalty-SMOTE,statlog,F-measure,plain SMOTE,win,L1,P075-D014,not stated
+757,Loyalty-SMOTE,Shuttle,F-measure,plain SMOTE,loss,L1,P075-D015,not stated
+758,Loyalty-SMOTE,Fault,F-measure,plain SMOTE,win,L1,P075-D016,not stated
+759,Loyalty-SMOTE,ICR,F-measure,plain SMOTE,win,L1,P075-D017,not stated
+760,Loyalty-SMOTE,breast,F-measure,plain SMOTE,win,L1,P075-D019,not stated
+761,Loyalty-SMOTE,WDBC,F-measure,plain SMOTE,win,L1,P075-D020,original
+762,Loyalty-SMOTE,WPBC,F-measure,plain SMOTE,win,L1,P075-D021,original
+763,Loyalty-SMOTE,heart,F-measure,plain SMOTE,loss,L1,P075-D022,original
+764,Loyalty-SMOTE,ionosphere,F-measure,plain SMOTE,win,L1,P075-D023,original
+765,Loyalty-SMOTE,iris,F-measure,plain SMOTE,tie,L1,P075-D024,not stated
+766,Loyalty-SMOTE,bezdeiris,F-measure,plain SMOTE,tie,L1,,unmatched
+767,Loyalty-SMOTE,raisin,F-measure,plain SMOTE,win,L1,P075-D026,not stated
+768,Loyalty-SMOTE,glass5,F-measure,plain SMOTE,tie,L1,P075-D027,repository-defined
+769,Loyalty-SMOTE,vowel0,F-measure,plain SMOTE,tie,L1,P075-D028,repository-defined
+770,Loyalty-SMOTE,ecoli-0-1-3-7_vs_2-6,F-measure,plain SMOTE,win,L1,P075-D029,repository-defined
+771,Loyalty-SMOTE,ecoli-0-1-4-6_vs_5,F-measure,plain SMOTE,tie,L1,P075-D030,repository-defined
+772,Loyalty-SMOTE,yeast-0-3-5-9_vs_7-8,F-measure,plain SMOTE,tie,L1,P075-D031,repository-defined
+773,Loyalty-SMOTE,adult,AUC,plain SMOTE,win,L1,P075-D001,original
+774,Loyalty-SMOTE,ai4i2020,AUC,plain SMOTE,tie,L1,P075-D002,not stated
+775,Loyalty-SMOTE,banknote,AUC,plain SMOTE,tie,L1,P075-D003,original
+776,Loyalty-SMOTE,drug,AUC,plain SMOTE,win,L1,P075-D004,not stated
+777,Loyalty-SMOTE,AIDS_5000,AUC,plain SMOTE,win,L1,P075-D005,not stated
+778,Loyalty-SMOTE,Maternal,AUC,plain SMOTE,win,L1,P075-D006,not stated
+779,Loyalty-SMOTE,national,AUC,plain SMOTE,win,L1,P075-D007,not stated
+780,Loyalty-SMOTE,occupancy,AUC,plain SMOTE,tie,L1,P075-D008,not stated
+781,Loyalty-SMOTE,online,AUC,plain SMOTE,win,L1,P075-D009,not stated
+782,Loyalty-SMOTE,Shoppers,AUC,plain SMOTE,win,L1,P075-D010,original
+783,Loyalty-SMOTE,Academic,AUC,plain SMOTE,win,L1,P075-D011,not stated
+784,Loyalty-SMOTE,AIDS_15000,AUC,plain SMOTE,win,L1,P075-D012,not stated
+785,Loyalty-SMOTE,german,AUC,plain SMOTE,win,L1,P075-D013,original
+786,Loyalty-SMOTE,statlog,AUC,plain SMOTE,win,L1,P075-D014,not stated
+787,Loyalty-SMOTE,Shuttle,AUC,plain SMOTE,loss,L1,P075-D015,not stated
+788,Loyalty-SMOTE,Fault,AUC,plain SMOTE,win,L1,P075-D016,not stated
+789,Loyalty-SMOTE,ICR,AUC,plain SMOTE,win,L1,P075-D017,not stated
+790,Loyalty-SMOTE,breast,AUC,plain SMOTE,tie,L1,P075-D019,not stated
+791,Loyalty-SMOTE,WDBC,AUC,plain SMOTE,win,L1,P075-D020,original
+792,Loyalty-SMOTE,WPBC,AUC,plain SMOTE,win,L1,P075-D021,original
+793,Loyalty-SMOTE,heart,AUC,plain SMOTE,win,L1,P075-D022,original
+794,Loyalty-SMOTE,ionosphere,AUC,plain SMOTE,win,L1,P075-D023,original
+795,Loyalty-SMOTE,iris,AUC,plain SMOTE,tie,L1,P075-D024,not stated
+796,Loyalty-SMOTE,bezdeiris,AUC,plain SMOTE,tie,L1,,unmatched
+797,Loyalty-SMOTE,raisin,AUC,plain SMOTE,win,L1,P075-D026,not stated
+798,Loyalty-SMOTE,glass5,AUC,plain SMOTE,tie,L1,P075-D027,repository-defined
+799,Loyalty-SMOTE,vowel0,AUC,plain SMOTE,tie,L1,P075-D028,repository-defined
+800,Loyalty-SMOTE,ecoli-0-1-3-7_vs_2-6,AUC,plain SMOTE,tie,L1,P075-D029,repository-defined
+801,Loyalty-SMOTE,ecoli-0-1-4-6_vs_5,AUC,plain SMOTE,loss,L1,P075-D030,repository-defined
+802,Loyalty-SMOTE,yeast-0-3-5-9_vs_7-8,AUC,plain SMOTE,win,L1,P075-D031,repository-defined
+803,Loyalty-SMOTE,adult,Recall/sensitivity,plain SMOTE,win,L1,P075-D001,original
+804,Loyalty-SMOTE,ai4i2020,Recall/sensitivity,plain SMOTE,win,L1,P075-D002,not stated
+805,Loyalty-SMOTE,banknote,Recall/sensitivity,plain SMOTE,tie,L1,P075-D003,original
+806,Loyalty-SMOTE,drug,Recall/sensitivity,plain SMOTE,win,L1,P075-D004,not stated
+807,Loyalty-SMOTE,AIDS_5000,Recall/sensitivity,plain SMOTE,win,L1,P075-D005,not stated
+808,Loyalty-SMOTE,Maternal,Recall/sensitivity,plain SMOTE,win,L1,P075-D006,not stated
+809,Loyalty-SMOTE,national,Recall/sensitivity,plain SMOTE,loss,L1,P075-D007,not stated
+810,Loyalty-SMOTE,occupancy,Recall/sensitivity,plain SMOTE,win,L1,P075-D008,not stated
+811,Loyalty-SMOTE,online,Recall/sensitivity,plain SMOTE,win,L1,P075-D009,not stated
+812,Loyalty-SMOTE,Shoppers,Recall/sensitivity,plain SMOTE,win,L1,P075-D010,original
+813,Loyalty-SMOTE,Academic,Recall/sensitivity,plain SMOTE,win,L1,P075-D011,not stated
+814,Loyalty-SMOTE,AIDS_15000,Recall/sensitivity,plain SMOTE,win,L1,P075-D012,not stated
+815,Loyalty-SMOTE,german,Recall/sensitivity,plain SMOTE,win,L1,P075-D013,original
+816,Loyalty-SMOTE,statlog,Recall/sensitivity,plain SMOTE,win,L1,P075-D014,not stated
+817,Loyalty-SMOTE,Shuttle,Recall/sensitivity,plain SMOTE,win,L1,P075-D015,not stated
+818,Loyalty-SMOTE,Fault,Recall/sensitivity,plain SMOTE,win,L1,P075-D016,not stated
+819,Loyalty-SMOTE,ICR,Recall/sensitivity,plain SMOTE,win,L1,P075-D017,not stated
+820,Loyalty-SMOTE,breast,Recall/sensitivity,plain SMOTE,win,L1,P075-D019,not stated
+821,Loyalty-SMOTE,WDBC,Recall/sensitivity,plain SMOTE,win,L1,P075-D020,original
+822,Loyalty-SMOTE,WPBC,Recall/sensitivity,plain SMOTE,win,L1,P075-D021,original
+823,Loyalty-SMOTE,heart,Recall/sensitivity,plain SMOTE,loss,L1,P075-D022,original
+824,Loyalty-SMOTE,ionosphere,Recall/sensitivity,plain SMOTE,win,L1,P075-D023,original
+825,Loyalty-SMOTE,iris,Recall/sensitivity,plain SMOTE,tie,L1,P075-D024,not stated
+826,Loyalty-SMOTE,bezdeiris,Recall/sensitivity,plain SMOTE,tie,L1,,unmatched
+827,Loyalty-SMOTE,raisin,Recall/sensitivity,plain SMOTE,win,L1,P075-D026,not stated
+828,Loyalty-SMOTE,glass5,Recall/sensitivity,plain SMOTE,tie,L1,P075-D027,repository-defined
+829,Loyalty-SMOTE,vowel0,Recall/sensitivity,plain SMOTE,tie,L1,P075-D028,repository-defined
+830,Loyalty-SMOTE,ecoli-0-1-3-7_vs_2-6,Recall/sensitivity,plain SMOTE,win,L1,P075-D029,repository-defined
+831,Loyalty-SMOTE,ecoli-0-1-4-6_vs_5,Recall/sensitivity,plain SMOTE,tie,L1,P075-D030,repository-defined
+832,Loyalty-SMOTE,yeast-0-3-5-9_vs_7-8,Recall/sensitivity,plain SMOTE,tie,L1,P075-D031,repository-defined
+833,Loyalty-SMOTE,adult,G-mean,plain SMOTE,win,L1,P075-D001,original
+834,Loyalty-SMOTE,ai4i2020,G-mean,plain SMOTE,win,L1,P075-D002,not stated
+835,Loyalty-SMOTE,banknote,G-mean,plain SMOTE,tie,L1,P075-D003,original
+836,Loyalty-SMOTE,drug,G-mean,plain SMOTE,win,L1,P075-D004,not stated
+837,Loyalty-SMOTE,AIDS_5000,G-mean,plain SMOTE,win,L1,P075-D005,not stated
+838,Loyalty-SMOTE,Maternal,G-mean,plain SMOTE,win,L1,P075-D006,not stated
+839,Loyalty-SMOTE,national,G-mean,plain SMOTE,win,L1,P075-D007,not stated
+840,Loyalty-SMOTE,occupancy,G-mean,plain SMOTE,loss,L1,P075-D008,not stated
+841,Loyalty-SMOTE,online,G-mean,plain SMOTE,win,L1,P075-D009,not stated
+842,Loyalty-SMOTE,Shoppers,G-mean,plain SMOTE,win,L1,P075-D010,original
+843,Loyalty-SMOTE,Academic,G-mean,plain SMOTE,win,L1,P075-D011,not stated
+844,Loyalty-SMOTE,AIDS_15000,G-mean,plain SMOTE,win,L1,P075-D012,not stated
+845,Loyalty-SMOTE,german,G-mean,plain SMOTE,win,L1,P075-D013,original
+846,Loyalty-SMOTE,statlog,G-mean,plain SMOTE,win,L1,P075-D014,not stated
+847,Loyalty-SMOTE,Shuttle,G-mean,plain SMOTE,tie,L1,P075-D015,not stated
+848,Loyalty-SMOTE,Fault,G-mean,plain SMOTE,win,L1,P075-D016,not stated
+849,Loyalty-SMOTE,ICR,G-mean,plain SMOTE,win,L1,P075-D017,not stated
+850,Loyalty-SMOTE,breast,G-mean,plain SMOTE,win,L1,P075-D019,not stated
+851,Loyalty-SMOTE,WDBC,G-mean,plain SMOTE,win,L1,P075-D020,original
+852,Loyalty-SMOTE,WPBC,G-mean,plain SMOTE,win,L1,P075-D021,original
+853,Loyalty-SMOTE,heart,G-mean,plain SMOTE,loss,L1,P075-D022,original
+854,Loyalty-SMOTE,ionosphere,G-mean,plain SMOTE,win,L1,P075-D023,original
+855,Loyalty-SMOTE,iris,G-mean,plain SMOTE,tie,L1,P075-D024,not stated
+856,Loyalty-SMOTE,bezdeiris,G-mean,plain SMOTE,tie,L1,,unmatched
+857,Loyalty-SMOTE,raisin,G-mean,plain SMOTE,win,L1,P075-D026,not stated
+858,Loyalty-SMOTE,glass5,G-mean,plain SMOTE,tie,L1,P075-D027,repository-defined
+859,Loyalty-SMOTE,vowel0,G-mean,plain SMOTE,tie,L1,P075-D028,repository-defined
+860,Loyalty-SMOTE,ecoli-0-1-3-7_vs_2-6,G-mean,plain SMOTE,win,L1,P075-D029,repository-defined
+861,Loyalty-SMOTE,ecoli-0-1-4-6_vs_5,G-mean,plain SMOTE,tie,L1,P075-D030,repository-defined
+862,Loyalty-SMOTE,yeast-0-3-5-9_vs_7-8,G-mean,plain SMOTE,win,L1,P075-D031,repository-defined
+863,MBS,Pima,AUC,plain SMOTE,win,L1,P046-D001,original
+864,MBS,Haberman,AUC,plain SMOTE,win,L1,P046-D002,not stated
+865,MBS,Satimage,AUC,plain SMOTE,win,L1,P046-D003,not stated
+866,MBS,Ecoli,AUC,plain SMOTE,win,L1,P046-D004,not stated
+867,MBS,Shuttle,AUC,plain SMOTE,win,L1,P046-D005,not stated
+868,MBS,Ionosphere,AUC,plain SMOTE,win,L1,P046-D006,original
+869,MBS,Vehicle,AUC,plain SMOTE,win,L1,P046-D007,not stated
+870,MBS,Credit,AUC,plain SMOTE,win,L1,P046-D008,not stated
+871,MBS,Diabetes,AUC,plain SMOTE,win,L1,P046-D009,original
+872,MBS,Hmeq,AUC,plain SMOTE,tie,L1,P046-D010,not stated
+873,MBS,Promotion,AUC,plain SMOTE,tie,L1,P046-D011,not stated
+874,MBS,Bank,AUC,plain SMOTE,win,L1,P046-D012,original
+875,MBS,Spambase,AUC,plain SMOTE,win,L1,P046-D013,original
+876,MC-CCR,Automobile,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P047-D001,original
+877,MC-CCR,Balance,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P047-D002,original
+878,MC-CCR,Car,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P047-D003,original
+879,MC-CCR,Cleveland,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P047-D004,original
+880,MC-CCR,Contraceptive,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P047-D005,original
+881,MC-CCR,Dermatology,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P047-D006,original
+882,MC-CCR,Ecoli,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P047-D007,original
+883,MC-CCR,Flare,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P047-D008,original
+884,MC-CCR,Glass,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P047-D009,original
+885,MC-CCR,Hayes-roth,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P047-D010,original
+886,MC-CCR,Led7digit,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P047-D011,original
+887,MC-CCR,Lymphography,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P047-D012,original
+888,MC-CCR,Newthyroid,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P047-D013,original
+889,MC-CCR,Pageblocks,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P047-D014,original
+890,MC-CCR,Thyroid,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P047-D015,original
+891,MC-CCR,Vehicle,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P047-D016,original
+892,MC-CCR,Wine,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P047-D017,original
+893,MC-CCR,Winequality-red,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P047-D018,original
+894,MC-CCR,Yeast,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P047-D019,original
+895,MC-CCR,Zoo,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P047-D020,original
+896,MC-CCR,Automobile,Average class accuracy,"SMOTE-all (multiclass, all classes)",loss,L1,P047-D001,original
+897,MC-CCR,Balance,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P047-D002,original
+898,MC-CCR,Car,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P047-D003,original
+899,MC-CCR,Cleveland,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P047-D004,original
+900,MC-CCR,Contraceptive,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P047-D005,original
+901,MC-CCR,Dermatology,Average class accuracy,"SMOTE-all (multiclass, all classes)",loss,L1,P047-D006,original
+902,MC-CCR,Ecoli,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P047-D007,original
+903,MC-CCR,Flare,Average class accuracy,"SMOTE-all (multiclass, all classes)",loss,L1,P047-D008,original
+904,MC-CCR,Hayes-roth,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P047-D010,original
+905,MC-CCR,Led7digit,Average class accuracy,"SMOTE-all (multiclass, all classes)",loss,L1,P047-D011,original
+906,MC-CCR,Lymphography,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P047-D012,original
+907,MC-CCR,Newthyroid,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P047-D013,original
+908,MC-CCR,Pageblocks,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P047-D014,original
+909,MC-CCR,Thyroid,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P047-D015,original
+910,MC-CCR,Vehicle,Average class accuracy,"SMOTE-all (multiclass, all classes)",loss,L1,P047-D016,original
+911,MC-CCR,Wine,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P047-D017,original
+912,MC-CCR,Winequality-red,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P047-D018,original
+913,MC-CCR,Yeast,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P047-D019,original
+914,MC-CCR,Zoo,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P047-D020,original
+915,MC-CCR,Automobile,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P047-D001,original
+916,MC-CCR,Balance,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P047-D002,original
+917,MC-CCR,Car,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P047-D003,original
+918,MC-CCR,Cleveland,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P047-D004,original
+919,MC-CCR,Contraceptive,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P047-D005,original
+920,MC-CCR,Dermatology,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P047-D006,original
+921,MC-CCR,Ecoli,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P047-D007,original
+922,MC-CCR,Flare,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P047-D008,original
+923,MC-CCR,Glass,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P047-D009,original
+924,MC-CCR,Hayes-roth,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P047-D010,original
+925,MC-CCR,Led7digit,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P047-D011,original
+926,MC-CCR,Lymphography,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P047-D012,original
+927,MC-CCR,Newthyroid,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P047-D013,original
+928,MC-CCR,Pageblocks,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P047-D014,original
+929,MC-CCR,Thyroid,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P047-D015,original
+930,MC-CCR,Vehicle,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P047-D016,original
+931,MC-CCR,Wine,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P047-D017,original
+932,MC-CCR,Winequality-red,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P047-D018,original
+933,MC-CCR,Yeast,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P047-D019,original
+934,MC-CCR,Zoo,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P047-D020,original
+935,MC-CCR,Automobile,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P047-D001,original
+936,MC-CCR,Balance,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P047-D002,original
+937,MC-CCR,Car,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P047-D003,original
+938,MC-CCR,Cleveland,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P047-D004,original
+939,MC-CCR,Contraceptive,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P047-D005,original
+940,MC-CCR,Dermatology,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P047-D006,original
+941,MC-CCR,Ecoli,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P047-D007,original
+942,MC-CCR,Flare,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P047-D008,original
+943,MC-CCR,Glass,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P047-D009,original
+944,MC-CCR,Hayes-roth,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P047-D010,original
+945,MC-CCR,Led7digit,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P047-D011,original
+946,MC-CCR,Lymphography,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P047-D012,original
+947,MC-CCR,Newthyroid,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P047-D013,original
+948,MC-CCR,Pageblocks,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P047-D014,original
+949,MC-CCR,Thyroid,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P047-D015,original
+950,MC-CCR,Vehicle,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P047-D016,original
+951,MC-CCR,Wine,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P047-D017,original
+952,MC-CCR,Winequality-red,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P047-D018,original
+953,MC-CCR,Yeast,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P047-D019,original
+954,MC-CCR,Zoo,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P047-D020,original
+955,MC-MBRC,automobile,Average class accuracy,excluded,win,L1,P067-D001,original
+956,MC-MBRC,autos,Average class accuracy,excluded,win,L1,P067-D002,original
+957,MC-MBRC,car,Average class accuracy,excluded,win,L1,P067-D003,original
+958,MC-MBRC,cleveland,Average class accuracy,excluded,win,L1,P067-D004,original
+959,MC-MBRC,cmc,Average class accuracy,excluded,win,L1,P067-D005,original
+960,MC-MBRC,contraceptive,Average class accuracy,excluded,win,L1,P067-D006,original
+961,MC-MBRC,Dry_Bean,Average class accuracy,excluded,win,L1,P067-D007,original
+962,MC-MBRC,ecoli,Average class accuracy,excluded,win,L1,P067-D008,original
+963,MC-MBRC,flare,Average class accuracy,excluded,win,L1,P067-D009,original
+964,MC-MBRC,glass,Average class accuracy,excluded,win,L1,P067-D010,original
+965,MC-MBRC,lymphography,Average class accuracy,excluded,win,L1,P067-D011,original
+966,MC-MBRC,newthyroid,Average class accuracy,excluded,win,L1,P067-D012,original
+967,MC-MBRC,page,Average class accuracy,excluded,win,L1,P067-D014,original
+968,MC-MBRC,page-blocks,Average class accuracy,excluded,win,L1,P067-D013,original
+969,MC-MBRC,shuttle,Average class accuracy,excluded,win,L1,P067-D015,original
+970,MC-MBRC,thyroid,Average class accuracy,excluded,win,L1,P067-D016,original
+971,MC-MBRC,winequality-red,Average class accuracy,excluded,win,L1,P067-D017,original
+972,MC-MBRC,winequality-white,Average class accuracy,excluded,win,L1,P067-D018,original
+973,MC-MBRC,yeast,Average class accuracy,excluded,win,L1,P067-D019,original
+974,MC-MBRC,zoo,Average class accuracy,excluded,win,L1,P067-D020,original
+975,MC-MBRC,automobile,F-measure,excluded,win,L1,P067-D001,original
+976,MC-MBRC,autos,F-measure,excluded,win,L1,P067-D002,original
+977,MC-MBRC,car,F-measure,excluded,win,L1,P067-D003,original
+978,MC-MBRC,cleveland,F-measure,excluded,win,L1,P067-D004,original
+979,MC-MBRC,cmc,F-measure,excluded,loss,L1,P067-D005,original
+980,MC-MBRC,contraceptive,F-measure,excluded,loss,L1,P067-D006,original
+981,MC-MBRC,Dry_Bean,F-measure,excluded,win,L1,P067-D007,original
+982,MC-MBRC,ecoli,F-measure,excluded,win,L1,P067-D008,original
+983,MC-MBRC,flare,F-measure,excluded,win,L1,P067-D009,original
+984,MC-MBRC,glass,F-measure,excluded,win,L1,P067-D010,original
+985,MC-MBRC,lymphography,F-measure,excluded,win,L1,P067-D011,original
+986,MC-MBRC,newthyroid,F-measure,excluded,win,L1,P067-D012,original
+987,MC-MBRC,page,F-measure,excluded,win,L1,P067-D014,original
+988,MC-MBRC,page-blocks,F-measure,excluded,win,L1,P067-D013,original
+989,MC-MBRC,shuttle,F-measure,excluded,win,L1,P067-D015,original
+990,MC-MBRC,thyroid,F-measure,excluded,win,L1,P067-D016,original
+991,MC-MBRC,winequality-red,F-measure,excluded,win,L1,P067-D017,original
+992,MC-MBRC,winequality-white,F-measure,excluded,win,L1,P067-D018,original
+993,MC-MBRC,yeast,F-measure,excluded,win,L1,P067-D019,original
+994,MC-MBRC,zoo,F-measure,excluded,win,L1,P067-D020,original
+995,MC-MBRC,automobile,CBA,excluded,win,L1,P067-D001,original
+996,MC-MBRC,autos,CBA,excluded,win,L1,P067-D002,original
+997,MC-MBRC,car,CBA,excluded,win,L1,P067-D003,original
+998,MC-MBRC,cleveland,CBA,excluded,win,L1,P067-D004,original
+999,MC-MBRC,cmc,CBA,excluded,loss,L1,P067-D005,original
+1000,MC-MBRC,contraceptive,CBA,excluded,loss,L1,P067-D006,original
+1001,MC-MBRC,Dry_Bean,CBA,excluded,win,L1,P067-D007,original
+1002,MC-MBRC,ecoli,CBA,excluded,win,L1,P067-D008,original
+1003,MC-MBRC,flare,CBA,excluded,win,L1,P067-D009,original
+1004,MC-MBRC,glass,CBA,excluded,win,L1,P067-D010,original
+1005,MC-MBRC,lymphography,CBA,excluded,win,L1,P067-D011,original
+1006,MC-MBRC,newthyroid,CBA,excluded,win,L1,P067-D012,original
+1007,MC-MBRC,page,CBA,excluded,win,L1,P067-D014,original
+1008,MC-MBRC,page-blocks,CBA,excluded,win,L1,P067-D013,original
+1009,MC-MBRC,shuttle,CBA,excluded,win,L1,P067-D015,original
+1010,MC-MBRC,thyroid,CBA,excluded,win,L1,P067-D016,original
+1011,MC-MBRC,winequality-red,CBA,excluded,win,L1,P067-D017,original
+1012,MC-MBRC,winequality-white,CBA,excluded,win,L1,P067-D018,original
+1013,MC-MBRC,yeast,CBA,excluded,win,L1,P067-D019,original
+1014,MC-MBRC,zoo,CBA,excluded,win,L1,P067-D020,original
+1015,MC-MBRC,automobile,CEN,excluded,win,L1,P067-D001,original
+1016,MC-MBRC,autos,CEN,excluded,win,L1,P067-D002,original
+1017,MC-MBRC,car,CEN,excluded,win,L1,P067-D003,original
+1018,MC-MBRC,cleveland,CEN,excluded,win,L1,P067-D004,original
+1019,MC-MBRC,cmc,CEN,excluded,win,L1,P067-D005,original
+1020,MC-MBRC,contraceptive,CEN,excluded,win,L1,P067-D006,original
+1021,MC-MBRC,Dry_Bean,CEN,excluded,win,L1,P067-D007,original
+1022,MC-MBRC,ecoli,CEN,excluded,win,L1,P067-D008,original
+1023,MC-MBRC,flare,CEN,excluded,win,L1,P067-D009,original
+1024,MC-MBRC,glass,CEN,excluded,win,L1,P067-D010,original
+1025,MC-MBRC,lymphography,CEN,excluded,win,L1,P067-D011,original
+1026,MC-MBRC,newthyroid,CEN,excluded,win,L1,P067-D012,original
+1027,MC-MBRC,page,CEN,excluded,win,L1,P067-D014,original
+1028,MC-MBRC,page-blocks,CEN,excluded,win,L1,P067-D013,original
+1029,MC-MBRC,shuttle,CEN,excluded,win,L1,P067-D015,original
+1030,MC-MBRC,thyroid,CEN,excluded,win,L1,P067-D016,original
+1031,MC-MBRC,winequality-red,CEN,excluded,win,L1,P067-D017,original
+1032,MC-MBRC,winequality-white,CEN,excluded,win,L1,P067-D018,original
+1033,MC-MBRC,yeast,CEN,excluded,win,L1,P067-D019,original
+1034,MC-MBRC,zoo,CEN,excluded,win,L1,P067-D020,original
+1035,MC-RBO,Automobile,Average class accuracy,"SMOTE-all (multiclass, all classes)",loss,L1,P048-D001,original
+1036,MC-RBO,Balance,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P048-D002,original
+1037,MC-RBO,Car,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P048-D003,original
+1038,MC-RBO,Cleveland,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P048-D004,original
+1039,MC-RBO,Contraceptive,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P048-D005,original
+1040,MC-RBO,Dermatology,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P048-D006,original
+1041,MC-RBO,Ecoli,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P048-D007,original
+1042,MC-RBO,Flare,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P048-D008,original
+1043,MC-RBO,Glass,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P048-D009,original
+1044,MC-RBO,Hayes-roth,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P048-D010,original
+1045,MC-RBO,Led7digit,Average class accuracy,"SMOTE-all (multiclass, all classes)",loss,L1,P048-D011,original
+1046,MC-RBO,Lymphography,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P048-D012,original
+1047,MC-RBO,Newthyroid,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P048-D013,original
+1048,MC-RBO,Pageblocks,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P048-D014,original
+1049,MC-RBO,Thyroid,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P048-D015,original
+1050,MC-RBO,Vehicle,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P048-D016,original
+1051,MC-RBO,Wine,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P048-D017,original
+1052,MC-RBO,Winequality-red,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P048-D018,original
+1053,MC-RBO,Yeast,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P048-D019,original
+1054,MC-RBO,Zoo,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P048-D020,original
+1055,MC-RBO,Automobile,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P048-D001,original
+1056,MC-RBO,Balance,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P048-D002,original
+1057,MC-RBO,Car,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P048-D003,original
+1058,MC-RBO,Cleveland,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P048-D004,original
+1059,MC-RBO,Contraceptive,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P048-D005,original
+1060,MC-RBO,Dermatology,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P048-D006,original
+1061,MC-RBO,Ecoli,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P048-D007,original
+1062,MC-RBO,Flare,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P048-D008,original
+1063,MC-RBO,Glass,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P048-D009,original
+1064,MC-RBO,Hayes-roth,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P048-D010,original
+1065,MC-RBO,Led7digit,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P048-D011,original
+1066,MC-RBO,Lymphography,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P048-D012,original
+1067,MC-RBO,Newthyroid,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P048-D013,original
+1068,MC-RBO,Pageblocks,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P048-D014,original
+1069,MC-RBO,Thyroid,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P048-D015,original
+1070,MC-RBO,Vehicle,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P048-D016,original
+1071,MC-RBO,Wine,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P048-D017,original
+1072,MC-RBO,Winequality-red,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P048-D018,original
+1073,MC-RBO,Yeast,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P048-D019,original
+1074,MC-RBO,Zoo,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P048-D020,original
+1075,MC-RBO,Automobile,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P048-D001,original
+1076,MC-RBO,Balance,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P048-D002,original
+1077,MC-RBO,Car,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P048-D003,original
+1078,MC-RBO,Cleveland,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P048-D004,original
+1079,MC-RBO,Contraceptive,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P048-D005,original
+1080,MC-RBO,Dermatology,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P048-D006,original
+1081,MC-RBO,Ecoli,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P048-D007,original
+1082,MC-RBO,Flare,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P048-D008,original
+1083,MC-RBO,Glass,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P048-D009,original
+1084,MC-RBO,Hayes-roth,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P048-D010,original
+1085,MC-RBO,Led7digit,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P048-D011,original
+1086,MC-RBO,Lymphography,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P048-D012,original
+1087,MC-RBO,Newthyroid,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P048-D013,original
+1088,MC-RBO,Pageblocks,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P048-D014,original
+1089,MC-RBO,Thyroid,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P048-D015,original
+1090,MC-RBO,Vehicle,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P048-D016,original
+1091,MC-RBO,Wine,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P048-D017,original
+1092,MC-RBO,Winequality-red,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P048-D018,original
+1093,MC-RBO,Yeast,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P048-D019,original
+1094,MC-RBO,Zoo,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P048-D020,original
+1095,MC-RBO,Automobile,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P048-D001,original
+1096,MC-RBO,Balance,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P048-D002,original
+1097,MC-RBO,Car,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P048-D003,original
+1098,MC-RBO,Cleveland,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P048-D004,original
+1099,MC-RBO,Contraceptive,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P048-D005,original
+1100,MC-RBO,Dermatology,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P048-D006,original
+1101,MC-RBO,Ecoli,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P048-D007,original
+1102,MC-RBO,Flare,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P048-D008,original
+1103,MC-RBO,Glass,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P048-D009,original
+1104,MC-RBO,Hayes-roth,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P048-D010,original
+1105,MC-RBO,Led7digit,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P048-D011,original
+1106,MC-RBO,Lymphography,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P048-D012,original
+1107,MC-RBO,Newthyroid,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P048-D013,original
+1108,MC-RBO,Pageblocks,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P048-D014,original
+1109,MC-RBO,Thyroid,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P048-D015,original
+1110,MC-RBO,Vehicle,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P048-D016,original
+1111,MC-RBO,Wine,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P048-D017,original
+1112,MC-RBO,Winequality-red,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P048-D018,original
+1113,MC-RBO,Yeast,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P048-D019,original
+1114,MC-RBO,Zoo,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P048-D020,original
+1115,MKC-SMOTE,cmc,G-mean,plain SMOTE,win,L1,P068-D001,original
+1116,MKC-SMOTE,use,G-mean,plain SMOTE,win,L1,P068-D002,original
+1117,MKC-SMOTE,new,G-mean,plain SMOTE,win,L1,P068-D003,original
+1118,MKC-SMOTE,con,G-mean,plain SMOTE,win,L1,P068-D004,original
+1119,MKC-SMOTE,zoo,G-mean,plain SMOTE,win,L1,P068-D005,original
+1120,MKC-SMOTE,ctg,G-mean,plain SMOTE,win,L1,P068-D006,original
+1121,MKC-SMOTE,eco,G-mean,plain SMOTE,win,L1,P068-D007,original
+1122,MKC-SMOTE,gla,G-mean,plain SMOTE,win,L1,P068-D008,original
+1123,MKC-SMOTE,abs,G-mean,plain SMOTE,win,L1,P068-D009,original
+1124,MKC-SMOTE,nur,G-mean,plain SMOTE,win,L1,P068-D010,original
+1125,MKC-SMOTE,let,G-mean,plain SMOTE,loss,L1,P068-D011,original
+1126,MKC-SMOTE,car,G-mean,plain SMOTE,loss,L1,P068-D012,original
+1127,MKC-SMOTE,win,G-mean,plain SMOTE,win,L1,P068-D013,original
+1128,MKC-SMOTE,pok,G-mean,plain SMOTE,win,L1,P068-D014,original
+1129,MKC-SMOTE,hcv,G-mean,plain SMOTE,win,L1,P068-D015,original
+1130,MKC-SMOTE,yea,G-mean,plain SMOTE,win,L1,P068-D016,original
+1131,MKC-SMOTE,cov,G-mean,plain SMOTE,win,L1,P068-D017,original
+1132,MKC-SMOTE,che,G-mean,plain SMOTE,win,L1,P068-D018,original
+1133,MKC-SMOTE,aba,G-mean,plain SMOTE,win,L1,P068-D019,original
+1134,MKC-SMOTE,bar,G-mean,plain SMOTE,win,L1,P068-D020,original
+1135,MKC-SMOTE,avi,G-mean,plain SMOTE,win,L1,P068-D021,original
+1136,MKC-SMOTE,cmc,AUC,plain SMOTE,win,L1,P068-D001,original
+1137,MKC-SMOTE,use,AUC,plain SMOTE,win,L1,P068-D002,original
+1138,MKC-SMOTE,new,AUC,plain SMOTE,win,L1,P068-D003,original
+1139,MKC-SMOTE,con,AUC,plain SMOTE,win,L1,P068-D004,original
+1140,MKC-SMOTE,zoo,AUC,plain SMOTE,win,L1,P068-D005,original
+1141,MKC-SMOTE,ctg,AUC,plain SMOTE,win,L1,P068-D006,original
+1142,MKC-SMOTE,eco,AUC,plain SMOTE,win,L1,P068-D007,original
+1143,MKC-SMOTE,gla,AUC,plain SMOTE,win,L1,P068-D008,original
+1144,MKC-SMOTE,abs,AUC,plain SMOTE,win,L1,P068-D009,original
+1145,MKC-SMOTE,nur,AUC,plain SMOTE,win,L1,P068-D010,original
+1146,MKC-SMOTE,let,AUC,plain SMOTE,loss,L1,P068-D011,original
+1147,MKC-SMOTE,car,AUC,plain SMOTE,win,L1,P068-D012,original
+1148,MKC-SMOTE,win,AUC,plain SMOTE,win,L1,P068-D013,original
+1149,MKC-SMOTE,pok,AUC,plain SMOTE,win,L1,P068-D014,original
+1150,MKC-SMOTE,hcv,AUC,plain SMOTE,win,L1,P068-D015,original
+1151,MKC-SMOTE,yea,AUC,plain SMOTE,win,L1,P068-D016,original
+1152,MKC-SMOTE,cov,AUC,plain SMOTE,win,L1,P068-D017,original
+1153,MKC-SMOTE,che,AUC,plain SMOTE,win,L1,P068-D018,original
+1154,MKC-SMOTE,aba,AUC,plain SMOTE,win,L1,P068-D019,original
+1155,MKC-SMOTE,bar,AUC,plain SMOTE,win,L1,P068-D020,original
+1156,MKC-SMOTE,avi,AUC,plain SMOTE,win,L1,P068-D021,original
+1157,MLOS,Ozo,AUC,plain SMOTE,win,L1,P073-D001,not stated
+1158,MLOS,Phi,AUC,plain SMOTE,loss,L1,P073-D002,not stated
+1159,MLOS,aba19,AUC,plain SMOTE,win,L1,P073-D003,repository-defined
+1160,MLOS,Cam,AUC,plain SMOTE,win,L1,P073-D004,not stated
+1161,MLOS,cle,AUC,plain SMOTE,win,L1,P073-D005,repository-defined
+1162,MLOS,cli,AUC,plain SMOTE,win,L1,P073-D006,not stated
+1163,MLOS,gla,AUC,plain SMOTE,win,L1,P073-D007,repository-defined
+1164,MLOS,ivy,AUC,plain SMOTE,win,L1,P073-D008,not stated
+1165,MLOS,jed,AUC,plain SMOTE,win,L1,P073-D009,not stated
+1166,MLOS,log,AUC,plain SMOTE,loss,L1,P073-D010,not stated
+1167,MLOS,mov,AUC,plain SMOTE,loss,L1,P073-D011,not stated
+1168,MLOS,pok,AUC,plain SMOTE,win,L1,P073-D012,repository-defined
+1169,MLOS,win35,AUC,plain SMOTE,win,L1,P073-D013,repository-defined
+1170,MLOS,win,AUC,plain SMOTE,win,L1,P073-D014,not stated
+1171,MLOS,xal,AUC,plain SMOTE,loss,L1,P073-D015,not stated
+1172,MLOS,yea,AUC,plain SMOTE,win,L1,P073-D016,repository-defined
+1173,MLOS,Ozo,G-mean,plain SMOTE,win,L1,P073-D001,not stated
+1174,MLOS,Phi,G-mean,plain SMOTE,loss,L1,P073-D002,not stated
+1175,MLOS,aba19,G-mean,plain SMOTE,win,L1,P073-D003,repository-defined
+1176,MLOS,Cam,G-mean,plain SMOTE,win,L1,P073-D004,not stated
+1177,MLOS,cle,G-mean,plain SMOTE,win,L1,P073-D005,repository-defined
+1178,MLOS,cli,G-mean,plain SMOTE,win,L1,P073-D006,not stated
+1179,MLOS,gla,G-mean,plain SMOTE,win,L1,P073-D007,repository-defined
+1180,MLOS,ivy,G-mean,plain SMOTE,win,L1,P073-D008,not stated
+1181,MLOS,jed,G-mean,plain SMOTE,win,L1,P073-D009,not stated
+1182,MLOS,log,G-mean,plain SMOTE,win,L1,P073-D010,not stated
+1183,MLOS,mov,G-mean,plain SMOTE,loss,L1,P073-D011,not stated
+1184,MLOS,pok,G-mean,plain SMOTE,win,L1,P073-D012,repository-defined
+1185,MLOS,win35,G-mean,plain SMOTE,win,L1,P073-D013,repository-defined
+1186,MLOS,win,G-mean,plain SMOTE,win,L1,P073-D014,not stated
+1187,MLOS,xal,G-mean,plain SMOTE,loss,L1,P073-D015,not stated
+1188,MLOS,yea,G-mean,plain SMOTE,win,L1,P073-D016,repository-defined
+1189,MLOS,Ozo,Recall/sensitivity,plain SMOTE,win,L1,P073-D001,not stated
+1190,MLOS,Phi,Recall/sensitivity,plain SMOTE,win,L1,P073-D002,not stated
+1191,MLOS,aba19,Recall/sensitivity,plain SMOTE,win,L1,P073-D003,repository-defined
+1192,MLOS,Cam,Recall/sensitivity,plain SMOTE,win,L1,P073-D004,not stated
+1193,MLOS,cle,Recall/sensitivity,plain SMOTE,win,L1,P073-D005,repository-defined
+1194,MLOS,cli,Recall/sensitivity,plain SMOTE,win,L1,P073-D006,not stated
+1195,MLOS,gla,Recall/sensitivity,plain SMOTE,win,L1,P073-D007,repository-defined
+1196,MLOS,ivy,Recall/sensitivity,plain SMOTE,win,L1,P073-D008,not stated
+1197,MLOS,jed,Recall/sensitivity,plain SMOTE,loss,L1,P073-D009,not stated
+1198,MLOS,log,Recall/sensitivity,plain SMOTE,win,L1,P073-D010,not stated
+1199,MLOS,mov,Recall/sensitivity,plain SMOTE,loss,L1,P073-D011,not stated
+1200,MLOS,pok,Recall/sensitivity,plain SMOTE,win,L1,P073-D012,repository-defined
+1201,MLOS,win35,Recall/sensitivity,plain SMOTE,win,L1,P073-D013,repository-defined
+1202,MLOS,win,Recall/sensitivity,plain SMOTE,win,L1,P073-D014,not stated
+1203,MLOS,xal,Recall/sensitivity,plain SMOTE,loss,L1,P073-D015,not stated
+1204,MLOS,yea,Recall/sensitivity,plain SMOTE,win,L1,P073-D016,repository-defined
+1205,MWMOTE,Abalone,G-mean,plain SMOTE,loss,L1,P025-D002,modified
+1206,MWMOTE,CTG,G-mean,plain SMOTE,win,L1,P025-D003,modified
+1207,MWMOTE,Semeion,G-mean,plain SMOTE,win,L1,P025-D006,modified
+1208,MWMOTE,Statlandsat,G-mean,plain SMOTE,win,L1,P025-D005,modified
+1209,MWMOTE,Bcancerorig,G-mean,plain SMOTE,loss,L1,,unmatched
+1210,MWMOTE,Btissue,G-mean,plain SMOTE,win,L1,,unmatched
+1211,MWMOTE,Ecoli,G-mean,plain SMOTE,loss,L1,P025-D011,modified
+1212,MWMOTE,Glass,G-mean,plain SMOTE,win,L1,P025-D012,modified
+1213,MWMOTE,Libra,G-mean,plain SMOTE,win,L1,P025-D008,modified
+1214,MWMOTE,Phoneme,G-mean,plain SMOTE,win,L1,P025-D016,modified
+1215,MWMOTE,Pima,G-mean,plain SMOTE,win,L1,P025-D020,original
+1216,MWMOTE,Robot,G-mean,plain SMOTE,loss,L1,P025-D010,modified
+1217,MWMOTE,Satimage,G-mean,plain SMOTE,win,L1,P025-D017,modified
+1218,MWMOTE,Vehicle,G-mean,plain SMOTE,win,L1,P025-D013,modified
+1219,MWMOTE,Wine,G-mean,plain SMOTE,win,L1,P025-D014,modified
+1220,MWMOTE,Yeast,G-mean,plain SMOTE,win,L1,P025-D009,modified
+1221,MWMOTE,Texture,G-mean,plain SMOTE,win,L1,P025-D015,modified
+1222,MWMOTE,Segment,G-mean,plain SMOTE,win,L1,P025-D007,modified
+1223,MWMOTE,OCR,G-mean,plain SMOTE,loss,L1,P025-D004,modified
+1224,MWMOTE,Page-blocks,G-mean,plain SMOTE,loss,L1,P025-D001,modified
+1225,MWMOTE,Abalone,F-measure,plain SMOTE,loss,L1,P025-D002,modified
+1226,MWMOTE,CTG,F-measure,plain SMOTE,win,L1,P025-D003,modified
+1227,MWMOTE,Semeion,F-measure,plain SMOTE,win,L1,P025-D006,modified
+1228,MWMOTE,Statlandsat,F-measure,plain SMOTE,win,L1,P025-D005,modified
+1229,MWMOTE,Bcancerorig,F-measure,plain SMOTE,loss,L1,,unmatched
+1230,MWMOTE,Btissue,F-measure,plain SMOTE,win,L1,,unmatched
+1231,MWMOTE,Ecoli,F-measure,plain SMOTE,loss,L1,P025-D011,modified
+1232,MWMOTE,Glass,F-measure,plain SMOTE,win,L1,P025-D012,modified
+1233,MWMOTE,Libra,F-measure,plain SMOTE,win,L1,P025-D008,modified
+1234,MWMOTE,Phoneme,F-measure,plain SMOTE,win,L1,P025-D016,modified
+1235,MWMOTE,Pima,F-measure,plain SMOTE,win,L1,P025-D020,original
+1236,MWMOTE,Robot,F-measure,plain SMOTE,win,L1,P025-D010,modified
+1237,MWMOTE,Satimage,F-measure,plain SMOTE,win,L1,P025-D017,modified
+1238,MWMOTE,Vehicle,F-measure,plain SMOTE,win,L1,P025-D013,modified
+1239,MWMOTE,Wine,F-measure,plain SMOTE,win,L1,P025-D014,modified
+1240,MWMOTE,Yeast,F-measure,plain SMOTE,win,L1,P025-D009,modified
+1241,MWMOTE,Texture,F-measure,plain SMOTE,win,L1,P025-D015,modified
+1242,MWMOTE,Segment,F-measure,plain SMOTE,win,L1,P025-D007,modified
+1243,MWMOTE,OCR,F-measure,plain SMOTE,loss,L1,P025-D004,modified
+1244,MWMOTE,Page-blocks,F-measure,plain SMOTE,loss,L1,P025-D001,modified
+1245,MWMOTE,Abalone,AUC,plain SMOTE,win,L1,P025-D002,modified
+1246,MWMOTE,CTG,AUC,plain SMOTE,win,L1,P025-D003,modified
+1247,MWMOTE,Semeion,AUC,plain SMOTE,win,L1,P025-D006,modified
+1248,MWMOTE,Statlandsat,AUC,plain SMOTE,win,L1,P025-D005,modified
+1249,MWMOTE,Bcancerorig,AUC,plain SMOTE,loss,L1,,unmatched
+1250,MWMOTE,Btissue,AUC,plain SMOTE,loss,L1,,unmatched
+1251,MWMOTE,Ecoli,AUC,plain SMOTE,loss,L1,P025-D011,modified
+1252,MWMOTE,Glass,AUC,plain SMOTE,win,L1,P025-D012,modified
+1253,MWMOTE,Libra,AUC,plain SMOTE,win,L1,P025-D008,modified
+1254,MWMOTE,Phoneme,AUC,plain SMOTE,loss,L1,P025-D016,modified
+1255,MWMOTE,Pima,AUC,plain SMOTE,win,L1,P025-D020,original
+1256,MWMOTE,Robot,AUC,plain SMOTE,loss,L1,P025-D010,modified
+1257,MWMOTE,Satimage,AUC,plain SMOTE,win,L1,P025-D017,modified
+1258,MWMOTE,Vehicle,AUC,plain SMOTE,win,L1,P025-D013,modified
+1259,MWMOTE,Wine,AUC,plain SMOTE,win,L1,P025-D014,modified
+1260,MWMOTE,Yeast,AUC,plain SMOTE,win,L1,P025-D009,modified
+1261,MWMOTE,Texture,AUC,plain SMOTE,win,L1,P025-D015,modified
+1262,MWMOTE,Segment,AUC,plain SMOTE,win,L1,P025-D007,modified
+1263,MWMOTE,OCR,AUC,plain SMOTE,win,L1,P025-D004,modified
+1264,MWMOTE,Page-blocks,AUC,plain SMOTE,loss,L1,P025-D001,modified
+1265,NBU,Wisconsin,G-mean,plain SMOTE,win,L1,P049-D002,original
+1266,NBU,Pima,G-mean,plain SMOTE,loss,L1,P049-D003,original
+1267,NBU,Glass0,G-mean,plain SMOTE,win,L1,P049-D004,repository-defined
+1268,NBU,Vehicle1,G-mean,plain SMOTE,win,L1,P049-D005,repository-defined
+1269,NBU,Vehicle0,G-mean,plain SMOTE,win,L1,P049-D006,repository-defined
+1270,NBU,Ecoli1,G-mean,plain SMOTE,win,L1,P049-D007,repository-defined
+1271,NBU,New-thyroid1,G-mean,plain SMOTE,win,L1,P049-D008,repository-defined
+1272,NBU,New-thyroid2,G-mean,plain SMOTE,loss,L1,P049-D009,repository-defined
+1273,NBU,Ecoli2,G-mean,plain SMOTE,win,L1,P049-D010,repository-defined
+1274,NBU,Segmemt0,G-mean,plain SMOTE,loss,L1,P049-D011,not stated
+1275,NBU,Yeast3,G-mean,plain SMOTE,win,L1,P049-D012,repository-defined
+1276,NBU,Ecoli3,G-mean,plain SMOTE,win,L1,P049-D013,repository-defined
+1277,NBU,Yeast2vs4,G-mean,plain SMOTE,win,L1,P049-D014,repository-defined
+1278,NBU,Vowel0,G-mean,plain SMOTE,win,L1,P049-D015,repository-defined
+1279,NBU,Glass2,G-mean,plain SMOTE,win,L1,P049-D016,repository-defined
+1280,NBU,Yeast1vs7,G-mean,plain SMOTE,win,L1,P049-D017,repository-defined
+1281,NBU,Glass4,G-mean,plain SMOTE,tie,L1,P049-D018,repository-defined
+1282,NBU,Ecoli4,G-mean,plain SMOTE,tie,L1,P049-D019,repository-defined
+1283,NBU,Page-blocks13vs2,G-mean,plain SMOTE,loss,L1,P049-D020,repository-defined
+1284,NBU,Abalone09-18,G-mean,plain SMOTE,win,L1,P049-D021,repository-defined
+1285,NBU,Glass5,G-mean,plain SMOTE,tie,L1,P049-D022,repository-defined
+1286,NBU,Yeast4,G-mean,plain SMOTE,win,L1,P049-D023,repository-defined
+1287,NBU,Ecoli0137vs26,G-mean,plain SMOTE,tie,L1,P049-D024,repository-defined
+1288,NBU,Yeast6,G-mean,plain SMOTE,loss,L1,P049-D025,repository-defined
+1289,NBU,Wisconsin,Recall/sensitivity,plain SMOTE,win,L1,P049-D002,original
+1290,NBU,Pima,Recall/sensitivity,plain SMOTE,win,L1,P049-D003,original
+1291,NBU,Glass0,Recall/sensitivity,plain SMOTE,win,L1,P049-D004,repository-defined
+1292,NBU,Vehicle1,Recall/sensitivity,plain SMOTE,win,L1,P049-D005,repository-defined
+1293,NBU,Vehicle0,Recall/sensitivity,plain SMOTE,win,L1,P049-D006,repository-defined
+1294,NBU,Ecoli1,Recall/sensitivity,plain SMOTE,win,L1,P049-D007,repository-defined
+1295,NBU,New-thyroid1,Recall/sensitivity,plain SMOTE,win,L1,P049-D008,repository-defined
+1296,NBU,New-thyroid2,Recall/sensitivity,plain SMOTE,tie,L1,P049-D009,repository-defined
+1297,NBU,Ecoli2,Recall/sensitivity,plain SMOTE,win,L1,P049-D010,repository-defined
+1298,NBU,Segmemt0,Recall/sensitivity,plain SMOTE,win,L1,P049-D011,not stated
+1299,NBU,Yeast3,Recall/sensitivity,plain SMOTE,win,L1,P049-D012,repository-defined
+1300,NBU,Ecoli3,Recall/sensitivity,plain SMOTE,win,L1,P049-D013,repository-defined
+1301,NBU,Yeast2vs4,Recall/sensitivity,plain SMOTE,win,L1,P049-D014,repository-defined
+1302,NBU,Vowel0,Recall/sensitivity,plain SMOTE,win,L1,P049-D015,repository-defined
+1303,NBU,Glass2,Recall/sensitivity,plain SMOTE,win,L1,P049-D016,repository-defined
+1304,NBU,Yeast1vs7,Recall/sensitivity,plain SMOTE,win,L1,P049-D017,repository-defined
+1305,NBU,Glass4,Recall/sensitivity,plain SMOTE,tie,L1,P049-D018,repository-defined
+1306,NBU,Ecoli4,Recall/sensitivity,plain SMOTE,tie,L1,P049-D019,repository-defined
+1307,NBU,Page-blocks13vs2,Recall/sensitivity,plain SMOTE,tie,L1,P049-D020,repository-defined
+1308,NBU,Abalone09-18,Recall/sensitivity,plain SMOTE,win,L1,P049-D021,repository-defined
+1309,NBU,Glass5,Recall/sensitivity,plain SMOTE,tie,L1,P049-D022,repository-defined
+1310,NBU,Yeast4,Recall/sensitivity,plain SMOTE,win,L1,P049-D023,repository-defined
+1311,NBU,Ecoli0137vs26,Recall/sensitivity,plain SMOTE,tie,L1,P049-D024,repository-defined
+1312,NBU,Yeast6,Recall/sensitivity,plain SMOTE,tie,L1,P049-D025,repository-defined
+1313,NBU,Wisconsin,Precision,plain SMOTE,loss,L1,P049-D002,original
+1314,NBU,Pima,Precision,plain SMOTE,win,L1,P049-D003,original
+1315,NBU,Glass0,Precision,plain SMOTE,loss,L1,P049-D004,repository-defined
+1316,NBU,Vehicle1,Precision,plain SMOTE,win,L1,P049-D005,repository-defined
+1317,NBU,Vehicle0,Precision,plain SMOTE,loss,L1,P049-D006,repository-defined
+1318,NBU,Ecoli1,Precision,plain SMOTE,win,L1,P049-D007,repository-defined
+1319,NBU,New-thyroid1,Precision,plain SMOTE,loss,L1,P049-D008,repository-defined
+1320,NBU,New-thyroid2,Precision,plain SMOTE,loss,L1,P049-D009,repository-defined
+1321,NBU,Ecoli2,Precision,plain SMOTE,loss,L1,P049-D010,repository-defined
+1322,NBU,Segmemt0,Precision,plain SMOTE,loss,L1,P049-D011,not stated
+1323,NBU,Yeast3,Precision,plain SMOTE,loss,L1,P049-D012,repository-defined
+1324,NBU,Ecoli3,Precision,plain SMOTE,win,L1,P049-D013,repository-defined
+1325,NBU,Yeast2vs4,Precision,plain SMOTE,loss,L1,P049-D014,repository-defined
+1326,NBU,Vowel0,Precision,plain SMOTE,loss,L1,P049-D015,repository-defined
+1327,NBU,Glass2,Precision,plain SMOTE,loss,L1,P049-D016,repository-defined
+1328,NBU,Yeast1vs7,Precision,plain SMOTE,win,L1,P049-D017,repository-defined
+1329,NBU,Glass4,Precision,plain SMOTE,tie,L1,P049-D018,repository-defined
+1330,NBU,Ecoli4,Precision,plain SMOTE,tie,L1,P049-D019,repository-defined
+1331,NBU,Page-blocks13vs2,Precision,plain SMOTE,loss,L1,P049-D020,repository-defined
+1332,NBU,Abalone09-18,Precision,plain SMOTE,loss,L1,P049-D021,repository-defined
+1333,NBU,Glass5,Precision,plain SMOTE,tie,L1,P049-D022,repository-defined
+1334,NBU,Yeast4,Precision,plain SMOTE,loss,L1,P049-D023,repository-defined
+1335,NBU,Ecoli0137vs26,Precision,plain SMOTE,tie,L1,P049-D024,repository-defined
+1336,NBU,Yeast6,Precision,plain SMOTE,loss,L1,P049-D025,repository-defined
+1337,NBU,Wisconsin,F-measure,plain SMOTE,win,L1,P049-D002,original
+1338,NBU,Pima,F-measure,plain SMOTE,win,L1,P049-D003,original
+1339,NBU,Glass0,F-measure,plain SMOTE,win,L1,P049-D004,repository-defined
+1340,NBU,Vehicle1,F-measure,plain SMOTE,win,L1,P049-D005,repository-defined
+1341,NBU,Vehicle0,F-measure,plain SMOTE,loss,L1,P049-D006,repository-defined
+1342,NBU,Ecoli1,F-measure,plain SMOTE,win,L1,P049-D007,repository-defined
+1343,NBU,New-thyroid1,F-measure,plain SMOTE,win,L1,P049-D008,repository-defined
+1344,NBU,New-thyroid2,F-measure,plain SMOTE,loss,L1,P049-D009,repository-defined
+1345,NBU,Ecoli2,F-measure,plain SMOTE,win,L1,P049-D010,repository-defined
+1346,NBU,Segmemt0,F-measure,plain SMOTE,loss,L1,P049-D011,not stated
+1347,NBU,Yeast3,F-measure,plain SMOTE,win,L1,P049-D012,repository-defined
+1348,NBU,Ecoli3,F-measure,plain SMOTE,win,L1,P049-D013,repository-defined
+1349,NBU,Yeast2vs4,F-measure,plain SMOTE,win,L1,P049-D014,repository-defined
+1350,NBU,Vowel0,F-measure,plain SMOTE,win,L1,P049-D015,repository-defined
+1351,NBU,Glass2,F-measure,plain SMOTE,loss,L1,P049-D016,repository-defined
+1352,NBU,Yeast1vs7,F-measure,plain SMOTE,win,L1,P049-D017,repository-defined
+1353,NBU,Glass4,F-measure,plain SMOTE,tie,L1,P049-D018,repository-defined
+1354,NBU,Ecoli4,F-measure,plain SMOTE,tie,L1,P049-D019,repository-defined
+1355,NBU,Page-blocks13vs2,F-measure,plain SMOTE,loss,L1,P049-D020,repository-defined
+1356,NBU,Abalone09-18,F-measure,plain SMOTE,win,L1,P049-D021,repository-defined
+1357,NBU,Glass5,F-measure,plain SMOTE,tie,L1,P049-D022,repository-defined
+1358,NBU,Yeast4,F-measure,plain SMOTE,loss,L1,P049-D023,repository-defined
+1359,NBU,Ecoli0137vs26,F-measure,plain SMOTE,tie,L1,P049-D024,repository-defined
+1360,NBU,Yeast6,F-measure,plain SMOTE,loss,L1,P049-D025,repository-defined
+1361,NROMM,Wine,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P064-D001,original
+1362,NROMM,Glass,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P064-D002,original
+1363,NROMM,New-thyroid,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P064-D003,original
+1364,NROMM,Vehicle,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P064-D004,original
+1365,NROMM,Page-blocks,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P064-D006,original
+1366,NROMM,Winequality-red,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P064-D005,original
+1367,NROMM,Zoo,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P064-D007,original
+1368,NROMM,Balance,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P064-D012,original
+1369,NROMM,Car,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P064-D014,original
+1370,NROMM,Led7digit,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P064-D011,original
+1371,NROMM,Dermatology,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P064-D010,original
+1372,NROMM,Flare,Average class accuracy,"SMOTE-all (multiclass, all classes)",loss,L1,P064-D013,original
+1373,NROMM,Hayes-roth,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P064-D009,original
+1374,NROMM,Lymphography,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P064-D008,original
+1375,NROMM,Automobile,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P064-D015,original
+1376,NROMM,Cleveland,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P064-D016,original
+1377,NROMM,Contraceptive,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P064-D018,original
+1378,NROMM,Ecoli,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P064-D017,original
+1379,NROMM,Yeast,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P064-D019,original
+1380,NROMM,Thyroid,Average class accuracy,"SMOTE-all (multiclass, all classes)",win,L1,P064-D020,original
+1381,NROMM,Wine,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P064-D001,original
+1382,NROMM,Glass,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P064-D002,original
+1383,NROMM,New-thyroid,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P064-D003,original
+1384,NROMM,Vehicle,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P064-D004,original
+1385,NROMM,Page-blocks,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P064-D006,original
+1386,NROMM,Winequality-red,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P064-D005,original
+1387,NROMM,Zoo,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P064-D007,original
+1388,NROMM,Balance,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P064-D012,original
+1389,NROMM,Car,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P064-D014,original
+1390,NROMM,Led7digit,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P064-D011,original
+1391,NROMM,Dermatology,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P064-D010,original
+1392,NROMM,Flare,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P064-D013,original
+1393,NROMM,Hayes-roth,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P064-D009,original
+1394,NROMM,Lymphography,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P064-D008,original
+1395,NROMM,Automobile,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P064-D015,original
+1396,NROMM,Cleveland,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P064-D016,original
+1397,NROMM,Contraceptive,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P064-D018,original
+1398,NROMM,Ecoli,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P064-D017,original
+1399,NROMM,Yeast,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P064-D019,original
+1400,NROMM,Thyroid,CBA,"SMOTE-all (multiclass, all classes)",win,L1,P064-D020,original
+1401,NROMM,Wine,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P064-D001,original
+1402,NROMM,Glass,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P064-D002,original
+1403,NROMM,New-thyroid,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P064-D003,original
+1404,NROMM,Vehicle,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P064-D004,original
+1405,NROMM,Page-blocks,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P064-D006,original
+1406,NROMM,Winequality-red,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P064-D005,original
+1407,NROMM,Zoo,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P064-D007,original
+1408,NROMM,Balance,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P064-D012,original
+1409,NROMM,Car,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P064-D014,original
+1410,NROMM,Led7digit,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P064-D011,original
+1411,NROMM,Dermatology,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P064-D010,original
+1412,NROMM,Flare,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P064-D013,original
+1413,NROMM,Hayes-roth,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P064-D009,original
+1414,NROMM,Lymphography,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P064-D008,original
+1415,NROMM,Automobile,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P064-D015,original
+1416,NROMM,Cleveland,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P064-D016,original
+1417,NROMM,Contraceptive,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P064-D018,original
+1418,NROMM,Ecoli,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P064-D017,original
+1419,NROMM,Yeast,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P064-D019,original
+1420,NROMM,Thyroid,G-mean,"SMOTE-all (multiclass, all classes)",win,L1,P064-D020,original
+1421,NROMM,Wine,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P064-D001,original
+1422,NROMM,Glass,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P064-D002,original
+1423,NROMM,New-thyroid,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P064-D003,original
+1424,NROMM,Vehicle,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P064-D004,original
+1425,NROMM,Page-blocks,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P064-D006,original
+1426,NROMM,Winequality-red,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P064-D005,original
+1427,NROMM,Zoo,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P064-D007,original
+1428,NROMM,Balance,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P064-D012,original
+1429,NROMM,Car,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P064-D014,original
+1430,NROMM,Led7digit,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P064-D011,original
+1431,NROMM,Dermatology,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P064-D010,original
+1432,NROMM,Flare,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P064-D013,original
+1433,NROMM,Hayes-roth,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P064-D009,original
+1434,NROMM,Lymphography,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P064-D008,original
+1435,NROMM,Automobile,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P064-D015,original
+1436,NROMM,Cleveland,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P064-D016,original
+1437,NROMM,Contraceptive,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P064-D018,original
+1438,NROMM,Ecoli,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P064-D017,original
+1439,NROMM,Yeast,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P064-D019,original
+1440,NROMM,Thyroid,CEN,"SMOTE-all (multiclass, all classes)",win,L1,P064-D020,original
+1441,OREM-M,Vt,F-measure,plain SMOTE,loss,L2,P065-D001,original
+1442,OREM-M,Lg,F-measure,plain SMOTE,win,L2,P065-D002,original
+1443,OREM-M,NT,F-measure,plain SMOTE,loss,L2,P065-D003,original
+1444,OREM-M,Toy,F-measure,plain SMOTE,win,L2,P065-D004,original
+1445,OREM-M,Vi-3,F-measure,plain SMOTE,win,L2,P065-D005,original
+1446,OREM-M,W5,F-measure,plain SMOTE,loss,L2,P065-D006,original
+1447,OREM-M,Cl,F-measure,plain SMOTE,win,L2,P065-D007,original
+1448,OREM-M,Vi-6,F-measure,plain SMOTE,win,L2,P065-D008,original
+1449,OREM-M,Vw-5,F-measure,plain SMOTE,loss,L2,P065-D009,repository-defined
+1450,OREM-M,Vw-4,F-measure,plain SMOTE,loss,L2,P065-D010,repository-defined
+1451,OREM-M,Dto,F-measure,plain SMOTE,win,L2,P065-D011,original
+1452,OREM-M,PB,F-measure,plain SMOTE,loss,L2,P065-D012,original
+1453,OREM-M,SWD,F-measure,plain SMOTE,win,L2,P065-D013,original
+1454,OREM-M,Ye,F-measure,plain SMOTE,win,L2,P065-D014,original
+1455,OREM-M,Au5,F-measure,plain SMOTE,win,L2,P065-D015,original
+1456,OREM-M,LEV,F-measure,plain SMOTE,win,L2,P065-D016,original
+1457,OREM-M,LP,F-measure,plain SMOTE,win,L2,P065-D017,original
+1458,OREM-M,S10,F-measure,plain SMOTE,loss,L2,P065-D018,original
+1459,OREM-M,PF,F-measure,plain SMOTE,loss,L2,P065-D019,original
+1460,OREM-M,Ab,F-measure,plain SMOTE,win,L2,P065-D020,original
+1461,OREM-M,H10,F-measure,plain SMOTE,win,L2,P065-D021,original
+1462,OREM-M,Vt,G-mean,plain SMOTE,loss,L2,P065-D001,original
+1463,OREM-M,Lg,G-mean,plain SMOTE,win,L2,P065-D002,original
+1464,OREM-M,NT,G-mean,plain SMOTE,win,L2,P065-D003,original
+1465,OREM-M,Toy,G-mean,plain SMOTE,win,L2,P065-D004,original
+1466,OREM-M,Vi-3,G-mean,plain SMOTE,loss,L2,P065-D005,original
+1467,OREM-M,W5,G-mean,plain SMOTE,loss,L2,P065-D006,original
+1468,OREM-M,Cl,G-mean,plain SMOTE,loss,L2,P065-D007,original
+1469,OREM-M,Vi-6,G-mean,plain SMOTE,loss,L2,P065-D008,original
+1470,OREM-M,Vw-5,G-mean,plain SMOTE,win,L2,P065-D009,repository-defined
+1471,OREM-M,Vw-4,G-mean,plain SMOTE,win,L2,P065-D010,repository-defined
+1472,OREM-M,Dto,G-mean,plain SMOTE,win,L2,P065-D011,original
+1473,OREM-M,PB,G-mean,plain SMOTE,win,L2,P065-D012,original
+1474,OREM-M,SWD,G-mean,plain SMOTE,win,L2,P065-D013,original
+1475,OREM-M,Ye,G-mean,plain SMOTE,loss,L2,P065-D014,original
+1476,OREM-M,Au5,G-mean,plain SMOTE,win,L2,P065-D015,original
+1477,OREM-M,LEV,G-mean,plain SMOTE,win,L2,P065-D016,original
+1478,OREM-M,LP,G-mean,plain SMOTE,win,L2,P065-D017,original
+1479,OREM-M,S10,G-mean,plain SMOTE,loss,L2,P065-D018,original
+1480,OREM-M,PF,G-mean,plain SMOTE,win,L2,P065-D019,original
+1481,OREM-M,Ab,G-mean,plain SMOTE,loss,L2,P065-D020,original
+1482,OREM-M,H10,G-mean,plain SMOTE,win,L2,P065-D021,original
+1483,OREM-M,Vt,AUC,plain SMOTE,loss,L2,P065-D001,original
+1484,OREM-M,Lg,AUC,plain SMOTE,win,L2,P065-D002,original
+1485,OREM-M,NT,AUC,plain SMOTE,win,L2,P065-D003,original
+1486,OREM-M,Toy,AUC,plain SMOTE,loss,L2,P065-D004,original
+1487,OREM-M,Vi-3,AUC,plain SMOTE,win,L2,P065-D005,original
+1488,OREM-M,W5,AUC,plain SMOTE,win,L2,P065-D006,original
+1489,OREM-M,Cl,AUC,plain SMOTE,win,L2,P065-D007,original
+1490,OREM-M,Vi-6,AUC,plain SMOTE,win,L2,P065-D008,original
+1491,OREM-M,Vw-5,AUC,plain SMOTE,win,L2,P065-D009,repository-defined
+1492,OREM-M,Vw-4,AUC,plain SMOTE,win,L2,P065-D010,repository-defined
+1493,OREM-M,Dto,AUC,plain SMOTE,win,L2,P065-D011,original
+1494,OREM-M,PB,AUC,plain SMOTE,win,L2,P065-D012,original
+1495,OREM-M,SWD,AUC,plain SMOTE,win,L2,P065-D013,original
+1496,OREM-M,Ye,AUC,plain SMOTE,loss,L2,P065-D014,original
+1497,OREM-M,Au5,AUC,plain SMOTE,win,L2,P065-D015,original
+1498,OREM-M,LEV,AUC,plain SMOTE,win,L2,P065-D016,original
+1499,OREM-M,LP,AUC,plain SMOTE,loss,L2,P065-D017,original
+1500,OREM-M,S10,AUC,plain SMOTE,loss,L2,P065-D018,original
+1501,OREM-M,PF,AUC,plain SMOTE,win,L2,P065-D019,original
+1502,OREM-M,Ab,AUC,plain SMOTE,loss,L2,P065-D020,original
+1503,OREM-M,H10,AUC,plain SMOTE,loss,L2,P065-D021,original
+1504,OVO-SMOTE,aut,Average class accuracy,Static-SMOTE,loss,L1,P024-D001,modified
+1505,OVO-SMOTE,bal,Average class accuracy,Static-SMOTE,loss,L1,P024-D002,original
+1506,OVO-SMOTE,cle,Average class accuracy,Static-SMOTE,win,L1,P024-D003,modified
+1507,OVO-SMOTE,con,Average class accuracy,Static-SMOTE,win,L1,P024-D004,original
+1508,OVO-SMOTE,der,Average class accuracy,Static-SMOTE,win,L1,P024-D005,modified
+1509,OVO-SMOTE,eco,Average class accuracy,Static-SMOTE,win,L1,P024-D006,original
+1510,OVO-SMOTE,fla,Average class accuracy,Static-SMOTE,win,L1,P024-D007,original
+1511,OVO-SMOTE,gla,Average class accuracy,Static-SMOTE,win,L1,P024-D008,original
+1512,OVO-SMOTE,hay,Average class accuracy,Static-SMOTE,loss,L1,P024-D009,original
+1513,OVO-SMOTE,led,Average class accuracy,Static-SMOTE,loss,L1,P024-D010,original
+1514,OVO-SMOTE,lym,Average class accuracy,Static-SMOTE,loss,L1,P024-D011,original
+1515,OVO-SMOTE,new,Average class accuracy,Static-SMOTE,win,L1,P024-D012,original
+1516,OVO-SMOTE,nur,Average class accuracy,Static-SMOTE,win,L1,P024-D013,original
+1517,OVO-SMOTE,pag,Average class accuracy,Static-SMOTE,win,L1,P024-D014,original
+1518,OVO-SMOTE,pos,Average class accuracy,Static-SMOTE,win,L1,P024-D015,modified
+1519,OVO-SMOTE,sat,Average class accuracy,Static-SMOTE,win,L1,P024-D016,original
+1520,OVO-SMOTE,shu,Average class accuracy,Static-SMOTE,win,L1,P024-D017,original
+1521,OVO-SMOTE,spl,Average class accuracy,Static-SMOTE,win,L1,P024-D018,original
+1522,OVO-SMOTE,thy,Average class accuracy,Static-SMOTE,win,L1,P024-D019,original
+1523,OVO-SMOTE,win,Average class accuracy,Static-SMOTE,loss,L1,P024-D020,original
+1524,OVO-SMOTE,wqr,Average class accuracy,Static-SMOTE,win,L1,P024-D021,original
+1525,OVO-SMOTE,wqw,Average class accuracy,Static-SMOTE,win,L1,P024-D022,original
+1526,OVO-SMOTE,yea,Average class accuracy,Static-SMOTE,win,L1,P024-D023,original
+1527,OVO-SMOTE,zoo,Average class accuracy,Static-SMOTE,win,L1,P024-D024,original
+1528,RACOG,prompting,Recall/sensitivity,plain SMOTE,win,L1,P026-D001,original
+1529,RACOG,abalone,Recall/sensitivity,plain SMOTE,win,L1,P026-D002,modified
+1530,RACOG,car,Recall/sensitivity,plain SMOTE,tie,L1,P026-D003,modified
+1531,RACOG,nursery,Recall/sensitivity,plain SMOTE,tie,L1,P026-D004,modified
+1532,RACOG,letter,Recall/sensitivity,plain SMOTE,loss,L1,P026-D005,modified
+1533,RACOG,connect-4,Recall/sensitivity,plain SMOTE,win,L1,P026-D006,modified
+1534,RACOG,ecoli1,Recall/sensitivity,plain SMOTE,win,L1,P026-D007,modified
+1535,RACOG,haberman,Recall/sensitivity,plain SMOTE,loss,L1,P026-D008,original
+1536,RACOG,yeast4,Recall/sensitivity,plain SMOTE,win,L1,P026-D009,modified
+1537,RACOG,yeast6,Recall/sensitivity,plain SMOTE,win,L1,P026-D010,modified
+1538,RACOG,prompting,G-mean,plain SMOTE,win,L1,P026-D001,original
+1539,RACOG,abalone,G-mean,plain SMOTE,loss,L1,P026-D002,modified
+1540,RACOG,car,G-mean,plain SMOTE,tie,L1,P026-D003,modified
+1541,RACOG,nursery,G-mean,plain SMOTE,win,L1,P026-D004,modified
+1542,RACOG,letter,G-mean,plain SMOTE,loss,L1,P026-D005,modified
+1543,RACOG,connect-4,G-mean,plain SMOTE,loss,L1,P026-D006,modified
+1544,RACOG,ecoli1,G-mean,plain SMOTE,loss,L1,P026-D007,modified
+1545,RACOG,haberman,G-mean,plain SMOTE,loss,L1,P026-D008,original
+1546,RACOG,yeast4,G-mean,plain SMOTE,win,L1,P026-D009,modified
+1547,RACOG,yeast6,G-mean,plain SMOTE,win,L1,P026-D010,modified
+1548,RACOG,prompting,AUC,plain SMOTE,win,L1,P026-D001,original
+1549,RACOG,abalone,AUC,plain SMOTE,loss,L1,P026-D002,modified
+1550,RACOG,car,AUC,plain SMOTE,tie,L1,P026-D003,modified
+1551,RACOG,nursery,AUC,plain SMOTE,win,L1,P026-D004,modified
+1552,RACOG,letter,AUC,plain SMOTE,tie,L1,P026-D005,modified
+1553,RACOG,connect-4,AUC,plain SMOTE,loss,L1,P026-D006,modified
+1554,RACOG,ecoli1,AUC,plain SMOTE,loss,L1,P026-D007,modified
+1555,RACOG,haberman,AUC,plain SMOTE,loss,L1,P026-D008,original
+1556,RACOG,yeast4,AUC,plain SMOTE,win,L1,P026-D009,modified
+1557,RACOG,yeast6,AUC,plain SMOTE,win,L1,P026-D010,modified
+1558,RAMOBoost,Sonar,G-mean,plain SMOTE,win,L1,P019-D001,original
+1559,RAMOBoost,Spambase,G-mean,plain SMOTE,win,L1,P019-D002,original
+1560,RAMOBoost,Ionosphere,G-mean,plain SMOTE,win,L1,P019-D003,original
+1561,RAMOBoost,PID,G-mean,plain SMOTE,win,L1,P019-D004,original
+1562,RAMOBoost,Wine,G-mean,plain SMOTE,win,L1,P019-D005,modified
+1563,RAMOBoost,German,G-mean,plain SMOTE,win,L1,P019-D006,original
+1564,RAMOBoost,Phoneme,G-mean,plain SMOTE,win,L1,P019-D007,original
+1565,RAMOBoost,Vehicle,G-mean,plain SMOTE,win,L1,P019-D008,modified
+1566,RAMOBoost,Texture,G-mean,plain SMOTE,win,L1,P019-D009,modified
+1567,RAMOBoost,Segment,G-mean,plain SMOTE,win,L1,P019-D010,modified
+1568,RAMOBoost,Page_Blocks,G-mean,plain SMOTE,win,L1,P019-D011,modified
+1569,RAMOBoost,Satimage,G-mean,plain SMOTE,win,L1,P019-D012,modified
+1570,RAMOBoost,Mf_Zernike,G-mean,plain SMOTE,loss,L1,P019-D013,modified
+1571,RAMOBoost,Vowel,G-mean,plain SMOTE,win,L1,P019-D014,modified
+1572,RAMOBoost,Abalone,G-mean,plain SMOTE,loss,L1,P019-D015,modified
+1573,RAMOBoost,Glass,G-mean,plain SMOTE,loss,L1,P019-D016,modified
+1574,RAMOBoost,Yeast,G-mean,plain SMOTE,loss,L1,P019-D017,modified
+1575,RAMOBoost,Letter,G-mean,plain SMOTE,win,L1,P019-D018,modified
+1576,RAMOBoost,Shuttle,G-mean,plain SMOTE,win,L1,P019-D019,modified
+1577,RAMOBoost,Sonar,Accuracy,plain SMOTE,win,L1,P019-D001,original
+1578,RAMOBoost,Spambase,Accuracy,plain SMOTE,win,L1,P019-D002,original
+1579,RAMOBoost,Ionosphere,Accuracy,plain SMOTE,win,L1,P019-D003,original
+1580,RAMOBoost,PID,Accuracy,plain SMOTE,win,L1,P019-D004,original
+1581,RAMOBoost,Wine,Accuracy,plain SMOTE,win,L1,P019-D005,modified
+1582,RAMOBoost,German,Accuracy,plain SMOTE,win,L1,P019-D006,original
+1583,RAMOBoost,Phoneme,Accuracy,plain SMOTE,win,L1,P019-D007,original
+1584,RAMOBoost,Vehicle,Accuracy,plain SMOTE,win,L1,P019-D008,modified
+1585,RAMOBoost,Texture,Accuracy,plain SMOTE,win,L1,P019-D009,modified
+1586,RAMOBoost,Segment,Accuracy,plain SMOTE,win,L1,P019-D010,modified
+1587,RAMOBoost,Page_Blocks,Accuracy,plain SMOTE,win,L1,P019-D011,modified
+1588,RAMOBoost,Satimage,Accuracy,plain SMOTE,win,L1,P019-D012,modified
+1589,RAMOBoost,Mf_Zernike,Accuracy,plain SMOTE,loss,L1,P019-D013,modified
+1590,RAMOBoost,Vowel,Accuracy,plain SMOTE,win,L1,P019-D014,modified
+1591,RAMOBoost,Abalone,Accuracy,plain SMOTE,loss,L1,P019-D015,modified
+1592,RAMOBoost,Glass,Accuracy,plain SMOTE,loss,L1,P019-D016,modified
+1593,RAMOBoost,Yeast,Accuracy,plain SMOTE,loss,L1,P019-D017,modified
+1594,RAMOBoost,Letter,Accuracy,plain SMOTE,win,L1,P019-D018,modified
+1595,RAMOBoost,Shuttle,Accuracy,plain SMOTE,tie,L1,P019-D019,modified
+1596,RAMOBoost,Sonar,Precision,plain SMOTE,win,L1,P019-D001,original
+1597,RAMOBoost,Spambase,Precision,plain SMOTE,win,L1,P019-D002,original
+1598,RAMOBoost,Ionosphere,Precision,plain SMOTE,win,L1,P019-D003,original
+1599,RAMOBoost,PID,Precision,plain SMOTE,win,L1,P019-D004,original
+1600,RAMOBoost,Wine,Precision,plain SMOTE,win,L1,P019-D005,modified
+1601,RAMOBoost,German,Precision,plain SMOTE,win,L1,P019-D006,original
+1602,RAMOBoost,Phoneme,Precision,plain SMOTE,loss,L1,P019-D007,original
+1603,RAMOBoost,Vehicle,Precision,plain SMOTE,win,L1,P019-D008,modified
+1604,RAMOBoost,Texture,Precision,plain SMOTE,win,L1,P019-D009,modified
+1605,RAMOBoost,Segment,Precision,plain SMOTE,win,L1,P019-D010,modified
+1606,RAMOBoost,Page_Blocks,Precision,plain SMOTE,win,L1,P019-D011,modified
+1607,RAMOBoost,Satimage,Precision,plain SMOTE,win,L1,P019-D012,modified
+1608,RAMOBoost,Mf_Zernike,Precision,plain SMOTE,loss,L1,P019-D013,modified
+1609,RAMOBoost,Vowel,Precision,plain SMOTE,win,L1,P019-D014,modified
+1610,RAMOBoost,Abalone,Precision,plain SMOTE,loss,L1,P019-D015,modified
+1611,RAMOBoost,Glass,Precision,plain SMOTE,loss,L1,P019-D016,modified
+1612,RAMOBoost,Yeast,Precision,plain SMOTE,loss,L1,P019-D017,modified
+1613,RAMOBoost,Letter,Precision,plain SMOTE,win,L1,P019-D018,modified
+1614,RAMOBoost,Shuttle,Precision,plain SMOTE,loss,L1,P019-D019,modified
+1615,RAMOBoost,Sonar,Recall/sensitivity,plain SMOTE,win,L1,P019-D001,original
+1616,RAMOBoost,Spambase,Recall/sensitivity,plain SMOTE,win,L1,P019-D002,original
+1617,RAMOBoost,Ionosphere,Recall/sensitivity,plain SMOTE,win,L1,P019-D003,original
+1618,RAMOBoost,PID,Recall/sensitivity,plain SMOTE,loss,L1,P019-D004,original
+1619,RAMOBoost,Wine,Recall/sensitivity,plain SMOTE,tie,L1,P019-D005,modified
+1620,RAMOBoost,German,Recall/sensitivity,plain SMOTE,loss,L1,P019-D006,original
+1621,RAMOBoost,Phoneme,Recall/sensitivity,plain SMOTE,win,L1,P019-D007,original
+1622,RAMOBoost,Vehicle,Recall/sensitivity,plain SMOTE,win,L1,P019-D008,modified
+1623,RAMOBoost,Texture,Recall/sensitivity,plain SMOTE,win,L1,P019-D009,modified
+1624,RAMOBoost,Segment,Recall/sensitivity,plain SMOTE,win,L1,P019-D010,modified
+1625,RAMOBoost,Page_Blocks,Recall/sensitivity,plain SMOTE,win,L1,P019-D011,modified
+1626,RAMOBoost,Satimage,Recall/sensitivity,plain SMOTE,win,L1,P019-D012,modified
+1627,RAMOBoost,Mf_Zernike,Recall/sensitivity,plain SMOTE,loss,L1,P019-D013,modified
+1628,RAMOBoost,Vowel,Recall/sensitivity,plain SMOTE,win,L1,P019-D014,modified
+1629,RAMOBoost,Abalone,Recall/sensitivity,plain SMOTE,loss,L1,P019-D015,modified
+1630,RAMOBoost,Glass,Recall/sensitivity,plain SMOTE,loss,L1,P019-D016,modified
+1631,RAMOBoost,Yeast,Recall/sensitivity,plain SMOTE,loss,L1,P019-D017,modified
+1632,RAMOBoost,Letter,Recall/sensitivity,plain SMOTE,win,L1,P019-D018,modified
+1633,RAMOBoost,Shuttle,Recall/sensitivity,plain SMOTE,win,L1,P019-D019,modified
+1634,RAMOBoost,Sonar,F-measure,plain SMOTE,win,L1,P019-D001,original
+1635,RAMOBoost,Spambase,F-measure,plain SMOTE,win,L1,P019-D002,original
+1636,RAMOBoost,Ionosphere,F-measure,plain SMOTE,win,L1,P019-D003,original
+1637,RAMOBoost,PID,F-measure,plain SMOTE,win,L1,P019-D004,original
+1638,RAMOBoost,Wine,F-measure,plain SMOTE,win,L1,P019-D005,modified
+1639,RAMOBoost,German,F-measure,plain SMOTE,win,L1,P019-D006,original
+1640,RAMOBoost,Phoneme,F-measure,plain SMOTE,win,L1,P019-D007,original
+1641,RAMOBoost,Vehicle,F-measure,plain SMOTE,win,L1,P019-D008,modified
+1642,RAMOBoost,Texture,F-measure,plain SMOTE,win,L1,P019-D009,modified
+1643,RAMOBoost,Segment,F-measure,plain SMOTE,win,L1,P019-D010,modified
+1644,RAMOBoost,Page_Blocks,F-measure,plain SMOTE,win,L1,P019-D011,modified
+1645,RAMOBoost,Satimage,F-measure,plain SMOTE,win,L1,P019-D012,modified
+1646,RAMOBoost,Mf_Zernike,F-measure,plain SMOTE,loss,L1,P019-D013,modified
+1647,RAMOBoost,Vowel,F-measure,plain SMOTE,win,L1,P019-D014,modified
+1648,RAMOBoost,Abalone,F-measure,plain SMOTE,loss,L1,P019-D015,modified
+1649,RAMOBoost,Glass,F-measure,plain SMOTE,loss,L1,P019-D016,modified
+1650,RAMOBoost,Yeast,F-measure,plain SMOTE,loss,L1,P019-D017,modified
+1651,RAMOBoost,Letter,F-measure,plain SMOTE,win,L1,P019-D018,modified
+1652,RAMOBoost,Shuttle,F-measure,plain SMOTE,win,L1,P019-D019,modified
+1653,RAMOBoost,Sonar,AUC,plain SMOTE,win,L1,P019-D001,original
+1654,RAMOBoost,Spambase,AUC,plain SMOTE,win,L1,P019-D002,original
+1655,RAMOBoost,Ionosphere,AUC,plain SMOTE,win,L1,P019-D003,original
+1656,RAMOBoost,PID,AUC,plain SMOTE,loss,L1,P019-D004,original
+1657,RAMOBoost,Wine,AUC,plain SMOTE,win,L1,P019-D005,modified
+1658,RAMOBoost,German,AUC,plain SMOTE,win,L1,P019-D006,original
+1659,RAMOBoost,Phoneme,AUC,plain SMOTE,win,L1,P019-D007,original
+1660,RAMOBoost,Vehicle,AUC,plain SMOTE,win,L1,P019-D008,modified
+1661,RAMOBoost,Texture,AUC,plain SMOTE,win,L1,P019-D009,modified
+1662,RAMOBoost,Segment,AUC,plain SMOTE,win,L1,P019-D010,modified
+1663,RAMOBoost,Page_Blocks,AUC,plain SMOTE,win,L1,P019-D011,modified
+1664,RAMOBoost,Satimage,AUC,plain SMOTE,win,L1,P019-D012,modified
+1665,RAMOBoost,Mf_Zernike,AUC,plain SMOTE,win,L1,P019-D013,modified
+1666,RAMOBoost,Vowel,AUC,plain SMOTE,win,L1,P019-D014,modified
+1667,RAMOBoost,Abalone,AUC,plain SMOTE,win,L1,P019-D015,modified
+1668,RAMOBoost,Glass,AUC,plain SMOTE,loss,L1,P019-D016,modified
+1669,RAMOBoost,Yeast,AUC,plain SMOTE,loss,L1,P019-D017,modified
+1670,RAMOBoost,Letter,AUC,plain SMOTE,win,L1,P019-D018,modified
+1671,RAMOBoost,Shuttle,AUC,plain SMOTE,tie,L1,P019-D019,modified
+1672,RBBoost,hddt boundary,G-mean,excluded,loss,L1,P027-D001,not stated
+1673,RBBoost,hddt breast-y,G-mean,excluded,loss,L1,P027-D002,not stated
+1674,RBBoost,hddt cam,G-mean,excluded,loss,L1,P027-D003,not stated
+1675,RBBoost,hddt compustat,G-mean,excluded,loss,L1,P027-D004,not stated
+1676,RBBoost,hddt covtype,G-mean,excluded,loss,L1,P027-D005,not stated
+1677,RBBoost,hddt credit-g,G-mean,excluded,win,L1,P027-D006,original
+1678,RBBoost,hddt estate,G-mean,excluded,loss,L1,P027-D007,not stated
+1679,RBBoost,hddt german-numer,G-mean,excluded,win,L1,P027-D008,original
+1680,RBBoost,hddt heart-v,G-mean,excluded,win,L1,P027-D009,not stated
+1681,RBBoost,hddt hypo,G-mean,excluded,win,L1,P027-D010,not stated
+1682,RBBoost,hddt ism,G-mean,excluded,loss,L1,P027-D011,not stated
+1683,RBBoost,hddt letter,G-mean,excluded,win,L1,P027-D012,not stated
+1684,RBBoost,hddt oil,G-mean,excluded,loss,L1,P027-D013,not stated
+1685,RBBoost,hddt optdigits,G-mean,excluded,win,L1,P027-D014,not stated
+1686,RBBoost,hddt page,G-mean,excluded,loss,L1,P027-D015,not stated
+1687,RBBoost,hddt pendigits,G-mean,excluded,win,L1,P027-D016,not stated
+1688,RBBoost,hddt phoneme,G-mean,excluded,win,L1,P027-D017,original
+1689,RBBoost,hddt PhosS,G-mean,excluded,loss,L1,P027-D018,not stated
+1690,RBBoost,hddt satimage,G-mean,excluded,loss,L1,P027-D019,not stated
+1691,RBBoost,hddt segment,G-mean,excluded,win,L1,P027-D020,not stated
+1692,RBBoost,keel abalone19,G-mean,excluded,loss,L1,P027-D021,repository-defined
+1693,RBBoost,keel abalone9-18,G-mean,excluded,loss,L1,P027-D022,repository-defined
+1694,RBBoost,keel cleveland-0 vs 4,G-mean,excluded,loss,L1,P027-D023,repository-defined
+1695,RBBoost,keel ecoli-0-1-3-7 vs 2-6,G-mean,excluded,win,L1,P027-D024,repository-defined
+1696,RBBoost,keel ecoli-0-1-4-6 vs 5,G-mean,excluded,win,L1,P027-D025,repository-defined
+1697,RBBoost,keel ecoli-0-1-4-7 vs 2-3,G-mean,excluded,win,L1,P027-D026,repository-defined
+1698,RBBoost,keel ecoli-0-1-4-7 vs 5-6,G-mean,excluded,win,L1,P027-D027,repository-defined
+1699,RBBoost,keel ecoli-0-1 vs 2-3-5,G-mean,excluded,win,L1,P027-D028,repository-defined
+1700,RBBoost,keel ecoli-0-1 vs 5,G-mean,excluded,win,L1,P027-D029,repository-defined
+1701,RBBoost,keel ecoli-0-2-3-4 vs 5,G-mean,excluded,win,L1,P027-D030,repository-defined
+1702,RBBoost,keel ecoli-0-2-6-7 vs 3-5,G-mean,excluded,win,L1,P027-D031,repository-defined
+1703,RBBoost,keel ecoli-0-3-4-6 vs 5,G-mean,excluded,win,L1,P027-D032,repository-defined
+1704,RBBoost,keel ecoli-0-3-4-7 vs 5-6,G-mean,excluded,win,L1,P027-D033,repository-defined
+1705,RBBoost,keel ecoli-0-3-4 vs 5,G-mean,excluded,win,L1,P027-D034,repository-defined
+1706,RBBoost,keel ecoli-0-4-6 vs 5,G-mean,excluded,win,L1,P027-D035,repository-defined
+1707,RBBoost,keel ecoli-0-6-7 vs 3-5,G-mean,excluded,loss,L1,P027-D036,repository-defined
+1708,RBBoost,keel ecoli-0-6-7 vs 5,G-mean,excluded,loss,L1,P027-D037,repository-defined
+1709,RBBoost,keel ecoli-0 vs 1,G-mean,excluded,loss,L1,P027-D038,repository-defined
+1710,RBBoost,keel ecoli1,G-mean,excluded,loss,L1,P027-D039,repository-defined
+1711,RBBoost,keel ecoli2,G-mean,excluded,loss,L1,P027-D040,repository-defined
+1712,RBBoost,keel ecoli3,G-mean,excluded,loss,L1,P027-D041,repository-defined
+1713,RBBoost,keel ecoli4,G-mean,excluded,win,L1,P027-D042,repository-defined
+1714,RBBoost,keel glass-0-1-2-3 vs 4-5,G-mean,excluded,win,L1,P027-D043,repository-defined
+1715,RBBoost,keel glass-0-1-4-6 vs 2,G-mean,excluded,loss,L1,P027-D044,repository-defined
+1716,RBBoost,keel glass-0-1-5 vs 2,G-mean,excluded,loss,L1,P027-D045,repository-defined
+1717,RBBoost,keel glass-0-1-6 vs 2,G-mean,excluded,loss,L1,P027-D046,repository-defined
+1718,RBBoost,keel glass-0-1-6 vs 5,G-mean,excluded,loss,L1,P027-D047,repository-defined
+1719,RBBoost,keel glass-0-4 vs 5,G-mean,excluded,loss,L1,P027-D048,repository-defined
+1720,RBBoost,keel glass-0-6 vs 5,G-mean,excluded,loss,L1,P027-D049,repository-defined
+1721,RBBoost,keel glass0,G-mean,excluded,win,L1,P027-D050,repository-defined
+1722,RBBoost,keel glass1,G-mean,excluded,win,L1,P027-D051,repository-defined
+1723,RBBoost,keel glass2,G-mean,excluded,loss,L1,P027-D052,repository-defined
+1724,RBBoost,keel glass4,G-mean,excluded,loss,L1,P027-D053,repository-defined
+1725,RBBoost,keel glass5,G-mean,excluded,loss,L1,P027-D054,repository-defined
+1726,RBBoost,keel glass6,G-mean,excluded,win,L1,P027-D055,repository-defined
+1727,RBBoost,keel haberman,G-mean,excluded,loss,L1,P027-D056,original
+1728,RBBoost,keel iris0,G-mean,excluded,tie,L1,P027-D057,repository-defined
+1729,RBBoost,keel led7digit-0-2-4-5-6-,G-mean,excluded,loss,L1,P027-D058,repository-defined
+1730,RBBoost,keel new-thyroid1,G-mean,excluded,win,L1,P027-D059,repository-defined
+1731,RBBoost,keel new-thyroid2,G-mean,excluded,win,L1,P027-D060,repository-defined
+1732,RBBoost,keel page-blocks-1-3 vs 4,G-mean,excluded,win,L1,P027-D061,repository-defined
+1733,RBBoost,keel page-blocks0,G-mean,excluded,loss,L1,P027-D062,repository-defined
+1734,RBBoost,keel pima,G-mean,excluded,loss,L1,P027-D063,original
+1735,RBBoost,keel segment0,G-mean,excluded,win,L1,P027-D064,repository-defined
+1736,RBBoost,keel shuttle-c0-vs-c4,G-mean,excluded,tie,L1,P027-D065,repository-defined
+1737,RBBoost,keel shuttle-c2-vs-c4,G-mean,excluded,tie,L1,P027-D066,repository-defined
+1738,RBBoost,keel vehicle0,G-mean,excluded,win,L1,P027-D067,repository-defined
+1739,RBBoost,keel vehicle1,G-mean,excluded,loss,L1,P027-D068,repository-defined
+1740,RBBoost,keel vehicle2,G-mean,excluded,win,L1,P027-D069,repository-defined
+1741,RBBoost,keel vehicle3,G-mean,excluded,loss,L1,P027-D070,repository-defined
+1742,RBBoost,keel vowel0,G-mean,excluded,win,L1,P027-D071,repository-defined
+1743,RBBoost,keel wisconsin,G-mean,excluded,win,L1,P027-D072,original
+1744,RBBoost,keel yeast-0-2-5-6 vs 3-7,G-mean,excluded,loss,L1,P027-D073,repository-defined
+1745,RBBoost,keel yeast-0-2-5-7-9 vs 3,G-mean,excluded,loss,L1,P027-D074,repository-defined
+1746,RBBoost,keel yeast-0-3-5-9 vs 7-8,G-mean,excluded,loss,L1,P027-D075,repository-defined
+1747,RBBoost,keel yeast-0-5-6-7-9 vs 4,G-mean,excluded,loss,L1,P027-D076,repository-defined
+1748,RBBoost,keel yeast-1-2-8-9 vs 7,G-mean,excluded,loss,L1,P027-D077,repository-defined
+1749,RBBoost,keel yeast-1-4-5-8 vs 7,G-mean,excluded,loss,L1,P027-D078,repository-defined
+1750,RBBoost,keel yeast-1 vs 7,G-mean,excluded,loss,L1,P027-D079,repository-defined
+1751,RBBoost,keel yeast-2 vs 4,G-mean,excluded,loss,L1,P027-D080,repository-defined
+1752,RBBoost,keel yeast-2 vs 8,G-mean,excluded,win,L1,P027-D081,repository-defined
+1753,RBBoost,keel yeast1,G-mean,excluded,loss,L1,P027-D082,repository-defined
+1754,RBBoost,keel yeast3,G-mean,excluded,loss,L1,P027-D083,repository-defined
+1755,RBBoost,keel yeast4,G-mean,excluded,loss,L1,P027-D084,repository-defined
+1756,RBBoost,keel yeast5,G-mean,excluded,loss,L1,P027-D085,repository-defined
+1757,RBBoost,keel yeast6,G-mean,excluded,loss,L1,P027-D086,repository-defined
+1758,RBBoost,hddt boundary,AUC,excluded,win,L1,P027-D001,not stated
+1759,RBBoost,hddt breast-y,AUC,excluded,win,L1,P027-D002,not stated
+1760,RBBoost,hddt cam,AUC,excluded,win,L1,P027-D003,not stated
+1761,RBBoost,hddt compustat,AUC,excluded,win,L1,P027-D004,not stated
+1762,RBBoost,hddt covtype,AUC,excluded,win,L1,P027-D005,not stated
+1763,RBBoost,hddt credit-g,AUC,excluded,win,L1,P027-D006,original
+1764,RBBoost,hddt estate,AUC,excluded,win,L1,P027-D007,not stated
+1765,RBBoost,hddt german-numer,AUC,excluded,win,L1,P027-D008,original
+1766,RBBoost,hddt heart-v,AUC,excluded,win,L1,P027-D009,not stated
+1767,RBBoost,hddt hypo,AUC,excluded,win,L1,P027-D010,not stated
+1768,RBBoost,hddt ism,AUC,excluded,loss,L1,P027-D011,not stated
+1769,RBBoost,hddt letter,AUC,excluded,win,L1,P027-D012,not stated
+1770,RBBoost,hddt oil,AUC,excluded,win,L1,P027-D013,not stated
+1771,RBBoost,hddt optdigits,AUC,excluded,win,L1,P027-D014,not stated
+1772,RBBoost,hddt page,AUC,excluded,win,L1,P027-D015,not stated
+1773,RBBoost,hddt pendigits,AUC,excluded,win,L1,P027-D016,not stated
+1774,RBBoost,hddt phoneme,AUC,excluded,win,L1,P027-D017,original
+1775,RBBoost,hddt PhosS,AUC,excluded,win,L1,P027-D018,not stated
+1776,RBBoost,hddt satimage,AUC,excluded,win,L1,P027-D019,not stated
+1777,RBBoost,hddt segment,AUC,excluded,win,L1,P027-D020,not stated
+1778,RBBoost,keel abalone19,AUC,excluded,loss,L1,P027-D021,repository-defined
+1779,RBBoost,keel abalone9-18,AUC,excluded,win,L1,P027-D022,repository-defined
+1780,RBBoost,keel cleveland-0 vs 4,AUC,excluded,win,L1,P027-D023,repository-defined
+1781,RBBoost,keel ecoli-0-1-3-7 vs 2-6,AUC,excluded,win,L1,P027-D024,repository-defined
+1782,RBBoost,keel ecoli-0-1-4-6 vs 5,AUC,excluded,win,L1,P027-D025,repository-defined
+1783,RBBoost,keel ecoli-0-1-4-7 vs 2-3,AUC,excluded,win,L1,P027-D026,repository-defined
+1784,RBBoost,keel ecoli-0-1-4-7 vs 5-6,AUC,excluded,win,L1,P027-D027,repository-defined
+1785,RBBoost,keel ecoli-0-1 vs 2-3-5,AUC,excluded,win,L1,P027-D028,repository-defined
+1786,RBBoost,keel ecoli-0-1 vs 5,AUC,excluded,win,L1,P027-D029,repository-defined
+1787,RBBoost,keel ecoli-0-2-3-4 vs 5,AUC,excluded,win,L1,P027-D030,repository-defined
+1788,RBBoost,keel ecoli-0-2-6-7 vs 3-5,AUC,excluded,win,L1,P027-D031,repository-defined
+1789,RBBoost,keel ecoli-0-3-4-6 vs 5,AUC,excluded,win,L1,P027-D032,repository-defined
+1790,RBBoost,keel ecoli-0-3-4-7 vs 5-6,AUC,excluded,win,L1,P027-D033,repository-defined
+1791,RBBoost,keel ecoli-0-3-4 vs 5,AUC,excluded,win,L1,P027-D034,repository-defined
+1792,RBBoost,keel ecoli-0-4-6 vs 5,AUC,excluded,win,L1,P027-D035,repository-defined
+1793,RBBoost,keel ecoli-0-6-7 vs 3-5,AUC,excluded,win,L1,P027-D036,repository-defined
+1794,RBBoost,keel ecoli-0-6-7 vs 5,AUC,excluded,win,L1,P027-D037,repository-defined
+1795,RBBoost,keel ecoli-0 vs 1,AUC,excluded,win,L1,P027-D038,repository-defined
+1796,RBBoost,keel ecoli1,AUC,excluded,win,L1,P027-D039,repository-defined
+1797,RBBoost,keel ecoli2,AUC,excluded,win,L1,P027-D040,repository-defined
+1798,RBBoost,keel ecoli3,AUC,excluded,win,L1,P027-D041,repository-defined
+1799,RBBoost,keel ecoli4,AUC,excluded,win,L1,P027-D042,repository-defined
+1800,RBBoost,keel glass-0-1-2-3 vs 4-5,AUC,excluded,win,L1,P027-D043,repository-defined
+1801,RBBoost,keel glass-0-1-4-6 vs 2,AUC,excluded,win,L1,P027-D044,repository-defined
+1802,RBBoost,keel glass-0-1-5 vs 2,AUC,excluded,win,L1,P027-D045,repository-defined
+1803,RBBoost,keel glass-0-1-6 vs 2,AUC,excluded,win,L1,P027-D046,repository-defined
+1804,RBBoost,keel glass-0-1-6 vs 5,AUC,excluded,win,L1,P027-D047,repository-defined
+1805,RBBoost,keel glass-0-4 vs 5,AUC,excluded,win,L1,P027-D048,repository-defined
+1806,RBBoost,keel glass-0-6 vs 5,AUC,excluded,win,L1,P027-D049,repository-defined
+1807,RBBoost,keel glass0,AUC,excluded,win,L1,P027-D050,repository-defined
+1808,RBBoost,keel glass1,AUC,excluded,win,L1,P027-D051,repository-defined
+1809,RBBoost,keel glass2,AUC,excluded,loss,L1,P027-D052,repository-defined
+1810,RBBoost,keel glass4,AUC,excluded,win,L1,P027-D053,repository-defined
+1811,RBBoost,keel glass5,AUC,excluded,loss,L1,P027-D054,repository-defined
+1812,RBBoost,keel glass6,AUC,excluded,win,L1,P027-D055,repository-defined
+1813,RBBoost,keel haberman,AUC,excluded,loss,L1,P027-D056,original
+1814,RBBoost,keel iris0,AUC,excluded,win,L1,P027-D057,repository-defined
+1815,RBBoost,keel led7digit-0-2-4-5-6-,AUC,excluded,win,L1,P027-D058,repository-defined
+1816,RBBoost,keel new-thyroid1,AUC,excluded,win,L1,P027-D059,repository-defined
+1817,RBBoost,keel new-thyroid2,AUC,excluded,win,L1,P027-D060,repository-defined
+1818,RBBoost,keel page-blocks-1-3 vs 4,AUC,excluded,win,L1,P027-D061,repository-defined
+1819,RBBoost,keel page-blocks0,AUC,excluded,win,L1,P027-D062,repository-defined
+1820,RBBoost,keel pima,AUC,excluded,loss,L1,P027-D063,original
+1821,RBBoost,keel segment0,AUC,excluded,win,L1,P027-D064,repository-defined
+1822,RBBoost,keel shuttle-c0-vs-c4,AUC,excluded,tie,L1,P027-D065,repository-defined
+1823,RBBoost,keel shuttle-c2-vs-c4,AUC,excluded,tie,L1,P027-D066,repository-defined
+1824,RBBoost,keel vehicle0,AUC,excluded,win,L1,P027-D067,repository-defined
+1825,RBBoost,keel vehicle1,AUC,excluded,win,L1,P027-D068,repository-defined
+1826,RBBoost,keel vehicle2,AUC,excluded,win,L1,P027-D069,repository-defined
+1827,RBBoost,keel vehicle3,AUC,excluded,win,L1,P027-D070,repository-defined
+1828,RBBoost,keel vowel0,AUC,excluded,win,L1,P027-D071,repository-defined
+1829,RBBoost,keel wisconsin,AUC,excluded,win,L1,P027-D072,original
+1830,RBBoost,keel yeast-0-2-5-6 vs 3-7,AUC,excluded,win,L1,P027-D073,repository-defined
+1831,RBBoost,keel yeast-0-2-5-7-9 vs 3,AUC,excluded,win,L1,P027-D074,repository-defined
+1832,RBBoost,keel yeast-0-3-5-9 vs 7-8,AUC,excluded,win,L1,P027-D075,repository-defined
+1833,RBBoost,keel yeast-0-5-6-7-9 vs 4,AUC,excluded,tie,L1,P027-D076,repository-defined
+1834,RBBoost,keel yeast-1-2-8-9 vs 7,AUC,excluded,win,L1,P027-D077,repository-defined
+1835,RBBoost,keel yeast-1-4-5-8 vs 7,AUC,excluded,win,L1,P027-D078,repository-defined
+1836,RBBoost,keel yeast-1 vs 7,AUC,excluded,win,L1,P027-D079,repository-defined
+1837,RBBoost,keel yeast-2 vs 4,AUC,excluded,loss,L1,P027-D080,repository-defined
+1838,RBBoost,keel yeast-2 vs 8,AUC,excluded,win,L1,P027-D081,repository-defined
+1839,RBBoost,keel yeast1,AUC,excluded,loss,L1,P027-D082,repository-defined
+1840,RBBoost,keel yeast3,AUC,excluded,loss,L1,P027-D083,repository-defined
+1841,RBBoost,keel yeast4,AUC,excluded,loss,L1,P027-D084,repository-defined
+1842,RBBoost,keel yeast5,AUC,excluded,win,L1,P027-D085,repository-defined
+1843,RBBoost,keel yeast6,AUC,excluded,win,L1,P027-D086,repository-defined
+1844,RBBoost,hddt boundary,F-measure,excluded,loss,L1,P027-D001,not stated
+1845,RBBoost,hddt breast-y,F-measure,excluded,win,L1,P027-D002,not stated
+1846,RBBoost,hddt cam,F-measure,excluded,loss,L1,P027-D003,not stated
+1847,RBBoost,hddt compustat,F-measure,excluded,win,L1,P027-D004,not stated
+1848,RBBoost,hddt covtype,F-measure,excluded,win,L1,P027-D005,not stated
+1849,RBBoost,hddt credit-g,F-measure,excluded,win,L1,P027-D006,original
+1850,RBBoost,hddt estate,F-measure,excluded,loss,L1,P027-D007,not stated
+1851,RBBoost,hddt german-numer,F-measure,excluded,win,L1,P027-D008,original
+1852,RBBoost,hddt heart-v,F-measure,excluded,win,L1,P027-D009,not stated
+1853,RBBoost,hddt hypo,F-measure,excluded,win,L1,P027-D010,not stated
+1854,RBBoost,hddt ism,F-measure,excluded,win,L1,P027-D011,not stated
+1855,RBBoost,hddt letter,F-measure,excluded,win,L1,P027-D012,not stated
+1856,RBBoost,hddt oil,F-measure,excluded,win,L1,P027-D013,not stated
+1857,RBBoost,hddt optdigits,F-measure,excluded,win,L1,P027-D014,not stated
+1858,RBBoost,hddt page,F-measure,excluded,win,L1,P027-D015,not stated
+1859,RBBoost,hddt pendigits,F-measure,excluded,win,L1,P027-D016,not stated
+1860,RBBoost,hddt phoneme,F-measure,excluded,win,L1,P027-D017,original
+1861,RBBoost,hddt PhosS,F-measure,excluded,loss,L1,P027-D018,not stated
+1862,RBBoost,hddt satimage,F-measure,excluded,win,L1,P027-D019,not stated
+1863,RBBoost,hddt segment,F-measure,excluded,win,L1,P027-D020,not stated
+1864,RBBoost,keel abalone19,F-measure,excluded,loss,L1,P027-D021,repository-defined
+1865,RBBoost,keel abalone9-18,F-measure,excluded,win,L1,P027-D022,repository-defined
+1866,RBBoost,keel cleveland-0 vs 4,F-measure,excluded,win,L1,P027-D023,repository-defined
+1867,RBBoost,keel ecoli-0-1-3-7 vs 2-6,F-measure,excluded,win,L1,P027-D024,repository-defined
+1868,RBBoost,keel ecoli-0-1-4-6 vs 5,F-measure,excluded,win,L1,P027-D025,repository-defined
+1869,RBBoost,keel ecoli-0-1-4-7 vs 2-3,F-measure,excluded,win,L1,P027-D026,repository-defined
+1870,RBBoost,keel ecoli-0-1-4-7 vs 5-6,F-measure,excluded,win,L1,P027-D027,repository-defined
+1871,RBBoost,keel ecoli-0-1 vs 2-3-5,F-measure,excluded,win,L1,P027-D028,repository-defined
+1872,RBBoost,keel ecoli-0-1 vs 5,F-measure,excluded,win,L1,P027-D029,repository-defined
+1873,RBBoost,keel ecoli-0-2-3-4 vs 5,F-measure,excluded,win,L1,P027-D030,repository-defined
+1874,RBBoost,keel ecoli-0-2-6-7 vs 3-5,F-measure,excluded,win,L1,P027-D031,repository-defined
+1875,RBBoost,keel ecoli-0-3-4-6 vs 5,F-measure,excluded,win,L1,P027-D032,repository-defined
+1876,RBBoost,keel ecoli-0-3-4-7 vs 5-6,F-measure,excluded,win,L1,P027-D033,repository-defined
+1877,RBBoost,keel ecoli-0-3-4 vs 5,F-measure,excluded,win,L1,P027-D034,repository-defined
+1878,RBBoost,keel ecoli-0-4-6 vs 5,F-measure,excluded,win,L1,P027-D035,repository-defined
+1879,RBBoost,keel ecoli-0-6-7 vs 3-5,F-measure,excluded,win,L1,P027-D036,repository-defined
+1880,RBBoost,keel ecoli-0-6-7 vs 5,F-measure,excluded,win,L1,P027-D037,repository-defined
+1881,RBBoost,keel ecoli-0 vs 1,F-measure,excluded,loss,L1,P027-D038,repository-defined
+1882,RBBoost,keel ecoli1,F-measure,excluded,loss,L1,P027-D039,repository-defined
+1883,RBBoost,keel ecoli2,F-measure,excluded,win,L1,P027-D040,repository-defined
+1884,RBBoost,keel ecoli3,F-measure,excluded,loss,L1,P027-D041,repository-defined
+1885,RBBoost,keel ecoli4,F-measure,excluded,win,L1,P027-D042,repository-defined
+1886,RBBoost,keel glass-0-1-2-3 vs 4-5,F-measure,excluded,win,L1,P027-D043,repository-defined
+1887,RBBoost,keel glass-0-1-4-6 vs 2,F-measure,excluded,loss,L1,P027-D044,repository-defined
+1888,RBBoost,keel glass-0-1-5 vs 2,F-measure,excluded,loss,L1,P027-D045,repository-defined
+1889,RBBoost,keel glass-0-1-6 vs 2,F-measure,excluded,loss,L1,P027-D046,repository-defined
+1890,RBBoost,keel glass-0-1-6 vs 5,F-measure,excluded,loss,L1,P027-D047,repository-defined
+1891,RBBoost,keel glass-0-4 vs 5,F-measure,excluded,loss,L1,P027-D048,repository-defined
+1892,RBBoost,keel glass-0-6 vs 5,F-measure,excluded,loss,L1,P027-D049,repository-defined
+1893,RBBoost,keel glass0,F-measure,excluded,win,L1,P027-D050,repository-defined
+1894,RBBoost,keel glass1,F-measure,excluded,win,L1,P027-D051,repository-defined
+1895,RBBoost,keel glass2,F-measure,excluded,loss,L1,P027-D052,repository-defined
+1896,RBBoost,keel glass4,F-measure,excluded,win,L1,P027-D053,repository-defined
+1897,RBBoost,keel glass5,F-measure,excluded,loss,L1,P027-D054,repository-defined
+1898,RBBoost,keel glass6,F-measure,excluded,win,L1,P027-D055,repository-defined
+1899,RBBoost,keel haberman,F-measure,excluded,loss,L1,P027-D056,original
+1900,RBBoost,keel iris0,F-measure,excluded,tie,L1,P027-D057,repository-defined
+1901,RBBoost,keel led7digit-0-2-4-5-6-,F-measure,excluded,loss,L1,P027-D058,repository-defined
+1902,RBBoost,keel new-thyroid1,F-measure,excluded,win,L1,P027-D059,repository-defined
+1903,RBBoost,keel new-thyroid2,F-measure,excluded,win,L1,P027-D060,repository-defined
+1904,RBBoost,keel page-blocks-1-3 vs 4,F-measure,excluded,win,L1,P027-D061,repository-defined
+1905,RBBoost,keel page-blocks0,F-measure,excluded,win,L1,P027-D062,repository-defined
+1906,RBBoost,keel pima,F-measure,excluded,loss,L1,P027-D063,original
+1907,RBBoost,keel segment0,F-measure,excluded,win,L1,P027-D064,repository-defined
+1908,RBBoost,keel shuttle-c0-vs-c4,F-measure,excluded,tie,L1,P027-D065,repository-defined
+1909,RBBoost,keel shuttle-c2-vs-c4,F-measure,excluded,tie,L1,P027-D066,repository-defined
+1910,RBBoost,keel vehicle0,F-measure,excluded,win,L1,P027-D067,repository-defined
+1911,RBBoost,keel vehicle1,F-measure,excluded,loss,L1,P027-D068,repository-defined
+1912,RBBoost,keel vehicle2,F-measure,excluded,win,L1,P027-D069,repository-defined
+1913,RBBoost,keel vehicle3,F-measure,excluded,loss,L1,P027-D070,repository-defined
+1914,RBBoost,keel vowel0,F-measure,excluded,win,L1,P027-D071,repository-defined
+1915,RBBoost,keel wisconsin,F-measure,excluded,win,L1,P027-D072,original
+1916,RBBoost,keel yeast-0-2-5-6 vs 3-7,F-measure,excluded,win,L1,P027-D073,repository-defined
+1917,RBBoost,keel yeast-0-2-5-7-9 vs 3,F-measure,excluded,win,L1,P027-D074,repository-defined
+1918,RBBoost,keel yeast-0-3-5-9 vs 7-8,F-measure,excluded,win,L1,P027-D075,repository-defined
+1919,RBBoost,keel yeast-0-5-6-7-9 vs 4,F-measure,excluded,win,L1,P027-D076,repository-defined
+1920,RBBoost,keel yeast-1-2-8-9 vs 7,F-measure,excluded,win,L1,P027-D077,repository-defined
+1921,RBBoost,keel yeast-1-4-5-8 vs 7,F-measure,excluded,loss,L1,P027-D078,repository-defined
+1922,RBBoost,keel yeast-1 vs 7,F-measure,excluded,win,L1,P027-D079,repository-defined
+1923,RBBoost,keel yeast-2 vs 4,F-measure,excluded,win,L1,P027-D080,repository-defined
+1924,RBBoost,keel yeast-2 vs 8,F-measure,excluded,win,L1,P027-D081,repository-defined
+1925,RBBoost,keel yeast1,F-measure,excluded,loss,L1,P027-D082,repository-defined
+1926,RBBoost,keel yeast3,F-measure,excluded,loss,L1,P027-D083,repository-defined
+1927,RBBoost,keel yeast4,F-measure,excluded,win,L1,P027-D084,repository-defined
+1928,RBBoost,keel yeast5,F-measure,excluded,loss,L1,P027-D085,repository-defined
+1929,RBBoost,keel yeast6,F-measure,excluded,win,L1,P027-D086,repository-defined
+1930,RBBoost,hddt boundary,Accuracy,excluded,win,L1,P027-D001,not stated
+1931,RBBoost,hddt breast-y,Accuracy,excluded,win,L1,P027-D002,not stated
+1932,RBBoost,hddt cam,Accuracy,excluded,win,L1,P027-D003,not stated
+1933,RBBoost,hddt compustat,Accuracy,excluded,win,L1,P027-D004,not stated
+1934,RBBoost,hddt covtype,Accuracy,excluded,win,L1,P027-D005,not stated
+1935,RBBoost,hddt credit-g,Accuracy,excluded,win,L1,P027-D006,original
+1936,RBBoost,hddt estate,Accuracy,excluded,win,L1,P027-D007,not stated
+1937,RBBoost,hddt german-numer,Accuracy,excluded,win,L1,P027-D008,original
+1938,RBBoost,hddt heart-v,Accuracy,excluded,win,L1,P027-D009,not stated
+1939,RBBoost,hddt hypo,Accuracy,excluded,win,L1,P027-D010,not stated
+1940,RBBoost,hddt ism,Accuracy,excluded,win,L1,P027-D011,not stated
+1941,RBBoost,hddt letter,Accuracy,excluded,win,L1,P027-D012,not stated
+1942,RBBoost,hddt oil,Accuracy,excluded,win,L1,P027-D013,not stated
+1943,RBBoost,hddt optdigits,Accuracy,excluded,win,L1,P027-D014,not stated
+1944,RBBoost,hddt page,Accuracy,excluded,win,L1,P027-D015,not stated
+1945,RBBoost,hddt pendigits,Accuracy,excluded,win,L1,P027-D016,not stated
+1946,RBBoost,hddt phoneme,Accuracy,excluded,win,L1,P027-D017,original
+1947,RBBoost,hddt PhosS,Accuracy,excluded,win,L1,P027-D018,not stated
+1948,RBBoost,hddt satimage,Accuracy,excluded,win,L1,P027-D019,not stated
+1949,RBBoost,hddt segment,Accuracy,excluded,win,L1,P027-D020,not stated
+1950,RBBoost,keel abalone19,Accuracy,excluded,win,L1,P027-D021,repository-defined
+1951,RBBoost,keel abalone9-18,Accuracy,excluded,win,L1,P027-D022,repository-defined
+1952,RBBoost,keel cleveland-0 vs 4,Accuracy,excluded,win,L1,P027-D023,repository-defined
+1953,RBBoost,keel ecoli-0-1-3-7 vs 2-6,Accuracy,excluded,win,L1,P027-D024,repository-defined
+1954,RBBoost,keel ecoli-0-1-4-6 vs 5,Accuracy,excluded,win,L1,P027-D025,repository-defined
+1955,RBBoost,keel ecoli-0-1-4-7 vs 2-3,Accuracy,excluded,win,L1,P027-D026,repository-defined
+1956,RBBoost,keel ecoli-0-1-4-7 vs 5-6,Accuracy,excluded,win,L1,P027-D027,repository-defined
+1957,RBBoost,keel ecoli-0-1 vs 2-3-5,Accuracy,excluded,win,L1,P027-D028,repository-defined
+1958,RBBoost,keel ecoli-0-1 vs 5,Accuracy,excluded,win,L1,P027-D029,repository-defined
+1959,RBBoost,keel ecoli-0-2-3-4 vs 5,Accuracy,excluded,win,L1,P027-D030,repository-defined
+1960,RBBoost,keel ecoli-0-2-6-7 vs 3-5,Accuracy,excluded,win,L1,P027-D031,repository-defined
+1961,RBBoost,keel ecoli-0-3-4-6 vs 5,Accuracy,excluded,win,L1,P027-D032,repository-defined
+1962,RBBoost,keel ecoli-0-3-4-7 vs 5-6,Accuracy,excluded,win,L1,P027-D033,repository-defined
+1963,RBBoost,keel ecoli-0-3-4 vs 5,Accuracy,excluded,win,L1,P027-D034,repository-defined
+1964,RBBoost,keel ecoli-0-4-6 vs 5,Accuracy,excluded,win,L1,P027-D035,repository-defined
+1965,RBBoost,keel ecoli-0-6-7 vs 3-5,Accuracy,excluded,win,L1,P027-D036,repository-defined
+1966,RBBoost,keel ecoli-0-6-7 vs 5,Accuracy,excluded,win,L1,P027-D037,repository-defined
+1967,RBBoost,keel ecoli-0 vs 1,Accuracy,excluded,loss,L1,P027-D038,repository-defined
+1968,RBBoost,keel ecoli1,Accuracy,excluded,win,L1,P027-D039,repository-defined
+1969,RBBoost,keel ecoli2,Accuracy,excluded,win,L1,P027-D040,repository-defined
+1970,RBBoost,keel ecoli3,Accuracy,excluded,win,L1,P027-D041,repository-defined
+1971,RBBoost,keel ecoli4,Accuracy,excluded,win,L1,P027-D042,repository-defined
+1972,RBBoost,keel glass-0-1-2-3 vs 4-5,Accuracy,excluded,win,L1,P027-D043,repository-defined
+1973,RBBoost,keel glass-0-1-4-6 vs 2,Accuracy,excluded,win,L1,P027-D044,repository-defined
+1974,RBBoost,keel glass-0-1-5 vs 2,Accuracy,excluded,win,L1,P027-D045,repository-defined
+1975,RBBoost,keel glass-0-1-6 vs 2,Accuracy,excluded,win,L1,P027-D046,repository-defined
+1976,RBBoost,keel glass-0-1-6 vs 5,Accuracy,excluded,loss,L1,P027-D047,repository-defined
+1977,RBBoost,keel glass-0-4 vs 5,Accuracy,excluded,loss,L1,P027-D048,repository-defined
+1978,RBBoost,keel glass-0-6 vs 5,Accuracy,excluded,loss,L1,P027-D049,repository-defined
+1979,RBBoost,keel glass0,Accuracy,excluded,win,L1,P027-D050,repository-defined
+1980,RBBoost,keel glass1,Accuracy,excluded,win,L1,P027-D051,repository-defined
+1981,RBBoost,keel glass2,Accuracy,excluded,win,L1,P027-D052,repository-defined
+1982,RBBoost,keel glass4,Accuracy,excluded,win,L1,P027-D053,repository-defined
+1983,RBBoost,keel glass5,Accuracy,excluded,loss,L1,P027-D054,repository-defined
+1984,RBBoost,keel glass6,Accuracy,excluded,win,L1,P027-D055,repository-defined
+1985,RBBoost,keel haberman,Accuracy,excluded,win,L1,P027-D056,original
+1986,RBBoost,keel iris0,Accuracy,excluded,tie,L1,P027-D057,repository-defined
+1987,RBBoost,keel led7digit-0-2-4-5-6-,Accuracy,excluded,win,L1,P027-D058,repository-defined
+1988,RBBoost,keel new-thyroid1,Accuracy,excluded,win,L1,P027-D059,repository-defined
+1989,RBBoost,keel new-thyroid2,Accuracy,excluded,win,L1,P027-D060,repository-defined
+1990,RBBoost,keel page-blocks-1-3 vs 4,Accuracy,excluded,win,L1,P027-D061,repository-defined
+1991,RBBoost,keel page-blocks0,Accuracy,excluded,win,L1,P027-D062,repository-defined
+1992,RBBoost,keel pima,Accuracy,excluded,win,L1,P027-D063,original
+1993,RBBoost,keel segment0,Accuracy,excluded,win,L1,P027-D064,repository-defined
+1994,RBBoost,keel shuttle-c0-vs-c4,Accuracy,excluded,tie,L1,P027-D065,repository-defined
+1995,RBBoost,keel shuttle-c2-vs-c4,Accuracy,excluded,tie,L1,P027-D066,repository-defined
+1996,RBBoost,keel vehicle0,Accuracy,excluded,win,L1,P027-D067,repository-defined
+1997,RBBoost,keel vehicle1,Accuracy,excluded,win,L1,P027-D068,repository-defined
+1998,RBBoost,keel vehicle2,Accuracy,excluded,win,L1,P027-D069,repository-defined
+1999,RBBoost,keel vehicle3,Accuracy,excluded,win,L1,P027-D070,repository-defined
+2000,RBBoost,keel vowel0,Accuracy,excluded,win,L1,P027-D071,repository-defined
+2001,RBBoost,keel wisconsin,Accuracy,excluded,win,L1,P027-D072,original
+2002,RBBoost,keel yeast-0-2-5-6 vs 3-7,Accuracy,excluded,win,L1,P027-D073,repository-defined
+2003,RBBoost,keel yeast-0-2-5-7-9 vs 3,Accuracy,excluded,win,L1,P027-D074,repository-defined
+2004,RBBoost,keel yeast-0-3-5-9 vs 7-8,Accuracy,excluded,win,L1,P027-D075,repository-defined
+2005,RBBoost,keel yeast-0-5-6-7-9 vs 4,Accuracy,excluded,win,L1,P027-D076,repository-defined
+2006,RBBoost,keel yeast-1-2-8-9 vs 7,Accuracy,excluded,win,L1,P027-D077,repository-defined
+2007,RBBoost,keel yeast-1-4-5-8 vs 7,Accuracy,excluded,win,L1,P027-D078,repository-defined
+2008,RBBoost,keel yeast-1 vs 7,Accuracy,excluded,win,L1,P027-D079,repository-defined
+2009,RBBoost,keel yeast-2 vs 4,Accuracy,excluded,win,L1,P027-D080,repository-defined
+2010,RBBoost,keel yeast-2 vs 8,Accuracy,excluded,win,L1,P027-D081,repository-defined
+2011,RBBoost,keel yeast1,Accuracy,excluded,win,L1,P027-D082,repository-defined
+2012,RBBoost,keel yeast3,Accuracy,excluded,win,L1,P027-D083,repository-defined
+2013,RBBoost,keel yeast4,Accuracy,excluded,win,L1,P027-D084,repository-defined
+2014,RBBoost,keel yeast5,Accuracy,excluded,win,L1,P027-D085,repository-defined
+2015,RBBoost,keel yeast6,Accuracy,excluded,win,L1,P027-D086,repository-defined
+2016,RSMOTE,avila,Precision,plain SMOTE,win,L1,P053-D019,modified
+2017,RSMOTE,breast_tissue2,Precision,plain SMOTE,win,L1,P053-D001,not stated
+2018,RSMOTE,breastcancer,Precision,plain SMOTE,win,L1,P053-D011,modified
+2019,RSMOTE,codrna,Precision,plain SMOTE,win,L1,P053-D018,modified
+2020,RSMOTE,creditApproval,Precision,plain SMOTE,win,L1,P053-D012,modified
+2021,RSMOTE,ecoli,Precision,plain SMOTE,win,L1,P053-D002,not stated
+2022,RSMOTE,heart,Precision,plain SMOTE,win,L1,P053-D003,original
+2023,RSMOTE,iris,Precision,plain SMOTE,loss,L1,P053-D004,not stated
+2024,RSMOTE,isolet5,Precision,plain SMOTE,win,L1,P053-D017,modified
+2025,RSMOTE,letter,Precision,plain SMOTE,win,L1,P053-D020,modified
+2026,RSMOTE,libra,Precision,plain SMOTE,win,L1,P053-D005,not stated
+2027,RSMOTE,magic,Precision,plain SMOTE,win,L1,P053-D025,modified
+2028,RSMOTE,mocap,Precision,plain SMOTE,win,L1,P053-D022,modified
+2029,RSMOTE,mushrooms,Precision,plain SMOTE,tie,L1,P053-D016,modified
+2030,RSMOTE,nomao,Precision,plain SMOTE,win,L1,P053-D024,modified
+2031,RSMOTE,pima,Precision,plain SMOTE,win,L1,P053-D006,original
+2032,RSMOTE,poker,Precision,plain SMOTE,win,L1,P053-D023,modified
+2033,RSMOTE,segment,Precision,plain SMOTE,win,L1,P053-D007,not stated
+2034,RSMOTE,skin,Precision,plain SMOTE,win,L1,P053-D026,modified
+2035,RSMOTE,splice,Precision,plain SMOTE,win,L1,P053-D015,modified
+2036,RSMOTE,susy,Precision,plain SMOTE,win,L1,P053-D021,modified
+2037,RSMOTE,svmguide1,Precision,plain SMOTE,win,L1,P053-D010,modified
+2038,RSMOTE,svmguide3,Precision,plain SMOTE,win,L1,P053-D014,modified
+2039,RSMOTE,vehicle,Precision,plain SMOTE,win,L1,P053-D008,not stated
+2040,RSMOTE,votes,Precision,plain SMOTE,loss,L1,P053-D013,modified
+2041,RSMOTE,wine,Precision,plain SMOTE,win,L1,P053-D009,not stated
+2042,RSMOTE,Online_Retail,Precision,plain SMOTE,win,L1,P053-D027,modified
+2043,RSMOTE,avila,Recall/sensitivity,plain SMOTE,loss,L1,P053-D019,modified
+2044,RSMOTE,breast_tissue2,Recall/sensitivity,plain SMOTE,win,L1,P053-D001,not stated
+2045,RSMOTE,breastcancer,Recall/sensitivity,plain SMOTE,win,L1,P053-D011,modified
+2046,RSMOTE,codrna,Recall/sensitivity,plain SMOTE,loss,L1,P053-D018,modified
+2047,RSMOTE,creditApproval,Recall/sensitivity,plain SMOTE,tie,L1,P053-D012,modified
+2048,RSMOTE,ecoli,Recall/sensitivity,plain SMOTE,win,L1,P053-D002,not stated
+2049,RSMOTE,heart,Recall/sensitivity,plain SMOTE,win,L1,P053-D003,original
+2050,RSMOTE,iris,Recall/sensitivity,plain SMOTE,win,L1,P053-D004,not stated
+2051,RSMOTE,isolet5,Recall/sensitivity,plain SMOTE,loss,L1,P053-D017,modified
+2052,RSMOTE,letter,Recall/sensitivity,plain SMOTE,win,L1,P053-D020,modified
+2053,RSMOTE,libra,Recall/sensitivity,plain SMOTE,win,L1,P053-D005,not stated
+2054,RSMOTE,magic,Recall/sensitivity,plain SMOTE,loss,L1,P053-D025,modified
+2055,RSMOTE,mocap,Recall/sensitivity,plain SMOTE,loss,L1,P053-D022,modified
+2056,RSMOTE,mushrooms,Recall/sensitivity,plain SMOTE,win,L1,P053-D016,modified
+2057,RSMOTE,nomao,Recall/sensitivity,plain SMOTE,loss,L1,P053-D024,modified
+2058,RSMOTE,pima,Recall/sensitivity,plain SMOTE,win,L1,P053-D006,original
+2059,RSMOTE,poker,Recall/sensitivity,plain SMOTE,win,L1,P053-D023,modified
+2060,RSMOTE,segment,Recall/sensitivity,plain SMOTE,win,L1,P053-D007,not stated
+2061,RSMOTE,skin,Recall/sensitivity,plain SMOTE,win,L1,P053-D026,modified
+2062,RSMOTE,splice,Recall/sensitivity,plain SMOTE,win,L1,P053-D015,modified
+2063,RSMOTE,susy,Recall/sensitivity,plain SMOTE,loss,L1,P053-D021,modified
+2064,RSMOTE,svmguide1,Recall/sensitivity,plain SMOTE,win,L1,P053-D010,modified
+2065,RSMOTE,svmguide3,Recall/sensitivity,plain SMOTE,loss,L1,P053-D014,modified
+2066,RSMOTE,vehicle,Recall/sensitivity,plain SMOTE,win,L1,P053-D008,not stated
+2067,RSMOTE,votes,Recall/sensitivity,plain SMOTE,loss,L1,P053-D013,modified
+2068,RSMOTE,wine,Recall/sensitivity,plain SMOTE,win,L1,P053-D009,not stated
+2069,RSMOTE,Online_Retail,Recall/sensitivity,plain SMOTE,loss,L1,P053-D027,modified
+2070,RSMOTE,avila,AUC,plain SMOTE,win,L1,P053-D019,modified
+2071,RSMOTE,breast_tissue2,AUC,plain SMOTE,win,L1,P053-D001,not stated
+2072,RSMOTE,breastcancer,AUC,plain SMOTE,win,L1,P053-D011,modified
+2073,RSMOTE,codrna,AUC,plain SMOTE,loss,L1,P053-D018,modified
+2074,RSMOTE,creditApproval,AUC,plain SMOTE,win,L1,P053-D012,modified
+2075,RSMOTE,ecoli,AUC,plain SMOTE,win,L1,P053-D002,not stated
+2076,RSMOTE,heart,AUC,plain SMOTE,win,L1,P053-D003,original
+2077,RSMOTE,iris,AUC,plain SMOTE,win,L1,P053-D004,not stated
+2078,RSMOTE,isolet5,AUC,plain SMOTE,win,L1,P053-D017,modified
+2079,RSMOTE,letter,AUC,plain SMOTE,win,L1,P053-D020,modified
+2080,RSMOTE,libra,AUC,plain SMOTE,win,L1,P053-D005,not stated
+2081,RSMOTE,magic,AUC,plain SMOTE,win,L1,P053-D025,modified
+2082,RSMOTE,mocap,AUC,plain SMOTE,loss,L1,P053-D022,modified
+2083,RSMOTE,mushrooms,AUC,plain SMOTE,tie,L1,P053-D016,modified
+2084,RSMOTE,nomao,AUC,plain SMOTE,win,L1,P053-D024,modified
+2085,RSMOTE,pima,AUC,plain SMOTE,win,L1,P053-D006,original
+2086,RSMOTE,poker,AUC,plain SMOTE,win,L1,P053-D023,modified
+2087,RSMOTE,segment,AUC,plain SMOTE,win,L1,P053-D007,not stated
+2088,RSMOTE,skin,AUC,plain SMOTE,loss,L1,P053-D026,modified
+2089,RSMOTE,splice,AUC,plain SMOTE,win,L1,P053-D015,modified
+2090,RSMOTE,susy,AUC,plain SMOTE,win,L1,P053-D021,modified
+2091,RSMOTE,svmguide1,AUC,plain SMOTE,win,L1,P053-D010,modified
+2092,RSMOTE,svmguide3,AUC,plain SMOTE,win,L1,P053-D014,modified
+2093,RSMOTE,vehicle,AUC,plain SMOTE,win,L1,P053-D008,not stated
+2094,RSMOTE,votes,AUC,plain SMOTE,loss,L1,P053-D013,modified
+2095,RSMOTE,wine,AUC,plain SMOTE,win,L1,P053-D009,not stated
+2096,RSMOTE,Online_Retail,AUC,plain SMOTE,loss,L1,P053-D027,modified
+2097,RSMOTE,avila,F-measure,plain SMOTE,win,L1,P053-D019,modified
+2098,RSMOTE,breast_tissue2,F-measure,plain SMOTE,win,L1,P053-D001,not stated
+2099,RSMOTE,breastcancer,F-measure,plain SMOTE,win,L1,P053-D011,modified
+2100,RSMOTE,codrna,F-measure,plain SMOTE,win,L1,P053-D018,modified
+2101,RSMOTE,creditApproval,F-measure,plain SMOTE,win,L1,P053-D012,modified
+2102,RSMOTE,ecoli,F-measure,plain SMOTE,win,L1,P053-D002,not stated
+2103,RSMOTE,heart,F-measure,plain SMOTE,win,L1,P053-D003,original
+2104,RSMOTE,iris,F-measure,plain SMOTE,win,L1,P053-D004,not stated
+2105,RSMOTE,isolet5,F-measure,plain SMOTE,win,L1,P053-D017,modified
+2106,RSMOTE,letter,F-measure,plain SMOTE,win,L1,P053-D020,modified
+2107,RSMOTE,libra,F-measure,plain SMOTE,win,L1,P053-D005,not stated
+2108,RSMOTE,magic,F-measure,plain SMOTE,win,L1,P053-D025,modified
+2109,RSMOTE,mocap,F-measure,plain SMOTE,win,L1,P053-D022,modified
+2110,RSMOTE,mushrooms,F-measure,plain SMOTE,win,L1,P053-D016,modified
+2111,RSMOTE,nomao,F-measure,plain SMOTE,win,L1,P053-D024,modified
+2112,RSMOTE,pima,F-measure,plain SMOTE,win,L1,P053-D006,original
+2113,RSMOTE,poker,F-measure,plain SMOTE,win,L1,P053-D023,modified
+2114,RSMOTE,segment,F-measure,plain SMOTE,win,L1,P053-D007,not stated
+2115,RSMOTE,skin,F-measure,plain SMOTE,win,L1,P053-D026,modified
+2116,RSMOTE,splice,F-measure,plain SMOTE,win,L1,P053-D015,modified
+2117,RSMOTE,susy,F-measure,plain SMOTE,win,L1,P053-D021,modified
+2118,RSMOTE,svmguide1,F-measure,plain SMOTE,win,L1,P053-D010,modified
+2119,RSMOTE,svmguide3,F-measure,plain SMOTE,win,L1,P053-D014,modified
+2120,RSMOTE,vehicle,F-measure,plain SMOTE,win,L1,P053-D008,not stated
+2121,RSMOTE,votes,F-measure,plain SMOTE,loss,L1,P053-D013,modified
+2122,RSMOTE,wine,F-measure,plain SMOTE,win,L1,P053-D009,not stated
+2123,RSMOTE,Online_Retail,F-measure,plain SMOTE,win,L1,P053-D027,modified
+2124,RSMOTE,avila,G-mean,plain SMOTE,win,L1,P053-D019,modified
+2125,RSMOTE,breast_tissue2,G-mean,plain SMOTE,win,L1,P053-D001,not stated
+2126,RSMOTE,breastcancer,G-mean,plain SMOTE,win,L1,P053-D011,modified
+2127,RSMOTE,codrna,G-mean,plain SMOTE,loss,L1,P053-D018,modified
+2128,RSMOTE,creditApproval,G-mean,plain SMOTE,win,L1,P053-D012,modified
+2129,RSMOTE,ecoli,G-mean,plain SMOTE,win,L1,P053-D002,not stated
+2130,RSMOTE,heart,G-mean,plain SMOTE,win,L1,P053-D003,original
+2131,RSMOTE,iris,G-mean,plain SMOTE,win,L1,P053-D004,not stated
+2132,RSMOTE,isolet5,G-mean,plain SMOTE,loss,L1,P053-D017,modified
+2133,RSMOTE,letter,G-mean,plain SMOTE,win,L1,P053-D020,modified
+2134,RSMOTE,libra,G-mean,plain SMOTE,win,L1,P053-D005,not stated
+2135,RSMOTE,magic,G-mean,plain SMOTE,win,L1,P053-D025,modified
+2136,RSMOTE,mocap,G-mean,plain SMOTE,loss,L1,P053-D022,modified
+2137,RSMOTE,mushrooms,G-mean,plain SMOTE,win,L1,P053-D016,modified
+2138,RSMOTE,nomao,G-mean,plain SMOTE,loss,L1,P053-D024,modified
+2139,RSMOTE,pima,G-mean,plain SMOTE,win,L1,P053-D006,original
+2140,RSMOTE,poker,G-mean,plain SMOTE,win,L1,P053-D023,modified
+2141,RSMOTE,segment,G-mean,plain SMOTE,win,L1,P053-D007,not stated
+2142,RSMOTE,skin,G-mean,plain SMOTE,win,L1,P053-D026,modified
+2143,RSMOTE,splice,G-mean,plain SMOTE,win,L1,P053-D015,modified
+2144,RSMOTE,susy,G-mean,plain SMOTE,win,L1,P053-D021,modified
+2145,RSMOTE,svmguide1,G-mean,plain SMOTE,win,L1,P053-D010,modified
+2146,RSMOTE,svmguide3,G-mean,plain SMOTE,win,L1,P053-D014,modified
+2147,RSMOTE,vehicle,G-mean,plain SMOTE,win,L1,P053-D008,not stated
+2148,RSMOTE,votes,G-mean,plain SMOTE,loss,L1,P053-D013,modified
+2149,RSMOTE,wine,G-mean,plain SMOTE,win,L1,P053-D009,not stated
+2150,RSMOTE,Online_Retail,G-mean,plain SMOTE,loss,L1,P053-D027,modified
+2151,RUSBoost,CAR,AUC,plain SMOTE,win,L1,P020-D004,modified
+2152,RUSBoost,CCCS12,AUC,plain SMOTE,win,L1,P020-D005,not stated
+2153,RUSBoost,CM1,AUC,plain SMOTE,win,L1,P020-D009,not stated
+2154,RUSBoost,CONTRACEPTIVE,AUC,plain SMOTE,win,L1,P020-D014,modified
+2155,RUSBoost,ECOLI,AUC,plain SMOTE,win,L1,P020-D012,modified
+2156,RUSBoost,GLASS,AUC,plain SMOTE,win,L1,P020-D008,modified
+2157,RUSBoost,MAMMOGRAPHY,AUC,plain SMOTE,win,L1,P020-D002,original
+2158,RUSBoost,PC1,AUC,plain SMOTE,win,L1,P020-D007,not stated
+2159,RUSBoost,PENDIGITS,AUC,plain SMOTE,win,L1,P020-D010,modified
+2160,RUSBoost,SATIMG,AUC,plain SMOTE,win,L1,P020-D011,modified
+2161,RUSBoost,SEGMENT,AUC,plain SMOTE,win,L1,P020-D013,modified
+2162,RUSBoost,SOLARFLARE,AUC,plain SMOTE,win,L1,P020-D003,modified
+2163,RUSBoost,SP1,AUC,plain SMOTE,win,L1,P020-D006,not stated
+2164,RUSBoost,SP3,AUC,plain SMOTE,win,L1,P020-D001,not stated
+2165,RUSBoost,VEHICLE,AUC,plain SMOTE,win,L1,P020-D015,modified
+2166,SCUT,Thyroid,G-mean,plain SMOTE,loss,L1,P028-D001,original
+2167,SCUT,Lympho.,G-mean,plain SMOTE,win,L1,P028-D002,original
+2168,SCUT,Pageblock,G-mean,plain SMOTE,tie,L1,P028-D003,original
+2169,SCUT,Derma.,G-mean,plain SMOTE,win,L1,P028-D004,original
+2170,SCUT,Autos,G-mean,plain SMOTE,loss,L1,P028-D005,original
+2171,SCUT,Ecoli,G-mean,plain SMOTE,loss,L1,P028-D006,original
+2172,SCUT,Wine,G-mean,plain SMOTE,win,L1,P028-D007,original
+2173,SCUT,Yeast,G-mean,plain SMOTE,win,L1,P028-D008,original
+2174,SCUT,Thyroid,F-measure,plain SMOTE,loss,L1,P028-D001,original
+2175,SCUT,Lympho.,F-measure,plain SMOTE,win,L1,P028-D002,original
+2176,SCUT,Pageblocks,F-measure,plain SMOTE,loss,L3,P028-D003,original
+2177,SCUT,Derma.,F-measure,plain SMOTE,win,L1,P028-D004,original
+2178,SCUT,Autos,F-measure,plain SMOTE,loss,L1,P028-D005,original
+2179,SCUT,Ecoli,F-measure,plain SMOTE,loss,L1,P028-D006,original
+2180,SCUT,Wine,F-measure,plain SMOTE,win,L1,P028-D007,original
+2181,SCUT,Yeast,F-measure,plain SMOTE,win,L1,P028-D008,original
+2182,SCUT,Thyroid,AUC,plain SMOTE,loss,L1,P028-D001,original
+2183,SCUT,Lympho.,AUC,plain SMOTE,win,L1,P028-D002,original
+2184,SCUT,Pageblocks,AUC,plain SMOTE,loss,L3,P028-D003,original
+2185,SCUT,Derma,AUC,plain SMOTE,loss,L2,P028-D004,original
+2186,SCUT,Autos,AUC,plain SMOTE,loss,L1,P028-D005,original
+2187,SCUT,Ecoli,AUC,plain SMOTE,loss,L1,P028-D006,original
+2188,SCUT,Wine,AUC,plain SMOTE,win,L1,P028-D007,original
+2189,SCUT,Yeast,AUC,plain SMOTE,win,L1,P028-D008,original
+2190,SHSampler,balance,G-mean,OVO-SMOTE,loss,L1,P059-D001,original
+2191,SHSampler,car,G-mean,OVO-SMOTE,loss,L1,P059-D002,original
+2192,SHSampler,cleveland,G-mean,OVO-SMOTE,win,L1,P059-D003,original
+2193,SHSampler,ecoli,G-mean,OVO-SMOTE,win,L1,P059-D004,original
+2194,SHSampler,glass,G-mean,OVO-SMOTE,loss,L1,P059-D005,original
+2195,SHSampler,hayes-roth,G-mean,OVO-SMOTE,win,L1,P059-D006,original
+2196,SHSampler,led7digit,G-mean,OVO-SMOTE,loss,L1,P059-D007,original
+2197,SHSampler,lymphography,G-mean,OVO-SMOTE,win,L1,P059-D008,original
+2198,SHSampler,newthyroid,G-mean,OVO-SMOTE,win,L1,P059-D009,original
+2199,SHSampler,page-blocks,G-mean,OVO-SMOTE,win,L1,P059-D010,original
+2200,SHSampler,PhishingData,G-mean,OVO-SMOTE,win,L1,P059-D011,original
+2201,SHSampler,sensorReadings,G-mean,OVO-SMOTE,loss,L1,P059-D012,original
+2202,SHSampler,thyroid,G-mean,OVO-SMOTE,loss,L1,P059-D013,original
+2203,SHSampler,userknowledge,G-mean,OVO-SMOTE,win,L1,P059-D014,original
+2204,SHSampler,vehicle,G-mean,OVO-SMOTE,win,L1,P059-D015,original
+2205,SHSampler,vertebralColumn,G-mean,OVO-SMOTE,win,L1,P059-D016,original
+2206,SHSampler,wine,G-mean,OVO-SMOTE,loss,L1,P059-D017,original
+2207,SHSampler,winequality,G-mean,OVO-SMOTE,tie,L1,P059-D018,original
+2208,SHSampler,yeast,G-mean,OVO-SMOTE,win,L1,P059-D019,original
+2209,SHSampler,zoo,G-mean,OVO-SMOTE,win,L1,P059-D020,original
+2210,SHSampler,balance,AUC,OVO-SMOTE,loss,L1,P059-D001,original
+2211,SHSampler,car,AUC,OVO-SMOTE,loss,L1,P059-D002,original
+2212,SHSampler,cleveland,AUC,OVO-SMOTE,win,L1,P059-D003,original
+2213,SHSampler,ecoli,AUC,OVO-SMOTE,loss,L1,P059-D004,original
+2214,SHSampler,glass,AUC,OVO-SMOTE,loss,L1,P059-D005,original
+2215,SHSampler,hayes-roth,AUC,OVO-SMOTE,win,L1,P059-D006,original
+2216,SHSampler,led7digit,AUC,OVO-SMOTE,loss,L1,P059-D007,original
+2217,SHSampler,lymphography,AUC,OVO-SMOTE,win,L1,P059-D008,original
+2218,SHSampler,newthyroid,AUC,OVO-SMOTE,win,L1,P059-D009,original
+2219,SHSampler,page-blocks,AUC,OVO-SMOTE,win,L1,P059-D010,original
+2220,SHSampler,PhishingData,AUC,OVO-SMOTE,win,L1,P059-D011,original
+2221,SHSampler,sensorReadings,AUC,OVO-SMOTE,loss,L1,P059-D012,original
+2222,SHSampler,thyroid,AUC,OVO-SMOTE,loss,L1,P059-D013,original
+2223,SHSampler,userknowledge,AUC,OVO-SMOTE,win,L1,P059-D014,original
+2224,SHSampler,vehicle,AUC,OVO-SMOTE,win,L1,P059-D015,original
+2225,SHSampler,vertebralColumn,AUC,OVO-SMOTE,win,L1,P059-D016,original
+2226,SHSampler,wine,AUC,OVO-SMOTE,loss,L1,P059-D017,original
+2227,SHSampler,winequality,AUC,OVO-SMOTE,loss,L1,P059-D018,original
+2228,SHSampler,yeast,AUC,OVO-SMOTE,win,L1,P059-D019,original
+2229,SHSampler,zoo,AUC,OVO-SMOTE,win,L1,P059-D020,original
+2230,SMOM,vehicle,G-mean,plain SMOTE,loss,L1,P034-D001,original
+2231,SMOM,sat,G-mean,plain SMOTE,win,L1,P034-D002,original
+2232,SMOM,ecoli,G-mean,plain SMOTE,win,L1,P034-D003,original
+2233,SMOM,automobile,G-mean,plain SMOTE,win,L1,P034-D004,modified
+2234,SMOM,voice9_6,G-mean,plain SMOTE,win,L1,P034-D005,modified
+2235,SMOM,vowel5,G-mean,plain SMOTE,win,L1,P034-D006,modified
+2236,SMOM,vowel7,G-mean,plain SMOTE,win,L1,P034-D007,modified
+2237,SMOM,robot,G-mean,plain SMOTE,tie,L1,P034-D008,original
+2238,SMOM,pendigits,G-mean,plain SMOTE,loss,L1,P034-D009,modified
+2239,SMOM,page-blocks,G-mean,plain SMOTE,win,L1,P034-D010,modified
+2240,SMOM,housing5,G-mean,plain SMOTE,win,L1,P034-D011,original
+2241,SMOM,SWD,G-mean,plain SMOTE,win,L1,P034-D012,original
+2242,SMOM,wine-red,G-mean,plain SMOTE,win,L1,P034-D013,original
+2243,SMOM,voice9_7,G-mean,plain SMOTE,loss,L1,P034-D014,original
+2244,SMOM,LEV,G-mean,plain SMOTE,win,L1,P034-D015,original
+2245,SMOM,machine,G-mean,plain SMOTE,win,L1,P034-D016,modified
+2246,SMOM,abalone8,G-mean,plain SMOTE,win,L1,P034-D017,modified
+2247,SMOM,plates-faults5,G-mean,plain SMOTE,loss,L1,P034-D018,modified
+2248,SMOM,plates-faults7,G-mean,plain SMOTE,win,L1,P034-D019,original
+2249,SMOM,ESL,G-mean,plain SMOTE,loss,L1,P034-D020,modified
+2250,SMOM,ERA,G-mean,plain SMOTE,loss,L1,P034-D021,original
+2251,SMOM,yeast5,G-mean,plain SMOTE,win,L1,P034-D022,modified
+2252,SMOM,ERA5,G-mean,plain SMOTE,win,L1,P034-D023,original
+2253,SMOM,yeast7,G-mean,plain SMOTE,win,L1,P034-D024,modified
+2254,SMOM,abalone10,G-mean,plain SMOTE,win,L1,P034-D025,modified
+2255,SMOM,yeast8,G-mean,plain SMOTE,loss,L1,P034-D026,modified
+2256,SMOM,housing10,G-mean,plain SMOTE,win,L1,P034-D027,original
+2257,SMOM,vehicle,AUC,plain SMOTE,loss,L1,P034-D001,original
+2258,SMOM,sat,AUC,plain SMOTE,win,L1,P034-D002,original
+2259,SMOM,ecoli,AUC,plain SMOTE,win,L1,P034-D003,original
+2260,SMOM,automobile,AUC,plain SMOTE,loss,L1,P034-D004,modified
+2261,SMOM,voice9_6,AUC,plain SMOTE,loss,L1,P034-D005,modified
+2262,SMOM,vowel5,AUC,plain SMOTE,win,L1,P034-D006,modified
+2263,SMOM,vowel7,AUC,plain SMOTE,win,L1,P034-D007,modified
+2264,SMOM,robot,AUC,plain SMOTE,tie,L1,P034-D008,original
+2265,SMOM,pendigits,AUC,plain SMOTE,tie,L1,P034-D009,modified
+2266,SMOM,page-blocks,AUC,plain SMOTE,loss,L1,P034-D010,modified
+2267,SMOM,housing5,AUC,plain SMOTE,win,L1,P034-D011,original
+2268,SMOM,SWD,AUC,plain SMOTE,loss,L1,P034-D012,original
+2269,SMOM,wine-red,AUC,plain SMOTE,win,L1,P034-D013,original
+2270,SMOM,voice9_7,AUC,plain SMOTE,loss,L1,P034-D014,original
+2271,SMOM,LEV,AUC,plain SMOTE,win,L1,P034-D015,original
+2272,SMOM,machine,AUC,plain SMOTE,win,L1,P034-D016,modified
+2273,SMOM,abalone8,AUC,plain SMOTE,win,L1,P034-D017,modified
+2274,SMOM,plates-faults5,AUC,plain SMOTE,loss,L1,P034-D018,modified
+2275,SMOM,plates-faults7,AUC,plain SMOTE,win,L1,P034-D019,original
+2276,SMOM,ESL,AUC,plain SMOTE,win,L1,P034-D020,modified
+2277,SMOM,ERA,AUC,plain SMOTE,win,L1,P034-D021,original
+2278,SMOM,yeast5,AUC,plain SMOTE,win,L1,P034-D022,modified
+2279,SMOM,ERA5,AUC,plain SMOTE,win,L1,P034-D023,original
+2280,SMOM,yeast7,AUC,plain SMOTE,win,L1,P034-D024,modified
+2281,SMOM,abalone10,AUC,plain SMOTE,win,L1,P034-D025,modified
+2282,SMOM,yeast8,AUC,plain SMOTE,win,L1,P034-D026,modified
+2283,SMOM,housing10,AUC,plain SMOTE,win,L1,P034-D027,original
+2284,SMOM,vehicle,Recall/sensitivity,plain SMOTE,win,L1,P034-D001,original
+2285,SMOM,sat,Recall/sensitivity,plain SMOTE,win,L1,P034-D002,original
+2286,SMOM,ecoli,Recall/sensitivity,plain SMOTE,win,L1,P034-D003,original
+2287,SMOM,automobile,Recall/sensitivity,plain SMOTE,loss,L1,P034-D004,modified
+2288,SMOM,voice9_6,Recall/sensitivity,plain SMOTE,loss,L1,P034-D005,modified
+2289,SMOM,vowel5,Recall/sensitivity,plain SMOTE,win,L1,P034-D006,modified
+2290,SMOM,vowel7,Recall/sensitivity,plain SMOTE,loss,L1,P034-D007,modified
+2291,SMOM,robot,Recall/sensitivity,plain SMOTE,tie,L1,P034-D008,original
+2292,SMOM,pendigits,Recall/sensitivity,plain SMOTE,loss,L1,P034-D009,modified
+2293,SMOM,page-blocks,Recall/sensitivity,plain SMOTE,win,L1,P034-D010,modified
+2294,SMOM,housing5,Recall/sensitivity,plain SMOTE,win,L1,P034-D011,original
+2295,SMOM,SWD,Recall/sensitivity,plain SMOTE,win,L1,P034-D012,original
+2296,SMOM,wine-red,Recall/sensitivity,plain SMOTE,win,L1,P034-D013,original
+2297,SMOM,voice9_7,Recall/sensitivity,plain SMOTE,loss,L1,P034-D014,original
+2298,SMOM,LEV,Recall/sensitivity,plain SMOTE,win,L1,P034-D015,original
+2299,SMOM,machine,Recall/sensitivity,plain SMOTE,tie,L1,P034-D016,modified
+2300,SMOM,abalone8,Recall/sensitivity,plain SMOTE,win,L1,P034-D017,modified
+2301,SMOM,plates-faults5,Recall/sensitivity,plain SMOTE,loss,L1,P034-D018,modified
+2302,SMOM,plates-faults7,Recall/sensitivity,plain SMOTE,win,L1,P034-D019,original
+2303,SMOM,ESL,Recall/sensitivity,plain SMOTE,loss,L1,P034-D020,modified
+2304,SMOM,ERA,Recall/sensitivity,plain SMOTE,win,L1,P034-D021,original
+2305,SMOM,yeast5,Recall/sensitivity,plain SMOTE,win,L1,P034-D022,modified
+2306,SMOM,ERA5,Recall/sensitivity,plain SMOTE,win,L1,P034-D023,original
+2307,SMOM,yeast7,Recall/sensitivity,plain SMOTE,win,L1,P034-D024,modified
+2308,SMOM,abalone10,Recall/sensitivity,plain SMOTE,win,L1,P034-D025,modified
+2309,SMOM,yeast8,Recall/sensitivity,plain SMOTE,win,L1,P034-D026,modified
+2310,SMOM,housing10,Recall/sensitivity,plain SMOTE,win,L1,P034-D027,original
+2311,SMOM,vehicle,Precision,plain SMOTE,win,L1,P034-D001,original
+2312,SMOM,sat,Precision,plain SMOTE,loss,L1,P034-D002,original
+2313,SMOM,ecoli,Precision,plain SMOTE,win,L1,P034-D003,original
+2314,SMOM,automobile,Precision,plain SMOTE,loss,L1,P034-D004,modified
+2315,SMOM,voice9_6,Precision,plain SMOTE,win,L1,P034-D005,modified
+2316,SMOM,vowel5,Precision,plain SMOTE,win,L1,P034-D006,modified
+2317,SMOM,vowel7,Precision,plain SMOTE,win,L1,P034-D007,modified
+2318,SMOM,robot,Precision,plain SMOTE,loss,L1,P034-D008,original
+2319,SMOM,pendigits,Precision,plain SMOTE,loss,L1,P034-D009,modified
+2320,SMOM,page-blocks,Precision,plain SMOTE,win,L1,P034-D010,modified
+2321,SMOM,housing5,Precision,plain SMOTE,loss,L1,P034-D011,original
+2322,SMOM,SWD,Precision,plain SMOTE,loss,L1,P034-D012,original
+2323,SMOM,wine-red,Precision,plain SMOTE,loss,L1,P034-D013,original
+2324,SMOM,voice9_7,Precision,plain SMOTE,loss,L1,P034-D014,original
+2325,SMOM,LEV,Precision,plain SMOTE,win,L1,P034-D015,original
+2326,SMOM,machine,Precision,plain SMOTE,loss,L1,P034-D016,modified
+2327,SMOM,abalone8,Precision,plain SMOTE,win,L1,P034-D017,modified
+2328,SMOM,plates-faults5,Precision,plain SMOTE,loss,L1,P034-D018,modified
+2329,SMOM,plates-faults7,Precision,plain SMOTE,loss,L1,P034-D019,original
+2330,SMOM,ESL,Precision,plain SMOTE,loss,L1,P034-D020,modified
+2331,SMOM,ERA,Precision,plain SMOTE,win,L1,P034-D021,original
+2332,SMOM,yeast5,Precision,plain SMOTE,win,L1,P034-D022,modified
+2333,SMOM,ERA5,Precision,plain SMOTE,loss,L1,P034-D023,original
+2334,SMOM,yeast7,Precision,plain SMOTE,win,L1,P034-D024,modified
+2335,SMOM,abalone10,Precision,plain SMOTE,win,L1,P034-D025,modified
+2336,SMOM,yeast8,Precision,plain SMOTE,win,L1,P034-D026,modified
+2337,SMOM,housing10,Precision,plain SMOTE,win,L1,P034-D027,original
+2338,SMOTE-ENN,Pima,AUC,plain SMOTE,loss,L1,P008-D001,original
+2339,SMOTE-ENN,German,AUC,plain SMOTE,win,L1,P008-D002,original
+2340,SMOTE-ENN,Post-operative,AUC,plain SMOTE,win,L1,P008-D003,modified
+2341,SMOTE-ENN,Haberman,AUC,plain SMOTE,win,L1,P008-D004,original
+2342,SMOTE-ENN,Splice-ie,AUC,plain SMOTE,loss,L1,P008-D005,modified
+2343,SMOTE-ENN,Splice-ei,AUC,plain SMOTE,loss,L1,P008-D006,modified
+2344,SMOTE-ENN,Vehicle,AUC,plain SMOTE,loss,L1,P008-D007,modified
+2345,SMOTE-ENN,Letter-vowel,AUC,plain SMOTE,win,L1,P008-D008,modified
+2346,SMOTE-ENN,New-thyroid,AUC,plain SMOTE,win,L1,P008-D009,modified
+2347,SMOTE-ENN,E.Coli,AUC,plain SMOTE,loss,L1,P008-D010,modified
+2348,SMOTE-ENN,Satimage,AUC,plain SMOTE,win,L1,P008-D011,modified
+2349,SMOTE-ENN,Flag,AUC,plain SMOTE,win,L1,P008-D012,modified
+2350,SMOTE-ENN,Glass,AUC,plain SMOTE,win,L1,P008-D013,modified
+2351,SMOTE-ENN,Letter-a,AUC,plain SMOTE,tie,L1,P008-D014,modified
+2352,SMOTE-ENN,Nursery,AUC,plain SMOTE,loss,L1,P008-D015,modified
+2353,SMOTE-IPF,acl,AUC,plain SMOTE,win,L1,P029-D031,not stated
+2354,SMOTE-IPF,breast,AUC,plain SMOTE,win,L1,P029-D032,not stated
+2355,SMOTE-IPF,bupa,AUC,plain SMOTE,win,L1,P029-D033,original
+2356,SMOTE-IPF,cleveland,AUC,plain SMOTE,win,L1,P029-D034,not stated
+2357,SMOTE-IPF,ecoli,AUC,plain SMOTE,win,L1,P029-D035,not stated
+2358,SMOTE-IPF,haberman,AUC,plain SMOTE,win,L1,P029-D036,original
+2359,SMOTE-IPF,hepatitis,AUC,plain SMOTE,win,L1,P029-D037,original
+2360,SMOTE-IPF,newthyroid,AUC,plain SMOTE,win,L1,P029-D038,not stated
+2361,SMOTE-IPF,pima,AUC,plain SMOTE,win,L1,P029-D039,original
+2362,SMOTEBoost,KDDCup-99 intrusion (U2R class),Recall/sensitivity,plain SMOTE,win,L1,P007-D001,modified
+2363,SMOTEBoost,mammography,Recall/sensitivity,plain SMOTE,win,L1,P007-D002,original
+2364,SMOTEBoost,Satimage,Recall/sensitivity,plain SMOTE,loss,L1,P007-D003,modified
+2365,SMOTEBoost,phoneme,Recall/sensitivity,plain SMOTE,loss,L1,P007-D004,original
+2366,SMOTEBoost,KDDCup-99 intrusion (U2R class),Precision,plain SMOTE,win,L1,P007-D001,modified
+2367,SMOTEBoost,mammography,Precision,plain SMOTE,win,L1,P007-D002,original
+2368,SMOTEBoost,Satimage,Precision,plain SMOTE,win,L1,P007-D003,modified
+2369,SMOTEBoost,phoneme,Precision,plain SMOTE,win,L1,P007-D004,original
+2370,SMOTEBoost,KDDCup-99 intrusion (U2R class),F-measure,plain SMOTE,win,L1,P007-D001,modified
+2371,SMOTEBoost,mammography,F-measure,plain SMOTE,win,L1,P007-D002,original
+2372,SMOTEBoost,Satimage,F-measure,plain SMOTE,win,L1,P007-D003,modified
+2373,SMOTEBoost,phoneme,F-measure,plain SMOTE,win,L1,P007-D004,original
+2374,SOS,Default,F-measure,plain SMOTE,win,L1,P060-D001,original
+2375,SOS,Shoppers,F-measure,plain SMOTE,win,L1,P060-D002,original
+2376,SOS,Surgical,F-measure,plain SMOTE,win,L1,P060-D003,not stated
+2377,SOS,WeatherAUS,F-measure,plain SMOTE,win,L1,P060-D004,not stated
+2378,SOS,Buddy,F-measure,plain SMOTE,win,L1,P060-D005,original
+2379,SOS,Satimage,F-measure,plain SMOTE,win,L1,P060-D006,original
+2380,SOUP,balance scale,G-mean,Static-SMOTE,win,L1,P043-D001,original
+2381,SOUP,car,G-mean,Static-SMOTE,win,L1,P043-D002,original
+2382,SOUP,cleveland 1,G-mean,Static-SMOTE,win,L1,P043-D003,modified
+2383,SOUP,cleveland 2,G-mean,Static-SMOTE,win,L1,P043-D004,modified
+2384,SOUP,cmc,G-mean,Static-SMOTE,win,L1,P043-D005,original
+2385,SOUP,dermatology,G-mean,Static-SMOTE,win,L1,P043-D006,original
+2386,SOUP,ecoli,G-mean,Static-SMOTE,loss,L1,P043-D007,original
+2387,SOUP,flare,G-mean,Static-SMOTE,win,L1,P043-D008,original
+2388,SOUP,glass,G-mean,Static-SMOTE,win,L1,P043-D009,original
+2389,SOUP,hayes roth,G-mean,Static-SMOTE,tie,L1,P043-D010,original
+2390,SOUP,led7digit,G-mean,Static-SMOTE,win,L1,P043-D011,original
+2391,SOUP,thyroid,G-mean,Static-SMOTE,win,L1,P043-D012,original
+2392,SOUP,vehicle,G-mean,Static-SMOTE,tie,L1,P043-D013,original
+2393,SOUP,wine quality,G-mean,Static-SMOTE,win,L1,P043-D015,original
+2394,SOUP,yeast,G-mean,Static-SMOTE,win,L1,P043-D014,original
+2395,SOUP,art1,G-mean,Static-SMOTE,win,L1,P043-D016,synthetic
+2396,SOUP,art2,G-mean,Static-SMOTE,win,L1,P043-D017,synthetic
+2397,SOUP,art3,G-mean,Static-SMOTE,win,L1,P043-D018,synthetic
+2398,SOUP,art4,G-mean,Static-SMOTE,win,L1,P043-D019,synthetic
+2399,SPE,Credit Fraud (KNN),G-mean,plain SMOTE,win,L1,P050-D002,original
+2400,SPE,Credit Fraud (DT),G-mean,plain SMOTE,win,L1,P050-D002,original
+2401,SPE,Credit Fraud (MLP),G-mean,plain SMOTE,win,L1,P050-D002,original
+2402,SPE,KDDCUP (DOS vs. PRB) (AdaBoost10),G-mean,plain SMOTE,not comparable,L3,P050-D003,modified
+2403,SPE,KDDCUP (DOS vs. R2L) (AdaBoost10),G-mean,plain SMOTE,not comparable,L3,P050-D004,modified
+2404,SPE,Record Linkage (GBDT10),G-mean,plain SMOTE,not comparable,L3,P050-D005,original
+2405,SPE,Payment Simulation (GBDT10),G-mean,plain SMOTE,not comparable,L3,P050-D006,original
+2406,SPE,Credit Fraud (KNN),AUC-PR,plain SMOTE,win,L1,P050-D002,original
+2407,SPE,Credit Fraud (DT),AUC-PR,plain SMOTE,win,L1,P050-D002,original
+2408,SPE,Credit Fraud (MLP),AUC-PR,plain SMOTE,win,L1,P050-D002,original
+2409,SPE,KDDCUP (DOS vs. PRB) (AdaBoost10),AUC-PR,plain SMOTE,not comparable,L3,P050-D003,modified
+2410,SPE,KDDCUP (DOS vs. R2L) (AdaBoost10),AUC-PR,plain SMOTE,not comparable,L3,P050-D004,modified
+2411,SPE,Record Linkage (GBDT10),AUC-PR,plain SMOTE,not comparable,L3,P050-D005,original
+2412,SPE,Payment Simulation (GBDT10),AUC-PR,plain SMOTE,not comparable,L3,P050-D006,original
+2413,SPE,Credit Fraud (KNN),F-measure,plain SMOTE,win,L1,P050-D002,original
+2414,SPE,Credit Fraud (DT),F-measure,plain SMOTE,win,L1,P050-D002,original
+2415,SPE,Credit Fraud (MLP),F-measure,plain SMOTE,win,L1,P050-D002,original
+2416,SPE,KDDCUP (DOS vs. PRB) (AdaBoost10),F-measure,plain SMOTE,not comparable,L3,P050-D003,modified
+2417,SPE,KDDCUP (DOS vs. R2L) (AdaBoost10),F-measure,plain SMOTE,not comparable,L3,P050-D004,modified
+2418,SPE,Record Linkage (GBDT10),F-measure,plain SMOTE,not comparable,L3,P050-D005,original
+2419,SPE,Payment Simulation (GBDT10),F-measure,plain SMOTE,not comparable,L3,P050-D006,original
+2420,SPE,Credit Fraud (KNN),MCC,plain SMOTE,win,L1,P050-D002,original
+2421,SPE,Credit Fraud (DT),MCC,plain SMOTE,win,L1,P050-D002,original
+2422,SPE,Credit Fraud (MLP),MCC,plain SMOTE,win,L1,P050-D002,original
+2423,SPE,KDDCUP (DOS vs. PRB) (AdaBoost10),MCC,plain SMOTE,not comparable,L3,P050-D003,modified
+2424,SPE,KDDCUP (DOS vs. R2L) (AdaBoost10),MCC,plain SMOTE,not comparable,L3,P050-D004,modified
+2425,SPE,Record Linkage (GBDT10),MCC,plain SMOTE,not comparable,L3,P050-D005,original
+2426,SPE,Payment Simulation (GBDT10),MCC,plain SMOTE,not comparable,L3,P050-D006,original
+2427,SVDD-WSMOTE,Wine,G-mean,plain SMOTE,win,L1,P061-D001,modified
+2428,SVDD-WSMOTE,Iris,G-mean,plain SMOTE,win,L1,P061-D002,modified
+2429,SVDD-WSMOTE,Abalone,G-mean,plain SMOTE,win,L1,P061-D003,modified
+2430,SVDD-WSMOTE,Pima,G-mean,plain SMOTE,win,L1,P061-D004,original
+2431,SVDD-WSMOTE,Ecoli,G-mean,plain SMOTE,win,L1,P061-D005,modified
+2432,SVDD-WSMOTE,Libra,G-mean,plain SMOTE,win,L1,P061-D006,modified
+2433,SVDD-WSMOTE,Vehicle,G-mean,plain SMOTE,win,L1,P061-D007,modified
+2434,SVDD-WSMOTE,Balance,G-mean,plain SMOTE,win,L1,P061-D008,modified
+2435,SVDD-WSMOTE,Haberman,G-mean,plain SMOTE,win,L1,P061-D009,original
+2436,SVDD-WSMOTE,Car,G-mean,plain SMOTE,win,L1,P061-D010,modified
+2437,SVDD-WSMOTE,Liver,G-mean,plain SMOTE,win,L1,P061-D011,original
+2438,SVDD-WSMOTE,Seed,G-mean,plain SMOTE,win,L1,P061-D012,modified
+2439,SVDD-WSMOTE,Spect (printed under repeated header 'Wine' in Table 3 (continued)),G-mean,plain SMOTE,win,L2,P061-D013,original
+2440,SVDD-WSMOTE,Pageblock (printed under repeated header 'Iris' in Table 3 (continued)),G-mean,plain SMOTE,win,L2,P061-D014,modified
+2441,SVDD-WSMOTE,Pageblock1 (printed under repeated header 'Abalone' in Table 3 (continued)),G-mean,plain SMOTE,win,L2,P061-D015,modified
+2442,SVDD-WSMOTE,Yeast,G-mean,plain SMOTE,win,L1,P061-D016,modified
+2443,SVDD-WSMOTE,Yeast1,G-mean,plain SMOTE,win,L1,P061-D017,modified
+2444,SVDD-WSMOTE,Yeast2,G-mean,plain SMOTE,win,L1,P061-D018,modified
+2445,SVDD-WSMOTE,Yeast3,G-mean,plain SMOTE,win,L1,P061-D019,modified
+2446,SVDD-WSMOTE,Yeast4,G-mean,plain SMOTE,win,L1,P061-D020,modified
+2447,SVDD-WSMOTE,Yeast5,G-mean,plain SMOTE,win,L1,P061-D021,modified
+2448,SVDD-WSMOTE,Yeast6,G-mean,plain SMOTE,win,L1,P061-D022,modified
+2449,SVDD-WSMOTE,Yeast7,G-mean,plain SMOTE,win,L1,P061-D023,modified
+2450,SVDD-WSMOTE,Yeast8,G-mean,plain SMOTE,win,L1,P061-D024,modified
+2451,SVDD-WSMOTE,Wine,F-measure,plain SMOTE,win,L1,P061-D001,modified
+2452,SVDD-WSMOTE,Iris,F-measure,plain SMOTE,win,L1,P061-D002,modified
+2453,SVDD-WSMOTE,Abalone,F-measure,plain SMOTE,win,L1,P061-D003,modified
+2454,SVDD-WSMOTE,Pima,F-measure,plain SMOTE,win,L1,P061-D004,original
+2455,SVDD-WSMOTE,Ecoli,F-measure,plain SMOTE,win,L1,P061-D005,modified
+2456,SVDD-WSMOTE,Libra,F-measure,plain SMOTE,win,L1,P061-D006,modified
+2457,SVDD-WSMOTE,Vehicle,F-measure,plain SMOTE,win,L1,P061-D007,modified
+2458,SVDD-WSMOTE,Balance,F-measure,plain SMOTE,win,L1,P061-D008,modified
+2459,SVDD-WSMOTE,Haberman,F-measure,plain SMOTE,win,L1,P061-D009,original
+2460,SVDD-WSMOTE,Car,F-measure,plain SMOTE,win,L1,P061-D010,modified
+2461,SVDD-WSMOTE,Liver,F-measure,plain SMOTE,win,L1,P061-D011,original
+2462,SVDD-WSMOTE,Seed,F-measure,plain SMOTE,win,L1,P061-D012,modified
+2463,SVDD-WSMOTE,Spect (printed under repeated header 'Wine' in Table 3 (continued)),F-measure,plain SMOTE,win,L2,P061-D013,original
+2464,SVDD-WSMOTE,Pageblock (printed under repeated header 'Iris' in Table 3 (continued)),F-measure,plain SMOTE,win,L2,P061-D014,modified
+2465,SVDD-WSMOTE,Pageblock1 (printed under repeated header 'Abalone' in Table 3 (continued)),F-measure,plain SMOTE,win,L2,P061-D015,modified
+2466,SVDD-WSMOTE,Yeast,F-measure,plain SMOTE,win,L1,P061-D016,modified
+2467,SVDD-WSMOTE,Yeast1,F-measure,plain SMOTE,win,L1,P061-D017,modified
+2468,SVDD-WSMOTE,Yeast2,F-measure,plain SMOTE,win,L1,P061-D018,modified
+2469,SVDD-WSMOTE,Yeast3,F-measure,plain SMOTE,win,L1,P061-D019,modified
+2470,SVDD-WSMOTE,Yeast4,F-measure,plain SMOTE,win,L1,P061-D020,modified
+2471,SVDD-WSMOTE,Yeast5,F-measure,plain SMOTE,win,L1,P061-D021,modified
+2472,SVDD-WSMOTE,Yeast6,F-measure,plain SMOTE,win,L1,P061-D022,modified
+2473,SVDD-WSMOTE,Yeast7,F-measure,plain SMOTE,win,L1,P061-D023,modified
+2474,SVDD-WSMOTE,Yeast8,F-measure,plain SMOTE,win,L1,P061-D024,modified
+2475,SVDD-WSMOTE,Wine,AUC,plain SMOTE,win,L1,P061-D001,modified
+2476,SVDD-WSMOTE,Iris,AUC,plain SMOTE,win,L1,P061-D002,modified
+2477,SVDD-WSMOTE,Abalone,AUC,plain SMOTE,win,L1,P061-D003,modified
+2478,SVDD-WSMOTE,Pima,AUC,plain SMOTE,win,L1,P061-D004,original
+2479,SVDD-WSMOTE,Ecoli,AUC,plain SMOTE,win,L1,P061-D005,modified
+2480,SVDD-WSMOTE,Libra,AUC,plain SMOTE,win,L1,P061-D006,modified
+2481,SVDD-WSMOTE,Vehicle,AUC,plain SMOTE,win,L1,P061-D007,modified
+2482,SVDD-WSMOTE,Balance,AUC,plain SMOTE,win,L1,P061-D008,modified
+2483,SVDD-WSMOTE,Haberman,AUC,plain SMOTE,win,L1,P061-D009,original
+2484,SVDD-WSMOTE,Car,AUC,plain SMOTE,win,L1,P061-D010,modified
+2485,SVDD-WSMOTE,Liver,AUC,plain SMOTE,win,L1,P061-D011,original
+2486,SVDD-WSMOTE,Seed,AUC,plain SMOTE,win,L1,P061-D012,modified
+2487,SVDD-WSMOTE,Spect (printed under repeated header 'Wine' in Table 3 (continued)),AUC,plain SMOTE,win,L2,P061-D013,original
+2488,SVDD-WSMOTE,Pageblock (printed under repeated header 'Iris' in Table 3 (continued)),AUC,plain SMOTE,win,L2,P061-D014,modified
+2489,SVDD-WSMOTE,Pageblock1 (printed under repeated header 'Abalone' in Table 3 (continued)),AUC,plain SMOTE,win,L2,P061-D015,modified
+2490,SVDD-WSMOTE,Yeast,AUC,plain SMOTE,win,L1,P061-D016,modified
+2491,SVDD-WSMOTE,Yeast1,AUC,plain SMOTE,win,L1,P061-D017,modified
+2492,SVDD-WSMOTE,Yeast2,AUC,plain SMOTE,win,L1,P061-D018,modified
+2493,SVDD-WSMOTE,Yeast3,AUC,plain SMOTE,win,L1,P061-D019,modified
+2494,SVDD-WSMOTE,Yeast4,AUC,plain SMOTE,win,L1,P061-D020,modified
+2495,SVDD-WSMOTE,Yeast5,AUC,plain SMOTE,win,L1,P061-D021,modified
+2496,SVDD-WSMOTE,Yeast6,AUC,plain SMOTE,win,L1,P061-D022,modified
+2497,SVDD-WSMOTE,Yeast7,AUC,plain SMOTE,win,L1,P061-D023,modified
+2498,SVDD-WSMOTE,Yeast8,AUC,plain SMOTE,win,L1,P061-D024,modified

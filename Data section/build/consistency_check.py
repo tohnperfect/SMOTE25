@@ -28,22 +28,39 @@ ck("audit corrected values are what the CSV holds now",
 # 3 manuscript
 P = RC["partitions"]; pr = P["primary"]; bt = pr["by_type"]; std = RC["outcomes"]["plain_per_dataset_standard"]
 tex = open("manuscript/data-section-draft.tex", encoding="utf-8").read()
+# 29 Oct 2026: Wins section uses the all-metric results (Toon's win/loss definition); rule A kept as robustness
+WA = json.load(open("out/winloss_allmetric_summary.json", encoding="utf-8"))
+texn = re.sub(r"\s+", " ", tex)
+HY = json.load(open("out/hypotheses.json", encoding="utf-8"))
+fmt = lambda n: f"{n:,}"
+pm = WA["plain_smote_only"]["by_metric_group"]
+NAME = {"Recall/sensitivity": "Recall (sensitivity)"}
+for g, v in pm.items():
+    row = f'{NAME.get(g, g)} & {v["papers"]} & {fmt(v["rows"])} & {fmt(v["win"])} & {v["tie"]} & {v["loss"]} & {v["not_comparable"]}\\\\'
+    ck(f"tex by-metric row '{g}'", row in tex, row)
+o = WA["plain_smote_only"]["overall_all_metrics"]
+ck("tex by-metric row 'All metrics'", f'All metrics & {o["papers"]} & {fmt(o["rows"])} & {fmt(o["win"])} & {o["tie"]} & {o["loss"]} & {o["not_comparable"]}\\\\' in tex)
 LAB = {"original": "Original", "repository-defined": "Repository-defined", "modified": "Modified", "synthetic": "Synthetic",
-       "not stated": "Cannot be told", "unmatched": "Result row not matched to a dataset"}
+       "not stated": "Cannot be told", "unmatched": "Not matched to a dataset"}
+bt = HY["all_metric_plain"]["by_type"]
 for k, lab in LAB.items():
-    v = bt[k]; row = f'{lab} & {v["rows"]} & {v["papers"]} & {v["proposed_higher"]} & {v["smote_higher"]} & {v["equal"]}\\\\'
-    ck(f"tex wins table row '{lab}'", row in tex, row)
-allrow = f'All & {pr["rows"]} & {pr["papers"]} & {pr["proposed_higher"]} & {pr["smote_higher"]} & {pr["equal"]}\\\\'
-ck("tex wins table row 'All'", allrow in tex, allrow)
-ck("tex standard rows sentence", f'on these {std["rows"]} standard rows SMOTE wins in {std["smote_higher"]} and ties in {std["equal"]}' in tex)
-ck("tex primary rows/wins/ties/losses sentence (521/402/39/80 since R8)", f'{pr["rows"]} comparisons' in tex and f'wins in {pr["proposed_higher"]} rows, ties in {pr["equal"]} and loses in {pr["smote_higher"]}' in tex)
-ck("tex wrapper 207 and RBBoost 86/63", f'contribute {P["wrapper_eligible"]["rows"]} rows' in tex and "Its 86 rows, 63 of them on repository-defined" in tex)
+    v = bt[k]
+    row = f'{lab} & ' 
+    ok = any(l.startswith(row) and f'& {v["papers"]} & {fmt(v["rows"])} & {fmt(v["win"])} & {v["tie"]} & {v["loss"]} &' in l for l in tex.split("\n"))
+    ck(f"tex by-type row '{lab}' (all-metric)", ok, f'{v["papers"]}/{v["rows"]}/{v["win"]}/{v["tie"]}/{v["loss"]}')
+ov_ = HY["all_metric_plain"]["overall"]
+ck("tex overall wins/ties/losses sentence", f'the proposed method wins {fmt(ov_["win"])}, ties {ov_["tie"]} and loses {ov_["loss"]}' in texn)
+ck("tex rule-A robustness sentence", f'gives {pr["rows"]} comparisons, in which the proposed method wins in {pr["proposed_higher"]} rows, ties in {pr["equal"]} and loses in {pr["smote_higher"]}' in texn)
+h = HY["all_metric_plain"]["H1_primary_modsyn_vs_original"]
+ck("tex H1 GEE and conditional OR", f'{h["M1_gee"]["odds_ratio"]:.2f}' in tex and f'{h["M2_conditional"]["odds_ratio"]:.2f}' in tex)
+npt = sum(v["overall_all_metrics"]["rows"] for v in WA["non_plain_by_comparator"].values())
+ck("tex non-plain total", f'contribute {npt} comparisons' in texn, npt)
 ov = open("manuscript/overview.json", encoding="utf-8").read()
-ck("overview.json standard rows", f'บนชุดมาตรฐาน {std["rows"]} แถว SMOTE ชนะ {std["smote_higher"]} เสมอ {std["equal"]}' in ov)
-ck("overview.json primary rows/wins/ties/losses", f'{pr["rows"]} แถว: วิธีที่เสนอชนะ {pr["proposed_higher"]} เสมอ {pr["equal"]} แพ้ {pr["smote_higher"]}' in ov)
+ck("overview.json all-metric totals", f'{fmt(o["rows"])} แถว' in ov and f'ชนะ {fmt(ov_["win"])} เสมอ {ov_["tie"]} แพ้ {ov_["loss"]}' in ov)
+ck("overview.json rule-A robustness", f'{pr["rows"]} แถว: วิธีที่เสนอชนะ {pr["proposed_higher"]} เสมอ {pr["equal"]} แพ้ {pr["smote_higher"]}' in ov)
 pdf = "manuscript/data-section-draft-preview.pdf"
 pt = subprocess.run(["pdftotext", pdf, "-"], capture_output=True, text=True).stdout
-ck("preview PDF newer than tex and shows current standard count", os.path.getmtime(pdf) >= os.path.getmtime("manuscript/data-section-draft.tex") and f'{std["rows"]} standard rows' in re.sub(r"\s+", " ", pt))
+ck("preview PDF newer than tex and shows the all-metric total", os.path.getmtime(pdf) >= os.path.getmtime("manuscript/data-section-draft.tex") and f'{fmt(o["rows"])} comparisons on' in re.sub(r"\s+", " ", pt))
 # 4 workbook
 try:
     import openpyxl
@@ -67,15 +84,20 @@ ck("Atlas eligibility = reconcile partitions", (el["plain"]["rows"], el["plain"]
    (pr["rows"], pr["proposed_higher"], pr["smote_higher"], pr["equal"], P["wrapper_eligible"]["rows"], P["excluded"]["rows"]))
 ck("Atlas outcome rows = verified_outcomes (dataset, scores, sign, type, mapping)",
    len(X["outcome"]["rows"]) == len(O) and all(all(a[k] == b[k] for k in ("paper", "dataset", "proposed", "smote", "raw_sign", "how_obtained", "n_instances", "mapping_audit")) for a, b in zip(X["outcome"]["rows"], O)))
-ck("Atlas manuscript tab shows current standard count", f'{std["rows"]} standard rows' in X["manuscript"]["html"])
+ck("Atlas manuscript tab shows the all-metric total", f'{fmt(o["rows"])} comparisons on' in re.sub(r"\s+", " ", X["manuscript"]["html"]))
 ck("Atlas reconciled_with sha = current outcomes", el["reconciled_with"]["outcomes_sha256"] == sha("out/verified_outcomes.csv"))
 # 6 handoff
 H = open("handoff.md", encoding="utf-8").read()
-ck("handoff records current standard count and audit file", f"{std['rows']}" in H and "outcome_mapping_audit.csv" in H)
+ck("handoff records the all-metric total and audit file", fmt(o["rows"]) in H and "outcome_mapping_audit.csv" in H)
 # R8 (29 Oct 2026): papers excluded for an unconfirmed SMOTE comparator are the same in the rule-A set and the all-metric set
 _WA = json.load(open("out/winloss_allmetric_summary.json", encoding="utf-8"))
 _r8 = set(RC["partitions"]["excluded"]["comparator"]["reasons"])
-ck("R8 excluded papers: rule-A set = all-metric set", _r8 == set(_WA["excluded"]) and _r8, f"{sorted(_r8)} vs {sorted(_WA['excluded'])}")
+ck("R8 excluded paper is excluded in the all-metric set too", _r8 and _r8 <= set(_WA["excluded"]), f"{sorted(_r8)} vs {sorted(_WA['excluded'])}")
+_cls = {k.split(" /")[0]: v["comparator_group"] for k, v in _WA["per_paper"].items()}
+_ra = {"primary": set(), "wrapper": set()}
+for _p in RC["partitions"]["wrapper_eligible"]["papers_list"]: _ra["wrapper"].add(_p.split(" /")[0])
+_bad = [k for k in _ra["wrapper"] if _cls.get(k) in ("plain SMOTE", None)]
+ck("paper classes: every rule-A wrapper paper is non-plain in the all-metric set", not _bad, _bad)
 w = max(len(n) for n, _, _ in res)
 for n, ok, d in res: print(f"{'ok  ' if ok else 'FAIL'} {n:{w}s} {d}")
 print(f"{sum(ok for _, ok, _ in res)}/{len(res)} ok"); sys.exit(0 if all(ok for _, ok, _ in res) else 1)

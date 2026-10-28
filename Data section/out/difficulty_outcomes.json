@@ -1,0 +1,141 @@
+{
+ "rows_joined": 374,
+ "decided_rows": 334,
+ "papers": 20,
+ "tasks": 72,
+ "ties": 40,
+ "win_share_by_profile": {
+  "none": {
+   "rows": 128,
+   "win": 105,
+   "share": 0.82
+  },
+  "small_disjuncts + small_sample + outlier_flag": {
+   "rows": 17,
+   "win": 14,
+   "share": 0.824
+  },
+  "small_sample": {
+   "rows": 126,
+   "win": 107,
+   "share": 0.849
+  },
+  "small_sample + outlier_flag": {
+   "rows": 63,
+   "win": 55,
+   "share": 0.873
+  }
+ },
+ "models": {
+  "noise_per_0.1": {
+   "gee": {
+    "odds_ratio": 1.147,
+    "ci95": [
+     1.043,
+     1.261
+    ],
+    "p": 0.0046
+   },
+   "within_paper": {
+    "papers": 9,
+    "rows": 270,
+    "odds_ratio": 1.185,
+    "ci95": [
+     1.037,
+     1.354
+    ],
+    "p": 0.0129
+   }
+  },
+  "log2_IR": {
+   "gee": {
+    "odds_ratio": 0.917,
+    "ci95": [
+     0.657,
+     1.279
+    ],
+    "p": 0.6106
+   },
+   "within_paper": {
+    "papers": 9,
+    "rows": 270,
+    "odds_ratio": 0.955,
+    "ci95": [
+     0.761,
+     1.198
+    ],
+    "p": 0.6895
+   }
+  },
+  "small_sample": {
+   "gee": {
+    "odds_ratio": 1.084,
+    "ci95": [
+     0.469,
+     2.506
+    ],
+    "p": 0.8506
+   },
+   "within_paper": {
+    "papers": 8,
+    "rows": 267,
+    "odds_ratio": 1.034,
+    "ci95": [
+     0.534,
+     2.0
+    ],
+    "p": 0.9211
+   }
+  },
+  "outlier_flag": {
+   "gee": {
+    "odds_ratio": 1.5,
+    "ci95": [
+     0.338,
+     6.662
+    ],
+    "p": 0.5939
+   },
+   "within_paper": {
+    "papers": 7,
+    "rows": 243,
+    "odds_ratio": 1.886,
+    "ci95": [
+     0.846,
+     4.207
+    ],
+    "p": 0.121
+   }
+  },
+  "small_disjuncts": {
+   "gee": {
+    "odds_ratio": 0.787,
+    "ci95": [
+     0.303,
+     2.042
+    ],
+    "p": 0.6222
+   },
+   "within_paper": {
+    "papers": 3,
+    "rows": 186,
+    "odds_ratio": 0.979,
+    "ci95": [
+     0.188,
+     5.092
+    ],
+    "p": 0.9797
+   }
+  }
+ },
+ "robust_task_majority_noise_per_0.1": {
+  "rows": 124,
+  "papers": 19,
+  "odds_ratio": 1.157,
+  "ci95": [
+   0.984,
+   1.361
+  ],
+  "p": 0.0768
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "rows": 2497,
+ "by_method": {
+  "L1": 2312,
+  "unmatched": 1,
+  "L2": 166,
+  "L3": 18
+ },
+ "unmatched_by_paper": {
+  "A-SUWO": 1
+ },
+ "plain_by_type": {
+  "modified": 503,
+  "original": 433,
+  "unmatched": 11,
+  "repository-defined": 315,
+  "not stated": 234,
+  "synthetic": 15
+ }
+}

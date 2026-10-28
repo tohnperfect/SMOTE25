@@ -1,5 +1,7 @@
 # Data section
 
+> **29 ต.ค. 2026:** ข้อสรุปทั้งหมดอยู่ที่ `CONCLUSIONS.md` · manuscript ฉบับเต็ม `manuscript/data-section-draft.tex` (ไม่มีช่องค้าง) และฉบับพร้อม merge `manuscript/data-section-final.tex` + `.bib`
+
 > **28 ต.ค. 2026:** HTML หลักของ Data section คือ `out/dataset-atlas.html` (สร้างด้วย `python3 build/make_atlas.py`) ไฟล์ `../SMOTE25_Data_Section_Explorer.html` และ `ai-draft/Data_Section_Explorer.html` เป็นรุ่นเก่า เลิกใช้แล้ว
 
 วัสดุทั้งหมดของ **Data section** (ส่วนที่ Toon รับผิดชอบ) ของ survey `25 Years of SMOTE: What Has Been Done and How Did It Benefit Society?`

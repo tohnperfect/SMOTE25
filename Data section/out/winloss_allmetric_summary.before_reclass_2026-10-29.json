@@ -1,0 +1,2156 @@
+{
+ "rule": "(no threshold): compare the printed numbers. win = proposed better in the\nmetric's direction, loss = worse, tie = printed values equal. Rows with a non-numeric value\non either side (\"---\", unreadable) are counted as 'not comparable'.",
+ "decision": "Toon 28 Oct 2026: main result = plain SMOTE; non-plain comparators reported apart; MC-MBRC excluded",
+ "all_comparators": {
+  "overall_all_metrics": {
+   "win": 1827,
+   "tie": 125,
+   "loss": 449,
+   "not_comparable": 16,
+   "rows": 2417,
+   "papers": 43
+  },
+  "by_metric_group": {
+   "AUC": {
+    "win": 461,
+    "tie": 36,
+    "loss": 101,
+    "not_comparable": 0,
+    "rows": 598,
+    "papers": 26
+   },
+   "AUC-PR": {
+    "win": 3,
+    "tie": 0,
+    "loss": 0,
+    "not_comparable": 4,
+    "rows": 7,
+    "papers": 1
+   },
+   "Accuracy": {
+    "win": 153,
+    "tie": 4,
+    "loss": 11,
+    "not_comparable": 0,
+    "rows": 168,
+    "papers": 6
+   },
+   "Average class accuracy": {
+    "win": 99,
+    "tie": 1,
+    "loss": 18,
+    "not_comparable": 0,
+    "rows": 118,
+    "papers": 7
+   },
+   "CBA": {
+    "win": 60,
+    "tie": 0,
+    "loss": 0,
+    "not_comparable": 0,
+    "rows": 60,
+    "papers": 3
+   },
+   "CEN": {
+    "win": 60,
+    "tie": 0,
+    "loss": 0,
+    "not_comparable": 0,
+    "rows": 60,
+    "papers": 3
+   },
+   "F-measure": {
+    "win": 285,
+    "tie": 19,
+    "loss": 82,
+    "not_comparable": 4,
+    "rows": 390,
+    "papers": 21
+   },
+   "G-mean": {
+    "win": 442,
+    "tie": 37,
+    "loss": 128,
+    "not_comparable": 4,
+    "rows": 611,
+    "papers": 29
+   },
+   "MCC": {
+    "win": 40,
+    "tie": 0,
+    "loss": 8,
+    "not_comparable": 4,
+    "rows": 52,
+    "papers": 3
+   },
+   "Minimum class recall": {
+    "win": 30,
+    "tie": 2,
+    "loss": 7,
+    "not_comparable": 0,
+    "rows": 39,
+    "papers": 3
+   },
+   "Precision": {
+    "win": 63,
+    "tie": 5,
+    "loss": 46,
+    "not_comparable": 0,
+    "rows": 114,
+    "papers": 8
+   },
+   "Recall/sensitivity": {
+    "win": 130,
+    "tie": 21,
+    "loss": 42,
+    "not_comparable": 0,
+    "rows": 193,
+    "papers": 12
+   },
+   "Specificity": {
+    "win": 1,
+    "tie": 0,
+    "loss": 6,
+    "not_comparable": 0,
+    "rows": 7,
+    "papers": 1
+   }
+  }
+ },
+ "plain_smote_only": {
+  "overall_all_metrics": {
+   "win": 1604,
+   "tie": 114,
+   "loss": 382,
+   "not_comparable": 16,
+   "rows": 2116,
+   "papers": 35
+  },
+  "by_metric_group": {
+   "AUC": {
+    "win": 383,
+    "tie": 33,
+    "loss": 74,
+    "not_comparable": 0,
+    "rows": 490,
+    "papers": 21
+   },
+   "AUC-PR": {
+    "win": 3,
+    "tie": 0,
+    "loss": 0,
+    "not_comparable": 4,
+    "rows": 7,
+    "papers": 1
+   },
+   "Accuracy": {
+    "win": 140,
+    "tie": 4,
+    "loss": 11,
+    "not_comparable": 0,
+    "rows": 155,
+    "papers": 5
+   },
+   "Average class accuracy": {
+    "win": 60,
+    "tie": 0,
+    "loss": 8,
+    "not_comparable": 0,
+    "rows": 68,
+    "papers": 4
+   },
+   "CBA": {
+    "win": 60,
+    "tie": 0,
+    "loss": 0,
+    "not_comparable": 0,
+    "rows": 60,
+    "papers": 3
+   },
+   "CEN": {
+    "win": 60,
+    "tie": 0,
+    "loss": 0,
+    "not_comparable": 0,
+    "rows": 60,
+    "papers": 3
+   },
+   "F-measure": {
+    "win": 276,
+    "tie": 19,
+    "loss": 75,
+    "not_comparable": 4,
+    "rows": 374,
+    "papers": 20
+   },
+   "G-mean": {
+    "win": 388,
+    "tie": 32,
+    "loss": 112,
+    "not_comparable": 4,
+    "rows": 536,
+    "papers": 25
+   },
+   "MCC": {
+    "win": 40,
+    "tie": 0,
+    "loss": 8,
+    "not_comparable": 4,
+    "rows": 52,
+    "papers": 3
+   },
+   "Precision": {
+    "win": 63,
+    "tie": 5,
+    "loss": 46,
+    "not_comparable": 0,
+    "rows": 114,
+    "papers": 8
+   },
+   "Recall/sensitivity": {
+    "win": 130,
+    "tie": 21,
+    "loss": 42,
+    "not_comparable": 0,
+    "rows": 193,
+    "papers": 12
+   },
+   "Specificity": {
+    "win": 1,
+    "tie": 0,
+    "loss": 6,
+    "not_comparable": 0,
+    "rows": 7,
+    "papers": 1
+   }
+  }
+ },
+ "non_plain_by_comparator": {
+  "OVO-SMOTE": {
+   "papers_list": [
+    "AMDO",
+    "GDHS",
+    "SHSampler"
+   ],
+   "overall_all_metrics": {
+    "win": 101,
+    "tie": 6,
+    "loss": 41,
+    "not_comparable": 0,
+    "rows": 148,
+    "papers": 3
+   },
+   "by_metric_group": {
+    "AUC": {
+     "win": 50,
+     "tie": 2,
+     "loss": 22,
+     "not_comparable": 0,
+     "rows": 74,
+     "papers": 3
+    },
+    "Average class accuracy": {
+     "win": 12,
+     "tie": 1,
+     "loss": 4,
+     "not_comparable": 0,
+     "rows": 17,
+     "papers": 1
+    },
+    "G-mean": {
+     "win": 27,
+     "tie": 2,
+     "loss": 11,
+     "not_comparable": 0,
+     "rows": 40,
+     "papers": 2
+    },
+    "Minimum class recall": {
+     "win": 12,
+     "tie": 1,
+     "loss": 4,
+     "not_comparable": 0,
+     "rows": 17,
+     "papers": 1
+    }
+   }
+  },
+  "SMOTE wrapped with another classifier": {
+   "papers_list": [
+    "DSRBF",
+    "EasyEnsemble"
+   ],
+   "overall_all_metrics": {
+    "win": 53,
+    "tie": 2,
+    "loss": 19,
+    "not_comparable": 0,
+    "rows": 74,
+    "papers": 2
+   },
+   "by_metric_group": {
+    "AUC": {
+     "win": 10,
+     "tie": 1,
+     "loss": 5,
+     "not_comparable": 0,
+     "rows": 16,
+     "papers": 1
+    },
+    "Accuracy": {
+     "win": 13,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 13,
+     "papers": 1
+    },
+    "F-measure": {
+     "win": 9,
+     "tie": 0,
+     "loss": 7,
+     "not_comparable": 0,
+     "rows": 16,
+     "papers": 1
+    },
+    "G-mean": {
+     "win": 11,
+     "tie": 1,
+     "loss": 4,
+     "not_comparable": 0,
+     "rows": 16,
+     "papers": 1
+    },
+    "Minimum class recall": {
+     "win": 10,
+     "tie": 0,
+     "loss": 3,
+     "not_comparable": 0,
+     "rows": 13,
+     "papers": 1
+    }
+   }
+  },
+  "Static-SMOTE": {
+   "papers_list": [
+    "EMDO",
+    "OVO-SMOTE",
+    "SOUP"
+   ],
+   "overall_all_metrics": {
+    "win": 69,
+    "tie": 3,
+    "loss": 7,
+    "not_comparable": 0,
+    "rows": 79,
+    "papers": 3
+   },
+   "by_metric_group": {
+    "AUC": {
+     "win": 18,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 18,
+     "papers": 1
+    },
+    "Average class accuracy": {
+     "win": 27,
+     "tie": 0,
+     "loss": 6,
+     "not_comparable": 0,
+     "rows": 33,
+     "papers": 2
+    },
+    "G-mean": {
+     "win": 16,
+     "tie": 2,
+     "loss": 1,
+     "not_comparable": 0,
+     "rows": 19,
+     "papers": 1
+    },
+    "Minimum class recall": {
+     "win": 8,
+     "tie": 1,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 9,
+     "papers": 1
+    }
+   }
+  }
+ },
+ "excluded": {
+  "MC-MBRC": {
+   "reason": "Toon 28 Oct 2026: excluded; the comparator column is printed \"MDO\" and no text confirms it is SMOTE",
+   "win": 76,
+   "tie": 0,
+   "loss": 4,
+   "not_comparable": 0,
+   "rows": 80,
+   "papers": 1
+  }
+ },
+ "rule_A_metric_only": {
+  "overall_all_metrics": {
+   "win": 613,
+   "tie": 48,
+   "loss": 154,
+   "not_comparable": 4,
+   "rows": 819,
+   "papers": 43
+  },
+  "by_metric_group": {
+   "AUC": {
+    "win": 88,
+    "tie": 9,
+    "loss": 11,
+    "not_comparable": 0,
+    "rows": 108,
+    "papers": 7
+   },
+   "Accuracy": {
+    "win": 13,
+    "tie": 0,
+    "loss": 0,
+    "not_comparable": 0,
+    "rows": 13,
+    "papers": 1
+   },
+   "Average class accuracy": {
+    "win": 18,
+    "tie": 0,
+    "loss": 6,
+    "not_comparable": 0,
+    "rows": 24,
+    "papers": 1
+   },
+   "F-measure": {
+    "win": 52,
+    "tie": 2,
+    "loss": 9,
+    "not_comparable": 0,
+    "rows": 63,
+    "papers": 5
+   },
+   "G-mean": {
+    "win": 442,
+    "tie": 37,
+    "loss": 128,
+    "not_comparable": 4,
+    "rows": 611,
+    "papers": 29
+   }
+  }
+ },
+ "per_paper": {
+  "A-SUWO": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 34,
+    "tie": 7,
+    "loss": 7,
+    "not_comparable": 0,
+    "rows": 48,
+    "papers": 1
+   },
+   "by_metric": {
+    "G-M (G-mean)": {
+     "win": 11,
+     "tie": 3,
+     "loss": 2,
+     "not_comparable": 0,
+     "rows": 16,
+     "papers": 1
+    },
+    "F_M (F-measure)": {
+     "win": 12,
+     "tie": 2,
+     "loss": 2,
+     "not_comparable": 0,
+     "rows": 16,
+     "papers": 1
+    },
+    "AUC": {
+     "win": 11,
+     "tie": 2,
+     "loss": 3,
+     "not_comparable": 0,
+     "rows": 16,
+     "papers": 1
+    }
+   }
+  },
+  "AB-SMOTE": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 4,
+    "tie": 2,
+    "loss": 10,
+    "not_comparable": 0,
+    "rows": 16,
+    "papers": 1
+   },
+   "by_metric": {
+    "F-measure": {
+     "win": 2,
+     "tie": 1,
+     "loss": 5,
+     "not_comparable": 0,
+     "rows": 8,
+     "papers": 1
+    },
+    "Recall": {
+     "win": 2,
+     "tie": 1,
+     "loss": 5,
+     "not_comparable": 0,
+     "rows": 8,
+     "papers": 1
+    }
+   }
+  },
+  "ADASYN": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 17,
+    "tie": 0,
+    "loss": 8,
+    "not_comparable": 0,
+    "rows": 25,
+    "papers": 1
+   },
+   "by_metric": {
+    "OA": {
+     "win": 3,
+     "tie": 0,
+     "loss": 2,
+     "not_comparable": 0,
+     "rows": 5,
+     "papers": 1
+    },
+    "Precision": {
+     "win": 2,
+     "tie": 0,
+     "loss": 3,
+     "not_comparable": 0,
+     "rows": 5,
+     "papers": 1
+    },
+    "Recall": {
+     "win": 4,
+     "tie": 0,
+     "loss": 1,
+     "not_comparable": 0,
+     "rows": 5,
+     "papers": 1
+    },
+    "F_measure": {
+     "win": 3,
+     "tie": 0,
+     "loss": 2,
+     "not_comparable": 0,
+     "rows": 5,
+     "papers": 1
+    },
+    "G_mean": {
+     "win": 5,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 5,
+     "papers": 1
+    }
+   }
+  },
+  "AMDO": {
+   "comparator": "OVO-SMOTE",
+   "comparator_group": "OVO-SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 49,
+    "tie": 4,
+    "loss": 15,
+    "not_comparable": 0,
+    "rows": 68,
+    "papers": 1
+   },
+   "by_metric": {
+    "Pmin (%)": {
+     "win": 12,
+     "tie": 1,
+     "loss": 4,
+     "not_comparable": 0,
+     "rows": 17,
+     "papers": 1
+    },
+    "Pavg (%)": {
+     "win": 12,
+     "tie": 1,
+     "loss": 4,
+     "not_comparable": 0,
+     "rows": 17,
+     "papers": 1
+    },
+    "AUCm (%)": {
+     "win": 13,
+     "tie": 1,
+     "loss": 3,
+     "not_comparable": 0,
+     "rows": 17,
+     "papers": 1
+    },
+    "MAUC (%)": {
+     "win": 12,
+     "tie": 1,
+     "loss": 4,
+     "not_comparable": 0,
+     "rows": 17,
+     "papers": 1
+    }
+   }
+  },
+  "CBHSID": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 37,
+    "tie": 0,
+    "loss": 11,
+    "not_comparable": 0,
+    "rows": 48,
+    "papers": 1
+   },
+   "by_metric": {
+    "G-Mean": {
+     "win": 13,
+     "tie": 0,
+     "loss": 3,
+     "not_comparable": 0,
+     "rows": 16,
+     "papers": 1
+    },
+    "Recall": {
+     "win": 12,
+     "tie": 0,
+     "loss": 4,
+     "not_comparable": 0,
+     "rows": 16,
+     "papers": 1
+    },
+    "F1 score": {
+     "win": 12,
+     "tie": 0,
+     "loss": 4,
+     "not_comparable": 0,
+     "rows": 16,
+     "papers": 1
+    }
+   }
+  },
+  "CGMOS": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 24,
+    "tie": 5,
+    "loss": 1,
+    "not_comparable": 0,
+    "rows": 30,
+    "papers": 1
+   },
+   "by_metric": {
+    "AUC": {
+     "win": 24,
+     "tie": 5,
+     "loss": 1,
+     "not_comparable": 0,
+     "rows": 30,
+     "papers": 1
+    }
+   }
+  },
+  "DGOT": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 58,
+    "tie": 1,
+    "loss": 7,
+    "not_comparable": 0,
+    "rows": 66,
+    "papers": 1
+   },
+   "by_metric": {
+    "F1-score": {
+     "win": 18,
+     "tie": 1,
+     "loss": 3,
+     "not_comparable": 0,
+     "rows": 22,
+     "papers": 1
+    },
+    "Accuracy": {
+     "win": 22,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 22,
+     "papers": 1
+    },
+    "MCC": {
+     "win": 18,
+     "tie": 0,
+     "loss": 4,
+     "not_comparable": 0,
+     "rows": 22,
+     "papers": 1
+    }
+   }
+  },
+  "DSRBF": {
+   "comparator": "SMOTE + MLP (proposed uses RBF network)",
+   "comparator_group": "SMOTE wrapped with another classifier",
+   "excluded": "",
+   "all_metrics": {
+    "win": 23,
+    "tie": 0,
+    "loss": 3,
+    "not_comparable": 0,
+    "rows": 26,
+    "papers": 1
+   },
+   "by_metric": {
+    "CG (%) accuracy, generalization": {
+     "win": 13,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 13,
+     "papers": 1
+    },
+    "MSG (%) minimum sensitivity, generalization": {
+     "win": 10,
+     "tie": 0,
+     "loss": 3,
+     "not_comparable": 0,
+     "rows": 13,
+     "papers": 1
+    }
+   }
+  },
+  "EMDO": {
+   "comparator": "Static-SMOTE",
+   "comparator_group": "Static-SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 35,
+    "tie": 1,
+    "loss": 0,
+    "not_comparable": 0,
+    "rows": 36,
+    "papers": 1
+   },
+   "by_metric": {
+    "Pmin (%)": {
+     "win": 8,
+     "tie": 1,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 9,
+     "papers": 1
+    },
+    "Pavg (%)": {
+     "win": 9,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 9,
+     "papers": 1
+    },
+    "AUCm (%)": {
+     "win": 9,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 9,
+     "papers": 1
+    },
+    "MAUC (%)": {
+     "win": 9,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 9,
+     "papers": 1
+    }
+   }
+  },
+  "EasyEnsemble": {
+   "comparator": "SMOTE + AdaBoost",
+   "comparator_group": "SMOTE wrapped with another classifier",
+   "excluded": "",
+   "all_metrics": {
+    "win": 30,
+    "tie": 2,
+    "loss": 16,
+    "not_comparable": 0,
+    "rows": 48,
+    "papers": 1
+   },
+   "by_metric": {
+    "AUC": {
+     "win": 10,
+     "tie": 1,
+     "loss": 5,
+     "not_comparable": 0,
+     "rows": 16,
+     "papers": 1
+    },
+    "F-measure": {
+     "win": 9,
+     "tie": 0,
+     "loss": 7,
+     "not_comparable": 0,
+     "rows": 16,
+     "papers": 1
+    },
+    "G-mean": {
+     "win": 11,
+     "tie": 1,
+     "loss": 4,
+     "not_comparable": 0,
+     "rows": 16,
+     "papers": 1
+    }
+   }
+  },
+  "FW-SMOTE": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 67,
+    "tie": 16,
+    "loss": 1,
+    "not_comparable": 0,
+    "rows": 84,
+    "papers": 1
+   },
+   "by_metric": {
+    "AUC x100": {
+     "win": 37,
+     "tie": 5,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 42,
+     "papers": 1
+    },
+    "G-mean x100": {
+     "win": 30,
+     "tie": 11,
+     "loss": 1,
+     "not_comparable": 0,
+     "rows": 42,
+     "papers": 1
+    }
+   }
+  },
+  "GAMO": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 18,
+    "tie": 0,
+    "loss": 0,
+    "not_comparable": 0,
+    "rows": 18,
+    "papers": 1
+   },
+   "by_metric": {
+    "GM": {
+     "win": 9,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 9,
+     "papers": 1
+    },
+    "ACSA (Average Class Specific Accuracy)": {
+     "win": 9,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 9,
+     "papers": 1
+    }
+   }
+  },
+  "GDHS": {
+   "comparator": "OVO-SMOTE",
+   "comparator_group": "OVO-SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 29,
+    "tie": 1,
+    "loss": 10,
+    "not_comparable": 0,
+    "rows": 40,
+    "papers": 1
+   },
+   "by_metric": {
+    "mGM": {
+     "win": 15,
+     "tie": 1,
+     "loss": 4,
+     "not_comparable": 0,
+     "rows": 20,
+     "papers": 1
+    },
+    "MAUC": {
+     "win": 14,
+     "tie": 0,
+     "loss": 6,
+     "not_comparable": 0,
+     "rows": 20,
+     "papers": 1
+    }
+   }
+  },
+  "GDO": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 62,
+    "tie": 1,
+    "loss": 17,
+    "not_comparable": 0,
+    "rows": 80,
+    "papers": 1
+   },
+   "by_metric": {
+    "G-mean": {
+     "win": 32,
+     "tie": 1,
+     "loss": 7,
+     "not_comparable": 0,
+     "rows": 40,
+     "papers": 1
+    },
+    "AUC": {
+     "win": 30,
+     "tie": 0,
+     "loss": 10,
+     "not_comparable": 0,
+     "rows": 40,
+     "papers": 1
+    }
+   }
+  },
+  "GOIO": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 64,
+    "tie": 0,
+    "loss": 5,
+    "not_comparable": 0,
+    "rows": 69,
+    "papers": 1
+   },
+   "by_metric": {
+    "F1-score": {
+     "win": 22,
+     "tie": 0,
+     "loss": 1,
+     "not_comparable": 0,
+     "rows": 23,
+     "papers": 1
+    },
+    "MCC": {
+     "win": 19,
+     "tie": 0,
+     "loss": 4,
+     "not_comparable": 0,
+     "rows": 23,
+     "papers": 1
+    },
+    "Accuracy": {
+     "win": 23,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 23,
+     "papers": 1
+    }
+   }
+  },
+  "INOS": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 21,
+    "tie": 0,
+    "loss": 14,
+    "not_comparable": 0,
+    "rows": 35,
+    "papers": 1
+   },
+   "by_metric": {
+    "F-Value": {
+     "win": 6,
+     "tie": 0,
+     "loss": 1,
+     "not_comparable": 0,
+     "rows": 7,
+     "papers": 1
+    },
+    "G-Mean": {
+     "win": 7,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 7,
+     "papers": 1
+    },
+    "Precision": {
+     "win": 0,
+     "tie": 0,
+     "loss": 7,
+     "not_comparable": 0,
+     "rows": 7,
+     "papers": 1
+    },
+    "Recall (or True Positive Rate)": {
+     "win": 7,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 7,
+     "papers": 1
+    },
+    "True Negative Rate": {
+     "win": 1,
+     "tie": 0,
+     "loss": 6,
+     "not_comparable": 0,
+     "rows": 7,
+     "papers": 1
+    }
+   }
+  },
+  "KNNOR": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 4,
+    "tie": 0,
+    "loss": 0,
+    "not_comparable": 0,
+    "rows": 4,
+    "papers": 1
+   },
+   "by_metric": {
+    "G-score (G)": {
+     "win": 1,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 1,
+     "papers": 1
+    },
+    "AUC": {
+     "win": 1,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 1,
+     "papers": 1
+    },
+    "F1-score (F1)": {
+     "win": 1,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 1,
+     "papers": 1
+    },
+    "P20 (Precision at top 20%)": {
+     "win": 1,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 1,
+     "papers": 1
+    }
+   }
+  },
+  "Loyalty-SMOTE": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 80,
+    "tie": 31,
+    "loss": 9,
+    "not_comparable": 0,
+    "rows": 120,
+    "papers": 1
+   },
+   "by_metric": {
+    "F1-score": {
+     "win": 19,
+     "tie": 8,
+     "loss": 3,
+     "not_comparable": 0,
+     "rows": 30,
+     "papers": 1
+    },
+    "AUROC": {
+     "win": 19,
+     "tie": 9,
+     "loss": 2,
+     "not_comparable": 0,
+     "rows": 30,
+     "papers": 1
+    },
+    "Recall": {
+     "win": 21,
+     "tie": 7,
+     "loss": 2,
+     "not_comparable": 0,
+     "rows": 30,
+     "papers": 1
+    },
+    "G-mean": {
+     "win": 21,
+     "tie": 7,
+     "loss": 2,
+     "not_comparable": 0,
+     "rows": 30,
+     "papers": 1
+    }
+   }
+  },
+  "MBS": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 11,
+    "tie": 2,
+    "loss": 0,
+    "not_comparable": 0,
+    "rows": 13,
+    "papers": 1
+   },
+   "by_metric": {
+    "AUC (Average AUC)": {
+     "win": 11,
+     "tie": 2,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 13,
+     "papers": 1
+    }
+   }
+  },
+  "MC-CCR": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 74,
+    "tie": 0,
+    "loss": 5,
+    "not_comparable": 0,
+    "rows": 79,
+    "papers": 1
+   },
+   "by_metric": {
+    "mGM [%]": {
+     "win": 20,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 20,
+     "papers": 1
+    },
+    "AvAcc [%]": {
+     "win": 14,
+     "tie": 0,
+     "loss": 5,
+     "not_comparable": 0,
+     "rows": 19,
+     "papers": 1
+    },
+    "CBA [%]": {
+     "win": 20,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 20,
+     "papers": 1
+    },
+    "CEN": {
+     "win": 20,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 20,
+     "papers": 1
+    }
+   }
+  },
+  "MC-MBRC": {
+   "comparator": "uncertain: column printed \"MDO\", inferred to be SMOTE",
+   "comparator_group": "excluded",
+   "excluded": "Toon 28 Oct 2026: excluded; the comparator column is printed \"MDO\" and no text confirms it is SMOTE",
+   "all_metrics": {
+    "win": 76,
+    "tie": 0,
+    "loss": 4,
+    "not_comparable": 0,
+    "rows": 80,
+    "papers": 1
+   },
+   "by_metric": {
+    "AvAcc [%]": {
+     "win": 20,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 20,
+     "papers": 1
+    },
+    "F_betaM [%]": {
+     "win": 18,
+     "tie": 0,
+     "loss": 2,
+     "not_comparable": 0,
+     "rows": 20,
+     "papers": 1
+    },
+    "CBA [%]": {
+     "win": 18,
+     "tie": 0,
+     "loss": 2,
+     "not_comparable": 0,
+     "rows": 20,
+     "papers": 1
+    },
+    "CEN": {
+     "win": 20,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 20,
+     "papers": 1
+    }
+   }
+  },
+  "MC-RBO": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 78,
+    "tie": 0,
+    "loss": 2,
+    "not_comparable": 0,
+    "rows": 80,
+    "papers": 1
+   },
+   "by_metric": {
+    "AvAcc [%]": {
+     "win": 18,
+     "tie": 0,
+     "loss": 2,
+     "not_comparable": 0,
+     "rows": 20,
+     "papers": 1
+    },
+    "CBA [%]": {
+     "win": 20,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 20,
+     "papers": 1
+    },
+    "mGM [%]": {
+     "win": 20,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 20,
+     "papers": 1
+    },
+    "CEN": {
+     "win": 20,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 20,
+     "papers": 1
+    }
+   }
+  },
+  "MKC-SMOTE": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 39,
+    "tie": 0,
+    "loss": 3,
+    "not_comparable": 0,
+    "rows": 42,
+    "papers": 1
+   },
+   "by_metric": {
+    "MG": {
+     "win": 19,
+     "tie": 0,
+     "loss": 2,
+     "not_comparable": 0,
+     "rows": 21,
+     "papers": 1
+    },
+    "MAUC": {
+     "win": 20,
+     "tie": 0,
+     "loss": 1,
+     "not_comparable": 0,
+     "rows": 21,
+     "papers": 1
+    }
+   }
+  },
+  "MLOS": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 38,
+    "tie": 0,
+    "loss": 10,
+    "not_comparable": 0,
+    "rows": 48,
+    "papers": 1
+   },
+   "by_metric": {
+    "AUC": {
+     "win": 12,
+     "tie": 0,
+     "loss": 4,
+     "not_comparable": 0,
+     "rows": 16,
+     "papers": 1
+    },
+    "G-mean": {
+     "win": 13,
+     "tie": 0,
+     "loss": 3,
+     "not_comparable": 0,
+     "rows": 16,
+     "papers": 1
+    },
+    "Recall": {
+     "win": 13,
+     "tie": 0,
+     "loss": 3,
+     "not_comparable": 0,
+     "rows": 16,
+     "papers": 1
+    }
+   }
+  },
+  "MWMOTE": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 43,
+    "tie": 0,
+    "loss": 17,
+    "not_comparable": 0,
+    "rows": 60,
+    "papers": 1
+   },
+   "by_metric": {
+    "G-mean": {
+     "win": 14,
+     "tie": 0,
+     "loss": 6,
+     "not_comparable": 0,
+     "rows": 20,
+     "papers": 1
+    },
+    "F-measure": {
+     "win": 15,
+     "tie": 0,
+     "loss": 5,
+     "not_comparable": 0,
+     "rows": 20,
+     "papers": 1
+    },
+    "AUC": {
+     "win": 14,
+     "tie": 0,
+     "loss": 6,
+     "not_comparable": 0,
+     "rows": 20,
+     "papers": 1
+    }
+   }
+  },
+  "NBU": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 50,
+    "tie": 19,
+    "loss": 27,
+    "not_comparable": 0,
+    "rows": 96,
+    "papers": 1
+   },
+   "by_metric": {
+    "G-mean": {
+     "win": 15,
+     "tie": 4,
+     "loss": 5,
+     "not_comparable": 0,
+     "rows": 24,
+     "papers": 1
+    },
+    "Sensitivity": {
+     "win": 17,
+     "tie": 7,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 24,
+     "papers": 1
+    },
+    "Precision": {
+     "win": 5,
+     "tie": 4,
+     "loss": 15,
+     "not_comparable": 0,
+     "rows": 24,
+     "papers": 1
+    },
+    "F1-score": {
+     "win": 13,
+     "tie": 4,
+     "loss": 7,
+     "not_comparable": 0,
+     "rows": 24,
+     "papers": 1
+    }
+   }
+  },
+  "NROMM": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 79,
+    "tie": 0,
+    "loss": 1,
+    "not_comparable": 0,
+    "rows": 80,
+    "papers": 1
+   },
+   "by_metric": {
+    "AvAcc [%]": {
+     "win": 19,
+     "tie": 0,
+     "loss": 1,
+     "not_comparable": 0,
+     "rows": 20,
+     "papers": 1
+    },
+    "CBA [%]": {
+     "win": 20,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 20,
+     "papers": 1
+    },
+    "MG [%]": {
+     "win": 20,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 20,
+     "papers": 1
+    },
+    "CEN": {
+     "win": 20,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 20,
+     "papers": 1
+    }
+   }
+  },
+  "OREM-M": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 40,
+    "tie": 0,
+    "loss": 23,
+    "not_comparable": 0,
+    "rows": 63,
+    "papers": 1
+   },
+   "by_metric": {
+    "macro-F1": {
+     "win": 13,
+     "tie": 0,
+     "loss": 8,
+     "not_comparable": 0,
+     "rows": 21,
+     "papers": 1
+    },
+    "MG": {
+     "win": 13,
+     "tie": 0,
+     "loss": 8,
+     "not_comparable": 0,
+     "rows": 21,
+     "papers": 1
+    },
+    "MAUC": {
+     "win": 14,
+     "tie": 0,
+     "loss": 7,
+     "not_comparable": 0,
+     "rows": 21,
+     "papers": 1
+    }
+   }
+  },
+  "OVO-SMOTE": {
+   "comparator": "Static-SMOTE (Static-SMT)",
+   "comparator_group": "Static-SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 18,
+    "tie": 0,
+    "loss": 6,
+    "not_comparable": 0,
+    "rows": 24,
+    "papers": 1
+   },
+   "by_metric": {
+    "Average accuracy (Avg-Acc)": {
+     "win": 18,
+     "tie": 0,
+     "loss": 6,
+     "not_comparable": 0,
+     "rows": 24,
+     "papers": 1
+    }
+   }
+  },
+  "RACOG": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 14,
+    "tie": 5,
+    "loss": 11,
+    "not_comparable": 0,
+    "rows": 30,
+    "papers": 1
+   },
+   "by_metric": {
+    "Sensitivity": {
+     "win": 6,
+     "tie": 2,
+     "loss": 2,
+     "not_comparable": 0,
+     "rows": 10,
+     "papers": 1
+    },
+    "G-mean": {
+     "win": 4,
+     "tie": 1,
+     "loss": 5,
+     "not_comparable": 0,
+     "rows": 10,
+     "papers": 1
+    },
+    "AUC-ROC": {
+     "win": 4,
+     "tie": 2,
+     "loss": 4,
+     "not_comparable": 0,
+     "rows": 10,
+     "papers": 1
+    }
+   }
+  },
+  "RAMOBoost": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 84,
+    "tie": 3,
+    "loss": 27,
+    "not_comparable": 0,
+    "rows": 114,
+    "papers": 1
+   },
+   "by_metric": {
+    "G-mean": {
+     "win": 15,
+     "tie": 0,
+     "loss": 4,
+     "not_comparable": 0,
+     "rows": 19,
+     "papers": 1
+    },
+    "OA": {
+     "win": 14,
+     "tie": 1,
+     "loss": 4,
+     "not_comparable": 0,
+     "rows": 19,
+     "papers": 1
+    },
+    "Precision": {
+     "win": 13,
+     "tie": 0,
+     "loss": 6,
+     "not_comparable": 0,
+     "rows": 19,
+     "papers": 1
+    },
+    "Recall": {
+     "win": 12,
+     "tie": 1,
+     "loss": 6,
+     "not_comparable": 0,
+     "rows": 19,
+     "papers": 1
+    },
+    "F-measure": {
+     "win": 15,
+     "tie": 0,
+     "loss": 4,
+     "not_comparable": 0,
+     "rows": 19,
+     "papers": 1
+    },
+    "AUC": {
+     "win": 15,
+     "tie": 1,
+     "loss": 3,
+     "not_comparable": 0,
+     "rows": 19,
+     "papers": 1
+    }
+   }
+  },
+  "RBBoost": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 244,
+    "tie": 12,
+    "loss": 88,
+    "not_comparable": 0,
+    "rows": 344,
+    "papers": 1
+   },
+   "by_metric": {
+    "Geometric Mean": {
+     "win": 35,
+     "tie": 3,
+     "loss": 48,
+     "not_comparable": 0,
+     "rows": 86,
+     "papers": 1
+    },
+    "AUC": {
+     "win": 73,
+     "tie": 3,
+     "loss": 10,
+     "not_comparable": 0,
+     "rows": 86,
+     "papers": 1
+    },
+    "F-Measure": {
+     "win": 58,
+     "tie": 3,
+     "loss": 25,
+     "not_comparable": 0,
+     "rows": 86,
+     "papers": 1
+    },
+    "Accuracy": {
+     "win": 78,
+     "tie": 3,
+     "loss": 5,
+     "not_comparable": 0,
+     "rows": 86,
+     "papers": 1
+    }
+   }
+  },
+  "RSMOTE": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 108,
+    "tie": 3,
+    "loss": 24,
+    "not_comparable": 0,
+    "rows": 135,
+    "papers": 1
+   },
+   "by_metric": {
+    "Precision": {
+     "win": 24,
+     "tie": 1,
+     "loss": 2,
+     "not_comparable": 0,
+     "rows": 27,
+     "papers": 1
+    },
+    "Recall": {
+     "win": 16,
+     "tie": 1,
+     "loss": 10,
+     "not_comparable": 0,
+     "rows": 27,
+     "papers": 1
+    },
+    "AUC": {
+     "win": 21,
+     "tie": 1,
+     "loss": 5,
+     "not_comparable": 0,
+     "rows": 27,
+     "papers": 1
+    },
+    "F1": {
+     "win": 26,
+     "tie": 0,
+     "loss": 1,
+     "not_comparable": 0,
+     "rows": 27,
+     "papers": 1
+    },
+    "G-mean": {
+     "win": 21,
+     "tie": 0,
+     "loss": 6,
+     "not_comparable": 0,
+     "rows": 27,
+     "papers": 1
+    }
+   }
+  },
+  "RUSBoost": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 15,
+    "tie": 0,
+    "loss": 0,
+    "not_comparable": 0,
+    "rows": 15,
+    "papers": 1
+   },
+   "by_metric": {
+    "A-ROC (area under ROC curve)": {
+     "win": 15,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 15,
+     "papers": 1
+    }
+   }
+  },
+  "SCUT": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 11,
+    "tie": 1,
+    "loss": 12,
+    "not_comparable": 0,
+    "rows": 24,
+    "papers": 1
+   },
+   "by_metric": {
+    "G-mean": {
+     "win": 4,
+     "tie": 1,
+     "loss": 3,
+     "not_comparable": 0,
+     "rows": 8,
+     "papers": 1
+    },
+    "F-measure": {
+     "win": 4,
+     "tie": 0,
+     "loss": 4,
+     "not_comparable": 0,
+     "rows": 8,
+     "papers": 1
+    },
+    "AUC": {
+     "win": 3,
+     "tie": 0,
+     "loss": 5,
+     "not_comparable": 0,
+     "rows": 8,
+     "papers": 1
+    }
+   }
+  },
+  "SHSampler": {
+   "comparator": "OVO-SMOTE",
+   "comparator_group": "OVO-SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 23,
+    "tie": 1,
+    "loss": 16,
+    "not_comparable": 0,
+    "rows": 40,
+    "papers": 1
+   },
+   "by_metric": {
+    "mGM": {
+     "win": 12,
+     "tie": 1,
+     "loss": 7,
+     "not_comparable": 0,
+     "rows": 20,
+     "papers": 1
+    },
+    "MAUC": {
+     "win": 11,
+     "tie": 0,
+     "loss": 9,
+     "not_comparable": 0,
+     "rows": 20,
+     "papers": 1
+    }
+   }
+  },
+  "SMOM": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 69,
+    "tie": 5,
+    "loss": 34,
+    "not_comparable": 0,
+    "rows": 108,
+    "papers": 1
+   },
+   "by_metric": {
+    "MG (geometric mean of per-class recalls)": {
+     "win": 19,
+     "tie": 1,
+     "loss": 7,
+     "not_comparable": 0,
+     "rows": 27,
+     "papers": 1
+    },
+    "MAUC": {
+     "win": 18,
+     "tie": 2,
+     "loss": 7,
+     "not_comparable": 0,
+     "rows": 27,
+     "papers": 1
+    },
+    "Recall (of the smallest minority class)": {
+     "win": 18,
+     "tie": 2,
+     "loss": 7,
+     "not_comparable": 0,
+     "rows": 27,
+     "papers": 1
+    },
+    "Precision (of the smallest minority class)": {
+     "win": 14,
+     "tie": 0,
+     "loss": 13,
+     "not_comparable": 0,
+     "rows": 27,
+     "papers": 1
+    }
+   }
+  },
+  "SMOTE-ENN": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 8,
+    "tie": 1,
+    "loss": 6,
+    "not_comparable": 0,
+    "rows": 15,
+    "papers": 1
+   },
+   "by_metric": {
+    "AUC (%) mean(std), 10-fold CV": {
+     "win": 8,
+     "tie": 1,
+     "loss": 6,
+     "not_comparable": 0,
+     "rows": 15,
+     "papers": 1
+    }
+   }
+  },
+  "SMOTE-IPF": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 9,
+    "tie": 0,
+    "loss": 0,
+    "not_comparable": 0,
+    "rows": 9,
+    "papers": 1
+   },
+   "by_metric": {
+    "AUC": {
+     "win": 9,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 9,
+     "papers": 1
+    }
+   }
+  },
+  "SMOTEBoost": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 10,
+    "tie": 0,
+    "loss": 2,
+    "not_comparable": 0,
+    "rows": 12,
+    "papers": 1
+   },
+   "by_metric": {
+    "Recall (minority class)": {
+     "win": 2,
+     "tie": 0,
+     "loss": 2,
+     "not_comparable": 0,
+     "rows": 4,
+     "papers": 1
+    },
+    "Precision (minority class)": {
+     "win": 4,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 4,
+     "papers": 1
+    },
+    "F-value (minority class)": {
+     "win": 4,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 4,
+     "papers": 1
+    }
+   }
+  },
+  "SOS": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 6,
+    "tie": 0,
+    "loss": 0,
+    "not_comparable": 0,
+    "rows": 6,
+    "papers": 1
+   },
+   "by_metric": {
+    "Weighted F1": {
+     "win": 6,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 6,
+     "papers": 1
+    }
+   }
+  },
+  "SOUP": {
+   "comparator": "Static-SMOTE",
+   "comparator_group": "Static-SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 16,
+    "tie": 2,
+    "loss": 1,
+    "not_comparable": 0,
+    "rows": 19,
+    "papers": 1
+   },
+   "by_metric": {
+    "G-mean": {
+     "win": 16,
+     "tie": 2,
+     "loss": 1,
+     "not_comparable": 0,
+     "rows": 19,
+     "papers": 1
+    }
+   }
+  },
+  "SPE": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 12,
+    "tie": 0,
+    "loss": 0,
+    "not_comparable": 16,
+    "rows": 28,
+    "papers": 1
+   },
+   "by_metric": {
+    "GM (G-mean)": {
+     "win": 3,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 4,
+     "rows": 7,
+     "papers": 1
+    },
+    "AUCPRC (area under precision-recall curve)": {
+     "win": 3,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 4,
+     "rows": 7,
+     "papers": 1
+    },
+    "F1-score": {
+     "win": 3,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 4,
+     "rows": 7,
+     "papers": 1
+    },
+    "MCC": {
+     "win": 3,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 4,
+     "rows": 7,
+     "papers": 1
+    }
+   }
+  },
+  "SVDD-WSMOTE": {
+   "comparator": "plain SMOTE",
+   "comparator_group": "plain SMOTE",
+   "excluded": "",
+   "all_metrics": {
+    "win": 72,
+    "tie": 0,
+    "loss": 0,
+    "not_comparable": 0,
+    "rows": 72,
+    "papers": 1
+   },
+   "by_metric": {
+    "G-M (G-mean)": {
+     "win": 24,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 24,
+     "papers": 1
+    },
+    "F-M (F-measure)": {
+     "win": 24,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 24,
+     "papers": 1
+    },
+    "AUC": {
+     "win": 24,
+     "tie": 0,
+     "loss": 0,
+     "not_comparable": 0,
+     "rows": 24,
+     "papers": 1
+    }
+   }
+  }
+ },
+ "comparator_notes": {
+  "AMDO": "OVO-SMOTE",
+  "EMDO": "Static-SMOTE",
+  "SOUP": "Static-SMOTE",
+  "OVO-SMOTE": "Static-SMOTE (Static-SMT)",
+  "GDHS": "OVO-SMOTE",
+  "SHSampler": "OVO-SMOTE",
+  "MC-MBRC": "uncertain: column printed \"MDO\", inferred to be SMOTE",
+  "DSRBF": "SMOTE + MLP (proposed uses RBF network)",
+  "EasyEnsemble": "SMOTE + AdaBoost"
+ },
+ "crosscheck_rule_A": {
+  "match": 839
+ },
+ "unmapped_metrics": []
+}

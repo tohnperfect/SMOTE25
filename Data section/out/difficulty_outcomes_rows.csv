@@ -1,0 +1,375 @@
+paper,dataset_as_printed,metric_group,result,record_id,file,file_src,profile,noise_index,IR,small_sample,outlier_flag,small_disjuncts
+A-SUWO,Pima,G-mean,win,P031-D003,pima,KEEL(keel_ds),none,0.649,1.866,False,False,False
+A-SUWO,Heart,G-mean,win,P031-D011,heart,KEEL(keel_ds),small_sample,0.333,1.25,True,False,False
+A-SUWO,Haber,G-mean,tie,P031-D013,haberman,KEEL(keel_ds),none,0.84,2.778,False,False,False
+A-SUWO,Pima,F-measure,win,P031-D003,pima,KEEL(keel_ds),none,0.649,1.866,False,False,False
+A-SUWO,Heart,F-measure,win,P031-D011,heart,KEEL(keel_ds),small_sample,0.333,1.25,True,False,False
+A-SUWO,Haber,F-measure,win,P031-D013,haberman,KEEL(keel_ds),none,0.84,2.778,False,False,False
+A-SUWO,Pima,AUC,win,P031-D003,pima,KEEL(keel_ds),none,0.649,1.866,False,False,False
+A-SUWO,Heart,AUC,win,P031-D011,heart,KEEL(keel_ds),small_sample,0.333,1.25,True,False,False
+A-SUWO,Haber,AUC,win,P031-D013,haberman,KEEL(keel_ds),none,0.84,2.778,False,False,False
+AB-SMOTE,Abalone9-18 (Table IV),F-measure,win,P044-D001,abalone9-18,KEEL(keel_ds),small_sample + outlier_flag,0.857,16.405,True,True,False
+AB-SMOTE,Harberman (Table VI),F-measure,loss,P044-D004,haberman,KEEL(keel_ds),none,0.84,2.778,False,False,False
+AB-SMOTE,Abalone9-18 (Table IV),Recall/sensitivity,win,P044-D001,abalone9-18,KEEL(keel_ds),small_sample + outlier_flag,0.857,16.405,True,True,False
+AB-SMOTE,Harberman (Table VI),Recall/sensitivity,loss,P044-D004,haberman,KEEL(keel_ds),none,0.84,2.778,False,False,False
+ADASYN,Ionosphere,Accuracy,win,P013-D004,ionosphere,KEEL(keel_ds),small_sample,0.437,1.786,True,False,False
+ADASYN,Ionosphere,Precision,win,P013-D004,ionosphere,KEEL(keel_ds),small_sample,0.437,1.786,True,False,False
+ADASYN,Ionosphere,Recall/sensitivity,win,P013-D004,ionosphere,KEEL(keel_ds),small_sample,0.437,1.786,True,False,False
+ADASYN,Ionosphere,F-measure,win,P013-D004,ionosphere,KEEL(keel_ds),small_sample,0.437,1.786,True,False,False
+ADASYN,Ionosphere,G-mean,win,P013-D004,ionosphere,KEEL(keel_ds),small_sample,0.437,1.786,True,False,False
+CBHSID,Pima,G-mean,win,P055-D002,pima,KEEL(keel_ds),none,0.649,1.866,False,False,False
+CBHSID,Yeast1,G-mean,win,P055-D005,yeast1,KEEL(keel_ds),none,0.72,2.459,False,False,False
+CBHSID,Haberman,G-mean,win,P055-D006,haberman,KEEL(keel_ds),none,0.84,2.778,False,False,False
+CBHSID,Vehicle1,G-mean,loss,P055-D007,vehicle1,KEEL(keel_ds),none,0.737,2.899,False,False,False
+CBHSID,Glass6,G-mean,win,P055-D008,glass6,KEEL(keel_ds),small_sample,0.241,6.379,True,False,False
+CBHSID,Yeast3,G-mean,loss,P055-D009,yeast3,KEEL(keel_ds),none,0.399,8.104,False,False,False
+CBHSID,Yeast4,G-mean,win,P055-D010,yeast4,KEEL(keel_ds),small_sample + outlier_flag,0.863,28.098,True,True,False
+CBHSID,Yeast5,G-mean,win,P055-D011,yeast5,KEEL(keel_ds),small_sample,0.659,32.727,True,False,False
+CBHSID,Yeast6,G-mean,win,P055-D012,yeast6,KEEL(keel_ds),small_sample + outlier_flag,0.629,41.4,True,True,False
+CBHSID,Pima,Recall/sensitivity,win,P055-D002,pima,KEEL(keel_ds),none,0.649,1.866,False,False,False
+CBHSID,Yeast1,Recall/sensitivity,win,P055-D005,yeast1,KEEL(keel_ds),none,0.72,2.459,False,False,False
+CBHSID,Haberman,Recall/sensitivity,win,P055-D006,haberman,KEEL(keel_ds),none,0.84,2.778,False,False,False
+CBHSID,Vehicle1,Recall/sensitivity,win,P055-D007,vehicle1,KEEL(keel_ds),none,0.737,2.899,False,False,False
+CBHSID,Glass6,Recall/sensitivity,win,P055-D008,glass6,KEEL(keel_ds),small_sample,0.241,6.379,True,False,False
+CBHSID,Yeast3,Recall/sensitivity,win,P055-D009,yeast3,KEEL(keel_ds),none,0.399,8.104,False,False,False
+CBHSID,Yeast4,Recall/sensitivity,win,P055-D010,yeast4,KEEL(keel_ds),small_sample + outlier_flag,0.863,28.098,True,True,False
+CBHSID,Yeast5,Recall/sensitivity,loss,P055-D011,yeast5,KEEL(keel_ds),small_sample,0.659,32.727,True,False,False
+CBHSID,Yeast6,Recall/sensitivity,loss,P055-D012,yeast6,KEEL(keel_ds),small_sample + outlier_flag,0.629,41.4,True,True,False
+CBHSID,Pima,F-measure,win,P055-D002,pima,KEEL(keel_ds),none,0.649,1.866,False,False,False
+CBHSID,Yeast1,F-measure,win,P055-D005,yeast1,KEEL(keel_ds),none,0.72,2.459,False,False,False
+CBHSID,Haberman,F-measure,win,P055-D006,haberman,KEEL(keel_ds),none,0.84,2.778,False,False,False
+CBHSID,Vehicle1,F-measure,win,P055-D007,vehicle1,KEEL(keel_ds),none,0.737,2.899,False,False,False
+CBHSID,Glass6,F-measure,win,P055-D008,glass6,KEEL(keel_ds),small_sample,0.241,6.379,True,False,False
+CBHSID,Yeast3,F-measure,win,P055-D009,yeast3,KEEL(keel_ds),none,0.399,8.104,False,False,False
+CBHSID,Yeast4,F-measure,win,P055-D010,yeast4,KEEL(keel_ds),small_sample + outlier_flag,0.863,28.098,True,True,False
+CBHSID,Yeast5,F-measure,loss,P055-D011,yeast5,KEEL(keel_ds),small_sample,0.659,32.727,True,False,False
+CBHSID,Yeast6,F-measure,loss,P055-D012,yeast6,KEEL(keel_ds),small_sample + outlier_flag,0.629,41.4,True,True,False
+CGMOS,Haberman,AUC,win,P032-D012,haberman,KEEL(keel_ds),none,0.84,2.778,False,False,False
+DGOT,coil_2000,F-measure,tie,P074-D019,coil2000,PMLB,small_disjuncts + small_sample + outlier_flag,0.737,15.761,True,True,True
+DGOT,coil_2000,Accuracy,win,P074-D019,coil2000,PMLB,small_disjuncts + small_sample + outlier_flag,0.737,15.761,True,True,True
+DGOT,coil_2000,MCC,loss,P074-D019,coil2000,PMLB,small_disjuncts + small_sample + outlier_flag,0.737,15.761,True,True,True
+FW-SMOTE,ldd3,AUC,win,P056-D003,ecoli-0-1_vs_5,KEEL(keel_ds),small_sample,0.25,11.0,True,False,False
+FW-SMOTE,ldd4,AUC,win,P056-D004,ecoli-0-1-4-6_vs_5,KEEL(keel_ds),small_sample,0.3,13.0,True,False,False
+FW-SMOTE,ldd5,AUC,win,P056-D005,ecoli-0-1-4-7_vs_5-6,KEEL(keel_ds),small_sample,0.28,12.28,True,False,False
+FW-SMOTE,ldd6,AUC,win,P056-D006,ecoli-0-2-3-4_vs_5,KEEL(keel_ds),small_sample,0.3,9.1,True,False,False
+FW-SMOTE,ldd7,AUC,tie,P056-D007,ecoli-0-2-6-7_vs_3-5,KEEL(keel_ds),small_sample,0.5,9.182,True,False,False
+FW-SMOTE,ldd8,AUC,win,P056-D008,ecoli-0-3-4_vs_5,KEEL(keel_ds),small_sample,0.25,9.0,True,False,False
+FW-SMOTE,ldd9,AUC,win,P056-D009,ecoli-0-3-4-6_vs_5,KEEL(keel_ds),small_sample,0.25,9.25,True,False,False
+FW-SMOTE,ldd10,AUC,win,P056-D010,ecoli-0-3-4-7_vs_5-6,KEEL(keel_ds),small_sample,0.32,9.28,True,False,False
+FW-SMOTE,ldd11,AUC,win,P056-D011,ecoli-0-4-6_vs_5,KEEL(keel_ds),small_sample,0.25,9.15,True,False,False
+FW-SMOTE,ldd12,AUC,win,P056-D012,ecoli-0-6-7_vs_3-5,KEEL(keel_ds),small_sample,0.5,9.091,True,False,False
+FW-SMOTE,ldd13,AUC,win,P056-D013,ecoli-0-6-7_vs_5,KEEL(keel_ds),small_sample,0.55,10.0,True,False,False
+FW-SMOTE,ldd14,AUC,win,P056-D014,ecoli4,KEEL(keel_ds),small_sample,0.3,15.8,True,False,False
+FW-SMOTE,ldd15,AUC,win,P056-D015,glass-0-1-6_vs_2,KEEL(keel_ds),small_disjuncts + small_sample + outlier_flag,0.765,10.294,True,True,True
+FW-SMOTE,ldd16,AUC,win,P056-D016,glass-0-4_vs_5,KEEL(keel_ds),small_sample,0.667,9.222,True,False,False
+FW-SMOTE,ldd17,AUC,win,P056-D017,glass-0-6_vs_5,KEEL(keel_ds),small_sample,0.333,11.0,True,False,False
+FW-SMOTE,ldd18,AUC,win,P056-D018,glass4,KEEL(keel_ds),small_sample,0.692,15.462,True,False,False
+FW-SMOTE,ldd20,AUC,win,P056-D020,page-blocks-1-3_vs_4,KEEL(keel_ds),small_sample,0.143,15.857,True,False,False
+FW-SMOTE,ldd21,AUC,tie,P056-D021,shuttle-c0-vs-c4,KEEL(keel_ds),none,0.008,13.87,False,False,False
+FW-SMOTE,ldd23,AUC,win,P056-D023,yeast-0-2-5-7-9_vs_3-6-8,KEEL(keel_ds),none,0.293,9.141,False,False,False
+FW-SMOTE,ldd24,AUC,win,P056-D024,yeast-0-5-6-7-9_vs_4,KEEL(keel_ds),small_sample + outlier_flag,0.824,9.353,True,True,False
+FW-SMOTE,ldd25,AUC,win,P056-D025,yeast-1_vs_7,KEEL(keel_ds),small_sample + outlier_flag,0.767,14.3,True,True,False
+FW-SMOTE,ldd26,AUC,win,P056-D026,yeast-1-4-5-8_vs_7,KEEL(keel_ds),small_disjuncts + small_sample + outlier_flag,0.6,22.1,True,True,True
+FW-SMOTE,ldd27,AUC,win,P056-D027,yeast-2_vs_4,KEEL(keel_ds),small_sample,0.392,9.078,True,False,False
+FW-SMOTE,ldd28,AUC,win,P056-D028,yeast3,KEEL(keel_ds),none,0.399,8.104,False,False,False
+FW-SMOTE,ldd29,AUC,win,P056-D029,yeast4,KEEL(keel_ds),small_sample + outlier_flag,0.863,28.098,True,True,False
+FW-SMOTE,ldd30,AUC,win,P056-D030,yeast5,KEEL(keel_ds),small_sample,0.659,32.727,True,False,False
+FW-SMOTE,ldd3,G-mean,win,P056-D003,ecoli-0-1_vs_5,KEEL(keel_ds),small_sample,0.25,11.0,True,False,False
+FW-SMOTE,ldd4,G-mean,tie,P056-D004,ecoli-0-1-4-6_vs_5,KEEL(keel_ds),small_sample,0.3,13.0,True,False,False
+FW-SMOTE,ldd5,G-mean,win,P056-D005,ecoli-0-1-4-7_vs_5-6,KEEL(keel_ds),small_sample,0.28,12.28,True,False,False
+FW-SMOTE,ldd6,G-mean,tie,P056-D006,ecoli-0-2-3-4_vs_5,KEEL(keel_ds),small_sample,0.3,9.1,True,False,False
+FW-SMOTE,ldd7,G-mean,win,P056-D007,ecoli-0-2-6-7_vs_3-5,KEEL(keel_ds),small_sample,0.5,9.182,True,False,False
+FW-SMOTE,ldd8,G-mean,tie,P056-D008,ecoli-0-3-4_vs_5,KEEL(keel_ds),small_sample,0.25,9.0,True,False,False
+FW-SMOTE,ldd9,G-mean,tie,P056-D009,ecoli-0-3-4-6_vs_5,KEEL(keel_ds),small_sample,0.25,9.25,True,False,False
+FW-SMOTE,ldd10,G-mean,loss,P056-D010,ecoli-0-3-4-7_vs_5-6,KEEL(keel_ds),small_sample,0.32,9.28,True,False,False
+FW-SMOTE,ldd11,G-mean,tie,P056-D011,ecoli-0-4-6_vs_5,KEEL(keel_ds),small_sample,0.25,9.15,True,False,False
+FW-SMOTE,ldd12,G-mean,win,P056-D012,ecoli-0-6-7_vs_3-5,KEEL(keel_ds),small_sample,0.5,9.091,True,False,False
+FW-SMOTE,ldd13,G-mean,win,P056-D013,ecoli-0-6-7_vs_5,KEEL(keel_ds),small_sample,0.55,10.0,True,False,False
+FW-SMOTE,ldd14,G-mean,win,P056-D014,ecoli4,KEEL(keel_ds),small_sample,0.3,15.8,True,False,False
+FW-SMOTE,ldd15,G-mean,win,P056-D015,glass-0-1-6_vs_2,KEEL(keel_ds),small_disjuncts + small_sample + outlier_flag,0.765,10.294,True,True,True
+FW-SMOTE,ldd16,G-mean,win,P056-D016,glass-0-4_vs_5,KEEL(keel_ds),small_sample,0.667,9.222,True,False,False
+FW-SMOTE,ldd17,G-mean,tie,P056-D017,glass-0-6_vs_5,KEEL(keel_ds),small_sample,0.333,11.0,True,False,False
+FW-SMOTE,ldd18,G-mean,win,P056-D018,glass4,KEEL(keel_ds),small_sample,0.692,15.462,True,False,False
+FW-SMOTE,ldd20,G-mean,win,P056-D020,page-blocks-1-3_vs_4,KEEL(keel_ds),small_sample,0.143,15.857,True,False,False
+FW-SMOTE,ldd21,G-mean,tie,P056-D021,shuttle-c0-vs-c4,KEEL(keel_ds),none,0.008,13.87,False,False,False
+FW-SMOTE,ldd23,G-mean,win,P056-D023,yeast-0-2-5-7-9_vs_3-6-8,KEEL(keel_ds),none,0.293,9.141,False,False,False
+FW-SMOTE,ldd24,G-mean,win,P056-D024,yeast-0-5-6-7-9_vs_4,KEEL(keel_ds),small_sample + outlier_flag,0.824,9.353,True,True,False
+FW-SMOTE,ldd25,G-mean,win,P056-D025,yeast-1_vs_7,KEEL(keel_ds),small_sample + outlier_flag,0.767,14.3,True,True,False
+FW-SMOTE,ldd26,G-mean,win,P056-D026,yeast-1-4-5-8_vs_7,KEEL(keel_ds),small_disjuncts + small_sample + outlier_flag,0.6,22.1,True,True,True
+FW-SMOTE,ldd27,G-mean,win,P056-D027,yeast-2_vs_4,KEEL(keel_ds),small_sample,0.392,9.078,True,False,False
+FW-SMOTE,ldd28,G-mean,win,P056-D028,yeast3,KEEL(keel_ds),none,0.399,8.104,False,False,False
+FW-SMOTE,ldd29,G-mean,win,P056-D029,yeast4,KEEL(keel_ds),small_sample + outlier_flag,0.863,28.098,True,True,False
+FW-SMOTE,ldd30,G-mean,win,P056-D030,yeast5,KEEL(keel_ds),small_sample,0.659,32.727,True,False,False
+GDO,glass1,G-mean,win,P057-D001,glass1,KEEL(keel_ds),small_sample,0.474,1.816,True,False,False
+GDO,ecoli-0_vs_1,G-mean,win,P057-D002,ecoli-0_vs_1,KEEL(keel_ds),none,0.117,1.857,False,False,False
+GDO,wisconsin,G-mean,win,P057-D003,wisconsin,KEEL(keel_ds),none,0.088,1.858,False,False,False
+GDO,yeast1,G-mean,win,P057-D004,yeast1,KEEL(keel_ds),none,0.72,2.459,False,False,False
+GDO,haberman,G-mean,win,P057-D005,haberman,KEEL(keel_ds),none,0.84,2.778,False,False,False
+GDO,ecoli1,G-mean,win,P057-D007,ecoli1,KEEL(keel_ds),none,0.455,3.364,False,False,False
+GDO,new-thyroid1,G-mean,win,P057-D008,new-thyroid1,KEEL(keel_ds),small_sample,0.314,5.143,True,False,False
+GDO,ecoli2,G-mean,loss,P057-D009,ecoli2,KEEL(keel_ds),small_sample,0.231,5.462,True,False,False
+GDO,segment0,G-mean,win,P057-D010,segment0,KEEL(keel_ds),none,0.021,6.015,False,False,False
+GDO,yeast3,G-mean,tie,P057-D011,yeast3,KEEL(keel_ds),none,0.399,8.104,False,False,False
+GDO,ecoli3,G-mean,win,P057-D012,ecoli3,KEEL(keel_ds),small_sample,0.686,8.6,True,False,False
+GDO,yeast-2_vs_4,G-mean,loss,P057-D013,yeast-2_vs_4,KEEL(keel_ds),small_sample,0.392,9.078,True,False,False
+GDO,yeast-0-5-6-7-9_vs_4,G-mean,win,P057-D014,yeast-0-5-6-7-9_vs_4,KEEL(keel_ds),small_sample + outlier_flag,0.824,9.353,True,True,False
+GDO,vowel0,G-mean,win,P057-D015,vowel0,KEEL(keel_ds),small_sample,0.011,9.978,True,False,False
+GDO,kr-vs-k-three_vs_eleven,G-mean,win,P057-D016,kr-vs-k-three_vs_eleven,KEEL(keel_ds),none,0.049,35.235,False,False,False
+GDO,glass2,G-mean,win,P057-D017,glass2,KEEL(keel_ds),small_disjuncts + small_sample + outlier_flag,0.647,11.588,True,True,True
+GDO,shuttle-c0-vs-c4,G-mean,win,P057-D018,shuttle-c0-vs-c4,KEEL(keel_ds),none,0.008,13.87,False,False,False
+GDO,yeast-1_vs_7,G-mean,win,P057-D019,yeast-1_vs_7,KEEL(keel_ds),small_sample + outlier_flag,0.767,14.3,True,True,False
+GDO,glass4,G-mean,win,P057-D020,glass4,KEEL(keel_ds),small_sample,0.692,15.462,True,False,False
+GDO,ecoli4,G-mean,loss,P057-D021,ecoli4,KEEL(keel_ds),small_sample,0.3,15.8,True,False,False
+GDO,abalone9-18,G-mean,win,P057-D024,abalone9-18,KEEL(keel_ds),small_sample + outlier_flag,0.857,16.405,True,True,False
+GDO,glass-0-1-6_vs_5,G-mean,win,P057-D025,glass-0-1-6_vs_5,KEEL(keel_ds),small_sample,0.667,19.444,True,False,False
+GDO,yeast-1-4-5-8_vs_7,G-mean,win,P057-D026,yeast-1-4-5-8_vs_7,KEEL(keel_ds),small_disjuncts + small_sample + outlier_flag,0.6,22.1,True,True,True
+GDO,glass5,G-mean,win,P057-D027,glass5,KEEL(keel_ds),small_sample,0.667,22.778,True,False,False
+GDO,car-good,G-mean,win,P057-D028,car-good,KEEL(keel_ds),none,0.478,24.043,False,False,False
+GDO,car-vgood,G-mean,win,P057-D029,car-vgood,KEEL(keel_ds),none,0.077,25.585,False,False,False
+GDO,kr-vs-k-zero-one_vs_draw,G-mean,win,P057-D030,kr-vs-k-zero-one_vs_draw,KEEL(keel_ds),none,0.305,26.629,False,False,False
+GDO,kr-vs-k-one_vs_fifteen,G-mean,loss,P057-D031,kr-vs-k-one_vs_fifteen,KEEL(keel_ds),none,0.0,27.769,False,False,False
+GDO,yeast4,G-mean,win,P057-D032,yeast4,KEEL(keel_ds),small_sample + outlier_flag,0.863,28.098,True,True,False
+GDO,yeast5,G-mean,win,P057-D034,yeast5,KEEL(keel_ds),small_sample,0.659,32.727,True,False,False
+GDO,glass-0-1-2-3_vs_4-5-6,G-mean,win,P057-D035,glass-0-1-2-3_vs_4-5-6,KEEL(keel_ds),small_sample,0.333,3.196,True,False,False
+GDO,yeast6,G-mean,win,P057-D036,yeast6,KEEL(keel_ds),small_sample + outlier_flag,0.629,41.4,True,True,False
+GDO,winequality-white-3_vs_7,G-mean,win,P057-D038,winequality-white-3_vs_7,KEEL(keel_ds),small_sample + outlier_flag,0.95,44.0,True,True,False
+GDO,australian,G-mean,win,P057-D039,australian,KEEL(keel_ds),none,0.293,1.248,False,False,False
+GDO,abalone19,G-mean,win,P057-D040,abalone19,KEEL(keel_ds),small_sample + outlier_flag,0.906,129.438,True,True,False
+GDO,glass1,AUC,loss,P057-D001,glass1,KEEL(keel_ds),small_sample,0.474,1.816,True,False,False
+GDO,ecoli-0_vs_1,AUC,win,P057-D002,ecoli-0_vs_1,KEEL(keel_ds),none,0.117,1.857,False,False,False
+GDO,wisconsin,AUC,win,P057-D003,wisconsin,KEEL(keel_ds),none,0.088,1.858,False,False,False
+GDO,yeast1,AUC,win,P057-D004,yeast1,KEEL(keel_ds),none,0.72,2.459,False,False,False
+GDO,haberman,AUC,win,P057-D005,haberman,KEEL(keel_ds),none,0.84,2.778,False,False,False
+GDO,ecoli1,AUC,win,P057-D007,ecoli1,KEEL(keel_ds),none,0.455,3.364,False,False,False
+GDO,new-thyroid1,AUC,win,P057-D008,new-thyroid1,KEEL(keel_ds),small_sample,0.314,5.143,True,False,False
+GDO,ecoli2,AUC,loss,P057-D009,ecoli2,KEEL(keel_ds),small_sample,0.231,5.462,True,False,False
+GDO,segment0,AUC,win,P057-D010,segment0,KEEL(keel_ds),none,0.021,6.015,False,False,False
+GDO,yeast3,AUC,loss,P057-D011,yeast3,KEEL(keel_ds),none,0.399,8.104,False,False,False
+GDO,ecoli3,AUC,win,P057-D012,ecoli3,KEEL(keel_ds),small_sample,0.686,8.6,True,False,False
+GDO,yeast-2_vs_4,AUC,loss,P057-D013,yeast-2_vs_4,KEEL(keel_ds),small_sample,0.392,9.078,True,False,False
+GDO,yeast-0-5-6-7-9_vs_4,AUC,win,P057-D014,yeast-0-5-6-7-9_vs_4,KEEL(keel_ds),small_sample + outlier_flag,0.824,9.353,True,True,False
+GDO,vowel0,AUC,win,P057-D015,vowel0,KEEL(keel_ds),small_sample,0.011,9.978,True,False,False
+GDO,kr-vs-k-three_vs_eleven,AUC,win,P057-D016,kr-vs-k-three_vs_eleven,KEEL(keel_ds),none,0.049,35.235,False,False,False
+GDO,glass2,AUC,win,P057-D017,glass2,KEEL(keel_ds),small_disjuncts + small_sample + outlier_flag,0.647,11.588,True,True,True
+GDO,shuttle-c0-vs-c4,AUC,win,P057-D018,shuttle-c0-vs-c4,KEEL(keel_ds),none,0.008,13.87,False,False,False
+GDO,yeast-1_vs_7,AUC,win,P057-D019,yeast-1_vs_7,KEEL(keel_ds),small_sample + outlier_flag,0.767,14.3,True,True,False
+GDO,glass4,AUC,win,P057-D020,glass4,KEEL(keel_ds),small_sample,0.692,15.462,True,False,False
+GDO,ecoli4,AUC,loss,P057-D021,ecoli4,KEEL(keel_ds),small_sample,0.3,15.8,True,False,False
+GDO,abalone9-18,AUC,win,P057-D024,abalone9-18,KEEL(keel_ds),small_sample + outlier_flag,0.857,16.405,True,True,False
+GDO,glass-0-1-6_vs_5,AUC,win,P057-D025,glass-0-1-6_vs_5,KEEL(keel_ds),small_sample,0.667,19.444,True,False,False
+GDO,yeast-1-4-5-8_vs_7,AUC,win,P057-D026,yeast-1-4-5-8_vs_7,KEEL(keel_ds),small_disjuncts + small_sample + outlier_flag,0.6,22.1,True,True,True
+GDO,glass5,AUC,win,P057-D027,glass5,KEEL(keel_ds),small_sample,0.667,22.778,True,False,False
+GDO,car-good,AUC,win,P057-D028,car-good,KEEL(keel_ds),none,0.478,24.043,False,False,False
+GDO,car-vgood,AUC,win,P057-D029,car-vgood,KEEL(keel_ds),none,0.077,25.585,False,False,False
+GDO,kr-vs-k-zero-one_vs_draw,AUC,win,P057-D030,kr-vs-k-zero-one_vs_draw,KEEL(keel_ds),none,0.305,26.629,False,False,False
+GDO,kr-vs-k-one_vs_fifteen,AUC,loss,P057-D031,kr-vs-k-one_vs_fifteen,KEEL(keel_ds),none,0.0,27.769,False,False,False
+GDO,yeast4,AUC,win,P057-D032,yeast4,KEEL(keel_ds),small_sample + outlier_flag,0.863,28.098,True,True,False
+GDO,yeast5,AUC,win,P057-D034,yeast5,KEEL(keel_ds),small_sample,0.659,32.727,True,False,False
+GDO,glass-0-1-2-3_vs_4-5-6,AUC,win,P057-D035,glass-0-1-2-3_vs_4-5-6,KEEL(keel_ds),small_sample,0.333,3.196,True,False,False
+GDO,yeast6,AUC,win,P057-D036,yeast6,KEEL(keel_ds),small_sample + outlier_flag,0.629,41.4,True,True,False
+GDO,winequality-white-3_vs_7,AUC,win,P057-D038,winequality-white-3_vs_7,KEEL(keel_ds),small_sample + outlier_flag,0.95,44.0,True,True,False
+GDO,australian,AUC,win,P057-D039,australian,KEEL(keel_ds),none,0.293,1.248,False,False,False
+GDO,abalone19,AUC,win,P057-D040,abalone19,KEEL(keel_ds),small_sample + outlier_flag,0.906,129.438,True,True,False
+Loyalty-SMOTE,german,F-measure,win,P075-D013,german,KEEL(keel_ds),none,0.72,2.333,False,False,False
+Loyalty-SMOTE,ionosphere,F-measure,win,P075-D023,ionosphere,KEEL(keel_ds),small_sample,0.437,1.786,True,False,False
+Loyalty-SMOTE,vowel0,F-measure,tie,P075-D028,vowel0,KEEL(keel_ds),small_sample,0.011,9.978,True,False,False
+Loyalty-SMOTE,ecoli-0-1-3-7_vs_2-6,F-measure,win,P075-D029,ecoli-0-1-3-7_vs_2-6,KEEL(keel_ds),small_sample + outlier_flag,0.286,39.143,True,True,False
+Loyalty-SMOTE,ecoli-0-1-4-6_vs_5,F-measure,tie,P075-D030,ecoli-0-1-4-6_vs_5,KEEL(keel_ds),small_sample,0.3,13.0,True,False,False
+Loyalty-SMOTE,yeast-0-3-5-9_vs_7-8,F-measure,tie,P075-D031,yeast-0-3-5-9_vs_7-8,KEEL(keel_ds),small_sample + outlier_flag,0.68,9.12,True,True,False
+Loyalty-SMOTE,german,AUC,win,P075-D013,german,KEEL(keel_ds),none,0.72,2.333,False,False,False
+Loyalty-SMOTE,ionosphere,AUC,win,P075-D023,ionosphere,KEEL(keel_ds),small_sample,0.437,1.786,True,False,False
+Loyalty-SMOTE,vowel0,AUC,tie,P075-D028,vowel0,KEEL(keel_ds),small_sample,0.011,9.978,True,False,False
+Loyalty-SMOTE,ecoli-0-1-3-7_vs_2-6,AUC,tie,P075-D029,ecoli-0-1-3-7_vs_2-6,KEEL(keel_ds),small_sample + outlier_flag,0.286,39.143,True,True,False
+Loyalty-SMOTE,ecoli-0-1-4-6_vs_5,AUC,loss,P075-D030,ecoli-0-1-4-6_vs_5,KEEL(keel_ds),small_sample,0.3,13.0,True,False,False
+Loyalty-SMOTE,yeast-0-3-5-9_vs_7-8,AUC,win,P075-D031,yeast-0-3-5-9_vs_7-8,KEEL(keel_ds),small_sample + outlier_flag,0.68,9.12,True,True,False
+Loyalty-SMOTE,german,Recall/sensitivity,win,P075-D013,german,KEEL(keel_ds),none,0.72,2.333,False,False,False
+Loyalty-SMOTE,ionosphere,Recall/sensitivity,win,P075-D023,ionosphere,KEEL(keel_ds),small_sample,0.437,1.786,True,False,False
+Loyalty-SMOTE,vowel0,Recall/sensitivity,tie,P075-D028,vowel0,KEEL(keel_ds),small_sample,0.011,9.978,True,False,False
+Loyalty-SMOTE,ecoli-0-1-3-7_vs_2-6,Recall/sensitivity,win,P075-D029,ecoli-0-1-3-7_vs_2-6,KEEL(keel_ds),small_sample + outlier_flag,0.286,39.143,True,True,False
+Loyalty-SMOTE,ecoli-0-1-4-6_vs_5,Recall/sensitivity,tie,P075-D030,ecoli-0-1-4-6_vs_5,KEEL(keel_ds),small_sample,0.3,13.0,True,False,False
+Loyalty-SMOTE,yeast-0-3-5-9_vs_7-8,Recall/sensitivity,tie,P075-D031,yeast-0-3-5-9_vs_7-8,KEEL(keel_ds),small_sample + outlier_flag,0.68,9.12,True,True,False
+Loyalty-SMOTE,german,G-mean,win,P075-D013,german,KEEL(keel_ds),none,0.72,2.333,False,False,False
+Loyalty-SMOTE,ionosphere,G-mean,win,P075-D023,ionosphere,KEEL(keel_ds),small_sample,0.437,1.786,True,False,False
+Loyalty-SMOTE,vowel0,G-mean,tie,P075-D028,vowel0,KEEL(keel_ds),small_sample,0.011,9.978,True,False,False
+Loyalty-SMOTE,ecoli-0-1-3-7_vs_2-6,G-mean,win,P075-D029,ecoli-0-1-3-7_vs_2-6,KEEL(keel_ds),small_sample + outlier_flag,0.286,39.143,True,True,False
+Loyalty-SMOTE,ecoli-0-1-4-6_vs_5,G-mean,tie,P075-D030,ecoli-0-1-4-6_vs_5,KEEL(keel_ds),small_sample,0.3,13.0,True,False,False
+Loyalty-SMOTE,yeast-0-3-5-9_vs_7-8,G-mean,win,P075-D031,yeast-0-3-5-9_vs_7-8,KEEL(keel_ds),small_sample + outlier_flag,0.68,9.12,True,True,False
+MBS,Spambase,AUC,win,P046-D013,spambase,PMLB,none,0.189,1.538,False,False,False
+MLOS,aba19,AUC,win,P073-D003,abalone19,KEEL(keel_ds),small_sample + outlier_flag,0.906,129.438,True,True,False
+MLOS,cle,AUC,win,P073-D005,cleveland-0_vs_4,KEEL(keel_ds),small_sample,1.0,12.615,True,False,False
+MLOS,gla,AUC,win,P073-D007,glass5,KEEL(keel_ds),small_sample,0.667,22.778,True,False,False
+MLOS,pok,AUC,win,P073-D012,poker-8_vs_6,KEEL(keel_ds),small_disjuncts + small_sample + outlier_flag,0.706,85.882,True,True,True
+MLOS,win35,AUC,win,P073-D013,winequality-red-3_vs_5,KEEL(keel_ds),small_sample + outlier_flag,1.0,68.1,True,True,False
+MLOS,yea,AUC,win,P073-D016,yeast6,KEEL(keel_ds),small_sample + outlier_flag,0.629,41.4,True,True,False
+MLOS,aba19,G-mean,win,P073-D003,abalone19,KEEL(keel_ds),small_sample + outlier_flag,0.906,129.438,True,True,False
+MLOS,cle,G-mean,win,P073-D005,cleveland-0_vs_4,KEEL(keel_ds),small_sample,1.0,12.615,True,False,False
+MLOS,gla,G-mean,win,P073-D007,glass5,KEEL(keel_ds),small_sample,0.667,22.778,True,False,False
+MLOS,pok,G-mean,win,P073-D012,poker-8_vs_6,KEEL(keel_ds),small_disjuncts + small_sample + outlier_flag,0.706,85.882,True,True,True
+MLOS,win35,G-mean,win,P073-D013,winequality-red-3_vs_5,KEEL(keel_ds),small_sample + outlier_flag,1.0,68.1,True,True,False
+MLOS,yea,G-mean,win,P073-D016,yeast6,KEEL(keel_ds),small_sample + outlier_flag,0.629,41.4,True,True,False
+MLOS,aba19,Recall/sensitivity,win,P073-D003,abalone19,KEEL(keel_ds),small_sample + outlier_flag,0.906,129.438,True,True,False
+MLOS,cle,Recall/sensitivity,win,P073-D005,cleveland-0_vs_4,KEEL(keel_ds),small_sample,1.0,12.615,True,False,False
+MLOS,gla,Recall/sensitivity,win,P073-D007,glass5,KEEL(keel_ds),small_sample,0.667,22.778,True,False,False
+MLOS,pok,Recall/sensitivity,win,P073-D012,poker-8_vs_6,KEEL(keel_ds),small_disjuncts + small_sample + outlier_flag,0.706,85.882,True,True,True
+MLOS,win35,Recall/sensitivity,win,P073-D013,winequality-red-3_vs_5,KEEL(keel_ds),small_sample + outlier_flag,1.0,68.1,True,True,False
+MLOS,yea,Recall/sensitivity,win,P073-D016,yeast6,KEEL(keel_ds),small_sample + outlier_flag,0.629,41.4,True,True,False
+MWMOTE,Pima,G-mean,win,P025-D020,pima,KEEL(keel_ds),none,0.649,1.866,False,False,False
+MWMOTE,Pima,F-measure,win,P025-D020,pima,KEEL(keel_ds),none,0.649,1.866,False,False,False
+MWMOTE,Pima,AUC,win,P025-D020,pima,KEEL(keel_ds),none,0.649,1.866,False,False,False
+NBU,Wisconsin,G-mean,win,P049-D002,wisconsin,KEEL(keel_ds),none,0.088,1.858,False,False,False
+NBU,Pima,G-mean,loss,P049-D003,pima,KEEL(keel_ds),none,0.649,1.866,False,False,False
+NBU,Glass0,G-mean,win,P049-D004,glass0,KEEL(keel_ds),small_sample,0.443,2.057,True,False,False
+NBU,Vehicle1,G-mean,win,P049-D005,vehicle1,KEEL(keel_ds),none,0.737,2.899,False,False,False
+NBU,Vehicle0,G-mean,win,P049-D006,vehicle0,KEEL(keel_ds),none,0.256,3.251,False,False,False
+NBU,Ecoli1,G-mean,win,P049-D007,ecoli1,KEEL(keel_ds),none,0.455,3.364,False,False,False
+NBU,New-thyroid1,G-mean,win,P049-D008,new-thyroid1,KEEL(keel_ds),small_sample,0.314,5.143,True,False,False
+NBU,New-thyroid2,G-mean,loss,P049-D009,new-thyroid2,KEEL(keel_ds),small_sample,0.314,5.143,True,False,False
+NBU,Ecoli2,G-mean,win,P049-D010,ecoli2,KEEL(keel_ds),small_sample,0.231,5.462,True,False,False
+NBU,Segmemt0,G-mean,loss,P049-D011,segment0,KEEL(keel_ds),none,0.021,6.015,False,False,False
+NBU,Yeast3,G-mean,win,P049-D012,yeast3,KEEL(keel_ds),none,0.399,8.104,False,False,False
+NBU,Ecoli3,G-mean,win,P049-D013,ecoli3,KEEL(keel_ds),small_sample,0.686,8.6,True,False,False
+NBU,Yeast2vs4,G-mean,win,P049-D014,yeast-2_vs_4,KEEL(keel_ds),small_sample,0.392,9.078,True,False,False
+NBU,Vowel0,G-mean,win,P049-D015,vowel0,KEEL(keel_ds),small_sample,0.011,9.978,True,False,False
+NBU,Glass2,G-mean,win,P049-D016,glass2,KEEL(keel_ds),small_disjuncts + small_sample + outlier_flag,0.647,11.588,True,True,True
+NBU,Yeast1vs7,G-mean,win,P049-D017,yeast-1_vs_7,KEEL(keel_ds),small_sample + outlier_flag,0.767,14.3,True,True,False
+NBU,Glass4,G-mean,tie,P049-D018,glass4,KEEL(keel_ds),small_sample,0.692,15.462,True,False,False
+NBU,Ecoli4,G-mean,tie,P049-D019,ecoli4,KEEL(keel_ds),small_sample,0.3,15.8,True,False,False
+NBU,Abalone09-18,G-mean,win,P049-D021,abalone9-18,KEEL(keel_ds),small_sample + outlier_flag,0.857,16.405,True,True,False
+NBU,Glass5,G-mean,tie,P049-D022,glass5,KEEL(keel_ds),small_sample,0.667,22.778,True,False,False
+NBU,Yeast4,G-mean,win,P049-D023,yeast4,KEEL(keel_ds),small_sample + outlier_flag,0.863,28.098,True,True,False
+NBU,Ecoli0137vs26,G-mean,tie,P049-D024,ecoli-0-1-3-7_vs_2-6,KEEL(keel_ds),small_sample + outlier_flag,0.286,39.143,True,True,False
+NBU,Yeast6,G-mean,loss,P049-D025,yeast6,KEEL(keel_ds),small_sample + outlier_flag,0.629,41.4,True,True,False
+NBU,Wisconsin,Recall/sensitivity,win,P049-D002,wisconsin,KEEL(keel_ds),none,0.088,1.858,False,False,False
+NBU,Pima,Recall/sensitivity,win,P049-D003,pima,KEEL(keel_ds),none,0.649,1.866,False,False,False
+NBU,Glass0,Recall/sensitivity,win,P049-D004,glass0,KEEL(keel_ds),small_sample,0.443,2.057,True,False,False
+NBU,Vehicle1,Recall/sensitivity,win,P049-D005,vehicle1,KEEL(keel_ds),none,0.737,2.899,False,False,False
+NBU,Vehicle0,Recall/sensitivity,win,P049-D006,vehicle0,KEEL(keel_ds),none,0.256,3.251,False,False,False
+NBU,Ecoli1,Recall/sensitivity,win,P049-D007,ecoli1,KEEL(keel_ds),none,0.455,3.364,False,False,False
+NBU,New-thyroid1,Recall/sensitivity,win,P049-D008,new-thyroid1,KEEL(keel_ds),small_sample,0.314,5.143,True,False,False
+NBU,New-thyroid2,Recall/sensitivity,tie,P049-D009,new-thyroid2,KEEL(keel_ds),small_sample,0.314,5.143,True,False,False
+NBU,Ecoli2,Recall/sensitivity,win,P049-D010,ecoli2,KEEL(keel_ds),small_sample,0.231,5.462,True,False,False
+NBU,Segmemt0,Recall/sensitivity,win,P049-D011,segment0,KEEL(keel_ds),none,0.021,6.015,False,False,False
+NBU,Yeast3,Recall/sensitivity,win,P049-D012,yeast3,KEEL(keel_ds),none,0.399,8.104,False,False,False
+NBU,Ecoli3,Recall/sensitivity,win,P049-D013,ecoli3,KEEL(keel_ds),small_sample,0.686,8.6,True,False,False
+NBU,Yeast2vs4,Recall/sensitivity,win,P049-D014,yeast-2_vs_4,KEEL(keel_ds),small_sample,0.392,9.078,True,False,False
+NBU,Vowel0,Recall/sensitivity,win,P049-D015,vowel0,KEEL(keel_ds),small_sample,0.011,9.978,True,False,False
+NBU,Glass2,Recall/sensitivity,win,P049-D016,glass2,KEEL(keel_ds),small_disjuncts + small_sample + outlier_flag,0.647,11.588,True,True,True
+NBU,Yeast1vs7,Recall/sensitivity,win,P049-D017,yeast-1_vs_7,KEEL(keel_ds),small_sample + outlier_flag,0.767,14.3,True,True,False
+NBU,Glass4,Recall/sensitivity,tie,P049-D018,glass4,KEEL(keel_ds),small_sample,0.692,15.462,True,False,False
+NBU,Ecoli4,Recall/sensitivity,tie,P049-D019,ecoli4,KEEL(keel_ds),small_sample,0.3,15.8,True,False,False
+NBU,Abalone09-18,Recall/sensitivity,win,P049-D021,abalone9-18,KEEL(keel_ds),small_sample + outlier_flag,0.857,16.405,True,True,False
+NBU,Glass5,Recall/sensitivity,tie,P049-D022,glass5,KEEL(keel_ds),small_sample,0.667,22.778,True,False,False
+NBU,Yeast4,Recall/sensitivity,win,P049-D023,yeast4,KEEL(keel_ds),small_sample + outlier_flag,0.863,28.098,True,True,False
+NBU,Ecoli0137vs26,Recall/sensitivity,tie,P049-D024,ecoli-0-1-3-7_vs_2-6,KEEL(keel_ds),small_sample + outlier_flag,0.286,39.143,True,True,False
+NBU,Yeast6,Recall/sensitivity,tie,P049-D025,yeast6,KEEL(keel_ds),small_sample + outlier_flag,0.629,41.4,True,True,False
+NBU,Wisconsin,Precision,loss,P049-D002,wisconsin,KEEL(keel_ds),none,0.088,1.858,False,False,False
+NBU,Pima,Precision,win,P049-D003,pima,KEEL(keel_ds),none,0.649,1.866,False,False,False
+NBU,Glass0,Precision,loss,P049-D004,glass0,KEEL(keel_ds),small_sample,0.443,2.057,True,False,False
+NBU,Vehicle1,Precision,win,P049-D005,vehicle1,KEEL(keel_ds),none,0.737,2.899,False,False,False
+NBU,Vehicle0,Precision,loss,P049-D006,vehicle0,KEEL(keel_ds),none,0.256,3.251,False,False,False
+NBU,Ecoli1,Precision,win,P049-D007,ecoli1,KEEL(keel_ds),none,0.455,3.364,False,False,False
+NBU,New-thyroid1,Precision,loss,P049-D008,new-thyroid1,KEEL(keel_ds),small_sample,0.314,5.143,True,False,False
+NBU,New-thyroid2,Precision,loss,P049-D009,new-thyroid2,KEEL(keel_ds),small_sample,0.314,5.143,True,False,False
+NBU,Ecoli2,Precision,loss,P049-D010,ecoli2,KEEL(keel_ds),small_sample,0.231,5.462,True,False,False
+NBU,Segmemt0,Precision,loss,P049-D011,segment0,KEEL(keel_ds),none,0.021,6.015,False,False,False
+NBU,Yeast3,Precision,loss,P049-D012,yeast3,KEEL(keel_ds),none,0.399,8.104,False,False,False
+NBU,Ecoli3,Precision,win,P049-D013,ecoli3,KEEL(keel_ds),small_sample,0.686,8.6,True,False,False
+NBU,Yeast2vs4,Precision,loss,P049-D014,yeast-2_vs_4,KEEL(keel_ds),small_sample,0.392,9.078,True,False,False
+NBU,Vowel0,Precision,loss,P049-D015,vowel0,KEEL(keel_ds),small_sample,0.011,9.978,True,False,False
+NBU,Glass2,Precision,loss,P049-D016,glass2,KEEL(keel_ds),small_disjuncts + small_sample + outlier_flag,0.647,11.588,True,True,True
+NBU,Yeast1vs7,Precision,win,P049-D017,yeast-1_vs_7,KEEL(keel_ds),small_sample + outlier_flag,0.767,14.3,True,True,False
+NBU,Glass4,Precision,tie,P049-D018,glass4,KEEL(keel_ds),small_sample,0.692,15.462,True,False,False
+NBU,Ecoli4,Precision,tie,P049-D019,ecoli4,KEEL(keel_ds),small_sample,0.3,15.8,True,False,False
+NBU,Abalone09-18,Precision,loss,P049-D021,abalone9-18,KEEL(keel_ds),small_sample + outlier_flag,0.857,16.405,True,True,False
+NBU,Glass5,Precision,tie,P049-D022,glass5,KEEL(keel_ds),small_sample,0.667,22.778,True,False,False
+NBU,Yeast4,Precision,loss,P049-D023,yeast4,KEEL(keel_ds),small_sample + outlier_flag,0.863,28.098,True,True,False
+NBU,Ecoli0137vs26,Precision,tie,P049-D024,ecoli-0-1-3-7_vs_2-6,KEEL(keel_ds),small_sample + outlier_flag,0.286,39.143,True,True,False
+NBU,Yeast6,Precision,loss,P049-D025,yeast6,KEEL(keel_ds),small_sample + outlier_flag,0.629,41.4,True,True,False
+NBU,Wisconsin,F-measure,win,P049-D002,wisconsin,KEEL(keel_ds),none,0.088,1.858,False,False,False
+NBU,Pima,F-measure,win,P049-D003,pima,KEEL(keel_ds),none,0.649,1.866,False,False,False
+NBU,Glass0,F-measure,win,P049-D004,glass0,KEEL(keel_ds),small_sample,0.443,2.057,True,False,False
+NBU,Vehicle1,F-measure,win,P049-D005,vehicle1,KEEL(keel_ds),none,0.737,2.899,False,False,False
+NBU,Vehicle0,F-measure,loss,P049-D006,vehicle0,KEEL(keel_ds),none,0.256,3.251,False,False,False
+NBU,Ecoli1,F-measure,win,P049-D007,ecoli1,KEEL(keel_ds),none,0.455,3.364,False,False,False
+NBU,New-thyroid1,F-measure,win,P049-D008,new-thyroid1,KEEL(keel_ds),small_sample,0.314,5.143,True,False,False
+NBU,New-thyroid2,F-measure,loss,P049-D009,new-thyroid2,KEEL(keel_ds),small_sample,0.314,5.143,True,False,False
+NBU,Ecoli2,F-measure,win,P049-D010,ecoli2,KEEL(keel_ds),small_sample,0.231,5.462,True,False,False
+NBU,Segmemt0,F-measure,loss,P049-D011,segment0,KEEL(keel_ds),none,0.021,6.015,False,False,False
+NBU,Yeast3,F-measure,win,P049-D012,yeast3,KEEL(keel_ds),none,0.399,8.104,False,False,False
+NBU,Ecoli3,F-measure,win,P049-D013,ecoli3,KEEL(keel_ds),small_sample,0.686,8.6,True,False,False
+NBU,Yeast2vs4,F-measure,win,P049-D014,yeast-2_vs_4,KEEL(keel_ds),small_sample,0.392,9.078,True,False,False
+NBU,Vowel0,F-measure,win,P049-D015,vowel0,KEEL(keel_ds),small_sample,0.011,9.978,True,False,False
+NBU,Glass2,F-measure,loss,P049-D016,glass2,KEEL(keel_ds),small_disjuncts + small_sample + outlier_flag,0.647,11.588,True,True,True
+NBU,Yeast1vs7,F-measure,win,P049-D017,yeast-1_vs_7,KEEL(keel_ds),small_sample + outlier_flag,0.767,14.3,True,True,False
+NBU,Glass4,F-measure,tie,P049-D018,glass4,KEEL(keel_ds),small_sample,0.692,15.462,True,False,False
+NBU,Ecoli4,F-measure,tie,P049-D019,ecoli4,KEEL(keel_ds),small_sample,0.3,15.8,True,False,False
+NBU,Abalone09-18,F-measure,win,P049-D021,abalone9-18,KEEL(keel_ds),small_sample + outlier_flag,0.857,16.405,True,True,False
+NBU,Glass5,F-measure,tie,P049-D022,glass5,KEEL(keel_ds),small_sample,0.667,22.778,True,False,False
+NBU,Yeast4,F-measure,loss,P049-D023,yeast4,KEEL(keel_ds),small_sample + outlier_flag,0.863,28.098,True,True,False
+NBU,Ecoli0137vs26,F-measure,tie,P049-D024,ecoli-0-1-3-7_vs_2-6,KEEL(keel_ds),small_sample + outlier_flag,0.286,39.143,True,True,False
+NBU,Yeast6,F-measure,loss,P049-D025,yeast6,KEEL(keel_ds),small_sample + outlier_flag,0.629,41.4,True,True,False
+RACOG,ecoli1,Recall/sensitivity,win,P026-D007,ecoli1,KEEL(keel_ds),none,0.455,3.364,False,False,False
+RACOG,haberman,Recall/sensitivity,loss,P026-D008,haberman,KEEL(keel_ds),none,0.84,2.778,False,False,False
+RACOG,yeast4,Recall/sensitivity,win,P026-D009,yeast4,KEEL(keel_ds),small_sample + outlier_flag,0.863,28.098,True,True,False
+RACOG,yeast6,Recall/sensitivity,win,P026-D010,yeast6,KEEL(keel_ds),small_sample + outlier_flag,0.629,41.4,True,True,False
+RACOG,ecoli1,G-mean,loss,P026-D007,ecoli1,KEEL(keel_ds),none,0.455,3.364,False,False,False
+RACOG,haberman,G-mean,loss,P026-D008,haberman,KEEL(keel_ds),none,0.84,2.778,False,False,False
+RACOG,yeast4,G-mean,win,P026-D009,yeast4,KEEL(keel_ds),small_sample + outlier_flag,0.863,28.098,True,True,False
+RACOG,yeast6,G-mean,win,P026-D010,yeast6,KEEL(keel_ds),small_sample + outlier_flag,0.629,41.4,True,True,False
+RACOG,ecoli1,AUC,loss,P026-D007,ecoli1,KEEL(keel_ds),none,0.455,3.364,False,False,False
+RACOG,haberman,AUC,loss,P026-D008,haberman,KEEL(keel_ds),none,0.84,2.778,False,False,False
+RACOG,yeast4,AUC,win,P026-D009,yeast4,KEEL(keel_ds),small_sample + outlier_flag,0.863,28.098,True,True,False
+RACOG,yeast6,AUC,win,P026-D010,yeast6,KEEL(keel_ds),small_sample + outlier_flag,0.629,41.4,True,True,False
+RAMOBoost,Sonar,G-mean,win,P019-D001,sonar,KEEL(keel_ds),small_sample,0.402,1.144,True,False,False
+RAMOBoost,Spambase,G-mean,win,P019-D002,spambase,PMLB,none,0.189,1.538,False,False,False
+RAMOBoost,Ionosphere,G-mean,win,P019-D003,ionosphere,KEEL(keel_ds),small_sample,0.437,1.786,True,False,False
+RAMOBoost,Phoneme,G-mean,win,P019-D007,phoneme,KEEL(keel_ds),none,0.364,2.407,False,False,False
+RAMOBoost,Sonar,Accuracy,win,P019-D001,sonar,KEEL(keel_ds),small_sample,0.402,1.144,True,False,False
+RAMOBoost,Spambase,Accuracy,win,P019-D002,spambase,PMLB,none,0.189,1.538,False,False,False
+RAMOBoost,Ionosphere,Accuracy,win,P019-D003,ionosphere,KEEL(keel_ds),small_sample,0.437,1.786,True,False,False
+RAMOBoost,Phoneme,Accuracy,win,P019-D007,phoneme,KEEL(keel_ds),none,0.364,2.407,False,False,False
+RAMOBoost,Sonar,Precision,win,P019-D001,sonar,KEEL(keel_ds),small_sample,0.402,1.144,True,False,False
+RAMOBoost,Spambase,Precision,win,P019-D002,spambase,PMLB,none,0.189,1.538,False,False,False
+RAMOBoost,Ionosphere,Precision,win,P019-D003,ionosphere,KEEL(keel_ds),small_sample,0.437,1.786,True,False,False
+RAMOBoost,Phoneme,Precision,loss,P019-D007,phoneme,KEEL(keel_ds),none,0.364,2.407,False,False,False
+RAMOBoost,Sonar,Recall/sensitivity,win,P019-D001,sonar,KEEL(keel_ds),small_sample,0.402,1.144,True,False,False
+RAMOBoost,Spambase,Recall/sensitivity,win,P019-D002,spambase,PMLB,none,0.189,1.538,False,False,False
+RAMOBoost,Ionosphere,Recall/sensitivity,win,P019-D003,ionosphere,KEEL(keel_ds),small_sample,0.437,1.786,True,False,False
+RAMOBoost,Phoneme,Recall/sensitivity,win,P019-D007,phoneme,KEEL(keel_ds),none,0.364,2.407,False,False,False
+RAMOBoost,Sonar,F-measure,win,P019-D001,sonar,KEEL(keel_ds),small_sample,0.402,1.144,True,False,False
+RAMOBoost,Spambase,F-measure,win,P019-D002,spambase,PMLB,none,0.189,1.538,False,False,False
+RAMOBoost,Ionosphere,F-measure,win,P019-D003,ionosphere,KEEL(keel_ds),small_sample,0.437,1.786,True,False,False
+RAMOBoost,Phoneme,F-measure,win,P019-D007,phoneme,KEEL(keel_ds),none,0.364,2.407,False,False,False
+RAMOBoost,Sonar,AUC,win,P019-D001,sonar,KEEL(keel_ds),small_sample,0.402,1.144,True,False,False
+RAMOBoost,Spambase,AUC,win,P019-D002,spambase,PMLB,none,0.189,1.538,False,False,False
+RAMOBoost,Ionosphere,AUC,win,P019-D003,ionosphere,KEEL(keel_ds),small_sample,0.437,1.786,True,False,False
+RAMOBoost,Phoneme,AUC,win,P019-D007,phoneme,KEEL(keel_ds),none,0.364,2.407,False,False,False
+RSMOTE,heart,Precision,win,P053-D003,heart,KEEL(keel_ds),small_sample,0.333,1.25,True,False,False
+RSMOTE,pima,Precision,win,P053-D006,pima,KEEL(keel_ds),none,0.649,1.866,False,False,False
+RSMOTE,heart,Recall/sensitivity,win,P053-D003,heart,KEEL(keel_ds),small_sample,0.333,1.25,True,False,False
+RSMOTE,pima,Recall/sensitivity,win,P053-D006,pima,KEEL(keel_ds),none,0.649,1.866,False,False,False
+RSMOTE,heart,AUC,win,P053-D003,heart,KEEL(keel_ds),small_sample,0.333,1.25,True,False,False
+RSMOTE,pima,AUC,win,P053-D006,pima,KEEL(keel_ds),none,0.649,1.866,False,False,False
+RSMOTE,heart,F-measure,win,P053-D003,heart,KEEL(keel_ds),small_sample,0.333,1.25,True,False,False
+RSMOTE,pima,F-measure,win,P053-D006,pima,KEEL(keel_ds),none,0.649,1.866,False,False,False
+RSMOTE,heart,G-mean,win,P053-D003,heart,KEEL(keel_ds),small_sample,0.333,1.25,True,False,False
+RSMOTE,pima,G-mean,win,P053-D006,pima,KEEL(keel_ds),none,0.649,1.866,False,False,False
+SMOTE-ENN,Pima,AUC,loss,P008-D001,pima,KEEL(keel_ds),none,0.649,1.866,False,False,False
+SMOTE-ENN,German,AUC,win,P008-D002,german,KEEL(keel_ds),none,0.72,2.333,False,False,False
+SMOTE-ENN,Haberman,AUC,win,P008-D004,haberman,KEEL(keel_ds),none,0.84,2.778,False,False,False
+SMOTE-IPF,bupa,AUC,win,P029-D033,bupa,KEEL(keel_ds),none,0.793,1.379,False,False,False
+SMOTE-IPF,haberman,AUC,win,P029-D036,haberman,KEEL(keel_ds),none,0.84,2.778,False,False,False
+SMOTE-IPF,hepatitis,AUC,win,P029-D037,hepatitis,PMLB,small_sample,0.75,3.844,True,False,False
+SMOTE-IPF,pima,AUC,win,P029-D039,pima,KEEL(keel_ds),none,0.649,1.866,False,False,False
+SMOTEBoost,phoneme,Recall/sensitivity,loss,P007-D004,phoneme,KEEL(keel_ds),none,0.364,2.407,False,False,False
+SMOTEBoost,phoneme,Precision,win,P007-D004,phoneme,KEEL(keel_ds),none,0.364,2.407,False,False,False
+SMOTEBoost,phoneme,F-measure,win,P007-D004,phoneme,KEEL(keel_ds),none,0.364,2.407,False,False,False
+SVDD-WSMOTE,Pima,G-mean,win,P061-D004,pima,KEEL(keel_ds),none,0.649,1.866,False,False,False
+SVDD-WSMOTE,Haberman,G-mean,win,P061-D009,haberman,KEEL(keel_ds),none,0.84,2.778,False,False,False
+SVDD-WSMOTE,Spect (printed under repeated header 'Wine' in Table 3 (continued)),G-mean,win,P061-D013,spect,PMLB,small_sample,0.636,3.855,True,False,False
+SVDD-WSMOTE,Pima,F-measure,win,P061-D004,pima,KEEL(keel_ds),none,0.649,1.866,False,False,False
+SVDD-WSMOTE,Haberman,F-measure,win,P061-D009,haberman,KEEL(keel_ds),none,0.84,2.778,False,False,False
+SVDD-WSMOTE,Spect (printed under repeated header 'Wine' in Table 3 (continued)),F-measure,win,P061-D013,spect,PMLB,small_sample,0.636,3.855,True,False,False
+SVDD-WSMOTE,Pima,AUC,win,P061-D004,pima,KEEL(keel_ds),none,0.649,1.866,False,False,False
+SVDD-WSMOTE,Haberman,AUC,win,P061-D009,haberman,KEEL(keel_ds),none,0.84,2.778,False,False,False
+SVDD-WSMOTE,Spect (printed under repeated header 'Wine' in Table 3 (continued)),AUC,win,P061-D013,spect,PMLB,small_sample,0.636,3.855,True,False,False

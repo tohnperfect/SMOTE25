@@ -1,0 +1,953 @@
+record_id,paper_key,name_as_reported,category,granularity,in_comparison
+P031-D001,A-SUWO,Vehicle,modified,per-dataset,True
+P031-D002,A-SUWO,Ecoli,modified,per-dataset,True
+P031-D003,A-SUWO,Pima,original,per-dataset,True
+P031-D004,A-SUWO,Balance,modified,per-dataset,True
+P031-D005,A-SUWO,Liver,original,per-dataset,True
+P031-D006,A-SUWO,Wine,modified,per-dataset,True
+P031-D007,A-SUWO,Breast Tissue,modified,per-dataset,True
+P031-D008,A-SUWO,Libra,modified,per-dataset,True
+P031-D009,A-SUWO,LEV,modified,per-dataset,True
+P031-D010,A-SUWO,Iris,modified,per-dataset,True
+P031-D011,A-SUWO,Heart,original,per-dataset,True
+P031-D012,A-SUWO,Glass,modified,per-dataset,True
+P031-D013,A-SUWO,Haberman,original,per-dataset,True
+P031-D014,A-SUWO,Eucalyptus,modified,per-dataset,True
+P031-D015,A-SUWO,Heating,modified,per-dataset,True
+P031-D016,A-SUWO,Segment,modified,per-dataset,True
+P044-D001,AB-SMOTE,Abalone9-18,repository-defined,per-dataset,True
+P044-D002,AB-SMOTE,Customer Churn Wireless Telecom,not stated,per-dataset,True
+P044-D003,AB-SMOTE,Telco Customer Churn,original,per-dataset,True
+P044-D004,AB-SMOTE,Haberman,original,per-dataset,True
+P044-D005,AB-SMOTE,Employe Attrition,not stated,per-dataset,True
+P044-D006,AB-SMOTE,Flare,not stated,per-dataset,True
+P044-D007,AB-SMOTE,Wine Quality,not stated,per-dataset,True
+P044-D008,AB-SMOTE,Sales: Win Loss,not stated,per-dataset,True
+P013-D001,ADASYN,Vehicle,modified,per-dataset,True
+P013-D002,ADASYN,Diabetes (PID),original,per-dataset,True
+P013-D003,ADASYN,Vowel,modified,per-dataset,True
+P013-D004,ADASYN,Ionosphere,original,per-dataset,True
+P013-D005,ADASYN,Abalone,modified,per-dataset,True
+P013-D006,ADASYN,artificial two-class imbalanced data set,synthetic,per-dataset,False
+P035-D001,AMDO,Balance,original,per-dataset,True
+P035-D002,AMDO,Hayes-roth,original,per-dataset,True
+P035-D003,AMDO,New-thyroid,original,per-dataset,True
+P035-D004,AMDO,Page-blocks,original,per-dataset,True
+P035-D005,AMDO,Dermatology,modified,per-dataset,True
+P035-D006,AMDO,Breast-tissue,original,per-dataset,True
+P035-D007,AMDO,User-knowledge-modelling (UKM),original,per-dataset,True
+P035-D008,AMDO,Vertebral-column,original,per-dataset,True
+P035-D009,AMDO,Ecoli,modified,per-dataset,True
+P035-D010,AMDO,Pre2D,original,per-dataset,True
+P035-D011,AMDO,Contraceptive,original,per-dataset,True
+P035-D012,AMDO,Flare,original,per-dataset,True
+P035-D013,AMDO,Thyroid,original,per-dataset,True
+P035-D014,AMDO,Car,original,per-dataset,True
+P035-D015,AMDO,Nursery,modified,per-dataset,True
+P035-D016,AMDO,Splice,original,per-dataset,True
+P035-D017,AMDO,PreND,original,per-dataset,True
+P055-D001,CBHSID,Liver,original,per-dataset,True
+P055-D002,CBHSID,Pima,original,per-dataset,True
+P055-D003,CBHSID,Cancer,not stated,per-dataset,True
+P055-D004,CBHSID,Heart failure,not stated,per-dataset,True
+P055-D005,CBHSID,Yeast1,repository-defined,per-dataset,True
+P055-D006,CBHSID,Haberman,original,per-dataset,True
+P055-D007,CBHSID,Vehicle1,repository-defined,per-dataset,True
+P055-D008,CBHSID,Glass6,repository-defined,per-dataset,True
+P055-D009,CBHSID,Yeast3,repository-defined,per-dataset,True
+P055-D010,CBHSID,Yeast4,repository-defined,per-dataset,True
+P055-D011,CBHSID,Yeast5,repository-defined,per-dataset,True
+P055-D012,CBHSID,Yeast6,repository-defined,per-dataset,True
+P055-D013,CBHSID,Penbased,original,per-dataset,True
+P055-D014,CBHSID,Contraceptive,original,per-dataset,True
+P055-D015,CBHSID,Dermatology,original,per-dataset,True
+P055-D016,CBHSID,Thyroid,original,per-dataset,True
+P032-D001,CGMOS,BankMarket,not stated,per-dataset,True
+P032-D002,CGMOS,BloodService,not stated,per-dataset,True
+P032-D003,CGMOS,BreastCancer,original,per-dataset,True
+P032-D004,CGMOS,BreastTissue,not stated,per-dataset,True
+P032-D005,CGMOS,CarEvaluation,not stated,per-dataset,True
+P032-D006,CGMOS,Card’graphy,not stated,per-dataset,True
+P032-D007,CGMOS,CharacterTraj,not stated,per-dataset,True
+P032-D008,CGMOS,Chess,not stated,per-dataset,True
+P032-D009,CGMOS,ClimateSim,not stated,per-dataset,True
+P032-D010,CGMOS,Contraceptive,not stated,per-dataset,True
+P032-D011,CGMOS,Fertility,not stated,per-dataset,True
+P032-D012,CGMOS,Haberman,original,per-dataset,True
+P032-D013,CGMOS,ILPD,not stated,per-dataset,True
+P032-D014,CGMOS,ImgSeg,not stated,per-dataset,True
+P032-D015,CGMOS,Leaf,not stated,per-dataset,True
+P032-D016,CGMOS,Libras,not stated,per-dataset,True
+P032-D017,CGMOS,MultipleFs,not stated,per-dataset,True
+P032-D018,CGMOS,Parkinson,not stated,per-dataset,True
+P032-D019,CGMOS,PlanRelax,not stated,per-dataset,True
+P032-D020,CGMOS,QSAR,not stated,per-dataset,True
+P032-D021,CGMOS,SPECT,original,per-dataset,True
+P032-D022,CGMOS,SPECTF,original,per-dataset,True
+P032-D023,CGMOS,SeismicBumps,not stated,per-dataset,True
+P032-D024,CGMOS,Statlog,not stated,per-dataset,True
+P032-D025,CGMOS,PlatesFaults,not stated,per-dataset,True
+P032-D026,CGMOS,TAEvaluation,not stated,per-dataset,True
+P032-D027,CGMOS,UKnowledge,not stated,per-dataset,True
+P032-D028,CGMOS,Vertebral,not stated,per-dataset,True
+P032-D029,CGMOS,Customers,not stated,per-dataset,True
+P032-D030,CGMOS,Yeast,not stated,per-dataset,True
+P074-D001,DGOT,satimage,original,per-dataset,True
+P074-D002,DGOT,students_dropout,original,per-dataset,True
+P074-D003,DGOT,default,original,per-dataset,True
+P074-D004,DGOT,Dry_Beans,original,per-dataset,True
+P074-D005,DGOT,bank,original,per-dataset,True
+P074-D006,DGOT,nursery,original,per-dataset,True
+P074-D007,DGOT,abalone_15,modified,per-dataset,True
+P074-D008,DGOT,abalone_6,modified,per-dataset,True
+P074-D009,DGOT,polish_bankruptcy,original,per-dataset,True
+P074-D010,DGOT,avila,original,per-dataset,True
+P074-D011,DGOT,page-blocks,original,per-dataset,True
+P074-D012,DGOT,firewall,original,per-dataset,True
+P074-D013,DGOT,optical_digits,repository-defined,per-dataset,True
+P074-D014,DGOT,satimage_4,repository-defined,per-dataset,True
+P074-D015,DGOT,pen_digits,repository-defined,per-dataset,True
+P074-D016,DGOT,sick_euthyroid,repository-defined,per-dataset,True
+P074-D017,DGOT,isolet,repository-defined,per-dataset,True
+P074-D018,DGOT,thyroid_sick,repository-defined,per-dataset,True
+P074-D019,DGOT,coil_2000,repository-defined,per-dataset,True
+P074-D020,DGOT,wine_quality,repository-defined,per-dataset,True
+P074-D021,DGOT,letter_img,repository-defined,per-dataset,True
+P074-D022,DGOT,abalone_19,repository-defined,per-dataset,True
+P022-D001,DSRBF / Static-SMOTE,Hepatitis,original,per-dataset,True
+P022-D002,DSRBF / Static-SMOTE,BreastC,original,per-dataset,True
+P022-D003,DSRBF / Static-SMOTE,Haberman,original,per-dataset,True
+P022-D004,DSRBF / Static-SMOTE,CYTvsPOX,modified,per-dataset,True
+P022-D005,DSRBF / Static-SMOTE,ME2vsOther,modified,per-dataset,True
+P022-D006,DSRBF / Static-SMOTE,Newthyroid,original,per-dataset,True
+P022-D007,DSRBF / Static-SMOTE,Balance,original,per-dataset,True
+P022-D008,DSRBF / Static-SMOTE,Saureus4,original,per-dataset,True
+P022-D009,DSRBF / Static-SMOTE,Anneal,original,per-dataset,True
+P022-D010,DSRBF / Static-SMOTE,Glass,original,per-dataset,True
+P022-D011,DSRBF / Static-SMOTE,Zoo,original,per-dataset,True
+P022-D012,DSRBF / Static-SMOTE,E. coli,original,per-dataset,True
+P022-D013,DSRBF / Static-SMOTE,Yeast,original,per-dataset,True
+P051-D001,EMDO,Balance,original,per-dataset,True
+P051-D002,EMDO,Hayes-Roth,original,per-dataset,True
+P051-D003,EMDO,New-Thyroid,original,per-dataset,True
+P051-D004,EMDO,Page-Blocks,original,per-dataset,True
+P051-D005,EMDO,Dermatology,original,per-dataset,True
+P051-D006,EMDO,Breast-Tissue,original,per-dataset,True
+P051-D007,EMDO,User-Knowledge-Modelling (UKM),original,per-dataset,True
+P051-D008,EMDO,Vertebral-Column,original,per-dataset,True
+P051-D009,EMDO,Ecoli,original,per-dataset,True
+P051-D010,EMDO,Statlog (Shuttle),original,per-dataset,False
+P051-D011,EMDO,Mafalda,original,per-dataset,False
+P016-D001,EasyEnsemble / BalanceCascade,abalone,modified,per-dataset,True
+P016-D002,EasyEnsemble / BalanceCascade,balance,modified,per-dataset,True
+P016-D003,EasyEnsemble / BalanceCascade,car,modified,per-dataset,True
+P016-D004,EasyEnsemble / BalanceCascade,cmc,modified,per-dataset,True
+P016-D005,EasyEnsemble / BalanceCascade,haberman,original,per-dataset,True
+P016-D006,EasyEnsemble / BalanceCascade,housing,modified,per-dataset,True
+P016-D007,EasyEnsemble / BalanceCascade,ionosphere,original,per-dataset,True
+P016-D008,EasyEnsemble / BalanceCascade,letter,modified,per-dataset,True
+P016-D009,EasyEnsemble / BalanceCascade,mf-morph,modified,per-dataset,True
+P016-D010,EasyEnsemble / BalanceCascade,mf-zernike,modified,per-dataset,True
+P016-D011,EasyEnsemble / BalanceCascade,phoneme,original,per-dataset,True
+P016-D012,EasyEnsemble / BalanceCascade,pima,original,per-dataset,True
+P016-D013,EasyEnsemble / BalanceCascade,satimage,modified,per-dataset,True
+P016-D014,EasyEnsemble / BalanceCascade,vehicle,modified,per-dataset,True
+P016-D015,EasyEnsemble / BalanceCascade,wdbc,original,per-dataset,True
+P016-D016,EasyEnsemble / BalanceCascade,wpbc,original,per-dataset,True
+P056-D001,FW-SMOTE,abalone7,repository-defined,per-dataset,True
+P056-D002,FW-SMOTE,ecoli,not stated,per-dataset,True
+P056-D003,FW-SMOTE,ecoli-0-1 vs 5,repository-defined,per-dataset,True
+P056-D004,FW-SMOTE,ecoli-0-1-4-6 vs 5,repository-defined,per-dataset,True
+P056-D005,FW-SMOTE,ecoli-0-1-4-7 vs 5–6,repository-defined,per-dataset,True
+P056-D006,FW-SMOTE,ecoli-0-2-3-4 vs 5,repository-defined,per-dataset,True
+P056-D007,FW-SMOTE,ecoli-0-2-6-7 vs 3–5,repository-defined,per-dataset,True
+P056-D008,FW-SMOTE,ecoli-0-3-4 vs 5,repository-defined,per-dataset,True
+P056-D009,FW-SMOTE,ecoli-0-3-4-6 vs 5,repository-defined,per-dataset,True
+P056-D010,FW-SMOTE,ecoli-0-3-4-7 vs 5–6,repository-defined,per-dataset,True
+P056-D011,FW-SMOTE,ecoli-0-4-6 vs 5,repository-defined,per-dataset,True
+P056-D012,FW-SMOTE,ecoli-0-6-7 vs 3–5,repository-defined,per-dataset,True
+P056-D013,FW-SMOTE,ecoli-0-6-7 vs 5,repository-defined,per-dataset,True
+P056-D014,FW-SMOTE,ecoli4,repository-defined,per-dataset,True
+P056-D015,FW-SMOTE,glass-0-1-6 vs 2,repository-defined,per-dataset,True
+P056-D016,FW-SMOTE,glass-0-4 vs 5,repository-defined,per-dataset,True
+P056-D017,FW-SMOTE,glass-0-6 vs 5,repository-defined,per-dataset,True
+P056-D018,FW-SMOTE,glass4,repository-defined,per-dataset,True
+P056-D019,FW-SMOTE,image1,not stated,per-dataset,True
+P056-D020,FW-SMOTE,page-blocks-1-3 vs 4,repository-defined,per-dataset,True
+P056-D021,FW-SMOTE,shuttle-c0-vs-c4,repository-defined,per-dataset,True
+P056-D022,FW-SMOTE,solar,not stated,per-dataset,True
+P056-D023,FW-SMOTE,yeast-0-2-5-7-9 vs 3-6-8,repository-defined,per-dataset,True
+P056-D024,FW-SMOTE,yeast-0-5-6-7-9 vs 4,repository-defined,per-dataset,True
+P056-D025,FW-SMOTE,yeast-1 vs 7,repository-defined,per-dataset,True
+P056-D026,FW-SMOTE,yeast-1-4-5-8 vs 7,repository-defined,per-dataset,True
+P056-D027,FW-SMOTE,yeast-2 vs 4,repository-defined,per-dataset,True
+P056-D028,FW-SMOTE,yeast3,repository-defined,per-dataset,True
+P056-D029,FW-SMOTE,yeast4,repository-defined,per-dataset,True
+P056-D030,FW-SMOTE,yeast5,repository-defined,per-dataset,True
+P056-D031,FW-SMOTE,bhat1,not stated,per-dataset,True
+P056-D032,FW-SMOTE,bhat2,not stated,per-dataset,True
+P056-D033,FW-SMOTE,bhat3,not stated,per-dataset,True
+P056-D034,FW-SMOTE,bhat4,not stated,per-dataset,True
+P056-D035,FW-SMOTE,bullinger,not stated,per-dataset,True
+P056-D036,FW-SMOTE,car1,not stated,per-dataset,True
+P056-D037,FW-SMOTE,car2,not stated,per-dataset,True
+P056-D038,FW-SMOTE,car3,not stated,per-dataset,True
+P056-D039,FW-SMOTE,car4,not stated,per-dataset,True
+P056-D040,FW-SMOTE,glioma,not stated,per-dataset,True
+P056-D041,FW-SMOTE,lung,not stated,per-dataset,True
+P056-D042,FW-SMOTE,srbct,not stated,per-dataset,True
+P041-D001,GAMO,MNIST,modified,per-dataset,True
+P041-D002,GAMO,Fashion-MNIST,modified,per-dataset,True
+P041-D003,GAMO,CIFAR10,modified,per-dataset,True
+P041-D004,GAMO,SVHN,modified,per-dataset,True
+P041-D005,GAMO,CelebA-Small,modified,per-dataset,True
+P041-D006,GAMO,CelebA-Large,modified,per-dataset,True
+P041-D007,GAMO,LSUN-Small,modified,per-dataset,True
+P041-D008,GAMO,LSUN-Large,modified,per-dataset,True
+P041-D009,GAMO,SUN397,modified,per-dataset,True
+P041-D010,GAMO,Abalone19,repository-defined,per-dataset,False
+P041-D011,GAMO,Chess,original,per-dataset,False
+P041-D012,GAMO,Cover Type,original,per-dataset,False
+P041-D013,GAMO,IJCNN1,original,per-dataset,False
+P041-D014,GAMO,Magic,original,per-dataset,False
+P070-D001,GDHS,car,original,per-dataset,True
+P070-D002,GDHS,cleveland,original,per-dataset,True
+P070-D003,GDHS,contraceptive,original,per-dataset,True
+P070-D004,GDHS,glass,original,per-dataset,True
+P070-D005,GDHS,hayes-roth,original,per-dataset,True
+P070-D006,GDHS,newthyroid,original,per-dataset,True
+P070-D007,GDHS,sensorReadings,original,per-dataset,True
+P070-D008,GDHS,thyroid,original,per-dataset,True
+P070-D009,GDHS,userknowledge,original,per-dataset,True
+P070-D010,GDHS,vehicle,original,per-dataset,True
+P070-D011,GDHS,vertebralColumn,original,per-dataset,True
+P070-D012,GDHS,winequality-red,original,per-dataset,True
+P070-D013,GDHS,yeast,original,per-dataset,True
+P070-D014,GDHS,zoo,original,per-dataset,True
+P070-D015,GDHS,camel-1.4,original,per-dataset,True
+P070-D016,GDHS,camel-1.6,original,per-dataset,True
+P070-D017,GDHS,hive-0.12.0,original,per-dataset,True
+P070-D018,GDHS,velocity-1.5,original,per-dataset,True
+P070-D019,GDHS,xalan-2.4,original,per-dataset,True
+P070-D020,GDHS,xerces-1.2,original,per-dataset,True
+P057-D001,GDO,glass1,repository-defined,per-dataset,True
+P057-D002,GDO,ecoli-0_vs_1,repository-defined,per-dataset,True
+P057-D003,GDO,wisconsin,repository-defined,per-dataset,True
+P057-D004,GDO,yeast1,repository-defined,per-dataset,True
+P057-D005,GDO,haberman,repository-defined,per-dataset,True
+P057-D006,GDO,planningrelax,repository-defined,per-dataset,True
+P057-D007,GDO,ecoli1,repository-defined,per-dataset,True
+P057-D008,GDO,new-thyroid1,repository-defined,per-dataset,True
+P057-D009,GDO,ecoli2,repository-defined,per-dataset,True
+P057-D010,GDO,segment0,repository-defined,per-dataset,True
+P057-D011,GDO,yeast3,repository-defined,per-dataset,True
+P057-D012,GDO,ecoli3,repository-defined,per-dataset,True
+P057-D013,GDO,yeast-2_vs_4,repository-defined,per-dataset,True
+P057-D014,GDO,yeast-0-5-6-7-9_vs_4,repository-defined,per-dataset,True
+P057-D015,GDO,vowel0,repository-defined,per-dataset,True
+P057-D016,GDO,kr-vs-k-three_vs_eleven,repository-defined,per-dataset,True
+P057-D017,GDO,glass2,repository-defined,per-dataset,True
+P057-D018,GDO,shuttle-c0-vs-c4,repository-defined,per-dataset,True
+P057-D019,GDO,yeast-1_vs_7,repository-defined,per-dataset,True
+P057-D020,GDO,glass4,repository-defined,per-dataset,True
+P057-D021,GDO,ecoli4,repository-defined,per-dataset,True
+P057-D022,GDO,glass-0-1-6_vs_2,repository-defined,per-dataset,True
+P057-D023,GDO,bupa,repository-defined,per-dataset,True
+P057-D024,GDO,abalone9-18,repository-defined,per-dataset,True
+P057-D025,GDO,glass-0-1-6_vs_5,repository-defined,per-dataset,True
+P057-D026,GDO,yeast-1-4-5-8_vs_7,repository-defined,per-dataset,True
+P057-D027,GDO,glass5,repository-defined,per-dataset,True
+P057-D028,GDO,car-good,repository-defined,per-dataset,True
+P057-D029,GDO,car-vgood,repository-defined,per-dataset,True
+P057-D030,GDO,kr-vs-k-zero-one_vs_draw,repository-defined,per-dataset,True
+P057-D031,GDO,kr-vs-k-one_vs_fifteen,repository-defined,per-dataset,True
+P057-D032,GDO,yeast4,repository-defined,per-dataset,True
+P057-D033,GDO,breast-cancer-wisconsin,repository-defined,per-dataset,True
+P057-D034,GDO,yeast5,repository-defined,per-dataset,True
+P057-D035,GDO,glass-0-1-2-3_vs_4-5-6,repository-defined,per-dataset,True
+P057-D036,GDO,yeast6,repository-defined,per-dataset,True
+P057-D037,GDO,abalone-3_vs_11,repository-defined,per-dataset,True
+P057-D038,GDO,winequality-white-3_vs_7,repository-defined,per-dataset,True
+P057-D039,GDO,australian,repository-defined,per-dataset,True
+P057-D040,GDO,abalone19,repository-defined,per-dataset,True
+P057-D041,GDO,Chesscking-Rook vs. King,not stated,per-dataset,False
+P057-D042,GDO,HTRU2,not stated,per-dataset,False
+P057-D043,GDO,isolet,not stated,per-dataset,False
+P057-D044,GDO,letter-recognition,not stated,per-dataset,False
+P057-D045,GDO,musk,original,per-dataset,False
+P057-D046,GDO,nursery,not stated,per-dataset,False
+P057-D047,GDO,page-block0,not stated,per-dataset,False
+P057-D048,GDO,parkinsons telemonitoring,not stated,per-dataset,False
+P057-D049,GDO,sat,not stated,per-dataset,False
+P057-D050,GDO,waveform,not stated,per-dataset,False
+P057-D051,GDO,Internet video traffic data set,original,per-dataset,False
+P057-D052,GDO,Esophageal cancer patient data set,original,per-dataset,False
+P071-D001,GOIO,default,original,per-dataset,True
+P071-D002,GOIO,shoppers,original,per-dataset,True
+P071-D003,GOIO,bank_full,original,per-dataset,True
+P071-D004,GOIO,bank_small,original,per-dataset,True
+P071-D005,GOIO,avila_0vs5,modified,per-dataset,True
+P071-D006,GOIO,optical_digits,not stated,per-dataset,True
+P071-D007,GOIO,avila_0vs6,modified,per-dataset,True
+P071-D008,GOIO,sick_euthyroid,original,per-dataset,True
+P071-D009,GOIO,avila_0vs7,modified,per-dataset,True
+P071-D010,GOIO,scene,not stated,per-dataset,True
+P071-D011,GOIO,abalone_15,modified,per-dataset,True
+P071-D012,GOIO,thyroid_sick,original,per-dataset,True
+P071-D013,GOIO,abalone_6,modified,per-dataset,True
+P071-D014,GOIO,wine_quality,not stated,per-dataset,True
+P071-D015,GOIO,taiwanses,original,per-dataset,True
+P071-D016,GOIO,mammography,original,per-dataset,True
+P071-D017,GOIO,bankruptcy,original,per-dataset,True
+P071-D018,GOIO,page-blocks_0vs3,modified,per-dataset,True
+P071-D019,GOIO,artificial_0.3_5,synthetic,per-dataset,True
+P071-D020,GOIO,artificial_0.5_2.5,synthetic,per-dataset,True
+P071-D021,GOIO,artificial_0.5_5,synthetic,per-dataset,True
+P071-D022,GOIO,artificial_0.5_10,synthetic,per-dataset,True
+P071-D023,GOIO,artificial_1_5,synthetic,per-dataset,True
+P023-D001,INOS,Adiac,modified,per-dataset,True
+P023-D002,INOS,FaceAll,modified,per-dataset,True
+P023-D003,INOS,50Words,modified,per-dataset,True
+P023-D004,INOS,SLeaf,modified,per-dataset,True
+P023-D005,INOS,TwoPats,modified,per-dataset,True
+P023-D006,INOS,Wafer,modified,per-dataset,True
+P023-D007,INOS,Yoga,modified,per-dataset,True
+P075-D001,Loyalty-SMOTE,adult,original,per-dataset,True
+P075-D002,Loyalty-SMOTE,ai4i2020,not stated,per-dataset,True
+P075-D003,Loyalty-SMOTE,banknote,original,per-dataset,True
+P075-D004,Loyalty-SMOTE,drug,not stated,per-dataset,True
+P075-D005,Loyalty-SMOTE,AIDS_5000,not stated,per-dataset,True
+P075-D006,Loyalty-SMOTE,Maternal,not stated,per-dataset,True
+P075-D007,Loyalty-SMOTE,national,not stated,per-dataset,True
+P075-D008,Loyalty-SMOTE,occupancy,not stated,per-dataset,True
+P075-D009,Loyalty-SMOTE,online,not stated,per-dataset,True
+P075-D010,Loyalty-SMOTE,Shoppers,original,per-dataset,True
+P075-D011,Loyalty-SMOTE,Academic,not stated,per-dataset,True
+P075-D012,Loyalty-SMOTE,AIDS_15000,not stated,per-dataset,True
+P075-D013,Loyalty-SMOTE,german,original,per-dataset,True
+P075-D014,Loyalty-SMOTE,statlog,not stated,per-dataset,True
+P075-D015,Loyalty-SMOTE,Shuttle,not stated,per-dataset,True
+P075-D016,Loyalty-SMOTE,Fault,not stated,per-dataset,True
+P075-D017,Loyalty-SMOTE,ICR,not stated,per-dataset,True
+P075-D018,Loyalty-SMOTE,Bankruptcy,not stated,per-dataset,False
+P075-D019,Loyalty-SMOTE,breast,not stated,per-dataset,True
+P075-D020,Loyalty-SMOTE,wdbc,original,per-dataset,True
+P075-D021,Loyalty-SMOTE,wpbc,original,per-dataset,True
+P075-D022,Loyalty-SMOTE,heart,original,per-dataset,True
+P075-D023,Loyalty-SMOTE,ionosphere,original,per-dataset,True
+P075-D024,Loyalty-SMOTE,iris,not stated,per-dataset,True
+P075-D025,Loyalty-SMOTE,bezediris,not stated,per-dataset,False
+P075-D026,Loyalty-SMOTE,raisin,not stated,per-dataset,True
+P075-D027,Loyalty-SMOTE,glass5,repository-defined,per-dataset,True
+P075-D028,Loyalty-SMOTE,vowel0,repository-defined,per-dataset,True
+P075-D029,Loyalty-SMOTE,ecoli-0-1-3-7_vs_2-6,repository-defined,per-dataset,True
+P075-D030,Loyalty-SMOTE,ecoli-0-1-4-6_vs_5,repository-defined,per-dataset,True
+P075-D031,Loyalty-SMOTE,yeast-0-3-5-9_vs_7-8,repository-defined,per-dataset,True
+P075-D032,Loyalty-SMOTE,australia,not stated,per-dataset,False
+P075-D033,Loyalty-SMOTE,Obesity,not stated,per-dataset,False
+P075-D034,Loyalty-SMOTE,Gender,not stated,per-dataset,False
+P075-D035,Loyalty-SMOTE,approval,not stated,per-dataset,False
+P075-D036,Loyalty-SMOTE,spambase,original,per-dataset,False
+P075-D037,Loyalty-SMOTE,magic04,not stated,per-dataset,False
+P075-D038,Loyalty-SMOTE,covertype,not stated,per-dataset,False
+P075-D039,Loyalty-SMOTE,Purchase,not stated,per-dataset,False
+P075-D040,Loyalty-SMOTE,Satisfied,not stated,per-dataset,False
+P075-D041,Loyalty-SMOTE,AIDS_50000,not stated,per-dataset,False
+P075-D042,Loyalty-SMOTE,smoke,not stated,per-dataset,False
+P075-D043,Loyalty-SMOTE,vertebal,not stated,per-dataset,False
+P075-D044,Loyalty-SMOTE,parkinson,not stated,per-dataset,False
+P075-D045,Loyalty-SMOTE,yeast,original,per-dataset,False
+P075-D046,Loyalty-SMOTE,HR,original,per-dataset,False
+P075-D047,Loyalty-SMOTE,employee,original,per-dataset,False
+P075-D048,Loyalty-SMOTE,Drug200,original,per-dataset,False
+P075-D049,Loyalty-SMOTE,MEDV,original,per-dataset,False
+P075-D050,Loyalty-SMOTE,Mushroom,not stated,per-dataset,False
+P075-D051,Loyalty-SMOTE,Firewall,not stated,per-dataset,False
+P075-D052,Loyalty-SMOTE,Cardiovascular,not stated,per-dataset,False
+P075-D053,Loyalty-SMOTE,RT-IOT,not stated,per-dataset,False
+P075-D054,Loyalty-SMOTE,Gender_by_name,not stated,per-dataset,False
+P075-D055,Loyalty-SMOTE,Smartphone,not stated,per-dataset,False
+P075-D056,Loyalty-SMOTE,Bankruptcy,not stated,per-dataset,False
+P075-D057,Loyalty-SMOTE,darwin,not stated,per-dataset,False
+P075-D058,Loyalty-SMOTE,toxicity,not stated,per-dataset,False
+P075-D059,Loyalty-SMOTE,cnae,not stated,per-dataset,False
+P046-D001,MBS,Pima Indian Diabetes,original,per-dataset,True
+P046-D002,MBS,Haberman’s Survival,not stated,per-dataset,True
+P046-D003,MBS,Satimage,not stated,per-dataset,True
+P046-D004,MBS,E.coli,not stated,per-dataset,True
+P046-D005,MBS,Shuttle,not stated,per-dataset,True
+P046-D006,MBS,Ionosphere,original,per-dataset,True
+P046-D007,MBS,Vehicle,not stated,per-dataset,True
+P046-D008,MBS,Give Me Some Credit,not stated,per-dataset,True
+P046-D009,MBS,Diabetes,original,per-dataset,True
+P046-D010,MBS,Hmeq,not stated,per-dataset,True
+P046-D011,MBS,Promotion,not stated,per-dataset,True
+P046-D012,MBS,Bank,original,per-dataset,True
+P046-D013,MBS,Spambase,original,per-dataset,True
+P047-D001,MC-CCR,Automobile,original,per-dataset,True
+P047-D002,MC-CCR,Balance,original,per-dataset,True
+P047-D003,MC-CCR,Car,original,per-dataset,True
+P047-D004,MC-CCR,Cleveland,original,per-dataset,True
+P047-D005,MC-CCR,Contraceptive,original,per-dataset,True
+P047-D006,MC-CCR,Dermatology,original,per-dataset,True
+P047-D007,MC-CCR,Ecoli,original,per-dataset,True
+P047-D008,MC-CCR,Flare,original,per-dataset,True
+P047-D009,MC-CCR,Glass,original,per-dataset,True
+P047-D010,MC-CCR,Hayes-Roth,original,per-dataset,True
+P047-D011,MC-CCR,Led7digit,original,per-dataset,True
+P047-D012,MC-CCR,Lymphography,original,per-dataset,True
+P047-D013,MC-CCR,New-thyroid,original,per-dataset,True
+P047-D014,MC-CCR,Page-blocks,original,per-dataset,True
+P047-D015,MC-CCR,Thyroid,original,per-dataset,True
+P047-D016,MC-CCR,Vehicle,original,per-dataset,True
+P047-D017,MC-CCR,Wine,original,per-dataset,True
+P047-D018,MC-CCR,Winequality-red,original,per-dataset,True
+P047-D019,MC-CCR,Yeast,original,per-dataset,True
+P047-D020,MC-CCR,Zoo,original,per-dataset,True
+P067-D001,MC-MBRC,automobile,original,per-dataset,True
+P067-D002,MC-MBRC,autos,original,per-dataset,True
+P067-D003,MC-MBRC,car,original,per-dataset,True
+P067-D004,MC-MBRC,cleveland,original,per-dataset,True
+P067-D005,MC-MBRC,cmc,original,per-dataset,True
+P067-D006,MC-MBRC,contraceptive,original,per-dataset,True
+P067-D007,MC-MBRC,Dry_Bean,original,per-dataset,True
+P067-D008,MC-MBRC,ecoli,original,per-dataset,True
+P067-D009,MC-MBRC,flare,original,per-dataset,True
+P067-D010,MC-MBRC,glass,original,per-dataset,True
+P067-D011,MC-MBRC,lymphography,original,per-dataset,True
+P067-D012,MC-MBRC,newthyroid,original,per-dataset,True
+P067-D013,MC-MBRC,page-blocks,original,per-dataset,True
+P067-D014,MC-MBRC,page,original,per-dataset,True
+P067-D015,MC-MBRC,shuttle,original,per-dataset,True
+P067-D016,MC-MBRC,thyroid,original,per-dataset,True
+P067-D017,MC-MBRC,winequality-red,original,per-dataset,True
+P067-D018,MC-MBRC,winequality-white,original,per-dataset,True
+P067-D019,MC-MBRC,yeast,original,per-dataset,True
+P067-D020,MC-MBRC,zoo,original,per-dataset,True
+P048-D001,MC-RBO,Automobile,original,per-dataset,True
+P048-D002,MC-RBO,Balance,original,per-dataset,True
+P048-D003,MC-RBO,Car,original,per-dataset,True
+P048-D004,MC-RBO,Cleveland,original,per-dataset,True
+P048-D005,MC-RBO,Contraceptive,original,per-dataset,True
+P048-D006,MC-RBO,Dermatology,original,per-dataset,True
+P048-D007,MC-RBO,Ecoli,original,per-dataset,True
+P048-D008,MC-RBO,Flare,original,per-dataset,True
+P048-D009,MC-RBO,Glass,original,per-dataset,True
+P048-D010,MC-RBO,Hayes-Roth,original,per-dataset,True
+P048-D011,MC-RBO,Led7digit,original,per-dataset,True
+P048-D012,MC-RBO,Lymphography,original,per-dataset,True
+P048-D013,MC-RBO,New-thyroid,original,per-dataset,True
+P048-D014,MC-RBO,Page-blocks,original,per-dataset,True
+P048-D015,MC-RBO,Thyroid,original,per-dataset,True
+P048-D016,MC-RBO,Vehicle,original,per-dataset,True
+P048-D017,MC-RBO,Wine,original,per-dataset,True
+P048-D018,MC-RBO,Winequality-red,original,per-dataset,True
+P048-D019,MC-RBO,Yeast,original,per-dataset,True
+P048-D020,MC-RBO,Zoo,original,per-dataset,True
+P068-D001,MKC-SMOTE,Contraceptive Method Choice,original,per-dataset,True
+P068-D002,MKC-SMOTE,User Knowledge Modeling,original,per-dataset,True
+P068-D003,MKC-SMOTE,New-thyroid,original,per-dataset,True
+P068-D004,MKC-SMOTE,Connect-4,original,per-dataset,True
+P068-D005,MKC-SMOTE,Zoo,original,per-dataset,True
+P068-D006,MKC-SMOTE,Cardiotocography,original,per-dataset,True
+P068-D007,MKC-SMOTE,Ecoli,original,per-dataset,True
+P068-D008,MKC-SMOTE,Glass Identification,original,per-dataset,True
+P068-D009,MKC-SMOTE,Absenteeism at work,original,per-dataset,True
+P068-D010,MKC-SMOTE,Nursery,original,per-dataset,True
+P068-D011,MKC-SMOTE,Letter Recognition,original,per-dataset,True
+P068-D012,MKC-SMOTE,Car Evaluation,original,per-dataset,True
+P068-D013,MKC-SMOTE,Wine Quality-White,original,per-dataset,True
+P068-D014,MKC-SMOTE,Poker Hand,original,per-dataset,True
+P068-D015,MKC-SMOTE,HCV,original,per-dataset,True
+P068-D016,MKC-SMOTE,Yeast,original,per-dataset,True
+P068-D017,MKC-SMOTE,Covertype,original,per-dataset,True
+P068-D018,MKC-SMOTE,Chess (King-Rook vs. King),original,per-dataset,True
+P068-D019,MKC-SMOTE,Abalone,original,per-dataset,True
+P068-D020,MKC-SMOTE,Bar Crawl,original,per-dataset,True
+P068-D021,MKC-SMOTE,Avila,original,per-dataset,True
+P073-D001,MLOS,Ozone-Level,not stated,per-dataset,True
+P073-D002,MLOS,PhishingData,not stated,per-dataset,True
+P073-D003,MLOS,abalone19,repository-defined,per-dataset,True
+P073-D004,MLOS,camel-1.0,not stated,per-dataset,True
+P073-D005,MLOS,cleveland-0_vs_4,repository-defined,per-dataset,True
+P073-D006,MLOS,climate,not stated,per-dataset,True
+P073-D007,MLOS,glass5,repository-defined,per-dataset,True
+P073-D008,MLOS,ivy-1.4,not stated,per-dataset,True
+P073-D009,MLOS,jedit-4.3,not stated,per-dataset,True
+P073-D010,MLOS,log4j-1.2,not stated,per-dataset,True
+P073-D011,MLOS,movement_libras,not stated,per-dataset,True
+P073-D012,MLOS,poker-8_vs_6,repository-defined,per-dataset,True
+P073-D013,MLOS,winequalityred3vs5,repository-defined,per-dataset,True
+P073-D014,MLOS,winequality,not stated,per-dataset,True
+P073-D015,MLOS,xalan-2.7,not stated,per-dataset,True
+P073-D016,MLOS,yeast6,repository-defined,per-dataset,True
+P025-D001,MWMOTE,Pageblocks,modified,per-dataset,True
+P025-D002,MWMOTE,Abalone,modified,per-dataset,True
+P025-D003,MWMOTE,CTG,modified,per-dataset,True
+P025-D004,MWMOTE,OCR,modified,per-dataset,True
+P025-D005,MWMOTE,Statlandsat,modified,per-dataset,True
+P025-D006,MWMOTE,Semeion,modified,per-dataset,True
+P025-D007,MWMOTE,Segment,modified,per-dataset,True
+P025-D008,MWMOTE,Libra,modified,per-dataset,True
+P025-D009,MWMOTE,Yeast,modified,per-dataset,True
+P025-D010,MWMOTE,Robot,modified,per-dataset,True
+P025-D011,MWMOTE,Ecoli,modified,per-dataset,True
+P025-D012,MWMOTE,Glass,modified,per-dataset,True
+P025-D013,MWMOTE,Vehicle,modified,per-dataset,True
+P025-D014,MWMOTE,Wine,modified,per-dataset,True
+P025-D015,MWMOTE,Texture,modified,per-dataset,True
+P025-D016,MWMOTE,Phoneme,modified,per-dataset,True
+P025-D017,MWMOTE,Satimage,modified,per-dataset,True
+P025-D018,MWMOTE,Breast-tissue,modified,per-dataset,False
+P025-D019,MWMOTE,Breast-cancer-original,original,per-dataset,False
+P025-D020,MWMOTE,Pima,original,per-dataset,True
+P025-D021,MWMOTE,Artificial C x C grid domain (C=3 and C=5; IR 1:3 and 1:10; four data sets),synthetic,per-dataset,False
+P049-D001,NBU,"Simulated binary datasets (66, Experiment I)",synthetic,per-dataset partial,False
+P049-D002,NBU,Wisconsin,original,per-dataset partial,True
+P049-D003,NBU,Pima,original,per-dataset partial,True
+P049-D004,NBU,Glass0,repository-defined,per-dataset partial,True
+P049-D005,NBU,Vehicle1,repository-defined,per-dataset partial,True
+P049-D006,NBU,Vehicle0,repository-defined,per-dataset partial,True
+P049-D007,NBU,Ecoli1,repository-defined,per-dataset partial,True
+P049-D008,NBU,New-thyroid1,repository-defined,per-dataset partial,True
+P049-D009,NBU,New-thyroid2,repository-defined,per-dataset partial,True
+P049-D010,NBU,Ecoli2,repository-defined,per-dataset partial,True
+P049-D011,NBU,Segmemt0,not stated,per-dataset partial,True
+P049-D012,NBU,Yeast3,repository-defined,per-dataset partial,True
+P049-D013,NBU,Ecoli3,repository-defined,per-dataset partial,True
+P049-D014,NBU,Yeast2vs4,repository-defined,per-dataset partial,True
+P049-D015,NBU,Vowel0,repository-defined,per-dataset partial,True
+P049-D016,NBU,Glass2,repository-defined,per-dataset partial,True
+P049-D017,NBU,Yeast1vs7,repository-defined,per-dataset partial,True
+P049-D018,NBU,Glass4,repository-defined,per-dataset partial,True
+P049-D019,NBU,Ecoli4,repository-defined,per-dataset partial,True
+P049-D020,NBU,Page-blocks13vs2,repository-defined,per-dataset partial,True
+P049-D021,NBU,Abalone09-18,repository-defined,per-dataset partial,True
+P049-D022,NBU,Glass5,repository-defined,per-dataset partial,True
+P049-D023,NBU,Yeast4,repository-defined,per-dataset partial,True
+P049-D024,NBU,Ecoli0137vs26,repository-defined,per-dataset partial,True
+P049-D025,NBU,Yeast6,repository-defined,per-dataset partial,True
+P049-D026,NBU,Breast cancer (KDD Cup 2008),original,per-dataset partial,False
+P049-D027,NBU,MNIST 3 (class 3 minority),modified,per-dataset partial,False
+P049-D028,NBU,MNIST 5 (class 5 minority),modified,per-dataset partial,False
+P064-D001,NROMM,Wine,original,per-dataset,True
+P064-D002,NROMM,Glass,original,per-dataset,True
+P064-D003,NROMM,New-thyroid,original,per-dataset,True
+P064-D004,NROMM,Vehicle,original,per-dataset,True
+P064-D005,NROMM,Winequality-red,original,per-dataset,True
+P064-D006,NROMM,Page-blocks,original,per-dataset,True
+P064-D007,NROMM,Zoo,original,per-dataset,True
+P064-D008,NROMM,Lymphography,original,per-dataset,True
+P064-D009,NROMM,Hayes-roth,original,per-dataset,True
+P064-D010,NROMM,Dermatology,original,per-dataset,True
+P064-D011,NROMM,Led7digit,original,per-dataset,True
+P064-D012,NROMM,Balance,original,per-dataset,True
+P064-D013,NROMM,Flare,original,per-dataset,True
+P064-D014,NROMM,Car,original,per-dataset,True
+P064-D015,NROMM,Automobile,original,per-dataset,True
+P064-D016,NROMM,Cleveland,original,per-dataset,True
+P064-D017,NROMM,Ecoli,original,per-dataset,True
+P064-D018,NROMM,Contraceptive,original,per-dataset,True
+P064-D019,NROMM,Yeast,original,per-dataset,True
+P064-D020,NROMM,Thyroid,original,per-dataset,True
+P064-D021,NROMM,D1 Yeast5,not stated,per-dataset,False
+P064-D022,NROMM,D2 Yeast-8 vs 2,repository-defined,per-dataset,False
+P064-D023,NROMM,D3 Yeast4,not stated,per-dataset,False
+P064-D024,NROMM,D4 Yeast-4 vs 2,repository-defined,per-dataset,False
+P064-D025,NROMM,D5 Yeast6,not stated,per-dataset,False
+P064-D026,NROMM,D6 Ecoli-5 vs 0-6-7,repository-defined,per-dataset,False
+P064-D027,NROMM,D7 Ecoli-3-5 vs 0-6-7,repository-defined,per-dataset,False
+P064-D028,NROMM,D8 Ecoli-3-5 vs 0-2-6-7,repository-defined,per-dataset,False
+P064-D029,NROMM,D9 Ecoli4,not stated,per-dataset,False
+P064-D030,NROMM,D10 Page-blocks-4 vs 1-3,repository-defined,per-dataset,False
+P065-D001,OREM-M,Vertebral,original,per-dataset,True
+P065-D002,OREM-M,Laryngeal,original,per-dataset,True
+P065-D003,OREM-M,New-thyroid,original,per-dataset,True
+P065-D004,OREM-M,Toy,original,per-dataset,True
+P065-D005,OREM-M,Voice3,original,per-dataset,True
+P065-D006,OREM-M,Wisconsin5,original,per-dataset,True
+P065-D007,OREM-M,Cleveland,original,per-dataset,True
+P065-D008,OREM-M,Voice6,original,per-dataset,True
+P065-D009,OREM-M,Vowel5,repository-defined,per-dataset,True
+P065-D010,OREM-M,Vowel4,repository-defined,per-dataset,True
+P065-D011,OREM-M,Dermatology,original,per-dataset,True
+P065-D012,OREM-M,Page-blocks,original,per-dataset,True
+P065-D013,OREM-M,SWD,original,per-dataset,True
+P065-D014,OREM-M,Yeast,original,per-dataset,True
+P065-D015,OREM-M,Auto5,original,per-dataset,True
+P065-D016,OREM-M,LEV,original,per-dataset,True
+P065-D017,OREM-M,Leaves plant,original,per-dataset,True
+P065-D018,OREM-M,Stock10,original,per-dataset,True
+P065-D019,OREM-M,Plates faults,original,per-dataset,True
+P065-D020,OREM-M,Abalone,original,per-dataset,True
+P065-D021,OREM-M,Housing10,original,per-dataset,True
+P024-D001,OVO-SMOTE,Autos,modified,per-dataset,True
+P024-D002,OVO-SMOTE,Balance,original,per-dataset,True
+P024-D003,OVO-SMOTE,Cleveland,modified,per-dataset,True
+P024-D004,OVO-SMOTE,Contraceptive,original,per-dataset,True
+P024-D005,OVO-SMOTE,Dermatology,modified,per-dataset,True
+P024-D006,OVO-SMOTE,Ecoli,original,per-dataset,True
+P024-D007,OVO-SMOTE,Flare,original,per-dataset,True
+P024-D008,OVO-SMOTE,Glass,original,per-dataset,True
+P024-D009,OVO-SMOTE,Hayes-Roth,original,per-dataset,True
+P024-D010,OVO-SMOTE,Led7digit,original,per-dataset,True
+P024-D011,OVO-SMOTE,Lymphography,original,per-dataset,True
+P024-D012,OVO-SMOTE,New-thyroid,original,per-dataset,True
+P024-D013,OVO-SMOTE,Nursery,original,per-dataset,True
+P024-D014,OVO-SMOTE,Page-blocks,original,per-dataset,True
+P024-D015,OVO-SMOTE,Post-operative,modified,per-dataset,True
+P024-D016,OVO-SMOTE,Satimage,original,per-dataset,True
+P024-D017,OVO-SMOTE,Shuttle,original,per-dataset,True
+P024-D018,OVO-SMOTE,Splice,original,per-dataset,True
+P024-D019,OVO-SMOTE,Thyroid,original,per-dataset,True
+P024-D020,OVO-SMOTE,Wine,original,per-dataset,True
+P024-D021,OVO-SMOTE,Wine-Quality-Red,original,per-dataset,True
+P024-D022,OVO-SMOTE,Wine-Quality-White,original,per-dataset,True
+P024-D023,OVO-SMOTE,Yeast,original,per-dataset,True
+P024-D024,OVO-SMOTE,Zoo,original,per-dataset,True
+P026-D001,RACOG / wRACOG,prompting,original,per-dataset,True
+P026-D002,RACOG / wRACOG,abalone,modified,per-dataset,True
+P026-D003,RACOG / wRACOG,car,modified,per-dataset,True
+P026-D004,RACOG / wRACOG,nursery,modified,per-dataset,True
+P026-D005,RACOG / wRACOG,letter,modified,per-dataset,True
+P026-D006,RACOG / wRACOG,connect-4,modified,per-dataset,True
+P026-D007,RACOG / wRACOG,ecoli1,modified,per-dataset,True
+P026-D008,RACOG / wRACOG,haberman,original,per-dataset,True
+P026-D009,RACOG / wRACOG,yeast4,modified,per-dataset,True
+P026-D010,RACOG / wRACOG,yeast6,modified,per-dataset,True
+P019-D001,RAMOBoost,Sonar,original,per-dataset,True
+P019-D002,RAMOBoost,Spambase,original,per-dataset,True
+P019-D003,RAMOBoost,Ionosphere,original,per-dataset,True
+P019-D004,RAMOBoost,PID,original,per-dataset,True
+P019-D005,RAMOBoost,Wine,modified,per-dataset,True
+P019-D006,RAMOBoost,German,original,per-dataset,True
+P019-D007,RAMOBoost,Phoneme,original,per-dataset,True
+P019-D008,RAMOBoost,Vehicle,modified,per-dataset,True
+P019-D009,RAMOBoost,Texture,modified,per-dataset,True
+P019-D010,RAMOBoost,Segment,modified,per-dataset,True
+P019-D011,RAMOBoost,Page_Blocks,modified,per-dataset,True
+P019-D012,RAMOBoost,Satimage,modified,per-dataset,True
+P019-D013,RAMOBoost,Mf_Zernike,modified,per-dataset,True
+P019-D014,RAMOBoost,Vowel,modified,per-dataset,True
+P019-D015,RAMOBoost,Abalone,modified,per-dataset,True
+P019-D016,RAMOBoost,Glass,modified,per-dataset,True
+P019-D017,RAMOBoost,Yeast,modified,per-dataset,True
+P019-D018,RAMOBoost,Letter,modified,per-dataset,True
+P019-D019,RAMOBoost,Shuttle,modified,per-dataset,True
+P027-D001,RBBoost / Random Balance,boundary,not stated,per-dataset,True
+P027-D002,RBBoost / Random Balance,breast-y,not stated,per-dataset,True
+P027-D003,RBBoost / Random Balance,cam,not stated,per-dataset,True
+P027-D004,RBBoost / Random Balance,compustat,not stated,per-dataset,True
+P027-D005,RBBoost / Random Balance,covtype,not stated,per-dataset,True
+P027-D006,RBBoost / Random Balance,credit-g,original,per-dataset,True
+P027-D007,RBBoost / Random Balance,estate,not stated,per-dataset,True
+P027-D008,RBBoost / Random Balance,german-numer,original,per-dataset,True
+P027-D009,RBBoost / Random Balance,heart-v,not stated,per-dataset,True
+P027-D010,RBBoost / Random Balance,hypo,not stated,per-dataset,True
+P027-D011,RBBoost / Random Balance,ism,not stated,per-dataset,True
+P027-D012,RBBoost / Random Balance,letter,not stated,per-dataset,True
+P027-D013,RBBoost / Random Balance,oil,not stated,per-dataset,True
+P027-D014,RBBoost / Random Balance,optdigits,not stated,per-dataset,True
+P027-D015,RBBoost / Random Balance,page,not stated,per-dataset,True
+P027-D016,RBBoost / Random Balance,pendigits,not stated,per-dataset,True
+P027-D017,RBBoost / Random Balance,phoneme,original,per-dataset,True
+P027-D018,RBBoost / Random Balance,PhosS,not stated,per-dataset,True
+P027-D019,RBBoost / Random Balance,satimage,not stated,per-dataset,True
+P027-D020,RBBoost / Random Balance,segment,not stated,per-dataset,True
+P027-D021,RBBoost / Random Balance,abalone19,repository-defined,per-dataset,True
+P027-D022,RBBoost / Random Balance,abalone9-18,repository-defined,per-dataset,True
+P027-D023,RBBoost / Random Balance,cleveland-0_vs_4,repository-defined,per-dataset,True
+P027-D024,RBBoost / Random Balance,ecoli-0-1-3-7_vs_2-6,repository-defined,per-dataset,True
+P027-D025,RBBoost / Random Balance,ecoli-0-1-4-6_vs_5,repository-defined,per-dataset,True
+P027-D026,RBBoost / Random Balance,ecoli-0-1-4-7_vs_2-3-5-6,repository-defined,per-dataset,True
+P027-D027,RBBoost / Random Balance,ecoli-0-1-4-7_vs_5-6,repository-defined,per-dataset,True
+P027-D028,RBBoost / Random Balance,ecoli-0-1_vs_2-3-5,repository-defined,per-dataset,True
+P027-D029,RBBoost / Random Balance,ecoli-0-1_vs_5,repository-defined,per-dataset,True
+P027-D030,RBBoost / Random Balance,ecoli-0-2-3-4_vs_5,repository-defined,per-dataset,True
+P027-D031,RBBoost / Random Balance,ecoli-0-2-6-7_vs_3-5,repository-defined,per-dataset,True
+P027-D032,RBBoost / Random Balance,ecoli-0-3-4-6_vs_5,repository-defined,per-dataset,True
+P027-D033,RBBoost / Random Balance,ecoli-0-3-4-7_vs_5-6,repository-defined,per-dataset,True
+P027-D034,RBBoost / Random Balance,ecoli-0-3-4_vs_5,repository-defined,per-dataset,True
+P027-D035,RBBoost / Random Balance,ecoli-0-4-6_vs_5,repository-defined,per-dataset,True
+P027-D036,RBBoost / Random Balance,ecoli-0-6-7_vs_3-5,repository-defined,per-dataset,True
+P027-D037,RBBoost / Random Balance,ecoli-0-6-7_vs_5,repository-defined,per-dataset,True
+P027-D038,RBBoost / Random Balance,ecoli-0_vs_1,repository-defined,per-dataset,True
+P027-D039,RBBoost / Random Balance,ecoli1,repository-defined,per-dataset,True
+P027-D040,RBBoost / Random Balance,ecoli2,repository-defined,per-dataset,True
+P027-D041,RBBoost / Random Balance,ecoli3,repository-defined,per-dataset,True
+P027-D042,RBBoost / Random Balance,ecoli4,repository-defined,per-dataset,True
+P027-D043,RBBoost / Random Balance,glass-0-1-2-3_vs_4-5-6,repository-defined,per-dataset,True
+P027-D044,RBBoost / Random Balance,glass-0-1-4-6_vs_2,repository-defined,per-dataset,True
+P027-D045,RBBoost / Random Balance,glass-0-1-5_vs_2,repository-defined,per-dataset,True
+P027-D046,RBBoost / Random Balance,glass-0-1-6_vs_2,repository-defined,per-dataset,True
+P027-D047,RBBoost / Random Balance,glass-0-1-6_vs_5,repository-defined,per-dataset,True
+P027-D048,RBBoost / Random Balance,glass-0-4_vs_5,repository-defined,per-dataset,True
+P027-D049,RBBoost / Random Balance,glass-0-6_vs_5,repository-defined,per-dataset,True
+P027-D050,RBBoost / Random Balance,glass0,repository-defined,per-dataset,True
+P027-D051,RBBoost / Random Balance,glass1,repository-defined,per-dataset,True
+P027-D052,RBBoost / Random Balance,glass2,repository-defined,per-dataset,True
+P027-D053,RBBoost / Random Balance,glass4,repository-defined,per-dataset,True
+P027-D054,RBBoost / Random Balance,glass5,repository-defined,per-dataset,True
+P027-D055,RBBoost / Random Balance,glass6,repository-defined,per-dataset,True
+P027-D056,RBBoost / Random Balance,haberman,original,per-dataset,True
+P027-D057,RBBoost / Random Balance,iris0,repository-defined,per-dataset,True
+P027-D058,RBBoost / Random Balance,led7digit-0-2-4-5-6-7-8-9_vs_1,repository-defined,per-dataset,True
+P027-D059,RBBoost / Random Balance,new-thyroid1,repository-defined,per-dataset,True
+P027-D060,RBBoost / Random Balance,new-thyroid2,repository-defined,per-dataset,True
+P027-D061,RBBoost / Random Balance,page-blocks-1-3_vs_4,repository-defined,per-dataset,True
+P027-D062,RBBoost / Random Balance,page-blocks0,repository-defined,per-dataset,True
+P027-D063,RBBoost / Random Balance,pima,original,per-dataset,True
+P027-D064,RBBoost / Random Balance,segment0,repository-defined,per-dataset,True
+P027-D065,RBBoost / Random Balance,shuttle-c0-vs-c4,repository-defined,per-dataset,True
+P027-D066,RBBoost / Random Balance,shuttle-c2-vs-c4,repository-defined,per-dataset,True
+P027-D067,RBBoost / Random Balance,vehicle0,repository-defined,per-dataset,True
+P027-D068,RBBoost / Random Balance,vehicle1,repository-defined,per-dataset,True
+P027-D069,RBBoost / Random Balance,vehicle2,repository-defined,per-dataset,True
+P027-D070,RBBoost / Random Balance,vehicle3,repository-defined,per-dataset,True
+P027-D071,RBBoost / Random Balance,vowel0,repository-defined,per-dataset,True
+P027-D072,RBBoost / Random Balance,wisconsin,original,per-dataset,True
+P027-D073,RBBoost / Random Balance,yeast-0-2-5-6_vs_3-7-8-9,repository-defined,per-dataset,True
+P027-D074,RBBoost / Random Balance,yeast-0-2-5-7-9_vs_3-6-8,repository-defined,per-dataset,True
+P027-D075,RBBoost / Random Balance,yeast-0-3-5-9_vs_7-8,repository-defined,per-dataset,True
+P027-D076,RBBoost / Random Balance,yeast-0-5-6-7-9_vs_4,repository-defined,per-dataset,True
+P027-D077,RBBoost / Random Balance,yeast-1-2-8-9_vs_7,repository-defined,per-dataset,True
+P027-D078,RBBoost / Random Balance,yeast-1-4-5-8_vs_7,repository-defined,per-dataset,True
+P027-D079,RBBoost / Random Balance,yeast-1_vs_7,repository-defined,per-dataset,True
+P027-D080,RBBoost / Random Balance,yeast-2_vs_4,repository-defined,per-dataset,True
+P027-D081,RBBoost / Random Balance,yeast-2_vs_8,repository-defined,per-dataset,True
+P027-D082,RBBoost / Random Balance,yeast1,repository-defined,per-dataset,True
+P027-D083,RBBoost / Random Balance,yeast3,repository-defined,per-dataset,True
+P027-D084,RBBoost / Random Balance,yeast4,repository-defined,per-dataset,True
+P027-D085,RBBoost / Random Balance,yeast5,repository-defined,per-dataset,True
+P027-D086,RBBoost / Random Balance,yeast6,repository-defined,per-dataset,True
+P053-D001,RSMOTE,breast_tissue2,not stated,per-dataset,True
+P053-D002,RSMOTE,ecoli,not stated,per-dataset,True
+P053-D003,RSMOTE,heart,original,per-dataset,True
+P053-D004,RSMOTE,iris,not stated,per-dataset,True
+P053-D005,RSMOTE,libra,not stated,per-dataset,True
+P053-D006,RSMOTE,pima,original,per-dataset,True
+P053-D007,RSMOTE,segment,not stated,per-dataset,True
+P053-D008,RSMOTE,vehicle,not stated,per-dataset,True
+P053-D009,RSMOTE,wine,not stated,per-dataset,True
+P053-D010,RSMOTE,svmguide1,modified,per-dataset,True
+P053-D011,RSMOTE,breastcancer,modified,per-dataset,True
+P053-D012,RSMOTE,creditApproval,modified,per-dataset,True
+P053-D013,RSMOTE,votes,modified,per-dataset,True
+P053-D014,RSMOTE,svmguide3,modified,per-dataset,True
+P053-D015,RSMOTE,splice,modified,per-dataset,True
+P053-D016,RSMOTE,mushrooms,modified,per-dataset,True
+P053-D017,RSMOTE,isolet5,modified,per-dataset,True
+P053-D018,RSMOTE,codrna,modified,per-dataset,True
+P053-D019,RSMOTE,avila,modified,per-dataset,True
+P053-D020,RSMOTE,letter,modified,per-dataset,True
+P053-D021,RSMOTE,susy,modified,per-dataset,True
+P053-D022,RSMOTE,mocap,modified,per-dataset,True
+P053-D023,RSMOTE,poker,modified,per-dataset,True
+P053-D024,RSMOTE,nomao,modified,per-dataset,True
+P053-D025,RSMOTE,magic,modified,per-dataset,True
+P053-D026,RSMOTE,skin,modified,per-dataset,True
+P053-D027,RSMOTE,Online_Retail,modified,per-dataset,True
+P053-D028,RSMOTE,contraceptive,original,per-dataset,False
+P053-D029,RSMOTE,OBS,original,per-dataset,False
+P053-D030,RSMOTE,PhishingData,original,per-dataset,False
+P053-D031,RSMOTE,sensorReadings,original,per-dataset,False
+P053-D032,RSMOTE,svmguide2,original,per-dataset,False
+P053-D033,RSMOTE,userknowledge,original,per-dataset,False
+P053-D034,RSMOTE,vertebralColumn,original,per-dataset,False
+P053-D035,RSMOTE,Healthy_Older_People2,original,per-dataset,False
+P020-D001,RUSBoost,SP3,not stated,per-dataset partial,True
+P020-D002,RUSBoost,MAMMOGRAPHY,original,per-dataset partial,True
+P020-D003,RUSBoost,SOLARFLAREF,modified,per-dataset partial,True
+P020-D004,RUSBoost,CAR3,modified,per-dataset partial,True
+P020-D005,RUSBoost,CCCS12,not stated,per-dataset partial,True
+P020-D006,RUSBoost,SP1,not stated,per-dataset partial,True
+P020-D007,RUSBoost,PC1,not stated,per-dataset partial,True
+P020-D008,RUSBoost,GLASS3,modified,per-dataset partial,True
+P020-D009,RUSBoost,CM1,not stated,per-dataset partial,True
+P020-D010,RUSBoost,PENDIGITS5,modified,per-dataset partial,True
+P020-D011,RUSBoost,SATIMAGE4,modified,per-dataset partial,True
+P020-D012,RUSBoost,ECOLI4,modified,per-dataset partial,True
+P020-D013,RUSBoost,SEGMENT5,modified,per-dataset partial,True
+P020-D014,RUSBoost,CONTRA2,modified,per-dataset partial,True
+P020-D015,RUSBoost,VEHICLE1,modified,per-dataset partial,True
+P028-D001,SCUT,Thyroid,original,per-dataset,True
+P028-D002,SCUT,Lymphography,original,per-dataset,True
+P028-D003,SCUT,Pageblocks,original,per-dataset,True
+P028-D004,SCUT,Dermatology,original,per-dataset,True
+P028-D005,SCUT,Autos,original,per-dataset,True
+P028-D006,SCUT,Ecoli,original,per-dataset,True
+P028-D007,SCUT,Wine Quality,original,per-dataset,True
+P028-D008,SCUT,Yeast,original,per-dataset,True
+P059-D001,SHSampler,balance,original,per-dataset,True
+P059-D002,SHSampler,car,original,per-dataset,True
+P059-D003,SHSampler,cleveland,original,per-dataset,True
+P059-D004,SHSampler,ecoli,original,per-dataset,True
+P059-D005,SHSampler,glass,original,per-dataset,True
+P059-D006,SHSampler,hayes-roth,original,per-dataset,True
+P059-D007,SHSampler,led7digit,original,per-dataset,True
+P059-D008,SHSampler,lymphography,original,per-dataset,True
+P059-D009,SHSampler,newthyroid,original,per-dataset,True
+P059-D010,SHSampler,page-blocks,original,per-dataset,True
+P059-D011,SHSampler,PhishingData,original,per-dataset,True
+P059-D012,SHSampler,sensorReadings,original,per-dataset,True
+P059-D013,SHSampler,thyroid,original,per-dataset,True
+P059-D014,SHSampler,userknowledge,original,per-dataset,True
+P059-D015,SHSampler,vehicle,original,per-dataset,True
+P059-D016,SHSampler,vertebralColumn,original,per-dataset,True
+P059-D017,SHSampler,wine,original,per-dataset,True
+P059-D018,SHSampler,winequality,original,per-dataset,True
+P059-D019,SHSampler,yeast,original,per-dataset,True
+P059-D020,SHSampler,zoo,original,per-dataset,True
+P034-D001,SMOM,vehicle,original,per-dataset,True
+P034-D002,SMOM,sat,original,per-dataset,True
+P034-D003,SMOM,ecoli,original,per-dataset,True
+P034-D004,SMOM,automobile,modified,per-dataset,True
+P034-D005,SMOM,voice9_6,modified,per-dataset,True
+P034-D006,SMOM,vowel5,modified,per-dataset,True
+P034-D007,SMOM,vowel7,modified,per-dataset,True
+P034-D008,SMOM,robot,original,per-dataset,True
+P034-D009,SMOM,pendigits,modified,per-dataset,True
+P034-D010,SMOM,page-blocks,modified,per-dataset,True
+P034-D011,SMOM,housing5,original,per-dataset,True
+P034-D012,SMOM,SWD,original,per-dataset,True
+P034-D013,SMOM,wine-red,original,per-dataset,True
+P034-D014,SMOM,voice9_7,original,per-dataset,True
+P034-D015,SMOM,LEV,original,per-dataset,True
+P034-D016,SMOM,machine,modified,per-dataset,True
+P034-D017,SMOM,abalone8,modified,per-dataset,True
+P034-D018,SMOM,plates-faults5,modified,per-dataset,True
+P034-D019,SMOM,plates-faults7,original,per-dataset,True
+P034-D020,SMOM,ESL,modified,per-dataset,True
+P034-D021,SMOM,ERA,original,per-dataset,True
+P034-D022,SMOM,yeast5,modified,per-dataset,True
+P034-D023,SMOM,ERA5,original,per-dataset,True
+P034-D024,SMOM,yeast7,modified,per-dataset,True
+P034-D025,SMOM,abalone10,modified,per-dataset,True
+P034-D026,SMOM,yeast8,modified,per-dataset,True
+P034-D027,SMOM,housing10,original,per-dataset,True
+P008-D001,SMOTE-ENN / SMOTE-Tomek,Pima,original,per-dataset,True
+P008-D002,SMOTE-ENN / SMOTE-Tomek,German,original,per-dataset,True
+P008-D003,SMOTE-ENN / SMOTE-Tomek,Post-operative,modified,per-dataset,True
+P008-D004,SMOTE-ENN / SMOTE-Tomek,Haberman,original,per-dataset,True
+P008-D005,SMOTE-ENN / SMOTE-Tomek,Splice-ie,modified,per-dataset,True
+P008-D006,SMOTE-ENN / SMOTE-Tomek,Splice-ei,modified,per-dataset,True
+P008-D007,SMOTE-ENN / SMOTE-Tomek,Vehicle,modified,per-dataset,True
+P008-D008,SMOTE-ENN / SMOTE-Tomek,Letter-vowel,modified,per-dataset,True
+P008-D009,SMOTE-ENN / SMOTE-Tomek,New-thyroid,modified,per-dataset,True
+P008-D010,SMOTE-ENN / SMOTE-Tomek,E.Coli,modified,per-dataset,True
+P008-D011,SMOTE-ENN / SMOTE-Tomek,Satimage,modified,per-dataset,True
+P008-D012,SMOTE-ENN / SMOTE-Tomek,Flag,modified,per-dataset,True
+P008-D013,SMOTE-ENN / SMOTE-Tomek,Glass,modified,per-dataset,True
+P008-D014,SMOTE-ENN / SMOTE-Tomek,Letter-a,modified,per-dataset,True
+P008-D015,SMOTE-ENN / SMOTE-Tomek,Nursery,modified,per-dataset,True
+P029-D001,SMOTE-IPF,"sub-cluster IR=5, DR=0",synthetic,per-dataset,False
+P029-D002,SMOTE-IPF,"sub-cluster IR=5, DR=30",synthetic,per-dataset,False
+P029-D003,SMOTE-IPF,"sub-cluster IR=5, DR=50",synthetic,per-dataset,False
+P029-D004,SMOTE-IPF,"sub-cluster IR=5, DR=60",synthetic,per-dataset,False
+P029-D005,SMOTE-IPF,"sub-cluster IR=5, DR=70",synthetic,per-dataset,False
+P029-D006,SMOTE-IPF,"sub-cluster IR=7, DR=0",synthetic,per-dataset,False
+P029-D007,SMOTE-IPF,"sub-cluster IR=7, DR=30",synthetic,per-dataset,False
+P029-D008,SMOTE-IPF,"sub-cluster IR=7, DR=50",synthetic,per-dataset,False
+P029-D009,SMOTE-IPF,"sub-cluster IR=7, DR=60",synthetic,per-dataset,False
+P029-D010,SMOTE-IPF,"sub-cluster IR=7, DR=70",synthetic,per-dataset,False
+P029-D011,SMOTE-IPF,"clover IR=5, DR=0",synthetic,per-dataset,False
+P029-D012,SMOTE-IPF,"clover IR=5, DR=30",synthetic,per-dataset,False
+P029-D013,SMOTE-IPF,"clover IR=5, DR=50",synthetic,per-dataset,False
+P029-D014,SMOTE-IPF,"clover IR=5, DR=60",synthetic,per-dataset,False
+P029-D015,SMOTE-IPF,"clover IR=5, DR=70",synthetic,per-dataset,False
+P029-D016,SMOTE-IPF,"clover IR=7, DR=0",synthetic,per-dataset,False
+P029-D017,SMOTE-IPF,"clover IR=7, DR=30",synthetic,per-dataset,False
+P029-D018,SMOTE-IPF,"clover IR=7, DR=50",synthetic,per-dataset,False
+P029-D019,SMOTE-IPF,"clover IR=7, DR=60",synthetic,per-dataset,False
+P029-D020,SMOTE-IPF,"clover IR=7, DR=70",synthetic,per-dataset,False
+P029-D021,SMOTE-IPF,"paw IR=5, DR=0",synthetic,per-dataset,False
+P029-D022,SMOTE-IPF,"paw IR=5, DR=30",synthetic,per-dataset,False
+P029-D023,SMOTE-IPF,"paw IR=5, DR=50",synthetic,per-dataset,False
+P029-D024,SMOTE-IPF,"paw IR=5, DR=60",synthetic,per-dataset,False
+P029-D025,SMOTE-IPF,"paw IR=5, DR=70",synthetic,per-dataset,False
+P029-D026,SMOTE-IPF,"paw IR=7, DR=0",synthetic,per-dataset,False
+P029-D027,SMOTE-IPF,"paw IR=7, DR=30",synthetic,per-dataset,False
+P029-D028,SMOTE-IPF,"paw IR=7, DR=50",synthetic,per-dataset,False
+P029-D029,SMOTE-IPF,"paw IR=7, DR=60",synthetic,per-dataset,False
+P029-D030,SMOTE-IPF,"paw IR=7, DR=70",synthetic,per-dataset,False
+P029-D031,SMOTE-IPF,acl,not stated,per-dataset,True
+P029-D032,SMOTE-IPF,breast,not stated,per-dataset,True
+P029-D033,SMOTE-IPF,bupa,original,per-dataset,True
+P029-D034,SMOTE-IPF,cleveland,not stated,per-dataset,True
+P029-D035,SMOTE-IPF,ecoli,not stated,per-dataset,True
+P029-D036,SMOTE-IPF,haberman,original,per-dataset,True
+P029-D037,SMOTE-IPF,hepatitis,original,per-dataset,True
+P029-D038,SMOTE-IPF,newthyroid,not stated,per-dataset,True
+P029-D039,SMOTE-IPF,pima,original,per-dataset,True
+P029-D040,SMOTE-IPF,"Class noise versions of the 9 real-world datasets (e.g. 'aclx=20%', 'aclx=40%'; 18 datasets)",modified,per-dataset,False
+P029-D041,SMOTE-IPF,"Attribute noise versions of the 9 real-world datasets (e.g. 'aclx=20%', 'aclx=40%'; 18 datasets)",modified,per-dataset,False
+P007-D001,SMOTEBoost,KDDCup-99 Intrusion,modified,per-dataset,True
+P007-D002,SMOTEBoost,Mammography,original,per-dataset,True
+P007-D003,SMOTEBoost,Satimage,modified,per-dataset,True
+P007-D004,SMOTEBoost,Phoneme,original,per-dataset,True
+P060-D001,SOS,Default,original,per-dataset,True
+P060-D002,SOS,Shoppers,original,per-dataset,True
+P060-D003,SOS,Surgical,not stated,per-dataset,True
+P060-D004,SOS,WeatherAUS,not stated,per-dataset,True
+P060-D005,SOS,Buddy,original,per-dataset,True
+P060-D006,SOS,Satimage,original,per-dataset,True
+P043-D001,SOUP,balance-scale,original,per-dataset,True
+P043-D002,SOUP,car,original,per-dataset,True
+P043-D003,SOUP,cleveland_1,modified,per-dataset,True
+P043-D004,SOUP,cleveland_2,modified,per-dataset,True
+P043-D005,SOUP,cmc,original,per-dataset,True
+P043-D006,SOUP,dermatology,original,per-dataset,True
+P043-D007,SOUP,ecoli,original,per-dataset,True
+P043-D008,SOUP,flare,original,per-dataset,True
+P043-D009,SOUP,glass,original,per-dataset,True
+P043-D010,SOUP,hayes_roth,original,per-dataset,True
+P043-D011,SOUP,led7digit,original,per-dataset,True
+P043-D012,SOUP,new_thyroid,original,per-dataset,True
+P043-D013,SOUP,vehicle,original,per-dataset,True
+P043-D014,SOUP,yeast,original,per-dataset,True
+P043-D015,SOUP,wine_quality_red,original,per-dataset,True
+P043-D016,SOUP,art1,synthetic,per-dataset,True
+P043-D017,SOUP,art2,synthetic,per-dataset,True
+P043-D018,SOUP,art3,synthetic,per-dataset,True
+P043-D019,SOUP,art4,synthetic,per-dataset,True
+P050-D001,SPE,checkerboard,synthetic,per-dataset partial,False
+P050-D002,SPE,Credit Fraud,original,per-dataset partial,True
+P050-D003,SPE,KDDCUP (DOS vs. PRB),modified,per-dataset partial,True
+P050-D004,SPE,KDDCUP (DOS vs. R2L),modified,per-dataset partial,True
+P050-D005,SPE,Record Linkage,original,per-dataset partial,True
+P050-D006,SPE,Payment Simulation,original,per-dataset partial,True
+P061-D001,SVDD-WSMOTE,Wine,modified,per-dataset,True
+P061-D002,SVDD-WSMOTE,Iris,modified,per-dataset,True
+P061-D003,SVDD-WSMOTE,Abalone,modified,per-dataset,True
+P061-D004,SVDD-WSMOTE,Pima,original,per-dataset,True
+P061-D005,SVDD-WSMOTE,Ecoli,modified,per-dataset,True
+P061-D006,SVDD-WSMOTE,Libra,modified,per-dataset,True
+P061-D007,SVDD-WSMOTE,Vehicle,modified,per-dataset,True
+P061-D008,SVDD-WSMOTE,Balance,modified,per-dataset,True
+P061-D009,SVDD-WSMOTE,Haberman,original,per-dataset,True
+P061-D010,SVDD-WSMOTE,Car,modified,per-dataset,True
+P061-D011,SVDD-WSMOTE,Liver,original,per-dataset,True
+P061-D012,SVDD-WSMOTE,Seed,modified,per-dataset,True
+P061-D013,SVDD-WSMOTE,Spect,original,per-dataset,True
+P061-D014,SVDD-WSMOTE,Pageblock,modified,per-dataset,True
+P061-D015,SVDD-WSMOTE,Pageblock1,modified,per-dataset,True
+P061-D016,SVDD-WSMOTE,Yeast,modified,per-dataset,True
+P061-D017,SVDD-WSMOTE,Yeast1,modified,per-dataset,True
+P061-D018,SVDD-WSMOTE,Yeast2,modified,per-dataset,True
+P061-D019,SVDD-WSMOTE,Yeast3,modified,per-dataset,True
+P061-D020,SVDD-WSMOTE,Yeast4,modified,per-dataset,True
+P061-D021,SVDD-WSMOTE,Yeast5,modified,per-dataset,True
+P061-D022,SVDD-WSMOTE,Yeast6,modified,per-dataset,True
+P061-D023,SVDD-WSMOTE,Yeast7,modified,per-dataset,True
+P061-D024,SVDD-WSMOTE,Yeast8,modified,per-dataset,True
+P061-D025,SVDD-WSMOTE,Simulated dataset A,synthetic,per-dataset,False
+P061-D026,SVDD-WSMOTE,Simulated dataset B,synthetic,per-dataset,False
+P061-D027,SVDD-WSMOTE,Simulated dataset C,synthetic,per-dataset,False
+P061-D028,SVDD-WSMOTE,Simulated dataset D,synthetic,per-dataset,False
+P061-D029,SVDD-WSMOTE,Bearing IF,not stated,per-dataset,False
+P061-D030,SVDD-WSMOTE,Bearing OF,not stated,per-dataset,False
+P061-D031,SVDD-WSMOTE,Bearing RF,not stated,per-dataset,False
+P061-D032,SVDD-WSMOTE,Bearing IF + OF,not stated,per-dataset,False
+P061-D033,SVDD-WSMOTE,Bearing OF + RF,not stated,per-dataset,False
+P061-D034,SVDD-WSMOTE,Bearing IF + RF,not stated,per-dataset,False
+P061-D035,SVDD-WSMOTE,Bearing IF + OF + RF,not stated,per-dataset,False

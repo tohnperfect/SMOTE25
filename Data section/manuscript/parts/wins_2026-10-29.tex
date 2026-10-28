@@ -1,0 +1,161 @@
+\subsection{Where Reported Wins over SMOTE Come From}
+\label{sec:data-wins}
+% Rewritten 29 Oct 2026 (Claude; Toon delegated every remaining decision on 29 Oct).
+% Win/loss definition decided by Toon (28 Oct 2026): every metric the paper reports
+% with a SMOTE column, classifier and condition fixed by rule A, printed values
+% compared in the metric's direction, equal printed values = tie. Numbers:
+% out/winloss_allmetric_summary.json, out/hypotheses.json, out/difficulty_outcomes.json.
+At the paper level, 44 of the 73 papers use plain SMOTE as a baseline,
+13 use SMOTE inside a multiclass or ensemble scheme, and 16 do not compare with
+SMOTE at all. Fewer papers give scores a reader can pair: 29 papers print
+per-dataset scores for the proposed method and plain SMOTE in the same table.
+For these papers we compared the printed values on every metric that the table
+reports for both methods, with the classifier and condition fixed as in
+Section~\ref{sec:data-method}; a win means the proposed method's printed value is
+better in the metric's direction, and equal printed values count as a tie. This
+gives 1,511 comparisons on 520 datasets (one to six metrics per paper, median
+three); 16 cannot be decided because a value is not printed as a number. Of the
+other 1,495, the proposed method wins 1,107, ties 102 and loses 286, a win in
+79.5\% of the decided comparisons (95\% CI 77.3 to 81.5). Twenty-three of the 29
+papers report at least one comparison that SMOTE wins.
+
+\begin{table}[t]
+\centering\small
+\caption{Comparisons of the Proposed Method with Plain SMOTE by Metric (29 Papers).
+A row is one dataset and one metric in one paper; printed values are compared in the
+direction of the metric, equal printed values are ties, and n.c.\ counts values not
+printed as numbers. Scores are not comparable across papers.}
+\label{tab:wins-by-metric}
+\begin{tabular}{lrrrrrr}
+\toprule
+Metric & Papers & Rows & Proposed wins & Ties & SMOTE wins & n.c.\\
+\midrule
+AUC & 19 & 403 & 309 & 30 & 64 & 0\\
+G-mean & 19 & 380 & 283 & 29 & 64 & 4\\
+F-measure & 18 & 287 & 217 & 16 & 50 & 4\\
+Recall (sensitivity) & 12 & 193 & 130 & 21 & 42 & 0\\
+Precision & 7 & 113 & 62 & 5 & 46 & 0\\
+Accuracy & 4 & 69 & 62 & 1 & 6 & 0\\
+MCC & 3 & 52 & 40 & 0 & 8 & 4\\
+AUC-PR & 1 & 7 & 3 & 0 & 0 & 4\\
+Specificity & 1 & 7 & 1 & 0 & 6 & 0\\
+\addlinespace
+All metrics & 29 & 1,511 & 1,107 & 102 & 286 & 16\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:wins-by-metric} shows that the margin depends on the metric. On the
+measures that reward finding minority examples (AUC, G-mean, F-measure, recall) the
+proposed method wins three to four comparisons in five, while on precision the split
+is 62 to 46 and on specificity SMOTE wins six of seven. Counting one result per dataset
+(the majority over its metrics) gives 409 wins, 35 ties and 76 losses on 520 datasets,
+and the earlier single-metric rule (G-mean, else AUC, else F-measure, else accuracy)
+gives 521 comparisons, in which the proposed method wins in 402 rows, ties in 39 and
+loses in 80.
+
+\begin{table}[t]
+\centering\small
+\caption{Comparisons with Plain SMOTE by How the Dataset Was Obtained (All Metrics,
+29 Papers). Win share is the share of wins among decided comparisons (ties left out),
+with a 95\% Wilson interval. Sixteen comparisons not printed as numbers are left out.}
+\label{tab:wins-by-type}
+\begin{tabular}{lrrrrrrl}
+\toprule
+How obtained & Datasets & Papers & Rows & Wins & Ties & Losses & Win share (\%)\\
+\midrule
+Original & 144 & 25 & 425 & 329 & 10 & 86 & 79.3 (75.1--82.9)\\
+Repository-defined & 119 & 9 & 315 & 220 & 44 & 51 & 81.2 (76.1--85.4)\\
+Modified & 143 & 14 & 495 & 356 & 20 & 119 & 74.9 (70.9--78.6)\\
+Synthetic & 5 & 1 & 15 & 15 & 0 & 0 & 100 (79.6--100)\\
+Cannot be told & 105 & 13 & 234 & 184 & 24 & 26 & 87.6 (82.5--91.4)\\
+Not matched to a dataset & 4 & 3 & 11 & 3 & 4 & 4 & 42.9 (15.8--75.0)\\
+\addlinespace
+All & 520 & 29 & 1,495 & 1,107 & 102 & 286 & 79.5 (77.3--81.5)\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+We tested the hypothesis that motivated this analysis: that proposed methods win
+more often on data the authors modified or generated than on original data. The data
+do not support it (Table~\ref{tab:wins-by-type}). Modified and synthetic data give a
+win in 75.7\% of decided comparisons (371 of 490) against 79.3\% on original data.
+Because the comparisons of one paper are not independent, we estimated the
+difference with the paper as the unit of clustering: a logistic model with
+paper-level clustering (generalised estimating equations) gives an odds ratio of 0.68
+(95\% CI 0.43 to 1.08, $p = 0.10$) for modified or synthetic against original data;
+a conditional logistic model that compares the two kinds of data only inside the 11
+papers that use both and report both outcomes gives 0.61 (0.38 to 0.97, $p = 0.04$);
+and a mixed model with random effects for paper and for dataset gives 0.75 (0.58 to
+0.97). The direction is therefore the opposite of the hypothesis, but it is not
+stable: with one result per dataset the two clustered estimates are 0.64 ($p = 0.15$)
+and 0.46 ($p = 0.13$), and under the single-metric rule 0.80 ($p = 0.47$) and 0.61
+($p = 0.31$). Paper by paper, among the 13 papers with both kinds of data, the win
+share is higher on modified or synthetic data in 3, higher on standard data in 7 and
+equal in 3 (sign test $p = 0.34$). Repository-defined splits do not differ from
+original data (odds ratio 1.19, $p = 0.61$), and the comparisons whose data origin
+cannot be told show the highest raw win share, a difference that disappears once
+papers are taken into account (odds ratio 0.99, $p = 0.98$).
+
+The second hypothesis concerned papers that add a single standard dataset to data of
+another kind. Two papers fit this pattern: MWMOTE (one standard and 19 other
+datasets) and RUSBoost~\pcite{seiffert2010rusboost} (one and 14). Both win on their
+standard dataset; on their other datasets they win 52 of 65 decided comparisons
+(80.0\%), the same share as in the 21 papers with at least two standard datasets
+(482 of 600, 80.3\%). Five papers compare with SMOTE only on standard data and one
+(INOS) only on modified data. Two papers are too few for a test, and nothing in them
+suggests that the standard dataset serves a different purpose from the rest.
+
+Measured difficulty says more about where the wins fall than the origin of the data.
+For the 72 verifiable two-class files (Section~\ref{sec:data-difficulty}) that appear
+in these comparisons (20 papers, 374 comparisons), the chance that the proposed method
+beats SMOTE rises with the noise index: the odds ratio per 0.1 of noise index is 1.15
+(95\% CI 1.04 to 1.26, $p = 0.005$) with paper-level clustering and 1.19 (1.04 to 1.35,
+$p = 0.01$) within papers, and 1.16 (0.98 to 1.36, $p = 0.08$) with one result per file
+and paper. The imbalance ratio shows no such relation (odds ratio 0.92 per doubling,
+$p = 0.61$), nor do the small-sample, outlier and small-disjunct flags taken one at a
+time. This analysis is exploratory: it covers the files that could be verified, which
+are mostly small and low-dimensional.
+
+Comparisons with SMOTE inside another scheme are kept apart and are not pooled with
+Tables~\ref{tab:wins-by-metric} and~\ref{tab:wins-by-type}. Twelve papers contribute
+558 comparisons: Static-SMOTE (EMDO~\pcite{yao2021emdo}, OVO-SMOTE, SOUP) 79, with 69
+wins, 3 ties and 7 losses; SMOTE after one-versus-one decomposition (AMDO~\pcite{yang2018amdo}, GDHS~\pcite{yan2025gdhs},
+SHSampler~\pcite{zheng2022shsampler}) 148, with 101, 6 and 41; SMOTE applied to all
+classes (MC-CCR~\pcite{koziarski2020mcccr}, MC-RBO~\pcite{krawczyk2020mcrbo}, NROMM) 239,
+with 231, 0 and 8; and SMOTE combined with another learner (DSRBF~\pcite{fernandeznavarro2011dsrbf}, EasyEnsemble, GAMO) 92,
+with 71, 2 and 19. Three papers are left out of every comparison set. KNNOR~\pcite{islam2022knnor}
+prints only means over its 19 datasets (G-score .8363 for KNNOR and .8238 for SMOTE).
+MC-MBRC~\pcite{ma2024mcmbrc} names SMOTE as a baseline, but the column headers of its
+per-dataset tables do not say which column is SMOTE. In RBBoost~\pcite{diezpastor2015randombalance},
+the scores of its RB-Boost come from the Boosting-family table of its supplement
+(Supplementary Table~11) and those of its SMOTE ensemble (ESM) from the
+data-processing-family table (Supplementary Table~3); both report the same protocol
+(J48 with Laplace smoothing, ensembles of 100, stratified $5\times2$-fold
+cross-validation), but the paper compares methods only within each family and never
+compares RB-Boost with ESM directly. Its 86 datasets, 63 of them repository-defined,
+are kept in our data for audit.
+
+\paragraph{What the reader should do.} Read a reported win over SMOTE together with
+the metric: most of the margin comes from minority-sensitive measures, and precision
+and specificity often favour SMOTE. Expect wins over SMOTE to be more frequent on data
+whose minority examples are borderline or isolated, and less informative on clean
+data. Whether the data were modified does not, on this evidence, inflate the win
+rate; whether they are described well enough to be identified matters more for the
+reader (Sections~\ref{sec:data-names} and~\ref{sec:data-verifiability}).
+
+\evidence{Rows: out/winloss\_allmetric\_rows.csv (2,497 dataset-by-metric rows from
+ai-draft/outcome/allmetric/*.json, 44 papers; the single-metric values re-copied
+independently and identical on 839 of 839 rows, out/winloss\_allmetric\_crosscheck.csv);
+build/winloss\_allmetric.py $\rightarrow$ out/winloss\_allmetric\_summary.json (plain,
+non-plain groups, exclusions R4, R6, R8; paper classes aligned with
+build/reconcile\_counts.py on 29 Oct 2026). Data types: build/allmetric\_links.py
+$\rightarrow$ out/allmetric\_links.csv (2,496 of 2,497 rows linked to a record). Tests:
+build/hypotheses.py $\rightarrow$ out/hypotheses.json, out/hypotheses\_paper\_split.csv
+(statsmodels 0.15: GEE exchangeable, ConditionalLogit, BinomialBayesMixedGLM variational
+fit). Single-metric set: out/verified\_outcomes.csv, out/reconcile\_counts.json (521 rows,
+rules R4, R6, R8). Difficulty: build/difficulty\_outcomes.py $\rightarrow$
+out/difficulty\_outcomes.json. RBBoost: supplement Table~3 pp.3--5 and Table~11
+pp.17--18; protocol p.101 and family design p.102. MC-MBRC: SMOTE named in Appendix A.1
+and Table~8 only; Tables 9--12, p.10--11.}
+

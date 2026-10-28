@@ -3,9 +3,9 @@
 % or from the title page of the PDF read for this survey (hassanat2022stop). BibLaTeX + Biber (JAIR template):
 % Unicode names are kept as Crossref gives them; article numbers are in 'eid'.
 % Not yet merged into ../../references.bib (merge at integration time). Keys match \pcite{} in data-section-draft.tex.
-% Points to check before submission: zhu2023orem (Crossref still early access, no volume/pages);
-% cieslak2006cluster (Crossref has no issued date; 2006 from the proceedings title);
-% jain1982dimensionality (last page not in Crossref).
+% Checks closed 29 Oct 2026: zhu2023orem volume/issue/pages from the published PDF (35(6):6167-6181, 2023);
+% cieslak2006cluster year from the proceedings title (2006 IEEE GrC), noted in the entry;
+% jain1982dimensionality is not cited in the text (last page left unchecked, entry kept for the record).
 
 @article{abdi2016mdo,
   author  = {Abdi, Lida and Hashemi, Sattar},
@@ -62,6 +62,7 @@
   location  = {Atlanta, GA, USA},
   pages     = {732--737},
   date      = {2006},
+  note      = {Year from the conference title (2006 IEEE GrC); Crossref record has no year field (checked 28 Oct 2026)},
   doi       = {10.1109/GRC.2006.1635905}
 }
 
@@ -333,9 +334,10 @@
   author  = {Zhu, Tuanfei and Liu, Xinwang and Zhu, En},
   title   = {Oversampling with Reliably Expanding Minority Class Regions for Imbalanced Data Learning},
   journaltitle = {IEEE Transactions on Knowledge and Data Engineering},
-  date    = {2022},
+  volume  = {35}, number = {6}, pages = {6167--6181},
+  date    = {2023-06},
   doi     = {10.1109/TKDE.2022.3171706},
-  note    = {Early access; volume, issue and pages not yet in Crossref (checked 28 Oct 2026)}
+  note    = {Volume, issue and pages from the printed header and page numbers of the published PDF in paper/Multiclass (checked 29 Oct 2026)}
 }
 
 @article{ortigosahernandez2017imbalance,
@@ -390,7 +392,7 @@
   pages     = {835},
   year      = {1982},
   doi       = {10.1016/S0169-7161(82)02042-2},
-  note      = {Identified as ref. [80] of jain2000statistical: present in its Crossref reference list; number inferred from the alphabetical order of the list. Crossref gives first page only; last page not yet checked.}
+  note      = {Identified as ref. [80] of jain2000statistical: present in its Crossref reference list; number inferred from the alphabetical order of the list. Crossref gives first page only; last page not checked. Not cited in the Data section text (the small-sample rule cites jain2000statistical, sec. 3, directly).}
 }
 
 @article{fernandez2008study,
@@ -414,4 +416,27 @@
   year    = {1997},
   doi     = {10.1613/jair.346},
   note    = {Used: HVDM, Eq. 11--13; N2 normalized\_vdm for nominal attributes (sec. 3.2)}
+}
+
+% Added 29 Oct 2026 (Claude): keys newly cited in the final Data section text.
+% chawla2002smote: copied unchanged from ../references.bib (already in the repository bibliography).
+@article{chawla2002smote,
+  author  = {Chawla, Nitesh V. and Bowyer, Kevin W. and Hall, Lawrence O. and Kegelmeyer, W. Philip},
+  title   = {{SMOTE}: Synthetic Minority Over-sampling Technique},
+  journal = {Journal of Artificial Intelligence Research},
+  volume  = {16},
+  pages   = {321--357},
+  year    = {2002},
+  doi     = {10.1613/jair.953}
+}
+
+% saez2015smoteipf: first page of the PDF in paper/Both (Information Sciences 291 (2015) 184-203, doi printed there).
+@article{saez2015smoteipf,
+  author  = {S{\'a}ez, Jos{\'e} A. and Luengo, Juli{\'a}n and Stefanowski, Jerzy and Herrera, Francisco},
+  title   = {{SMOTE--IPF}: Addressing the Noisy and Borderline Examples Problem in Imbalanced Classification by a Re-Sampling Method with Filtering},
+  journal = {Information Sciences},
+  volume  = {291},
+  pages   = {184--203},
+  year    = {2015},
+  doi     = {10.1016/j.ins.2014.08.051}
 }

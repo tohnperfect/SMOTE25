@@ -540,9 +540,10 @@ tr.mz-sel td{background:var(--accent-soft)}
   </section>
 
   <section role="tabpanel" id="p-wn" aria-labelledby="t-wn" hidden>
-    <div class="notice"><b>ผลเทียบจาก 73 paper ที่มีการประเมินผลบนข้อมูล ตัดสินแพ้ชนะด้วยกติกา A ชั่วคราว</b> (metric เดียวต่อ paper ค่าเท่ากันที่ทศนิยมที่พิมพ์ = เสมอ รออาจารย์ยืนยัน) "สูงกว่า" คือค่าที่พิมพ์มากกว่า
+    <div class="notice"><b>ส่วนล่างของแท็บนี้ (ตาราง 1–3) ใช้กติกา A: metric เดียวต่อ paper</b> ซึ่งเป็นการตรวจความทนทาน ผลหลักตั้งแต่ 29 ต.ค. คือทุก metric (การ์ดด้านบน) · (metric เดียวต่อ paper ค่าเท่ากันที่ทศนิยมที่พิมพ์ = เสมอ รออาจารย์ยืนยัน) "สูงกว่า" คือค่าที่พิมพ์มากกว่า
     diff อยู่ในหน่วยของ metric ของ paper นั้น <b>เทียบข้าม paper ไม่ได้</b> แต่ละ paper ใช้ metric และ classifier ตามกติกาเดียวกัน (G-mean &gt; AUC &gt; F1 &gt; accuracy, classifier ที่ abstract ชู)</div>
-    <div class="notice"><b>สถานะ 28 ต.ค. 2026: การวิเคราะห์ชนะ/แพ้ยังพักไว้</b> ตัวเลขในแท็บนี้เป็นค่าที่สกัดและจับคู่แล้ว แต่นิยาม win/tie/loss (กติกา A) ยังเป็นค่าชั่วคราวรออาจารย์ และยังไม่ได้ทดสอบสมมติฐาน H1–H3 ใช้ดูข้อมูลได้ แต่ยังไม่ใช่ข้อสรุปของ paper</div>
+    <div class="notice"><b>สถานะ 29 ต.ค. 2026: เสร็จ</b> นิยาม win/tie/loss ตามที่ Toon ตัดสิน (28 ต.ค.): ทุก metric ที่ paper รายงานคู่กับ SMOTE เทียบค่าที่พิมพ์ เท่ากัน = เสมอ · ทดสอบ H1–H3 แล้ว (การ์ดด้านล่าง) ข้อความใน manuscript ส่วน Wins เขียนจากผลชุดนี้</div>
+    <div class="card" id="wn-hyp"></div>
     <div class="card" id="wn-allm"></div>
     <div class="card" id="wn-famdep"></div>
     <div class="notice" id="wn-rules"></div>
@@ -2160,5 +2161,24 @@ makeLand("ln", $("#p-ln"));
     const P = W.per_paper[k];
     box.innerHTML = `<p class="sub">${esc(k)} · ตัวเทียบ: ${esc(P.comparator)}${P.excluded?` · <b>ตัดออกจากผลรวม</b>: ${esc(P.excluded)}`:""}</p><div class="tbox"><table>${head}<tbody>${row("รวมทุก metric",P.all_metrics)}${Object.entries(P.by_metric).map(([m,v])=>row(m,v)).join("")}</tbody></table></div>`; };
   document.querySelector("#wa-k").addEventListener("change", draw); document.querySelector("#wa-p").addEventListener("change", drawP); draw();
+})();
+
+/* ---------- H1-H3 และความยากที่วัดได้ (29 ต.ค. 2026) ข้อมูลจาก D.hyp ---------- */
+(function(){
+  const H = D.hyp, el = document.querySelector("#wn-hyp"); if (!H || !el) return;
+  const f2 = x => (x==null||isNaN(x)) ? "–" : Number(x).toFixed(2), fp = p => p==null ? "–" : (p<0.001 ? "<0.001" : Number(p).toFixed(3));
+  const mrow = (lab, m) => { const g=m.M1_gee||{}, c=m.M2_conditional||{}, b=m.M3_bayes_mixed||{}, cr=m.crude||{};
+    return `<tr><td>${esc(lab)}</td><td class="num">${cr.test_win}/${cr.test_win+cr.test_loss} vs ${cr.base_win}/${cr.base_win+cr.base_loss}</td><td class="num">${f2(g.odds_ratio)} [${f2((g.ci95||[])[0])}, ${f2((g.ci95||[])[1])}] p ${fp(g.p)}</td><td class="num">${c.odds_ratio!=null?`${f2(c.odds_ratio)} [${f2(c.ci95[0])}, ${f2(c.ci95[1])}] p ${fp(c.p)}`:esc(c.not_estimable||"–")} · ${c.papers_informative} paper</td><td class="num">${f2(b.odds_ratio)} [${f2((b.ci95_approx||[])[0])}, ${f2((b.ci95_approx||[])[1])}]</td></tr>`; };
+  const A = H.main, W = H.within, H2 = H.h2, H3a = H.h3a, H3b = H.h3b, DO = H.diff;
+  el.innerHTML = `<h3 class="ct">สมมติฐาน H1–H3 และความยากที่วัดได้ <span class="unit">plain SMOTE · ทุก metric · หน่วย paper เป็น cluster</span></h3>
+    <p class="sub" style="margin:0"><b>H1</b> วิธีที่เสนอชนะบ่อยกว่าบนข้อมูล modified/synthetic มากกว่า original · odds ratio &lt; 1 = ชนะบน modified/synthetic น้อยกว่า · ตัด tie ออกจากโมเดล</p>
+    <div class="tbox"><table><thead><tr><th>การเทียบ (หน่วยแถว)</th><th class="num">ชนะ/ตัดสินได้</th><th class="num">GEE (cluster paper)</th><th class="num">ภายใน paper (conditional)</th><th class="num">mixed model (Bayes)</th></tr></thead><tbody>
+    ${mrow("modified+synthetic vs original · ทุก metric", A.H1_primary_modsyn_vs_original)}${mrow("modified+synthetic vs มาตรฐาน · ทุก metric", A.H1_modsyn_vs_standard)}${mrow("repository-defined vs original", A.repository_defined_vs_original)}${mrow("บอกที่มาไม่ได้ vs มาตรฐาน", A.not_stated_vs_standard)}
+    ${mrow("H1 · หนึ่งผลต่อ dataset", H.r1.H1_primary_modsyn_vs_original)}${mrow("H1 · กติกา A (metric เดียว)", H.r2.H1_primary_modsyn_vs_original)}</tbody></table></div>
+    <p class="cap">ราย paper (13 paper ที่มีทั้งสองแบบ): สัดส่วนชนะบน modified/synthetic สูงกว่า ${W.modsyn_higher} · บนมาตรฐานสูงกว่า ${W.std_higher} · เท่ากัน ${W.equal} (sign test p ${fp(W.sign_test_p)}) → <b>H1 ไม่ได้รับการสนับสนุน</b> ทิศทางกลับด้านแต่ไม่ทนต่อการเปลี่ยนหน่วย</p>
+    <p class="sub" style="margin:0"><b>H2</b> paper ที่ใส่ชุดมาตรฐานชุดเดียว: ${H2.papers.map(p=>`${esc(p.paper)} (มาตรฐาน ${p.std_win_loss_tie}, อื่น ${p.modsyn_win_loss_tie} ชนะ/แพ้/เสมอ)`).join(" · ")} · บนข้อมูลอื่นชนะ ${H2.non_standard_rows_token_papers.win_share_of_decided.pct}% vs paper อื่น ${H2.non_standard_rows_other_papers.win_share_of_decided.pct}% · 2 paper ทดสอบไม่ได้</p>
+    <p class="sub" style="margin:0"><b>H3</b> granularity: รายชุด ${H3a.counts["per-dataset"]}, รายชุดบางส่วน ${H3a.counts["per-dataset partial"]}, กราฟ ${H3a.counts["plots only"]}, ค่าเฉลี่ย ${H3a.counts["aggregate only"]}, อันดับ ${H3a.counts["ranking only"]}, ไม่เทียบ ${H3a.counts["no comparison"]} จาก ${H3a.papers} paper · entry ที่ลิสต์แต่ไม่มีคู่ค่ากับ SMOTE ${H3b.not_in_comparison.k}/${H3b.not_in_comparison.n} (${H3b.not_in_comparison.pct}%, CI ${H3b.not_in_comparison.ci95.join("–")}) จาก ${H3b.papers_with_any_missing} paper</p>
+    <p class="sub" style="margin:0"><b>ความยากที่วัดได้</b> (${DO.tasks} ไฟล์, ${DO.papers} paper, ${DO.rows_joined} แถว): noise index +0.1 → odds ชนะ ×${f2(DO.models["noise_per_0.1"].gee.odds_ratio)} (p ${fp(DO.models["noise_per_0.1"].gee.p)}; ภายใน paper ×${f2(DO.models["noise_per_0.1"].within_paper.odds_ratio)} p ${fp(DO.models["noise_per_0.1"].within_paper.p)}; หนึ่งผลต่อไฟล์ ×${f2(DO.robust.odds_ratio)} p ${fp(DO.robust.p)}) · log2 IR ×${f2(DO.models.log2_IR.gee.odds_ratio)} (p ${fp(DO.models.log2_IR.gee.p)}) · exploratory</p>
+    <p class="cap">ที่มา <code>${esc(H.source)}</code></p>`;
 })();
 </script>
