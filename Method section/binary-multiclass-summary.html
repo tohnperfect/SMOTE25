@@ -1,0 +1,140 @@
+<title>SMOTE Family by Class Setting</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one reading column; a 3x3 rule-by-tested matrix leads, findings and the multiclass strategies follow, the full list and PDF checks close. Palette and faces follow the SMOTE25 Method Map. */
+:root{
+  --bg:#f3f5f7; --surface:#ffffff; --sunk:#eaeef2; --ink:#17212b; --muted:#56626e; --line:#d6dde4; --line-strong:#b9c3cd;
+  --bin:#1d5c9f; --bin-bg:#e4edf7; --mul:#a9530a; --mul-bg:#faecdf; --both:#0d735c; --both-bg:#dff1eb; --ovr:#6b4fa0; --ovr-bg:#ece6f6;
+  --f-display:'Archivo Narrow','Arial Narrow',system-ui,sans-serif;
+  --f-body:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --f-mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1418; --surface:#161d23; --sunk:#1c252d; --ink:#e3e9ee; --muted:#9ba7b2; --line:#29343e; --line-strong:#3b4855;
+  --bin:#7fb2ea; --bin-bg:#16283b; --mul:#efa75e; --mul-bg:#33240f; --both:#52c8a7; --both-bg:#0f2f28; --ovr:#b9a2e6; --ovr-bg:#251d36; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1418; --surface:#161d23; --sunk:#1c252d; --ink:#e3e9ee; --muted:#9ba7b2; --line:#29343e; --line-strong:#3b4855;
+  --bin:#7fb2ea; --bin-bg:#16283b; --mul:#efa75e; --mul-bg:#33240f; --both:#52c8a7; --both-bg:#0f2f28; --ovr:#b9a2e6; --ovr-bg:#251d36; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.55 var(--f-body);margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 64px;display:grid;gap:34px}
+.wrap>*{min-width:0}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0}
+h1{font-size:2.3rem;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:1.35rem;line-height:1.2;margin-bottom:12px}
+.eyebrow{font:600 .74rem/1 var(--f-display);text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:10px}
+.lead{max-width:68ch;margin:12px 0 0;color:var(--muted)}
+.lead b{color:var(--ink);font-weight:600}
+.n{font:500 .78rem var(--f-mono);color:var(--muted);margin-left:6px;font-variant-numeric:tabular-nums}
+
+.axes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.axis{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px}
+.axis b{font:600 1rem var(--f-display);display:block;margin-bottom:2px}
+.axis p{margin:0;font-size:.9rem;color:var(--muted)}
+
+.scroll{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+table.mx{width:100%;min-width:760px;border-collapse:collapse;table-layout:fixed}
+.mx th,.mx td{border-bottom:1px solid var(--line);padding:12px;vertical-align:top;text-align:left}
+.mx td+td,.mx th+th,.mx th+td{border-left:1px solid var(--line)}
+.mx thead th{font:600 .98rem/1.2 var(--f-display)}
+.mx thead th:first-child{width:220px;font:500 .78rem/1.4 var(--f-body);color:var(--muted)}
+.mx .ax{font-weight:600;color:var(--ink)}
+.mx thead th.c-Binary{color:var(--bin);box-shadow:inset 0 3px 0 var(--bin)}
+.mx thead th.c-Both{color:var(--both);box-shadow:inset 0 3px 0 var(--both)}
+.mx thead th.c-Multiclass{color:var(--mul);box-shadow:inset 0 3px 0 var(--mul)}
+.mx tbody th b{font:600 1rem var(--f-display)}
+.mx tbody th small{display:block;color:var(--muted);font-size:.8rem;line-height:1.35;margin-top:3px;font-weight:400}
+.mx tbody tr:last-child>*{border-bottom:0}
+.big{font:700 2rem/1 var(--f-display);margin-bottom:8px;font-variant-numeric:tabular-nums}
+.zero .big{color:var(--line-strong)}
+.ms{display:flex;flex-wrap:wrap;gap:4px}
+.ms span{font-size:.78rem;line-height:1.35;border:1px solid var(--line-strong);border-radius:4px;padding:1px 6px;background:var(--surface)}
+.ms span i{font:normal .68rem var(--f-mono);color:var(--muted);margin-left:4px}
+.ms span.chk{border-color:var(--ink);font-weight:600}
+.note{font-size:.82rem;color:var(--muted);margin:8px 2px 0}
+.note .chk{font-weight:600;color:var(--ink);border:1px solid var(--ink);border-radius:4px;padding:0 5px}
+
+ol.find{margin:0;padding:0;list-style:none;display:grid;gap:10px;counter-reset:f}
+ol.find li{counter-increment:f;display:grid;grid-template-columns:2.2rem minmax(0,1fr);gap:4px 10px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px}
+ol.find li::before{content:counter(f);font:700 1.5rem/1 var(--f-display);color:var(--muted);grid-row:span 2}
+ol.find b{font:600 1.02rem/1.3 var(--f-display)}
+ol.find p{margin:0;font-size:.9rem;color:var(--muted);max-width:80ch}
+ol.find p strong{color:var(--ink);font-weight:600}
+
+.strats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:10px}
+.st,.ck{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;display:grid;gap:6px;align-content:start}
+.sh{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px}
+.sh b{font:600 1rem var(--f-display)}
+.st p,.ck p{margin:0;font-size:.86rem;color:var(--muted)}
+
+table.list{width:100%;min-width:680px;border-collapse:collapse}
+.list th{text-align:left;font:600 .72rem/1 var(--f-display);text-transform:uppercase;letter-spacing:.07em;color:var(--muted);padding:10px;border-bottom:1px solid var(--line-strong)}
+.list td{padding:7px 10px;border-bottom:1px solid var(--line);font-size:.88rem;vertical-align:top}
+.list tr:last-child td{border-bottom:0}
+.list .nm{font-weight:600}
+.list .yr{font-family:var(--f-mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.list .sm{color:var(--muted);font-size:.82rem}
+.pill{display:inline-block;font:600 .74rem/1.5 var(--f-display);letter-spacing:.02em;padding:0 7px;border-radius:3px;white-space:nowrap}
+.r-Binary,.t-Binary{color:var(--bin);background:var(--bin-bg)}
+.r-Multiclass,.t-Multi{color:var(--mul);background:var(--mul-bg)}
+.r-Onevsrest{color:var(--ovr);background:var(--ovr-bg)}
+.t-Both{color:var(--both);background:var(--both-bg)}
+.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:10px}
+footer{font-size:.82rem;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;display:grid;gap:6px}
+footer p{margin:0;max-width:90ch}
+@media (max-width:640px){h1{font-size:1.8rem}.axes{grid-template-columns:minmax(0,1fr)}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">SMOTE25 · Method section · 28 October 2026</div>
+  <h1>Binary, multiclass, or both?</h1>
+  <p class="lead">How the <b>37 SMOTE-family methods</b> in our corpus of 76 papers handle the number of classes. Each method is placed on two axes: what its generation rule is written for, and what data its own paper tested it on.</p>
+</header>
+
+<section class="axes" aria-label="The two axes">
+  <div class="axis"><b>Generation rule</b><p>What the oversampler itself is written for: one minority class against the rest, or several classes at once.</p></div>
+  <div class="axis"><b>Tested on</b><p>The class setting of the paper's own experiments. The Drive folder is not used: it differs from the experiments in 12 of the 37 papers.</p></div>
+</section>
+
+<section>
+  <h2>The two axes together</h2>
+  <div class="scroll"><table class="mx"><thead><tr><th scope="col"><span class="ax">Generation rule</span> ↓ <span class="ax">Tested on</span> →</th><th scope="col" class="c-Binary">Binary only<span class="n">23</span></th><th scope="col" class="c-Both">Both<span class="n">8</span></th><th scope="col" class="c-Multiclass">Multiclass only<span class="n">6</span></th></tr></thead><tbody><tr><th scope="row"><b>Binary rule</b><span class="n">23</span><small>Written for one minority class against the rest.</small></th><td><div class="big">22</div><div class="ms"><span class="m">SMOTE<i>02</i></span><span class="m">SMOTE-Tomek / ENN<i>04</i></span><span class="m">Borderline-SMOTE<i>05</i></span><span class="m">Cluster-SMOTE<i>06</i></span><span class="m">ADASYN<i>08</i></span><span class="m">LS<i>08</i></span><span class="m">Safe-Level-SMOTE<i>09</i></span><span class="m">RAMOBoost<i>10</i></span><span class="m chk">INOS<i>13</i></span><span class="m">MWMOTE<i>14</i></span><span class="m">RBBoost<i>15</i></span><span class="m">SMOTE-IPF<i>15</i></span><span class="m">A-SUWO<i>16</i></span><span class="m">CGMOS<i>16</i></span><span class="m">k-means SMOTE<i>18</i></span><span class="m">G-SMOTE<i>19</i></span><span class="m">AB-SMOTE<i>20</i></span><span class="m">HDE<i>21</i></span><span class="m">FW-SMOTE<i>22</i></span><span class="m chk">KNNOR<i>22</i></span><span class="m">SVDD-WSMOTE<i>22</i></span><span class="m">CISO<i>26</i></span></div></td><td><div class="big">1</div><div class="ms"><span class="m chk">Loyalty-SMOTE<i>26</i></span></div></td><td class="zero"><div class="big">0</div></td></tr><tr><th scope="row"><b>One-vs-rest stated</b><span class="n">1</span><small>Each class against the rest is stated, never run.</small></th><td><div class="big">1</div><div class="ms"><span class="m chk">QC-SMOTE<i>26</i></span></div></td><td class="zero"><div class="big">0</div></td><td class="zero"><div class="big">0</div></td></tr><tr><th scope="row"><b>Multiclass rule</b><span class="n">13</span><small>Generates for several classes itself.</small></th><td class="zero"><div class="big">0</div></td><td><div class="big">7</div><div class="ms"><span class="m chk">SMOTEBoost<i>03</i></span><span class="m">SSRBF / DSRBF<i>11</i></span><span class="m">RSMOTE<i>21</i></span><span class="m">NROMM<i>23</i></span><span class="m chk">OREM / OREM-M<i>23</i></span><span class="m">MC-MBRC<i>24</i></span><span class="m">GDHS<i>25</i></span></div></td><td><div class="big">6</div><div class="ms"><span class="m">SCUT<i>15</i></span><span class="m">SMOM<i>17</i></span><span class="m">GAMO<i>19</i></span><span class="m">EMDO<i>21</i></span><span class="m">GLOS<i>23</i></span><span class="m">MKC-SMOTE<i>24</i></span></div></td></tr></tbody></table></div>
+  <p class="note">Each cell shows the number of methods and their names with the publication year. <span class="chk">Bold outline</span>: the class setting was checked against the PDF on 28 October 2026; the others come from the Method Map record.</p>
+</section>
+
+<section>
+  <h2>What the matrix shows</h2>
+  <ol class="find">
+    <li><b>Most SMOTE-family generators are still two-class.</b><p><strong>23 of 37</strong> are written for one minority class against the rest. Using them on multiclass data requires decomposition (one-vs-one, one-vs-rest) or reducing the data to two classes.</p></li>
+    <li><b>What a method is designed for and what it was tested on are different questions.</b><p>Loyalty-SMOTE has a binary rule but is run on multiclass data framed as largest class vs smallest class. <strong>6 methods with a multiclass rule</strong> are never shown on two classes. QC-SMOTE states a one-vs-rest rule that it never runs, and KNNOR names one only as future work.</p></li>
+    <li><b>Multiclass rules have become common only recently.</b><p>Before 2018, <strong>4 of 18</strong> SMOTE-family methods have a multiclass rule; since 2018, <strong>9 of 19</strong> do.</p></li>
+    <li><b>Binary-rule papers usually test on multiclass data reduced to two classes.</b><p><strong>17 of the 23</strong> say they turned multiclass sources into two-class problems, usually the smallest class against the rest; the others use ready-made two-class benchmarks such as KEEL splits. (16 from the Method Map evidence text, Loyalty-SMOTE from its PDF.)</p></li>
+    <li><b>"Multiclass" can come from outside the generator.</b><p>In SMOTEBoost the classes are carried by AdaBoost.M2; its SMOTE step works on one minority class at a time with amounts set by hand.</p></li>
+  </ol>
+</section>
+
+<section>
+  <h2>How the 13 multiclass rules handle several classes</h2>
+  <div class="strats"><div class="st"><div class="sh"><b>To the largest class</b><span class="n">3</span></div><p>Every minority class is grown to the size of the largest class.</p><div class="ms"><span class="m">SMOM<i>17</i></span><span class="m">RSMOTE<i>21</i></span><span class="m">MKC-SMOTE<i>24</i></span></div></div><div class="st"><div class="sh"><b>To the mean class size</b><span class="n">2</span></div><p>Small classes are grown, and large ones reduced, to the mean class size.</p><div class="ms"><span class="m">SCUT<i>15</i></span><span class="m">GDHS<i>25</i></span></div></div><div class="st"><div class="sh"><b>Class by class</b><span class="n">4</span></div><p>One class at a time, against the classes larger than it, with checks against other minority classes.</p><div class="ms"><span class="m">SSRBF / DSRBF<i>11</i></span><span class="m">NROMM<i>23</i></span><span class="m chk">OREM / OREM-M<i>23</i></span><span class="m">MC-MBRC<i>24</i></span></div></div><div class="st"><div class="sh"><b>Per-class generator or region</b><span class="n">3</span></div><p>Each minority class gets its own generator, ellipsoids or instance types.</p><div class="ms"><span class="m">GAMO<i>19</i></span><span class="m">EMDO<i>21</i></span><span class="m">GLOS<i>23</i></span></div></div><div class="st"><div class="sh"><b>Through the ensemble</b><span class="n">1</span></div><p>SMOTE stays two-class; the boosting framework (AdaBoost.M2) carries the classes.</p><div class="ms"><span class="m chk">SMOTEBoost<i>03</i></span></div></div></div>
+</section>
+
+<section>
+  <h2>All 37 methods</h2>
+  <div class="scroll"><table class="list">
+    <thead><tr><th scope="col">Method</th><th scope="col">Year</th><th scope="col">Generation rule</th><th scope="col">Tested on</th><th scope="col">Multiclass strategy</th><th scope="col">Source</th></tr></thead>
+    <tbody><tr><td class="nm">SMOTE</td><td class="yr">2002</td><td><span class="pill r-Binary">Binary rule</span></td><td><span class="pill t-Binary">Binary</span></td><td class="sm">–</td><td class="sm">Record</td></tr><tr><td class="nm">SMOTEBoost</td><td class="yr">2003</td><td><span class="pill r-Multiclass">Multiclass rule</span></td><td><span class="pill t-Both">Both</span></td><td class="sm">Through the ensemble</td><td class="sm">PDF, 28 Oct</td></tr><tr><td class="nm">SMOTE-Tomek / ENN</td><td class="yr">2004</td><td><span class="pill r-Binary">Binary rule</span></td><td><span class="pill t-Binary">Binary</span></td><td class="sm">–</td><td class="sm">Record</td></tr><tr><td class="nm">Borderline-SMOTE</td><td class="yr">2005</td><td><span class="pill r-Binary">Binary rule</span></td><td><span class="pill t-Binary">Binary</span></td><td class="sm">–</td><td class="sm">Record</td></tr><tr><td class="nm">Cluster-SMOTE</td><td class="yr">2006</td><td><span class="pill r-Binary">Binary rule</span></td><td><span class="pill t-Binary">Binary</span></td><td class="sm">–</td><td class="sm">Record</td></tr><tr><td class="nm">ADASYN</td><td class="yr">2008</td><td><span class="pill r-Binary">Binary rule</span></td><td><span class="pill t-Binary">Binary</span></td><td class="sm">–</td><td class="sm">Record</td></tr><tr><td class="nm">LS</td><td class="yr">2008</td><td><span class="pill r-Binary">Binary rule</span></td><td><span class="pill t-Binary">Binary</span></td><td class="sm">–</td><td class="sm">Record</td></tr><tr><td class="nm">Safe-Level-SMOTE</td><td class="yr">2009</td><td><span class="pill r-Binary">Binary rule</span></td><td><span class="pill t-Binary">Binary</span></td><td class="sm">–</td><td class="sm">Record</td></tr><tr><td class="nm">RAMOBoost</td><td class="yr">2010</td><td><span class="pill r-Binary">Binary rule</span></td><td><span class="pill t-Binary">Binary</span></td><td class="sm">–</td><td class="sm">Record</td></tr><tr><td class="nm">SSRBF / DSRBF</td><td class="yr">2011</td><td><span class="pill r-Multiclass">Multiclass rule</span></td><td><span class="pill t-Both">Both</span></td><td class="sm">Class by class</td><td class="sm">Record</td></tr><tr><td class="nm">INOS</td><td class="yr">2013</td><td><span class="pill r-Binary">Binary rule</span></td><td><span class="pill t-Binary">Binary</span></td><td class="sm">–</td><td class="sm">PDF, 28 Oct</td></tr><tr><td class="nm">MWMOTE</td><td class="yr">2014</td><td><span class="pill r-Binary">Binary rule</span></td><td><span class="pill t-Binary">Binary</span></td><td class="sm">–</td><td class="sm">Record</td></tr><tr><td class="nm">RBBoost</td><td class="yr">2015</td><td><span class="pill r-Binary">Binary rule</span></td><td><span class="pill t-Binary">Binary</span></td><td class="sm">–</td><td class="sm">Record</td></tr><tr><td class="nm">SCUT</td><td class="yr">2015</td><td><span class="pill r-Multiclass">Multiclass rule</span></td><td><span class="pill t-Multi">Multiclass</span></td><td class="sm">To the mean class size</td><td class="sm">Record</td></tr><tr><td class="nm">SMOTE-IPF</td><td class="yr">2015</td><td><span class="pill r-Binary">Binary rule</span></td><td><span class="pill t-Binary">Binary</span></td><td class="sm">–</td><td class="sm">Record</td></tr><tr><td class="nm">A-SUWO</td><td class="yr">2016</td><td><span class="pill r-Binary">Binary rule</span></td><td><span class="pill t-Binary">Binary</span></td><td class="sm">–</td><td class="sm">Record</td></tr><tr><td class="nm">CGMOS</td><td class="yr">2016</td><td><span class="pill r-Binary">Binary rule</span></td><td><span class="pill t-Binary">Binary</span></td><td class="sm">–</td><td class="sm">Record</td></tr><tr><td class="nm">SMOM</td><td class="yr">2017</td><td><span class="pill r-Multiclass">Multiclass rule</span></td><td><span class="pill t-Multi">Multiclass</span></td><td class="sm">To the largest class</td><td class="sm">Record</td></tr><tr><td class="nm">k-means SMOTE</td><td class="yr">2018</td><td><span class="pill r-Binary">Binary rule</span></td><td><span class="pill t-Binary">Binary</span></td><td class="sm">–</td><td class="sm">Record</td></tr><tr><td class="nm">G-SMOTE</td><td class="yr">2019</td><td><span class="pill r-Binary">Binary rule</span></td><td><span class="pill t-Binary">Binary</span></td><td class="sm">–</td><td class="sm">Record</td></tr><tr><td class="nm">GAMO</td><td class="yr">2019</td><td><span class="pill r-Multiclass">Multiclass rule</span></td><td><span class="pill t-Multi">Multiclass</span></td><td class="sm">Per-class generator or region</td><td class="sm">Record</td></tr><tr><td class="nm">AB-SMOTE</td><td class="yr">2020</td><td><span class="pill r-Binary">Binary rule</span></td><td><span class="pill t-Binary">Binary</span></td><td class="sm">–</td><td class="sm">Record</td></tr><tr><td class="nm">EMDO</td><td class="yr">2021</td><td><span class="pill r-Multiclass">Multiclass rule</span></td><td><span class="pill t-Multi">Multiclass</span></td><td class="sm">Per-class generator or region</td><td class="sm">Record</td></tr><tr><td class="nm">HDE</td><td class="yr">2021</td><td><span class="pill r-Binary">Binary rule</span></td><td><span class="pill t-Binary">Binary</span></td><td class="sm">–</td><td class="sm">Record</td></tr><tr><td class="nm">RSMOTE</td><td class="yr">2021</td><td><span class="pill r-Multiclass">Multiclass rule</span></td><td><span class="pill t-Both">Both</span></td><td class="sm">To the largest class</td><td class="sm">Record</td></tr><tr><td class="nm">FW-SMOTE</td><td class="yr">2022</td><td><span class="pill r-Binary">Binary rule</span></td><td><span class="pill t-Binary">Binary</span></td><td class="sm">–</td><td class="sm">Record</td></tr><tr><td class="nm">KNNOR</td><td class="yr">2022</td><td><span class="pill r-Binary">Binary rule</span></td><td><span class="pill t-Binary">Binary</span></td><td class="sm">–</td><td class="sm">PDF, 28 Oct</td></tr><tr><td class="nm">SVDD-WSMOTE</td><td class="yr">2022</td><td><span class="pill r-Binary">Binary rule</span></td><td><span class="pill t-Binary">Binary</span></td><td class="sm">–</td><td class="sm">Record</td></tr><tr><td class="nm">GLOS</td><td class="yr">2023</td><td><span class="pill r-Multiclass">Multiclass rule</span></td><td><span class="pill t-Multi">Multiclass</span></td><td class="sm">Per-class generator or region</td><td class="sm">Record</td></tr><tr><td class="nm">NROMM</td><td class="yr">2023</td><td><span class="pill r-Multiclass">Multiclass rule</span></td><td><span class="pill t-Both">Both</span></td><td class="sm">Class by class</td><td class="sm">Record</td></tr><tr><td class="nm">OREM / OREM-M</td><td class="yr">2023</td><td><span class="pill r-Multiclass">Multiclass rule</span></td><td><span class="pill t-Both">Both</span></td><td class="sm">Class by class</td><td class="sm">PDF, 28 Oct</td></tr><tr><td class="nm">MC-MBRC</td><td class="yr">2024</td><td><span class="pill r-Multiclass">Multiclass rule</span></td><td><span class="pill t-Both">Both</span></td><td class="sm">Class by class</td><td class="sm">Record</td></tr><tr><td class="nm">MKC-SMOTE</td><td class="yr">2024</td><td><span class="pill r-Multiclass">Multiclass rule</span></td><td><span class="pill t-Multi">Multiclass</span></td><td class="sm">To the largest class</td><td class="sm">Record</td></tr><tr><td class="nm">GDHS</td><td class="yr">2025</td><td><span class="pill r-Multiclass">Multiclass rule</span></td><td><span class="pill t-Both">Both</span></td><td class="sm">To the mean class size</td><td class="sm">Record</td></tr><tr><td class="nm">CISO</td><td class="yr">2026</td><td><span class="pill r-Binary">Binary rule</span></td><td><span class="pill t-Binary">Binary</span></td><td class="sm">–</td><td class="sm">Record</td></tr><tr><td class="nm">Loyalty-SMOTE</td><td class="yr">2026</td><td><span class="pill r-Binary">Binary rule</span></td><td><span class="pill t-Both">Both</span></td><td class="sm">–</td><td class="sm">PDF, 28 Oct</td></tr><tr><td class="nm">QC-SMOTE</td><td class="yr">2026</td><td><span class="pill r-Onevsrest">One-vs-rest stated</span></td><td><span class="pill t-Binary">Binary</span></td><td class="sm">–</td><td class="sm">PDF, 28 Oct</td></tr></tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>The six edge cases checked against the PDFs</h2>
+  <div class="checks"><div class="ck"><div class="sh"><b>SMOTEBoost</b><span class="pill r-Multiclass">Multiclass rule</span></div><p>Several classes are handled by AdaBoost.M2, not by SMOTE: the formal algorithm names one minority class (Fig. 1, p.111), and in the 5-class KDDCup-99 run each minority class (U2R, R2L) gets a hand-set SMOTE amount (Sec. 4, p.112). Only U2R results are tabulated (Table 3).</p></div><div class="ck"><div class="sh"><b>INOS</b><span class="pill r-Binary">Binary rule</span></div><p>Written for a positive vs a negative class (Sec. 3, p.3). 48 two-class tasks built from 7 UCR sets, one class vs the rest (Sec. 4.2, pp.7-8); no multiclass extension mentioned.</p></div><div class="ck"><div class="sh"><b>KNNOR</b><span class="pill r-Binary">Binary rule</span></div><p>Algorithms 1-2 split the data into Smin and Smaj (pp.4, 7). 19 KEEL two-class sets; image demos are also one class vs the rest. Per-class multiclass use is named only as future work (conclusion, p.16).</p></div><div class="ck"><div class="sh"><b>OREM / OREM-M</b><span class="pill r-Multiclass">Multiclass rule</span></div><p>OREM (Alg. 1) is two-class; OREM-M (Alg. 2, Sec. 3.2, p.6172) extends it: classes drawn in random order weighted by remaining quota, a synthetic point is dropped when its nearest neighbour is another minority class. OREM is tested on 28 two-class sets, OREM-M on 21 multiclass sets (never on two classes); OREMBoost on both.</p></div><div class="ck"><div class="sh"><b>Loyalty-SMOTE</b><span class="pill r-Binary">Binary rule</span></div><p>Loyalty and the Attraction relabelling use all classes, but SMOTE grows only one minority class (Sec. 3.3, p.6). The 5 multiclass sets are run as largest class vs smallest class and scored with binary metrics (Sec. 4.4.4, p.12). Earlier coded as native multiclass; corrected.</p></div><div class="ck"><div class="sh"><b>QC-SMOTE</b><span class="pill r-Onevsrest">One-vs-rest stated</span></div><p>Each underrepresented class is the target against all other classes (Sec. 3.1, p.4; Sec. 3.7, p.7), but all 30 datasets are binary (Sec. 4.1, Table 1); the multiclass rule is never run.</p></div></div>
+</section>
+
+<footer>
+  <p>Source: SMOTE25 Method Map (76 papers, read 6 October 2026; Wang and Yao added 19 October), fields class_rule, mc_strategy, paper_scope and class_rule_note added 28 October 2026. SMOTE-family follows the Method Map definition (Core 34, Partial 3).</p>
+  <p>Not yet checked against the PDFs: the generation rule and strategy of the other 31 methods (taken from each record's multiclass-handling field), and the 17-of-23 count in finding 4.</p>
+</footer>
+</div>
