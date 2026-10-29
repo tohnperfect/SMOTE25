@@ -1,0 +1,570 @@
+% =====================================================================
+% SMOTE25 paper draft, Method part (SMOTE family): working draft v2 (Claude, 28 Oct 2026)
+% ---------------------------------------------------------------------
+% P asked (28 Oct) for a draft of the paper from SMOTE (2002) to the present,
+% written only from what the team has researched, centred on our part (the
+% methods of the SMOTE family), with space left for the team members working
+% on Datasets and on Performance Metrics. v1 (21 Oct) is replaced: all 37
+% SMOTE-family papers were re-read in full on 28 Oct, which corrected the
+% decision points of 21 of the 36 variants and added the class category.
+% Markup, delete before submission (same macros as the Data section draft):
+%  * \draftnum{}    number NOT checked against the PDFs (orange).
+%  * \claudedraft{} sentence that interprets or argues (blue). Claude wrote it so
+%                   the draft reads end to end; the interpretation must be P's
+%                   own, so rewrite or delete every one.
+%  * \evidence{}    where the numbers come from (grey).
+%  * \classev{}     class-setting evidence of one paper, with page references (grey).
+%  * \pcite{}       bibliography key not yet in references.bib (keys from
+%                   Data section/out/section7_key_map.csv; wang2012multiclass is new).
+%  * \pnote{}       a decision or check for P (boxed).
+%  * \teamslot{}{}  section reserved for a team member (boxed).
+% Generated parts (do not edit by hand; rerun Method section/build/make_tex.py
+% SMOTE25_Method_Map_1.html "Method section/manuscript/generated" from the repo root):
+%  * generated/smote-family-table.tex, generated/smote-family-methods.tex
+% Sources: SMOTE25_Method_Map_1.html (76 papers; fields smote_rel, smote_via,
+% class_category, class_evidence_pdf, smote_explain, all 37 SMOTE-family
+% records checked against the PDFs on 28 Oct 2026);
+% notes/smote25-development-brief.md (SMOTE 2002 facts with JAIR page numbers).
+% Conventions: British spelling, Title Case headings, caption above tables,
+% booktabs with \midrule only under the header, no em-dash.
+% When moved into sections/ for Overleaf, change the \input paths below.
+% =====================================================================
+\providecommand{\draftnum}[1]{\textcolor{orange}{#1}}
+\providecommand{\claudedraft}[1]{\textcolor{blue}{#1}}
+\providecommand{\evidence}[1]{\par\noindent{\footnotesize\textcolor{gray}{\textbf{Evidence:} #1}}\par}
+\providecommand{\classev}[1]{\par{\footnotesize\textcolor{gray}{\textbf{Class setting:} #1}}\par}
+\providecommand{\pcite}[1]{[\textsc{#1}]}
+\providecommand{\pnote}[1]{\par\noindent\fbox{\parbox{0.95\linewidth}{\small\textbf{[P]} #1}}\par}
+\providecommand{\teamslot}[2]{\par\noindent\fbox{\parbox{0.95\linewidth}{\small\textbf{[Team: #1]} #2}}\par}
+\providecommand{\fm}{$\bullet$}
+
+% =====================================================================
+\section{Introduction}
+\label{sec:introduction}
+
+\textcite{chawla2002smote} introduced the Synthetic Minority Over-sampling
+Technique (SMOTE) in this journal in 2002. Instead of replicating minority
+examples, SMOTE creates new ones by interpolating between a minority example
+and one of its nearest minority neighbours. Sixteen years later,
+\textcite{fernandez2018smote} reviewed the progress of SMOTE-based learning at
+its 15-year anniversary. This survey follows the line from 2002 to the present
+through a corpus of 76 papers and asks, for the methods that build on SMOTE,
+what exactly they change, and in which class setting (two classes, several
+classes, or both) they are shown to work.
+
+Our account rests on three elements. First, we write the SMOTE generation rule
+as six decisions and record which of them each method changes
+(Section~\ref{sec:smote-by-decision}). Second, we sort the methods by the class
+setting in which their papers actually generate synthetic data
+(Section~\ref{sec:class-setting}). Third, we give for every method an account of
+how it builds on SMOTE, with references to the pages of its paper
+(Section~\ref{sec:methods}). All 37 SMOTE-family papers in the corpus were read
+in full for this purpose.
+
+\pnote{Motivation (growth of the literature since 2018, relation to Fern\'andez
+et al.\ 2018, societal impact) and the research questions are still open; the
+development brief has material for them. Keep this introduction to what the
+Method part shows until the team agrees on the framing.}
+
+% =====================================================================
+\section{The SMOTE Generation Rule}
+\label{sec:smote-rule}
+
+Let $S_{\min}\subset\mathbb{R}^d$ be the minority examples of a two-class
+training set and $S_{\mathrm{maj}}$ the majority examples. For a seed
+$\mathbf{x}_i\in S_{\min}$, let $N_k(\mathbf{x}_i)$ denote its $k$ nearest
+neighbours within $S_{\min}$ under the Euclidean distance. SMOTE creates a
+synthetic example by choosing a neighbour $\mathbf{x}_j\in N_k(\mathbf{x}_i)$ at
+random and placing a point at a random position on the segment that joins them
+\parencite[pp.~328--329]{chawla2002smote}:
+\begin{equation}
+  \mathbf{x}_{\mathrm{new}} = \mathbf{x}_i + \lambda\,(\mathbf{x}_j-\mathbf{x}_i),
+  \qquad \lambda\sim U(0,1).
+  \label{eq:smote}
+\end{equation}
+The amount of oversampling is a percentage $N$: at $N=200\%$ each minority
+example produces two synthetic points, towards two of its $k=5$ neighbours, and
+amounts below $100\%$ apply the rule to a random subset of the minority class.
+In the experiments SMOTE is combined with random undersampling of the majority
+class at levels from $10\%$ to $2000\%$ \parencite[pp.~331, 337]{chawla2002smote}.
+The same paper extends the rule to mixed features (SMOTE-NC) and to nominal
+features (SMOTE-N), the latter without evaluation
+\parencite[pp.~348--351]{chawla2002smote}.
+
+Read as a procedure, Eq.~\eqref{eq:smote} fixes six choices in the simplest way
+(Table~\ref{tab:decision-points}): every minority example is a seed with equal
+weight; every seed receives the same number of points; the partner is drawn
+uniformly from the five nearest minority neighbours; the point is drawn uniformly
+on the segment; nothing is removed afterwards; and the generator runs once,
+before training. We call these the six \emph{decision points} of the rule. A
+general SMOTE-family generator can then be written as
+\begin{equation}
+  i\sim w(\cdot),\quad g_i,\quad \mathbf{x}_j\sim q(\cdot\mid\mathbf{x}_i),\quad
+  \mathbf{x}_{\mathrm{new}}\sim r(\cdot\mid\mathbf{x}_i,\mathbf{x}_j),\quad F(\cdot),
+  \label{eq:template}
+\end{equation}
+with a seed distribution $w$, an allocation $g_i$ of points to seeds (or to
+clusters or classes), a partner distribution $q$, a placement distribution $r$,
+and a filter $F$ applied to the enlarged training set; the sixth decision is
+whether the procedure is called once or repeatedly inside a learner. SMOTE is the
+special case with uniform $w$, constant $g_i=N/100$, uniform $q$ over
+$N_5(\mathbf{x}_i)$, $r$ uniform on the segment, and the identity as $F$.
+
+\begin{table}[t]
+\centering\small
+\caption{The Six Decision Points of the SMOTE Generation Rule. Papers: SMOTE-family
+papers in the corpus that change each decision (37 papers; a paper is counted once
+for every decision it changes).}
+\label{tab:decision-points}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}p{0.16\linewidth}p{0.3\linewidth}p{0.24\linewidth}r@{}}
+\toprule
+Decision point & What it decides & SMOTE (2002) & Papers\\
+\midrule
+Seed selection & Which minority points become seeds, or how they are weighted & All seeds, equal weight & 24\\
+Sample allocation & How many points each seed, cluster or class receives & $N/100$ per seed & 21\\
+Neighbour choice & Which partner is paired with the seed & Uniform over 5 minority neighbours, Euclidean & 22\\
+Placement rule & Where the new point lands & Uniform on the segment & 13\\
+Post-filtering & What is removed or rejected after generation & Nothing & 12\\
+Inside a pipeline & Whether generation runs inside boosting, bagging, a wrapper or training & Once, before training & 8\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\pnote{The published pseudo-code draws the gap once per attribute, not once per
+point (p.~329), so a point lies in the box spanned by $\mathbf{x}_i$ and
+$\mathbf{x}_j$ rather than on the segment. GDHS does the same on purpose (its
+Eq.~3). Check the printed page; if confirmed, this is worth a footnote.}
+
+% =====================================================================
+\section{Review Method}
+\label{sec:review-method}
+
+\subsection{Corpus}
+\label{sec:corpus}
+The corpus is the team's collection of 76 papers, published from 1972 to 2026
+and kept in four folders by problem setting: binary (24 papers), multiclass (21),
+both (29) and surveys (2). Sixty-six papers propose a new method, five are
+foundational (for example ENN, Tomek links and AdaBoost), three are empirical
+studies and two are surveys. Each paper was recorded in a coding sheet (the
+Method Map) with its approach, mechanism, baselines, datasets, classifiers,
+metrics, stated limitations and code availability.
+
+\teamslot{Review protocol}{Search strategy, databases, time window, inclusion and
+exclusion criteria, and the PRISMA-style flow belong here (Section 3 of the
+outline). The numbers above describe the corpus as it stands on 28 October 2026.}
+
+\subsection{What Counts as a SMOTE-Family Method}
+\label{sec:smote-definition}
+We call a method \emph{SMOTE-family} when it creates synthetic minority examples
+by interpolating between a minority seed and a neighbour as in
+Eq.~\eqref{eq:smote}, or by a rule that extends it: a different law for
+$\lambda$, a region built around the segment, extrapolation along the line
+through the two points, or a convex combination of several instances. The
+definition concerns the generator, not the name of a method. Each paper received
+one of four labels: \emph{Core} (34 papers), where interpolation is the main
+generator; \emph{Partial} (3: INOS, EMDO and GLOS), where it is one of several
+generators; \emph{Study} (3), which evaluates or reviews SMOTE without proposing
+a generator \pcite{fernandez2013analysing}\pcite{pradipta2021smote}\pcite{hassanat2022stop};
+and \emph{Not counted} (12), related to SMOTE but generating in another way or not
+at all. The remaining 24 papers have no direct link to SMOTE.
+
+Ten of the twelve \emph{Not counted} papers generate synthetic minority examples,
+but not between two instances: on the Mahalanobis contour of a seed (MDO, AMDO),
+inside a sphere or ball around one point (MC-CCR, SHSampler, MC-NCLWO, MLOS),
+along a random direction at a Gaussian distance (GDO), by perturbing points near a
+cluster centroid (CBHSID), or by hill climbing on a potential field (RBO, MC-RBO).
+The other two derive from SMOTE but drop its generator: RUSBoost replaces SMOTE in
+SMOTEBoost by random undersampling, and AdaBoost.NC with random oversampling
+\pcite{wang2012multiclass} duplicates examples. Two inclusions are judgement calls:
+G-SMOTE samples in a hypersphere whose radius is set by the chosen neighbour and
+which can be shrunk back to the segment, and GAMO replaces two-point interpolation
+by a learned convex combination of all instances of a class. Both are counted
+because they generalise the segment rather than replace it. Nine of the ten
+region- or distribution-based generators appeared in 2018 or later.
+
+\subsection{Coding Procedure}
+\label{sec:coding}
+All 37 SMOTE-family papers were read in full on 28 October 2026, including
+supplementary material where the main paper left the class setting open. For each
+paper we recorded (i) which of the six decision points the generator changes,
+(ii) a short account of how it builds on SMOTE, and (iii) its class category,
+defined by what the paper shows its generator doing:
+\begin{itemize}
+\item \emph{Binary only}: every experiment in which the generator creates
+      synthetic data is a two-class problem. A multiclass dataset reduced to two
+      classes (one class against the rest, merged classes, two classes kept and the
+      rest dropped, or a ready-made split such as KEEL's \texttt{yeast-2\_vs\_4})
+      counts here, and so does a multiclass extension that is described but never
+      run.
+\item \emph{Multiclass only}: the generator creates synthetic data with three or
+      more classes kept, and is never run on a two-class problem.
+\item \emph{Binary + Multiclass}: the same generator is run on at least one
+      two-class problem and on at least one problem with three or more classes
+      kept, without first reducing it to two classes.
+\end{itemize}
+A paper that generates more than one type of data (for example images and
+tables) is classified for each data type separately
+(Section~\ref{sec:other-data}), and its overall category combines them.
+Experiments reported only in supplementary material count, since they show what
+the method can do.
+Every statement in the per-method accounts carries a page, section, table or
+equation reference to its paper. The reading corrected the decision points of 21
+of the 36 variants recorded in an earlier pass, mostly by adding decisions that
+the first coding had missed.
+
+\pnote{The reading was done by AI readers, one or two papers each, under fixed
+rules (Method section/pdf-check/coding\_rules.md; their reports are the JSON files
+in the same folder). State this in the paper as an assisted extraction and plan a
+human check of a sample, as the Data section does.}
+
+% =====================================================================
+\section{Datasets}
+\label{sec:datasets}
+
+\teamslot{Datasets}{Which datasets the SMOTE-family papers use, where they come
+from, how they are modified, and what the reader should check. The Data section
+draft (Data section/manuscript/data-section-draft.tex) covers the whole corpus.
+Two findings from the Method side belong here or should be cross-referenced:
+(1) 23 of the 24 Binary-only SMOTE-family papers evaluate on multiclass sources
+reduced to two classes, 15 by their own reduction and 8 through ready-made
+two-class splits (mostly KEEL) whose reduction they do not describe
+(Section~\ref{sec:class-setting}); (2) the same dataset name can hide different
+class splits, so a multiclass name in a dataset list does not show multiclass
+generation.}
+
+% =====================================================================
+\section{Performance Metrics}
+\label{sec:metrics}
+
+\teamslot{Performance metrics}{Which metrics the SMOTE-family papers report
+(AUC, G-mean, F-measure, MCC, macro-averaged metrics for multiclass problems),
+which statistical tests they run, and how comparable the results are. The
+Section~7 draft (SMOTE25\_Evaluation\_Section.html) is the starting point. From
+the Method side: several multiclass-capable methods score multiclass data with
+macro-averaged or MAUC metrics (RSMOTE, MKC-SMOTE, GDHS), while Loyalty-SMOTE
+scores its multiclass datasets with binary metrics.}
+
+% =====================================================================
+\section{The SMOTE Family by Decision Point}
+\label{sec:smote-by-decision}
+
+Table~\ref{tab:smote-family} lists the 37 SMOTE-family methods with their class
+category and the decisions each one changes. A method is marked under every
+decision it changes, so no method is forced into a single category. Variants
+differ widely in how much they change: of the 36 variants, 8 change one decision,
+8 change two, 8 change three, 9 change four, 2 change five and one (OREM with its
+multiclass and boosting versions) changes all six.
+
+\begin{table}[p]
+\centering\footnotesize
+\caption{SMOTE-Family Methods in the Corpus. Class: B binary only, M multiclass
+only, B+M binary and multiclass (Section~\ref{sec:coding}; * provisional). Link:
+Core or Partial. Decisions: Seed selection, sample Allocation, Neighbour choice,
+Placement rule, post-Filtering, inside a Pipeline. Checked against the PDFs on
+28 October 2026.}
+\label{tab:smote-family}
+\setlength{\tabcolsep}{3pt}
+\input{generated/smote-family-table}
+\end{table}
+
+\paragraph{Seed selection (24 papers).}
+The most frequently changed decision is the choice of seeds, and the papers do
+it in four ways. Eight concentrate generation near the class border or on hard
+examples: Borderline-SMOTE~\pcite{han2005borderline} and
+AB-SMOTE~\pcite{almajzoub2020absmote} use only ``danger'' seeds,
+RAMOBoost~\pcite{chen2010ramoboost} draws seeds from a ranking that favours border
+points, MWMOTE~\pcite{barua2014mwmote} and A-SUWO~\pcite{nekooeimehr2016asuwo}
+weight seeds by closeness to the majority class, EMDO~\pcite{yao2021emdo} and
+GLOS~\pcite{han2023glos} use borderline seeds for their interpolating generator,
+and Loyalty-SMOTE~\pcite{hu2026loyalty} keeps boundary samples with a Loyalty
+score between 0 and $m$. Seven favour safe or dense seeds:
+k-means SMOTE~\pcite{douzas2018kmeans} keeps minority-dominated clusters,
+KNNOR~\pcite{islam2022knnor} the densest minority points,
+MC-MBRC~\pcite{ma2024mcmbrc} safe samples by fuzzy membership,
+MKC-SMOTE~\pcite{wang2024mkc} points with at least half same-class neighbours,
+GDHS~\pcite{yan2025gdhs} a safe factor, and CISO~\pcite{yadav2025ciso} and
+QC-SMOTE~\pcite{upman2026qcsmote} safety or trust scores. Five remove noise or
+type their seeds before generation: Safe-Level-SMOTE~\pcite{bunkhumpornpat2009safelevel}
+skips pairs of noisy points, CGMOS~\pcite{zhang2016cgmos} weights seeds by the
+expected gain in posterior certainty, RSMOTE~\pcite{chen2021rsmote} drops noise and
+separates borderline from safe seeds, SVDD-WSMOTE~\pcite{tao2022svddw} removes
+overlapped seeds inside the majority boundary, and NROMM~\pcite{liu2023nromm}
+splits seeds into inland, borderline and trapped. In the last four the learner
+sets the seeds: SMOTEBoost~\pcite{chawla2003smoteboost} and OREMBoost sample them
+from the boosting distribution, RBBoost~\pcite{diezpastor2015randombalance} may
+grow the majority class when it draws inverted class proportions, and
+GAMO~\pcite{mullick2019gamo} has no single seed at all.
+
+\paragraph{Sample allocation (21).}
+Ten methods give seeds unequal numbers of points: ADASYN~\pcite{he2008adasyn} by
+the share of majority neighbours, RAMOBoost, MWMOTE, A-SUWO, RSMOTE, SVDD-WSMOTE,
+CISO and QC-SMOTE through weighted seed draws or quotas, k-means SMOTE by the
+inverse density of clusters, and NROMM by local density. Seven set quotas per
+class or region: SSRBF and DSRBF~\pcite{fernandeznavarro2011dsrbf} enlarge one
+class at a time, SCUT~\pcite{agrawal2015scut} and GDHS fill classes to the mean
+class size, MC-MBRC to the largest class minus its overlap, OREM-M~\pcite{zhu2023orem}
+draws classes in proportion to their remaining quota, GLOS uses class
+discreteness and EMDO splits each class's quota across ellipsoids. LS~\pcite{cieslak2008ls}
+searches the SMOTE level per data segment with a wrapper, and RBBoost draws random
+class proportions. INOS~\pcite{cao2013inos} splits the quota between an
+interpolating and a Gaussian generator, and in GAMO the allocation is learned.
+
+\paragraph{Neighbour choice (22).}
+Nine methods restrict the partner to a region: the same cluster
+(Cluster-SMOTE~\pcite{cieslak2006cluster}, MWMOTE, k-means SMOTE, NROMM), a
+sub-cluster that does not cross the majority class (A-SUWO), other borderline
+points (AB-SMOTE), the same ellipsoid under its Mahalanobis metric (EMDO), safe
+and border samples of the same class (MC-MBRC) or the boundary set
+(Loyalty-SMOTE). Five allow a majority point as partner or radius point, which the
+2002 paper listed as future work \parencite[p.~348]{chawla2002smote}:
+Borderline-SMOTE2, G-SMOTE~\pcite{douzas2019gsmote}, HDE~\pcite{chen2021hde},
+OREM and GLOS. Four reweight the partners or directions (SMOM~\pcite{zhu2017smom},
+GDHS, CISO, SVDD-WSMOTE), three replace the single partner by several instances
+(KNNOR chains through all $k$ neighbours, MKC-SMOTE uses their centroid, GAMO all
+instances of the class), and FW-SMOTE~\pcite{maldonado2022fwsmote} changes the
+distance to a feature-weighted Minkowski metric.
+
+\paragraph{Placement rule (13).}
+Five methods change the law of $\lambda$ or the step: Borderline-SMOTE2
+($\lambda\le 0.5$ towards majority partners), Safe-Level-SMOTE (shifted towards
+the safer endpoint), OREM (half the step towards majority partners), CISO (a
+truncated $q$-Gaussian on a segment between two neighbours of the anchor) and HDE
+(a step from $N(0,1)$, which can extrapolate). Five leave the segment: G-SMOTE (a
+truncated, deformed hypersphere), MKC-SMOTE (the line from the neighbours'
+centroid through the seed and beyond), KNNOR (chained steps), GLOS (a step capped
+at the nearest-neighbour distance, plus two non-interpolating generators) and EMDO
+(points along ellipsoid axes in pure ellipsoids). GAMO uses a learned convex
+combination, QC-SMOTE keeps the best of several candidates, and NROMM uses an
+optimised embedding for trapped seeds and a constrained rule for categorical
+values.
+
+\paragraph{Post-filtering (12).}
+Four methods clean the enlarged training set as a whole: SMOTE-Tomek and
+SMOTE-ENN~\pcite{batista2004study}, SMOTE-IPF~\pcite{saez2015smoteipf}, INOS (noise
+links) and Loyalty-SMOTE. Five test each candidate and reject or replace it:
+KNNOR, SVDD-WSMOTE, QC-SMOTE, MKC-SMOTE (which over-generates and keeps the
+candidates nearest the centroid) and OREM-M (which drops points nearest to another
+minority class). Three remove or move majority examples in the regions where
+synthetic points were placed: NROMM, MC-MBRC and GDHS.
+
+\paragraph{Inside a pipeline (8).}
+Eight methods call the generator repeatedly inside a learner: in every round of
+AdaBoost.M2 (SMOTEBoost, RAMOBoost, RBBoost, OREMBoost), in every member of a
+bagging ensemble (HDE), inside a wrapper that tunes the sampling levels (LS),
+during the evolutionary training of a radial basis function network (DSRBF), or
+inside adversarial training (GAMO).
+
+\evidence{Method Map smote\_via after the 28 Oct PDF check (old values kept in
+smote\_via\_v1); smote\_explain of each method. The groupings within each
+decision are Claude's reading of those accounts.}
+
+\pnote{The groupings in these paragraphs (for example border vs safe seeds) are
+a new reading of the accounts, not fields of the Method Map. Keep only the ones
+you want to defend, and check them against Section~\ref{sec:methods}.}
+
+% Flush Table~\ref{tab:smote-family} (a full float page) here; otherwise every
+% later table queues behind it until the end of the document. Drafting layout only.
+\clearpage
+
+% =====================================================================
+\section{Binary, Multiclass, or Both}
+\label{sec:class-setting}
+
+\begin{table}[t]
+\centering\small
+\caption{SMOTE-Family Methods by Class Category and Period (37 Papers).}
+\label{tab:class-period}
+\begin{tabular}{lrrrr}
+\toprule
+Period & Binary only & Multiclass only & Binary + Multiclass & Total\\
+\midrule
+2002--2009 & 7 & 0 & 1 & 8\\
+2010--2017 & 7 & 2 & 1 & 10\\
+2018--2026 & 10 & 3 & 6 & 19\\
+\addlinespace
+All & 24 & 5 & 8 & 37\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:class-period} shows that most SMOTE-family methods generate data
+for two classes only. Twenty-four of the 37 are Binary only. Twenty-three of
+these evaluate on multiclass sources reduced to two classes: 15 reduce the classes
+themselves (one class against the rest, merged classes, or two classes kept and
+the rest dropped) and 8 use ready-made two-class splits, mostly from KEEL, without
+describing the reduction; the remaining one, Cluster-SMOTE, collapses the attack
+types of its own network data into intrusive versus not. Eleven Binary-only papers
+mention multiclass use without running it: four describe an extension (SMOTE,
+ADASYN, k-means SMOTE, QC-SMOTE) and seven name it as future work (RAMOBoost,
+MWMOTE, RBBoost, A-SUWO, KNNOR, SVDD-WSMOTE, CISO).
+
+Methods that handle several classes are more recent. One of the 8 SMOTE-family
+methods of 2002 to 2009 is Multiclass only or Binary + Multiclass (SMOTEBoost),
+against 3 of 10 in 2010 to 2017 and 9 of 19 in 2018 to 2026. Five methods are
+Multiclass only (SCUT, SMOM, EMDO, GLOS, MKC-SMOTE); their rules would cover two
+classes as a special case, but their papers never show it. Eight are Binary +
+Multiclass. In three of these the two-class evidence is limited: GAMO's two-class
+runs are in its supplement, MC-MBRC's two-class data are synthetic, and OREM is
+run on two-class data while its multiclass version OREM-M is run on multiclass
+data.
+
+\begin{table}[t]
+\centering\small
+\caption{How the 13 Multiclass-Capable SMOTE-Family Methods Handle Several Classes.}
+\label{tab:mc-strategies}
+\begin{tabular}{p{0.3\linewidth}p{0.6\linewidth}}
+\toprule
+Strategy & Methods\\
+\midrule
+To the largest class & SMOM, RSMOTE, MKC-SMOTE\\
+To the mean class size & SCUT, GDHS\\
+Class by class, against the larger classes & SSRBF/DSRBF, NROMM, OREM-M, MC-MBRC\\
+Per-class generator or region & GAMO, EMDO, GLOS\\
+Through the ensemble & SMOTEBoost (AdaBoost.M2 carries the classes)\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:mc-strategies} groups the 13 methods that generate for several
+classes by how they do it. None runs a separate binary generator for each
+one-vs-one or one-vs-rest subproblem; several instead set each class against the
+rest or against the larger classes within one procedure (EMDO, NROMM, OREM-M,
+MC-MBRC), and RSMOTE uses one-vs-one only for its classifiers. Decomposition with binary SMOTE nevertheless remains a reference
+point: in the study of \pcite{fernandez2013analysing}, one-vs-one with SMOTE was
+among the best combinations.
+
+\claudedraft{A dataset list is therefore a poor guide to what a method can do:
+most papers that list multiclass datasets have reduced them to two classes, and a
+multiclass extension stated in a paper is rarely tested.}
+
+\pnote{Two categories are provisional. Loyalty-SMOTE runs on five multiclass
+datasets but oversamples only the smallest class and scores with binary metrics
+(coded Binary only, rule 1). GLOS's only two-class run is a parameter-tuning demo
+on Sonar (coded Multiclass only). Decide both before the numbers above are final.}
+
+\evidence{Method Map class\_category, class\_evidence\_pdf, class\_reduced and
+mc\_strategy (28 Oct 2026); reduction split from class\_reduced, hand-coded in
+make\_summary2.py (SELF 15, READY 8).}
+
+\subsection{Papers on Other Data Types}
+\label{sec:other-data}
+
+Three of the 37 SMOTE-family papers generate data other than tables: INOS for
+time series, GAMO for images, and KNNOR for tables and images. We classify each
+data type on its own with the three rules of Section~\ref{sec:coding}
+(Table~\ref{tab:other-data}). INOS is Binary only: its 48 tasks are built from
+seven UCR datasets, four of them with 14 to 50 classes, by taking one class
+against the rest \pcite{cao2013inos}. GAMO is Multiclass only on images, where all
+of its seven datasets keep 5 to 50 classes, and Binary + Multiclass on tables, but
+its tabular runs appear only in the supplement \pcite{mullick2019gamo}; its
+overall category therefore rests on the supplement. KNNOR is Binary only on both:
+its image experiments set male against female faces in UTKFace and airplanes
+against the other nine CIFAR-10 classes, and show generated images without
+classification results \pcite{islam2022knnor}.
+
+\begin{table}[!ht]
+\centering\small
+\caption{SMOTE-Family Papers on Other Data Types, Classified per Data Type.}
+\label{tab:other-data}
+\begin{tabular}{@{}llp{0.18\linewidth}p{0.36\linewidth}l@{}}
+\toprule
+Method & Data type & Category for this data & Evidence & Overall\\
+\midrule
+INOS (2013) & Time series & Binary only & 48 two-class tasks from 7 UCR datasets, one class vs the rest (Sec.~4.2, pp.~7--8) & B\\
+GAMO (2019) & Image & Multiclass only & MNIST, Fashion-MNIST, CIFAR10, SVHN (10 classes), CelebA, LSUN (5), SUN397 (50) (Secs.~4.1--4.4) & B+M\\
+ & Tabular & Binary + Multiclass & Supplement only: Abalone19, IJCNN1, Magic (2 classes); Chess (18), Cover Type (7) (Supp.\ Tables~7--8) & \\
+KNNOR (2022) & Tabular & Binary only & 19 two-class datasets, 18 from KEEL (Table~2, p.~11) & B\\
+ & Image & Binary only & UTKFace male vs female; CIFAR-10 airplane vs the rest; images shown, no scores (Sec.~6, p.~14) & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\claudedraft{Outside tables the SMOTE family is thin: three papers, of which only
+GAMO generates for several classes, and only on images does it do so in its main
+text.} Outside the family, the corpus has five more papers on other data types
+(COG-OS and GDO on text, and Buda et al., DLexiBoost and NBU on images); they are
+not classified here.
+
+% =====================================================================
+\section{How Each Method Builds on SMOTE}
+\label{sec:methods}
+
+This section gives, for each of the 37 methods, how its generator relates to
+Eq.~\eqref{eq:smote}, the decisions it changes, and the evidence for its class
+category. Methods are grouped by class category and ordered by year.
+
+\input{generated/smote-family-methods}
+
+% =====================================================================
+\section{What the Method View Shows}
+\label{sec:method-findings}
+
+\emph{Changes accumulate.} The mean number of decisions changed per variant rose
+from 1.7 in 2002 to 2009 (7 variants) to 2.0 in 2010 to 2017 (10) and 3.6 in 2018
+to 2026 (19). Twelve of the 36 variants change four or more decisions.
+\claudedraft{When a method changes the seeds, the partner, the placement and the
+filter together, a comparison with SMOTE alone cannot tell which change produced
+the gain.}
+
+\emph{The partner, the placement and the filter changed most after 2018.} Since
+2018, 17 of 19 variants change the neighbour choice (5 of 17 before), 11 change
+the placement rule (2 of 17 before) and 9 add a filter after generation (3 of 17
+before). Generation inside a pipeline did not grow (2, 3 and 3 variants in the
+three periods).
+
+\emph{The questions of 2002 have mostly been taken up, with one exception.} The
+2002 paper named four directions for future work
+\parencite[p.~348]{chawla2002smote}: other ways of creating synthetic points
+(13 methods change the placement rule), a focus on misclassified examples (the
+border-oriented seed rules and the boosting methods), and the use of majority
+neighbours (five methods allow a majority partner). The fourth, an adaptive choice
+of $k$, is not the subject of any method in the corpus; MKC-SMOTE still lists it as
+future work.
+
+\pnote{``Not the subject of any method'' rests on the Method Map fields; the PDF
+check was not asked about $k$. Confirm before keeping it.}
+
+\emph{Recent variants cost more than SMOTE.} CISO reports a median resampling
+time of 47 ms per fold against 1.2 ms for SMOTE, about 39 times
+\pcite{yadav2025ciso}, and QC-SMOTE about 39.47 times (its Table~7)
+\pcite{upman2026qcsmote}. CISO also reports no significant improvement over SMOTE,
+class weighting or random oversampling in PR-AUC.
+\claudedraft{The move towards safer, more elaborate generators has not yet been
+matched by evidence that the extra computation pays off;
+Section~\ref{sec:metrics} examines that evidence.}
+
+\emph{The family has a boundary, and it is moving.} Since 2018, nine new
+generators in the corpus have left interpolation for spheres, contours, potential
+fields or fitted distributions, and deep generative models (CTGAN, SOS, GOIO,
+DGOT) learn the minority distribution instead of interpolating between examples.
+
+\evidence{Method Map smote\_via by year (variants: 7, 10, 19 per period);
+CISO Sec.~6.7, p.~29; QC-SMOTE Sec.~4.5.5, Table~7, p.~10; CISO's PR-AUC result from
+its limitations field (\draftnum{not re-checked}).}
+
+% =====================================================================
+\section{Recommendations for Describing a New Variant}
+\label{sec:method-recommendations}
+\begin{enumerate}
+\item State which of the six decisions the method changes, and keep the others as
+      in SMOTE unless there is a reason not to.
+\item When more than one decision changes, report a comparison that changes one
+      decision at a time against SMOTE.
+\item State the class setting in which the generator is run, and whether any
+      multiclass dataset was reduced to two classes and how.
+\item State how nominal and mixed features are handled, or that they are not.
+\item Report the running time relative to SMOTE on the same data.
+\end{enumerate}
+
+\pnote{Keep, cut or reword; each item should point back to a finding above.
+Item~3 overlaps with the Data section's recommendations, items~2 and~5 with
+Section~7.}
+
+% =====================================================================
+\section{Discussion and Conclusion}
+\label{sec:conclusion}
+
+\teamslot{Discussion and conclusion}{To be written once the Datasets and
+Performance Metrics sections are in: what the field has done since 2002, what
+remains open, and what the three parts (methods, data, evaluation) say together.}

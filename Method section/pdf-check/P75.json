@@ -1,0 +1,13 @@
+[
+ {"uid": "P75", "acronym": "QC-SMOTE",
+  "category": "B",
+  "variant_categories": null,
+  "class_evidence": "30 binary datasets from the VS-SMOTE benchmark (KEEL-style), IR 1.82 to 32.73 (Table 1, p.8; Sec. 4.1, p.8). CatBoost, repeated stratified CV, oversampling on training folds only (Secs. 4.2-4.3, p.8). A one-vs-rest use is described (Sec. 3.1, p.4; Sec. 3.7, p.7) but never run.",
+  "reduced_multiclass": "Uses ready-made KEEL two-class splits (one-vs-rest such as ecoli1-4, glass0/1/6, vehicle0-3, yeast1/3/4/5; merged-class splits such as glass-0-1-2-3_vs_4-5-6, yeast-1-2-8-9_vs_7) (Table 1, p.8); the paper does not describe the reduction.",
+  "multiclass_how": null,
+  "smote_relation": "Core",
+  "decision_points": ["Seed selection", "Sample allocation", "Placement rule", "Post-filtering"],
+  "smote_explanation": "Seeds are drawn in proportion to a trust score combining safe level, minority density and distance from the majority class (Eqs. 2-6, Sec. 3.2, p.5), and the number of attempts per seed also follows trust (Eq. 7, Sec. 3.3, p.6). Each candidate is still x_i + lambda(x_j - x_i) with a 5-NN minority partner, but lambda ~ U(0, alpha_r) shrinks with overlap and the best of K_r candidates is kept by a purity and clearance score (Eqs. 8-18, Secs. 3.4-3.5, pp.6-7). A candidate that fails the thresholds is replaced by a copy of the most trusted point near the seed (Eqs. 19-21, Sec. 3.6, p.7).",
+  "corrections": "Add Sample allocation (trust-proportional attempts per seed, Sec. 3.3, Eq. 7; ablated in Table 4). Fallback copies the most trusted point among the seed and its neighbours, not a global prototype.",
+  "flags": "Fallback outputs duplicates, but interpolation stays the main generator (Core). Baseline scores copied from published VS-SMOTE tables. Conclusion mentions PR-AUC, which no table reports."}
+]

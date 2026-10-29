@@ -1,0 +1,274 @@
+<title>SMOTE Family by Class Setting</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one reading column; the three class categories lead as a three-column board, findings follow, then the 37-paper table with the SMOTE steps each method changes and how it builds on SMOTE. Palette and faces follow the SMOTE25 Method Map. */
+:root{
+  --bg:#f3f5f7; --surface:#ffffff; --sunk:#eaeef2; --ink:#17212b; --muted:#56626e; --line:#d6dde4; --line-strong:#b9c3cd;
+  --bin:#1d5c9f; --bin-bg:#e4edf7; --mul:#a9530a; --mul-bg:#faecdf; --both:#0d735c; --both-bg:#dff1eb; --warn:#9c2f69; --warn-bg:#f7e4ee;
+  --f-display:'Archivo Narrow','Arial Narrow',system-ui,sans-serif;
+  --f-body:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --f-mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1418; --surface:#161d23; --sunk:#1c252d; --ink:#e3e9ee; --muted:#9ba7b2; --line:#29343e; --line-strong:#3b4855;
+  --bin:#7fb2ea; --bin-bg:#16283b; --mul:#efa75e; --mul-bg:#33240f; --both:#52c8a7; --both-bg:#0f2f28; --warn:#e690c0; --warn-bg:#35172a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1418; --surface:#161d23; --sunk:#1c252d; --ink:#e3e9ee; --muted:#9ba7b2; --line:#29343e; --line-strong:#3b4855;
+  --bin:#7fb2ea; --bin-bg:#16283b; --mul:#efa75e; --mul-bg:#33240f; --both:#52c8a7; --both-bg:#0f2f28; --warn:#e690c0; --warn-bg:#35172a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.55 var(--f-body);margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 64px;display:grid;gap:34px}
+.wrap>*{min-width:0}
+h1,h2{font-family:var(--f-display);text-wrap:balance;margin:0}
+h1{font-size:2.3rem;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:1.35rem;line-height:1.2;margin-bottom:12px}
+.eyebrow{font:600 .74rem/1 var(--f-display);text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:10px}
+.lead{max-width:72ch;margin:12px 0 0;color:var(--muted)}
+.lead b{color:var(--ink);font-weight:600}
+.def{max-width:80ch;margin:0;color:var(--muted);font-size:.9rem}
+.def code{font-family:var(--f-mono);font-size:.85rem;color:var(--ink);background:var(--sunk);padding:1px 5px;border-radius:3px}
+
+.board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.col{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px;display:grid;gap:8px;align-content:start;box-shadow:inset 0 3px 0 var(--c)}
+.c-B{--c:var(--bin)}.c-M{--c:var(--mul)}.c-BM{--c:var(--both)}
+.ch{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.ch b{font:600 1.1rem/1.2 var(--f-display);color:var(--c)}
+.big{font:700 2.2rem/1 var(--f-display);color:var(--c);font-variant-numeric:tabular-nums}
+.col p{margin:0;font-size:.84rem;color:var(--muted)}
+.ms{display:flex;flex-wrap:wrap;gap:4px}
+.ms span{font-size:.78rem;line-height:1.35;border:1px solid var(--line-strong);border-radius:4px;padding:1px 6px;background:var(--surface)}
+.ms span i{font:normal .68rem var(--f-mono);color:var(--muted);margin-left:4px}
+.ms span.prov{border-style:dashed;border-color:var(--warn)}
+.note{font-size:.82rem;color:var(--muted);margin:8px 2px 0}
+.note .pv{border:1px dashed var(--warn);border-radius:4px;padding:0 5px;color:var(--ink)}
+
+ol.find{margin:0;padding:0;list-style:none;display:grid;gap:10px;counter-reset:f}
+ol.find li{counter-increment:f;display:grid;grid-template-columns:2.2rem minmax(0,1fr);gap:4px 10px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px}
+ol.find li::before{content:counter(f);font:700 1.5rem/1 var(--f-display);color:var(--muted);grid-row:span 2}
+ol.find b{font:600 1.02rem/1.3 var(--f-display)}
+ol.find p{margin:0;font-size:.9rem;color:var(--muted);max-width:84ch}
+ol.find p strong{color:var(--ink);font-weight:600}
+
+.scroll{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+table.list{width:100%;min-width:980px;border-collapse:collapse}
+.list th{text-align:left;font:600 .72rem/1.2 var(--f-display);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:10px 8px;border-bottom:1px solid var(--line-strong);position:sticky;top:0;background:var(--surface)}
+.list td{padding:9px 8px;border-bottom:1px solid var(--line);font-size:.86rem;vertical-align:top}
+.list .nm{font-weight:600;width:150px}
+.list .yr{display:block;font:400 .74rem var(--f-mono);color:var(--muted)}
+.list .d{text-align:center;width:52px;color:var(--ink);font-variant-numeric:tabular-nums}
+.list th.d{text-align:center}
+.list .ex{color:var(--muted);font-size:.82rem;line-height:1.5;min-width:380px}
+.list tr.tot td{font-weight:600;border-bottom:0;background:var(--sunk)}
+.pill{display:inline-block;font:600 .74rem/1.5 var(--f-display);letter-spacing:.02em;padding:0 7px;border-radius:3px;white-space:nowrap}
+.p-B{color:var(--bin);background:var(--bin-bg)}.p-M{color:var(--mul);background:var(--mul-bg)}.p-BM{color:var(--both);background:var(--both-bg)}
+.prov-t{display:inline-block;font:500 .68rem/1.4 var(--f-mono);color:var(--warn);background:var(--warn-bg);border-radius:3px;padding:0 4px;margin-top:4px}
+
+.pend{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:10px}
+.pd{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--warn);border-radius:6px;padding:12px 14px}
+.pd b{font:600 1rem var(--f-display);display:block;margin-bottom:2px}
+.pd p{margin:0;font-size:.86rem;color:var(--muted)}
+/* timeline */
+.tlbar{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;margin-bottom:12px}
+.seg{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.seg .lab{font:600 .72rem/1 var(--f-display);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-right:2px}
+.fb{border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);border-radius:999px;padding:4px 12px;font:500 .84rem var(--f-body);cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.fb .n{font:500 .74rem var(--f-mono);color:var(--muted)}
+.fb[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.fb[aria-pressed="true"] .n{color:var(--bg);opacity:.75}
+.fb .sw{width:10px;height:10px;border-radius:2px;background:var(--c,var(--muted))}
+.fb:focus-visible,.dot:focus-visible,.tchip:focus-visible{outline:2px solid var(--bin);outline-offset:2px}
+.tlcount{font-size:.84rem;color:var(--muted)}
+.tlcount b{color:var(--ink);font-family:var(--f-mono)}
+.strip{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 12px 8px;overflow-x:auto}
+.strip-in{display:grid;grid-template-columns:repeat(25,minmax(26px,1fr));gap:4px;min-width:700px;align-items:end}
+.yc{display:flex;flex-direction:column-reverse;align-items:center;gap:3px;min-height:92px}
+.yl{font:500 .66rem var(--f-mono);color:var(--muted);margin-top:4px;text-align:center}
+.yl.dec{color:var(--ink);font-weight:600}
+.dot{width:18px;height:18px;border-radius:4px;border:0;padding:0;cursor:pointer;background:var(--c)}
+.dot.pv{background:transparent;box-shadow:inset 0 0 0 2px var(--c)}
+.dot.off{opacity:.12;cursor:default}
+.dot.sel{box-shadow:0 0 0 2px var(--surface),0 0 0 4px var(--ink)}
+.c-B,.k-B{--c:var(--bin)}.c-M,.k-M{--c:var(--mul)}.c-BM,.k-BM{--c:var(--both)}
+.tllist{display:grid;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:6px;margin-top:12px}
+.tlrow{display:grid;grid-template-columns:4.2rem minmax(0,1fr);gap:10px;padding:10px 14px;border-bottom:1px solid var(--line)}
+.tlrow:last-child{border-bottom:0}
+.tly{font:600 1rem/1.6 var(--f-mono);color:var(--muted)}
+.tlch{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.tchip{border:1px solid var(--line-strong);border-left:4px solid var(--c);background:var(--surface);color:var(--ink);border-radius:4px;padding:3px 8px;font:500 .84rem var(--f-body);cursor:pointer;display:inline-flex;gap:6px;align-items:baseline}
+.tchip .t{font:500 .66rem var(--f-mono);color:var(--muted)}
+.tchip.pv{border-left-style:dashed}
+.tchip[aria-expanded="true"]{background:var(--sunk);border-color:var(--ink);border-left-color:var(--c)}
+.tldet{grid-column:1/-1;background:var(--sunk);border-radius:6px;padding:12px 14px;display:grid;gap:6px}
+.tldet h3{margin:0;font:600 1.05rem/1.3 var(--f-display)}
+.tldet p{margin:0;font-size:.86rem;max-width:90ch}
+.tldet .meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.8rem;color:var(--muted)}
+.tldet .st{display:inline-block;font-size:.72rem;border:1px solid var(--line-strong);border-radius:3px;padding:0 5px}
+.tldet .ev{color:var(--muted);font-size:.8rem}
+.tlnone{padding:24px;text-align:center;color:var(--muted)}
+.tlnote{font-size:.8rem;color:var(--muted);margin:8px 2px 0}
+@media (prefers-reduced-motion:no-preference){.fb,.dot,.tchip{transition:background-color .12s,opacity .12s,border-color .12s}}
+.p-dt{color:var(--muted);background:var(--sunk)}
+table.other{width:100%;min-width:760px;border-collapse:collapse}
+.other th{text-align:left;font:600 .72rem/1.2 var(--f-display);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:10px 8px;border-bottom:1px solid var(--line-strong)}
+.other td{padding:9px 8px;border-bottom:1px solid var(--line);font-size:.86rem;vertical-align:top}
+.other .nm{font-weight:600;width:130px}
+.other .yr{display:block;font:400 .74rem var(--f-mono);color:var(--muted)}
+.other .ex{color:var(--muted);font-size:.84rem}
+footer{font-size:.82rem;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;display:grid;gap:6px}
+footer p{margin:0;max-width:96ch}
+@media (max-width:820px){.board{grid-template-columns:minmax(0,1fr)}h1{font-size:1.8rem}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">SMOTE25 · Method section · 28 October 2026</div>
+  <h1>Binary, multiclass, or both?</h1>
+  <p class="lead">The <b>37 SMOTE-family methods</b> in our corpus of 76 papers, sorted by the class setting in which each paper actually generates synthetic data, with an account of how each one builds on SMOTE. <b>All 37 were checked against their PDFs</b> on 28 October 2026.</p>
+</header>
+
+<section>
+  <h2>The reference: SMOTE (2002)</h2>
+  <p class="def">Every method is read against the rule of Chawla et al. (2002): for a minority seed <code>x</code>, pick a partner <code>x_nn</code> among its 5 nearest minority neighbours and create <code>x + λ(x_nn − x)</code> with <code>λ ~ U(0,1)</code>. SMOTE fixes six steps in the simplest way (every minority point is a seed, equal points per seed, a uniform partner among 5 neighbours, uniform placement on the segment, no filtering afterwards, run once before training). The table below marks the steps each method changes.</p>
+</section>
+
+<section>
+  <h2>Three class categories</h2>
+  <div class="board">{{BOARD}}</div>
+  <p class="note"><span class="pv">Dashed outline</span>: provisional category, decision listed at the end of the page.</p>
+</section>
+
+<section aria-labelledby="tl-h">
+  <h2 id="tl-h">Timeline</h2>
+  <div class="tlbar">
+    <div class="seg" role="group" aria-label="Class category">
+      <span class="lab">Category</span>
+      <button class="fb" type="button" data-f="c" data-v="all" aria-pressed="true">All<span class="n" data-n="all"></span></button>
+      <button class="fb k-B" type="button" data-f="c" data-v="B" aria-pressed="false"><span class="sw"></span>Binary only<span class="n" data-n="B"></span></button>
+      <button class="fb k-M" type="button" data-f="c" data-v="M" aria-pressed="false"><span class="sw"></span>Multiclass only<span class="n" data-n="M"></span></button>
+      <button class="fb k-BM" type="button" data-f="c" data-v="BM" aria-pressed="false"><span class="sw"></span>Binary + Multiclass<span class="n" data-n="BM"></span></button>
+    </div>
+    <div class="seg" role="group" aria-label="Data type">
+      <span class="lab">Data</span>
+      <button class="fb" type="button" data-f="d" data-v="all" aria-pressed="true">All</button>
+      <button class="fb" type="button" data-f="d" data-v="other" aria-pressed="false">Other data types<span class="n" data-n="other"></span></button>
+    </div>
+    <span class="tlcount" id="tl-count" aria-live="polite"></span>
+  </div>
+  <div class="strip" aria-label="Methods per year, one square per paper"><div class="strip-in" id="tl-strip"></div></div>
+  <div class="tllist" id="tl-list"></div>
+  <p class="tlnote">One square per paper, coloured by class category; an outlined square or dashed chip is a provisional category. Select a square or a name for the paper's evidence and how it builds on SMOTE.</p>
+</section>
+
+<section>
+  <h2>What the categories show</h2>
+  <ol class="find">
+    <li><b>Most SMOTE-family methods generate only for two classes.</b><p><strong>{{NB}} of 37</strong> are Binary only. {{BRED}}. A multiclass name in a dataset list therefore does not mean multiclass generation.</p></li>
+    <li><b>Methods that handle several classes are recent.</b><p>Multiclass only or Binary + Multiclass: <strong>{{P0}}</strong> methods from 2002 to 2009, <strong>{{P1}}</strong> from 2010 to 2017, and <strong>{{P2}}</strong> from 2018 to 2026.</p></li>
+    <li><b>Few methods show both settings, and five never show two classes.</b><p><strong>{{NBM}}</strong> are Binary + Multiclass; <strong>{{NM}}</strong> are Multiclass only, although their rules would logically cover two classes. Several multiclass extensions of binary methods (ADASYN, KNNOR, QC-SMOTE, CISO) are described or named as future work but never run.</p></li>
+    <li><b>The PDF check corrected how many methods relate to SMOTE.</b><p>The steps changed were corrected for <strong>{{CHANGED}} of the 36 variants</strong>, mostly by adding steps the earlier coding missed. Papers changing each step: {{STEPS}}.</p></li>
+  </ol>
+</section>
+
+<section>
+  <h2>All 37 methods and how they build on SMOTE</h2>
+  <div class="scroll"><table class="list">
+    <thead><tr><th scope="col">Method</th><th scope="col">Class category</th>{{HEAD}}<th scope="col">How it builds on SMOTE (from the PDF)</th></tr></thead>
+    <tbody>{{ROWS}}</tbody>
+  </table></div>
+  <p class="note">● = the method changes that SMOTE step. Seed: which minority points are seeds. Alloc.: how many points each seed, cluster or class gets. Partner: which neighbour is paired with the seed. Place: where the new point lands. Filter: what is removed after generation. Pipeline: generation inside boosting, bagging, a wrapper or training.</p>
+</section>
+
+<section>
+  <h2>Papers on other data types</h2>
+  <p class="def">{{NOTHER}} of the 37 SMOTE-family papers generate data other than tables. Each data type is classified on its own with the same three rules; the last column repeats the paper's overall category.</p>
+  <div class="scroll" style="margin-top:12px"><table class="other">
+    <thead><tr><th scope="col">Method</th><th scope="col">Data type</th><th scope="col">Category for this data</th><th scope="col">Evidence (from the PDF)</th><th scope="col">Overall</th></tr></thead>
+    <tbody>{{OTHERROWS}}</tbody>
+  </table></div>
+  <p class="note">Outside the SMOTE family, the corpus has five more papers on other data types: {{OUTSIDE}}. They are not classified here.</p>
+</section>
+
+<section>
+  <h2>Decisions still open</h2>
+  <div class="pend">
+    <div class="pd"><b>Loyalty-SMOTE: Binary only or Binary + Multiclass?</b><p>It runs on 5 multiclass datasets, but only the smallest class is ever oversampled and results use binary metrics. Coded Binary only for now, following rule 1.</p></div>
+    <div class="pd"><b>GLOS: Multiclass only or Binary + Multiclass?</b><p>Its only two-class run is a parameter-tuning demo on Sonar (Fig. 7), whose class count the paper does not state. Coded Multiclass only for now.</p></div>
+    <div class="pd" style="border-left-color:var(--both)"><b>Decided: supplementary experiments count</b><p>Experiments reported only in a paper's supplement count, because they show what the method can do. GAMO is therefore Binary + Multiclass (its two-class runs are tabular, in the supplement).</p></div>
+    <div class="pd"><b>OREM / OREM-M: one entry with two variants</b><p>OREM is run on two-class data and OREM-M on multiclass data; OREMBoost is run on both. Coded Binary + Multiclass for the paper as a whole.</p></div>
+    <div class="pd"><b>NROMM: Core or Partial?</b><p>Seeds of the "trapped" type get points from an optimised embedding, not interpolation. Still coded Core.</p></div>
+    <div class="pd"><b>SMOM: wrong PDF in Drive</b><p>The file named as the SMOM paper contains INOS. SMOM was coded from its supplement; re-check once the main PDF is in Drive.</p></div>
+  </div>
+</section>
+
+<footer>
+  <p>Source: SMOTE25 Method Map (76 papers), fields class_category, class_evidence_pdf, smote_explain and smote_via, from a reading of all 37 SMOTE-family PDFs on 28 October 2026 with page, section or table references in each record. SMOTE-family follows the Method Map definition (Core 34, Partial 3).</p>
+  <p>The explanations are paraphrases written by AI readers of the PDFs and should be read against the papers before they go into the manuscript.</p>
+</footer>
+</div>
+<script type="application/json" id="tl-data">{{TLDATA}}</script>
+<script>
+(function(){
+  var P=JSON.parse(document.getElementById('tl-data').textContent);
+  var CAT={B:'Binary only',M:'Multiclass only',BM:'Binary + Multiclass'}, ORD={B:0,M:1,BM:2};
+  var S={c:'all',d:'all',sel:null};
+  var strip=document.getElementById('tl-strip'), list=document.getElementById('tl-list'), count=document.getElementById('tl-count');
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function other(p){return p.d.some(function(d){return d!=='Tabular';});}
+  function okC(p){return S.c==='all'||p.c===S.c;}
+  function okD(p){return S.d==='all'||other(p);}
+  function pass(p){return okC(p)&&okD(p);}
+  function byYear(a,b){return a.y-b.y||ORD[a.c]-ORD[b.c]||a.n.localeCompare(b.n);}
+  P.sort(byYear);
+  function counts(){
+    function set(k,n){var el=document.querySelector('[data-n="'+k+'"]');if(el) el.textContent=n;}
+    set('all',P.filter(okD).length);
+    ['B','M','BM'].forEach(function(c){set(c,P.filter(function(p){return p.c===c&&okD(p);}).length);});
+    set('other',P.filter(function(p){return okC(p)&&other(p);}).length);
+  }
+  function detail(p){
+    return '<div class="tldet" id="det-'+p.id+'"><h3>'+esc(p.n)+' ('+p.y+')</h3>'+
+      '<div class="meta"><span class="pill p-'+p.c+'">'+esc(p.cat)+'</span>'+(p.pv?'<span class="prov-t">provisional</span>':'')+
+      '<span>'+esc(p.l)+' SMOTE-family</span><span>· '+esc(p.d.join(', '))+'</span></div>'+
+      '<div class="meta">'+(p.s.length?p.s.map(function(x){return '<span class="st">'+esc(x)+'</span>';}).join(''):'<span>Reference rule: no SMOTE step changed</span>')+'</div>'+
+      '<p>'+esc(p.x)+'</p><p class="ev"><b>Class setting:</b> '+esc(p.e)+'</p></div>';
+  }
+  function render(){
+    var r=P.filter(pass);
+    if(S.sel&&!r.some(function(p){return p.id===S.sel;})) S.sel=null;
+    var ys=r.map(function(p){return p.y;});
+    count.innerHTML=r.length?'Showing <b>'+r.length+'</b> of 37 · '+Math.min.apply(null,ys)+'–'+Math.max.apply(null,ys):'Showing <b>0</b> of 37';
+    var h='';
+    for(var y=2002;y<=2026;y++){
+      var py=P.filter(function(p){return p.y===y;});
+      h+='<div><div class="yc">'+py.map(function(p){var on=pass(p);return '<button type="button" class="dot c-'+p.c+(p.pv?' pv':'')+(on?'':' off')+(S.sel===p.id?' sel':'')+'" data-id="'+p.id+'"'+(on?'':' tabindex="-1" aria-hidden="true"')+' title="'+esc(p.n+' ('+p.y+') · '+p.cat)+'" aria-label="'+esc(p.n+', '+p.y+', '+p.cat)+'"></button>';}).join('')+'</div>'+
+         '<div class="yl'+(y%5===0||y===2002?' dec':'')+'">'+(y%5===0||y===2002?y:'’'+String(y).slice(2))+'</div></div>';
+    }
+    strip.innerHTML=h;
+    var yrs=[];r.forEach(function(p){if(yrs.indexOf(p.y)<0) yrs.push(p.y);});
+    if(!yrs.length){list.innerHTML='<div class="tlnone">No methods match these filters.</div>';counts();return;}
+    list.innerHTML=yrs.map(function(y){
+      var py=r.filter(function(p){return p.y===y;});
+      var sel=py.filter(function(p){return p.id===S.sel;})[0];
+      return '<div class="tlrow"><div class="tly">'+y+'</div><div class="tlch">'+py.map(function(p){return '<button type="button" class="tchip k-'+p.c+(p.pv?' pv':'')+'" data-id="'+p.id+'" aria-expanded="'+(S.sel===p.id)+'" aria-controls="det-'+p.id+'">'+esc(p.n)+'<span class="t">'+esc(p.c==='BM'?'B+M':p.c)+'</span></button>';}).join('')+'</div>'+(sel?detail(sel):'')+'</div>';
+    }).join('');
+    counts();
+  }
+  function select(id,fromStrip){
+    S.sel=S.sel===id?null:id; render();
+    if(S.sel){var d=document.getElementById('det-'+S.sel); if(d&&fromStrip){try{d.scrollIntoView({block:'nearest',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}catch(e){}}
+      var c=list.querySelector('.tchip[data-id="'+S.sel+'"]'); if(c&&!fromStrip) c.focus();}
+  }
+  document.addEventListener('click',function(ev){
+    var b=ev.target.closest('.fb');
+    if(b){S[b.getAttribute('data-f')]=b.getAttribute('data-v');
+      document.querySelectorAll('.fb[data-f="'+b.getAttribute('data-f')+'"]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b));});
+      render();return;}
+    var d=ev.target.closest('.dot');
+    if(d&&!d.classList.contains('off')){select(d.getAttribute('data-id'),true);return;}
+    var c=ev.target.closest('.tchip');
+    if(c){select(c.getAttribute('data-id'),false);}
+  });
+  render();
+})();
+</script>
