@@ -358,8 +358,12 @@ if _NT["names"] != DASH["names"]["distinct"] or len(_NTR) != _NT["names"] or sum
 if sum(_NT["by_source"].values()) != _NT["names"] or C.Counter(r["source"] for r in _NTR) != C.Counter({k: v for k, v in _NT["by_source"].items() if v}) \
         or _NT["entry_level_by_source"]["KEEL"] != DASH["provenance"]["repos"]["KEEL"]["total"]:
     sys.exit("STOP: name-level sources in out/name_level_types.* do not add up (rerun python3 build/name_level_types.py)")
+_SI = rcsv("out/name_level_sources.csv")
+if len(_SI) != _NT["distinct_sources"]["n"] or {r["source"] for r in _SI} != {x for r in _NTR for x in r["source_ids"].split("; ") if x} \
+        or sum(_NT["distinct_sources"]["sources_per_paper"].values()) != _NT["distinct_sources"]["papers"]:
+    sys.exit("STOP: out/name_level_sources.csv disagrees with out/name_level_types.* (rerun python3 build/name_level_types.py)")
 data["nt"] = dict(sum=_NT, rows=[[r["normalized_name"], r["name_type"], int(r["entries"]), r["entries_by_category"], int(r["n_papers"]), r["papers"],
-                                 r["difficulty"], r["measured_tasks"], r["not_measured_reason"], r["source"], r["entries_by_source"], r["source_combo"]] for r in _NTR],
+                                 r["difficulty"], r["measured_tasks"], r["not_measured_reason"], r["source"], r["entries_by_source"], r["source_combo"], r["source_ids"]] for r in _NTR],
                   source="out/name_level_types.csv, out/name_level_types.json (build/name_level_types.py)")
 data["manuscript"] = dict(overview=json.load(open(p("manuscript/overview.json"), encoding="utf-8")),
                           html=tex2html.convert(_tex), tex=_tex)

@@ -216,6 +216,7 @@ footer code{font-family:var(--f-mono)}
 .mrow .n{font-family:var(--f-mono);font-size:12px;color:var(--ink3);text-align:right}
 .mrow .stack{height:16px}
 .mrow.click{cursor:pointer;border-radius:4px} .mrow.click:hover,.mrow.sel{background:var(--accent-soft)}
+tr.click{cursor:pointer} tr.click:hover td,tr.sel td{background:var(--accent-soft)}
 .btnl{font:500 13px var(--f-body);color:var(--accent);background:none;border:1px solid var(--line);border-radius:6px;padding:4px 10px;cursor:pointer}
 .btnl:hover{border-color:var(--accent)}
 .xg{display:grid;gap:8px}
@@ -359,6 +360,7 @@ tr.mz-sel td{background:var(--accent-soft)}
       <div class="card" id="db-prov"></div>
     </div>
     <div class="card" id="db-diff"></div>
+    <div class="card" id="db-src"></div>
     <div class="card" id="db-rec" hidden>
       <h3 class="ct" id="db-rec-h"></h3>
       <div class="controls">
@@ -877,7 +879,8 @@ renderWNsum();
       <div class="kpi" ${tipA("ตัด " + B.corpus.non_empirical.join(", ") + " ซึ่งไม่มีการประเมินผลบนข้อมูล · Section 7 ของ P ใช้ 71")}><b>${f(B.corpus.papers_empirical)}</b><span>มีการประเมินผลบนข้อมูล</span></div></div></div>
     <div class="kgroup"><h3>Dataset · หน่วย entry / ชื่อ</h3><div class="kpis">
       <div class="kpi" ${tipA("1 entry = 1 dataset ใน 1 paper นับซ้ำข้าม paper")}><b>${f(B.entries.total)}</b><span>dataset entry</span></div>
-      <div class="kpi" ${tipA("ชื่อหลัง norm(): ตัวเล็ก ตัดวงเล็บ รวม _ กับช่องว่าง ไม่นับคำบรรยายตัวอย่างของ Tomek links")}><b>${f(B.names.distinct)}</b><span>ชื่อที่ต่างกัน</span></div></div></div>
+      <div class="kpi" ${tipA("ชื่อหลัง norm(): ตัวเล็ก ตัดวงเล็บ รวม _ กับช่องว่าง ไม่นับคำบรรยายตัวอย่างของ Tomek links")}><b>${f(B.names.distinct)}</b><span>ชื่อที่ต่างกัน</span></div>
+      <div class="kpi" ${tipA("1 แหล่ง = 1 คลังหรือ benchmark (KEEL นับ 1, UCI นับ 1), 1 งานหรือผู้ให้ข้อมูลที่อ้าง หรือข้อมูลเฉพาะของ 1 paper · ไม่นับ synthetic ระดับกลุ่ม และไม่ระบุ")}><b>${f(D.nt.sum.distinct_sources.n)}</b><span>แหล่งที่ต่างกัน</span></div></div></div>
     <div class="kgroup"><h3>ผลเทียบกับ SMOTE · หน่วย แถว</h3>
       <div class="stack" role="img" aria-label="แถวผลเทียบ ${f(EL.all_rows)} แถว: ${part.map(p=>p[1]+" "+p[2]).join(", ")}">${part.map(([k,l,n]) => `<span class="seg k-${k}" style="flex:${n}" tabindex="0" ${tipA(l+": "+f(n)+" แถว ("+pc(n,EL.all_rows)+" ของ "+f(EL.all_rows)+")")}></span>`).join("")}</div>
       <div class="legend">${part.map(([k,l,n]) => `<span class="k-${k}"><i class="sw"></i>${l} <b>${f(n)}</b></span>`).join("")}</div></div>`;
@@ -896,7 +899,7 @@ renderWNsum();
   ].map(x => `<li>${x}</li>`).join("");
 
   /* A. ชนิดข้อมูล หน่วยชื่อหลัง normalise (29 ต.ค. 2026) + ความยากที่วัดได้ กดเพื่อดูรายชื่อ dataset · ข้อมูลจาก D.nt (build/name_level_types.py) */
-  const NT = D.nt.sum, NTR = D.nt.rows.map(r => ({name:r[0], type:r[1], ent:r[2], bycat:r[3], np:r[4], papers:r[5], diff:r[6], tasks:r[7], why:r[8], src:r[9], bysrc:r[10], combo:r[11]}));
+  const NT = D.nt.sum, NTR = D.nt.rows.map(r => ({name:r[0], type:r[1], ent:r[2], bycat:r[3], np:r[4], papers:r[5], diff:r[6], tasks:r[7], why:r[8], src:r[9], bysrc:r[10], combo:r[11], sids:r[12] ? r[12].split("; ") : []}));
   const SLAB = {"KEEL":"KEEL","UCI":"UCI","group-level":"ระบุแค่ระดับกลุ่ม","other repository":"คลังหรือ benchmark อื่น","other paper/author":"จาก paper หรือผู้เขียนอื่น",
     "private":"Private (ข้อมูลเฉพาะ)","synthetic":"Synthetic","multiple":"หลายแหล่ง","not stated":"ไม่ระบุแหล่ง"};
   const STIP = {"KEEL":"paper ระบุ KEEL","UCI":"paper ระบุ UCI (รวม UCI KDD Archive)","group-level":"paper บอกแค่ว่าทั้งชุดมาจาก UCI หรือ KEEL (หรือ UCI หรือ ELENA) ไม่บอกรายชุด",
@@ -932,28 +935,29 @@ renderWNsum();
     ${CATS.map(c => `<tr><th scope="row"><span class="${kc(c)}" style="display:inline-flex;gap:6px;align-items:center"><i class="sw"></i>${CATLAB[c]}</span></th>${DK.map(k=>`<td class="num">${cell(c,k,XT[c][k])}</td>`).join("")}<td class="num">${cell(c,"",NB[c])}</td></tr>`).join("")}
     <tr><th scope="row">รวม</th>${DK.map(k=>`<td class="num">${cell("",k,colTot(k))}</td>`).join("")}<td class="num"><b>${f(tot)}</b></td></tr></tbody></table></div>
     <p class="cap">วัดจากไฟล์สาธารณะที่ตรวจแล้วว่าตรงกับที่ paper ใช้ (HVDM, k = 5) ใช้ธงที่มีอ้างอิง: <b>Sample</b> = small sample (minority ต่อ feature &lt; 10, Jain et al. 2000), <b>Outlier</b> = minority เป็น outlier เกิน 20% และ <b>Disjuncts</b> = small disjuncts (rare ≥ 20%) ตาม Napierala &amp; Stefanowski 2016 · <b>หลายคลาส</b> = ตรวจได้กับไฟล์หลายคลาสแต่ไม่มีคลาส minority เดียว · มีโปรไฟล์สองคลาส ${f(NT.measured_names)} ชื่อ · ชื่อที่จับได้หลาย task ใช้โปรไฟล์เดียวเมื่อทุก task ตรงกัน · Synthetic และ Not stated วัดไม่ได้ทั้งหมด เพราะไม่มีไฟล์ให้ตรวจ · วัดไม่ได้ไม่ได้แปลว่าง่ายหรือยาก กดตัวเลขเพื่อดูรายชื่อ dataset</p>`;
-  let recCat = null, recDiff = "", recSrc = "";
+  let recCat = null, recDiff = "", recSrc = "", recSid = "";
   function renderRec(){
-    const on = recCat !== null || !!recSrc; $("#db-rec").hidden = !on;
+    const on = recCat !== null || !!recSrc || !!recSid; $("#db-rec").hidden = !on;
     document.querySelectorAll("#db-cat .hrow").forEach(el => el.classList.toggle("sel", on && !recDiff && !recSrc && el.dataset.cat===recCat));
     document.querySelectorAll("#db-prov .mrow[data-src]").forEach(el => el.classList.toggle("sel", on && el.dataset.src===recSrc));
+    document.querySelectorAll("#db-src tr[data-sid]").forEach(el => el.classList.toggle("sel", on && el.dataset.sid===recSid));
     if (!on) return;
     const q = $("#db-rec-q").value.trim().toLowerCase();
-    const A0 = NTR.filter(r => (!recCat || r.type===recCat) && (!recDiff || r.diff===recDiff) && (!recSrc || r.src===recSrc)).sort((a,b) => b.np - a.np || a.name.localeCompare(b.name));
+    const A0 = NTR.filter(r => (!recCat || r.type===recCat) && (!recDiff || r.diff===recDiff) && (!recSrc || r.src===recSrc) && (!recSid || r.sids.includes(recSid))).sort((a,b) => b.np - a.np || a.name.localeCompare(b.name));
     const L = A0.filter(r => !q || (r.name+" "+r.papers).toLowerCase().includes(q));
-    $("#db-rec-h").innerHTML = `${recCat ? `<span class="${kc(recCat)}" style="display:inline-flex;gap:6px;align-items:center"><i class="sw"></i>${CATLAB[recCat]}</span>` : (recSrc ? "แหล่ง: "+esc(SLAB[recSrc]) : "ทุกชนิด")}${recDiff ? " · "+esc(DLAB[recDiff]) : ""} <span class="unit">${f(A0.length)} จาก ${f(tot)} ชื่อ</span>`;
+    $("#db-rec-h").innerHTML = `${recCat ? `<span class="${kc(recCat)}" style="display:inline-flex;gap:6px;align-items:center"><i class="sw"></i>${CATLAB[recCat]}</span>` : (recSrc ? "แหล่ง: "+esc(SLAB[recSrc]) : recSid ? "แหล่ง: "+esc(recSid.replace(/^private: /,"Private: ")) : "ทุกชนิด")}${recDiff ? " · "+esc(DLAB[recDiff]) : ""} <span class="unit">${f(A0.length)} จาก ${f(tot)} ชื่อ</span>`;
     $("#db-rec-n").textContent = (q ? `ตรงกับคำค้น ${f(L.length)} · ` : "") + `แสดง ${f(L.length)} ชื่อ เรียงตามจำนวน paper`;
     $("#db-rec-t tbody").innerHTML = L.map(r => `<tr><td><button class="btnl mono" data-n="${esc(r.name)}" type="button" ${tipA("เปิด "+r.name+" ในแท็บ Datasets")}>${esc(r.name)}</button></td>
       <td><span class="${dc(r.diff)}" style="display:inline-flex;gap:6px;align-items:center;font-size:12.5px"><i class="sw"></i>${esc(DLAB[r.diff])}</span></td>
       <td class="num">${r.ent}</td><td style="font-size:12.5px">${esc(r.bycat)}<div style="font-size:11.5px;color:var(--ink3)">แหล่ง: ${esc(SLAB[r.src])}${r.combo ? " ("+esc(r.combo)+")" : ""}</div></td><td class="num" ${tipA(r.papers)} tabindex="0">${r.np}</td>
       <td class="mono" style="font-size:11.5px">${esc(r.tasks || r.why || (r.diff==="multiclass" ? "ไฟล์หลายคลาส ไม่มีคลาส minority เดียว" : ""))}</td></tr>`).join("") || `<tr><td colspan="6" class="empty">ไม่พบ dataset ที่ตรงกับคำค้น</td></tr>`;
   }
-  const pick = (c, k, s = "") => { if (recCat === c && recDiff === k && recSrc === s) { recCat = null; recDiff = ""; recSrc = ""; } else { recCat = c; recDiff = k; recSrc = s; } $("#db-rec-q").value = ""; renderRec(); if (recCat !== null || recSrc) $("#db-rec").scrollIntoView({block:"nearest"}); };
+  const pick = (c, k, s = "", sid = "") => { if (recCat === c && recDiff === k && recSrc === s && recSid === sid) { recCat = null; recDiff = ""; recSrc = ""; recSid = ""; } else { recCat = c; recDiff = k; recSrc = s; recSid = sid; } $("#db-rec-q").value = ""; renderRec(); if (recCat !== null || recSrc || recSid) $("#db-rec").scrollIntoView({block:"nearest"}); };
   $("#db-cat").addEventListener("click", e => { const el = e.target.closest(".hrow"); if (el) pick(el.dataset.cat, ""); });
   $("#db-cat").addEventListener("keydown", e => { const el = e.target.closest(".hrow"); if (el && (e.key==="Enter"||e.key===" ")){ e.preventDefault(); pick(el.dataset.cat, ""); } });
   $("#db-diff").addEventListener("click", e => { const b = e.target.closest("button[data-diff]"); if (b) pick(b.dataset.cat, b.dataset.diff); });
   $("#db-rec-q").addEventListener("input", renderRec);
-  $("#db-rec-reset").addEventListener("click", () => { recCat = null; recDiff = ""; recSrc = ""; $("#db-rec-q").value = ""; renderRec(); });
+  $("#db-rec-reset").addEventListener("click", () => { recCat = null; recDiff = ""; recSrc = ""; recSid = ""; $("#db-rec-q").value = ""; renderRec(); });
   $("#db-rec-t").addEventListener("click", e => { const b = e.target.closest("button[data-n]"); if (b) openName(b); });
 
   /* C. KEEL กับ UCI */
@@ -969,6 +973,28 @@ renderWNsum();
     <p class="cap">1 ชื่อนับครั้งเดียว: ถ้า paper ที่ระบุแหล่งรายชุดระบุตรงกัน ใช้แหล่งนั้น · ระบุต่างกัน = หลายแหล่ง (${Object.entries(NT.multiple_source_combos).slice(0,2).map(([k,v]) => k.split(" + ").map(x=>SLAB[x]).join(" + ")+" "+v).join(", ")} และอื่น ๆ ดูได้เมื่อชี้ที่แถว) · ไม่มี paper ระบุรายชุดแต่บอกระดับกลุ่ม = ระบุแค่ระดับกลุ่ม · แหล่งตามที่ paper เขียน ${Object.keys(NT.source_map).length} แบบ จัดเป็นกลุ่มด้วยการจับข้อความ (<code>out/name_level_types.json</code> source_map) · นับแบบ entry (${f(NT.entries)}): ${Object.entries(ES).map(([k,v])=>SLAB[k]+" "+f(v)).join(" · ")} · กดแถวเพื่อดูรายชื่อ</p>`;
   $("#db-prov").addEventListener("click", e => { const el = e.target.closest(".mrow[data-src]"); if (el) pick(null, "", el.dataset.src); });
   $("#db-prov").addEventListener("keydown", e => { const el = e.target.closest(".mrow[data-src]"); if (el && (e.key==="Enter"||e.key===" ")){ e.preventDefault(); pick(null, "", el.dataset.src); } });
+
+  /* แหล่งที่ต่างกัน 1 แหล่งนับ 1 (29 ต.ค. 2026 บ่าย 3, Toon สั่ง) ข้อมูลจาก D.nt.sum.distinct_sources (out/name_level_sources.csv) */
+  const DS0 = NT.distinct_sources, GLAB = {"KEEL":"KEEL","UCI":"UCI","other repository":"คลังหรือ benchmark อื่น","other paper/author":"จาก paper หรือผู้เขียนอื่น","private":"Private"};
+  let srcAll = false;
+  function renderSrc(){
+    const L = srcAll ? DS0.rows : DS0.rows.slice(0, 12), mx = DS0.rows[0].names;
+    const nm = s => s.startsWith("private: ") ? "ข้อมูลเฉพาะของ " + s.slice(9) : s;
+    $("#db-src").innerHTML = `<h3 class="ct">แหล่งข้อมูลที่ต่างกัน ${f(DS0.n)} แหล่ง <span class="unit">1 แหล่งนับ 1 · เช่น KEEL = 1</span></h3>
+      <div class="kpis" style="margin:4px 0 10px">${Object.entries(DS0.by_group).map(([g,n]) => `<div class="kpi"><b>${n}</b><span>${GLAB[g]}</span></div>`).join("")}</div>
+      <div class="tbox"><table class="dxt"><thead><tr><th>แหล่ง</th><th>กลุ่ม</th><th style="min-width:140px">ชื่อ dataset</th><th class="num">entry</th><th class="num">paper</th></tr></thead><tbody>
+      ${L.map(r => `<tr class="click" data-sid="${esc(r.source)}" role="button" tabindex="0" ${tipA(nm(r.source)+": "+r.names+" ชื่อ, "+r.entries+" entry, "+r.papers+" paper ("+r.paper_list+") · ที่ paper เขียน: "+r.as_reported+" · กดเพื่อดูรายชื่อ")}>
+        <td><b>${esc(nm(r.source))}</b></td><td style="font-size:12.5px">${GLAB[r.group]}</td>
+        <td><div style="display:flex;gap:8px;align-items:center"><span class="trk" style="flex:1;display:flex;height:10px"><span class="fillk k-pri" style="width:${r.names/mx*100}%"></span></span><span class="mono" style="min-width:3ch;text-align:right">${r.names}</span></div></td>
+        <td class="num">${r.entries}</td><td class="num">${r.papers}</td></tr>`).join("")}</tbody></table></div>
+      <div class="controls" style="margin-top:8px"><button class="btnl" type="button" id="db-src-all">${srcAll ? "แสดงแค่ 12 แหล่งแรก" : "แสดงทั้งหมด " + DS0.n + " แหล่ง"}</button></div>
+      <p class="sub" style="margin:6px 0 0">จำนวนแหล่งที่ paper หนึ่งใช้ (${DS0.papers} paper): ${Object.entries(DS0.sources_per_paper).map(([k,v]) => `<b>${k}</b> แหล่ง ${v} paper`).join(" · ")} · 0 แหล่ง = paper ไม่ระบุแหล่งรายชุด หรือใช้แต่ synthetic</p>
+      <p class="cap">${esc(DS0.rule)} · ชื่อหนึ่งอาจมาจากหลายแหล่ง (เช่น paper หนึ่งบอก KEEL อีก paper บอก UCI) ผลรวมคอลัมน์ชื่อจึงมากกว่า ${f(DS0.names_with_a_source)} ชื่อที่มีแหล่งระบุ · ที่มา <code>out/name_level_sources.csv</code> · กดแถวเพื่อดูรายชื่อ</p>`;
+  }
+  renderSrc();
+  $("#db-src").addEventListener("click", e => { if (e.target.closest("#db-src-all")) { srcAll = !srcAll; renderSrc(); return; }
+    const tr = e.target.closest("tr[data-sid]"); if (tr) pick(null, "", "", tr.dataset.sid); });
+  $("#db-src").addEventListener("keydown", e => { const tr = e.target.closest("tr[data-sid]"); if (tr && (e.key==="Enter"||e.key===" ")){ e.preventDefault(); pick(null, "", "", tr.dataset.sid); } });
 
   /* B. ใช้ซ้ำ top-N ชื่อตรงตัว */
   let topN = 10;

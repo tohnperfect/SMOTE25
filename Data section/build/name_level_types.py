@@ -38,6 +38,29 @@ def src_group(s):
     if any(k in s for k in _UCI): return "UCI"
     if any(k in s for k in _REF): return "other paper/author"
     return "other repository"   # คลังหรือ benchmark ที่มีชื่อ เช่น HDDT, PROMISE, ELENA, MNIST, ImageNet, NASA MDP
+# ---- แหล่งที่ต่างกัน (29 ต.ค. บ่าย 3, Toon: "KEEL นับเป็น 1"): 1 แหล่ง = 1 คลัง/benchmark/งานที่อ้าง/ข้อมูลเฉพาะของ 1 paper ----
+# ชื่อที่เขียนต่างกันแต่เป็นแหล่งเดียวกันรวมเป็นหนึ่ง (MNIST 3 แบบ, ImageNet 2 รุ่น, ref [6] ของ LS 2 แบบ) · ไม่นับ synthetic, group-level, not stated
+_ID = [("UCI KDD Archive", "UCI"), ("kdd.ics.uci.edu", "UCI"), ("MNIST", "MNIST"), ("ImageNet", "ImageNet"), ("CIFAR-10", "CIFAR-10"),
+       ("HDDT collection", "HDDT collection (Cieslak et al.)"), ("ELENA project", "ELENA"), ("PROMISE", "PROMISE"),
+       ("NASA Metrics", "NASA Metrics Data Program"), ("TREC", "TREC"), ("WebACE", "WebACE"), ("Crowd Analytix", "Crowd Analytix"),
+       ("IBM Analytics", "IBM Analytics"), ("mafalda", "GitHub sisinflab-swot/mafalda"), ("Compustat", "Compustat"),
+       ("KDD Cup 2008", "KDD Cup 2008"), ("KDD'99 Challenge", "KDD Cup 1999"), ("multi-imbalance library", "multi-imbalance library"),
+       ("Maldonado", "microarray (Maldonado et al.)"), ("ordinal regression benchmark", "ordinal regression benchmark (SMOM refs [13,25])"),
+       ("Akritidis", "software defect (Akritidis & Bozanis)"), ("Radivojac", "biological (Radivojac et al.)"),
+       ("hyperspectral image source [53]", "hyperspectral source [53] (DLexiBoost)"), ("hyperspectral image source [54]", "hyperspectral source [54] (DLexiBoost)"),
+       ("hyperspectral image source [55]", "hyperspectral source [55] (DLexiBoost)"), ("KRNN", "Zhang et al. (KRNN)"),
+       ("provided by Dr. N. Chawla", "ให้โดย N. Chawla"), ("Kubat", "Kubat et al."), ("provided by authors of [45]", "ผู้เขียน ref [45] (SMOTE-IPF)"),
+       ("S. aureus", "predictive microbiology refs [57,58]"), ("originally considered in [6]", "ref [6] (LS)"),
+       ("Can ExodusII", "Can ExodusII (AVATAR)"), ("USF Intelligent", "USF Intelligent Systems Lab (Woods et al.)"),
+       ("ref [1] (Chawla", "SMOTE paper (Chawla et al. 2002)"), ("ref [23] (Provost", "Provost et al. 1998")]
+def src_id(raw, paper):
+    g = src_group(raw)
+    if g in ("synthetic", "group-level", "not stated"): return None
+    if g == "private": return f"private: {paper}"
+    if raw in ("KEEL", "UCI") + _REPO: return raw
+    hit = [v for k, v in _ID if k in raw]
+    assert len(hit) == 1, f"STOP: source string has no unique identity: {raw!r}"
+    return hit[0]
 SPEC = ["KEEL", "UCI", "other repository", "other paper/author", "private", "synthetic"]   # ระบุแหล่งรายชุด
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); os.chdir(HERE)
@@ -55,6 +78,7 @@ assert len(D) == 1653 and D.normalized_name.nunique() == 771, "STOP: dataset_rec
 M = D.merge(V[["record_id", "verif", "file", "file_src"]], on="record_id", how="left")
 assert M.verif.notna().all(), "STOP: a record has no verifiability row"
 M["src"] = M.source_as_reported.map(src_group)
+M["sid"] = [src_id(r, p) for r, p in zip(M.source_as_reported, M.paper_key)]
 
 PB = {(r.file, r.source): r for r in P[P.origin == "binary file"].itertuples()}
 OVR = {(r.file, r.source) for r in P[P.origin.str.startswith("one-vs")].itertuples()}
@@ -99,6 +123,7 @@ for name, g in M.groupby("normalized_name", sort=True):
         names_as_reported="; ".join(sorted(set(g.name_as_reported)))[:300],
         source=nsrc, source_combo=" + ".join(spec) if len(spec) > 1 else "",
         entries_by_source="; ".join(f"{x} {sc[x]}" for x in SRC if sc.get(x)),
+        source_ids="; ".join(sorted({x for x in g.sid if x})),
         difficulty=diff,
         measured_tasks="; ".join(f"{t.file} [{t.source}] minority={t.minority_label.strip()} N={t.N} n_min={t.n_min} IR={t.IR} noise={t.noise_index} profile={t.profile}"
                                  for t in tasks.values()),
@@ -134,9 +159,29 @@ out = dict(
                difficulty="โปรไฟล์ของ task สองคลาสที่วัดแล้ว (ธงจาก difficulty/profile_final.py) · หลาย task ต่างโปรไฟล์ = varies · มีแต่ไฟล์หลายคลาส = multiclass · ไม่มีไฟล์ที่ตรวจได้ = not measured"))
 assert sum(src_cnt.values()) == 771 and sum(out["entry_level_by_source"].values()) == 1653
 assert sum(by_type.values()) == 771 and all(sum(v.values()) == by_type[c] for c, v in cross.items())
+# แหล่งที่ต่างกัน: 1 แถวต่อแหล่ง
+S = M[M.sid.notna()]
+SI = pd.DataFrame([dict(source=k, group=src_group(g.source_as_reported.iloc[0]), names=g.normalized_name.nunique(), entries=len(g),
+                        papers=g.paper_key.nunique(), paper_list="; ".join(sorted(set(g.paper_key))),
+                        as_reported=" | ".join(sorted(set(g.source_as_reported)))) for k, g in S.groupby("sid")])
+SI = SI.sort_values(["names", "entries", "source"], ascending=[False, False, True])
+SI.to_csv("out/name_level_sources.csv", index=False)
+pp = M.groupby("paper_key").sid.apply(lambda x: len({v for v in x if v}))
+dist = Counter(min(int(v), 4) for v in pp)
+out["distinct_sources"] = dict(
+    n=int(len(SI)), by_group={k: int((SI.group == k).sum()) for k in SPEC if k != "synthetic"},
+    named_public=int(SI.group.isin(["KEEL", "UCI", "other repository"]).sum()),
+    rows=SI[["source", "group", "names", "entries", "papers", "paper_list", "as_reported"]].to_dict("records"),
+    papers=int(len(pp)), sources_per_paper={("4+" if k == 4 else str(k)): int(v) for k, v in sorted(dist.items())},
+    names_with_a_source=int(R.source_ids.ne("").sum()),
+    rule="1 แหล่ง = 1 คลังหรือ benchmark, 1 งานหรือผู้ให้ข้อมูลที่อ้าง, หรือข้อมูลเฉพาะของ 1 paper · ชื่อที่เขียนต่างกันแต่เป็นแหล่งเดียวกันรวมกัน (ตาราง _ID ใน build/name_level_types.py) · ไม่นับ synthetic, ระบุแค่ระดับกลุ่ม และไม่ระบุ",
+    source="out/name_level_sources.csv")
+assert SI.entries.sum() == len(S) and pp.index.nunique() == M.paper_key.nunique()
 json.dump(out, open("out/name_level_types.json", "w", encoding="utf-8"), indent=1, ensure_ascii=False)
 print(json.dumps({k: out[k] for k in ("by_type", "by_difficulty", "measured_names", "names_mixed_type")}, indent=1))
 for c in ORDER: print(c, {k: v for k, v in cross[c].items() if v})
+print("distinct", out["distinct_sources"]["n"], out["distinct_sources"]["by_group"], out["distinct_sources"]["sources_per_paper"], out["distinct_sources"]["names_with_a_source"])
+print(SI.head(12)[["source","names","entries","papers"]].to_string())
 print("source", src_cnt, "\nentry", out["entry_level_by_source"], "\ncombos", out["multiple_source_combos"])
 for x in SRCN: print(x, {k: v for k, v in src_x_type[x].items() if v})
 for k, v in out["source_map"].items():

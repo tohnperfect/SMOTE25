@@ -1,0 +1,51 @@
+source,group,names,entries,papers,paper_list,as_reported
+UCI,UCI,268,428,36,AB-SMOTE; ADASYN; Borderline-SMOTE; CGMOS; CISO; COG-OS; CTGAN / TVAE; ClusterCentroids; DGOT; DSRBF / Static-SMOTE; EMDO; EasyEnsemble / BalanceCascade; GDO; GMMSampling; Global-CS (AAAI); Global-CS (journal); LS; Loyalty-SMOTE; MBS; MKC-SMOTE; MLOS; MWMOTE; OSS; RACOG / wRACOG; RSMOTE; RUSBoost; SCUT; SMOM; SMOTE; SMOTE-ENN / SMOTE-Tomek; SMOTEBoost; SOUP; SPIDER2; SVDD-WSMOTE; Safe-Level-SMOTE; k-means SMOTE,"UCI | other: KDD-Cup 1999 (ref [20], http://kdd.ics.uci.edu/databases/kddcup99/task.html) | other: UCI KDD Archive"
+KEEL,KEEL,196,486,20,AB-SMOTE; CISO; DLexiBoost; GDHS; GDO; HDE; KNNOR; MC-CCR; MC-NCLWO; MC-RBO; MLOS; NROMM; OVO-SMOTE; RBBoost / Random Balance; RBO; SCUT; SHSampler; SMOTE-IPF; SplitBal; k-means SMOTE,KEEL
+Kaggle,other repository,28,28,3,CTGAN / TVAE; Loyalty-SMOTE; MBS,Kaggle
+HDDT collection (Cieslak et al.),other repository,20,20,1,RBBoost / Random Balance,other: HDDT collection of Cieslak et al. [37] (http://www.nd.edu/dial/hddt/)
+LibSVM,other repository,17,22,3,COG-OS; HDE; LS,LibSVM
+microarray (Maldonado et al.),other paper/author,12,12,1,FW-SMOTE,other: microarray datasets reported in Maldonado et al. [6]
+imbalanced-learn,other repository,10,10,1,DGOT,imbalanced-learn
+"ordinal regression benchmark (SMOM refs [13,25])",other paper/author,8,8,1,SMOM,"other: ordinal regression benchmark data (refs [13,25])"
+UCR,other repository,7,7,1,INOS,UCR
+private: SVDD-WSMOTE,private,7,7,1,SVDD-WSMOTE,private
+software defect (Akritidis & Bozanis),other paper/author,6,6,1,GDHS,other: software defect detection datasets from ref [46] (Akritidis & Bozanis)
+MNIST,other repository,5,5,3,CTGAN / TVAE; NBU; ROS (Buda),"other: MNIST | other: MNIST (LeCun) | other: MNIST benchmark (LeCun, Bottou, Bengio, & Haffner, 1998)"
+PROMISE,other repository,5,5,1,MLOS,other: PROMISE
+ImageNet,other repository,4,4,2,DLexiBoost; ROS (Buda),"other: ImageNet 2011 Fall Release | other: ImageNet ILSVRC-2012 (Russakovsky et al., 2015)"
+multi-imbalance library,other repository,4,4,1,GMMSampling,other: multi-imbalance library (artificial datasets repository)
+private: OSS,private,4,4,1,OSS,private
+IBM Analytics,other repository,3,3,1,AB-SMOTE,other: IBM Analytics
+biological (Radivojac et al.),other paper/author,3,3,1,LS,other: biological datasets [20] (Radivojac et al.)
+private: RUSBoost,private,3,3,1,RUSBoost,private
+NASA Metrics Data Program,other repository,2,2,1,RUSBoost,other: NASA Metrics Data Program
+hyperspectral source [53] (DLexiBoost),other paper/author,2,2,1,DLexiBoost,other: hyperspectral image source [53] as cited in main paper Sec 4.4
+hyperspectral source [55] (DLexiBoost),other paper/author,2,2,1,DLexiBoost,other: hyperspectral image source [55] as cited in main paper Sec 4.4
+private: AMDO,private,2,2,1,AMDO,private
+private: Cluster-SMOTE,private,2,2,1,Cluster-SMOTE,private
+private: GDO,private,2,2,1,GDO,private
+private: SMOTE,private,2,2,1,SMOTE,private
+ref [6] (LS),other paper/author,2,2,1,LS,other: real-world dataset originally considered in [6] | other: real-world dataset originally considered in [6] (NCI Yeast AntiCancer drug screen)
+ELENA,other repository,1,2,2,LS; SMOTE,other: ELENA project
+CIFAR-10,other repository,1,1,1,ROS (Buda),"other: CIFAR-10 benchmark (Krizhevsky & Hinton, 2009)"
+Can ExodusII (AVATAR),other paper/author,1,1,1,SMOTE,other: generated from Can ExodusII data (AVATAR version of Mustafa Visualization tool)
+Compustat,other repository,1,1,1,LS,other: Compustat North America financial database
+Crowd Analytix,other repository,1,1,1,AB-SMOTE,other: Crowd Analytix
+GitHub sisinflab-swot/mafalda,other repository,1,1,1,EMDO,"other: GitHub (sisinflab-swot/mafalda, ref [64])"
+KDD Cup 1999,other repository,1,1,1,LS,other: KDD'99 Challenge [16]
+KDD Cup 2008,other repository,1,1,1,NBU,other: KDD Cup 2008
+Kubat et al.,other paper/author,1,1,1,LS,other: provided by [17] (Kubat et al.)
+Provost et al. 1998,other paper/author,1,1,1,SMOTEBoost,"other: ref [23] (Provost, Fawcett, Kohavi, ICML 1998)"
+SMOTE paper (Chawla et al. 2002),other paper/author,1,1,1,SMOTEBoost,"other: ref [1] (Chawla et al., SMOTE, JAIR 2002)"
+TREC,other repository,1,1,1,COG-OS,other: TREC
+USF Intelligent Systems Lab (Woods et al.),other paper/author,1,1,1,SMOTE,"other: USF Intelligent Systems Lab (Woods et al., 1993)"
+WebACE,other repository,1,1,1,COG-OS,other: WebACE
+Zhang et al. (KRNN),other paper/author,1,1,1,KNNOR,"other: cited as ref [42] (Zhang et al., KRNN, Pattern Recognit. 2017); repository not named in Table 2"
+hyperspectral source [54] (DLexiBoost),other paper/author,1,1,1,DLexiBoost,other: hyperspectral image source [54] as cited in main paper Sec 4.4
+"predictive microbiology refs [57,58]",other paper/author,1,1,1,DSRBF / Static-SMOTE,"other: real predictive microbiology data (S. aureus growth/no growth) from refs [57,58]"
+private: ClusterCentroids,private,1,1,1,ClusterCentroids,private
+private: RACOG / wRACOG,private,1,1,1,RACOG / wRACOG,private
+private: SHRINK,private,1,1,1,SHRINK,private
+private: SPIDER2,private,1,1,1,SPIDER2,private
+ผู้เขียน ref [45] (SMOTE-IPF),other paper/author,1,1,1,SMOTE-IPF,other: provided by authors of [45]
+ให้โดย N. Chawla,other paper/author,1,1,1,RUSBoost,other: provided by Dr. N. Chawla
