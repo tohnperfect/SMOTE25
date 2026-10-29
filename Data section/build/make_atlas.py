@@ -350,6 +350,14 @@ data["hyp"] = dict(main=_HY["all_metric_plain"], r1=_HY["robust_R1_dataset_major
                    within=_HY["H1_within_paper_descriptive"], h2=_HY["H2"], h3a=_HY["H3a_granularity"], h3b=_HY["H3b_listed_not_compared"],
                    diff=dict(_DO, robust=_DO["robust_task_majority_noise_per_0.1"]),
                    source="out/hypotheses.json (build/hypotheses.py), out/difficulty_outcomes.json (build/difficulty_outcomes.py)")
+# ชนิดระดับชื่อ + ความยากที่วัดได้ของแต่ละชื่อ (29 ต.ค. 2026, Toon สั่งให้แผงชนิดใช้จำนวนที่ normalise แล้ว): build/name_level_types.py
+_NT = json.load(open(p("out/name_level_types.json"), encoding="utf-8")); _NTR = rcsv("out/name_level_types.csv")
+if _NT["names"] != DASH["names"]["distinct"] or len(_NTR) != _NT["names"] or sum(_NT["by_type"].values()) != _NT["names"] \
+        or C.Counter(r["name_type"] for r in _NTR) != C.Counter({k: v for k, v in _NT["by_type"].items() if v}):
+    sys.exit("STOP: out/name_level_types.* disagree with each other or with the 771 names (rerun python3 build/name_level_types.py)")
+data["nt"] = dict(sum=_NT, rows=[[r["normalized_name"], r["name_type"], int(r["entries"]), r["entries_by_category"], int(r["n_papers"]), r["papers"],
+                                 r["difficulty"], r["measured_tasks"], r["not_measured_reason"]] for r in _NTR],
+                  source="out/name_level_types.csv, out/name_level_types.json (build/name_level_types.py)")
 data["manuscript"] = dict(overview=json.load(open(p("manuscript/overview.json"), encoding="utf-8")),
                           html=tex2html.convert(_tex), tex=_tex)
 js = json.dumps(data, ensure_ascii=False, separators=(",", ":"))

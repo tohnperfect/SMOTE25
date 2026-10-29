@@ -358,14 +358,15 @@ tr.mz-sel td{background:var(--accent-soft)}
       <div class="card" id="db-cat"></div>
       <div class="card" id="db-prov"></div>
     </div>
+    <div class="card" id="db-diff"></div>
     <div class="card" id="db-rec" hidden>
       <h3 class="ct" id="db-rec-h"></h3>
       <div class="controls">
-        <input type="search" id="db-rec-q" placeholder="ค้นชื่อ dataset หรือ paper" aria-label="ค้นใน entry ที่เลือก">
+        <input type="search" id="db-rec-q" placeholder="ค้นชื่อ dataset หรือ paper" aria-label="ค้นใน dataset ที่เลือก">
         <button class="btnl" id="db-rec-reset" type="button">ล้างตัวเลือก</button>
         <span class="count" id="db-rec-n"></span>
       </div>
-      <div class="tbox"><table id="db-rec-t"><thead><tr><th>paper</th><th>dataset ตามที่พิมพ์</th><th>แหล่ง</th><th>ที่มาของป้าย</th><th>ตาราง / หน้า</th></tr></thead><tbody></tbody></table></div>
+      <div class="tbox"><table id="db-rec-t"><thead><tr><th>dataset (ชื่อหลัง normalise)</th><th>ความยากที่วัดได้</th><th class="num">entry</th><th>entry แยกตามชนิด</th><th class="num">paper</th><th>task ที่วัด / เหตุที่วัดไม่ได้</th></tr></thead><tbody></tbody></table></div>
     </div>
 
     <h2 class="sec">2. dataset ถูกใช้ซ้ำแค่ไหน</h2>
@@ -887,35 +888,65 @@ renderWNsum();
   const eligP = new Set(ORALL.filter(r=>r.eligible).map(r=>r.paper)).size;
   $("#db-find").innerHTML = [
     `<b>${f(B.names.single_paper_datasets_t1)}</b> จาก <b>${f(B.names.datasets_t1)}</b> dataset (${pc(B.names.single_paper_datasets_t1,B.names.datasets_t1)}; ${f(B.names.distinct)} ชื่อ, ${f(B.names.families_t1)} ตระกูล ตามกฎ T1) ปรากฏใน paper เดียว ขณะที่ตระกูล ecoli และ yeast (กฎ T1 นับรวม split) อยู่ใน <b>${fam.ecoli.family}</b> และ <b>${fam.yeast.family}</b> จาก ${B.corpus.papers_empirical} paper`,
-    `ผู้เขียนดัดแปลงข้อมูลเอง <b>${f(C0.modified)}</b> entry และระบุไม่ได้ว่าได้มาอย่างไร <b>${f(C0["not stated"])}</b> entry จาก ${f(B.entries.total)}`,
+    `ผู้เขียนดัดแปลงข้อมูลเอง <b>${f(C0.modified)}</b> entry จาก ${f(B.entries.total)} และ <b>${f(D.nt.sum.by_type.modified)}</b> จาก ${f(D.nt.sum.names)} ชื่อเคยถูกดัดแปลงใน paper ใด paper หนึ่ง · ระบุไม่ได้ว่าได้มาอย่างไร <b>${f(C0["not stated"])}</b> entry (${f(D.nt.sum.by_type["not stated"])} ชื่อ)`,
     `<b>${sv.datasets_with_more_than_one_size}</b> จาก <b>${sv.datasets_with_size_in_2plus_papers}</b> dataset (กฎ T1) ที่พิมพ์ขนาดใน 2 paper ขึ้นไป มีขนาดมากกว่าหนึ่งค่า ชื่อเดียวกันจึงไม่ได้รับประกันว่าเป็นข้อมูลชุดเดียวกัน`,
     `KEEL ส่วนใหญ่ใช้ไฟล์ที่คลังแบ่งคลาสไว้แล้ว (<b>${kp.KEEL.by_cat["repository-defined"]}</b>/${kp.KEEL.total} entry) ส่วน UCI ผู้เขียนดัดแปลงเอง <b>${kp.UCI.by_cat.modified}</b>/${kp.UCI.total} entry`,
     `ในผลหลัก ค่าที่ paper พิมพ์ของวิธีที่เสนอสูงกว่า plain SMOTE <b>${P.up}</b> จาก <b>${P.rows}</b> แถว (${P.papers} paper) ผลแบบห่อแยกต่างหาก <b>${W.up}</b> จาก <b>${W.rows}</b> แถว ไม่รวมกัน`,
     `<b>${base - eligP}</b> จาก ${base} paper ที่ใช้ SMOTE เป็น baseline ไม่มีคู่ค่ารายชุดที่เข้าเกณฑ์ (ไม่มีตัวเลขรายชุดใน paper, มีแค่ค่าเฉลี่ย หรือจับคู่ข้ามตาราง)`
   ].map(x => `<li>${x}</li>`).join("");
 
-  /* A. ชนิดข้อมูล กดเพื่อดู entry */
-  const tot = B.entries.total, cmax = Math.max(...CATS.map(c=>C0[c]));
-  $("#db-cat").innerHTML = `<h3 class="ct">ชนิดของ dataset entry <span class="unit">n = ${f(tot)} entry</span></h3>
-    <div class="hb" >${CATS.map(c => `<div class="hrow click ${kc(c)}" role="button" tabindex="0" data-cat="${c}" ${tipA(CATLAB[c]+": "+f(C0[c])+" จาก "+f(tot)+" entry ("+pc(C0[c],tot)+") · กดเพื่อดูรายการ")}>
-      <span class="lab"><i class="sw"></i>${CATLAB[c]}</span><span class="trk"><span class="fillk ${kc(c)}" style="width:${C0[c]/cmax*100}%"></span></span><span class="val">${f(C0[c])} · ${pc(C0[c],tot)}</span></div>`).join("")}</div>
-    <p class="cap">Not stated คือ paper ไม่ให้ข้อมูลพอจะจัดชนิด (เหลือหลังใช้กฎที่ Toon อนุมัติ) ไม่ได้แปลว่าวิธีวิจัยไม่ดี กดแถวเพื่อดู entry ของชนิดนั้น</p>`;
-  let recCat = null;
-  const ROWS = D.papers.flatMap(p => p.rows.map(r => ({p:p.k, name:r[0], src:r[2], how:r[9], basis:r[10], ref:r[12]})));
+  /* A. ชนิดข้อมูล หน่วยชื่อหลัง normalise (29 ต.ค. 2026) + ความยากที่วัดได้ กดเพื่อดูรายชื่อ dataset · ข้อมูลจาก D.nt (build/name_level_types.py) */
+  const NT = D.nt.sum, NTR = D.nt.rows.map(r => ({name:r[0], type:r[1], ent:r[2], bycat:r[3], np:r[4], papers:r[5], diff:r[6], tasks:r[7], why:r[8]}));
+  const tot = NT.names, NB = NT.by_type, cmax = Math.max(...CATS.map(c=>NB[c]));
+  const DLAB = {"none":"ไม่ติดธงใด","small_sample":"Small sample","outlier_flag":"Outlier > 20%","small_sample + outlier_flag":"Small sample + outlier > 20%",
+    "small_disjuncts + outlier_flag":"Small disjuncts + outlier > 20%","small_disjuncts + small_sample":"Small disjuncts + small sample",
+    "small_disjuncts + small_sample + outlier_flag":"Small disjuncts + small sample + outlier > 20%","varies":"ต่างกันตามไฟล์หรือคลาส",
+    "multiclass":"หลายคลาส (วัดได้แค่ราย class)","not measured":"วัดไม่ได้"};
+  const DTIP = {"none":"วัดจากไฟล์จริงแล้ว ไม่ติดธงใดในสามธง (small sample: minority ต่อ feature < 10, Jain et al. 2000; outlier > 20% และ small disjuncts: rare ≥ 20%, Napierala & Stefanowski 2016)",
+    "small_sample":"minority ต่อ feature < 10 (Jain et al. 2000)","outlier_flag":"minority ที่เป็น outlier เกิน 20% (Napierala & Stefanowski 2016)",
+    "varies":"ชื่อนี้จับคู่ได้หลาย task (คนละไฟล์หรือคนละคลาส minority) และโปรไฟล์ต่างกัน",
+    "multiclass":"ตรวจได้กับไฟล์หลายคลาส แต่ paper ใช้แบบหลายคลาสหรือไม่บอกว่าคลาสไหนเป็น minority จึงไม่มีโปรไฟล์เดียว (วัดราย class แบบ one-vs-rest ในแท็บความยากที่วัดได้)",
+    "not measured":"ไม่มีไฟล์สาธารณะที่ตรวจได้ (ไม่พบไฟล์, ขนาดที่พิมพ์ไม่ตรง, synthetic, ไม่พิมพ์ขนาด หรือสร้าง task ซ้ำไม่ได้)"};
+  const DSH = {"none":"ไม่ติดธง","small_sample":"Sample","outlier_flag":"Outlier","small_sample + outlier_flag":"Sample + outlier",
+    "small_disjuncts + outlier_flag":"Disjuncts + outlier","small_disjuncts + small_sample":"Disjuncts + sample",
+    "small_disjuncts + small_sample + outlier_flag":"Disjuncts + sample + outlier","varies":"ต่างกัน","multiclass":"หลายคลาส","not measured":"วัดไม่ได้"};
+  const dtip = k => DTIP[k] || ("ติดธง " + DLAB[k] + " · small sample: minority ต่อ feature < 10; outlier > 20%; small disjuncts: rare ≥ 20%");
+  const DK = NT.difficulty_order.filter(k => NT.by_difficulty[k] > 0);
+  const dc = k => k==="not measured" ? "k-not-stated" : k==="multiclass" ? "k-exc" : k==="none" ? "k-up" : k==="varies" ? "k-eq" : "k-dn";
+  const E0 = NT.entry_level_by_category;
+  $("#db-cat").innerHTML = `<h3 class="ct">ชนิดของ dataset <span class="unit">n = ${f(tot)} ชื่อ (normalise แล้ว)</span></h3>
+    <div class="hb">${CATS.map(c => `<div class="hrow click ${kc(c)}" role="button" tabindex="0" data-cat="${c}" ${tipA(CATLAB[c]+": "+f(NB[c])+" จาก "+f(tot)+" ชื่อ ("+pc(NB[c],tot)+") · นับแบบ entry "+f(E0[c])+" entry · กดเพื่อดูรายชื่อ")}>
+      <span class="lab"><i class="sw"></i>${CATLAB[c]}</span><span class="trk"><span class="fillk ${kc(c)}" style="width:${NB[c]/cmax*100}%"></span></span><span class="val">${f(NB[c])} · ${pc(NB[c],tot)}</span></div>`).join("")}</div>
+    <p class="cap">1 ชื่อนับครั้งเดียว ${f(NT.names_mixed_type)} ชื่อที่ paper ต่าง ๆ ใช้ต่างชนิดกัน ได้ชนิดเดียวตามลำดับ Modified &gt; Synthetic &gt; Repository-defined &gt; Original &gt; Not stated (เคยถูกดัดแปลงใน paper ใด = Modified) · นับแบบ entry (${f(NT.entries)} entry): ${CATS.map(c=>CATLAB[c]+" "+f(E0[c])).join(" · ")} · Not stated คือ paper ไม่ให้ข้อมูลพอจะจัดชนิด</p>`;
+  const cell = (c, k, n) => n ? `<button class="btnl" type="button" data-cat="${c}" data-diff="${k}" ${tipA((c?CATLAB[c]:"ทุกชนิด")+" · "+DLAB[k]+": "+f(n)+" ชื่อ · กดเพื่อดูรายชื่อ")}>${f(n)}</button>` : `<span style="color:var(--ink3)">0</span>`;
+  const XT = NT.type_by_difficulty, colTot = k => CATS.reduce((a,c)=>a+XT[c][k],0);
+  $("#db-diff").innerHTML = `<h3 class="ct">ความยากที่วัดได้ของ dataset แต่ละชนิด <span class="unit">หน่วยชื่อ · n = ${f(tot)}</span></h3>
+    <div class="tbox"><table class="dxt"><thead><tr><th>ชนิด</th>${DK.map(k=>`<th class="num" ${tipA(DLAB[k]+": "+dtip(k))} tabindex="0">${DSH[k]||DLAB[k]}</th>`).join("")}<th class="num">รวม</th></tr></thead><tbody>
+    ${CATS.map(c => `<tr><th scope="row"><span class="${kc(c)}" style="display:inline-flex;gap:6px;align-items:center"><i class="sw"></i>${CATLAB[c]}</span></th>${DK.map(k=>`<td class="num">${cell(c,k,XT[c][k])}</td>`).join("")}<td class="num">${cell(c,"",NB[c])}</td></tr>`).join("")}
+    <tr><th scope="row">รวม</th>${DK.map(k=>`<td class="num">${cell("",k,colTot(k))}</td>`).join("")}<td class="num"><b>${f(tot)}</b></td></tr></tbody></table></div>
+    <p class="cap">วัดจากไฟล์สาธารณะที่ตรวจแล้วว่าตรงกับที่ paper ใช้ (HVDM, k = 5) ใช้ธงที่มีอ้างอิง: <b>Sample</b> = small sample (minority ต่อ feature &lt; 10, Jain et al. 2000), <b>Outlier</b> = minority เป็น outlier เกิน 20% และ <b>Disjuncts</b> = small disjuncts (rare ≥ 20%) ตาม Napierala &amp; Stefanowski 2016 · <b>หลายคลาส</b> = ตรวจได้กับไฟล์หลายคลาสแต่ไม่มีคลาส minority เดียว · มีโปรไฟล์สองคลาส ${f(NT.measured_names)} ชื่อ · ชื่อที่จับได้หลาย task ใช้โปรไฟล์เดียวเมื่อทุก task ตรงกัน · Synthetic และ Not stated วัดไม่ได้ทั้งหมด เพราะไม่มีไฟล์ให้ตรวจ · วัดไม่ได้ไม่ได้แปลว่าง่ายหรือยาก กดตัวเลขเพื่อดูรายชื่อ dataset</p>`;
+  let recCat = null, recDiff = "";
   function renderRec(){
-    $("#db-rec").hidden = !recCat; document.querySelectorAll("#db-cat .hrow").forEach(el => el.classList.toggle("sel", el.dataset.cat===recCat));
-    if (!recCat) return;
-    const q = $("#db-rec-q").value.trim().toLowerCase(), A0 = ROWS.filter(r => r.how===recCat), L = A0.filter(r => !q || (r.name+" "+r.p).toLowerCase().includes(q));
-    $("#db-rec-h").innerHTML = `<span class="${kc(recCat)}" style="display:inline-flex;gap:6px;align-items:center"><i class="sw"></i>${CATLAB[recCat]}</span> <span class="unit">${f(A0.length)} จาก ${f(tot)} entry</span>`;
-    $("#db-rec-n").textContent = (q ? `ตรงกับคำค้น ${f(L.length)} · ` : "") + (L.length > 300 ? "แสดง 300 แถวแรก" : `แสดง ${f(L.length)} แถว`);
-    $("#db-rec-t tbody").innerHTML = L.slice(0,300).map(r => `<tr><td><button class="btnl" data-p="${esc(r.p)}" type="button">${esc(r.p)}</button></td><td class="mono">${esc(r.name)}</td><td style="font-size:12.5px">${esc(r.src)}</td><td style="font-size:12.5px">${String(r.basis).startsWith("rule") ? "กฎที่ Toon อนุมัติ" : "อ่านจาก paper"}<div style="font-size:11px;color:var(--ink3)">${esc(r.basis)}</div></td><td class="mono" style="font-size:11.5px">${esc(nz(r.ref))}</td></tr>`).join("") || `<tr><td colspan="5" class="empty">ไม่พบ entry ที่ตรงกับคำค้น</td></tr>`;
+    const on = recCat !== null; $("#db-rec").hidden = !on;
+    document.querySelectorAll("#db-cat .hrow").forEach(el => el.classList.toggle("sel", on && !recDiff && el.dataset.cat===recCat));
+    if (!on) return;
+    const q = $("#db-rec-q").value.trim().toLowerCase();
+    const A0 = NTR.filter(r => (!recCat || r.type===recCat) && (!recDiff || r.diff===recDiff)).sort((a,b) => b.np - a.np || a.name.localeCompare(b.name));
+    const L = A0.filter(r => !q || (r.name+" "+r.papers).toLowerCase().includes(q));
+    $("#db-rec-h").innerHTML = `${recCat ? `<span class="${kc(recCat)}" style="display:inline-flex;gap:6px;align-items:center"><i class="sw"></i>${CATLAB[recCat]}</span>` : "ทุกชนิด"}${recDiff ? " · "+esc(DLAB[recDiff]) : ""} <span class="unit">${f(A0.length)} จาก ${f(tot)} ชื่อ</span>`;
+    $("#db-rec-n").textContent = (q ? `ตรงกับคำค้น ${f(L.length)} · ` : "") + `แสดง ${f(L.length)} ชื่อ เรียงตามจำนวน paper`;
+    $("#db-rec-t tbody").innerHTML = L.map(r => `<tr><td><button class="btnl mono" data-n="${esc(r.name)}" type="button" ${tipA("เปิด "+r.name+" ในแท็บ Datasets")}>${esc(r.name)}</button></td>
+      <td><span class="${dc(r.diff)}" style="display:inline-flex;gap:6px;align-items:center;font-size:12.5px"><i class="sw"></i>${esc(DLAB[r.diff])}</span></td>
+      <td class="num">${r.ent}</td><td style="font-size:12.5px">${esc(r.bycat)}</td><td class="num" ${tipA(r.papers)} tabindex="0">${r.np}</td>
+      <td class="mono" style="font-size:11.5px">${esc(r.tasks || r.why || (r.diff==="multiclass" ? "ไฟล์หลายคลาส ไม่มีคลาส minority เดียว" : ""))}</td></tr>`).join("") || `<tr><td colspan="6" class="empty">ไม่พบ dataset ที่ตรงกับคำค้น</td></tr>`;
   }
-  const pickCat = el => { recCat = recCat===el.dataset.cat ? null : el.dataset.cat; $("#db-rec-q").value = ""; renderRec(); if (recCat) $("#db-rec").scrollIntoView({block:"nearest"}); };
-  $("#db-cat").addEventListener("click", e => { const el = e.target.closest(".hrow"); if (el) pickCat(el); });
-  $("#db-cat").addEventListener("keydown", e => { const el = e.target.closest(".hrow"); if (el && (e.key==="Enter"||e.key===" ")){ e.preventDefault(); pickCat(el); } });
+  const pick = (c, k) => { if (recCat === c && recDiff === k) { recCat = null; recDiff = ""; } else { recCat = c; recDiff = k; } $("#db-rec-q").value = ""; renderRec(); if (recCat !== null) $("#db-rec").scrollIntoView({block:"nearest"}); };
+  $("#db-cat").addEventListener("click", e => { const el = e.target.closest(".hrow"); if (el) pick(el.dataset.cat, ""); });
+  $("#db-cat").addEventListener("keydown", e => { const el = e.target.closest(".hrow"); if (el && (e.key==="Enter"||e.key===" ")){ e.preventDefault(); pick(el.dataset.cat, ""); } });
+  $("#db-diff").addEventListener("click", e => { const b = e.target.closest("button[data-diff]"); if (b) pick(b.dataset.cat, b.dataset.diff); });
   $("#db-rec-q").addEventListener("input", renderRec);
-  $("#db-rec-reset").addEventListener("click", () => { recCat = null; $("#db-rec-q").value = ""; renderRec(); });
-  $("#db-rec-t").addEventListener("click", e => { const b = e.target.closest("button[data-p]"); if (b) gotoPaper(b.dataset.p); });
+  $("#db-rec-reset").addEventListener("click", () => { recCat = null; recDiff = ""; $("#db-rec-q").value = ""; renderRec(); });
+  $("#db-rec-t").addEventListener("click", e => { const b = e.target.closest("button[data-n]"); if (b) openName(b); });
 
   /* C. KEEL กับ UCI */
   const stackRow = (lab, by, n, extra) => `<div class="mrow"><span>${lab}</span><div class="stack" role="img" aria-label="${esc(lab)}: ${CATS.filter(c=>by[c]).map(c=>CATLAB[c]+" "+by[c]).join(", ")}">${CATS.filter(c=>by[c]).map(c => `<span class="seg ${kc(c)}" style="flex:${by[c]}" tabindex="0" ${tipA(lab+" · "+CATLAB[c]+": "+f(by[c])+" จาก "+f(n)+" entry ("+pc(by[c],n)+")")}></span>`).join("")}</div><span class="n">${f(n)}</span></div>`;

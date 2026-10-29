@@ -1,0 +1,120 @@
+{
+ "source": "build/name_level_types.py; inputs out/dataset_records.csv, difficulty/verifiability_entries.csv, difficulty/difficulty_profile_final.csv",
+ "unit": "normalized dataset name (R1 placeholders removed)",
+ "names": 771,
+ "entries": 1653,
+ "precedence": [
+  "modified",
+  "synthetic",
+  "repository-defined",
+  "original",
+  "not stated"
+ ],
+ "by_type": {
+  "modified": 233,
+  "synthetic": 107,
+  "repository-defined": 164,
+  "original": 149,
+  "not stated": 118
+ },
+ "entry_level_by_category": {
+  "modified": 331,
+  "synthetic": 119,
+  "repository-defined": 470,
+  "original": 534,
+  "not stated": 199
+ },
+ "names_single_type": 657,
+ "names_mixed_type": 114,
+ "difficulty_order": [
+  "none",
+  "small_sample",
+  "outlier_flag",
+  "small_sample + outlier_flag",
+  "small_disjuncts + outlier_flag",
+  "small_disjuncts + small_sample",
+  "small_disjuncts + small_sample + outlier_flag",
+  "varies",
+  "multiclass",
+  "not measured"
+ ],
+ "by_difficulty": {
+  "none": 43,
+  "small_sample": 84,
+  "outlier_flag": 0,
+  "small_sample + outlier_flag": 25,
+  "small_disjuncts + outlier_flag": 0,
+  "small_disjuncts + small_sample": 0,
+  "small_disjuncts + small_sample + outlier_flag": 17,
+  "varies": 0,
+  "multiclass": 30,
+  "not measured": 572
+ },
+ "type_by_difficulty": {
+  "modified": {
+   "none": 18,
+   "small_sample": 11,
+   "outlier_flag": 0,
+   "small_sample + outlier_flag": 4,
+   "small_disjuncts + outlier_flag": 0,
+   "small_disjuncts + small_sample": 0,
+   "small_disjuncts + small_sample + outlier_flag": 1,
+   "varies": 0,
+   "multiclass": 19,
+   "not measured": 180
+  },
+  "synthetic": {
+   "none": 0,
+   "small_sample": 0,
+   "outlier_flag": 0,
+   "small_sample + outlier_flag": 0,
+   "small_disjuncts + outlier_flag": 0,
+   "small_disjuncts + small_sample": 0,
+   "small_disjuncts + small_sample + outlier_flag": 0,
+   "varies": 0,
+   "multiclass": 0,
+   "not measured": 107
+  },
+  "repository-defined": {
+   "none": 24,
+   "small_sample": 67,
+   "outlier_flag": 0,
+   "small_sample + outlier_flag": 21,
+   "small_disjuncts + outlier_flag": 0,
+   "small_disjuncts + small_sample": 0,
+   "small_disjuncts + small_sample + outlier_flag": 16,
+   "varies": 0,
+   "multiclass": 1,
+   "not measured": 35
+  },
+  "original": {
+   "none": 1,
+   "small_sample": 6,
+   "outlier_flag": 0,
+   "small_sample + outlier_flag": 0,
+   "small_disjuncts + outlier_flag": 0,
+   "small_disjuncts + small_sample": 0,
+   "small_disjuncts + small_sample + outlier_flag": 0,
+   "varies": 0,
+   "multiclass": 10,
+   "not measured": 132
+  },
+  "not stated": {
+   "none": 0,
+   "small_sample": 0,
+   "outlier_flag": 0,
+   "small_sample + outlier_flag": 0,
+   "small_disjuncts + outlier_flag": 0,
+   "small_disjuncts + small_sample": 0,
+   "small_disjuncts + small_sample + outlier_flag": 0,
+   "varies": 0,
+   "multiclass": 0,
+   "not measured": 118
+  }
+ },
+ "measured_names": 169,
+ "rules": {
+  "type": "ชื่อหนึ่งได้ชนิดเดียว: ถ้ามี entry ใดเป็นชนิดที่มาก่อนตามลำดับ precedence ใช้ชนิดนั้น (เคยดัดแปลง = modified)",
+  "difficulty": "โปรไฟล์ของ task สองคลาสที่วัดแล้ว (ธงจาก difficulty/profile_final.py) · หลาย task ต่างโปรไฟล์ = varies · มีแต่ไฟล์หลายคลาส = multiclass · ไม่มีไฟล์ที่ตรวจได้ = not measured"
+ }
+}

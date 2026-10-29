@@ -1923,3 +1923,14 @@ python3 build/outcome_pilot.py
 - เอกสาร: `CONCLUSIONS.md` ใหม่, README และ decisions-pending ชี้ไปที่ไฟล์นี้
 - ไม่ได้ทำ (ต้องใช้คน): merge เข้า main.tex/sections/references.bib (กติกา: แก้เฉพาะ Data section), push, อาจารย์รับรองนิยามและการตีความ H1, เทียบไฟล์ mirror ที่เหลือกับไฟล์ทางการ
 - Atlas publish version 19 · commit "Data section: final ..." (hash ดูจาก `git log -1`) ยังไม่ push
+
+## 2026-10-29 (แก้เล็ก) — ค่า noise ของ OvR ในตาราง tab:data-difficulty
+- ตารางพิมพ์ P25/P75 ของ OvR เป็น [0.03, 0.47] ซึ่งเป็นค่าเก่า (ก่อนเปลี่ยนเป็น HVDM) · ค่าจาก difficulty/profile_final_summary.json คือ P25 0.045 (คำนวณจาก csv ได้ 0.046), P75 0.451 → แก้เป็น [0.05, 0.45] · Atlas แสดง 0.04 เพราะ toFixed ของ 0.045 (ปัดลง) ค่าจริง 0.046 · make_final + preview สร้างใหม่ · Toon ถามเรื่องตารางนี้ในแชต
+
+## 2026-10-29 (บ่าย) — Atlas แผง "ชนิดของ dataset" เปลี่ยนเป็นหน่วยชื่อ (771) + ความยากของแต่ละชนิด (Claude; Toon สั่งในแชต)
+- **คำสั่ง Toon**: แผงชนิดของ dataset ให้ใช้จำนวนที่ normalise แล้ว (ไม่ใช่ 1,654 entry) บอกจำนวนแต่ละความยาก และกดแล้วเห็นรายชื่อ dataset · Toon ยืนยันว่า "original + modified ก็คือ modified"
+- ใหม่ `build/name_level_types.py` → `out/name_level_types.csv` (771 แถว: ชนิด, entry แยกตามชนิด, paper, ความยาก, task ที่วัด, เหตุที่วัดไม่ได้, record_id) และ `out/name_level_types.json` (สรุป + ตารางไขว้) · มี assert หยุดถ้าจำนวน entry/ชื่อเปลี่ยน
+- กติกาชนิดระดับชื่อ (Claude ตัดสิน): ลำดับ modified > synthetic > repository-defined > original > not stated (ไม่มี threshold) · ผล: Original 149, Repository-defined 164, Modified 233, Synthetic 107, Not stated 118 = 771 (114 ชื่อใช้ต่างชนิดกันข้าม paper)
+- กติกาความยากระดับชื่อ: ใช้ธงจาก `difficulty/difficulty_profile_final.csv` ตรง ๆ (task สองคลาส: binary file จับด้วย file+source, binarise จับด้วย n_min = n_minority ที่พิมพ์) · หลาย task ต่างโปรไฟล์ = varies (ตอนนี้ 0) · ตรวจได้แต่เป็นไฟล์หลายคลาส = multiclass · ที่เหลือ = not measured · ผล: ไม่ติดธง 43, small sample 84, sample+outlier 25, disjuncts+sample+outlier 17, หลายคลาส 30, วัดไม่ได้ 572 · ตามชนิด: Original 1/6/0/0/10/132, Repository-defined 24/67/21/16/1/35, Modified 18/11/4/1/19/180, Synthetic และ Not stated วัดไม่ได้ทั้งหมด
+- Atlas (สำรอง `build/atlas_template.before_nametypes_2026-10-29.html`, `build/make_atlas.before_nametypes_2026-10-29.py`): make_atlas อ่าน `data["nt"]` + guard (771, ผลรวมตรง) · แผง #db-cat เป็นหน่วยชื่อ (คำอธิบายใต้แผงยังให้ตัวเลขแบบ entry ไว้) · การ์ดใหม่ #db-diff ตารางชนิด × ความยาก กดตัวเลขได้ · รายการ #db-rec เปลี่ยนจาก entry เป็นชื่อ (กดชื่อไปแท็บ Datasets) · ข้อค้นพบหลักข้อ 2 เพิ่ม "233 จาก 771 ชื่อ" · checks: atlas_analysis 41/41, consistency 43/43, phase2 14/14 · Playwright 1280/390 ไม่มี JS error ไม่ล้นจอ · publish Atlas version 20
+- ไม่ได้แก้ manuscript (ยังรายงานแบบ entry) · ถ้าจะใส่ตัวเลขระดับชื่อใน manuscript ใช้ `out/name_level_types.json`
