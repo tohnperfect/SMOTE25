@@ -1,0 +1,280 @@
+{
+ "not_measured": {
+  "names": 572,
+  "by_reason": {
+   "U-no_public_file": 437,
+   "U-synthetic": 109,
+   "U-size_mismatch": 21,
+   "U-task_not_reconstructible": 4,
+   "U-no_printed_size": 1
+  },
+  "no_public_file_by_source": {
+   "UCI": 177,
+   "other repository": 73,
+   "not stated": 63,
+   "other paper/author": 34,
+   "multiple": 30,
+   "private": 23,
+   "group-level": 19,
+   "KEEL": 18
+  },
+  "no_public_file_single_paper": 355,
+  "no_public_file_3plus_papers": [
+   "abalone",
+   "automobile",
+   "autos",
+   "avila",
+   "balance",
+   "breast tissue",
+   "breast-tissue",
+   "car",
+   "cleveland",
+   "cmc",
+   "covertype",
+   "default",
+   "diabetes",
+   "flare",
+   "lev",
+   "libra",
+   "liver",
+   "mammography",
+   "oil",
+   "page",
+   "phishingdata",
+   "sensorreadings",
+   "shoppers",
+   "statlog",
+   "svmguide1",
+   "thyroid",
+   "userknowledge",
+   "vertebral-column",
+   "vertebralcolumn",
+   "waveform",
+   "wine quality",
+   "zoo"
+  ],
+  "note": "แหล่ง KEEL/UCI/group-level/multiple/other repository = ไฟล์น่าจะมีเผยแพร่แต่ไม่อยู่ใน mirror ที่เข้าถึงได้; private/other paper/not stated = ไม่มีไฟล์ให้ดาวน์โหลด (แบ่งตามแหล่งที่ paper เขียน ยังไม่ได้ตรวจทีละชื่อ)",
+  "no_public_file_split": {
+   "likely_public_not_in_mirror": 317,
+   "no_file_to_download": 120
+  }
+ },
+ "modified_ops_per_name": {
+  "names": 233,
+  "by_number_of_ops": {
+   "1": 86,
+   "2": 132,
+   "3": 14,
+   "4": 1
+  },
+  "combos": {
+   "US;IM": 97,
+   "CS": 70,
+   "CS;US;IM": 11,
+   "CS;IM": 11,
+   "CS;FM": 7,
+   "CS;US": 6,
+   "SF": 5,
+   "US": 5,
+   "CS;SF": 5,
+   "FM": 4,
+   "US;IM;SF": 3,
+   "SF;FM": 3,
+   "OT": 2,
+   "CS;OT": 2,
+   "US;SF": 1,
+   "CS;US;IM;FM": 1
+  },
+  "sum_of_tag_names": 396
+ },
+ "synthetic_availability": {
+  "papers": 19,
+  "entries": 120,
+  "by_group": {
+   "published": {
+    "papers": 4,
+    "entries": 40
+   },
+   "cited source": {
+    "papers": 2,
+    "entries": 5
+   },
+   "code link only": {
+    "papers": 2,
+    "entries": 3
+   },
+   "not found": {
+    "papers": 11,
+    "entries": 72
+   }
+  },
+  "rows": [
+   {
+    "paper": "G-SMOTE",
+    "group": "published",
+    "entries": 2,
+    "evidence": "can be found at https://github.com/IMS-ML-Lab"
+   },
+   {
+    "paper": "GMMSampling",
+    "group": "published",
+    "entries": 4,
+    "evidence": "the artificial datasets can be found in the repository of multi-imbalance"
+   },
+   {
+    "paper": "SVDD-WSMOTE",
+    "group": "published",
+    "entries": 4,
+    "evidence": "can be found in https://github.com/Zheng7777/simulated-datasets"
+   },
+   {
+    "paper": "SMOTE-IPF",
+    "group": "published",
+    "entries": 30,
+    "evidence": "This web-page also includes the basic information of this paper, the datasets used"
+   },
+   {
+    "paper": "SOUP",
+    "group": "cited source",
+    "entries": 4,
+    "evidence": "synthetic data sets coming from the work of Lango et al. (2017)"
+   },
+   {
+    "paper": "Tomek Links",
+    "group": "cited source",
+    "entries": 1,
+    "evidence": "ตัวอย่างจาก ref. [4] (บันทึกการอ่าน: Fig. 6 caption p.3)"
+   },
+   {
+    "paper": "NBU",
+    "group": "code link only",
+    "entries": 1,
+    "evidence": "Source code available at https://github.com/fonkafon/NB-undersampling"
+   },
+   {
+    "paper": "DLexiBoost",
+    "group": "code link only",
+    "entries": 2,
+    "evidence": "Our implementation of LexiBoost can be found at https://github.com/Shounak-D/LexiBoost"
+   },
+   {
+    "paper": "ADASYN",
+    "group": "not found",
+    "entries": 1,
+    "evidence": "ค้นคำ github/http/available/download/supplementary ใน PDF ไม่พบข้อความว่าเผยแพร่ข้อมูล synthetic"
+   },
+   {
+    "paper": "Borderline-SMOTE",
+    "group": "not found",
+    "entries": 1,
+    "evidence": "ค้นคำ github/http/available/download/supplementary ใน PDF ไม่พบข้อความว่าเผยแพร่ข้อมูล synthetic"
+   },
+   {
+    "paper": "CTGAN / TVAE",
+    "group": "not found",
+    "entries": 7,
+    "evidence": "ค้นคำ github/http/available/download/supplementary ใน PDF ไม่พบข้อความว่าเผยแพร่ข้อมูล synthetic"
+   },
+   {
+    "paper": "ClusterCentroids",
+    "group": "not found",
+    "entries": 5,
+    "evidence": "ค้นคำ github/http/available/download/supplementary ใน PDF ไม่พบข้อความว่าเผยแพร่ข้อมูล synthetic"
+   },
+   {
+    "paper": "GOIO",
+    "group": "not found",
+    "entries": 5,
+    "evidence": "ค้นคำ github/http/available/download/supplementary ใน PDF ไม่พบข้อความว่าเผยแพร่ข้อมูล synthetic"
+   },
+   {
+    "paper": "Global-CS (AAAI)",
+    "group": "not found",
+    "entries": 6,
+    "evidence": "ค้นคำ github/http/available/download/supplementary ใน PDF ไม่พบข้อความว่าเผยแพร่ข้อมูล synthetic"
+   },
+   {
+    "paper": "Global-CS (journal)",
+    "group": "not found",
+    "entries": 6,
+    "evidence": "ค้นคำ github/http/available/download/supplementary ใน PDF ไม่พบข้อความว่าเผยแพร่ข้อมูล synthetic"
+   },
+   {
+    "paper": "MWMOTE",
+    "group": "not found",
+    "entries": 1,
+    "evidence": "ค้นคำ github/http/available/download/supplementary ใน PDF ไม่พบข้อความว่าเผยแพร่ข้อมูล synthetic"
+   },
+   {
+    "paper": "SPE",
+    "group": "not found",
+    "entries": 1,
+    "evidence": "ค้นคำ github/http/available/download/supplementary ใน PDF ไม่พบข้อความว่าเผยแพร่ข้อมูล synthetic"
+   },
+   {
+    "paper": "SPIDER2",
+    "group": "not found",
+    "entries": 24,
+    "evidence": "ค้นคำ github/http/available/download/supplementary ใน PDF ไม่พบข้อความว่าเผยแพร่ข้อมูล synthetic"
+   },
+   {
+    "paper": "k-means SMOTE",
+    "group": "not found",
+    "entries": 15,
+    "evidence": "ค้นคำ github/http/available/download/supplementary ใน PDF ไม่พบข้อความว่าเผยแพร่ข้อมูล synthetic"
+   }
+  ],
+  "method": "pdftotext + ค้นคำ ไม่ได้อ่านทั้งเรื่อง; 'not found' ไม่ได้แปลว่ายืนยันแล้วว่าไม่มี (เช่น CTGAN มี SDGym แต่ PDF ให้ลิงก์เฉพาะข้อมูลจริง)"
+ },
+ "results_by_type": {
+  "plain_smote": {
+   "names": 337,
+   "names_by_type": {
+    "modified": 123,
+    "not stated": 73,
+    "original": 69,
+    "repository-defined": 67,
+    "synthetic": 5
+   },
+   "entries": 520,
+   "rows": 1500,
+   "rows_by_type": {
+    "modified": 503,
+    "original": 433,
+    "repository-defined": 315,
+    "not stated": 234,
+    "synthetic": 15
+   }
+  },
+  "all_comparators_incl_excluded": {
+   "names": 419,
+   "names_by_type": {
+    "modified": 144,
+    "original": 102,
+    "repository-defined": 84,
+    "not stated": 80,
+    "synthetic": 9
+   },
+   "entries": 833,
+   "rows": 2482,
+   "rows_by_type": {
+    "original": 1021,
+    "modified": 573,
+    "repository-defined": 567,
+    "not stated": 302,
+    "synthetic": 19
+   }
+  },
+  "h3_listed_entries": {
+   "entries": 952,
+   "in_comparison": 833,
+   "in_comparison_by_type": {
+    "original": 345,
+    "repository-defined": 182,
+    "modified": 175,
+    "not stated": 122,
+    "synthetic": 9
+   }
+  }
+ }
+}
