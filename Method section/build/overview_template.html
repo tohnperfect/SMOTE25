@@ -1,0 +1,435 @@
+<title>SMOTE Family at 25</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* Layout: one reading column under a sticky window bar with four windows (definitions, roadmap, oversampling, takeaways); the roadmap is a vertical sequence of stages from the 2002 rule. Palette and faces follow the SMOTE25 Method Map. */
+:root{
+  --bg:#f3f5f7; --surface:#ffffff; --sunk:#eaeef2; --ink:#17212b; --muted:#56626e; --line:#d6dde4; --line-strong:#b9c3cd;
+  --bin:#1d5c9f; --bin-bg:#e4edf7; --mul:#a9530a; --mul-bg:#faecdf; --both:#0d735c; --both-bg:#dff1eb;
+  --warn:#9c2f69; --warn-bg:#f7e4ee; --stop:#a12c2c; --stop-bg:#f8e3e1; --go:#0d735c; --go-bg:#dff1eb;
+  --f-display:'Archivo Narrow','Arial Narrow',system-ui,sans-serif;
+  --f-body:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --f-mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1418; --surface:#161d23; --sunk:#1c252d; --ink:#e3e9ee; --muted:#9ba7b2; --line:#29343e; --line-strong:#3b4855;
+  --bin:#7fb2ea; --bin-bg:#16283b; --mul:#efa75e; --mul-bg:#33240f; --both:#52c8a7; --both-bg:#0f2f28;
+  --warn:#e690c0; --warn-bg:#35172a; --stop:#f08a80; --stop-bg:#3a1a18; --go:#52c8a7; --go-bg:#0f2f28; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1418; --surface:#161d23; --sunk:#1c252d; --ink:#e3e9ee; --muted:#9ba7b2; --line:#29343e; --line-strong:#3b4855;
+  --bin:#7fb2ea; --bin-bg:#16283b; --mul:#efa75e; --mul-bg:#33240f; --both:#52c8a7; --both-bg:#0f2f28;
+  --warn:#e690c0; --warn-bg:#35172a; --stop:#f08a80; --stop-bg:#3a1a18; --go:#52c8a7; --go-bg:#0f2f28; color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.6 var(--f-body);margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 72px}
+.wrap>*{min-width:0}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0}
+h1{font-size:2.4rem;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:1.45rem;line-height:1.2;margin:0 0 10px}
+h3{font-size:1.08rem;line-height:1.25}
+p{margin:0}
+.eyebrow{font:600 .74rem/1 var(--f-display);text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:10px}
+.lead{max-width:72ch;margin-top:10px;color:var(--muted)}
+.lead b{color:var(--ink);font-weight:600}
+code,.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+code{font-size:.86rem;background:var(--sunk);padding:1px 5px;border-radius:3px}
+
+/* window bar */
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);display:flex;gap:2px;border-bottom:1px solid var(--line);margin:24px 0 26px;overflow-x:auto}
+.tab{border:0;background:transparent;padding:12px 14px 10px;cursor:pointer;font:600 1rem/1 var(--f-display);color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-1px;white-space:nowrap;display:flex;gap:8px;align-items:baseline}
+.tab .k{font:500 .72rem var(--f-mono);color:var(--muted)}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--ink)}
+.tab:focus-visible,button:focus-visible{outline:2px solid var(--bin);outline-offset:2px}
+.panel{display:grid;gap:26px}
+.panel>*{min-width:0}
+.intro{max-width:76ch;color:var(--muted)}
+.intro b{color:var(--ink)}
+
+/* cards */
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px;display:grid;gap:8px;align-content:start}
+.card p,.card li{font-size:.92rem}
+.card .sub{color:var(--muted);font-size:.86rem}
+.card ul{margin:0;padding-left:18px;display:grid;gap:3px}
+.cat{box-shadow:inset 0 4px 0 var(--c)}
+.k-B{--c:var(--bin);--cb:var(--bin-bg)}.k-M{--c:var(--mul);--cb:var(--mul-bg)}.k-BM{--c:var(--both);--cb:var(--both-bg)}
+.cat .ch{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.cat .ch h3{color:var(--c)}
+.big{font:700 2.3rem/1 var(--f-display);color:var(--c,var(--ink));font-variant-numeric:tabular-nums}
+.rule{font-size:.86rem;border-top:1px dashed var(--line);padding-top:8px;display:grid;gap:4px}
+.rule .y,.rule .n{display:flex;gap:6px}
+.rule .y::before{content:"Counts";font:600 .7rem/1.7 var(--f-display);text-transform:uppercase;letter-spacing:.06em;color:var(--go);flex:none;width:56px}
+.rule .n::before{content:"Not";font:600 .7rem/1.7 var(--f-display);text-transform:uppercase;letter-spacing:.06em;color:var(--stop);flex:none;width:56px}
+.formula{font:500 1.05rem var(--f-mono);background:var(--sunk);border-radius:6px;padding:12px 14px;overflow-x:auto;white-space:nowrap}
+table.dp{width:100%;border-collapse:collapse;font-size:.9rem}
+.dp th{text-align:left;font:600 .72rem/1.2 var(--f-display);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:8px;border-bottom:1px solid var(--line-strong)}
+.dp td{padding:8px;border-bottom:1px solid var(--line);vertical-align:top}
+.dp tr:last-child td{border-bottom:0}
+.dp .num{text-align:right;font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.scroll{overflow-x:auto}
+.labels{display:flex;flex-wrap:wrap;gap:8px}
+.lab{border:1px solid var(--line);border-radius:6px;padding:8px 10px;background:var(--surface);font-size:.86rem;flex:1 1 200px}
+.lab b{font-family:var(--f-display);font-size:1rem;margin-right:6px}
+.lab .mono{color:var(--muted)}
+
+/* roadmap */
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;display:grid;gap:2px}
+.tile .lbl{font:600 .78rem/1.2 var(--f-display);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.tile .big{font-size:2rem}
+.tile .sub{font-size:.8rem;color:var(--muted)}
+.bars{display:grid;gap:8px}
+.bar{display:grid;grid-template-columns:7.5rem minmax(0,1fr) 3rem;gap:10px;align-items:center;font-size:.86rem}
+.bar .track{display:flex;height:22px;border-radius:4px;overflow:hidden;background:var(--sunk)}
+.bar .seg{background:var(--c);height:100%;display:flex;align-items:center;justify-content:center;color:var(--surface);font:600 .72rem var(--f-mono);min-width:0}
+.bar .tot{font-family:var(--f-mono);color:var(--muted);text-align:right}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:.82rem;color:var(--muted)}
+.legend span{display:inline-flex;gap:6px;align-items:center}
+.legend i{width:11px;height:11px;border-radius:2px;background:var(--c);display:inline-block}
+.filt{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.filt .t{font:600 .72rem/1 var(--f-display);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-right:2px}
+.fb{border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);border-radius:999px;padding:4px 12px;font:500 .84rem var(--f-body);cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.fb i{width:10px;height:10px;border-radius:2px;background:var(--c,var(--muted))}
+.fb[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.road{position:relative;display:grid;gap:14px;padding-left:28px}
+.road::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:3px;border-radius:2px;background:var(--line-strong)}
+.stage{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;display:grid;gap:10px}
+.stage::before{content:"";position:absolute;left:-26px;top:16px;width:15px;height:15px;border-radius:50%;background:var(--surface);border:3px solid var(--ink)}
+.stage.origin::before{background:var(--ink)}
+.stage .hd{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;align-items:baseline}
+.stage .when{font:600 .78rem var(--f-mono);color:var(--muted)}
+.stage .stats{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.84rem;color:var(--muted)}
+.stage .stats b{color:var(--ink);font-family:var(--f-mono);font-weight:500}
+.stage ul{margin:0;padding-left:18px;display:grid;gap:3px;font-size:.9rem}
+.branch{border-style:dashed}
+.branch::before{border-style:dashed;border-color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:5px}
+.chip{border:1px solid var(--line-strong);border-left:4px solid var(--c);background:var(--surface);color:var(--ink);border-radius:4px;padding:2px 8px;font:500 .82rem var(--f-body);cursor:pointer;display:inline-flex;gap:6px;align-items:baseline}
+.chip .t{font:500 .66rem var(--f-mono);color:var(--muted)}
+.chip.pv{border-left-style:dashed}
+.chip.off{display:none}
+.chip[aria-expanded="true"]{background:var(--sunk);border-color:var(--ink);border-left-color:var(--c)}
+.det{background:var(--sunk);border-radius:6px;padding:12px 14px;display:grid;gap:6px;font-size:.88rem}
+.det h4{margin:0;font:600 1rem var(--f-display)}
+.det .meta{display:flex;flex-wrap:wrap;gap:6px;font-size:.8rem;color:var(--muted)}
+.pill{display:inline-block;font:600 .74rem/1.5 var(--f-display);letter-spacing:.02em;padding:0 7px;border-radius:3px;white-space:nowrap;color:var(--c);background:var(--cb)}
+.st{display:inline-block;font-size:.72rem;border:1px solid var(--line-strong);border-radius:3px;padding:0 5px}
+table.steps{width:100%;border-collapse:collapse;font-size:.88rem;min-width:520px}
+.steps th{text-align:left;font:600 .72rem/1.2 var(--f-display);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:8px;border-bottom:1px solid var(--line-strong)}
+.steps td{padding:7px 8px;border-bottom:1px solid var(--line)}
+.steps td.v{width:22%}
+.steps .cell{display:flex;align-items:center;gap:8px;font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.steps .cell span.b{height:10px;border-radius:2px;background:var(--ink);opacity:.75}
+.steps tr:last-child td{border-bottom:0}
+
+/* oversampling window */
+.verdict{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--stop);border-radius:6px;padding:18px;display:grid;gap:8px}
+.verdict h2{margin:0}
+.verdict .tag{font:600 .72rem/1 var(--f-display);text-transform:uppercase;letter-spacing:.08em;color:var(--stop)}
+.ev{display:grid;gap:10px}
+.evi{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px}
+.evi p{grid-column:1/-1;font-size:.9rem;color:var(--muted)}
+.evi h3{font-size:1rem}
+.badge{font:600 .68rem/1.6 var(--f-display);text-transform:uppercase;letter-spacing:.06em;padding:0 6px;border-radius:3px;white-space:nowrap;align-self:start}
+.b-ver{color:var(--go);background:var(--go-bg)}
+.b-pre{color:var(--warn);background:var(--warn-bg)}
+.b-our{color:var(--bin);background:var(--bin-bg)}
+.cols3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.col{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;display:grid;gap:8px;align-content:start;box-shadow:inset 0 4px 0 var(--c)}
+.col.stop{--c:var(--stop)}.col.keep{--c:var(--muted)}.col.start{--c:var(--go)}
+.col h3{color:var(--c)}
+.col ul{margin:0;padding-left:18px;display:grid;gap:5px;font-size:.9rem}
+.caveat{font-size:.84rem;color:var(--muted);border:1px dashed var(--line-strong);border-radius:6px;padding:10px 12px}
+.caveat b{color:var(--ink)}
+
+/* takeaways */
+.msgs{display:grid;gap:10px;counter-reset:m;margin:0;padding:0;list-style:none}
+.msgs li{counter-increment:m;display:grid;grid-template-columns:2.4rem minmax(0,1fr);gap:4px 12px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px}
+.msgs li::before{content:counter(m);font:700 1.7rem/1 var(--f-display);color:var(--muted);grid-row:span 2}
+.msgs b{font:600 1.08rem/1.3 var(--f-display)}
+.msgs p{font-size:.92rem;color:var(--muted);max-width:84ch}
+.msgs p strong{color:var(--ink);font-weight:600}
+footer{margin-top:36px;font-size:.82rem;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;display:grid;gap:6px}
+footer p{max-width:96ch}
+@media (max-width:860px){.grid3,.cols3{grid-template-columns:minmax(0,1fr)}.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.grid2{grid-template-columns:minmax(0,1fr)}h1{font-size:1.9rem}.bar{grid-template-columns:5.6rem minmax(0,1fr) 2.4rem}}
+@media (prefers-reduced-motion:no-preference){.tab,.fb,.chip{transition:background-color .12s,border-color .12s,color .12s}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">SMOTE25 survey · Method part · checked against the PDFs on 28 October 2026</div>
+  <h1>SMOTE Family at 25</h1>
+  <p class="lead">What twenty-five years of methods built on SMOTE have changed, and in which class setting they work. <b><span data-k="nSF"></span> SMOTE-family methods</b> from a corpus of <span data-k="papers"></span> papers, 2002 to 2026.</p>
+</header>
+
+<div class="tabs" role="tablist" aria-label="Windows">
+  <button class="tab" role="tab" id="t-definitions" aria-controls="definitions" data-w="definitions"><span class="k">1</span>Definitions</button>
+  <button class="tab" role="tab" id="t-roadmap" aria-controls="roadmap" data-w="roadmap"><span class="k">2</span>Counts and roadmap</button>
+  <button class="tab" role="tab" id="t-oversampling" aria-controls="oversampling" data-w="oversampling"><span class="k">3</span>Keep oversampling?</button>
+  <button class="tab" role="tab" id="t-takeaways" aria-controls="takeaways" data-w="takeaways"><span class="k">4</span>What the reader gets</button>
+</div>
+
+<!-- 1. DEFINITIONS -->
+<section class="panel" role="tabpanel" id="definitions" aria-labelledby="t-definitions">
+  <p class="intro">Every result on this page rests on four definitions. They were fixed before the papers were coded, and every paper was coded against them.</p>
+
+  <div class="card">
+    <h3>The reference: SMOTE (Chawla et al., 2002)</h3>
+    <p>For a minority example <code>x</code>, pick a partner <code>x<sub>nn</sub></code> among its five nearest minority neighbours and place a new point at a random position on the segment between them:</p>
+    <div class="formula">x<sub>new</sub> = x + λ · (x<sub>nn</sub> − x),&nbsp;&nbsp;&nbsp;λ ~ U(0, 1)</div>
+    <p class="sub">Read as a procedure, the rule fixes six choices in the simplest way. We call them the six decision points; every method below is described by the ones it changes.</p>
+    <div class="scroll"><table class="dp">
+      <thead><tr><th scope="col">Decision point</th><th scope="col">What it decides</th><th scope="col">SMOTE (2002)</th><th scope="col" class="num">Methods changing it</th></tr></thead>
+      <tbody id="dp-rows"></tbody>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <h3>SMOTE-family</h3>
+    <p>A method is <b>SMOTE-family</b> when it creates synthetic minority examples by interpolating between a minority seed and a neighbour, as in the rule above, or by a rule that extends it: a different law for λ, a region built around the segment, extrapolation along the line, or a convex combination of several instances. The definition concerns the generator, not the method's name.</p>
+    <div class="labels">
+      <div class="lab"><b>Core</b><span class="mono" data-k="core"></span><br>Interpolation is the main generator, alone or inside a hybrid, cleaning or ensemble procedure.</div>
+      <div class="lab"><b>Partial</b><span class="mono" data-k="partial"></span><br>Interpolation is one of several generators (INOS, EMDO, GLOS).</div>
+      <div class="lab"><b>Not counted</b><span class="mono" data-k="notcounted"></span><br>Related to SMOTE, but generates in another way (spheres, Mahalanobis contours, potential fields) or not at all.</div>
+      <div class="lab"><b>Study</b><span class="mono" data-k="study"></span><br>Evaluates or reviews SMOTE without proposing a generator. Not counted.</div>
+    </div>
+    <p class="sub">SMOTE-family = Core + Partial = <span data-k="nSF"></span> papers. The other <span data-k="nolink"></span> papers in the corpus have no direct link to SMOTE.</p>
+  </div>
+
+  <div>
+    <h2>Three class categories</h2>
+    <p class="intro" style="margin-bottom:12px">A method is classified by <b>what its paper shows its generator doing</b>, not by what it could do in principle or by the names in its dataset list.</p>
+    <div class="grid3">
+      <div class="card cat k-B">
+        <div class="ch"><h3>Binary only</h3><span class="big" data-k="nB"></span></div>
+        <p>Every experiment in which the generator creates synthetic data is a two-class problem.</p>
+        <div class="rule"><span class="y">A multiclass dataset reduced to two classes (one class against the rest, merged classes, a KEEL split such as <code>yeast-2_vs_4</code>).</span><span class="y">A multiclass extension that is described but never run.</span></div>
+      </div>
+      <div class="card cat k-M">
+        <div class="ch"><h3>Multiclass only</h3><span class="big" data-k="nM"></span></div>
+        <p>The generator creates synthetic data with three or more classes kept, and is never run on a two-class problem.</p>
+        <div class="rule"><span class="n">A rule that would cover two classes in principle but is not shown on them.</span></div>
+      </div>
+      <div class="card cat k-BM">
+        <div class="ch"><h3>Binary + Multiclass</h3><span class="big" data-k="nBM"></span></div>
+        <p>The same generator is run on at least one two-class problem and on at least one problem with three or more classes kept, without reducing it first.</p>
+        <div class="rule"><span class="y">Experiments reported only in supplementary material.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="card"><h3>Other data types</h3><p>A paper that generates more than one type of data (tables, images, time series) is classified for each data type separately; its overall category combines them. <span data-k="nNontab"></span> SMOTE-family papers use non-tabular data (INOS, GAMO, KNNOR).</p></div>
+    <div class="card"><h3>Provisional cases</h3><p>Two categories await a team decision: Loyalty-SMOTE (runs on multiclass data but oversamples only the smallest class; coded Binary only) and GLOS (its only two-class run is a parameter-tuning demo; coded Multiclass only). They are drawn with dashed edges.</p></div>
+  </div>
+</section>
+
+<!-- 2. COUNTS AND ROADMAP -->
+<section class="panel" role="tabpanel" id="roadmap" aria-labelledby="t-roadmap" hidden>
+  <div class="tiles">
+    <div class="tile"><span class="lbl">SMOTE-family</span><span class="big" data-k="nSF"></span><span class="sub">Core <span data-k="core"></span> · Partial <span data-k="partial"></span></span></div>
+    <div class="tile k-B"><span class="lbl">Binary only</span><span class="big" data-k="nB"></span><span class="sub"><span data-k="pB"></span> of the family</span></div>
+    <div class="tile k-M"><span class="lbl">Multiclass only</span><span class="big" data-k="nM"></span><span class="sub"><span data-k="pM"></span> of the family</span></div>
+    <div class="tile k-BM"><span class="lbl">Binary + Multiclass</span><span class="big" data-k="nBM"></span><span class="sub"><span data-k="pBM"></span> of the family</span></div>
+  </div>
+
+  <div class="card">
+    <h3>Class categories by period</h3>
+    <div class="bars" id="cat-bars"></div>
+    <div class="legend"><span class="k-B"><i></i>Binary only</span><span class="k-M"><i></i>Multiclass only</span><span class="k-BM"><i></i>Binary + Multiclass</span></div>
+    <p class="sub">Methods able to generate for several classes: <span data-k="mcP0"></span> in 2002 to 2009, <span data-k="mcP1"></span> in 2010 to 2017, <span data-k="mcP2"></span> in 2018 to 2026.</p>
+  </div>
+
+  <div>
+    <h2>Roadmap from the 2002 rule</h2>
+    <div class="filt" role="group" aria-label="Show methods" style="margin-bottom:14px">
+      <span class="t">Show</span>
+      <button class="fb" type="button" data-c="all" aria-pressed="true">All</button>
+      <button class="fb k-B" type="button" data-c="B" aria-pressed="false"><i></i>Binary only</button>
+      <button class="fb k-M" type="button" data-c="M" aria-pressed="false"><i></i>Multiclass only</button>
+      <button class="fb k-BM" type="button" data-c="BM" aria-pressed="false"><i></i>Binary + Multiclass</button>
+    </div>
+    <div class="road" id="road"></div>
+  </div>
+
+  <div class="card">
+    <h3>Which decision points changed, by period</h3>
+    <p class="sub">Share of the variants in each period that change each decision point (SMOTE itself excluded).</p>
+    <div class="scroll"><table class="steps"><thead><tr><th scope="col">Decision point</th><th scope="col">2002–2009</th><th scope="col">2010–2017</th><th scope="col">2018–2026</th></tr></thead><tbody id="step-rows"></tbody></table></div>
+  </div>
+</section>
+
+<!-- 3. KEEP OVERSAMPLING? -->
+<section class="panel" role="tabpanel" id="oversampling" aria-labelledby="t-oversampling" hidden>
+  <div class="verdict">
+    <span class="tag">Our position (draft)</span>
+    <h2>Stop proposing new SMOTE variants as a contribution in themselves</h2>
+    <p>Twenty-five years of variants have re-decided the same six choices, each new method changes more of them at once, costs more to run, and is judged mostly by its own authors against plain SMOTE. Several independent studies now find that rebalancing adds little once a strong learner, a tuned threshold or a calibrated model is used, and that it can harm risk estimates. The marginal value of variant number 38 is low. Where imbalance must be handled, the evidence points to better baselines and better evaluation rather than a new generator.</p>
+  </div>
+
+  <div>
+    <h2>Why: what the papers report</h2>
+    <div class="ev">
+      <div class="evi"><h3>Synthetic points fall among the majority</h3><span class="badge b-pre">Preprint · in corpus</span><p>Hassanat et al. (2022), <i>Stop Oversampling for Class Imbalance Learning</i>: after hiding part of the majority class, synthetic minority points from 72 oversamplers, mostly SMOTE-based, often lay closer to the hidden majority points; the authors advise avoiding oversampling. Evidence is narrow (three Yeast datasets and Vehicle3).</p></div>
+      <div class="evi"><h3>The same holds on medical data</h3><span class="badge b-ver">Verified</span><p>Hassanat et al. (2023, IEEE ISCC): on medical datasets many synthetic samples fall outside the minority class.</p></div>
+      <div class="evi"><h3>No gain in discrimination, worse calibration</h3><span class="badge b-ver">Verified</span><p>van den Goorbergh et al. (2022, JAMIA): random over- and undersampling and SMOTE gave clinical logistic models no better AUC but systematically overestimated minority-class risk. Carriero et al. (2025, Statistics in Medicine) find the same for machine-learning models, and Piccininni et al. (2024) report the calibration cost of random resampling.</p></div>
+      <div class="evi"><h3>Strong learners do not need it</h3><span class="badge b-pre">Preprint</span><p>Elor and Averbuch-Elor (2022): balancing helps weak learners but not gradient boosting with a tuned decision threshold; they find gains only in some tuned-F1 settings.</p></div>
+      <div class="evi"><h3>High dimensions</h3><span class="badge b-ver">Verified</span><p>Blagus and Lusa (2013): SMOTE shrinks variance and adds correlation in high-dimensional data and does worse than undersampling there unless variables are selected first.</p></div>
+      <div class="evi"><h3>Many reported gains were leakage</h3><span class="badge b-ver">Verified</span><p>Santos et al. (2018) show that oversampling before cross-validation inflates results; Vandewiele et al. (2021) found more than 20 preterm-birth studies whose near-perfect scores collapsed once the data were split first.</p></div>
+      <div class="evi"><h3>Results depend on the measure and the learner</h3><span class="badge b-ver">Verified</span><p>Tantithamthavorn et al. (2020): the effect of rebalancing depends on the evaluation measure and the classifier, and it changes which features a model treats as important.</p></div>
+      <div class="evi"><h3>Our corpus: more change, more cost, small margins</h3><span class="badge b-our">Our data</span><p>The mean number of decision points changed per variant rose from <span data-k="mean0"></span> to <span data-k="mean2"></span>. CISO (2026) costs about 39 times SMOTE's running time and reports itself statistically equivalent to SMOTE; QC-SMOTE costs about 39.47 times. Already in 2002, SMOTE's own C4.5 AUC gains over undersampling were all below 0.01, without a significance test. New methods beat SMOTE in 420 of 541 per-dataset comparisons printed in their own papers, under their own protocols (Data section).</p></div>
+    </div>
+  </div>
+
+  <div>
+    <h2>So what should the field do?</h2>
+    <div class="cols3">
+      <div class="col stop"><h3>Stop</h3><ul>
+        <li>Proposing a new interpolation variant whose only evidence is a win over plain SMOTE in its own paper.</li>
+        <li>Oversampling before splitting the data, or outside the training folds.</li>
+        <li>Reporting accuracy or ROC-AUC alone on imbalanced data.</li>
+        <li>Calling a method multiclass when it was only run on data reduced to two classes.</li>
+      </ul></div>
+      <div class="col keep"><h3>Keep, with care</h3><ul>
+        <li>Plain SMOTE as a baseline, not as a default preprocessing step.</li>
+        <li>Oversampling for weak learners, where the evidence still shows gains.</li>
+        <li>Oversampling inside a pipeline only when it is compared against the same pipeline without it.</li>
+      </ul></div>
+      <div class="col start"><h3>Start</h3><ul>
+        <li>Compare against class weighting and threshold tuning with a strong learner such as gradient boosting.</li>
+        <li>Report PR-AUC and a calibration measure next to ROC-AUC, and per-dataset results.</li>
+        <li>Change one decision point at a time and report the ablation.</li>
+        <li>State the class setting and how any multiclass data were reduced.</li>
+        <li>Report running time relative to SMOTE.</li>
+      </ul></div>
+    </div>
+  </div>
+
+  <p class="caveat"><b>Read this as a position, not a finding.</b> The evidence above comes from the team's development brief (each source labelled Verified or Preprint) and from our own coding; two of the strongest statements are preprints. In the manuscript the interpretation must be written by P, and the claim should be limited to what these studies tested: tabular data, mostly binary problems, and the learners they used.</p>
+</section>
+
+<!-- 4. WHAT THE READER GETS -->
+<section class="panel" role="tabpanel" id="takeaways" aria-labelledby="t-takeaways" hidden>
+  <p class="intro">Our part of the paper answers one question: <b>what have twenty-five years of methods built on SMOTE actually changed, and in which class setting do they work?</b> A reader should leave with three messages and one way of reading any new oversampler.</p>
+
+  <ol class="msgs">
+    <li><b>Twenty-five years of SMOTE variants re-decide six choices made in 2002.</b><p>Every one of the <strong><span data-k="nVar"></span> variants</strong> changes some of the same six decision points: seeds, allocation, partner, placement, filtering, and where generation runs. The most changed are seed selection (<span data-k="s0"></span>), the partner (<span data-k="s2"></span>) and allocation (<span data-k="s1"></span>). One question from 2002, an adaptive choice of the neighbourhood size k, is not addressed by any method in our coding (still to be confirmed against the papers).</p></li>
+    <li><b>The family is mostly binary, and dataset lists hide it.</b><p><strong><span data-k="nB"></span> of <span data-k="nSF"></span></strong> methods only ever generate for two classes. <span data-k="nRed"></span> of them evaluate on multiclass sources reduced to two classes (<span data-k="nSelf"></span> by their own reduction, <span data-k="nReady"></span> through ready-made splits). Multiclass extensions are often described but rarely run. Methods able to handle several classes grew from <span data-k="mcP0"></span> before 2010 to <span data-k="mcP2"></span> since 2018.</p></li>
+    <li><b>New variants change more, cost more, and prove less.</b><p>The mean number of decisions changed per variant rose from <span data-k="mean0"></span> (2002 to 2009) to <span data-k="mean2"></span> (2018 to 2026); recent methods cost tens of times SMOTE's running time; few test one change at a time. Meanwhile, <span data-k="nRegion"></span> generators in the corpus have left interpolation altogether, <span data-k="nRegion18"></span> of them since 2018.</p></li>
+  </ol>
+
+  <div class="grid2">
+    <div class="card"><h3>What we present</h3><ul>
+      <li>The SMOTE rule as six decision points (Table 1).</li>
+      <li>All <span data-k="nSF"></span> methods with their class category and the decisions they change (Table 2).</li>
+      <li>Class categories by period, and the five ways multiclass methods handle several classes (Tables 3 and 4).</li>
+      <li>Papers on other data types, classified per data type (Table 5).</li>
+      <li>For every method, how it builds on SMOTE, with page references.</li>
+      <li>A roadmap figure from the 2002 rule (to be drawn from window 2).</li>
+    </ul></div>
+    <div class="card"><h3>How to read a new oversampler</h3><ul>
+      <li>Which of the six decisions does it change?</li>
+      <li>Is each change tested on its own?</li>
+      <li>In which class setting is it actually run, and were classes reduced?</li>
+      <li>What does it cost compared with SMOTE?</li>
+      <li>Does it beat class weighting and threshold tuning with a strong learner?</li>
+    </ul></div>
+    <div class="card"><h3>What we do not claim</h3><ul>
+      <li>That oversampling never helps: the evidence is for tabular data and the learners tested.</li>
+      <li>Which method performs best: performance comparisons belong to the Performance Metrics and Evaluation sections.</li>
+      <li>Anything about deep generative oversamplers beyond their position outside the family.</li>
+    </ul></div>
+    <div class="card"><h3>How it connects to the team's sections</h3><ul>
+      <li><b>Datasets:</b> most binary-only methods test on reduced multiclass data; the same dataset name can hide different splits.</li>
+      <li><b>Performance metrics:</b> multiclass methods use macro or MAUC metrics, Loyalty-SMOTE uses binary ones; strong baselines and calibration decide whether oversampling is worth it.</li>
+      <li><b>Discussion:</b> window 3 is the bridge to the recommendations.</li>
+    </ul></div>
+  </div>
+</section>
+
+<footer>
+  <p>Source: SMOTE25 Method Map (<span data-k="papers"></span> papers), with all <span data-k="nSF"></span> SMOTE-family papers read in full on 28 October 2026 (Method section/pdf-check). Evidence in window 3 from notes/smote25-development-brief.md and the Data section draft. Every number on this page is computed from the Method Map records embedded in it.</p>
+  <p>Draft for the team. Accounts of individual methods were written by AI readers of the PDFs and should be checked against the papers before they go into the manuscript.</p>
+</footer>
+</div>
+
+<script type="application/json" id="data">{{DATA}}</script>
+<script>
+(function(){
+  var DATA=JSON.parse(document.getElementById('data').textContent), SF=DATA.sf;
+  var STEPS=[['Seed selection','Which minority points become seeds, or how they are weighted','All seeds, equal weight'],
+    ['Sample allocation','How many points each seed, cluster or class receives','N/100 per seed'],
+    ['Neighbour choice','Which partner is paired with the seed','Uniform over 5 minority neighbours, Euclidean'],
+    ['Placement rule','Where the new point lands','Uniform on the segment'],
+    ['Post-filtering','What is removed or rejected after generation','Nothing'],
+    ['Inside a pipeline','Whether generation runs inside boosting, bagging, a wrapper or training','Once, before training']];
+  var CAT={B:'Binary only',M:'Multiclass only',BM:'Binary + Multiclass'};
+  var PER=[[2002,2009],[2010,2017],[2018,2026]];
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function inP(p,i){return p.y>=PER[i][0]&&p.y<=PER[i][1];}
+  var VAR=SF.filter(function(p){return p.n!=='SMOTE';});
+  function cnt(a,f){return a.filter(f).length;}
+  function mean(a){return a.length?(a.reduce(function(s,p){return s+p.s.length;},0)/a.length).toFixed(1):'0';}
+  var K={nSF:SF.length,papers:DATA.corpus.papers,core:DATA.corpus.core,partial:DATA.corpus.partial,study:DATA.corpus.study,notcounted:DATA.corpus.notcounted,nolink:DATA.corpus.nolink,nVar:VAR.length};
+  ['B','M','BM'].forEach(function(c){K['n'+c]=cnt(SF,function(p){return p.c===c;});K['p'+c]=Math.round(100*K['n'+c]/SF.length)+'%';});
+  PER.forEach(function(r,i){var all=SF.filter(function(p){return inP(p,i);});K['mcP'+i]=cnt(all,function(p){return p.c!=='B';})+' of '+all.length;K['mean'+i]=mean(VAR.filter(function(p){return inP(p,i);}));});
+  STEPS.forEach(function(s,i){K['s'+i]=cnt(SF,function(p){return p.s.indexOf(s[0])>=0;});});
+  K.nNontab=cnt(SF,function(p){return p.d.some(function(d){return d!=='Tabular';});});
+  K.nSelf=cnt(SF,function(p){return p.red==='self';});K.nReady=cnt(SF,function(p){return p.red==='ready';});K.nRed=K.nSelf+K.nReady;
+  K.nRegion=DATA.region.length;K.nRegion18=cnt(DATA.region,function(r){return r.y>=2018;});
+  document.querySelectorAll('[data-k]').forEach(function(el){var k=el.getAttribute('data-k');if(K[k]!=null) el.textContent=(['core','partial','notcounted','study'].indexOf(k)>=0&&el.classList.contains('mono'))?K[k]+' papers':K[k];});
+
+  // decision-point table
+  document.getElementById('dp-rows').innerHTML=STEPS.map(function(s,i){return '<tr><td><b>'+esc(s[0])+'</b></td><td>'+esc(s[1])+'</td><td>'+esc(s[2])+'</td><td class="num">'+K['s'+i]+'</td></tr>';}).join('');
+
+  // category bars
+  document.getElementById('cat-bars').innerHTML=PER.map(function(r,i){var all=SF.filter(function(p){return inP(p,i);});
+    return '<div class="bar"><span>'+r[0]+'–'+r[1]+'</span><div class="track" role="img" aria-label="'+['B','M','BM'].map(function(c){return CAT[c]+' '+cnt(all,function(p){return p.c===c;});}).join(', ')+'">'+
+      ['B','M','BM'].map(function(c){var n=cnt(all,function(p){return p.c===c;});return n?'<span class="seg k-'+c+'" style="width:'+(100*n/all.length)+'%">'+n+'</span>':'';}).join('')+'</div><span class="tot">'+all.length+'</span></div>';}).join('');
+
+  // step table
+  document.getElementById('step-rows').innerHTML=STEPS.map(function(s){return '<tr><td>'+esc(s[0])+'</td>'+PER.map(function(r,i){var v=VAR.filter(function(p){return inP(p,i);});var n=cnt(v,function(p){return p.s.indexOf(s[0])>=0;});return '<td class="v"><div class="cell"><span class="b" style="width:'+Math.round(60*n/v.length)+'px"></span>'+n+' of '+v.length+'</div></td>';}).join('')+'</tr>';}).join('');
+
+  // roadmap
+  function chips(list){return '<div class="chips">'+list.map(function(p){return '<button type="button" class="chip k-'+p.c+(p.pv?' pv':'')+'" data-id="'+p.id+'" aria-expanded="false">'+esc(p.n)+'<span class="t">'+p.y+'</span></button>';}).join('')+'</div><div class="dslot"></div>';}
+  function firsts(i){var seen={};SF.filter(function(p){return p.y<PER[i][0];}).forEach(function(p){p.s.forEach(function(x){seen[x]=1;});});
+    var out=[];STEPS.forEach(function(s){if(seen[s[0]]) return;var f=SF.filter(function(p){return inP(p,i)&&p.s.indexOf(s[0])>=0;})[0];if(f) out.push({y:f.y,t:s[0].toLowerCase()+' ('+f.n+', '+f.y+')'});});
+    return out.sort(function(a,b){return a.y-b.y;}).map(function(o){return o.t;});}
+  var STAGES=[
+    {t:'The reference rule',p:[2002,2002],o:true,pts:['Interpolation on the segment between a minority point and one of its 5 nearest minority neighbours; equal points per seed; nothing filtered; run once before training.','Tested on binary problems only; SMOTE-NC and SMOTE-N extend it to mixed and nominal features.']},
+    {t:'First changes, one at a time',p:[2003,2009],pts:['Each early variant changes one or two decisions: boosting around SMOTE (SMOTEBoost, 2003), cleaning after it (SMOTE-Tomek and SMOTE-ENN, 2004), border seeds and majority partners (Borderline-SMOTE, 2005), cluster partners (Cluster-SMOTE, 2006), unequal allocation (ADASYN, 2008), a shifted λ (Safe-Level-SMOTE, 2009).','SMOTEBoost is the only method of the period run on multiclass data, through AdaBoost.M2.']},
+    {t:'Allocation and the first multiclass rules',p:[2010,2017],pts:['Allocation becomes the most changed decision: weighted seeds (RAMOBoost, MWMOTE, A-SUWO) and per-class targets (SSRBF/DSRBF, SCUT).','First Multiclass-only methods (SCUT 2015, SMOM 2017) and the first non-tabular method (INOS 2013, time series). No method changes the placement rule.']},
+    {t:'Many changes at once',p:[2018,2026],pts:['Variants change several decisions together: the partner changes in almost every method, the placement in most and a post-generation filter in about half; safety- and trust-scored seeds appear (CISO, QC-SMOTE).','Nearly half of the period’s methods can generate for several classes; GAMO (2019) learns the interpolation weights and works on images. The two most recent safety-oriented methods cost about 39 times SMOTE’s running time.']}
+  ];
+  var roadH=STAGES.map(function(st,i){
+    var list=SF.filter(function(p){return p.y>=st.p[0]&&p.y<=st.p[1];});
+    var v=list.filter(function(p){return p.n!=='SMOTE';});
+    var f=i?firsts(i-1):[];
+    var stats=st.o?'':'<div class="stats"><span><b>'+list.length+'</b> methods</span><span>mean <b>'+mean(v)+'</b> decisions changed</span>'+['B','M','BM'].map(function(c){return '<span>'+CAT[c]+' <b>'+cnt(list,function(p){return p.c===c;})+'</b></span>';}).join('')+'</div>';
+    return '<div class="stage'+(st.o?' origin':'')+'"><div class="hd"><h3>'+esc(st.t)+'</h3><span class="when">'+(st.p[0]===st.p[1]?st.p[0]:st.p[0]+'–'+st.p[1])+'</span></div>'+stats+
+      '<ul>'+st.pts.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+(f.length?'<li>First changes to: '+esc(f.join('; '))+'.</li>':'')+'</ul>'+chips(list)+'</div>';
+  }).join('');
+  roadH+='<div class="stage branch"><div class="hd"><h3>Branching off: generators that leave interpolation</h3><span class="when">2016–2025</span></div><ul><li>'+K.nRegion+' oversamplers in the corpus generate inside spheres, on Mahalanobis contours, on potential fields or from fitted distributions instead of between two instances; '+K.nRegion18+' of them appeared in 2018 or later. Deep generative models (CTGAN, SOS, GOIO, DGOT) learn the minority distribution directly.</li></ul><div class="chips">'+DATA.region.slice().sort(function(a,b){return a.y-b.y;}).map(function(r){return '<span class="chip" style="--c:var(--line-strong);cursor:default">'+esc(r.n)+'<span class="t">'+r.y+'</span></span>';}).join('')+'</div></div>';
+  var road=document.getElementById('road');road.innerHTML=roadH;
+  var CF='all';
+  function applyFilter(){road.querySelectorAll('.chip[data-id]').forEach(function(c){var p=SF.filter(function(q){return q.id===c.getAttribute('data-id');})[0];var off=CF!=='all'&&p.c!==CF;c.classList.toggle('off',off);if(off&&c.getAttribute('aria-expanded')==='true'){c.setAttribute('aria-expanded','false');c.closest('.stage').querySelector('.dslot').innerHTML='';}});}
+  document.querySelectorAll('.fb[data-c]').forEach(function(b){b.addEventListener('click',function(){CF=b.getAttribute('data-c');document.querySelectorAll('.fb[data-c]').forEach(function(x){x.setAttribute('aria-pressed',String(x===b));});applyFilter();});});
+  road.addEventListener('click',function(ev){var c=ev.target.closest('.chip[data-id]');if(!c) return;var stage=c.closest('.stage'),slot=stage.querySelector('.dslot'),open=c.getAttribute('aria-expanded')==='true';
+    stage.querySelectorAll('.chip[data-id]').forEach(function(x){x.setAttribute('aria-expanded','false');});
+    if(open){slot.innerHTML='';return;}
+    var p=SF.filter(function(q){return q.id===c.getAttribute('data-id');})[0];c.setAttribute('aria-expanded','true');
+    slot.innerHTML='<div class="det"><h4>'+esc(p.n)+' ('+p.y+')</h4><div class="meta"><span class="pill k-'+p.c+'">'+CAT[p.c]+'</span>'+(p.pv?'<span>provisional</span>':'')+'<span>'+esc(p.rel)+'</span><span>'+esc(p.d.join(', '))+'</span>'+(p.mc?'<span>· '+esc(p.mc)+'</span>':'')+'</div><div class="meta">'+(p.s.length?p.s.map(function(x){return '<span class="st">'+esc(x)+'</span>';}).join(''):'<span>Reference rule</span>')+'</div><p>'+esc(p.x)+'</p></div>';});
+
+  // windows
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  function show(w,focus){tabs.forEach(function(t){var on=t.getAttribute('data-w')===w;t.setAttribute('aria-selected',String(on));t.tabIndex=on?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!on;if(on&&focus) t.focus();});
+    try{history.replaceState(null,'','#'+w);}catch(e){}}
+  tabs.forEach(function(t,i){t.addEventListener('click',function(){show(t.getAttribute('data-w'));});
+    t.addEventListener('keydown',function(ev){var j=ev.key==='ArrowRight'?i+1:ev.key==='ArrowLeft'?i-1:null;if(j==null) return;ev.preventDefault();show(tabs[(j+tabs.length)%tabs.length].getAttribute('data-w'),true);});});
+  var h=(location.hash||'').slice(1);show(['definitions','roadmap','oversampling','takeaways'].indexOf(h)>=0?h:'definitions');
+})();
+</script>

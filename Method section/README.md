@@ -47,6 +47,7 @@
 
 | ไฟล์ | คืออะไร |
 |---|---|
+| `smote-family-overview.html` | หน้า **SMOTE Family at 25** (ภาษาอังกฤษ) 4 หน้าต่าง: นิยาม, จำนวนและ Roadmap, ควรทำ oversampling ต่อไหม, ผู้อ่านได้อะไร **สร้างจาก script ห้ามแก้มือ** |
 | `binary-multiclass-summary.html` | หน้าสรุปสำหรับนำเสนอ: 3 ประเภท, Timeline แบบ interactive, paper ที่ใช้ข้อมูลประเภทอื่น, ตาราง 37 วิธีพร้อมคำอธิบาย **สร้างจาก script ห้ามแก้มือ** |
 | `manuscript/method-section-draft.tex` | ร่าง paper ส่วน Method (v2) มีช่องว่างให้ทีม Datasets และ Performance Metrics |
 | `manuscript/generated/` | ตาราง 37 วิธีและคำอธิบายรายวิธี **สร้างจาก Method Map ห้ามแก้มือ** |
@@ -59,6 +60,7 @@
 ```bash
 python "Method section/build/make_tex.py" SMOTE25_Method_Map_1.html "Method section/manuscript/generated"
 python "Method section/build/make_summary2.py" SMOTE25_Method_Map_1.html "Method section/binary-multiclass-summary.html" "Method section/build/summary_template2.html"
+python "Method section/build/make_overview.py" SMOTE25_Method_Map_1.html "Method section/smote-family-overview.html" "Method section/build/overview_template.html"
 ```
 
 `add_class_rule.py`, `merge_pdf_check.py` และ `decide_supplement.py` เป็นบันทึกว่าแก้ Method Map อย่างไร
