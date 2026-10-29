@@ -937,7 +937,18 @@ renderWNsum();
     <p class="cap">1 ชื่อนับครั้งเดียว ${f(NT.names_mixed_type)} ชื่อที่ paper ต่าง ๆ ใช้ต่างชนิดกัน ได้ชนิดเดียวตามลำดับ Modified &gt; Synthetic &gt; Repository-defined &gt; Original &gt; Not stated (เคยถูกดัดแปลงใน paper ใด = Modified) · นับแบบ entry (${f(NT.entries)} entry): ${CATS.map(c=>CATLAB[c]+" "+f(E0[c])).join(" · ")} · Not stated คือ paper ไม่ให้ข้อมูลพอจะจัดชนิด</p>`;
   const cell = (c, k, n) => n ? `<button class="btnl" type="button" data-cat="${c}" data-diff="${k}" ${tipA((c?CATLAB[c]:"ทุกชนิด")+" · "+DLAB[k]+": "+f(n)+" ชื่อ · กดเพื่อดูรายชื่อ")}>${f(n)}</button>` : `<span style="color:var(--ink3)">0</span>`;
   const XT = NT.type_by_difficulty, colTot = k => CATS.reduce((a,c)=>a+XT[c][k],0);
-  $("#db-diff").innerHTML = `<h3 class="ct">ความยากที่วัดได้ของ dataset แต่ละชนิด <span class="unit">หน่วยชื่อ · n = ${f(tot)}</span></h3>
+  const BD = NT.by_difficulty, bmax = Math.max(...DK.map(k=>BD[k])), prof = DK.filter(k => !["varies","multiclass","not measured"].includes(k)).reduce((a,k)=>a+BD[k],0);
+  if (DK.reduce((a,k)=>a+BD[k],0) !== tot) console.error("difficulty counts do not add up to", tot);
+  $("#db-diff").innerHTML = `<h3 class="ct">ความยากของข้อมูล <span class="unit">ทั้งหมด ${f(tot)} dataset (ชื่อหลัง normalise)</span></h3>
+    <div class="kpis" style="margin:4px 0 10px">
+      <div class="kpi" ${tipA("ชื่อที่จับคู่กับไฟล์สองคลาสที่วัดแล้วได้ และมีโปรไฟล์ธงความยาก")}><b>${f(prof)}</b><span>วัดได้ มีโปรไฟล์</span></div>
+      <div class="kpi" ${tipA(dtip("multiclass"))}><b>${f(BD.multiclass||0)}</b><span>หลายคลาส</span></div>
+      <div class="kpi" ${tipA(dtip("not measured"))}><b>${f(BD["not measured"]||0)}</b><span>วัดไม่ได้</span></div>
+      <div class="kpi"><b>${f(tot)}</b><span>รวม dataset</span></div></div>
+    <div class="hb">${DK.map(k => `<div class="hrow click ${dc(k)}" role="button" tabindex="0" data-dsum="${k}" ${tipA(DLAB[k]+": "+f(BD[k])+" จาก "+f(tot)+" dataset ("+pc(BD[k],tot)+") · "+dtip(k)+" · กดเพื่อดูรายชื่อ")}>
+      <span class="lab"><i class="sw"></i>${DLAB[k]}</span><span class="trk"><span class="fillk ${dc(k)}" style="width:${BD[k]/bmax*100}%"></span></span><span class="val">${f(BD[k])} · ${pc(BD[k],tot)}</span></div>`).join("")}
+      <div class="hrow" style="border-top:1px solid var(--line);padding-top:6px"><span class="lab"><b>รวม</b></span><span></span><span class="val"><b>${f(DK.reduce((a,k)=>a+BD[k],0))}</b> · 100%</span></div></div>
+    <h4 style="margin:16px 0 6px;font-size:14px">แยกตามชนิดของ dataset <span class="unit">หน่วยชื่อ · n = ${f(tot)}</span></h4>
     <div class="tbox"><table class="dxt"><thead><tr><th>ชนิด</th>${DK.map(k=>`<th class="num" ${tipA(DLAB[k]+": "+dtip(k))} tabindex="0">${DSH[k]||DLAB[k]}</th>`).join("")}<th class="num">รวม</th></tr></thead><tbody>
     ${CATS.map(c => `<tr><th scope="row"><span class="${kc(c)}" style="display:inline-flex;gap:6px;align-items:center"><i class="sw"></i>${CATLAB[c]}</span></th>${DK.map(k=>`<td class="num">${cell(c,k,XT[c][k])}</td>`).join("")}<td class="num">${cell(c,"",NB[c])}</td></tr>`).join("")}
     <tr><th scope="row">รวม</th>${DK.map(k=>`<td class="num">${cell("",k,colTot(k))}</td>`).join("")}<td class="num"><b>${f(tot)}</b></td></tr></tbody></table></div>
@@ -962,7 +973,8 @@ renderWNsum();
   const pick = (c, k, s = "", sid = "") => { if (recCat === c && recDiff === k && recSrc === s && recSid === sid) { recCat = null; recDiff = ""; recSrc = ""; recSid = ""; } else { recCat = c; recDiff = k; recSrc = s; recSid = sid; } $("#db-rec-q").value = ""; renderRec(); if (recCat !== null || recSrc || recSid) $("#db-rec").scrollIntoView({block:"nearest"}); };
   $("#db-cat").addEventListener("click", e => { const tr = e.target.closest("#db-ns-src tr[data-src]"); if (tr) { pick("not stated", "", tr.dataset.src); return; } const el = e.target.closest(".hrow"); if (el) pick(el.dataset.cat, ""); });
   $("#db-cat").addEventListener("keydown", e => { const tr = e.target.closest("#db-ns-src tr[data-src]"); if (tr && (e.key==="Enter"||e.key===" ")) { e.preventDefault(); pick("not stated", "", tr.dataset.src); return; } const el = e.target.closest(".hrow"); if (el && (e.key==="Enter"||e.key===" ")){ e.preventDefault(); pick(el.dataset.cat, ""); } });
-  $("#db-diff").addEventListener("click", e => { const b = e.target.closest("button[data-diff]"); if (b) pick(b.dataset.cat, b.dataset.diff); });
+  $("#db-diff").addEventListener("click", e => { const r = e.target.closest(".hrow[data-dsum]"); if (r) { pick("", r.dataset.dsum); return; } const b = e.target.closest("button[data-diff]"); if (b) pick(b.dataset.cat, b.dataset.diff); });
+  $("#db-diff").addEventListener("keydown", e => { const r = e.target.closest(".hrow[data-dsum]"); if (r && (e.key==="Enter"||e.key===" ")) { e.preventDefault(); pick("", r.dataset.dsum); } });
   $("#db-rec-q").addEventListener("input", renderRec);
   $("#db-rec-reset").addEventListener("click", () => { recCat = null; recDiff = ""; recSrc = ""; recSid = ""; $("#db-rec-q").value = ""; renderRec(); });
   $("#db-rec-t").addEventListener("click", e => { const b = e.target.closest("button[data-n]"); if (b) openName(b); });

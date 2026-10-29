@@ -1951,3 +1951,8 @@ python3 build/outcome_pilot.py
 ## 2026-10-29 (บ่าย 4) — ตาราง "Not stated มาจากแหล่งไหน" ในแผงชนิดของ dataset (Claude; Toon สั่งในแชต)
 - Atlas (สำรอง `build/atlas_template.before_nssource_2026-10-29.html`): ตารางใต้แถบชนิดใน #db-cat อ่านจาก `source_by_type[*]["not stated"]` ใน `out/name_level_types.json` (ไม่มีตัวเลขเขียนตาย) · คลัง/benchmark อื่น 37, UCI 30, ระดับกลุ่ม 13, Private 12, จาก paper อื่น 11, ไม่ระบุแหล่ง 11, หลายแหล่ง 3, KEEL 1 = 118 · กดแถวเห็นรายชื่อ Not stated ของแหล่งนั้น · json เพิ่ม `not_stated_single_paper` = 113
 - checks 41/41, 43/43, 14/14 · Playwright 1280/390 ไม่มี error ไม่ล้นจอ · publish Atlas version 23
+
+## 2026-10-29 (บ่าย 5) — สรุปจำนวนความยากรวม 771 dataset ในหน้าภาพรวม (Claude; Toon สั่งในแชต)
+- Atlas (สำรอง `build/atlas_template.before_diffsum_2026-10-29.html`): การ์ด #db-diff เปลี่ยนหัวเป็น "ความยากของข้อมูล ทั้งหมด 771 dataset (ชื่อหลัง normalise)" + KPI (วัดได้ มีโปรไฟล์ 169 · หลายคลาส 30 · วัดไม่ได้ 572 · รวม 771) + แถบแต่ละความยาก (ไม่ติดธง 43, small sample 84, sample + outlier 25, disjuncts + sample + outlier 17, หลายคลาส 30, วัดไม่ได้ 572) + แถวรวม 771 · กดแถบเห็นรายชื่อ · ตารางชนิด × ความยากเดิมอยู่ใต้หัวข้อย่อย "แยกตามชนิดของ dataset"
+- ตัวเลขอ่านจาก `by_difficulty` ใน `out/name_level_types.json` · make_atlas guard ผลรวมความยาก = 771 และตรงกับ csv
+- checks 41/41, 43/43, 14/14 · Playwright 1280/390 ไม่มี JS error ไม่ล้นจอ · publish Atlas version 24

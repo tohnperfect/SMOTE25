@@ -358,6 +358,8 @@ if _NT["names"] != DASH["names"]["distinct"] or len(_NTR) != _NT["names"] or sum
 if sum(_NT["by_source"].values()) != _NT["names"] or C.Counter(r["source"] for r in _NTR) != C.Counter({k: v for k, v in _NT["by_source"].items() if v}) \
         or _NT["entry_level_by_source"]["KEEL"] != DASH["provenance"]["repos"]["KEEL"]["total"]:
     sys.exit("STOP: name-level sources in out/name_level_types.* do not add up (rerun python3 build/name_level_types.py)")
+if sum(_NT["by_difficulty"].values()) != _NT["names"] or C.Counter(r["difficulty"] for r in _NTR) != C.Counter({k: v for k, v in _NT["by_difficulty"].items() if v}):
+    sys.exit("STOP: name-level difficulty counts do not add up to the 771 names (rerun python3 build/name_level_types.py)")
 _SI = rcsv("out/name_level_sources.csv")
 if len(_SI) != _NT["distinct_sources"]["n"] or {r["source"] for r in _SI} != {x for r in _NTR for x in r["source_ids"].split("; ") if x} \
         or sum(_NT["distinct_sources"]["sources_per_paper"].values()) != _NT["distinct_sources"]["papers"]:
