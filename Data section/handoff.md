@@ -1947,3 +1947,7 @@ python3 build/outcome_pilot.py
 - เขียน `out/name_level_sources.csv` (50 แถว: แหล่ง, กลุ่ม, ชื่อ, entry, paper, ข้อความที่ paper เขียน) · json `distinct_sources` · csv ชื่อเพิ่มคอลัมน์ `source_ids`
 - ผล: **50 แหล่ง** = KEEL 1, UCI 1, คลัง/benchmark อื่น 20, จาก paper/ผู้เขียนอื่น 17, private 11 · UCI 268 ชื่อ 428 entry 36 paper, KEEL 196/486/20, Kaggle 28/28/3, HDDT 20/20/1, LibSVM 17/22/3 · แหล่งต่อ paper (72 paper): 0 = 15, 1 = 25, 2 = 21, 3 = 5, 4+ = 6 · ชื่อที่มีแหล่งระบุ 564 (ชื่อหนึ่งอาจมีหลายแหล่ง)
 - Atlas: KPI "แหล่งที่ต่างกัน 50" ในหน้าภาพรวม + การ์ด #db-src (ตาราง 12 แหล่งแรก/ทั้งหมด 50, กดแถวเห็นรายชื่อ, การกระจายแหล่งต่อ paper) · make_atlas guard ชุดแหล่งตรงกับ csv ชื่อ · checks 41/41, 43/43, 14/14 · Playwright 1280/390 ไม่มี error ไม่ล้นจอ · publish Atlas version 22
+
+## 2026-10-29 (บ่าย 4) — ตาราง "Not stated มาจากแหล่งไหน" ในแผงชนิดของ dataset (Claude; Toon สั่งในแชต)
+- Atlas (สำรอง `build/atlas_template.before_nssource_2026-10-29.html`): ตารางใต้แถบชนิดใน #db-cat อ่านจาก `source_by_type[*]["not stated"]` ใน `out/name_level_types.json` (ไม่มีตัวเลขเขียนตาย) · คลัง/benchmark อื่น 37, UCI 30, ระดับกลุ่ม 13, Private 12, จาก paper อื่น 11, ไม่ระบุแหล่ง 11, หลายแหล่ง 3, KEEL 1 = 118 · กดแถวเห็นรายชื่อ Not stated ของแหล่งนั้น · json เพิ่ม `not_stated_single_paper` = 113
+- checks 41/41, 43/43, 14/14 · Playwright 1280/390 ไม่มี error ไม่ล้นจอ · publish Atlas version 23

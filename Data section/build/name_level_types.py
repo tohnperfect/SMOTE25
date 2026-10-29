@@ -148,6 +148,7 @@ out = dict(
     unit="normalized dataset name (R1 placeholders removed)", names=int(len(R)), entries=int(len(D)),
     precedence=ORDER, by_type=by_type, entry_level_by_category={c: int(ent[c]) for c in ORDER},
     names_single_type=int(len(R) - len(mixed)), names_mixed_type=int(len(mixed)),
+    not_stated_single_paper=int(((R.name_type == "not stated") & (R.n_papers == 1)).sum()),
     difficulty_order=DIFF, by_difficulty={k: int((R.difficulty == k).sum()) for k in DIFF}, type_by_difficulty=cross,
     source_order=SRCN, by_source=src_cnt, source_by_type=src_x_type, source_by_difficulty=src_x_diff,
     multiple_source_combos=dict(Counter(R.source_combo[R.source == "multiple"]).most_common()),

@@ -908,6 +908,7 @@ renderWNsum();
     "private":"ข้อมูลเฉพาะของผู้เขียนหรือหน่วยงาน","synthetic":"ผู้เขียนสร้างข้อมูลเอง","multiple":"paper ต่าง ๆ ระบุแหล่งรายชุดไม่ตรงกัน เช่น บาง paper บอก KEEL บาง paper บอก UCI",
     "not stated":"ไม่มี paper ไหนระบุแหล่งของชุดนี้"};
   const tot = NT.names, NB = NT.by_type, cmax = Math.max(...CATS.map(c=>NB[c]));
+  const NSLAB = {"other repository":"คลังหรือ benchmark อื่น เช่น Kaggle, HDDT","group-level":"ระบุแค่ระดับกลุ่ม เช่น “UCI หรือ KEEL”","other paper/author":"จาก paper อื่น","private":"Private"};
   const DLAB = {"none":"ไม่ติดธงใด","small_sample":"Small sample","outlier_flag":"Outlier > 20%","small_sample + outlier_flag":"Small sample + outlier > 20%",
     "small_disjuncts + outlier_flag":"Small disjuncts + outlier > 20%","small_disjuncts + small_sample":"Small disjuncts + small sample",
     "small_disjuncts + small_sample + outlier_flag":"Small disjuncts + small sample + outlier > 20%","varies":"ต่างกันตามไฟล์หรือคลาส",
@@ -927,6 +928,12 @@ renderWNsum();
   $("#db-cat").innerHTML = `<h3 class="ct">ชนิดของ dataset <span class="unit">n = ${f(tot)} ชื่อ (normalise แล้ว)</span></h3>
     <div class="hb">${CATS.map(c => `<div class="hrow click ${kc(c)}" role="button" tabindex="0" data-cat="${c}" ${tipA(CATLAB[c]+": "+f(NB[c])+" จาก "+f(tot)+" ชื่อ ("+pc(NB[c],tot)+") · นับแบบ entry "+f(E0[c])+" entry · กดเพื่อดูรายชื่อ")}>
       <span class="lab"><i class="sw"></i>${CATLAB[c]}</span><span class="trk"><span class="fillk ${kc(c)}" style="width:${NB[c]/cmax*100}%"></span></span><span class="val">${f(NB[c])} · ${pc(NB[c],tot)}</span></div>`).join("")}</div>
+    <h4 style="margin:14px 0 6px;font-size:14px">Not stated ${f(NB["not stated"])} ชื่อ มาจากแหล่งไหน <span class="unit">หน่วยชื่อ</span></h4>
+    <div class="tbox"><table class="dxt" id="db-ns-src"><thead><tr><th>แหล่ง</th><th class="num">ชื่อ</th></tr></thead><tbody>
+      ${NT.source_order.filter(x => NT.source_by_type[x]["not stated"]).sort((a,b) => NT.source_by_type[b]["not stated"] - NT.source_by_type[a]["not stated"]).map(x =>
+        `<tr class="click" data-src="${esc(x)}" role="button" tabindex="0" ${tipA(SLAB[x]+": "+NT.source_by_type[x]["not stated"]+" ชื่อที่เป็น Not stated · "+STIP[x]+" · กดเพื่อดูรายชื่อ")}><td>${NSLAB[x] || SLAB[x]}</td><td class="num">${NT.source_by_type[x]["not stated"]}</td></tr>`).join("")}
+      <tr><th scope="row">รวม</th><td class="num"><b>${f(NB["not stated"])}</b></td></tr></tbody></table></div>
+    <p class="cap" style="margin-top:4px">ส่วนใหญ่รู้แหล่ง แต่ paper ไม่บอกว่าเตรียมข้อมูลอย่างไร (เช่น ทำเป็นสองคลาสโดยเลือกคลาสไหนเป็น minority) · ${f(NT.not_stated_single_paper)} จาก ${f(NB["not stated"])} ชื่อใช้ใน paper เดียว</p>
     <p class="cap">1 ชื่อนับครั้งเดียว ${f(NT.names_mixed_type)} ชื่อที่ paper ต่าง ๆ ใช้ต่างชนิดกัน ได้ชนิดเดียวตามลำดับ Modified &gt; Synthetic &gt; Repository-defined &gt; Original &gt; Not stated (เคยถูกดัดแปลงใน paper ใด = Modified) · นับแบบ entry (${f(NT.entries)} entry): ${CATS.map(c=>CATLAB[c]+" "+f(E0[c])).join(" · ")} · Not stated คือ paper ไม่ให้ข้อมูลพอจะจัดชนิด</p>`;
   const cell = (c, k, n) => n ? `<button class="btnl" type="button" data-cat="${c}" data-diff="${k}" ${tipA((c?CATLAB[c]:"ทุกชนิด")+" · "+DLAB[k]+": "+f(n)+" ชื่อ · กดเพื่อดูรายชื่อ")}>${f(n)}</button>` : `<span style="color:var(--ink3)">0</span>`;
   const XT = NT.type_by_difficulty, colTot = k => CATS.reduce((a,c)=>a+XT[c][k],0);
@@ -945,7 +952,7 @@ renderWNsum();
     const q = $("#db-rec-q").value.trim().toLowerCase();
     const A0 = NTR.filter(r => (!recCat || r.type===recCat) && (!recDiff || r.diff===recDiff) && (!recSrc || r.src===recSrc) && (!recSid || r.sids.includes(recSid))).sort((a,b) => b.np - a.np || a.name.localeCompare(b.name));
     const L = A0.filter(r => !q || (r.name+" "+r.papers).toLowerCase().includes(q));
-    $("#db-rec-h").innerHTML = `${recCat ? `<span class="${kc(recCat)}" style="display:inline-flex;gap:6px;align-items:center"><i class="sw"></i>${CATLAB[recCat]}</span>` : (recSrc ? "แหล่ง: "+esc(SLAB[recSrc]) : recSid ? "แหล่ง: "+esc(recSid.replace(/^private: /,"Private: ")) : "ทุกชนิด")}${recDiff ? " · "+esc(DLAB[recDiff]) : ""} <span class="unit">${f(A0.length)} จาก ${f(tot)} ชื่อ</span>`;
+    $("#db-rec-h").innerHTML = `${recCat ? `<span class="${kc(recCat)}" style="display:inline-flex;gap:6px;align-items:center"><i class="sw"></i>${CATLAB[recCat]}</span>` : (recSrc ? "แหล่ง: "+esc(SLAB[recSrc]) : recSid ? "แหล่ง: "+esc(recSid.replace(/^private: /,"Private: ")) : "ทุกชนิด")}${recCat && recSrc ? " · แหล่ง: "+esc(SLAB[recSrc]) : ""}${recDiff ? " · "+esc(DLAB[recDiff]) : ""} <span class="unit">${f(A0.length)} จาก ${f(tot)} ชื่อ</span>`;
     $("#db-rec-n").textContent = (q ? `ตรงกับคำค้น ${f(L.length)} · ` : "") + `แสดง ${f(L.length)} ชื่อ เรียงตามจำนวน paper`;
     $("#db-rec-t tbody").innerHTML = L.map(r => `<tr><td><button class="btnl mono" data-n="${esc(r.name)}" type="button" ${tipA("เปิด "+r.name+" ในแท็บ Datasets")}>${esc(r.name)}</button></td>
       <td><span class="${dc(r.diff)}" style="display:inline-flex;gap:6px;align-items:center;font-size:12.5px"><i class="sw"></i>${esc(DLAB[r.diff])}</span></td>
@@ -953,8 +960,8 @@ renderWNsum();
       <td class="mono" style="font-size:11.5px">${esc(r.tasks || r.why || (r.diff==="multiclass" ? "ไฟล์หลายคลาส ไม่มีคลาส minority เดียว" : ""))}</td></tr>`).join("") || `<tr><td colspan="6" class="empty">ไม่พบ dataset ที่ตรงกับคำค้น</td></tr>`;
   }
   const pick = (c, k, s = "", sid = "") => { if (recCat === c && recDiff === k && recSrc === s && recSid === sid) { recCat = null; recDiff = ""; recSrc = ""; recSid = ""; } else { recCat = c; recDiff = k; recSrc = s; recSid = sid; } $("#db-rec-q").value = ""; renderRec(); if (recCat !== null || recSrc || recSid) $("#db-rec").scrollIntoView({block:"nearest"}); };
-  $("#db-cat").addEventListener("click", e => { const el = e.target.closest(".hrow"); if (el) pick(el.dataset.cat, ""); });
-  $("#db-cat").addEventListener("keydown", e => { const el = e.target.closest(".hrow"); if (el && (e.key==="Enter"||e.key===" ")){ e.preventDefault(); pick(el.dataset.cat, ""); } });
+  $("#db-cat").addEventListener("click", e => { const tr = e.target.closest("#db-ns-src tr[data-src]"); if (tr) { pick("not stated", "", tr.dataset.src); return; } const el = e.target.closest(".hrow"); if (el) pick(el.dataset.cat, ""); });
+  $("#db-cat").addEventListener("keydown", e => { const tr = e.target.closest("#db-ns-src tr[data-src]"); if (tr && (e.key==="Enter"||e.key===" ")) { e.preventDefault(); pick("not stated", "", tr.dataset.src); return; } const el = e.target.closest(".hrow"); if (el && (e.key==="Enter"||e.key===" ")){ e.preventDefault(); pick(el.dataset.cat, ""); } });
   $("#db-diff").addEventListener("click", e => { const b = e.target.closest("button[data-diff]"); if (b) pick(b.dataset.cat, b.dataset.diff); });
   $("#db-rec-q").addEventListener("input", renderRec);
   $("#db-rec-reset").addEventListener("click", () => { recCat = null; recDiff = ""; recSrc = ""; recSid = ""; $("#db-rec-q").value = ""; renderRec(); });
