@@ -94,6 +94,13 @@ def task_of(e):
         return hit[0] if len(hit) == 1 else None
     return None
 
+# การดัดแปลง (29 ต.ค. บ่าย 6, Toon สั่งใส่ตารางชนิดการดำเนินการในหน้าภาพรวม): อ่าน out/modified_operations_audit.csv (build/modified_operations.py)
+OPS = ["CS", "US", "IM", "SF", "FM", "OT", "IS"]
+MO = pd.read_csv("out/modified_operations_audit.csv", dtype=str).fillna("")
+MOS = json.load(open("out/modified_operations_summary.json", encoding="utf-8"))
+assert len(MO) == MOS["entries"] and set(MO.record_id) == set(D[D.category == "modified"].record_id), "STOP: modified_operations_audit.csv out of date"
+MO["opset"] = MO.ops.map(lambda o: {x for x in o.split(";") if x})
+NOPS = {n: sorted(set().union(*g.opset), key=OPS.index) for n, g in MO.groupby("normalized_name")}
 rows, unmapped_binarised = [], []
 for name, g in M.groupby("normalized_name", sort=True):
     cats = Counter(g.category)
@@ -124,6 +131,7 @@ for name, g in M.groupby("normalized_name", sort=True):
         source=nsrc, source_combo=" + ".join(spec) if len(spec) > 1 else "",
         entries_by_source="; ".join(f"{x} {sc[x]}" for x in SRC if sc.get(x)),
         source_ids="; ".join(sorted({x for x in g.sid if x})),
+        mod_ops=";".join(NOPS.get(name, [])),
         difficulty=diff,
         measured_tasks="; ".join(f"{t.file} [{t.source}] minority={t.minority_label.strip()} N={t.N} n_min={t.n_min} IR={t.IR} noise={t.noise_index} profile={t.profile}"
                                  for t in tasks.values()),
@@ -160,6 +168,14 @@ out = dict(
                difficulty="โปรไฟล์ของ task สองคลาสที่วัดแล้ว (ธงจาก difficulty/profile_final.py) · หลาย task ต่างโปรไฟล์ = varies · มีแต่ไฟล์หลายคลาส = multiclass · ไม่มีไฟล์ที่ตรวจได้ = not measured"))
 assert sum(src_cnt.values()) == 771 and sum(out["entry_level_by_source"].values()) == 1653
 assert sum(by_type.values()) == 771 and all(sum(v.values()) == by_type[c] for c, v in cross.items())
+out["modified_ops"] = dict(
+    order=OPS, entries=int(len(MO)), papers=int(MO.paper_key.nunique()), names=int(MO.normalized_name.nunique()),
+    by_op={o: dict(entries=int(MO.opset.map(lambda x: o in x).sum()), papers=int(MO[MO.opset.map(lambda x: o in x)].paper_key.nunique()),
+                   names=int(sum(o in v for v in NOPS.values()))) for o in OPS},
+    purpose_papers=MOS["purpose"]["papers_with_stated_purpose"], purpose_themes=MOS["purpose"]["themes_by_paper"],
+    source="out/modified_operations_audit.csv (build/modified_operations.py); ชื่อ = normalized_name ที่มี entry modified อย่างน้อย 1")
+assert all(out["modified_ops"]["by_op"][o]["entries"] == MOS["tag_entries"][o] and out["modified_ops"]["by_op"][o]["papers"] == MOS["tag_papers"][o] for o in OPS)
+assert out["modified_ops"]["names"] == by_type["modified"]
 # แหล่งที่ต่างกัน: 1 แถวต่อแหล่ง
 S = M[M.sid.notna()]
 SI = pd.DataFrame([dict(source=k, group=src_group(g.source_as_reported.iloc[0]), names=g.normalized_name.nunique(), entries=len(g),
@@ -181,6 +197,7 @@ assert SI.entries.sum() == len(S) and pp.index.nunique() == M.paper_key.nunique(
 json.dump(out, open("out/name_level_types.json", "w", encoding="utf-8"), indent=1, ensure_ascii=False)
 print(json.dumps({k: out[k] for k in ("by_type", "by_difficulty", "measured_names", "names_mixed_type")}, indent=1))
 for c in ORDER: print(c, {k: v for k, v in cross[c].items() if v})
+print("modops", {o: tuple(v.values()) for o, v in out["modified_ops"]["by_op"].items()})
 print("distinct", out["distinct_sources"]["n"], out["distinct_sources"]["by_group"], out["distinct_sources"]["sources_per_paper"], out["distinct_sources"]["names_with_a_source"])
 print(SI.head(12)[["source","names","entries","papers"]].to_string())
 print("source", src_cnt, "\nentry", out["entry_level_by_source"], "\ncombos", out["multiple_source_combos"])

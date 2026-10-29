@@ -1956,3 +1956,8 @@ python3 build/outcome_pilot.py
 - Atlas (สำรอง `build/atlas_template.before_diffsum_2026-10-29.html`): การ์ด #db-diff เปลี่ยนหัวเป็น "ความยากของข้อมูล ทั้งหมด 771 dataset (ชื่อหลัง normalise)" + KPI (วัดได้ มีโปรไฟล์ 169 · หลายคลาส 30 · วัดไม่ได้ 572 · รวม 771) + แถบแต่ละความยาก (ไม่ติดธง 43, small sample 84, sample + outlier 25, disjuncts + sample + outlier 17, หลายคลาส 30, วัดไม่ได้ 572) + แถวรวม 771 · กดแถบเห็นรายชื่อ · ตารางชนิด × ความยากเดิมอยู่ใต้หัวข้อย่อย "แยกตามชนิดของ dataset"
 - ตัวเลขอ่านจาก `by_difficulty` ใน `out/name_level_types.json` · make_atlas guard ผลรวมความยาก = 771 และตรงกับ csv
 - checks 41/41, 43/43, 14/14 · Playwright 1280/390 ไม่มี JS error ไม่ล้นจอ · publish Atlas version 24
+
+## 2026-10-29 (บ่าย 6) — ตารางชนิดการดำเนินการ (entry / paper / ชื่อ dataset) ในหน้าภาพรวม (Claude; Toon สั่งในแชต)
+- `build/name_level_types.py` อ่าน `out/modified_operations_audit.csv` (หยุดถ้า record ไม่ตรงกับ entry modified ใน dataset_records) · csv ชื่อเพิ่มคอลัมน์ `mod_ops` (union ของ tag ทุก entry ของชื่อ) · json `modified_ops` (entry, paper, ชื่อต่อ tag; assert entry/paper ตรงกับ `out/modified_operations_summary.json` และจำนวนชื่อ = Modified 233)
+- ผล: CS 175/29/113, US 148/11/124, IM 147/9/123, SF 18/9/17, FM 16/7/15, OT 4/3/4, IS 0/0/0 (entry/paper/ชื่อ)
+- Atlas (สำรอง `build/atlas_template.before_modops_2026-10-29.html`): การ์ด #db-ops "ข้อมูลที่ถูกดัดแปลง ดัดแปลงอย่างไร" ใต้แผงชนิด/แหล่ง · tooltip นิยามแต่ละ tag · กดแถวเห็นรายชื่อ · คำอธิบายใต้ตาราง: ผลรวมเกินเพราะหลาย tag, เหตุผลที่ CS ยุบมาก, paper ที่เขียนเหตุผล 15/39 · make_atlas guard · checks 41/41, 43/43, 14/14 · Playwright 1280/390 ไม่มี error ไม่ล้นจอ · publish Atlas version 25

@@ -359,6 +359,7 @@ tr.mz-sel td{background:var(--accent-soft)}
       <div class="card" id="db-cat"></div>
       <div class="card" id="db-prov"></div>
     </div>
+    <div class="card" id="db-ops"></div>
     <div class="card" id="db-diff"></div>
     <div class="card" id="db-src"></div>
     <div class="card" id="db-rec" hidden>
@@ -899,7 +900,7 @@ renderWNsum();
   ].map(x => `<li>${x}</li>`).join("");
 
   /* A. ชนิดข้อมูล หน่วยชื่อหลัง normalise (29 ต.ค. 2026) + ความยากที่วัดได้ กดเพื่อดูรายชื่อ dataset · ข้อมูลจาก D.nt (build/name_level_types.py) */
-  const NT = D.nt.sum, NTR = D.nt.rows.map(r => ({name:r[0], type:r[1], ent:r[2], bycat:r[3], np:r[4], papers:r[5], diff:r[6], tasks:r[7], why:r[8], src:r[9], bysrc:r[10], combo:r[11], sids:r[12] ? r[12].split("; ") : []}));
+  const NT = D.nt.sum, NTR = D.nt.rows.map(r => ({name:r[0], type:r[1], ent:r[2], bycat:r[3], np:r[4], papers:r[5], diff:r[6], tasks:r[7], why:r[8], src:r[9], bysrc:r[10], combo:r[11], sids:r[12] ? r[12].split("; ") : [], ops:r[13] ? r[13].split(";") : []}));
   const SLAB = {"KEEL":"KEEL","UCI":"UCI","group-level":"ระบุแค่ระดับกลุ่ม","other repository":"คลังหรือ benchmark อื่น","other paper/author":"จาก paper หรือผู้เขียนอื่น",
     "private":"Private (ข้อมูลเฉพาะ)","synthetic":"Synthetic","multiple":"หลายแหล่ง","not stated":"ไม่ระบุแหล่ง"};
   const STIP = {"KEEL":"paper ระบุ KEEL","UCI":"paper ระบุ UCI (รวม UCI KDD Archive)","group-level":"paper บอกแค่ว่าทั้งชุดมาจาก UCI หรือ KEEL (หรือ UCI หรือ ELENA) ไม่บอกรายชุด",
@@ -909,6 +910,11 @@ renderWNsum();
     "not stated":"ไม่มี paper ไหนระบุแหล่งของชุดนี้"};
   const tot = NT.names, NB = NT.by_type, cmax = Math.max(...CATS.map(c=>NB[c]));
   const NSLAB = {"other repository":"คลังหรือ benchmark อื่น เช่น Kaggle, HDDT","group-level":"ระบุแค่ระดับกลุ่ม เช่น “UCI หรือ KEEL”","other paper/author":"จาก paper อื่น","private":"Private"};
+  const OPLAB = {CS:"CS แปลงคลาส", US:"US ลดตัวอย่าง", IM:"IM ตั้งใจเปลี่ยน IR", SF:"SF ตัดแถว / ใช้ subset", FM:"FM เปลี่ยน feature", OT:"OT อื่น ๆ", IS:"IS ระบุไม่ได้"};
+  const OPTIP = {CS:"class selection / task conversion: แปลง multiclass เป็นสองคลาส (ส่วนใหญ่ one-vs-rest), เลือก รวม หรือตัดคลาส, ตั้ง threshold บนค่าเป้าหมาย",
+    US:"sample reduction / undersampling: ลดจำนวนตัวอย่างของคลาสใดคลาสหนึ่ง (ส่วนใหญ่ minority)", IM:"imbalance manipulation: ตั้งใจเปลี่ยน IR (paper เขียนว่าทำเพื่อสร้างหรือเพิ่มความไม่สมดุล)",
+    SF:"sample filtering / subset selection: ตัดแถวที่มีค่าหาย หรือใช้ subset โดยไม่เจาะจงคลาส", FM:"feature modification: ตัด เลือก หรือแปลง feature, feature extraction, ใส่ noise ใน attribute",
+    OT:"other documented: เช่น ใส่ label noise หรือสร้างป้ายคลาสเอง", IS:"insufficiently specified: รู้ว่าดัดแปลงแต่ระบุการดำเนินการไม่ได้"};
   const DLAB = {"none":"ไม่ติดธงใด","small_sample":"Small sample","outlier_flag":"Outlier > 20%","small_sample + outlier_flag":"Small sample + outlier > 20%",
     "small_disjuncts + outlier_flag":"Small disjuncts + outlier > 20%","small_disjuncts + small_sample":"Small disjuncts + small sample",
     "small_disjuncts + small_sample + outlier_flag":"Small disjuncts + small sample + outlier > 20%","varies":"ต่างกันตามไฟล์หรือคลาส",
@@ -953,30 +959,31 @@ renderWNsum();
     ${CATS.map(c => `<tr><th scope="row"><span class="${kc(c)}" style="display:inline-flex;gap:6px;align-items:center"><i class="sw"></i>${CATLAB[c]}</span></th>${DK.map(k=>`<td class="num">${cell(c,k,XT[c][k])}</td>`).join("")}<td class="num">${cell(c,"",NB[c])}</td></tr>`).join("")}
     <tr><th scope="row">รวม</th>${DK.map(k=>`<td class="num">${cell("",k,colTot(k))}</td>`).join("")}<td class="num"><b>${f(tot)}</b></td></tr></tbody></table></div>
     <p class="cap">วัดจากไฟล์สาธารณะที่ตรวจแล้วว่าตรงกับที่ paper ใช้ (HVDM, k = 5) ใช้ธงที่มีอ้างอิง: <b>Sample</b> = small sample (minority ต่อ feature &lt; 10, Jain et al. 2000), <b>Outlier</b> = minority เป็น outlier เกิน 20% และ <b>Disjuncts</b> = small disjuncts (rare ≥ 20%) ตาม Napierala &amp; Stefanowski 2016 · <b>หลายคลาส</b> = ตรวจได้กับไฟล์หลายคลาสแต่ไม่มีคลาส minority เดียว · มีโปรไฟล์สองคลาส ${f(NT.measured_names)} ชื่อ · ชื่อที่จับได้หลาย task ใช้โปรไฟล์เดียวเมื่อทุก task ตรงกัน · Synthetic และ Not stated วัดไม่ได้ทั้งหมด เพราะไม่มีไฟล์ให้ตรวจ · วัดไม่ได้ไม่ได้แปลว่าง่ายหรือยาก กดตัวเลขเพื่อดูรายชื่อ dataset</p>`;
-  let recCat = null, recDiff = "", recSrc = "", recSid = "";
+  let recCat = null, recDiff = "", recSrc = "", recSid = "", recOp = "";
   function renderRec(){
-    const on = recCat !== null || !!recSrc || !!recSid; $("#db-rec").hidden = !on;
+    const on = recCat !== null || !!recSrc || !!recSid || !!recOp; $("#db-rec").hidden = !on;
     document.querySelectorAll("#db-cat .hrow").forEach(el => el.classList.toggle("sel", on && !recDiff && !recSrc && el.dataset.cat===recCat));
     document.querySelectorAll("#db-prov .mrow[data-src]").forEach(el => el.classList.toggle("sel", on && el.dataset.src===recSrc));
+    document.querySelectorAll("#db-ops tr[data-op]").forEach(el => el.classList.toggle("sel", on && el.dataset.op===recOp));
     document.querySelectorAll("#db-src tr[data-sid]").forEach(el => el.classList.toggle("sel", on && el.dataset.sid===recSid));
     if (!on) return;
     const q = $("#db-rec-q").value.trim().toLowerCase();
-    const A0 = NTR.filter(r => (!recCat || r.type===recCat) && (!recDiff || r.diff===recDiff) && (!recSrc || r.src===recSrc) && (!recSid || r.sids.includes(recSid))).sort((a,b) => b.np - a.np || a.name.localeCompare(b.name));
+    const A0 = NTR.filter(r => (!recCat || r.type===recCat) && (!recDiff || r.diff===recDiff) && (!recSrc || r.src===recSrc) && (!recSid || r.sids.includes(recSid)) && (!recOp || r.ops.includes(recOp))).sort((a,b) => b.np - a.np || a.name.localeCompare(b.name));
     const L = A0.filter(r => !q || (r.name+" "+r.papers).toLowerCase().includes(q));
-    $("#db-rec-h").innerHTML = `${recCat ? `<span class="${kc(recCat)}" style="display:inline-flex;gap:6px;align-items:center"><i class="sw"></i>${CATLAB[recCat]}</span>` : (recSrc ? "แหล่ง: "+esc(SLAB[recSrc]) : recSid ? "แหล่ง: "+esc(recSid.replace(/^private: /,"Private: ")) : "ทุกชนิด")}${recCat && recSrc ? " · แหล่ง: "+esc(SLAB[recSrc]) : ""}${recDiff ? " · "+esc(DLAB[recDiff]) : ""} <span class="unit">${f(A0.length)} จาก ${f(tot)} ชื่อ</span>`;
+    $("#db-rec-h").innerHTML = `${recCat ? `<span class="${kc(recCat)}" style="display:inline-flex;gap:6px;align-items:center"><i class="sw"></i>${CATLAB[recCat]}</span>` : (recSrc ? "แหล่ง: "+esc(SLAB[recSrc]) : recSid ? "แหล่ง: "+esc(recSid.replace(/^private: /,"Private: ")) : recOp ? "ดัดแปลงแบบ "+esc(OPLAB[recOp]) : "ทุกชนิด")}${recCat && recSrc ? " · แหล่ง: "+esc(SLAB[recSrc]) : ""}${recDiff ? " · "+esc(DLAB[recDiff]) : ""} <span class="unit">${f(A0.length)} จาก ${f(tot)} ชื่อ</span>`;
     $("#db-rec-n").textContent = (q ? `ตรงกับคำค้น ${f(L.length)} · ` : "") + `แสดง ${f(L.length)} ชื่อ เรียงตามจำนวน paper`;
     $("#db-rec-t tbody").innerHTML = L.map(r => `<tr><td><button class="btnl mono" data-n="${esc(r.name)}" type="button" ${tipA("เปิด "+r.name+" ในแท็บ Datasets")}>${esc(r.name)}</button></td>
       <td><span class="${dc(r.diff)}" style="display:inline-flex;gap:6px;align-items:center;font-size:12.5px"><i class="sw"></i>${esc(DLAB[r.diff])}</span></td>
       <td class="num">${r.ent}</td><td style="font-size:12.5px">${esc(r.bycat)}<div style="font-size:11.5px;color:var(--ink3)">แหล่ง: ${esc(SLAB[r.src])}${r.combo ? " ("+esc(r.combo)+")" : ""}</div></td><td class="num" ${tipA(r.papers)} tabindex="0">${r.np}</td>
       <td class="mono" style="font-size:11.5px">${esc(r.tasks || r.why || (r.diff==="multiclass" ? "ไฟล์หลายคลาส ไม่มีคลาส minority เดียว" : ""))}</td></tr>`).join("") || `<tr><td colspan="6" class="empty">ไม่พบ dataset ที่ตรงกับคำค้น</td></tr>`;
   }
-  const pick = (c, k, s = "", sid = "") => { if (recCat === c && recDiff === k && recSrc === s && recSid === sid) { recCat = null; recDiff = ""; recSrc = ""; recSid = ""; } else { recCat = c; recDiff = k; recSrc = s; recSid = sid; } $("#db-rec-q").value = ""; renderRec(); if (recCat !== null || recSrc || recSid) $("#db-rec").scrollIntoView({block:"nearest"}); };
+  const pick = (c, k, s = "", sid = "", op = "") => { if (recCat === c && recDiff === k && recSrc === s && recSid === sid && recOp === op) { recCat = null; recDiff = ""; recSrc = ""; recSid = ""; recOp = ""; } else { recCat = c; recDiff = k; recSrc = s; recSid = sid; recOp = op; } $("#db-rec-q").value = ""; renderRec(); if (recCat !== null || recSrc || recSid || recOp) $("#db-rec").scrollIntoView({block:"nearest"}); };
   $("#db-cat").addEventListener("click", e => { const tr = e.target.closest("#db-ns-src tr[data-src]"); if (tr) { pick("not stated", "", tr.dataset.src); return; } const el = e.target.closest(".hrow"); if (el) pick(el.dataset.cat, ""); });
   $("#db-cat").addEventListener("keydown", e => { const tr = e.target.closest("#db-ns-src tr[data-src]"); if (tr && (e.key==="Enter"||e.key===" ")) { e.preventDefault(); pick("not stated", "", tr.dataset.src); return; } const el = e.target.closest(".hrow"); if (el && (e.key==="Enter"||e.key===" ")){ e.preventDefault(); pick(el.dataset.cat, ""); } });
   $("#db-diff").addEventListener("click", e => { const r = e.target.closest(".hrow[data-dsum]"); if (r) { pick("", r.dataset.dsum); return; } const b = e.target.closest("button[data-diff]"); if (b) pick(b.dataset.cat, b.dataset.diff); });
   $("#db-diff").addEventListener("keydown", e => { const r = e.target.closest(".hrow[data-dsum]"); if (r && (e.key==="Enter"||e.key===" ")) { e.preventDefault(); pick("", r.dataset.dsum); } });
   $("#db-rec-q").addEventListener("input", renderRec);
-  $("#db-rec-reset").addEventListener("click", () => { recCat = null; recDiff = ""; recSrc = ""; recSid = ""; $("#db-rec-q").value = ""; renderRec(); });
+  $("#db-rec-reset").addEventListener("click", () => { recCat = null; recDiff = ""; recSrc = ""; recSid = ""; recOp = ""; $("#db-rec-q").value = ""; renderRec(); });
   $("#db-rec-t").addEventListener("click", e => { const b = e.target.closest("button[data-n]"); if (b) openName(b); });
 
   /* C. KEEL กับ UCI */
@@ -992,6 +999,16 @@ renderWNsum();
     <p class="cap">1 ชื่อนับครั้งเดียว: ถ้า paper ที่ระบุแหล่งรายชุดระบุตรงกัน ใช้แหล่งนั้น · ระบุต่างกัน = หลายแหล่ง (${Object.entries(NT.multiple_source_combos).slice(0,2).map(([k,v]) => k.split(" + ").map(x=>SLAB[x]).join(" + ")+" "+v).join(", ")} และอื่น ๆ ดูได้เมื่อชี้ที่แถว) · ไม่มี paper ระบุรายชุดแต่บอกระดับกลุ่ม = ระบุแค่ระดับกลุ่ม · แหล่งตามที่ paper เขียน ${Object.keys(NT.source_map).length} แบบ จัดเป็นกลุ่มด้วยการจับข้อความ (<code>out/name_level_types.json</code> source_map) · นับแบบ entry (${f(NT.entries)}): ${Object.entries(ES).map(([k,v])=>SLAB[k]+" "+f(v)).join(" · ")} · กดแถวเพื่อดูรายชื่อ</p>`;
   $("#db-prov").addEventListener("click", e => { const el = e.target.closest(".mrow[data-src]"); if (el) pick(null, "", el.dataset.src); });
   $("#db-prov").addEventListener("keydown", e => { const el = e.target.closest(".mrow[data-src]"); if (el && (e.key==="Enter"||e.key===" ")){ e.preventDefault(); pick(null, "", el.dataset.src); } });
+
+  /* ชนิดการดำเนินการของข้อมูลที่ถูกดัดแปลง (29 ต.ค. 2026 บ่าย 6, Toon สั่ง) ข้อมูลจาก D.nt.sum.modified_ops */
+  const MOP = NT.modified_ops;
+  $("#db-ops").innerHTML = `<h3 class="ct">ข้อมูลที่ถูกดัดแปลง ดัดแปลงอย่างไร <span class="unit">${f(MOP.entries)} entry · ${MOP.papers} paper · ${f(MOP.names)} ชื่อ dataset</span></h3>
+    <div class="tbox"><table class="dxt"><thead><tr><th>ชนิดการดำเนินการ</th><th class="num">entry</th><th class="num">paper</th><th class="num">ชื่อ dataset</th></tr></thead><tbody>
+    ${MOP.order.map(o => { const v = MOP.by_op[o]; return `<tr${v.names ? ` class="click" data-op="${o}" role="button" tabindex="0"` : ""} ${tipA(OPLAB[o]+" · "+OPTIP[o]+(v.names ? " · กดเพื่อดูรายชื่อ" : ""))}><td><b class="mono">${o}</b> ${OPLAB[o].slice(3)}</td><td class="num">${f(v.entries)}</td><td class="num">${v.papers}</td><td class="num">${f(v.names)}</td></tr>`; }).join("")}
+    </tbody></table></div>
+    <p class="cap">entry หนึ่งหรือชื่อหนึ่งถูกดัดแปลงได้หลายแบบ ผลรวมแต่ละคอลัมน์จึงเกินจำนวนทั้งหมด · ชื่อ dataset = ชื่อหลัง normalise ที่มี entry ดัดแปลงอย่างน้อย 1 (ตรงกับ Modified ${f(NB.modified)} ชื่อในแผงชนิด) · CS ยุบจาก entry เป็นชื่อมากเพราะชุดดังถูกหลาย paper แปลงคลาสซ้ำ ส่วน US/IM แทบไม่ยุบเพราะแต่ละเวอร์ชันที่ลดตัวอย่างได้ชื่อของตัวเอง · paper ที่เขียนเหตุผลของการดัดแปลง ${MOP.purpose_papers} จาก ${MOP.papers} (${Object.entries(MOP.purpose_themes).map(([k,v])=>esc(k)+" "+v).join(", ")}) · ที่มา <code>out/modified_operations_audit.csv</code> · กดแถวเพื่อดูรายชื่อ</p>`;
+  $("#db-ops").addEventListener("click", e => { const tr = e.target.closest("tr[data-op]"); if (tr) pick(null, "", "", "", tr.dataset.op); });
+  $("#db-ops").addEventListener("keydown", e => { const tr = e.target.closest("tr[data-op]"); if (tr && (e.key==="Enter"||e.key===" ")){ e.preventDefault(); pick(null, "", "", "", tr.dataset.op); } });
 
   /* แหล่งที่ต่างกัน 1 แหล่งนับ 1 (29 ต.ค. 2026 บ่าย 3, Toon สั่ง) ข้อมูลจาก D.nt.sum.distinct_sources (out/name_level_sources.csv) */
   const DS0 = NT.distinct_sources, GLAB = {"KEEL":"KEEL","UCI":"UCI","other repository":"คลังหรือ benchmark อื่น","other paper/author":"จาก paper หรือผู้เขียนอื่น","private":"Private"};

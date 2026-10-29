@@ -391,6 +391,67 @@
   "type": "ชื่อหนึ่งได้ชนิดเดียว: ถ้ามี entry ใดเป็นชนิดที่มาก่อนตามลำดับ precedence ใช้ชนิดนั้น (เคยดัดแปลง = modified)",
   "difficulty": "โปรไฟล์ของ task สองคลาสที่วัดแล้ว (ธงจาก difficulty/profile_final.py) · หลาย task ต่างโปรไฟล์ = varies · มีแต่ไฟล์หลายคลาส = multiclass · ไม่มีไฟล์ที่ตรวจได้ = not measured"
  },
+ "modified_ops": {
+  "order": [
+   "CS",
+   "US",
+   "IM",
+   "SF",
+   "FM",
+   "OT",
+   "IS"
+  ],
+  "entries": 331,
+  "papers": 39,
+  "names": 233,
+  "by_op": {
+   "CS": {
+    "entries": 175,
+    "papers": 29,
+    "names": 113
+   },
+   "US": {
+    "entries": 148,
+    "papers": 11,
+    "names": 124
+   },
+   "IM": {
+    "entries": 147,
+    "papers": 9,
+    "names": 123
+   },
+   "SF": {
+    "entries": 18,
+    "papers": 9,
+    "names": 17
+   },
+   "FM": {
+    "entries": 16,
+    "papers": 7,
+    "names": 15
+   },
+   "OT": {
+    "entries": 4,
+    "papers": 3,
+    "names": 4
+   },
+   "IS": {
+    "entries": 0,
+    "papers": 0,
+    "names": 0
+   }
+  },
+  "purpose_papers": 15,
+  "purpose_themes": {
+   "two-class problems": 7,
+   "more extreme imbalance": 1,
+   "extreme imbalance": 1,
+   "higher imbalance": 4,
+   "imbalance study": 1,
+   "data-set size": 1
+  },
+  "source": "out/modified_operations_audit.csv (build/modified_operations.py); ชื่อ = normalized_name ที่มี entry modified อย่างน้อย 1"
+ },
  "distinct_sources": {
   "n": 50,
   "by_group": {
