@@ -112,8 +112,281 @@
    "not measured": 118
   }
  },
+ "source_order": [
+  "KEEL",
+  "UCI",
+  "group-level",
+  "other repository",
+  "other paper/author",
+  "private",
+  "synthetic",
+  "multiple",
+  "not stated"
+ ],
+ "by_source": {
+  "KEEL": 146,
+  "UCI": 203,
+  "group-level": 20,
+  "other repository": 81,
+  "other paper/author": 34,
+  "private": 23,
+  "synthetic": 105,
+  "multiple": 77,
+  "not stated": 82
+ },
+ "source_by_type": {
+  "KEEL": {
+   "modified": 3,
+   "synthetic": 0,
+   "repository-defined": 133,
+   "original": 9,
+   "not stated": 1
+  },
+  "UCI": {
+   "modified": 121,
+   "synthetic": 0,
+   "repository-defined": 0,
+   "original": 52,
+   "not stated": 30
+  },
+  "group-level": {
+   "modified": 1,
+   "synthetic": 0,
+   "repository-defined": 0,
+   "original": 6,
+   "not stated": 13
+  },
+  "other repository": {
+   "modified": 26,
+   "synthetic": 0,
+   "repository-defined": 8,
+   "original": 10,
+   "not stated": 37
+  },
+  "other paper/author": {
+   "modified": 4,
+   "synthetic": 0,
+   "repository-defined": 0,
+   "original": 19,
+   "not stated": 11
+  },
+  "private": {
+   "modified": 2,
+   "synthetic": 0,
+   "repository-defined": 0,
+   "original": 9,
+   "not stated": 12
+  },
+  "synthetic": {
+   "modified": 2,
+   "synthetic": 103,
+   "repository-defined": 0,
+   "original": 0,
+   "not stated": 0
+  },
+  "multiple": {
+   "modified": 49,
+   "synthetic": 4,
+   "repository-defined": 3,
+   "original": 18,
+   "not stated": 3
+  },
+  "not stated": {
+   "modified": 25,
+   "synthetic": 0,
+   "repository-defined": 20,
+   "original": 26,
+   "not stated": 11
+  }
+ },
+ "source_by_difficulty": {
+  "KEEL": {
+   "none": 22,
+   "small_sample": 62,
+   "outlier_flag": 0,
+   "small_sample + outlier_flag": 20,
+   "small_disjuncts + outlier_flag": 0,
+   "small_disjuncts + small_sample": 0,
+   "small_disjuncts + small_sample + outlier_flag": 15,
+   "varies": 0,
+   "multiclass": 4,
+   "not measured": 23
+  },
+  "UCI": {
+   "none": 3,
+   "small_sample": 4,
+   "outlier_flag": 0,
+   "small_sample + outlier_flag": 0,
+   "small_disjuncts + outlier_flag": 0,
+   "small_disjuncts + small_sample": 0,
+   "small_disjuncts + small_sample + outlier_flag": 0,
+   "varies": 0,
+   "multiclass": 9,
+   "not measured": 187
+  },
+  "group-level": {
+   "none": 0,
+   "small_sample": 1,
+   "outlier_flag": 0,
+   "small_sample + outlier_flag": 0,
+   "small_disjuncts + outlier_flag": 0,
+   "small_disjuncts + small_sample": 0,
+   "small_disjuncts + small_sample + outlier_flag": 0,
+   "varies": 0,
+   "multiclass": 0,
+   "not measured": 19
+  },
+  "other repository": {
+   "none": 0,
+   "small_sample": 0,
+   "outlier_flag": 0,
+   "small_sample + outlier_flag": 0,
+   "small_disjuncts + outlier_flag": 0,
+   "small_disjuncts + small_sample": 0,
+   "small_disjuncts + small_sample + outlier_flag": 1,
+   "varies": 0,
+   "multiclass": 0,
+   "not measured": 80
+  },
+  "other paper/author": {
+   "none": 0,
+   "small_sample": 0,
+   "outlier_flag": 0,
+   "small_sample + outlier_flag": 0,
+   "small_disjuncts + outlier_flag": 0,
+   "small_disjuncts + small_sample": 0,
+   "small_disjuncts + small_sample + outlier_flag": 0,
+   "varies": 0,
+   "multiclass": 0,
+   "not measured": 34
+  },
+  "private": {
+   "none": 0,
+   "small_sample": 0,
+   "outlier_flag": 0,
+   "small_sample + outlier_flag": 0,
+   "small_disjuncts + outlier_flag": 0,
+   "small_disjuncts + small_sample": 0,
+   "small_disjuncts + small_sample + outlier_flag": 0,
+   "varies": 0,
+   "multiclass": 0,
+   "not measured": 23
+  },
+  "synthetic": {
+   "none": 0,
+   "small_sample": 0,
+   "outlier_flag": 0,
+   "small_sample + outlier_flag": 0,
+   "small_disjuncts + outlier_flag": 0,
+   "small_disjuncts + small_sample": 0,
+   "small_disjuncts + small_sample + outlier_flag": 0,
+   "varies": 0,
+   "multiclass": 0,
+   "not measured": 105
+  },
+  "multiple": {
+   "none": 14,
+   "small_sample": 9,
+   "outlier_flag": 0,
+   "small_sample + outlier_flag": 2,
+   "small_disjuncts + outlier_flag": 0,
+   "small_disjuncts + small_sample": 0,
+   "small_disjuncts + small_sample + outlier_flag": 1,
+   "varies": 0,
+   "multiclass": 16,
+   "not measured": 35
+  },
+  "not stated": {
+   "none": 4,
+   "small_sample": 8,
+   "outlier_flag": 0,
+   "small_sample + outlier_flag": 3,
+   "small_disjuncts + outlier_flag": 0,
+   "small_disjuncts + small_sample": 0,
+   "small_disjuncts + small_sample + outlier_flag": 0,
+   "varies": 0,
+   "multiclass": 1,
+   "not measured": 66
+  }
+ },
+ "multiple_source_combos": {
+  "KEEL + UCI": 44,
+  "UCI + other repository": 15,
+  "other repository + synthetic": 4,
+  "KEEL + UCI + other repository": 4,
+  "other repository + other paper/author": 3,
+  "other paper/author + private": 2,
+  "KEEL + other repository": 2,
+  "UCI + other paper/author": 1,
+  "other repository + other paper/author + private": 1,
+  "UCI + other repository + other paper/author": 1
+ },
+ "entry_level_by_source": {
+  "KEEL": 486,
+  "UCI": 428,
+  "group-level": 65,
+  "other repository": 120,
+  "other paper/author": 45,
+  "private": 26,
+  "synthetic": 119,
+  "not stated": 364
+ },
+ "source_map": {
+  "KEEL": "KEEL",
+  "Kaggle": "other repository",
+  "LibSVM": "other repository",
+  "UCI": "UCI",
+  "UCR": "other repository",
+  "imbalanced-learn": "other repository",
+  "not stated in paper": "not stated",
+  "other: CIFAR-10 benchmark (Krizhevsky & Hinton, 2009)": "other repository",
+  "other: Compustat North America financial database": "other repository",
+  "other: Crowd Analytix": "other repository",
+  "other: ELENA project": "other repository",
+  "other: GitHub (sisinflab-swot/mafalda, ref [64])": "other repository",
+  "other: HDDT collection of Cieslak et al. [37] (http://www.nd.edu/dial/hddt/)": "other repository",
+  "other: IBM Analytics": "other repository",
+  "other: ImageNet 2011 Fall Release": "other repository",
+  "other: ImageNet ILSVRC-2012 (Russakovsky et al., 2015)": "other repository",
+  "other: KDD Cup 2008": "other repository",
+  "other: KDD'99 Challenge [16]": "other repository",
+  "other: KDD-Cup 1999 (ref [20], http://kdd.ics.uci.edu/databases/kddcup99/task.html)": "UCI",
+  "other: MNIST": "other repository",
+  "other: MNIST (LeCun)": "other repository",
+  "other: MNIST benchmark (LeCun, Bottou, Bengio, & Haffner, 1998)": "other repository",
+  "other: NASA Metrics Data Program": "other repository",
+  "other: PROMISE": "other repository",
+  "other: TREC": "other repository",
+  "other: UCI KDD Archive": "UCI",
+  "other: UCI or ELENA project (paper names both; per-dataset source not stated in paper)": "group-level",
+  "other: UCI or KEEL (paper says 'from the UCI and KEEL repositories', not per dataset)": "group-level",
+  "other: UCI/KEEL (group-level; per dataset not stated)": "group-level",
+  "other: USF Intelligent Systems Lab (Woods et al., 1993)": "other paper/author",
+  "other: WebACE": "other repository",
+  "other: biological datasets [20] (Radivojac et al.)": "other paper/author",
+  "other: cited as ref [42] (Zhang et al., KRNN, Pattern Recognit. 2017); repository not named in Table 2": "other paper/author",
+  "other: generated from Can ExodusII data (AVATAR version of Mustafa Visualization tool)": "other paper/author",
+  "other: hyperspectral image source [53] as cited in main paper Sec 4.4": "other paper/author",
+  "other: hyperspectral image source [54] as cited in main paper Sec 4.4": "other paper/author",
+  "other: hyperspectral image source [55] as cited in main paper Sec 4.4": "other paper/author",
+  "other: microarray datasets reported in Maldonado et al. [6]": "other paper/author",
+  "other: multi-imbalance library (artificial datasets repository)": "other repository",
+  "other: ordinal regression benchmark data (refs [13,25])": "other paper/author",
+  "other: provided by Dr. N. Chawla": "other paper/author",
+  "other: provided by [17] (Kubat et al.)": "other paper/author",
+  "other: provided by authors of [45]": "other paper/author",
+  "other: real predictive microbiology data (S. aureus growth/no growth) from refs [57,58]": "other paper/author",
+  "other: real-world dataset originally considered in [6]": "other paper/author",
+  "other: real-world dataset originally considered in [6] (NCI Yeast AntiCancer drug screen)": "other paper/author",
+  "other: ref [1] (Chawla et al., SMOTE, JAIR 2002)": "other paper/author",
+  "other: ref [23] (Provost, Fawcett, Kohavi, ICML 1998)": "other paper/author",
+  "other: software defect detection datasets from ref [46] (Akritidis & Bozanis)": "other paper/author",
+  "private": "private",
+  "synthetic": "synthetic"
+ },
  "measured_names": 169,
  "rules": {
+  "source": "แหล่งตามที่ paper เขียน จัดเป็น 8 กลุ่มด้วยการจับข้อความ (source_map) · ระดับชื่อ: ถ้า paper ที่ระบุแหล่งรายชุดระบุตรงกันแหล่งเดียว ใช้แหล่งนั้น · ระบุต่างกัน = multiple · ไม่มี paper ระบุรายชุด แต่มีระดับกลุ่ม (เช่น UCI หรือ KEEL) = group-level · ไม่มีเลย = not stated",
   "type": "ชื่อหนึ่งได้ชนิดเดียว: ถ้ามี entry ใดเป็นชนิดที่มาก่อนตามลำดับ precedence ใช้ชนิดนั้น (เคยดัดแปลง = modified)",
   "difficulty": "โปรไฟล์ของ task สองคลาสที่วัดแล้ว (ธงจาก difficulty/profile_final.py) · หลาย task ต่างโปรไฟล์ = varies · มีแต่ไฟล์หลายคลาส = multiclass · ไม่มีไฟล์ที่ตรวจได้ = not measured"
  }

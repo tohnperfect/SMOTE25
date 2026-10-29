@@ -1,4 +1,4 @@
-"""name_level_types.py  ชนิดของ dataset ระดับชื่อหลัง normalise (771 ชื่อ) + ความยากที่วัดได้ของแต่ละชื่อ
+"""name_level_types.py  ชนิดและแหล่งของ dataset ระดับชื่อหลัง normalise (771 ชื่อ) + ความยากที่วัดได้ของแต่ละชื่อ
 (29 ต.ค. 2026, Claude; Toon สั่งให้แท็บภาพรวมของ Atlas ใช้จำนวนที่ normalise แล้วแทนจำนวน entry)
 
 อ่าน  out/dataset_records.csv                    (1 แถว = 1 entry; ตัด placeholder ตามกติกา R1 -> 1,653 entry, 771 ชื่อ)
@@ -21,6 +21,25 @@ import json, os, re
 from collections import Counter
 import pandas as pd
 
+# ---- แหล่งข้อมูล (29 ต.ค. บ่าย, Toon สั่ง "normalize แหล่งข้อมูลด้วย") ----
+# จัด source_as_reported (51 ค่าตามที่ paper เขียน) เป็น 8 กลุ่ม ด้วยการจับข้อความตรงตัว ไม่มี threshold
+SRC = ["KEEL", "UCI", "group-level", "other repository", "other paper/author", "private", "synthetic", "not stated"]
+_GROUP = ("UCI/KEEL", "UCI or KEEL", "UCI or ELENA")                 # paper บอกแค่ระดับกลุ่ม ไม่ระบุรายชุด
+_UCI = ("UCI KDD Archive", "kdd.ics.uci.edu")                        # คลัง KDD ของ UCI
+_REF = ("reported in", "refs [", "from ref", "biological datasets", "hyperspectral image source", "cited as ref", "provided by",
+        "originally considered in", "from refs", "generated from Can", "USF Intelligent", "ref [1]", "ref [23]")
+_REPO = ("Kaggle", "LibSVM", "imbalanced-learn", "UCR")
+def src_group(s):
+    if s in ("KEEL", "UCI", "private", "synthetic"): return s
+    if s == "not stated in paper": return "not stated"
+    if s in _REPO: return "other repository"
+    assert s.startswith("other: "), f"STOP: unknown source string {s!r}"
+    if any(k in s for k in _GROUP): return "group-level"
+    if any(k in s for k in _UCI): return "UCI"
+    if any(k in s for k in _REF): return "other paper/author"
+    return "other repository"   # คลังหรือ benchmark ที่มีชื่อ เช่น HDDT, PROMISE, ELENA, MNIST, ImageNet, NASA MDP
+SPEC = ["KEEL", "UCI", "other repository", "other paper/author", "private", "synthetic"]   # ระบุแหล่งรายชุด
+
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); os.chdir(HERE)
 ORDER = ["modified", "synthetic", "repository-defined", "original", "not stated"]
 DIFF = ["none", "small_sample", "outlier_flag", "small_sample + outlier_flag", "small_disjuncts + outlier_flag",
@@ -35,6 +54,7 @@ P = pd.read_csv("difficulty/difficulty_profile_final.csv", dtype=str).fillna("")
 assert len(D) == 1653 and D.normalized_name.nunique() == 771, "STOP: dataset_records.csv changed (expected 1,653 entries, 771 names)"
 M = D.merge(V[["record_id", "verif", "file", "file_src"]], on="record_id", how="left")
 assert M.verif.notna().all(), "STOP: a record has no verifiability row"
+M["src"] = M.source_as_reported.map(src_group)
 
 PB = {(r.file, r.source): r for r in P[P.origin == "binary file"].itertuples()}
 OVR = {(r.file, r.source) for r in P[P.origin.str.startswith("one-vs")].itertuples()}
@@ -69,11 +89,16 @@ for name, g in M.groupby("normalized_name", sort=True):
     elif multi: diff = "multiclass"
     else: diff = "not measured"
     reason = "; ".join(f"{k} {v}" for k, v in Counter(x for x in g.verif if x.startswith("U-")).most_common()) if diff == "not measured" else ""
+    sc = Counter(g.src); spec = [x for x in SPEC if sc.get(x)]
+    # แหล่งระดับชื่อ: แหล่งที่ระบุรายชุดถ้ามีแค่แหล่งเดียว · หลายแหล่ง = "multiple" · ไม่มีแหล่งรายชุด -> ระดับกลุ่ม หรือ not stated
+    nsrc = spec[0] if len(spec) == 1 else "multiple" if spec else "group-level" if sc.get("group-level") else "not stated"
     rows.append(dict(
         normalized_name=name, name_type=ntype, entries=len(g),
         entries_by_category="; ".join(f"{c} {cats[c]}" for c in ORDER if cats.get(c)),
         n_papers=g.paper_key.nunique(), papers="; ".join(sorted(set(g.paper_key))),
         names_as_reported="; ".join(sorted(set(g.name_as_reported)))[:300],
+        source=nsrc, source_combo=" + ".join(spec) if len(spec) > 1 else "",
+        entries_by_source="; ".join(f"{x} {sc[x]}" for x in SRC if sc.get(x)),
         difficulty=diff,
         measured_tasks="; ".join(f"{t.file} [{t.source}] minority={t.minority_label.strip()} N={t.N} n_min={t.n_min} IR={t.IR} noise={t.noise_index} profile={t.profile}"
                                  for t in tasks.values()),
@@ -88,16 +113,31 @@ ent = Counter(D.category)
 by_type = {c: int((R.name_type == c).sum()) for c in ORDER}
 cross = {c: {k: int(((R.name_type == c) & (R.difficulty == k)).sum()) for k in DIFF} for c in ORDER}
 mixed = R[R.entries_by_category.str.contains(";")]
+SRCN = SRC[:-1] + ["multiple", "not stated"]
+assert set(R.source) <= set(SRCN)
+src_cnt = {x: int((R.source == x).sum()) for x in SRCN}
+src_x_type = {x: {c: int(((R.source == x) & (R.name_type == c)).sum()) for c in ORDER} for x in SRCN}
+src_x_diff = {x: {k: int(((R.source == x) & (R.difficulty == k)).sum()) for k in DIFF} for x in SRCN}
 out = dict(
     source="build/name_level_types.py; inputs out/dataset_records.csv, difficulty/verifiability_entries.csv, difficulty/difficulty_profile_final.csv",
     unit="normalized dataset name (R1 placeholders removed)", names=int(len(R)), entries=int(len(D)),
     precedence=ORDER, by_type=by_type, entry_level_by_category={c: int(ent[c]) for c in ORDER},
     names_single_type=int(len(R) - len(mixed)), names_mixed_type=int(len(mixed)),
     difficulty_order=DIFF, by_difficulty={k: int((R.difficulty == k).sum()) for k in DIFF}, type_by_difficulty=cross,
+    source_order=SRCN, by_source=src_cnt, source_by_type=src_x_type, source_by_difficulty=src_x_diff,
+    multiple_source_combos=dict(Counter(R.source_combo[R.source == "multiple"]).most_common()),
+    entry_level_by_source={x: int((M.src == x).sum()) for x in SRC},
+    source_map={raw: src_group(raw) for raw in sorted(set(M.source_as_reported))},
     measured_names=int(R.difficulty.isin(DIFF[:8]).sum()),
-    rules=dict(type="ชื่อหนึ่งได้ชนิดเดียว: ถ้ามี entry ใดเป็นชนิดที่มาก่อนตามลำดับ precedence ใช้ชนิดนั้น (เคยดัดแปลง = modified)",
+    rules=dict(source="แหล่งตามที่ paper เขียน จัดเป็น 8 กลุ่มด้วยการจับข้อความ (source_map) · ระดับชื่อ: ถ้า paper ที่ระบุแหล่งรายชุดระบุตรงกันแหล่งเดียว ใช้แหล่งนั้น · ระบุต่างกัน = multiple · ไม่มี paper ระบุรายชุด แต่มีระดับกลุ่ม (เช่น UCI หรือ KEEL) = group-level · ไม่มีเลย = not stated",
+               type="ชื่อหนึ่งได้ชนิดเดียว: ถ้ามี entry ใดเป็นชนิดที่มาก่อนตามลำดับ precedence ใช้ชนิดนั้น (เคยดัดแปลง = modified)",
                difficulty="โปรไฟล์ของ task สองคลาสที่วัดแล้ว (ธงจาก difficulty/profile_final.py) · หลาย task ต่างโปรไฟล์ = varies · มีแต่ไฟล์หลายคลาส = multiclass · ไม่มีไฟล์ที่ตรวจได้ = not measured"))
+assert sum(src_cnt.values()) == 771 and sum(out["entry_level_by_source"].values()) == 1653
 assert sum(by_type.values()) == 771 and all(sum(v.values()) == by_type[c] for c, v in cross.items())
 json.dump(out, open("out/name_level_types.json", "w", encoding="utf-8"), indent=1, ensure_ascii=False)
 print(json.dumps({k: out[k] for k in ("by_type", "by_difficulty", "measured_names", "names_mixed_type")}, indent=1))
 for c in ORDER: print(c, {k: v for k, v in cross[c].items() if v})
+print("source", src_cnt, "\nentry", out["entry_level_by_source"], "\ncombos", out["multiple_source_combos"])
+for x in SRCN: print(x, {k: v for k, v in src_x_type[x].items() if v})
+for k, v in out["source_map"].items():
+    if v in ("other repository", "other paper/author", "group-level") or k.startswith("other: UCI"): print("  ", v, "<-", k[:90])

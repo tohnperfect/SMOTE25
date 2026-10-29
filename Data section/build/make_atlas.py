@@ -355,8 +355,11 @@ _NT = json.load(open(p("out/name_level_types.json"), encoding="utf-8")); _NTR = 
 if _NT["names"] != DASH["names"]["distinct"] or len(_NTR) != _NT["names"] or sum(_NT["by_type"].values()) != _NT["names"] \
         or C.Counter(r["name_type"] for r in _NTR) != C.Counter({k: v for k, v in _NT["by_type"].items() if v}):
     sys.exit("STOP: out/name_level_types.* disagree with each other or with the 771 names (rerun python3 build/name_level_types.py)")
+if sum(_NT["by_source"].values()) != _NT["names"] or C.Counter(r["source"] for r in _NTR) != C.Counter({k: v for k, v in _NT["by_source"].items() if v}) \
+        or _NT["entry_level_by_source"]["KEEL"] != DASH["provenance"]["repos"]["KEEL"]["total"]:
+    sys.exit("STOP: name-level sources in out/name_level_types.* do not add up (rerun python3 build/name_level_types.py)")
 data["nt"] = dict(sum=_NT, rows=[[r["normalized_name"], r["name_type"], int(r["entries"]), r["entries_by_category"], int(r["n_papers"]), r["papers"],
-                                 r["difficulty"], r["measured_tasks"], r["not_measured_reason"]] for r in _NTR],
+                                 r["difficulty"], r["measured_tasks"], r["not_measured_reason"], r["source"], r["entries_by_source"], r["source_combo"]] for r in _NTR],
                   source="out/name_level_types.csv, out/name_level_types.json (build/name_level_types.py)")
 data["manuscript"] = dict(overview=json.load(open(p("manuscript/overview.json"), encoding="utf-8")),
                           html=tex2html.convert(_tex), tex=_tex)
