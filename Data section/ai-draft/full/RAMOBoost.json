@@ -308,6 +308,38 @@
    "how_obtained_detail": "minority Class of 'Fpv Close' vs majority 'Rad Flow','Fpv Open','High','Bypass','Bpv Close' and 'Bpv Open' (Table II)",
    "in_results_table": "yes",
    "ref": "Table I, p.7 (printed 1630); Table II, p.8 (printed 1631)"
+  },
+  {
+   "name": "Class label noise versions of Abalone",
+   "group": "Noisy modified data - class label noise (Sec. IV, Table XVIII)",
+   "source_repo": "UCI",
+   "n_instances": null,
+   "n_features": null,
+   "n_classes": 2,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": null,
+   "ir_printed": null,
+   "how_obtained": "modified",
+   "how_obtained_detail": "the two-class Abalone set of the paper with class label noise added by the authors at several levels (procedure of [58]: an instance of class X is mislabelled as Y with probability x); levels as in Table XVIII; sizes not printed",
+   "in_results_table": "no",
+   "ref": "Sec. IV, p.16-17; Table XVIII"
+  },
+  {
+   "name": "Attribute noise versions of Abalone",
+   "group": "Noisy modified data - attribute noise (Sec. IV, Table XXI)",
+   "source_repo": "UCI",
+   "n_instances": null,
+   "n_features": null,
+   "n_classes": 2,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": null,
+   "ir_printed": null,
+   "how_obtained": "modified",
+   "how_obtained_detail": "the two-class Abalone set of the paper with attribute noise added by the authors at several levels (procedure of [59]: each attribute replaced by a random value with probability x); levels as in Table XXI; sizes not printed",
+   "in_results_table": "no",
+   "ref": "Sec. IV, p.16-17; Table XXI"
   }
  ],
  "ir_definition": "not stated in paper (Table I column 'Imbalanced ratio' printed as minority : majority class proportions, e.g. '0.47 : 0.53')",

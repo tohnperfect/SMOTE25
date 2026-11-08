@@ -45,6 +45,7 @@ segmentation,1,2,US:2;IM:2,,segmentation(1p),G-SMOTE
 a1a,1,1,US:1;IM:1,,a1a(1p),HDE
 adiac,1,1,CS:1;US:1,one-vs-rest:1,adiac(1p),INOS
 adult,1,1,FM:1,,adult(1p),SMOTE
+attributenoiseversionsofabalone,1,1,NI:1,attribute noise injection:1,attribute noise versions of abalone(1p),RAMOBoost
 attributenoiseversionsofthe9realworlddatasets,1,1,NI:1,attribute noise injection:1,attribute noise versions of the 9 real-world datasets(1p),SMOTE-IPF
 australian,1,1,US:1;IM:1,,australian(1p),HDE
 automobile,1,1,CS:1,class merging:1,automobile(1p),SMOM
@@ -55,6 +56,7 @@ car3,1,1,CS:1,one-vs-rest (class inferred from suffix):1,car3(1p),RUSBoost
 celebalarge,1,1,CS:1;FM:1,class subset (classes selected):1,celeba-large(1p),GAMO
 celebasmall,1,1,CS:1;FM:1,class subset (classes selected):1,celeba-small(1p),GAMO
 censusincomedatabase,1,1,SF:1,,census-income database(1p),ClusterCentroids
+classlabelnoiseversionsofabalone,1,1,NI:1,label noise injection:1,class label noise versions of abalone(1p),RAMOBoost
 classnoiseversionsofthe9realworlddatasets,1,1,NI:1,label noise injection:1,class noise versions of the 9 real-world datasets(1p),SMOTE-IPF
 cmc,1,1,CS:1,one-vs-rest:1,cmc(1p),EasyEnsemble / BalanceCascade
 cod,1,1,US:1;IM:1,,cod(1p),HDE
@@ -70,6 +72,8 @@ diabetes,1,1,US:1;IM:1,,diabetes(1p),HDE
 esl,1,1,CS:1,class merging:1,esl(1p),SMOM
 faceall,1,1,CS:1;US:1,one-vs-rest:1,faceall(1p),INOS
 fashionmnist,1,1,US:1;IM:1,,fashion-mnist(1p),GAMO
+featurenoiseversionsoffourdatasets,1,1,NI:1,feature noise injection:1,feature noise versions of four data sets(1p),MC-NCLWO
+featurenoiseversionsofthebenchmarkdatasets,1,1,NI:1,feature noise injection:1,feature noise versions of the benchmark data sets(1p),RBO
 flag,1,1,CS:1,one-vs-rest:1,flag(1p),SMOTE-ENN / SMOTE-Tomek
 forestcover,1,1,CS:1,class subset (two classes kept):1,forest cover(1p),SMOTE
 g7,1,1,CS:1;US:1,one-vs-rest:1,g7(1p),OSS
@@ -83,6 +87,10 @@ ijcnn,1,1,US:1;IM:1,,ijcnn(1p),HDE
 ilsvrc2012,1,1,US:1;SF:1;IM:1,,ilsvrc-2012(1p),ROS (Buda)
 intrusion,1,1,CS:1;SF:1,class subset (two classes kept):1,intrusion(1p),LS
 isolet,1,1,US:1;IM:1,,isolet5(1p),RSMOTE
+labelnoiseversionsofthebenchmarkdatasets,1,1,NI:1,label noise injection:1,label noise versions of the benchmark data sets(1p),RBO
+labelnoiseversionsofthebinarydatasets,1,1,NI:1,label noise injection:1,label noise versions of the binary data sets(1p),RSMOTE
+labelnoiseversionsofthemulticlassbenchmarkdatasets,1,1,NI:1,label noise injection:1,label noise versions of the multiclass benchmark data sets(1p),MC-CCR
+labelnoiseversionsoftherealdatasets,1,1,NI:1,label noise injection:1,label noise versions of the real data sets(1p),MC-MBRC
 led,1,1,US:1;IM:1,,led(1p),G-SMOTE
 lettera,1,1,CS:1,one-vs-rest:1,letter-a(1p),SMOTE-ENN / SMOTE-Tomek
 lettervowel,1,1,CS:1,one-vs-rest:1,letter-vowel(1p),SMOTE-ENN / SMOTE-Tomek
@@ -93,6 +101,7 @@ machine,1,1,CS:1,class merging:1,machine(1p),SMOM
 magic,1,1,US:1;IM:1,,magic(1p),RSMOTE
 me2vsother,1,1,CS:1,one-vs-rest:1,me2vsother(1p),DSRBF / Static-SMOTE
 mfmorph,1,1,CS:1,one-vs-rest:1,mf-morph(1p),EasyEnsemble / BalanceCascade
+missingvalueversionsofthebenchmarkdatasets,1,1,NI:1,missing-value injection:1,missing-value versions of the benchmark data sets(1p),SPE
 mocap,1,1,US:1;IM:1,,mocap(1p),RSMOTE
 nomao,1,1,US:1;IM:1,,nomao(1p),RSMOTE
 ocr,1,1,CS:1,one-vs-rest:1,ocr(1p),MWMOTE

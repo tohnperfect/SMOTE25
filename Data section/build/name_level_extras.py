@@ -27,10 +27,14 @@ out["not_measured"] = dict(names=int(len(n)), by_reason=n.reason.value_counts().
     no_public_file_single_paper=int((npf.n_papers.astype(int) == 1).sum()),
     no_public_file_3plus_papers=sorted(npf[npf.n_papers.astype(int) >= 3].normalized_name),
     note="แหล่ง KEEL/UCI/group-level/multiple/other repository = ไฟล์น่าจะมีเผยแพร่แต่ไม่อยู่ใน mirror ที่เข้าถึงได้; private/other paper/not stated = ไม่มีไฟล์ให้ดาวน์โหลด (แบ่งตามแหล่งที่ paper เขียน ยังไม่ได้ตรวจทีละชื่อ)")
-pub = npf.source.isin(["KEEL", "UCI", "group-level", "multiple", "other repository"]).sum()
+# 9 Nov 2026: a name whose only modification is noise/outlier/missing values added by the authors (op NI) has no file to download,
+# whatever source the paper names for the base sets (the noisy versions were generated in the experiment)
+_ni = R.mod_ops.map(lambda o: set(x for x in o.split(";") if x) == {"NI"})
+PUBSRC = npf.source.isin(["KEEL", "UCI", "group-level", "multiple", "other repository"]) & ~_ni.reindex(npf.index, fill_value=False)
+pub = PUBSRC.sum()
 out["not_measured"]["no_public_file_split"] = {"likely_public_not_in_mirror": int(pub), "no_file_to_download": int(len(npf) - pub)}
 # 8 Nov 2026: list of names whose paper names a public source but whose file is in none of the mirrors -> for Toon to download
-_lp = npf[npf.source.isin(["KEEL", "UCI", "group-level", "multiple", "other repository"])].copy()
+_lp = npf[PUBSRC].copy()
 _rec = D.set_index("record_id")
 def _sizes(ids, col): return "; ".join(sorted({_rec.at[i, col] for i in ids.split("; ") if i in _rec.index and _rec.at[i, col]}))
 _lp["printed_n"] = _lp.record_ids.map(lambda x: _sizes(x, "n_instances")); _lp["printed_features"] = _lp.record_ids.map(lambda x: _sizes(x, "n_features"))

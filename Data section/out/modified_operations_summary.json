@@ -1,14 +1,14 @@
 {
  "unit": "dataset entry with category = modified (out/dataset_records.csv)",
- "entries": 332,
- "papers": 39,
+ "entries": 341,
+ "papers": 43,
  "tag_entries": {
   "CS": 175,
   "US": 148,
   "FM": 15,
   "SF": 18,
   "IM": 147,
-  "NI": 3,
+  "NI": 12,
   "LC": 3,
   "IS": 0
  },
@@ -19,13 +19,14 @@
   "FM": 6,
   "SF": 9,
   "IM": 9,
-  "NI": 2,
+  "NI": 8,
   "LC": 2,
   "IS": 0
  },
  "combinations": {
   "CS": 141,
   "US;IM": 131,
+  "NI": 12,
   "CS;IM": 11,
   "CS;FM": 9,
   "SF": 7,
@@ -35,7 +36,6 @@
   "US;SF;IM": 3,
   "FM": 3,
   "FM;SF": 3,
-  "NI": 3,
   "CS;LC": 2,
   "CS;US;IM": 2,
   "LC": 1,
@@ -43,7 +43,7 @@
  },
  "combinations_note": "mutually exclusive; sums to the number of entries",
  "entries_by_number_of_ops": {
-  "1": 160,
+  "1": 169,
   "2": 167,
   "3": 5
  },
@@ -51,20 +51,20 @@
  "papers_with_multiple_ops_entries": 17,
  "entries_with_conditional_ops": 61,
  "confidence": {
-  "explicitly reported": 312,
+  "explicitly reported": 321,
   "supported by indirect evidence": 16,
   "ambiguous": 4
  },
- "changes_task_entries": 177,
- "changes_task_papers": 30,
+ "changes_task_entries": 182,
+ "changes_task_papers": 34,
  "changes": {
-  "class_structure": 177,
+  "class_structure": 182,
   "sample_composition": 202,
   "feature_space": 15,
   "imbalance": {
    "changed as a consequence": 178,
    "deliberately changed": 147,
-   "not changed by the reported operation": 7
+   "not changed by the reported operation": 16
   }
  },
  "class_op_kind": {
@@ -88,8 +88,8 @@
  },
  "purpose": {
   "papers_with_stated_purpose": 15,
-  "papers": 39,
-  "entries_with_stated_purpose": 192,
+  "papers": 43,
+  "entries_with_stated_purpose": 195,
   "themes_by_paper": {
    "two-class problems": 7,
    "more extreme imbalance": 1,
@@ -116,9 +116,13 @@
    "GOIO",
    "INOS",
    "LS",
+   "MC-CCR",
+   "MC-MBRC",
+   "MC-NCLWO",
    "OSS",
    "OVO-SMOTE",
    "RACOG / wRACOG",
+   "RBO",
    "SMOM",
    "SMOTE-ENN / SMOTE-Tomek",
    "SOUP",
@@ -126,14 +130,14 @@
   ]
  },
  "missing_information": {
-  "characteristics not printed": 56,
+  "characteristics not printed": 65,
   "minority class not stated": 15,
   "original class count not stated": 3,
   "subset selection not described": 1,
   "target IR not stated": 18,
   "affected data sets not named": 2
  },
- "entries_with_missing_information": 94,
+ "entries_with_missing_information": 103,
  "by_paper": {
   "A-SUWO": {
    "entries": 12,
@@ -289,6 +293,27 @@
    },
    "purpose": false
   },
+  "MC-CCR": {
+   "entries": 1,
+   "ops": {
+    "NI": 1
+   },
+   "purpose": false
+  },
+  "MC-MBRC": {
+   "entries": 1,
+   "ops": {
+    "NI": 1
+   },
+   "purpose": false
+  },
+  "MC-NCLWO": {
+   "entries": 1,
+   "ops": {
+    "NI": 1
+   },
+   "purpose": false
+  },
   "MWMOTE": {
    "entries": 18,
    "ops": {
@@ -330,11 +355,19 @@
    "purpose": false
   },
   "RAMOBoost": {
-   "entries": 13,
+   "entries": 15,
    "ops": {
-    "CS": 13
+    "CS": 13,
+    "NI": 2
    },
    "purpose": true
+  },
+  "RBO": {
+   "entries": 2,
+   "ops": {
+    "NI": 2
+   },
+   "purpose": false
   },
   "ROS (Buda)": {
    "entries": 3,
@@ -346,11 +379,11 @@
    "purpose": true
   },
   "RSMOTE": {
-   "entries": 19,
+   "entries": 20,
    "ops": {
     "US": 18,
     "IM": 18,
-    "NI": 1
+    "NI": 2
    },
    "purpose": true
   },
@@ -408,9 +441,10 @@
    "purpose": false
   },
   "SPE": {
-   "entries": 2,
+   "entries": 3,
    "ops": {
-    "CS": 2
+    "CS": 2,
+    "NI": 1
    },
    "purpose": false
   },

@@ -405,6 +405,7 @@ P047-D017,MC-CCR,Wine,original,per-dataset,True
 P047-D018,MC-CCR,Winequality-red,original,per-dataset,True
 P047-D019,MC-CCR,Yeast,original,per-dataset,True
 P047-D020,MC-CCR,Zoo,original,per-dataset,True
+P047-D021,MC-CCR,Label noise versions of the multiclass benchmark data sets,modified,per-dataset,False
 P067-D001,MC-MBRC,automobile,original,per-dataset,True
 P067-D002,MC-MBRC,autos,original,per-dataset,True
 P067-D003,MC-MBRC,car,original,per-dataset,True
@@ -485,6 +486,7 @@ P067-D077,MC-MBRC,MC-MBRC sim IR200 overlap 60,synthetic,per-dataset,False
 P067-D078,MC-MBRC,MC-MBRC sim IR200 overlap 70,synthetic,per-dataset,False
 P067-D079,MC-MBRC,MC-MBRC sim IR200 overlap 80,synthetic,per-dataset,False
 P067-D080,MC-MBRC,MC-MBRC sim IR200 overlap 90,synthetic,per-dataset,False
+P067-D081,MC-MBRC,Label noise versions of the real data sets,modified,per-dataset,False
 P048-D001,MC-RBO,Automobile,original,per-dataset,True
 P048-D002,MC-RBO,Balance,original,per-dataset,True
 P048-D003,MC-RBO,Car,original,per-dataset,True
@@ -705,6 +707,8 @@ P019-D016,RAMOBoost,Glass,modified,per-dataset,True
 P019-D017,RAMOBoost,Yeast,modified,per-dataset,True
 P019-D018,RAMOBoost,Letter,modified,per-dataset,True
 P019-D019,RAMOBoost,Shuttle,modified,per-dataset,True
+P019-D020,RAMOBoost,Class label noise versions of Abalone,modified,per-dataset,False
+P019-D021,RAMOBoost,Attribute noise versions of Abalone,modified,per-dataset,False
 P027-D001,RBBoost / Random Balance,boundary,not stated,per-dataset,True
 P027-D002,RBBoost / Random Balance,breast-y,not stated,per-dataset,True
 P027-D003,RBBoost / Random Balance,cam,not stated,per-dataset,True
@@ -831,6 +835,7 @@ P053-D036,RSMOTE,toy data set,synthetic,per-dataset,False
 P053-D037,RSMOTE,moons,synthetic,per-dataset,False
 P053-D038,RSMOTE,circles,synthetic,per-dataset,False
 P053-D039,RSMOTE,fourclass (outlier added),modified,per-dataset,False
+P053-D040,RSMOTE,"Label noise versions of the binary data sets (10%, 20%, 30%)",modified,per-dataset,False
 P020-D001,RUSBoost,SP3,not stated,per-dataset partial,True
 P020-D002,RUSBoost,MAMMOGRAPHY,original,per-dataset partial,True
 P020-D003,RUSBoost,SOLARFLAREF,modified,per-dataset partial,True
@@ -992,6 +997,7 @@ P050-D003,SPE,KDDCUP (DOS vs. PRB),modified,per-dataset partial,True
 P050-D004,SPE,KDDCUP (DOS vs. R2L),modified,per-dataset partial,True
 P050-D005,SPE,Record Linkage,original,per-dataset partial,True
 P050-D006,SPE,Payment Simulation,original,per-dataset partial,True
+P050-D007,SPE,Missing-value versions of the benchmark data sets,modified,per-dataset partial,False
 P061-D001,SVDD-WSMOTE,Wine,modified,per-dataset,True
 P061-D002,SVDD-WSMOTE,Iris,modified,per-dataset,True
 P061-D003,SVDD-WSMOTE,Abalone,modified,per-dataset,True

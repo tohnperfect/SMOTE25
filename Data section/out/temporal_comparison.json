@@ -282,32 +282,32 @@
   },
   "2010-2019": {
    "papers_with_named_entries": 26,
-   "entries": 742,
+   "entries": 746,
    "category_entries": {
     "original": {
      "n": 170,
-     "of": 742,
-     "pct": 22.9
+     "of": 746,
+     "pct": 22.8
     },
     "repository-defined": {
      "n": 208,
-     "of": 742,
-     "pct": 28.0
+     "of": 746,
+     "pct": 27.9
     },
     "modified": {
-     "n": 199,
-     "of": 742,
-     "pct": 26.8
+     "n": 203,
+     "of": 746,
+     "pct": 27.2
     },
     "synthetic": {
      "n": 91,
-     "of": 742,
-     "pct": 12.3
+     "of": 746,
+     "pct": 12.2
     },
     "not stated": {
      "n": 74,
-     "of": 742,
-     "pct": 10.0
+     "of": 746,
+     "pct": 9.9
     }
    },
    "category_papers_with_any": {
@@ -322,9 +322,9 @@
      "pct": 26.9
     },
     "modified": {
-     "n": 17,
+     "n": 18,
      "of": 26,
-     "pct": 65.4
+     "pct": 69.2
     },
     "synthetic": {
      "n": 10,
@@ -338,46 +338,46 @@
     }
    },
    "papers_only_original_or_repository": {
-    "n": 4,
+    "n": 3,
     "of": 26,
-    "pct": 15.4
+    "pct": 11.5
    },
-   "modified_entries": 199,
-   "modified_papers": 17,
+   "modified_entries": 203,
+   "modified_papers": 18,
    "modification_ops_entries_of_modified": {
     "CS": {
      "n": 89,
-     "of": 199,
-     "pct": 44.7
+     "of": 203,
+     "pct": 43.8
     },
     "US": {
      "n": 105,
-     "of": 199,
-     "pct": 52.8
+     "of": 203,
+     "pct": 51.7
     },
     "IM": {
      "n": 96,
-     "of": 199,
-     "pct": 48.2
+     "of": 203,
+     "pct": 47.3
     },
     "SF": {
      "n": 8,
-     "of": 199,
-     "pct": 4.0
+     "of": 203,
+     "pct": 3.9
     },
     "FM": {
      "n": 10,
-     "of": 199,
-     "pct": 5.0
+     "of": 203,
+     "pct": 4.9
     },
     "NI": {
-     "n": 2,
-     "of": 199,
-     "pct": 1.0
+     "n": 6,
+     "of": 203,
+     "pct": 3.0
     },
     "LC": {
      "n": 0,
-     "of": 199,
+     "of": 203,
      "pct": 0.0
     }
    },
@@ -408,9 +408,9 @@
      "pct": 11.5
     },
     "NI": {
-     "n": 1,
+     "n": 3,
      "of": 26,
-     "pct": 3.8
+     "pct": 11.5
     },
     "LC": {
      "n": 0,
@@ -420,39 +420,39 @@
    },
    "modifying_papers_with_stated_purpose": {
     "n": 7,
-    "of": 17,
-    "pct": 41.2
+    "of": 18,
+    "pct": 38.9
    },
    "reporting_entries": {
     "n_instances": {
      "n": 620,
-     "of": 742,
-     "pct": 83.6
+     "of": 746,
+     "pct": 83.1
     },
     "n_features": {
      "n": 540,
-     "of": 742,
-     "pct": 72.8
+     "of": 746,
+     "pct": 72.4
     },
     "n_classes": {
-     "n": 632,
-     "of": 742,
-     "pct": 85.2
+     "n": 636,
+     "of": 746,
+     "pct": 85.3
     },
     "n_minority": {
      "n": 254,
-     "of": 742,
-     "pct": 34.2
+     "of": 746,
+     "pct": 34.0
     },
     "ir_as_printed": {
      "n": 584,
-     "of": 742,
-     "pct": 78.7
+     "of": 746,
+     "pct": 78.3
     },
     "source_as_reported": {
-     "n": 592,
-     "of": 742,
-     "pct": 79.8
+     "n": 596,
+     "of": 746,
+     "pct": 79.9
     }
    },
    "papers_stating_ir_definition": {
@@ -462,13 +462,13 @@
    },
    "uses_on_names_shared_by_5plus_papers": {
     "n": 275,
-    "of": 700,
-    "pct": 39.3
+    "of": 704,
+    "pct": 39.1
    },
    "uses_on_single_paper_names": {
-    "n": 279,
-    "of": 700,
-    "pct": 39.9
+    "n": 283,
+    "of": 704,
+    "pct": 40.2
    },
    "smote_baseline_papers": {
     "n": 21,
@@ -561,32 +561,32 @@
   },
   "2020-2026": {
    "papers_with_named_entries": 32,
-   "entries": 858,
+   "entries": 863,
    "category_entries": {
     "original": {
      "n": 307,
-     "of": 858,
-     "pct": 35.8
+     "of": 863,
+     "pct": 35.6
     },
     "repository-defined": {
      "n": 262,
-     "of": 858,
-     "pct": 30.5
+     "of": 863,
+     "pct": 30.4
     },
     "modified": {
-     "n": 83,
-     "of": 858,
-     "pct": 9.7
+     "n": 88,
+     "of": 863,
+     "pct": 10.2
     },
     "synthetic": {
      "n": 92,
-     "of": 858,
+     "of": 863,
      "pct": 10.7
     },
     "not stated": {
      "n": 114,
-     "of": 858,
-     "pct": 13.3
+     "of": 863,
+     "pct": 13.2
     }
    },
    "category_papers_with_any": {
@@ -601,9 +601,9 @@
      "pct": 53.1
     },
     "modified": {
-     "n": 10,
+     "n": 13,
      "of": 32,
-     "pct": 31.2
+     "pct": 40.6
     },
     "synthetic": {
      "n": 12,
@@ -617,46 +617,46 @@
     }
    },
    "papers_only_original_or_repository": {
-    "n": 10,
+    "n": 8,
     "of": 32,
-    "pct": 31.2
+    "pct": 25.0
    },
-   "modified_entries": 83,
-   "modified_papers": 10,
+   "modified_entries": 88,
+   "modified_papers": 13,
    "modification_ops_entries_of_modified": {
     "CS": {
      "n": 47,
-     "of": 83,
-     "pct": 56.6
+     "of": 88,
+     "pct": 53.4
     },
     "US": {
      "n": 34,
-     "of": 83,
-     "pct": 41.0
+     "of": 88,
+     "pct": 38.6
     },
     "IM": {
      "n": 45,
-     "of": 83,
-     "pct": 54.2
+     "of": 88,
+     "pct": 51.1
     },
     "SF": {
      "n": 3,
-     "of": 83,
-     "pct": 3.6
+     "of": 88,
+     "pct": 3.4
     },
     "FM": {
      "n": 3,
-     "of": 83,
-     "pct": 3.6
+     "of": 88,
+     "pct": 3.4
     },
     "NI": {
-     "n": 1,
-     "of": 83,
-     "pct": 1.2
+     "n": 6,
+     "of": 88,
+     "pct": 6.8
     },
     "LC": {
      "n": 0,
-     "of": 83,
+     "of": 88,
      "pct": 0.0
     }
    },
@@ -687,9 +687,9 @@
      "pct": 3.1
     },
     "NI": {
-     "n": 1,
+     "n": 5,
      "of": 32,
-     "pct": 3.1
+     "pct": 15.6
     },
     "LC": {
      "n": 0,
@@ -699,39 +699,39 @@
    },
    "modifying_papers_with_stated_purpose": {
     "n": 4,
-    "of": 10,
-    "pct": 40.0
+    "of": 13,
+    "pct": 30.8
    },
    "reporting_entries": {
     "n_instances": {
      "n": 601,
-     "of": 858,
-     "pct": 70.0
+     "of": 863,
+     "pct": 69.6
     },
     "n_features": {
      "n": 633,
-     "of": 858,
-     "pct": 73.8
+     "of": 863,
+     "pct": 73.3
     },
     "n_classes": {
-     "n": 614,
-     "of": 858,
-     "pct": 71.6
+     "n": 616,
+     "of": 863,
+     "pct": 71.4
     },
     "n_minority": {
      "n": 195,
-     "of": 858,
-     "pct": 22.7
+     "of": 863,
+     "pct": 22.6
     },
     "ir_as_printed": {
      "n": 777,
-     "of": 858,
-     "pct": 90.6
+     "of": 863,
+     "pct": 90.0
     },
     "source_as_reported": {
-     "n": 643,
-     "of": 858,
-     "pct": 74.9
+     "n": 648,
+     "of": 863,
+     "pct": 75.1
     }
    },
    "papers_stating_ir_definition": {
@@ -741,13 +741,13 @@
    },
    "uses_on_names_shared_by_5plus_papers": {
     "n": 377,
-    "of": 856,
-    "pct": 44.0
+    "of": 861,
+    "pct": 43.8
    },
    "uses_on_single_paper_names": {
-    "n": 294,
-    "of": 856,
-    "pct": 34.3
+    "n": 299,
+    "of": 861,
+    "pct": 34.7
    },
    "smote_baseline_papers": {
     "n": 29,

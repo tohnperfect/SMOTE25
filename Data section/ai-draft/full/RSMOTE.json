@@ -628,6 +628,22 @@
    "how_obtained_detail": "the fourclass data with one outlier 'added artificially' (Sec. 4.3.1, p.10); source and size not printed here",
    "in_results_table": "no",
    "ref": "Sec. 4.3.1, p.10; Figs. 2-5"
+  },
+  {
+   "name": "Label noise versions of the binary data sets (10%, 20%, 30%)",
+   "group": "Noisy modified data - label noise (Sec. 4)",
+   "source_repo": "UCI",
+   "n_instances": null,
+   "n_features": null,
+   "n_classes": 2,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": null,
+   "ir_printed": null,
+   "how_obtained": "modified",
+   "how_obtained_detail": "every binary data set of the paper with label noise added to the training data at 10%, 20% and 30%: minority labels flipped to the majority class first, then the same number of majority labels flipped, so the IR is kept (p.12); sizes not printed",
+   "in_results_table": "no",
+   "ref": "p.12"
   }
  ],
  "ir_definition": "IR = #Majority / #Minority",

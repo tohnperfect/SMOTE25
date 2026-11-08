@@ -1,25 +1,25 @@
 {
  "units": "entry = data set in one paper; use = distinct (paper, normalised name); name = norm() of analyse_dataset_usage.py",
  "papers": 72,
- "named_entries": 1746,
+ "named_entries": 1755,
  "by_name": {
-  "names": 857,
-  "uses": 1702,
-  "singletons": 626,
-  "singleton_share_of_names": 0.7305,
-  "singleton_share_of_uses": 0.3678,
+  "names": 866,
+  "uses": 1711,
+  "singletons": 635,
+  "singleton_share_of_names": 0.7333,
+  "singleton_share_of_uses": 0.3711,
   "top_share": {
-   "5": 0.0646,
-   "10": 0.1122,
-   "20": 0.188,
-   "50": 0.3373,
-   "100": 0.4665
+   "5": 0.0643,
+   "10": 0.1116,
+   "20": 0.187,
+   "50": 0.3355,
+   "100": 0.4641
   },
-  "names_for_half_of_uses": 119,
-  "effective_number": 291.8,
-  "gini": 0.4334,
+  "names_for_half_of_uses": 121,
+  "effective_number": 294.6,
+  "gini": 0.4318,
   "papers_per_name_distribution": {
-   "1": 626,
+   "1": 635,
    "2": 111,
    "3-4": 44,
    "5-9": 46,
@@ -28,34 +28,34 @@
   }
  },
  "by_entry": {
-  "entries": 1746,
+  "entries": 1755,
   "top_share": {
-   "5": 0.0676,
-   "10": 0.1163,
-   "20": 0.1901,
-   "50": 0.3385,
-   "100": 0.4674
+   "5": 0.0672,
+   "10": 0.1157,
+   "20": 0.1892,
+   "50": 0.3368,
+   "100": 0.465
   },
-  "effective_number": 286.5
+  "effective_number": 289.2
  },
  "by_dataset": {
-  "names": 766,
-  "uses": 1702,
-  "singletons": 543,
-  "singleton_share_of_names": 0.7089,
-  "singleton_share_of_uses": 0.319,
+  "names": 775,
+  "uses": 1711,
+  "singletons": 552,
+  "singleton_share_of_names": 0.7123,
+  "singleton_share_of_uses": 0.3226,
   "top_share": {
-   "5": 0.0676,
-   "10": 0.1204,
-   "20": 0.2027,
-   "50": 0.3655,
-   "100": 0.5188
+   "5": 0.0672,
+   "10": 0.1198,
+   "20": 0.2016,
+   "50": 0.3635,
+   "100": 0.5161
   },
-  "names_for_half_of_uses": 92,
-  "effective_number": 251.2,
-  "gini": 0.4742,
+  "names_for_half_of_uses": 93,
+  "effective_number": 253.6,
+  "gini": 0.4726,
   "papers_per_name_distribution": {
-   "1": 543,
+   "1": 552,
    "2": 93,
    "3-4": 47,
    "5-9": 50,
@@ -64,23 +64,23 @@
   }
  },
  "by_family": {
-  "names": 482,
-  "uses": 1221,
-  "singletons": 340,
-  "singleton_share_of_names": 0.7054,
-  "singleton_share_of_uses": 0.2785,
+  "names": 491,
+  "uses": 1230,
+  "singletons": 349,
+  "singleton_share_of_names": 0.7108,
+  "singleton_share_of_uses": 0.2837,
   "top_share": {
-   "5": 0.1474,
-   "10": 0.2424,
-   "20": 0.3686,
-   "50": 0.5397,
-   "100": 0.6527
+   "5": 0.1463,
+   "10": 0.2407,
+   "20": 0.3659,
+   "50": 0.5358,
+   "100": 0.648
   },
-  "names_for_half_of_uses": 40,
-  "effective_number": 104.4,
-  "gini": 0.5366,
+  "names_for_half_of_uses": 41,
+  "effective_number": 105.9,
+  "gini": 0.5339,
   "papers_per_name_distribution": {
-   "1": 340,
+   "1": 349,
    "2": 62,
    "3-4": 34,
    "5-9": 21,
@@ -238,7 +238,7 @@
   ]
  ],
  "size_profile_all_entries": {
-  "entries": 1746,
+  "entries": 1755,
   "instances": {
    "reported": 1324,
    "median": 800.0,
@@ -252,9 +252,9 @@
    "share_ge_100": 0.046
   },
   "classes": {
-   "reported": 1369,
-   "share_2": 0.703,
-   "share_ge_5": 0.175
+   "reported": 1375,
+   "share_2": 0.704,
+   "share_ge_5": 0.174
   }
  },
  "size_profile_names_used_by_10plus_papers": {

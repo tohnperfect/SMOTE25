@@ -43,6 +43,7 @@ artificial family a,artificialfamilya,artificialfamilya,False,,,5.0,1,1
 artificial family b,artificialfamilyb,artificialfamilyb,False,,,5.0,1,1
 artificial two-class imbalanced data set,artificialtwoclassimbalanceddataset,artificialtwoclassimbalanceddataset,False,,,,1,1
 asia,asia,asia,False,,,,1,1
+attribute noise versions of abalone,attributenoiseversionsofabalone,attributenoiseversionsofabalone,False,,,,1,1
 attribute noise versions of the 9 real-world datasets,attributenoiseversionsofthe9realworlddatasets,attributenoiseversionsofthe9realworlddatasets,False,,,,1,1
 australia,australia,australia,False,,,15.0,1,1
 australian,australian,australian,False,,prefix_without_split_marker,14.5,2,2
@@ -128,6 +129,7 @@ cifar-10,cifar10,cifar10,False,,,,1,1
 cifar10,cifar10,cifar10,False,,,,1,1
 circle,circle,circle,False,,,2.0,1,1
 circles,circles,circles,False,,prefix_without_split_marker,2.0,2,2
+class label noise versions of abalone,classlabelnoiseversionsofabalone,classlabelnoiseversionsofabalone,False,,,,1,1
 class noise versions of the 9 real-world datasets,classnoiseversionsofthe9realworlddatasets,classnoiseversionsofthe9realworlddatasets,False,,,,1,1
 cleveland,cleveland,cleveland,False,,,13.0,13,13
 cleveland 1,cleveland1,cleveland,True,cleveland,,,2,2
@@ -259,6 +261,8 @@ eucalyptus,eucalyptus,eucalyptus,False,,,8.0,2,4
 faceall,faceall,faceall,False,,,131.0,1,1
 fashion-mnist,fashionmnist,fashionmnist,False,,,,1,1
 fault,fault,fault,False,,,28.0,1,1
+feature noise versions of four data sets,featurenoiseversionsoffourdatasets,featurenoiseversionsoffourdatasets,False,,,,1,1
+feature noise versions of the benchmark data sets,featurenoiseversionsofthebenchmarkdatasets,featurenoiseversionsofthebenchmarkdatasets,False,,,,1,1
 fertility,fertility,fertility,False,,,10.0,1,1
 firewall,firewall,firewall,False,,,11.0,2,2
 five-class artificial set,fiveclassartificialset,fiveclassartificialset,False,,,,1,1
@@ -374,6 +378,10 @@ krvsk0vs8,krvsk0vs8,krvsk,True,,separate_different_dataset,6.0,1,1
 krvsk3vs11,krvsk3vs11,krvsk,True,,separate_different_dataset,6.0,1,1
 ksc,ksc,ksc,False,,,,1,1
 la12,la12,la12,False,,,31472.0,1,1
+label noise versions of the benchmark data sets,labelnoiseversionsofthebenchmarkdatasets,labelnoiseversionsofthebenchmarkdatasets,False,,,,1,1
+label noise versions of the binary data sets,labelnoiseversionsofthebinarydatasets,labelnoiseversionsofthebinarydatasets,False,,,,1,1
+label noise versions of the multiclass benchmark data sets,labelnoiseversionsofthemulticlassbenchmarkdatasets,labelnoiseversionsofthemulticlassbenchmarkdatasets,False,,,,1,1
+label noise versions of the real data sets,labelnoiseversionsoftherealdatasets,labelnoiseversionsoftherealdatasets,False,,,,1,1
 laryngeal,laryngeal,laryngeal,False,,,16.0,1,1
 leaf,leaf,leaf,False,,,16.0,1,1
 leaves plant,leavesplant,leavesplant,False,,,64.0,1,1
@@ -483,6 +491,7 @@ mf zernike,mfzernike,mfzernike,False,,,47.0,1,1
 mf-morph,mfmorph,mfmorph,False,,,,1,1
 mf-zernike,mfzernike,mfzernike,False,,,47.0,1,1
 mfeat-fouri,mfeatfouri,mfeatfouri,False,,,76.0,2,2
+missing-value versions of the benchmark data sets,missingvalueversionsofthebenchmarkdatasets,missingvalueversionsofthebenchmarkdatasets,False,,,,1,1
 mnist,mnist,mnist,False,,,,2,2
 mnist 3,mnist3,mnist,True,mnist,,784.0,1,1
 mnist 5,mnist5,mnist,True,mnist,,784.0,1,1

@@ -53,11 +53,11 @@
 
 | เรื่อง | ตัวเลขปัจจุบัน | ไฟล์ |
 |---|---|---|
-| corpus | 76 paper (มีการประเมินบนข้อมูล 73) · entry 1,747 (มีชื่อ 1,746; รวม 93 ชุดประกอบภาพ/ทดลองข้างเคียงของ 10 paper ที่เพิ่ม 8 พ.ย.) → 857 ชื่อ → 766 dataset → 482 family | `out/reconcile_counts.json`, `out/dataset_families.csv` |
-| ชนิด entry | original 537 · repository-defined 470 · modified 332 · synthetic 213 · not stated 195 (Toy ของ OREM-M: original → synthetic, override `EXTERNAL`; กฎ NS ของ Toon รอบสาม: 4 entry SPIDER2 → original, `RULE_NS` จาก `out/rule_ns_original.csv`; ทั้งสองใน build/full_extraction.py) | `out/dataset_records.csv` |
+| corpus | 76 paper (มีการประเมินบนข้อมูล 73) · entry 1,756 (มีชื่อ 1,755; รวม 93 ชุดประกอบภาพ/ทดลองข้างเคียงของ 10 paper ที่เพิ่ม 8 พ.ย. และ 9 entry ชุดที่ใส่ noise ของ 7 paper ที่เพิ่ม 9 พ.ย.) → 866 ชื่อ → 775 dataset → 491 family | `out/reconcile_counts.json`, `out/dataset_families.csv` |
+| ชนิด entry | original 537 · repository-defined 470 · modified 341 · synthetic 213 · not stated 195 (Toy ของ OREM-M: original → synthetic, override `EXTERNAL`; กฎ NS ของ Toon รอบสาม: 4 entry SPIDER2 → original, `RULE_NS` จาก `out/rule_ns_original.csv`; ทั้งสองใน build/full_extraction.py) | `out/dataset_records.csv` |
 | ตรวจได้ (ความยาก) | 986 entry 65 paper 256 ไฟล์ (รอบสอง 973/65/247; รอบแรก 8 พ.ย. 864/65/172; 28 ต.ค. 643/61/131) · V-author_release 43 entry (k-means SMOTE, Toon ยืนยัน) · Kaggle 7 entry · Loyalty-SMOTE N+1 8 entry (Toon ยืนยัน) | `difficulty/verify_ext_summary.json` |
 | task ที่วัดได้ | binary/binarise 236 (701 entry 46 paper) · OvR 339 · covertype ไม่ได้วัด (ใหญ่เกินเวลา) | `difficulty/profile_final_summary.json`, `difficulty/measure_log.csv` |
-| ความยากระดับชื่อ | มีโปรไฟล์ 315 (รวม varies 5) · หลายคลาส 63 · วัดไม่ได้ 479 (synthetic 196, ไม่พบไฟล์ 161, ขนาดไม่ตรง 79, task สร้างซ้ำไม่ได้ 32, อื่น 11) | `out/name_level_types.json`, `out/name_level_extras.json` |
+| ความยากระดับชื่อ | มีโปรไฟล์ 315 (รวม varies 5) · หลายคลาส 63 · วัดไม่ได้ 488 (synthetic 196, ไม่พบไฟล์ 170, ขนาดไม่ตรง 79, task สร้างซ้ำไม่ได้ 32, อื่น 11) | `out/name_level_types.json`, `out/name_level_extras.json` |
 | 200 ชื่อที่ไม่มีไฟล์ (รอบแรก) | ตรวจได้แล้ว 92 ชื่อ (114 entry) · ได้ไฟล์แต่ขนาด/task ไม่ตรง 42 · modified ไม่พิมพ์ขนาด 8 · ยังไม่ได้ไฟล์ 58 (HDDT เว็บปิด, private, ภาพ/ข้อความ/time series, Kaggle competition) | `out/names_download_result.csv`, `out/names_to_download.csv` (58 ที่เหลือ), `difficulty/official_manifest.csv` |
 | synthetic เผยแพร่ไหม | 29 paper 213 entry: เผยแพร่ 7 paper/63 (รวม Toy ของ OREM-M) · อ้างงานอื่น 3/13 · ขอได้ 1/60 (MC-MBRC) · บอกแค่ตัวสร้าง 1/3 · มีแค่โค้ด 5/10 · ไม่พบ 13/64 (OREM-M อยู่ 2 กลุ่ม) | `out/synthetic_availability.json` |
 | ผลชนะ SMOTE | plain 29 paper 1,511 แถว ชนะ 1,107 เสมอ 102 แพ้ 286 (ไม่เปลี่ยน) · H1 ไม่ได้รับการสนับสนุน (GEE 0.69 p 0.10) · noise +0.1 → odds ชนะ ×1.14 (p 0.009) | `out/winloss_allmetric_summary.json`, `out/hypotheses.json`, `out/difficulty_outcomes.json` |
@@ -75,7 +75,7 @@ python3 build/make_final.py && python3 build/build_jair_pdf.py && python3 build/
 python3 build/make_atlas.py && python3 build/atlas_analysis_checks.py && python3 build/consistency_check.py && python3 build/phase2_checks.py
 ```
 
-**ยังค้าง (ต้องใช้คน)**: ตัดสินว่ารับสถานะ `V-author_release` (43 entry k-means SMOTE) หรือไม่ (ปิดได้ที่ `AUTHOR_RELEASE` ใน difficulty/verify_ext.py) · ไฟล์ Kaggle ใน `out/names_to_download.csv` ต้องดาวน์โหลดเองด้วยบัญชี · ลบไฟล์ `.tmp` 3 ไฟล์ใน Downloads ที่ browser สร้าง (01ad4a4f…, 44a83ffd…, 99f5be00…) · ชื่อผู้เขียนใน PDF ปล่อยว่าง (Toon 8 พ.ย.) · merge เข้า main.tex/sections/references.bib ตอนรวมกับ P · push
+**สถานะเรื่องที่เคยค้าง (อัปเดต 9 พ.ย.)**: V-author_release รับแล้ว (Toon 8 พ.ย. รอบสาม) · ขนาด +1 ของ Loyalty-SMOTE รับแล้ว (Toon 8 พ.ย.) · Kaggle ดาวน์โหลดแล้ว 9 ชุดด้วยบัญชีของ Toon (ที่เหลือ: icr เป็น competition, credit ของ CTGAN/TVAE เป็นเวอร์ชัน SDGym, approval ระบุชุดไม่ได้) · ไฟล์ชั่วคราวใน Downloads (.tmp, smote25_uci_*.bin, uci_extended.tar.gz, archive*.zip) มีสำเนาใน difficulty/src/ แล้ว ลบได้ · ชื่อผู้เขียนใน PDF ปล่อยว่าง (Toon 8 พ.ย.) · **ที่เหลือจริง**: merge เข้า main.tex/sections/references.bib ตอนรวมกับ P · git pull แล้ว push
 
 ---
 
@@ -2134,3 +2134,11 @@ python3 build/outcome_pilot.py
 - แก้ตัวเลข: paper ที่ใส่ noise เป็นเงื่อนไขการทดลองโดยไม่นับเป็น entry คือ 7 (เดิมเขียน 6)
 - manuscript (หัวข้อ How Datasets Are Chosen and Modified): เหตุผลการดัดแปลง 20/39 paper (เดิม 15) · ย่อหน้าใหม่ 5 ย่อหน้า (วิธีดัดแปลงที่เหลือ + noise, เหตุผลที่เขียน, สัญญาณจากการออกแบบ, ชุดที่ใช้ร่วม, การใช้ตามช่วงเวลา) · ตารางใหม่ tab:data-noise และ tab:data-periods · หัวข้อความยาก: ประโยคกฎ NS เปลี่ยนเป็น "which the paper does not describe as changed" และเพิ่มข้อจำกัด 132 entry (15 paper) ที่ไม่พิมพ์ขนาดและไม่บอกการดัดแปลง (35 ในนั้นไม่พิมพ์สัดส่วนคลาสด้วย) ว่าป้ายและโปรไฟล์ตั้งอยู่บนสมมติฐานว่าใช้ไฟล์สาธารณะตามที่แจก
 - build/preview/build_preview.py คอมไพล์ 3 รอบ (ตารางใหม่ทำให้เลขหน้าเลื่อน) · JAIR PDF 17 หน้า overfull 0 · overview.json และ CONCLUSIONS.md เพิ่มผลข้างต้น
+
+**9 พ.ย. ต่อ (2) — ชุดที่ใส่ noise นับเป็น entry modified (Toon: "เอาเข้า modify เลย")**
+- เดิมชุดที่ใส่ noise ของ 7 paper ไม่ได้อยู่ในหมวดใดเลย (ไม่ใช่ "อื่น ๆ"): นับแค่ชุดต้นทางในหมวดของมัน ส่วนเวอร์ชันที่ใส่ noise เป็นเงื่อนไขการทดลอง
+- `build/add_noise_entries.py` (ประโยคหลักฐาน 9 ประโยคตรวจบนหน้า PDF ครบบนเครื่อง) เพิ่ม 9 entry modified แบบเดียวกับ SMOTE-IPF (1 entry ต่อ paper ต่อชนิด; ไม่พิมพ์ขนาด): RAMOBoost 2 (class label / attribute noise ของ Abalone), RSMOTE 1 (label noise), RBO 2 (label / feature noise), MC-CCR 1, MC-MBRC 1, MC-NCLWO 1, SPE 1 (ค่าหาย) · in_results_table = no เพื่อไม่ให้การจับคู่แถวผลเปลี่ยน (สคริปต์ assert ว่า full_outcome_rows.csv ไม่เปลี่ยน) · record_id เดิมไม่เปลี่ยน (ต่อท้ายแต่ละ paper)
+- modified_operations.py: กฎ NI ของ 7 paper · name_level_extras.py: ชื่อที่ดัดแปลงด้วย NI อย่างเดียวไม่นับเป็น "ไฟล์สาธารณะที่ควรดาวน์โหลด" (รวม 2 ชื่อของ SMOTE-IPF ที่เคยอยู่ในรายการ)
+- ตัวเลขใหม่: entry 1,756 (มีชื่อ 1,755) · 866 ชื่อ → 775 dataset → 491 family (single-paper 552; ครึ่งของการใช้ที่ 41 family) · modified 341 (43 paper; NI 12 entry 8 paper) · ข้อมูลไม่พอทำซ้ำ 103/341 (ไม่พิมพ์ลักษณะ 65) · เหตุผลที่เขียน 24/43 paper · ความครบที่พิมพ์ 75.6/72.4/78.3%, สัดส่วนคลาส 54.5% · ชื่อที่ไม่มีไฟล์ 170 (56 อ้างแหล่งสาธารณะ) · H3b 201/1,034 (19.4%); 76 ชุดประกอบภาพ + 6 ชุด noise ของ 5 paper; ที่เหลือ 119/952 เท่าเดิม · ตารางช่วงเวลาเปลี่ยนเล็กน้อย (2010–14 154 entry ฯลฯ) · ผลแพ้ชนะ H1/H2 ไม่เปลี่ยน (แถวผลเดิม)
+- manuscript, overview.json, CONCLUSIONS.md, section 0 ของไฟล์นี้, หน้า Atlas อัปเดตตาม · ข้อความ "ยังค้าง (ต้องใช้คน)" ในข้อ 0 เขียนใหม่เป็นสถานะที่ปิดแล้ว (V-author_release และ +1 ของ Loyalty-SMOTE รับแล้ว, Kaggle โหลดแล้ว, ไฟล์ชั่วคราวใน Downloads ลบได้)
+- ไม่ได้ push

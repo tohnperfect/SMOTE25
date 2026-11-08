@@ -1,6 +1,6 @@
 {
   "entry_level": {
-    "entries_total": 1747,
+    "entries_total": 1756,
     "instances": {
       "reported": 1325,
       "q25_q50_q75": [
@@ -24,22 +24,22 @@
       "ge_100": 59
     },
     "classes": {
-      "eq_2": 963,
+      "eq_2": 969,
       "gt_2": 407,
-      "not_reported": 377
+      "not_reported": 380
     },
     "category_counts": {
       "original": 537,
       "repository-defined": 470,
-      "modified": 332,
+      "modified": 341,
       "synthetic": 213,
       "not stated": 195
     },
     "category_by_classes": {
       "modified": {
         "more": 40,
-        "not_reported": 87,
-        "two": 205
+        "not_reported": 90,
+        "two": 211
       },
       "not stated": {
         "more": 0,

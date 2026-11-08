@@ -23,14 +23,14 @@
 ## 1. ขอบเขตของข้อมูลที่สกัด
 
 - corpus 76 paper ใช้ 73 paper ที่มีการประเมินผลบนข้อมูล (ตัด ENN, AdaBoost, review ของ Pradipta; นับ Tomek Links ตามที่ Toon ตัดสิน) · Section 7 ของ P นับ 71
-- dataset entry 1,747 รายการ (มีชื่อ 1,746) ทุกค่ามีตาราง/หน้า และตรวจกับ PDF รอบสองครบ (Toon ตรวจด้วย 28 ต.ค.) · 93 ในนั้นคือชุดที่ 10 paper สร้างเพื่อภาพประกอบ/ทดลองข้างเคียง เพิ่ม 8 พ.ย. ตาม Toon (`build/add_synthetic_entries.py`, ประโยคหลักฐานตรวจบนหน้า PDF ครบ)
+- dataset entry 1,756 รายการ (มีชื่อ 1,755; 9 พ.ย. +9 entry ชุดที่ใส่ noise ของ 7 paper, `build/add_noise_entries.py`) ทุกค่ามีตาราง/หน้า และตรวจกับ PDF รอบสองครบ (Toon ตรวจด้วย 28 ต.ค.) · 93 ในนั้นคือชุดที่ 10 paper สร้างเพื่อภาพประกอบ/ทดลองข้างเคียง เพิ่ม 8 พ.ย. ตาม Toon (`build/add_synthetic_entries.py`, ประโยคหลักฐานตรวจบนหน้า PDF ครบ)
 - ผลเทียบกับ SMOTE: กติกา A (metric เดียวต่อ paper) 835 แถว · ทุก metric 2,497 แถว (dataset × metric) จาก 44 paper · ค่าของ metric เดิมลอกซ้ำอิสระตรงกัน 839/839 แถว; metric อื่นอ่านครั้งเดียว
 - แหล่ง: `out/verified_datasets.csv`, `out/verified_outcomes.csv`, `out/winloss_allmetric_rows.csv`, `out/winloss_allmetric_crosscheck.csv`
 
 ## 2. ภูมิทัศน์ของ benchmark: จำนวนชุดไม่เท่ากับจำนวนแหล่ง
 
-- 1,746 entry → 857 ชื่อ → 766 dataset (กฎ T1 ข้อ 1) → 482 source family (T1 ข้อ 2–3) (ก่อนเพิ่มชุดส่วน B: 771/680/459)
-- 543/766 dataset ใช้ใน paper เดียว (60 คือชุดจำลองของ MC-MBRC เป็น family เดียว) · ครึ่งของการใช้ทั้งหมดตกอยู่ที่ 40 family
+- 1,755 entry → 866 ชื่อ → 775 dataset (กฎ T1 ข้อ 1) → 491 source family (T1 ข้อ 2–3) (ก่อนเพิ่มชุดที่ใส่ noise: 857/766/482; ก่อนเพิ่มชุดส่วน B: 771/680/459)
+- 552/775 dataset ใช้ใน paper เดียว (60 คือชุดจำลองของ MC-MBRC เป็น family เดียว) · ครึ่งของการใช้ทั้งหมดตกอยู่ที่ 41 family
 - นับเป็น dataset: ecoli 29, yeast 22, glass 19 paper · นับรวม split: ecoli 42, yeast 39, glass 35 จาก 73 paper
 - split จากแหล่งเดียวกันเปลี่ยน task (yeast 14 ชุด IR 2.5–41.4, noise 0.29–0.86) แต่ไม่เปลี่ยน domain/feature (yeast 7–8 feature) และอาจใช้ minority ชุดเดียวกัน (yeast4 กับ yeast-0-5-6-7-9_vs_4 ใช้ minority 51 ตัวเดียวกัน)
 - ผลบน split ของแหล่งเดียวกันไม่อิสระ: 11 paper, 282 แถว, 262 คู่ · ชนะ/แพ้ไม่กระจุก (0.60 เท่าสุ่ม) แต่ขนาดของความได้เปรียบใกล้กันกว่า (ระยะอันดับ 0.29 vs 0.34, p = 0.005; ตัดทีละ paper p 0.002–0.048)
@@ -39,17 +39,17 @@
 
 ## 3. การเลือกและดัดแปลงข้อมูล
 
-- entry: original 537, repository-defined 470, modified 332, synthetic 213, บอกไม่ได้ 195 (8 พ.ย.: +92 synthetic และ fourclass ที่เติม outlier ของ RSMOTE เป็น modified; Toy ของ OREM-M original → synthetic; รอบสาม กฎ NS ของ Toon: ไม่บอกที่มา + ไม่พิมพ์ขนาด + ชื่อตรงไฟล์สาธารณะที่ไม่ดัดแปลง → original 4 entry ของ SPIDER2; ผลชนะไม่เปลี่ยนเพราะ SPIDER2 ไม่มีแถวใน verified_outcomes.csv)
+- entry: original 537, repository-defined 470, modified 341, synthetic 213, บอกไม่ได้ 195 (8 พ.ย.: +92 synthetic และ fourclass ที่เติม outlier ของ RSMOTE เป็น modified; Toy ของ OREM-M original → synthetic; รอบสาม กฎ NS ของ Toon: ไม่บอกที่มา + ไม่พิมพ์ขนาด + ชื่อตรงไฟล์สาธารณะที่ไม่ดัดแปลง → original 4 entry ของ SPIDER2; ผลชนะไม่เปลี่ยนเพราะ SPIDER2 ไม่มีแถวใน verified_outcomes.csv)
 - เหตุผลการเลือก (paper): ให้เหตุผลเอง 48, อ้างงานก่อน 14, "widely used" อย่างเดียว 3, ไม่บอก 8 · ยกรายชื่อ benchmark จากงานก่อน 20 paper (ยกทั้งชุด 11)
-- modified 332 entry 39 paper: เปลี่ยนโครงสร้างคลาส 177 (30 paper; one-vs-rest 84) · เพิ่ม IR โดยตั้งใจ 147 (9 paper; 131 entry เป็นคู่ undersampling + เพิ่ม IR คือสุ่มลด minority ตาม Analysis A) · บอกเหตุผลการดัดแปลง 20/39 paper (9 พ.ย.: อ่านประโยคจาก PDF ใหม่ทุก paper; เดิม 15)
-- **การดัดแปลงแบบละเอียด (9 พ.ย.)** วิธีแยกครบ ไม่มีหมวดอื่น ๆ: CS 175, US 148, IM 147, SF 18, FM 15, NI (ใส่ noise/outlier) 3, LC (ผู้เขียนสร้างป้ายเอง) 3
-  - ใส่ noise/outlier/ค่าหายลงข้อมูลจริง 8 paper: SMOTE-IPF, RAMOBoost, RSMOTE, RBO, MC-CCR, MC-MBRC, MC-NCLWO, SPE (7 ใน 8 เป็นเงื่อนไขการทดลองบนชุดที่นับในหมวดเดิม ยังไม่ได้เพิ่มเป็น entry) · synthetic ที่มี noise ในตัว 5 paper
-  - เหตุผลที่เขียน (43 paper): สองคลาส 10 · ทำให้ไม่สมดุลมากขึ้น 9 · ทดสอบความทนต่อ noise 8 · เชิงปฏิบัติ 2 · ไม่พบ 19 · entry: ทำให้ยากขึ้น 152/332, สองคลาส 51, ไม่บอก 127 · ที่มาของการเลือก: งานก่อน 5, กฎที่เขียน 2
-  - สัญญาณ: แปลงคลาสแล้วทดลองสองคลาสล้วน 16/29 (เขียนเหตุผล 7) · มีชุดเดิมคู่กัน 5/39 · ไล่หลายระดับ 12 · เผยแพร่ไฟล์ดัดแปลง 3 · ชนะ SMOTE บนชุดดัดแปลงเองสูงกว่าชุดอื่น 2 paper, ต่ำกว่า 6, เท่ากัน 3 (11 paper)
+- modified 341 entry 43 paper: เปลี่ยนโครงสร้างคลาส 177 (30 paper; one-vs-rest 84) · เพิ่ม IR โดยตั้งใจ 147 (9 paper; 131 entry เป็นคู่ undersampling + เพิ่ม IR คือสุ่มลด minority ตาม Analysis A) · บอกเหตุผลการดัดแปลง 24/43 paper (9 พ.ย.: อ่านประโยคจาก PDF ใหม่ทุก paper; เดิม 15)
+- **การดัดแปลงแบบละเอียด (9 พ.ย.)** วิธีแยกครบ ไม่มีหมวดอื่น ๆ: CS 175, US 148, IM 147, SF 18, FM 15, NI (ใส่ noise/outlier/ค่าหาย) 12, LC (ผู้เขียนสร้างป้ายเอง) 3
+  - ใส่ noise/outlier/ค่าหายลงข้อมูลจริง 8 paper: SMOTE-IPF, RAMOBoost, RSMOTE, RBO, MC-CCR, MC-MBRC, MC-NCLWO, SPE (9 พ.ย. Toon: ชุดที่ใส่ noise นับเป็น entry modified 1 ต่อ paper ต่อชนิด) · synthetic ที่มี noise ในตัว 5 paper
+  - เหตุผลที่เขียน (43 paper): สองคลาส 10 · ทำให้ไม่สมดุลมากขึ้น 9 · ทดสอบความทนต่อ noise 8 · เชิงปฏิบัติ 2 · ไม่พบ 19 · entry: ทำให้ยากขึ้น 161/341, สองคลาส 51, ไม่บอก 127 · ที่มาของการเลือก: งานก่อน 5, กฎที่เขียน 2
+  - สัญญาณ: แปลงคลาสแล้วทดลองสองคลาสล้วน 16/29 (เขียนเหตุผล 7) · มีชุดเดิมคู่กัน 5/43 · ไล่หลายระดับ 12 · เผยแพร่ไฟล์ดัดแปลง 3 · ชนะ SMOTE บนชุดดัดแปลงเองสูงกว่าชุดอื่น 2 paper, ต่ำกว่า 6, เท่ากัน 3 (11 paper)
   - ชุดที่ถูกดัดแปลงบ่อย: vehicle 11 paper, ecoli 10, abalone/satimage 9, glass/page-blocks 8 · ชื่อเดียวกันขนาดต่างกัน ไม่มีเวอร์ชันใดพิมพ์ตรงกันเกิน 3 paper
   - ตามช่วงเวลา: modified 58% ของ entry ก่อน 2005 → 5% ใน 2025–2026; repository-defined 28–37% ตั้งแต่ 2015 · 2020–2026 ใช้ yeast, new-thyroid, page-blocks, ecoli (original) และ KEEL split ของ yeast/glass/ecoli/abalone มากที่สุด
   - แหล่ง: `out/modification_analysis.json`, `out/modification_purpose_quotes.csv`, `out/noise_injection_papers.csv`, `out/modified_families.csv`, `out/usage_by_period.csv` · manuscript ตาราง tab:data-noise, tab:data-periods
-- **ประกาศ/ไม่ประกาศ**: 94/332 entry ขาดข้อมูลที่ต้องใช้ทำซ้ำ (ไม่พิมพ์ลักษณะชุดที่ได้ 56, ไม่บอก IR เป้าหมาย 18, ไม่บอก minority 15) · 8/37 paper ที่ binarize ไม่บอกว่าคลาสไหนเป็น minority · 48 entry ที่ดัดแปลงโดยไม่พิมพ์ลักษณะและผู้เขียนไม่เผยแพร่ไฟล์ จับคู่กับไฟล์สาธารณะไม่ได้ (k-means SMOTE เผยแพร่ไฟล์ที่ดัดแปลงเอง 43 entry → V-author_release)
+- **ประกาศ/ไม่ประกาศ**: 103/341 entry ขาดข้อมูลที่ต้องใช้ทำซ้ำ (ไม่พิมพ์ลักษณะชุดที่ได้ 65, ไม่บอก IR เป้าหมาย 18, ไม่บอก minority 15) · 8/37 paper ที่ binarize ไม่บอกว่าคลาสไหนเป็น minority · 48 entry ที่ดัดแปลงโดยไม่พิมพ์ลักษณะและผู้เขียนไม่เผยแพร่ไฟล์ จับคู่กับไฟล์สาธารณะไม่ได้ (k-means SMOTE เผยแพร่ไฟล์ที่ดัดแปลงเอง 43 entry → V-author_release)
 - แหล่ง: `out/data_handling_summary.json`, `out/modified_operations_summary.json`, `analysis/A_modified_operations.md`
 
 ## 4. ชื่อเดียวกันไม่ใช่ข้อมูลเดียวกัน
@@ -70,7 +70,7 @@
 - ราย paper (≥ 3 task, 39 paper): ผสม 36, ไม่ติดธงล้วน 2 (COG-OS, SMOTE-ENN), ติดธงล้วน 1 (GOIO)
 - **ชุดอ้างอิง** 42 task (19 ช่อง profile × แถบ IR) ครอบ noise 0–1, IR 1.1–970.6, N 79–62,630; 13 ไฟล์ตรงกับตาราง KEEL ทางการ; yeast 4, pima 3, ecoli/glass/haberman/cleveland/heart/iris อย่างละ 2
 - ไม่ได้วัด: covertype (581,012 แถว, OvR อย่างเดียว, เกินเวลา), heart-v (เหลือ minority 1 แถวหลังตัด missing) · `difficulty/measure_log.csv`
-- ชื่อที่ยังวัดไม่ได้ 489/857: synthetic 196, ไม่พบไฟล์ 173 (70 อ้างแหล่งสาธารณะ → `out/names_to_download.csv`), ขนาดไม่ตรง 81, สร้าง task ซ้ำไม่ได้ 28, อื่น 11 (`out/name_level_extras.json`)
+- ชื่อที่ยังวัดไม่ได้ 488/866: synthetic 196, ไม่พบไฟล์ 170 (56 อ้างแหล่งสาธารณะ → `out/names_to_download.csv`; ชุดที่ใส่ noise ไม่นับเป็นไฟล์ที่ดาวน์โหลดได้), ขนาดไม่ตรง 79, สร้าง task ซ้ำไม่ได้ 32, อื่น 11 (`out/name_level_extras.json`)
 - **200 ชื่อที่ไม่มีไฟล์ในรอบแรก**: ตรวจได้แล้ว 83 ชื่อ (103 entry) · ได้ไฟล์แต่ขนาด/task ไม่ตรง 39 · modified ไม่พิมพ์ขนาด 8 · ยังไม่ได้ไฟล์ 70 (`out/names_download_result.csv` มีคอลัมน์ผลตรวจของ Toon) · ข้อสังเกต: Loyalty-SMOTE พิมพ์ N มากกว่าไฟล์ 1 แถวในหลายชุด (น่าจะนับหัวตาราง) ยังไม่ผ่อนกติกา
 - แหล่ง: `difficulty/verify_ext_summary.json`, `difficulty_profile_final.csv`, `profile_final_summary.json`, `paper_profile_mix.json`, `reference_collection.csv`, `dimension_profile.json`, `official_manifest.csv`
 
@@ -119,7 +119,7 @@
 
 - granularity 73 paper: รายชุด 47 (64.4%), รายชุดบางส่วน 8, กราฟ 5, ค่าเฉลี่ย 5, อันดับ 3, ไม่เทียบ 5
 - 14/57 paper ที่ใช้ SMOTE เป็น baseline ไม่มีคู่ค่ารายชุดกับ SMOTE ใน paper (กราฟ 5, ค่าเฉลี่ย 4 + KNNOR, อันดับ 3, review 1)
-- **H3 ได้รับการสนับสนุน**: ใน 43 paper ที่มีผลรายชุดเทียบ SMOTE, 195/1,028 entry ที่ลิสต์ไม่มีคู่ค่ากับ SMOTE แต่ 76 ในนั้นคือชุดประกอบภาพที่เพิ่ม 8 พ.ย. (ไม่ได้ตั้งใจเทียบ) · ไม่นับชุดเหล่านี้ 119/952 (12.5%, CI 10.5–14.8) มาจาก 12 paper (SMOTE-IPF 32/41, Loyalty-SMOTE 30/59) · synthetic 38/48, บอกที่มาไม่ได้ 44/166, modified 5/180, repository-defined 7/189
+- **H3 ได้รับการสนับสนุน**: ใน 43 paper ที่มีผลรายชุดเทียบ SMOTE, 201/1,034 entry ที่ลิสต์ไม่มีคู่ค่ากับ SMOTE แต่ 76 ในนั้นคือชุดประกอบภาพที่เพิ่ม 8 พ.ย. (ไม่ได้ตั้งใจเทียบ) และ 6 คือชุดที่ใส่ noise ของ 5 paper (9 พ.ย.) · ไม่นับชุดเหล่านี้ 119/952 (12.5%, CI 10.5–14.8) มาจาก 12 paper (SMOTE-IPF 32/41, Loyalty-SMOTE 30/59) · synthetic 38/48, บอกที่มาไม่ได้ 44/166, modified 5/180, repository-defined 7/189
 - **ข้อมูล synthetic เผยแพร่ไหม** (8 พ.ย., `out/synthetic_availability.json`): 29 paper 213 entry · บอกที่ดาวน์โหลด 7 paper 63 entry (รวม Toy ของ OREM-M ซึ่งเป็นชุด toy ของ benchmark ordinal regression ใน ORCA) · อ้างงานอื่น 3/13 (NROMM ใช้ชุด A–D ของ SVDD-WSMOTE) · ขอได้ MC-MBRC 60 · บอกแค่ตัวสร้าง RSMOTE 3 · ลิงก์แค่โค้ด 5/10 · ไม่บอก 13/64 (OREM-M อยู่ 2 กลุ่ม)
 - ยกผล baseline ข้าม paper 3 กรณี: MC-CCR ↔ MC-RBO (SMOTE-all เท่ากันทุกค่า 20 ชุด, กลุ่มเดียวกัน), QC-SMOTE ยกจาก VS-SMOTE, EMDO ↔ AMDO (เท่ากันทุกค่า 9 ชุด, คนละกลุ่ม, ไม่ประกาศ)
 - แหล่ง: `out/full_summary.json`, `out/h3_entries.csv`, `out/hypotheses.json`, `out/baseline_provenance_summary.json`
@@ -164,4 +164,4 @@ python3 build/make_final.py                      # ฉบับพร้อม m
 2. **merge กับ P**: คัดลอก `manuscript/data-section-final.tex` ไป `sections/`, เพิ่ม `\input` ใน main.tex, ต่อ `manuscript/data-section-final.bib` เข้า `references.bib`, คัดลอก `manuscript/figures/data-difficulty.pdf` ไป `figures/` (ทดสอบแล้ว: main.tex + ส่วนนี้คอมไพล์ด้วย biber ได้ 17 หน้า ไม่มี undefined citation/reference จากส่วนนี้) และตกลงเรื่องเนื้อหาที่ซ้อนกับ Section 7
 3. **git push** (commit แล้ว ยังไม่ push)
 4. เทียบไฟล์ mirror ที่เหลือกับไฟล์ทางการ (UCI ทางการดาวน์โหลดผ่าน browser ได้แล้ว 8 พ.ย.; KEEL sci2s.ugr.es ยังไม่ได้)
-6. ตัดสิน V-author_release (43 entry k-means SMOTE) และเรื่องขนาด +1 ของ Loyalty-SMOTE · ดาวน์โหลดชุด Kaggle ด้วยบัญชีเอง ถ้าต้องการ (`out/names_to_download.csv`)
+(ข้อเดิม: V-author_release และขนาด +1 ของ Loyalty-SMOTE รับแล้ว 8 พ.ย. · Kaggle ดาวน์โหลดแล้ว 9 ชุด)

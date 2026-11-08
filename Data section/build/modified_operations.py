@@ -12,7 +12,7 @@
   FM  feature modification                ตัด/เลือก/แปลง feature, ทำ feature extraction
   SF  sample filtering / subset selection ตัดแถวที่ค่าหาย, ใช้ subset ของข้อมูล (ไม่เจาะจงคลาส)
   IM  imbalance manipulation              ตั้งใจเปลี่ยน IR (ต้องมีข้อความบอกว่าทำเพื่อเปลี่ยน/สร้างความไม่สมดุล)
-  NI  noise / outlier injection            ใส่ label (class) noise, attribute noise หรือ outlier ลงในข้อมูลจริง
+  NI  noise / outlier injection            ใส่ label (class) noise, attribute/feature noise, outlier หรือค่าหาย ลงในข้อมูลจริง
   LC  labels constructed by the authors    ผู้เขียนสร้างชุดข้อมูลและกำหนดป้ายคลาสเองจากข้อมูลดิบ (log, simulation output)
   (9 พ.ย. 2026 Toon: ไม่ใช้หมวด 'อื่น ๆ' — OT เดิมแยกเป็น NI กับ LC; attribute noise ของ SMOTE-IPF ย้ายจาก FM ไป NI)
   IS  insufficiently specified             รู้ว่าดัดแปลงแต่ระบุการดำเนินการไม่ได้
@@ -28,6 +28,11 @@ OPNAME = {"CS": "class selection / task conversion", "US": "sample reduction / u
 EX, IN, AM = "explicitly reported", "supported by indirect evidence", "ambiguous"
 # กติกาต่อ paper: (เงื่อนไขบน name หรือ note เป็น regex, '*' = ทุก entry, ops, ops_conditional, class_op_kind, confidence, เหตุผล)
 R = {
+ "RBO": [("Label noise versions", "NI", "", "label noise injection", EX, "pairwise label noise 0-20% (Experiment 3, p.8); entry added 9 Nov 2026"),
+         ("Feature noise versions", "NI", "", "feature noise injection", EX, "feature noise (Experiment 4, p.8); entry added 9 Nov 2026")],
+ "MC-CCR": [("*", "NI", "", "label noise injection", EX, "random label noise 0-25% (Sec. 4.4, p.9); entry added 9 Nov 2026")],
+ "MC-MBRC": [("*", "NI", "", "label noise injection", EX, "labels randomly replaced, 0-30% (Sec. 5.3, p.10); entry added 9 Nov 2026")],
+ "MC-NCLWO": [("*", "NI", "", "feature noise injection", EX, "Gaussian feature noise 5-30% on four sets (p.15); entry added 9 Nov 2026")],
  "A-SUWO": [("*", "CS", "", "one-vs-rest", EX, "minority class named in Table 3.1, rest merged; conversion stated p.35")],
  "ADASYN": [("abalone|Abalone", "CS FM", "", "class subset (two classes kept)", EX, "class 18 vs class 9; discrete feature 'sex' removed (p.4)"),
             ("*", "CS", "", "one-vs-rest", EX, "one class chosen as minority, rest collapsed (p.3-4)")],
@@ -68,11 +73,14 @@ R = {
                     ("binned", "CS FM", "", "one-vs-rest (class not stated)", EX, "one class vs rest (p.4), class not stated; real-valued attributes equal-width binned"),
                     ("size printed as 5000", "CS SF", "", "one-vs-rest (class not stated)", IN, "one class vs rest (p.4); size 5000 implies a subset, selection not described"),
                     ("*", "CS", "", "one-vs-rest (class not stated)", EX, "one class vs rest (p.4), class not stated")],
- "RAMOBoost": [("*", "CS", "", "one-vs-rest or class subset", EX, "class mapping listed in Table II")],
+ "RAMOBoost": [("Class label noise versions", "NI", "", "label noise injection", EX, "class label noise added to Abalone at several levels (Sec. IV, Table XVIII); entry added 9 Nov 2026"),
+               ("Attribute noise versions", "NI", "", "attribute noise injection", EX, "attribute noise added to Abalone at several levels (Sec. IV, Table XXI); entry added 9 Nov 2026"),
+               ("*", "CS", "", "one-vs-rest or class subset", EX, "class mapping listed in Table II")],
  "ROS (Buda)": [("MNIST", "SF US IM", "", "", EX, "classes subsampled to <=5000, then artificially imbalanced (Sec 3.3.1)"),
                 ("ILSVRC", "SF US IM", "", "", EX, "majority classes reduced 1200->1000; step-imbalanced subsets (Sec 3.3.3)"),
                 ("*", "US IM", "", "", EX, "training set artificially imbalanced (Sec 3.3.2)")],
- "RSMOTE": [("outlier added", "NI", "", "outlier injection", EX, "one outlier added artificially to fourclass for the illustration (Sec. 4.3.1, p.10); entry added 8 Nov 2026"),
+ "RSMOTE": [("Label noise versions", "NI", "", "label noise injection", EX, "minority and majority labels flipped at 10/20/30% in the training data, IR kept (p.12); entry added 9 Nov 2026"),
+            ("outlier added", "NI", "", "outlier injection", EX, "one outlier added artificially to fourclass for the illustration (Sec. 4.3.1, p.10); entry added 8 Nov 2026"),
             ("*", "US IM", "", "", EX, "positive class randomly undersampled to obtain higher IR (p.12)")],
  "RUSBoost": [("SOLARFLARE", "CS", "", "class or threshold (not stated)", AM, "general statement: one class positive or threshold on a continuous target (p.5); which one not stated"),
               ("*", "CS", "", "one-vs-rest (class inferred from suffix)", IN, "general statement p.5; positive class inferred from the name suffix, not stated")],
@@ -88,7 +96,8 @@ R = {
  "SMOTEBoost": [("KDDCup", "SF US", "CS", "", EX, "train+test merged, 69,980 connections sampled from the majority classes only (p.6)"),
                 ("*", "CS", "", "one-vs-rest", EX, "smallest class vs rest (p.6)")],
  "SOUP": [("*", "CS", "", "class grouping (minority/majority sets)", IN, "paper says some data were modified by aggregating classes without naming them (p.7); Table 2 groups classes")],
- "SPE": [("*", "CS", "", "class subset (two classes kept)", EX, "two-class problem formed from KDDCUP-99 categories")],
+ "SPE": [("Missing-value versions", "NI", "", "missing-value injection", EX, "values removed at random and replaced by 0 to simulate missing values (p.10); entry added 9 Nov 2026"),
+         ("*", "CS", "", "class subset (two classes kept)", EX, "two-class problem formed from KDDCUP-99 categories")],
  "SVDD-WSMOTE": [("^(Pageblock|Yeast)", "CS IM", "", "one-vs-rest or class pair", EX, "one-versus-others; Pageblock and Yeast class combinations used to obtain higher-IR sets (p.22)"),
                  ("*", "CS", "", "one-vs-rest", EX, "one-versus-others, smaller class as minority (p.22)")],
  "Safe-Level-SMOTE": [("*", "CS", "", "one-vs-rest", EX, "class 4 as minority, rest merged (p.6)")],

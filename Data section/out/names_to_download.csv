@@ -8,12 +8,10 @@ phoss,original,multiple,2,2,LS; RBBoost / Random Balance,11411,479,other: HDDT c
 50words,modified,other repository,1,1,INOS,,270,UCR,P023-D003
 adiac,modified,other repository,1,1,INOS,,176,UCR,P023-D001
 approval,not stated,other repository,1,1,Loyalty-SMOTE,697,7,Kaggle,P075-D035
-attribute noise versions of the 9 real-world datasets,modified,KEEL,1,1,SMOTE-IPF,,,KEEL,P029-D041
 bar crawl,original,UCI,1,1,MKC-SMOTE,10486,4,UCI,P068-D020
 cam,not stated,other repository,1,1,RBBoost / Random Balance,18916,,other: HDDT collection of Cieslak et al. [37] (http://www.nd.edu/dial/hddt/),P027-D003
 charactertraj,not stated,UCI,1,1,CGMOS,2860,3,UCI,P032-D007
 cifar-10,modified,other repository,1,1,ROS (Buda),,,"other: CIFAR-10 benchmark (Krizhevsky & Hinton, 2009)",P037-D002
-class noise versions of the 9 real-world datasets,modified,KEEL,1,1,SMOTE-IPF,,,KEEL,P029-D040
 covtype,not stated,other repository,1,1,RBBoost / Random Balance,38500,,other: HDDT collection of Cieslak et al. [37] (http://www.nd.edu/dial/hddt/),P027-D005
 credit,original,other repository,1,1,CTGAN / TVAE,,,Kaggle,P039-D011
 customer churn wireless telecom,not stated,other repository,1,1,AB-SMOTE,5000,,other: Crowd Analytix,P044-D002

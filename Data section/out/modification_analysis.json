@@ -2,13 +2,8 @@
  "source": "Modified data: what was done, why, signals in the experimental design, reuse, and use over time  (9 Nov 2026, Claude;",
  "purpose": {
   "papers": 43,
-  "papers_with_modified_entries": 39,
-  "papers_noise_only": [
-   "MC-CCR",
-   "MC-MBRC",
-   "MC-NCLWO",
-   "RBO"
-  ],
+  "papers_with_modified_entries": 43,
+  "papers_noise_only": [],
   "by_theme_papers": {
    "two-class scope": 10,
    "create/raise imbalance": 9,
@@ -23,10 +18,10 @@
    "two-class scope": 51,
    "create/raise imbalance": 149,
    "practical": 10,
-   "robustness test": 3
+   "robustness test": 12
   },
-  "entries": 332,
-  "harder_entries": 152,
+  "entries": 341,
+  "harder_entries": 161,
   "scope_entries": 51,
   "basis_papers": {
    "basis: earlier work": 5,
@@ -40,7 +35,7 @@
   "converted_and_two_class_only": 16,
   "of_which_state_two_class_scope": 7,
   "same_data_also_unmodified_papers": 5,
-  "papers_with_modified_entries": 39,
+  "papers_with_modified_entries": 43,
   "several_levels": 12,
   "harder_papers_with_several_levels": 12,
   "publishes_modified_data": 3,
@@ -68,7 +63,7 @@
     "what_was_added": "class label noise + attribute noise",
     "levels": "several levels (Tables XVIII, XXI)",
     "data_sets": "Abalone",
-    "noisy_sets_are_entries": "no",
+    "noisy_sets_are_entries": "yes (2 entries, added 9 Nov)",
     "where_in_paper": "Sec IV, p.16-17"
    },
    {
@@ -76,7 +71,7 @@
     "what_was_added": "label noise (minority labels flipped)",
     "levels": "10%, 20%, 30%",
     "data_sets": "all binary sets",
-    "noisy_sets_are_entries": "no",
+    "noisy_sets_are_entries": "yes (1 entry, added 9 Nov)",
     "where_in_paper": "p.12"
    },
    {
@@ -92,7 +87,7 @@
     "what_was_added": "label noise; feature noise",
     "levels": "0-20% (label)",
     "data_sets": "the benchmark sets (Experiments 3-4)",
-    "noisy_sets_are_entries": "no",
+    "noisy_sets_are_entries": "yes (2 entries, added 9 Nov)",
     "where_in_paper": "p.8"
    },
    {
@@ -100,7 +95,7 @@
     "what_was_added": "random label noise",
     "levels": "0-25% in steps of 5%",
     "data_sets": "the multiclass benchmark sets",
-    "noisy_sets_are_entries": "no",
+    "noisy_sets_are_entries": "yes (1 entry, added 9 Nov)",
     "where_in_paper": "Sec 4.4, p.9"
    },
    {
@@ -108,7 +103,7 @@
     "what_was_added": "label noise (labels randomly replaced)",
     "levels": "0-30% in steps of 5%",
     "data_sets": "real data sets (Fig. 6)",
-    "noisy_sets_are_entries": "no",
+    "noisy_sets_are_entries": "yes (1 entry, added 9 Nov)",
     "where_in_paper": "Sec 5.3, p.10-11"
    },
    {
@@ -116,7 +111,7 @@
     "what_was_added": "Gaussian feature noise",
     "levels": "5-30% in steps of 5%",
     "data_sets": "four data sets",
-    "noisy_sets_are_entries": "no",
+    "noisy_sets_are_entries": "yes (1 entry, added 9 Nov)",
     "where_in_paper": "p.15"
    },
    {
@@ -124,7 +119,7 @@
     "what_was_added": "missing values (values replaced by 0)",
     "levels": "several levels",
     "data_sets": "the benchmark sets",
-    "noisy_sets_are_entries": "no",
+    "noisy_sets_are_entries": "yes (1 entry, added 9 Nov)",
     "where_in_paper": "p.10"
    }
   ],
@@ -272,7 +267,7 @@
   "synthetic_with_noise_papers": 5
  },
  "common": {
-  "families_modified": 130,
+  "families_modified": 139,
   "families_modified_by_2plus_papers": 37,
   "top_families": [
    {
@@ -614,6 +609,7 @@
   "combinations": {
    "CS": 141,
    "US;IM": 131,
+   "NI": 12,
    "CS;IM": 11,
    "CS;FM": 9,
    "SF": 7,
@@ -623,7 +619,6 @@
    "US;SF;IM": 3,
    "FM": 3,
    "FM;SF": 3,
-   "NI": 3,
    "CS;LC": 2,
    "CS;US;IM": 2,
    "LC": 1,
@@ -635,7 +630,7 @@
    "FM": 15,
    "SF": 18,
    "IM": 147,
-   "NI": 3,
+   "NI": 12,
    "LC": 3,
    "IS": 0
   },
@@ -645,7 +640,7 @@
    "FM": 6,
    "SF": 9,
    "IM": 9,
-   "NI": 2,
+   "NI": 8,
    "LC": 2,
    "IS": 0
   },
@@ -692,7 +687,7 @@
     "papers": 8,
     "entries": {
      "original": 62,
-     "modified": 53,
+     "modified": 55,
      "synthetic (not published)": 31,
      "not stated": 6
     }
@@ -700,7 +695,7 @@
    "2015-2019": {
     "papers": 18,
     "entries": {
-     "modified": 146,
+     "modified": 148,
      "original": 108,
      "not stated": 68,
      "synthetic (published)": 54,
@@ -714,7 +709,7 @@
      "repository-defined": 171,
      "not stated": 61,
      "original": 225,
-     "modified": 71,
+     "modified": 75,
      "synthetic (not published)": 76,
      "synthetic (published)": 10
     }
@@ -724,7 +719,7 @@
     "entries": {
      "repository-defined": 91,
      "original": 82,
-     "modified": 12,
+     "modified": 13,
      "not stated": 53,
      "synthetic (not published)": 6
     }
@@ -2100,6 +2095,13 @@
       "papers_in_period": 1,
       "papers_total": 2,
       "first_year": 2021,
+      "last_year": 2025
+     },
+     {
+      "family": "featurenoiseversionsoffourdatasets",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2025,
       "last_year": 2025
      },
      {

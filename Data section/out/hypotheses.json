@@ -1253,21 +1253,21 @@
  },
  "H3b_listed_not_compared": {
   "papers": 43,
-  "entries": 1028,
+  "entries": 1034,
   "not_in_comparison": {
-   "k": 195,
-   "n": 1028,
-   "pct": 19.0,
+   "k": 201,
+   "n": 1034,
+   "pct": 19.4,
    "ci95": [
-    16.7,
-    21.5
+    17.1,
+    22.0
    ]
   },
-  "papers_with_any_missing": 16,
+  "papers_with_any_missing": 18,
   "by_paper": {
    "MC-MBRC": {
-    "listed": 80,
-    "missing": 60
+    "listed": 81,
+    "missing": 61
    },
    "SMOTE-IPF": {
     "listed": 41,
@@ -1281,13 +1281,13 @@
     "listed": 38,
     "missing": 18
    },
+   "RSMOTE": {
+    "listed": 40,
+    "missing": 13
+   },
    "GDO": {
     "listed": 53,
     "missing": 13
-   },
-   "RSMOTE": {
-    "listed": 39,
-    "missing": 12
    },
    "SVDD-WSMOTE": {
     "listed": 35,
@@ -1309,35 +1309,43 @@
     "listed": 11,
     "missing": 2
    },
-   "RBBoost / Random Balance": {
-    "listed": 87,
+   "RAMOBoost": {
+    "listed": 21,
+    "missing": 2
+   },
+   "SPE": {
+    "listed": 7,
+    "missing": 2
+   },
+   "MLOS": {
+    "listed": 17,
     "missing": 1
    },
    "ADASYN": {
     "listed": 6,
     "missing": 1
    },
+   "RBBoost / Random Balance": {
+    "listed": 87,
+    "missing": 1
+   },
    "OREM-M": {
     "listed": 22,
     "missing": 1
    },
-   "SPE": {
-    "listed": 6,
-    "missing": 1
-   },
-   "MLOS": {
-    "listed": 17,
+   "MC-CCR": {
+    "listed": 21,
     "missing": 1
    }
   },
   "by_category": {
    "modified": {
-    "k": 6,
-    "n": 181,
-    "pct": 3.3,
+    "k": 12,
+    "n": 187,
+    "pct": 6.4,
     "ci95": [
-     1.5,
-     7.0
+     3.7,
+     10.9
     ]
    },
    "not stated": {

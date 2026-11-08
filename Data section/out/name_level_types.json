@@ -1,8 +1,8 @@
 {
  "source": "build/name_level_types.py; inputs out/dataset_records.csv, difficulty/verifiability_entries.csv, difficulty/difficulty_profile_final.csv",
  "unit": "normalized dataset name (R1 placeholders removed)",
- "names": 857,
- "entries": 1746,
+ "names": 866,
+ "entries": 1755,
  "precedence": [
   "modified",
   "synthetic",
@@ -11,20 +11,20 @@
   "not stated"
  ],
  "by_type": {
-  "modified": 233,
+  "modified": 242,
   "synthetic": 194,
   "repository-defined": 164,
   "original": 150,
   "not stated": 116
  },
  "entry_level_by_category": {
-  "modified": 332,
+  "modified": 341,
   "synthetic": 212,
   "repository-defined": 470,
   "original": 537,
   "not stated": 195
  },
- "names_single_type": 743,
+ "names_single_type": 752,
  "names_mixed_type": 114,
  "not_stated_single_paper": 111,
  "difficulty_order": [
@@ -49,7 +49,7 @@
   "small_disjuncts + small_sample + outlier_flag": 35,
   "varies": 5,
   "multiclass": 63,
-  "not measured": 479
+  "not measured": 488
  },
  "type_by_difficulty": {
   "modified": {
@@ -62,7 +62,7 @@
    "small_disjuncts + small_sample + outlier_flag": 15,
    "varies": 3,
    "multiclass": 24,
-   "not measured": 97
+   "not measured": 106
   },
   "synthetic": {
    "none": 0,
@@ -125,8 +125,8 @@
   "not stated"
  ],
  "by_source": {
-  "KEEL": 146,
-  "UCI": 203,
+  "KEEL": 151,
+  "UCI": 207,
   "group-level": 20,
   "other repository": 81,
   "other paper/author": 34,
@@ -137,14 +137,14 @@
  },
  "source_by_type": {
   "KEEL": {
-   "modified": 3,
+   "modified": 8,
    "synthetic": 0,
    "repository-defined": 133,
    "original": 9,
    "not stated": 1
   },
   "UCI": {
-   "modified": 121,
+   "modified": 125,
    "synthetic": 0,
    "repository-defined": 0,
    "original": 54,
@@ -211,7 +211,7 @@
    "small_disjuncts + small_sample + outlier_flag": 17,
    "varies": 1,
    "multiclass": 8,
-   "not measured": 11
+   "not measured": 16
   },
   "UCI": {
    "none": 23,
@@ -223,7 +223,7 @@
    "small_disjuncts + small_sample + outlier_flag": 13,
    "varies": 1,
    "multiclass": 27,
-   "not measured": 89
+   "not measured": 93
   },
   "group-level": {
    "none": 4,
@@ -323,8 +323,8 @@
   "UCI + other repository + other paper/author": 1
  },
  "entry_level_by_source": {
-  "KEEL": 486,
-  "UCI": 428,
+  "KEEL": 491,
+  "UCI": 432,
   "group-level": 65,
   "other repository": 120,
   "other paper/author": 45,
@@ -402,9 +402,9 @@
    "LC",
    "IS"
   ],
-  "entries": 332,
-  "papers": 39,
-  "names": 233,
+  "entries": 341,
+  "papers": 43,
+  "names": 242,
   "by_op": {
    "CS": {
     "entries": 175,
@@ -432,9 +432,9 @@
     "names": 14
    },
    "NI": {
-    "entries": 3,
-    "papers": 2,
-    "names": 3
+    "entries": 12,
+    "papers": 8,
+    "names": 12
    },
    "LC": {
     "entries": 3,
@@ -472,19 +472,19 @@
    {
     "source": "UCI",
     "group": "UCI",
-    "names": 268,
-    "entries": 428,
-    "papers": 36,
-    "paper_list": "AB-SMOTE; ADASYN; Borderline-SMOTE; CGMOS; CISO; COG-OS; CTGAN / TVAE; ClusterCentroids; DGOT; DSRBF / Static-SMOTE; EMDO; EasyEnsemble / BalanceCascade; GDO; GMMSampling; Global-CS (AAAI); Global-CS (journal); LS; Loyalty-SMOTE; MBS; MKC-SMOTE; MLOS; MWMOTE; OSS; RACOG / wRACOG; RSMOTE; RUSBoost; SCUT; SMOM; SMOTE; SMOTE-ENN / SMOTE-Tomek; SMOTEBoost; SOUP; SPIDER2; SVDD-WSMOTE; Safe-Level-SMOTE; k-means SMOTE",
+    "names": 272,
+    "entries": 432,
+    "papers": 38,
+    "paper_list": "AB-SMOTE; ADASYN; Borderline-SMOTE; CGMOS; CISO; COG-OS; CTGAN / TVAE; ClusterCentroids; DGOT; DSRBF / Static-SMOTE; EMDO; EasyEnsemble / BalanceCascade; GDO; GMMSampling; Global-CS (AAAI); Global-CS (journal); LS; Loyalty-SMOTE; MBS; MKC-SMOTE; MLOS; MWMOTE; OSS; RACOG / wRACOG; RAMOBoost; RSMOTE; RUSBoost; SCUT; SMOM; SMOTE; SMOTE-ENN / SMOTE-Tomek; SMOTEBoost; SOUP; SPE; SPIDER2; SVDD-WSMOTE; Safe-Level-SMOTE; k-means SMOTE",
     "as_reported": "UCI | other: KDD-Cup 1999 (ref [20], http://kdd.ics.uci.edu/databases/kddcup99/task.html) | other: UCI KDD Archive"
    },
    {
     "source": "KEEL",
     "group": "KEEL",
-    "names": 196,
-    "entries": 486,
-    "papers": 20,
-    "paper_list": "AB-SMOTE; CISO; DLexiBoost; GDHS; GDO; HDE; KNNOR; MC-CCR; MC-NCLWO; MC-RBO; MLOS; NROMM; OVO-SMOTE; RBBoost / Random Balance; RBO; SCUT; SHSampler; SMOTE-IPF; SplitBal; k-means SMOTE",
+    "names": 201,
+    "entries": 491,
+    "papers": 21,
+    "paper_list": "AB-SMOTE; CISO; DLexiBoost; GDHS; GDO; HDE; KNNOR; MC-CCR; MC-MBRC; MC-NCLWO; MC-RBO; MLOS; NROMM; OVO-SMOTE; RBBoost / Random Balance; RBO; SCUT; SHSampler; SMOTE-IPF; SplitBal; k-means SMOTE",
     "as_reported": "KEEL"
    },
    {
@@ -922,13 +922,13 @@
   ],
   "papers": 72,
   "sources_per_paper": {
-   "0": 15,
-   "1": 25,
+   "0": 12,
+   "1": 28,
    "2": 21,
    "3": 5,
    "4+": 6
   },
-  "names_with_a_source": 564,
+  "names_with_a_source": 573,
   "rule": "1 แหล่ง = 1 คลังหรือ benchmark, 1 งานหรือผู้ให้ข้อมูลที่อ้าง, หรือข้อมูลเฉพาะของ 1 paper · ชื่อที่เขียนต่างกันแต่เป็นแหล่งเดียวกันรวมกัน (ตาราง _ID ใน build/name_level_types.py) · ไม่นับ synthetic, ระบุแค่ระดับกลุ่ม และไม่ระบุ",
   "source": "out/name_level_sources.csv"
  }

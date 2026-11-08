@@ -79,7 +79,7 @@ compared? How broad is the evidence behind the benchmarks the field relies on?
 How difficult, beyond the imbalance ratio, are the datasets that can be
 checked? When a paper reports that its method beats SMOTE, on what kind of data does
 that happen, and can a reader check it? This section answers these questions
-from the 1,747 dataset entries and the comparisons with SMOTE that we extracted from the
+from the 1,756 dataset entries and the comparisons with SMOTE that we extracted from the
 76 papers of our corpus: 835 under one fixed metric per paper (834 per dataset and one
 average over datasets) and 2,497 over every metric the papers report. Three of them (ENN, AdaBoost and one review) contain no
 evaluation on data, so counts below use the 73 papers with an
@@ -154,21 +154,21 @@ build/verify\_pdf.py, out/visual\_checks.json, out/verified\_*.csv; values also 
 % ---------------------------------------------------------------------
 \subsection{The Benchmark Landscape}
 \label{sec:data-landscape}
-The 73 papers with an evaluation on data list 1,747 dataset entries, counting the
+The 73 papers with an evaluation on data list 1,756 dataset entries, counting the
 93 sets that ten papers generate only for an illustration or a side experiment
 (Section~\ref{sec:data-verifiability}). One of them, the single toy example in Tomek links, is a description rather than a
-name and is set aside here, leaving 1,746 named entries. These reduce to 857
+name and is set aside here, leaving 1,755 named entries. These reduce to 866
 distinct names once names are lower-cased, text in parentheses is dropped, and
 underscores and spaces are treated alike. Treating spellings that differ only in
 punctuation as one dataset (\texttt{page-blocks}, \texttt{pageblocks} and the singular
-\texttt{page-block}) leaves 766 datasets, and grouping each numbered or split version with its main set (for
+\texttt{page-block}) leaves 775 datasets, and grouping each numbered or split version with its main set (for
 example \texttt{yeast4} or \texttt{glass-0-1-6\_vs\_2} with yeast and glass),
 while keeping non-standard names such as \texttt{glass identification} apart,
-leaves 482 source families. Most datasets appear once: 543 of the 766 occur in a
+leaves 491 source families. Most datasets appear once: 552 of the 775 occur in a
 single paper (60 of them are the generated sets of a single experiment in MC-MBRC~\pcite{ma2024mcmbrc}, which form one family). Counted as datasets, ecoli appears in 29 papers, yeast in 22 and
 glass in 19; counted with their splits, the ecoli family appears in 42 papers,
 the yeast family in 39 and the glass family in 35, about half of the 73. Half of
-all uses of a family fall on 40 of the 482 families. Names whose printed number of
+all uses of a family fall on 41 of the 491 families. Names whose printed number of
 features contradicts their main set are kept in its family when they are the same
 source with a different composition (for example \texttt{abalone8}, \texttt{oil1}) and
 kept apart when they are a different data set that shares the prefix (for example
@@ -216,7 +216,7 @@ exact-name, dataset and family counts under rule T1 (build/family\_rule.py, out/
 count gave 39/39/36 and is superseded); datasets and families per name: out/landscape\_families.csv; concentration by
 dataset and family: out/benchmark\_concentration.json. With the placeholder the counts are 858 and 627;
 removing all punctuation would leave 678 names. The 605 names of the 6 Oct list are
-superseded by the 771 of the full re-read (857 after the 93 generated sets of build/add\_synthetic\_entries.py, 8 Nov 2026). Spread within the yeast, ecoli and glass
+superseded by the 771 of the full re-read (857 after the 93 generated sets of build/add\_synthetic\_entries.py, 8 Nov 2026; 866 after the 9 noisy-version entries of build/add\_noise\_entries.py, 9 Nov 2026). Spread within the yeast, ecoli and glass
 families: difficulty/family\_spread.py $\rightarrow$ family\_spread.json. Datasets and families
 everywhere in this subsection: rule T1 (Toon, 28 Oct 2026; names differing only by punctuation are one dataset, numbered
 or split versions belong to their main set, non-standard names are not merged), build/family\_rule.py
@@ -294,9 +294,9 @@ Dataset & Group & Papers & Family papers & Instances & Size printed & Classes & 
 % Groups F, D and V approved by Toon 28 Oct 2026 (family rule T1, 28 Oct 2026).
 
 \paragraph{Limits of the evidence.}
-Size, dimensionality and the number of classes are printed for 75.9\%, 72.7\%
-and 78.4\% of the 1,746 named entries, and class proportions in some form for
-54.8\%. A measured class overlap exists for 36 entries in two papers, on two
+Size, dimensionality and the number of classes are printed for 75.6\%, 72.4\%
+and 78.3\% of the 1,755 named entries, and class proportions in some form for
+54.5\%. A measured class overlap exists for 36 entries in two papers, on two
 incompatible scales, and the curated evidence contains no statement about
 sparsity. %
 % Claude 29 Oct 2026 (Toon delegated all open decisions): adopted (was \claudedraft)
@@ -338,7 +338,7 @@ Binarised, minority rule not stated (papers) & 8 of 37\\
 \multicolumn{2}{l}{\emph{How each dataset entry reached the experiment}}\\
 \quad Original & 537\\
 \quad Repository-defined (KEEL, imbalanced-learn) & 470\\
-\quad Modified by the authors & 332\\
+\quad Modified by the authors & 341\\
 \quad Synthetic & 213\\
 \quad Cannot be told from the paper & 195\\
 \bottomrule
@@ -346,7 +346,7 @@ Binarised, minority rule not stated (papers) & 8 of 37\\
 \end{table}
 
 Table~\ref{tab:data-handling} shows that modification by the authors is
-common: 332 of 1,747 dataset entries were changed by the
+common: 341 of 1,756 dataset entries were changed by the
 authors themselves, and for 195 the paper does not let a reader
 tell how the data were obtained. Eleven papers give no reason for their
 choice of datasets or only call them widely used.
@@ -361,13 +361,13 @@ declares its split; a paper that prints only ``Yeast'' after choosing its own
 minority classes does not.
 
 % Claude 29 Oct 2026 (Toon delegated all open decisions): replaces the [Toon] slot on declared vs undeclared modification
-Modifications differ in how completely they are described. Of the 332 modified
-entries (39 papers), 177 in 30 papers change the class structure, most often by
+Modifications differ in how completely they are described. Of the 341 modified
+entries (43 papers), 177 in 30 papers change the class structure, most often by
 keeping one class against the rest (84 entries), and 147 in 9 papers raise the
 imbalance ratio on purpose, almost always by removing minority examples at random
-(131 entries). A purpose for the change is stated in 20 of the 39 papers. For 94 of
-the 332 entries, information needed to repeat the change is missing: the
-characteristics of the modified set are not printed for 56, the target imbalance
+(131 entries). A purpose for the change is stated in 24 of the 43 papers. For 103 of
+the 341 entries, information needed to repeat the change is missing: the
+characteristics of the modified set are not printed for 65, the target imbalance
 ratio for 18 and the minority class for 15. At the paper level, 8 of the 37 papers
 that binarise data do not state which class becomes the minority. Entries modified
 without printed characteristics cannot be matched to any public file unless the authors
@@ -378,41 +378,40 @@ are therefore left out of the difficulty measurement (Section~\ref{sec:data-diff
 The remaining operations are named rather than pooled. Rows are removed or a subset is used
 in 18 entries (9 papers), features are removed, transformed or extracted in 15 (6 papers),
 three data sets are built and labelled by the authors from raw records (network traffic
-labelled by an intrusion detector, simulation output; 2 papers), and three carry noise or an
-outlier added by the authors (2 papers). Noise is added more often than these entries show:
-eight papers add label noise, attribute noise, outliers or missing values to real data sets
-(Table~\ref{tab:data-noise}), and in seven of them the noisy versions are an experimental
-condition on sets that are listed, and counted here, under their own category. Five further
-papers generate synthetic data with noise or outliers built in.
+labelled by an intrusion detector, simulation output; 2 papers), and twelve carry label noise,
+attribute noise, an outlier or missing values added by the authors to real data sets (8 papers,
+Table~\ref{tab:data-noise}). The noisy versions are recorded as one entry per paper and kind of
+change, since the papers print no size for them; the base sets keep their own category. Five
+further papers generate synthetic data with noise or outliers built in.
 
 \begin{table}[t]
 \centering\small
 \caption{Noise, Outliers and Missing Values Added to Real Data Sets.
-Entries: whether the altered versions are dataset entries of the corpus.}
+Entries: modified entries that record the altered versions (one per paper and kind of change).}
 \label{tab:data-noise}
 \begin{tabular}{p{0.15\linewidth}p{0.28\linewidth}p{0.17\linewidth}p{0.2\linewidth}l}
 \toprule
 Paper & Added & Levels & Data & Entries\\
 \midrule
-SMOTE-IPF & class and attribute noise & 20\%, 40\% & 9 sets & yes\\
-RAMOBoost & class and attribute noise & several & abalone & no\\
-RSMOTE & label noise; one outlier & 10--30\%; one point & all sets; fourclass & no; yes\\
-RBO & label and feature noise & 0--20\% (label) & all sets & no\\
-MC-CCR & label noise & 0--25\% & all sets & no\\
-MC-MBRC & label noise & 0--30\% & real sets & no\\
-MC-NCLWO & Gaussian feature noise & 5--30\% & 4 sets & no\\
-SPE & missing values & several & all sets & no\\
+SMOTE-IPF & class and attribute noise & 20\%, 40\% & 9 sets & 2\\
+RAMOBoost & class and attribute noise & several & abalone & 2\\
+RSMOTE & label noise; one outlier & 10--30\%; one point & all sets; fourclass & 1; 1\\
+RBO & label and feature noise & 0--20\% (label) & all sets & 2\\
+MC-CCR & label noise & 0--25\% & all sets & 1\\
+MC-MBRC & label noise & 0--30\% & real sets & 1\\
+MC-NCLWO & Gaussian feature noise & 5--30\% & 4 sets & 1\\
+SPE & missing values & several & all sets & 1\\
 \bottomrule
 \end{tabular}
 \end{table}
 
 Why the data were modified can be read only where a paper says so. Across the 43 papers that
-modify data or add noise (the 39 above and four that only add noise), ten state that the study
+modify data, ten state that the study
 or the method concerns two-class problems and convert multiclass sets for that reason, nine
 state that their data were not imbalanced enough and make them more imbalanced, eight add
 noise, outliers or missing values to test how the methods cope, two give practical reasons
 (the size of the data, agreement between the training and test files), and 19 give no reason
-that we could find. Counted by entries, 152 of the 332 modified entries are made harder in a
+that we could find. Counted by entries, 161 of the 341 modified entries are made harder in a
 way the paper explains (more imbalance or noise), 51 are converted for a two-class scope that
 the paper states, ten are changed for practical reasons and 127 have no stated reason. Which
 class becomes the minority, or which noise scheme is used, is traced to earlier work in five
@@ -421,7 +420,7 @@ papers and to a written rule, such as the smallest class against the rest, in tw
 Whether a modification favours the proposed method cannot be read from a paper, but some
 features of the design make it checkable. Of the 29 papers that convert classes, 16 evaluate
 on two-class tasks only, so that the conversion matches the scope of the method being tested;
-seven of them say so. Five of the 39 papers also use an unmodified version of a set they
+seven of them say so. Five of the 43 papers also use an unmodified version of a set they
 modify, which lets a reader see what the change does to the result. Twelve papers apply a
 change at several levels (imbalance ratios or noise levels), all of them papers that state
 that they make the data harder, and three publish their modified files. Where a paper reports
@@ -429,7 +428,7 @@ comparisons with SMOTE both on sets it modified and on its other real sets (11 p
 share of wins is higher on the modified sets in two papers, lower in six and equal in three
 (424 and 278 comparisons).
 
-Modified versions are rarely shared. Of the 130 dataset families that someone modifies, 37 are
+Modified versions are rarely shared. Of the 139 dataset families that someone modifies, 37 are
 modified in more than one paper; vehicle (11 papers), ecoli (10), abalone and satimage (9 each),
 glass and page-blocks (8 each) are modified most often, most of them by converting classes. The
 same modified name does not mean the same data: the nine papers that modify vehicle print seven
@@ -448,10 +447,10 @@ Period & Papers & Entries & Original & Repository & Modified & Synthetic & Canno
 \midrule
 up to 2004 & 5 & 36 & 33 & 0 & 58 & 0 / 0 & 8\\
 2005--2009 & 9 & 110 & 44 & 0 & 26 & 0 / 26 & 4\\
-2010--2014 & 8 & 152 & 41 & 0 & 35 & 0 / 20 & 4\\
-2015--2019 & 18 & 590 & 18 & 35 & 25 & 9 / 1 & 12\\
-2020--2024 & 24 & 614 & 37 & 28 & 12 & 2 / 12 & 10\\
-2025--2026 & 8 & 244 & 34 & 37 & 5 & 0 / 2 & 22\\
+2010--2014 & 8 & 154 & 40 & 0 & 36 & 0 / 20 & 4\\
+2015--2019 & 18 & 592 & 18 & 35 & 25 & 9 / 1 & 11\\
+2020--2024 & 24 & 618 & 36 & 28 & 12 & 2 / 12 & 10\\
+2025--2026 & 8 & 245 & 33 & 37 & 5 & 0 / 2 & 22\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -543,7 +542,7 @@ paper in out/full\_summary.json.}
 % for Loyalty-SMOTE, rule NS): 986 entries, 236 tasks.
 % Numbers: difficulty/profile_final_summary.json, verify_ext_summary.json.
 The papers rarely describe how hard their data are beyond the imbalance ratio.
-A numerical overlap measure is printed for 36 of the 1,746 named entries, all in
+A numerical overlap measure is printed for 36 of the 1,755 named entries, all in
 two papers, and noise or borderline examples are described for 5; three of 72
 papers report such a property of their original data
 (Section~\ref{sec:data-landscape}). The literature on imbalanced learning, however,
@@ -737,9 +736,9 @@ as numeric attributes. Rows with missing values are dropped before the neighbour
 found; the largest losses are 1,129 of the 3,772 rows of the sick thyroid data and 75 of the
 155 rows of hepatitis. The labels are computed in the full feature space, not in any
 two-dimensional projection. One verifiable file was not measured: covertype (581,012 rows), which two entries use
-only as a seven-class file, so that it would give one-vs-rest tasks only, was beyond our computing time. Of the 857 dataset names, 161
-have no file in these copies (58 of them name a public source such as UCI or KEEL; the others are
-private data, sites that no longer exist, image, text and time-series collections, or names that do not
+only as a seven-class file, so that it would give one-vs-rest tasks only, was beyond our computing time. Of the 866 dataset names, 170
+have no file in these copies (56 of them name a public source such as UCI or KEEL; the others are
+noisy versions made in an experiment, private data, sites that no longer exist, image, text and time-series collections, or names that do not
 identify a data set), 196 are synthetic and 79 have a file whose size differs from every printed one.
 
 \evidence{difficulty/verify\_ext.py (8 Nov 2026: extended mirrors, name crosswalk, same
@@ -954,11 +953,12 @@ as a mean over its datasets.
 
 % Claude 29 Oct 2026 (Toon delegated all open decisions): hypothesis H3 (listed but not compared), out/hypotheses.json H3b
 Even where per-dataset tables exist, they do not always cover the datasets a paper
-lists. In the 43 papers with per-dataset comparisons with SMOTE, 195 of the 1,028 listed
-dataset entries (19.0\%, 95\% CI 16.7 to 21.5) have no row in the table that compares
+lists. In the 43 papers with per-dataset comparisons with SMOTE, 201 of the 1,034 listed
+dataset entries (19.4\%, 95\% CI 17.1 to 22.0) have no row in the table that compares
 the proposed method with SMOTE. Seventy-six of them are sets that seven of these papers generate only
 for an illustration or a side experiment (described below with the other synthetic data), which are not meant to be
-compared. Of the other 952 entries, 119 (12.5\%, 95\% CI 10.5 to 14.8) have no such row,
+compared, and six are noisy versions of real sets that five papers use only in a separate robustness experiment.
+Of the other 952 entries, 119 (12.5\%, 95\% CI 10.5 to 14.8) have no such row,
 and 12 papers account for all of them, most of all
 SMOTE-IPF~\pcite{saez2015smoteipf} (32 of 41) and Loyalty-SMOTE (30 of 59). The gap is
 largest for synthetic sets (38 of 48) and for entries whose origin cannot be told

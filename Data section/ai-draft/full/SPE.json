@@ -100,6 +100,22 @@
    "how_obtained_detail": "8,213 frauds out of 6,362,620 transactions (text)",
    "in_results_table": "yes (SMOTE missing)",
    "ref": "Table III, p.8; text p.7"
+  },
+  {
+   "name": "Missing-value versions of the benchmark data sets",
+   "group": "Modified data - missing values added (Sec. 5)",
+   "source_repo": "UCI",
+   "n_instances": null,
+   "n_features": null,
+   "n_classes": 2,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": null,
+   "ir_printed": null,
+   "how_obtained": "modified",
+   "how_obtained_detail": "the paper's data sets with values removed at random from all features in training and test data and replaced by 0 to simulate missing values (p.10); levels as in the paper; sizes not printed",
+   "in_results_table": "no",
+   "ref": "p.10"
   }
  ],
  "ir_definition": "Imbalance Ratio (IR) = n_majority / n_minority = |N| / |P|",

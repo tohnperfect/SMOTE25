@@ -1,10 +1,10 @@
 {
- "units": "entries = named data entries (1746); papers = papers with named entries (72)",
+ "units": "entries = named data entries (1755); papers = papers with named entries (72)",
  "n_instances": {
   "entries": {
    "n": 1326,
-   "of": 1746,
-   "pct": 75.9
+   "of": 1755,
+   "pct": 75.6
   },
   "papers_with_any": {
    "n": 59,
@@ -15,8 +15,8 @@
  "n_features": {
   "entries": {
    "n": 1270,
-   "of": 1746,
-   "pct": 72.7
+   "of": 1755,
+   "pct": 72.4
   },
   "papers_with_any": {
    "n": 59,
@@ -26,9 +26,9 @@
  },
  "n_classes": {
   "entries": {
-   "n": 1369,
-   "of": 1746,
-   "pct": 78.4
+   "n": 1375,
+   "of": 1755,
+   "pct": 78.3
   },
   "papers_with_any": {
    "n": 62,
@@ -39,8 +39,8 @@
  "n_minority": {
   "entries": {
    "n": 519,
-   "of": 1746,
-   "pct": 29.7
+   "of": 1755,
+   "pct": 29.6
   },
   "papers_with_any": {
    "n": 35,
@@ -51,8 +51,8 @@
  "n_majority": {
   "entries": {
    "n": 504,
-   "of": 1746,
-   "pct": 28.9
+   "of": 1755,
+   "pct": 28.7
   },
   "papers_with_any": {
    "n": 35,
@@ -63,8 +63,8 @@
  "class_distribution": {
   "entries": {
    "n": 588,
-   "of": 1746,
-   "pct": 33.7
+   "of": 1755,
+   "pct": 33.5
   },
   "papers_with_any": {
    "n": 43,
@@ -75,8 +75,8 @@
  "class_proportions_any_form": {
   "entries": {
    "n": 956,
-   "of": 1746,
-   "pct": 54.8
+   "of": 1755,
+   "pct": 54.5
   },
   "papers_with_any": {
    "n": 56,
@@ -88,7 +88,7 @@
   "field": "none (not extracted systematically)",
   "entries_mentioning": {
    "n": 128,
-   "of": 1746,
+   "of": 1755,
    "pct": 7.3
   },
   "papers_mentioning": {
@@ -101,12 +101,12 @@
  "overlap_noise_sparsity": {
   "entries_with_measured_value": {
    "n": 36,
-   "of": 1746,
+   "of": 1755,
    "pct": 2.1
   },
   "entries_with_described_property": {
    "n": 5,
-   "of": 1746,
+   "of": 1755,
    "pct": 0.3
   },
   "papers_reporting_inherent_property": {

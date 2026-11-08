@@ -43,6 +43,7 @@ artificial family a,synthetic,1,synthetic 1,1,DLexiBoost,"Artificial family A (2
 artificial family b,synthetic,1,synthetic 1,1,DLexiBoost,Artificial family B (27 sets with outliers),synthetic,,synthetic 1,,,not measured,,U-synthetic 1,U-synthetic 1,P045-D035
 artificial two-class imbalanced data set,synthetic,1,synthetic 1,1,ADASYN,artificial two-class imbalanced data set,synthetic,,synthetic 1,,,not measured,,U-synthetic 1,U-synthetic 1,P013-D006
 asia,synthetic,1,synthetic 1,1,CTGAN / TVAE,asia,synthetic,,synthetic 1,,,not measured,,U-synthetic 1,U-synthetic 1,P039-D004
+attribute noise versions of abalone,modified,1,modified 1,1,RAMOBoost,Attribute noise versions of Abalone,UCI,,UCI 1,UCI,NI,not measured,,U-no_public_file 1,U-no_public_file 1,P019-D021
 attribute noise versions of the 9 real-world datasets,modified,1,modified 1,1,SMOTE-IPF,"Attribute noise versions of the 9 real-world datasets (e.g. 'aclx=20%', 'aclx=40%'; 18 datasets)",KEEL,,KEEL 1,KEEL,NI,not measured,,U-no_public_file 1,U-no_public_file 1,P029-D041
 australia,not stated,1,not stated 1,1,Loyalty-SMOTE,australia,other repository,,other repository 1,Kaggle,,not measured,,U-size_mismatch 1,U-size_mismatch 1,P075-D032
 australian,modified,2,modified 1; repository-defined 1,2,GDO; HDE,australian,multiple,KEEL + other repository,KEEL 1; other repository 1,KEEL; LibSVM,US;IM,none,australian [KEEL(keel_ds)] minority=1 N=690 n_min=307 IR=1.248 noise=0.293 profile=none,V-binary_file 1; U-size_mismatch 1,,P057-D039; P052-D027
@@ -128,6 +129,7 @@ cifar-10,modified,1,modified 1,1,ROS (Buda),CIFAR-10,other repository,,other rep
 cifar10,modified,1,modified 1,1,GAMO,CIFAR10,not stated,,not stated 1,,US,not measured,,U-no_public_file 1,U-no_public_file 1,P041-D003
 circle,synthetic,1,synthetic 1,1,Borderline-SMOTE,Circle(Simulation),synthetic,,synthetic 1,,,not measured,,U-synthetic 1,U-synthetic 1,P009-D001
 circles,synthetic,2,synthetic 2,2,RSMOTE; k-means SMOTE,circles,synthetic,,synthetic 2,,,not measured,,U-synthetic 2,U-synthetic 2,P053-D038; P038-D096
+class label noise versions of abalone,modified,1,modified 1,1,RAMOBoost,Class label noise versions of Abalone,UCI,,UCI 1,UCI,NI,not measured,,U-no_public_file 1,U-no_public_file 1,P019-D020
 class noise versions of the 9 real-world datasets,modified,1,modified 1,1,SMOTE-IPF,"Class noise versions of the 9 real-world datasets (e.g. 'aclx=20%', 'aclx=40%'; 18 datasets)",KEEL,,KEEL 1,KEEL,NI,not measured,,U-no_public_file 1,U-no_public_file 1,P029-D040
 cleveland,modified,13,modified 1; original 11; not stated 1,13,GDHS; GLOS; MC-CCR; MC-MBRC; MC-NCLWO; MC-RBO; MDO; NROMM; OREM-M; OVO-SMOTE; SHSampler; SMOTE-IPF; SPIDER2,Cleveland; cleveland,multiple,KEEL + UCI,KEEL 8; UCI 1; not stated 4,KEEL; UCI,SF,small_disjuncts + small_sample + outlier_flag,heart-disease-processed-cleveland [UCI++] minority=4 N=303 n_min=35 IR=7.657 noise=0.714 profile=small_disjuncts + small_sample + outlier_flag,V-multiclass_asis 7; U-size_mismatch 3; V-name_only_ext 2; V-binarized_rule_unique 1,,P070-D002; P063-D004; P047-D004; P067-D004; P072-D014; P048-D004; P033-D009; P064-D016; P065-D007; P024-D003; P059-D003; P029-D034; P021-D028
 cleveland 1,modified,2,modified 2,2,GMMSampling; SOUP,Cleveland_1; cleveland_1,UCI,,UCI 2,UCI,CS,not measured,,U-no_printed_size 2,U-no_printed_size 2,P066-D001; P043-D003
@@ -259,6 +261,8 @@ eucalyptus,modified,4,modified 3; not stated 1,2,A-SUWO; G-SMOTE,EUCALYPTUS; EUC
 faceall,modified,1,modified 1,1,INOS,FaceAll,other repository,,other repository 1,UCR,CS;US,not measured,,U-no_public_file 1,U-no_public_file 1,P023-D002
 fashion-mnist,modified,1,modified 1,1,GAMO,Fashion-MNIST,not stated,,not stated 1,,US;IM,not measured,,U-no_public_file 1,U-no_public_file 1,P041-D002
 fault,not stated,1,not stated 1,1,Loyalty-SMOTE,Fault,group-level,,group-level 1,,,not measured,,U-size_mismatch 1,U-size_mismatch 1,P075-D016
+feature noise versions of four data sets,modified,1,modified 1,1,MC-NCLWO,Feature noise versions of four data sets,KEEL,,KEEL 1,KEEL,NI,not measured,,U-no_public_file 1,U-no_public_file 1,P072-D024
+feature noise versions of the benchmark data sets,modified,1,modified 1,1,RBO,Feature noise versions of the benchmark data sets,KEEL,,KEEL 1,KEEL,NI,not measured,,U-no_public_file 1,U-no_public_file 1,P042-D036
 fertility,not stated,1,not stated 1,1,CGMOS,Fertility,UCI,,UCI 1,UCI,,small_disjuncts + small_sample + outlier_flag,fertility-diagnosis [UCI++] minority=2 N=100 n_min=12 IR=7.333 noise=0.75 profile=small_disjuncts + small_sample + outlier_flag,V-binary_file 1,,P032-D011
 firewall,original,2,original 1; not stated 1,2,DGOT; Loyalty-SMOTE,Firewall; firewall,multiple,UCI + other repository,UCI 1; other repository 1,Kaggle; UCI,,multiclass,,V-multiclass_asis 1; U-task_not_reconstructible 1,,P074-D012; P075-D051
 five-class artificial set,synthetic,1,synthetic 1,1,MDO,five-class artificial set,synthetic,,synthetic 1,,,not measured,,U-synthetic 1,U-synthetic 1,P033-D021
@@ -374,6 +378,10 @@ krvsk0vs8,repository-defined,1,repository-defined 1,1,HDE,krvsk0vs8,KEEL,,KEEL 1
 krvsk3vs11,repository-defined,1,repository-defined 1,1,HDE,krvsk3vs11,KEEL,,KEEL 1,KEEL,,none,kr-vs-k-three_vs_eleven [KEEL(keel_ds)] minority=positive N=2935 n_min=81 IR=35.235 noise=0.049 profile=none,V-binary_file 1,,P052-D021
 ksc,original,1,original 1,1,DLexiBoost,KSC,other paper/author,,other paper/author 1,hyperspectral source [54] (DLexiBoost),,not measured,,U-no_public_file 1,U-no_public_file 1,P045-D029
 la12,original,1,original 1,1,COG-OS,la12,other repository,,other repository 1,TREC,,not measured,,U-no_public_file 1,U-no_public_file 1,P012-D010
+label noise versions of the benchmark data sets,modified,1,modified 1,1,RBO,Label noise versions of the benchmark data sets,KEEL,,KEEL 1,KEEL,NI,not measured,,U-no_public_file 1,U-no_public_file 1,P042-D035
+label noise versions of the binary data sets,modified,1,modified 1,1,RSMOTE,"Label noise versions of the binary data sets (10%, 20%, 30%)",UCI,,UCI 1,UCI,NI,not measured,,U-no_public_file 1,U-no_public_file 1,P053-D040
+label noise versions of the multiclass benchmark data sets,modified,1,modified 1,1,MC-CCR,Label noise versions of the multiclass benchmark data sets,KEEL,,KEEL 1,KEEL,NI,not measured,,U-no_public_file 1,U-no_public_file 1,P047-D021
+label noise versions of the real data sets,modified,1,modified 1,1,MC-MBRC,Label noise versions of the real data sets,KEEL,,KEEL 1,KEEL,NI,not measured,,U-no_public_file 1,U-no_public_file 1,P067-D081
 laryngeal,original,1,original 1,1,OREM-M,Laryngeal,not stated,,not stated 1,,,not measured,,U-no_public_file 1,U-no_public_file 1,P065-D002
 leaf,not stated,1,not stated 1,1,CGMOS,Leaf,UCI,,UCI 1,UCI,,not measured,,U-size_mismatch 1,U-size_mismatch 1,P032-D015
 leaves plant,original,1,original 1,1,OREM-M,Leaves plant,not stated,,not stated 1,,,not measured,,U-no_public_file 1,U-no_public_file 1,P065-D017
@@ -483,6 +491,7 @@ mf zernike,modified,1,modified 1,1,RAMOBoost,Mf_Zernike,group-level,,group-level
 mf-morph,modified,1,modified 1,1,EasyEnsemble / BalanceCascade,mf-morph,UCI,,UCI 1,UCI,CS,multiclass,,V?-binarized_rule_ambiguous 1,,P016-D009
 mf-zernike,modified,1,modified 1,1,EasyEnsemble / BalanceCascade,mf-zernike,UCI,,UCI 1,UCI,CS,multiclass,,V?-binarized_rule_ambiguous 1,,P016-D010
 mfeat-fouri,original,2,original 2,2,Global-CS (AAAI); Global-CS (journal),mfeat-fouri,UCI,,UCI 2,UCI,,multiclass,,V-multiclass_asis 2,,P011-D001; P018-D001
+missing-value versions of the benchmark data sets,modified,1,modified 1,1,SPE,Missing-value versions of the benchmark data sets,UCI,,UCI 1,UCI,NI,not measured,,U-no_public_file 1,U-no_public_file 1,P050-D007
 mnist,modified,2,modified 2,2,GAMO; ROS (Buda),MNIST,other repository,,other repository 1; not stated 1,MNIST,US;IM;SF,not measured,,U-no_printed_size 2,U-no_printed_size 2,P041-D001; P037-D001
 mnist 3,modified,1,modified 1,1,NBU,MNIST 3 (class 3 minority),other repository,,other repository 1,MNIST,CS;US;IM,not measured,,U-no_public_file 1,U-no_public_file 1,P049-D027
 mnist 5,modified,1,modified 1,1,NBU,MNIST 5 (class 5 minority),other repository,,other repository 1,MNIST,CS;US;IM,not measured,,U-no_public_file 1,U-no_public_file 1,P049-D028

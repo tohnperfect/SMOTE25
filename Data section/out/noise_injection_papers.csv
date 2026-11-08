@@ -1,10 +1,10 @@
 paper_key,what_was_added,levels,data_sets,noisy_sets_are_entries,where_in_paper
 SMOTE-IPF,class noise + attribute noise,"20%, 40%",9 real-world sets (acl + 8 KEEL),yes (2 modified entries),Sec 4.2
-RAMOBoost,class label noise + attribute noise,"several levels (Tables XVIII, XXI)",Abalone,no,"Sec IV, p.16-17"
-RSMOTE,label noise (minority labels flipped),"10%, 20%, 30%",all binary sets,no,p.12
+RAMOBoost,class label noise + attribute noise,"several levels (Tables XVIII, XXI)",Abalone,"yes (2 entries, added 9 Nov)","Sec IV, p.16-17"
+RSMOTE,label noise (minority labels flipped),"10%, 20%, 30%",all binary sets,"yes (1 entry, added 9 Nov)",p.12
 RSMOTE,one outlier added,one point,fourclass,yes (1 modified entry),"Sec 4.3.1, p.10"
-RBO,label noise; feature noise,0-20% (label),the benchmark sets (Experiments 3-4),no,p.8
-MC-CCR,random label noise,0-25% in steps of 5%,the multiclass benchmark sets,no,"Sec 4.4, p.9"
-MC-MBRC,label noise (labels randomly replaced),0-30% in steps of 5%,real data sets (Fig. 6),no,"Sec 5.3, p.10-11"
-MC-NCLWO,Gaussian feature noise,5-30% in steps of 5%,four data sets,no,p.15
-SPE,missing values (values replaced by 0),several levels,the benchmark sets,no,p.10
+RBO,label noise; feature noise,0-20% (label),the benchmark sets (Experiments 3-4),"yes (2 entries, added 9 Nov)",p.8
+MC-CCR,random label noise,0-25% in steps of 5%,the multiclass benchmark sets,"yes (1 entry, added 9 Nov)","Sec 4.4, p.9"
+MC-MBRC,label noise (labels randomly replaced),0-30% in steps of 5%,real data sets (Fig. 6),"yes (1 entry, added 9 Nov)","Sec 5.3, p.10-11"
+MC-NCLWO,Gaussian feature noise,5-30% in steps of 5%,four data sets,"yes (1 entry, added 9 Nov)",p.15
+SPE,missing values (values replaced by 0),several levels,the benchmark sets,"yes (1 entry, added 9 Nov)",p.10

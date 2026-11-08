@@ -324,6 +324,22 @@
    "how_obtained_detail": "KEEL multiclass dataset used as in Table 1 (no class selection stated)",
    "in_results_table": "yes",
    "ref": "Table 1, p.8"
+  },
+  {
+   "name": "Label noise versions of the multiclass benchmark data sets",
+   "group": "Noisy modified data - label noise (Sec. 4.4)",
+   "source_repo": "KEEL",
+   "n_instances": null,
+   "n_features": null,
+   "n_classes": null,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": null,
+   "ir_printed": null,
+   "how_obtained": "modified",
+   "how_obtained_detail": "the paper's multiclass benchmark sets with random label noise in the training data (a subset of training examples chosen uniformly at random gets a randomly chosen other label), levels {0.0, 0.05, 0.1, 0.15, 0.20, 0.25} (p.9); sizes not printed",
+   "in_results_table": "no",
+   "ref": "Sec. 4.4, p.9"
   }
  ],
  "ir_definition": "not stated in paper",

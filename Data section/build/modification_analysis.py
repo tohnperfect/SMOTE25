@@ -14,8 +14,8 @@ Reads (no file is changed):
 Writes out/modification_analysis.json, out/modification_purpose_by_paper.csv, out/modified_families.csv, out/usage_by_period.csv
 
 Rules (written before counting; no thresholds of our own):
-  papers covered        the papers with a 'modified' entry, plus the papers that add noise to real data as an experimental
-                        condition (out/noise_injection_papers.csv) although the noisy sets are not entries
+  papers covered        the papers with a 'modified' entry (since 9 Nov the noisy versions of real data are modified entries,
+                        build/add_noise_entries.py), plus any paper in out/noise_injection_papers.csv without one (none now)
   theme of a paper      every theme with at least one quote; a paper with none is "not stated"
   theme of an entry     a modified entry carries a paper's theme only when its operations are the ones the quote is about:
                         two-class scope -> CS; create/raise imbalance -> IM or US; robustness test -> NI; practical -> SF or US

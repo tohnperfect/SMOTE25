@@ -777,6 +777,7 @@ MC-CCR,Wine,"Table 1, p.8",row match on cited page,name:cited@8; n_instances:cit
 MC-CCR,Winequality-red,"Table 1, p.8",row match on cited page,name:cited@8; n_instances:cited@8; n_features:cited@8; n_classes:cited@8; ir_printed:cited@8; _row:row@8
 MC-CCR,Yeast,"Table 1, p.8",row match on cited page,name:cited@8; n_instances:cited@8; n_features:cited@8; n_classes:cited@8; ir_printed:cited@8; _row:row@8
 MC-CCR,Zoo,"Table 1, p.8",row match on cited page,name:cited@8; n_instances:cited@8; n_features:cited@8; n_classes:cited@8; ir_printed:cited@8; _row:row@8
+MC-CCR,Label noise versions of the multiclass benchmark data sets,"Sec. 4.4, p.9","ok (evidence quote, add_noise_entries.py)",quote asserted on the cited page; no size printed for the noisy versions
 MC-MBRC,automobile,"Table 2, p.7",row match on cited page,name:cited@7; n_instances:cited@7; n_features:cited@7; n_classes:cited@7; ir_printed:cited@7; _row:row@7
 MC-MBRC,autos,"Table 2, p.7",row match on cited page,name:cited@7; n_instances:cited@7; n_features:cited@7; n_classes:cited@7; ir_printed:cited@7; _row:row@7
 MC-MBRC,car,"Table 2, p.7",row match on cited page,name:cited@7; n_instances:cited@7; n_features:cited@7; n_classes:cited@7; ir_printed:cited@7; _row:row@7
@@ -857,6 +858,7 @@ MC-MBRC,MC-MBRC sim IR200 overlap 60,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence
 MC-MBRC,MC-MBRC sim IR200 overlap 70,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
 MC-MBRC,MC-MBRC sim IR200 overlap 80,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
 MC-MBRC,MC-MBRC sim IR200 overlap 90,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,Label noise versions of the real data sets,"Sec. 5.3, p.10-11; Fig. 6","ok (evidence quote, add_noise_entries.py)",quote asserted on the cited page; no size printed for the noisy versions
 MC-NCLWO,vehicle,"Table 1, p.10 (printed p.152629)",partly missing,name:missing; n_instances:missing; n_features:elsewhere@3; n_classes:elsewhere@1; ir_printed:missing
 MC-NCLWO,penbased,"Table 1, p.10 (printed p.152629)",partly missing,name:cited@11; n_instances:missing; n_features:elsewhere@2; n_classes:cited@10; ir_printed:missing
 MC-NCLWO,wine,"Table 1, p.10 (printed p.152629)",partly missing,name:elsewhere@2; n_instances:elsewhere@17; n_features:cited@10; n_classes:elsewhere@1; ir_printed:missing
@@ -880,6 +882,7 @@ MC-NCLWO,ecoli,"Table 1, p.10 (printed p.152629)",partly missing,name:cited@11; 
 MC-NCLWO,yeast,"Table 1, p.10 (printed p.152629)",partly missing,name:cited@11; n_instances:missing; n_features:cited@9; n_classes:cited@10; ir_printed:missing
 MC-NCLWO,page-blocks,"Table 1, p.10 (printed p.152629)",partly missing,name:cited@11; n_instances:missing; n_features:cited@10; n_classes:elsewhere@1; ir_printed:missing
 MC-NCLWO,shuttle,"Table 1, p.10 (printed p.152629)",partly missing,name:missing; n_instances:missing; n_features:cited@11; n_classes:elsewhere@1; ir_printed:missing
+MC-NCLWO,Feature noise versions of four data sets,p.15; Fig. 13,"ok (evidence quote, add_noise_entries.py)",quote asserted on the cited page; no size printed for the noisy versions
 MC-RBO,Automobile,"Table I, p.7 (printed p.2824)",partly missing,name:missing; n_instances:elsewhere@13; n_features:elsewhere@1; n_classes:cited@6; ir_printed:cited@6
 MC-RBO,Balance,"Table I, p.7 (printed p.2824)",partly missing,name:cited@7; n_instances:missing; n_features:cited@7; n_classes:cited@7; ir_printed:missing
 MC-RBO,Car,"Table I, p.7 (printed p.2824)",partly missing,name:elsewhere@1; n_instances:missing; n_features:cited@6; n_classes:cited@7; ir_printed:missing
@@ -1194,6 +1197,8 @@ RAMOBoost,Glass,"Table I, p.7 (printed 1630); Table II, p.8 (printed 1631)",row 
 RAMOBoost,Yeast,"Table I, p.7 (printed 1630); Table II, p.8 (printed 1631)",row match on cited page,name:cited@7; n_instances:cited@7; n_features:cited@7; n_classes:cited@7; n_minority:cited@7; n_majority:cited@7; ir_printed:cited@7; _row:row@7
 RAMOBoost,Letter,"Table I, p.7 (printed 1630); Table II, p.8 (printed 1631)",row match on cited page,name:cited@7; n_instances:cited@7; n_features:cited@7; n_classes:cited@7; n_minority:cited@7; n_majority:cited@7; ir_printed:cited@7; _row:row@7
 RAMOBoost,Shuttle,"Table I, p.7 (printed 1630); Table II, p.8 (printed 1631)",row match on cited page,name:cited@7; n_instances:cited@7; n_features:cited@7; n_classes:cited@7; n_minority:cited@7; n_majority:cited@7; ir_printed:cited@7; _row:row@7
+RAMOBoost,Class label noise versions of Abalone,"Sec. IV, p.16-17; Table XVIII","ok (evidence quote, add_noise_entries.py)",quote asserted on the cited page; no size printed for the noisy versions
+RAMOBoost,Attribute noise versions of Abalone,"Sec. IV, p.16-17; Table XXI","ok (evidence quote, add_noise_entries.py)",quote asserted on the cited page; no size printed for the noisy versions
 RBBoost / Random Balance,boundary,"Table 2, p.7 (printed p.102)",row match on cited page,name:cited@7; n_instances:cited@7; n_classes:cited@7; ir_printed:cited@7; _row:row@7
 RBBoost / Random Balance,breast-y,"Table 2, p.7 (printed p.102)",row match on cited page,name:cited@7; n_instances:cited@7; n_classes:cited@7; ir_printed:cited@7; _row:row@7
 RBBoost / Random Balance,cam,"Table 2, p.7 (printed p.102)",row match on cited page,name:cited@7; n_instances:cited@7; n_classes:cited@7; ir_printed:cited@7; _row:row@7
@@ -1315,6 +1320,8 @@ RBO,yeast1458vs7,"Table 1, p.6 (printed p.24)",row match on cited page,name:cite
 RBO,yeast4,"Table 1, p.6 (printed p.24)",row match on cited page,name:cited@6; n_instances:cited@6; n_features:cited@6; n_classes:cited@6; ir_printed:cited@6; _row:row@6
 RBO,yeast1289vs7,"Table 1, p.6 (printed p.24)",row match on cited page,name:cited@6; n_instances:cited@6; n_features:cited@6; n_classes:cited@6; ir_printed:cited@6; _row:row@6
 RBO,poker89vs6,"Table 1, p.6 (printed p.24)",row match on cited page,name:cited@6; n_instances:cited@6; n_features:cited@6; n_classes:cited@6; ir_printed:cited@6; _row:row@6
+RBO,Label noise versions of the benchmark data sets,"Sec. 4.4, p.8","ok (evidence quote, add_noise_entries.py)",quote asserted on the cited page; no size printed for the noisy versions
+RBO,Feature noise versions of the benchmark data sets,"Sec. 4.5, p.8","ok (evidence quote, add_noise_entries.py)",quote asserted on the cited page; no size printed for the noisy versions
 ROS (Buda),MNIST,"Table 1, p.4 (printed 252); Sec. 3.3.1 p.4",ok on cited page,name:cited@4; n_classes:cited@4; ir_printed:cited@4
 ROS (Buda),CIFAR-10,"Table 1, p.4 (printed 252); Sec. 3.3.2 p.4-5",ok on cited page,name:cited@4; n_classes:cited@4; ir_printed:cited@4
 ROS (Buda),ILSVRC-2012,"Table 1, p.4 (printed 252); Sec. 3.3.3 p.5; Table 4 p.8 (printed 256)",ok on cited page,name:cited@4; n_classes:cited@4; ir_printed:cited@4
@@ -1357,6 +1364,7 @@ RSMOTE,toy data set,"Sec. 4.3.1, p.10; Figs. 2-5","ok (evidence quote, add_synth
 RSMOTE,moons,"Sec. 4.3.1, p.10; Figs. 2-5","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
 RSMOTE,circles,"Sec. 4.3.1, p.10; Figs. 2-5","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
 RSMOTE,fourclass (outlier added),"Sec. 4.3.1, p.10; Figs. 2-5","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+RSMOTE,"Label noise versions of the binary data sets (10%, 20%, 30%)",p.12,"ok (evidence quote, add_noise_entries.py)",quote asserted on the cited page; no size printed for the noisy versions
 RUSBoost,SP3,"Table I, p.5 (printed 189)",partly missing,name:cited@5; n_instances:missing; n_features:cited@5; n_classes:cited@5; n_minority:missing
 RUSBoost,MAMMOGRAPHY,"Table I, p.5 (printed 189)",partly missing,name:cited@5; n_instances:missing; n_features:cited@5; n_classes:cited@5; n_minority:missing
 RUSBoost,SOLARFLAREF,"Table I, p.5 (printed 189)",partly missing,name:missing; n_instances:missing; n_features:elsewhere@3; n_classes:cited@5; n_minority:elsewhere@11
@@ -1528,6 +1536,7 @@ SPE,KDDCUP (DOS vs. PRB),"Table III, p.8; text p.7",row match on cited page,name
 SPE,KDDCUP (DOS vs. R2L),"Table III, p.8; text p.7",row match on cited page,name:cited@8; n_instances:cited@8; n_features:cited@8; n_classes:cited@8; ir_printed:cited@8; _row:row@8
 SPE,Record Linkage,"Table III, p.8; text p.7",ok on cited page,name:cited@8; n_instances:cited@8; n_features:cited@8; n_classes:cited@8; n_minority:cited@7; ir_printed:cited@8
 SPE,Payment Simulation,"Table III, p.8; text p.7",ok on cited page,name:cited@8; n_instances:cited@8; n_features:cited@8; n_classes:cited@8; n_minority:cited@7; ir_printed:cited@8
+SPE,Missing-value versions of the benchmark data sets,p.10,"ok (evidence quote, add_noise_entries.py)",quote asserted on the cited page; no size printed for the noisy versions
 SPIDER2,subclus-0,"Table 2, p.7 (printed 164); also Table 1, p.6",ok on cited page,name:cited@7; n_instances:cited@6; n_features:cited@7; n_classes:cited@7; ir_printed:cited@6
 SPIDER2,subclus-30,"Table 2, p.7 (printed 164); also Table 1, p.6",ok on cited page,name:cited@7; n_instances:cited@6; n_features:cited@7; n_classes:cited@7; ir_printed:cited@6
 SPIDER2,subclus-50,"Table 2, p.7 (printed 164); also Table 1, p.6",ok on cited page,name:cited@7; n_instances:cited@6; n_features:cited@7; n_classes:cited@7; ir_printed:cited@6

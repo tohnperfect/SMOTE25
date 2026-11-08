@@ -40,6 +40,7 @@ texture,modified,2,0,0,2,0,0,0,2010,2014
 a1a,modified,1,0,0,0,0,1,0,2021,2021
 adiac,modified,1,0,0,1,0,0,0,2013,2013
 adult,modified,1,1,0,0,0,0,0,2002,2002
+attributenoiseversionsofabalone,modified,1,0,0,1,0,0,0,2010,2010
 attributenoiseversionsofthe9realworlddatasets,modified,1,0,0,0,1,0,0,2015,2015
 australian,modified,1,0,0,0,0,1,0,2021,2021
 automobile,modified,1,0,0,0,1,0,0,2017,2017
@@ -50,6 +51,7 @@ car3,modified,1,0,0,1,0,0,0,2010,2010
 celebalarge,modified,1,0,0,0,1,0,0,2019,2019
 celebasmall,modified,1,0,0,0,1,0,0,2019,2019
 censusincomedatabase,modified,1,0,1,0,0,0,0,2009,2009
+classlabelnoiseversionsofabalone,modified,1,0,0,1,0,0,0,2010,2010
 classnoiseversionsofthe9realworlddatasets,modified,1,0,0,0,1,0,0,2015,2015
 cmc,modified,1,0,1,0,0,0,0,2009,2009
 cod,modified,1,0,0,0,0,1,0,2021,2021
@@ -65,6 +67,8 @@ diabetes,modified,1,0,0,0,0,1,0,2021,2021
 esl,modified,1,0,0,0,1,0,0,2017,2017
 faceall,modified,1,0,0,1,0,0,0,2013,2013
 fashionmnist,modified,1,0,0,0,1,0,0,2019,2019
+featurenoiseversionsoffourdatasets,modified,1,0,0,0,0,0,1,2025,2025
+featurenoiseversionsofthebenchmarkdatasets,modified,1,0,0,0,1,0,0,2019,2019
 flag,modified,1,1,0,0,0,0,0,2004,2004
 forestcover,modified,1,1,0,0,0,0,0,2002,2002
 g7,modified,1,1,0,0,0,0,0,1997,1997
@@ -79,6 +83,10 @@ ilsvrc2012,modified,1,0,0,0,1,0,0,2018,2018
 imagenet,modified,1,0,0,0,0,1,0,2020,2020
 intrusion,modified,1,0,1,0,0,0,0,2008,2008
 isolet,modified,1,0,0,0,0,1,0,2021,2021
+labelnoiseversionsofthebenchmarkdatasets,modified,1,0,0,0,1,0,0,2019,2019
+labelnoiseversionsofthebinarydatasets,modified,1,0,0,0,0,1,0,2021,2021
+labelnoiseversionsofthemulticlassbenchmarkdatasets,modified,1,0,0,0,0,1,0,2020,2020
+labelnoiseversionsoftherealdatasets,modified,1,0,0,0,0,1,0,2024,2024
 led,modified,1,0,0,0,1,0,0,2019,2019
 lettera,modified,1,1,0,0,0,0,0,2004,2004
 lettervowel,modified,1,1,0,0,0,0,0,2004,2004
@@ -92,6 +100,7 @@ magic,modified,1,0,0,0,0,1,0,2021,2021
 mandelon,modified,1,0,0,0,1,0,0,2019,2019
 me2vsother,modified,1,0,0,1,0,0,0,2011,2011
 mfmorph,modified,1,0,1,0,0,0,0,2009,2009
+missingvalueversionsofthebenchmarkdatasets,modified,1,0,0,0,0,1,0,2020,2020
 mocap,modified,1,0,0,0,0,1,0,2021,2021
 nomao,modified,1,0,0,0,0,1,0,2021,2021
 ocr,modified,1,0,0,1,0,0,0,2014,2014

@@ -2,8 +2,8 @@
 "in these papers, what did they modify the data for — to make it harder, to fit their method, ... how can we tell").
 
 Unit: paper. Papers covered = the 39 papers with at least one entry of category 'modified' (out/modified_operations_audit.csv)
-plus papers that inject noise into real data sets as an experimental condition without listing the noisy sets as entries
-(found by a search of every PDF for noise-injection wording on 9 Nov; RBO, MC-CCR, MC-MBRC, MC-NCLWO).
+(on 9 Nov the noisy versions of real data in seven papers were added as modified entries, build/add_noise_entries.py, so the
+four papers that only add noise -- RBO, MC-CCR, MC-MBRC, MC-NCLWO -- are now among them).
 
 Every row below is a sentence (or the part of it that carries the reason) copied from the paper. The script stops if a quote is
 not found in the PDF text (pdftotext; NFKC, ligatures, whitespace and case normalised). Themes are named after what the
@@ -72,14 +72,14 @@ Q = [
 # are dataset entries of the corpus; where they are not, the base sets stay in their own category.
 NOISE = [
  ("SMOTE-IPF", "class noise + attribute noise", "20%, 40%", "9 real-world sets (acl + 8 KEEL)", "yes (2 modified entries)", "Sec 4.2"),
- ("RAMOBoost", "class label noise + attribute noise", "several levels (Tables XVIII, XXI)", "Abalone", "no", "Sec IV, p.16-17"),
- ("RSMOTE", "label noise (minority labels flipped)", "10%, 20%, 30%", "all binary sets", "no", "p.12"),
+ ("RAMOBoost", "class label noise + attribute noise", "several levels (Tables XVIII, XXI)", "Abalone", "yes (2 entries, added 9 Nov)", "Sec IV, p.16-17"),
+ ("RSMOTE", "label noise (minority labels flipped)", "10%, 20%, 30%", "all binary sets", "yes (1 entry, added 9 Nov)", "p.12"),
  ("RSMOTE", "one outlier added", "one point", "fourclass", "yes (1 modified entry)", "Sec 4.3.1, p.10"),
- ("RBO", "label noise; feature noise", "0-20% (label)", "the benchmark sets (Experiments 3-4)", "no", "p.8"),
- ("MC-CCR", "random label noise", "0-25% in steps of 5%", "the multiclass benchmark sets", "no", "Sec 4.4, p.9"),
- ("MC-MBRC", "label noise (labels randomly replaced)", "0-30% in steps of 5%", "real data sets (Fig. 6)", "no", "Sec 5.3, p.10-11"),
- ("MC-NCLWO", "Gaussian feature noise", "5-30% in steps of 5%", "four data sets", "no", "p.15"),
- ("SPE", "missing values (values replaced by 0)", "several levels", "the benchmark sets", "no", "p.10"),
+ ("RBO", "label noise; feature noise", "0-20% (label)", "the benchmark sets (Experiments 3-4)", "yes (2 entries, added 9 Nov)", "p.8"),
+ ("MC-CCR", "random label noise", "0-25% in steps of 5%", "the multiclass benchmark sets", "yes (1 entry, added 9 Nov)", "Sec 4.4, p.9"),
+ ("MC-MBRC", "label noise (labels randomly replaced)", "0-30% in steps of 5%", "real data sets (Fig. 6)", "yes (1 entry, added 9 Nov)", "Sec 5.3, p.10-11"),
+ ("MC-NCLWO", "Gaussian feature noise", "5-30% in steps of 5%", "four data sets", "yes (1 entry, added 9 Nov)", "p.15"),
+ ("SPE", "missing values (values replaced by 0)", "several levels", "the benchmark sets", "yes (1 entry, added 9 Nov)", "p.10"),
 ]
 P2PDF = {"CTGAN / TVAE": "CTGAN", "DSRBF / Static-SMOTE": "DSRBF", "EasyEnsemble / BalanceCascade": "EasyEnsemble", "RACOG / wRACOG": "RACOG",
          "ROS (Buda)": "ROS-Buda", "SMOTE-ENN / SMOTE-Tomek": "SMOTE-ENN", "k-means SMOTE": "k-means-SMOTE"}

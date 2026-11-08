@@ -372,6 +372,22 @@
    "how_obtained_detail": "Table 1 titled 'imbalanced multi-class datasets from the KEEL repository'; no class selection or modification stated",
    "in_results_table": "not applicable (no per-dataset results)",
    "ref": "Table 1, p.10 (printed p.152629)"
+  },
+  {
+   "name": "Feature noise versions of four data sets",
+   "group": "Noisy modified data - Gaussian feature noise (Fig. 13)",
+   "source_repo": "KEEL",
+   "n_instances": null,
+   "n_features": null,
+   "n_classes": null,
+   "n_minority": null,
+   "n_majority": null,
+   "class_distribution": null,
+   "ir_printed": null,
+   "how_obtained": "modified",
+   "how_obtained_detail": "four of the paper's data sets (incl. winequality-red and page-blocks) with Gaussian feature noise of 5% to 30% in steps of 5% (p.15, Fig. 13); sizes not printed",
+   "in_results_table": "no",
+   "ref": "p.15; Fig. 13"
   }
  ],
  "ir_definition": "not stated in paper",

@@ -19,7 +19,7 @@
  "frequent_set_size": 33,
  "frequent_set_check_vs_C": 33,
  "families": {
-  "total": 482,
+  "total": 491,
   "rule": "T1 (Toon, 28 Oct 2026): names differing only by '-', '_', spaces or dots are one dataset; numbered or split versions belong to their main set's family; non-standard names are not merged (build/family_rule.py)",
   "flagged": 15,
   "flagged_list": {

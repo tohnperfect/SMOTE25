@@ -1,7 +1,7 @@
 {
-  "entries_total": 1747,
+  "entries_total": 1756,
   "entries_with_n_features": 1271,
-  "entries_without_n_features": 476,
+  "entries_without_n_features": 485,
   "entry_level": {
     "quantiles": {
       "0.1": 4.0,
