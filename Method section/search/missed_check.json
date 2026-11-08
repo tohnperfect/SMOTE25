@@ -1,0 +1,264 @@
+{
+ "best": "S5 final (S1 or S2, wider)",
+ "rows": [
+  [
+   "SMOTE",
+   2002,
+   true,
+   false,
+   "Journal of Artificial Intelligence Research"
+  ],
+  [
+   "SMOTEBoost",
+   2003,
+   false,
+   false,
+   "Lecture notes in computer science"
+  ],
+  [
+   "SMOTE-Tomek / SMOTE-ENN",
+   2004,
+   true,
+   false,
+   "ACM SIGKDD Explorations Newsletter"
+  ],
+  [
+   "Borderline-SMOTE",
+   2005,
+   false,
+   false,
+   "Lecture notes in computer science"
+  ],
+  [
+   "Cluster-SMOTE",
+   2006,
+   true,
+   false,
+   "IEEE International Conference on Granular Computing (GrC)"
+  ],
+  [
+   "ADASYN",
+   2008,
+   true,
+   false,
+   "International Joint Conference on Neural Networks (IJCNN)"
+  ],
+  [
+   "LS",
+   2008,
+   true,
+   true,
+   "Proceedings"
+  ],
+  [
+   "Safe-Level-SMOTE",
+   2009,
+   false,
+   false,
+   "Lecture notes in computer science"
+  ],
+  [
+   "RAMOBoost",
+   2010,
+   true,
+   false,
+   "IEEE Transactions on Neural Networks"
+  ],
+  [
+   "DSRBF / SSRBF (Static-SMOTE)",
+   2011,
+   false,
+   false,
+   "Pattern Recognition"
+  ],
+  [
+   "INOS",
+   2013,
+   true,
+   false,
+   "IEEE Transactions on Knowledge and Data Engineering"
+  ],
+  [
+   "MWMOTE",
+   2014,
+   true,
+   false,
+   "IEEE Transactions on Knowledge and Data Engineering"
+  ],
+  [
+   "RBBoost",
+   2015,
+   false,
+   false,
+   "Knowledge-Based Systems"
+  ],
+  [
+   "SCUT",
+   2015,
+   true,
+   false,
+   "International Joint Conference on Knowledge Discovery, Knowledge Engineering and Knowledge Management"
+  ],
+  [
+   "SMOTE-IPF",
+   2015,
+   false,
+   false,
+   "Information Sciences"
+  ],
+  [
+   "A-SUWO",
+   2016,
+   false,
+   false,
+   "Expert Systems with Applications"
+  ],
+  [
+   "CGMOS",
+   2016,
+   true,
+   false,
+   "ACM International Conference on Information and Knowledge Management (CIKM)"
+  ],
+  [
+   "SMOM",
+   2017,
+   false,
+   false,
+   "Pattern Recognition"
+  ],
+  [
+   "k-means SMOTE",
+   2018,
+   false,
+   false,
+   "Information Sciences"
+  ],
+  [
+   "G-SMOTE",
+   2019,
+   false,
+   false,
+   "Information Sciences"
+  ],
+  [
+   "GAMO",
+   2019,
+   true,
+   false,
+   "IEEE/CVF International Conference on Computer Vision (ICCV)"
+  ],
+  [
+   "AB-SMOTE",
+   2020,
+   false,
+   false,
+   "International Journal of Machine Learning and Computing"
+  ],
+  [
+   "EMDO",
+   2021,
+   true,
+   false,
+   "Sensors"
+  ],
+  [
+   "HDE",
+   2021,
+   false,
+   false,
+   "Information Sciences"
+  ],
+  [
+   "RSMOTE",
+   2021,
+   false,
+   false,
+   "Information Sciences"
+  ],
+  [
+   "FW-SMOTE",
+   2022,
+   false,
+   false,
+   "Pattern Recognition"
+  ],
+  [
+   "KNNOR",
+   2022,
+   true,
+   false,
+   "Applied Soft Computing"
+  ],
+  [
+   "SVDDWSMOTE",
+   2022,
+   false,
+   false,
+   "Information Sciences"
+  ],
+  [
+   "GLOS",
+   2023,
+   false,
+   false,
+   "International Journal of Machine Learning and Cybernetics"
+  ],
+  [
+   "NROMM",
+   2023,
+   false,
+   false,
+   "Pattern Recognition"
+  ],
+  [
+   "OREM / OREM-M",
+   2023,
+   true,
+   false,
+   "IEEE Transactions on Knowledge and Data Engineering"
+  ],
+  [
+   "MC-MBRC",
+   2024,
+   false,
+   false,
+   "Expert Systems with Applications"
+  ],
+  [
+   "MKC-SMOTE",
+   2024,
+   true,
+   false,
+   "IEEE Access"
+  ],
+  [
+   "CISO",
+   2025,
+   true,
+   false,
+   "arXiv (Cornell University)"
+  ],
+  [
+   "GDHS",
+   2025,
+   false,
+   false,
+   "Neurocomputing"
+  ],
+  [
+   "Loyalty-SMOTE",
+   2026,
+   false,
+   false,
+   "Neural Networks"
+  ],
+  [
+   "QC-SMOTE",
+   2026,
+   true,
+   false,
+   "arXiv (Cornell University)"
+  ]
+ ]
+}

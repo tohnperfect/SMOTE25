@@ -75,6 +75,42 @@ table.dp{width:100%;border-collapse:collapse;font-size:.9rem}
 .lab b{font-family:var(--f-display);font-size:1rem;margin-right:6px}
 .lab .mono{color:var(--muted)}
 
+/* equation explorer */
+:root{--d1:#2A78D6;--d2:#C9531B;--d3:#138A5E;--d4:#A67200;--d5:#B83227;--d6:#7B4FA0}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--d1:#7FB2EA;--d2:#F09A6A;--d3:#5FD0A2;--d4:#E8B84A;--d5:#F08A80;--d6:#C3A6EE}}
+:root[data-theme="dark"]{--d1:#7FB2EA;--d2:#F09A6A;--d3:#5FD0A2;--d4:#E8B84A;--d5:#F08A80;--d6:#C3A6EE}
+.eqx{display:grid;gap:12px}
+.dpbtns{display:flex;flex-wrap:wrap;gap:6px}
+.dpb{border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);border-radius:999px;padding:5px 12px 5px 6px;font:500 .86rem var(--f-body);cursor:pointer;display:inline-flex;gap:7px;align-items:center}
+.dpb .no{width:20px;height:20px;border-radius:50%;background:var(--c);color:var(--surface);font:700 .74rem/20px var(--f-mono);text-align:center}
+.dpb[aria-pressed="true"]{border-color:var(--c);box-shadow:inset 0 0 0 1px var(--c);background:var(--sunk)}
+.tpl{background:var(--sunk);border-radius:6px;padding:14px 16px;font:500 1rem/2 var(--f-mono);overflow-x:auto}
+.tpl .ln{white-space:nowrap;display:block}
+.tpl .in1{padding-left:2.2em}.tpl .in2{padding-left:4.4em}
+.tpl .frame{border:2px dashed transparent;border-radius:8px;padding:6px 10px;display:block}
+.tpl .box{border:2px solid transparent;border-radius:6px;padding:2px 8px;display:block}
+.sym{border-radius:4px;padding:1px 3px;transition:background-color .12s,color .12s}
+.sym.on{background:var(--c);color:var(--surface)}
+.tpl .frame.on{border-color:var(--d6)}
+.tpl .box.on{border-color:var(--d2)}
+.tpl .cm{color:var(--muted);font-size:.84rem}
+.dpd{border-left:4px solid var(--c);background:var(--surface);border-radius:0 6px 6px 0;padding:10px 14px;display:grid;gap:4px;font-size:.9rem}
+.dpd h4{margin:0;font:600 1.02rem var(--f-display);color:var(--c)}
+.dpd .meta{color:var(--muted);font-size:.84rem}
+.d1{--c:var(--d1)}.d2{--c:var(--d2)}.d3{--c:var(--d3)}.d4{--c:var(--d4)}.d5{--c:var(--d5)}.d6{--c:var(--d6)}
+.gen{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;align-items:baseline;margin:4px 0}
+.gen .gl{font:600 .7rem/1.4 var(--f-display);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);white-space:nowrap}
+.gen .ge{font-family:var(--f-mono);font-size:.9rem;overflow-x:auto}
+.gen .ge b{color:var(--c);font-weight:600}
+.gen .old{color:var(--muted)}
+.gen .ex{font-family:var(--f-body);font-size:.86rem}
+@media (max-width:640px){.gen{grid-template-columns:minmax(0,1fr)}}
+.ext{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.ext div{border:1px solid var(--line);border-radius:6px;padding:8px 10px;font-size:.88rem}
+.ext b{display:block;font-family:var(--f-display);font-size:.98rem}
+.ext code{white-space:nowrap}
+@media (max-width:640px){.ext{grid-template-columns:minmax(0,1fr)}}
+
 /* roadmap */
 .tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
 .tile{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;display:grid;gap:2px}
@@ -178,19 +214,60 @@ footer p{max-width:96ch}
   <p class="intro">Every result on this page rests on four definitions. They were fixed before the papers were coded, and every paper was coded against them.</p>
 
   <div class="card">
-    <h3>The reference: SMOTE (Chawla et al., 2002)</h3>
-    <p>For a minority example <code>x</code>, pick a partner <code>x<sub>nn</sub></code> among its five nearest minority neighbours and place a new point at a random position on the segment between them:</p>
-    <div class="formula">x<sub>new</sub> = x + λ · (x<sub>nn</sub> − x),&nbsp;&nbsp;&nbsp;λ ~ U(0, 1)</div>
-    <p class="sub">Read as a procedure, the rule fixes six choices in the simplest way. We call them the six decision points; every method below is described by the ones it changes.</p>
+    <h3>The corpus: SMOTE25 core corpus</h3>
+    <p>The <b><span data-k="papers"></span> papers</b> analysed here are a <b>curated collection</b> the team assembled in a shared folder with four sub-folders (binary, multiclass, both, surveys), not the result of a systematic database search. The folder holds 100 files: 12 supplements and 88 paper files, 12 of them second copies of a paper filed under two settings. Merging the copies leaves <span data-k="papers"></span> distinct papers from 1972 to 2026, so <span data-k="papers"></span> is a count of what the collection contains, not a target.</p>
+    <div class="labels">
+      <div class="lab"><b>5</b>foundational works later methods build on or compare with (ENN, Tomek links, AdaBoost, Wang and Yao's multiclass analysis, CTGAN/TVAE)</div>
+      <div class="lab"><b>66</b>new methods for imbalanced classification (29 oversampling, 17 hybrid, 9 ensemble, 4 undersampling, 4 deep generative, 3 other)</div>
+      <div class="lab"><b>3</b>empirical studies of SMOTE or resampling</div>
+      <div class="lab"><b>2</b>surveys</div>
+    </div>
+    <p class="sub">Open for the team: who chose the papers and by which criteria.</p>
+    <p><b>The previous JAIR review was built the same way.</b> Fernández et al. (2018) report no databases, search terms, criteria or screening counts; they present the SMOTE-based approaches they judged most significant (p. 868), state that more than 85 extensions exist (p. 871), and list about 90 of them (2004 to 2017) in Table 1, characterised by seven properties: initial selection, integration with undersampling, type of interpolation, dimensionality change, adaptive generation, relabelling and filtering (pp. 869 to 871). Four of these map to our decision points; the pilot search below is what our survey adds.</p>
+    <h3 style="margin-top:6px">Systematic search: pilot on OpenAlex (29 October 2026)</h3>
+    <p>Final search string, on title, abstract and keywords: <code>(SMOTE OR oversampling OR "over-sampling" OR "synthetic minority" OR "adaptive synthetic" OR "synthetic samples" OR "synthetic instances") AND (imbalanced OR imbalance OR "minority class" OR "minority classes")</code>, 2002 to 2026.</p>
+    <div class="labels">
+      <div class="lab"><b>14,589</b>records found on OpenAlex</div>
+      <div class="lab"><b>36 of 37</b>SMOTE-family papers retrieved (LS missed)</div>
+      <div class="lab"><b>57 of 75</b>corpus papers retrieved; the 18 missed are mostly not oversampling papers</div>
+      <div class="lab"><b>17 of 37</b>SMOTE-family papers have an abstract in OpenAlex</div>
+    </div>
+    <p class="sub">Because OpenAlex lacks most journal abstracts, the search for the paper has to be run in Scopus or Web of Science, then screened by two reviewers against inclusion criteria I1 to I3 and exclusion criteria E1 to E4, and reported as a PRISMA 2020 flow (draft Section 3.2).</p>
+  </div>
+
+  <div class="card">
+    <h3>The reference: SMOTE (Chawla et al., 2002) and its six decision points</h3>
+    <p>For a minority seed <code>x<sub>i</sub></code>, pick a partner <code>x<sub>j</sub></code> among its five nearest minority neighbours and place a new point at a random position on the segment between them. Read as a procedure, the rule fixes six choices; each one changes a different part of the equation. <b>Select a decision point</b> to see which part.</p>
+    <div class="eqx">
+      <div class="dpbtns" role="group" aria-label="Decision points" id="dp-btns"></div>
+      <div class="tpl" aria-label="Generation template">
+        <span class="frame" data-dp="6"><span class="cm">(6) once before training, or at every step t of a learner</span>
+          <span class="ln">for seed <span class="sym d1" data-dp="1">x<sub>i</sub> ~ w</span> :</span>
+          <span class="box" data-dp="2"><span class="ln"><span class="sym d2" data-dp="2">repeat g<sub>i</sub> times</span> :</span>
+            <span class="ln in1">partner <span class="sym d3" data-dp="3">x<sub>j</sub> ~ q(· | x<sub>i</sub>)</span></span>
+            <span class="ln in1">x<sub>new</sub> = <span class="sym d1" data-dp="1">x<sub>i</sub></span> + <span class="sym d4" data-dp="4">λ</span> · (<span class="sym d3" data-dp="3">x<sub>j</sub></span> − <span class="sym d1" data-dp="1">x<sub>i</sub></span>),&nbsp; <span class="sym d4" data-dp="4">λ ~ r</span></span>
+          </span>
+          <span class="ln">training set ← <span class="sym d5" data-dp="5">F</span>(original ∪ synthetic)</span>
+        </span>
+      </div>
+      <div class="dpd" id="dp-detail" aria-live="polite"></div>
+    </div>
     <div class="scroll"><table class="dp">
-      <thead><tr><th scope="col">Decision point</th><th scope="col">What it decides</th><th scope="col">SMOTE (2002)</th><th scope="col" class="num">Methods changing it</th></tr></thead>
+      <thead><tr><th scope="col">Decision point</th><th scope="col">Symbol</th><th scope="col">What it decides</th><th scope="col">SMOTE (2002)</th><th scope="col" class="num">Methods changing it</th></tr></thead>
       <tbody id="dp-rows"></tbody>
     </table></div>
   </div>
 
   <div class="card">
     <h3>SMOTE-family</h3>
-    <p>A method is <b>SMOTE-family</b> when it creates synthetic minority examples by interpolating between a minority seed and a neighbour, as in the rule above, or by a rule that extends it: a different law for λ, a region built around the segment, extrapolation along the line, or a convex combination of several instances. The definition concerns the generator, not the method's name.</p>
+    <p>A method is <b>SMOTE-family</b> when it creates synthetic minority examples with SMOTE's equation, <code>x<sub>new</sub> = x<sub>i</sub> + λ(x<sub>j</sub> − x<sub>i</sub>)</code> with λ ~ U(0, 1), or with a rule that extends it in one of four ways. It may change any of the six decision points and still belong to the family. The definition concerns the generator, not the method's name.</p>
+    <div class="ext">
+      <div><b>A different law for λ</b><code>λ ≤ 0.5</code>, a shifted or Gaussian λ (Borderline-SMOTE2, Safe-Level-SMOTE, HDE, CISO)</div>
+      <div><b>A region around the segment</b>the point is drawn near the segment, not on it (G-SMOTE)</div>
+      <div><b>Extrapolation along the line</b><code>λ</code> outside [0, 1] (MKC-SMOTE, HDE)</div>
+      <div><b>More than two instances</b><code>x<sub>new</sub> = Σ α<sub>m</sub> x<sub>m</sub></code>, α<sub>m</sub> ≥ 0, Σ α<sub>m</sub> = 1 (GAMO, KNNOR)</div>
+    </div>
+    <p class="sub">Outside the family: sampling around one point without a partner (sphere, Mahalanobis contour, random direction) and drawing from a fitted or learned distribution.</p>
     <div class="labels">
       <div class="lab"><b>Core</b><span class="mono" data-k="core"></span><br>Interpolation is the main generator, alone or inside a hybrid, cleaning or ensemble procedure.</div>
       <div class="lab"><b>Partial</b><span class="mono" data-k="partial"></span><br>Interpolation is one of several generators (INOS, EMDO, GLOS).</div>
@@ -383,8 +460,37 @@ footer p{max-width:96ch}
   K.nRegion=DATA.region.length;K.nRegion18=cnt(DATA.region,function(r){return r.y>=2018;});
   document.querySelectorAll('[data-k]').forEach(function(el){var k=el.getAttribute('data-k');if(K[k]!=null) el.textContent=(['core','partial','notcounted','study'].indexOf(k)>=0&&el.classList.contains('mono'))?K[k]+' papers':K[k];});
 
-  // decision-point table
-  document.getElementById('dp-rows').innerHTML=STEPS.map(function(s,i){return '<tr><td><b>'+esc(s[0])+'</b></td><td>'+esc(s[1])+'</td><td>'+esc(s[2])+'</td><td class="num">'+K['s'+i]+'</td></tr>';}).join('');
+  // decision-point table and equation explorer
+  var SYM=['w: which xᵢ','gᵢ: how often','q: which xⱼ','r: λ or region','F','step 6: where it runs'];
+  var DPX=['Which minority points serve as seeds xᵢ and with what weight w. Border-focused rules pick points near the majority; safety-focused rules pick dense or safe points; some drop noise first.',
+    'How many synthetic points gᵢ each seed, cluster or class receives, instead of the same N/100 for every seed: by local difficulty, by cluster density, or up to a per-class target.',
+    'Which partner xⱼ is paired with the seed: the candidate pool (same cluster, borderline points, majority points), the distance used, or weights on the directions.',
+    'Where the new point lands: a different law r for λ, a region around the segment, extrapolation beyond the endpoints, or a combination of more than two instances.',
+    'What the filter F does to the enlarged training set: reject candidates, clean original and synthetic points, or move majority points out of the synthetic region.',
+    'Whether the whole box is run once before training, or again at every boosting round, bagging member, wrapper step or training step.'];
+  // generalised equation and corpus example for each decision point (as in Eq. 3 to 8 of the draft)
+  var GEN=[
+    ['x<sub>i</sub> ~ Uniform(S<sub>min</sub>)','x<sub>i</sub> ~ w(i) = <b>s(x<sub>i</sub>)</b> / &Sigma;<sub>k</sub> <b>s(x<sub>k</sub>)</b>, &nbsp;s &ge; 0','Borderline-SMOTE: s(x<sub>i</sub>) = 1 when k/2 &le; m<sub>i</sub> &lt; k majority neighbours, else 0'],
+    ['g<sub>i</sub> = N/100 for every seed','g<sub>i</sub> = G &middot; <b>r&#770;<sub>i</sub></b>, &nbsp;r&#770;<sub>i</sub> = r<sub>i</sub> / &Sigma;<sub>k</sub> r<sub>k</sub>','ADASYN: r<sub>i</sub> = m<sub>i</sub>/k, G = (|S<sub>maj</sub>| &minus; |S<sub>min</sub>|) &beta;'],
+    ['x<sub>j</sub> ~ Uniform(N<sub>5</sub>(x<sub>i</sub>)), Euclidean','x<sub>j</sub> ~ q(j | i) &prop; <b>&omega;<sub>ij</sub></b> &middot; 1[x<sub>j</sub> &isin; <b>P(x<sub>i</sub>)</b>] under a metric <b>d</b>','Cluster-SMOTE: P = same cluster; Borderline-SMOTE2: P holds the nearest majority point; FW-SMOTE: weighted d'],
+    ['&lambda; ~ U(0, 1), on the segment','&lambda; ~ <b>r(&lambda;)</b>, &nbsp;or x<sub>new</sub> &isin; <b>R(x<sub>i</sub>, x<sub>j</sub>)</b>, &nbsp;or x<sub>new</sub> = <b>&Sigma;<sub>m</sub> &alpha;<sub>m</sub> x<sub>m</sub></b>','Borderline-SMOTE2: &lambda; ~ U(0, 0.5); HDE: &lambda; ~ N(0, 1); G-SMOTE: R = truncated hypersphere; GAMO: learned &alpha;<sub>m</sub>'],
+    ["S&prime; = S &cup; S<sub>syn</sub>","S&prime; = (S &cup; {x &isin; S<sub>syn</sub> : <b>a(x)</b> = 1}) &setminus; <b>R</b>",'KNNOR: a(x) = 1 only if all k nearest neighbours are minority; SMOTE-ENN: R = examples misclassified by 3 nearest neighbours'],
+    ['h = A(D &cup; SMOTE(D)), once','for t = 1..T: D<sub>t</sub> = D &cup; SMOTE(D; <b>&#119967;<sub>t</sub></b>), h<sub>t</sub> = A(D<sub>t</sub>); &nbsp;H = argmax<sub>y</sub> &Sigma;<sub>t</sub> &alpha;<sub>t</sub> h<sub>t</sub>','SMOTEBoost: &#119967;<sub>t</sub> = boosting weights of round t; synthetic points discarded after each round']];
+  document.getElementById('dp-rows').innerHTML=STEPS.map(function(s,i){return '<tr class="d'+(i+1)+'"><td><b>'+esc(s[0])+'</b></td><td><code>'+esc(SYM[i])+'</code></td><td>'+esc(s[1])+'</td><td>'+esc(s[2])+'</td><td class="num">'+K['s'+i]+'</td></tr>';}).join('');
+  var btns=document.getElementById('dp-btns');
+  btns.innerHTML=STEPS.map(function(s,i){return '<button type="button" class="dpb d'+(i+1)+'" data-dp="'+(i+1)+'" aria-pressed="false"><span class="no">'+(i+1)+'</span>'+esc(s[0])+'</button>';}).join('');
+  var det=document.getElementById('dp-detail');
+  function pickDP(n){
+    btns.querySelectorAll('.dpb').forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-dp')===String(n)));});
+    document.querySelectorAll('.tpl [data-dp]').forEach(function(el){el.classList.toggle('on',el.getAttribute('data-dp')===String(n));});
+    var i=n-1, s=STEPS[i], ms=SF.filter(function(p){return p.s.indexOf(s[0])>=0;});
+    det.className='dpd d'+n;
+    det.innerHTML='<h4>'+n+'. '+esc(s[0])+' · changes <code>'+esc(SYM[i])+'</code></h4><p>'+esc(DPX[i])+'</p>'+
+      '<div class="gen"><span class="gl">SMOTE (2002)</span><span class="ge old">'+GEN[i][0]+'</span><span class="gl">Generalised (Eq. '+(n+2)+' of the draft)</span><span class="ge">'+GEN[i][1]+'</span><span class="gl">Example</span><span class="ge ex">'+GEN[i][2]+'</span></div>'+
+      '<p class="meta">SMOTE (2002): '+esc(s[2])+'. Changed by <b>'+ms.length+'</b> of '+SF.length+' SMOTE-family methods, first by '+esc(ms[0].n)+' ('+ms[0].y+'); also '+esc(ms.slice(1,5).map(function(p){return p.n;}).join(', '))+(ms.length>5?' and '+(ms.length-5)+' more':'')+'.</p>';
+  }
+  btns.addEventListener('click',function(ev){var b=ev.target.closest('.dpb');if(b) pickDP(+b.getAttribute('data-dp'));});
+  pickDP(1);
 
   // category bars
   document.getElementById('cat-bars').innerHTML=PER.map(function(r,i){var all=SF.filter(function(p){return inP(p,i);});

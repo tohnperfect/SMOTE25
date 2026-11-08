@@ -3,6 +3,8 @@
 วัสดุของ **Method section** (ส่วนที่ P รับผิดชอบ) ของ survey `25 Years of SMOTE`
 เน้น paper ที่เป็น **SMOTE-family** ตามนิยามใน `SMOTE25_Method_Map_1.html` (ระดับบนสุดของ repo)
 
+**สถานะล่าสุด บันทึกการทำงาน และสิ่งที่ต้องทำต่อ อยู่ใน [`handoff.md`](handoff.md)** (อัปเดต 8 พ.ย. 2026)
+
 โฟลเดอร์นี้ไม่ขึ้น Overleaf โดยตรง ร่าง LaTeX จะย้ายเข้า `sections/` เมื่อทีมตกลงตำแหน่งกันแล้ว
 
 ---

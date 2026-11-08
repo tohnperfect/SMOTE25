@@ -1,0 +1,706 @@
+{
+ "summary": {
+  "run": "2026-10-29",
+  "filters": [
+   "publication_year:2002-2026",
+   "type:article|preprint|book-chapter|review"
+  ],
+  "corpus_with_record": 75,
+  "sf_with_record": 37,
+  "strings": {
+   "S1 SMOTE named": {
+    "field": "title_and_abstract.search",
+    "query": "\"SMOTE\" OR \"synthetic minority oversampling\" OR \"synthetic minority over-sampling\"",
+    "records": 16109,
+    "recall_all": 24,
+    "recall_sf": 21,
+    "missed_sf": [
+     "A-SUWO",
+     "ADASYN",
+     "Cluster-SMOTE",
+     "DSRBF / SSRBF (Static-SMOTE)",
+     "EMDO",
+     "GAMO",
+     "GDHS",
+     "GLOS",
+     "HDE",
+     "INOS",
+     "LS",
+     "MC-MBRC",
+     "MWMOTE",
+     "NROMM",
+     "OREM / OREM-M",
+     "RAMOBoost"
+    ]
+   },
+   "S2 oversampling + imbalance": {
+    "field": "title_and_abstract.search",
+    "query": "(oversampling OR \"over-sampling\" OR \"synthetic minority\") AND (imbalanced OR imbalance OR \"minority class\")",
+    "records": 10853,
+    "recall_all": 52,
+    "recall_sf": 32,
+    "missed_sf": [
+     "AB-SMOTE",
+     "ADASYN",
+     "LS",
+     "RBBoost",
+     "SCUT"
+    ]
+   },
+   "S3 S2 in title only": {
+    "field": "title.search",
+    "query": "SMOTE OR oversampling OR \"over-sampling\" OR \"synthetic minority\"",
+    "records": 4519,
+    "recall_all": 39,
+    "recall_sf": 27,
+    "missed_sf": [
+     "ADASYN",
+     "CGMOS",
+     "Cluster-SMOTE",
+     "GDHS",
+     "HDE",
+     "LS",
+     "MC-MBRC",
+     "RBBoost",
+     "SMOTE-Tomek / SMOTE-ENN",
+     "SMOTEBoost"
+    ]
+   },
+   "S4 method focus": {
+    "field": "title_and_abstract.search",
+    "query": "(SMOTE OR oversampling OR \"over-sampling\" OR \"synthetic minority\") AND (imbalanced OR imbalance OR \"minority class\") AND (propose OR proposed OR novel OR \"new method\" OR algorithm)",
+    "records": 10407,
+    "recall_all": 48,
+    "recall_sf": 31,
+    "missed_sf": [
+     "AB-SMOTE",
+     "ADASYN",
+     "CISO",
+     "LS",
+     "RAMOBoost",
+     "Safe-Level-SMOTE"
+    ]
+   },
+   "S5 final (S1 or S2, wider)": {
+    "field": "title_and_abstract.search",
+    "query": "(SMOTE OR oversampling OR \"over-sampling\" OR \"synthetic minority\" OR \"adaptive synthetic\" OR \"synthetic samples\" OR \"synthetic instances\") AND (imbalanced OR imbalance OR \"minority class\" OR \"minority classes\")",
+    "records": 14589,
+    "recall_all": 57,
+    "recall_sf": 36,
+    "missed_sf": [
+     "LS"
+    ]
+   }
+  }
+ },
+ "corpus": [
+  {
+   "key": "ENN-1972",
+   "title": "Asymptotic Properties of Nearest Neighbor Rules Using Edited Data",
+   "year": 1972,
+   "oa": "W2107686700",
+   "sf": false,
+   "acronym": "ENN"
+  },
+  {
+   "key": "TomekLinks-1976",
+   "title": "Two Modifications of CNN",
+   "year": 1976,
+   "oa": "W1591261915",
+   "sf": false,
+   "acronym": "Tomek links"
+  },
+  {
+   "key": "AdaBoost-1997",
+   "title": "A Decision-Theoretic Generalization of On-Line Learning and an Application to Boosting",
+   "year": 1997,
+   "oa": "W1988790447",
+   "sf": false,
+   "acronym": "AdaBoost"
+  },
+  {
+   "key": "OSS-1997",
+   "title": "Addressing the Curse of Imbalanced Training Sets: One-Sided Selection",
+   "year": 1997,
+   "oa": "W85350352",
+   "sf": false,
+   "acronym": "OSS"
+  },
+  {
+   "key": "SHRINK-1998",
+   "title": "Machine Learning for the Detection of Oil Spills in Satellite Radar Images",
+   "year": 1998,
+   "oa": "W1588282782",
+   "sf": false,
+   "acronym": "SHRINK"
+  },
+  {
+   "key": "SMOTE-2002",
+   "title": "SMOTE: Synthetic Minority Over-sampling Technique",
+   "year": 2002,
+   "oa": "W2148143831",
+   "sf": true,
+   "acronym": "SMOTE"
+  },
+  {
+   "key": "SMOTEBoost-2003",
+   "title": "SMOTEBoost: Improving Prediction of the Minority Class in Boosting",
+   "year": 2003,
+   "oa": "W1563938718",
+   "sf": true,
+   "acronym": "SMOTEBoost"
+  },
+  {
+   "key": "SMOTE-ENN-Tomek-2004",
+   "title": "A Study of the Behavior of Several Methods for Balancing Machine Learning Training Data",
+   "year": 2004,
+   "oa": "W1993220166",
+   "sf": true,
+   "acronym": "SMOTE-Tomek / SMOTE-ENN"
+  },
+  {
+   "key": "Borderline-SMOTE-2005",
+   "title": "Borderline-SMOTE: A New Over-Sampling Method in Imbalanced Data Sets Learning",
+   "year": 2005,
+   "oa": "W2132791018",
+   "sf": true,
+   "acronym": "Borderline-SMOTE"
+  },
+  {
+   "key": "Cluster-SMOTE-2006",
+   "title": "Combating Imbalance in Network Intrusion Datasets",
+   "year": 2006,
+   "oa": "W2126996952",
+   "sf": true,
+   "acronym": "Cluster-SMOTE"
+  },
+  {
+   "key": "Global-CS-2006",
+   "title": "On Multi-Class Cost-Sensitive Learning",
+   "year": 2006,
+   "oa": null,
+   "sf": false,
+   "acronym": "Global-CS (RESCALEnew)"
+  },
+  {
+   "key": "COG-OS-2007",
+   "title": "Local Decomposition for Rare Class Analysis",
+   "year": 2007,
+   "oa": "W2151779862",
+   "sf": false,
+   "acronym": "COG-OS"
+  },
+  {
+   "key": "ADASYN-2008",
+   "title": "ADASYN: Adaptive Synthetic Sampling Approach for Imbalanced Learning",
+   "year": 2008,
+   "oa": "W2104933073",
+   "sf": true,
+   "acronym": "ADASYN"
+  },
+  {
+   "key": "LS-2008",
+   "title": "Start Globally, Optimize Locally, Predict Globally: Improving Performance on Imbalanced Data",
+   "year": 2008,
+   "oa": "W2117689108",
+   "sf": true,
+   "acronym": "LS"
+  },
+  {
+   "key": "SBC-2009",
+   "title": "Cluster-based under-sampling approaches for imbalanced data distributions",
+   "year": 2009,
+   "oa": "W2128965734",
+   "sf": false,
+   "acronym": "SBC (ClusterCentroids)"
+  },
+  {
+   "key": "EasyEnsemble-BalanceCascade-2009",
+   "title": "Exploratory Undersampling for Class-Imbalance Learning",
+   "year": 2009,
+   "oa": "W2104167780",
+   "sf": false,
+   "acronym": "EasyEnsemble/BalanceCascade"
+  },
+  {
+   "key": "Safe-Level-SMOTE-2009",
+   "title": "Safe-Level-SMOTE: Safe-Level-Synthetic Minority Over-Sampling TEchnique for Handling the Class Imbalanced Problem",
+   "year": 2009,
+   "oa": "W1496056137",
+   "sf": true,
+   "acronym": "Safe-Level-SMOTE"
+  },
+  {
+   "key": "Global-CS-2010",
+   "title": "On Multi-Class Cost-Sensitive Learning",
+   "year": 2010,
+   "oa": "W72187777",
+   "sf": false,
+   "acronym": "Global-CS (RESCALEnew)"
+  },
+  {
+   "key": "RAMOBoost-2010",
+   "title": "RAMOBoost: Ranked Minority Oversampling in Boosting",
+   "year": 2010,
+   "oa": "W2096235960",
+   "sf": true,
+   "acronym": "RAMOBoost"
+  },
+  {
+   "key": "RUSBoost-2010",
+   "title": "RUSBoost: A Hybrid Approach to Alleviating Class Imbalance",
+   "year": 2010,
+   "oa": "W2096945460",
+   "sf": false,
+   "acronym": "RUSBoost"
+  },
+  {
+   "key": "SPIDER2-2010",
+   "title": "Learning from Imbalanced Data in Presence of Noisy and Borderline Examples",
+   "year": 2010,
+   "oa": "W1592804209",
+   "sf": false,
+   "acronym": "SPIDER2"
+  },
+  {
+   "key": "DSRBF-2011",
+   "title": "A dynamic over-sampling procedure based on sensitivity for multi-class problems",
+   "year": 2011,
+   "oa": "W2124710650",
+   "sf": true,
+   "acronym": "DSRBF / SSRBF (Static-SMOTE)"
+  },
+  {
+   "key": "INOS-2013",
+   "title": "Integrated Oversampling for Imbalanced Time Series Classification",
+   "year": 2013,
+   "oa": "W2015681982",
+   "sf": true,
+   "acronym": "INOS"
+  },
+  {
+   "key": "OVO-SMOTE-2013",
+   "title": "Analysing the classification of imbalanced data-sets with multiple classes: Binarization techniques and ad-hoc approaches",
+   "year": 2013,
+   "oa": "W2164341120",
+   "sf": false,
+   "acronym": "OVO/OVA + SMOTE study"
+  },
+  {
+   "key": "MWMOTE-2014",
+   "title": "MWMOTE: Majority Weighted Minority Oversampling Technique for Imbalanced Data Set Learning",
+   "year": 2014,
+   "oa": "W2087240369",
+   "sf": true,
+   "acronym": "MWMOTE"
+  },
+  {
+   "key": "RACOG-2015",
+   "title": "RACOG and wRACOG: Two Probabilistic Oversampling Techniques",
+   "year": 2015,
+   "oa": "W2076272581",
+   "sf": false,
+   "acronym": "RACOG/wRACOG"
+  },
+  {
+   "key": "RBBoost-2015",
+   "title": "Random Balance: Ensembles of variable priors classifiers for imbalanced data",
+   "year": 2015,
+   "oa": "W769353746",
+   "sf": true,
+   "acronym": "RBBoost"
+  },
+  {
+   "key": "SCUT-2015",
+   "title": "SCUT: Multi-Class Imbalanced Data Classification using SMOTE and Cluster-based Undersampling",
+   "year": 2015,
+   "oa": "W2294246171",
+   "sf": true,
+   "acronym": "SCUT"
+  },
+  {
+   "key": "SMOTE-IPF-2015",
+   "title": "SMOTE-IPF: Addressing the noisy and borderline examples problem in imbalanced classification by a re-sampling method with filtering",
+   "year": 2015,
+   "oa": "W2107138773",
+   "sf": true,
+   "acronym": "SMOTE-IPF"
+  },
+  {
+   "key": "SplitBal-2015",
+   "title": "A novel ensemble method for classifying imbalanced data",
+   "year": 2015,
+   "oa": "W2091007025",
+   "sf": false,
+   "acronym": "SplitBal"
+  },
+  {
+   "key": "A-SUWO-2016",
+   "title": "Oversampling Methods for Imbalanced Dataset Classification and their Application to Gynecological Disorder Diagnosis (Ch. 3: Adaptive Semi-Unsupervised Weighted Oversampling (A-SUWO) for Imbalanced Datasets)",
+   "year": 2016,
+   "oa": "W2172165257",
+   "sf": true,
+   "acronym": "A-SUWO"
+  },
+  {
+   "key": "CGMOS-2016",
+   "title": "CGMOS: Certainty Guided Minority OverSampling",
+   "year": 2016,
+   "oa": "W2476542064",
+   "sf": true,
+   "acronym": "CGMOS"
+  },
+  {
+   "key": "MDO-2016",
+   "title": "To Combat Multi-Class Imbalanced Problems by Means of Over-Sampling Techniques",
+   "year": 2016,
+   "oa": "W2185967890",
+   "sf": false,
+   "acronym": "MDO"
+  },
+  {
+   "key": "SMOM-2017",
+   "title": "Synthetic minority oversampling technique for multiclass imbalance problems",
+   "year": 2017,
+   "oa": "W2736435690",
+   "sf": true,
+   "acronym": "SMOM"
+  },
+  {
+   "key": "AMDO-2018",
+   "title": "AMDO: an Over-Sampling Technique for Multi-Class Imbalanced Problems",
+   "year": 2018,
+   "oa": "W2763110968",
+   "sf": false,
+   "acronym": "AMDO"
+  },
+  {
+   "key": "OBU-2018",
+   "title": "Overlap-based undersampling for improving imbalanced data classification",
+   "year": 2018,
+   "oa": "W2900321945",
+   "sf": false,
+   "acronym": "OBU"
+  },
+  {
+   "key": "ROS-Buda-2018",
+   "title": "A systematic study of the class imbalance problem in convolutional neural networks",
+   "year": 2018,
+   "oa": "W2767106145",
+   "sf": false,
+   "acronym": "ROS/RUS in CNNs (Buda)"
+  },
+  {
+   "key": "KMeansSMOTE-2018",
+   "title": "Improving imbalanced learning through a heuristic oversampling method based on k-means and SMOTE",
+   "year": 2018,
+   "oa": "W2766296277",
+   "sf": true,
+   "acronym": "k-means SMOTE"
+  },
+  {
+   "key": "CTGAN-2019",
+   "title": "Modeling Tabular Data using Conditional GAN",
+   "year": 2019,
+   "oa": "W2954395498",
+   "sf": false,
+   "acronym": "CTGAN/TVAE"
+  },
+  {
+   "key": "G-SMOTE-2019",
+   "title": "Geometric SMOTE a geometrically enhanced drop-in replacement for SMOTE",
+   "year": 2019,
+   "oa": "W2948219206",
+   "sf": true,
+   "acronym": "G-SMOTE"
+  },
+  {
+   "key": "GAMO-2019",
+   "title": "Generative Adversarial Minority Oversampling",
+   "year": 2019,
+   "oa": "W2924282518",
+   "sf": true,
+   "acronym": "GAMO"
+  },
+  {
+   "key": "RBO-2019",
+   "title": "Radial-Based oversampling for noisy imbalanced data classification",
+   "year": 2019,
+   "oa": "W2914361121",
+   "sf": false,
+   "acronym": "RBO"
+  },
+  {
+   "key": "SOUP-2019",
+   "title": "Using information on class interrelations to improve classification of multiclass imbalanced data: A new resampling algorithm",
+   "year": 2019,
+   "oa": "W2998823736",
+   "sf": false,
+   "acronym": "SOUP"
+  },
+  {
+   "key": "AB-SMOTE-2020",
+   "title": "AB-SMOTE: An Affinitive Borderline SMOTE Approach for Imbalanced Data Binary Classification",
+   "year": 2020,
+   "oa": "W3015143107",
+   "sf": true,
+   "acronym": "AB-SMOTE"
+  },
+  {
+   "key": "DLexiBoost-2020",
+   "title": "Boosting with Lexicographic Programming: Addressing Class Imbalance without Cost Tuning",
+   "year": 2020,
+   "oa": "W2913816472",
+   "sf": false,
+   "acronym": "DLexiBoost"
+  },
+  {
+   "key": "MBS-2020",
+   "title": "Model-Based Synthetic Sampling for Imbalanced Data",
+   "year": 2020,
+   "oa": "W2922054794",
+   "sf": false,
+   "acronym": "MBS"
+  },
+  {
+   "key": "MC-CCR-2020",
+   "title": "Combined Cleaning and Resampling algorithm for multi-class imbalanced data with label noise",
+   "year": 2020,
+   "oa": "W3015358651",
+   "sf": false,
+   "acronym": "MC-CCR"
+  },
+  {
+   "key": "MC-RBO-2020",
+   "title": "Radial-Based Oversampling for Multiclass Imbalanced Data Classification",
+   "year": 2020,
+   "oa": "W2952448206",
+   "sf": false,
+   "acronym": "MC-RBO"
+  },
+  {
+   "key": "NBU-2020",
+   "title": "Neighbourhood-based undersampling approach for handling imbalanced and overlapped data",
+   "year": 2020,
+   "oa": "W2971749073",
+   "sf": false,
+   "acronym": "NBU"
+  },
+  {
+   "key": "SPE-2020",
+   "title": "Self-paced Ensemble for Highly Imbalanced Massive Data Classification",
+   "year": 2020,
+   "oa": "W3031232306",
+   "sf": false,
+   "acronym": "SPE"
+  },
+  {
+   "key": "EMDO-2021",
+   "title": "Evolutionary Mahalanobis Distance-Based Oversampling for Multi-Class Imbalanced Data Classification",
+   "year": 2021,
+   "oa": "W3204058295",
+   "sf": true,
+   "acronym": "EMDO"
+  },
+  {
+   "key": "HDE-2021",
+   "title": "A hybrid data-level ensemble to enable learning from highly imbalanced dataset",
+   "year": 2021,
+   "oa": "W3111875476",
+   "sf": true,
+   "acronym": "HDE"
+  },
+  {
+   "key": "RSMOTE-2021",
+   "title": "RSMOTE: A self-adaptive robust SMOTE for imbalanced problems with label noise",
+   "year": 2021,
+   "oa": "W3093212523",
+   "sf": true,
+   "acronym": "RSMOTE"
+  },
+  {
+   "key": "PradiptaReview-2021",
+   "title": "SMOTE for Handling Imbalanced Data Problem: A Review",
+   "year": 2021,
+   "oa": "W4200494353",
+   "sf": false,
+   "acronym": "SMOTE Review"
+  },
+  {
+   "key": "CBHSID-2022",
+   "title": "A Hybrid Sampling Approach for Imbalanced Binary and Multi-Class Data Using Clustering Analysis",
+   "year": 2022,
+   "oa": "W4313017257",
+   "sf": false,
+   "acronym": "CBHSID"
+  },
+  {
+   "key": "FW-SMOTE-2022",
+   "title": "FW-SMOTE: A feature-weighted oversampling approach for imbalanced classification",
+   "year": 2022,
+   "oa": "W4200472276",
+   "sf": true,
+   "acronym": "FW-SMOTE"
+  },
+  {
+   "key": "GDO-2022",
+   "title": "Gaussian Distribution Based Oversampling for Imbalanced Data Classification",
+   "year": 2022,
+   "oa": "W3015967287",
+   "sf": false,
+   "acronym": "GDO"
+  },
+  {
+   "key": "KNNOR-2022",
+   "title": "KNNOR: An oversampling technique for imbalanced datasets",
+   "year": 2022,
+   "oa": "W4200122681",
+   "sf": true,
+   "acronym": "KNNOR"
+  },
+  {
+   "key": "SHSampler-2022",
+   "title": "Combating Mutuality with Difficulty Factors in Multi-class Imbalanced Data: A Similarity-based Hybrid Sampling",
+   "year": 2022,
+   "oa": "W4319778623",
+   "sf": false,
+   "acronym": "SHSampler"
+  },
+  {
+   "key": "SOS-2022",
+   "title": "SOS: Score-based Oversampling for Tabular Data",
+   "year": 2022,
+   "oa": "W4290876805",
+   "sf": false,
+   "acronym": "SOS"
+  },
+  {
+   "key": "SVDDWSMOTE-2022",
+   "title": "SVDD-based weighted oversampling technique for imbalanced and overlapped dataset learning",
+   "year": 2022,
+   "oa": "W4200464085",
+   "sf": true,
+   "acronym": "SVDDWSMOTE"
+  },
+  {
+   "key": "StopOversampling-2022",
+   "title": "Stop Oversampling for Class Imbalance Learning: A Critical Review",
+   "year": 2022,
+   "oa": "W4226084339",
+   "sf": false,
+   "acronym": "Stop Oversampling"
+  },
+  {
+   "key": "GLOS-2023",
+   "title": "Global-local information based oversampling for multi-class imbalanced data",
+   "year": 2023,
+   "oa": "W4312106179",
+   "sf": true,
+   "acronym": "GLOS"
+  },
+  {
+   "key": "NROMM-2023",
+   "title": "Noise-robust oversampling for imbalanced data classification",
+   "year": 2023,
+   "oa": "W4296311910",
+   "sf": true,
+   "acronym": "NROMM"
+  },
+  {
+   "key": "OREM-2023",
+   "title": "Oversampling With Reliably Expanding Minority Class Regions for Imbalanced Data Learning",
+   "year": 2023,
+   "oa": "W4285140661",
+   "sf": true,
+   "acronym": "OREM / OREM-M"
+  },
+  {
+   "key": "GMMSampling-2024",
+   "title": "GMMSampling: a new model-based, data difficulty-driven resampling method for multi-class imbalanced data",
+   "year": 2024,
+   "oa": "W4388817724",
+   "sf": false,
+   "acronym": "GMMSampling"
+  },
+  {
+   "key": "MC-MBRC-2024",
+   "title": "A membership-based resampling and cleaning algorithm for multi-class imbalanced overlapping data",
+   "year": 2024,
+   "oa": "W4388599766",
+   "sf": true,
+   "acronym": "MC-MBRC"
+  },
+  {
+   "key": "MKC-SMOTE-2024",
+   "title": "MKC-SMOTE: A Novel Synthetic Oversampling Method for Multi-Class Imbalanced Data Classification",
+   "year": 2024,
+   "oa": "W4405718128",
+   "sf": true,
+   "acronym": "MKC-SMOTE"
+  },
+  {
+   "key": "CISO-2025",
+   "title": "Certified Interpolation Oversampling: Per-Instance Safety Guarantees for Imbalanced Learning",
+   "year": 2025,
+   "oa": "W4406883410",
+   "sf": true,
+   "acronym": "CISO"
+  },
+  {
+   "key": "GDHS-2025",
+   "title": "GDHS: An efficient hybrid sampling method for multi-class imbalanced data classification",
+   "year": 2025,
+   "oa": "W4408997830",
+   "sf": true,
+   "acronym": "GDHS"
+  },
+  {
+   "key": "GOIO-2025",
+   "title": "GOIO: Generative Oversampling Approach to Class Imbalance and Overlap of Tabular Data",
+   "year": 2025,
+   "oa": "W4414110570",
+   "sf": false,
+   "acronym": "GOIO"
+  },
+  {
+   "key": "MC-NCLWO-2025",
+   "title": "MC-NCLWO: Newton's Cooling Law-Based Oversampling Algorithm for Multi-Class Imbalanced Datasets With Feature Noise",
+   "year": 2025,
+   "oa": "W4413822180",
+   "sf": false,
+   "acronym": "MC-NCLWO"
+  },
+  {
+   "key": "MLOS-2025",
+   "title": "Synthetic oversampling with Mahalanobis distance and local information for highly imbalanced class-overlapped data",
+   "year": 2025,
+   "oa": "W4402738944",
+   "sf": false,
+   "acronym": "MLOS"
+  },
+  {
+   "key": "DGOT-2026",
+   "title": "Diffusion GAN-Based Oversampling for Imbalanced Tabular Data",
+   "year": 2026,
+   "oa": "W4416926020",
+   "sf": false,
+   "acronym": "DGOT"
+  },
+  {
+   "key": "Loyalty-SMOTE-2026",
+   "title": "Loyalty-SMOTE: Data synthesis algorithm for effective imbalanced data classification",
+   "year": 2026,
+   "oa": "W7127314557",
+   "sf": true,
+   "acronym": "Loyalty-SMOTE"
+  },
+  {
+   "key": "QC-SMOTE-2026",
+   "title": "QC-SMOTE: Quality-Controlled SMOTE for Imbalanced Classification",
+   "year": 2026,
+   "oa": "W7165798645",
+   "sf": true,
+   "acronym": "QC-SMOTE"
+  }
+ ]
+}
