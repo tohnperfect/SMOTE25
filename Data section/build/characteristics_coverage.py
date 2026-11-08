@@ -14,7 +14,7 @@ N, P = len(R), sorted({r["paper_key"] for r in R})
 miss = lambda v: (not (v or "").strip()) or v.strip().lower().startswith("not stated in paper") or v.strip().lower() in ("none", "null")
 def frac(a, b): return dict(n=a, of=b, pct=round(100 * a / b, 1))
 def papers_any(f): return len({r["paper_key"] for r in R if f(r)})
-out = dict(units="entries = named data entries (1,653); papers = papers with named entries (72)")
+out = dict(units=f"entries = named data entries ({N}); papers = papers with named entries ({len(P)})")
 # 1 size and class structure (verified fields)
 for f in ["n_instances", "n_features", "n_classes", "n_minority", "n_majority", "class_distribution"]:
     out[f] = dict(entries=frac(sum(not miss(r[f]) for r in R), N), papers_with_any=frac(papers_any(lambda r: not miss(r[f])), len(P)))

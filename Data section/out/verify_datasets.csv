@@ -163,6 +163,10 @@ COG-OS,SVMguide1,"Table 2, p.5 (printed 818); Table 3, p.6 (printed 819)",row ma
 COG-OS,kddcup99data,"Table 8, p.7 (printed 820)",row match on cited page,name:cited@7; n_features:cited@7; n_classes:cited@7; _row:row@7
 COG-OS,probe binary,"Table 8, p.7 (printed 820)",row match on cited page,name:cited@7; n_features:cited@7; n_classes:cited@7; _row:row@7
 COG-OS,r2l binary,"Table 8, p.7 (printed 820)",row match on cited page,name:cited@7; n_features:cited@7; n_classes:cited@7; _row:row@7
+COG-OS,synthetic scenario I,"Sec. 3, p.3 (printed 816); Fig. 3, p.4 (printed 817)","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+COG-OS,synthetic scenario II,"Sec. 3, p.3 (printed 816); Fig. 3, p.4 (printed 817)","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+COG-OS,synthetic scenario III,"Sec. 3, p.3 (printed 816); Fig. 3, p.4 (printed 817)","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+COG-OS,synthetic three-class set,"Sec. 2.2, p.3 (printed 816)","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
 CTGAN / TVAE,grid,"Supp. Table 1, supp p.1",name match on cited page (no numbers to check),name:cited@1
 CTGAN / TVAE,gridr,"Supp. Table 1, supp p.1",name match on cited page (no numbers to check),name:cited@1
 CTGAN / TVAE,ring,"Supp. Table 1, supp p.1",name match on cited page (no numbers to check),name:cited@1
@@ -481,6 +485,7 @@ GDO,sat,"Table 3, p.8 (printed 674)",row match on cited page,name:cited@8; n_ins
 GDO,waveform,"Table 3, p.8 (printed 674)",row match on cited page,name:cited@8; n_instances:cited@8; n_features:cited@8; ir_printed:cited@8; _row:row@8
 GDO,Internet video traffic data set,"Table 4 and Sec 4.2.3, p.8 (printed 674)",ok on cited page,name:cited@8; n_minority:cited@8; n_majority:cited@8
 GDO,Esophageal cancer patient data set,"Sec 4.2.3, p.8 (printed 674)",ok on cited page,name:cited@8; n_instances:cited@8; n_features:cited@8
+GDO,artificial data set (Fig. 4),"Fig. 4, p.6 (printed 672)","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
 GLOS,Balance,"Table 1, p.9 (printed 2079)",row match on cited page,name:cited@9; n_instances:cited@9; n_features:cited@9; n_classes:cited@9; ir_printed:cited@9; _row:row@9
 GLOS,Breast-tissue,"Table 1, p.9 (printed 2079)",row match on cited page,name:cited@9; n_instances:cited@9; n_features:cited@9; n_classes:cited@9; ir_printed:cited@9; _row:row@9
 GLOS,Cardiotocography,"Table 1, p.9 (printed 2079)",row match on cited page,name:cited@9; n_instances:cited@9; n_features:cited@9; n_classes:cited@9; ir_printed:cited@9; _row:row@9
@@ -668,6 +673,18 @@ LS,Satimage,"Table 2, p.7",row match on cited page,name:cited@7; n_instances:cit
 LS,Segment,"Table 2, p.7",row match on cited page,name:cited@7; n_instances:cited@7; n_features:cited@7; n_classes:cited@7; _row:row@7
 LS,Splice,"Table 2, p.7",row match on cited page,name:cited@7; n_instances:cited@7; n_features:cited@7; n_classes:cited@7; _row:row@7
 LS,SVMGuide1,"Table 2, p.7",row match on cited page,name:cited@7; n_instances:cited@7; n_features:cited@7; n_classes:cited@7; _row:row@7
+LS,radial rho High delta High,"Sec. 2, p.2; Fig. 2, p.3; Table 1, p.4","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+LS,radial rho High delta Medium,"Sec. 2, p.2; Fig. 2, p.3; Table 1, p.4","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+LS,radial rho High delta Low,"Sec. 2, p.2; Fig. 2, p.3; Table 1, p.4","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+LS,radial rho Medium delta High,"Sec. 2, p.2; Fig. 2, p.3; Table 1, p.4","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+LS,radial rho Medium delta Medium,"Sec. 2, p.2; Fig. 2, p.3; Table 1, p.4","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+LS,radial rho Medium delta Low,"Sec. 2, p.2; Fig. 2, p.3; Table 1, p.4","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+LS,radial rho Low delta High,"Sec. 2, p.2; Fig. 2, p.3; Table 1, p.4","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+LS,radial rho Low delta Medium,"Sec. 2, p.2; Fig. 2, p.3; Table 1, p.4","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+LS,radial rho Low delta Low,"Sec. 2, p.2; Fig. 2, p.3; Table 1, p.4","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+LS,LS example left,"p.3; Fig. 3, p.4","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+LS,LS example middle,"p.3; Fig. 3, p.4","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+LS,LS example combined,"p.3; Fig. 3, p.4","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
 Loyalty-SMOTE,adult,"Table 2, p.8",row match on cited page,name:cited@8; n_instances:cited@8; n_features:cited@8; ir_printed:cited@8; _row:row@8
 Loyalty-SMOTE,ai4i2020,"Table 2, p.8",row match on cited page,name:cited@8; n_instances:cited@8; n_features:cited@8; ir_printed:cited@8; _row:row@8
 Loyalty-SMOTE,banknote,"Table 2, p.8",row match on cited page,name:cited@8; n_instances:cited@8; n_features:cited@8; ir_printed:cited@8; _row:row@8
@@ -780,6 +797,66 @@ MC-MBRC,winequality-red,"Table 2, p.7",row match on cited page,name:cited@7; n_i
 MC-MBRC,winequality-white,"Table 2, p.7",row match on cited page,name:cited@7; n_instances:cited@7; n_features:cited@7; n_classes:cited@7; ir_printed:cited@7; _row:row@7
 MC-MBRC,yeast,"Table 2, p.7",row match on cited page,name:cited@7; n_instances:cited@7; n_features:cited@7; n_classes:cited@7; ir_printed:cited@7; _row:row@7
 MC-MBRC,zoo,"Table 2, p.7",row match on cited page,name:cited@7; n_instances:cited@7; n_features:cited@7; n_classes:cited@7; ir_printed:cited@7; _row:row@7
+MC-MBRC,MC-MBRC sim IR3 overlap 0,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR3 overlap 10,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR3 overlap 20,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR3 overlap 30,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR3 overlap 40,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR3 overlap 50,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR3 overlap 60,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR3 overlap 70,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR3 overlap 80,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR3 overlap 90,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR12 overlap 0,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR12 overlap 10,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR12 overlap 20,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR12 overlap 30,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR12 overlap 40,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR12 overlap 50,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR12 overlap 60,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR12 overlap 70,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR12 overlap 80,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR12 overlap 90,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR30 overlap 0,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR30 overlap 10,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR30 overlap 20,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR30 overlap 30,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR30 overlap 40,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR30 overlap 50,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR30 overlap 60,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR30 overlap 70,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR30 overlap 80,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR30 overlap 90,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR60 overlap 0,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR60 overlap 10,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR60 overlap 20,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR60 overlap 30,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR60 overlap 40,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR60 overlap 50,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR60 overlap 60,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR60 overlap 70,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR60 overlap 80,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR60 overlap 90,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR120 overlap 0,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR120 overlap 10,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR120 overlap 20,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR120 overlap 30,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR120 overlap 40,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR120 overlap 50,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR120 overlap 60,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR120 overlap 70,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR120 overlap 80,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR120 overlap 90,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR200 overlap 0,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR200 overlap 10,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR200 overlap 20,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR200 overlap 30,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR200 overlap 40,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR200 overlap 50,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR200 overlap 60,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR200 overlap 70,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR200 overlap 80,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+MC-MBRC,MC-MBRC sim IR200 overlap 90,"Sec. 5.2, p.10; Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
 MC-NCLWO,vehicle,"Table 1, p.10 (printed p.152629)",partly missing,name:missing; n_instances:missing; n_features:elsewhere@3; n_classes:elsewhere@1; ir_printed:missing
 MC-NCLWO,penbased,"Table 1, p.10 (printed p.152629)",partly missing,name:cited@11; n_instances:missing; n_features:elsewhere@2; n_classes:cited@10; ir_printed:missing
 MC-NCLWO,wine,"Table 1, p.10 (printed p.152629)",partly missing,name:elsewhere@2; n_instances:elsewhere@17; n_features:cited@10; n_classes:elsewhere@1; ir_printed:missing
@@ -843,6 +920,7 @@ MDO,winequality-red,"Table 1, p.9 (printed p.246)",row match on cited page,name:
 MDO,Abalone,"Table 1, p.9 (printed p.246)",row match on cited page,name:cited@9; n_instances:cited@9; n_features:cited@9; n_classes:cited@9; ir_printed:cited@9; _row:row@9
 MDO,winequality-white,"Table 1, p.9 (printed p.246)",row match on cited page,name:cited@9; n_instances:cited@9; n_features:cited@9; n_classes:cited@9; ir_printed:cited@9; _row:row@9
 MDO,Letter,"Table 1, p.9 (printed p.246)",row match on cited page,name:cited@9; n_instances:cited@9; n_features:cited@9; n_classes:cited@9; ir_printed:cited@9; _row:row@9
+MDO,five-class artificial set,"p.11 (printed 248); Fig. 4, p.7 (printed 244); Fig. 5, p.12 (printed 249)","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
 MKC-SMOTE,Contraceptive Method Choice,"Table 1, p.5 (printed 196933)",partly missing,name:missing; n_instances:missing; n_features:cited@4; n_classes:cited@4; ir_printed:cited@5
 MKC-SMOTE,User Knowledge Modeling,"Table 1, p.5 (printed 196933)",partly missing,name:missing; n_instances:missing; n_features:cited@4; n_classes:cited@4; ir_printed:missing
 MKC-SMOTE,New-thyroid,"Table 1, p.5 (printed 196933)",partly missing,name:missing; n_instances:missing; n_features:cited@4; n_classes:cited@4; ir_printed:missing
@@ -880,6 +958,7 @@ MLOS,winequalityred3vs5,"Table 1, p.9 (abbr win35; R-value 0.9855 also printed)"
 MLOS,winequality,"Table 1, p.9 (abbr win; R-value 0.9193 also printed)",row match on cited page,name:cited@9; n_instances:cited@9; n_features:cited@9; n_classes:cited@9; n_minority:cited@9; n_majority:cited@9; ir_printed:cited@9; _row:row@9
 MLOS,xalan-2.7,"Table 1, p.9 (abbr xal; R-value 0.4491 also printed)",row match on cited page,name:cited@9; n_instances:cited@9; n_features:cited@9; n_classes:cited@9; n_minority:cited@9; n_majority:cited@9; ir_printed:cited@9; _row:row@9
 MLOS,yeast6,"Table 1, p.9 (abbr yea; R-value 0.5023 also printed)",row match on cited page,name:cited@9; n_instances:cited@9; n_features:cited@9; n_classes:cited@9; n_minority:cited@9; n_majority:cited@9; ir_printed:cited@9; _row:row@9
+MLOS,synthetic illustration set,"Fig. 5, p.8","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
 MWMOTE,Pageblocks,"Table 5, p.12 (printed p.416)",partly missing,name:missing; n_instances:missing; n_features:cited@12; n_minority:missing; n_majority:missing; ir_printed:missing
 MWMOTE,Abalone,"Table 5, p.12 (printed p.416)",partly missing,name:missing; n_instances:missing; n_features:elsewhere@1; n_minority:cited@11; n_majority:missing; ir_printed:missing
 MWMOTE,CTG,"Table 5, p.12 (printed p.416)",partly missing,name:elsewhere@20; n_instances:missing; n_features:elsewhere@2; n_minority:missing; n_majority:elsewhere@21; ir_printed:missing
@@ -959,6 +1038,14 @@ NROMM,D7 Ecoli-3-5 vs 0-6-7,"Table 1, supp p.11",row match on cited page,name:ci
 NROMM,D8 Ecoli-3-5 vs 0-2-6-7,"Table 1, supp p.11",row match on cited page,name:cited@11; n_instances:cited@11; n_classes:cited@11; n_minority:cited@11; n_majority:cited@11; ir_printed:cited@11; _row:row@11
 NROMM,D9 Ecoli4,"Table 1, supp p.11",row match on cited page,name:cited@11; n_instances:cited@11; n_classes:cited@11; n_minority:cited@11; n_majority:cited@11; ir_printed:cited@11; _row:row@11
 NROMM,D10 Page-blocks-4 vs 1-3,"Table 1, supp p.11",row match on cited page,name:cited@11; n_instances:cited@11; n_classes:cited@11; n_minority:cited@11; n_majority:cited@11; ir_printed:cited@11; _row:row@11
+NROMM,simulated dataset A,"Supplement Sec. 8, p.16; Table 5, p.16","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+NROMM,simulated dataset A 1D,"Supplement Sec. 8, p.16; Table 5, p.16","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+NROMM,simulated dataset B,"Supplement Sec. 8, p.16; Table 5, p.16","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+NROMM,simulated dataset B 1D,"Supplement Sec. 8, p.16; Table 5, p.16","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+NROMM,simulated dataset C,"Supplement Sec. 8, p.16; Table 5, p.16","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+NROMM,simulated dataset C 1D,"Supplement Sec. 8, p.16; Table 5, p.16","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+NROMM,simulated dataset D,"Supplement Sec. 8, p.16; Table 5, p.16","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+NROMM,simulated dataset D 1D,"Supplement Sec. 8, p.16; Table 5, p.16","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
 OBU,Abalone09-18,"Table 1, p.7 (printed p.6)",row match on cited page,name:cited@7; n_instances:cited@7; n_features:cited@7; n_classes:cited@7; ir_printed:cited@7; _row:row@7
 OBU,Ecoli1,"Table 1, p.7 (printed p.6)",row match on cited page,name:cited@7; n_instances:cited@7; n_features:cited@7; n_classes:cited@7; ir_printed:cited@7; _row:row@7
 OBU,Ecoli2,"Table 1, p.7 (printed p.6)",row match on cited page,name:cited@7; n_instances:cited@7; n_features:cited@7; n_classes:cited@7; ir_printed:cited@7; _row:row@7
@@ -1016,6 +1103,7 @@ OREM-M,Stock10,"Table 6, p.11 (printed 6177)",row match on cited page,name:cited
 OREM-M,Plates faults,"Table 6, p.11 (printed 6177)",row match on cited page,name:cited@11; n_features:cited@11; n_classes:cited@11; ir_printed:cited@11; _row:row@11
 OREM-M,Abalone,"Table 6, p.11 (printed 6177)",row match on cited page,name:cited@11; n_features:cited@11; n_classes:cited@11; ir_printed:cited@11; _row:row@11
 OREM-M,Housing10,"Table 6, p.11 (printed 6177)",row match on cited page,name:cited@11; n_features:cited@11; n_classes:cited@11; ir_printed:cited@11; _row:row@11
+OREM-M,simulated set (Fig. S2),"Supplement S5, p.11; Fig. S2","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
 OSS,oil1,"Table 3, p.5",partly missing,name:missing; n_features:missing; n_classes:cited@5; n_minority:missing; n_majority:missing
 OSS,oil2,"Table 3, p.5",partly missing,name:missing; n_features:missing; n_classes:cited@5; n_minority:missing; n_majority:missing
 OSS,kr,"Table 3, p.5",partly missing,name:missing; n_features:elsewhere@2; n_classes:cited@5; n_minority:missing; n_majority:missing
@@ -1192,6 +1280,7 @@ RBBoost / Random Balance,yeast3,"Table 3, p.8 (printed p.103)",row match on cite
 RBBoost / Random Balance,yeast4,"Table 3, p.8 (printed p.103)",row match on cited page,name:cited@8; n_instances:cited@8; n_classes:cited@8; ir_printed:cited@8; _row:row@8
 RBBoost / Random Balance,yeast5,"Table 3, p.8 (printed p.103)",row match on cited page,name:cited@8; n_instances:cited@8; n_classes:cited@8; ir_printed:cited@8; _row:row@8
 RBBoost / Random Balance,yeast6,"Table 3, p.8 (printed p.103)",row match on cited page,name:cited@8; n_instances:cited@8; n_classes:cited@8; ir_printed:cited@8; _row:row@8
+RBBoost / Random Balance,two Gaussian classes,"Sec. 5, p.5","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
 RBO,pima,"Table 1, p.6 (printed p.24)",row match on cited page,name:cited@6; n_instances:cited@6; n_features:cited@6; n_classes:cited@6; ir_printed:cited@6; _row:row@6
 RBO,yeast1,"Table 1, p.6 (printed p.24)",row match on cited page,name:cited@6; n_instances:cited@6; n_features:cited@6; n_classes:cited@6; ir_printed:cited@6; _row:row@6
 RBO,haberman,"Table 1, p.6 (printed p.24)",row match on cited page,name:cited@6; n_instances:cited@6; n_features:cited@6; n_classes:cited@6; ir_printed:cited@6; _row:row@6
@@ -1264,6 +1353,10 @@ RSMOTE,svmguide2,"Table 7, p.20 (printed 416); results Table 8, p.21",row match 
 RSMOTE,userknowledge,"Table 7, p.20 (printed 416); results Table 8, p.21",row match on cited page,name:cited@20; n_instances:cited@20; n_features:cited@20; n_classes:cited@20; _row:row@20
 RSMOTE,vertebralColumn,"Table 7, p.20 (printed 416); results Table 8, p.21",row match on cited page,name:cited@20; n_instances:cited@20; n_features:cited@20; n_classes:cited@20; _row:row@20
 RSMOTE,Healthy_Older_People2,"Table 7, p.20 (printed 416); results Table 8, p.21",row match on cited page,name:cited@20; n_instances:cited@20; n_features:cited@20; n_classes:cited@20; _row:row@20
+RSMOTE,toy data set,"Sec. 4.3.1, p.10; Figs. 2-5","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+RSMOTE,moons,"Sec. 4.3.1, p.10; Figs. 2-5","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+RSMOTE,circles,"Sec. 4.3.1, p.10; Figs. 2-5","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
+RSMOTE,fourclass (outlier added),"Sec. 4.3.1, p.10; Figs. 2-5","ok (evidence quote, add_synthetic_entries.py)",quote asserted on the cited page; values are the printed ones
 RUSBoost,SP3,"Table I, p.5 (printed 189)",partly missing,name:cited@5; n_instances:missing; n_features:cited@5; n_classes:cited@5; n_minority:missing
 RUSBoost,MAMMOGRAPHY,"Table I, p.5 (printed 189)",partly missing,name:cited@5; n_instances:missing; n_features:cited@5; n_classes:cited@5; n_minority:missing
 RUSBoost,SOLARFLAREF,"Table I, p.5 (printed 189)",partly missing,name:missing; n_instances:missing; n_features:elsewhere@3; n_classes:cited@5; n_minority:elsewhere@11

@@ -8,12 +8,12 @@ Task & Role & Profile & IR band & $N$ & $N_{\min}$ & $d$ & IR & Noise & Entries\
 \midrule
 \raggedright\texttt{australian} & low & none & $\leq$1.5 & 690 & 307 & 14 & 1.2 & 0.29 & 1\\
 \raggedright\texttt{bupa} & core+high & none & $\leq$1.5 & 345 & 145 & 6 & 1.4 & 0.79 & 6\\
-\raggedright\texttt{iris0} & low & none & 1.5--3 & 150 & 50 & 4 & 2.0 & 0.02 & 2\\
+\raggedright\texttt{fourclass} & low & none & 1.5--3 & 862 & 307 & 2 & 1.8 & 0.00 & 2\\
 \raggedright\texttt{pima} & core & none & 1.5--3 & 768 & 268 & 8 & 1.9 & 0.65 & 24\\
 \raggedright\texttt{haberman} & high & none & 1.5--3 & 306 & 81 & 3 & 2.8 & 0.84 & 22\\
 \raggedright\texttt{segment0} & low & none & 3--9 & 2,308 & 329 & 19 & 6.0 & 0.02 & 7\\
 \raggedright\texttt{yeast3} & core & none & 3--9 & 1,484 & 163 & 8 & 8.1 & 0.40 & 13\\
-\raggedright\texttt{contraceptive [minority: 2]} & high & none & 3--9 & 1,473 & 333 & 9 & 3.4 & 0.79 & 1\\
+\raggedright\texttt{contraceptive [minority: 2]} & high & none & 3--9 & 1,473 & 333 & 9 & 3.4 & 0.79 & 2\\
 \raggedright\texttt{kr-\allowbreak{}vs-\allowbreak{}k-\allowbreak{}one\_\allowbreak{}vs\_\allowbreak{}fifteen} & low & none & $>$9 & 2,244 & 78 & 6 & 27.8 & 0.00 & 1\\
 \raggedright\texttt{shuttle-\allowbreak{}c0-\allowbreak{}vs-\allowbreak{}c4} & core & none & $>$9 & 1,829 & 123 & 9 & 13.9 & 0.01 & 7\\
 \raggedright\texttt{yeast-\allowbreak{}0-\allowbreak{}2-\allowbreak{}5-\allowbreak{}6\_\allowbreak{}vs\_\allowbreak{}3-\allowbreak{}7-\allowbreak{}8-\allowbreak{}9} & high & none & $>$9 & 1,004 & 99 & 8 & 9.1 & 0.57 & 4\\
@@ -28,17 +28,27 @@ Task & Role & Profile & IR band & $N$ & $N_{\min}$ & $d$ & IR & Noise & Entries\
 \raggedright\texttt{dermatology-\allowbreak{}6} & low & S & $>$9 & 358 & 20 & 34 & 16.9 & 0.00 & 2\\
 \raggedright\texttt{yeast5} & core & S & $>$9 & 1,484 & 44 & 8 & 32.7 & 0.66 & 13\\
 \raggedright\texttt{cleveland-\allowbreak{}0\_\allowbreak{}vs\_\allowbreak{}4} & high & S & $>$9 & 177 & 13 & 13 & 12.6 & 1.00 & 4\\
+\raggedright\texttt{shoppers} & low & O & 3--9 & 12,330 & 1,908 & 17 & 5.5 & 0.62 & 3\\
+\raggedright\texttt{default} & core & O & 3--9 & 30,000 & 6,636 & 23 & 3.5 & 0.68 & 3\\
+\raggedright\texttt{pima2} & high & O & 3--9 & 634 & 134 & 8 & 3.7 & 0.80 & 1\\
 \raggedright\texttt{mammography} & core+low & O & $>$9 & 11,183 & 260 & 6 & 42.0 & 0.54 & 5\\
 \raggedright\texttt{balance [minority: B]} & high & O & $>$9 & 625 & 49 & 4 & 11.8 & 0.88 & 2\\
+\raggedright\texttt{heart6} & low & S+O & 3--9 & 170 & 20 & 13 & 7.5 & 0.65 & 1\\
+\raggedright\texttt{breast\_\allowbreak{}tissue4} & core+high & S+O & 3--9 & 79 & 9 & 9 & 7.8 & 0.89 & 1\\
 \raggedright\texttt{ecoli-\allowbreak{}0-\allowbreak{}1-\allowbreak{}3-\allowbreak{}7\_\allowbreak{}vs\_\allowbreak{}2-\allowbreak{}6} & low & S+O & $>$9 & 281 & 7 & 7 & 39.1 & 0.29 & 7\\
 \raggedright\texttt{yeast4} & core & S+O & $>$9 & 1,484 & 51 & 8 & 28.1 & 0.86 & 15\\
-\raggedright\texttt{ivy-\allowbreak{}1.4} & high & S+O & $>$9 & 241 & 16 & 20 & 14.1 & 1.00 & 1\\
-\raggedright\texttt{breast.cancer} & core+low+high & D+S & 1.5--3 & 277 & 81 & 9 & 2.4 & 0.57 & 2\\
+\raggedright\texttt{ijcnn1} & high & S+O & $>$9 & 4,858 & 5 & 22 & 970.6 & 1.00 & 1\\
+\raggedright\texttt{haberman2} & core+low+high & D+O & 3--9 & 265 & 40 & 3 & 5.6 & 0.70 & 2\\
+\raggedright\texttt{promotion} & core+low+high & D+O & $>$9 & 23,815 & 1,634 & 4 & 13.6 & 0.77 & 1\\
+\raggedright\texttt{breast.cancer} & core+low+high & D+S & 1.5--3 & 277 & 81 & 9 & 2.4 & 0.57 & 3\\
+\raggedright\texttt{iris4} & core+low+high & D+S & 3--9 & 112 & 12 & 4 & 8.3 & 0.75 & 1\\
+\raggedright\texttt{iris6} & core+low+high & D+S & $>$9 & 108 & 8 & 4 & 12.5 & 0.50 & 1\\
 \raggedright\texttt{heart-\allowbreak{}disease-\allowbreak{}processed-\allowbreak{}cleveland [minority: 4]} & low & D+S+O & 3--9 & 303 & 35 & 13 & 7.7 & 0.71 & 1\\
-\raggedright\texttt{fertility-\allowbreak{}diagnosis} & core+high & D+S+O & 3--9 & 100 & 12 & 9 & 7.3 & 0.75 & 1\\
-\raggedright\texttt{yeast-\allowbreak{}1-\allowbreak{}4-\allowbreak{}5-\allowbreak{}8\_\allowbreak{}vs\_\allowbreak{}7} & low & D+S+O & $>$9 & 693 & 30 & 8 & 22.1 & 0.60 & 7\\
-\raggedright\texttt{glass2} & core & D+S+O & $>$9 & 214 & 17 & 9 & 11.6 & 0.65 & 9\\
-\raggedright\texttt{winequality-\allowbreak{}red-\allowbreak{}8\_\allowbreak{}vs\_\allowbreak{}6-\allowbreak{}7} & high & D+S+O & $>$9 & 855 & 18 & 11 & 46.5 & 0.78 & 1\\
+\raggedright\texttt{fertility-\allowbreak{}diagnosis} & core & D+S+O & 3--9 & 100 & 12 & 9 & 7.3 & 0.75 & 1\\
+\raggedright\texttt{liver\_\allowbreak{}disorders6} & high & D+S+O & 3--9 & 224 & 24 & 6 & 8.3 & 0.79 & 1\\
+\raggedright\texttt{flare [minority: 5]} & low & D+S+O & $>$9 & 1,389 & 51 & 12 & 26.2 & 0.59 & 1\\
+\raggedright\texttt{glass2 (KEEL(keel\_\allowbreak{}ds), N=214)} & core & D+S+O & $>$9 & 214 & 17 & 9 & 11.6 & 0.65 & 9\\
+\raggedright\texttt{pima6} & high & D+S+O & $>$9 & 544 & 44 & 8 & 11.4 & 0.80 & 1\\
 \bottomrule
 \end{tabular}
 \end{table}

@@ -836,6 +836,22 @@
    "how_obtained_detail": "clinical text collected by authors, 750-dim vector after NLP; goal is to pick out patients whose cancer cells have transferred; results only in Fig. 10 histograms",
    "in_results_table": "no",
    "ref": "Sec 4.2.3, p.8 (printed 674)"
+  },
+  {
+   "name": "artificial data set (Fig. 4)",
+   "group": "synthetic: illustration (Fig. 4-5)",
+   "source_repo": "synthetic",
+   "n_instances": null,
+   "n_features": null,
+   "n_classes": 2,
+   "n_minority": 33,
+   "n_majority": 200,
+   "class_distribution": null,
+   "ir_printed": null,
+   "how_obtained": "synthetic",
+   "how_obtained_detail": "artificial imbalanced binary set; 200 majority and 33 minority instances (p.6); generator and dimension not stated (plotted in 2-D); no data location given",
+   "in_results_table": "no",
+   "ref": "Fig. 4, p.6 (printed 672)"
   }
  ],
  "ir_definition": "IR = n_maj / n_min (Eq. 25): ratio between the number of majority and minority class instances",

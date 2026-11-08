@@ -1,33 +1,33 @@
 {
-  "n_all": 456,
-  "n_binary_binarised": 151,
-  "n_ovr": 305,
+  "n_all": 566,
+  "n_binary_binarised": 227,
+  "n_ovr": 339,
   "quantiles": {
-    "all tasks (n=456)": {
-      "0.25": 0.095,
-      "0.5": 0.333,
-      "0.75": 0.679
+    "all tasks (n=566)": {
+      "0.25": 0.121,
+      "0.5": 0.399,
+      "0.75": 0.696
     },
-    "binary + binarised (n=151)": {
-      "0.25": 0.25,
-      "0.5": 0.443,
-      "0.75": 0.744
+    "binary + binarised (n=227)": {
+      "0.25": 0.295,
+      "0.5": 0.568,
+      "0.75": 0.767
     }
   },
   "spearman_IR_noise": {
-    "all": 0.108,
-    "binary": 0.178
+    "all": 0.174,
+    "binary": 0.256
   },
   "outlier_heavy": {
-    "all": 78,
-    "binary": 38
+    "all": 124,
+    "binary": 81
   },
   "noise_eq_0": {
-    "all": 19,
+    "all": 24,
     "binary": 8
   },
   "binary_borderline_vs_outlier_median": {
-    "borderline": 0.275,
-    "outlier": 0.111
+    "borderline": 0.318,
+    "outlier": 0.14
   }
 }

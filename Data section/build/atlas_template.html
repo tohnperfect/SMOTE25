@@ -2336,20 +2336,21 @@ makeLand("ln", $("#p-ln"));
 (function(){
   const V = D.mz && D.mz.verify; if (!V) return;
   const f = n => (+n).toLocaleString(), tipA = s => `data-tip="${esc(s)}"`;
-  const SRCL = {"KEEL-std(F)":"KEEL standard (GitHub: Fuminides/keel_datasets)","KEEL(keel_ds)":"KEEL (keel-ds, PyPI)","UCI++":"UCI++ (lpfgarcia/ucipp)",
+  const SRCL = {"UCI-official":"UCI (ดาวน์โหลดจาก archive.ics.uci.edu)","LibSVM":"LIBSVM (csie.ntu.edu.tw)","author-HDE":"repo ผู้เขียน HDE","author-DGOT":"repo ผู้เขียน DGOT",
+    "author-SOS":"repo ผู้เขียน SOS","author-MBS":"repo ผู้เขียน MBS","author-kmeans":"release ผู้เขียน k-means SMOTE","KEEL-std(F)":"KEEL standard (GitHub: Fuminides/keel_datasets)","KEEL(keel_ds)":"KEEL (keel-ds, PyPI)","UCI++":"UCI++ (lpfgarcia/ucipp)",
     "jbrownlee-UCI":"UCI CSV (jbrownlee/Datasets)","PROMISE-ck":"tera-PROMISE CK (klainfo/DefectData)","Weka-UCI":"UCI ARFF ของ Weka","PMLB":"PMLB"};
-  const BL = k => k.startsWith("imbalanced-learn") ? "task ของ imbalanced-learn" : ({"exact name":"ชื่อตรง","alias":"ชื่อเรียกอื่นของ dataset เดียวกัน","KEEL split name cut at _vs_":"ชื่อ split ของ KEEL ที่ถูกตัดที่ _vs_"}[k] || k);
+  const BL = k => k.startsWith("imbalanced-learn") ? "task ของ imbalanced-learn" : ({"exact name":"ชื่อตรง","alias":"ชื่อเรียกอื่นของ dataset เดียวกัน","KEEL split name cut at _vs_":"ชื่อ split ของ KEEL ที่ถูกตัดที่ _vs_","modified file published by the paper's authors under the same name":"ผู้เขียนเผยแพร่ไฟล์ที่ดัดแปลงเองในชื่อเดียวกัน (V-author_release)"}[k] || k);
   const bars = (obj, lab, cls) => { const e = Object.entries(obj).sort((a,b)=>b[1]-a[1]), mx = Math.max(...e.map(x=>x[1]));
     return `<div class="hb wide">${e.map(([k,n]) => `<div class="hrow ${cls||"k-up"}" ${tipA(lab(k)+": "+n)}><span class="lab"><i class="sw"></i>${esc(lab(k))}</span><span class="trk"><span class="fillk ${cls||"k-up"}" style="width:${n/mx*100}%"></span></span><span class="val">${f(n)}</span></div>`).join("")}</div>`; };
   const bb = {}; Object.entries(V.new.by_basis).forEach(([k,n]) => { const L = BL(k); bb[L] = (bb[L]||0) + n; });
   $("#mz-ext").innerHTML = `<h3 class="ct">entry ที่ตรวจได้เพิ่มในรอบ 8 พ.ย. <span class="unit">${f(V.new.entries)} entry · ${V.new.names} ชื่อ · ${V.new.papers} paper · ${V.new.files} ไฟล์</span></h3>
-    <p class="cap">เว็บ KEEL / UCI / OpenML ถูกบล็อก จึงใช้สำเนาบน GitHub และ PyPI · กติกาเดิม: จำนวน instance ที่พิมพ์ต้องตรงกับไฟล์ (feature ±1) ถ้าไม่พิมพ์ขนาด ชื่อต้องตรงและผู้เขียนไม่ได้ดัดแปลง</p>
+    <p class="cap">รอบแรก: เว็บ KEEL / UCI / OpenML ถูกบล็อก จึงใช้สำเนาบน GitHub และ PyPI · รอบสอง (Toon ขอ): ดาวน์โหลดไฟล์ทางการจาก UCI และ LIBSVM ผ่าน browser บนเครื่อง Toon และไฟล์ที่ผู้เขียน 5 paper เผยแพร่เอง · กติกาเดิม: จำนวน instance ที่พิมพ์ต้องตรงกับไฟล์ (feature ±1) ถ้าไม่พิมพ์ขนาด ชื่อต้องตรงและผู้เขียนไม่ได้ดัดแปลง</p>
     <h4 style="margin:10px 0 6px;font-size:14px">แหล่งของไฟล์</h4>${bars(V.new.by_source, k => SRCL[k] || k)}
     <h4 style="margin:12px 0 6px;font-size:14px">หาไฟล์เจอด้วยอะไร (ตัวตัดสินยังเป็นขนาดที่พิมพ์)</h4>${bars(bb, x => x)}
-    <p class="cap" style="margin-top:6px">รวมทั้งหมด ${f(V.total.entries)} entry ${V.total.papers} paper ${V.total.files} ไฟล์ (28 ต.ค. 643 entry 61 paper 131 ไฟล์) · ไฟล์ชุดเดียวกันหลายสำเนา map ไปสำเนาเดียว ลำดับ KEEL &gt; UCI++ &gt; Weka &gt; jbrownlee &gt; PMLB</p>`;
-  const RL = {"U-no_public_file":"ไม่พบไฟล์ในสำเนาใด","U-synthetic":"synthetic (ผู้เขียนสร้างเอง)","U-size_mismatch":"มีไฟล์ แต่ขนาดไม่ตรงทุกเวอร์ชัน","U-task_not_reconstructible":"สร้าง task ซ้ำไม่ได้ (ไม่รู้ว่าคลาสไหนเป็น minority)","U-no_printed_size":"ดัดแปลงโดยไม่พิมพ์ขนาด","U-name_ambiguous":"ชื่อเข้ากับไฟล์ที่โครงสร้างต่างกัน"};
+    <p class="cap" style="margin-top:6px">รวมทั้งหมด ${f(V.total.entries)} entry ${V.total.papers} paper ${V.total.files} ไฟล์ (28 ต.ค. 643 entry 61 paper 131 ไฟล์) · ไฟล์ชุดเดียวกันหลายสำเนา map ไปสำเนาเดียว ลำดับ ไฟล์ผู้เขียน = KEEL &gt; UCI ทางการ/LIBSVM &gt; UCI++ &gt; Weka &gt; jbrownlee &gt; PMLB</p>`;
+  const RL = {"U-no_public_file":"ไม่พบไฟล์ในสำเนาใด","U-synthetic":"synthetic (ผู้เขียนสร้างเอง)","U-size_mismatch":"มีไฟล์ แต่ขนาดไม่ตรงทุกเวอร์ชัน","U-task_not_reconstructible":"สร้าง task ซ้ำไม่ได้ (ไม่รู้ว่าคลาสไหนเป็น minority)","U-no_printed_size":"ดัดแปลงโดยไม่พิมพ์ขนาด","U-name_ambiguous":"ชื่อเข้ากับไฟล์ที่โครงสร้างต่างกัน","V-not_run":"ตรวจได้ แต่ยังไม่ได้วัด (covertype: ใหญ่เกินเวลา)"};
   const N = V.notm, SL = {"UCI":"UCI","not stated":"ไม่ระบุแหล่ง","other repository":"คลังอื่น","other paper/author":"จาก paper/ผู้เขียนอื่น","private":"private","group-level":"ระบุระดับกลุ่ม","multiple":"หลายแหล่ง","KEEL":"KEEL"};
-  $("#mz-notm").innerHTML = `<h3 class="ct">ชื่อ dataset ที่ยังวัดความยากไม่ได้ <span class="unit">${f(N.names)} จาก 771 ชื่อ</span></h3>
+  $("#mz-notm").innerHTML = `<h3 class="ct">ชื่อ dataset ที่ยังวัดความยากไม่ได้ <span class="unit">${f(N.names)} จาก ${f(V.names_total)} ชื่อ</span></h3>
     ${bars(N.by_reason, k => RL[k] || k, "k-dn")}
     <h4 style="margin:12px 0 6px;font-size:14px">"ไม่พบไฟล์" ${f(N.by_reason["U-no_public_file"])} ชื่อ paper บอกแหล่งว่า</h4>${bars(N.no_public_file_by_source, k => SL[k] || k, "k-not-stated")}
     <p class="cap" style="margin-top:6px">${f(N.no_public_file_split.likely_public_not_in_mirror)} ชื่ออ้างแหล่งที่ควรมีไฟล์เผยแพร่ (UCI, KEEL, คลังอื่น, ระดับกลุ่ม, หลายแหล่ง) แต่ไม่อยู่ในสำเนาที่เข้าถึงได้ → รายชื่อด้านล่าง · ${f(N.no_public_file_split.no_file_to_download)} ชื่อไม่มีไฟล์ให้ดาวน์โหลด (private, ไม่ระบุ, จาก paper อื่น)</p>`;
@@ -2359,12 +2360,31 @@ makeLand("ln", $("#p-ln"));
     $("#mz-dl-n").textContent = rows.length + " / " + V.dl.length + " ชื่อ";
     $("#mz-dl-t tbody").innerHTML = rows.map(r => `<tr><td>${esc(r[0])}</td><td>${esc(DT[r[1]]||r[1])}</td><td>${esc(r[8])}</td><td class="num">${r[3]}</td><td class="num">${r[4]}</td><td>${esc(r[6])}</td><td>${esc(r[7])}</td><td style="font-size:12px">${esc(r[5])}</td></tr>`).join("");
   }
-  $("#mz-dl").innerHTML = `<h3 class="ct">ชื่อที่วัดได้ถ้ามีไฟล์ทางการ <span class="unit">${V.dl.length} ชื่อ · out/names_to_download.csv</span></h3>
-    <p class="cap">ดาวน์โหลดจาก UCI / KEEL / คลังที่ paper อ้าง แล้ววางไฟล์ไว้ใน difficulty/src/ รัน difficulty/rebuild_difficulty.sh ได้ทันที · ${V.notm.names_to_download.with_printed_size} ชื่อมีขนาดที่ paper พิมพ์ไว้ (ตรวจได้ตามกติกาเดิม) ที่เหลือเป็น modified ที่ไม่พิมพ์ขนาด ซึ่งตัดตามคำตัดสินแนวทาง ก</p>
+  $("#mz-dl").innerHTML = `<h3 class="ct">ชื่อที่ยังไม่มีไฟล์หลังรอบสอง (paper อ้างแหล่งสาธารณะ) <span class="unit">${V.dl.length} ชื่อ · out/names_to_download.csv</span></h3>
+    <p class="cap">ส่วนใหญ่คือ Kaggle (ต้องมีบัญชี), ชุดภาพ/ข้อความ/time series ที่ไม่ได้โหลด และชุดที่ระบุไม่ได้จากชื่อ ดูเหตุผลรายชื่อในตาราง 200 ชื่อด้านล่าง · ถ้าวางไฟล์ไว้ใน difficulty/src/ แล้วเพิ่มใน official_sources.py รัน difficulty/rebuild_difficulty.sh ได้ทันที · ${V.notm.names_to_download.with_printed_size} ชื่อมีขนาดที่ paper พิมพ์ไว้</p>
     <div class="controls"><input type="search" id="mz-dl-q" placeholder="ค้นชื่อ / paper / แหล่ง" aria-label="ค้นชื่อที่ควรดาวน์โหลด"><span class="count" id="mz-dl-n"></span></div>
     <div class="tbox" style="max-height:420px"><table class="dxt" id="mz-dl-t"><thead><tr><th>ชื่อ</th><th>ชนิด</th><th>แหล่งที่ paper เขียน</th><th class="num">paper</th><th class="num">entry</th><th>N ที่พิมพ์</th><th>feature ที่พิมพ์</th><th>paper</th></tr></thead><tbody></tbody></table></div>
     <p class="cap">ที่มา: ${esc(V.src)}</p>`;
   dl(""); $("#mz-dl-q").addEventListener("input", e => dl(e.target.value.trim().toLowerCase()));
+  // 8 พ.ย. รอบสอง: ผลของ 200 ชื่อ
+  const R2 = D.mz.dl200; if (!R2) return;
+  const RES = ["now verifiable","file obtained, size or task does not match","modified, no printed size","synthetic","no file obtained"];
+  const RESL = {"now verifiable":"ตรวจได้แล้ว","file obtained, size or task does not match":"ได้ไฟล์ แต่ขนาด/task ไม่ตรงที่พิมพ์","modified, no printed size":"modified ไม่พิมพ์ขนาด (กติกา ก)","synthetic":"synthetic","no file obtained":"ยังไม่ได้ไฟล์"};
+  const RESC = {"now verifiable":"k-up","file obtained, size or task does not match":"k-eq","modified, no printed size":"k-not-stated","synthetic":"k-not-stated","no file obtained":"k-dn"};
+  const BR = R2.summary.by_result, mx2 = Math.max(...RES.map(k => BR[k].names));
+  const el = document.createElement("div"); el.className = "card"; el.id = "mz-dl200"; $("#mz-dl").after(el);
+  function d2(q){
+    const rows = R2.rows.filter(r => !q || r.join(" ").toLowerCase().includes(q));
+    $("#mz-d2-n").textContent = rows.length + " / " + R2.rows.length + " ชื่อ";
+    $("#mz-d2-t tbody").innerHTML = rows.map(r => `<tr><td>${esc(r[0])}</td><td>${esc(RESL[r[5]]||r[5])}</td><td class="num">${r[4]}/${r[3]}</td><td>${esc(r[2])}</td><td>${esc(r[7])} ${esc(r[8])}</td><td style="font-size:12px">${esc(r[9])}</td><td style="font-size:12px">${esc(r[6])}</td></tr>`).join("");
+  }
+  el.innerHTML = `<h3 class="ct">ผลการตามไฟล์ของ 200 ชื่อ (8 พ.ย. รอบสอง) <span class="unit">${R2.summary.names} ชื่อ · ${R2.summary.entries} entry · ไฟล์ที่ดาวน์โหลด/อ่าน ${R2.manifest.files} รายการ</span></h3>
+    <div class="hb wide">${RES.filter(k => BR[k].names).map(k => `<div class="hrow ${RESC[k]}" ${tipA(RESL[k]+": "+BR[k].names+" ชื่อ, "+BR[k].entries+" entry")}><span class="lab"><i class="sw"></i>${RESL[k]}</span><span class="trk"><span class="fillk ${RESC[k]}" style="width:${BR[k].names/mx2*100}%"></span></span><span class="val">${BR[k].names} ชื่อ · ${BR[k].entries} entry</span></div>`).join("")}</div>
+    <p class="cap">ตรวจได้แล้ว = มีอย่างน้อย 1 entry ของชื่อนั้นผ่านกติกาเดิม (ขนาดที่พิมพ์ตรงไฟล์) หรือผู้เขียนเผยแพร่ไฟล์ที่ดัดแปลงเอง · คอลัมน์ "ตรวจของ Toon" มาจาก out/names_download_check.csv ตามที่ให้มา</p>
+    <div class="controls"><input type="search" id="mz-d2-q" placeholder="ค้นชื่อ / paper / ผล" aria-label="ค้นผล 200 ชื่อ"><span class="count" id="mz-d2-n"></span></div>
+    <div class="tbox" style="max-height:440px"><table class="dxt" id="mz-d2-t"><thead><tr><th>ชื่อ</th><th>ผล</th><th class="num">entry ตรวจได้</th><th>paper</th><th>ตรวจของ Toon</th><th>หมายเหตุของ Toon</th><th>รายละเอียด</th></tr></thead><tbody></tbody></table></div>
+    <p class="cap">ที่มา: ${esc(R2.src)}</p>`;
+  d2(""); $("#mz-d2-q").addEventListener("input", e => d2(e.target.value.trim().toLowerCase()));
 })();
 
 /* ---------- 8 พ.ย. 2026: synthetic ที่ผู้เขียนสร้างเผยแพร่หรือไม่ (D.syn จาก out/synthetic_availability.json) ---------- */
@@ -2385,7 +2405,8 @@ makeLand("ln", $("#p-ln"));
     <details style="margin-top:10px"><summary>ราย paper พร้อมข้อความยืนยันจาก PDF (${RA.length} paper)</summary>
       <div class="tbox"><table class="dxt"><thead><tr><th>paper</th><th>กลุ่ม</th><th class="num">entry</th><th>ข้อความใน PDF</th></tr></thead><tbody>
       ${RA.map(r => `<tr><td>${esc(r.paper)}</td><td>${esc(GL[r.group])}</td><td class="num">${r.entries}</td><td style="font-size:12.5px">${esc(r.evidence)}${r.note ? ` <span class="cap">(${esc(r.note)})</span>` : ""}</td></tr>`).join("")}</tbody></table></div></details>
-    <details><summary>อีก ${RB.length} paper สร้างข้อมูลเองเพื่อภาพประกอบหรือทดลองข้างเคียง (ไม่นับเป็น entry)</summary>
+    ${RB.length ? "" : `<p class="cap" style="margin-top:8px">8 พ.ย. รอบสอง (Toon สั่ง): ชุดที่ 10 paper สร้างเพื่อภาพประกอบหรือทดลองข้างเคียงนับเป็น entry แล้ว 93 entry (build/add_synthetic_entries.py) · Toy ของ OREM-M เปลี่ยนเป็น synthetic ที่เผยแพร่ (ชุด toy ของ benchmark ordinal regression, ตรวจนอก paper) · OREM-M จึงอยู่ 2 กลุ่ม</p>`}
+    <details ${RB.length ? "" : "hidden"}><summary>อีก ${RB.length} paper สร้างข้อมูลเองเพื่อภาพประกอบหรือทดลองข้างเคียง (ไม่นับเป็น entry)</summary>
       <div class="tbox"><table class="dxt"><thead><tr><th>paper</th><th>ชุดที่สร้าง</th><th>บทบาท</th><th>กลุ่ม</th><th>ข้อความใน PDF</th></tr></thead><tbody>
       ${RB.map(r => `<tr><td>${esc(r.paper)}</td><td>${esc(r.sets_stated)}</td><td>${esc(r.role)}</td><td>${esc(GL[r.group])}</td><td style="font-size:12.5px">${esc(r.evidence)}</td></tr>`).join("")}</tbody></table></div></details>
     <p class="cap" style="margin-top:6px">Synthetic = ผู้เขียนสร้างข้อมูลเองด้วย generator/simulation ที่อธิบายใน paper · ทุกข้อความยืนยันถูกตรวจว่ามีอยู่จริงใน PDF (pdftotext) · แก้ผลรอบ 29 ต.ค. ที่ค้นคำแล้วพลาด k-means SMOTE และ CTGAN · ที่มา: ${esc(S.source)}</p>`;

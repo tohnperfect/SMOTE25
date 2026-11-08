@@ -2,7 +2,7 @@
  "summary": {
   "_note": "ai_draft ทุกค่า diff เทียบข้าม paper ไม่ได้ (คนละ metric/หน่วย) ชนิดข้อมูลมาจากที่ผู้อ่านจัดตามคำนิยามใน SCHEMA.md",
   "papers": 73,
-  "datasets_listed": 1654,
+  "datasets_listed": 1747,
   "uncertain_items": 454,
   "granularity": {
    "per-dataset": 47,
@@ -64,18 +64,18 @@
    "SVDD-WSMOTE"
   ],
   "how_obtained_all": {
-   "modified": 331,
-   "original": 534,
+   "modified": 332,
+   "original": 533,
    "repository-defined": 470,
    "not stated": 199,
-   "synthetic": 120
+   "synthetic": 213
   },
   "how_obtained_reader_only": {
-   "modified": 330,
+   "modified": 331,
    "original": 287,
    "repository-defined": 362,
    "not stated": 555,
-   "synthetic": 120
+   "synthetic": 212
   },
   "match_methods": {
    "name": 734,
@@ -113,9 +113,9 @@
     "equal": 13
    },
    "original": {
-    "rows": 346,
+    "rows": 345,
     "papers": 38,
-    "proposed_higher": 281,
+    "proposed_higher": 280,
     "smote_higher": 55,
     "equal": 10
    },
@@ -127,9 +127,9 @@
     "equal": 19
    },
    "synthetic": {
-    "rows": 9,
-    "papers": 2,
-    "proposed_higher": 9,
+    "rows": 10,
+    "papers": 3,
+    "proposed_higher": 10,
     "smote_higher": 0,
     "equal": 0
    },
@@ -157,9 +157,9 @@
     "equal": 13
    },
    "original": {
-    "rows": 167,
+    "rows": 166,
     "papers": 26,
-    "proposed_higher": 133,
+    "proposed_higher": 132,
     "smote_higher": 29,
     "equal": 5
    },
@@ -171,9 +171,9 @@
     "equal": 16
    },
    "synthetic": {
-    "rows": 5,
-    "papers": 1,
-    "proposed_higher": 5,
+    "rows": 6,
+    "papers": 2,
+    "proposed_higher": 6,
     "smote_higher": 0,
     "equal": 0
    },
@@ -606,9 +606,9 @@
    },
    "OREM-M": {
     "original": {
-     "rows": 19,
+     "rows": 18,
      "papers": 1,
-     "proposed_higher": 11,
+     "proposed_higher": 10,
      "smote_higher": 8,
      "equal": 0
     },
@@ -616,6 +616,13 @@
      "rows": 2,
      "papers": 1,
      "proposed_higher": 2,
+     "smote_higher": 0,
+     "equal": 0
+    },
+    "synthetic": {
+     "rows": 1,
+     "papers": 1,
+     "proposed_higher": 1,
      "smote_higher": 0,
      "equal": 0
     }
@@ -1975,7 +1982,7 @@
    "key": "COG-OS",
    "task": "both",
    "n_datasets_claimed": null,
-   "n_datasets_listed": 17,
+   "n_datasets_listed": 21,
    "characteristics_table": "Table 2, p.5 (printed 818); also Table 8, p.7 (printed 820) for kddcup99data and modified binary sets; Table 3, p.6 (printed 819) for sampled imbalanced binary sets",
    "ir_definition": "not stated in paper (imbalance described by CV, Coefficient of Variation of class sizes; no IR used)",
    "results_granularity": "no comparison",
@@ -2499,7 +2506,7 @@
    "key": "GDO",
    "task": "binary",
    "n_datasets_claimed": 52,
-   "n_datasets_listed": 52,
+   "n_datasets_listed": 53,
    "characteristics_table": "Table 2, p.7 (KEEL, IR only) and Table 3, p.8 (large); Table 4, p.8 (video traffic)",
    "ir_definition": "IR = n_maj / n_min (Eq. 25): ratio between the number of majority and minority class instances",
    "results_granularity": "per-dataset",
@@ -2911,7 +2918,7 @@
    "key": "LS",
    "task": "binary",
    "n_datasets_claimed": 20,
-   "n_datasets_listed": 20,
+   "n_datasets_listed": 32,
    "characteristics_table": "Table 2, p.7",
    "ir_definition": "not stated in paper",
    "results_granularity": "per-dataset",
@@ -3059,7 +3066,7 @@
    "key": "MC-MBRC",
    "task": "multiclass",
    "n_datasets_claimed": 20,
-   "n_datasets_listed": 20,
+   "n_datasets_listed": 80,
    "characteristics_table": "Table 2, p.7",
    "ir_definition": "not stated in paper (Table 2 gives IR column; no formula; text only says shuttle IR 853 high imbalance, contraceptive IR 1.9 low)",
    "results_granularity": "per-dataset",
@@ -3238,7 +3245,7 @@
    "key": "MDO",
    "task": "multiclass",
    "n_datasets_claimed": 20,
-   "n_datasets_listed": 20,
+   "n_datasets_listed": 21,
    "characteristics_table": "Table 1, p.9 (printed p.246)",
    "ir_definition": "\"Imbalance ratio or IR is computed as the proportion of the number of majority class examples to the number of minority class examples [40]. The class with maximum number of instances is the majority class and the class with minimum number of examples is the minority class.\"",
    "results_granularity": "ranking only",
@@ -3325,7 +3332,7 @@
    "key": "MLOS",
    "task": "binary",
    "n_datasets_claimed": 16,
-   "n_datasets_listed": 16,
+   "n_datasets_listed": 17,
    "characteristics_table": "Table 1, p.9",
    "ir_definition": "not stated in paper",
    "results_granularity": "per-dataset",
@@ -3443,7 +3450,7 @@
    "key": "NROMM",
    "task": "both",
    "n_datasets_claimed": 20,
-   "n_datasets_listed": 30,
+   "n_datasets_listed": 38,
    "characteristics_table": "Table 2, main p.7 (20 multi-class); Table 1, supp p.11 (binary D1-D10)",
    "ir_definition": "The imbalance ratio (IR) is computed by dividing the number of samples from the largest class by the number of samples from the smallest class.",
    "results_granularity": "per-dataset",
@@ -3525,7 +3532,7 @@
    "key": "OREM-M",
    "task": "multiclass",
    "n_datasets_claimed": 21,
-   "n_datasets_listed": 21,
+   "n_datasets_listed": 22,
    "characteristics_table": "Table 6, p.11 (printed 6177)",
    "ir_definition": "Overall IR on multiclass datasets 'is computed as [5]' (formula not printed in paper); per-class imbalance degree ID_ci = sum_{q!=i} n_cq / ((|C|-1) * n_ci), Eq. (1), used for rebalancing",
    "results_granularity": "per-dataset",
@@ -3779,7 +3786,7 @@
    "key": "RBBoost / Random Balance",
    "task": "binary",
    "n_datasets_claimed": 86,
-   "n_datasets_listed": 86,
+   "n_datasets_listed": 87,
    "characteristics_table": "Table 2, p.7 (HDDT, 20) and Table 3, p.8 (KEEL, 66)",
    "ir_definition": "\"the imbalance ratio (the number of instances of the majority class for each instance of the minority class)\"",
    "results_granularity": "per-dataset",
@@ -3911,7 +3918,7 @@
    "key": "RSMOTE",
    "task": "both",
    "n_datasets_claimed": 35,
-   "n_datasets_listed": 35,
+   "n_datasets_listed": 39,
    "characteristics_table": "Table 2, p.13 (binary); Table 7, p.20 (multi-class)",
    "ir_definition": "IR = #Majority / #Minority",
    "results_granularity": "per-dataset",

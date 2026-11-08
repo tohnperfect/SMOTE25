@@ -23,6 +23,7 @@ OUT = HERE.parent / "manuscript" / "figures"
 NAMES = {"none": "No flag", "small_sample": "Small sample", "outlier_flag": "Outliers",
          "small_sample + outlier_flag": "Small sample + outliers",
          "small_disjuncts + small_sample": "Small disjuncts + small sample",
+         "small_disjuncts + outlier_flag": "Small disjuncts + outliers",
          "small_disjuncts + small_sample + outlier_flag": "Small disjuncts + small sample\n+ outliers"}
 
 
@@ -36,7 +37,7 @@ def main():
 
     a = ax[0]
     order = [p for p in ["small_disjuncts + small_sample + outlier_flag", "small_disjuncts + small_sample",
-                         "small_sample + outlier_flag", "outlier_flag", "small_sample", "none"] if p in set(b.profile)]
+                         "small_disjuncts + outlier_flag", "small_sample + outlier_flag", "outlier_flag", "small_sample", "none"] if p in set(b.profile)]
     rng = np.random.default_rng(0)
     for i, p in enumerate(order):
         s = b[b.profile == p]

@@ -1,6 +1,6 @@
 {
   "entry_level": {
-    "entries_total": 1654,
+    "entries_total": 1747,
     "instances": {
       "reported": 1325,
       "q25_q50_q75": [
@@ -13,32 +13,32 @@
       "ge_10000": 121
     },
     "features": {
-      "reported": 1255,
+      "reported": 1271,
       "q25_q50_q75": [
         7.0,
         9.0,
         18.0
       ],
-      "lt_20": 982,
+      "lt_20": 998,
       "20_99": 214,
       "ge_100": 59
     },
     "classes": {
-      "eq_2": 876,
-      "gt_2": 405,
-      "not_reported": 373
+      "eq_2": 963,
+      "gt_2": 407,
+      "not_reported": 377
     },
     "category_counts": {
-      "original": 534,
+      "original": 533,
       "repository-defined": 470,
-      "modified": 331,
-      "not stated": 199,
-      "synthetic": 120
+      "modified": 332,
+      "synthetic": 213,
+      "not stated": 199
     },
     "category_by_classes": {
       "modified": {
         "more": 40,
-        "not_reported": 86,
+        "not_reported": 87,
         "two": 205
       },
       "not stated": {
@@ -47,7 +47,7 @@
         "two": 95
       },
       "original": {
-        "more": 349,
+        "more": 348,
         "not_reported": 94,
         "two": 91
       },
@@ -57,103 +57,103 @@
         "two": 397
       },
       "synthetic": {
-        "more": 12,
-        "not_reported": 20,
-        "two": 88
+        "more": 15,
+        "not_reported": 23,
+        "two": 175
       }
     }
   },
   "task_level": {
     "all_tasks": {
-      "n_tasks": 456,
+      "n_tasks": 566,
       "task_types": {
-        "ovr": 305,
-        "binary": 124,
-        "binarized": 27
+        "ovr": 339,
+        "binary": 194,
+        "binarized": 33
       },
       "spearman_with_IR": {
-        "noise_index": 0.108,
-        "rare": 0.049,
-        "kDN_min": 0.173,
-        "n_min_per_feature": -0.285,
-        "safe": -0.14
+        "noise_index": 0.174,
+        "rare": 0.111,
+        "kDN_min": 0.238,
+        "n_min_per_feature": -0.341,
+        "safe": -0.212
       },
       "by_IR_bin": {
         "(3.0, 9.0]": {
-          "n": 137,
-          "noise_median": 0.308,
-          "safe_median": 0.686,
+          "n": 175,
+          "noise_median": 0.314,
+          "safe_median": 0.68,
           "rare_median": 0.012
         },
         "(0.0, 3.0]": {
-          "n": 84,
-          "noise_median": 0.371,
-          "safe_median": 0.593,
-          "rare_median": 0.02
+          "n": 96,
+          "noise_median": 0.356,
+          "safe_median": 0.614,
+          "rare_median": 0.018
         },
         "(50.0, inf]": {
-          "n": 41,
-          "noise_median": 0.37,
-          "safe_median": 0.52,
-          "rare_median": 0.036
+          "n": 50,
+          "noise_median": 0.45,
+          "safe_median": 0.45,
+          "rare_median": 0.062
         },
         "(9.0, 20.0]": {
-          "n": 109,
-          "noise_median": 0.333,
-          "safe_median": 0.655,
-          "rare_median": 0.012
+          "n": 140,
+          "noise_median": 0.402,
+          "safe_median": 0.53,
+          "rare_median": 0.025
         },
         "(20.0, 50.0]": {
-          "n": 85,
-          "noise_median": 0.496,
+          "n": 105,
+          "noise_median": 0.504,
           "safe_median": 0.435,
-          "rare_median": 0.005
+          "rare_median": 0.006
         }
       }
     },
     "binary_and_binarized": {
-      "n_tasks": 151,
+      "n_tasks": 227,
       "task_types": {
-        "binary": 124,
-        "binarized": 27
+        "binary": 194,
+        "binarized": 33
       },
       "spearman_with_IR": {
-        "noise_index": 0.178,
-        "rare": 0.025,
-        "kDN_min": 0.228,
-        "n_min_per_feature": -0.509,
-        "safe": -0.19
+        "noise_index": 0.256,
+        "rare": 0.151,
+        "kDN_min": 0.322,
+        "n_min_per_feature": -0.491,
+        "safe": -0.295
       },
       "by_IR_bin": {
         "(3.0, 9.0]": {
-          "n": 29,
-          "noise_median": 0.333,
-          "safe_median": 0.667,
-          "rare_median": 0.027
+          "n": 50,
+          "noise_median": 0.474,
+          "safe_median": 0.443,
+          "rare_median": 0.04
         },
         "(0.0, 3.0]": {
-          "n": 35,
+          "n": 39,
           "noise_median": 0.402,
           "safe_median": 0.557,
-          "rare_median": 0.025
+          "rare_median": 0.021
         },
         "(9.0, 20.0]": {
-          "n": 46,
-          "noise_median": 0.481,
-          "safe_median": 0.471,
-          "rare_median": 0.034
+          "n": 72,
+          "noise_median": 0.609,
+          "safe_median": 0.333,
+          "rare_median": 0.059
         },
         "(20.0, 50.0]": {
-          "n": 29,
-          "noise_median": 0.667,
-          "safe_median": 0.333,
-          "rare_median": 0.029
+          "n": 46,
+          "noise_median": 0.675,
+          "safe_median": 0.102,
+          "rare_median": 0.056
         },
         "(50.0, inf]": {
-          "n": 12,
-          "noise_median": 0.364,
-          "safe_median": 0.636,
-          "rare_median": 0.0
+          "n": 20,
+          "noise_median": 0.686,
+          "safe_median": 0.05,
+          "rare_median": 0.079
         }
       }
     }

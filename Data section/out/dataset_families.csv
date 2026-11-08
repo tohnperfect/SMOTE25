@@ -38,6 +38,7 @@ artificial 0.5 2.5,artificial0525,artificial,True,,stem_family,25.0,1,1
 artificial 0.5 5,artificial055,artificial,True,,stem_family,25.0,1,1
 artificial 1 5,artificial15,artificial,True,,stem_family,25.0,1,1
 artificial c x c grid domain,artificialcxcgriddomain,artificialcxcgriddomain,False,,,2.0,1,1
+artificial data set,artificialdataset,artificialdataset,False,,,,1,1
 artificial family a,artificialfamilya,artificialfamilya,False,,,5.0,1,1
 artificial family b,artificialfamilyb,artificialfamilyb,False,,,5.0,1,1
 artificial two-class imbalanced data set,artificialtwoclassimbalanceddataset,artificialtwoclassimbalanceddataset,False,,,,1,1
@@ -126,7 +127,7 @@ child,child,child,False,,,,1,1
 cifar-10,cifar10,cifar10,False,,,,1,1
 cifar10,cifar10,cifar10,False,,,,1,1
 circle,circle,circle,False,,,2.0,1,1
-circles,circles,circles,False,,prefix_without_split_marker,2.0,1,1
+circles,circles,circles,False,,prefix_without_split_marker,2.0,2,2
 class noise versions of the 9 real-world datasets,classnoiseversionsofthe9realworlddatasets,classnoiseversionsofthe9realworlddatasets,False,,,,1,1
 cleveland,cleveland,cleveland,False,,,13.0,13,13
 cleveland 1,cleveland1,cleveland,True,cleveland,,,2,2
@@ -260,11 +261,12 @@ fashion-mnist,fashionmnist,fashionmnist,False,,,,1,1
 fault,fault,fault,False,,,28.0,1,1
 fertility,fertility,fertility,False,,,10.0,1,1
 firewall,firewall,firewall,False,,,11.0,2,2
+five-class artificial set,fiveclassartificialset,fiveclassartificialset,False,,,,1,1
 flag,flag,flag,False,,,28.0,1,1
 flare,flare,flare,False,,,11.0,9,9
 flare-f,flaref,flaref,False,,prefix_without_split_marker,11.0,1,1
 forest cover,forestcover,forestcover,False,,,,1,1
-fourclass,fourclass,fourclass,False,,,2.0,2,2
+fourclass,fourclass,fourclass,False,,,2.0,3,3
 g7,g7,g7,False,,,10.0,1,1
 gender,gender,gender,False,,,18.0,1,1
 gender by name,genderbyname,genderbyname,False,,prefix_without_split_marker,4.0,1,1
@@ -399,6 +401,9 @@ liver disorders2,liverdisorders2,liverdisorders,True,liverdisorders,,,1,1
 liver disorders4,liverdisorders4,liverdisorders,True,liverdisorders,,,1,1
 liver disorders6,liverdisorders6,liverdisorders,True,liverdisorders,,,1,1
 log4j-1.2,log4j12,log4j12,False,,,20.0,1,1
+ls example combined,lsexamplecombined,lsexamplecombined,False,,,,1,1
+ls example left,lsexampleleft,lsexampleleft,False,,,,1,1
+ls example middle,lsexamplemiddle,lsexamplemiddle,False,,,,1,1
 lsun-large,lsunlarge,lsunlarge,False,,,,1,1
 lsun-small,lsunsmall,lsunsmall,False,,,,1,1
 lung,lung,lung,False,,,12533.0,1,1
@@ -412,6 +417,66 @@ mammography,mammography,mammography,False,,,6.0,5,5
 mandelon 1,mandelon1,mandelon,True,,stem_family,20.0,1,3
 mandelon 2,mandelon2,mandelon,True,,stem_family,200.0,1,3
 maternal,maternal,maternal,False,,,7.0,1,1
+mc-mbrc sim ir12 overlap 0,mcmbrcsimir12overlap0,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir12 overlap 10,mcmbrcsimir12overlap10,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir12 overlap 20,mcmbrcsimir12overlap20,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir12 overlap 30,mcmbrcsimir12overlap30,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir12 overlap 40,mcmbrcsimir12overlap40,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir12 overlap 50,mcmbrcsimir12overlap50,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir12 overlap 60,mcmbrcsimir12overlap60,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir12 overlap 70,mcmbrcsimir12overlap70,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir12 overlap 80,mcmbrcsimir12overlap80,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir12 overlap 90,mcmbrcsimir12overlap90,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir120 overlap 0,mcmbrcsimir120overlap0,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir120 overlap 10,mcmbrcsimir120overlap10,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir120 overlap 20,mcmbrcsimir120overlap20,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir120 overlap 30,mcmbrcsimir120overlap30,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir120 overlap 40,mcmbrcsimir120overlap40,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir120 overlap 50,mcmbrcsimir120overlap50,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir120 overlap 60,mcmbrcsimir120overlap60,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir120 overlap 70,mcmbrcsimir120overlap70,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir120 overlap 80,mcmbrcsimir120overlap80,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir120 overlap 90,mcmbrcsimir120overlap90,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir200 overlap 0,mcmbrcsimir200overlap0,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir200 overlap 10,mcmbrcsimir200overlap10,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir200 overlap 20,mcmbrcsimir200overlap20,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir200 overlap 30,mcmbrcsimir200overlap30,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir200 overlap 40,mcmbrcsimir200overlap40,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir200 overlap 50,mcmbrcsimir200overlap50,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir200 overlap 60,mcmbrcsimir200overlap60,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir200 overlap 70,mcmbrcsimir200overlap70,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir200 overlap 80,mcmbrcsimir200overlap80,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir200 overlap 90,mcmbrcsimir200overlap90,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir3 overlap 0,mcmbrcsimir3overlap0,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir3 overlap 10,mcmbrcsimir3overlap10,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir3 overlap 20,mcmbrcsimir3overlap20,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir3 overlap 30,mcmbrcsimir3overlap30,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir3 overlap 40,mcmbrcsimir3overlap40,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir3 overlap 50,mcmbrcsimir3overlap50,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir3 overlap 60,mcmbrcsimir3overlap60,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir3 overlap 70,mcmbrcsimir3overlap70,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir3 overlap 80,mcmbrcsimir3overlap80,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir3 overlap 90,mcmbrcsimir3overlap90,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir30 overlap 0,mcmbrcsimir30overlap0,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir30 overlap 10,mcmbrcsimir30overlap10,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir30 overlap 20,mcmbrcsimir30overlap20,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir30 overlap 30,mcmbrcsimir30overlap30,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir30 overlap 40,mcmbrcsimir30overlap40,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir30 overlap 50,mcmbrcsimir30overlap50,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir30 overlap 60,mcmbrcsimir30overlap60,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir30 overlap 70,mcmbrcsimir30overlap70,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir30 overlap 80,mcmbrcsimir30overlap80,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir30 overlap 90,mcmbrcsimir30overlap90,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir60 overlap 0,mcmbrcsimir60overlap0,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir60 overlap 10,mcmbrcsimir60overlap10,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir60 overlap 20,mcmbrcsimir60overlap20,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir60 overlap 30,mcmbrcsimir60overlap30,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir60 overlap 40,mcmbrcsimir60overlap40,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir60 overlap 50,mcmbrcsimir60overlap50,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir60 overlap 60,mcmbrcsimir60overlap60,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir60 overlap 70,mcmbrcsimir60overlap70,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir60 overlap 80,mcmbrcsimir60overlap80,mcmbrcsimir,True,,stem_family,,1,1
+mc-mbrc sim ir60 overlap 90,mcmbrcsimir60overlap90,mcmbrcsimir,True,,stem_family,,1,1
 me2vsother,me2vsother,me2vsother,False,,,8.0,1,1
 medv,medv,medv,False,,,13.0,1,1
 mf zernike,mfzernike,mfzernike,False,,,47.0,1,1
@@ -424,7 +489,7 @@ mnist 5,mnist5,mnist,True,mnist,,784.0,1,1
 mnist12,mnist12,mnist,True,mnist,,,1,1
 mnist28,mnist28,mnist,True,mnist,,,1,1
 mocap,mocap,mocap,False,,,33.0,1,1
-moons,moons,moons,False,,,2.0,1,1
+moons,moons,moons,False,,,2.0,2,2
 movement libras,movementlibras,movementlibras,False,,,90.0,1,1
 multiplefs,multiplefs,multiplefs,False,,,649.0,1,1
 mushroom,mushroom,mushroom,False,,,12.0,1,1
@@ -540,6 +605,15 @@ prompting,prompting,prompting,False,,,17.0,1,1
 purchase,purchase,purchase,False,,,18.0,1,1
 qsar,qsar,qsar,False,,,41.0,1,1
 r2l binary,r2lbinary,r2lbinary,False,,,41.0,1,1
+radial rho high delta high,radialrhohighdeltahigh,radialrhohighdeltahigh,False,,,,1,1
+radial rho high delta low,radialrhohighdeltalow,radialrhohighdeltalow,False,,,,1,1
+radial rho high delta medium,radialrhohighdeltamedium,radialrhohighdeltamedium,False,,,,1,1
+radial rho low delta high,radialrholowdeltahigh,radialrholowdeltahigh,False,,,,1,1
+radial rho low delta low,radialrholowdeltalow,radialrholowdeltalow,False,,,,1,1
+radial rho low delta medium,radialrholowdeltamedium,radialrholowdeltamedium,False,,,,1,1
+radial rho medium delta high,radialrhomediumdeltahigh,radialrhomediumdeltahigh,False,,,,1,1
+radial rho medium delta low,radialrhomediumdeltalow,radialrhomediumdeltalow,False,,,,1,1
+radial rho medium delta medium,radialrhomediumdeltamedium,radialrhomediumdeltamedium,False,,,,1,1
 raisin,raisin,raisin,False,,,8.0,1,1
 record linkage,recordlinkage,recordlinkage,False,,,12.0,1,1
 ring,ring,ring,False,,,,1,1
@@ -585,10 +659,15 @@ shuttlec2vsc4,shuttlec2vsc4,shuttle,True,shuttle,,9.5,2,2
 sick euthyroid,sickeuthyroid,sickeuthyroid,False,,,42.0,2,2
 sick2,sick2,sick2,False,,,,1,1
 simulated binary datasets,simulatedbinarydatasets,simulatedbinarydatasets,False,,,,1,1
-simulated dataset a,simulateddataseta,simulateddataseta,False,,,2.0,1,1
-simulated dataset b,simulateddatasetb,simulateddatasetb,False,,,2.0,1,1
-simulated dataset c,simulateddatasetc,simulateddatasetc,False,,,2.0,1,1
-simulated dataset d,simulateddatasetd,simulateddatasetd,False,,,2.0,1,1
+simulated dataset a,simulateddataseta,simulateddataseta,False,,,2.0,2,2
+simulated dataset a 1d,simulateddataseta1d,simulateddataseta,True,simulateddataseta,,1.0,1,1
+simulated dataset b,simulateddatasetb,simulateddatasetb,False,,,2.0,2,2
+simulated dataset b 1d,simulateddatasetb1d,simulateddatasetb,True,simulateddatasetb,,1.0,1,1
+simulated dataset c,simulateddatasetc,simulateddatasetc,False,,,2.0,2,2
+simulated dataset c 1d,simulateddatasetc1d,simulateddatasetc,True,simulateddatasetc,,1.0,1,1
+simulated dataset d,simulateddatasetd,simulateddatasetd,False,,,2.0,2,2
+simulated dataset d 1d,simulateddatasetd1d,simulateddatasetd,True,simulateddatasetd,,1.0,1,1
+simulated set,simulatedset,simulatedset,False,,,,1,1
 simulated1,simulated1,simulated,True,,stem_family,20.0,1,1
 simulated10,simulated10,simulated,True,,stem_family,200.0,1,1
 simulated2,simulated2,simulated,True,,stem_family,20.0,1,1
@@ -654,6 +733,11 @@ syn-c,sync,sync,False,,,2.0,2,2
 syn-d,synd,synd,False,,,2.0,2,2
 syn-e,syne,syne,False,,,2.0,2,2
 syn-f,synf,synf,False,,,2.0,2,2
+synthetic illustration set,syntheticillustrationset,syntheticillustrationset,False,,,,1,1
+synthetic scenario i,syntheticscenarioi,syntheticscenarioi,False,,,2.0,1,1
+synthetic scenario ii,syntheticscenarioii,syntheticscenarioii,False,,prefix_without_split_marker,2.0,1,1
+synthetic scenario iii,syntheticscenarioiii,syntheticscenarioiii,False,,prefix_without_split_marker,2.0,1,1
+synthetic three-class set,syntheticthreeclassset,syntheticthreeclassset,False,,,,1,1
 taevaluation,taevaluation,taevaluation,False,,,5.0,1,1
 taiwanses,taiwanses,taiwanses,False,,,94.0,1,1
 telco customer churn,telcocustomerchurn,telcocustomerchurn,False,,,,1,1
@@ -664,9 +748,11 @@ thyroid,thyroid,thyroid,False,,,21.0,12,12
 thyroid sick,thyroidsick,thyroidsick,False,,prefix_without_split_marker,52.0,2,2
 toxicity,toxicity,toxicity,False,,,1171.0,1,1
 toy,toy,toy,False,,,2.0,1,1
-toy dataset a,toydataseta,toydataseta,False,,,2.0,1,1
-toy dataset b,toydatasetb,toydatasetb,False,,,2.0,1,1
-toy dataset c,toydatasetc,toydatasetc,False,,,2.0,1,1
+toy data set,toydataset,toydataset,False,,,2.0,1,1
+toy dataset a,toydataseta,toydataseta,False,,prefix_without_split_marker,2.0,1,1
+toy dataset b,toydatasetb,toydatasetb,False,,prefix_without_split_marker,2.0,1,1
+toy dataset c,toydatasetc,toydatasetc,False,,prefix_without_split_marker,2.0,1,1
+two gaussian classes,twogaussianclasses,twogaussianclasses,False,,,2.0,1,1
 twopats,twopats,twopats,False,,,128.0,1,1
 uknowledge,uknowledge,uknowledge,False,,,5.0,1,1
 user knowledge modeling,userknowledgemodeling,userknowledgemodeling,False,,prefix_without_split_marker,5.0,2,2

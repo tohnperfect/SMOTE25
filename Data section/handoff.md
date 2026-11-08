@@ -53,14 +53,14 @@
 
 | เรื่อง | ตัวเลขปัจจุบัน | ไฟล์ |
 |---|---|---|
-| corpus | 76 paper (มีการประเมินบนข้อมูล 73) · entry 1,654 (มีชื่อ 1,653) → 771 ชื่อ → 680 dataset → 459 family | `out/reconcile_counts.json`, `out/dataset_families.csv` |
-| ชนิด entry | original 534 · repository-defined 470 · modified 331 · synthetic 120 · not stated 199 | `out/dataset_records.csv` |
-| ตรวจได้ (ความยาก) | 864 entry 65 paper 172 ไฟล์ (28 ต.ค. 643/61/131) | `difficulty/verify_ext_summary.json` |
-| task ที่วัดได้ | binary/binarise 151 (594 entry 45 paper) · OvR 305 | `difficulty/profile_final_summary.json` |
-| ความยากระดับชื่อ | มีโปรไฟล์ 228 · หลายคลาส 53 · วัดไม่ได้ 490 (ไม่พบไฟล์ 309, synthetic 109, ขนาดไม่ตรง 51, อื่น 21) | `out/name_level_types.json`, `out/name_level_extras.json` |
-| ชื่อที่ควรดาวน์โหลดไฟล์ทางการ | 200 ชื่อ (อ้าง UCI/KEEL/คลังอื่น แต่ไม่อยู่ใน mirror ใด) | `out/names_to_download.csv` |
-| synthetic เผยแพร่ไหม | 19 paper 120 entry: เผยแพร่ 6 paper/62 · อ้างงานอื่น 2/5 · มีแค่โค้ด 4/9 · ไม่พบ 7/44 · อีก 10 paper สร้างข้อมูลประกอบภาพ/ทดลองข้างเคียง (ไม่นับเป็น entry) | `out/synthetic_availability.json` |
-| ผลชนะ SMOTE | plain 29 paper 1,511 แถว ชนะ 1,107 เสมอ 102 แพ้ 286 · H1 ไม่ได้รับการสนับสนุน · noise +0.1 → odds ชนะ ×1.13 (p 0.03) | `out/winloss_allmetric_summary.json`, `out/hypotheses.json`, `out/difficulty_outcomes.json` |
+| corpus | 76 paper (มีการประเมินบนข้อมูล 73) · entry 1,747 (มีชื่อ 1,746; รวม 93 ชุดประกอบภาพ/ทดลองข้างเคียงของ 10 paper ที่เพิ่ม 8 พ.ย.) → 857 ชื่อ → 766 dataset → 482 family | `out/reconcile_counts.json`, `out/dataset_families.csv` |
+| ชนิด entry | original 533 · repository-defined 470 · modified 332 · synthetic 213 · not stated 199 (Toy ของ OREM-M: original → synthetic, override `EXTERNAL` ใน build/full_extraction.py) | `out/dataset_records.csv` |
+| ตรวจได้ (ความยาก) | 973 entry 65 paper 247 ไฟล์ (รอบแรก 8 พ.ย. 864/65/172; 28 ต.ค. 643/61/131) · ใหม่: V-author_release 43 entry (k-means SMOTE) | `difficulty/verify_ext_summary.json` |
+| task ที่วัดได้ | binary/binarise 227 (689 entry 46 paper) · OvR 339 · covertype ไม่ได้วัด (ใหญ่เกินเวลา) | `difficulty/profile_final_summary.json`, `difficulty/measure_log.csv` |
+| ความยากระดับชื่อ | มีโปรไฟล์ 305 (รวม varies 5) · หลายคลาส 63 · วัดไม่ได้ 489 (synthetic 196, ไม่พบไฟล์ 173, ขนาดไม่ตรง 81, task สร้างซ้ำไม่ได้ 28, อื่น 11) | `out/name_level_types.json`, `out/name_level_extras.json` |
+| 200 ชื่อที่ไม่มีไฟล์ (รอบแรก) | ตรวจได้แล้ว 83 ชื่อ (103 entry) · ได้ไฟล์แต่ขนาด/task ไม่ตรง 39 · modified ไม่พิมพ์ขนาด 8 · ยังไม่ได้ไฟล์ 70 (Kaggle ต้องมีบัญชี, HDDT เว็บปิด, private, ภาพ/ข้อความ/time series) | `out/names_download_result.csv`, `out/names_to_download.csv` (70 ที่เหลือ), `difficulty/official_manifest.csv` |
+| synthetic เผยแพร่ไหม | 29 paper 213 entry: เผยแพร่ 7 paper/63 (รวม Toy ของ OREM-M) · อ้างงานอื่น 3/13 · ขอได้ 1/60 (MC-MBRC) · บอกแค่ตัวสร้าง 1/3 · มีแค่โค้ด 5/10 · ไม่พบ 13/64 (OREM-M อยู่ 2 กลุ่ม) | `out/synthetic_availability.json` |
+| ผลชนะ SMOTE | plain 29 paper 1,511 แถว ชนะ 1,107 เสมอ 102 แพ้ 286 (ไม่เปลี่ยน) · H1 ไม่ได้รับการสนับสนุน (GEE 0.69 p 0.10) · noise +0.1 → odds ชนะ ×1.15 (p 0.01) | `out/winloss_allmetric_summary.json`, `out/hypotheses.json`, `out/difficulty_outcomes.json` |
 | manuscript | `manuscript/data-section-draft.tex` (แก้ที่นี่) → `data-section-final.tex` + `.bib` (make_final.py) → **`manuscript/data-section-jair.pdf`** (template JAIR จริง, build_jair_pdf.py) · พรีวิวแบบมีมาร์กอัป `data-section-draft-preview.pdf` | |
 | HTML หลัก | `out/dataset-atlas.html` (มีแท็บ Handoff ที่ฝังไฟล์นี้ทั้งไฟล์) | `build/make_atlas.py` + `build/atlas_template.html` |
 | git | commit ในเครื่องแล้ว ยังไม่ push (push ต้องรันเองบนเครื่อง) | |
@@ -70,11 +70,12 @@
 ```
 bash difficulty/rebuild_difficulty.sh        # verify_ext -> measure -> ... -> name_level_* -> difficulty_outcomes
 python3 build/synthetic_availability.py      # ต้องมี paper/ (PDF ไม่อยู่ใน git)
+python3 build/names_download_result.py       # ผลของ 200 ชื่อรอบแรก (8 พ.ย. รอบสอง)
 python3 build/make_final.py && python3 build/build_jair_pdf.py && python3 build/preview/build_preview.py
 python3 build/make_atlas.py && python3 build/atlas_analysis_checks.py && python3 build/consistency_check.py && python3 build/phase2_checks.py
 ```
 
-**ยังค้าง (ต้องใช้คน)**: ดาวน์โหลดไฟล์ทางการของ 200 ชื่อใน `out/names_to_download.csv` (เว็บ KEEL/UCI ถูกบล็อกจากทั้งเครื่องและ cloud; Claude ขอให้ web-fetch ดาวน์โหลดแล้วถูกปฏิเสธ) · ตัดสินว่าจะเพิ่ม synthetic ส่วน B (10 paper) เป็น entry หรือไม่ · เติมชื่อผู้เขียนใน main.tex · merge เข้า main.tex/sections/references.bib ตอนรวมกับ P · push
+**ยังค้าง (ต้องใช้คน)**: ตัดสินว่ารับสถานะ `V-author_release` (43 entry k-means SMOTE) หรือไม่ (ปิดได้ที่ `AUTHOR_RELEASE` ใน difficulty/verify_ext.py) · ไฟล์ Kaggle ใน `out/names_to_download.csv` ต้องดาวน์โหลดเองด้วยบัญชี · ลบไฟล์ `.tmp` 3 ไฟล์ใน Downloads ที่ browser สร้าง (01ad4a4f…, 44a83ffd…, 99f5be00…) · ชื่อผู้เขียนใน PDF ปล่อยว่าง (Toon 8 พ.ย.) · merge เข้า main.tex/sections/references.bib ตอนรวมกับ P · push
 
 ---
 
@@ -2029,3 +2030,40 @@ python3 build/outcome_pilot.py
 - **CRLF**: working copy บน Windows (core.autocrlf) แปลงไฟล์เป็น CRLF ทำให้ sha256 ที่เก็บไว้ไม่ตรง (make_atlas หยุดที่ difficulty_evidence) → เพิ่ม `sha_ok()` ใน `build/reconcile_counts.py` (ยอมรับไบต์ดิบ/LF/CRLF) ใช้ใน make_atlas และ consistency_check · consistency_check เพิ่ม check ว่า PDF JAIR ใหม่กว่า final tex
 - **Atlas**: แท็บใหม่ **Handoff** (ฝัง handoff.md ทั้งไฟล์ + สารบัญ + ค้นหา + การ์ดสถานะที่อ่านจาก json), แท็บความยากที่วัดได้ (ขอบเขตอ่านจาก verify_ext_summary, การ์ดที่มาของไฟล์รอบ 8 พ.ย., ตารางชื่อที่ควรดาวน์โหลด), หน้าภาพรวม (การ์ด synthetic เผยแพร่ไหม) · checks: atlas_analysis 41/41, consistency 44/44, phase2 14/14, reference_collection_check PASS
 - ยังไม่ได้ทำ: push · ดาวน์โหลดไฟล์ทางการ 200 ชื่อ · คำตัดสินส่วน B ของ synthetic และ "Toy" ของ OREM-M
+
+
+## 2026-11-08 (รอบสอง) — นับชุด synthetic ส่วน B เป็น entry, Toy ของ OREM-M, ดาวน์โหลดไฟล์ทางการของ 200 ชื่อ (Claude; Toon สั่ง)
+**คำสั่งของ Toon 8 พ.ย. (รอบสอง)** (1) ชื่อผู้เขียนใน PDF ปล่อยว่าง (2) อีก 10 paper ที่สร้างข้อมูลเพื่อภาพประกอบหรือทดลองข้างเคียง ให้นับเป็น entry (3) "Toy" ของ OREM-M อาจเป็น modified (Toon เห็นว่ามีใน Kaggle) ให้ตรวจให้ดี (4) 200 ชื่อที่ไม่มีไฟล์ น่าจะโหลดได้เกือบหมดจาก benchmark สาธารณะ ให้โหลดมาวิเคราะห์ ชุดที่ไม่เผยแพร่ปล่อยไว้
+
+**(2) ส่วน B เป็น entry** — `build/add_synthetic_entries.py`
+- 93 entry ต่อท้ายรายการเดิมของแต่ละ paper (record_id เดิมไม่เปลี่ยน): MC-MBRC 60 (ตาราง IR {3,12,30,60,120,200} × overlap 0–90%, ลบ 1200 ตัว; ablation Sec. 5.4 ใช้ 50 ชุดที่สร้างแบบเดียวกัน ไม่นับซ้ำเพราะ paper ไม่บอกว่าสร้างใหม่หรือไม่), LS 12 (radial 9 ชุด 50:1000 + ตัวอย่าง Fig. 3 สามชุด), NROMM 8 (ชุด A–D ของ SVDD-WSMOTE ref [7] แบบ 2D และ 1D), COG-OS 4, RSMOTE 4 (toy data set, moons, circles จาก k-means SMOTE ref [10] + fourclass ที่เติม outlier = **modified**), MDO 1, MLOS 1, RBBoost 1, GDO 1, OREM-M 1 (supp. Fig. S2)
+- ค่าใส่เฉพาะที่ paper พิมพ์ ค่าที่ต้องคำนวณเอง (ผลรวม, 1200/IR) ไม่ใส่ เขียนไว้ใน how_obtained_detail · in_results_table = no
+- ทุก entry มีประโยคหลักฐาน ตรวจแล้วว่าอยู่บนหน้า PDF ที่อ้าง (`--check-pdf` รันบนเครื่อง: 93/93)
+- ชื่อ: paper ส่วนใหญ่ไม่ได้ตั้งชื่อ จึงตั้งชื่อบรรยายที่ไม่ชนกับกฎ family (ไม่ใช้วงเล็บ เพราะ norm ตัดทิ้ง) · NROMM ใช้ชื่อ "simulated dataset A–D" ให้รวมกับ SVDD-WSMOTE (ชุดเดียวกัน) · moons/circles ของ RSMOTE รวมกับ k-means SMOTE
+- ลำดับรัน: แก้ JSON (สำรองที่ `ai-draft/full_backup_partb_2026-11-08/` นอกโฟลเดอร์ที่ full_extraction glob — รอบแรกสำรองไว้ใน `ai-draft/full/` แล้ว full_extraction อ่านซ้ำ ต้องย้าย) → full_extraction (outcome ไม่เปลี่ยนนอกจากแถว Toy) → แทรกแถวใน verify_datasets.csv / verified_datasets.csv ที่ตำแหน่งเดียวกัน → dataset_records → family_rule → reconcile_counts
+- ตัวเลขตายตัวที่แก้ให้อ่านจากแหล่ง: dataset_records EXPECTED (1747/1746/857/533/332/213), reconcile EXPECTED, name_level_types (อ่าน reconcile_counts.json), phase2_checks, modified_operations (อ่าน dataset_records_summary), characteristics_coverage units
+- ผลกระทบ: H3b 195/1,028 (76 ในนั้นคือชุดประกอบภาพ ไม่ได้ตั้งใจเทียบ; ไม่นับ = 119/952 เท่าเดิม) · landscape 857 ชื่อ, 766 dataset (543 ใช้ paper เดียว, 60 คือชุด MC-MBRC ซึ่งเป็น family เดียว), 482 family, ครึ่งของการใช้อยู่ที่ 40 family · ความครบของคุณลักษณะที่พิมพ์ลดลง (N 75.9%, d 72.7%, คลาส 78.4%)
+
+**(3) Toy ของ OREM-M** — ไม่ใช่ modified
+- OREM-M Table 6: Toy 2 feature 5 คลาส 68/87/79/35/31 · paper บอกแค่ว่ามาจาก "ordinal regression benchmark datasets [39]" ([39] = Chu & Ghahramani 2005)
+- ชุด toy ของ benchmark ordinal regression (Gutiérrez et al. 2016 TKDE Table 3: 300 × 2, 5 คลาส 35/87/79/68/31) · ไฟล์สาธารณะใน ORCA (github.com/ayrna/orca exampledata/1-holdout/toy, commit 7940028): train 225 + test 75 = 300 แถว 2 feature จำนวนต่อคลาส 35/87/79/68/31 ตรงทุกคลาส (paper พิมพ์คนละลำดับ) → ไม่ได้ตัด/แก้อะไร = synthetic ที่เผยแพร่
+- Kaggle "toy dataset" (carlolepelaars) เป็นคนละชุด (ตารางสมมติ city/gender/age/income/illness) ไม่ใช่ชุด ordinal 2 feature 5 คลาส
+- บันทึกเป็น override `EXTERNAL` ใน build/full_extraction.py (how_basis บอกว่าเป็นหลักฐานนอก paper) ค่าที่ผู้อ่านใส่ใน OREM-M.json ยังเป็น "not stated" · แถว Toy ใน verified_outcomes.csv แก้ how_obtained/how_basis ตาม (2 ช่อง) · ผล: all-metric original 425→422 แถว, synthetic 15→18 (2 paper)
+- ไฟล์เผยแพร่แล้วแต่ยังไม่วัดความยาก (synthetic ทั้งหมดไม่วัดตามกติกา 28 ต.ค.)
+
+**(4) 200 ชื่อ** — ใช้ `out/names_download_check.csv` ของ Toon เป็นแผนที่หาไฟล์
+- เครือข่าย: cloud และ shell บนเครื่องเข้า UCI/LIBSVM ไม่ได้ แต่ browser ในแอปเข้าได้ → browser fetch ไฟล์จาก URL ทางการแล้วรวมเป็น bundle เดียวดาวน์โหลด (ลง Downloads เป็น `.tmp` ชื่อสุ่ม) → stage ขึ้น cloud → `difficulty/unbundle_official.py` แยก ตรวจขนาด แตก zip และเขียน URL + sha256 ทุกไฟล์ใน `difficulty/official_manifest.csv`
+  - UCI ทางการ 60 zip (2 bundle 41.7 MB) · LIBSVM 8 ไฟล์ (fourclass, svmguide1/2/3, a1a) · UCI โหลดช้ามาก (~1 ไฟล์/นาที) จึงตัดไฟล์ที่มีใน mirror แล้วออกกลางทาง · aids clinical trials (890) 404
+  - repo ผู้เขียน (git clone บน cloud, pin commit ใน manifest และ fetch_mirrors_ext.sh): HD-Ensemble (HDE, ARFF แบบ sparse), DGOT, SOS (npz อ่านแบบ allow_pickle=False), MBS (`*_data.csv` ที่ผู้เขียนประมวลผลแล้ว), mafalda (EMDO; 4 ไฟล์ 24,953 แถว 3 คอลัมน์ป้าย paper พิมพ์ 23,762 ไม่บอกวิธีรวม → ไม่โหลด)
+  - release k-means SMOTE (uci_extended.tar.gz 63.7 MB): proxy ของ cloud และ browser (CORS/การนำทางไปดาวน์โหลด) ไม่ได้ แต่ `curl` บนเครื่องได้ → วางไว้ที่ `difficulty/src/author/` (gitignore) แล้ว stage · แตกเฉพาะ CSV (filter='data', ข้ามไฟล์ `._`) · ใช้เฉพาะชุดดัดแปลง (ชื่อลงท้ายด้วยตัวเลข) และ simulated1–10 ไม่ใช้ไฟล์ฐาน (pima, iris, …) กันไม่ให้แทนไฟล์มาตรฐานของ paper อื่น
+- โค้ด: `difficulty/official_sources.py` (loader ARFF dense/sparse, LibSVM, ตาราง, npz, ตาราง one-hot ของ steel plates; ทุกไฟล์ UCI ระบุคอลัมน์ป้ายและคอลัมน์ที่ตัด เช่น ai4i ตัด UDI, Product ID และธง failure mode 5 ตัวที่เป็นส่วนของป้าย) · `mirrors_ext.py` รวมเข้า catalog · `verify_ext.py`: SRC_RANK (ไฟล์ผู้เขียน = KEEL > UCI ทางการ/LIBSVM), ALIAS เพิ่ม (ชื่อ split ชี้ไปไฟล์ฐาน เช่น yeast7 → yeast, glass3 → glass ให้ขนาด/minority ที่พิมพ์ตัดสิน), IMBLEARN isolet = คลาส 1,2 (A,B) 600 ตัว, `sync_with_records()` (entry ใหม่/หมวดที่เปลี่ยนตั้งแต่ 28 ต.ค.)
+- **สถานะใหม่ `V-author_release`** (43 entry ของ k-means SMOTE): entry modified ที่ไม่พิมพ์ขนาด เดิมตัดตามกติกา ก แต่ผู้เขียนเผยแพร่ไฟล์ที่ดัดแปลงเองในชื่อเดียวกัน ("All modified and simulated datasets used in the study are made available at ...") จึงนับว่าตรวจได้ · **รอ Toon ยืนยัน** ปิดได้ด้วย `AUTHOR_RELEASE = {}`
+- measure.py: covertype (581,012 แถว ใช้เป็นไฟล์ 7 คลาส → OvR อย่างเดียว) ใช้เวลา >15 นาทีต่อ task จึงไม่รัน (`NOT_MEASURED`, บันทึกใน measure_log.csv) · heart_disease_va_long_beach เหลือ minority 1 แถวหลังตัดแถว missing → ไม่ได้วัด · name_level_types / name_level_extras รองรับสองกรณีนี้
+- ผล: ตรวจได้ **973 entry 65 paper 247 ไฟล์** · task binary/binarise **227** (689 entry 46 paper) OvR 339 · small sample 158 (70%), outliers 81, small disjuncts 33, ไม่ติดธง 56 · โปรไฟล์ใหม่ small disjuncts + outliers (2 task) → เพิ่มใน reference_collection และ fig_manuscript · noise median 0.57 [0.30, 0.77] (เดิม 0.44 — ชุดดัดแปลงของ k-means SMOTE/HDE มี IR สูง noise สูง) · ชุดอ้างอิง 43 task 19 ช่อง · noise vs ชนะ: OR 1.15 ต่อ 0.1 (p 0.01), ภายใน paper 1.17, หนึ่งผลต่อไฟล์ 1.22
+- 200 ชื่อ (`build/names_download_result.py` → `out/names_download_result.csv/.json`, รวมคอลัมน์ตรวจของ Toon): **ตรวจได้แล้ว 83 ชื่อ 103 entry** · ได้ไฟล์แต่ขนาด/task ไม่ตรง 39 (เช่น Loyalty-SMOTE พิมพ์ N มากกว่าไฟล์ 1 แถวหลายชุด — น่าจะนับแถวหัวตาราง แต่กติกาให้ขนาดตรงเป๊ะ จึงไม่รับ: maternal 1015/1014, obesity 2112/2111, toxicity 172/171, gender 4747/4746, rt-iot 123118/123117, bankruptcy 6820/6819, purchase 12331/12330) · modified ไม่พิมพ์ขนาด 8 · **ยังไม่ได้ไฟล์ 70** (Kaggle ต้องมีบัญชี, HDDT เว็บปิด, NCI/private, ImageNet/CIFAR/MNIST/UCR/CLUTO/KDD99 ที่ไม่ได้โหลด, ชื่อที่ระบุไม่ได้) · รายชื่อที่เหลืออยู่ใน `out/names_to_download.csv`
+- ข้อสังเกตเรื่องขนาด +1 ของ Loyalty-SMOTE เป็นเรื่องที่ Toon ควรตัดสิน (ผ่อนกติกาหรือไม่) ยังไม่ได้ผ่อน
+
+**สคริปต์ที่ต้องรันบนเครื่อง (มี paper/)**: modified_operations.py (เพิ่มกฎ RSMOTE outlier added), difficulty_evidence.py, baseline_provenance.py, synthetic_availability.py — รันแล้วดึงผลกลับ · ข้อควรระวัง: `device_commit_files` จาก path เดิมใน outputs อาจได้สำเนาเก่า ให้ใช้ชื่อไฟล์ใหม่ทุกครั้ง
+**manuscript**: แก้ตัวเลขทุกจุด (landscape, ตาราง data-handling, ความครบ, modified, difficulty ทั้งหัวข้อ + ตารางอ้างอิงที่ generate ใหม่, Limits, H1, H2, wins-by-type, noise vs ชนะ, H3b, ย่อหน้า synthetic ใหม่) · bib เพิ่ม gutierrez2016ordinal, chang2011libsvm · JAIR PDF 15 หน้า undefined 0 overfull 0
+**Atlas**: การ์ดแหล่งไฟล์รวมแหล่งใหม่ · การ์ดใหม่ "ผลการตามไฟล์ของ 200 ชื่อ" (ค้นได้ มีคอลัมน์ตรวจของ Toon) · การ์ด synthetic บอกว่าส่วน B นับเป็น entry แล้ว
+- ไม่ได้ push

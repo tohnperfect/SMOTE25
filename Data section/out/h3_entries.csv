@@ -282,6 +282,7 @@ P057-D049,GDO,sat,not stated,per-dataset,False
 P057-D050,GDO,waveform,not stated,per-dataset,False
 P057-D051,GDO,Internet video traffic data set,original,per-dataset,False
 P057-D052,GDO,Esophageal cancer patient data set,original,per-dataset,False
+P057-D053,GDO,artificial data set (Fig. 4),synthetic,per-dataset,False
 P071-D001,GOIO,default,original,per-dataset,True
 P071-D002,GOIO,shoppers,original,per-dataset,True
 P071-D003,GOIO,bank_full,original,per-dataset,True
@@ -424,6 +425,66 @@ P067-D017,MC-MBRC,winequality-red,original,per-dataset,True
 P067-D018,MC-MBRC,winequality-white,original,per-dataset,True
 P067-D019,MC-MBRC,yeast,original,per-dataset,True
 P067-D020,MC-MBRC,zoo,original,per-dataset,True
+P067-D021,MC-MBRC,MC-MBRC sim IR3 overlap 0,synthetic,per-dataset,False
+P067-D022,MC-MBRC,MC-MBRC sim IR3 overlap 10,synthetic,per-dataset,False
+P067-D023,MC-MBRC,MC-MBRC sim IR3 overlap 20,synthetic,per-dataset,False
+P067-D024,MC-MBRC,MC-MBRC sim IR3 overlap 30,synthetic,per-dataset,False
+P067-D025,MC-MBRC,MC-MBRC sim IR3 overlap 40,synthetic,per-dataset,False
+P067-D026,MC-MBRC,MC-MBRC sim IR3 overlap 50,synthetic,per-dataset,False
+P067-D027,MC-MBRC,MC-MBRC sim IR3 overlap 60,synthetic,per-dataset,False
+P067-D028,MC-MBRC,MC-MBRC sim IR3 overlap 70,synthetic,per-dataset,False
+P067-D029,MC-MBRC,MC-MBRC sim IR3 overlap 80,synthetic,per-dataset,False
+P067-D030,MC-MBRC,MC-MBRC sim IR3 overlap 90,synthetic,per-dataset,False
+P067-D031,MC-MBRC,MC-MBRC sim IR12 overlap 0,synthetic,per-dataset,False
+P067-D032,MC-MBRC,MC-MBRC sim IR12 overlap 10,synthetic,per-dataset,False
+P067-D033,MC-MBRC,MC-MBRC sim IR12 overlap 20,synthetic,per-dataset,False
+P067-D034,MC-MBRC,MC-MBRC sim IR12 overlap 30,synthetic,per-dataset,False
+P067-D035,MC-MBRC,MC-MBRC sim IR12 overlap 40,synthetic,per-dataset,False
+P067-D036,MC-MBRC,MC-MBRC sim IR12 overlap 50,synthetic,per-dataset,False
+P067-D037,MC-MBRC,MC-MBRC sim IR12 overlap 60,synthetic,per-dataset,False
+P067-D038,MC-MBRC,MC-MBRC sim IR12 overlap 70,synthetic,per-dataset,False
+P067-D039,MC-MBRC,MC-MBRC sim IR12 overlap 80,synthetic,per-dataset,False
+P067-D040,MC-MBRC,MC-MBRC sim IR12 overlap 90,synthetic,per-dataset,False
+P067-D041,MC-MBRC,MC-MBRC sim IR30 overlap 0,synthetic,per-dataset,False
+P067-D042,MC-MBRC,MC-MBRC sim IR30 overlap 10,synthetic,per-dataset,False
+P067-D043,MC-MBRC,MC-MBRC sim IR30 overlap 20,synthetic,per-dataset,False
+P067-D044,MC-MBRC,MC-MBRC sim IR30 overlap 30,synthetic,per-dataset,False
+P067-D045,MC-MBRC,MC-MBRC sim IR30 overlap 40,synthetic,per-dataset,False
+P067-D046,MC-MBRC,MC-MBRC sim IR30 overlap 50,synthetic,per-dataset,False
+P067-D047,MC-MBRC,MC-MBRC sim IR30 overlap 60,synthetic,per-dataset,False
+P067-D048,MC-MBRC,MC-MBRC sim IR30 overlap 70,synthetic,per-dataset,False
+P067-D049,MC-MBRC,MC-MBRC sim IR30 overlap 80,synthetic,per-dataset,False
+P067-D050,MC-MBRC,MC-MBRC sim IR30 overlap 90,synthetic,per-dataset,False
+P067-D051,MC-MBRC,MC-MBRC sim IR60 overlap 0,synthetic,per-dataset,False
+P067-D052,MC-MBRC,MC-MBRC sim IR60 overlap 10,synthetic,per-dataset,False
+P067-D053,MC-MBRC,MC-MBRC sim IR60 overlap 20,synthetic,per-dataset,False
+P067-D054,MC-MBRC,MC-MBRC sim IR60 overlap 30,synthetic,per-dataset,False
+P067-D055,MC-MBRC,MC-MBRC sim IR60 overlap 40,synthetic,per-dataset,False
+P067-D056,MC-MBRC,MC-MBRC sim IR60 overlap 50,synthetic,per-dataset,False
+P067-D057,MC-MBRC,MC-MBRC sim IR60 overlap 60,synthetic,per-dataset,False
+P067-D058,MC-MBRC,MC-MBRC sim IR60 overlap 70,synthetic,per-dataset,False
+P067-D059,MC-MBRC,MC-MBRC sim IR60 overlap 80,synthetic,per-dataset,False
+P067-D060,MC-MBRC,MC-MBRC sim IR60 overlap 90,synthetic,per-dataset,False
+P067-D061,MC-MBRC,MC-MBRC sim IR120 overlap 0,synthetic,per-dataset,False
+P067-D062,MC-MBRC,MC-MBRC sim IR120 overlap 10,synthetic,per-dataset,False
+P067-D063,MC-MBRC,MC-MBRC sim IR120 overlap 20,synthetic,per-dataset,False
+P067-D064,MC-MBRC,MC-MBRC sim IR120 overlap 30,synthetic,per-dataset,False
+P067-D065,MC-MBRC,MC-MBRC sim IR120 overlap 40,synthetic,per-dataset,False
+P067-D066,MC-MBRC,MC-MBRC sim IR120 overlap 50,synthetic,per-dataset,False
+P067-D067,MC-MBRC,MC-MBRC sim IR120 overlap 60,synthetic,per-dataset,False
+P067-D068,MC-MBRC,MC-MBRC sim IR120 overlap 70,synthetic,per-dataset,False
+P067-D069,MC-MBRC,MC-MBRC sim IR120 overlap 80,synthetic,per-dataset,False
+P067-D070,MC-MBRC,MC-MBRC sim IR120 overlap 90,synthetic,per-dataset,False
+P067-D071,MC-MBRC,MC-MBRC sim IR200 overlap 0,synthetic,per-dataset,False
+P067-D072,MC-MBRC,MC-MBRC sim IR200 overlap 10,synthetic,per-dataset,False
+P067-D073,MC-MBRC,MC-MBRC sim IR200 overlap 20,synthetic,per-dataset,False
+P067-D074,MC-MBRC,MC-MBRC sim IR200 overlap 30,synthetic,per-dataset,False
+P067-D075,MC-MBRC,MC-MBRC sim IR200 overlap 40,synthetic,per-dataset,False
+P067-D076,MC-MBRC,MC-MBRC sim IR200 overlap 50,synthetic,per-dataset,False
+P067-D077,MC-MBRC,MC-MBRC sim IR200 overlap 60,synthetic,per-dataset,False
+P067-D078,MC-MBRC,MC-MBRC sim IR200 overlap 70,synthetic,per-dataset,False
+P067-D079,MC-MBRC,MC-MBRC sim IR200 overlap 80,synthetic,per-dataset,False
+P067-D080,MC-MBRC,MC-MBRC sim IR200 overlap 90,synthetic,per-dataset,False
 P048-D001,MC-RBO,Automobile,original,per-dataset,True
 P048-D002,MC-RBO,Balance,original,per-dataset,True
 P048-D003,MC-RBO,Car,original,per-dataset,True
@@ -481,6 +542,7 @@ P073-D013,MLOS,winequalityred3vs5,repository-defined,per-dataset,True
 P073-D014,MLOS,winequality,not stated,per-dataset,True
 P073-D015,MLOS,xalan-2.7,not stated,per-dataset,True
 P073-D016,MLOS,yeast6,repository-defined,per-dataset,True
+P073-D017,MLOS,synthetic illustration set,synthetic,per-dataset,False
 P025-D001,MWMOTE,Pageblocks,modified,per-dataset,True
 P025-D002,MWMOTE,Abalone,modified,per-dataset,True
 P025-D003,MWMOTE,CTG,modified,per-dataset,True
@@ -560,10 +622,18 @@ P064-D027,NROMM,D7 Ecoli-3-5 vs 0-6-7,repository-defined,per-dataset,False
 P064-D028,NROMM,D8 Ecoli-3-5 vs 0-2-6-7,repository-defined,per-dataset,False
 P064-D029,NROMM,D9 Ecoli4,not stated,per-dataset,False
 P064-D030,NROMM,D10 Page-blocks-4 vs 1-3,repository-defined,per-dataset,False
+P064-D031,NROMM,simulated dataset A,synthetic,per-dataset,False
+P064-D032,NROMM,simulated dataset A 1D,synthetic,per-dataset,False
+P064-D033,NROMM,simulated dataset B,synthetic,per-dataset,False
+P064-D034,NROMM,simulated dataset B 1D,synthetic,per-dataset,False
+P064-D035,NROMM,simulated dataset C,synthetic,per-dataset,False
+P064-D036,NROMM,simulated dataset C 1D,synthetic,per-dataset,False
+P064-D037,NROMM,simulated dataset D,synthetic,per-dataset,False
+P064-D038,NROMM,simulated dataset D 1D,synthetic,per-dataset,False
 P065-D001,OREM-M,Vertebral,original,per-dataset,True
 P065-D002,OREM-M,Laryngeal,original,per-dataset,True
 P065-D003,OREM-M,New-thyroid,original,per-dataset,True
-P065-D004,OREM-M,Toy,original,per-dataset,True
+P065-D004,OREM-M,Toy,synthetic,per-dataset,True
 P065-D005,OREM-M,Voice3,original,per-dataset,True
 P065-D006,OREM-M,Wisconsin5,original,per-dataset,True
 P065-D007,OREM-M,Cleveland,original,per-dataset,True
@@ -581,6 +651,7 @@ P065-D018,OREM-M,Stock10,original,per-dataset,True
 P065-D019,OREM-M,Plates faults,original,per-dataset,True
 P065-D020,OREM-M,Abalone,original,per-dataset,True
 P065-D021,OREM-M,Housing10,original,per-dataset,True
+P065-D022,OREM-M,simulated set (Fig. S2),synthetic,per-dataset,False
 P024-D001,OVO-SMOTE,Autos,modified,per-dataset,True
 P024-D002,OVO-SMOTE,Balance,original,per-dataset,True
 P024-D003,OVO-SMOTE,Cleveland,modified,per-dataset,True
@@ -720,6 +791,7 @@ P027-D083,RBBoost / Random Balance,yeast3,repository-defined,per-dataset,True
 P027-D084,RBBoost / Random Balance,yeast4,repository-defined,per-dataset,True
 P027-D085,RBBoost / Random Balance,yeast5,repository-defined,per-dataset,True
 P027-D086,RBBoost / Random Balance,yeast6,repository-defined,per-dataset,True
+P027-D087,RBBoost / Random Balance,two Gaussian classes,synthetic,per-dataset,False
 P053-D001,RSMOTE,breast_tissue2,not stated,per-dataset,True
 P053-D002,RSMOTE,ecoli,not stated,per-dataset,True
 P053-D003,RSMOTE,heart,original,per-dataset,True
@@ -755,6 +827,10 @@ P053-D032,RSMOTE,svmguide2,original,per-dataset,False
 P053-D033,RSMOTE,userknowledge,original,per-dataset,False
 P053-D034,RSMOTE,vertebralColumn,original,per-dataset,False
 P053-D035,RSMOTE,Healthy_Older_People2,original,per-dataset,False
+P053-D036,RSMOTE,toy data set,synthetic,per-dataset,False
+P053-D037,RSMOTE,moons,synthetic,per-dataset,False
+P053-D038,RSMOTE,circles,synthetic,per-dataset,False
+P053-D039,RSMOTE,fourclass (outlier added),modified,per-dataset,False
 P020-D001,RUSBoost,SP3,not stated,per-dataset partial,True
 P020-D002,RUSBoost,MAMMOGRAPHY,original,per-dataset partial,True
 P020-D003,RUSBoost,SOLARFLAREF,modified,per-dataset partial,True

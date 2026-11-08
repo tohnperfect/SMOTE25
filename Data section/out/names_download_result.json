@@ -1,0 +1,68 @@
+{
+ "names": 200,
+ "entries": 236,
+ "by_result": {
+  "now verifiable": {
+   "names": 83,
+   "entries": 103,
+   "entries_verifiable": 95
+  },
+  "file obtained, size or task does not match": {
+   "names": 39,
+   "entries": 47,
+   "entries_verifiable": 0
+  },
+  "modified, no printed size": {
+   "names": 8,
+   "entries": 10,
+   "entries_verifiable": 0
+  },
+  "synthetic": {
+   "names": 0,
+   "entries": 0,
+   "entries_verifiable": 0
+  },
+  "no file obtained": {
+   "names": 70,
+   "entries": 76,
+   "entries_verifiable": 0
+  }
+ },
+ "no_file_by_toon_check": {
+  "B_rebuild": 26,
+  "A_repo": 18,
+  "D_none": 12,
+  "C_identify": 7,
+  "A_author": 6,
+  "?": 1
+ },
+ "no_file_by_where": {
+  "Kaggle": 11,
+  "UCI ML Repository": 10,
+  "UCR": 6,
+  "KDD Cup 1999": 5,
+  "HDDT collection": 4,
+  "IBM sample": 3,
+  "ImageNet features": 3,
+  "SDGym": 3,
+  "SMOTE-IPF site": 2,
+  "Boston Housing": 2,
+  "CLUTO text datasets": 2,
+  "MNIST": 2,
+  "KEEL": 2,
+  "UCI?": 2,
+  "private": 1,
+  "CIFAR-10": 1,
+  "Compustat": 1,
+  "CrowdAnalytix contest": 1,
+  "NCI": 1,
+  "HDDT": 1,
+  "LibSVM": 1,
+  "Kaggle competition": 1,
+  "ImageNet": 1,
+  "GitHub": 1,
+  "UCI": 1,
+  "IBM Watson sample": 1,
+  "-": 1
+ }
+}

@@ -18,7 +18,7 @@ HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); os.chdir(HER
 L = pd.read_csv("out/allmetric_links.csv", dtype=str).fillna("")
 L = L[(L.comparator_group == "plain SMOTE") & L.result.isin(["win", "loss", "tie"]) & (L.record_id != "")]
 V = pd.read_csv("difficulty/verifiability_entries.csv", dtype=str).fillna("")
-V = V[V.verif.isin(["V-binary_file", "V-keel_name_only", "V-name_only_other", "V-name_only_ext"])][["record_id", "file", "file_src"]]   # 8 Nov: + V-name_only_ext
+V = V[V.verif.isin(["V-binary_file", "V-keel_name_only", "V-name_only_other", "V-name_only_ext", "V-author_release"])][["record_id", "file", "file_src"]]   # 8 Nov: + V-name_only_ext
 P = pd.read_csv("difficulty/difficulty_profile_final.csv")
 P = P[P.origin == "binary file"].rename(columns={"source": "file_src"})
 J = L.merge(V, on="record_id").merge(P, on=["file", "file_src"])

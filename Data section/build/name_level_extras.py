@@ -19,7 +19,8 @@ out = {}
 # 1
 PRI = ["U-synthetic", "U-minority_mismatch", "U-task_not_reconstructible", "U-name_ambiguous", "U-size_mismatch", "U-no_printed_size", "U-no_class_info", "U-no_public_file"]   # 8 Nov: + name_ambiguous, no_class_info (verify_ext.py)
 n = R[R.difficulty == "not measured"].copy()
-n["reason"] = n.not_measured_reason.map(lambda s: next(x for x in PRI if x in [y.rsplit(" ", 1)[0] for y in s.split("; ")]))
+# 8 Nov second round: a name whose only entries are verifiable but not run (covertype; heart-v with 1 minority row left) -> V-not_run
+n["reason"] = n.not_measured_reason.map(lambda s: next((x for x in PRI if x in [y.rsplit(" ", 1)[0] for y in s.split("; ")]), "V-not_run"))
 npf = n[n.reason == "U-no_public_file"]
 out["not_measured"] = dict(names=int(len(n)), by_reason=n.reason.value_counts().to_dict(),
     no_public_file_by_source=npf.source.value_counts().to_dict(),

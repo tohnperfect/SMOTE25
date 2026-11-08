@@ -67,20 +67,26 @@ HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); os.chdir(HER
 ORDER = ["modified", "synthetic", "repository-defined", "original", "not stated"]
 DIFF = ["none", "small_sample", "outlier_flag", "small_sample + outlier_flag", "small_disjuncts + outlier_flag",
         "small_disjuncts + small_sample", "small_disjuncts + small_sample + outlier_flag", "varies", "multiclass", "not measured"]
-BIN_FILE = {"V-binary_file", "V-keel_name_only", "V-name_only_other", "V-name_only_ext"}   # V-name_only_ext: 8 Nov (verify_ext.py)
+BIN_FILE = {"V-binary_file", "V-keel_name_only", "V-name_only_other", "V-name_only_ext", "V-author_release"}   # V-name_only_ext: 8 Nov (verify_ext.py); V-author_release: 8 Nov second round
 MULTI = {"V-multiclass_asis", "V?-binarized_rule_ambiguous"}
 
 D = pd.read_csv("out/dataset_records.csv", dtype=str).fillna("")
 D = D[D.is_placeholder != "yes"]
 V = pd.read_csv("difficulty/verifiability_entries.csv", dtype=str).fillna("")
 P = pd.read_csv("difficulty/difficulty_profile_final.csv", dtype=str).fillna("")
-assert len(D) == 1653 and D.normalized_name.nunique() == 771, "STOP: dataset_records.csv changed (expected 1,653 entries, 771 names)"
+# expected counts come from out/reconcile_counts.json (8 Nov 2026: no fixed numbers; was 1,653 entries / 771 names)
+_RC = json.load(open("out/reconcile_counts.json", encoding="utf-8"))["checks"]
+N_ENT, N_NAMES = _RC["entries_named"]["got"], _RC["distinct_names"]["got"]
+assert len(D) == N_ENT and D.normalized_name.nunique() == N_NAMES, f"STOP: dataset_records.csv and reconcile_counts.json disagree ({len(D)} vs {N_ENT})"
 M = D.merge(V[["record_id", "verif", "file", "file_src", "task_minority"]], on="record_id", how="left")
 assert M.verif.notna().all(), "STOP: a record has no verifiability row"
 M["src"] = M.source_as_reported.map(src_group)
 M["sid"] = [src_id(r, p) or "" for r, p in zip(M.source_as_reported, M.paper_key)]   # "" not None (pandas 3 turns None into NaN)
 
 PB = {(r.file, r.source): r for r in P[P.origin == "binary file"].itertuples()}
+_ML = pd.read_csv("difficulty/measure_log.csv", dtype=str).fillna("")
+NOT_RUN = {(r.file, r.item) for r in _ML.itertuples() if r.note.startswith("not measured")}   # (file, source)
+TOO_FEW = {r.file for r in _ML.itertuples() if r.note.startswith("minority <2")}   # file whose minority has <2 rows after missing-row drop
 OVR = {(r.file, r.source) for r in P[P.origin.str.startswith("one-vs")].itertuples()}
 PZ = {}
 for r in P[P.origin.str.startswith("binarised")].itertuples(): PZ.setdefault((r.file, r.source), []).append(r)
@@ -109,11 +115,15 @@ for name, g in M.groupby("normalized_name", sort=True):
     cats = Counter(g.category)
     ntype = next(c for c in ORDER if cats.get(c))
     tasks = {}
-    multi = False
+    multi = notrun = False
     for e in g.itertuples():
         t = task_of(e)
         if t is not None: tasks[(t.file, t.source, t.minority_label)] = t
         elif e.verif in MULTI: multi = True
+        elif (e.file, e.file_src) in NOT_RUN:   # 8 Nov second round: verifiable file that measure.py did not run (covertype)
+            notrun = True
+        elif e.verif in BIN_FILE and e.file in TOO_FEW and (e.file, e.file_src) not in OVR:
+            notrun = True              # e.g. PMLB heart_disease_va_long_beach: 1 minority row left after rows with missing values are dropped
         elif e.verif in BIN_FILE:   # name matched a multiclass file without a known minority class -> measured only one-vs-rest
             assert (e.file, e.file_src) in OVR, f"STOP: {e.record_id} matched {e.file} but no measured task"
             multi = True
@@ -123,6 +133,7 @@ for name, g in M.groupby("normalized_name", sort=True):
     elif multi: diff = "multiclass"
     else: diff = "not measured"
     reason = "; ".join(f"{k} {v}" for k, v in Counter(x for x in g.verif if x.startswith("U-")).most_common()) if diff == "not measured" else ""
+    if diff == "not measured" and notrun: reason = (reason + "; " if reason else "") + "verifiable, not measured (difficulty/measure_log.csv: not run for time, or fewer than 2 minority rows after missing-row drop)"
     sc = Counter(g.src); spec = [x for x in SPEC if sc.get(x)]
     # แหล่งระดับชื่อ: แหล่งที่ระบุรายชุดถ้ามีแค่แหล่งเดียว · หลายแหล่ง = "multiple" · ไม่มีแหล่งรายชุด -> ระดับกลุ่ม หรือ not stated
     nsrc = spec[0] if len(spec) == 1 else "multiple" if spec else "group-level" if sc.get("group-level") else "not stated"
@@ -141,7 +152,7 @@ for name, g in M.groupby("normalized_name", sort=True):
         verif_statuses="; ".join(f"{k} {v}" for k, v in Counter(g.verif).most_common()),
         not_measured_reason=reason, record_ids="; ".join(g.record_id)))
 R = pd.DataFrame(rows)
-assert len(R) == 771 and set(R.difficulty) <= set(DIFF)
+assert len(R) == N_NAMES and set(R.difficulty) <= set(DIFF)
 assert not unmapped_binarised, f"STOP: binarised entries without a measured task: {unmapped_binarised}"
 R.to_csv("out/name_level_types.csv", index=False)
 
@@ -169,8 +180,8 @@ out = dict(
     rules=dict(source="แหล่งตามที่ paper เขียน จัดเป็น 8 กลุ่มด้วยการจับข้อความ (source_map) · ระดับชื่อ: ถ้า paper ที่ระบุแหล่งรายชุดระบุตรงกันแหล่งเดียว ใช้แหล่งนั้น · ระบุต่างกัน = multiple · ไม่มี paper ระบุรายชุด แต่มีระดับกลุ่ม (เช่น UCI หรือ KEEL) = group-level · ไม่มีเลย = not stated",
                type="ชื่อหนึ่งได้ชนิดเดียว: ถ้ามี entry ใดเป็นชนิดที่มาก่อนตามลำดับ precedence ใช้ชนิดนั้น (เคยดัดแปลง = modified)",
                difficulty="โปรไฟล์ของ task สองคลาสที่วัดแล้ว (ธงจาก difficulty/profile_final.py) · หลาย task ต่างโปรไฟล์ = varies · มีแต่ไฟล์หลายคลาส = multiclass · ไม่มีไฟล์ที่ตรวจได้ = not measured"))
-assert sum(src_cnt.values()) == 771 and sum(out["entry_level_by_source"].values()) == 1653
-assert sum(by_type.values()) == 771 and all(sum(v.values()) == by_type[c] for c, v in cross.items())
+assert sum(src_cnt.values()) == N_NAMES and sum(out["entry_level_by_source"].values()) == N_ENT
+assert sum(by_type.values()) == N_NAMES and all(sum(v.values()) == by_type[c] for c, v in cross.items())
 out["modified_ops"] = dict(
     order=OPS, entries=int(len(MO)), papers=int(MO.paper_key.nunique()), names=int(MO.normalized_name.nunique()),
     by_op={o: dict(entries=int(MO.opset.map(lambda x: o in x).sum()), papers=int(MO[MO.opset.map(lambda x: o in x)].paper_key.nunique()),

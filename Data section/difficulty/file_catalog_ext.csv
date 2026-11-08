@@ -715,3 +715,150 @@ jbrownlee-UCI,pima-indians-diabetes,src/jbrownlee/pima-indians-diabetes.csv,768,
 jbrownlee-UCI,sonar,src/jbrownlee/sonar.csv,208,60,2,97,"[97, 111]",,sonar
 jbrownlee-UCI,wheat-seeds,src/jbrownlee/wheat-seeds.csv,210,7,3,70,"[70, 70, 70]",,wheatseeds
 jbrownlee-UCI,wine,src/jbrownlee/wine.csv,178,13,3,48,"[48, 59, 71]",,wine
+author-HDE,a1a,src/author/HD-Ensemble/a1a.arff,404,119,2,9,"[9, 395]",,a1a
+author-HDE,abalone-17_vs_7-8-9-10,src/author/HD-Ensemble/abalone-17_vs_7-8-9-10.arff,2338,8,2,58,"[58, 2280]",,abalone17vs78910
+author-HDE,abalone19,src/author/HD-Ensemble/abalone19.arff,4174,8,2,32,"[32, 4142]",,abalone19
+author-HDE,abalone9-18,src/author/HD-Ensemble/abalone9-18.arff,731,8,2,42,"[42, 689]",,abalone918
+author-HDE,australian_scale,src/author/HD-Ensemble/australian_scale.arff,314,14,2,7,"[7, 307]",,australianscale
+author-HDE,breast-cancer_scale,src/author/HD-Ensemble/breast-cancer_scale.arff,248,10,2,9,"[9, 239]",,breastcancerscale
+author-HDE,cod-rna,src/author/HD-Ensemble/cod-rna.arff,19871,8,2,26,"[26, 19845]",,codrna
+author-HDE,diabetes_scale,src/author/HD-Ensemble/diabetes_scale.arff,276,8,2,8,"[8, 268]",,diabetesscale
+author-HDE,ecoli-0-1-3-7_vs_2-6,src/author/HD-Ensemble/ecoli-0-1-3-7_vs_2-6.arff,281,7,2,7,"[7, 274]",,ecoli0137vs26
+author-HDE,ecoli4,src/author/HD-Ensemble/ecoli4.arff,336,7,2,20,"[20, 316]",,ecoli4
+author-HDE,german,src/author/HD-Ensemble/german.arff,324,24,2,24,"[24, 300]",,german
+author-HDE,glass-0-1-6_vs_2,src/author/HD-Ensemble/glass-0-1-6_vs_2.arff,192,9,2,17,"[17, 175]",,glass016vs2
+author-HDE,glass-0-1-6_vs_5,src/author/HD-Ensemble/glass-0-1-6_vs_5.arff,184,9,2,9,"[9, 175]",,glass016vs5
+author-HDE,glass2,src/author/HD-Ensemble/glass2.arff,214,9,2,17,"[17, 197]",,glass2
+author-HDE,glass5,src/author/HD-Ensemble/glass5.arff,214,9,2,9,"[9, 205]",,glass5
+author-HDE,ijcnn1,src/author/HD-Ensemble/ijcnn1.arff,4858,22,2,5,"[5, 4853]",,ijcnn1
+author-HDE,kddcup-buffer_overflow_vs_back,src/author/HD-Ensemble/kddcup-buffer_overflow_vs_back.arff,2233,41,2,30,"[30, 2203]",,kddbufferoverflowvsback
+author-HDE,kddcup-land_vs_satan,src/author/HD-Ensemble/kddcup-land_vs_satan.arff,1610,41,2,21,"[21, 1589]",,kddlandvssatan
+author-HDE,kddcup-rootkit-imap_vs_back,src/author/HD-Ensemble/kddcup-rootkit-imap_vs_back.arff,2225,41,2,22,"[22, 2203]",,kddrootkitvsback
+author-HDE,kr-vs-k-three_vs_eleven,src/author/HD-Ensemble/kr-vs-k-three_vs_eleven.arff,2935,6,2,81,"[81, 2854]",,krvsk3vs11
+author-HDE,kr-vs-k-zero_vs_eight,src/author/HD-Ensemble/kr-vs-k-zero_vs_eight.arff,1460,6,2,27,"[27, 1433]",,krvsk0vs8
+author-HDE,kr-vs-k-zero_vs_fifteen,src/author/HD-Ensemble/kr-vs-k-zero_vs_fifteen.arff,2193,6,2,27,"[27, 2166]",,krvsk0vs15
+author-HDE,madelon,src/author/HD-Ensemble/madelon.arff,1378,500,2,78,"[78, 1300]",,madelon
+author-HDE,mushrooms,src/author/HD-Ensemble/mushrooms.arff,4001,112,2,85,"[85, 3916]",,mushrooms
+author-HDE,phishing,src/author/HD-Ensemble/phishing.arff,4910,68,2,12,"[12, 4898]",,phishing
+author-HDE,poker-8-9_vs_5,src/author/HD-Ensemble/poker-8-9_vs_5.arff,2075,10,2,25,"[25, 2050]",,poker89vs5
+author-HDE,poker-8_vs_6,src/author/HD-Ensemble/poker-8_vs_6.arff,1477,10,2,17,"[17, 1460]",,poker8vs6
+author-HDE,shuttle-2_vs_5,src/author/HD-Ensemble/shuttle-2_vs_5.arff,3316,9,2,49,"[49, 3267]",,shuttle2vs5
+author-HDE,shuttle-c0-vs-c4,src/author/HD-Ensemble/shuttle-c0-vs-c4.arff,1829,9,2,123,"[123, 1706]",,shuttlec0vsc4
+author-HDE,shuttle-c2-vs-c4,src/author/HD-Ensemble/shuttle-c2-vs-c4.arff,129,9,2,6,"[6, 123]",,shuttlec2vsc4
+author-HDE,skin_nonskin,src/author/HD-Ensemble/skin_nonskin.arff,20034,3,2,34,"[34, 20000]",,skinnonskin
+author-HDE,svmguide1,src/author/HD-Ensemble/svmguide1.arff,3175,4,2,86,"[86, 3089]",,svmguide1
+author-HDE,svmguide3,src/author/HD-Ensemble/svmguide3.arff,312,22,2,16,"[16, 296]",,svmguide3
+author-HDE,vowel0,src/author/HD-Ensemble/vowel0.arff,988,13,2,90,"[90, 898]",,vowel0
+author-HDE,yeast-0-5-6-7-9_vs_4,src/author/HD-Ensemble/yeast-0-5-6-7-9_vs_4.arff,528,8,2,51,"[51, 477]",,yeast05679vs4
+author-HDE,yeast-1-2-8-9_vs_7,src/author/HD-Ensemble/yeast-1-2-8-9_vs_7.arff,947,8,2,30,"[30, 917]",,yeast1289vs7
+author-HDE,yeast-1-4-5-8_vs_7,src/author/HD-Ensemble/yeast-1-4-5-8_vs_7.arff,693,8,2,30,"[30, 663]",,yeast1458vs7
+author-HDE,yeast-1_vs_7,src/author/HD-Ensemble/yeast-1_vs_7.arff,459,7,2,30,"[30, 429]",,yeast1vs7
+author-HDE,yeast-2_vs_4,src/author/HD-Ensemble/yeast-2_vs_4.arff,514,8,2,51,"[51, 463]",,yeast2vs4
+author-HDE,yeast5,src/author/HD-Ensemble/yeast5.arff,1484,8,2,44,"[44, 1440]",,yeast5
+author-HDE,yeast6,src/author/HD-Ensemble/yeast6.arff,1484,8,2,35,"[35, 1449]",,yeast6
+author-DGOT,abalone_15,src/author/DGOT/abalone_15.csv,4177,8,2,261,"[261, 3916]",,abalone15
+author-SOS,default,src/author/SOS/default.npz,30000,23,2,6636,"[6636, 23364]",,default
+author-SOS,shoppers,src/author/SOS/shoppers.npz,12330,17,2,1908,"[1908, 10422]",,shoppers
+author-SOS,satimage,src/author/SOS/satimage.npz,6430,36,6,625,"[625, 703, 707, 1356, 1508, 1531]",,satimage
+author-MBS,bank,src/author/MBS/bank/Bank_data.csv,45211,11,2,5289,"[5289, 39922]",,bank
+author-MBS,hmeq,src/author/MBS/hmeq/Hmeq_data.csv,5960,10,2,1189,"[1189, 4771]",,hmeq
+author-MBS,give me some credit,src/author/MBS/Give Me Some Credit/Credit_data.csv,150000,10,2,10026,"[10026, 139974]",,givemesomecredit
+author-MBS,promotion,src/author/MBS/promotion/Promotion_data.csv,25000,4,2,1716,"[1716, 23284]",,promotion
+author-kmeans,breast_tissue2,src/author/kmeans/breast_tissue2.csv,88,9,2,18,"[18, 70]",,breasttissue2
+author-kmeans,breast_tissue4,src/author/kmeans/breast_tissue4.csv,79,9,2,9,"[9, 70]",,breasttissue4
+author-kmeans,ecoli2,src/author/kmeans/ecoli2.csv,310,7,2,26,"[26, 284]",,ecoli2
+author-kmeans,ecoli4,src/author/kmeans/ecoli4.csv,297,7,2,13,"[13, 284]",,ecoli4
+author-kmeans,ecoli6,src/author/kmeans/ecoli6.csv,292,7,2,8,"[8, 284]",,ecoli6
+author-kmeans,glass2,src/author/kmeans/glass2.csv,179,9,2,35,"[35, 144]",,glass2
+author-kmeans,glass4,src/author/kmeans/glass4.csv,161,9,2,17,"[17, 144]",,glass4
+author-kmeans,glass6,src/author/kmeans/glass6.csv,155,9,2,11,"[11, 144]",,glass6
+author-kmeans,haberman10,src/author/kmeans/haberman10.csv,233,3,2,8,"[8, 225]",,haberman10
+author-kmeans,haberman2,src/author/kmeans/haberman2.csv,265,3,2,40,"[40, 225]",,haberman2
+author-kmeans,haberman4,src/author/kmeans/haberman4.csv,245,3,2,20,"[20, 225]",,haberman4
+author-kmeans,haberman6,src/author/kmeans/haberman6.csv,238,3,2,13,"[13, 225]",,haberman6
+author-kmeans,heart10,src/author/kmeans/heart10.csv,162,13,2,12,"[12, 150]",,heart10
+author-kmeans,heart15,src/author/kmeans/heart15.csv,158,13,2,8,"[8, 150]",,heart15
+author-kmeans,heart2,src/author/kmeans/heart2.csv,210,13,2,60,"[60, 150]",,heart2
+author-kmeans,heart4,src/author/kmeans/heart4.csv,180,13,2,30,"[30, 150]",,heart4
+author-kmeans,heart6,src/author/kmeans/heart6.csv,170,13,2,20,"[20, 150]",,heart6
+author-kmeans,iris2,src/author/kmeans/iris2.csv,125,4,2,25,"[25, 100]",,iris2
+author-kmeans,iris4,src/author/kmeans/iris4.csv,112,4,2,12,"[12, 100]",,iris4
+author-kmeans,iris6,src/author/kmeans/iris6.csv,108,4,2,8,"[8, 100]",,iris6
+author-kmeans,libra2,src/author/kmeans/libra2.csv,324,90,2,36,"[36, 288]",,libra2
+author-kmeans,libra4,src/author/kmeans/libra4.csv,306,90,2,18,"[18, 288]",,libra4
+author-kmeans,libra6,src/author/kmeans/libra6.csv,300,90,2,12,"[12, 288]",,libra6
+author-kmeans,liver_disorders10,src/author/kmeans/liver_disorders10.csv,214,6,2,14,"[14, 200]",,liverdisorders10
+author-kmeans,liver_disorders15,src/author/kmeans/liver_disorders15.csv,209,6,2,9,"[9, 200]",,liverdisorders15
+author-kmeans,liver_disorders2,src/author/kmeans/liver_disorders2.csv,272,6,2,72,"[72, 200]",,liverdisorders2
+author-kmeans,liver_disorders4,src/author/kmeans/liver_disorders4.csv,236,6,2,36,"[36, 200]",,liverdisorders4
+author-kmeans,liver_disorders6,src/author/kmeans/liver_disorders6.csv,224,6,2,24,"[24, 200]",,liverdisorders6
+author-kmeans,pima10,src/author/kmeans/pima10.csv,526,8,2,26,"[26, 500]",,pima10
+author-kmeans,pima15,src/author/kmeans/pima15.csv,517,8,2,17,"[17, 500]",,pima15
+author-kmeans,pima2,src/author/kmeans/pima2.csv,634,8,2,134,"[134, 500]",,pima2
+author-kmeans,pima20,src/author/kmeans/pima20.csv,513,8,2,13,"[13, 500]",,pima20
+author-kmeans,pima4,src/author/kmeans/pima4.csv,567,8,2,67,"[67, 500]",,pima4
+author-kmeans,pima6,src/author/kmeans/pima6.csv,544,8,2,44,"[44, 500]",,pima6
+author-kmeans,segment10,src/author/kmeans/segment10.csv,2013,16,2,33,"[33, 1980]",,segment10
+author-kmeans,segment15,src/author/kmeans/segment15.csv,2001,16,2,21,"[21, 1980]",,segment15
+author-kmeans,segment2,src/author/kmeans/segment2.csv,2145,16,2,165,"[165, 1980]",,segment2
+author-kmeans,segment20,src/author/kmeans/segment20.csv,1996,16,2,16,"[16, 1980]",,segment20
+author-kmeans,segment4,src/author/kmeans/segment4.csv,2062,16,2,82,"[82, 1980]",,segment4
+author-kmeans,segment6,src/author/kmeans/segment6.csv,2035,16,2,55,"[55, 1980]",,segment6
+author-kmeans,simulated1,src/author/kmeans/simulated1.csv,4000,20,2,25,"[25, 3975]",,simulated1
+author-kmeans,simulated10,src/author/kmeans/simulated10.csv,3000,200,2,22,"[22, 2978]",,simulated10
+author-kmeans,simulated2,src/author/kmeans/simulated2.csv,4000,20,2,23,"[23, 3977]",,simulated2
+author-kmeans,simulated3,src/author/kmeans/simulated3.csv,4000,20,2,23,"[23, 3977]",,simulated3
+author-kmeans,simulated4,src/author/kmeans/simulated4.csv,4000,20,2,26,"[26, 3974]",,simulated4
+author-kmeans,simulated5,src/author/kmeans/simulated5.csv,4000,20,2,23,"[23, 3977]",,simulated5
+author-kmeans,simulated6,src/author/kmeans/simulated6.csv,3000,200,2,20,"[20, 2980]",,simulated6
+author-kmeans,simulated7,src/author/kmeans/simulated7.csv,3000,200,2,19,"[19, 2981]",,simulated7
+author-kmeans,simulated8,src/author/kmeans/simulated8.csv,3000,200,2,15,"[15, 2985]",,simulated8
+author-kmeans,simulated9,src/author/kmeans/simulated9.csv,3000,200,2,13,"[13, 2987]",,simulated9
+author-kmeans,vehicle10,src/author/kmeans/vehicle10.csv,666,18,2,19,"[19, 647]",,vehicle10
+author-kmeans,vehicle15,src/author/kmeans/vehicle15.csv,660,18,2,13,"[13, 647]",,vehicle15
+author-kmeans,vehicle2,src/author/kmeans/vehicle2.csv,746,18,2,99,"[99, 647]",,vehicle2
+author-kmeans,vehicle20,src/author/kmeans/vehicle20.csv,656,18,2,9,"[9, 647]",,vehicle20
+author-kmeans,vehicle4,src/author/kmeans/vehicle4.csv,696,18,2,49,"[49, 647]",,vehicle4
+author-kmeans,vehicle6,src/author/kmeans/vehicle6.csv,680,18,2,33,"[33, 647]",,vehicle6
+author-kmeans,wine2,src/author/kmeans/wine2.csv,142,13,2,35,"[35, 107]",,wine2
+author-kmeans,wine4,src/author/kmeans/wine4.csv,124,13,2,17,"[17, 107]",,wine4
+author-kmeans,wine6,src/author/kmeans/wine6.csv,118,13,2,11,"[11, 107]",,wine6
+LibSVM,fourclass,src/official/libsvm/binary__fourclass,862,2,2,307,"[307, 555]",,fourclass
+LibSVM,svmguide1,src/official/libsvm/binary__svmguide1,3089,4,2,1089,"[1089, 2000]",,svmguide1
+LibSVM,svmguide1 (train+test),src/official/libsvm/binary__svmguide1+t,7089,4,2,3089,"[3089, 4000]",,svmguide1traintest
+LibSVM,svmguide3,src/official/libsvm/binary__svmguide3,1243,22,2,296,"[296, 947]",,svmguide3
+LibSVM,svmguide3 (train+test),src/official/libsvm/binary__svmguide3+t,1284,22,2,337,"[337, 947]",,svmguide3traintest
+LibSVM,svmguide2,src/official/libsvm/multiclass__svmguide2,391,20,3,53,"[53, 117, 221]",,svmguide2
+LibSVM,a1a,src/official/libsvm/binary__a1a,1605,119,2,395,"[395, 1210]",,a1a
+UCI-official,avila,src/official/uci/459_avila.zip+concat,20867,10,12,10,"[10, 89, 206, 533, 705, 893, 1039, 1044, 1663, 2190, 3923, 8572]",,avila
+UCI-official,avila train,src/official/uci/459_avila.zip.d/avila/avila-tr.txt,10430,10,12,5,"[5, 44, 103, 266, 352, 446, 519, 522, 831, 1095, 1961, 4286]",,avilatrain
+UCI-official,covertype,src/official/uci/31_covertype.zip.d/covtype.data.gz,581012,54,7,2747,"[2747, 9493, 17367, 20510, 35754, 211840, 283301]",,covertype
+UCI-official,phishingdata,src/official/uci/379_website+phishing.zip.d/PhishingData.arff,1353,9,3,103,"[103, 548, 702]",,phishingdata
+UCI-official,online shoppers,src/official/uci/468_online+shoppers+purchasing+intention+dataset.zip.d/online_shoppers_intention.csv,12330,17,2,1908,"[1908, 10422]",,onlineshoppers
+UCI-official,polish bankruptcy year1,src/official/uci/365_polish+companies+bankruptcy+data.zip.d/1year.arff,7027,64,2,271,"[271, 6756]",,polishbankruptcyyear1
+UCI-official,polish bankruptcy year2,src/official/uci/365_polish+companies+bankruptcy+data.zip.d/2year.arff,10173,64,2,400,"[400, 9773]",,polishbankruptcyyear2
+UCI-official,polish bankruptcy year3,src/official/uci/365_polish+companies+bankruptcy+data.zip.d/3year.arff,10503,64,2,495,"[495, 10008]",,polishbankruptcyyear3
+UCI-official,polish bankruptcy year4,src/official/uci/365_polish+companies+bankruptcy+data.zip.d/4year.arff,9792,64,2,515,"[515, 9277]",,polishbankruptcyyear4
+UCI-official,polish bankruptcy year5,src/official/uci/365_polish+companies+bankruptcy+data.zip.d/5year.arff,5910,64,2,410,"[410, 5500]",,polishbankruptcyyear5
+UCI-official,taiwanese bankruptcy,src/official/uci/572_taiwanese+bankruptcy+prediction.zip.d/data.csv,6819,95,2,220,"[220, 6599]",,taiwanesebankruptcy
+UCI-official,firewall,src/official/uci/542_internet+firewall+data.zip.d/log2.csv,65532,11,4,54,"[54, 12851, 14987, 37640]",,firewall
+UCI-official,htru2,src/official/uci/372_htru2.zip.d/HTRU_2.arff,17898,8,2,1639,"[1639, 16259]",,htru2
+UCI-official,isolet,src/official/uci/54_isolet.zip+concat,7797,617,26,298,"[298, 299, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300]",,isolet
+UCI-official,absenteeism at work,src/official/uci/445_absenteeism+at+work.zip.d/Absenteeism_at_work.csv,740,19,19,1,"[1, 1, 1, 2, 2, 3, 3, 3, 6, 7, 7, 16, 19, 44, 60, 88, 112, 157, 208]",,absenteeismatwork
+UCI-official,drybean,src/official/uci/602_dry+bean+dataset.zip.d/DryBeanDataset/Dry_Bean_Dataset.arff,13611,16,7,522,"[522, 1322, 1630, 1928, 2027, 2636, 3546]",,drybean
+UCI-official,hcv,src/official/uci/571_hcv+data.zip.d/hcvdat0.csv,615,12,5,7,"[7, 21, 24, 30, 533]",,hcv
+UCI-official,obs,src/official/uci/404_burst+header+packet+bhp+flooding+attack+on+optical+burst+switching+obs+network.zip.d/OBS-Network-DataSet_2_Aug27.arff,1075,21,4,120,"[120, 155, 300, 500]",,obs
+UCI-official,students dropout,src/official/uci/697_predict+students+dropout+and+academic+success.zip.d/data.csv,4424,36,3,794,"[794, 1421, 2209]",,studentsdropout
+UCI-official,ai4i2020,src/official/uci/601_ai4i+2020+predictive+maintenance+dataset.zip.d/ai4i2020.csv,10000,6,2,339,"[339, 9661]",,ai4i2020
+UCI-official,raisin,src/official/uci/850_raisin.zip.d/Raisin_Dataset.zip.d/Raisin_Dataset/Raisin_Dataset.arff,900,7,2,450,"[450, 450]",,raisin
+UCI-official,maternal,src/official/uci/863_maternal+health+risk.zip.d/Maternal Health Risk Data Set.csv,1014,6,3,272,"[272, 336, 406]",,maternal
+UCI-official,occupancy training,src/official/uci/357_occupancy+detection.zip.d/datatraining.txt,8143,5,2,1729,"[1729, 6414]",,occupancytraining
+UCI-official,occupancy test,src/official/uci/357_occupancy+detection.zip.d/datatest.txt,2665,5,2,972,"[972, 1693]",,occupancytest
+UCI-official,occupancy test2,src/official/uci/357_occupancy+detection.zip.d/datatest2.txt,9752,5,2,2049,"[2049, 7703]",,occupancytest2
+UCI-official,cnae,src/official/uci/233_cnae+9.zip.d/CNAE-9.data,1080,856,9,120,"[120, 120, 120, 120, 120, 120, 120, 120, 120]",,cnae
+UCI-official,darwin,src/official/uci/732_darwin.zip.d/data.csv,174,450,2,85,"[85, 89]",,darwin
+UCI-official,toxicity,src/official/uci/728_toxicity-2.zip.d/data.csv,171,1203,2,56,"[56, 115]",,toxicity
+UCI-official,gender,src/official/uci/852_gender+gap+in+spanish+wp.zip.d/data.csv,4746,20,3,353,"[353, 1601, 2792]",,gender
+UCI-official,obesity,src/official/uci/544_estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition.zip.d/ObesityDataSet_raw_and_data_sinthetic.csv,2111,16,7,272,"[272, 287, 290, 290, 297, 324, 351]",,obesity
+UCI-official,rt-iot,src/official/uci/942_rt-iot2022.zip.d/RT_IOT2022,123117,83,12,28,"[28, 37, 253, 534, 1002, 2000, 2010, 2590, 4146, 7750, 8108, 94659]",,rtiot
+UCI-official,steel plates faults 7class,src/official/uci/198_steel+plates+faults.zip.d/Faults.NNA,1941,27,7,55,"[55, 72, 158, 190, 391, 402, 673]",,steelplatesfaults7class

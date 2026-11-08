@@ -1,6 +1,6 @@
 {
  "unit": "dataset entry with category = modified (out/dataset_records.csv)",
- "entries": 331,
+ "entries": 332,
  "papers": 39,
  "tag_entries": {
   "CS": 175,
@@ -8,7 +8,7 @@
   "FM": 16,
   "SF": 18,
   "IM": 147,
-  "OT": 4,
+  "OT": 5,
   "IS": 0
  },
  "tag_entries_note": "an entry can carry several tags; these counts sum to more than the number of entries",
@@ -18,7 +18,7 @@
   "FM": 7,
   "SF": 9,
   "IM": 9,
-  "OT": 3,
+  "OT": 4,
   "IS": 0
  },
  "combinations": {
@@ -33,14 +33,14 @@
   "FM": 4,
   "US;SF;IM": 3,
   "FM;SF": 3,
+  "OT": 3,
   "CS;OT": 2,
   "CS;US;IM": 2,
-  "OT": 2,
   "US;SF": 1
  },
  "combinations_note": "mutually exclusive; sums to the number of entries",
  "entries_by_number_of_ops": {
-  "1": 159,
+  "1": 160,
   "2": 167,
   "3": 5
  },
@@ -48,7 +48,7 @@
  "papers_with_multiple_ops_entries": 17,
  "entries_with_conditional_ops": 61,
  "confidence": {
-  "explicitly reported": 311,
+  "explicitly reported": 312,
   "supported by indirect evidence": 16,
   "ambiguous": 4
  },
@@ -61,7 +61,7 @@
   "imbalance": {
    "changed as a consequence": 178,
    "deliberately changed": 147,
-   "not changed by the reported operation": 6
+   "not changed by the reported operation": 7
   }
  },
  "class_op_kind": {
@@ -86,7 +86,7 @@
  "purpose": {
   "papers_with_stated_purpose": 15,
   "papers": 39,
-  "entries_with_stated_purpose": 191,
+  "entries_with_stated_purpose": 192,
   "themes_by_paper": {
    "two-class problems": 7,
    "more extreme imbalance": 1,
@@ -123,14 +123,14 @@
   ]
  },
  "missing_information": {
-  "characteristics not printed": 55,
+  "characteristics not printed": 56,
   "minority class not stated": 15,
   "original class count not stated": 3,
   "subset selection not described": 1,
   "target IR not stated": 18,
   "affected data sets not named": 2
  },
- "entries_with_missing_information": 93,
+ "entries_with_missing_information": 94,
  "by_paper": {
   "A-SUWO": {
    "entries": 12,
@@ -343,10 +343,11 @@
    "purpose": true
   },
   "RSMOTE": {
-   "entries": 18,
+   "entries": 19,
    "ops": {
     "US": 18,
-    "IM": 18
+    "IM": 18,
+    "OT": 1
    },
    "purpose": true
   },

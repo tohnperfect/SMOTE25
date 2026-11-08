@@ -332,7 +332,17 @@ if len(_DL) != _NX["not_measured"]["names_to_download"]["names"]:
 data["mz"]["verify"] = dict(total=_VX["verifiable_total"], new=_VX["newly_verifiable"], status=_VX["status_now"], status28=_VX["status_28oct"],
                             notm=_NX["not_measured"], dl=[[r["normalized_name"], r["name_type"], r["source"], int(r["n_papers"]), int(r["entries"]),
                                                           r["papers"], r["printed_n"], r["printed_features"], r["sources_as_reported"]] for r in _DL],
-                            src="difficulty/verify_ext_summary.json, out/name_level_extras.json, out/names_to_download.csv")
+                            src="difficulty/verify_ext_summary.json, out/name_level_extras.json, out/names_to_download.csv",
+                            names_total=DASH["names"]["distinct"])
+# 8 พ.ย. 2026 รอบสอง: ผลของ 200 ชื่อที่ไม่มีไฟล์ในรอบแรก (build/names_download_result.py) + ไฟล์ทางการที่ดาวน์โหลด (difficulty/official_manifest.csv)
+_NR = json.load(open(p("out/names_download_result.json"), encoding="utf-8")); _NRR = rcsv("out/names_download_result.csv")
+if len(_NRR) != _NR["names"]:
+    sys.exit("STOP: out/names_download_result.* disagree (rerun build/names_download_result.py)")
+_OM = rcsv("difficulty/official_manifest.csv")
+data["mz"]["dl200"] = dict(summary=_NR, rows=[[r["normalized_name"], r["name_type"], r["papers"], int(r["entries"]), int(r["entries_verifiable"]),
+                                                r["result"], r["detail"], r["toon_check_status"], r["toon_check_where"], r["toon_check_note"]] for r in _NRR],
+                           manifest=dict(files=len(_OM), by_tag={t: sum(1 for r in _OM if r["tag"] == t) for t in sorted({r["tag"] for r in _OM})}),
+                           src="out/names_download_result.csv/.json (build/names_download_result.py); difficulty/official_manifest.csv")
 # 8 พ.ย. 2026: synthetic เผยแพร่ไหม (build/synthetic_availability.py, รันบนเครื่องที่มี paper/)
 _SY = json.load(open(p("out/synthetic_availability.json"), encoding="utf-8"))
 if sum(v["entries"] for v in _SY["part_A_by_group"].values()) != DASH["entries"]["by_cat"]["synthetic"]:
@@ -382,12 +392,12 @@ data["hyp"] = dict(main=_HY["all_metric_plain"], r1=_HY["robust_R1_dataset_major
 _NT = json.load(open(p("out/name_level_types.json"), encoding="utf-8")); _NTR = rcsv("out/name_level_types.csv")
 if _NT["names"] != DASH["names"]["distinct"] or len(_NTR) != _NT["names"] or sum(_NT["by_type"].values()) != _NT["names"] \
         or C.Counter(r["name_type"] for r in _NTR) != C.Counter({k: v for k, v in _NT["by_type"].items() if v}):
-    sys.exit("STOP: out/name_level_types.* disagree with each other or with the 771 names (rerun python3 build/name_level_types.py)")
+    sys.exit("STOP: out/name_level_types.* disagree with each other or with the distinct names (rerun python3 build/name_level_types.py)")
 if sum(_NT["by_source"].values()) != _NT["names"] or C.Counter(r["source"] for r in _NTR) != C.Counter({k: v for k, v in _NT["by_source"].items() if v}) \
         or _NT["entry_level_by_source"]["KEEL"] != DASH["provenance"]["repos"]["KEEL"]["total"]:
     sys.exit("STOP: name-level sources in out/name_level_types.* do not add up (rerun python3 build/name_level_types.py)")
 if sum(_NT["by_difficulty"].values()) != _NT["names"] or C.Counter(r["difficulty"] for r in _NTR) != C.Counter({k: v for k, v in _NT["by_difficulty"].items() if v}):
-    sys.exit("STOP: name-level difficulty counts do not add up to the 771 names (rerun python3 build/name_level_types.py)")
+    sys.exit("STOP: name-level difficulty counts do not add up to the distinct names (rerun python3 build/name_level_types.py)")
 _MOS = json.load(open(p("out/modified_operations_summary.json"), encoding="utf-8"))
 if any(_NT["modified_ops"]["by_op"][o]["entries"] != _MOS["tag_entries"][o] or _NT["modified_ops"]["by_op"][o]["names"] != sum(o in r["mod_ops"].split(";") for r in _NTR)
        for o in _NT["modified_ops"]["order"]) or _NT["modified_ops"]["entries"] != _MOS["entries"]:

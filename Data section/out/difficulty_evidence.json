@@ -1861,8 +1861,8 @@
   }
  ],
  "sources": {
-  "ai-draft/difficulty/evidence.json": "fdce805462962fcaad47c136afe49f305ef734fe1cd49efb0b02164304f7a5bb",
-  "out/difficulty_candidates.csv": "c04e431e59a6af3d4ae52a4ebdc7429293dd142f0ed44725e41034c3a59f0309",
-  "out/dataset_records.csv": "2c361e9d54c17420974cce596c91f6ce977a434ac3b5d93ac7d7446b08a16a40"
+  "ai-draft/difficulty/evidence.json": "3d97d9ed24a33650646212c1a586c93e244d391d56ae25642114920d2ad2b094",
+  "out/difficulty_candidates.csv": "9a3431dc1437a740ac71e6b451bc7051bc2f59fc0db7cd7b4594619ee280de83",
+  "out/dataset_records.csv": "493f1af82578d3bba96583af27990aedb7d4a5a55a685f3a7b28b44f65ef18aa"
  }
 }

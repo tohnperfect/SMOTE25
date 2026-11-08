@@ -29,7 +29,7 @@
   }
  },
  "ecoli": {
-  "tasks": 19,
+  "tasks": 21,
   "n_features": [
    6,
    7
@@ -51,13 +51,13 @@
    0.69
   ],
   "profiles": {
-   "small_sample": 16,
+   "small_sample": 18,
    "none": 2,
    "small_sample + outlier_flag": 1
   }
  },
  "glass": {
-  "tasks": 13,
+  "tasks": 14,
   "n_features": [
    9
   ],
@@ -78,7 +78,7 @@
    0.77
   ],
   "profiles": {
-   "small_sample": 9,
+   "small_sample": 10,
    "small_disjuncts + small_sample + outlier_flag": 4
   }
  },

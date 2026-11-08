@@ -71,10 +71,11 @@ CROSS_TABLE_REVIEW = {
 
 # ตัวเลขที่ draft หรือ handoff เคยพิมพ์ไว้ ใช้ตรวจว่ายังทำซ้ำได้ (ไม่ใช่ค่าที่ต้องบังคับให้ได้)
 EXPECTED = {
-    "entries_total": 1654, "entries_named": 1653, "distinct_names": 771, "single_paper_names": 546,
-    "distinct_names_incl_placeholder": 772, "single_paper_names_incl_placeholder": 547,
+    # 8 Nov 2026: +93 Part-B entries (build/add_synthetic_entries.py); was 1654 / 1653 / 771 / 546 / 772 / 547
+    "entries_total": 1747, "entries_named": 1746, "distinct_names": 857, "single_paper_names": 626,
+    "distinct_names_incl_placeholder": 858, "single_paper_names_incl_placeholder": 627,
     "yeast_family_papers": 39, "ecoli_family_papers": 42, "glass_family_papers": 35,  # T1 (28 Oct 2026); prefix rule gave 39/39/36
-    "datasets_t1": 680, "families_t1": 459,  # T1 + Toon follow-up 28 Oct (pageblock = pageblocks; 8 same-source names joined)
+    "datasets_t1": 766, "families_t1": 482,  # T1 + Toon follow-up 28 Oct (pageblock = pageblocks; 8 same-source names joined); 8 Nov +Part B (was 680 / 459)
     "size_var_names_2plus": 198, "size_var_names_multi": 78, "size_var_datasets_2plus": 192, "size_var_datasets_multi": 90,
     "outcome_rows_all": 835, "outcome_rows_plain_incl_aggregate": 542, "outcome_papers_plain_incl_aggregate": 31,
     "plain_per_dataset_rows": 521, "plain_per_dataset_papers": 29,  # R8 29 Oct 2026 (was 541/30 incl. MC-MBRC)

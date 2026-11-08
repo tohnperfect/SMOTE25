@@ -43,12 +43,13 @@
    "B1|repository-defined": 91,
    "B1|not stated": 35,
    "B2|not stated": 70,
-   "B2|original": 92,
+   "B2|original": 91,
    "B1|synthetic": 5,
    "B2|modified": 77,
    "B2|unlinked": 1,
    "B2|repository-defined": 28,
-   "B1|unlinked": 2
+   "B1|unlinked": 2,
+   "B2|synthetic": 1
   },
   "wrapper": {
    "B1|linked": 76,

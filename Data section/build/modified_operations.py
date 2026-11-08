@@ -1,4 +1,4 @@
-"""modified_operations.py  Analysis A (19 ต.ค. 2026): จำแนกการดัดแปลงข้อมูลของ 331 entry ที่ category = modified
+"""modified_operations.py  Analysis A (19 ต.ค. 2026): จำแนกการดัดแปลงข้อมูลของ entry ที่ category = modified (331 เมื่อ 19 ต.ค.; 332 หลัง 8 พ.ย.) modified
 
 อ่าน   out/dataset_records.csv (ไม่แก้; category เดิมคงไว้เป็นระดับบน)
        PDF ของ paper (ผ่าน out/pdf_map.json) เพื่อตรวจข้อความ "เหตุผลที่ดัดแปลง" ที่อ้างใน PURPOSE ว่ามีอยู่จริง
@@ -70,7 +70,8 @@ R = {
  "ROS (Buda)": [("MNIST", "SF US IM", "", "", EX, "classes subsampled to <=5000, then artificially imbalanced (Sec 3.3.1)"),
                 ("ILSVRC", "SF US IM", "", "", EX, "majority classes reduced 1200->1000; step-imbalanced subsets (Sec 3.3.3)"),
                 ("*", "US IM", "", "", EX, "training set artificially imbalanced (Sec 3.3.2)")],
- "RSMOTE": [("*", "US IM", "", "", EX, "positive class randomly undersampled to obtain higher IR (p.12)")],
+ "RSMOTE": [("outlier added", "OT", "", "", EX, "one outlier added artificially to fourclass for the illustration (Sec. 4.3.1, p.10); entry added 8 Nov 2026"),
+            ("*", "US IM", "", "", EX, "positive class randomly undersampled to obtain higher IR (p.12)")],
  "RUSBoost": [("SOLARFLARE", "CS", "", "class or threshold (not stated)", AM, "general statement: one class positive or threshold on a continuous target (p.5); which one not stated"),
               ("*", "CS", "", "one-vs-rest (class inferred from suffix)", IN, "general statement p.5; positive class inferred from the name suffix, not stated")],
  "SMOM": [("dropped classes|chose a subset", "CS", "", "class subset (classes dropped)", IN, "class labels absent from Table 1 imply dropped classes"),
@@ -155,7 +156,8 @@ with open("out/modified_operations_audit.csv", "w", encoding="utf-8", newline=""
     w = csv.DictWriter(fh, fieldnames=list(rows[0]), lineterminator="\n"); w.writeheader(); w.writerows(rows)
 # ---- สรุป ----
 N, P = len(rows), sorted({r["paper_key"] for r in rows})
-assert N == 331 and len({r["record_id"] for r in rows}) == N, "duplicate or missing rows"
+_NMOD = json.load(open("out/dataset_records_summary.json", encoding="utf-8"))["counts"]["modified"]   # 8 Nov: was the fixed 331
+assert N == _NMOD and len({r["record_id"] for r in rows}) == N, "duplicate or missing rows"
 tag_entries = {o: sum(o in r["ops"].split(";") for r in rows) for o in OPS}
 tag_papers = {o: len({r["paper_key"] for r in rows if o in r["ops"].split(";")}) for o in OPS}
 combo = Counter(r["ops"] for r in rows)

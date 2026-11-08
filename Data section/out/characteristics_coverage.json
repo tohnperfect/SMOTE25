@@ -1,10 +1,10 @@
 {
- "units": "entries = named data entries (1,653); papers = papers with named entries (72)",
+ "units": "entries = named data entries (1746); papers = papers with named entries (72)",
  "n_instances": {
   "entries": {
    "n": 1326,
-   "of": 1653,
-   "pct": 80.2
+   "of": 1746,
+   "pct": 75.9
   },
   "papers_with_any": {
    "n": 59,
@@ -14,57 +14,57 @@
  },
  "n_features": {
   "entries": {
-   "n": 1254,
-   "of": 1653,
-   "pct": 75.9
+   "n": 1270,
+   "of": 1746,
+   "pct": 72.7
   },
   "papers_with_any": {
-   "n": 57,
+   "n": 59,
    "of": 72,
-   "pct": 79.2
+   "pct": 81.9
   }
  },
  "n_classes": {
   "entries": {
-   "n": 1280,
-   "of": 1653,
-   "pct": 77.4
+   "n": 1369,
+   "of": 1746,
+   "pct": 78.4
   },
   "papers_with_any": {
-   "n": 61,
+   "n": 62,
    "of": 72,
-   "pct": 84.7
+   "pct": 86.1
   }
  },
  "n_minority": {
   "entries": {
-   "n": 504,
-   "of": 1653,
-   "pct": 30.5
+   "n": 519,
+   "of": 1746,
+   "pct": 29.7
   },
   "papers_with_any": {
-   "n": 33,
+   "n": 35,
    "of": 72,
-   "pct": 45.8
+   "pct": 48.6
   }
  },
  "n_majority": {
   "entries": {
-   "n": 428,
-   "of": 1653,
-   "pct": 25.9
+   "n": 504,
+   "of": 1746,
+   "pct": 28.9
   },
   "papers_with_any": {
-   "n": 31,
+   "n": 35,
    "of": 72,
-   "pct": 43.1
+   "pct": 48.6
   }
  },
  "class_distribution": {
   "entries": {
-   "n": 586,
-   "of": 1653,
-   "pct": 35.5
+   "n": 588,
+   "of": 1746,
+   "pct": 33.7
   },
   "papers_with_any": {
    "n": 43,
@@ -74,22 +74,22 @@
  },
  "class_proportions_any_form": {
   "entries": {
-   "n": 939,
-   "of": 1653,
-   "pct": 56.8
+   "n": 956,
+   "of": 1746,
+   "pct": 54.8
   },
   "papers_with_any": {
-   "n": 54,
+   "n": 56,
    "of": 72,
-   "pct": 75.0
+   "pct": 77.8
   }
  },
  "feature_type": {
   "field": "none (not extracted systematically)",
   "entries_mentioning": {
    "n": 128,
-   "of": 1653,
-   "pct": 7.7
+   "of": 1746,
+   "pct": 7.3
   },
   "papers_mentioning": {
    "n": 10,
@@ -101,12 +101,12 @@
  "overlap_noise_sparsity": {
   "entries_with_measured_value": {
    "n": 36,
-   "of": 1653,
-   "pct": 2.2
+   "of": 1746,
+   "pct": 2.1
   },
   "entries_with_described_property": {
    "n": 5,
-   "of": 1653,
+   "of": 1746,
    "pct": 0.3
   },
   "papers_reporting_inherent_property": {

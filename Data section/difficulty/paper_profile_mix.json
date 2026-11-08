@@ -1,6 +1,6 @@
 {
  "papers_with_at_least_1_tasks": {
-  "n": 45,
+  "n": 46,
   "all_flag_free": [
    "Borderline-SMOTE",
    "COG-OS",
@@ -10,14 +10,13 @@
   ],
   "all_flagged": [
    "GOIO",
-   "MLOS",
-   "RUSBoost",
-   "SHRINK"
+   "SHRINK",
+   "SOS"
   ],
-  "mixed": 36
+  "mixed": 38
  },
  "papers_with_at_least_2_tasks": {
-  "n": 41,
+  "n": 44,
   "all_flag_free": [
    "Borderline-SMOTE",
    "COG-OS",
@@ -25,19 +24,20 @@
    "Safe-Level-SMOTE"
   ],
   "all_flagged": [
-   "MLOS"
+   "GOIO",
+   "SOS"
   ],
-  "mixed": 36
+  "mixed": 38
  },
  "papers_with_at_least_3_tasks": {
-  "n": 35,
+  "n": 38,
   "all_flag_free": [
    "COG-OS",
    "SMOTE-ENN / SMOTE-Tomek"
   ],
   "all_flagged": [
-   "MLOS"
+   "GOIO"
   ],
-  "mixed": 32
+  "mixed": 35
  }
 }

@@ -3,42 +3,42 @@
  "sources": {
   "datasets": {
    "path": "out/verified_datasets.csv",
-   "sha256": "99b0cfd08de4c281014ba1a7eaea18f4b51ef69329102f5cd0467712d2d0d385"
+   "sha256": "51cc7a84be2f40d714edb7d5b9982d59170c8a4f6894f73141f860251733cb25"
   },
   "outcomes": {
    "path": "out/verified_outcomes.csv",
-   "sha256": "370abda782a5b894d6dfa0eb3114dc638e8f6ab7df8a504d49ebb2af5f50eceb"
+   "sha256": "c72b641b7615339863749eff3b10d4964192333f0d16f051e17201b9ef1cbcc7"
   },
   "summary": {
    "path": "out/full_summary.json",
-   "sha256": "8eba0dbab72c8f0b2f8db96a169db452e355bafc2d16274973767d54aedca63c"
+   "sha256": "f4906f4aa02e75e82090e6fdd4d40857e3673cd0fafb0f39cf38c2b0a8fca924"
   }
  },
  "names": {
   "rule": "R1 + R2: exclude placeholder descriptions; distinct values of analyse_dataset_usage.norm(name)",
-  "entries_total": 1654,
-  "entries_named": 1653,
+  "entries_total": 1747,
+  "entries_named": 1746,
   "papers": 73,
   "excluded_placeholder_rows": [
    {
-    "csv_line": 1558,
+    "csv_line": 1651,
     "paper": "Tomek Links",
     "name": "[two-class uniform 2-D example from ref. [4], not named]",
     "how_obtained_final": "synthetic"
    }
   ],
   "empty_name_rows": [],
-  "distinct_names": 771,
-  "single_paper_names": 546,
-  "distinct_names_incl_placeholder": 772,
-  "single_paper_names_incl_placeholder": 547,
-  "distinct_if_all_punctuation_removed": 678,
+  "distinct_names": 857,
+  "single_paper_names": 626,
+  "distinct_names_incl_placeholder": 858,
+  "single_paper_names_incl_placeholder": 627,
+  "distinct_if_all_punctuation_removed": 764,
   "norm_definition": "lower-case; drop text in parentheses; collapse underscores and whitespace; hyphens and dots kept",
   "t1_rule": "T1 (Toon, 28 Oct 2026): names differing only by '-', '_', spaces or dots are one dataset; numbered or split versions belong to their main set's family; non-standard names are not merged (build/family_rule.py)",
-  "datasets_t1": 680,
-  "single_paper_datasets_t1": 463,
-  "families_t1": 459,
-  "single_paper_families_t1": 323
+  "datasets_t1": 766,
+  "single_paper_datasets_t1": 543,
+  "families_t1": 482,
+  "single_paper_families_t1": 340
  },
  "size_variation": {
   "names": {
@@ -52,18 +52,18 @@
       "7200"
      ],
      "papers_per_size": {
-      "720": [
-       "GDHS",
-       "MC-MBRC",
-       "MC-NCLWO",
-       "SCUT"
-      ],
       "7200": [
        "AMDO",
        "MC-CCR",
        "MC-RBO",
        "NROMM",
        "OVO-SMOTE"
+      ],
+      "720": [
+       "GDHS",
+       "MC-MBRC",
+       "MC-NCLWO",
+       "SCUT"
       ]
      }
     },
@@ -74,6 +74,10 @@
       "366"
      ],
      "papers_per_size": {
+      "366": [
+       "GLOS",
+       "SCUT"
+      ],
       "358": [
        "AMDO",
        "EMDO",
@@ -83,10 +87,6 @@
        "MC-RBO",
        "NROMM",
        "OVO-SMOTE"
-      ],
-      "366": [
-       "GLOS",
-       "SCUT"
       ]
      }
     },
@@ -100,6 +100,9 @@
      ],
      "papers_per_size": {
       "310": [
+       "G-SMOTE"
+      ],
+      "301": [
        "G-SMOTE"
       ],
       "336": [
@@ -125,9 +128,6 @@
        "GLOS",
        "MDO",
        "SMOM"
-      ],
-      "301": [
-       "G-SMOTE"
       ]
      }
     },
@@ -140,7 +140,7 @@
       "769"
      ],
      "papers_per_size": {
-      "635": [
+      "769": [
        "G-SMOTE"
       ],
       "768": [
@@ -161,10 +161,10 @@
        "SMOTE-IPF",
        "k-means SMOTE"
       ],
-      "590": [
+      "635": [
        "G-SMOTE"
       ],
-      "769": [
+      "590": [
        "G-SMOTE"
       ]
      }
@@ -182,18 +182,18 @@
       "7200"
      ],
      "papers_per_size": {
-      "720": [
-       "GDHS",
-       "MC-MBRC",
-       "MC-NCLWO",
-       "SCUT"
-      ],
       "7200": [
        "AMDO",
        "MC-CCR",
        "MC-RBO",
        "NROMM",
        "OVO-SMOTE"
+      ],
+      "720": [
+       "GDHS",
+       "MC-MBRC",
+       "MC-NCLWO",
+       "SCUT"
       ]
      }
     },
@@ -204,6 +204,10 @@
       "366"
      ],
      "papers_per_size": {
+      "366": [
+       "GLOS",
+       "SCUT"
+      ],
       "358": [
        "AMDO",
        "EMDO",
@@ -213,10 +217,6 @@
        "MC-RBO",
        "NROMM",
        "OVO-SMOTE"
-      ],
-      "366": [
-       "GLOS",
-       "SCUT"
       ]
      }
     },
@@ -230,6 +230,9 @@
      ],
      "papers_per_size": {
       "310": [
+       "G-SMOTE"
+      ],
+      "301": [
        "G-SMOTE"
       ],
       "336": [
@@ -258,9 +261,6 @@
        "GLOS",
        "MDO",
        "SMOM"
-      ],
-      "301": [
-       "G-SMOTE"
       ]
      }
     },
@@ -273,7 +273,7 @@
       "769"
      ],
      "papers_per_size": {
-      "635": [
+      "769": [
        "G-SMOTE"
       ],
       "768": [
@@ -294,10 +294,10 @@
        "SMOTE-IPF",
        "k-means SMOTE"
       ],
-      "590": [
+      "635": [
        "G-SMOTE"
       ],
-      "769": [
+      "590": [
        "G-SMOTE"
       ]
      }
@@ -615,9 +615,9 @@
     "equal": 13
    },
    "original": {
-    "rows": 146,
+    "rows": 145,
     "papers": 25,
-    "proposed_higher": 114,
+    "proposed_higher": 113,
     "smote_higher": 27,
     "equal": 5
    },
@@ -629,9 +629,9 @@
     "equal": 16
    },
    "synthetic": {
-    "rows": 5,
-    "papers": 1,
-    "proposed_higher": 5,
+    "rows": 6,
+    "papers": 2,
+    "proposed_higher": 6,
     "smote_higher": 0,
     "equal": 0
    },
@@ -644,9 +644,9 @@
    }
   },
   "plain_per_dataset_standard": {
-   "rows": 265,
+   "rows": 264,
    "papers": 28,
-   "proposed_higher": 204,
+   "proposed_higher": 203,
    "smote_higher": 40,
    "equal": 21,
    "papers_with_standard_rows": 28,
@@ -1151,9 +1151,9 @@
      "equal": 13
     },
     "original": {
-     "rows": 146,
+     "rows": 145,
      "papers": 25,
-     "proposed_higher": 114,
+     "proposed_higher": 113,
      "smote_higher": 27,
      "equal": 5
     },
@@ -1165,9 +1165,9 @@
      "equal": 16
     },
     "synthetic": {
-     "rows": 5,
-     "papers": 1,
-     "proposed_higher": 5,
+     "rows": 6,
+     "papers": 2,
+     "proposed_higher": 6,
      "smote_higher": 0,
      "equal": 0
     },
@@ -1269,18 +1269,18 @@
  },
  "checks": {
   "datasets_t1": {
-   "expected": 680,
-   "got": 680,
+   "expected": 766,
+   "got": 766,
    "ok": true
   },
   "distinct_names": {
-   "expected": 771,
-   "got": 771,
+   "expected": 857,
+   "got": 857,
    "ok": true
   },
   "distinct_names_incl_placeholder": {
-   "expected": 772,
-   "got": 772,
+   "expected": 858,
+   "got": 858,
    "ok": true
   },
   "ecoli_family_papers": {
@@ -1289,13 +1289,13 @@
    "ok": true
   },
   "entries_named": {
-   "expected": 1653,
-   "got": 1653,
+   "expected": 1746,
+   "got": 1746,
    "ok": true
   },
   "entries_total": {
-   "expected": 1654,
-   "got": 1654,
+   "expected": 1747,
+   "got": 1747,
    "ok": true
   },
   "excluded_aggregate_rows": {
@@ -1334,8 +1334,8 @@
    "ok": true
   },
   "families_t1": {
-   "expected": 459,
-   "got": 459,
+   "expected": 482,
+   "got": 482,
    "ok": true
   },
   "glass_family_papers": {
@@ -1399,13 +1399,13 @@
    "ok": true
   },
   "single_paper_names": {
-   "expected": 546,
-   "got": 546,
+   "expected": 626,
+   "got": 626,
    "ok": true
   },
   "single_paper_names_incl_placeholder": {
-   "expected": 547,
-   "got": 547,
+   "expected": 627,
+   "got": 627,
    "ok": true
   },
   "size_var_datasets_2plus": {

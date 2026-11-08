@@ -23,7 +23,9 @@ from catalog import key
 K=5
 VE=os.environ.get('VERIF_FILE','verifiability_entries.csv')   # 8 Nov: written by verify_ext.py (28 Oct snapshot: verifiability_entries_28oct.csv)
 o=pd.read_csv(VE); o=o[o.verif.str.startswith('V-')]
-EXT_SRC={'KEEL-std(F)','KEEL-std(C)','UCI++','Weka-UCI','PROMISE-ck','NASA-MDP','jbrownlee-UCI','PMLB'}
+EXT_SRC={'KEEL-std(F)','KEEL-std(C)','UCI++','Weka-UCI','PROMISE-ck','NASA-MDP','jbrownlee-UCI','PMLB',
+         # 8 Nov second round: official sites and author repositories (official_sources.py)
+         'UCI-official','LibSVM','author-HDE','author-DGOT','author-SOS','author-MBS','author-kmeans'}
 _cx=pd.read_csv('file_catalog_ext.csv') if os.path.exists('file_catalog_ext.csv') else None
 rec=pd.read_csv(os.environ.get('DATASET_RECORDS','../out/dataset_records.csv')).set_index('record_id')
 idb={key(os.path.basename(d)):glob.glob(d+'/*.dat') for d in glob.glob('src/idb/imbalanced_databases/data/*')}
@@ -144,6 +146,7 @@ def iter_tasks():
     for _,r in o.iterrows():
         tasks.setdefault((r.file,r.file_src),[]).append((r.verif,r.record_id,r.paper,r.get('task_minority') if isinstance(r.get('task_minority'),str) else None))
     for (f,src),lst in tasks.items():
+        if (f,src) in NOT_MEASURED: LOG.append((f,src,'not measured: '+NOT_MEASURED[(f,src)])); continue
         d,y,how=load(f,src); X,keep=encode(d); y=y[keep].astype(str).values
         dt,keep2,nominal=typed(d); assert (keep2==keep).all()
         labs,cnt=np.unique(y,return_counts=True); nfeat=d.shape[1]
@@ -165,6 +168,10 @@ def iter_tasks():
 OLD_PMLB={'adult','balance_scale','car_evaluation','coil2000','connect_4','dermatology','ecoli','hepatitis','lymphography',
           'new_thyroid','nursery','page_blocks','pendigits','shuttle','spambase','spect','wine_quality_red','wine_quality_white','yeast'}
 LOG=[]
+# 8 Nov second round: files that are verifiable but not measured. covertype (581,012 rows) is used only as a 7-class file
+# (CTGAN name-only, GAMO as is), so it gives one-vs-rest tasks only; the 5-NN search on 581,012 rows took more than 15 min
+# per one-vs-rest task (7 tasks), beyond the time available. Its 2 entries stay verifiable; they have no measured profile.
+NOT_MEASURED={('covertype','UCI-official'):'581,012 rows, one-vs-rest tasks only; not run for time (8 Nov)'}
 def main():
     out=[]
     for f,src,how,X,dt,nominal,t,lab,ymin,who,nfeat,keep in iter_tasks():

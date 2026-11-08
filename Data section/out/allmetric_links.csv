@@ -1441,7 +1441,7 @@ allmetric_csv_line,paper,dataset_as_printed,metric_group,comparator_group,result
 1441,OREM-M,Vt,F-measure,plain SMOTE,loss,L2,P065-D001,original
 1442,OREM-M,Lg,F-measure,plain SMOTE,win,L2,P065-D002,original
 1443,OREM-M,NT,F-measure,plain SMOTE,loss,L2,P065-D003,original
-1444,OREM-M,Toy,F-measure,plain SMOTE,win,L2,P065-D004,original
+1444,OREM-M,Toy,F-measure,plain SMOTE,win,L2,P065-D004,synthetic
 1445,OREM-M,Vi-3,F-measure,plain SMOTE,win,L2,P065-D005,original
 1446,OREM-M,W5,F-measure,plain SMOTE,loss,L2,P065-D006,original
 1447,OREM-M,Cl,F-measure,plain SMOTE,win,L2,P065-D007,original
@@ -1462,7 +1462,7 @@ allmetric_csv_line,paper,dataset_as_printed,metric_group,comparator_group,result
 1462,OREM-M,Vt,G-mean,plain SMOTE,loss,L2,P065-D001,original
 1463,OREM-M,Lg,G-mean,plain SMOTE,win,L2,P065-D002,original
 1464,OREM-M,NT,G-mean,plain SMOTE,win,L2,P065-D003,original
-1465,OREM-M,Toy,G-mean,plain SMOTE,win,L2,P065-D004,original
+1465,OREM-M,Toy,G-mean,plain SMOTE,win,L2,P065-D004,synthetic
 1466,OREM-M,Vi-3,G-mean,plain SMOTE,loss,L2,P065-D005,original
 1467,OREM-M,W5,G-mean,plain SMOTE,loss,L2,P065-D006,original
 1468,OREM-M,Cl,G-mean,plain SMOTE,loss,L2,P065-D007,original
@@ -1483,7 +1483,7 @@ allmetric_csv_line,paper,dataset_as_printed,metric_group,comparator_group,result
 1483,OREM-M,Vt,AUC,plain SMOTE,loss,L2,P065-D001,original
 1484,OREM-M,Lg,AUC,plain SMOTE,win,L2,P065-D002,original
 1485,OREM-M,NT,AUC,plain SMOTE,win,L2,P065-D003,original
-1486,OREM-M,Toy,AUC,plain SMOTE,loss,L2,P065-D004,original
+1486,OREM-M,Toy,AUC,plain SMOTE,loss,L2,P065-D004,synthetic
 1487,OREM-M,Vi-3,AUC,plain SMOTE,win,L2,P065-D005,original
 1488,OREM-M,W5,AUC,plain SMOTE,win,L2,P065-D006,original
 1489,OREM-M,Cl,AUC,plain SMOTE,win,L2,P065-D007,original

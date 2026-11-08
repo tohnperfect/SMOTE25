@@ -12,6 +12,7 @@ come from public GitHub mirrors (fetched by fetch_mirrors_ext.sh into src/, not 
   PROMISE-ck    klainfo/DefectData terapromise/ck      tera-PROMISE CK-metric defect sets (label = bug > 0)
   NASA-MDP      klainfo/DefectData terapromise/mccabe  NASA MDP McCabe/Halstead sets
   jbrownlee-UCI jbrownlee/Datasets               selected UCI CSVs (mammography, oil-spill, ...; no header)
+  + (8 Nov 2026, second round) UCI-official, LibSVM and author repositories: see official_sources.py
 
 parse(src, path) returns (features as a DataFrame of strings/categories, labels as str Series, loader note).
 Nothing here decides whether a file is the one a paper used: that is verify_ext.py (printed size must match).
@@ -19,6 +20,9 @@ Nothing here decides whether a file is the one a paper used: that is verify_ext.
 import os, re, csv, glob, gzip, io
 import pandas as pd, numpy as np
 from catalog import key
+import official_sources
+OFFICIAL_SRC = {'UCI-official', 'LibSVM', 'author-HDE', 'author-DGOT', 'author-SOS', 'author-MBS', 'author-kmeans'}
+OFFICIAL_BY_PATH = {s[2]: s for s in official_sources.SPEC}   # key = path under src/
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(HERE, 'src')
@@ -68,6 +72,9 @@ def parse(src, path):
         y = (pd.to_numeric(d['bug']) > 0).map({True: 'defective', False: 'clean'})
         d = d.drop(columns=[c for c in d.columns if c in ('name', 'version', 'name.1', 'bug')])
         return d, y, 'promise ck (label = bug > 0)'
+    if src in OFFICIAL_SRC:                                   # official sites and author repositories (official_sources.py)
+        spec = OFFICIAL_BY_PATH[os.path.relpath(path if os.path.isabs(path) else os.path.join(HERE, path), SRC)]
+        d, y = official_sources.load(spec); return d, y, f'{src} ({spec[3]})'
     raise ValueError(src)
 
 def build():
@@ -96,6 +103,8 @@ def build():
         add('NASA-MDP', os.path.basename(p)[:-5], p)
     for p in sorted(glob.glob(os.path.join(SRC, 'jbrownlee', '*.csv'))):
         add('jbrownlee-UCI', os.path.basename(p)[:-4], p)
+    for sp in official_sources.entries():                     # 8 Nov 2026 (second round): official sites, author repos
+        add(sp[0], sp[1], os.path.join(SRC, sp[2]))
     c = pd.DataFrame(C); c['key'] = c.name.map(key)
     return c
 

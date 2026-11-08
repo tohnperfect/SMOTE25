@@ -21,7 +21,7 @@ IMBLEARN gives the minority definition of the imbalanced-learn benchmark tasks (
 feature count may differ because imbalanced-learn one-hot encodes nominal attributes.
 
 Input:  verifiability_entries_28oct.csv (the 28 Oct result, kept unchanged as the starting point).
-Output: verifiability_entries.csv (all 1,653 entries; the 28 Oct columns + pass, basis, candidates_considered,
+Output: verifiability_entries.csv (all named entries, 1,746 after the 8 Nov Part-B entries; the 28 Oct columns + pass, basis, candidates_considered,
 task_minority) -- the file every later script reads -- and verify_ext_summary.json.
 """
 import re, json, os, itertools
@@ -109,16 +109,43 @@ ALIAS = {
  'winequality': ['winequalityred', 'winequalitywhite'],
  'abalone': ['abalone', 'abalone28class'], 'mushrooms': ['mushroom'],
  'musk': ['musk', 'clean2'], 'semeion': ['semeion'],
- 'eucalyptus': [], 'svmguide1': [],
+ 'eucalyptus': [],
+ # 8 Nov 2026, second round (official sites + author repositories, official_sources.py)
+ 'svmguide1': ['svmguide1traintest'], 'svmguide3': ['svmguide3traintest'],
+ 'cod': ['codrna'], 'codrna': ['codrna'], 'ijcnn': ['ijcnn1'], 'skinnonskin': ['skinnonskin'],
+ 'bank': ['bank', 'bankmarketing', 'bankmarketingfull'], 'bankmarket': ['bankmarketing', 'bankmarketingfull'],
+ 'shoppers': ['shoppers', 'onlineshoppers'], 'onlineshoppers': ['onlineshoppers', 'shoppers'], 'purchase': ['onlineshoppers', 'shoppers'],
+ 'bankruptcy': ['taiwanesebankruptcy', 'polishbankruptcyyear1', 'polishbankruptcyyear2', 'polishbankruptcyyear3',
+                'polishbankruptcyyear4', 'polishbankruptcyyear5'],
+ 'polishbankruptcy': ['polishbankruptcyyear1', 'polishbankruptcyyear2', 'polishbankruptcyyear3', 'polishbankruptcyyear4', 'polishbankruptcyyear5'],
+ 'drybeans': ['drybean'], 'magic04': ['magic'], 'academic': ['studentsdropout'],
+ 'occupancy': ['occupancytraining', 'occupancytest', 'occupancytest2'], 'rtiot': ['rtiot'],
+ 'platesfaults7': ['steelplatesfaults7class'], 'platesfaults': ['steelplatesfaults7class'],
+ 'heartv': ['heartdiseasevalongbeach', 'heartdiseaseprocessedva'], 'hypo': ['hypothyroid', 'thyroidhypothyroid'],
+ 'ism': ['mammography'], 'multiplefs': ['multiplefeatures'], 'pageblock0': ['pageblocks0'],
+ 'breastcan': ['breastcancer', 'breast'],
+ 'yeast7': ['yeast'], 'yeast8': ['yeast'], 'cytvspox': ['yeast'], 'me2vsother': ['yeast'], 'g7': ['glass'], 'glass3': ['glass'],
+ 'veh1': ['vehicle'], 'contra2': ['cmc', 'contraceptive'], 'satimage4': ['satimage'], 'segment5': ['segment', 'segmentation'],
+ 'pendigits5': ['pendigits', 'penbased'], 'solarflaref': ['flare', 'solarflare2'], 'vowel5': ['vowel'], 'vowel7': ['vowel'],
+ 'vw0': ['vowel'], 'abalone10': ['abalone'], 'abalone8': ['abalone'], 'abalone6': ['abalone'], 'flag': ['flags'],
+ 'lettera': ['letter'], 'lettervowel': ['letter'], 'spliceei': ['splice'], 'spliceie': ['splice'],
+ 'seed': ['seeds'], 'pageblock1': ['pageblocks'], 'avila': ['avila', 'avilatrain'],
+ 'car3': ['car'], 'cleveland1': ['cleveland'], 'cleveland2': ['cleveland'], 'forestcover': ['covertype'],
+ 'platesfaults5': ['steelplatesfaults7class'], 'pokerhand': ['poker'], 'skin': ['skinsegmentation'], 'isolet5': ['isolet'],
+ 'censusincomedatabase': ['adult', 'adultall'],
 }
-ALIAS_NOTE = 'UCI/KEEL/Weka/PMLB file names of the same data set (e.g. liver = bupa = liver-disorders; cmc = contraceptive method choice; satellite = satimage = statlog landsat).'
+ALIAS_NOTE = ('UCI/KEEL/Weka/PMLB file names of the same data set (e.g. liver = bupa = liver-disorders; cmc = contraceptive method '
+              'choice; satellite = satimage = statlog landsat); 8 Nov second round: names of a split of a UCI set point to that set '
+              '(yeast7 -> yeast, glass3 -> glass), so the printed N and minority size decide whether the split can be rebuilt.')
 
 # imbalanced-learn benchmark tasks: corpus key -> (source catalog keys, minority labels, documented minority size)
 IMBLEARN = {
  'satimage4': (['satimage'], ['4'], 626), 'letterimg': (['letter'], ['Z'], 734), 'opticaldigits': (['optdigits'], ['8'], 554),
  'pendigits': (['penbased', 'pendigits'], ['5'], 1055), 'thyroidsick': (['sick'], ['sick'], 231),
- 'abalone19': (['abalone28class'], ['19'], 32), 'isolet': ([], [], 600), 'sickeuthyroid': (['thyroidsickeuthyroid'], ['sick'], 293),
+ 'abalone19': (['abalone28class'], ['19'], 32), 'isolet': (['isolet'], ['1.', '2.'], 600),   # isolet: letters A, B (UCI labels 1, 2) 'sickeuthyroid': (['thyroidsickeuthyroid'], ['sick'], 293),
 }
+
+AUTHOR_RELEASE = {'k-means SMOTE': 'author-kmeans'}   # paper -> source holding the authors' release of their modified sets
 
 def num(x):
     if pd.isna(x): return None
@@ -133,11 +160,39 @@ def subsets(ds, t):
     return sum(1 for k in range(1, len(ds)) for s in itertools.combinations(range(len(ds)), k) if sum(ds[i] for i in s) == t)
 
 SRC_RANK = {'KEEL(keel_ds)': 0, 'KEEL(imbalanced_databases)': 0, 'KEEL-std(F)': 1, 'KEEL-std(C)': 2, 'UCI++': 3, 'Weka-UCI': 4,
-            'jbrownlee-UCI': 5, 'imbalanced_databases(other fmt)': 6, 'PMLB': 7, 'PROMISE-ck': 8, 'NASA-MDP': 8}
+            'jbrownlee-UCI': 5, 'imbalanced_databases(other fmt)': 6, 'PMLB': 7, 'PROMISE-ck': 8, 'NASA-MDP': 8,
+            # 8 Nov second round: the authors' own files first, then the official sites
+            'author-HDE': 0, 'author-DGOT': 0, 'author-SOS': 0, 'author-MBS': 0, 'author-kmeans': 0, 'UCI-official': 1, 'LibSVM': 1}
+
+def sync_with_records(old, rec):
+    """8 Nov 2026 (second round): bring the 28 Oct snapshot in line with the current dataset_records.csv.
+    - entries added after 28 Oct (the 93 Part-B entries of build/add_synthetic_entries.py) get a starting status by the
+      28 Oct rule: category synthetic -> U-synthetic (author-generated, not measured); otherwise U-no_public_file, which
+      this pass re-examines;
+    - an entry whose category changed to synthetic (OREM-M Toy, external check) -> U-synthetic.
+    Every other row is unchanged."""
+    named = rec[rec.is_placeholder.astype(str) != 'yes']
+    o = old.set_index('record_id')
+    add = []
+    for rid, q in named.iterrows():
+        if rid in o.index:
+            if q.category == 'synthetic' and o.loc[rid, 'category'] != 'synthetic':
+                o.loc[rid, ['category', 'verif', 'status', 'file', 'file_src', 'file_n', 'file_f']] = ['synthetic', 'U-synthetic', 'no_file', np.nan, np.nan, np.nan, np.nan]
+                o.loc[rid, 'note_structure'] = 'category changed to synthetic after 28 Oct (external check, build/full_extraction.py EXTERNAL)'
+            continue
+        add.append(dict(record_id=rid, paper=q.paper_key, name=q.normalized_name, category=q.category, source=q.source_as_reported,
+                        pn=num(q.n_instances), pf=num(q.n_features), status='no_file',
+                        verif='U-synthetic' if q.category == 'synthetic' else 'U-no_public_file',
+                        note_structure='entry added 8 Nov 2026 (build/add_synthetic_entries.py)'))
+    o = o.reset_index()
+    out = pd.concat([o, pd.DataFrame(add)], ignore_index=True) if add else o
+    assert set(out.record_id) == set(named.index), 'STOP: verifiability rows and named records differ'
+    return out
 
 def main():
     old = pd.read_csv(os.path.join(HERE, 'verifiability_entries_28oct.csv'))   # 28 Oct snapshot (unchanged input)
     rec = pd.read_csv(os.environ.get('DATASET_RECORDS', os.path.join(HERE, '..', 'out', 'dataset_records.csv'))).set_index('record_id')
+    old = sync_with_records(old, rec)
     c0 = pd.read_csv(os.path.join(HERE, 'file_catalog.csv')); c0['dist'] = c0.dist.map(lambda s: json.loads(s) if isinstance(s, str) else None)
     c1 = pd.read_csv(os.path.join(HERE, 'file_catalog_ext.csv')); c1['dist'] = c1.dist.map(lambda s: json.loads(s) if isinstance(s, str) else None)
     # PMLB rows of the old catalog have no class counts; the ext catalog parses every PMLB file, so use ext for PMLB
@@ -212,6 +267,17 @@ def main():
             rows.append(row); continue
         if not cands:
             row.update(verif='U-no_public_file', basis='no file under this name or its aliases in any mirror'); rows.append(row); continue
+        # 8 Nov second round: a modified entry without a printed size is accepted when the paper's own authors publish the
+        # modified file under the same name (k-means SMOTE: "All modified and simulated datasets used in the study are made
+        # available at" the v0.0.1 release). Switch off with AUTHOR_RELEASE = {} to return to the 28 Oct rule for these entries.
+        if pn is None and r.paper in AUTHOR_RELEASE:
+            hit = [x for x, b in cands if x.src == AUTHOR_RELEASE[r.paper] and b == 'exact name']
+            if hit:
+                x = hit[0]
+                row.update(verif='V-author_release', file=x['name'], file_src=x.src, file_n=x.n, file_f=x.f,
+                           basis='modified file published by the paper\'s authors under the same name',
+                           note_structure='authors\' own release of the modified data set (no printed size needed)')
+                rows.append(row); continue
         if pn is None:
             ok = [(x, b) for x, b in cands if b in ('exact name', 'alias', 'exact name (vs dropped)')]
             if cat_ == 'modified' or not ok:
@@ -221,7 +287,7 @@ def main():
             # prefer the source the paper names
             s = str(r.source).lower()
             def pref(x):
-                return (0 if ('keel' in s and x.src.startswith('KEEL')) or ('uci' in s and x.src in ('UCI++', 'Weka-UCI', 'jbrownlee-UCI')) else 1, x['rank'])
+                return (0 if ('keel' in s and x.src.startswith('KEEL')) or ('uci' in s and x.src in ('UCI++', 'Weka-UCI', 'jbrownlee-UCI', 'UCI-official')) or ('libsvm' in s and x.src == 'LibSVM') else 1, x['rank'])
             exact = [t for t in ok if t[1] != 'alias']
             ok = exact or ok                                   # an alias is used only when no file has the exact name
             best = min(pref(t[0])[0] for t in ok)

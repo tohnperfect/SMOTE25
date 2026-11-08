@@ -340,6 +340,22 @@
    "how_obtained_detail": "Paper says datasets are 'widely used ordinal regression benchmark datasets [39] and UCI datasets [33]'; no per-dataset source or class-selection detail printed; minority classes in bold per Table 6",
    "in_results_table": "yes",
    "ref": "Table 6, p.11 (printed 6177)"
+  },
+  {
+   "name": "simulated set (Fig. S2)",
+   "group": "synthetic: visual comparison (supp. S5, Fig. S2)",
+   "source_repo": "synthetic",
+   "n_instances": null,
+   "n_features": null,
+   "n_classes": 2,
+   "n_minority": null,
+   "n_majority": 584,
+   "class_distribution": "584 majority / 60 minority + 6 noisy minority (as printed)",
+   "ir_printed": null,
+   "how_obtained": "synthetic",
+   "how_obtained_detail": "simulated imbalanced set: 60 minority samples, 584 majority samples and 6 noisy minority samples inside the majority region (supp. S5, p.11); the minority subclusters have different covariance (p.12); dimension not stated (plotted in 2-D); no data location given",
+   "in_results_table": "no",
+   "ref": "Supplement S5, p.11; Fig. S2"
   }
  ],
  "ir_definition": "Overall IR on multiclass datasets 'is computed as [5]' (formula not printed in paper); per-class imbalance degree ID_ci = sum_{q!=i} n_cq / ((|C|-1) * n_ci), Eq. (1), used for rebalancing",

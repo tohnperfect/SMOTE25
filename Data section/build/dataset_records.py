@@ -43,8 +43,11 @@ SRC = {"datasets": "out/verified_datasets.csv", "papers": "out/section7_key_map.
 OUT_CSV, OUT_JSON = "out/dataset_records.csv", "out/dataset_records_summary.json"
 NUM_RE = re.compile(r"\d[\d,]*(\.\d+)?")
 CATS = ["original", "repository-defined", "modified", "synthetic", "not stated"]
-EXPECTED = {"entries": 1654, "named_entries": 1653, "normalized_names": 771, "papers_with_entries": 73,
-            "original": 534, "repository-defined": 470, "modified": 331, "synthetic": 120, "not stated": 199}
+# 8 Nov 2026: +93 entries of the 10 "Part B" papers (build/add_synthetic_entries.py: 92 synthetic + RSMOTE fourclass with an
+# added outlier = modified) and OREM-M Toy original -> synthetic (external check). Was 1654/1653/771, original 534,
+# modified 331, synthetic 120.
+EXPECTED = {"entries": 1747, "named_entries": 1746, "normalized_names": 857, "papers_with_entries": 73,
+            "original": 533, "repository-defined": 470, "modified": 332, "synthetic": 213, "not stated": 199}
 FIELDS = ["record_id", "paper_id", "paper_key", "bibkey", "paper_title", "year", "source_csv_line", "entry_ordinal_in_paper",
           "name_as_reported", "normalized_name", "is_placeholder", "group_in_paper", "source_as_reported",
           "n_instances", "n_features", "n_classes", "n_minority", "n_majority", "class_distribution",

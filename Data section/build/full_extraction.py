@@ -59,6 +59,15 @@ def keel_rule(x, task):
         return "original", "rule: multiclass common name, no modification stated (Toon 18 Oct)"
     return "not stated", "reader (PDF)"
 
+# 8 Nov 2026 (Claude; Toon asked to check OREM-M "Toy"): category decided from evidence OUTSIDE the paper, so it is kept
+# here as an override of the rule (the reader's value in ai-draft/full/OREM-M.json stays "not stated").
+EXTERNAL = {
+    ("OREM-M", "Toy"): ("synthetic", "external check 8 Nov (Claude): 'toy' is the synthetic set of the ordinal-regression "
+                        "benchmark (Gutierrez et al. 2016, IEEE TKDE 28(1), Table 3: 300 x 2, 5 classes 35/87/79/68/31); the public "
+                        "ORCA copy (github.com/ayrna/orca exampledata/1-holdout/toy) has the same 300 rows, 2 features and class counts "
+                        "as OREM-M Table 6 (printed in another class order); not modified"),
+}
+
 def strip_variants(nm):
     s = str(nm or ""); out = {norm(s)}
     for inner in re.findall(r"\(([^)]*)\)", s): out.add(norm(inner))
@@ -91,7 +100,7 @@ for f in sorted(glob.glob(P("ai-draft/full/*.json"))):
                  n_minority=x.get("n_minority"), n_majority=x.get("n_majority"), class_distribution=x.get("class_distribution"),
                  ir_printed=x.get("ir_printed"), how_obtained=x.get("how_obtained"), how_obtained_detail=x.get("how_obtained_detail"),
                  in_results_table=x.get("in_results_table"), ref=x.get("ref"))
-        r["how_obtained_final"], r["how_basis"] = keel_rule(x, d.get("task"))
+        r["how_obtained_final"], r["how_basis"] = EXTERNAL.get((k, x.get("name"))) or keel_rule(x, d.get("task"))
         ds_rows.append(r); dmap.setdefault(norm(x.get("name")), r)
     sk = smote_kind(o.get("smote_name_as_printed")) if o.get("smote_in_baselines") == "yes" else "not a baseline"
     rows_with_smote = 0; idx = 0

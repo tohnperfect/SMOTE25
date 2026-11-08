@@ -1,0 +1,201 @@
+﻿normalized_name,name_type,papers,printed_n,printed_features,status,where,url,fetch_from_claude,note
+svmguide1,modified,COG-OS; HDE; LS; RSMOTE,3089; 3175; 4400,4,A_author,HDE repo (arff) + LibSVM,https://github.com/smallcube/HD-Ensemble/tree/master/datasets ; https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/,yes,LibSVM file is the original; COG-OS/LS/RSMOTE sizes differ (3089 vs 4400 = train vs train+test)
+avila,modified,DGOT; MKC-SMOTE; RSMOTE,10430; 11695; 20850,10,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/459/avila,browser,"paper sizes differ (10430 = train split, 20850 = train+test); class binarisation per paper"
+covertype,original,CTGAN / TVAE; Loyalty-SMOTE; MKC-SMOTE,5781; 581012,12; 54,A_repo,UCI ML Repository / SDGym,https://archive.ics.uci.edu/dataset/31/covertype,browser,CTGAN uses SDGym 'covertype' subsample; Loyalty-SMOTE N=5781 is a subsample
+default,original,DGOT; GOIO; SOS,30000,23,A_author,SOS repo (npz) + UCI,https://github.com/JayoungKim408/SOS/tree/master/tabular_datasets ; https://archive.ics.uci.edu/dataset/350,yes,default of credit card clients
+phishingdata,original,MLOS; RSMOTE; SHSampler,1353,8; 9,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/379/website+phishing,browser,"Website Phishing, 1353 x 9"
+shoppers,original,GOIO; Loyalty-SMOTE; SOS,12330; 12331,11; 16,A_author,SOS repo (npz) + UCI,https://github.com/JayoungKim408/SOS/tree/master/tabular_datasets ; https://archive.ics.uci.edu/dataset/468,yes,Online Shoppers Purchasing Intention
+bankruptcy,original,GOIO; Loyalty-SMOTE,19967; 6820,64; 94,C_identify,UCI ML Repository,"https://archive.ics.uci.edu/dataset/365 (Polish, 64 feat) ; https://archive.ics.uci.edu/dataset/572 (Taiwanese, 95 feat)",browser,same name = two different datasets (19967x64 Polish one year; 6820x94 Taiwanese)
+abalone 15,modified,DGOT; GOIO,4177,8,A_author,DGOT / GOIO repos (csv),https://github.com/MLneuers/DGOT/tree/master/datasets/abalone_15,yes,raw abalone_15.csv in repo
+abalone 6,modified,DGOT; GOIO,3527; 4177,8,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/1/abalone,browser,class 6 vs rest per paper (DGOT N=3527 = subset)
+acl,not stated,SMOTE-IPF; SPIDER2,140,6,D_none,private (Stefanowski group),,-,papers say provided by authors / private
+bank,original,DGOT; MBS,4521; 45211,11; 16,A_author,"MBS repo (bank.csv, bank-full.csv) + UCI",https://github.com/b10071007/Model-Based-Synthetic-Sampling/tree/master/data/bank ; https://archive.ics.uci.edu/dataset/222,yes,"4521 = bank.csv, 45211 = bank-full.csv"
+boundary,original,LS; RBBoost / Random Balance,3505,174,D_none,HDDT collection (Cieslak et al.),http://www.nd.edu/dial/hddt/,-,biological data of Radivojac et al.; HDDT page dead
+breast tissue2,modified,RSMOTE; k-means SMOTE,88,9,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/192/breast+tissue,browser,k-means SMOTE version is in its release; RSMOTE version must be rebuilt
+car3,modified,FW-SMOTE; RUSBoost,1728; 174,7; 9182,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/19/car+evaluation,browser,"RUSBoost: car class 3 vs rest. NOTE FW-SMOTE 'car3' (174 x 9182) is a microarray set, not UCI car -> D"
+cleveland 1,modified,GMMSampling; SOUP,,,B_rebuild,UCI ML Repository / KEEL,https://archive.ics.uci.edu/dataset/45/heart+disease,browser,class binarisation per paper (GMMSampling/SOUP)
+cleveland 2,modified,GMMSampling; SOUP,,,B_rebuild,UCI ML Repository / KEEL,https://archive.ics.uci.edu/dataset/45/heart+disease,browser,class binarisation per paper
+compustat,original,LS; RBBoost / Random Balance,13657,20,D_none,"Compustat (proprietary, WRDS) via HDDT",http://www.nd.edu/dial/hddt/,-,commercial database; HDDT page dead
+e-state,original,LS; SMOTE,5322; 53220,12,D_none,"NCI (SMOTE paper, private) / HDDT",,-,not publicly released
+firewall,original,DGOT; Loyalty-SMOTE,65532; 65533,11,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/542/internet+firewall+data,browser,Internet Firewall Data
+fourclass,modified,COG-OS; LS,862,2,B_rebuild,LibSVM,https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html#fourclass,browser,
+htru2,original,CISO; GDO,17898,8; 9,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/372/htru2,browser,
+intrusion,modified,CTGAN / TVAE; LS,,41,B_rebuild,KDD Cup 1999 / SDGym,http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html,browser,SDGym ships its own 'intrusion' version
+isolet,repository-defined,DGOT; GDO,7797,617,A_repo,UCI ML Repository / imbalanced-learn,https://archive.ics.uci.edu/dataset/54/isolet,browser,imblearn fetch_datasets('isolet') gives the binarised version
+phoss,original,LS; RBBoost / Random Balance,11411,479,D_none,HDDT collection (Cieslak et al.),http://www.nd.edu/dial/hddt/,-,phosphorylation data of Radivojac et al.; HDDT page dead
+svmguide3,modified,HDE; RSMOTE,1041; 312,22,A_author,HDE repo (arff) + LibSVM,https://github.com/smallcube/HD-Ensemble/tree/master/datasets ; https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/,yes,
+vowel5,modified,OREM-M; SMOM,990,10,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/152,browser,class 5 vs rest
+yeast7,modified,SMOM; SVDD-WSMOTE,1055,8,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/110/yeast,browser,class binarisation per paper
+yeast8,modified,SMOM; SVDD-WSMOTE,1484,8,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/110/yeast,browser,class binarisation per paper
+50words,modified,INOS,,270,B_rebuild,UCR,https://www.timeseriesclassification.com/ (UCR archive),browser,FiftyWords; INOS made it imbalanced
+a1a,modified,HDE,404,119,A_author,HDE repo (arff) + LibSVM,https://github.com/smallcube/HD-Ensemble/tree/master/datasets ; https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/,yes,
+abalone10,modified,SMOM,2297,10,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/1/abalone,browser,SMOM class split
+abalone8,modified,SMOM,2148,10,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/1/abalone,browser,SMOM class split
+absenteeism at work,original,MKC-SMOTE,740,11,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/445,browser,
+academic,not stated,Loyalty-SMOTE,4425,37,C_identify,UCI ML Repository,https://archive.ics.uci.edu/dataset/697,browser,likely 'Predict Students Dropout and Academic Success' (4424 x 36)
+adiac,modified,INOS,,176,B_rebuild,UCR,https://www.timeseriesclassification.com/ (UCR archive),browser,INOS imbalanced version
+ai4i2020,not stated,Loyalty-SMOTE,10000,5,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/601,browser,AI4I 2020 Predictive Maintenance
+aids 15000,not stated,Loyalty-SMOTE,15000,23,B_rebuild,Kaggle,https://www.kaggle.com/datasets/aadarshvelu/aids-virus-infection-prediction,browser,15000-row subsample of the 50000-row set; sampling seed unknown
+aids 5000,not stated,Loyalty-SMOTE,5000,23,B_rebuild,Kaggle,https://www.kaggle.com/datasets/aadarshvelu/aids-virus-infection-prediction,browser,5000-row subsample
+aids 50000,not stated,Loyalty-SMOTE,50000,23,A_repo,Kaggle,https://www.kaggle.com/datasets/aadarshvelu/aids-virus-infection-prediction,browser,50000 x 23
+approval,not stated,Loyalty-SMOTE,697,7,C_identify,Kaggle,,browser,697 x 7 matches no well-known set (UCI Credit Approval is 690 x 15); check paper
+attribute noise versions of the 9 real-world datasets,modified,SMOTE-IPF,,,A_author,SMOTE-IPF site,https://sci2s.ugr.es/node/174 (SMOTE-IPF complementary site),browser,noisy versions generated by authors; site lists real-world datasets zip
+bankmarket,not stated,CGMOS,45211,17,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/222/bank+marketing,browser,bank-full.csv
+bar crawl,original,MKC-SMOTE,10486,4,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/515,browser,raw accelerometer data; 10486 x 4 is a derived subset
+breast can.,not stated,SPIDER2,,,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/14/breast+cancer,browser,Ljubljana breast cancer (SPIDER2)
+breast tissue4,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+cam,not stated,RBBoost / Random Balance,18916,,D_none,HDDT collection (Cieslak et al.),http://www.nd.edu/dial/hddt/,-,HDDT page dead
+cardiovascular,not stated,Loyalty-SMOTE,55772,10,C_identify,Kaggle,https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset,browser,Kaggle set has 70000 rows; 55772 = after cleaning? check paper
+census-income database,modified,ClusterCentroids,30162,,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/2/adult,browser,30162 = Adult train after dropping missing
+charactertraj,not stated,CGMOS,2860,3,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/175,browser,Character Trajectories
+cifar-10,modified,ROS (Buda),,,B_rebuild,CIFAR-10,https://www.cs.toronto.edu/~kriz/cifar.html,browser,Buda et al. built imbalanced versions
+class noise versions of the 9 real-world datasets,modified,SMOTE-IPF,,,A_author,SMOTE-IPF site,https://sci2s.ugr.es/node/174 (SMOTE-IPF complementary site),browser,
+cnae,not stated,Loyalty-SMOTE,1080,312,C_identify,UCI ML Repository,https://archive.ics.uci.edu/dataset/233/cnae+9,browser,UCI CNAE-9 has 857 features; paper prints 312
+cod,modified,HDE,19871,8,A_author,HDE repo (cod-rna.arff) + LibSVM,https://github.com/smallcube/HD-Ensemble/tree/master/datasets ; https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/,yes,cod-rna
+codrna,modified,RSMOTE,41674,8,B_rebuild,LibSVM,https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html#cod-rna,browser,RSMOTE N=41674 subset
+contra2,modified,RUSBoost,1473,10,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/30,browser,"Contraceptive Method Choice, class 2 vs rest"
+covtype,not stated,RBBoost / Random Balance,38500,,D_none,HDDT collection,http://www.nd.edu/dial/hddt/,-,38500-row HDDT subsample of covertype; HDDT page dead
+credit,original,CTGAN / TVAE,,,A_repo,Kaggle / SDGym,https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud,browser,SDGym 'credit' is a version of this
+customer churn wireless telecom,not stated,AB-SMOTE,5000,,D_none,CrowdAnalytix contest,http://www.crowdanalytix.com/contests/why-customer-churn/,-,contest page gone; Kaggle copies exist but unverified
+cytvspox,modified,DSRBF / Static-SMOTE,482,8,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/110/yeast,browser,yeast CYT vs POX
+darwin,not stated,Loyalty-SMOTE,129,423,C_identify,UCI ML Repository,https://archive.ics.uci.edu/dataset/732/darwin,browser,UCI DARWIN is 174 x 451; paper prints 129 x 423
+drug,not stated,Loyalty-SMOTE,1886,13,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/373,browser,Drug Consumption (1885)
+drug200,original,Loyalty-SMOTE,413,5,C_identify,Kaggle,https://www.kaggle.com/datasets/prathamtripathi/drug-classification,browser,Kaggle drug200 has 200 rows; paper prints 413
+dry beans,original,DGOT,13611,16,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/602/dry+bean+dataset,browser,
+dry-bean,original,MC-NCLWO,13611,16,A_repo,KEEL / UCI,https://archive.ics.uci.edu/dataset/602/dry+bean+dataset,browser,
+ecoli6,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+employe attrition,not stated,AB-SMOTE,1470,,A_repo,IBM sample (Kaggle mirror),https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset,browser,1470 rows
+employee,original,Loyalty-SMOTE,4654,7,A_repo,Kaggle,https://www.kaggle.com/datasets/tawfikelmetwally/employee-dataset,browser,4653 x 9
+estate,not stated,RBBoost / Random Balance,5322,,D_none,HDDT / NCI,http://www.nd.edu/dial/hddt/,-,same as e-state; not public
+faceall,modified,INOS,,131,B_rebuild,UCR,https://www.timeseriesclassification.com/ (UCR archive),browser,INOS imbalanced version
+flag,modified,SMOTE-ENN / SMOTE-Tomek,194,28,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/40/flags,browser,class binarisation per paper
+forest cover,modified,SMOTE,,,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/31/covertype,browser,SMOTE paper used a 2-class subset
+g7,modified,OSS,,10,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/42/glass+identification,browser,glass class 7 vs rest (OSS)
+gender,not stated,Loyalty-SMOTE,4747,18,C_identify,Kaggle,,browser,4747 x 18: dataset not identifiable from name; check paper
+gender by name,not stated,Loyalty-SMOTE,146870,4,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/591/gender+by+name,browser,
+gisette,modified,HDE,3076,5000,B_rebuild,LibSVM / UCI,https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html#gisette,browser,N=3076 = paper's subset
+give me some credit,not stated,MBS,150000,10,A_author,MBS repo + Kaggle,https://github.com/b10071007/Model-Based-Synthetic-Sampling/tree/master/data/Give%20Me%20Some%20Credit,yes,cs-training.csv
+glass3,modified,RUSBoost,214,10,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/42,browser,class 3 vs rest
+haberman10,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+haberman2,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+haberman4,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+haberman6,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+hcv,original,MKC-SMOTE,589,12,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/571/hcv+data,browser,615 rows; 589 after dropping missing
+healthy older people2,original,RSMOTE,22646,8,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/427,browser,room setting S2
+heart-v,not stated,RBBoost / Random Balance,200,,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/45/heart+disease,browser,VA Long Beach (200 rows); HDDT preprocessing unknown
+heart10,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+heart15,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+heart2,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+heart4,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+heart6,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+hmeq,not stated,MBS,5960,10,A_author,MBS repo + Kaggle,https://github.com/b10071007/Model-Based-Synthetic-Sampling/tree/master/data/hmeq,yes,
+housing,modified,EasyEnsemble / BalanceCascade,506,,B_rebuild,Boston Housing (StatLib / Kaggle),http://lib.stat.cmu.edu/datasets/boston,browser,regression target binarised by paper; UCI page removed
+hr,original,Loyalty-SMOTE,1470,21,A_repo,IBM sample (Kaggle mirror),https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset,browser,
+hypo,not stated,RBBoost / Random Balance,3163,,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/102/thyroid+disease,browser,hypothyroid.data (3163 rows)
+icr,not stated,Loyalty-SMOTE,634,33,A_repo,Kaggle competition,https://www.kaggle.com/competitions/icr-identify-age-related-conditions,browser,must accept competition rules
+ijcnn,modified,HDE,4858,22,A_author,HDE repo (arff) + LibSVM,https://github.com/smallcube/HD-Ensemble/tree/master/datasets ; https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/,yes,ijcnn1
+ilsvrc-2012,modified,ROS (Buda),,,B_rebuild,ImageNet (registration),https://image-net.org/,browser,Buda et al. imbalanced subsets
+imagenet12,modified,DLexiBoost,,2048,D_none,ImageNet features (DLexiBoost),https://github.com/Shounak-D/LexiBoost,-,2048-dim CNN features not released
+imagenet8,modified,DLexiBoost,1120,2048,D_none,ImageNet features (DLexiBoost),https://github.com/Shounak-D/LexiBoost,-,not released
+imagenet9,modified,DLexiBoost,1240,2048,D_none,ImageNet features (DLexiBoost),https://github.com/Shounak-D/LexiBoost,-,not released
+iris2,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+iris4,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+iris6,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+ism,not stated,RBBoost / Random Balance,11180,,A_repo,mammography (Woods et al.) via imbalanced-learn / OpenML,https://www.openml.org/d/310,browser,"ism = mammography, 11183 x 6"
+isolet5,modified,RSMOTE,858,617,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/54/isolet,browser,subset per paper
+k1b,original,COG-OS,2340,21839,A_repo,CLUTO text datasets (Karypis),http://glaros.dtc.umn.edu/gkhome/cluto/cluto/download,browser,in datasets.tgz
+kddcup-99 intrusion,modified,SMOTEBoost,,,B_rebuild,KDD Cup 1999,http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html,browser,
+kddcup99data,modified,COG-OS,,41,B_rebuild,KDD Cup 1999,http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html,browser,
+la12,original,COG-OS,6279,31472,A_repo,CLUTO text datasets (Karypis),http://glaros.dtc.umn.edu/gkhome/cluto/cluto/download,browser,in datasets.tgz
+letter-a,modified,SMOTE-ENN / SMOTE-Tomek,20000,16,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/59,browser,letter A vs rest
+letter-vowel,modified,SMOTE-ENN / SMOTE-Tomek,20000,16,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/59,browser,vowels vs rest
+libra2,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+libra4,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+libra6,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+liver disorders10,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+liver disorders15,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+liver disorders2,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+liver disorders4,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+liver disorders6,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+mafalda,original,EMDO,23762,14,A_author,GitHub (sisinflab-swot/mafalda),https://github.com/sisinflab-swot/mafalda/tree/master/dataset,yes,4 csv/arff files
+magic04,not stated,Loyalty-SMOTE,19020,11,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/159,browser,
+maternal,not stated,Loyalty-SMOTE,1015,7,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/863,browser,Maternal Health Risk (1014)
+me2vsother,modified,DSRBF / Static-SMOTE,1484,8,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/110/yeast,browser,ME2 vs rest
+medv,original,Loyalty-SMOTE,512,13,B_rebuild,Boston Housing,http://lib.stat.cmu.edu/datasets/boston,browser,target binarised
+mnist 3,modified,NBU,,784,B_rebuild,MNIST,http://yann.lecun.com/exdb/mnist/,browser,NBU imbalanced version
+mnist 5,modified,NBU,,784,B_rebuild,MNIST,http://yann.lecun.com/exdb/mnist/,browser,
+mnist12,modified,CTGAN / TVAE,,,A_author,SDGym,SDGym benchmark (sdv-dev/SDGym; data on public S3 bucket sdv-datasets),browser,SDGym 'mnist12'
+mnist28,modified,CTGAN / TVAE,,,A_author,SDGym,SDGym benchmark (sdv-dev/SDGym; data on public S3 bucket sdv-datasets),browser,SDGym 'mnist28'
+mocap,modified,RSMOTE,48023,33,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/405,browser,MoCap Hand Postures; subset per paper
+multiplefs,not stated,CGMOS,2000,649,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/72,browser,Multiple Features 2000 x 649
+national,not stated,Loyalty-SMOTE,2279,9,C_identify,UCI/KEEL (group-level),,browser,2279 x 9: not identifiable from name
+news,original,CTGAN / TVAE,,,A_author,SDGym / UCI,SDGym benchmark (sdv-dev/SDGym; data on public S3 bucket sdv-datasets) ; https://archive.ics.uci.edu/dataset/332,browser,Online News Popularity
+obesity,not stated,Loyalty-SMOTE,2112,17,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/544,browser,
+obs,original,RSMOTE,1075,21,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/404,browser,Burst Header Packet (OBS-Network) 1075 x 21
+occupancy,not stated,Loyalty-SMOTE,2666,7,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/357,browser,2665 = one of the test files
+online,not stated,Loyalty-SMOTE,39645,38,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/332,browser,Online News Popularity 39644
+online retail,modified,RSMOTE,541909,7,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/352/online+retail,browser,transaction log; label construction per paper
+online shoppers,original,CISO,12330,17,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/468,browser,
+page-block0,not stated,GDO,5472,10,A_repo,KEEL / UCI,https://sci2s.ugr.es/keel/imbalanced.php,browser,page-blocks0
+pageblock1,modified,SVDD-WSMOTE,,10,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/78,browser,class split per paper
+parkinsons telemonitoring,not stated,GDO,5875,26,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/189,browser,regression target binarised per paper
+pendigits5,modified,RUSBoost,10992,17,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/81,browser,digit 5 vs rest
+phishing,modified,HDE,4910,68,A_author,HDE repo (arff) + LibSVM,https://github.com/smallcube/HD-Ensemble/tree/master/datasets ; https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/,yes,
+pima10,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+pima15,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+pima2,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+pima20,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+pima4,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+pima6,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+plates-faults5,modified,SMOM,1941,27,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/198,browser,"Steel Plates Faults, class split"
+plates-faults7,original,SMOM,1941,27,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/198,browser,class split
+poker hand,original,MKC-SMOTE,24811,10,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/158,browser,24811 = subset
+polish bankruptcy,original,DGOT,19967,64,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/365,browser,
+probe binary,modified,COG-OS,,41,B_rebuild,KDD Cup 1999,http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html,browser,
+promotion,not stated,MBS,25000,4,A_author,MBS repo,https://github.com/b10071007/Model-Based-Synthetic-Sampling/tree/master/data/promotion,yes,
+purchase,not stated,Loyalty-SMOTE,12331,18,A_repo,Kaggle / UCI,https://archive.ics.uci.edu/dataset/468,browser,= Online Shoppers 12330
+r2l binary,modified,COG-OS,,41,B_rebuild,KDD Cup 1999,http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html,browser,
+raisin,not stated,Loyalty-SMOTE,600,8,C_identify,UCI ML Repository,https://archive.ics.uci.edu/dataset/850/raisin,browser,UCI Raisin has 900 rows; paper prints 600
+rt-iot,not stated,Loyalty-SMOTE,123118,53,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/942/rt-iot2022,browser,123117 rows
+sales: win loss,not stated,AB-SMOTE,78025,,A_repo,IBM Watson sample (Kaggle/GitHub copies),,browser,"WA_Fn-UseC_-Sales-Win-Loss.csv; IBM page gone, copies widely mirrored"
+satimage4,modified,RUSBoost,6435,37,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/146,browser,class 4 vs rest
+satisfied,not stated,Loyalty-SMOTE,103905,21,A_repo,Kaggle,https://www.kaggle.com/datasets/teejmahal20/airline-passenger-satisfaction,browser,train.csv 103904
+seed,modified,SVDD-WSMOTE,,7,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/236/seeds,browser,class split
+segment10,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+segment15,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+segment2,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+segment20,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+segment4,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+segment5,modified,RUSBoost,2310,20,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/50,browser,class 5 vs rest
+segment6,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+sick2,repository-defined,DLexiBoost,,,B_rebuild,KEEL,https://sci2s.ugr.es/keel/datasets.php,browser,class split of sick
+skin,modified,RSMOTE,196139,3,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/229/skin+segmentation,browser,
+skinnonskin,modified,HDE,20034,3,A_author,HDE repo (arff) + LibSVM,https://github.com/smallcube/HD-Ensemble/tree/master/datasets ; https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/,yes,N=20034 subset
+sleaf,modified,INOS,,128,B_rebuild,UCR,https://www.timeseriesclassification.com/ (UCR archive),browser,SwedishLeaf
+smartphone,not stated,Loyalty-SMOTE,2948,536,C_identify,Kaggle (UCI HAR),https://archive.ics.uci.edu/dataset/240,browser,2948 x 536 ~ HAR test split
+smoke,not stated,Loyalty-SMOTE,62631,14,A_repo,Kaggle,https://www.kaggle.com/datasets/deepcontractor/smoke-detection-dataset,browser,62630 rows
+solarflaref,modified,RUSBoost,1389,13,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/89,browser,class F vs rest
+soybean12,repository-defined,DLexiBoost,,,B_rebuild,KEEL,https://sci2s.ugr.es/keel/datasets.php,browser,class split of soybean
+splice-ei,modified,SMOTE-ENN / SMOTE-Tomek,3176,60,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/69,browser,EI vs rest
+splice-ie,modified,SMOTE-ENN / SMOTE-Tomek,3176,60,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/69,browser,IE vs rest
+students dropout,original,DGOT,4424,36,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/697,browser,
+susy,modified,RSMOTE,23752,18,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/279/susy,browser,5M rows; 23752 = subsample
+svmguide2,original,RSMOTE,391,20,A_repo,LibSVM,https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/multiclass.html#svmguide2,browser,
+telco customer churn,original,AB-SMOTE,7043,,A_repo,IBM sample (Kaggle mirror),https://www.kaggle.com/datasets/blastchar/telco-customer-churn,browser,
+toxicity,not stated,Loyalty-SMOTE,172,1171,A_repo,UCI ML Repository,https://archive.ics.uci.edu/dataset/728/toxicity-2,browser,171 x 1203
+twopats,modified,INOS,,128,B_rebuild,UCR,https://www.timeseriesclassification.com/ (UCR archive),browser,TwoPatterns
+veh1,modified,OSS,,19,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/149,browser,vehicle class 1 vs rest
+vehicle10,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+vehicle15,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+vehicle20,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+vehicle4,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+vehicle6,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+voice9 6,modified,SMOM,413,10,C_identify,UCI?,,browser,'voice9' (413 x 10) not identifiable; check SMOM paper
+voice9 7,original,SMOM,413,10,C_identify,UCI?,,browser,same as voice9 6
+vowel7,modified,SMOM,990,10,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/152,browser,class 7 vs rest
+vw0,modified,OSS,,10,B_rebuild,UCI ML Repository,https://archive.ics.uci.edu/dataset/152,browser,vowel class 0 vs rest
+wafer,modified,INOS,,152,B_rebuild,UCR,https://www.timeseriesclassification.com/ (UCR archive),browser,Wafer
+wine2,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+wine4,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+wine6,modified,k-means SMOTE,,,A_author,k-means SMOTE authors (GitHub release),https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,browser,paper states all modified datasets are released here; 63.7 MB; release assets blocked by proxy here
+yoga,modified,INOS,,426,?,,,browser,

@@ -3,7 +3,7 @@
  "sources": {
   "datasets": {
    "path": "out/verified_datasets.csv",
-   "sha256": "99b0cfd08de4c281014ba1a7eaea18f4b51ef69329102f5cd0467712d2d0d385"
+   "sha256": "51cc7a84be2f40d714edb7d5b9982d59170c8a4f6894f73141f860251733cb25"
   },
   "papers": {
    "path": "out/section7_key_map.csv",
@@ -11,89 +11,89 @@
   },
   "summary": {
    "path": "out/full_summary.json",
-   "sha256": "8eba0dbab72c8f0b2f8db96a169db452e355bafc2d16274973767d54aedca63c"
+   "sha256": "f4906f4aa02e75e82090e6fdd4d40857e3673cd0fafb0f39cf38c2b0a8fca924"
   }
  },
  "counts": {
-  "entries": 1654,
-  "named_entries": 1653,
-  "normalized_names": 771,
+  "entries": 1747,
+  "named_entries": 1746,
+  "normalized_names": 857,
   "papers_with_entries": 73,
-  "original": 534,
+  "original": 533,
   "repository-defined": 470,
-  "modified": 331,
-  "synthetic": 120,
+  "modified": 332,
+  "synthetic": 213,
   "not stated": 199
  },
  "completeness": {
   "source_as_reported": {
-   "denominator": 1654,
-   "reported": 1290,
-   "missing": 364
+   "denominator": 1747,
+   "reported": 1382,
+   "missing": 365
   },
   "group_in_paper": {
-   "denominator": 1654,
-   "reported": 1200,
+   "denominator": 1747,
+   "reported": 1293,
    "missing": 454
   },
   "n_instances": {
-   "denominator": 1654,
+   "denominator": 1747,
    "reported": 1327,
-   "missing": 327,
+   "missing": 420,
    "numeric": 1325,
    "reported_non_numeric": 2
   },
   "n_features": {
-   "denominator": 1654,
-   "reported": 1255,
-   "missing": 399,
-   "numeric": 1255,
+   "denominator": 1747,
+   "reported": 1271,
+   "missing": 476,
+   "numeric": 1271,
    "reported_non_numeric": 0
   },
   "n_classes": {
-   "denominator": 1654,
-   "reported": 1281,
-   "missing": 373,
-   "numeric": 1281,
+   "denominator": 1747,
+   "reported": 1370,
+   "missing": 377,
+   "numeric": 1370,
    "reported_non_numeric": 0
   },
   "n_minority": {
-   "denominator": 1654,
-   "reported": 505,
-   "missing": 1149,
-   "numeric": 505,
+   "denominator": 1747,
+   "reported": 520,
+   "missing": 1227,
+   "numeric": 520,
    "reported_non_numeric": 0
   },
   "n_majority": {
-   "denominator": 1654,
-   "reported": 429,
-   "missing": 1225,
-   "numeric": 429,
+   "denominator": 1747,
+   "reported": 505,
+   "missing": 1242,
+   "numeric": 505,
    "reported_non_numeric": 0
   },
   "class_distribution": {
-   "denominator": 1654,
-   "reported": 587,
-   "missing": 1067
+   "denominator": 1747,
+   "reported": 589,
+   "missing": 1158
   },
   "ir_as_printed": {
-   "denominator": 1654,
-   "reported": 1321,
-   "missing": 333,
-   "numeric_single_value": 1146,
-   "ratio_form": 124,
+   "denominator": 1747,
+   "reported": 1390,
+   "missing": 357,
+   "numeric_single_value": 1206,
+   "ratio_form": 133,
    "other_form": 51,
    "with_paper_definition_stated": 873,
-   "with_paper_definition_not_stated": 448
+   "with_paper_definition_not_stated": 517
   },
   "preprocessing_note": {
-   "denominator": 1654,
-   "reported": 1641,
+   "denominator": 1747,
+   "reported": 1734,
    "missing": 13
   },
   "evidence_ref": {
-   "denominator": 1654,
-   "reported": 1654,
+   "denominator": 1747,
+   "reported": 1747,
    "missing": 0
   }
  },
@@ -112,18 +112,18 @@
  },
  "checks": {
   "entries": {
-   "expected": 1654,
-   "got": 1654,
+   "expected": 1747,
+   "got": 1747,
    "ok": true
   },
   "named_entries": {
-   "expected": 1653,
-   "got": 1653,
+   "expected": 1746,
+   "got": 1746,
    "ok": true
   },
   "normalized_names": {
-   "expected": 771,
-   "got": 771,
+   "expected": 857,
+   "got": 857,
    "ok": true
   },
   "papers_with_entries": {
@@ -132,8 +132,8 @@
    "ok": true
   },
   "original": {
-   "expected": 534,
-   "got": 534,
+   "expected": 533,
+   "got": 533,
    "ok": true
   },
   "repository-defined": {
@@ -142,13 +142,13 @@
    "ok": true
   },
   "modified": {
-   "expected": 331,
-   "got": 331,
+   "expected": 332,
+   "got": 332,
    "ok": true
   },
   "synthetic": {
-   "expected": 120,
-   "got": 120,
+   "expected": 213,
+   "got": 213,
    "ok": true
   },
   "not stated": {

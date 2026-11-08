@@ -1,2 +1,4 @@
 file,item,note
+covertype,UCI-official,"not measured: 581,012 rows, one-vs-rest tasks only; not run for time (8 Nov)"
 post-operative,I,minority <2 rows
+heart_disease_va_long_beach,1,minority <2 rows
