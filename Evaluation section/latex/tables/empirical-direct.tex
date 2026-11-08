@@ -1,0 +1,23 @@
+%% Table: direct checks of the resampled data (input from sections/07-empirical-comparisons.tex). Version 4, generated 2026-11-08 by v4/make_tables.py.
+%% JAIR style: caption above the table, booktabs rules. Regenerate instead of editing numbers by hand.
+\begin{table}[t]
+  \caption{Studies That Check the Resampled Data Directly}
+  \label{tab:empirical-direct}
+  \footnotesize
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}p{0.17\linewidth}p{0.22\linewidth}p{0.55\linewidth}@{}}
+    \toprule
+    Study & What is checked & How\\
+    \midrule
+    SMOTE-IPF (2015)~\parencite{saez2015smoteipf} & Noise created by SMOTE & Share of synthetic, original minority and original majority examples removed by a noise filter after SMOTE, on synthetic, real and noise-injected data\\
+    SPE (2020)~\parencite{liu2020spe} & Hardness of the examples kept & Number of majority examples per hardness bin before and after under-sampling; resampled sets drawn on a 2-D checkerboard\\
+    CTGAN (2019)~\parencite{xu2019ctgan} & Fidelity to the true distribution & Likelihood of synthetic rows under the known generating model, and of real test rows under a model refitted on synthetic rows\\
+    GAMO (2019)~\parencite{mullick2019gamo} & Distance between distributions (images) & Fréchet inception distance between real and generated images; a proof that the objective is a sum of Jensen--Shannon divergences\\
+    GLOS (2023)~\parencite{han2023glos} & Type of the minority examples & Counts of safe, borderline and small-disjunct minority examples as a parameter varies\\
+    CISO (2025)~\parencite{yadav2025ciso} & Distance to held-out minority data; per-sample guarantee & MMD$^2$ and the AUC of a classifier two-sample test against held-out minority examples; share of synthetic points that pass a certificate of not entering majority regions\\
+    \midrule
+    Hassanat et al. (2022)~\parencite{hassanat2022stop} & Whether synthetic points belong to the minority & Hide 10, 25 or 50\% of the majority class, oversample the rest, and count the synthetic points whose nearest original example (Hassanat distance) is a majority example; no classifier is trained\\
+    \bottomrule
+  \end{tabular}
+  \par\smallskip\raggedright\scriptsize The last row is a position paper that is not among the 71 empirical studies.
+\end{table}

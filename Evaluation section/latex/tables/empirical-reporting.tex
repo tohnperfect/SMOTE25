@@ -1,0 +1,21 @@
+%% Table: how results are reported and how they should be (input from sections/07-empirical-comparisons.tex). Version 4, generated 2026-11-08 by v4/make_tables.py.
+%% JAIR style: caption above the table, booktabs rules. Regenerate instead of editing numbers by hand.
+\begin{table}[t]
+  \caption{How Results Are Reported and What We Recommend}
+  \label{tab:empirical-reporting}
+  \footnotesize
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}p{0.14\linewidth}p{0.22\linewidth}p{0.32\linewidth}p{0.26\linewidth}@{}}
+    \toprule
+    Purpose & In the corpus (of 71) & Recommended & Why\\
+    \midrule
+    Results per dataset & 58 studies give a table, 24 with a standard deviation & Mean $\pm$ standard deviation over repeated runs, datasets sorted by IR, full table in the supplement & The reader can see whether a gain exceeds the run-to-run variation\\
+    Summary over datasets & 38 give average ranks, 19 win/tie/loss counts & Average ranks per learner, win/tie/loss against the main baseline, adjusted $p$-values, in the same table & One table answers "how often, by how much and is it reliable"\\
+    Significance & 4 draw a critical-difference diagram & One critical-difference diagram per measure (and per learner, or per learner-averaged score) & Shows at a glance which methods cannot be told apart\\
+    Several measures and learners & 4 heat maps & A heat map of average ranks, measures by learners & Shows whether the conclusion depends on the measure\\
+    Where the method helps & 29 plot a measure against IR or a parameter & Per-dataset gain over the baseline against IR or dataset size & Tells a user on which data the method is worth its cost\\
+    Cost & 12 runtime tables & Running time against dataset size on log axes & Separates a practical method from a slow one\\
+    Figures to avoid & 17 bar charts, 6 ROC plots & Bar charts of means across datasets; ROC curves for dozens of datasets & Averages mix scales; overlaid curves cannot be read\\
+    \bottomrule
+  \end{tabular}
+\end{table}

@@ -1,0 +1,28 @@
+%% Table: studies with a measure-definition problem (input from sections/07-empirical-comparisons.tex). Version 4.1, generated 2026-11-08 by v4.1/make_tables_v41.py.
+%% JAIR style: caption above the table, booktabs rules. Regenerate instead of editing numbers by hand.
+\begin{table}[t]
+  \caption{Studies With a Problem in the Definition of a Measure}
+  \label{tab:empirical-metric-issues}
+  \footnotesize
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.3\linewidth}>{\raggedright\arraybackslash}p{0.66\linewidth}@{}}
+    \toprule
+    Study & Problem\\
+    \midrule
+    SCUT (2015)~\parencite{agrawal2015scut} & multi-class averaging of G-mean, F-measure and AUC not defined\\
+    CGMOS (2016)~\parencite{zhang2016cgmos} & 'G-score' = sqrt(Precision x Recall), reported for both classes as positive\\
+    AMDO (2018)~\parencite{yang2018amdo} & Pavg described as precision but equated with average accuracy\\
+    DLexiBoost (2020)~\parencite{datta2020dlexiboost} & 'AUC' computed from crisp predictions as (1+TPR-FPR)/2 (= balanced accuracy)\\
+    SPE (2020)~\parencite{liu2020spe} & G-mean defined as sqrt(Recall x Precision) instead of sqrt(TPR x TNR)\\
+    EMDO (2021)~\parencite{yao2021emdo} & per-class precision called 'accuracy' (Pmin/Pavg)\\
+    CBHSID (2022)~\parencite{palli2022cbhsid} & multi-class averaging of Recall/F1 not stated; F1 misdefined\\
+    GDO (2022)~\parencite{xie2022gdo} & 'AUC' defined as (Sens+Spec)/2, i.e. single-threshold balanced accuracy\\
+    SHSampler (2022)~\parencite{zheng2022shsampler} & MAUC computed from predicted labels instead of scores\\
+    SOS (2022)~\parencite{kim2022sos} & weighted-F1 (majority-dominated) as the sole main metric\\
+    MC-MBRC (2024)~\parencite{ma2024mcmbrc} & AvAcc defined as mean one-vs-rest accuracy, inflated by true negatives\\
+    GDHS (2025)~\parencite{yan2025gdhs} & MAUC computed from predicted labels instead of scores\\
+    MC-NCLWO (2025)~\parencite{tao2025mcnclwo} & AvAcc defined as mean one-vs-rest accuracy, inflated by true negatives\\
+    Loyalty-SMOTE (2026)~\parencite{hu2026loyalty} & implausible AUC values (e.g. 0) and averages inconsistent with tables\\
+    \bottomrule
+  \end{tabular}
+\end{table}

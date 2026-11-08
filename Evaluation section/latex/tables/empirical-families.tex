@@ -1,0 +1,27 @@
+%% Table: learner families of the studies published 2021 to 2026, with the algorithms inside each (input from sections/07-empirical-comparisons.tex). Version 4.1, generated 2026-11-08 by v4.1/make_tables_v41.py.
+%% JAIR style: caption above the table, booktabs rules. Regenerate instead of editing numbers by hand.
+\begin{table}[t]
+  \caption{Learner Families Used by the 24 Studies Published 2021 to 2026}
+  \label{tab:empirical-families}
+  \footnotesize
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.5\linewidth}rr@{}}
+    \toprule
+    Family & Algorithms named in the studies & Studies & Used alone\\
+    \midrule
+    Support vector machine & SVM with RBF or linear kernel (LIBSVM, scikit-learn), one-vs-rest for several classes & 13 (54\%) & 4\\
+    CART (decision tree) & CART, the decision tree of scikit-learn; also the base tree of some ensembles & 12 (50\%) & 1\\
+    k-NN & k-nearest neighbours, usually $k = 5$ & 9 (38\%) & --\\
+    Multilayer perceptron & multilayer perceptron trained by back-propagation & 6 (25\%) & --\\
+    Random forest & random forest & 6 (25\%) & --\\
+    C4.5 or C5.0 & C4.5 (Weka J48, sometimes unpruned with Laplace smoothing) and C5.0 & 5 (21\%) & 3\\
+    Logistic regression & logistic regression & 5 (21\%) & --\\
+    Naive Bayes & naive Bayes, including Gaussian naive Bayes & 5 (21\%) & --\\
+    Gradient boosting & XGBoost, CatBoost, GBDT, HistGradientBoosting & 5 (21\%) & 1\\
+    AdaBoost-type boosting & AdaBoost & 2 (8\%) & --\\
+    LDA & linear discriminant analysis & 1 (4\%) & --\\
+    Other & dynamic selection of one-vs-one classifiers (DOVO) over several learners & 1 (4\%) & --\\
+    \bottomrule
+  \end{tabular}
+  \par\smallskip\raggedright\scriptsize Used alone: studies whose only learner is of this family (9 of the 24). The papers write these algorithms under 32 different names, for example ``SVM, ``SVM (RBF) and ``Linear SVM (LIBSVM).
+\end{table}
