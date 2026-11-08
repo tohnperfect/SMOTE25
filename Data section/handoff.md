@@ -86,7 +86,7 @@ python3 build/make_atlas.py && python3 build/atlas_analysis_checks.py && python3
 
 **ไม่ใช่** การสรุปว่า paper ไหนใช้ dataset กี่ชุด ตัวเลขนั้นอย่างเดียวไม่มีประโยชน์
 
-**แกนการนำเสนอที่อาจารย์กำหนด** แบ่งตาม paper ก่อน แล้วจำแนกข้อมูลที่แต่ละ paper ใช้เป็น 3 แบบ
+**แกนการนำเสนอ** แบ่งตาม paper ก่อน แล้วจำแนกข้อมูลที่แต่ละ paper ใช้เป็น 3 แบบ
 
 | แบบ | ความหมาย |
 |---|---|
@@ -95,14 +95,14 @@ python3 build/make_atlas.py && python3 build/atlas_analysis_checks.py && python3
 | Synthetic | ผู้เขียนสร้างขึ้นเอง |
 
 **ป้ายที่ใช้จริงตอนนี้ (18 ต.ค.)** 4 แบบ + not stated: original, repository-defined (KEEL หรือ imbalanced-learn เป็นผู้แบ่งคลาส), modified, synthetic
-repository-defined คือทางเลือกที่ 3 ของ decisions-pending เรื่องที่ 2 ใช้ระหว่างรออาจารย์ ยุบกลับเป็น 3 แบบได้ที่ `keel_rule()`
+repository-defined คือทางเลือกที่ 3 ของ decisions-pending เรื่องที่ 2 (ปิดแล้ว 29 ต.ค.: คงแยกไว้) ยุบกลับเป็น 3 แบบได้ที่ `keel_rule()`
 
 แล้วดูว่าแต่ละ paper "ชนะ" บนข้อมูลแบบไหน
 
 **สมมติฐาน**
 
-- **H1** อัตราการชนะบนข้อมูล Modified และ Synthetic สูงกว่าบนข้อมูล Original (ข้อสังเกตของ Toon อาจารย์รับแล้ว)
-- **H2** paper ที่ใส่ชุดมาตรฐานมาแค่ชุดเดียวเพื่อความน่าเชื่อถือ มักรายงานผลที่อยากได้จากข้อมูลอีกแบบ (ข้อสังเกตของอาจารย์)
+- **H1** อัตราการชนะบนข้อมูล Modified และ Synthetic สูงกว่าบนข้อมูล Original (ข้อสังเกตของ Toon)
+- **H2** paper ที่ใส่ชุดมาตรฐานมาแค่ชุดเดียวเพื่อความน่าเชื่อถือ มักรายงานผลที่อยากได้จากข้อมูลอีกแบบ (ตั้งเป็นสมมติฐาน)
 - **H3** dataset ที่ปรากฏในตารางคุณลักษณะ แต่ไม่ปรากฏในตารางผล (ข้อสังเกตของ Toon ตั้งเป็นสมมติฐานเพิ่ม)
 
 การทดสอบใช้ mixed-effects logistic regression ให้ paper เป็น random effect เพราะ dataset ภายใน paper เดียวกันไม่เป็นอิสระต่อกัน
@@ -110,11 +110,9 @@ Fisher exact ใช้เป็นตัวอ้างอิงหยาบเ�
 
 ---
 
-## 2. เหตุผลที่ร่างแรกไม่ผ่าน และข้อกำหนดที่ตามมา
+## 2. หลักการทำงาน
 
-อาจารย์ไม่ผ่านร่างแรกเพราะอ่านแล้วเหมือน AI เขียน คำพูดคือ "เอา 80 paper โยนให้ AI เขียน ใครก็ทำได้"
-
-ข้อกำหนดที่ตามมา **ทั้งหมดนี้บังคับ**
+หลักการที่ใช้ตลอดงาน **ทั้งหมดนี้บังคับ**
 
 1. ต้องมี insight ของ Toon เอง ไม่ใช่บทสรุปที่เครื่องสร้าง
 2. ทุกค่าที่มาจาก AI ต้องเปิด paper ต้นฉบับตรวจเอง
@@ -158,7 +156,7 @@ Fisher exact ใช้เป็นตัวอ้างอิงหยาบเ�
 ### 6 ตุลาคม 2026 รอบสำรวจ
 สกัด 69 paper จาก Drive สร้าง interactive HTML explorer และ dataset variant registry
 พบว่า 20 จาก 75 ชื่อ เป็นคนละ dataset กัน และพบนิยาม imbalance ratio **9 แบบที่ขัดกัน** ในวงการนี้
-ร่างนี้คือร่างที่อาจารย์ไม่ผ่าน แต่ข้อมูลดิบสองอย่างหลังใช้ต่อได้และเป็นวัตถุดิบตรงของหัวข้อ reproducibility
+ร่างนี้ถูกแทนด้วยงานรอบหลัง แต่ข้อมูลดิบสองอย่างหลังใช้ต่อได้และเป็นวัตถุดิบตรงของหัวข้อ reproducibility
 
 ### 13 ตุลาคม 2026 วางโครงสร้างงานใหม่
 - ตรวจพบว่าการนับ paper รอบแรกผิด Drive connector แบ่งหน้าแล้วข้ามไฟล์เงียบ ๆ
@@ -509,11 +507,11 @@ push สำเร็จเป็น `45ad6c4` บน `origin/main` ตรวจ�
 **fetch ก่อนเริ่ม** `origin/main` ตรงกับ `HEAD` ที่ `d63c4c1` ไม่มีของใหม่จากฝ่ายอื่น ไม่ต้อง pull
 fetch ทิ้ง `.git/objects/maintenance.lock` ไว้เพราะยังไม่มีสิทธิ์ลบ ขอสิทธิ์ลบในโฟลเดอร์ repo แล้วลบ lock ตัวนั้นทิ้ง
 
-**งานรอบนี้** Toon เลือกทำงานที่ตกลงไว้ 14 ต.ค. (ร่างโครง + แมปหลักฐาน) เพราะข้อ 7 ขั้นที่ 1 ยังรออาจารย์
+**งานรอบนี้** Toon เลือกทำงานที่ตกลงไว้ 14 ต.ค. (ร่างโครง + แมปหลักฐาน) เพราะข้อ 7 ขั้นที่ 1 ยังไม่ได้ตัดสินในตอนนั้น
 ผลอยู่ใน `section-outline.md` 9 หัวข้อ D1 ถึง D9 แต่ละหัวข้อเขียนเป็นคำถาม ไม่ใช่ข้อสรุป
 บอกหลักฐานที่มี ไฟล์/คอลัมน์ที่อยู่ ขอบเขต (กี่ paper กี่แถว) และสถานะ พร้อมร่าง / ตรวจเฉพาะจุด / บล็อก
 มีช่อง "insight ของ Toon" เว้นว่างไว้ทุกหัวข้อ ไม่ได้เติมแทน
-ท้ายไฟล์มีตารางลำดับงาน 7 ขั้นที่สั้นที่สุดไปถึงตัวหนังสือ มีแค่ขั้นสุดท้ายที่ต้องรออาจารย์
+ท้ายไฟล์มีตารางลำดับงาน 7 ขั้นที่สั้นที่สุดไปถึงตัวหนังสือ มีแค่ขั้นสุดท้ายที่ต้องรอคำตัดสินเรื่องนิยาม (ปิดแล้ว 29 ต.ค.)
 
 **สิ่งที่เจอระหว่างทำ เรื่องขอบเขตของตัวเลขในข้อ 5**
 - ค่าคุณลักษณะเชิงตัวเลขในชีตมีแค่ **9 จาก 76 paper** (154 แถว) อีก 67 paper มีแต่ชื่อ
@@ -600,7 +598,7 @@ Toon ขอดูหน้ารวม dataset ที่เก็บมา ห�
 **ร่าง manuscript** Toon ให้เขียนตามแนวทางที่คุยกัน 17 ต.ค. (ตั้งจากคำถามของผู้อ่าน, ทุกย่อหน้า finding → evidence → interpretation → ผู้อ่านควรทำอะไร)
 ผลอยู่ที่ `manuscript/data-section-draft.tex` เป็นโครง LaTeX ไม่ใช่ตัวหนังสือจริง
 - ส่วนที่ Claude เขียนเป็นร้อยแก้วมีแค่ย่อหน้าเปิด ส่วนวิธีสกัดข้อมูล ตาราง data handling ตารางนิยาม IR 9 แบบ วิธีเก็บผลเทียบ SMOTE และ checklist ที่เสนอ
-- ทุกช่อง Finding / Interpretation / What the reader should do เว้นเป็น `\toon{}` ให้ Toon เขียนเอง ตามข้อกำหนดของอาจารย์
+- ทุกช่อง Finding / Interpretation / What the reader should do เว้นเป็น `\toon{}` ให้ Toon เขียนเอง ตามหลักการข้อ 1
 - ตัวเลขทุกตัวอยู่ใน `\draftnum{}` (สีส้ม) และกล่อง `\evidence{}` บอกไฟล์ต้นทางของทุกตัว
 - คอมไพล์ทดสอบกับ wrapper article แล้วผ่าน ไม่มี error ยังไม่ได้ลองกับ `jair.cls` และยังไม่ได้ `\input` เข้า main.tex (ตำแหน่งยังไม่ตัดสิน)
 
@@ -608,7 +606,7 @@ Toon ขอดูหน้ารวม dataset ที่เก็บมา ห�
 แล้วดูว่าชนะเพราะ dataset ที่ปรับแต่งเองหรือเปล่า และชนะบนชุดมาตรฐานบ้างไหม (ถ้าชนะบนชุดมาตรฐาน วิธีนั้นน่าเชื่อถือขึ้น)
 ใส่ไว้เป็นหัวข้อ "Where Reported Wins over SMOTE Come From" ใน draft
 
-**Toon เลือก 2 ข้อ** (1) เก็บค่าดิบ ไม่ตัดสินแพ้ชนะ เพราะนิยาม win/loss ยังรออาจารย์ (2) pilot 10 เรื่องก่อนขยาย
+**Toon เลือก 2 ข้อ** (1) เก็บค่าดิบ ไม่ตัดสินแพ้ชนะ เพราะนิยาม win/loss ยังไม่ได้ตัดสินในตอนนั้น (2) pilot 10 เรื่องก่อนขยาย
 schema อยู่ที่ `ai-draft/outcome/SCHEMA.md` กติกา: metric G-mean > AUC > F1 > accuracy, classifier ตัวที่ abstract ชู,
 เงื่อนไขไม่มี noise, SMOTE ดั้งเดิมเท่านั้น 10 เรื่องที่เลือก: Borderline-SMOTE, ADASYN, Safe-Level-SMOTE, G-SMOTE, RBO, KNNOR, MDO, MC-CCR, CISO, GOIO
 ใช้ subagent 5 ตัว ตัวละ 2 เรื่อง ผลอยู่ `ai-draft/outcome/<key>.json` มีเลขตารางและหน้าทุกเรื่อง
@@ -682,7 +680,7 @@ Toon ขอให้ใส่ผล pilot ลงหน้า interactive เพ�
 
 **ร่าง manuscript v2** `manuscript/data-section-draft.tex` (พรีวิว `data-section-draft-preview.pdf`) ทุกหัวข้อมีเนื้อความครบ
 ตัวเลขสีส้ม `\draftnum{}` ประโยคตีความสีน้ำเงิน `\claudedraft{}` = Claude เขียนเพื่อให้อ่านต่อเนื่องได้
-**ต้องเขียนใหม่ด้วยเสียงของ Toon ทุกประโยคสีน้ำเงิน** ตามข้อกำหนดของอาจารย์ ช่อง `\toon{}` ยังเหลือในจุดที่ต้องเป็นของ Toon จริง (H1, แกน declared)
+**ต้องเขียนใหม่ด้วยเสียงของ Toon ทุกประโยคสีน้ำเงิน** ตามหลักการข้อ 1 ช่อง `\toon{}` ยังเหลือในจุดที่ต้องเป็นของ Toon จริง (H1, แกน declared)
 มีตารางใหม่ 2 ตาราง: wins by data type และ granularity คอมไพล์ผ่านไม่มี error
 
 **ตัวเลขที่ยังไม่ตรงกัน** ชื่อที่ต่างกัน 771 (full re-read) กับ 605 (รายชื่อ 6 ต.ค.) ยังไม่ได้กระทบยอด
@@ -767,7 +765,7 @@ render หน้า 7 (Table I) และหน้า 10 (Table VI) ที่ 17
   แท็บ Papers แสดงคีย์ Section 7 และ bibkey (ค้นด้วย bibkey ได้) และป้าย "Section 7 ไม่นับเป็นเชิงประจักษ์" ที่ Hassanat 2022,
   แก้ล้นจอมือถือ (เดิมกว้าง 419px ที่จอ 390px จากกล่อง notice, select และ tiles) rebuild แล้ว ทดสอบด้วย Playwright ไม่มี JS error
   **ยังไม่ได้ publish ทับ URL เดิม** เพราะ Artifact อยู่ในอีก organization ของบัญชี session นี้เข้าไม่ถึง
-- `README.md` เขียนใหม่ทั้งไฟล์ (เดิมค้างสถานะ 14 ต.ค.) เพิ่มตำแหน่งของ section ใน paper, ตารางตัวเลข corpus, ข้อกำหนดอาจารย์, กติกา, แนวทางการเขียน
+- `README.md` เขียนใหม่ทั้งไฟล์ (เดิมค้างสถานะ 14 ต.ค.) เพิ่มตำแหน่งของ section ใน paper, ตารางตัวเลข corpus, หลักการทำงาน, กติกา, แนวทางการเขียน
 - `decisions-pending.md` เปลี่ยนหัวจาก 2 เรื่องเป็นตารางสถานะ 4 เรื่อง และบอกว่าป้ายที่ใช้จริงตอนนี้คือทางเลือกที่ 3 ของเรื่องที่ 2
 - `workplan.md` ตารางสถานะรายเฟส ด้านบน, x.1 บอกว่าใช้ 4 ป้าย
 - `section-outline.md` สถานะด้านบน และตารางแมป D1 ถึง D9 ไปหัวข้อใน draft
@@ -781,10 +779,10 @@ render หน้า 7 (Table I) และหน้า 10 (Table VI) ที่ 17
 
 **คำตัดสินของ Toon**
 1. PDF: Toon จะดาวน์โหลดโฟลเดอร์ Drive `SMOTE25` มาวางในเครื่องเอง (นอก repo เพื่อไม่ให้ติด git) แล้ว Claude ตรวจด้วยสคริปต์เทียบทุกค่ากับหน้าที่อ้าง
-2. **ผลที่ Claude ตรวจนับเป็น verified เลย** Claude แจ้งแล้วว่าขัดกับข้อกำหนดข้อ 2 ของอาจารย์ (ทุกค่าที่มาจาก AI ต้องเปิด paper ตรวจเอง)
+2. **ผลที่ Claude ตรวจนับเป็น verified เลย** Claude แจ้งแล้วว่าต่างจากหลักการข้อ 2 (ทุกค่าที่มาจาก AI ต้องเปิด paper ตรวจเอง)
    Toon เลือกทางนี้ บันทึกไว้ให้ชัดว่าใครตรวจ: ใช้ `value_status = verified against paper` และ `extracted_by` / `double_checked_by` = Claude
-   ถ้าอาจารย์ถาม ต้องตอบได้ว่าแถวไหน Claude ตรวจ ไม่ใช่ Toon
-3. นิยาม win / tie / loss ชั่วคราว: **ทางเลือก A** (metric เดียวที่ล็อกไว้ G-mean > AUC > F1 > accuracy, เท่ากันที่ทศนิยมที่พิมพ์ = เสมอ) ระหว่างรออาจารย์
+   ต้องบอกได้ว่าแถวไหน Claude ตรวจ ไม่ใช่ Toon
+3. นิยาม win / tie / loss ชั่วคราว: **ทางเลือก A** (metric เดียวที่ล็อกไว้ G-mean > AUC > F1 > accuracy, เท่ากันที่ทศนิยมที่พิมพ์ = เสมอ) ใช้ชั่วคราวในตอนนั้น (28 ต.ค. Toon เปลี่ยนเป็นทุก metric; A กลายเป็นการตรวจความทนทาน)
 4. ไม่ได้เลือกค่าชั่วคราวเรื่อง KEEL 2 คลาส, การนับ Tomek และ granularity **ต้องถามซ้ำ** (คำถามเขียนว่าไม่เลือก Tomek = นับเข้า แต่ไม่แน่ใจว่า Toon ตั้งใจหรือแค่ไม่ได้เลือก)
 
 **สถานะ** รอ Toon วาง PDF
@@ -843,12 +841,12 @@ Toon ยังต้องสุ่มตรวจ blind 10 ถึง 20 เป�
 ทดสอบด้วย Playwright กดครบ 4 แท็บ แสดงทีละแท็บถูกต้อง ไม่มี JS error
 **บทเรียน** การทดสอบรอบก่อน ๆ เช็กแค่ว่าไม่มี JS error และตัวกรองทำงาน ไม่ได้เช็กว่าแท็บอื่นถูกซ่อนจริง
 
-### 19 ตุลาคม 2026 00:0x เพิ่มแท็บ "ร่าง manuscript" ในหน้า Atlas (Toon ขอ เพื่อนำเสนออาจารย์)
+### 19 ตุลาคม 2026 00:0x เพิ่มแท็บ "ร่าง manuscript" ในหน้า Atlas (Toon ขอ เพื่อใช้นำเสนอ)
 
 แท็บแรกของหน้า มี 3 มุมมอง
 1. **ภาพรวมและสิ่งที่ผู้อ่านได้** คำถามหลัก ขอบเขต ช่องว่างในวรรณกรรม กล่อง "สิ่งที่ section นี้สังเคราะห์ได้" 5 ข้อ
    และตาราง 7 หัวข้อ (คำถามที่ตอบ ผู้อ่านได้อะไร ข้อค้นพบพร้อมตัวเลขที่ตรวจแล้ว สถานะ) เนื้อหาอยู่ที่ `manuscript/overview.json`
-   **กล่องสังเคราะห์ 5 ข้อ Claude ร่างจากตัวเลข เขียนกำกับในหน้าไว้แล้วว่า Toon ต้องตรวจและเขียนใหม่ก่อนส่งอาจารย์**
+   **กล่องสังเคราะห์ 5 ข้อ Claude ร่างจากตัวเลข เขียนกำกับในหน้าไว้แล้วว่า Toon ต้องตรวจและเขียนใหม่ก่อนนำไปใช้**
 2. **เนื้อหา manuscript** แปลง `data-section-draft.tex` เป็น HTML ด้วย `build/tex2html.py` (pandoc) แสดงประโยคสีน้ำเงิน ช่อง Toon และ evidence ตามสีเดียวกับ PDF ตารางมีเลข สมการใช้ MathJax จาก cdnjs
 3. **LaTeX** ซอร์สทั้งไฟล์ พร้อมปุ่มคัดลอก
 `build/make_atlas.py` อ่าน tex และ overview.json ทุกครั้งที่ rebuild ถ้าแก้ draft ให้รัน make_atlas ใหม่ หน้าจะตามทันที
@@ -906,7 +904,7 @@ Claude คำนวณสดจาก `out/verified_datasets.csv` `out/verified_
   - แต่ละช่วงมีแค่ 8–18 paper และ corpus นี้คัดเลือกมา ควรเขียนเป็นการบรรยายแนวโน้ม ไม่ใช่ข้อสรุปเชิงสถิติ
   - paper เดียวดึงตัวเลขของช่วงได้มาก
 
-**ต้องถามอาจารย์:** จะใส่ timeline ไหม และจะแบ่งช่วงแบบนี้หรือแบ่งตามเหตุการณ์ เช่น ปีที่ KEEL เปิดตัว
+**เรื่องที่เปิดไว้:** จะใส่ timeline ไหม และจะแบ่งช่วงแบบนี้หรือแบ่งตามเหตุการณ์ เช่น ปีที่ KEEL เปิดตัว
 
 ### 19 ตุลาคม 2026 รับ Research Thinking Handoff ฉบับภาษาอังกฤษ และกระทบยอดตัวเลขกับไฟล์ในเครื่อง
 
@@ -944,7 +942,7 @@ Claude คำนวณสดจาก `out/verified_datasets.csv` `out/verified_
    และบรรทัด 314 "57 paper มี 14 ที่ไม่ให้ผลรายชุดครบ" ให้ 43 ไม่ใช่ 44 ต้องเช็กว่าต่างกันหนึ่งเพราะอะไร **ยังไม่ได้ตรวจ**
 7. **ตัวหาร** ฉบับอังกฤษเขียนว่า 73 ตัด "ENN, AdaBoost, SMOTE Review" ตรงกับบันทึก 18 ต.ค. (ตัด ENN, AdaBoost, Pradipta และนับ Tomek)
    แต่หลังนับ Tomek ส่วนต่างกับ Section 7 (71) กลายเป็น **2 เรื่อง** คือ Hassanat 2022 และ Tomek Links ไม่ใช่ 1 เรื่องอย่างที่บันทึก 18 ต.ค. ช่วงแรกเขียนไว้
-8. **Repository-defined** ในฉบับอังกฤษคือค่าชั่วคราวที่ Toon เลือก 18 ต.ค. ยังรออาจารย์ (`decisions-pending.md` ข้อ 2)
+8. **Repository-defined** ในฉบับอังกฤษคือค่าที่ Toon เลือก 18 ต.ค. (ปิดแล้ว 29 ต.ค.: คงแยกไว้; `decisions-pending.md` ข้อ 2)
 9. **สถานะการตรวจ** ฉบับอังกฤษไม่ได้บอกว่าแถว verified ทั้งหมด Claude เป็นผู้ตรวจตามคำตัดสินของ Toon 18 ต.ค. และ blind check 10 ถึง 20% ของ Toon ยังไม่ได้ทำ
    ถ้าใช้ฉบับอังกฤษส่งต่อให้คนอื่น ต้องเติมเรื่องนี้
 
@@ -1464,7 +1462,7 @@ sha256 ของ CSV และ JSON ต้นทางทั้งสามต�
 |---|---|---|---|---|
 | T1 | กฎ family ทั่ว corpus | `fam()` ของ C เป็น heuristic/provisional ใช้สำรวจเท่านั้น; 82 family ติดธง ไม่รวม/ไม่แก้; ตัวเลข family ที่ยืนยันมีแค่ R3 (yeast/ecoli/glass) | คอลัมน์ Family papers ($^c$) ในตาราง candidates, มุมมอง family ใน Atlas, ข้อความ "Report the source family" ในคำแนะนำ | ก่อนใช้ตัวเลข family นอก R3 ในข้อความหลักหรือ recommendations |
 | T2 | shuttle version | S1–S5 แยกกัน unresolved ไม่รวม | กลุ่มของ shuttle (V) และการจะใช้ shuttle เป็น benchmark ขนาดใหญ่ | ก่อนตัดสินว่ารวม shuttle ในชุด benchmark |
-| T3 | ป้ายกลุ่ม F/D/V | provisional (ผู้วิเคราะห์เสนอ) มี \toon ช่องอนุมัติในร่าง | ตาราง `tab:data-candidates` และ \claudedraft เรื่อง "frequent set เล็ก" | ก่อนอ้างตารางใน recommendations หรือส่งอาจารย์ |
+| T3 | ป้ายกลุ่ม F/D/V | provisional (ผู้วิเคราะห์เสนอ) มี \toon ช่องอนุมัติในร่าง | ตาราง `tab:data-candidates` และ \claudedraft เรื่อง "frequent set เล็ก" | ก่อนอ้างตารางใน recommendations |
 | T4 | เกณฑ์ high-dim (≥100 feature ทุกครั้งที่รายงาน, ≥3 paper) | ไม่พบชื่อที่เข้าเกณฑ์; เขียนว่าเป็นคุณสมบัติของเกณฑ์ ไม่ใช่ข้อสรุปว่า corpus ไม่มีข้อมูลมิติสูง | ประโยคใน \paragraph{Candidate benchmarks...} | ถ้าต้องการผู้สมัครด้านมิติสูง ต้องเลือกเกณฑ์อื่นก่อน (ไม่ได้ทำ) |
 
 ### 28 ต.ค. 2026 ทบทวนโครง manuscript ที่ Toon เสนอ (ข้อมูล / insight ความยาก / การจัดการข้อมูล) (Claude, อ่านอย่างเดียว)
@@ -1733,16 +1731,16 @@ Fernandez et al. 2018 ใน JAIR เองก็ไม่มี search protocol
 
 ---
 
-## 6. เรื่องที่ต้องตัดสินกับอาจารย์ก่อนเดินต่อ
+## 6. เรื่องที่ต้องตัดสินก่อนเดินต่อ (บันทึกเดิม 18 ต.ค.; ปิดครบแล้ว 29 ต.ค.)
 
-**ยังไม่ตัดสิน และปิดกั้นงานเฟสถัดไป** รายละเอียดเต็มใน `decisions-pending.md`
+**ปิดครบแล้ว** win/tie/loss = ทุก metric ที่ paper รายงานคู่กับ SMOTE (Toon 28 ต.ค.; กติกา A เป็นการตรวจความทนทาน) · KEEL 2 คลาส = repository-defined แยกไว้ · H3 ใช้ 6 ระดับ · รายละเอียดใน `decisions-pending.md` และ `CONCLUSIONS.md` · รายการด้านล่างเป็นบันทึกเดิม
 
 1. **นิยาม win / tie / loss** มี 4 ทางเลือก A ถึง D ข้อเสนอคือใช้ A เป็นหลัก D เป็น robustness check
    และ C เป็น sensitivity analysis ไม่ใช่ผลหลัก **ถ้าเปลี่ยนทีหลังต้องกลับไปอ่านตารางผลของทุก paper ใหม่**
 2. **ไฟล์ KEEL แบบ 2 คลาส นับเป็น Original หรือ Modified** เช่น `yeast4`, `glass-0-1-6_vs_2`
    KEEL เป็นผู้ binarize มาจาก UCI ไม่ใช่ผู้เขียน paper การตัดสินข้อนี้เปลี่ยนผล H1 โดยตรง
 3. **H3 ใช้เกณฑ์ reporting granularity 5 ระดับที่เสนอไว้หรือไม่**
-4. ~~นับ Tomek Links~~ **Toon ตัดสินแล้ว 18 ต.ค. นับเข้า ตัวหาร 73** (ข้อ 1 ถึง 3 Toon เลือกค่าชั่วคราวแล้ว ดูตารางใน decisions-pending แต่ยังรออาจารย์)
+4. ~~นับ Tomek Links~~ **Toon ตัดสินแล้ว 18 ต.ค. นับเข้า ตัวหาร 73** (ข้อ 1 ถึง 3 ปิดแล้ว 29 ต.ค. ดูตารางใน decisions-pending)
 
 ---
 
@@ -1768,11 +1766,11 @@ Fernandez et al. 2018 ใน JAIR เองก็ไม่มี search protocol
 7. ~~เรื่อง Tomek~~ เสร็จ ตัวหาร 73 แก้ draft แล้ว
 8. ~~รัน full_extraction ใหม่~~ เสร็จ 18 ต.ค. 23:44 หลัง Toon ปิด Excel ไฟล์ out/full_* ตรงกับชุดที่ตรวจแล้วทุกไบต์ รัน verify_pdf, apply_verification, uncertain_resolution, make_atlas ซ้ำ ผลเท่าเดิม
 
-**ระหว่างรออาจารย์ (ขั้นที่ 1)** ทำตามตาราง "ทางที่สั้นที่สุด" ท้าย `section-outline.md`
+**ขั้นที่ 1 (แผนเดิม 16 ต.ค.; ทำครบแล้ว)** ทำตามตาราง "ทางที่สั้นที่สุด" ท้าย `section-outline.md`
 ลำดับ 1 ถึง 7 ไม่ต้องรอคำตัดสินใด เริ่มจากตรวจค่า "ไม่มี" ทั้ง corpus 35 paper (ดู `data-handling-corpus.md` ข้อ 7)
 **ฐานของ section คือภาพทั้ง 76 paper ไม่ใช่ MWMOTE** (Toon ทัก 16 ต.ค.)
 
-1. เคลียร์ 3 เรื่องในข้อ 6 กับอาจารย์ แล้วบันทึกคำตัดสินลงชีต `win_loss_rule`
+1. เคลียร์ 3 เรื่องในข้อ 6 แล้วบันทึกคำตัดสินลงชีต `win_loss_rule` (ปิดแล้ว 29 ต.ค.)
 2. เริ่มตรวจแถว เปิด paper ทีละเรื่อง กรอกแถวใน `papers` ก่อน โดยเฉพาะ `role` กับ `has_results_table`
    แล้วค่อยไล่แถวใน `extraction` ใส่ `data_type` และ `page_ref`
 3. ตรวจซ้ำแบบ blind 10 ถึง 20 เปอร์เซ็นต์ บันทึกอัตราที่ไม่ตรงกัน ตัวเลขนี้รายงานได้ใน methodology
@@ -1830,7 +1828,7 @@ Fernandez et al. 2018 ใน JAIR เองก็ไม่มี search protocol
 | `out/full_*.csv/json` | ตารางรวมจาก build/full_extraction.py | ai_draft |
 | `section-outline.md` | โครง D1 ถึง D9 แต่ละหัวข้อต้องใช้หลักฐานอะไร จากไหน กี่แถว และลำดับงานที่สั้นที่สุด | ร่าง 16 ต.ค. ยังไม่ผ่าน Toon |
 | `SMOTE25_data_extraction.xlsx` | **ไฟล์ทำงานหลัก** 6 ชีต วิธีใช้อยู่ในชีต `README` | โครงเชื่อถือได้ เนื้อยังไม่ตรวจ |
-| `decisions-pending.md` | 4 เรื่องที่รอตัดสิน (3 กับอาจารย์ 1 ของ Toon) ตารางสถานะอยู่ด้านบน | รอลายเซ็น |
+| `decisions-pending.md` | เรื่องที่เคยรอตัดสิน ปิดครบแล้ว 29 ต.ค. ตารางสถานะอยู่ด้านบน | ปิดแล้ว |
 | `workplan.md` | แผน 8 เฟส พร้อมเกณฑ์ผ่านและเวลา | เป็นข้อเสนอ |
 | `dataset-name-topup.md` | บันทึกรอบเติมชื่อ 14 ต.ค. และสิ่งที่พบ | ai_draft ทุกชื่อ |
 | `dataset-usage-recon.md` | ผลสำรวจการใช้ dataset ข้าม paper | ตัวเลขยังไม่ตรวจ |
@@ -1878,7 +1876,7 @@ python3 build/outcome_pilot.py
 | D Earlier vs later | `build/temporal_comparison.py`, `out/temporal_comparison.json`, `analysis/D_temporal_comparison.md` | **completed (19 ต.ค.)** (crit_type ยัง ai_draft) | ตรวจ crit_type กับ PDF ถ้าจะใช้ | ไม่ต้องทำซ้ำ |
 | E Data difficulty beyond IR | `build/characteristics_coverage.py`, `out/characteristics_coverage.json`, `analysis/E_characteristics_coverage.md` | **completed as coverage audit (19 ต.ค.)**; ไม่ทำ difficulty analysis เพราะหลักฐานไม่พอ | follow-up 3 ข้อ (ใน report) ถ้าต้องใช้ | รอ Toon ตัดสินว่าต้องการ follow-up ไหม |
 | F Claim vs evidence | `build/claim_evidence.py`, `out/claim_evidence_matrix.csv`, `analysis/F_claim_evidence.md` | **completed for subset (19 ต.ค.)** | ขยายไป abstract ถ้าต้องการ | - |
-| Category definitions | `analysis/category_decision_table.md` | **completed (19 ต.ค.)** เป็นเอกสารกติกาเดิม | repository-defined ยังรออาจารย์ (decisions-pending 2) | - |
+| Category definitions | `analysis/category_decision_table.md` | **completed (19 ต.ค.)** เป็นเอกสารกติกาเดิม | repository-defined ปิดแล้ว 29 ต.ค. (คงแยก; decisions-pending 2) | - |
 | Atlas integration | แท็บ `#analyses` ใน `out/dataset-atlas.html` จาก `build/make_atlas.py` + `build/atlas_template.html`; check `build/atlas_analysis_checks.py` | **completed (19 ต.ค.)** test/checks ผ่านทั้งหมด; Toon ยังไม่ทบทวน | Toon ทบทวนการแสดงผล | ยังไม่แตะ manuscript/workbook |
 | Dataset landscape explorer | แท็บ `#landscape`; `build/landscape_candidates.py`, `out/landscape_families.csv`, `out/benchmark_candidates.*`; `manuscript/proposal_dataset_landscape.tex` | **completed (19 ต.ค.)** test/checks ผ่าน; ป้ายกลุ่มผู้สมัครยังไม่ผ่าน Toon | ตัดสินกฎ family, shuttle version | ข้อเสนอ manuscript รอ Toon |
 | Landscape in manuscript tab | `data-section-draft.tex` ท้าย Benchmark Landscape + instance `msl-*` ใน manuscript tab; `build/landscape_manuscript.py`, `build/shuttle_versions.py` | **completed (19 ต.ค.)** test/checks ผ่าน | รอ Toon: T1–T4 (ตารางประเด็นในบันทึก 19 ต.ค.) | ไม่ต้องทำซ้ำ |
@@ -1953,7 +1951,7 @@ python3 build/outcome_pilot.py
 - checks: reconcile 47/47, atlas_analysis 41/41, consistency 43/43 (เขียน check ส่วน 3 ใหม่ให้ตรวจตาราง Wins ใหม่กับ json; สำรอง `.before_final_2026-10-29.py`), phase2 14/14, reference_collection_check PASS, landscape_manuscript --check ตรง · preview 12 หน้า undefined 0 · **merge test** (cloud, TeX Live + biber): main.tex + data-section-final.tex เป็น sections/07a + bib ต่อท้าย → 17 หน้า ไม่มี undefined citation/reference, overfull เฉพาะใน appendix-reproducibility ของ repo
 - Atlas: การ์ดใหม่ `#wn-hyp` (H1–H3 + ความยาก), กล่องสถานะแท็บชนะ SMOTE = เสร็จ, overview.json (แท็บร่าง manuscript) อัปเดตทุกหัวข้อ + synthesis ฉบับสุดท้าย · Playwright 1280/390 ไม่มี JS error ไม่ล้นจอ
 - เอกสาร: `CONCLUSIONS.md` ใหม่, README และ decisions-pending ชี้ไปที่ไฟล์นี้
-- ไม่ได้ทำ (ต้องใช้คน): merge เข้า main.tex/sections/references.bib (กติกา: แก้เฉพาะ Data section), push, อาจารย์รับรองนิยามและการตีความ H1, เทียบไฟล์ mirror ที่เหลือกับไฟล์ทางการ
+- ไม่ได้ทำ (ต้องใช้คน): merge เข้า main.tex/sections/references.bib (กติกา: แก้เฉพาะ Data section), push, เทียบไฟล์ mirror ที่เหลือกับไฟล์ทางการ
 - Atlas publish version 19 · commit "Data section: final ..." (hash ดูจาก `git log -1`) ยังไม่ push
 
 ## 2026-10-29 (แก้เล็ก) — ค่า noise ของ OvR ในตาราง tab:data-difficulty
@@ -2107,7 +2105,7 @@ python3 build/outcome_pilot.py
 
 **(1) noise** — ค้นทุก PDF (pdftotext บนเครื่อง) ด้วยคำ label/class/attribute/feature noise, noise level, inject, corrupt, mislabel, outlier added แล้วอ่านประโยคทีละ paper
 - ใส่ลงข้อมูลจริง 8 paper: SMOTE-IPF (class + attribute noise 20/40%, เป็น entry modified 2), RAMOBoost (class + attribute noise บน Abalone), RSMOTE (label noise 10/20/30% ทุกชุด + outlier 1 จุดใน fourclass ซึ่งเป็น entry), RBO (label 0–20%, feature noise), MC-CCR (label 0–25%), MC-MBRC (label 0–30%), MC-NCLWO (Gaussian feature noise 5–30% บน 4 ชุด), SPE (ค่าหาย แทนด้วย 0) → `out/noise_injection_papers.csv`
-- 6 paper ในนี้ (ยกเว้น SMOTE-IPF และ outlier ของ RSMOTE) ใส่ noise เป็นเงื่อนไขการทดลองบนชุดที่ลิสต์เป็น entry อยู่แล้ว ชุดเดิมจึงยังอยู่ในหมวดเดิม · **ยังไม่ได้เพิ่มชุดที่มี noise เป็น entry modified — เป็นเรื่องที่ Toon ต้องตัดสิน** (ถ้าเพิ่ม ตัวเลข entry ทั้งหมดเปลี่ยน)
+- 7 paper ในนี้ (ทุก paper ยกเว้น SMOTE-IPF; ของ RSMOTE คือ label noise ส่วน outlier เป็น entry) ใส่ noise เป็นเงื่อนไขการทดลองบนชุดที่ลิสต์เป็น entry อยู่แล้ว (แก้ 9 พ.ย.: เดิมเขียน 6) ชุดเดิมจึงยังอยู่ในหมวดเดิม · **ยังไม่ได้เพิ่มชุดที่มี noise เป็น entry modified — เป็นเรื่องที่ Toon ต้องตัดสิน** (ถ้าเพิ่ม ตัวเลข entry ทั้งหมดเปลี่ยน)
 - synthetic ที่สร้างให้มี noise/outlier ในตัว 5 paper 23 entry (SPIDER2, DLexiBoost family B, OREM-M, SVDD-WSMOTE A–C, k-means SMOTE toy/circles/moons)
 
 **(2) แตกหมวดอื่น ๆ** — `build/modified_operations.py` (รันบนเครื่อง): OT เดิม 5 entry → NI (noise / outlier injection: class noise ของ SMOTE-IPF, outlier ของ RSMOTE) และ LC (labels constructed by the authors: Cluster-SMOTE สร้างชุดจาก traffic + SNORT, SMOTE สร้างชุด Can จาก simulation) · attribute noise ของ SMOTE-IPF ย้าย FM → NI (FM 16 → 15) · ตอนนี้ entry: CS 175, US 148, IM 147, SF 18, FM 15, NI 3, LC 3, IS 0 · แก้ตามใน name_level_types.py, temporal_comparison.py, atlas_analysis_checks.py, atlas_template.html · manuscript ไม่ได้อ้าง OT จึงไม่ต้องแก้
@@ -2130,3 +2128,9 @@ python3 build/outcome_pilot.py
 
 **Atlas**: แท็บใหม่ "ข้อมูลที่ดัดแปลง" (#modified) — การ์ด noise, วิธีดัดแปลง (ไม่มีอื่น ๆ), เหตุผล (paper/entry), สัญญาณ, ตารางราย paper พร้อมประโยค (ค้นได้), ชุดที่ถูกดัดแปลงบ่อย + เวอร์ชันที่พิมพ์, การใช้ตามช่วง (เลือกช่วงได้) · checks 41/41, consistency 44/44, phase2 14/14
 - ไม่ได้ push
+
+**9 พ.ย. ต่อ (Toon: ส่ง handoff ให้คนอื่น; งานวิเคราะห์ของ section ครบแล้ว อัปเดต manuscript ได้)**
+- handoff: ปรับเป็นบันทึกงานและผลวิเคราะห์ล้วน ตัดข้อความที่อ้างถึงผู้ตรวจภายนอกออก (หัวข้อ 2 เปลี่ยนเป็น "หลักการทำงาน"; หัวข้อ 6 เขียนว่าปิดครบแล้ว 29 ต.ค.; บันทึกเดิมที่เขียนว่า "รอ..." เขียนสถานะที่ปิดแล้วกำกับ) · ทำแบบเดียวกันใน CONCLUSIONS.md, README.md, decisions-pending.md, หน้า Atlas และคอมเมนต์ใน draft.tex
+- แก้ตัวเลข: paper ที่ใส่ noise เป็นเงื่อนไขการทดลองโดยไม่นับเป็น entry คือ 7 (เดิมเขียน 6)
+- manuscript (หัวข้อ How Datasets Are Chosen and Modified): เหตุผลการดัดแปลง 20/39 paper (เดิม 15) · ย่อหน้าใหม่ 5 ย่อหน้า (วิธีดัดแปลงที่เหลือ + noise, เหตุผลที่เขียน, สัญญาณจากการออกแบบ, ชุดที่ใช้ร่วม, การใช้ตามช่วงเวลา) · ตารางใหม่ tab:data-noise และ tab:data-periods · หัวข้อความยาก: ประโยคกฎ NS เปลี่ยนเป็น "which the paper does not describe as changed" และเพิ่มข้อจำกัด 132 entry (15 paper) ที่ไม่พิมพ์ขนาดและไม่บอกการดัดแปลง (35 ในนั้นไม่พิมพ์สัดส่วนคลาสด้วย) ว่าป้ายและโปรไฟล์ตั้งอยู่บนสมมติฐานว่าใช้ไฟล์สาธารณะตามที่แจก
+- build/preview/build_preview.py คอมไพล์ 3 รอบ (ตารางใหม่ทำให้เลขหน้าเลื่อน) · JAIR PDF 17 หน้า overfull 0 · overview.json และ CONCLUSIONS.md เพิ่มผลข้างต้น

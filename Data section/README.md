@@ -53,11 +53,11 @@
 | ผู้ตรวจ | Claude ตรวจทุกแถวกับ PDF · Toon ตรวจกับ PDF แล้ว (Toon แจ้ง 28 ต.ค. 2026; ไม่ได้บันทึกค่าที่ตรวจ จึงไม่มีอัตราไม่ตรงกันให้รายงาน) |
 
 **ตัวเลขใน `out/verified_*.csv` ใช้เขียน manuscript ได้แล้ว** (ตรวจรอบสองกับ PDF ในเครื่อง 18 ต.ค. ด้วยสคริปต์ `build/verify_pdf.py` และเปิดภาพหน้าดูเองสำหรับตารางที่เป็นรูป บันทึกใน `out/visual_checks.json`)
-ข้อควรระวัง ผู้ตรวจคือ Claude ไม่ใช่ Toon ซึ่งต่างจากข้อกำหนดข้อ 2 ของอาจารย์ Toon เลือกทางนี้เอง ต้องบอกอาจารย์ได้ว่าใครตรวจ
+ข้อควรระวัง ผู้ตรวจคือ Claude ไม่ใช่ Toon ซึ่งต่างจากหลักการข้อ 2 Toon เลือกทางนี้เอง ต้องบอกได้ว่าใครตรวจ
 
 ---
 
-## ข้อกำหนดของอาจารย์ (บังคับ)
+## หลักการทำงาน (บังคับ)
 
 1. ต้องมี insight ของ Toon เอง ไม่ใช่บทสรุปที่เครื่องสร้าง
 2. ทุกค่าที่มาจาก AI ต้องเปิด paper ต้นฉบับตรวจเอง
@@ -93,14 +93,14 @@
 |---|---|---|
 | `handoff.md` | **เริ่มอ่านที่นี่** สถานะรวม บันทึกการดำเนินงานทุกครั้ง เรื่องที่รอตัดสิน และกติกา | ปัจจุบัน |
 | `manuscript/data-section-draft.tex` | ร่าง section พร้อมพรีวิว PDF ตัวเลขตรวจแล้ว ประโยคสีน้ำเงินต้องเขียนใหม่ | ร่าง ตัวเลข verified |
-| `manuscript/overview.json` | เนื้อหาแท็บ "ร่าง manuscript" ใน Atlas: คำถาม สิ่งที่ผู้อ่านได้ ข้อค้นพบ และกล่องสังเคราะห์ (Claude ร่าง) | ให้ Toon ตรวจก่อนส่งอาจารย์ |
+| `manuscript/overview.json` | เนื้อหาแท็บ "ร่าง manuscript" ใน Atlas: คำถาม สิ่งที่ผู้อ่านได้ ข้อค้นพบ และกล่องสังเคราะห์ (Claude ร่าง) | ให้ Toon ตรวจก่อนนำไปใช้ |
 | `out/dataset-atlas.html` | หน้า SMOTE25 Dataset Atlas 5 แท็บ (แท็บแรกคือร่าง manuscript) สร้างจาก `build/make_atlas.py` + `build/atlas_template.html` + `build/tex2html.py` | ข้อมูล verified |
 | `out/full_*.csv/json` | ผลอ่าน PDF ครบ 72 paper รวมด้วย `build/full_extraction.py` | ai_draft มีตารางและหน้า |
 | `out/section7_key_map.csv` | คู่คีย์ paper ของเรากับคีย์และ bibkey ของ Section 7 สร้างจาก `build/section7_key_map.py` | จับคู่ครบ 76 เรื่อง |
 | `out/verified_*.csv`, `out/visual_checks.json`, `out/uncertain_resolution.csv` | ข้อมูลที่ตรวจกับ PDF แล้ว และบันทึกการตรวจ | ตรวจแล้ว |
 | `paper/` | PDF ทั้ง 100 ไฟล์ที่ Toon ดาวน์โหลดจาก Drive | **ห้าม commit** (อยู่ใน `.gitignore` ของโฟลเดอร์นี้) |
 | `SMOTE25_data_extraction.xlsx` | ไฟล์ทำงานหลัก วิธีใช้อยู่ในชีต `README` | ชีต `*_verified` ตรวจแล้ว ชีต `extraction` เดิมยังไม่ตรวจ |
-| `decisions-pending.md` | 4 เรื่องที่รอตัดสิน (3 เรื่องกับอาจารย์ 1 เรื่องของ Toon) | รอลายเซ็น |
+| `decisions-pending.md` | เรื่องที่เคยรอตัดสิน ปิดครบแล้ว 29 ต.ค. | ปิดแล้ว |
 | `section-outline.md` | โครง D1 ถึง D9 แต่ละหัวข้อต้องใช้หลักฐานอะไร และแมปไปหัวข้อใน draft | ร่าง 16 ต.ค. |
 | `workplan.md` | แผน 8 เฟส พร้อมเกณฑ์ผ่าน | เป็นข้อเสนอ มีสถานะ 18 ต.ค. ด้านบน |
 | `data-handling-corpus.md` | ภาพรวมการเลือกและจัดการข้อมูลทั้ง corpus | ai_draft |

@@ -267,7 +267,7 @@ data["an"] = dict(
                  G="analysis/category_decision_table.md"))
 for _k in ("A", "B", "C", "D", "E", "F"):
     if not data["an"][_k]["interpretation"]: sys.exit(f"STOP: no interpretation text parsed for analysis {_k}")
-# แท็บร่าง manuscript (เพิ่ม 18 ต.ค. 23:55 ตามที่ Toon ขอ เพื่อนำเสนออาจารย์)
+# แท็บร่าง manuscript (เพิ่ม 18 ต.ค. 23:55 ตามที่ Toon ขอ เพื่อใช้นำเสนอ)
 sys.path.insert(0, p("build")); import tex2html
 _tex = open(p("manuscript/data-section-draft.tex"), encoding="utf-8").read()
 # แท็บ Landscape (19 ต.ค. 2026): อ่าน out/landscape_families.csv และ out/benchmark_candidates.* จาก build/landscape_candidates.py

@@ -24,7 +24,7 @@ def main():
     env = dict(os.environ)
     env["TEXINPUTS"] = os.pathsep.join([os.path.join(HERE, "manuscript"), os.path.join(HERE, "build", "preview"), ""])
     with tempfile.TemporaryDirectory() as tmp:
-        for i in (1, 2):  # second pass resolves \ref
+        for i in (1, 2, 3):  # second pass resolves \ref; a third settles page numbers when floats move (9 Nov 2026)
             r = subprocess.run(["pdflatex", "-interaction=nonstopmode", "-halt-on-error", "-output-directory", tmp, WRAPPER],
                                cwd=HERE, env=env, capture_output=True, text=True, errors="replace")
             if r.returncode:

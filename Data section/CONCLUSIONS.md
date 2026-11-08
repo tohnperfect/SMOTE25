@@ -41,7 +41,14 @@
 
 - entry: original 537, repository-defined 470, modified 332, synthetic 213, บอกไม่ได้ 195 (8 พ.ย.: +92 synthetic และ fourclass ที่เติม outlier ของ RSMOTE เป็น modified; Toy ของ OREM-M original → synthetic; รอบสาม กฎ NS ของ Toon: ไม่บอกที่มา + ไม่พิมพ์ขนาด + ชื่อตรงไฟล์สาธารณะที่ไม่ดัดแปลง → original 4 entry ของ SPIDER2; ผลชนะไม่เปลี่ยนเพราะ SPIDER2 ไม่มีแถวใน verified_outcomes.csv)
 - เหตุผลการเลือก (paper): ให้เหตุผลเอง 48, อ้างงานก่อน 14, "widely used" อย่างเดียว 3, ไม่บอก 8 · ยกรายชื่อ benchmark จากงานก่อน 20 paper (ยกทั้งชุด 11)
-- modified 332 entry 39 paper: เปลี่ยนโครงสร้างคลาส 177 (30 paper; one-vs-rest 84) · เพิ่ม IR โดยตั้งใจ 147 (9 paper; 131 entry เป็นคู่ undersampling + เพิ่ม IR คือสุ่มลด minority ตาม Analysis A) · บอกเหตุผลการดัดแปลง 15/39 paper
+- modified 332 entry 39 paper: เปลี่ยนโครงสร้างคลาส 177 (30 paper; one-vs-rest 84) · เพิ่ม IR โดยตั้งใจ 147 (9 paper; 131 entry เป็นคู่ undersampling + เพิ่ม IR คือสุ่มลด minority ตาม Analysis A) · บอกเหตุผลการดัดแปลง 20/39 paper (9 พ.ย.: อ่านประโยคจาก PDF ใหม่ทุก paper; เดิม 15)
+- **การดัดแปลงแบบละเอียด (9 พ.ย.)** วิธีแยกครบ ไม่มีหมวดอื่น ๆ: CS 175, US 148, IM 147, SF 18, FM 15, NI (ใส่ noise/outlier) 3, LC (ผู้เขียนสร้างป้ายเอง) 3
+  - ใส่ noise/outlier/ค่าหายลงข้อมูลจริง 8 paper: SMOTE-IPF, RAMOBoost, RSMOTE, RBO, MC-CCR, MC-MBRC, MC-NCLWO, SPE (7 ใน 8 เป็นเงื่อนไขการทดลองบนชุดที่นับในหมวดเดิม ยังไม่ได้เพิ่มเป็น entry) · synthetic ที่มี noise ในตัว 5 paper
+  - เหตุผลที่เขียน (43 paper): สองคลาส 10 · ทำให้ไม่สมดุลมากขึ้น 9 · ทดสอบความทนต่อ noise 8 · เชิงปฏิบัติ 2 · ไม่พบ 19 · entry: ทำให้ยากขึ้น 152/332, สองคลาส 51, ไม่บอก 127 · ที่มาของการเลือก: งานก่อน 5, กฎที่เขียน 2
+  - สัญญาณ: แปลงคลาสแล้วทดลองสองคลาสล้วน 16/29 (เขียนเหตุผล 7) · มีชุดเดิมคู่กัน 5/39 · ไล่หลายระดับ 12 · เผยแพร่ไฟล์ดัดแปลง 3 · ชนะ SMOTE บนชุดดัดแปลงเองสูงกว่าชุดอื่น 2 paper, ต่ำกว่า 6, เท่ากัน 3 (11 paper)
+  - ชุดที่ถูกดัดแปลงบ่อย: vehicle 11 paper, ecoli 10, abalone/satimage 9, glass/page-blocks 8 · ชื่อเดียวกันขนาดต่างกัน ไม่มีเวอร์ชันใดพิมพ์ตรงกันเกิน 3 paper
+  - ตามช่วงเวลา: modified 58% ของ entry ก่อน 2005 → 5% ใน 2025–2026; repository-defined 28–37% ตั้งแต่ 2015 · 2020–2026 ใช้ yeast, new-thyroid, page-blocks, ecoli (original) และ KEEL split ของ yeast/glass/ecoli/abalone มากที่สุด
+  - แหล่ง: `out/modification_analysis.json`, `out/modification_purpose_quotes.csv`, `out/noise_injection_papers.csv`, `out/modified_families.csv`, `out/usage_by_period.csv` · manuscript ตาราง tab:data-noise, tab:data-periods
 - **ประกาศ/ไม่ประกาศ**: 94/332 entry ขาดข้อมูลที่ต้องใช้ทำซ้ำ (ไม่พิมพ์ลักษณะชุดที่ได้ 56, ไม่บอก IR เป้าหมาย 18, ไม่บอก minority 15) · 8/37 paper ที่ binarize ไม่บอกว่าคลาสไหนเป็น minority · 48 entry ที่ดัดแปลงโดยไม่พิมพ์ลักษณะและผู้เขียนไม่เผยแพร่ไฟล์ จับคู่กับไฟล์สาธารณะไม่ได้ (k-means SMOTE เผยแพร่ไฟล์ที่ดัดแปลงเอง 43 entry → V-author_release)
 - แหล่ง: `out/data_handling_summary.json`, `out/modified_operations_summary.json`, `analysis/A_modified_operations.md`
 
@@ -154,8 +161,7 @@ python3 build/make_final.py                      # ฉบับพร้อม m
 ## 11. สิ่งที่ยังต้องใช้คน (Claude ทำแทนไม่ได้หรือไม่ควรทำ)
 
 1. **Toon ทบทวนสิ่งที่ Claude ตัดสินแทน** (หัวข้อ 0) โดยเฉพาะข้อความที่มีคอมเมนต์ `% Claude 29 Oct 2026` ใน draft ซึ่งเป็นการตีความ
-2. **อาจารย์ยืนยัน** นิยาม win/loss และการตีความ H1 (ผลกลับด้านกับข้อสังเกตเดิม)
-3. **merge กับ P**: คัดลอก `manuscript/data-section-final.tex` ไป `sections/`, เพิ่ม `\input` ใน main.tex, ต่อ `manuscript/data-section-final.bib` เข้า `references.bib`, คัดลอก `manuscript/figures/data-difficulty.pdf` ไป `figures/` (ทดสอบแล้ว: main.tex + ส่วนนี้คอมไพล์ด้วย biber ได้ 17 หน้า ไม่มี undefined citation/reference จากส่วนนี้) และตกลงเรื่องเนื้อหาที่ซ้อนกับ Section 7
-4. **git push** (commit แล้ว ยังไม่ push)
-5. เทียบไฟล์ mirror ที่เหลือกับไฟล์ทางการ (UCI ทางการดาวน์โหลดผ่าน browser ได้แล้ว 8 พ.ย.; KEEL sci2s.ugr.es ยังไม่ได้)
+2. **merge กับ P**: คัดลอก `manuscript/data-section-final.tex` ไป `sections/`, เพิ่ม `\input` ใน main.tex, ต่อ `manuscript/data-section-final.bib` เข้า `references.bib`, คัดลอก `manuscript/figures/data-difficulty.pdf` ไป `figures/` (ทดสอบแล้ว: main.tex + ส่วนนี้คอมไพล์ด้วย biber ได้ 17 หน้า ไม่มี undefined citation/reference จากส่วนนี้) และตกลงเรื่องเนื้อหาที่ซ้อนกับ Section 7
+3. **git push** (commit แล้ว ยังไม่ push)
+4. เทียบไฟล์ mirror ที่เหลือกับไฟล์ทางการ (UCI ทางการดาวน์โหลดผ่าน browser ได้แล้ว 8 พ.ย.; KEEL sci2s.ugr.es ยังไม่ได้)
 6. ตัดสิน V-author_release (43 entry k-means SMOTE) และเรื่องขนาด +1 ของ Loyalty-SMOTE · ดาวน์โหลดชุด Kaggle ด้วยบัญชีเอง ถ้าต้องการ (`out/names_to_download.csv`)

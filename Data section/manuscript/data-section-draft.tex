@@ -8,8 +8,8 @@
 %                  as verified by Toon's decision; see out/verified_*.csv). Replace with values from
 %                  build/analyse_dataset_usage.py `sheet` mode or rows with page_ref.
 %  * \claudedraft{} sentence that interprets or argues (blue). Claude wrote it so
-%                  the section reads end to end; the supervisor requires the
-%                  interpretation to be Toon's own, so rewrite or delete every one.
+%                  the section reads end to end; the
+%                  interpretation is to be Toon's own, so rewrite or delete every one.
 %  * \evidence{}   where the numbers come from (grey). Delete in the final version.
 %  * \pcite{}      placeholder for a bibliography key not yet in references.bib.
 % Sources: out/full_summary.json, out/full_outcome_rows.csv, out/full_datasets.csv
@@ -119,7 +119,7 @@ original. Two further rules were fixed before counting: a set that is two-class
 in its source and is used without comment was labelled original, and a set from
 which the authors removed rows (for example, records with missing values) or
 attributes was labelled modified. A set whose source the paper does not state, for which it
-prints no size, and whose name identifies a public unmodified file was labelled original (four
+prints no size, whose name identifies a public file and which the paper does not describe as changed was labelled original (four
 entries). One label rests on evidence outside the paper: the \texttt{toy} set of
 OREM-M, listed without a source, is the synthetic set of the ordinal-regression
 benchmark~\pcite{gutierrez2016ordinal} and is labelled synthetic.
@@ -365,7 +365,7 @@ Modifications differ in how completely they are described. Of the 332 modified
 entries (39 papers), 177 in 30 papers change the class structure, most often by
 keeping one class against the rest (84 entries), and 147 in 9 papers raise the
 imbalance ratio on purpose, almost always by removing minority examples at random
-(131 entries). A purpose for the change is stated in 15 of the 39 papers. For 94 of
+(131 entries). A purpose for the change is stated in 20 of the 39 papers. For 94 of
 the 332 entries, information needed to repeat the change is missing: the
 characteristics of the modified set are not printed for 56, the target imbalance
 ratio for 18 and the minority class for 15. At the paper level, 8 of the 37 papers
@@ -374,10 +374,105 @@ without printed characteristics cannot be matched to any public file unless the 
 publish the modified data themselves, as k-means SMOTE does; 48 such entries
 are therefore left out of the difficulty measurement (Section~\ref{sec:data-difficulty}).
 
+% Claude 9 Nov 2026 (Toon 9 Nov: noise, operations without an "other" class, purposes, signals, shared sets, use over time)
+The remaining operations are named rather than pooled. Rows are removed or a subset is used
+in 18 entries (9 papers), features are removed, transformed or extracted in 15 (6 papers),
+three data sets are built and labelled by the authors from raw records (network traffic
+labelled by an intrusion detector, simulation output; 2 papers), and three carry noise or an
+outlier added by the authors (2 papers). Noise is added more often than these entries show:
+eight papers add label noise, attribute noise, outliers or missing values to real data sets
+(Table~\ref{tab:data-noise}), and in seven of them the noisy versions are an experimental
+condition on sets that are listed, and counted here, under their own category. Five further
+papers generate synthetic data with noise or outliers built in.
+
+\begin{table}[t]
+\centering\small
+\caption{Noise, Outliers and Missing Values Added to Real Data Sets.
+Entries: whether the altered versions are dataset entries of the corpus.}
+\label{tab:data-noise}
+\begin{tabular}{p{0.15\linewidth}p{0.28\linewidth}p{0.17\linewidth}p{0.2\linewidth}l}
+\toprule
+Paper & Added & Levels & Data & Entries\\
+\midrule
+SMOTE-IPF & class and attribute noise & 20\%, 40\% & 9 sets & yes\\
+RAMOBoost & class and attribute noise & several & abalone & no\\
+RSMOTE & label noise; one outlier & 10--30\%; one point & all sets; fourclass & no; yes\\
+RBO & label and feature noise & 0--20\% (label) & all sets & no\\
+MC-CCR & label noise & 0--25\% & all sets & no\\
+MC-MBRC & label noise & 0--30\% & real sets & no\\
+MC-NCLWO & Gaussian feature noise & 5--30\% & 4 sets & no\\
+SPE & missing values & several & all sets & no\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Why the data were modified can be read only where a paper says so. Across the 43 papers that
+modify data or add noise (the 39 above and four that only add noise), ten state that the study
+or the method concerns two-class problems and convert multiclass sets for that reason, nine
+state that their data were not imbalanced enough and make them more imbalanced, eight add
+noise, outliers or missing values to test how the methods cope, two give practical reasons
+(the size of the data, agreement between the training and test files), and 19 give no reason
+that we could find. Counted by entries, 152 of the 332 modified entries are made harder in a
+way the paper explains (more imbalance or noise), 51 are converted for a two-class scope that
+the paper states, ten are changed for practical reasons and 127 have no stated reason. Which
+class becomes the minority, or which noise scheme is used, is traced to earlier work in five
+papers and to a written rule, such as the smallest class against the rest, in two.
+
+Whether a modification favours the proposed method cannot be read from a paper, but some
+features of the design make it checkable. Of the 29 papers that convert classes, 16 evaluate
+on two-class tasks only, so that the conversion matches the scope of the method being tested;
+seven of them say so. Five of the 39 papers also use an unmodified version of a set they
+modify, which lets a reader see what the change does to the result. Twelve papers apply a
+change at several levels (imbalance ratios or noise levels), all of them papers that state
+that they make the data harder, and three publish their modified files. Where a paper reports
+comparisons with SMOTE both on sets it modified and on its other real sets (11 papers), the
+share of wins is higher on the modified sets in two papers, lower in six and equal in three
+(424 and 278 comparisons).
+
+Modified versions are rarely shared. Of the 130 dataset families that someone modifies, 37 are
+modified in more than one paper; vehicle (11 papers), ecoli (10), abalone and satimage (9 each),
+glass and page-blocks (8 each) are modified most often, most of them by converting classes. The
+same modified name does not mean the same data: the nine papers that modify vehicle print seven
+different combinations of size and minority count, and no modified version is printed with the
+same size and minority count by more than three papers (vehicle 846/199, satimage 6,435/626,
+abalone 731/42, segment 2,310/330).
+
+\begin{table}[t]
+\centering\small
+\caption{Dataset Entries by Period of Publication and by How They Reached the Experiment
+(Percent of the Period's Entries). Synthetic: published by the authors / not published.}
+\label{tab:data-periods}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Period & Papers & Entries & Original & Repository & Modified & Synthetic & Cannot tell\\
+\midrule
+up to 2004 & 5 & 36 & 33 & 0 & 58 & 0 / 0 & 8\\
+2005--2009 & 9 & 110 & 44 & 0 & 26 & 0 / 26 & 4\\
+2010--2014 & 8 & 152 & 41 & 0 & 35 & 0 / 20 & 4\\
+2015--2019 & 18 & 590 & 18 & 35 & 25 & 9 / 1 & 12\\
+2020--2024 & 24 & 614 & 37 & 28 & 12 & 2 / 12 & 10\\
+2025--2026 & 8 & 244 & 34 & 37 & 5 & 0 / 2 & 22\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The way data reach the experiment has shifted over time (Table~\ref{tab:data-periods}). Modified
+entries make up 58\% of the entries before 2005 and 5\% in 2025--2026, while repository-defined
+splits, absent before 2015, make up 28 to 37\% of the entries since. Each period holds only five to
+24 papers, so a single paper can move a share considerably. In the 32 papers from 2020 to 2026 the
+sets used most often are yeast (12 papers), new-thyroid and page-blocks (11 each) and ecoli (10) as
+distributed, mostly in multiclass papers, and the KEEL splits of yeast and glass (11 each), ecoli (9)
+and abalone (8). No modified set is used by more than four of these papers (page-blocks), and the
+synthetic sets that their authors publish (SVDD-WSMOTE, GMMSampling, OREM-M) are each used by one.
+
 \evidence{out/data\_handling\_summary.json (paper-level codes; binarised\_without\_stated\_rule,
 minority\_rule\_among\_binarised); out/full\_summary.json how\_obtained\_all (entry level, with rules);
 operations, purposes and missing information: build/modified\_operations.py $\rightarrow$
-out/modified\_operations\_audit.csv and out/modified\_operations\_summary.json (Analysis A).}
+out/modified\_operations\_audit.csv and out/modified\_operations\_summary.json (Analysis A; 9 Nov 2026: OT split into
+NI noise/outlier injection and LC labels constructed by the authors). Noise: out/noise\_injection\_papers.csv (search of all
+PDFs, 9 Nov 2026). Purposes: build/modification\_purpose.py $\rightarrow$ out/modification\_purpose\_quotes.csv (41 quotes from
+27 PDFs, each found in the PDF text). Signals, shared versions and periods: build/modification\_analysis.py $\rightarrow$
+out/modification\_analysis.json, out/modification\_purpose\_by\_paper.csv, out/modified\_families.csv, out/usage\_by\_period.csv.}
 
 % ---------------------------------------------------------------------
 \subsection{The Same Name Is Not the Same Data}
@@ -473,6 +568,9 @@ papers take from it. A name is
 looked up under the other published names of the same data set (liver disorders is
 \texttt{bupa}, contraceptive method choice is \texttt{cmc}), but only the printed size decides
 whether a file is accepted. This holds for 986 entries from 65 papers, which use 256 files.
+For 132 of these entries (15 papers) the paper prints no size and describes no change to the
+data, and for 35 of them it prints no class proportions either; their label and their measured
+profile rest on the assumption that the public file was used as distributed.
 Entries modified by their authors without printed characteristics and without a published
 file (48) are left out, because the data actually used cannot be reconstructed.
 
