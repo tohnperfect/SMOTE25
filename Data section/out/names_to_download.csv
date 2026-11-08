@@ -7,14 +7,10 @@ intrusion,modified,multiple,2,2,CTGAN / TVAE; LS,,41,UCI; other: KDD'99 Challeng
 phoss,original,multiple,2,2,LS; RBBoost / Random Balance,11411,479,other: HDDT collection of Cieslak et al. [37] (http://www.nd.edu/dial/hddt/); other: biological datasets [20] (Radivojac et al.),P014-D015; P027-D018
 50words,modified,other repository,1,1,INOS,,270,UCR,P023-D003
 adiac,modified,other repository,1,1,INOS,,176,UCR,P023-D001
-aids 15000,not stated,group-level,1,1,Loyalty-SMOTE,15000,23,other: UCI/KEEL (group-level; per dataset not stated),P075-D012
-aids 5000,not stated,group-level,1,1,Loyalty-SMOTE,5000,23,other: UCI/KEEL (group-level; per dataset not stated),P075-D005
-aids 50000,not stated,other repository,1,1,Loyalty-SMOTE,50000,23,Kaggle,P075-D041
 approval,not stated,other repository,1,1,Loyalty-SMOTE,697,7,Kaggle,P075-D035
 attribute noise versions of the 9 real-world datasets,modified,KEEL,1,1,SMOTE-IPF,,,KEEL,P029-D041
 bar crawl,original,UCI,1,1,MKC-SMOTE,10486,4,UCI,P068-D020
 cam,not stated,other repository,1,1,RBBoost / Random Balance,18916,,other: HDDT collection of Cieslak et al. [37] (http://www.nd.edu/dial/hddt/),P027-D003
-cardiovascular,not stated,other repository,1,1,Loyalty-SMOTE,55772,10,Kaggle,P075-D052
 charactertraj,not stated,UCI,1,1,CGMOS,2860,3,UCI,P032-D007
 cifar-10,modified,other repository,1,1,ROS (Buda),,,"other: CIFAR-10 benchmark (Krizhevsky & Hinton, 2009)",P037-D002
 class noise versions of the 9 real-world datasets,modified,KEEL,1,1,SMOTE-IPF,,,KEEL,P029-D040
@@ -22,16 +18,12 @@ covtype,not stated,other repository,1,1,RBBoost / Random Balance,38500,,other: H
 credit,original,other repository,1,1,CTGAN / TVAE,,,Kaggle,P039-D011
 customer churn wireless telecom,not stated,other repository,1,1,AB-SMOTE,5000,,other: Crowd Analytix,P044-D002
 drug,not stated,group-level,1,1,Loyalty-SMOTE,1886,13,other: UCI/KEEL (group-level; per dataset not stated),P075-D004
-drug200,original,UCI,1,1,Loyalty-SMOTE,413,5,UCI,P075-D048
-employe attrition,not stated,other repository,1,1,AB-SMOTE,1470,,other: IBM Analytics,P044-D005
-employee,original,UCI,1,1,Loyalty-SMOTE,4654,7,UCI,P075-D047
 estate,not stated,other repository,1,1,RBBoost / Random Balance,5322,,other: HDDT collection of Cieslak et al. [37] (http://www.nd.edu/dial/hddt/),P027-D007
 faceall,modified,other repository,1,1,INOS,,131,UCR,P023-D002
 gender by name,not stated,other repository,1,1,Loyalty-SMOTE,146870,4,Kaggle,P075-D054
 gisette,modified,other repository,1,1,HDE,3076,5000,LibSVM,P052-D025
 healthy older people2,original,UCI,1,1,RSMOTE,22646,8,UCI,P053-D035
 housing,modified,UCI,1,1,EasyEnsemble / BalanceCascade,506,,UCI,P016-D006
-hr,original,UCI,1,1,Loyalty-SMOTE,1470,21,UCI,P075-D046
 icr,not stated,group-level,1,1,Loyalty-SMOTE,634,33,other: UCI/KEEL (group-level; per dataset not stated),P075-D017
 ilsvrc-2012,modified,other repository,1,1,ROS (Buda),,,"other: ImageNet ILSVRC-2012 (Russakovsky et al., 2015)",P037-D003
 imagenet12,modified,other repository,1,1,DLexiBoost,,2048,other: ImageNet 2011 Fall Release,P045-D033
@@ -56,14 +48,10 @@ parkinsons telemonitoring,not stated,UCI,1,1,GDO,5875,26,UCI,P057-D048
 probe binary,modified,UCI,1,1,COG-OS,,41,other: UCI KDD Archive,P012-D016
 r2l binary,modified,UCI,1,1,COG-OS,,41,other: UCI KDD Archive,P012-D017
 sales: win loss,not stated,other repository,1,1,AB-SMOTE,78025,,other: IBM Analytics,P044-D008
-satisfied,not stated,other repository,1,1,Loyalty-SMOTE,103905,21,Kaggle,P075-D040
 sick2,repository-defined,KEEL,1,1,DLexiBoost,,,KEEL,P045-D008
 sleaf,modified,other repository,1,1,INOS,,128,UCR,P023-D004
-smartphone,not stated,other repository,1,1,Loyalty-SMOTE,2948,536,Kaggle,P075-D055
-smoke,not stated,other repository,1,1,Loyalty-SMOTE,62631,14,Kaggle,P075-D042
 soybean12,repository-defined,KEEL,1,1,DLexiBoost,,,KEEL,P045-D007
 susy,modified,UCI,1,1,RSMOTE,23752,18,UCI,P053-D021
-telco customer churn,original,other repository,1,1,AB-SMOTE,7043,,other: IBM Analytics,P044-D003
 twopats,modified,other repository,1,1,INOS,,128,UCR,P023-D005
 voice9 6,modified,UCI,1,1,SMOM,413,10,UCI,P034-D005
 voice9 7,original,UCI,1,1,SMOM,413,10,UCI,P034-D014

@@ -3,13 +3,13 @@
  "entries": 236,
  "by_result": {
   "now verifiable": {
-   "names": 83,
-   "entries": 103,
-   "entries_verifiable": 95
+   "names": 92,
+   "entries": 114,
+   "entries_verifiable": 105
   },
   "file obtained, size or task does not match": {
-   "names": 39,
-   "entries": 47,
+   "names": 42,
+   "entries": 48,
    "entries_verifiable": 0
   },
   "modified, no printed size": {
@@ -23,28 +23,27 @@
    "entries_verifiable": 0
   },
   "no file obtained": {
-   "names": 70,
-   "entries": 76,
+   "names": 58,
+   "entries": 64,
    "entries_verifiable": 0
   }
  },
  "no_file_by_toon_check": {
-  "B_rebuild": 26,
-  "A_repo": 18,
+  "B_rebuild": 24,
   "D_none": 12,
-  "C_identify": 7,
+  "A_repo": 11,
   "A_author": 6,
+  "C_identify": 4,
   "?": 1
  },
  "no_file_by_where": {
-  "Kaggle": 11,
   "UCI ML Repository": 10,
   "UCR": 6,
   "KDD Cup 1999": 5,
   "HDDT collection": 4,
-  "IBM sample": 3,
   "ImageNet features": 3,
   "SDGym": 3,
+  "Kaggle": 2,
   "SMOTE-IPF site": 2,
   "Boston Housing": 2,
   "CLUTO text datasets": 2,

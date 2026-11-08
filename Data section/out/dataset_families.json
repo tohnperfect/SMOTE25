@@ -335,19 +335,15 @@
   "stem_family": 114
  },
  "flagged": {
-  "separate_different_dataset": [
-   "car1",
-   "car2",
-   "car3",
-   "car4",
-   "drug200",
-   "kr-vs-k-one vs fifteen",
-   "kr-vs-k-three vs eleven",
-   "kr-vs-k-zero-one vs draw",
-   "krvsk0vs15",
-   "krvsk0vs8",
-   "krvsk3vs11",
-   "wisconsin5"
+  "same_source_composition_differs": [
+   "abalone10",
+   "abalone8",
+   "oil1",
+   "oil2",
+   "segment5",
+   "vowel4",
+   "vowel5",
+   "vowel7"
   ],
   "prefix_without_split_marker": [
    "australian",
@@ -440,15 +436,19 @@
    "winequality-red",
    "winequality-white"
   ],
-  "same_source_composition_differs": [
-   "abalone10",
-   "abalone8",
-   "oil1",
-   "oil2",
-   "segment5",
-   "vowel4",
-   "vowel5",
-   "vowel7"
+  "separate_different_dataset": [
+   "car1",
+   "car2",
+   "car3",
+   "car4",
+   "drug200",
+   "kr-vs-k-one vs fifteen",
+   "kr-vs-k-three vs eleven",
+   "kr-vs-k-zero-one vs draw",
+   "krvsk0vs15",
+   "krvsk0vs8",
+   "krvsk3vs11",
+   "wisconsin5"
   ],
   "stem_family": [
    "aids 15000",

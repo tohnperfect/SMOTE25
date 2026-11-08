@@ -1,14 +1,14 @@
 {
- "rows_joined": 474,
- "decided_rows": 430,
+ "rows_joined": 494,
+ "decided_rows": 446,
  "papers": 23,
- "tasks": 100,
- "ties": 44,
+ "tasks": 106,
+ "ties": 48,
  "win_share_by_profile": {
   "none": {
-   "rows": 165,
-   "win": 137,
-   "share": 0.83
+   "rows": 175,
+   "win": 145,
+   "share": 0.829
   },
   "outlier_flag": {
    "rows": 31,
@@ -26,105 +26,105 @@
    "share": 0.81
   },
   "small_sample": {
-   "rows": 133,
-   "win": 114,
-   "share": 0.857
+   "rows": 137,
+   "win": 118,
+   "share": 0.861
   },
   "small_sample + outlier_flag": {
-   "rows": 79,
-   "win": 67,
-   "share": 0.848
+   "rows": 81,
+   "win": 69,
+   "share": 0.852
   }
  },
  "models": {
   "noise_per_0.1": {
    "gee": {
-    "odds_ratio": 1.148,
+    "odds_ratio": 1.144,
     "ci95": [
-     1.028,
-     1.282
+     1.033,
+     1.266
     ],
-    "p": 0.0141
+    "p": 0.0094
    },
    "within_paper": {
     "papers": 14,
-    "rows": 366,
-    "odds_ratio": 1.174,
+    "rows": 382,
+    "odds_ratio": 1.179,
     "ci95": [
-     1.038,
-     1.328
+     1.043,
+     1.333
     ],
-    "p": 0.0109
+    "p": 0.0086
    }
   },
   "log2_IR": {
    "gee": {
-    "odds_ratio": 0.913,
+    "odds_ratio": 0.921,
     "ci95": [
-     0.68,
-     1.226
+     0.688,
+     1.233
     ],
-    "p": 0.5447
+    "p": 0.5787
    },
    "within_paper": {
     "papers": 14,
-    "rows": 366,
-    "odds_ratio": 0.946,
+    "rows": 382,
+    "odds_ratio": 0.951,
     "ci95": [
-     0.765,
-     1.169
+     0.769,
+     1.175
     ],
-    "p": 0.6056
+    "p": 0.6407
    }
   },
   "small_sample": {
    "gee": {
-    "odds_ratio": 1.011,
+    "odds_ratio": 1.1,
     "ci95": [
-     0.451,
-     2.27
+     0.47,
+     2.574
     ],
-    "p": 0.978
+    "p": 0.8254
    },
    "within_paper": {
     "papers": 11,
-    "rows": 321,
-    "odds_ratio": 1.082,
+    "rows": 337,
+    "odds_ratio": 1.187,
     "ci95": [
-     0.582,
-     2.01
+     0.643,
+     2.191
     ],
-    "p": 0.8041
+    "p": 0.5831
    }
   },
   "outlier_flag": {
    "gee": {
-    "odds_ratio": 1.543,
+    "odds_ratio": 1.661,
     "ci95": [
-     0.407,
-     5.85
+     0.421,
+     6.553
     ],
-    "p": 0.5235
+    "p": 0.4686
    },
    "within_paper": {
     "papers": 9,
-    "rows": 295,
-    "odds_ratio": 1.649,
+    "rows": 311,
+    "odds_ratio": 1.839,
     "ci95": [
-     0.796,
-     3.416
+     0.886,
+     3.816
     ],
-    "p": 0.1781
+    "p": 0.1018
    }
   },
   "small_disjuncts": {
    "gee": {
-    "odds_ratio": 0.704,
+    "odds_ratio": 0.712,
     "ci95": [
-     0.3,
-     1.653
+     0.307,
+     1.651
     ],
-    "p": 0.4207
+    "p": 0.4283
    },
    "within_paper": {
     "papers": 5,
@@ -139,13 +139,13 @@
   }
  },
  "robust_task_majority_noise_per_0.1": {
-  "rows": 162,
+  "rows": 167,
   "papers": 23,
-  "odds_ratio": 1.218,
+  "odds_ratio": 1.203,
   "ci95": [
-   1.051,
-   1.413
+   1.041,
+   1.39
   ],
-  "p": 0.0089
+  "p": 0.0124
  }
 }

@@ -3,7 +3,7 @@
  "sources": {
   "datasets": {
    "path": "out/verified_datasets.csv",
-   "sha256": "51cc7a84be2f40d714edb7d5b9982d59170c8a4f6894f73141f860251733cb25"
+   "sha256": "cc52ae1d44c5f3ccb95eb9881f6b55fb7b087b17d9e6cab990165daf16959471"
   },
   "papers": {
    "path": "out/section7_key_map.csv",
@@ -11,7 +11,7 @@
   },
   "summary": {
    "path": "out/full_summary.json",
-   "sha256": "f4906f4aa02e75e82090e6fdd4d40857e3673cd0fafb0f39cf38c2b0a8fca924"
+   "sha256": "a63671ca90a0be58250e3dac45d1a0650c3327aebb3fe1e88abfb560bf190f2c"
   }
  },
  "counts": {
@@ -19,11 +19,11 @@
   "named_entries": 1746,
   "normalized_names": 857,
   "papers_with_entries": 73,
-  "original": 533,
+  "original": 537,
   "repository-defined": 470,
   "modified": 332,
   "synthetic": 213,
-  "not stated": 199
+  "not stated": 195
  },
  "completeness": {
   "source_as_reported": {
@@ -132,8 +132,8 @@
    "ok": true
   },
   "original": {
-   "expected": 533,
-   "got": 533,
+   "expected": 537,
+   "got": 537,
    "ok": true
   },
   "repository-defined": {
@@ -152,8 +152,8 @@
    "ok": true
   },
   "not stated": {
-   "expected": 199,
-   "got": 199,
+   "expected": 195,
+   "got": 195,
    "ok": true
   },
   "record_ids_unique": {

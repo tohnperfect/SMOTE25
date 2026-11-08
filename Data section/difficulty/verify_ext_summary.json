@@ -16,12 +16,12 @@
   "U-minority_mismatch": 2
  },
  "status_now": {
-  "V-binary_file": 518,
-  "V-multiclass_asis": 224,
-  "U-size_mismatch": 220,
+  "V-binary_file": 530,
+  "V-multiclass_asis": 225,
+  "U-size_mismatch": 213,
   "U-synthetic": 212,
-  "U-no_public_file": 191,
-  "U-task_not_reconstructible": 80,
+  "U-no_public_file": 179,
+  "U-task_not_reconstructible": 86,
   "V-keel_name_only": 80,
   "V-binarized_rule_unique": 49,
   "U-no_printed_size": 48,
@@ -34,19 +34,20 @@
   "U-minority_mismatch": 2
  },
  "newly_verifiable": {
-  "entries": 330,
-  "papers": 52,
-  "names": 178,
-  "files": 143,
+  "entries": 343,
+  "papers": 53,
+  "names": 189,
+  "files": 153,
   "by_source": {
-   "KEEL-std(F)": 129,
-   "UCI++": 52,
+   "KEEL-std(F)": 130,
+   "UCI++": 53,
    "author-kmeans": 52,
-   "KEEL(keel_ds)": 33,
-   "UCI-official": 16,
+   "KEEL(keel_ds)": 34,
+   "UCI-official": 18,
    "author-HDE": 10,
    "jbrownlee-UCI": 9,
-   "author-SOS": 7,
+   "author-SOS": 8,
+   "Kaggle": 7,
    "LibSVM": 5,
    "PROMISE-ck": 5,
    "Weka-UCI": 4,
@@ -55,10 +56,12 @@
    "PMLB": 2
   },
   "by_basis": {
-   "exact name": 179,
-   "alias": 93,
+   "exact name": 183,
+   "alias": 94,
    "modified file published by the paper's authors under the same name": 43,
    "KEEL split name cut at _vs_": 8,
+   "alias; printed N = file N + 1 (header row counted, Toon 8 Nov)": 6,
+   "exact name; printed N = file N + 1 (header row counted, Toon 8 Nov)": 2,
    "imbalanced-learn task: minority = 8 (documented size 554)": 1,
    "imbalanced-learn task: minority = 4 (documented size 626)": 1,
    "imbalanced-learn task: minority = 5 (documented size 1055)": 1,
@@ -68,8 +71,8 @@
    "imbalanced-learn task: minority = 19 (documented size 32)": 1
   },
   "by_status": {
-   "V-multiclass_asis": 135,
-   "V-binary_file": 93,
+   "V-multiclass_asis": 136,
+   "V-binary_file": 105,
    "V-author_release": 43,
    "V-binarized_rule_unique": 29,
    "V-name_only_ext": 23,
@@ -77,9 +80,9 @@
   }
  },
  "verifiable_total": {
-  "entries": 973,
+  "entries": 986,
   "papers": 65,
-  "names": 364,
-  "files": 247
+  "names": 374,
+  "files": 256
  }
 }

@@ -39,7 +39,7 @@
 
 ## 3. การเลือกและดัดแปลงข้อมูล
 
-- entry: original 533, repository-defined 470, modified 332, synthetic 213, บอกไม่ได้ 199 (8 พ.ย.: +92 synthetic และ fourclass ที่เติม outlier ของ RSMOTE เป็น modified; Toy ของ OREM-M original → synthetic)
+- entry: original 537, repository-defined 470, modified 332, synthetic 213, บอกไม่ได้ 195 (8 พ.ย.: +92 synthetic และ fourclass ที่เติม outlier ของ RSMOTE เป็น modified; Toy ของ OREM-M original → synthetic; รอบสาม กฎ NS ของ Toon: ไม่บอกที่มา + ไม่พิมพ์ขนาด + ชื่อตรงไฟล์สาธารณะที่ไม่ดัดแปลง → original 4 entry ของ SPIDER2; ผลชนะไม่เปลี่ยนเพราะ SPIDER2 ไม่มีแถวใน verified_outcomes.csv)
 - เหตุผลการเลือก (paper): ให้เหตุผลเอง 48, อ้างงานก่อน 14, "widely used" อย่างเดียว 3, ไม่บอก 8 · ยกรายชื่อ benchmark จากงานก่อน 20 paper (ยกทั้งชุด 11)
 - modified 332 entry 39 paper: เปลี่ยนโครงสร้างคลาส 177 (30 paper; one-vs-rest 84) · เพิ่ม IR โดยตั้งใจ 147 (9 paper; 131 entry เป็นคู่ undersampling + เพิ่ม IR คือสุ่มลด minority ตาม Analysis A) · บอกเหตุผลการดัดแปลง 15/39 paper
 - **ประกาศ/ไม่ประกาศ**: 94/332 entry ขาดข้อมูลที่ต้องใช้ทำซ้ำ (ไม่พิมพ์ลักษณะชุดที่ได้ 56, ไม่บอก IR เป้าหมาย 18, ไม่บอก minority 15) · 8/37 paper ที่ binarize ไม่บอกว่าคลาสไหนเป็น minority · 48 entry ที่ดัดแปลงโดยไม่พิมพ์ลักษณะและผู้เขียนไม่เผยแพร่ไฟล์ จับคู่กับไฟล์สาธารณะไม่ได้ (k-means SMOTE เผยแพร่ไฟล์ที่ดัดแปลงเอง 43 entry → V-author_release)
@@ -52,16 +52,16 @@
 - MWMOTE: Satimage กับ Statlandsat เป็นชุดเดียวกัน (ทั้งชุดกับไฟล์ train) นับเป็น 2 ชุด
 - แหล่ง: `out/reconcile_counts.json` (size_variation), `out/full_summary.json`, `mwmote-table5-audit.md`
 
-## 5. ความยากของข้อมูลที่ตรวจได้ (อัปเดต 8 พ.ย. 2026 รอบสอง: ไฟล์ทางการ UCI/LIBSVM + repo ผู้เขียน)
+## 5. ความยากของข้อมูลที่ตรวจได้ (อัปเดต 8 พ.ย. 2026 รอบสาม: Kaggle + กติกา N+1 ของ Loyalty-SMOTE + กฎ NS)
 
-- ตรวจได้ **973 entry 65 paper 247 ไฟล์** (รอบแรก 8 พ.ย. 864/65/172; 28 ต.ค. 643/61/131) → **227 task binary/binarise** (689 entry, 46 paper) + OvR 339 task รายงานแยก
-- รอบแรก 8 พ.ย.: mirror บน GitHub/PyPI (KEEL standard 2 ชุดอิสระ, PMLB, UCI++, Weka-UCI, PROMISE, NASA MDP, jbrownlee) + ตารางชื่อเรียกอื่น · รอบสอง: ไฟล์ทางการจาก UCI (60 zip) และ LIBSVM ผ่าน browser บนเครื่อง Toon, ไฟล์ที่ผู้เขียนเผยแพร่เอง (HDE, DGOT, SOS, MBS, release ของ k-means SMOTE) · URL + sha256 ทุกไฟล์ใน `difficulty/official_manifest.csv` · กติกาเดิมทุกข้อ (ขนาดที่พิมพ์ต้องตรงไฟล์) + สถานะใหม่ V-author_release (43 entry ของ k-means SMOTE ที่ผู้เขียนเผยแพร่ไฟล์ที่ดัดแปลงเอง; **รอ Toon ยืนยัน**)
+- ตรวจได้ **986 entry 65 paper 256 ไฟล์** (รอบสอง 973/65/247; รอบแรก 8 พ.ย. 864/65/172; 28 ต.ค. 643/61/131) → **236 task binary/binarise** (701 entry, 46 paper) + OvR 339 task รายงานแยก
+- รอบแรก 8 พ.ย.: mirror บน GitHub/PyPI (KEEL standard 2 ชุดอิสระ, PMLB, UCI++, Weka-UCI, PROMISE, NASA MDP, jbrownlee) + ตารางชื่อเรียกอื่น · รอบสอง: ไฟล์ทางการจาก UCI (60 zip) และ LIBSVM ผ่าน browser บนเครื่อง Toon, ไฟล์ที่ผู้เขียนเผยแพร่เอง (HDE, DGOT, SOS, MBS, release ของ k-means SMOTE) · URL + sha256 ทุกไฟล์ใน `difficulty/official_manifest.csv` · กติกาเดิมทุกข้อ (ขนาดที่พิมพ์ต้องตรงไฟล์) + สถานะใหม่ V-author_release (43 entry ของ k-means SMOTE ที่ผู้เขียนเผยแพร่ไฟล์ที่ดัดแปลงเอง; Toon ยืนยัน 8 พ.ย.) · รอบสาม: Kaggle 9 ชุด (Toon login ให้), Loyalty-SMOTE พิมพ์ N = ไฟล์ + 1 นับว่าตรง (Toon: น่าจะนับแถวหัวตาราง; 8 entry), ไฟล์ 2 คลาสไม่รับเมื่อ paper พิมพ์ > 2 คลาส
 - วิธี: Napierala & Stefanowski (k = 5, กติกา rare เต็ม) ระยะ HVDM · ธงมีอ้างอิง: small disjuncts (rare ≥ 20%), outliers > 20%, small sample (n_min/d < 10) · noise index รายงานเป็นค่าต่อเนื่อง · กรอบ "ความยากจากลักษณะข้อมูล" อ้าง López et al. 2013, Jo & Japkowicz 2004
-- 227 task: small sample 158 (70%), outliers 81 (36%), small disjuncts 33 (15%), ไม่ติดธง 56 (25%) · โปรไฟล์ 7 แบบ (S 87, none 56, S+O 40, D+S+O 28, O 11, D+S 3, D+O 2) · noise มัธยฐาน 0.57 [0.30, 0.77] (สูงขึ้นจาก 0.44 เพราะชุดที่ผู้เขียนลด minority เพิ่ม IR ของ k-means SMOTE/HDE)
-- IR บอกได้น้อยว่า minority อยู่ตรงไหน: rank correlation กับ noise 0.26; กลุ่มไม่ติดธงมี noise 0–0.84 (≥ 0.5 มี 16 task)
+- 236 task: small sample 160 (68%), outliers 83 (35%), small disjuncts 33 (14%), ไม่ติดธง 63 (27%) · โปรไฟล์ 7 แบบ (S 87, none 63, S+O 42, D+S+O 28, O 11, D+S 3, D+O 2) · noise มัธยฐาน 0.58 [0.29, 0.77] (สูงขึ้นจาก 0.44 เพราะชุดที่ผู้เขียนลด minority เพิ่ม IR ของ k-means SMOTE/HDE)
+- IR บอกได้น้อยว่า minority อยู่ตรงไหน: rank correlation กับ noise 0.26; กลุ่มไม่ติดธงมี noise 0–0.84 (≥ 0.5 มี 20 task)
 - มิติ: มัธยฐาน 9 feature; 59 entry ที่ > 100 feature ตรวจได้ 6 (musk 2, isolet, madelon/a1a/mushrooms จากไฟล์ของ HDE); task ที่วัดได้ ≤ 617 feature
-- ราย paper (≥ 3 task, 38 paper): ผสม 35, ไม่ติดธงล้วน 2 (COG-OS, SMOTE-ENN), ติดธงล้วน 1 (GOIO)
-- **ชุดอ้างอิง** 43 task (19 ช่อง profile × แถบ IR) ครอบ noise 0–1, IR 1.1–970.6, N 79–30,000; 13 ไฟล์ตรงกับตาราง KEEL ทางการ; yeast 4, pima 3, ecoli/glass/haberman/cleveland/heart/iris อย่างละ 2
+- ราย paper (≥ 3 task, 39 paper): ผสม 36, ไม่ติดธงล้วน 2 (COG-OS, SMOTE-ENN), ติดธงล้วน 1 (GOIO)
+- **ชุดอ้างอิง** 42 task (19 ช่อง profile × แถบ IR) ครอบ noise 0–1, IR 1.1–970.6, N 79–62,630; 13 ไฟล์ตรงกับตาราง KEEL ทางการ; yeast 4, pima 3, ecoli/glass/haberman/cleveland/heart/iris อย่างละ 2
 - ไม่ได้วัด: covertype (581,012 แถว, OvR อย่างเดียว, เกินเวลา), heart-v (เหลือ minority 1 แถวหลังตัด missing) · `difficulty/measure_log.csv`
 - ชื่อที่ยังวัดไม่ได้ 489/857: synthetic 196, ไม่พบไฟล์ 173 (70 อ้างแหล่งสาธารณะ → `out/names_to_download.csv`), ขนาดไม่ตรง 81, สร้าง task ซ้ำไม่ได้ 28, อื่น 11 (`out/name_level_extras.json`)
 - **200 ชื่อที่ไม่มีไฟล์ในรอบแรก**: ตรวจได้แล้ว 83 ชื่อ (103 entry) · ได้ไฟล์แต่ขนาด/task ไม่ตรง 39 · modified ไม่พิมพ์ขนาด 8 · ยังไม่ได้ไฟล์ 70 (`out/names_download_result.csv` มีคอลัมน์ผลตรวจของ Toon) · ข้อสังเกต: Loyalty-SMOTE พิมพ์ N มากกว่าไฟล์ 1 แถวในหลายชุด (น่าจะนับหัวตาราง) ยังไม่ผ่อนกติกา
@@ -99,9 +99,9 @@
 
 **H2 (ใส่ชุดมาตรฐานชุดเดียวเพื่อความน่าเชื่อถือ)** — เข้าเงื่อนไข 2 paper (MWMOTE 1+19, RUSBoost 1+14) ชนะบนชุดมาตรฐานทั้งคู่ บนข้อมูลดัดแปลง/บอกที่มาไม่ได้ชนะ 52/65 = 80.0% (ไม่รวม 2 dataset ของ MWMOTE ที่จับคู่ record ไม่ได้; ถ้ารวม 54/71) เท่ากับข้อมูลแบบเดียวกันใน 21 paper ที่มีชุดมาตรฐาน ≥ 2 และมีข้อมูลอื่นด้วย 482/600 = 80.3% → ไม่พบรูปแบบ ทดสอบไม่ได้เพราะน้อยเกินไป · 5 paper เทียบเฉพาะชุดมาตรฐาน, INOS เฉพาะชุดดัดแปลง
 
-**ความยากที่วัดได้กับผลชนะ (exploratory)** — 100 ไฟล์, 23 paper, 474 แถว (8 พ.ย. รอบสอง; รอบแรก 89/22/440; 28 ต.ค. 72/20/374)
-- noise index +0.1 → odds ชนะ ×1.15 [1.03, 1.28] p 0.01; ภายใน paper ×1.17 p 0.01; หนึ่งผลต่อไฟล์ ×1.22 p 0.009
-- IR ไม่สัมพันธ์ (×0.91 ต่อ IR สองเท่า, p 0.54); ธง small sample / outlier / small disjuncts ไม่สัมพันธ์เมื่อดูทีละตัว
+**ความยากที่วัดได้กับผลชนะ (exploratory)** — 106 ไฟล์, 23 paper, 494 แถว (8 พ.ย. รอบสาม; รอบสอง 100/23/474; รอบแรก 89/22/440; 28 ต.ค. 72/20/374)
+- noise index +0.1 → odds ชนะ ×1.14 [1.03, 1.27] p 0.009; ภายใน paper ×1.18 p 0.009; หนึ่งผลต่อไฟล์ ×1.20 p 0.01
+- IR ไม่สัมพันธ์ (×0.92 ต่อ IR สองเท่า, p 0.58); ธง small sample / outlier / small disjuncts ไม่สัมพันธ์เมื่อดูทีละตัว
 - อ่านว่า: ผลชนะ SMOTE ที่รายงานไว้มีแนวโน้มอยู่บนข้อมูลที่ minority เป็น borderline/outlier มาก ไม่ใช่บนข้อมูลที่ IR สูง
 
 **SMOTE แบบอื่น (รายงานแยก)** 12 paper 558 แถว: Static-SMOTE 79 (69/3/7) · OVO-SMOTE 148 (101/6/41) · SMOTE-all 239 (231/0/8) · ห่อกับ learner อื่น 92 (71/2/19) · **ตัดออก**: KNNOR (มีแต่ค่าเฉลี่ย), RBBoost (ค่าคนละตาราง ไม่เคยเทียบตรง), MC-MBRC (หัวคอลัมน์ไม่ระบุว่าคือ SMOTE)

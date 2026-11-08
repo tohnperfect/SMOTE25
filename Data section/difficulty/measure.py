@@ -25,7 +25,7 @@ VE=os.environ.get('VERIF_FILE','verifiability_entries.csv')   # 8 Nov: written b
 o=pd.read_csv(VE); o=o[o.verif.str.startswith('V-')]
 EXT_SRC={'KEEL-std(F)','KEEL-std(C)','UCI++','Weka-UCI','PROMISE-ck','NASA-MDP','jbrownlee-UCI','PMLB',
          # 8 Nov second round: official sites and author repositories (official_sources.py)
-         'UCI-official','LibSVM','author-HDE','author-DGOT','author-SOS','author-MBS','author-kmeans'}
+         'UCI-official','LibSVM','author-HDE','author-DGOT','author-SOS','author-MBS','author-kmeans','Kaggle'}
 _cx=pd.read_csv('file_catalog_ext.csv') if os.path.exists('file_catalog_ext.csv') else None
 rec=pd.read_csv(os.environ.get('DATASET_RECORDS','../out/dataset_records.csv')).set_index('record_id')
 idb={key(os.path.basename(d)):glob.glob(d+'/*.dat') for d in glob.glob('src/idb/imbalanced_databases/data/*')}

@@ -1,5 +1,5 @@
 name,papers,entries,n_instances_reported,n_instances_distinct,n_instances_median,n_instances_range,n_features_reported,n_features_values,n_classes_reported,n_classes_values,ir_printed_reported,categories
-ecoli,26,28,22,4,336.0,301-336,21,7,21,2;4;5;8,23,original 15; modified 7; not stated 6
+ecoli,26,28,22,4,336.0,301-336,21,7,21,2;4;5;8,23,original 16; modified 7; not stated 5
 yeast,22,22,16,4,1484.0,483-1485,16,8;9,16,2;6;8;9;10,17,original 17; modified 4; not stated 1
 pima,21,23,19,4,768.0,590-769,17,8,17,2,18,original 18; repository-defined 3; modified 2
 vehicle,21,23,19,4,846.0,713-940,18,17;18;34,15,2;3;4,18,modified 10; original 9; not stated 4
@@ -11,7 +11,7 @@ satimage,15,15,11,2,6435.0,6430-6435,10,36;37,11,2;6;7,7,modified 8; original 4;
 yeast4,15,15,10,1,1484.0,1484-1484,12,8;9;10,12,2,14,repository-defined 13; modified 2
 car,14,14,11,1,1728.0,1728-1728,10,4;6;21,10,2;4,10,original 11; modified 3
 yeast5,14,14,9,2,1484.0,982-1484,11,8;9;10,12,2;5,13,repository-defined 12; modified 2
-cleveland,13,13,10,3,297.0,297-467,10,6;13,11,2;4;5,11,original 10; not stated 2; modified 1
+cleveland,13,13,10,3,297.0,297-467,10,6;13,11,2;4;5,11,original 11; modified 1; not stated 1
 contraceptive,13,13,10,2,1473.0,1473-1474,10,9,11,3,11,original 11; not stated 1; modified 1
 dermatology,13,13,10,2,358.0,358-366,10,33;34;35,12,2;6,11,original 10; modified 2; not stated 1
 page-blocks,13,13,11,3,5472.0,560-5473,11,10,12,4;5,11,original 12; modified 1

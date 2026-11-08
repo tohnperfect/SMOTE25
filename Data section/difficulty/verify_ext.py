@@ -133,6 +133,9 @@ ALIAS = {
  'car3': ['car'], 'cleveland1': ['cleveland'], 'cleveland2': ['cleveland'], 'forestcover': ['covertype'],
  'platesfaults5': ['steelplatesfaults7class'], 'pokerhand': ['poker'], 'skin': ['skinsegmentation'], 'isolet5': ['isolet'],
  'censusincomedatabase': ['adult', 'adultall'],
+ # Kaggle (8 Nov, Toon logged in)
+ 'employeattrition': ['ibmhrattrition'], 'hr': ['ibmhrattrition'], 'satisfied': ['airlinesatisfactiontrain'],
+ 'smoke': ['smokedetection'], 'smartphone': ['hartest'],
 }
 ALIAS_NOTE = ('UCI/KEEL/Weka/PMLB file names of the same data set (e.g. liver = bupa = liver-disorders; cmc = contraceptive method '
               'choice; satellite = satimage = statlog landsat); 8 Nov second round: names of a split of a UCI set point to that set '
@@ -145,7 +148,10 @@ IMBLEARN = {
  'abalone19': (['abalone28class'], ['19'], 32), 'isolet': (['isolet'], ['1.', '2.'], 600),   # isolet: letters A, B (UCI labels 1, 2) 'sickeuthyroid': (['thyroidsickeuthyroid'], ['sick'], 293),
 }
 
-AUTHOR_RELEASE = {'k-means SMOTE': 'author-kmeans'}   # paper -> source holding the authors' release of their modified sets
+AUTHOR_RELEASE = {'k-means SMOTE': 'author-kmeans'}   # paper -> source holding the authors' release of their modified sets (Toon 8 Nov: accepted)
+# Toon 8 Nov 2026: Loyalty-SMOTE prints N one larger than the public file for many sets (the header line was counted);
+# for this paper a printed N equal to file N + 1 counts as a size match. All other rules (features +-1, minority) unchanged.
+HEADER_ROW_PAPERS = {'Loyalty-SMOTE'}
 
 def num(x):
     if pd.isna(x): return None
@@ -162,7 +168,7 @@ def subsets(ds, t):
 SRC_RANK = {'KEEL(keel_ds)': 0, 'KEEL(imbalanced_databases)': 0, 'KEEL-std(F)': 1, 'KEEL-std(C)': 2, 'UCI++': 3, 'Weka-UCI': 4,
             'jbrownlee-UCI': 5, 'imbalanced_databases(other fmt)': 6, 'PMLB': 7, 'PROMISE-ck': 8, 'NASA-MDP': 8,
             # 8 Nov second round: the authors' own files first, then the official sites
-            'author-HDE': 0, 'author-DGOT': 0, 'author-SOS': 0, 'author-MBS': 0, 'author-kmeans': 0, 'UCI-official': 1, 'LibSVM': 1}
+            'author-HDE': 0, 'author-DGOT': 0, 'author-SOS': 0, 'author-MBS': 0, 'author-kmeans': 0, 'UCI-official': 1, 'LibSVM': 1, 'Kaggle': 2}
 
 def sync_with_records(old, rec):
     """8 Nov 2026 (second round): bring the 28 Oct snapshot in line with the current dataset_records.csv.
@@ -306,6 +312,8 @@ def main():
                        note_structure='paper reports only the dataset name; structure taken from the named file')
             rows.append(row); continue
         ex = [(x, b) for x, b in cands if int(x.n) == pn]
+        if not ex and r.paper in HEADER_ROW_PAPERS:         # Toon 8 Nov: printed N = file N + 1 counts as a match
+            ex = [(x, b + '; printed N = file N + 1 (header row counted, Toon 8 Nov)') for x, b in cands if int(x.n) == pn - 1]
         if not ex:
             near = sorted(cands, key=lambda t: abs(t[0].n - pn))[0][0]
             row.update(verif='U-size_mismatch', file=near['name'], file_src=near.src, file_n=near.n, file_f=near.f,
@@ -323,6 +331,8 @@ def main():
             ds = x.dist
             if ds is None: continue
             if len(ds) == 2:
+                if pc is not None and pc != 2:                 # 8 Nov: a two-class file cannot be the paper's task when the paper prints more classes
+                    decided = decided or ('U-task_not_reconstructible', x, b + '; printed classes %d, file has 2' % pc); continue
                 if pm is None or pm == ds[0]: decided = ('V-binary_file', x, b); break
                 decided = decided or ('U-minority_mismatch', x, b); continue
             if pc == len(ds) and (pm is None or pm == ds[0]):           # same rule as verify.py (28 Oct)

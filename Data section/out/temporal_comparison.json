@@ -275,9 +275,9 @@
    "entries": 742,
    "category_entries": {
     "original": {
-     "n": 166,
+     "n": 170,
      "of": 742,
-     "pct": 22.4
+     "pct": 22.9
     },
     "repository-defined": {
      "n": 208,
@@ -295,9 +295,9 @@
      "pct": 12.3
     },
     "not stated": {
-     "n": 78,
+     "n": 74,
      "of": 742,
-     "pct": 10.5
+     "pct": 10.0
     }
    },
    "category_papers_with_any": {

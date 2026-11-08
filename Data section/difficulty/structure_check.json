@@ -29,11 +29,11 @@
       "not_reported": 377
     },
     "category_counts": {
-      "original": 533,
+      "original": 537,
       "repository-defined": 470,
       "modified": 332,
       "synthetic": 213,
-      "not stated": 199
+      "not stated": 195
     },
     "category_by_classes": {
       "modified": {
@@ -43,12 +43,12 @@
       },
       "not stated": {
         "more": 0,
-        "not_reported": 104,
+        "not_reported": 100,
         "two": 95
       },
       "original": {
         "more": 348,
-        "not_reported": 94,
+        "not_reported": 98,
         "two": 91
       },
       "repository-defined": {
@@ -65,31 +65,31 @@
   },
   "task_level": {
     "all_tasks": {
-      "n_tasks": 566,
+      "n_tasks": 575,
       "task_types": {
         "ovr": 339,
-        "binary": 194,
+        "binary": 203,
         "binarized": 33
       },
       "spearman_with_IR": {
-        "noise_index": 0.174,
-        "rare": 0.111,
-        "kDN_min": 0.238,
-        "n_min_per_feature": -0.341,
+        "noise_index": 0.171,
+        "rare": 0.11,
+        "kDN_min": 0.237,
+        "n_min_per_feature": -0.361,
         "safe": -0.212
       },
       "by_IR_bin": {
         "(3.0, 9.0]": {
-          "n": 175,
-          "noise_median": 0.314,
-          "safe_median": 0.68,
-          "rare_median": 0.012
+          "n": 176,
+          "noise_median": 0.315,
+          "safe_median": 0.677,
+          "rare_median": 0.013
         },
         "(0.0, 3.0]": {
-          "n": 96,
-          "noise_median": 0.356,
-          "safe_median": 0.614,
-          "rare_median": 0.018
+          "n": 103,
+          "noise_median": 0.364,
+          "safe_median": 0.607,
+          "rare_median": 0.02
         },
         "(50.0, inf]": {
           "n": 50,
@@ -104,38 +104,38 @@
           "rare_median": 0.025
         },
         "(20.0, 50.0]": {
-          "n": 105,
-          "noise_median": 0.504,
-          "safe_median": 0.435,
-          "rare_median": 0.006
+          "n": 106,
+          "noise_median": 0.521,
+          "safe_median": 0.423,
+          "rare_median": 0.007
         }
       }
     },
     "binary_and_binarized": {
-      "n_tasks": 227,
+      "n_tasks": 236,
       "task_types": {
-        "binary": 194,
+        "binary": 203,
         "binarized": 33
       },
       "spearman_with_IR": {
-        "noise_index": 0.256,
-        "rare": 0.151,
-        "kDN_min": 0.322,
-        "n_min_per_feature": -0.491,
-        "safe": -0.295
+        "noise_index": 0.255,
+        "rare": 0.157,
+        "kDN_min": 0.33,
+        "n_min_per_feature": -0.526,
+        "safe": -0.304
       },
       "by_IR_bin": {
         "(3.0, 9.0]": {
-          "n": 50,
-          "noise_median": 0.474,
-          "safe_median": 0.443,
+          "n": 51,
+          "noise_median": 0.481,
+          "safe_median": 0.404,
           "rare_median": 0.04
         },
         "(0.0, 3.0]": {
-          "n": 39,
-          "noise_median": 0.402,
+          "n": 46,
+          "noise_median": 0.414,
           "safe_median": 0.557,
-          "rare_median": 0.021
+          "rare_median": 0.023
         },
         "(9.0, 20.0]": {
           "n": 72,
@@ -144,10 +144,10 @@
           "rare_median": 0.059
         },
         "(20.0, 50.0]": {
-          "n": 46,
-          "noise_median": 0.675,
-          "safe_median": 0.102,
-          "rare_median": 0.056
+          "n": 47,
+          "noise_median": 0.684,
+          "safe_median": 0.073,
+          "rare_median": 0.061
         },
         "(50.0, inf]": {
           "n": 20,

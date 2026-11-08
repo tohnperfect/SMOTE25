@@ -182,6 +182,24 @@ def _uci(kw):
     return kw
 SPEC += [('UCI-official', n, f'{U}/{r}' + ('+concat' if fn == 'concat' else ''), fn, _uci(kw)) for n, r, fn, kw in UCI]
 
+# --- Kaggle (8 Nov 2026, Toon logged in to Kaggle in the in-app browser; zips downloaded from the dataset pages,
+# sha256 in official_manifest.csv). Label = the target the Kaggle page names; id / index columns dropped.
+KG = 'official/kaggle'
+SPEC += [
+ ('Kaggle', 'aids 50000', f'{KG}/aadarshvelu__aids-virus-infection-prediction/AIDS_Classification_50000.csv', 'table', dict(label='infected')),
+ ('Kaggle', 'aids 15000', f'{KG}/aadarshvelu__aids-virus-infection-prediction/AIDS_Classification_15000.csv', 'table', dict(label='infected')),
+ ('Kaggle', 'aids 5000', f'{KG}/aadarshvelu__aids-virus-infection-prediction/AIDS_Classification_5000.csv', 'table', dict(label='infected')),
+ ('Kaggle', 'drug200', f'{KG}/prathamtripathi__drug-classification/drug200.csv', 'table', dict(label='Drug')),
+ ('Kaggle', 'cardiovascular', f'{KG}/sulianova__cardiovascular-disease-dataset/cardio_train.csv', 'table', dict(sep=';', label='cardio', drop=('id',))),
+ ('Kaggle', 'employee', f'{KG}/tawfikelmetwally__employee-dataset/Employee.csv', 'table', dict(label='LeaveOrNot')),
+ ('Kaggle', 'ibm hr attrition', f'{KG}/pavansubhasht__ibm-hr-analytics-attrition-dataset/WA_Fn-UseC_-HR-Employee-Attrition.csv', 'table',
+  dict(label='Attrition', drop=('EmployeeNumber',), encoding='utf-8-sig')),
+ ('Kaggle', 'airline satisfaction train', f'{KG}/teejmahal20__airline-passenger-satisfaction/train.csv', 'table', dict(label='satisfaction', drop=('Unnamed: 0', 'id'))),
+ ('Kaggle', 'smoke detection', f'{KG}/deepcontractor__smoke-detection-dataset/smoke_detection_iot.csv', 'table', dict(label='Fire Alarm', drop=('Unnamed: 0',))),
+ ('Kaggle', 'telco customer churn', f'{KG}/blastchar__telco-customer-churn/WA_Fn-UseC_-Telco-Customer-Churn.csv', 'table', dict(label='Churn', drop=('customerID',))),
+ ('Kaggle', 'har test', f'{KG}/uciml__human-activity-recognition-with-smartphones/test.csv', 'table', dict(label='Activity', drop=('subject',))),
+]
+
 def entries():
     # a spec is usable when all its files exist (path s[2] is the catalog key; '+t' marks a train+test combination)
     return [s for s in SPEC if all(os.path.exists(os.path.join(SRC, f)) for f in (s[4].get('files') or [s[2]]))]

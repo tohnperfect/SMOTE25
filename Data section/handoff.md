@@ -54,13 +54,13 @@
 | เรื่อง | ตัวเลขปัจจุบัน | ไฟล์ |
 |---|---|---|
 | corpus | 76 paper (มีการประเมินบนข้อมูล 73) · entry 1,747 (มีชื่อ 1,746; รวม 93 ชุดประกอบภาพ/ทดลองข้างเคียงของ 10 paper ที่เพิ่ม 8 พ.ย.) → 857 ชื่อ → 766 dataset → 482 family | `out/reconcile_counts.json`, `out/dataset_families.csv` |
-| ชนิด entry | original 533 · repository-defined 470 · modified 332 · synthetic 213 · not stated 199 (Toy ของ OREM-M: original → synthetic, override `EXTERNAL` ใน build/full_extraction.py) | `out/dataset_records.csv` |
-| ตรวจได้ (ความยาก) | 973 entry 65 paper 247 ไฟล์ (รอบแรก 8 พ.ย. 864/65/172; 28 ต.ค. 643/61/131) · ใหม่: V-author_release 43 entry (k-means SMOTE) | `difficulty/verify_ext_summary.json` |
-| task ที่วัดได้ | binary/binarise 227 (689 entry 46 paper) · OvR 339 · covertype ไม่ได้วัด (ใหญ่เกินเวลา) | `difficulty/profile_final_summary.json`, `difficulty/measure_log.csv` |
-| ความยากระดับชื่อ | มีโปรไฟล์ 305 (รวม varies 5) · หลายคลาส 63 · วัดไม่ได้ 489 (synthetic 196, ไม่พบไฟล์ 173, ขนาดไม่ตรง 81, task สร้างซ้ำไม่ได้ 28, อื่น 11) | `out/name_level_types.json`, `out/name_level_extras.json` |
-| 200 ชื่อที่ไม่มีไฟล์ (รอบแรก) | ตรวจได้แล้ว 83 ชื่อ (103 entry) · ได้ไฟล์แต่ขนาด/task ไม่ตรง 39 · modified ไม่พิมพ์ขนาด 8 · ยังไม่ได้ไฟล์ 70 (Kaggle ต้องมีบัญชี, HDDT เว็บปิด, private, ภาพ/ข้อความ/time series) | `out/names_download_result.csv`, `out/names_to_download.csv` (70 ที่เหลือ), `difficulty/official_manifest.csv` |
+| ชนิด entry | original 537 · repository-defined 470 · modified 332 · synthetic 213 · not stated 195 (Toy ของ OREM-M: original → synthetic, override `EXTERNAL`; กฎ NS ของ Toon รอบสาม: 4 entry SPIDER2 → original, `RULE_NS` จาก `out/rule_ns_original.csv`; ทั้งสองใน build/full_extraction.py) | `out/dataset_records.csv` |
+| ตรวจได้ (ความยาก) | 986 entry 65 paper 256 ไฟล์ (รอบสอง 973/65/247; รอบแรก 8 พ.ย. 864/65/172; 28 ต.ค. 643/61/131) · V-author_release 43 entry (k-means SMOTE, Toon ยืนยัน) · Kaggle 7 entry · Loyalty-SMOTE N+1 8 entry (Toon ยืนยัน) | `difficulty/verify_ext_summary.json` |
+| task ที่วัดได้ | binary/binarise 236 (701 entry 46 paper) · OvR 339 · covertype ไม่ได้วัด (ใหญ่เกินเวลา) | `difficulty/profile_final_summary.json`, `difficulty/measure_log.csv` |
+| ความยากระดับชื่อ | มีโปรไฟล์ 315 (รวม varies 5) · หลายคลาส 63 · วัดไม่ได้ 479 (synthetic 196, ไม่พบไฟล์ 161, ขนาดไม่ตรง 79, task สร้างซ้ำไม่ได้ 32, อื่น 11) | `out/name_level_types.json`, `out/name_level_extras.json` |
+| 200 ชื่อที่ไม่มีไฟล์ (รอบแรก) | ตรวจได้แล้ว 92 ชื่อ (114 entry) · ได้ไฟล์แต่ขนาด/task ไม่ตรง 42 · modified ไม่พิมพ์ขนาด 8 · ยังไม่ได้ไฟล์ 58 (HDDT เว็บปิด, private, ภาพ/ข้อความ/time series, Kaggle competition) | `out/names_download_result.csv`, `out/names_to_download.csv` (58 ที่เหลือ), `difficulty/official_manifest.csv` |
 | synthetic เผยแพร่ไหม | 29 paper 213 entry: เผยแพร่ 7 paper/63 (รวม Toy ของ OREM-M) · อ้างงานอื่น 3/13 · ขอได้ 1/60 (MC-MBRC) · บอกแค่ตัวสร้าง 1/3 · มีแค่โค้ด 5/10 · ไม่พบ 13/64 (OREM-M อยู่ 2 กลุ่ม) | `out/synthetic_availability.json` |
-| ผลชนะ SMOTE | plain 29 paper 1,511 แถว ชนะ 1,107 เสมอ 102 แพ้ 286 (ไม่เปลี่ยน) · H1 ไม่ได้รับการสนับสนุน (GEE 0.69 p 0.10) · noise +0.1 → odds ชนะ ×1.15 (p 0.01) | `out/winloss_allmetric_summary.json`, `out/hypotheses.json`, `out/difficulty_outcomes.json` |
+| ผลชนะ SMOTE | plain 29 paper 1,511 แถว ชนะ 1,107 เสมอ 102 แพ้ 286 (ไม่เปลี่ยน) · H1 ไม่ได้รับการสนับสนุน (GEE 0.69 p 0.10) · noise +0.1 → odds ชนะ ×1.14 (p 0.009) | `out/winloss_allmetric_summary.json`, `out/hypotheses.json`, `out/difficulty_outcomes.json` |
 | manuscript | `manuscript/data-section-draft.tex` (แก้ที่นี่) → `data-section-final.tex` + `.bib` (make_final.py) → **`manuscript/data-section-jair.pdf`** (template JAIR จริง, build_jair_pdf.py) · พรีวิวแบบมีมาร์กอัป `data-section-draft-preview.pdf` | |
 | HTML หลัก | `out/dataset-atlas.html` (มีแท็บ Handoff ที่ฝังไฟล์นี้ทั้งไฟล์) | `build/make_atlas.py` + `build/atlas_template.html` |
 | git | commit ในเครื่องแล้ว ยังไม่ push (push ต้องรันเองบนเครื่อง) | |
@@ -2066,4 +2066,34 @@ python3 build/outcome_pilot.py
 **สคริปต์ที่ต้องรันบนเครื่อง (มี paper/)**: modified_operations.py (เพิ่มกฎ RSMOTE outlier added), difficulty_evidence.py, baseline_provenance.py, synthetic_availability.py — รันแล้วดึงผลกลับ · ข้อควรระวัง: `device_commit_files` จาก path เดิมใน outputs อาจได้สำเนาเก่า ให้ใช้ชื่อไฟล์ใหม่ทุกครั้ง
 **manuscript**: แก้ตัวเลขทุกจุด (landscape, ตาราง data-handling, ความครบ, modified, difficulty ทั้งหัวข้อ + ตารางอ้างอิงที่ generate ใหม่, Limits, H1, H2, wins-by-type, noise vs ชนะ, H3b, ย่อหน้า synthetic ใหม่) · bib เพิ่ม gutierrez2016ordinal, chang2011libsvm · JAIR PDF 15 หน้า undefined 0 overfull 0
 **Atlas**: การ์ดแหล่งไฟล์รวมแหล่งใหม่ · การ์ดใหม่ "ผลการตามไฟล์ของ 200 ชื่อ" (ค้นได้ มีคอลัมน์ตรวจของ Toon) · การ์ด synthetic บอกว่าส่วน B นับเป็น entry แล้ว
+- ไม่ได้ push
+
+---
+
+### 8 พ.ย. 2026 รอบสาม (Claude) — กฎ NS, ขนาด +1 ของ Loyalty-SMOTE, Kaggle
+
+คำสั่ง Toon: (1) ผู้วิจัยไม่บอกขนาดแต่บอกชื่อ dataset ถ้าอยู่ใน dataset ประเภท original ก็นับเป็น original · (2) ขนาดเกิน 1 แถวของ Loyalty-SMOTE น่าจะนับแถวหัวตาราง นับว่าตรง · (3) Toon login Kaggle ใน browser ของแอปให้ แล้วโหลดชุดที่เข้าไม่ได้
+คำตอบ AskUserQuestion: กฎ (1) → "เปลี่ยนหมวดเป็น original" · V-author_release (43 entry ของ k-means SMOTE) → "นับว่าตรวจได้"
+
+**(1) กฎ NS** — `build/rule_ns.py` → `out/rule_ns_original.csv` → `build/full_extraction.py` (`RULE_NS`, ลำดับ EXTERNAL > RULE_NS > keel_rule) → `build/apply_category_overrides.py` (คัดลอกเฉพาะคอลัมน์หมวดไป verified_datasets/verified_outcomes; แถวที่มี mapping_audit 19 ต.ค. ไม่แตะ)
+- เงื่อนไข: หมวด not stated + ไม่พิมพ์ขนาด (n_instances ว่าง) + สถานะตรวจ V-name_only_ext / V-name_only_other (ชื่อตรงไฟล์สาธารณะ และไม่ใช่ entry ที่ดัดแปลง)
+- ผล 4 entry ทั้งหมดของ SPIDER2: Breast can., Cleveland, Ecoli, New thyr. → original 533 → 537, not stated 199 → 195 · แถวผล 0 (SPIDER2 ไม่มีแถวใน verified_outcomes.csv) → H1/H3b/ตารางชนะไม่เปลี่ยน · dataset_records EXPECTED แก้ตาม
+- manuscript: ตาราง data-handling + ประโยควิธี "A set whose source the paper does not state, for which it prints no size, and whose name identifies a public unmodified file was labelled original (four entries)"
+
+**(2) ขนาด +1 ของ Loyalty-SMOTE** — `difficulty/verify_ext.py` `HEADER_ROW_PAPERS = {'Loyalty-SMOTE'}`: เมื่อไม่มีไฟล์ขนาดตรง ให้รับไฟล์ที่ N = ที่พิมพ์ − 1 (basis เขียน "printed N = file N + 1 (header row counted, Toon 8 Nov)")
+- ตรวจได้เพิ่ม: banknote, bankruptcy ×2, wdbc, purchase (shoppers), satisfied, smoke, yeast (หลายคลาส) = 8 entry
+- ยังไม่ผ่านแม้ขนาดตรงแล้ว: maternal, academic, wpbc, obesity, firewall (ไฟล์หลายคลาส paper ไม่พิมพ์คลาส/minority จึงสร้าง task ไม่ได้), employee (ดูข้อ 3)
+- เพิ่มการตรวจใหม่ใน verify_ext: ไฟล์ 2 คลาสไม่รับเมื่อ paper พิมพ์จำนวนคลาส ≠ 2 (U-task_not_reconstructible)
+
+**(3) Kaggle** — Toon login (Microsoft SSO) ใน browser ของแอป · API ของ Kaggle ใช้ fetch ไม่ได้ (CORS/redirect) จึงกดปุ่ม Download บนหน้า dataset → ไฟล์ลง Downloads เป็น archive*.zip → stage ขึ้น cloud → `difficulty/src/official/kaggle/` · URL + sha256 ใน `difficulty/official_manifest.csv` (tag kaggle, 9 ไฟล์)
+- loader ใน `difficulty/official_sources.py` (KG): aids 50000/15000/5000 (infected), drug200 (Drug), cardiovascular (sep ';', cardio, ตัด id), employee (LeaveOrNot), ibm hr attrition (Attrition, ตัด EmployeeNumber), airline satisfaction train (satisfaction, ตัด Unnamed: 0, id), smoke detection (Fire Alarm, ตัด Unnamed: 0), telco customer churn (Churn, ตัด customerID), har test (Activity, ตัด subject) · ALIAS: employe attrition/hr → ibm hr attrition, satisfied → airline satisfaction train, smoke → smoke detection, smartphone → har test · SRC_RANK Kaggle = 2 (หลังไฟล์ผู้เขียน/KEEL)
+- ตรวจได้: AB-SMOTE telco customer churn, employe attrition; Loyalty-SMOTE aids 5000/15000/50000, satisfied, smoke (7 entry จาก Kaggle)
+- ไม่ผ่าน (กติกาเดิม ไม่ผ่อน): hr (N ตรง 1,470 แต่ feature 21 vs ไฟล์ 33) · employee (paper พิมพ์ 3 คลาส ไฟล์มี 2) · drug200 (พิมพ์ 413 ไฟล์ 200) · cardiovascular (พิมพ์ 55,772 ไฟล์ 70,000) · smartphone (feature 536 vs 561)
+- ไม่ได้โหลด: icr ของ Loyalty-SMOTE (เป็น competition ต้องกดยอมรับกติกาการแข่งขัน — ไม่ได้กดแทน Toon) · credit ของ CTGAN/TVAE (ตามบันทึกของ Toon คือเวอร์ชันของ SDGym ไม่ใช่ไฟล์ Kaggle ตรง ๆ; ยังไม่ได้โหลดรอบนี้) · approval ของ Loyalty-SMOTE (697 × 7 ยังระบุไม่ได้ว่าเป็นชุดไหน)
+- ข้อจำกัดที่เขียนใน manuscript: ไฟล์ Kaggle ผู้ใช้เป็นคนอัปโหลด อาจไม่ใช่ไฟล์เดียวกับที่ paper ใช้
+
+**ผล**: ตรวจได้ **986 entry 65 paper 256 ไฟล์** · task binary/binarise **236** (701 entry 46 paper) OvR 339 · small sample 160 (68%), outliers 83 (35%), small disjuncts 33 (14%), ไม่ติดธง 63 · โปรไฟล์ S 87, none 63, S+O 42, D+S+O 28, O 11, D+S 3, D+O 2 · noise median 0.58 [0.29, 0.77] · แถบ IR 0.31 (6) / 0.44 (40) / 0.48 (51) / 0.66 (139), rho 0.26 · ราย paper 39 (ผสม 36) · ชุดอ้างอิง 42 task 19 ช่อง N 79–62,630 · noise vs ชนะ: 106 ไฟล์ 23 paper 494 แถว OR 1.14 (1.03–1.27, p 0.009), ภายใน paper 1.18 (p 0.009), หนึ่งผลต่อไฟล์ 1.20 (1.04–1.39, p 0.01), IR 0.92 p 0.58
+- 200 ชื่อ: ตรวจได้ 92 ชื่อ (114 entry) · ได้ไฟล์แต่ไม่ตรง 42 · modified ไม่พิมพ์ขนาด 8 · ยังไม่ได้ไฟล์ 58 · ระดับชื่อ: ไม่พบไฟล์ 161 (58 ระบุแหล่งสาธารณะ), synthetic 196, ขนาดไม่ตรง 79
+- manuscript แก้: ย่อหน้ากติกาตรวจ (N+1, คลาส, Kaggle), 986/256, 236/701, ตารางความยาก, ย่อหน้าโปรไฟล์, Figure Description/caption, paper mix 39/36, ชุดอ้างอิง (ตาราง generate ใหม่), Limits (Kaggle + 161/58/196/79), noise vs ชนะ · overview.json, CONCLUSIONS.md, section 0 ของไฟล์นี้
+- ไฟล์ใน Downloads ของ Toon ที่เป็นของเรา (ลบเองได้): 01ad4a4f…tmp, smote25_uci_a.bin, smote25_uci_b.bin, uci_extended.tar.gz, archive.zip, archive1–8.zip (สำเนาอยู่ใน difficulty/src/ แล้ว)
 - ไม่ได้ push

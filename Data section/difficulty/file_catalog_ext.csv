@@ -862,3 +862,14 @@ UCI-official,gender,src/official/uci/852_gender+gap+in+spanish+wp.zip.d/data.csv
 UCI-official,obesity,src/official/uci/544_estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition.zip.d/ObesityDataSet_raw_and_data_sinthetic.csv,2111,16,7,272,"[272, 287, 290, 290, 297, 324, 351]",,obesity
 UCI-official,rt-iot,src/official/uci/942_rt-iot2022.zip.d/RT_IOT2022,123117,83,12,28,"[28, 37, 253, 534, 1002, 2000, 2010, 2590, 4146, 7750, 8108, 94659]",,rtiot
 UCI-official,steel plates faults 7class,src/official/uci/198_steel+plates+faults.zip.d/Faults.NNA,1941,27,7,55,"[55, 72, 158, 190, 391, 402, 673]",,steelplatesfaults7class
+Kaggle,aids 50000,src/official/kaggle/aadarshvelu__aids-virus-infection-prediction/AIDS_Classification_50000.csv,50000,22,2,15506,"[15506, 34494]",,aids50000
+Kaggle,aids 15000,src/official/kaggle/aadarshvelu__aids-virus-infection-prediction/AIDS_Classification_15000.csv,15000,22,2,4631,"[4631, 10369]",,aids15000
+Kaggle,aids 5000,src/official/kaggle/aadarshvelu__aids-virus-infection-prediction/AIDS_Classification_5000.csv,5000,22,2,1579,"[1579, 3421]",,aids5000
+Kaggle,drug200,src/official/kaggle/prathamtripathi__drug-classification/drug200.csv,200,5,5,16,"[16, 16, 23, 54, 91]",,drug200
+Kaggle,cardiovascular,src/official/kaggle/sulianova__cardiovascular-disease-dataset/cardio_train.csv,70000,11,2,34979,"[34979, 35021]",,cardiovascular
+Kaggle,employee,src/official/kaggle/tawfikelmetwally__employee-dataset/Employee.csv,4653,8,2,1600,"[1600, 3053]",,employee
+Kaggle,ibm hr attrition,src/official/kaggle/pavansubhasht__ibm-hr-analytics-attrition-dataset/WA_Fn-UseC_-HR-Employee-Attrition.csv,1470,33,2,237,"[237, 1233]",,ibmhrattrition
+Kaggle,airline satisfaction train,src/official/kaggle/teejmahal20__airline-passenger-satisfaction/train.csv,103904,22,2,45025,"[45025, 58879]",,airlinesatisfactiontrain
+Kaggle,smoke detection,src/official/kaggle/deepcontractor__smoke-detection-dataset/smoke_detection_iot.csv,62630,14,2,17873,"[17873, 44757]",,smokedetection
+Kaggle,telco customer churn,src/official/kaggle/blastchar__telco-customer-churn/WA_Fn-UseC_-Telco-Customer-Churn.csv,7043,19,2,1869,"[1869, 5174]",,telcocustomerchurn
+Kaggle,har test,src/official/kaggle/uciml__human-activity-recognition-with-smartphones/test.csv,2947,561,6,420,"[420, 471, 491, 496, 532, 537]",,hartest

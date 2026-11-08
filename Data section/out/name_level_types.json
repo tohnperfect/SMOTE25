@@ -14,19 +14,19 @@
   "modified": 233,
   "synthetic": 194,
   "repository-defined": 164,
-  "original": 148,
-  "not stated": 118
+  "original": 150,
+  "not stated": 116
  },
  "entry_level_by_category": {
   "modified": 332,
   "synthetic": 212,
   "repository-defined": 470,
-  "original": 533,
-  "not stated": 199
+  "original": 537,
+  "not stated": 195
  },
  "names_single_type": 743,
  "names_mixed_type": 114,
- "not_stated_single_paper": 113,
+ "not_stated_single_paper": 111,
  "difficulty_order": [
   "none",
   "small_sample",
@@ -40,16 +40,16 @@
   "not measured"
  ],
  "by_difficulty": {
-  "none": 78,
+  "none": 85,
   "small_sample": 116,
-  "outlier_flag": 11,
-  "small_sample + outlier_flag": 54,
+  "outlier_flag": 12,
+  "small_sample + outlier_flag": 56,
   "small_disjuncts + outlier_flag": 2,
   "small_disjuncts + small_sample": 4,
   "small_disjuncts + small_sample + outlier_flag": 35,
   "varies": 5,
   "multiclass": 63,
-  "not measured": 489
+  "not measured": 479
  },
  "type_by_difficulty": {
   "modified": {
@@ -89,28 +89,28 @@
    "not measured": 20
   },
   "original": {
-   "none": 10,
+   "none": 12,
    "small_sample": 7,
    "outlier_flag": 5,
-   "small_sample + outlier_flag": 2,
+   "small_sample + outlier_flag": 3,
    "small_disjuncts + outlier_flag": 0,
-   "small_disjuncts + small_sample": 0,
+   "small_disjuncts + small_sample": 1,
    "small_disjuncts + small_sample + outlier_flag": 0,
    "varies": 1,
-   "multiclass": 37,
-   "not measured": 86
+   "multiclass": 38,
+   "not measured": 83
   },
   "not stated": {
-   "none": 7,
+   "none": 12,
    "small_sample": 3,
-   "outlier_flag": 3,
-   "small_sample + outlier_flag": 6,
+   "outlier_flag": 4,
+   "small_sample + outlier_flag": 7,
    "small_disjuncts + outlier_flag": 1,
-   "small_disjuncts + small_sample": 2,
+   "small_disjuncts + small_sample": 1,
    "small_disjuncts + small_sample + outlier_flag": 2,
    "varies": 1,
-   "multiclass": 1,
-   "not measured": 92
+   "multiclass": 0,
+   "not measured": 85
   }
  },
  "source_order": [
@@ -147,8 +147,8 @@
    "modified": 121,
    "synthetic": 0,
    "repository-defined": 0,
-   "original": 52,
-   "not stated": 30
+   "original": 54,
+   "not stated": 28
   },
   "group-level": {
    "modified": 1,
@@ -226,7 +226,7 @@
    "not measured": 89
   },
   "group-level": {
-   "none": 1,
+   "none": 4,
    "small_sample": 1,
    "outlier_flag": 2,
    "small_sample + outlier_flag": 0,
@@ -235,19 +235,19 @@
    "small_disjuncts + small_sample + outlier_flag": 0,
    "varies": 0,
    "multiclass": 3,
-   "not measured": 13
+   "not measured": 10
   },
   "other repository": {
-   "none": 10,
+   "none": 14,
    "small_sample": 3,
-   "outlier_flag": 2,
-   "small_sample + outlier_flag": 8,
+   "outlier_flag": 3,
+   "small_sample + outlier_flag": 10,
    "small_disjuncts + outlier_flag": 1,
    "small_disjuncts + small_sample": 1,
    "small_disjuncts + small_sample + outlier_flag": 3,
    "varies": 0,
    "multiclass": 0,
-   "not measured": 53
+   "not measured": 46
   },
   "other paper/author": {
    "none": 0,
@@ -385,7 +385,7 @@
   "private": "private",
   "synthetic": "synthetic"
  },
- "measured_names": 305,
+ "measured_names": 315,
  "rules": {
   "source": "แหล่งตามที่ paper เขียน จัดเป็น 8 กลุ่มด้วยการจับข้อความ (source_map) · ระดับชื่อ: ถ้า paper ที่ระบุแหล่งรายชุดระบุตรงกันแหล่งเดียว ใช้แหล่งนั้น · ระบุต่างกัน = multiple · ไม่มี paper ระบุรายชุด แต่มีระดับกลุ่ม (เช่น UCI หรือ KEEL) = group-level · ไม่มีเลย = not stated",
   "type": "ชื่อหนึ่งได้ชนิดเดียว: ถ้ามี entry ใดเป็นชนิดที่มาก่อนตามลำดับ precedence ใช้ชนิดนั้น (เคยดัดแปลง = modified)",

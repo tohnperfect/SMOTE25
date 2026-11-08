@@ -68,6 +68,14 @@ EXTERNAL = {
                         "as OREM-M Table 6 (printed in another class order); not modified"),
 }
 
+# Rule NS (Toon 8 Nov 2026): category `not stated`, no printed size, name matched by name only to a public unmodified file
+# -> original. The list is written by build/rule_ns.py from difficulty/verifiability_entries.csv (two-step: run rule_ns.py,
+# then this script, then build/apply_category_overrides.py).
+RULE_NS = {}
+if os.path.exists(P("out/rule_ns_original.csv")):
+    for _r in csv.DictReader(open(P("out/rule_ns_original.csv"), encoding="utf-8")):
+        RULE_NS[(_r["paper_key"], _r["name_as_reported"])] = ("original", f"rule NS: no printed size, name = public file {_r['file_src']}:{_r['file']} (Toon 8 Nov)")
+
 def strip_variants(nm):
     s = str(nm or ""); out = {norm(s)}
     for inner in re.findall(r"\(([^)]*)\)", s): out.add(norm(inner))
@@ -100,7 +108,7 @@ for f in sorted(glob.glob(P("ai-draft/full/*.json"))):
                  n_minority=x.get("n_minority"), n_majority=x.get("n_majority"), class_distribution=x.get("class_distribution"),
                  ir_printed=x.get("ir_printed"), how_obtained=x.get("how_obtained"), how_obtained_detail=x.get("how_obtained_detail"),
                  in_results_table=x.get("in_results_table"), ref=x.get("ref"))
-        r["how_obtained_final"], r["how_basis"] = EXTERNAL.get((k, x.get("name"))) or keel_rule(x, d.get("task"))
+        r["how_obtained_final"], r["how_basis"] = EXTERNAL.get((k, x.get("name"))) or RULE_NS.get((k, x.get("name"))) or keel_rule(x, d.get("task"))
         ds_rows.append(r); dmap.setdefault(norm(x.get("name")), r)
     sk = smote_kind(o.get("smote_name_as_printed")) if o.get("smote_in_baselines") == "yes" else "not a baseline"
     rows_with_smote = 0; idx = 0

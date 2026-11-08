@@ -12,41 +12,41 @@
   },
   "excluded": 19,
   "all_tasks": {
-    "n_tasks": 566,
+    "n_tasks": 575,
     "axis_counts": {
       "small_disjuncts": 59,
-      "outlier_heavy": 124,
-      "small_sample": 315,
-      "small_sample_onehot": 337
+      "outlier_heavy": 126,
+      "small_sample": 317,
+      "small_sample_onehot": 339
     },
     "profiles": {
-      "none of the cited axes": 228,
+      "none of the cited axes": 235,
       "small_sample": 205,
-      "outlier_heavy + small_sample": 57,
+      "outlier_heavy + small_sample": 59,
       "small_disjuncts + outlier_heavy + small_sample": 44,
       "outlier_heavy": 17,
       "small_disjuncts + small_sample": 9,
       "small_disjuncts + outlier_heavy": 6
     },
     "ir_band": {
-      "<=1.5": 23,
-      "1.5-3 low": 73,
-      "3-9 medium": 175,
-      ">9 high": 295
+      "<=1.5": 25,
+      "1.5-3 low": 78,
+      "3-9 medium": 176,
+      ">9 high": 296
     },
     "noise_index_quantiles": {
       "0.1": 0.014,
-      "0.25": 0.121,
+      "0.25": 0.122,
       "0.5": 0.399,
-      "0.75": 0.696,
-      "0.9": 0.808
+      "0.75": 0.702,
+      "0.9": 0.811
     },
     "ir_band_by_profile": {
       "none of the cited axes": {
         ">9 high": 84,
         "3-9 medium": 78,
-        "1.5-3 low": 47,
-        "<=1.5": 19
+        "1.5-3 low": 52,
+        "<=1.5": 21
       },
       "outlier_heavy": {
         ">9 high": 12,
@@ -55,8 +55,8 @@
         "1.5-3 low": 0
       },
       "outlier_heavy + small_sample": {
-        ">9 high": 50,
-        "3-9 medium": 7,
+        ">9 high": 51,
+        "3-9 medium": 8,
         "<=1.5": 0,
         "1.5-3 low": 0
       },
@@ -87,41 +87,41 @@
     }
   },
   "binary_and_binarized": {
-    "n_tasks": 227,
+    "n_tasks": 236,
     "axis_counts": {
       "small_disjuncts": 33,
-      "outlier_heavy": 81,
-      "small_sample": 158,
-      "small_sample_onehot": 166
+      "outlier_heavy": 83,
+      "small_sample": 160,
+      "small_sample_onehot": 168
     },
     "profiles": {
       "small_sample": 87,
-      "none of the cited axes": 56,
-      "outlier_heavy + small_sample": 40,
+      "none of the cited axes": 63,
+      "outlier_heavy + small_sample": 42,
       "small_disjuncts + outlier_heavy + small_sample": 28,
       "outlier_heavy": 11,
       "small_disjuncts + small_sample": 3,
       "small_disjuncts + outlier_heavy": 2
     },
     "ir_band": {
-      "<=1.5": 4,
-      "1.5-3 low": 35,
-      "3-9 medium": 50,
-      ">9 high": 138
+      "<=1.5": 6,
+      "1.5-3 low": 40,
+      "3-9 medium": 51,
+      ">9 high": 139
     },
     "noise_index_quantiles": {
-      "0.1": 0.088,
-      "0.25": 0.295,
-      "0.5": 0.568,
-      "0.75": 0.767,
-      "0.9": 0.863
+      "0.1": 0.087,
+      "0.25": 0.293,
+      "0.5": 0.579,
+      "0.75": 0.768,
+      "0.9": 0.86
     },
     "ir_band_by_profile": {
       "none of the cited axes": {
-        "1.5-3 low": 22,
+        "1.5-3 low": 27,
         ">9 high": 18,
         "3-9 medium": 14,
-        "<=1.5": 2
+        "<=1.5": 4
       },
       "outlier_heavy": {
         ">9 high": 7,
@@ -130,8 +130,8 @@
         "1.5-3 low": 0
       },
       "outlier_heavy + small_sample": {
-        ">9 high": 36,
-        "3-9 medium": 4,
+        ">9 high": 37,
+        "3-9 medium": 5,
         "<=1.5": 0,
         "1.5-3 low": 0
       },

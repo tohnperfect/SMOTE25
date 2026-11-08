@@ -6,6 +6,15 @@ author,git:b10071007/Model-Based-Synthetic-Sampling,https://github.com/b10071007
 author,git:sisinflab-swot/mafalda,https://github.com/sisinflab-swot/mafalda,2026-11-08,,0bf33dfb1bcd0352f240ed1a2a3f469c90a229bb
 author,git:smallcube/HD-Ensemble,https://github.com/smallcube/HD-Ensemble,2026-11-08,,ae78b37243391f42475ce485bcbc90c124dfdd3d
 author,kmeans_uci_extended.tar.gz,https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,2026-11-08,63688428,bc0aff0adc079ab01a51d286c070334ca23a393393488a6fee441cf3cd0225cf
+kaggle,aadarshvelu/aids-virus-infection-prediction.zip,https://www.kaggle.com/datasets/aadarshvelu/aids-virus-infection-prediction,2026-11-08,1710961,3e0f6bffc2c0dbe2c0b859d0e2d1bba650efe93fc3b8b984d12cb4c0f992b292
+kaggle,blastchar/telco-customer-churn.zip,https://www.kaggle.com/datasets/blastchar/telco-customer-churn,2026-11-08,175758,cf7e6dcd8a238ecaa841a7d133142525453992d8d5e3ef6d1e5f0d359e7bf444
+kaggle,deepcontractor/smoke-detection-dataset.zip,https://www.kaggle.com/datasets/deepcontractor/smoke-detection-dataset,2026-11-08,1721785,9c1fb61d38f5efa0293c3f2c36f7c4af2556ee0a177653adaaaeb1ea78aceff8
+kaggle,pavansubhasht/ibm-hr-analytics-attrition-dataset.zip,https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset,2026-11-08,51314,8368f123ae1ae9e30c2f19f28e766a28d7481d1486ff9aabc9e0533fefcf6be3
+kaggle,prathamtripathi/drug-classification.zip,https://www.kaggle.com/datasets/prathamtripathi/drug-classification,2026-11-08,1720,f90803a2539f3aac059890557a0525879ab05e7b682be148b6ad343b37f43c7c
+kaggle,sulianova/cardiovascular-disease-dataset.zip,https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset,2026-11-08,760066,b78ff607480810c3e27de3e11d52c4962a3a81dbb3d69365e1cf3394a67c2b23
+kaggle,tawfikelmetwally/employee-dataset.zip,https://www.kaggle.com/datasets/tawfikelmetwally/employee-dataset,2026-11-08,18961,bd9370633edb356ed980120d17397e66033531a7fa383595853aa7e283cae8bd
+kaggle,teejmahal20/airline-passenger-satisfaction.zip,https://www.kaggle.com/datasets/teejmahal20/airline-passenger-satisfaction,2026-11-08,2841945,9dda424707f8bf6be12313df3c6c24ea9eed04b3ec85b50dae5089125f0d701b
+kaggle,uciml/human-activity-recognition-with-smartphones.zip,https://www.kaggle.com/datasets/uciml/human-activity-recognition-with-smartphones,2026-11-08,25693584,431950be2adea269b54df9f2d93de29f46117f87fa5e3057c4ae36c4c00c78f4
 libsvm,binary/a1a,https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary/a1a,2026-11-08T10:15:51.500Z,114818,eb54c45f1bdb51286f803dd092eb8202b44637a858fc6c4e533a2d64a0d94b4e
 libsvm,binary/a1a.t,https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary/a1a.t,2026-11-08T10:15:51.500Z,2215057,0212d0c4a3996fe6fb6a0ab54033d9f4fa4b60369b6e3bb141821d9ffc40c04d
 libsvm,binary/fourclass,https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary/fourclass,2026-11-08T10:15:51.500Z,25006,7b36a3beaa482bd982b8a601a26b7e74ffc39e00a825b5b501bd17b34a56e48f

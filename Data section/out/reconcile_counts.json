@@ -3,7 +3,7 @@
  "sources": {
   "datasets": {
    "path": "out/verified_datasets.csv",
-   "sha256": "51cc7a84be2f40d714edb7d5b9982d59170c8a4f6894f73141f860251733cb25"
+   "sha256": "cc52ae1d44c5f3ccb95eb9881f6b55fb7b087b17d9e6cab990165daf16959471"
   },
   "outcomes": {
    "path": "out/verified_outcomes.csv",
@@ -11,7 +11,7 @@
   },
   "summary": {
    "path": "out/full_summary.json",
-   "sha256": "f4906f4aa02e75e82090e6fdd4d40857e3673cd0fafb0f39cf38c2b0a8fca924"
+   "sha256": "a63671ca90a0be58250e3dac45d1a0650c3327aebb3fe1e88abfb560bf190f2c"
   }
  },
  "names": {
@@ -99,11 +99,15 @@
       "336"
      ],
      "papers_per_size": {
-      "310": [
-       "G-SMOTE"
-      ],
       "301": [
        "G-SMOTE"
+      ],
+      "327": [
+       "AMDO",
+       "EMDO",
+       "GLOS",
+       "MDO",
+       "SMOM"
       ],
       "336": [
        "A-SUWO",
@@ -122,12 +126,8 @@
        "SMOTE-IPF",
        "k-means SMOTE"
       ],
-      "327": [
-       "AMDO",
-       "EMDO",
-       "GLOS",
-       "MDO",
-       "SMOM"
+      "310": [
+       "G-SMOTE"
       ]
      }
     },
@@ -140,7 +140,13 @@
       "769"
      ],
      "papers_per_size": {
+      "590": [
+       "G-SMOTE"
+      ],
       "769": [
+       "G-SMOTE"
+      ],
+      "635": [
        "G-SMOTE"
       ],
       "768": [
@@ -160,12 +166,6 @@
        "SMOTE-ENN / SMOTE-Tomek",
        "SMOTE-IPF",
        "k-means SMOTE"
-      ],
-      "635": [
-       "G-SMOTE"
-      ],
-      "590": [
-       "G-SMOTE"
       ]
      }
     }
@@ -229,11 +229,15 @@
       "336"
      ],
      "papers_per_size": {
-      "310": [
-       "G-SMOTE"
-      ],
       "301": [
        "G-SMOTE"
+      ],
+      "327": [
+       "AMDO",
+       "EMDO",
+       "GLOS",
+       "MDO",
+       "SMOM"
       ],
       "336": [
        "A-SUWO",
@@ -255,12 +259,8 @@
        "SMOTE-IPF",
        "k-means SMOTE"
       ],
-      "327": [
-       "AMDO",
-       "EMDO",
-       "GLOS",
-       "MDO",
-       "SMOM"
+      "310": [
+       "G-SMOTE"
       ]
      }
     },
@@ -273,7 +273,13 @@
       "769"
      ],
      "papers_per_size": {
+      "590": [
+       "G-SMOTE"
+      ],
       "769": [
+       "G-SMOTE"
+      ],
+      "635": [
        "G-SMOTE"
       ],
       "768": [
@@ -293,12 +299,6 @@
        "SMOTE-ENN / SMOTE-Tomek",
        "SMOTE-IPF",
        "k-means SMOTE"
-      ],
-      "635": [
-       "G-SMOTE"
-      ],
-      "590": [
-       "G-SMOTE"
       ]
      }
     }

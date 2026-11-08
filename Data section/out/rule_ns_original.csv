@@ -1,0 +1,5 @@
+record_id,paper_key,name_as_reported,verif,file,file_src
+P021-D026,SPIDER2,Breast can.,V-name_only_ext,breast.cancer,Weka-UCI
+P021-D028,SPIDER2,Cleveland,V-name_only_ext,cleveland,KEEL-std(F)
+P021-D029,SPIDER2,Ecoli,V-name_only_other,ecoli,PMLB
+P021-D032,SPIDER2,New thyr.,V-name_only_ext,newthyroid,KEEL-std(F)
