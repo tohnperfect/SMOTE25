@@ -23,7 +23,7 @@
 | ในนั้นต่างจาก SMOTE ไม่เกิน ±0.03 (median) | 19 |
 | Systematic search (นำร่องบน OpenAlex) | 14,589 records, เจอ SMOTE-family 36/37 |
 | ร่าง paper | v2.3, 26 หน้า, compile ด้วย class ของ JAIR ผ่าน |
-| Push ล่าสุด | `ea1eaa8` (29 ต.ค.); งานตั้งแต่ 29 ต.ค. ถึง 8 พ.ย. **ยังไม่ push** |
+| Push ล่าสุด | `72c8495` (8 พ.ย.): งานทั้งหมดจนถึง 8 พ.ย. อยู่บน `main` แล้ว |
 
 ---
 
