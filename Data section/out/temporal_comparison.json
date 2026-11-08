@@ -96,7 +96,12 @@
      "of": 50,
      "pct": 4.0
     },
-    "OT": {
+    "NI": {
+     "n": 0,
+     "of": 50,
+     "pct": 0.0
+    },
+    "LC": {
      "n": 3,
      "of": 50,
      "pct": 6.0
@@ -128,7 +133,12 @@
      "of": 14,
      "pct": 14.3
     },
-    "OT": {
+    "NI": {
+     "n": 0,
+     "of": 14,
+     "pct": 0.0
+    },
+    "LC": {
      "n": 2,
      "of": 14,
      "pct": 14.3
@@ -356,14 +366,19 @@
      "pct": 4.0
     },
     "FM": {
-     "n": 11,
+     "n": 10,
      "of": 199,
-     "pct": 5.5
+     "pct": 5.0
     },
-    "OT": {
-     "n": 1,
+    "NI": {
+     "n": 2,
      "of": 199,
-     "pct": 0.5
+     "pct": 1.0
+    },
+    "LC": {
+     "n": 0,
+     "of": 199,
+     "pct": 0.0
     }
    },
    "modification_ops_papers_of_all_papers": {
@@ -388,14 +403,19 @@
      "pct": 15.4
     },
     "FM": {
-     "n": 4,
+     "n": 3,
      "of": 26,
-     "pct": 15.4
+     "pct": 11.5
     },
-    "OT": {
+    "NI": {
      "n": 1,
      "of": 26,
      "pct": 3.8
+    },
+    "LC": {
+     "n": 0,
+     "of": 26,
+     "pct": 0.0
     }
    },
    "modifying_papers_with_stated_purpose": {
@@ -629,10 +649,15 @@
      "of": 83,
      "pct": 3.6
     },
-    "OT": {
+    "NI": {
      "n": 1,
      "of": 83,
      "pct": 1.2
+    },
+    "LC": {
+     "n": 0,
+     "of": 83,
+     "pct": 0.0
     }
    },
    "modification_ops_papers_of_all_papers": {
@@ -661,10 +686,15 @@
      "of": 32,
      "pct": 3.1
     },
-    "OT": {
+    "NI": {
      "n": 1,
      "of": 32,
      "pct": 3.1
+    },
+    "LC": {
+     "n": 0,
+     "of": 32,
+     "pct": 0.0
     }
    },
    "modifying_papers_with_stated_purpose": {

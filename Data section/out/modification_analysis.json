@@ -1,0 +1,2831 @@
+{
+ "source": "Modified data: what was done, why, signals in the experimental design, reuse, and use over time  (9 Nov 2026, Claude;",
+ "purpose": {
+  "papers": 43,
+  "papers_with_modified_entries": 39,
+  "papers_noise_only": [
+   "MC-CCR",
+   "MC-MBRC",
+   "MC-NCLWO",
+   "RBO"
+  ],
+  "by_theme_papers": {
+   "two-class scope": 10,
+   "create/raise imbalance": 9,
+   "robustness test": 8,
+   "practical": 2,
+   "not stated": 19
+  },
+  "harder_papers": 16,
+  "scope_papers": 10,
+  "by_theme_entries": {
+   "not stated": 127,
+   "two-class scope": 51,
+   "create/raise imbalance": 149,
+   "practical": 10,
+   "robustness test": 3
+  },
+  "entries": 332,
+  "harder_entries": 152,
+  "scope_entries": 51,
+  "basis_papers": {
+   "basis: earlier work": 5,
+   "basis: stated rule": 2,
+   "not stated": 36
+  },
+  "note": "a paper can have several themes; shares are of the papers covered; 'not stated' = no sentence found"
+ },
+ "signals": {
+  "papers_with_class_conversion": 29,
+  "converted_and_two_class_only": 16,
+  "of_which_state_two_class_scope": 7,
+  "same_data_also_unmodified_papers": 5,
+  "papers_with_modified_entries": 39,
+  "several_levels": 12,
+  "harder_papers_with_several_levels": 12,
+  "publishes_modified_data": 3,
+  "win_share_both": {
+   "papers": 11,
+   "modified_higher": 2,
+   "other_higher": 6,
+   "equal": 3,
+   "rows_modified": 424,
+   "rows_other": 278
+  }
+ },
+ "noise": {
+  "real_data": [
+   {
+    "paper_key": "SMOTE-IPF",
+    "what_was_added": "class noise + attribute noise",
+    "levels": "20%, 40%",
+    "data_sets": "9 real-world sets (acl + 8 KEEL)",
+    "noisy_sets_are_entries": "yes (2 modified entries)",
+    "where_in_paper": "Sec 4.2"
+   },
+   {
+    "paper_key": "RAMOBoost",
+    "what_was_added": "class label noise + attribute noise",
+    "levels": "several levels (Tables XVIII, XXI)",
+    "data_sets": "Abalone",
+    "noisy_sets_are_entries": "no",
+    "where_in_paper": "Sec IV, p.16-17"
+   },
+   {
+    "paper_key": "RSMOTE",
+    "what_was_added": "label noise (minority labels flipped)",
+    "levels": "10%, 20%, 30%",
+    "data_sets": "all binary sets",
+    "noisy_sets_are_entries": "no",
+    "where_in_paper": "p.12"
+   },
+   {
+    "paper_key": "RSMOTE",
+    "what_was_added": "one outlier added",
+    "levels": "one point",
+    "data_sets": "fourclass",
+    "noisy_sets_are_entries": "yes (1 modified entry)",
+    "where_in_paper": "Sec 4.3.1, p.10"
+   },
+   {
+    "paper_key": "RBO",
+    "what_was_added": "label noise; feature noise",
+    "levels": "0-20% (label)",
+    "data_sets": "the benchmark sets (Experiments 3-4)",
+    "noisy_sets_are_entries": "no",
+    "where_in_paper": "p.8"
+   },
+   {
+    "paper_key": "MC-CCR",
+    "what_was_added": "random label noise",
+    "levels": "0-25% in steps of 5%",
+    "data_sets": "the multiclass benchmark sets",
+    "noisy_sets_are_entries": "no",
+    "where_in_paper": "Sec 4.4, p.9"
+   },
+   {
+    "paper_key": "MC-MBRC",
+    "what_was_added": "label noise (labels randomly replaced)",
+    "levels": "0-30% in steps of 5%",
+    "data_sets": "real data sets (Fig. 6)",
+    "noisy_sets_are_entries": "no",
+    "where_in_paper": "Sec 5.3, p.10-11"
+   },
+   {
+    "paper_key": "MC-NCLWO",
+    "what_was_added": "Gaussian feature noise",
+    "levels": "5-30% in steps of 5%",
+    "data_sets": "four data sets",
+    "noisy_sets_are_entries": "no",
+    "where_in_paper": "p.15"
+   },
+   {
+    "paper_key": "SPE",
+    "what_was_added": "missing values (values replaced by 0)",
+    "levels": "several levels",
+    "data_sets": "the benchmark sets",
+    "noisy_sets_are_entries": "no",
+    "where_in_paper": "p.10"
+   }
+  ],
+  "real_data_papers": 8,
+  "synthetic_generated_with_noise": [
+   {
+    "paper": "DLexiBoost",
+    "record_id": "P045-D034",
+    "name": "Artificial family A (27 sets, no outliers)",
+    "note": "Two 5-D standard normal distributions; full factorial IR {5,10,25} x size {500,1000,2500} x majority centre {[3,3,3,3,3],[1.7x5],[1.5x5]} (minority centre [0,0,0,0,0]) = 27 sets; individual sets not n"
+   },
+   {
+    "paper": "DLexiBoost",
+    "record_id": "P045-D035",
+    "name": "Artificial family B (27 sets with outliers)",
+    "note": "Same 27 as family A but 10 percent of instances of each class replaced by instances from the opposite class; total 54 artificial sets"
+   },
+   {
+    "paper": "OREM-M",
+    "record_id": "P065-D022",
+    "name": "simulated set (Fig. S2)",
+    "note": "simulated imbalanced set: 60 minority samples, 584 majority samples and 6 noisy minority samples inside the majority region (supp. S5, p.11); the minority subclusters have different covariance (p.12);"
+   },
+   {
+    "paper": "SPIDER2",
+    "record_id": "P021-D013",
+    "name": "subcl-safe",
+    "note": "shape 'subclus'; training minority = 30% safe, 50% borderline (B), 20% noise (C); test set contains only minority examples of type safe; train-test split instead of CV (Sec. 3.3, p.6-7)"
+   },
+   {
+    "paper": "SPIDER2",
+    "record_id": "P021-D014",
+    "name": "subcl-B",
+    "note": "shape 'subclus'; training minority = 30% safe, 50% borderline (B), 20% noise (C); test set contains only minority examples of type B; train-test split instead of CV (Sec. 3.3, p.6-7)"
+   },
+   {
+    "paper": "SPIDER2",
+    "record_id": "P021-D015",
+    "name": "subcl-C",
+    "note": "shape 'subclus'; training minority = 30% safe, 50% borderline (B), 20% noise (C); test set contains only minority examples of type C; train-test split instead of CV (Sec. 3.3, p.6-7)"
+   },
+   {
+    "paper": "SPIDER2",
+    "record_id": "P021-D016",
+    "name": "subcl-BC",
+    "note": "shape 'subclus'; training minority = 30% safe, 50% borderline (B), 20% noise (C); test set contains only minority examples of type BC; train-test split instead of CV (Sec. 3.3, p.6-7)"
+   },
+   {
+    "paper": "SPIDER2",
+    "record_id": "P021-D017",
+    "name": "clover-safe",
+    "note": "shape 'clover'; training minority = 30% safe, 50% borderline (B), 20% noise (C); test set contains only minority examples of type safe; train-test split instead of CV (Sec. 3.3, p.6-7)"
+   },
+   {
+    "paper": "SPIDER2",
+    "record_id": "P021-D018",
+    "name": "clover-B",
+    "note": "shape 'clover'; training minority = 30% safe, 50% borderline (B), 20% noise (C); test set contains only minority examples of type B; train-test split instead of CV (Sec. 3.3, p.6-7)"
+   },
+   {
+    "paper": "SPIDER2",
+    "record_id": "P021-D019",
+    "name": "clover-C",
+    "note": "shape 'clover'; training minority = 30% safe, 50% borderline (B), 20% noise (C); test set contains only minority examples of type C; train-test split instead of CV (Sec. 3.3, p.6-7)"
+   },
+   {
+    "paper": "SPIDER2",
+    "record_id": "P021-D020",
+    "name": "clover-BC",
+    "note": "shape 'clover'; training minority = 30% safe, 50% borderline (B), 20% noise (C); test set contains only minority examples of type BC; train-test split instead of CV (Sec. 3.3, p.6-7)"
+   },
+   {
+    "paper": "SPIDER2",
+    "record_id": "P021-D021",
+    "name": "paw-safe",
+    "note": "shape 'paw'; training minority = 30% safe, 50% borderline (B), 20% noise (C); test set contains only minority examples of type safe; train-test split instead of CV (Sec. 3.3, p.6-7)"
+   },
+   {
+    "paper": "SPIDER2",
+    "record_id": "P021-D022",
+    "name": "paw-B",
+    "note": "shape 'paw'; training minority = 30% safe, 50% borderline (B), 20% noise (C); test set contains only minority examples of type B; train-test split instead of CV (Sec. 3.3, p.6-7)"
+   },
+   {
+    "paper": "SPIDER2",
+    "record_id": "P021-D023",
+    "name": "paw-C",
+    "note": "shape 'paw'; training minority = 30% safe, 50% borderline (B), 20% noise (C); test set contains only minority examples of type C; train-test split instead of CV (Sec. 3.3, p.6-7)"
+   },
+   {
+    "paper": "SPIDER2",
+    "record_id": "P021-D024",
+    "name": "paw-BC",
+    "note": "shape 'paw'; training minority = 30% safe, 50% borderline (B), 20% noise (C); test set contains only minority examples of type BC; train-test split instead of CV (Sec. 3.3, p.6-7)"
+   },
+   {
+    "paper": "SVDD-WSMOTE",
+    "record_id": "P061-D025",
+    "name": "Simulated dataset A",
+    "note": "two-dimensional simulated imbalanced dataset with overlapped noisy minority instances and within-class imbalance; files at https://github.com/Zheng7777/simulated-datasets.git (not fetched); sizes show"
+   },
+   {
+    "paper": "SVDD-WSMOTE",
+    "record_id": "P061-D026",
+    "name": "Simulated dataset B",
+    "note": "two-dimensional simulated imbalanced dataset with overlapped noisy minority instances and within-class imbalance; files at https://github.com/Zheng7777/simulated-datasets.git (not fetched); sizes show"
+   },
+   {
+    "paper": "SVDD-WSMOTE",
+    "record_id": "P061-D027",
+    "name": "Simulated dataset C",
+    "note": "two-dimensional simulated imbalanced dataset with overlapped noisy minority instances and within-class imbalance; files at https://github.com/Zheng7777/simulated-datasets.git (not fetched); sizes show"
+   },
+   {
+    "paper": "k-means SMOTE",
+    "record_id": "P038-D093",
+    "name": "toy dataset A",
+    "note": "created by the authors: observations in three partially noisy clusters, 2-D binary"
+   },
+   {
+    "paper": "k-means SMOTE",
+    "record_id": "P038-D094",
+    "name": "toy dataset B",
+    "note": "created by the authors: three partially noisy clusters, 2-D binary"
+   },
+   {
+    "paper": "k-means SMOTE",
+    "record_id": "P038-D095",
+    "name": "toy dataset C",
+    "note": "created by the authors: three partially noisy clusters, 2-D binary"
+   },
+   {
+    "paper": "k-means SMOTE",
+    "record_id": "P038-D096",
+    "name": "circles",
+    "note": "scikit-learn make_circles, noise 0.3, 750 per class then one class randomly undersampled to 200"
+   },
+   {
+    "paper": "k-means SMOTE",
+    "record_id": "P038-D097",
+    "name": "moons",
+    "note": "scikit-learn make_moons, noise 0.3, 750 per class then one class randomly undersampled to 200"
+   }
+  ],
+  "synthetic_with_noise_papers": 5
+ },
+ "common": {
+  "families_modified": 130,
+  "families_modified_by_2plus_papers": 37,
+  "top_families": [
+   {
+    "family": "vehicle",
+    "papers": 11,
+    "entries": 17,
+    "operations": "CS:9;US:8;IM:8",
+    "kinds": "one-vs-rest:6;class grouping (minority/majority sets):1;one-vs-rest or class subset:1;one-vs-rest (class inferred from suffix):1"
+   },
+   {
+    "family": "ecoli",
+    "papers": 10,
+    "entries": 13,
+    "operations": "CS:8;US:5;IM:5;FM:1",
+    "kinds": "one-vs-rest:4;class subset (small classes dropped):1;class grouping (minority/majority sets):1;one-vs-rest (class not stated):1;one-vs-rest (class inferred from suffix):1"
+   },
+   {
+    "family": "abalone",
+    "papers": 9,
+    "entries": 12,
+    "operations": "CS:12;FM:2",
+    "kinds": "threshold on target:2;one-vs-rest:2;threshold on target or class choice:2;class subset (classes dropped):2;class subset (two classes kept):1;class subset (named classes kept):1;one-vs-rest (class not stated):1;one-vs-rest or class subset:1"
+   },
+   {
+    "family": "satimage",
+    "papers": 9,
+    "entries": 9,
+    "operations": "CS:9",
+    "kinds": "one-vs-rest:7;one-vs-rest or class subset:1;one-vs-rest (class inferred from suffix):1"
+   },
+   {
+    "family": "glass",
+    "papers": 8,
+    "entries": 11,
+    "operations": "CS:6;US:5;IM:5",
+    "kinds": "one-vs-rest:3;class grouping (minority/majority sets):1;one-vs-rest or class subset:1;one-vs-rest (class inferred from suffix):1"
+   },
+   {
+    "family": "pageblocks",
+    "papers": 8,
+    "entries": 10,
+    "operations": "CS:8;IM:4;US:2",
+    "kinds": "one-vs-rest:2;one-vs-rest or class pair:2;class grouping (minority/majority sets):1;threshold on target or class choice:1;one-vs-rest or class subset:1;class merging:1"
+   },
+   {
+    "family": "yeast",
+    "papers": 7,
+    "entries": 25,
+    "operations": "IM:17;CS:17;US:8",
+    "kinds": "one-vs-rest or class pair:9;one-vs-rest:3;class merging:2;class grouping (minority/majority sets):1;one-vs-rest or class subset:1;class subset (classes dropped):1"
+   },
+   {
+    "family": "wine",
+    "papers": 6,
+    "entries": 9,
+    "operations": "US:5;IM:5;CS:4",
+    "kinds": "one-vs-rest:3;one-vs-rest or class subset:1"
+   },
+   {
+    "family": "letter",
+    "papers": 6,
+    "entries": 6,
+    "operations": "CS:5;FM:1;US:1;IM:1",
+    "kinds": "one-vs-rest:2;class grouping (vowels vs consonants):1;one-vs-rest (class not stated):1;one-vs-rest or class subset:1"
+   },
+   {
+    "family": "segment",
+    "papers": 5,
+    "entries": 10,
+    "operations": "US:6;IM:6;CS:4",
+    "kinds": "one-vs-rest:2;one-vs-rest or class subset:1;one-vs-rest (class inferred from suffix):1"
+   },
+   {
+    "family": "vowel",
+    "papers": 5,
+    "entries": 7,
+    "operations": "CS:4;US:3;IM:3",
+    "kinds": "class merging:2;one-vs-rest:1;one-vs-rest or class subset:1"
+   },
+   {
+    "family": "iris",
+    "papers": 4,
+    "entries": 7,
+    "operations": "US:5;IM:5;CS:2",
+    "kinds": "one-vs-rest:2"
+   },
+   {
+    "family": "libra",
+    "papers": 4,
+    "entries": 6,
+    "operations": "CS:3;US:3;IM:3",
+    "kinds": "one-vs-rest:3"
+   },
+   {
+    "family": "mnist",
+    "papers": 4,
+    "entries": 6,
+    "operations": "US:4;IM:4;FM:2;CS:2;SF:1",
+    "kinds": "one-vs-rest:2"
+   },
+   {
+    "family": "breasttissue",
+    "papers": 4,
+    "entries": 5,
+    "operations": "US:3;IM:3;CS:2",
+    "kinds": "one-vs-rest:2"
+   }
+  ],
+  "same_modified_name_in_2plus_papers": [
+   {
+    "name": "vehicle",
+    "papers": 9,
+    "paper_keys": "A-SUWO;ADASYN;EasyEnsemble / BalanceCascade;G-SMOTE;GMMSampling;MWMOTE;RAMOBoost;SMOTE-ENN / SMOTE-Tomek;SVDD-WSMOTE",
+    "printed_N_over_minority": "846/199 (3p);846/212 (1p);746/99 (1p);713/66 (1p);?/? (1p);940/219 (1p);846/? (1p);?/199 (1p)"
+   },
+   {
+    "name": "satimage",
+    "papers": 8,
+    "paper_keys": "Borderline-SMOTE;EasyEnsemble / BalanceCascade;MWMOTE;RAMOBoost;SMOTE;SMOTE-ENN / SMOTE-Tomek;SMOTEBoost;Safe-Level-SMOTE",
+    "printed_N_over_minority": "6435/626 (3p);6435/? (2p);?/626 (2p);6435/2036 (1p)"
+   },
+   {
+    "name": "abalone",
+    "papers": 6,
+    "paper_keys": "ADASYN;EasyEnsemble / BalanceCascade;MWMOTE;RACOG / wRACOG;RAMOBoost;SVDD-WSMOTE",
+    "printed_N_over_minority": "731/42 (3p);4177/391 (1p);4177/? (1p);?/67 (1p)"
+   },
+   {
+    "name": "ecoli",
+    "papers": 6,
+    "paper_keys": "A-SUWO;AMDO;G-SMOTE;GMMSampling;MWMOTE;SVDD-WSMOTE",
+    "printed_N_over_minority": "336/52 (1p);327/? (1p);310/26 (1p);301/17 (1p);?/? (1p);336/77 (1p);?/52 (1p)"
+   },
+   {
+    "name": "glass",
+    "papers": 6,
+    "paper_keys": "A-SUWO;G-SMOTE;GMMSampling;MWMOTE;RAMOBoost;SMOTE-ENN / SMOTE-Tomek",
+    "printed_N_over_minority": "214/70 (1p);179/35 (1p);167/23 (1p);?/? (1p);214/51 (1p);214/9 (1p);214/? (1p)"
+   },
+   {
+    "name": "letter",
+    "papers": 6,
+    "paper_keys": "CISO;EasyEnsemble / BalanceCascade;LS;RACOG / wRACOG;RAMOBoost;RSMOTE",
+    "printed_N_over_minority": "20000/? (3p);20000/789 (2p);11057/1005 (1p)"
+   },
+   {
+    "name": "wine",
+    "papers": 5,
+    "paper_keys": "A-SUWO;G-SMOTE;MWMOTE;RAMOBoost;SVDD-WSMOTE",
+    "printed_N_over_minority": "178/71 (1p);142/35 (1p);130/23 (1p);178/48 (1p);178/59 (1p);?/48 (1p)"
+   },
+   {
+    "name": "yeast",
+    "papers": 4,
+    "paper_keys": "GMMSampling;MWMOTE;RAMOBoost;SVDD-WSMOTE",
+    "printed_N_over_minority": "?/? (1p);1484/304 (1p);483/20 (1p);?/429 (1p)"
+   },
+   {
+    "name": "balance",
+    "papers": 3,
+    "paper_keys": "A-SUWO;EasyEnsemble / BalanceCascade;SVDD-WSMOTE",
+    "printed_N_over_minority": "625/49 (2p);?/49 (1p)"
+   },
+   {
+    "name": "car",
+    "papers": 3,
+    "paper_keys": "EasyEnsemble / BalanceCascade;RACOG / wRACOG;SVDD-WSMOTE",
+    "printed_N_over_minority": "1728/384 (1p);1728/? (1p);?/65 (1p)"
+   },
+   {
+    "name": "iris",
+    "papers": 3,
+    "paper_keys": "A-SUWO;G-SMOTE;SVDD-WSMOTE",
+    "printed_N_over_minority": "150/50 (1p);125/25 (1p);116/16 (1p);?/50 (1p)"
+   },
+   {
+    "name": "libra",
+    "papers": 3,
+    "paper_keys": "A-SUWO;MWMOTE;SVDD-WSMOTE",
+    "printed_N_over_minority": "360/72 (2p);?/24 (1p)"
+   },
+   {
+    "name": "nursery",
+    "papers": 3,
+    "paper_keys": "AMDO;RACOG / wRACOG;SMOTE-ENN / SMOTE-Tomek",
+    "printed_N_over_minority": "12960/? (2p);12958/? (1p)"
+   },
+   {
+    "name": "segment",
+    "papers": 3,
+    "paper_keys": "A-SUWO;MWMOTE;RAMOBoost",
+    "printed_N_over_minority": "2310/330 (3p)"
+   },
+   {
+    "name": "svmguide1",
+    "papers": 3,
+    "paper_keys": "COG-OS;HDE;RSMOTE",
+    "printed_N_over_minority": "3089/1089 (1p);3175/? (1p);4400/400 (1p)"
+   },
+   {
+    "name": "vowel",
+    "papers": 3,
+    "paper_keys": "ADASYN;G-SMOTE;RAMOBoost",
+    "printed_N_over_minority": "990/90 (2p);943/45 (1p);928/30 (1p)"
+   },
+   {
+    "name": "abalone 15",
+    "papers": 2,
+    "paper_keys": "DGOT;GOIO",
+    "printed_N_over_minority": "4177/? (2p)"
+   },
+   {
+    "name": "abalone 6",
+    "papers": 2,
+    "paper_keys": "DGOT;GOIO",
+    "printed_N_over_minority": "4177/? (1p);3527/? (1p)"
+   },
+   {
+    "name": "breast tissue",
+    "papers": 2,
+    "paper_keys": "A-SUWO;G-SMOTE",
+    "printed_N_over_minority": "106/36 (1p);88/18 (1p)"
+   },
+   {
+    "name": "cleveland 1",
+    "papers": 2,
+    "paper_keys": "GMMSampling;SOUP",
+    "printed_N_over_minority": "?/? (2p)"
+   },
+   {
+    "name": "cleveland 2",
+    "papers": 2,
+    "paper_keys": "GMMSampling;SOUP",
+    "printed_N_over_minority": "?/? (2p)"
+   },
+   {
+    "name": "dermatology",
+    "papers": 2,
+    "paper_keys": "AMDO;OVO-SMOTE",
+    "printed_N_over_minority": "358/? (2p)"
+   },
+   {
+    "name": "ecoli4",
+    "papers": 2,
+    "paper_keys": "RUSBoost;k-means SMOTE",
+    "printed_N_over_minority": "336/35 (1p);?/? (1p)"
+   },
+   {
+    "name": "eucalyptus",
+    "papers": 2,
+    "paper_keys": "A-SUWO;G-SMOTE",
+    "printed_N_over_minority": "736/105 (1p);593/49 (1p);576/32 (1p)"
+   },
+   {
+    "name": "fourclass",
+    "papers": 2,
+    "paper_keys": "COG-OS;RSMOTE",
+    "printed_N_over_minority": "862/307 (1p);?/? (1p)"
+   },
+   {
+    "name": "mnist",
+    "papers": 2,
+    "paper_keys": "GAMO;ROS (Buda)",
+    "printed_N_over_minority": "?/? (2p)"
+   },
+   {
+    "name": "mushrooms",
+    "papers": 2,
+    "paper_keys": "HDE;RSMOTE",
+    "printed_N_over_minority": "4001/? (1p);4628/420 (1p)"
+   },
+   {
+    "name": "page blocks",
+    "papers": 2,
+    "paper_keys": "CISO;RAMOBoost",
+    "printed_N_over_minority": "5473/? (1p);5473/560 (1p)"
+   },
+   {
+    "name": "pageblocks",
+    "papers": 2,
+    "paper_keys": "GMMSampling;MWMOTE",
+    "printed_N_over_minority": "?/? (1p);5476/231 (1p)"
+   },
+   {
+    "name": "post-operative",
+    "papers": 2,
+    "paper_keys": "OVO-SMOTE;SMOTE-ENN / SMOTE-Tomek",
+    "printed_N_over_minority": "87/? (1p);90/? (1p)"
+   },
+   {
+    "name": "splice",
+    "papers": 2,
+    "paper_keys": "COG-OS;RSMOTE",
+    "printed_N_over_minority": "1000/483 (1p);620/51 (1p)"
+   },
+   {
+    "name": "svmguide3",
+    "papers": 2,
+    "paper_keys": "HDE;RSMOTE",
+    "printed_N_over_minority": "312/? (1p);1041/94 (1p)"
+   },
+   {
+    "name": "texture",
+    "papers": 2,
+    "paper_keys": "MWMOTE;RAMOBoost",
+    "printed_N_over_minority": "5477/1500 (1p);5500/1000 (1p)"
+   },
+   {
+    "name": "yeast4",
+    "papers": 2,
+    "paper_keys": "RACOG / wRACOG;SVDD-WSMOTE",
+    "printed_N_over_minority": "1484/? (1p);?/35 (1p)"
+   },
+   {
+    "name": "yeast5",
+    "papers": 2,
+    "paper_keys": "SMOM;SVDD-WSMOTE",
+    "printed_N_over_minority": "982/? (1p);?/20 (1p)"
+   },
+   {
+    "name": "yeast6",
+    "papers": 2,
+    "paper_keys": "RACOG / wRACOG;SVDD-WSMOTE",
+    "printed_N_over_minority": "1484/? (1p);?/51 (1p)"
+   },
+   {
+    "name": "yeast7",
+    "papers": 2,
+    "paper_keys": "SMOM;SVDD-WSMOTE",
+    "printed_N_over_minority": "1055/? (1p);?/44 (1p)"
+   },
+   {
+    "name": "yeast8",
+    "papers": 2,
+    "paper_keys": "SMOM;SVDD-WSMOTE",
+    "printed_N_over_minority": "1484/? (1p);?/35 (1p)"
+   }
+  ],
+  "combinations": {
+   "CS": 141,
+   "US;IM": 131,
+   "CS;IM": 11,
+   "CS;FM": 9,
+   "SF": 7,
+   "CS;US": 6,
+   "US": 5,
+   "CS;SF": 4,
+   "US;SF;IM": 3,
+   "FM": 3,
+   "FM;SF": 3,
+   "NI": 3,
+   "CS;LC": 2,
+   "CS;US;IM": 2,
+   "LC": 1,
+   "US;SF": 1
+  },
+  "tag_entries": {
+   "CS": 175,
+   "US": 148,
+   "FM": 15,
+   "SF": 18,
+   "IM": 147,
+   "NI": 3,
+   "LC": 3,
+   "IS": 0
+  },
+  "tag_papers": {
+   "CS": 29,
+   "US": 11,
+   "FM": 6,
+   "SF": 9,
+   "IM": 9,
+   "NI": 2,
+   "LC": 2,
+   "IS": 0
+  },
+  "class_op_kind": {
+   "one-vs-rest": 84,
+   "class subset (two classes kept)": 6,
+   "class subset (small classes dropped)": 2,
+   "label construction": 2,
+   "threshold on target": 2,
+   "class subset (classes selected)": 5,
+   "class grouping (minority/majority sets)": 13,
+   "threshold on target or class choice": 6,
+   "class grouping (vowels vs consonants)": 1,
+   "class subset (named classes kept)": 1,
+   "one-vs-rest (class not stated)": 6,
+   "one-vs-rest or class subset": 13,
+   "class or threshold (not stated)": 1,
+   "one-vs-rest (class inferred from suffix)": 8,
+   "class merging": 11,
+   "class subset (classes dropped)": 3,
+   "one-vs-rest or class pair": 11
+  }
+ },
+ "time": {
+  "periods": {
+   "<=2004": {
+    "papers": 5,
+    "entries": {
+     "original": 12,
+     "not stated": 3,
+     "modified": 21
+    }
+   },
+   "2005-2009": {
+    "papers": 9,
+    "entries": {
+     "modified": 29,
+     "original": 48,
+     "synthetic (not published)": 29,
+     "not stated": 4
+    }
+   },
+   "2010-2014": {
+    "papers": 8,
+    "entries": {
+     "original": 62,
+     "modified": 53,
+     "synthetic (not published)": 31,
+     "not stated": 6
+    }
+   },
+   "2015-2019": {
+    "papers": 18,
+    "entries": {
+     "modified": 146,
+     "original": 108,
+     "not stated": 68,
+     "synthetic (published)": 54,
+     "repository-defined": 208,
+     "synthetic (not published)": 6
+    }
+   },
+   "2020-2024": {
+    "papers": 24,
+    "entries": {
+     "repository-defined": 171,
+     "not stated": 61,
+     "original": 225,
+     "modified": 71,
+     "synthetic (not published)": 76,
+     "synthetic (published)": 10
+    }
+   },
+   "2025-2026": {
+    "papers": 8,
+    "entries": {
+     "repository-defined": 91,
+     "original": 82,
+     "modified": 12,
+     "not stated": 53,
+     "synthetic (not published)": 6
+    }
+   }
+  },
+  "top_by_period": {
+   "<=2004": {
+    "original": [
+     {
+      "family": "pima",
+      "papers_in_period": 2,
+      "papers_total": 18,
+      "first_year": 2002,
+      "last_year": 2026
+     },
+     {
+      "family": "phoneme",
+      "papers_in_period": 2,
+      "papers_total": 6,
+      "first_year": 2002,
+      "last_year": 2015
+     },
+     {
+      "family": "mammography",
+      "papers_in_period": 2,
+      "papers_total": 5,
+      "first_year": 2002,
+      "last_year": 2025
+     },
+     {
+      "family": "oil",
+      "papers_in_period": 2,
+      "papers_total": 3,
+      "first_year": 1997,
+      "last_year": 2008
+     },
+     {
+      "family": "haberman",
+      "papers_in_period": 1,
+      "papers_total": 17,
+      "first_year": 2004,
+      "last_year": 2022
+     },
+     {
+      "family": "german",
+      "papers_in_period": 1,
+      "papers_total": 3,
+      "first_year": 2004,
+      "last_year": 2026
+     },
+     {
+      "family": "oilspill",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 1998,
+      "last_year": 1998
+     }
+    ],
+    "repository-defined": [],
+    "modified": [
+     {
+      "family": "satimage",
+      "papers_in_period": 3,
+      "papers_total": 9,
+      "first_year": 2002,
+      "last_year": 2014
+     },
+     {
+      "family": "vehicle",
+      "papers_in_period": 1,
+      "papers_total": 11,
+      "first_year": 2004,
+      "last_year": 2024
+     },
+     {
+      "family": "ecoli",
+      "papers_in_period": 1,
+      "papers_total": 10,
+      "first_year": 2004,
+      "last_year": 2024
+     },
+     {
+      "family": "glass",
+      "papers_in_period": 1,
+      "papers_total": 8,
+      "first_year": 2004,
+      "last_year": 2024
+     },
+     {
+      "family": "kddcup",
+      "papers_in_period": 1,
+      "papers_total": 3,
+      "first_year": 2003,
+      "last_year": 2020
+     },
+     {
+      "family": "newthyroid",
+      "papers_in_period": 1,
+      "papers_total": 3,
+      "first_year": 2004,
+      "last_year": 2024
+     },
+     {
+      "family": "nursery",
+      "papers_in_period": 1,
+      "papers_total": 3,
+      "first_year": 2004,
+      "last_year": 2018
+     },
+     {
+      "family": "postoperative",
+      "papers_in_period": 1,
+      "papers_total": 2,
+      "first_year": 2004,
+      "last_year": 2013
+     }
+    ],
+    "not stated": [
+     {
+      "family": "estate",
+      "papers_in_period": 1,
+      "papers_total": 2,
+      "first_year": 2002,
+      "last_year": 2015
+     },
+     {
+      "family": "br",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 1997,
+      "last_year": 1997
+     },
+     {
+      "family": "kr",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 1997,
+      "last_year": 1997
+     }
+    ],
+    "synthetic (published)": [],
+    "synthetic (not published)": []
+   },
+   "2005-2009": {
+    "original": [
+     {
+      "family": "pima",
+      "papers_in_period": 3,
+      "papers_total": 18,
+      "first_year": 2002,
+      "last_year": 2026
+     },
+     {
+      "family": "haberman",
+      "papers_in_period": 3,
+      "papers_total": 17,
+      "first_year": 2004,
+      "last_year": 2022
+     },
+     {
+      "family": "phoneme",
+      "papers_in_period": 2,
+      "papers_total": 6,
+      "first_year": 2002,
+      "last_year": 2015
+     },
+     {
+      "family": "ionosphere",
+      "papers_in_period": 2,
+      "papers_total": 5,
+      "first_year": 2008,
+      "last_year": 2026
+     },
+     {
+      "family": "splice",
+      "papers_in_period": 2,
+      "papers_total": 5,
+      "first_year": 2006,
+      "last_year": 2018
+     },
+     {
+      "family": "vowel",
+      "papers_in_period": 2,
+      "papers_total": 3,
+      "first_year": 2006,
+      "last_year": 2010
+     },
+     {
+      "family": "pageblocks",
+      "papers_in_period": 1,
+      "papers_total": 16,
+      "first_year": 2007,
+      "last_year": 2026
+     },
+     {
+      "family": "balance",
+      "papers_in_period": 1,
+      "papers_total": 13,
+      "first_year": 2006,
+      "last_year": 2025
+     }
+    ],
+    "repository-defined": [],
+    "modified": [
+     {
+      "family": "satimage",
+      "papers_in_period": 3,
+      "papers_total": 9,
+      "first_year": 2002,
+      "last_year": 2014
+     },
+     {
+      "family": "vehicle",
+      "papers_in_period": 2,
+      "papers_total": 11,
+      "first_year": 2004,
+      "last_year": 2024
+     },
+     {
+      "family": "abalone",
+      "papers_in_period": 2,
+      "papers_total": 9,
+      "first_year": 2008,
+      "last_year": 2026
+     },
+     {
+      "family": "letter",
+      "papers_in_period": 2,
+      "papers_total": 6,
+      "first_year": 2008,
+      "last_year": 2025
+     },
+     {
+      "family": "vowel",
+      "papers_in_period": 1,
+      "papers_total": 5,
+      "first_year": 2008,
+      "last_year": 2021
+     },
+     {
+      "family": "balance",
+      "papers_in_period": 1,
+      "papers_total": 3,
+      "first_year": 2009,
+      "last_year": 2022
+     },
+     {
+      "family": "car",
+      "papers_in_period": 1,
+      "papers_total": 3,
+      "first_year": 2009,
+      "last_year": 2022
+     },
+     {
+      "family": "kddcup",
+      "papers_in_period": 1,
+      "papers_total": 3,
+      "first_year": 2003,
+      "last_year": 2020
+     }
+    ],
+    "not stated": [
+     {
+      "family": "segment",
+      "papers_in_period": 1,
+      "papers_total": 4,
+      "first_year": 2008,
+      "last_year": 2021
+     },
+     {
+      "family": "satimage",
+      "papers_in_period": 1,
+      "papers_total": 3,
+      "first_year": 2008,
+      "last_year": 2020
+     },
+     {
+      "family": "page",
+      "papers_in_period": 1,
+      "papers_total": 2,
+      "first_year": 2008,
+      "last_year": 2015
+     },
+     {
+      "family": "pendigits",
+      "papers_in_period": 1,
+      "papers_total": 2,
+      "first_year": 2008,
+      "last_year": 2015
+     }
+    ],
+    "synthetic (published)": [],
+    "synthetic (not published)": [
+     {
+      "family": "syna",
+      "papers_in_period": 1,
+      "papers_total": 2,
+      "first_year": 2006,
+      "last_year": 2010
+     },
+     {
+      "family": "synb",
+      "papers_in_period": 1,
+      "papers_total": 2,
+      "first_year": 2006,
+      "last_year": 2010
+     },
+     {
+      "family": "sync",
+      "papers_in_period": 1,
+      "papers_total": 2,
+      "first_year": 2006,
+      "last_year": 2010
+     },
+     {
+      "family": "synd",
+      "papers_in_period": 1,
+      "papers_total": 2,
+      "first_year": 2006,
+      "last_year": 2010
+     },
+     {
+      "family": "syne",
+      "papers_in_period": 1,
+      "papers_total": 2,
+      "first_year": 2006,
+      "last_year": 2010
+     },
+     {
+      "family": "synf",
+      "papers_in_period": 1,
+      "papers_total": 2,
+      "first_year": 2006,
+      "last_year": 2010
+     },
+     {
+      "family": "artificialtwoclassimbalanceddataset",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2008,
+      "last_year": 2008
+     },
+     {
+      "family": "circle",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2005,
+      "last_year": 2005
+     }
+    ]
+   },
+   "2010-2014": {
+    "original": [
+     {
+      "family": "ecoli",
+      "papers_in_period": 3,
+      "papers_total": 17,
+      "first_year": 2010,
+      "last_year": 2025
+     },
+     {
+      "family": "balance",
+      "papers_in_period": 3,
+      "papers_total": 13,
+      "first_year": 2006,
+      "last_year": 2025
+     },
+     {
+      "family": "pima",
+      "papers_in_period": 2,
+      "papers_total": 18,
+      "first_year": 2002,
+      "last_year": 2026
+     },
+     {
+      "family": "haberman",
+      "papers_in_period": 2,
+      "papers_total": 17,
+      "first_year": 2004,
+      "last_year": 2022
+     },
+     {
+      "family": "yeast",
+      "papers_in_period": 2,
+      "papers_total": 17,
+      "first_year": 2011,
+      "last_year": 2026
+     },
+     {
+      "family": "newthyroid",
+      "papers_in_period": 2,
+      "papers_total": 16,
+      "first_year": 2011,
+      "last_year": 2025
+     },
+     {
+      "family": "glass",
+      "papers_in_period": 2,
+      "papers_total": 12,
+      "first_year": 2011,
+      "last_year": 2025
+     },
+     {
+      "family": "zoo",
+      "papers_in_period": 2,
+      "papers_total": 10,
+      "first_year": 2011,
+      "last_year": 2025
+     }
+    ],
+    "repository-defined": [],
+    "modified": [
+     {
+      "family": "vehicle",
+      "papers_in_period": 3,
+      "papers_total": 11,
+      "first_year": 2004,
+      "last_year": 2024
+     },
+     {
+      "family": "satimage",
+      "papers_in_period": 3,
+      "papers_total": 9,
+      "first_year": 2002,
+      "last_year": 2014
+     },
+     {
+      "family": "glass",
+      "papers_in_period": 3,
+      "papers_total": 8,
+      "first_year": 2004,
+      "last_year": 2024
+     },
+     {
+      "family": "segment",
+      "papers_in_period": 3,
+      "papers_total": 5,
+      "first_year": 2010,
+      "last_year": 2018
+     },
+     {
+      "family": "ecoli",
+      "papers_in_period": 2,
+      "papers_total": 10,
+      "first_year": 2004,
+      "last_year": 2024
+     },
+     {
+      "family": "abalone",
+      "papers_in_period": 2,
+      "papers_total": 9,
+      "first_year": 2008,
+      "last_year": 2026
+     },
+     {
+      "family": "pageblocks",
+      "papers_in_period": 2,
+      "papers_total": 8,
+      "first_year": 2010,
+      "last_year": 2025
+     },
+     {
+      "family": "yeast",
+      "papers_in_period": 2,
+      "papers_total": 7,
+      "first_year": 2010,
+      "last_year": 2024
+     }
+    ],
+    "not stated": [
+     {
+      "family": "acl",
+      "papers_in_period": 1,
+      "papers_total": 2,
+      "first_year": 2010,
+      "last_year": 2015
+     },
+     {
+      "family": "cm1",
+      "papers_in_period": 1,
+      "papers_total": 2,
+      "first_year": 2010,
+      "last_year": 2022
+     },
+     {
+      "family": "cccs12",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2010,
+      "last_year": 2010
+     },
+     {
+      "family": "pc1",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2010,
+      "last_year": 2010
+     },
+     {
+      "family": "sp1",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2010,
+      "last_year": 2010
+     },
+     {
+      "family": "sp3",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2010,
+      "last_year": 2010
+     }
+    ],
+    "synthetic (published)": [],
+    "synthetic (not published)": [
+     {
+      "family": "syna",
+      "papers_in_period": 1,
+      "papers_total": 2,
+      "first_year": 2006,
+      "last_year": 2010
+     },
+     {
+      "family": "synb",
+      "papers_in_period": 1,
+      "papers_total": 2,
+      "first_year": 2006,
+      "last_year": 2010
+     },
+     {
+      "family": "sync",
+      "papers_in_period": 1,
+      "papers_total": 2,
+      "first_year": 2006,
+      "last_year": 2010
+     },
+     {
+      "family": "synd",
+      "papers_in_period": 1,
+      "papers_total": 2,
+      "first_year": 2006,
+      "last_year": 2010
+     },
+     {
+      "family": "syne",
+      "papers_in_period": 1,
+      "papers_total": 2,
+      "first_year": 2006,
+      "last_year": 2010
+     },
+     {
+      "family": "synf",
+      "papers_in_period": 1,
+      "papers_total": 2,
+      "first_year": 2006,
+      "last_year": 2010
+     },
+     {
+      "family": "artificialcxcgriddomain",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2014,
+      "last_year": 2014
+     },
+     {
+      "family": "clover",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2010,
+      "last_year": 2010
+     }
+    ]
+   },
+   "2015-2019": {
+    "original": [
+     {
+      "family": "haberman",
+      "papers_in_period": 8,
+      "papers_total": 17,
+      "first_year": 2004,
+      "last_year": 2022
+     },
+     {
+      "family": "pima",
+      "papers_in_period": 6,
+      "papers_total": 18,
+      "first_year": 2002,
+      "last_year": 2026
+     },
+     {
+      "family": "ecoli",
+      "papers_in_period": 4,
+      "papers_total": 17,
+      "first_year": 2010,
+      "last_year": 2025
+     },
+     {
+      "family": "yeast",
+      "papers_in_period": 3,
+      "papers_total": 17,
+      "first_year": 2011,
+      "last_year": 2026
+     },
+     {
+      "family": "newthyroid",
+      "papers_in_period": 3,
+      "papers_total": 16,
+      "first_year": 2011,
+      "last_year": 2025
+     },
+     {
+      "family": "pageblocks",
+      "papers_in_period": 3,
+      "papers_total": 16,
+      "first_year": 2007,
+      "last_year": 2026
+     },
+     {
+      "family": "hayesroth",
+      "papers_in_period": 3,
+      "papers_total": 13,
+      "first_year": 2013,
+      "last_year": 2025
+     },
+     {
+      "family": "vehicle",
+      "papers_in_period": 3,
+      "papers_total": 9,
+      "first_year": 2016,
+      "last_year": 2025
+     }
+    ],
+    "repository-defined": [
+     {
+      "family": "yeast",
+      "papers_in_period": 6,
+      "papers_total": 17,
+      "first_year": 2015,
+      "last_year": 2026
+     },
+     {
+      "family": "pageblocks",
+      "papers_in_period": 6,
+      "papers_total": 10,
+      "first_year": 2015,
+      "last_year": 2026
+     },
+     {
+      "family": "abalone",
+      "papers_in_period": 5,
+      "papers_total": 13,
+      "first_year": 2015,
+      "last_year": 2026
+     },
+     {
+      "family": "newthyroid",
+      "papers_in_period": 5,
+      "papers_total": 11,
+      "first_year": 2015,
+      "last_year": 2026
+     },
+     {
+      "family": "vowel",
+      "papers_in_period": 5,
+      "papers_total": 11,
+      "first_year": 2015,
+      "last_year": 2026
+     },
+     {
+      "family": "glass",
+      "papers_in_period": 4,
+      "papers_total": 15,
+      "first_year": 2015,
+      "last_year": 2026
+     },
+     {
+      "family": "ecoli",
+      "papers_in_period": 4,
+      "papers_total": 13,
+      "first_year": 2015,
+      "last_year": 2026
+     },
+     {
+      "family": "led",
+      "papers_in_period": 4,
+      "papers_total": 4,
+      "first_year": 2015,
+      "last_year": 2019
+     }
+    ],
+    "modified": [
+     {
+      "family": "ecoli",
+      "papers_in_period": 5,
+      "papers_total": 10,
+      "first_year": 2004,
+      "last_year": 2024
+     },
+     {
+      "family": "vehicle",
+      "papers_in_period": 3,
+      "papers_total": 11,
+      "first_year": 2004,
+      "last_year": 2024
+     },
+     {
+      "family": "glass",
+      "papers_in_period": 3,
+      "papers_total": 8,
+      "first_year": 2004,
+      "last_year": 2024
+     },
+     {
+      "family": "yeast",
+      "papers_in_period": 3,
+      "papers_total": 7,
+      "first_year": 2010,
+      "last_year": 2024
+     },
+     {
+      "family": "wine",
+      "papers_in_period": 3,
+      "papers_total": 6,
+      "first_year": 2010,
+      "last_year": 2022
+     },
+     {
+      "family": "breasttissue",
+      "papers_in_period": 3,
+      "papers_total": 4,
+      "first_year": 2014,
+      "last_year": 2019
+     },
+     {
+      "family": "iris",
+      "papers_in_period": 3,
+      "papers_total": 4,
+      "first_year": 2016,
+      "last_year": 2022
+     },
+     {
+      "family": "mnist",
+      "papers_in_period": 3,
+      "papers_total": 4,
+      "first_year": 2018,
+      "last_year": 2020
+     }
+    ],
+    "not stated": [
+     {
+      "family": "ecoli",
+      "papers_in_period": 3,
+      "papers_total": 6,
+      "first_year": 2015,
+      "last_year": 2022
+     },
+     {
+      "family": "breasttissue",
+      "papers_in_period": 3,
+      "papers_total": 4,
+      "first_year": 2016,
+      "last_year": 2021
+     },
+     {
+      "family": "iris",
+      "papers_in_period": 2,
+      "papers_total": 4,
+      "first_year": 2018,
+      "last_year": 2026
+     },
+     {
+      "family": "segment",
+      "papers_in_period": 2,
+      "papers_total": 4,
+      "first_year": 2008,
+      "last_year": 2021
+     },
+     {
+      "family": "vehicle",
+      "papers_in_period": 2,
+      "papers_total": 4,
+      "first_year": 2018,
+      "last_year": 2021
+     },
+     {
+      "family": "wine",
+      "papers_in_period": 2,
+      "papers_total": 3,
+      "first_year": 2018,
+      "last_year": 2021
+     },
+     {
+      "family": "glass",
+      "papers_in_period": 2,
+      "papers_total": 2,
+      "first_year": 2018,
+      "last_year": 2019
+     },
+     {
+      "family": "libras",
+      "papers_in_period": 2,
+      "papers_total": 2,
+      "first_year": 2016,
+      "last_year": 2019
+     }
+    ],
+    "synthetic (published)": [
+     {
+      "family": "alarm",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2019,
+      "last_year": 2019
+     },
+     {
+      "family": "asia",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2019,
+      "last_year": 2019
+     },
+     {
+      "family": "child",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2019,
+      "last_year": 2019
+     },
+     {
+      "family": "circles",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2018,
+      "last_year": 2018
+     },
+     {
+      "family": "cloverir=5,dr=0",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2015,
+      "last_year": 2015
+     },
+     {
+      "family": "cloverir=5,dr=30",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2015,
+      "last_year": 2015
+     },
+     {
+      "family": "cloverir=5,dr=50",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2015,
+      "last_year": 2015
+     },
+     {
+      "family": "cloverir=5,dr=60",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2015,
+      "last_year": 2015
+     }
+    ],
+    "synthetic (not published)": [
+     {
+      "family": "art",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2019,
+      "last_year": 2019
+     },
+     {
+      "family": "fiveclassartificialset",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2016,
+      "last_year": 2016
+     },
+     {
+      "family": "twogaussianclasses",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2015,
+      "last_year": 2015
+     }
+    ]
+   },
+   "2020-2024": {
+    "original": [
+     {
+      "family": "ecoli",
+      "papers_in_period": 9,
+      "papers_total": 17,
+      "first_year": 2010,
+      "last_year": 2025
+     },
+     {
+      "family": "yeast",
+      "papers_in_period": 9,
+      "papers_total": 17,
+      "first_year": 2011,
+      "last_year": 2026
+     },
+     {
+      "family": "newthyroid",
+      "papers_in_period": 9,
+      "papers_total": 16,
+      "first_year": 2011,
+      "last_year": 2025
+     },
+     {
+      "family": "pageblocks",
+      "papers_in_period": 9,
+      "papers_total": 16,
+      "first_year": 2007,
+      "last_year": 2026
+     },
+     {
+      "family": "hayesroth",
+      "papers_in_period": 7,
+      "papers_total": 13,
+      "first_year": 2013,
+      "last_year": 2025
+     },
+     {
+      "family": "thyroid",
+      "papers_in_period": 7,
+      "papers_total": 12,
+      "first_year": 2013,
+      "last_year": 2025
+     },
+     {
+      "family": "cleveland",
+      "papers_in_period": 7,
+      "papers_total": 11,
+      "first_year": 2010,
+      "last_year": 2025
+     },
+     {
+      "family": "contraceptive",
+      "papers_in_period": 7,
+      "papers_total": 11,
+      "first_year": 2013,
+      "last_year": 2025
+     }
+    ],
+    "repository-defined": [
+     {
+      "family": "yeast",
+      "papers_in_period": 7,
+      "papers_total": 17,
+      "first_year": 2015,
+      "last_year": 2026
+     },
+     {
+      "family": "glass",
+      "papers_in_period": 7,
+      "papers_total": 15,
+      "first_year": 2015,
+      "last_year": 2026
+     },
+     {
+      "family": "ecoli",
+      "papers_in_period": 6,
+      "papers_total": 13,
+      "first_year": 2015,
+      "last_year": 2026
+     },
+     {
+      "family": "abalone",
+      "papers_in_period": 5,
+      "papers_total": 13,
+      "first_year": 2015,
+      "last_year": 2026
+     },
+     {
+      "family": "newthyroid",
+      "papers_in_period": 4,
+      "papers_total": 11,
+      "first_year": 2015,
+      "last_year": 2026
+     },
+     {
+      "family": "shuttle",
+      "papers_in_period": 4,
+      "papers_total": 9,
+      "first_year": 2015,
+      "last_year": 2026
+     },
+     {
+      "family": "vowel",
+      "papers_in_period": 3,
+      "papers_total": 11,
+      "first_year": 2015,
+      "last_year": 2026
+     },
+     {
+      "family": "pageblocks",
+      "papers_in_period": 3,
+      "papers_total": 10,
+      "first_year": 2015,
+      "last_year": 2026
+     }
+    ],
+    "modified": [
+     {
+      "family": "vehicle",
+      "papers_in_period": 2,
+      "papers_total": 11,
+      "first_year": 2004,
+      "last_year": 2024
+     },
+     {
+      "family": "ecoli",
+      "papers_in_period": 2,
+      "papers_total": 10,
+      "first_year": 2004,
+      "last_year": 2024
+     },
+     {
+      "family": "pageblocks",
+      "papers_in_period": 2,
+      "papers_total": 8,
+      "first_year": 2010,
+      "last_year": 2025
+     },
+     {
+      "family": "yeast",
+      "papers_in_period": 2,
+      "papers_total": 7,
+      "first_year": 2010,
+      "last_year": 2024
+     },
+     {
+      "family": "svmguide",
+      "papers_in_period": 2,
+      "papers_total": 3,
+      "first_year": 2007,
+      "last_year": 2021
+     },
+     {
+      "family": "breastcancer",
+      "papers_in_period": 2,
+      "papers_total": 2,
+      "first_year": 2021,
+      "last_year": 2021
+     },
+     {
+      "family": "mushrooms",
+      "papers_in_period": 2,
+      "papers_total": 2,
+      "first_year": 2021,
+      "last_year": 2021
+     },
+     {
+      "family": "abalone",
+      "papers_in_period": 1,
+      "papers_total": 9,
+      "first_year": 2008,
+      "last_year": 2026
+     }
+    ],
+    "not stated": [
+     {
+      "family": "ecoli",
+      "papers_in_period": 3,
+      "papers_total": 6,
+      "first_year": 2015,
+      "last_year": 2022
+     },
+     {
+      "family": "vehicle",
+      "papers_in_period": 2,
+      "papers_total": 4,
+      "first_year": 2018,
+      "last_year": 2021
+     },
+     {
+      "family": "breasttissue",
+      "papers_in_period": 1,
+      "papers_total": 4,
+      "first_year": 2016,
+      "last_year": 2021
+     },
+     {
+      "family": "iris",
+      "papers_in_period": 1,
+      "papers_total": 4,
+      "first_year": 2018,
+      "last_year": 2026
+     },
+     {
+      "family": "segment",
+      "papers_in_period": 1,
+      "papers_total": 4,
+      "first_year": 2008,
+      "last_year": 2021
+     },
+     {
+      "family": "satimage",
+      "papers_in_period": 1,
+      "papers_total": 3,
+      "first_year": 2008,
+      "last_year": 2020
+     },
+     {
+      "family": "wine",
+      "papers_in_period": 1,
+      "papers_total": 3,
+      "first_year": 2018,
+      "last_year": 2021
+     },
+     {
+      "family": "winequality",
+      "papers_in_period": 1,
+      "papers_total": 3,
+      "first_year": 2020,
+      "last_year": 2025
+     }
+    ],
+    "synthetic (published)": [
+     {
+      "family": "art",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2024,
+      "last_year": 2024
+     },
+     {
+      "family": "simulateddataseta",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2022,
+      "last_year": 2022
+     },
+     {
+      "family": "simulateddatasetb",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2022,
+      "last_year": 2022
+     },
+     {
+      "family": "simulateddatasetc",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2022,
+      "last_year": 2022
+     },
+     {
+      "family": "simulateddatasetd",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2022,
+      "last_year": 2022
+     },
+     {
+      "family": "simulatedset",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2023,
+      "last_year": 2023
+     },
+     {
+      "family": "toy",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2023,
+      "last_year": 2023
+     }
+    ],
+    "synthetic (not published)": [
+     {
+      "family": "artificialdataset",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2022,
+      "last_year": 2022
+     },
+     {
+      "family": "artificialfamilya",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2020,
+      "last_year": 2020
+     },
+     {
+      "family": "artificialfamilyb",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2020,
+      "last_year": 2020
+     },
+     {
+      "family": "checkerboard",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2020,
+      "last_year": 2020
+     },
+     {
+      "family": "circles",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2021,
+      "last_year": 2021
+     },
+     {
+      "family": "mcmbrcsimir",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2024,
+      "last_year": 2024
+     },
+     {
+      "family": "moons",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2021,
+      "last_year": 2021
+     },
+     {
+      "family": "simulatedbinarydatasets",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2020,
+      "last_year": 2020
+     }
+    ]
+   },
+   "2025-2026": {
+    "original": [
+     {
+      "family": "yeast",
+      "papers_in_period": 3,
+      "papers_total": 17,
+      "first_year": 2011,
+      "last_year": 2026
+     },
+     {
+      "family": "newthyroid",
+      "papers_in_period": 2,
+      "papers_total": 16,
+      "first_year": 2011,
+      "last_year": 2025
+     },
+     {
+      "family": "pageblocks",
+      "papers_in_period": 2,
+      "papers_total": 16,
+      "first_year": 2007,
+      "last_year": 2026
+     },
+     {
+      "family": "hayesroth",
+      "papers_in_period": 2,
+      "papers_total": 13,
+      "first_year": 2013,
+      "last_year": 2025
+     },
+     {
+      "family": "glass",
+      "papers_in_period": 2,
+      "papers_total": 12,
+      "first_year": 2011,
+      "last_year": 2025
+     },
+     {
+      "family": "thyroid",
+      "papers_in_period": 2,
+      "papers_total": 12,
+      "first_year": 2013,
+      "last_year": 2025
+     },
+     {
+      "family": "car",
+      "papers_in_period": 2,
+      "papers_total": 11,
+      "first_year": 2006,
+      "last_year": 2025
+     },
+     {
+      "family": "cleveland",
+      "papers_in_period": 2,
+      "papers_total": 11,
+      "first_year": 2010,
+      "last_year": 2025
+     }
+    ],
+    "repository-defined": [
+     {
+      "family": "yeast",
+      "papers_in_period": 4,
+      "papers_total": 17,
+      "first_year": 2015,
+      "last_year": 2026
+     },
+     {
+      "family": "glass",
+      "papers_in_period": 4,
+      "papers_total": 15,
+      "first_year": 2015,
+      "last_year": 2026
+     },
+     {
+      "family": "abalone",
+      "papers_in_period": 3,
+      "papers_total": 13,
+      "first_year": 2015,
+      "last_year": 2026
+     },
+     {
+      "family": "ecoli",
+      "papers_in_period": 3,
+      "papers_total": 13,
+      "first_year": 2015,
+      "last_year": 2026
+     },
+     {
+      "family": "vowel",
+      "papers_in_period": 3,
+      "papers_total": 11,
+      "first_year": 2015,
+      "last_year": 2026
+     },
+     {
+      "family": "newthyroid",
+      "papers_in_period": 2,
+      "papers_total": 11,
+      "first_year": 2015,
+      "last_year": 2026
+     },
+     {
+      "family": "shuttle",
+      "papers_in_period": 2,
+      "papers_total": 9,
+      "first_year": 2015,
+      "last_year": 2026
+     },
+     {
+      "family": "vehicle",
+      "papers_in_period": 2,
+      "papers_total": 8,
+      "first_year": 2015,
+      "last_year": 2026
+     }
+    ],
+    "modified": [
+     {
+      "family": "abalone",
+      "papers_in_period": 2,
+      "papers_total": 9,
+      "first_year": 2008,
+      "last_year": 2026
+     },
+     {
+      "family": "pageblocks",
+      "papers_in_period": 2,
+      "papers_total": 8,
+      "first_year": 2010,
+      "last_year": 2025
+     },
+     {
+      "family": "letter",
+      "papers_in_period": 1,
+      "papers_total": 6,
+      "first_year": 2008,
+      "last_year": 2025
+     },
+     {
+      "family": "avila",
+      "papers_in_period": 1,
+      "papers_total": 2,
+      "first_year": 2021,
+      "last_year": 2025
+     },
+     {
+      "family": "statlog",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2025,
+      "last_year": 2025
+     },
+     {
+      "family": "waveform",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2025,
+      "last_year": 2025
+     }
+    ],
+    "not stated": [
+     {
+      "family": "winequality",
+      "papers_in_period": 2,
+      "papers_total": 3,
+      "first_year": 2020,
+      "last_year": 2025
+     },
+     {
+      "family": "iris",
+      "papers_in_period": 1,
+      "papers_total": 4,
+      "first_year": 2018,
+      "last_year": 2026
+     },
+     {
+      "family": "breast",
+      "papers_in_period": 1,
+      "papers_total": 2,
+      "first_year": 2015,
+      "last_year": 2026
+     },
+     {
+      "family": "parkinson",
+      "papers_in_period": 1,
+      "papers_total": 2,
+      "first_year": 2016,
+      "last_year": 2026
+     },
+     {
+      "family": "shuttle",
+      "papers_in_period": 1,
+      "papers_total": 2,
+      "first_year": 2020,
+      "last_year": 2026
+     },
+     {
+      "family": "statlog",
+      "papers_in_period": 1,
+      "papers_total": 2,
+      "first_year": 2016,
+      "last_year": 2026
+     },
+     {
+      "family": "academic",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2026,
+      "last_year": 2026
+     },
+     {
+      "family": "ai4i2020",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2026,
+      "last_year": 2026
+     }
+    ],
+    "synthetic (published)": [],
+    "synthetic (not published)": [
+     {
+      "family": "artificial",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2025,
+      "last_year": 2025
+     },
+     {
+      "family": "syntheticillustrationset",
+      "papers_in_period": 1,
+      "papers_total": 1,
+      "first_year": 2025,
+      "last_year": 2025
+     }
+    ]
+   }
+  },
+  "recent_2020_2026": {
+   "original": [
+    {
+     "family": "yeast",
+     "papers_in_period": 12,
+     "papers_total": 17,
+     "first_year": 2011,
+     "last_year": 2026
+    },
+    {
+     "family": "newthyroid",
+     "papers_in_period": 11,
+     "papers_total": 16,
+     "first_year": 2011,
+     "last_year": 2025
+    },
+    {
+     "family": "pageblocks",
+     "papers_in_period": 11,
+     "papers_total": 16,
+     "first_year": 2007,
+     "last_year": 2026
+    },
+    {
+     "family": "ecoli",
+     "papers_in_period": 10,
+     "papers_total": 17,
+     "first_year": 2010,
+     "last_year": 2025
+    },
+    {
+     "family": "hayesroth",
+     "papers_in_period": 9,
+     "papers_total": 13,
+     "first_year": 2013,
+     "last_year": 2025
+    },
+    {
+     "family": "thyroid",
+     "papers_in_period": 9,
+     "papers_total": 12,
+     "first_year": 2013,
+     "last_year": 2025
+    },
+    {
+     "family": "cleveland",
+     "papers_in_period": 9,
+     "papers_total": 11,
+     "first_year": 2010,
+     "last_year": 2025
+    },
+    {
+     "family": "glass",
+     "papers_in_period": 8,
+     "papers_total": 12,
+     "first_year": 2011,
+     "last_year": 2025
+    },
+    {
+     "family": "contraceptive",
+     "papers_in_period": 8,
+     "papers_total": 11,
+     "first_year": 2013,
+     "last_year": 2025
+    },
+    {
+     "family": "dermatology",
+     "papers_in_period": 8,
+     "papers_total": 10,
+     "first_year": 2015,
+     "last_year": 2025
+    },
+    {
+     "family": "zoo",
+     "papers_in_period": 8,
+     "papers_total": 10,
+     "first_year": 2011,
+     "last_year": 2025
+    },
+    {
+     "family": "balance",
+     "papers_in_period": 7,
+     "papers_total": 13,
+     "first_year": 2006,
+     "last_year": 2025
+    },
+    {
+     "family": "car",
+     "papers_in_period": 7,
+     "papers_total": 11,
+     "first_year": 2006,
+     "last_year": 2025
+    },
+    {
+     "family": "winequalityred",
+     "papers_in_period": 7,
+     "papers_total": 10,
+     "first_year": 2013,
+     "last_year": 2025
+    },
+    {
+     "family": "lymphography",
+     "papers_in_period": 7,
+     "papers_total": 9,
+     "first_year": 2013,
+     "last_year": 2025
+    }
+   ],
+   "repository-defined": [
+    {
+     "family": "yeast",
+     "papers_in_period": 11,
+     "papers_total": 17,
+     "first_year": 2015,
+     "last_year": 2026
+    },
+    {
+     "family": "glass",
+     "papers_in_period": 11,
+     "papers_total": 15,
+     "first_year": 2015,
+     "last_year": 2026
+    },
+    {
+     "family": "ecoli",
+     "papers_in_period": 9,
+     "papers_total": 13,
+     "first_year": 2015,
+     "last_year": 2026
+    },
+    {
+     "family": "abalone",
+     "papers_in_period": 8,
+     "papers_total": 13,
+     "first_year": 2015,
+     "last_year": 2026
+    },
+    {
+     "family": "newthyroid",
+     "papers_in_period": 6,
+     "papers_total": 11,
+     "first_year": 2015,
+     "last_year": 2026
+    },
+    {
+     "family": "vowel",
+     "papers_in_period": 6,
+     "papers_total": 11,
+     "first_year": 2015,
+     "last_year": 2026
+    },
+    {
+     "family": "shuttle",
+     "papers_in_period": 6,
+     "papers_total": 9,
+     "first_year": 2015,
+     "last_year": 2026
+    },
+    {
+     "family": "vehicle",
+     "papers_in_period": 5,
+     "papers_total": 8,
+     "first_year": 2015,
+     "last_year": 2026
+    },
+    {
+     "family": "pageblocks",
+     "papers_in_period": 4,
+     "papers_total": 10,
+     "first_year": 2015,
+     "last_year": 2026
+    },
+    {
+     "family": "poker",
+     "papers_in_period": 4,
+     "papers_total": 6,
+     "first_year": 2018,
+     "last_year": 2025
+    },
+    {
+     "family": "segment",
+     "papers_in_period": 4,
+     "papers_total": 6,
+     "first_year": 2015,
+     "last_year": 2026
+    },
+    {
+     "family": "winequalityred",
+     "papers_in_period": 3,
+     "papers_total": 4,
+     "first_year": 2019,
+     "last_year": 2025
+    },
+    {
+     "family": "cleveland",
+     "papers_in_period": 2,
+     "papers_total": 5,
+     "first_year": 2015,
+     "last_year": 2025
+    },
+    {
+     "family": "haberman",
+     "papers_in_period": 2,
+     "papers_total": 3,
+     "first_year": 2019,
+     "last_year": 2025
+    },
+    {
+     "family": "pima",
+     "papers_in_period": 2,
+     "papers_total": 3,
+     "first_year": 2019,
+     "last_year": 2025
+    }
+   ],
+   "modified": [
+    {
+     "family": "pageblocks",
+     "papers_in_period": 4,
+     "papers_total": 8,
+     "first_year": 2010,
+     "last_year": 2025
+    },
+    {
+     "family": "abalone",
+     "papers_in_period": 3,
+     "papers_total": 9,
+     "first_year": 2008,
+     "last_year": 2026
+    },
+    {
+     "family": "vehicle",
+     "papers_in_period": 2,
+     "papers_total": 11,
+     "first_year": 2004,
+     "last_year": 2024
+    },
+    {
+     "family": "ecoli",
+     "papers_in_period": 2,
+     "papers_total": 10,
+     "first_year": 2004,
+     "last_year": 2024
+    },
+    {
+     "family": "yeast",
+     "papers_in_period": 2,
+     "papers_total": 7,
+     "first_year": 2010,
+     "last_year": 2024
+    },
+    {
+     "family": "letter",
+     "papers_in_period": 2,
+     "papers_total": 6,
+     "first_year": 2008,
+     "last_year": 2025
+    },
+    {
+     "family": "svmguide",
+     "papers_in_period": 2,
+     "papers_total": 3,
+     "first_year": 2007,
+     "last_year": 2021
+    },
+    {
+     "family": "avila",
+     "papers_in_period": 2,
+     "papers_total": 2,
+     "first_year": 2021,
+     "last_year": 2025
+    },
+    {
+     "family": "breastcancer",
+     "papers_in_period": 2,
+     "papers_total": 2,
+     "first_year": 2021,
+     "last_year": 2021
+    },
+    {
+     "family": "mushrooms",
+     "papers_in_period": 2,
+     "papers_total": 2,
+     "first_year": 2021,
+     "last_year": 2021
+    },
+    {
+     "family": "glass",
+     "papers_in_period": 1,
+     "papers_total": 8,
+     "first_year": 2004,
+     "last_year": 2024
+    },
+    {
+     "family": "wine",
+     "papers_in_period": 1,
+     "papers_total": 6,
+     "first_year": 2010,
+     "last_year": 2022
+    },
+    {
+     "family": "vowel",
+     "papers_in_period": 1,
+     "papers_total": 5,
+     "first_year": 2008,
+     "last_year": 2021
+    },
+    {
+     "family": "iris",
+     "papers_in_period": 1,
+     "papers_total": 4,
+     "first_year": 2016,
+     "last_year": 2022
+    },
+    {
+     "family": "libra",
+     "papers_in_period": 1,
+     "papers_total": 4,
+     "first_year": 2014,
+     "last_year": 2022
+    }
+   ],
+   "not stated": [
+    {
+     "family": "ecoli",
+     "papers_in_period": 3,
+     "papers_total": 6,
+     "first_year": 2015,
+     "last_year": 2022
+    },
+    {
+     "family": "winequality",
+     "papers_in_period": 3,
+     "papers_total": 3,
+     "first_year": 2020,
+     "last_year": 2025
+    },
+    {
+     "family": "iris",
+     "papers_in_period": 2,
+     "papers_total": 4,
+     "first_year": 2018,
+     "last_year": 2026
+    },
+    {
+     "family": "vehicle",
+     "papers_in_period": 2,
+     "papers_total": 4,
+     "first_year": 2018,
+     "last_year": 2021
+    },
+    {
+     "family": "shuttle",
+     "papers_in_period": 2,
+     "papers_total": 2,
+     "first_year": 2020,
+     "last_year": 2026
+    },
+    {
+     "family": "breasttissue",
+     "papers_in_period": 1,
+     "papers_total": 4,
+     "first_year": 2016,
+     "last_year": 2021
+    },
+    {
+     "family": "segment",
+     "papers_in_period": 1,
+     "papers_total": 4,
+     "first_year": 2008,
+     "last_year": 2021
+    },
+    {
+     "family": "satimage",
+     "papers_in_period": 1,
+     "papers_total": 3,
+     "first_year": 2008,
+     "last_year": 2020
+    },
+    {
+     "family": "wine",
+     "papers_in_period": 1,
+     "papers_total": 3,
+     "first_year": 2018,
+     "last_year": 2021
+    },
+    {
+     "family": "breast",
+     "papers_in_period": 1,
+     "papers_total": 2,
+     "first_year": 2015,
+     "last_year": 2026
+    },
+    {
+     "family": "cm1",
+     "papers_in_period": 1,
+     "papers_total": 2,
+     "first_year": 2010,
+     "last_year": 2022
+    },
+    {
+     "family": "libra",
+     "papers_in_period": 1,
+     "papers_total": 2,
+     "first_year": 2018,
+     "last_year": 2021
+    },
+    {
+     "family": "parkinson",
+     "papers_in_period": 1,
+     "papers_total": 2,
+     "first_year": 2016,
+     "last_year": 2026
+    },
+    {
+     "family": "statlog",
+     "papers_in_period": 1,
+     "papers_total": 2,
+     "first_year": 2016,
+     "last_year": 2026
+    },
+    {
+     "family": "academic",
+     "papers_in_period": 1,
+     "papers_total": 1,
+     "first_year": 2026,
+     "last_year": 2026
+    }
+   ],
+   "synthetic (published)": [
+    {
+     "family": "art",
+     "papers_in_period": 1,
+     "papers_total": 1,
+     "first_year": 2024,
+     "last_year": 2024
+    },
+    {
+     "family": "simulateddataseta",
+     "papers_in_period": 1,
+     "papers_total": 1,
+     "first_year": 2022,
+     "last_year": 2022
+    },
+    {
+     "family": "simulateddatasetb",
+     "papers_in_period": 1,
+     "papers_total": 1,
+     "first_year": 2022,
+     "last_year": 2022
+    },
+    {
+     "family": "simulateddatasetc",
+     "papers_in_period": 1,
+     "papers_total": 1,
+     "first_year": 2022,
+     "last_year": 2022
+    },
+    {
+     "family": "simulateddatasetd",
+     "papers_in_period": 1,
+     "papers_total": 1,
+     "first_year": 2022,
+     "last_year": 2022
+    },
+    {
+     "family": "simulatedset",
+     "papers_in_period": 1,
+     "papers_total": 1,
+     "first_year": 2023,
+     "last_year": 2023
+    },
+    {
+     "family": "toy",
+     "papers_in_period": 1,
+     "papers_total": 1,
+     "first_year": 2023,
+     "last_year": 2023
+    }
+   ],
+   "synthetic (not published)": [
+    {
+     "family": "artificial",
+     "papers_in_period": 1,
+     "papers_total": 1,
+     "first_year": 2025,
+     "last_year": 2025
+    },
+    {
+     "family": "artificialdataset",
+     "papers_in_period": 1,
+     "papers_total": 1,
+     "first_year": 2022,
+     "last_year": 2022
+    },
+    {
+     "family": "artificialfamilya",
+     "papers_in_period": 1,
+     "papers_total": 1,
+     "first_year": 2020,
+     "last_year": 2020
+    },
+    {
+     "family": "artificialfamilyb",
+     "papers_in_period": 1,
+     "papers_total": 1,
+     "first_year": 2020,
+     "last_year": 2020
+    },
+    {
+     "family": "checkerboard",
+     "papers_in_period": 1,
+     "papers_total": 1,
+     "first_year": 2020,
+     "last_year": 2020
+    },
+    {
+     "family": "circles",
+     "papers_in_period": 1,
+     "papers_total": 1,
+     "first_year": 2021,
+     "last_year": 2021
+    },
+    {
+     "family": "mcmbrcsimir",
+     "papers_in_period": 1,
+     "papers_total": 1,
+     "first_year": 2024,
+     "last_year": 2024
+    },
+    {
+     "family": "moons",
+     "papers_in_period": 1,
+     "papers_total": 1,
+     "first_year": 2021,
+     "last_year": 2021
+    },
+    {
+     "family": "simulatedbinarydatasets",
+     "papers_in_period": 1,
+     "papers_total": 1,
+     "first_year": 2020,
+     "last_year": 2020
+    },
+    {
+     "family": "simulateddataseta",
+     "papers_in_period": 1,
+     "papers_total": 1,
+     "first_year": 2023,
+     "last_year": 2023
+    },
+    {
+     "family": "simulateddatasetb",
+     "papers_in_period": 1,
+     "papers_total": 1,
+     "first_year": 2023,
+     "last_year": 2023
+    },
+    {
+     "family": "simulateddatasetc",
+     "papers_in_period": 1,
+     "papers_total": 1,
+     "first_year": 2023,
+     "last_year": 2023
+    },
+    {
+     "family": "simulateddatasetd",
+     "papers_in_period": 1,
+     "papers_total": 1,
+     "first_year": 2023,
+     "last_year": 2023
+    },
+    {
+     "family": "syntheticillustrationset",
+     "papers_in_period": 1,
+     "papers_total": 1,
+     "first_year": 2025,
+     "last_year": 2025
+    },
+    {
+     "family": "toydataset",
+     "papers_in_period": 1,
+     "papers_total": 1,
+     "first_year": 2021,
+     "last_year": 2021
+    }
+   ]
+  },
+  "recent_papers": 32,
+  "published_synthetic_sets": [
+   {
+    "paper": "G-SMOTE",
+    "year": 2019,
+    "entries": "2",
+    "where": "can be found at https://github.com/IMS-ML-Lab"
+   },
+   {
+    "paper": "GMMSampling",
+    "year": 2024,
+    "entries": "4",
+    "where": "the artificial datasets can be found in the repository of multi-imbalance"
+   },
+   {
+    "paper": "SVDD-WSMOTE",
+    "year": 2022,
+    "entries": "4",
+    "where": "can be found in https://github.com/Zheng7777/simulated-datasets"
+   },
+   {
+    "paper": "SMOTE-IPF",
+    "year": 2015,
+    "entries": "30",
+    "where": "This web-page also includes the basic information of this paper, the datasets used"
+   },
+   {
+    "paper": "k-means SMOTE",
+    "year": 2018,
+    "entries": "15",
+    "where": "All modified and simulated datasets used in the study are made available at"
+   },
+   {
+    "paper": "CTGAN / TVAE",
+    "year": 2019,
+    "entries": "7",
+    "where": "Our benchmark can be found at https://github.com/DAI-Lab/SDGym"
+   },
+   {
+    "paper": "OREM-M",
+    "year": 2023,
+    "entries": "1",
+    "where": "benchmark set: public in the ORCA repository (github.com/ayrna/orca, exampledata/1-holdout/toy); identified outside the paper (external check 8 Nov, build/full_"
+   }
+  ]
+ }
+}

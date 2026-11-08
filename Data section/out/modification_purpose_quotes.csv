@@ -1,0 +1,42 @@
+paper_key,theme,quote,pdf_page
+ADASYN,two-class scope,since our interest here is to test the learning capabilities from two-class imbalanced problems,p.3
+ADASYN,basis: earlier work,according to various literary results from similar experiments,p.3
+ADASYN,basis: earlier work,as suggested in [17],p.4
+Borderline-SMOTE,two-class scope,as we only study two-class problem in this paper,p.6
+Safe-Level-SMOTE,two-class scope,because we only study the two-class imbalanced problem,p.6
+MWMOTE,two-class scope,We transform them to two-class problems because of our interest,p.13
+RAMOBoost,two-class scope,we also consider only two-class imbalanced problems in our current study,p.7
+RAMOBoost,basis: earlier work,we modified those datasets following suggestions in literature to make them into two-class datasets,p.7
+RAMOBoost,robustness test,"In order to systematically investigate the robustness of RAMOBoost, we manually introduce class label noise and attribute noise",p.16
+RUSBoost,two-class scope,"Since this paper considers only the binary classification problem, it was necessary to transform some of the data sets to have a binary class",p.5
+SMOTE,two-class scope,Since our system currently works for binary classes we extracted data for two classes from this dataset and ignored the rest,p.13
+SMOTE-IPF,two-class scope,Multi-class datasets are modiﬁed to obtain two-class imbalanced problems,p.8
+SMOTE-IPF,robustness test,to introduce additional class or attribute noise into these real-world datasets and to study its impact on compared SMOTE generalizations,p.3
+SMOTE-IPF,basis: earlier work,The same two noise introduction schemes proposed by the authors of that paper are used in this work,p.8
+Cluster-SMOTE,two-class scope,We can accommodate this limitation by focusing our approach and treating this as a 2-class problem,p.2
+NBU,create/raise imbalance,were undersampled to obtained higher class imbalance degrees,p.18
+NBU,two-class scope,the undersampling criteria for binary-class problems,p.33
+G-SMOTE,create/raise imbalance,In order to test the performance of the algorithm on more extreme cases of imbalance,p.3
+HDE,create/raise imbalance,"To evaluate the proposed HD-Ensemble for extreme case, we manually created 14 highly imbalanced datasets",p.9
+HDE,publishes modified data,All the 42 datasets adopted in our experiments have been uploaded to GitHub,p.9
+k-means SMOTE,create/raise imbalance,In order to generate additional datasets with even higher imbalance ratios,p.14
+k-means SMOTE,publishes modified data,All modified and simulated datasets used in the study are made available,p.14
+RSMOTE,create/raise imbalance,artificially imbalanced to obtain higher imbalanced ratios,p.12
+RSMOTE,robustness test,To verify the effectiveness of our method for imbalanced learning with label noise,p.12
+ROS (Buda),create/raise imbalance,to make them artificially imbalanced,p.10
+SVDD-WSMOTE,create/raise imbalance,to simulate the scenarios with higher imbalance ratios,p.22
+SVDD-WSMOTE,basis: stated rule,where the class with relatively a few numbers of instances are regarded as the minority class,p.22
+GAMO,create/raise imbalance,"are not significantly imbalanced in nature, therefore we have created their imbalanced variants",p.5
+COG-OS,create/raise imbalance,we prepared the imbalanced data sets with rare classes via sampling on various binary data sets,p.5
+COG-OS,practical,So for the evaluation concern we deleted these new subclasses,p.7
+SMOTEBoost,practical,in order to reduce the size of the data set,p.6
+SMOTEBoost,practical,we modified the data sets in order to have similar distributions in the training and test data,p.6
+SMOTEBoost,basis: earlier work,as was done in [24],p.6
+CISO,basis: stated rule,binarized by the smallestclass-versus-rest rule,p.15
+GMMSampling,basis: earlier work,The classification of classes into majority and minority categories was taken from the previous paper on SOUP,p.11
+DSRBF / Static-SMOTE,publishes modified data,All the datasets and the corresponding partitions have been included in a public website,p.7
+SPE,robustness test,To simulate the situation of missing values,p.10
+RBO,robustness test,we measured the inﬂuence of the label noise on the classiﬁcation performance,p.8
+MC-CCR,robustness test,we evaluated how the presence of the label noise affects the predictive performance of MC-CCR,p.9
+MC-MBRC,robustness test,How does label noise affect the performance of MC-MBRC?,p.10
+MC-NCLWO,robustness test,To assess the robustness of the MC-NCLWO method in feature noise environments,p.15

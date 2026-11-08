@@ -227,6 +227,7 @@ footer code{font-family:var(--f-mono)}
 .legend span{display:inline-flex;gap:6px;align-items:center}
 .cap{margin:0;font-size:12.5px;color:var(--ink3);max-width:80ch}
 .unit{font-family:var(--f-mono);font-size:11.5px;color:var(--ink3);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:0 6px;white-space:nowrap}
+#p-md .unit{white-space:normal}
 .card h3.ct{font-family:var(--f-display);font-size:16px;font-weight:600;margin:0;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
 .card{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;align-content:start}
 .grid2>*{min-width:0}
@@ -355,6 +356,7 @@ tr.mz-sel td{background:var(--accent-soft)}
     <button role="tab" id="t-mz" aria-selected="false" aria-controls="p-mz">ความยากที่วัดได้</button>
     <button role="tab" id="t-pp" aria-selected="false" aria-controls="p-pp">Papers</button>
     <button role="tab" id="t-ov" aria-selected="false" aria-controls="p-ov">ภาพรวมการจัดการข้อมูล</button>
+    <button role="tab" id="t-md" aria-selected="false" aria-controls="p-md">ข้อมูลที่ดัดแปลง</button>
     <button role="tab" id="t-wn" aria-selected="false" aria-controls="p-wn">ชนะ SMOTE บนข้อมูลแบบไหน</button>
     <button role="tab" id="t-an" aria-selected="false" aria-controls="p-an">Analyses A–F</button>
     <button role="tab" id="t-ho" aria-selected="false" aria-controls="p-ho">Handoff</button>
@@ -563,6 +565,7 @@ tr.mz-sel td{background:var(--accent-soft)}
     <div id="ms-tex" hidden><div class="card"><div class="ms-texbar"><span class="sub">LaTeX ของ section (ส่วน preamble ของร่างมี macro สี ตัดทิ้งได้ก่อนรวมเข้า main.tex)</span><button id="ms-copy">คัดลอก</button></div><pre class="ms-pre" id="ms-pre"></pre></div></div>
   </section>
 
+  <section role="tabpanel" id="p-md" aria-labelledby="t-md" hidden></section>
   <section role="tabpanel" id="p-wn" aria-labelledby="t-wn" hidden>
     <div class="notice"><b>ส่วนล่างของแท็บนี้ (ตาราง 1–3) ใช้กติกา A: metric เดียวต่อ paper</b> ซึ่งเป็นการตรวจความทนทาน ผลหลักตั้งแต่ 29 ต.ค. คือทุก metric (การ์ดด้านบน) · (metric เดียวต่อ paper ค่าเท่ากันที่ทศนิยมที่พิมพ์ = เสมอ รออาจารย์ยืนยัน) "สูงกว่า" คือค่าที่พิมพ์มากกว่า
     diff อยู่ในหน่วยของ metric ของ paper นั้น <b>เทียบข้าม paper ไม่ได้</b> แต่ละ paper ใช้ metric และ classifier ตามกติกาเดียวกัน (G-mean &gt; AUC &gt; F1 &gt; accuracy, classifier ที่ abstract ชู)</div>
@@ -685,12 +688,12 @@ const split = s => (s || "").split(";").filter(Boolean);
 const nz = v => (v===null||v===undefined||v==="None"||v==="null") ? "" : v;
 
 /* ---------- tabs ---------- */
-const TABS = ["db","ms","ds","dx","co","df","mz","pp","ov","wn","an","ln","ho"];
+const TABS = ["db","ms","ds","dx","co","df","mz","pp","ov","md","wn","an","ln","ho"];
 function show(t){ TABS.forEach(x=>{ $("#t-"+x).setAttribute("aria-selected", x===t); $("#p-"+x).hidden = x!==t; });
   try{ localStorage.setItem("atlas-tab", t) }catch(e){} }
 TABS.forEach(x => $("#t-"+x).addEventListener("click", () => show(x)));
 let start = "db"; try{ start = localStorage.getItem("atlas-tab") || "db" }catch(e){}
-const HASH = {"#dashboard":"db","#explorer":"dx","#characteristics":"co","#difficulty":"df","#manuscript":"ms","#papers":"pp","#overview":"ov","#wins":"wn","#analyses":"an","#landscape":"ln","#measured":"mz","#handoff":"ho"}; if (HASH[location.hash]) start = HASH[location.hash];
+const HASH = {"#dashboard":"db","#explorer":"dx","#characteristics":"co","#difficulty":"df","#manuscript":"ms","#papers":"pp","#overview":"ov","#wins":"wn","#analyses":"an","#landscape":"ln","#measured":"mz","#modified":"md","#handoff":"ho"}; if (HASH[location.hash]) start = HASH[location.hash];
 show(TABS.includes(start) ? start : "db");
 
 /* ---------- manuscript tab ---------- */
@@ -951,11 +954,11 @@ renderWNsum();
     "not stated":"ไม่มี paper ไหนระบุแหล่งของชุดนี้"};
   const tot = NT.names, NB = NT.by_type, cmax = Math.max(...CATS.map(c=>NB[c]));
   const NSLAB = {"other repository":"คลังหรือ benchmark อื่น เช่น Kaggle, HDDT","group-level":"ระบุแค่ระดับกลุ่ม เช่น “UCI หรือ KEEL”","other paper/author":"จาก paper อื่น","private":"Private"};
-  const OPLAB = {CS:"CS แปลงคลาส", US:"US ลดตัวอย่าง", IM:"IM ตั้งใจเปลี่ยน IR", SF:"SF ตัดแถว / ใช้ subset", FM:"FM เปลี่ยน feature", OT:"OT อื่น ๆ", IS:"IS ระบุไม่ได้"};
+  const OPLAB = {CS:"CS แปลงคลาส", US:"US ลดตัวอย่าง", IM:"IM ตั้งใจเปลี่ยน IR", SF:"SF ตัดแถว / ใช้ subset", FM:"FM เปลี่ยน feature", NI:"NI ใส่ noise / outlier", LC:"LC ผู้เขียนสร้างป้ายคลาสเอง", IS:"IS ระบุไม่ได้"};
   const OPTIP = {CS:"class selection / task conversion: แปลง multiclass เป็นสองคลาส (ส่วนใหญ่ one-vs-rest), เลือก รวม หรือตัดคลาส, ตั้ง threshold บนค่าเป้าหมาย",
     US:"sample reduction / undersampling: ลดจำนวนตัวอย่างของคลาสใดคลาสหนึ่ง (ส่วนใหญ่ minority)", IM:"imbalance manipulation: ตั้งใจเปลี่ยน IR (paper เขียนว่าทำเพื่อสร้างหรือเพิ่มความไม่สมดุล)",
-    SF:"sample filtering / subset selection: ตัดแถวที่มีค่าหาย หรือใช้ subset โดยไม่เจาะจงคลาส", FM:"feature modification: ตัด เลือก หรือแปลง feature, feature extraction, ใส่ noise ใน attribute",
-    OT:"other documented: เช่น ใส่ label noise หรือสร้างป้ายคลาสเอง", IS:"insufficiently specified: รู้ว่าดัดแปลงแต่ระบุการดำเนินการไม่ได้"};
+    SF:"sample filtering / subset selection: ตัดแถวที่มีค่าหาย หรือใช้ subset โดยไม่เจาะจงคลาส", FM:"feature modification: ตัด เลือก หรือแปลง feature, feature extraction",
+    NI:"noise / outlier injection: ใส่ label (class) noise, attribute noise หรือ outlier ลงในข้อมูลจริง", LC:"labels constructed by the authors: ผู้เขียนสร้างชุดข้อมูลและกำหนดป้ายคลาสเองจากข้อมูลดิบ (log ของเครือข่าย, ผล simulation)", IS:"insufficiently specified: รู้ว่าดัดแปลงแต่ระบุการดำเนินการไม่ได้"};
   const DLAB = {"none":"ไม่ติดธงใด","small_sample":"Small sample","outlier_flag":"Outlier > 20%","small_sample + outlier_flag":"Small sample + outlier > 20%",
     "small_disjuncts + outlier_flag":"Small disjuncts + outlier > 20%","small_disjuncts + small_sample":"Small disjuncts + small sample",
     "small_disjuncts + small_sample + outlier_flag":"Small disjuncts + small sample + outlier > 20%","varies":"ต่างกันตามไฟล์หรือคลาส",
@@ -1594,7 +1597,7 @@ renderWNsum();
   $("#an-nav").innerHTML = SECS.map(([k,l]) => `<button type="button" data-s="${k}" aria-pressed="${k===cur}">${l}</button>`).join("");
 
   /* ---------- A ---------- */
-  const OPN = {CS:"class selection / task conversion",US:"sample reduction / undersampling",IM:"imbalance manipulation (deliberate)",SF:"sample filtering / subset",FM:"feature modification",OT:"other documented",IS:"insufficiently specified"};
+  const OPN = {CS:"class selection / task conversion",US:"sample reduction / undersampling",IM:"imbalance manipulation (deliberate)",SF:"sample filtering / subset",FM:"feature modification",NI:"noise / outlier injection",LC:"labels constructed by the authors",IS:"insufficiently specified"};
   const AF = AN.A.fields, AR = AN.A.rows.map(a => Object.fromEntries(AF.map((k,i)=>[k,a[i]])));
   let aF = {op:"", cf:"", p:"", q:"", lim:100};
   function rA(){
@@ -1719,7 +1722,7 @@ renderWNsum();
       ...["original","repository-defined","modified","synthetic","not stated"].map(c => [`${c} (หน่วย entry)`, p => cell(BP[p].category_entries[c])]),
       ...["original","repository-defined","modified","synthetic","not stated"].map(c => [`paper ที่มี ${c} อย่างน้อย 1 ชุด`, p => cell(BP[p].category_papers_with_any[c])]),
       ["paper ที่ใช้แค่ original หรือ repository-defined", p => cell(BP[p].papers_only_original_or_repository)],
-      ...["CS","US","IM","SF","FM","OT"].map(o => [`paper ที่มี ${o} (จาก A; ตัวหาร = paper ในช่วง)`, p => cell(BP[p].modification_ops_papers_of_all_papers[o])]),
+      ...["CS","US","IM","SF","FM","NI","LC"].map(o => [`paper ที่มี ${o} (จาก A; ตัวหาร = paper ในช่วง)`, p => cell(BP[p].modification_ops_papers_of_all_papers[o])]),
       ["paper ที่ดัดแปลงและพบเหตุผล (ตัวหาร = paper ที่ดัดแปลง)", p => cell(BP[p].modifying_papers_with_stated_purpose)],
       ...["n_instances","n_features","n_classes","n_minority","ir_as_printed","source_as_reported"].map(k => [`entry ที่รายงาน ${k}`, p => cell(BP[p].reporting_entries[k])]),
       ["paper ที่ระบุนิยาม IR", p => cell(BP[p].papers_stating_ir_definition)],
@@ -1973,7 +1976,7 @@ function makeLand(P, host){
     const ndef = r => blank((PAP[r.paper_key]||{}).irdef);
     const IRD = [{l:"paper ระบุนิยาม IR", n:REC.filter(r=>!blank(r.ir_as_printed)&&!ndef(r)).length, pred:r=>!blank(r.ir_as_printed)&&!ndef(r), sel:"IR พิมพ์ + paper ระบุนิยาม"},
                  {l:"paper ไม่ระบุนิยาม", n:REC.filter(r=>!blank(r.ir_as_printed)&&ndef(r)).length, pred:r=>!blank(r.ir_as_printed)&&ndef(r), sel:"IR พิมพ์ + paper ไม่ระบุนิยาม", miss:1}];
-    const OPN = {CS:"class selection / task conversion",US:"sample reduction",IM:"imbalance manipulation",SF:"sample filtering",FM:"feature modification",OT:"other"};
+    const OPN = {CS:"class selection / task conversion",US:"sample reduction",IM:"imbalance manipulation",SF:"sample filtering",FM:"feature modification",NI:"noise / outlier injection",LC:"labels constructed by the authors"};
     const OP = Object.keys(OPN).map(o => ({l:o, lab:`<span class="opc">${o}</span>${esc(OPN[o])}`, n:REC.filter(r=>(OPS[r.record_id]||"").split(";").includes(o)).length, pred:r=>(OPS[r.record_id]||"").split(";").includes(o), sel:"การดัดแปลง "+o}));
     return `<p class="unitline">หน่วย: entry (${f(REC.length)}) · จำนวนคลาสคือค่าที่ paper พิมพ์ ซึ่งมักเป็นค่าหลังแปลงเป็นสองคลาสแล้ว · IR ใช้นิยามต่างกันตาม paper (${stated} paper ระบุนิยาม, ${irDef.length-stated} ไม่ระบุ) แท่ง IR จึงบอกค่าที่พิมพ์ ไม่ได้เทียบความไม่สมดุลข้าม paper ได้ตรง ๆ และไม่ได้บอกความยาก</p>
       <div class="grid2"><div class="card"><h3 class="ct">จำนวนคลาสที่พิมพ์ <span class="unit">entry</span></h3>${bars(CL,"entry")}${below2?`<p class="cap">ค่าต่ำกว่า 2: ${below2} entry (ไม่อยู่ในแท่ง)</p>`:""}</div>
@@ -2450,5 +2453,95 @@ makeLand("ln", $("#p-ln"));
   });
   render();
   $("#ho-src").textContent = `ที่มา: ${H.source} · handoff.md ${f(H.lines)} บรรทัด ฝังตอนรัน build/make_atlas.py (แปลงด้วย build/md2html.py)`;
+})();
+
+/* ---------- 9 พ.ย. 2026: ข้อมูลที่ดัดแปลง (D.md จาก build/modification_analysis.py) ---------- */
+(function(){
+  const M = D.md; if (!M) return;
+  const A = M.a, P = A.purpose, S = A.signals, f = n => (+n).toLocaleString(), pc = (k,n) => n ? Math.round(k/n*100)+"%" : "–";
+  const tipA = s => `data-tip="${esc(s)}"`;
+  const kp = (b, s, h) => `<div class="kpi"><b>${b}</b><span>${s}</span>${h?`<div class="cap" style="margin-top:4px">${h}</div>`:""}</div>`;
+  const bars = (items, of, unit) => { const mx = Math.max(1, ...items.map(i => i.n)); return `<div class="hb wide">${items.map(i => `<div class="hrow ${i.k||""}" ${tipA(i.l+": "+i.n+" "+unit+" จาก "+of)}><span class="lab"><i class="sw"></i>${i.l}</span><span class="trk"><span class="fillk ${i.k||""}" style="width:${i.n/mx*100}%"></span></span><span class="val">${i.n} · ${pc(i.n,of)}</span></div>`).join("")}</div>`; };
+  const TH = {"two-class scope":"ขอบเขตของงานหรือวิธีเป็นสองคลาส จึงแปลงชุดหลายคลาสเป็นสองคลาส","create/raise imbalance":"ข้อมูลไม่ไม่สมดุลพอ จึงทำให้ไม่สมดุล (มากขึ้น)","robustness test":"ใส่ noise / outlier / ค่าหาย เพื่อดูว่าวิธีทนได้แค่ไหน","practical":"เหตุผลเชิงปฏิบัติ: ลดขนาด หรือทำให้ไฟล์ train/test สอดคล้องกัน","not stated":"ไม่พบประโยคที่บอกเหตุผล"};
+  const OPL = {CS:"CS แปลง/เลือก/รวม/ตัดคลาส", US:"US ลดจำนวนตัวอย่าง", IM:"IM ตั้งใจเปลี่ยน IR", SF:"SF ตัดแถว / ใช้ subset", FM:"FM ตัด/แปลง feature", NI:"NI ใส่ noise / outlier", LC:"LC ผู้เขียนสร้างป้ายคลาสเองจากข้อมูลดิบ", IS:"IS ระบุไม่ได้"};
+  const C = A.common, N = A.noise, T = A.time;
+  const PER = ["<=2004","2005-2009","2010-2014","2015-2019","2020-2024","2025-2026"];
+  const CATS = ["original","repository-defined","modified","not stated","synthetic (published)","synthetic (not published)"];
+  const CL = {"original":"original","repository-defined":"repository-defined (KEEL/imbalanced-learn)","modified":"modified","not stated":"บอกที่มาไม่ได้","synthetic (published)":"synthetic ที่เผยแพร่","synthetic (not published)":"synthetic ที่ไม่ได้เผยแพร่เอง"};
+  const el = $("#p-md");
+  el.innerHTML = `<div class="db-head"><h2>ข้อมูลที่ดัดแปลง: ทำอะไร เพื่ออะไร ใช้กันอย่างไร</h2>
+      <p>หน่วยหลักคือ paper (${P.papers} paper = ${P.papers_with_modified_entries} paper ที่มี entry ชนิด modified + ${P.papers_noise_only.length} paper ที่ใส่ noise ลงในข้อมูลจริงเป็นเงื่อนไขการทดลองโดยไม่ได้นับชุดที่มี noise เป็น entry: ${P.papers_noise_only.join(", ")}) · เหตุผลทุกข้อยกจากประโยคใน PDF และตรวจอัตโนมัติว่ามีอยู่จริง · "ไม่ได้บอก" หมายถึงไม่พบประโยค ไม่ได้แปลว่าไม่มีเหตุผล</p></div>
+    <div class="kgrid">${kp(P.papers, "paper ที่ดัดแปลงข้อมูลหรือใส่ noise", `${f(P.entries)} entry ชนิด modified`)}
+      ${kp(`${P.harder_papers} (${pc(P.harder_papers,P.papers)})`, "paper ที่เขียนว่าทำให้ยากขึ้น", "ทำให้ไม่สมดุลมากขึ้น หรือใส่ noise เพื่อทดสอบความทน")}
+      ${kp(`${P.scope_papers} (${pc(P.scope_papers,P.papers)})`, "paper ที่เขียนว่าแปลงเพราะงาน/วิธีเป็นสองคลาส", "ให้ข้อมูลเข้ากับขอบเขตของวิธี")}
+      ${kp(`${P.by_theme_papers["not stated"]} (${pc(P.by_theme_papers["not stated"],P.papers)})`, "paper ที่ไม่พบเหตุผล", `${P.by_theme_entries["not stated"]} จาก ${P.entries} entry`)}</div>
+    <div class="card" id="md-noise"></div><div class="card" id="md-ops"></div><div class="card" id="md-why"></div>
+    <div class="card" id="md-sig"></div><div class="card" id="md-tab"></div><div class="card" id="md-com"></div><div class="card" id="md-time"></div>`;
+  // noise
+  $("#md-noise").innerHTML = `<h3 class="ct">ชุดที่มีการใส่ noise / outlier <span class="unit">${N.real_data_papers} paper ใส่ลงข้อมูลจริง · ${N.synthetic_with_noise_papers} paper สร้างข้อมูล synthetic ที่มี noise ในตัว</span></h3>
+    <div class="tbox"><table class="dxt"><thead><tr><th>paper</th><th>ใส่อะไร</th><th>ระดับ</th><th>ข้อมูลที่ใส่</th><th>ชุดที่มี noise เป็น entry ไหม</th><th>ตำแหน่งใน paper</th></tr></thead><tbody>${N.real_data.map(r => `<tr><td>${esc(r.paper_key)}</td><td>${esc(r.what_was_added)}</td><td>${esc(r.levels)}</td><td>${esc(r.data_sets)}</td><td>${esc(r.noisy_sets_are_entries)}</td><td>${esc(r.where_in_paper)}</td></tr>`).join("")}</tbody></table></div>
+    <p class="cap">ค้นทุก PDF ด้วยคำว่า label/class/attribute/feature noise, noise level, inject, corrupt, mislabel, outlier added แล้วอ่านประโยคทีละ paper · ชุดที่ "ไม่เป็น entry": paper ลิสต์ชุดเดิมเป็น entry แล้วใส่ noise เป็นเงื่อนไขเพิ่ม ชุดเดิมยังอยู่ในหมวดเดิม (ยังไม่ได้เพิ่มเป็น entry modified — รอ Toon ตัดสิน)</p>
+    <details><summary>synthetic ที่ผู้เขียนสร้างให้มี noise หรือ outlier ในตัว (${N.synthetic_generated_with_noise.length} entry)</summary><div class="tbox"><table class="dxt"><thead><tr><th>paper</th><th>record</th><th>ชื่อ</th><th>บันทึก</th></tr></thead><tbody>${N.synthetic_generated_with_noise.map(r => `<tr><td>${esc(r.paper)}</td><td class="mono">${esc(r.record_id)}</td><td>${esc(r.name)}</td><td style="font-size:12px">${esc(r.note)}</td></tr>`).join("")}</tbody></table></div></details>`;
+  // ops
+  const TE = C.tag_entries, TP = C.tag_papers, OPS = Object.keys(OPL).filter(o => TE[o] !== undefined);
+  $("#md-ops").innerHTML = `<h3 class="ct">การดัดแปลงทำอะไร (แยกเป็นวิธีที่มีชื่อ ไม่มีหมวด "อื่น ๆ") <span class="unit">${f(P.entries)} entry modified · 1 entry มีได้หลายวิธี</span></h3>
+    <div class="tbox"><table class="dxt"><thead><tr><th>วิธี</th><th class="num">entry</th><th class="num">paper</th></tr></thead><tbody>${OPS.map(o => `<tr><td>${esc(OPL[o])}</td><td class="num">${TE[o]}</td><td class="num">${TP[o]}</td></tr>`).join("")}</tbody></table></div>
+    <p class="cap">9 พ.ย.: หมวด OT ("อื่น ๆ") เดิม 5 entry แยกเป็น NI (class noise ของ SMOTE-IPF, outlier ที่เติมใน fourclass ของ RSMOTE) และ LC (Cluster-SMOTE สร้างชุดจาก traffic ของเครือข่ายและติดป้ายด้วย SNORT, SMOTE สร้างชุด Can จากผล simulation) · attribute noise ของ SMOTE-IPF ย้ายจาก FM ไป NI</p>
+    <details><summary>การแปลงคลาส (CS) แบบละเอียด</summary><div class="tbox"><table class="dxt"><thead><tr><th>แบบ</th><th class="num">entry</th></tr></thead><tbody>${Object.entries(C.class_op_kind).sort((a,b)=>b[1]-a[1]).map(([k,v]) => `<tr><td>${esc(k)}</td><td class="num">${v}</td></tr>`).join("")}</tbody></table></div></details>
+    <details><summary>ชุดวิธีที่ใช้ร่วมกันใน entry เดียว</summary><div class="tbox"><table class="dxt"><thead><tr><th>วิธีรวม</th><th class="num">entry</th></tr></thead><tbody>${Object.entries(C.combinations).sort((a,b)=>b[1]-a[1]).map(([k,v]) => `<tr><td class="mono">${esc(k)}</td><td class="num">${v}</td></tr>`).join("")}</tbody></table></div></details>`;
+  // why
+  const TT = ["two-class scope","create/raise imbalance","robustness test","practical","not stated"];
+  const tk = {"two-class scope":"k-eq","create/raise imbalance":"k-up","robustness test":"k-up","practical":"k-eq","not stated":"k-not-stated"};
+  $("#md-why").innerHTML = `<h3 class="ct">ดัดแปลงเพื่ออะไร (ตามประโยคใน paper) <span class="unit">paper ละได้หลายข้อ</span></h3>
+    <div class="grid2"><div><p class="cap">หน่วย paper (จาก ${P.papers})</p>${bars(TT.map(t => ({l:TH[t], n:P.by_theme_papers[t], k:tk[t]})), P.papers, "paper")}</div>
+      <div><p class="cap">หน่วย entry modified (จาก ${P.entries}; entry รับเหตุผลเฉพาะเมื่อวิธีของ entry ตรงกับเรื่องที่ประโยคพูด)</p>${bars(TT.map(t => ({l:TH[t], n:P.by_theme_entries[t]||0, k:tk[t]})), P.entries, "entry")}</div></div>
+    <p class="cap">"ทำให้ยากขึ้น" (ทำให้ไม่สมดุลมากขึ้นหรือใส่ noise) ${P.harder_papers} paper, ${P.harder_entries} entry · "ให้เข้ากับขอบเขตของวิธี" (สองคลาส) ${P.scope_papers} paper, ${P.scope_entries} entry · ที่มาของการเลือก (คลาสไหนเป็น minority, ใส่ noise แบบไหน): ตามงานก่อนหน้า ${P.basis_papers["basis: earlier work"]} paper, ตามกฎที่เขียนไว้ ${P.basis_papers["basis: stated rule"]} paper, ไม่ได้บอก ${P.basis_papers["not stated"]} paper</p>`;
+  // signals
+  const W = S.win_share_both;
+  $("#md-sig").innerHTML = `<h3 class="ct">ดูอย่างไรว่าการดัดแปลงเข้าทางวิธีของผู้เขียน: สัญญาณที่ตรวจได้ <span class="unit">ไม่มีสัญญาณใดพิสูจน์เจตนาได้</span></h3>
+    <div class="tbox"><table class="dxt"><thead><tr><th>สัญญาณ</th><th class="num">paper</th><th>อ่านอย่างไร</th></tr></thead><tbody>
+      <tr><td>แปลงคลาสแล้วทดลองบนสองคลาสอย่างเดียว</td><td class="num">${S.converted_and_two_class_only} / ${S.papers_with_class_conversion}</td><td>การแปลงทำให้ข้อมูลเข้ากับขอบเขตของวิธีที่ทดสอบ; เขียนเหตุผลนี้ไว้ ${S.of_which_state_two_class_scope} paper</td></tr>
+      <tr><td>รายงานผลบนชุดเดียวกันที่ไม่ได้ดัดแปลงคู่กันด้วย</td><td class="num">${S.same_data_also_unmodified_papers} / ${S.papers_with_modified_entries}</td><td>ถ้ามี ผู้อ่านเทียบได้ว่าการดัดแปลงเปลี่ยนผลแค่ไหน</td></tr>
+      <tr><td>ดัดแปลงหลายระดับ (หลาย IR หรือหลายระดับ noise)</td><td class="num">${S.several_levels} / ${P.papers}</td><td>การไล่ระดับเป็นการทดสอบความทน ไม่ใช่การเลือกจุดเดียว; ทุก paper ที่เขียนว่าทำให้ยากขึ้นและไล่ระดับ: ${S.harder_papers_with_several_levels}</td></tr>
+      <tr><td>บอกที่มาของการเลือก (ตามงานก่อน / กฎที่เขียนไว้)</td><td class="num">${P.papers - P.basis_papers["not stated"]} / ${P.papers}</td><td>ถ้าไม่บอก ผู้อ่านไม่รู้ว่าทำไมเลือกคลาสนั้นเป็น minority</td></tr>
+      <tr><td>เผยแพร่ไฟล์ที่ดัดแปลง</td><td class="num">${S.publishes_modified_data} / ${P.papers}</td><td>ทำซ้ำได้ตรงตัว</td></tr>
+      <tr><td>สัดส่วนชนะ SMOTE: บนชุดที่ดัดแปลงเอง vs ชุดอื่นใน paper เดียวกัน</td><td class="num">${W.papers}</td><td>ดัดแปลงสูงกว่า ${W.modified_higher} · ชุดอื่นสูงกว่า ${W.other_higher} · เท่ากัน ${W.equal} (${W.rows_modified} กับ ${W.rows_other} แถว; plain SMOTE, ทุก metric)</td></tr>
+    </tbody></table></div>`;
+  // per-paper table
+  const PR = M.papers;
+  function pt(q){
+    const rows = PR.filter(r => !q || Object.values(r).join(" ").toLowerCase().includes(q));
+    $("#md-pn").textContent = rows.length + " / " + PR.length + " paper";
+    $("#md-pt tbody").innerHTML = rows.map(r => `<tr><td>${esc(r.paper_key)}</td><td class="num">${esc(r.year)}</td><td class="num">${esc(r.modified_entries)}</td><td class="mono" style="font-size:12px">${esc(r.operations)}${r.noise_added?`<br>noise: ${esc(r.noise_added)}`:""}</td><td>${esc(r.stated_purpose)}</td><td>${esc(r.basis)}</td><td>${esc(r.converted_and_two_class_only)}</td><td>${esc(r.same_data_also_unmodified)}</td><td>${esc(r.several_levels)}</td><td>${esc(r.publishes_modified_data)}</td><td class="num">${r.win_share_modified||"–"} / ${r.win_share_other||"–"}</td><td style="font-size:12px;min-width:320px">${esc(r.quotes)}</td></tr>`).join("");
+  }
+  $("#md-tab").innerHTML = `<h3 class="ct">ราย paper พร้อมประโยคจาก PDF <span class="unit">${PR.length} paper</span></h3>
+    <div class="controls"><input type="search" id="md-pq" placeholder="ค้น paper / เหตุผล / ข้อความ" aria-label="ค้นราย paper"><span class="count" id="md-pn"></span></div>
+    <div class="tbox" style="max-height:520px"><table class="dxt" id="md-pt"><thead><tr><th>paper</th><th class="num">ปี</th><th class="num">entry modified</th><th>วิธี</th><th>เหตุผลที่เขียน</th><th>ที่มาของการเลือก</th><th>แปลงแล้วทดลองสองคลาสล้วน</th><th>มีชุดเดิมคู่กัน (family)</th><th>หลายระดับ</th><th>เผยแพร่ไฟล์</th><th class="num">ชนะ SMOTE ดัดแปลง / ชุดอื่น</th><th>ประโยค (หน้าใน PDF)</th></tr></thead><tbody></tbody></table></div>`;
+  pt(""); $("#md-pq").addEventListener("input", e => pt(e.target.value.trim().toLowerCase()));
+  // common
+  $("#md-com").innerHTML = `<h3 class="ct">ชุดที่ถูกดัดแปลงบ่อย <span class="unit">${C.families_modified} family ถูกดัดแปลง · ${C.families_modified_by_2plus_papers} family ถูกดัดแปลงใน ≥ 2 paper</span></h3>
+    <div class="tbox"><table class="dxt"><thead><tr><th>family</th><th class="num">paper</th><th class="num">entry</th><th>วิธี</th><th>แบบการแปลงคลาส</th></tr></thead><tbody>${C.top_families.map(r => `<tr><td>${esc(r.family)}</td><td class="num">${r.papers}</td><td class="num">${r.entries}</td><td class="mono" style="font-size:12px">${esc(r.operations)}</td><td style="font-size:12px">${esc(r.kinds)}</td></tr>`).join("")}</tbody></table></div>
+    <h4 style="margin:14px 0 6px">ชื่อชุดดัดแปลงเดียวกันที่หลาย paper ใช้: เป็นเวอร์ชันเดียวกันไหม</h4>
+    <div class="tbox" style="max-height:360px"><table class="dxt"><thead><tr><th>ชื่อ</th><th class="num">paper</th><th>N/minority ที่พิมพ์ (จำนวน paper)</th><th>paper</th></tr></thead><tbody>${C.same_modified_name_in_2plus_papers.map(r => `<tr><td>${esc(r.name)}</td><td class="num">${r.papers}</td><td class="mono" style="font-size:12px">${esc(r.printed_N_over_minority)}</td><td style="font-size:12px">${esc(r.paper_keys)}</td></tr>`).join("")}</tbody></table></div>
+    <p class="cap">ชื่อเดียวกันไม่ได้แปลว่าข้อมูลเดียวกัน: vehicle ที่ดัดแปลงใน 9 paper มีขนาด/minority ที่พิมพ์ต่างกัน 7 แบบ · "?" = paper ไม่พิมพ์ · ตารางเต็ม out/modified_families.csv</p>`;
+  // time
+  const UP = M.usage;
+  function tt(per){
+    const sel = per === "recent" ? T.recent_2020_2026 : T.top_by_period[per];
+    $("#md-tt").innerHTML = CATS.map(c => `<div class="card" style="margin:0"><h4 style="margin:0 0 6px">${esc(CL[c])}</h4>${(sel[c]||[]).length ? `<div class="tbox"><table class="dxt"><thead><tr><th>family</th><th class="num">paper ในช่วง</th><th class="num">ทั้งหมด</th><th class="num">ปีแรก–ล่าสุด</th></tr></thead><tbody>${sel[c].map(r => `<tr><td>${esc(r.family)}</td><td class="num">${r.papers_in_period}</td><td class="num">${r.papers_total}</td><td class="num">${r.first_year}–${r.last_year}</td></tr>`).join("")}</tbody></table></div>` : `<p class="cap">ไม่มี</p>`}</div>`).join("");
+  }
+  $("#md-time").innerHTML = `<h3 class="ct">ชุดที่ใช้ในแต่ละช่วงเวลา <span class="unit">ปีที่ตีพิมพ์ · ช่วง 5 ปี</span></h3>
+    <div class="tbox"><table class="dxt"><thead><tr><th>ช่วง</th><th class="num">paper</th>${CATS.map(c => `<th class="num">${esc(CL[c])}</th>`).join("")}</tr></thead><tbody>${PER.map(p => { const e = T.periods[p].entries, tot = Object.values(e).reduce((a,b)=>a+b,0); return `<tr><td>${p}</td><td class="num">${T.periods[p].papers}</td>${CATS.map(c => `<td class="num">${e[c]||0} <span style="color:var(--ink3);font-size:11px">${pc(e[c]||0,tot)}</span></td>`).join("")}</tr>`; }).join("")}</tbody></table></div>
+    <p class="cap">หน่วยในตารางนี้: entry · ช่วงหลัง (2020–2026) มี ${T.recent_papers} paper</p>
+    <div class="controls"><label for="md-per">ช่วง</label><select id="md-per"><option value="recent">2020–2026 (ช่วงหลัง)</option>${PER.map(p => `<option value="${p}">${p}</option>`).join("")}</select></div>
+    <div class="kgrid" id="md-tt"></div>
+    <details><summary>synthetic ที่ผู้เขียนเผยแพร่ (${T.published_synthetic_sets.length} paper)</summary><div class="tbox"><table class="dxt"><thead><tr><th>paper</th><th class="num">ปี</th><th class="num">entry</th><th>ที่อยู่ / ประโยค</th></tr></thead><tbody>${T.published_synthetic_sets.map(r => `<tr><td>${esc(r.paper)}</td><td class="num">${r.year}</td><td class="num">${r.entries}</td><td style="font-size:12px">${esc(r.where)}</td></tr>`).join("")}</tbody></table></div></details>
+    <details><summary>ทุก family × ชนิด × ช่วง (${UP.length} แถว; ค้นได้)</summary><div class="controls"><input type="search" id="md-uq" placeholder="ค้น family / ชนิด" aria-label="ค้นการใช้ตามช่วง"><span class="count" id="md-un"></span></div>
+      <div class="tbox" style="max-height:420px"><table class="dxt" id="md-ut"><thead><tr><th>family</th><th>ชนิด</th><th class="num">paper</th>${PER.map(p => `<th class="num">${p}</th>`).join("")}<th class="num">ปีแรก</th><th class="num">ล่าสุด</th></tr></thead><tbody></tbody></table></div></details>
+    <p class="cap">family ตามกฎ T1 · synthetic แยกว่าเผยแพร่หรือไม่ตาม out/synthetic_availability.csv · ที่มา: ${esc(M.src)}</p>`;
+  tt("recent"); $("#md-per").addEventListener("change", e => tt(e.target.value));
+  function ut(q){ const rows = UP.filter(r => !q || (r[0]+" "+r[1]).toLowerCase().includes(q)); $("#md-un").textContent = rows.length + " แถว";
+    $("#md-ut tbody").innerHTML = rows.slice(0,600).map(r => `<tr><td>${esc(r[0])}</td><td>${esc(CL[r[1]]||r[1])}</td><td class="num">${r[2]}</td>${r.slice(3,9).map(x => `<td class="num">${x||""}</td>`).join("")}<td class="num">${r[9]}</td><td class="num">${r[10]}</td></tr>`).join(""); }
+  ut(""); $("#md-uq").addEventListener("input", e => ut(e.target.value.trim().toLowerCase()));
 })();
 </script>

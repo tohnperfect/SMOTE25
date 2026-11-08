@@ -104,7 +104,7 @@ def task_of(e):
     return None
 
 # การดัดแปลง (29 ต.ค. บ่าย 6, Toon สั่งใส่ตารางชนิดการดำเนินการในหน้าภาพรวม): อ่าน out/modified_operations_audit.csv (build/modified_operations.py)
-OPS = ["CS", "US", "IM", "SF", "FM", "OT", "IS"]
+OPS = ["CS", "US", "IM", "SF", "FM", "NI", "LC", "IS"]
 MO = pd.read_csv("out/modified_operations_audit.csv", dtype=str).fillna("")
 MOS = json.load(open("out/modified_operations_summary.json", encoding="utf-8"))
 assert len(MO) == MOS["entries"] and set(MO.record_id) == set(D[D.category == "modified"].record_id), "STOP: modified_operations_audit.csv out of date"

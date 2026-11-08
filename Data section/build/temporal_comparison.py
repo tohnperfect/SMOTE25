@@ -35,8 +35,8 @@ for name, a, b in PER:
     d["papers_only_original_or_repository"] = frac(sum(all(r["category"] in ("original", "repository-defined") for r in E if r["paper_key"] == p) for p in P), nP)
     M = [m for m in MOD if per(m["year"]) == name]; mP = {m["paper_key"] for m in M}
     d["modified_entries"] = len(M); d["modified_papers"] = len(mP)
-    d["modification_ops_entries_of_modified"] = {o: frac(sum(o in m["ops"].split(";") for m in M), len(M)) for o in ["CS", "US", "IM", "SF", "FM", "OT"]}
-    d["modification_ops_papers_of_all_papers"] = {o: frac(len({m["paper_key"] for m in M if o in m["ops"].split(";")}), nP) for o in ["CS", "US", "IM", "SF", "FM", "OT"]}
+    d["modification_ops_entries_of_modified"] = {o: frac(sum(o in m["ops"].split(";") for m in M), len(M)) for o in ["CS", "US", "IM", "SF", "FM", "NI", "LC"]}
+    d["modification_ops_papers_of_all_papers"] = {o: frac(len({m["paper_key"] for m in M if o in m["ops"].split(";")}), nP) for o in ["CS", "US", "IM", "SF", "FM", "NI", "LC"]}
     d["modifying_papers_with_stated_purpose"] = frac(len({m["paper_key"] for m in M if not m["purpose_stated_by_authors"].startswith("none")}), len(mP))
     d["reporting_entries"] = {f: frac(sum(not miss(r[f]) for r in E), nE) for f in ["n_instances", "n_features", "n_classes", "n_minority", "ir_as_printed", "source_as_reported"]}
     d["papers_stating_ir_definition"] = frac(sum(not miss(next(r["ir_definition_paper"] for r in E if r["paper_key"] == p)) for p in P), nP)

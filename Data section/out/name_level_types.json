@@ -398,7 +398,8 @@
    "IM",
    "SF",
    "FM",
-   "OT",
+   "NI",
+   "LC",
    "IS"
   ],
   "entries": 332,
@@ -426,14 +427,19 @@
     "names": 17
    },
    "FM": {
-    "entries": 16,
-    "papers": 7,
-    "names": 15
+    "entries": 15,
+    "papers": 6,
+    "names": 14
    },
-   "OT": {
-    "entries": 5,
-    "papers": 4,
-    "names": 5
+   "NI": {
+    "entries": 3,
+    "papers": 2,
+    "names": 3
+   },
+   "LC": {
+    "entries": 3,
+    "papers": 2,
+    "names": 3
    },
    "IS": {
     "entries": 0,

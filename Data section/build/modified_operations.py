@@ -9,19 +9,21 @@
 ป้ายการดำเนินการ (operation) ซ้อนกันได้ต่อ entry:
   CS  class selection / task conversion   แปลง multiclass เป็น binary, เลือก/รวม/ตัดคลาส, ตั้ง threshold บน target
   US  sample reduction / undersampling    ลดจำนวนตัวอย่างของคลาสใดคลาสหนึ่ง
-  FM  feature modification                ตัด/เลือก/แปลง feature, ทำ feature extraction, ใส่ noise ใน attribute
+  FM  feature modification                ตัด/เลือก/แปลง feature, ทำ feature extraction
   SF  sample filtering / subset selection ตัดแถวที่ค่าหาย, ใช้ subset ของข้อมูล (ไม่เจาะจงคลาส)
   IM  imbalance manipulation              ตั้งใจเปลี่ยน IR (ต้องมีข้อความบอกว่าทำเพื่อเปลี่ยน/สร้างความไม่สมดุล)
-  OT  other documented modification        เช่น ใส่ label noise, สร้างป้ายจากข้อมูลดิบเอง
+  NI  noise / outlier injection            ใส่ label (class) noise, attribute noise หรือ outlier ลงในข้อมูลจริง
+  LC  labels constructed by the authors    ผู้เขียนสร้างชุดข้อมูลและกำหนดป้ายคลาสเองจากข้อมูลดิบ (log, simulation output)
+  (9 พ.ย. 2026 Toon: ไม่ใช้หมวด 'อื่น ๆ' — OT เดิมแยกเป็น NI กับ LC; attribute noise ของ SMOTE-IPF ย้ายจาก FM ไป NI)
   IS  insufficiently specified             รู้ว่าดัดแปลงแต่ระบุการดำเนินการไม่ได้
 ops_conditional = ข้อความระดับ paper ที่อาจใช้กับ entry นี้ แต่ระบุรายชุดไม่ได้ (ไม่นับในตัวนับหลัก)
 """
 import csv, json, os, re, subprocess, sys, unicodedata
 from collections import Counter, defaultdict
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); os.chdir(HERE)
-OPS = ["CS", "US", "FM", "SF", "IM", "OT", "IS"]
+OPS = ["CS", "US", "FM", "SF", "IM", "NI", "LC", "IS"]
 OPNAME = {"CS": "class selection / task conversion", "US": "sample reduction / undersampling", "FM": "feature modification",
-          "SF": "sample filtering / subset selection", "IM": "imbalance manipulation", "OT": "other documented modification",
+          "SF": "sample filtering / subset selection", "IM": "imbalance manipulation", "NI": "noise / outlier injection", "LC": "labels constructed by the authors from raw data",
           "IS": "insufficiently specified modification"}
 EX, IN, AM = "explicitly reported", "supported by indirect evidence", "ambiguous"
 # กติกาต่อ paper: (เงื่อนไขบน name หรือ note เป็น regex, '*' = ทุก entry, ops, ops_conditional, class_op_kind, confidence, เหตุผล)
@@ -38,7 +40,7 @@ R = {
             ("probe|r2l", "CS SF", "", "one-vs-rest", EX, "rare class vs the other four merged, from the KDD'99 10% sample (p.8, Table 8)"),
             ("*", "SF", "", "", EX, "10% sample; test instances with labels absent from training deleted (Table 8)")],
  "CTGAN / TVAE": [("*", "FM", "", "", EX, "MNIST images resized/binarised and flattened into tabular columns (main p.7)")],
- "Cluster-SMOTE": [("*", "OT CS", "", "label construction", EX, "data set built and labelled by the authors from network traffic; attack types collapsed into 2 classes (p.2)")],
+ "Cluster-SMOTE": [("*", "LC CS", "", "label construction", EX, "data set built and labelled by the authors from network traffic; attack types collapsed into 2 classes (p.2)")],
  "ClusterCentroids": [("*", "SF", "", "", EX, "incomplete records removed (30,162 after cleaning) (p.8)")],
  "DGOT": [("*", "CS", "", "threshold on target", EX, "#T gives a threshold on the target as the minority definition (Table I)")],
  "DLexiBoost": [("*", "SF FM", "", "", EX, "random ~2% of synsets per subtree sampled from ImageNet; Inception-v3 features (main Sec 4.5)")],
@@ -70,19 +72,19 @@ R = {
  "ROS (Buda)": [("MNIST", "SF US IM", "", "", EX, "classes subsampled to <=5000, then artificially imbalanced (Sec 3.3.1)"),
                 ("ILSVRC", "SF US IM", "", "", EX, "majority classes reduced 1200->1000; step-imbalanced subsets (Sec 3.3.3)"),
                 ("*", "US IM", "", "", EX, "training set artificially imbalanced (Sec 3.3.2)")],
- "RSMOTE": [("outlier added", "OT", "", "", EX, "one outlier added artificially to fourclass for the illustration (Sec. 4.3.1, p.10); entry added 8 Nov 2026"),
+ "RSMOTE": [("outlier added", "NI", "", "outlier injection", EX, "one outlier added artificially to fourclass for the illustration (Sec. 4.3.1, p.10); entry added 8 Nov 2026"),
             ("*", "US IM", "", "", EX, "positive class randomly undersampled to obtain higher IR (p.12)")],
  "RUSBoost": [("SOLARFLARE", "CS", "", "class or threshold (not stated)", AM, "general statement: one class positive or threshold on a continuous target (p.5); which one not stated"),
               ("*", "CS", "", "one-vs-rest (class inferred from suffix)", IN, "general statement p.5; positive class inferred from the name suffix, not stated")],
  "SMOM": [("dropped classes|chose a subset", "CS", "", "class subset (classes dropped)", IN, "class labels absent from Table 1 imply dropped classes"),
           ("*", "CS", "", "class merging", EX, "Table 1 'Description of classes' shows merged original classes")],
  "SMOTE": [("continuous features", "FM", "", "", EX, "only continuous features used for SMOTE (p.13)"),
-           ("generated by authors", "OT", "", "label construction", EX, "built by the authors from simulation output, labels assigned by the authors (p.14)"),
+           ("generated by authors", "LC", "", "label construction", EX, "built by the authors from simulation output, labels assigned by the authors (p.14)"),
            ("two classes", "CS", "", "class subset (two classes kept)", EX, "two of seven classes extracted (p.13-14)"),
            ("*", "CS", "", "one-vs-rest", EX, "smallest class vs rest (p.13)")],
  "SMOTE-ENN / SMOTE-Tomek": [("*", "CS", "", "one-vs-rest", EX, "class vs remainder (Table 3, p.5)")],
- "SMOTE-IPF": [("Class noise", "OT", "CS", "label noise injection", EX, "pairwise class noise at 20%/40% (Sec 4.2); base sets binarised"),
-               ("*", "FM", "CS", "", EX, "attribute noise at 20%/40% (Sec 4.2); base sets binarised")],
+ "SMOTE-IPF": [("Class noise", "NI", "CS", "label noise injection", EX, "pairwise class noise at 20%/40% (Sec 4.2); base sets binarised"),
+               ("*", "NI", "CS", "attribute noise injection", EX, "attribute noise at 20%/40% (Sec 4.2); base sets binarised")],
  "SMOTEBoost": [("KDDCup", "SF US", "CS", "", EX, "train+test merged, 69,980 connections sampled from the majority classes only (p.6)"),
                 ("*", "CS", "", "one-vs-rest", EX, "smallest class vs rest (p.6)")],
  "SOUP": [("*", "CS", "", "class grouping (minority/majority sets)", IN, "paper says some data were modified by aggregating classes without naming them (p.7); Table 2 groups classes")],

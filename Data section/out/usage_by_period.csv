@@ -1,0 +1,627 @@
+family,category,papers_total,<=2004,2005-2009,2010-2014,2015-2019,2020-2024,2025-2026,first_year,last_year
+vehicle,modified,11,1,2,3,3,2,0,2004,2024
+ecoli,modified,10,1,0,2,5,2,0,2004,2024
+abalone,modified,9,0,2,2,2,1,2,2008,2026
+satimage,modified,9,3,3,3,0,0,0,2002,2014
+glass,modified,8,1,0,3,3,1,0,2004,2024
+pageblocks,modified,8,0,0,2,2,2,2,2010,2025
+yeast,modified,7,0,0,2,3,2,0,2010,2024
+letter,modified,6,0,2,1,1,1,1,2008,2025
+wine,modified,6,0,0,2,3,1,0,2010,2022
+segment,modified,5,0,0,3,2,0,0,2010,2018
+vowel,modified,5,0,1,1,2,1,0,2008,2021
+breasttissue,modified,4,0,0,1,3,0,0,2014,2019
+iris,modified,4,0,0,0,3,1,0,2016,2022
+libra,modified,4,0,0,1,2,1,0,2014,2022
+mnist,modified,4,0,0,0,3,1,0,2018,2020
+balance,modified,3,0,1,0,1,1,0,2009,2022
+car,modified,3,0,1,0,1,1,0,2009,2022
+cleveland,modified,3,0,0,1,1,1,0,2013,2024
+kddcup,modified,3,1,1,0,0,1,0,2003,2020
+newthyroid,modified,3,1,0,0,1,1,0,2004,2024
+nursery,modified,3,1,0,0,2,0,0,2004,2018
+svmguide,modified,3,0,1,0,0,2,0,2007,2021
+avila,modified,2,0,0,0,0,1,1,2021,2025
+breastcancer,modified,2,0,0,0,0,2,0,2021,2021
+cifar10,modified,2,0,0,0,2,0,0,2018,2019
+dermatology,modified,2,0,0,1,1,0,0,2013,2018
+eucalyptus,modified,2,0,0,0,2,0,0,2016,2019
+fourclass,modified,2,0,1,0,0,1,0,2007,2021
+haberman,modified,2,0,0,0,2,0,0,2018,2019
+heart,modified,2,0,0,0,2,0,0,2018,2019
+mfzernike,modified,2,0,1,1,0,0,0,2009,2010
+mushrooms,modified,2,0,0,0,0,2,0,2021,2021
+pendigits,modified,2,0,0,1,1,0,0,2010,2017
+pima,modified,2,0,0,0,2,0,0,2018,2019
+postoperative,modified,2,1,0,1,0,0,0,2004,2013
+splice,modified,2,0,1,0,0,1,0,2007,2021
+texture,modified,2,0,0,2,0,0,0,2010,2014
+50words,modified,1,0,0,1,0,0,0,2013,2013
+a1a,modified,1,0,0,0,0,1,0,2021,2021
+adiac,modified,1,0,0,1,0,0,0,2013,2013
+adult,modified,1,1,0,0,0,0,0,2002,2002
+attributenoiseversionsofthe9realworlddatasets,modified,1,0,0,0,1,0,0,2015,2015
+australian,modified,1,0,0,0,0,1,0,2021,2021
+automobile,modified,1,0,0,0,1,0,0,2017,2017
+autos,modified,1,0,0,1,0,0,0,2013,2013
+breastw,modified,1,0,1,0,0,0,0,2007,2007
+can,modified,1,1,0,0,0,0,0,2002,2002
+car3,modified,1,0,0,1,0,0,0,2010,2010
+celebalarge,modified,1,0,0,0,1,0,0,2019,2019
+celebasmall,modified,1,0,0,0,1,0,0,2019,2019
+censusincomedatabase,modified,1,0,1,0,0,0,0,2009,2009
+classnoiseversionsofthe9realworlddatasets,modified,1,0,0,0,1,0,0,2015,2015
+cmc,modified,1,0,1,0,0,0,0,2009,2009
+cod,modified,1,0,0,0,0,1,0,2021,2021
+codrna,modified,1,0,0,0,0,1,0,2021,2021
+connect4,modified,1,0,0,0,1,0,0,2015,2015
+contra2,modified,1,0,0,1,0,0,0,2010,2010
+contraceptive,modified,1,0,0,0,0,1,0,2024,2024
+creditapproval,modified,1,0,0,0,0,1,0,2021,2021
+ctg,modified,1,0,0,1,0,0,0,2014,2014
+cytvspox,modified,1,0,0,1,0,0,0,2011,2011
+destinations,modified,1,0,1,0,0,0,0,2006,2006
+diabetes,modified,1,0,0,0,0,1,0,2021,2021
+esl,modified,1,0,0,0,1,0,0,2017,2017
+faceall,modified,1,0,0,1,0,0,0,2013,2013
+fashionmnist,modified,1,0,0,0,1,0,0,2019,2019
+flag,modified,1,1,0,0,0,0,0,2004,2004
+forestcover,modified,1,1,0,0,0,0,0,2002,2002
+g7,modified,1,1,0,0,0,0,0,1997,1997
+german,modified,1,0,0,0,0,1,0,2021,2021
+germannumer,modified,1,0,1,0,0,0,0,2007,2007
+gisette,modified,1,0,0,0,0,1,0,2021,2021
+hayesroth,modified,1,0,0,0,0,1,0,2024,2024
+heating,modified,1,0,0,0,1,0,0,2016,2016
+housing,modified,1,0,1,0,0,0,0,2009,2009
+ijcnn,modified,1,0,0,0,0,1,0,2021,2021
+ilsvrc2012,modified,1,0,0,0,1,0,0,2018,2018
+imagenet,modified,1,0,0,0,0,1,0,2020,2020
+intrusion,modified,1,0,1,0,0,0,0,2008,2008
+isolet,modified,1,0,0,0,0,1,0,2021,2021
+led,modified,1,0,0,0,1,0,0,2019,2019
+lettera,modified,1,1,0,0,0,0,0,2004,2004
+lettervowel,modified,1,1,0,0,0,0,0,2004,2004
+lev,modified,1,0,0,0,1,0,0,2016,2016
+liver,modified,1,0,0,0,1,0,0,2019,2019
+liverdisorders,modified,1,0,0,0,1,0,0,2018,2018
+lsunlarge,modified,1,0,0,0,1,0,0,2019,2019
+lsunsmall,modified,1,0,0,0,1,0,0,2019,2019
+machine,modified,1,0,0,0,1,0,0,2017,2017
+magic,modified,1,0,0,0,0,1,0,2021,2021
+mandelon,modified,1,0,0,0,1,0,0,2019,2019
+me2vsother,modified,1,0,0,1,0,0,0,2011,2011
+mfmorph,modified,1,0,1,0,0,0,0,2009,2009
+mocap,modified,1,0,0,0,0,1,0,2021,2021
+nomao,modified,1,0,0,0,0,1,0,2021,2021
+ocr,modified,1,0,0,1,0,0,0,2014,2014
+onlineretail,modified,1,0,0,0,0,1,0,2021,2021
+packets,modified,1,0,1,0,0,0,0,2006,2006
+phishing,modified,1,0,0,0,0,1,0,2021,2021
+phoneme,modified,1,0,0,1,0,0,0,2014,2014
+pimadiabetes,modified,1,0,1,0,0,0,0,2007,2007
+platesfaults,modified,1,0,0,0,1,0,0,2017,2017
+poker,modified,1,0,0,0,0,1,0,2021,2021
+probebinary,modified,1,0,1,0,0,0,0,2007,2007
+r2lbinary,modified,1,0,1,0,0,0,0,2007,2007
+robot,modified,1,0,0,1,0,0,0,2014,2014
+seed,modified,1,0,0,0,0,1,0,2022,2022
+segmentation,modified,1,0,0,0,1,0,0,2019,2019
+semeion,modified,1,0,0,1,0,0,0,2014,2014
+shuttle,modified,1,0,0,1,0,0,0,2010,2010
+skin,modified,1,0,0,0,0,1,0,2021,2021
+skinnonskin,modified,1,0,0,0,0,1,0,2021,2021
+sleaf,modified,1,0,0,1,0,0,0,2013,2013
+solarflaref,modified,1,0,0,1,0,0,0,2010,2010
+spliceei,modified,1,1,0,0,0,0,0,2004,2004
+spliceie,modified,1,1,0,0,0,0,0,2004,2004
+statlandsat,modified,1,0,0,1,0,0,0,2014,2014
+statlog,modified,1,0,0,0,0,0,1,2025,2025
+sun397,modified,1,0,0,0,1,0,0,2019,2019
+susy,modified,1,0,0,0,0,1,0,2021,2021
+svhn,modified,1,0,0,0,1,0,0,2019,2019
+twopats,modified,1,0,0,1,0,0,0,2013,2013
+veh1,modified,1,1,0,0,0,0,0,1997,1997
+voice,modified,1,0,0,0,1,0,0,2017,2017
+votes,modified,1,0,0,0,0,1,0,2021,2021
+vw0,modified,1,1,0,0,0,0,0,1997,1997
+wafer,modified,1,0,0,1,0,0,0,2013,2013
+waveform,modified,1,0,0,0,0,0,1,2025,2025
+winequality,modified,1,0,0,0,0,1,0,2024,2024
+yoga,modified,1,0,0,1,0,0,0,2013,2013
+ecoli,not stated,6,0,0,0,3,3,0,2015,2022
+breasttissue,not stated,4,0,0,0,3,1,0,2016,2021
+iris,not stated,4,0,0,0,2,1,1,2018,2026
+segment,not stated,4,0,1,0,2,1,0,2008,2021
+vehicle,not stated,4,0,0,0,2,2,0,2018,2021
+satimage,not stated,3,0,1,0,1,1,0,2008,2020
+wine,not stated,3,0,0,0,2,1,0,2018,2021
+winequality,not stated,3,0,0,0,0,1,2,2020,2025
+acl,not stated,2,0,0,1,1,0,0,2010,2015
+breast,not stated,2,0,0,0,1,0,1,2015,2026
+cm1,not stated,2,0,0,1,0,1,0,2010,2022
+estate,not stated,2,1,0,0,1,0,0,2002,2015
+glass,not stated,2,0,0,0,2,0,0,2018,2019
+libra,not stated,2,0,0,0,1,1,0,2018,2021
+libras,not stated,2,0,0,0,2,0,0,2016,2019
+page,not stated,2,0,1,0,1,0,0,2008,2015
+parkinson,not stated,2,0,0,0,1,0,1,2016,2026
+pendigits,not stated,2,0,1,0,1,0,0,2008,2015
+shuttle,not stated,2,0,0,0,0,1,1,2020,2026
+statlog,not stated,2,0,0,0,1,0,1,2016,2026
+academic,not stated,1,0,0,0,0,0,1,2026,2026
+ai4i2020,not stated,1,0,0,0,0,0,1,2026,2026
+aids,not stated,1,0,0,0,0,0,1,2026,2026
+approval,not stated,1,0,0,0,0,0,1,2026,2026
+australia,not stated,1,0,0,0,0,0,1,2026,2026
+bankmarket,not stated,1,0,0,0,1,0,0,2016,2016
+bankruptcy,not stated,1,0,0,0,0,0,1,2026,2026
+bearingif,not stated,1,0,0,0,0,1,0,2022,2022
+bearingif+of,not stated,1,0,0,0,0,1,0,2022,2022
+bearingif+of+rf,not stated,1,0,0,0,0,1,0,2022,2022
+bearingif+rf,not stated,1,0,0,0,0,1,0,2022,2022
+bearingof,not stated,1,0,0,0,0,1,0,2022,2022
+bearingof+rf,not stated,1,0,0,0,0,1,0,2022,2022
+bearingrf,not stated,1,0,0,0,0,1,0,2022,2022
+bezediris,not stated,1,0,0,0,0,0,1,2026,2026
+bhat,not stated,1,0,0,0,0,1,0,2022,2022
+bloodservice,not stated,1,0,0,0,1,0,0,2016,2016
+boundary,not stated,1,0,0,0,1,0,0,2015,2015
+br,not stated,1,1,0,0,0,0,0,1997,1997
+breasty,not stated,1,0,0,0,1,0,0,2015,2015
+bullinger,not stated,1,0,0,0,0,1,0,2022,2022
+cam,not stated,1,0,0,0,1,0,0,2015,2015
+camel,not stated,1,0,0,0,0,0,1,2025,2025
+cancer,not stated,1,0,0,0,0,1,0,2022,2022
+car1,not stated,1,0,0,0,0,1,0,2022,2022
+car2,not stated,1,0,0,0,0,1,0,2022,2022
+car3,not stated,1,0,0,0,0,1,0,2022,2022
+car4,not stated,1,0,0,0,0,1,0,2022,2022
+cardiovascular,not stated,1,0,0,0,0,0,1,2026,2026
+card’graphy,not stated,1,0,0,0,1,0,0,2016,2016
+carevaluation,not stated,1,0,0,0,1,0,0,2016,2016
+cccs12,not stated,1,0,0,1,0,0,0,2010,2010
+charactertraj,not stated,1,0,0,0,1,0,0,2016,2016
+chess,not stated,1,0,0,0,1,0,0,2016,2016
+chessckingrookvsking,not stated,1,0,0,0,0,1,0,2022,2022
+cleveland,not stated,1,0,0,0,1,0,0,2015,2015
+climate,not stated,1,0,0,0,0,0,1,2025,2025
+climatesim,not stated,1,0,0,0,1,0,0,2016,2016
+cnae,not stated,1,0,0,0,0,0,1,2026,2026
+compustat,not stated,1,0,0,0,1,0,0,2015,2015
+contraceptive,not stated,1,0,0,0,1,0,0,2016,2016
+covertype,not stated,1,0,0,0,0,0,1,2026,2026
+covtype,not stated,1,0,0,0,1,0,0,2015,2015
+customerchurnwirelesstelecom,not stated,1,0,0,0,0,1,0,2020,2020
+customers,not stated,1,0,0,0,1,0,0,2016,2016
+d1yeast5,not stated,1,0,0,0,0,1,0,2023,2023
+d3yeast4,not stated,1,0,0,0,0,1,0,2023,2023
+d5yeast6,not stated,1,0,0,0,0,1,0,2023,2023
+d9ecoli4,not stated,1,0,0,0,0,1,0,2023,2023
+darwin,not stated,1,0,0,0,0,0,1,2026,2026
+dermatology,not stated,1,0,0,0,1,0,0,2019,2019
+drug,not stated,1,0,0,0,0,0,1,2026,2026
+employeattrition,not stated,1,0,0,0,0,1,0,2020,2020
+eucalyptus,not stated,1,0,0,0,1,0,0,2019,2019
+fault,not stated,1,0,0,0,0,0,1,2026,2026
+fertility,not stated,1,0,0,0,1,0,0,2016,2016
+firewall,not stated,1,0,0,0,0,0,1,2026,2026
+flare,not stated,1,0,0,0,0,1,0,2020,2020
+gender,not stated,1,0,0,0,0,0,1,2026,2026
+genderbyname,not stated,1,0,0,0,0,0,1,2026,2026
+givemesomecredit,not stated,1,0,0,0,0,1,0,2020,2020
+glioma,not stated,1,0,0,0,0,1,0,2022,2022
+haberman’ssurvival,not stated,1,0,0,0,0,1,0,2020,2020
+heartfailure,not stated,1,0,0,0,0,1,0,2022,2022
+heartv,not stated,1,0,0,0,1,0,0,2015,2015
+hmeq,not stated,1,0,0,0,0,1,0,2020,2020
+htru2,not stated,1,0,0,0,0,1,0,2022,2022
+hypo,not stated,1,0,0,0,1,0,0,2015,2015
+icr,not stated,1,0,0,0,0,0,1,2026,2026
+ilpd,not stated,1,0,0,0,1,0,0,2016,2016
+image1,not stated,1,0,0,0,0,1,0,2022,2022
+imgseg,not stated,1,0,0,0,1,0,0,2016,2016
+ism,not stated,1,0,0,0,1,0,0,2015,2015
+isolet,not stated,1,0,0,0,0,1,0,2022,2022
+ivy14,not stated,1,0,0,0,0,0,1,2025,2025
+jedit43,not stated,1,0,0,0,0,0,1,2025,2025
+kr,not stated,1,1,0,0,0,0,0,1997,1997
+leaf,not stated,1,0,0,0,1,0,0,2016,2016
+led,not stated,1,0,0,0,1,0,0,2019,2019
+letter,not stated,1,0,0,0,1,0,0,2015,2015
+letterrecognition,not stated,1,0,0,0,0,1,0,2022,2022
+log4j12,not stated,1,0,0,0,0,0,1,2025,2025
+lung,not stated,1,0,0,0,0,1,0,2022,2022
+magic,not stated,1,0,0,0,0,0,1,2026,2026
+maternal,not stated,1,0,0,0,0,0,1,2026,2026
+movementlibras,not stated,1,0,0,0,0,0,1,2025,2025
+multiplefs,not stated,1,0,0,0,1,0,0,2016,2016
+mushroom,not stated,1,0,0,0,0,0,1,2026,2026
+national,not stated,1,0,0,0,0,0,1,2026,2026
+newthyroid,not stated,1,0,0,0,1,0,0,2015,2015
+nursery,not stated,1,0,0,0,0,1,0,2022,2022
+obesity,not stated,1,0,0,0,0,0,1,2026,2026
+occupancy,not stated,1,0,0,0,0,0,1,2026,2026
+oil,not stated,1,0,0,0,1,0,0,2015,2015
+online,not stated,1,0,0,0,0,0,1,2026,2026
+optdigits,not stated,1,0,0,0,1,0,0,2015,2015
+opticaldigits,not stated,1,0,0,0,0,0,1,2025,2025
+ozonelevel,not stated,1,0,0,0,0,0,1,2025,2025
+pageblocks,not stated,1,0,0,0,0,1,0,2022,2022
+parkinsonstelemonitoring,not stated,1,0,0,0,0,1,0,2022,2022
+pc1,not stated,1,0,0,1,0,0,0,2010,2010
+phishingdata,not stated,1,0,0,0,0,0,1,2025,2025
+phoss,not stated,1,0,0,0,1,0,0,2015,2015
+planrelax,not stated,1,0,0,0,1,0,0,2016,2016
+platesfaults,not stated,1,0,0,0,1,0,0,2016,2016
+promotion,not stated,1,0,0,0,0,1,0,2020,2020
+purchase,not stated,1,0,0,0,0,0,1,2026,2026
+qsar,not stated,1,0,0,0,1,0,0,2016,2016
+raisin,not stated,1,0,0,0,0,0,1,2026,2026
+rtiot,not stated,1,0,0,0,0,0,1,2026,2026
+sales:winloss,not stated,1,0,0,0,0,1,0,2020,2020
+sat,not stated,1,0,0,0,0,1,0,2022,2022
+satisfied,not stated,1,0,0,0,0,0,1,2026,2026
+scene,not stated,1,0,0,0,0,0,1,2025,2025
+segmemt0,not stated,1,0,0,0,0,1,0,2020,2020
+segmentation,not stated,1,0,0,0,1,0,0,2019,2019
+seismicbumps,not stated,1,0,0,0,1,0,0,2016,2016
+smartphone,not stated,1,0,0,0,0,0,1,2026,2026
+smoke,not stated,1,0,0,0,0,0,1,2026,2026
+solar,not stated,1,0,0,0,0,1,0,2022,2022
+sp1,not stated,1,0,0,1,0,0,0,2010,2010
+sp3,not stated,1,0,0,1,0,0,0,2010,2010
+srbct,not stated,1,0,0,0,0,1,0,2022,2022
+surgical,not stated,1,0,0,0,0,1,0,2022,2022
+taevaluation,not stated,1,0,0,0,1,0,0,2016,2016
+toxicity,not stated,1,0,0,0,0,0,1,2026,2026
+uknowledge,not stated,1,0,0,0,1,0,0,2016,2016
+vertebal,not stated,1,0,0,0,0,0,1,2026,2026
+vertebral,not stated,1,0,0,0,1,0,0,2016,2016
+vowel,not stated,1,0,0,0,1,0,0,2019,2019
+waveform,not stated,1,0,0,0,0,1,0,2022,2022
+weatheraus,not stated,1,0,0,0,0,1,0,2022,2022
+xalan,not stated,1,0,0,0,0,0,1,2025,2025
+yeast,not stated,1,0,0,0,1,0,0,2016,2016
+pima,original,18,2,3,2,6,4,1,2002,2026
+ecoli,original,17,0,0,3,4,9,1,2010,2025
+haberman,original,17,1,3,2,8,3,0,2004,2022
+yeast,original,17,0,0,2,3,9,3,2011,2026
+newthyroid,original,16,0,0,2,3,9,2,2011,2025
+pageblocks,original,16,0,1,1,3,9,2,2007,2026
+balance,original,13,0,1,3,2,6,1,2006,2025
+hayesroth,original,13,0,0,1,3,7,2,2013,2025
+glass,original,12,0,0,2,2,6,2,2011,2025
+thyroid,original,12,0,0,1,2,7,2,2013,2025
+car,original,11,0,1,1,2,5,2,2006,2025
+cleveland,original,11,0,0,1,1,7,2,2010,2025
+contraceptive,original,11,0,0,1,2,7,1,2013,2025
+dermatology,original,10,0,0,0,2,7,1,2015,2025
+winequalityred,original,10,0,0,1,2,5,2,2013,2025
+zoo,original,10,0,0,2,0,6,2,2011,2025
+lymphography,original,9,0,0,1,1,6,1,2013,2025
+vehicle,original,9,0,0,0,3,4,2,2016,2025
+wine,original,9,0,0,1,1,6,1,2013,2025
+flare,original,8,0,0,1,2,4,1,2013,2025
+led,original,7,0,0,1,1,4,1,2013,2025
+phoneme,original,6,2,2,1,1,0,0,2002,2015
+vertebralcolumn,original,6,0,0,0,2,3,1,2016,2025
+abalone,original,5,0,1,1,1,2,0,2006,2024
+automobile,original,5,0,0,0,0,4,1,2020,2025
+heart,original,5,0,0,0,3,1,1,2016,2026
+ionosphere,original,5,0,2,1,0,1,1,2008,2026
+mammography,original,5,2,1,1,0,0,1,2002,2025
+splice,original,5,0,2,2,1,0,0,2006,2018
+winequalitywhite,original,5,0,0,1,1,3,0,2013,2024
+breasttissue,original,4,0,0,0,2,2,0,2016,2023
+cmc,original,4,0,1,1,1,1,0,2006,2024
+liver,original,4,0,0,0,2,2,0,2016,2022
+satimage,original,4,0,1,1,0,1,1,2007,2026
+shuttle,original,4,0,0,1,0,2,1,2013,2025
+spambase,original,4,0,0,1,0,1,2,2010,2026
+autos,original,3,0,0,0,2,1,0,2015,2024
+connect4,original,3,0,1,1,0,1,0,2006,2024
+covertype,original,3,0,0,0,2,1,0,2019,2024
+default,original,3,0,0,0,0,1,2,2022,2026
+german,original,3,1,0,1,0,0,1,2004,2026
+hepatitis,original,3,0,0,2,1,0,0,2010,2015
+nursery,original,3,0,0,1,0,1,1,2013,2026
+oil,original,3,2,1,0,0,0,0,1997,2008
+page,original,3,0,1,1,0,1,0,2006,2024
+segment,original,3,0,1,1,0,1,0,2006,2023
+sensorreadings,original,3,0,0,0,0,2,1,2021,2025
+shoppers,original,3,0,0,0,0,1,2,2022,2026
+userknowledge,original,3,0,0,0,0,2,1,2021,2025
+userknowledgemodelling,original,3,0,0,0,2,1,0,2016,2021
+voice,original,3,0,0,0,2,1,0,2016,2023
+vowel,original,3,0,2,1,0,0,0,2006,2010
+wisconsin,original,3,0,0,0,1,1,1,2015,2026
+adult,original,2,0,0,0,1,0,1,2019,2026
+ann,original,2,0,1,1,0,0,0,2006,2010
+avila,original,2,0,0,0,0,1,1,2024,2026
+bank,original,2,0,0,0,0,1,1,2020,2026
+breastcancer,original,2,0,0,0,1,1,0,2016,2020
+bupa,original,2,0,0,1,1,0,0,2010,2015
+cardiotocography,original,2,0,0,0,0,2,0,2023,2024
+chess,original,2,0,0,0,1,1,0,2019,2024
+diabetes,original,2,0,1,0,0,1,0,2008,2020
+drybean,original,2,0,0,0,0,1,1,2024,2025
+germannumer,original,2,0,1,0,1,0,0,2008,2015
+housing,original,2,0,0,0,1,1,0,2017,2023
+letter,original,2,0,1,0,1,0,0,2007,2016
+lev,original,2,0,0,0,1,1,0,2017,2023
+mfeatfouri,original,2,0,1,1,0,0,0,2006,2010
+musk,original,2,0,0,0,0,1,1,2022,2025
+penbased,original,2,0,0,0,0,1,1,2022,2025
+phishingdata,original,2,0,0,0,0,2,0,2021,2022
+platesfaults,original,2,0,0,0,1,1,0,2017,2023
+satellite,original,2,0,1,1,0,0,0,2006,2010
+solarflare2,original,2,0,1,1,0,0,0,2006,2010
+spect,original,2,0,0,0,1,1,0,2016,2022
+svmguide,original,2,0,1,0,0,1,0,2008,2021
+swd,original,2,0,0,0,1,1,0,2017,2023
+userknowledgemodeling,original,2,0,0,0,0,2,0,2023,2024
+waveform,original,2,0,1,1,0,0,0,2006,2010
+wdbc,original,2,0,1,0,0,0,1,2009,2026
+winequality,original,2,0,0,0,1,1,0,2015,2022
+wpbc,original,2,0,1,0,0,0,1,2009,2026
+absenteeismatwork,original,1,0,0,0,0,1,0,2024,2024
+anneal,original,1,0,0,1,0,0,0,2011,2011
+auto5,original,1,0,0,0,0,1,0,2023,2023
+balancescale,original,1,0,0,0,1,0,0,2019,2019
+bankfull,original,1,0,0,0,0,0,1,2025,2025
+banknote,original,1,0,0,0,0,0,1,2026,2026
+bankruptcy,original,1,0,0,0,0,0,1,2025,2025
+banksmall,original,1,0,0,0,0,0,1,2025,2025
+barcrawl,original,1,0,0,0,0,1,0,2024,2024
+boundary,original,1,0,1,0,0,0,0,2008,2008
+breastc,original,1,0,0,1,0,0,0,2011,2011
+breastcan,original,1,0,0,1,0,0,0,2010,2010
+breastcanceroriginal,original,1,0,0,1,0,0,0,2014,2014
+breastw,original,1,0,1,0,0,0,0,2008,2008
+buddy,original,1,0,0,0,0,1,0,2022,2022
+calmodoulin,original,1,0,1,0,0,0,0,2008,2008
+camel,original,1,0,0,0,0,0,1,2025,2025
+carevaluation,original,1,0,0,0,0,1,0,2024,2024
+census,original,1,0,0,0,1,0,0,2019,2019
+compustat,original,1,0,1,0,0,0,0,2008,2008
+contraceptivel,original,1,0,0,0,0,0,1,2025,2025
+contraceptivemethodchoice,original,1,0,0,0,0,1,0,2024,2024
+credit,original,1,0,0,0,1,0,0,2019,2019
+creditfraud,original,1,0,0,0,0,1,0,2020,2020
+creditg,original,1,0,0,0,1,0,0,2015,2015
+drug200,original,1,0,0,0,0,0,1,2026,2026
+drybeans,original,1,0,0,0,0,0,1,2026,2026
+employee,original,1,0,0,0,0,0,1,2026,2026
+era,original,1,0,0,0,1,0,0,2017,2017
+esophagealcancerpatientdataset,original,1,0,0,0,0,1,0,2022,2022
+estate,original,1,0,1,0,0,0,0,2008,2008
+firewall,original,1,0,0,0,0,0,1,2026,2026
+fourclass,original,1,0,1,0,0,0,0,2008,2008
+gesturephasesegmentationprocessed,original,1,0,0,0,0,1,0,2023,2023
+glassidentification,original,1,0,0,0,0,1,0,2024,2024
+hcv,original,1,0,0,0,0,1,0,2024,2024
+healthyolderpeople2,original,1,0,0,0,0,1,0,2021,2021
+hive0120,original,1,0,0,0,0,0,1,2025,2025
+hr,original,1,0,0,0,0,0,1,2026,2026
+htru2,original,1,0,0,0,0,0,1,2025,2025
+ijcnn,original,1,0,0,0,1,0,0,2019,2019
+indianpines,original,1,0,0,0,0,1,0,2020,2020
+internetvideotrafficdataset,original,1,0,0,0,0,1,0,2022,2022
+intrusion,original,1,0,0,0,1,0,0,2019,2019
+jasperridge,original,1,0,0,0,0,1,0,2020,2020
+k1b,original,1,0,1,0,0,0,0,2007,2007
+ksc,original,1,0,0,0,0,1,0,2020,2020
+la12,original,1,0,1,0,0,0,0,2007,2007
+laryngeal,original,1,0,0,0,0,1,0,2023,2023
+leavesplant,original,1,0,0,0,0,1,0,2023,2023
+letterrecognition,original,1,0,0,0,0,1,0,2024,2024
+liverdisorders,original,1,0,0,0,1,0,0,2018,2018
+mafalda,original,1,0,0,0,0,1,0,2021,2021
+magic,original,1,0,0,0,1,0,0,2019,2019
+medv,original,1,0,0,0,0,0,1,2026,2026
+news,original,1,0,0,0,1,0,0,2019,2019
+newthyr,original,1,0,0,1,0,0,0,2010,2010
+obs,original,1,0,0,0,0,1,0,2021,2021
+oilspill,original,1,1,0,0,0,0,0,1998,1998
+onlineshoppers,original,1,0,0,0,0,0,1,2025,2025
+optdigits,original,1,0,1,0,0,0,0,2007,2007
+overduedetectiondatabase,original,1,0,1,0,0,0,0,2009,2009
+paymentsimulation,original,1,0,0,0,0,1,0,2020,2020
+pendigits,original,1,0,1,0,0,0,0,2007,2007
+phoss,original,1,0,1,0,0,0,0,2008,2008
+pid,original,1,0,0,1,0,0,0,2010,2010
+pimaindiandiabetes,original,1,0,0,0,0,1,0,2020,2020
+pokerhand,original,1,0,0,0,0,1,0,2024,2024
+polishbankruptcy,original,1,0,0,0,0,0,1,2026,2026
+pre2d,original,1,0,0,0,1,0,0,2018,2018
+prend,original,1,0,0,0,1,0,0,2018,2018
+prompting,original,1,0,0,0,1,0,0,2015,2015
+recordlinkage,original,1,0,0,0,0,1,0,2020,2020
+robot,original,1,0,0,0,1,0,0,2017,2017
+salinasa,original,1,0,0,0,0,1,0,2020,2020
+samson,original,1,0,0,0,0,1,0,2020,2020
+sat,original,1,0,0,0,1,0,0,2017,2017
+saureus4,original,1,0,0,1,0,0,0,2011,2011
+sickeuthyroid,original,1,0,0,0,0,0,1,2025,2025
+sonar,original,1,0,0,1,0,0,0,2010,2010
+spectf,original,1,0,0,0,1,0,0,2016,2016
+statlog,original,1,0,0,0,0,1,0,2021,2021
+stock10,original,1,0,0,0,0,1,0,2023,2023
+studentsdropout,original,1,0,0,0,0,0,1,2026,2026
+taiwanses,original,1,0,0,0,0,0,1,2025,2025
+telcocustomerchurn,original,1,0,0,0,0,1,0,2020,2020
+texture,original,1,0,0,0,0,1,0,2023,2023
+texturel,original,1,0,0,0,0,1,0,2023,2023
+textures,original,1,0,0,0,0,1,0,2023,2023
+thyroidsick,original,1,0,0,0,0,0,1,2025,2025
+velocity15,original,1,0,0,0,0,0,1,2025,2025
+vertebral,original,1,0,0,0,0,1,0,2023,2023
+winered,original,1,0,0,0,1,0,0,2017,2017
+wisconsin5,original,1,0,0,0,0,1,0,2023,2023
+xalan,original,1,0,0,0,0,0,1,2025,2025
+xerces12,original,1,0,0,0,0,0,1,2025,2025
+yeast,repository-defined,17,0,0,0,6,7,4,2015,2026
+glass,repository-defined,15,0,0,0,4,7,4,2015,2026
+abalone,repository-defined,13,0,0,0,5,5,3,2015,2026
+ecoli,repository-defined,13,0,0,0,4,6,3,2015,2026
+newthyroid,repository-defined,11,0,0,0,5,4,2,2015,2026
+vowel,repository-defined,11,0,0,0,5,3,3,2015,2026
+pageblocks,repository-defined,10,0,0,0,6,3,1,2015,2026
+shuttle,repository-defined,9,0,0,0,3,4,2,2015,2026
+vehicle,repository-defined,8,0,0,0,3,3,2,2015,2026
+poker,repository-defined,6,0,0,0,2,3,1,2018,2025
+segment,repository-defined,6,0,0,0,2,2,2,2015,2026
+cleveland,repository-defined,5,0,0,0,3,1,1,2015,2025
+led,repository-defined,4,0,0,0,4,0,0,2015,2019
+winequalityred,repository-defined,4,0,0,0,1,1,2,2019,2025
+haberman,repository-defined,3,0,0,0,1,1,1,2019,2025
+pima,repository-defined,3,0,0,0,1,1,1,2019,2025
+winequalitywhite,repository-defined,3,0,0,0,1,2,0,2019,2022
+cargood,repository-defined,2,0,0,0,0,1,1,2022,2025
+dermatology,repository-defined,2,0,0,0,1,0,1,2018,2025
+iris,repository-defined,2,0,0,0,2,0,0,2015,2018
+krvsk,repository-defined,2,0,0,0,0,2,0,2021,2022
+wisconsin,repository-defined,2,0,0,0,0,1,1,2022,2025
+australian,repository-defined,1,0,0,0,0,1,0,2022,2022
+breastcancerwisconsin,repository-defined,1,0,0,0,0,1,0,2022,2022
+bupa,repository-defined,1,0,0,0,0,1,0,2022,2022
+carvgood,repository-defined,1,0,0,0,0,1,0,2022,2022
+coil2000,repository-defined,1,0,0,0,0,0,1,2026,2026
+d10pageblocks4vs13,repository-defined,1,0,0,0,0,1,0,2023,2023
+d2yeast8vs2,repository-defined,1,0,0,0,0,1,0,2023,2023
+d4yeast4vs2,repository-defined,1,0,0,0,0,1,0,2023,2023
+d6ecoli5vs067,repository-defined,1,0,0,0,0,1,0,2023,2023
+d7ecoli35vs067,repository-defined,1,0,0,0,0,1,0,2023,2023
+d8ecoli35vs0267,repository-defined,1,0,0,0,0,1,0,2023,2023
+flaref,repository-defined,1,0,0,0,0,0,1,2025,2025
+german,repository-defined,1,0,0,0,0,1,0,2020,2020
+habarman,repository-defined,1,0,0,0,0,1,0,2022,2022
+isolet,repository-defined,1,0,0,0,0,0,1,2026,2026
+kddbufferoverflowvsback,repository-defined,1,0,0,0,0,1,0,2021,2021
+kddlandvssatan,repository-defined,1,0,0,0,0,1,0,2021,2021
+kddrootkitvsback,repository-defined,1,0,0,0,0,1,0,2021,2021
+letterimg,repository-defined,1,0,0,0,0,0,1,2026,2026
+madelon,repository-defined,1,0,0,0,0,1,0,2021,2021
+opticaldigits,repository-defined,1,0,0,0,0,0,1,2026,2026
+pendigits,repository-defined,1,0,0,0,0,0,1,2026,2026
+planningrelax,repository-defined,1,0,0,0,0,1,0,2022,2022
+satimage,repository-defined,1,0,0,0,0,0,1,2026,2026
+segmemt0,repository-defined,1,0,0,0,1,0,0,2018,2018
+sick2,repository-defined,1,0,0,0,0,1,0,2020,2020
+sickeuthyroid,repository-defined,1,0,0,0,0,0,1,2026,2026
+soybean12,repository-defined,1,0,0,0,0,1,0,2020,2020
+thyroidsick,repository-defined,1,0,0,0,0,0,1,2026,2026
+winequality,repository-defined,1,0,0,0,0,0,1,2026,2026
+syna,synthetic (not published),2,0,1,1,0,0,0,2006,2010
+synb,synthetic (not published),2,0,1,1,0,0,0,2006,2010
+sync,synthetic (not published),2,0,1,1,0,0,0,2006,2010
+synd,synthetic (not published),2,0,1,1,0,0,0,2006,2010
+syne,synthetic (not published),2,0,1,1,0,0,0,2006,2010
+synf,synthetic (not published),2,0,1,1,0,0,0,2006,2010
+art,synthetic (not published),1,0,0,0,1,0,0,2019,2019
+artificial,synthetic (not published),1,0,0,0,0,0,1,2025,2025
+artificialcxcgriddomain,synthetic (not published),1,0,0,1,0,0,0,2014,2014
+artificialdataset,synthetic (not published),1,0,0,0,0,1,0,2022,2022
+artificialfamilya,synthetic (not published),1,0,0,0,0,1,0,2020,2020
+artificialfamilyb,synthetic (not published),1,0,0,0,0,1,0,2020,2020
+artificialtwoclassimbalanceddataset,synthetic (not published),1,0,1,0,0,0,0,2008,2008
+checkerboard,synthetic (not published),1,0,0,0,0,1,0,2020,2020
+circle,synthetic (not published),1,0,1,0,0,0,0,2005,2005
+circles,synthetic (not published),1,0,0,0,0,1,0,2021,2021
+clover,synthetic (not published),1,0,0,1,0,0,0,2010,2010
+cloverb,synthetic (not published),1,0,0,1,0,0,0,2010,2010
+cloverbc,synthetic (not published),1,0,0,1,0,0,0,2010,2010
+cloverc,synthetic (not published),1,0,0,1,0,0,0,2010,2010
+cloversafe,synthetic (not published),1,0,0,1,0,0,0,2010,2010
+ds4e10d20,synthetic (not published),1,0,1,0,0,0,0,2009,2009
+ds4e10dn,synthetic (not published),1,0,1,0,0,0,0,2009,2009
+dsie,synthetic (not published),1,0,1,0,0,0,0,2009,2009
+fiveclassartificialset,synthetic (not published),1,0,0,0,1,0,0,2016,2016
+lsexamplecombined,synthetic (not published),1,0,1,0,0,0,0,2008,2008
+lsexampleleft,synthetic (not published),1,0,1,0,0,0,0,2008,2008
+lsexamplemiddle,synthetic (not published),1,0,1,0,0,0,0,2008,2008
+mcmbrcsimir,synthetic (not published),1,0,0,0,0,1,0,2024,2024
+moons,synthetic (not published),1,0,0,0,0,1,0,2021,2021
+paw,synthetic (not published),1,0,0,1,0,0,0,2010,2010
+pawb,synthetic (not published),1,0,0,1,0,0,0,2010,2010
+pawbc,synthetic (not published),1,0,0,1,0,0,0,2010,2010
+pawc,synthetic (not published),1,0,0,1,0,0,0,2010,2010
+pawsafe,synthetic (not published),1,0,0,1,0,0,0,2010,2010
+radialrhohighdeltahigh,synthetic (not published),1,0,1,0,0,0,0,2008,2008
+radialrhohighdeltalow,synthetic (not published),1,0,1,0,0,0,0,2008,2008
+radialrhohighdeltamedium,synthetic (not published),1,0,1,0,0,0,0,2008,2008
+radialrholowdeltahigh,synthetic (not published),1,0,1,0,0,0,0,2008,2008
+radialrholowdeltalow,synthetic (not published),1,0,1,0,0,0,0,2008,2008
+radialrholowdeltamedium,synthetic (not published),1,0,1,0,0,0,0,2008,2008
+radialrhomediumdeltahigh,synthetic (not published),1,0,1,0,0,0,0,2008,2008
+radialrhomediumdeltalow,synthetic (not published),1,0,1,0,0,0,0,2008,2008
+radialrhomediumdeltamedium,synthetic (not published),1,0,1,0,0,0,0,2008,2008
+simulatedbinarydatasets,synthetic (not published),1,0,0,0,0,1,0,2020,2020
+simulateddataseta,synthetic (not published),1,0,0,0,0,1,0,2023,2023
+simulateddatasetb,synthetic (not published),1,0,0,0,0,1,0,2023,2023
+simulateddatasetc,synthetic (not published),1,0,0,0,0,1,0,2023,2023
+simulateddatasetd,synthetic (not published),1,0,0,0,0,1,0,2023,2023
+subclb,synthetic (not published),1,0,0,1,0,0,0,2010,2010
+subclbc,synthetic (not published),1,0,0,1,0,0,0,2010,2010
+subclc,synthetic (not published),1,0,0,1,0,0,0,2010,2010
+subclsafe,synthetic (not published),1,0,0,1,0,0,0,2010,2010
+subclus,synthetic (not published),1,0,0,1,0,0,0,2010,2010
+syntheticillustrationset,synthetic (not published),1,0,0,0,0,0,1,2025,2025
+syntheticscenarioi,synthetic (not published),1,0,1,0,0,0,0,2007,2007
+syntheticscenarioii,synthetic (not published),1,0,1,0,0,0,0,2007,2007
+syntheticscenarioiii,synthetic (not published),1,0,1,0,0,0,0,2007,2007
+syntheticthreeclassset,synthetic (not published),1,0,1,0,0,0,0,2007,2007
+toydataset,synthetic (not published),1,0,0,0,0,1,0,2021,2021
+twogaussianclasses,synthetic (not published),1,0,0,0,1,0,0,2015,2015
+alarm,synthetic (published),1,0,0,0,1,0,0,2019,2019
+art,synthetic (published),1,0,0,0,0,1,0,2024,2024
+asia,synthetic (published),1,0,0,0,1,0,0,2019,2019
+child,synthetic (published),1,0,0,0,1,0,0,2019,2019
+circles,synthetic (published),1,0,0,0,1,0,0,2018,2018
+"cloverir=5,dr=0",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"cloverir=5,dr=30",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"cloverir=5,dr=50",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"cloverir=5,dr=60",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"cloverir=5,dr=70",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"cloverir=7,dr=0",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"cloverir=7,dr=30",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"cloverir=7,dr=50",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"cloverir=7,dr=60",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"cloverir=7,dr=70",synthetic (published),1,0,0,0,1,0,0,2015,2015
+grid,synthetic (published),1,0,0,0,1,0,0,2019,2019
+gridr,synthetic (published),1,0,0,0,1,0,0,2019,2019
+insurance,synthetic (published),1,0,0,0,1,0,0,2019,2019
+mandelon,synthetic (published),1,0,0,0,1,0,0,2019,2019
+moons,synthetic (published),1,0,0,0,1,0,0,2018,2018
+"pawir=5,dr=0",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"pawir=5,dr=30",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"pawir=5,dr=50",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"pawir=5,dr=60",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"pawir=5,dr=70",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"pawir=7,dr=0",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"pawir=7,dr=30",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"pawir=7,dr=50",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"pawir=7,dr=60",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"pawir=7,dr=70",synthetic (published),1,0,0,0,1,0,0,2015,2015
+ring,synthetic (published),1,0,0,0,1,0,0,2019,2019
+simulated,synthetic (published),1,0,0,0,1,0,0,2018,2018
+simulateddataseta,synthetic (published),1,0,0,0,0,1,0,2022,2022
+simulateddatasetb,synthetic (published),1,0,0,0,0,1,0,2022,2022
+simulateddatasetc,synthetic (published),1,0,0,0,0,1,0,2022,2022
+simulateddatasetd,synthetic (published),1,0,0,0,0,1,0,2022,2022
+simulatedset,synthetic (published),1,0,0,0,0,1,0,2023,2023
+"subclusterir=5,dr=0",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"subclusterir=5,dr=30",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"subclusterir=5,dr=50",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"subclusterir=5,dr=60",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"subclusterir=5,dr=70",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"subclusterir=7,dr=0",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"subclusterir=7,dr=30",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"subclusterir=7,dr=50",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"subclusterir=7,dr=60",synthetic (published),1,0,0,0,1,0,0,2015,2015
+"subclusterir=7,dr=70",synthetic (published),1,0,0,0,1,0,0,2015,2015
+toy,synthetic (published),1,0,0,0,0,1,0,2023,2023
+toydataseta,synthetic (published),1,0,0,0,1,0,0,2018,2018
+toydatasetb,synthetic (published),1,0,0,0,1,0,0,2018,2018
+toydatasetc,synthetic (published),1,0,0,0,1,0,0,2018,2018

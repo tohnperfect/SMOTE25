@@ -409,6 +409,16 @@ if len(_SI) != _NT["distinct_sources"]["n"] or {r["source"] for r in _SI} != {x 
 data["nt"] = dict(sum=_NT, rows=[[r["normalized_name"], r["name_type"], int(r["entries"]), r["entries_by_category"], int(r["n_papers"]), r["papers"],
                                  r["difficulty"], r["measured_tasks"], r["not_measured_reason"], r["source"], r["entries_by_source"], r["source_combo"], r["source_ids"], r["mod_ops"]] for r in _NTR],
                   source="out/name_level_types.csv, out/name_level_types.json (build/name_level_types.py)")
+# 9 พ.ย. 2026: ข้อมูลที่ดัดแปลง — ทำอะไร เพื่ออะไร สัญญาณจากการออกแบบการทดลอง ชุดที่ใช้ร่วม และการใช้ตามช่วงเวลา (build/modification_analysis.py)
+_MA = json.load(open(p("out/modification_analysis.json"), encoding="utf-8"))
+_MP = rcsv("out/modification_purpose_by_paper.csv"); _MQ = rcsv("out/modification_purpose_quotes.csv")
+if len(_MP) != _MA["purpose"]["papers"] or len(rcsv("out/modified_operations_audit.csv")) != _MA["purpose"]["entries"]:
+    sys.exit("STOP: modification analysis out of date (rerun build/modified_operations.py on the machine with paper/, then build/modification_analysis.py)")
+_MF = rcsv("out/modified_families.csv"); _UP = rcsv("out/usage_by_period.csv")
+data["md"] = dict(a=_MA, papers=_MP, quotes=_MQ, fams=[list(r.values()) for r in _MF], famcols=list(_MF[0]),
+                  usage=[[r["family"], r["category"], int(r["papers_total"]), *[int(r[k]) for k in ["<=2004", "2005-2009", "2010-2014", "2015-2019", "2020-2024", "2025-2026"]], r["first_year"], r["last_year"]] for r in _UP],
+                  src="out/modification_analysis.json, out/modification_purpose_by_paper.csv, out/modification_purpose_quotes.csv (quotes found in the PDFs), "
+                      "out/noise_injection_papers.csv, out/modified_families.csv, out/usage_by_period.csv; build/modification_purpose.py, build/modification_analysis.py")
 data["manuscript"] = dict(overview=json.load(open(p("manuscript/overview.json"), encoding="utf-8")),
                           html=tex2html.convert(_tex), tex=_tex)
 js = json.dumps(data, ensure_ascii=False, separators=(",", ":"))

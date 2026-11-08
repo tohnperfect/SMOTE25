@@ -1,0 +1,131 @@
+family,papers,modified_entries,operations,class_operation_kinds,modified_names (papers using that exact name),paper_keys
+vehicle,11,17,CS:9;US:8;IM:8,one-vs-rest:6;class grouping (minority/majority sets):1;one-vs-rest or class subset:1;one-vs-rest (class inferred from suffix):1,vehicle(9p);vehicle1(1p);vehicle2(1p);vehicle4(1p);vehicle6(1p);vehicle10(1p);vehicle15(1p);vehicle20(1p),A-SUWO;ADASYN;EasyEnsemble / BalanceCascade;G-SMOTE;GMMSampling;MWMOTE;RAMOBoost;RUSBoost;SMOTE-ENN / SMOTE-Tomek;SVDD-WSMOTE;k-means SMOTE
+ecoli,10,13,CS:8;US:5;IM:5;FM:1,one-vs-rest:4;class subset (small classes dropped):1;class grouping (minority/majority sets):1;one-vs-rest (class not stated):1;one-vs-rest (class inferred from suffix):1,ecoli(6p);ecoli4(2p);ecoli1(1p);e.coli(1p);ecoli2(1p);ecoli6(1p),A-SUWO;AMDO;G-SMOTE;GMMSampling;MWMOTE;RACOG / wRACOG;RUSBoost;SMOTE-ENN / SMOTE-Tomek;SVDD-WSMOTE;k-means SMOTE
+abalone,9,12,CS:12;FM:2,threshold on target:2;one-vs-rest:2;threshold on target or class choice:2;class subset (classes dropped):2;class subset (two classes kept):1;class subset (named classes kept):1;one-vs-rest (class not stated):1;one-vs-rest or class subset:1,abalone(6p);abalone 15(2p);abalone 6(2p);abalone8(1p);abalone10(1p),ADASYN;DGOT;EasyEnsemble / BalanceCascade;GOIO;MWMOTE;RACOG / wRACOG;RAMOBoost;SMOM;SVDD-WSMOTE
+satimage,9,9,CS:9,one-vs-rest:7;one-vs-rest or class subset:1;one-vs-rest (class inferred from suffix):1,satimage(8p);satimage4(1p),Borderline-SMOTE;EasyEnsemble / BalanceCascade;MWMOTE;RAMOBoost;RUSBoost;SMOTE;SMOTE-ENN / SMOTE-Tomek;SMOTEBoost;Safe-Level-SMOTE
+glass,8,11,CS:6;US:5;IM:5,one-vs-rest:3;class grouping (minority/majority sets):1;one-vs-rest or class subset:1;one-vs-rest (class inferred from suffix):1,glass(6p);glass3(1p);glass2(1p);glass4(1p);glass6(1p),A-SUWO;G-SMOTE;GMMSampling;MWMOTE;RAMOBoost;RUSBoost;SMOTE-ENN / SMOTE-Tomek;k-means SMOTE
+pageblocks,8,10,CS:8;IM:4;US:2,one-vs-rest:2;one-vs-rest or class pair:2;class grouping (minority/majority sets):1;threshold on target or class choice:1;one-vs-rest or class subset:1;class merging:1,page blocks(2p);page blocks 0(1p);pageblocks(2p);page-blocks 0vs3(1p);page-blocks(1p);pageblock(1p);pageblock1(1p),CISO;G-SMOTE;GMMSampling;GOIO;MWMOTE;RAMOBoost;SMOM;SVDD-WSMOTE
+yeast,7,25,IM:17;CS:17;US:8,one-vs-rest or class pair:9;one-vs-rest:3;class merging:2;class grouping (minority/majority sets):1;one-vs-rest or class subset:1;class subset (classes dropped):1,yeast(4p);yeast 1(1p);yeast 3(1p);yeast 4(1p);yeast4(2p);yeast6(2p);yeast5(2p);yeast7(2p),G-SMOTE;GMMSampling;MWMOTE;RACOG / wRACOG;RAMOBoost;SMOM;SVDD-WSMOTE
+wine,6,9,US:5;IM:5;CS:4,one-vs-rest:3;one-vs-rest or class subset:1,wine(5p);wine2(1p);wine4(1p);wine6(1p),A-SUWO;G-SMOTE;MWMOTE;RAMOBoost;SVDD-WSMOTE;k-means SMOTE
+letter,6,6,CS:5;FM:1;US:1;IM:1,one-vs-rest:2;class grouping (vowels vs consonants):1;one-vs-rest (class not stated):1;one-vs-rest or class subset:1,letter(6p),CISO;EasyEnsemble / BalanceCascade;LS;RACOG / wRACOG;RAMOBoost;RSMOTE
+segment,5,10,US:6;IM:6;CS:4,one-vs-rest:2;one-vs-rest or class subset:1;one-vs-rest (class inferred from suffix):1,segment(3p);segment5(1p);segment2(1p);segment4(1p);segment6(1p);segment10(1p);segment15(1p);segment20(1p),A-SUWO;MWMOTE;RAMOBoost;RUSBoost;k-means SMOTE
+vowel,5,7,CS:4;US:3;IM:3,class merging:2;one-vs-rest:1;one-vs-rest or class subset:1,vowel(3p);vowel0(1p);vowel5(1p);vowel7(1p),ADASYN;G-SMOTE;HDE;RAMOBoost;SMOM
+iris,4,7,US:5;IM:5;CS:2,one-vs-rest:2,iris(3p);iris2(1p);iris4(1p);iris6(1p),A-SUWO;G-SMOTE;SVDD-WSMOTE;k-means SMOTE
+libra,4,6,CS:3;US:3;IM:3,one-vs-rest:3,libra(3p);libra2(1p);libra4(1p);libra6(1p),A-SUWO;MWMOTE;SVDD-WSMOTE;k-means SMOTE
+mnist,4,6,US:4;IM:4;FM:2;CS:2;SF:1,one-vs-rest:2,mnist(2p);mnist12(1p);mnist28(1p);mnist 3(1p);mnist 5(1p),CTGAN / TVAE;GAMO;NBU;ROS (Buda)
+breasttissue,4,5,US:3;IM:3;CS:2,one-vs-rest:2,breast tissue(2p);breast-tissue(1p);breast tissue2(1p);breast tissue4(1p),A-SUWO;G-SMOTE;MWMOTE;k-means SMOTE
+cleveland,3,5,CS:4;SF:1,class grouping (minority/majority sets):4,cleveland 1(2p);cleveland 2(2p);cleveland(1p),GMMSampling;OVO-SMOTE;SOUP
+svmguide,3,5,US:5;IM:5,,svmguide1(3p);svmguide3(2p),COG-OS;HDE;RSMOTE
+kddcup,3,4,SF:2;CS:2;US:1,class subset (two classes kept):2,kddcup(1p);kddcup99data(1p);kddcup-99 intrusion(1p),COG-OS;SMOTEBoost;SPE
+newthyroid,3,4,US:2;IM:2;CS:2,class grouping (minority/majority sets):1;one-vs-rest:1,new thyroid 2(1p);new thyroid 1(1p);new thyroid(1p);new-thyroid(1p),G-SMOTE;GMMSampling;SMOTE-ENN / SMOTE-Tomek
+balance,3,3,CS:3,one-vs-rest:3,balance(3p),A-SUWO;EasyEnsemble / BalanceCascade;SVDD-WSMOTE
+car,3,3,CS:3,one-vs-rest:2;one-vs-rest (class not stated):1,car(3p),EasyEnsemble / BalanceCascade;RACOG / wRACOG;SVDD-WSMOTE
+nursery,3,3,CS:3,class subset (small classes dropped):1;one-vs-rest (class not stated):1;one-vs-rest:1,nursery(3p),AMDO;RACOG / wRACOG;SMOTE-ENN / SMOTE-Tomek
+pima,2,8,US:8;IM:8,,pima(1p);pima2(1p);pima4(1p);pima6(1p);pima10(1p);pima15(1p);pima20(1p),G-SMOTE;k-means SMOTE
+heart,2,7,US:7;IM:7,,heart(1p);heart2(1p);heart4(1p);heart6(1p);heart10(1p);heart15(1p),G-SMOTE;k-means SMOTE
+haberman,2,6,US:6;IM:6,,haberman(1p);haberman2(1p);haberman4(1p);haberman6(1p);haberman10(1p),G-SMOTE;k-means SMOTE
+avila,2,4,CS:3;US:1;IM:1,threshold on target or class choice:3,avila 0vs5(1p);avila 0vs6(1p);avila 0vs7(1p);avila(1p),GOIO;RSMOTE
+eucalyptus,2,3,US:2;IM:2;CS:1,one-vs-rest:1,eucalyptus(2p),A-SUWO;G-SMOTE
+breastcancer,2,2,US:2;IM:2,,breast-cancer(1p);breastcancer(1p),HDE;RSMOTE
+cifar10,2,2,US:2;IM:1,,cifar10(1p);cifar-10(1p),GAMO;ROS (Buda)
+dermatology,2,2,SF:2,,dermatology(2p),AMDO;OVO-SMOTE
+fourclass,2,2,US:1;IM:1;NI:1,outlier injection:1,fourclass(2p),COG-OS;RSMOTE
+mfzernike,2,2,CS:2,one-vs-rest:1;one-vs-rest or class subset:1,mf-zernike(1p);mf zernike(1p),EasyEnsemble / BalanceCascade;RAMOBoost
+mushrooms,2,2,US:2;IM:2,,mushrooms(2p),HDE;RSMOTE
+pendigits,2,2,CS:2,one-vs-rest (class inferred from suffix):1;class merging:1,pendigits5(1p);pendigits(1p),RUSBoost;SMOM
+postoperative,2,2,SF:1;CS:1,one-vs-rest:1,post-operative(2p),OVO-SMOTE;SMOTE-ENN / SMOTE-Tomek
+splice,2,2,US:2;IM:2,,splice(2p),COG-OS;RSMOTE
+texture,2,2,CS:2,one-vs-rest:1;one-vs-rest or class subset:1,texture(2p),MWMOTE;RAMOBoost
+liverdisorders,1,5,US:5;IM:5,,liver disorders2(1p);liver disorders4(1p);liver disorders6(1p);liver disorders10(1p);liver disorders15(1p),k-means SMOTE
+mandelon,1,4,US:4;IM:4,,mandelon 1(1p);mandelon 2(1p),G-SMOTE
+imagenet,1,3,FM:3;SF:3,,imagenet8(1p);imagenet9(1p);imagenet12(1p),DLexiBoost
+liver,1,2,US:2;IM:2,,liver(1p),G-SMOTE
+segmentation,1,2,US:2;IM:2,,segmentation(1p),G-SMOTE
+50words,1,1,CS:1;US:1,one-vs-rest:1,50words(1p),INOS
+a1a,1,1,US:1;IM:1,,a1a(1p),HDE
+adiac,1,1,CS:1;US:1,one-vs-rest:1,adiac(1p),INOS
+adult,1,1,FM:1,,adult(1p),SMOTE
+attributenoiseversionsofthe9realworlddatasets,1,1,NI:1,attribute noise injection:1,attribute noise versions of the 9 real-world datasets(1p),SMOTE-IPF
+australian,1,1,US:1;IM:1,,australian(1p),HDE
+automobile,1,1,CS:1,class merging:1,automobile(1p),SMOM
+autos,1,1,SF:1,,autos(1p),OVO-SMOTE
+breastw,1,1,US:1;SF:1;IM:1,,breast-w(1p),COG-OS
+can,1,1,LC:1,label construction:1,can(1p),SMOTE
+car3,1,1,CS:1,one-vs-rest (class inferred from suffix):1,car3(1p),RUSBoost
+celebalarge,1,1,CS:1;FM:1,class subset (classes selected):1,celeba-large(1p),GAMO
+celebasmall,1,1,CS:1;FM:1,class subset (classes selected):1,celeba-small(1p),GAMO
+censusincomedatabase,1,1,SF:1,,census-income database(1p),ClusterCentroids
+classnoiseversionsofthe9realworlddatasets,1,1,NI:1,label noise injection:1,class noise versions of the 9 real-world datasets(1p),SMOTE-IPF
+cmc,1,1,CS:1,one-vs-rest:1,cmc(1p),EasyEnsemble / BalanceCascade
+cod,1,1,US:1;IM:1,,cod(1p),HDE
+codrna,1,1,US:1;IM:1,,codrna(1p),RSMOTE
+connect4,1,1,CS:1;SF:1,one-vs-rest (class not stated):1,connect-4(1p),RACOG / wRACOG
+contra2,1,1,CS:1,one-vs-rest (class inferred from suffix):1,contra2(1p),RUSBoost
+contraceptive,1,1,CS:1,class grouping (minority/majority sets):1,contraceptive(1p),GMMSampling
+creditapproval,1,1,US:1;IM:1,,creditapproval(1p),RSMOTE
+ctg,1,1,CS:1,one-vs-rest:1,ctg(1p),MWMOTE
+cytvspox,1,1,CS:1,class subset (two classes kept):1,cytvspox(1p),DSRBF / Static-SMOTE
+destinations,1,1,CS:1;LC:1,label construction:1,destinations(1p),Cluster-SMOTE
+diabetes,1,1,US:1;IM:1,,diabetes(1p),HDE
+esl,1,1,CS:1,class merging:1,esl(1p),SMOM
+faceall,1,1,CS:1;US:1,one-vs-rest:1,faceall(1p),INOS
+fashionmnist,1,1,US:1;IM:1,,fashion-mnist(1p),GAMO
+flag,1,1,CS:1,one-vs-rest:1,flag(1p),SMOTE-ENN / SMOTE-Tomek
+forestcover,1,1,CS:1,class subset (two classes kept):1,forest cover(1p),SMOTE
+g7,1,1,CS:1;US:1,one-vs-rest:1,g7(1p),OSS
+german,1,1,US:1;IM:1,,german(1p),HDE
+germannumer,1,1,US:1;IM:1,,german.numer(1p),COG-OS
+gisette,1,1,US:1;IM:1,,gisette(1p),HDE
+hayesroth,1,1,CS:1,class grouping (minority/majority sets):1,hayes roth(1p),GMMSampling
+heating,1,1,CS:1,one-vs-rest:1,heating(1p),A-SUWO
+housing,1,1,CS:1,one-vs-rest:1,housing(1p),EasyEnsemble / BalanceCascade
+ijcnn,1,1,US:1;IM:1,,ijcnn(1p),HDE
+ilsvrc2012,1,1,US:1;SF:1;IM:1,,ilsvrc-2012(1p),ROS (Buda)
+intrusion,1,1,CS:1;SF:1,class subset (two classes kept):1,intrusion(1p),LS
+isolet,1,1,US:1;IM:1,,isolet5(1p),RSMOTE
+led,1,1,US:1;IM:1,,led(1p),G-SMOTE
+lettera,1,1,CS:1,one-vs-rest:1,letter-a(1p),SMOTE-ENN / SMOTE-Tomek
+lettervowel,1,1,CS:1,one-vs-rest:1,letter-vowel(1p),SMOTE-ENN / SMOTE-Tomek
+lev,1,1,CS:1,one-vs-rest:1,lev(1p),A-SUWO
+lsunlarge,1,1,CS:1;FM:1,class subset (classes selected):1,lsun-large(1p),GAMO
+lsunsmall,1,1,CS:1;FM:1,class subset (classes selected):1,lsun-small(1p),GAMO
+machine,1,1,CS:1,class merging:1,machine(1p),SMOM
+magic,1,1,US:1;IM:1,,magic(1p),RSMOTE
+me2vsother,1,1,CS:1,one-vs-rest:1,me2vsother(1p),DSRBF / Static-SMOTE
+mfmorph,1,1,CS:1,one-vs-rest:1,mf-morph(1p),EasyEnsemble / BalanceCascade
+mocap,1,1,US:1;IM:1,,mocap(1p),RSMOTE
+nomao,1,1,US:1;IM:1,,nomao(1p),RSMOTE
+ocr,1,1,CS:1,one-vs-rest:1,ocr(1p),MWMOTE
+onlineretail,1,1,US:1;IM:1,,online retail(1p),RSMOTE
+packets,1,1,CS:1;LC:1,label construction:1,packets(1p),Cluster-SMOTE
+phishing,1,1,US:1;IM:1,,phishing(1p),HDE
+phoneme,1,1,CS:1,one-vs-rest:1,phoneme(1p),MWMOTE
+pimadiabetes,1,1,US:1;IM:1,,pima-diabetes(1p),COG-OS
+platesfaults,1,1,CS:1,class merging:1,plates-faults5(1p),SMOM
+poker,1,1,US:1;IM:1,,poker(1p),RSMOTE
+probebinary,1,1,CS:1;SF:1,one-vs-rest:1,probe binary(1p),COG-OS
+r2lbinary,1,1,CS:1;SF:1,one-vs-rest:1,r2l binary(1p),COG-OS
+robot,1,1,CS:1,one-vs-rest:1,robot(1p),MWMOTE
+seed,1,1,CS:1,one-vs-rest:1,seed(1p),SVDD-WSMOTE
+semeion,1,1,CS:1,one-vs-rest:1,semeion(1p),MWMOTE
+shuttle,1,1,CS:1,one-vs-rest or class subset:1,shuttle(1p),RAMOBoost
+skin,1,1,US:1;IM:1,,skin(1p),RSMOTE
+skinnonskin,1,1,US:1;IM:1,,skinnonskin(1p),HDE
+sleaf,1,1,CS:1;US:1,one-vs-rest:1,sleaf(1p),INOS
+solarflaref,1,1,CS:1,class or threshold (not stated):1,solarflaref(1p),RUSBoost
+spliceei,1,1,CS:1,one-vs-rest:1,splice-ei(1p),SMOTE-ENN / SMOTE-Tomek
+spliceie,1,1,CS:1,one-vs-rest:1,splice-ie(1p),SMOTE-ENN / SMOTE-Tomek
+statlandsat,1,1,CS:1,one-vs-rest:1,statlandsat(1p),MWMOTE
+statlog,1,1,CS:1,one-vs-rest:1,statlog(1p),CISO
+sun397,1,1,CS:1;FM:1,class subset (classes selected):1,sun397(1p),GAMO
+susy,1,1,US:1;IM:1,,susy(1p),RSMOTE
+svhn,1,1,US:1,,svhn(1p),GAMO
+twopats,1,1,US:1,,twopats(1p),INOS
+veh1,1,1,CS:1;US:1,one-vs-rest:1,veh1(1p),OSS
+voice,1,1,CS:1,class merging:1,voice9 6(1p),SMOM
+votes,1,1,US:1;IM:1,,votes(1p),RSMOTE
+vw0,1,1,CS:1,one-vs-rest:1,vw0(1p),OSS
+wafer,1,1,US:1,,wafer(1p),INOS
+waveform,1,1,CS:1,one-vs-rest:1,waveform(1p),CISO
+winequality,1,1,CS:1,class grouping (minority/majority sets):1,wine quality(1p),GMMSampling
+yoga,1,1,US:1,,yoga(1p),INOS

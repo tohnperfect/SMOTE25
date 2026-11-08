@@ -5,20 +5,22 @@
  "tag_entries": {
   "CS": 175,
   "US": 148,
-  "FM": 16,
+  "FM": 15,
   "SF": 18,
   "IM": 147,
-  "OT": 5,
+  "NI": 3,
+  "LC": 3,
   "IS": 0
  },
  "tag_entries_note": "an entry can carry several tags; these counts sum to more than the number of entries",
  "tag_papers": {
   "CS": 29,
   "US": 11,
-  "FM": 7,
+  "FM": 6,
   "SF": 9,
   "IM": 9,
-  "OT": 4,
+  "NI": 2,
+  "LC": 2,
   "IS": 0
  },
  "combinations": {
@@ -30,12 +32,13 @@
   "CS;US": 6,
   "US": 5,
   "CS;SF": 4,
-  "FM": 4,
   "US;SF;IM": 3,
+  "FM": 3,
   "FM;SF": 3,
-  "OT": 3,
-  "CS;OT": 2,
+  "NI": 3,
+  "CS;LC": 2,
   "CS;US;IM": 2,
+  "LC": 1,
   "US;SF": 1
  },
  "combinations_note": "mutually exclusive; sums to the number of entries",
@@ -57,7 +60,7 @@
  "changes": {
   "class_structure": 177,
   "sample_composition": 202,
-  "feature_space": 16,
+  "feature_space": 15,
   "imbalance": {
    "changed as a consequence": 178,
    "deliberately changed": 147,
@@ -190,7 +193,7 @@
    "entries": 2,
    "ops": {
     "CS": 2,
-    "OT": 2
+    "LC": 2
    },
    "purpose": false
   },
@@ -347,7 +350,7 @@
    "ops": {
     "US": 18,
     "IM": 18,
-    "OT": 1
+    "NI": 1
    },
    "purpose": true
   },
@@ -370,7 +373,7 @@
    "ops": {
     "FM": 1,
     "CS": 2,
-    "OT": 1
+    "LC": 1
    },
    "purpose": true
   },
@@ -384,8 +387,7 @@
   "SMOTE-IPF": {
    "entries": 2,
    "ops": {
-    "OT": 1,
-    "FM": 1
+    "NI": 2
    },
    "purpose": true
   },

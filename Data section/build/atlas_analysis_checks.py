@@ -29,7 +29,7 @@ rows = [dict(zip(A["fields"], r)) for r in A["rows"]]
 chk("A rows = audit csv", len(rows) == len(ma), f"{len(rows)} vs {len(ma)}")
 chk("A rows identical to csv (fields shown)", all(all(r[k] == m.get(k, "") for k in A["fields"]) for r, m in zip(rows, ma)))
 chk("A summary = summary json", A["summary"] == ms)
-tag = {o: sum(o in r["ops"].split(";") for r in rows) for o in ["CS", "US", "IM", "SF", "FM", "OT", "IS"]}
+tag = {o: sum(o in r["ops"].split(";") for r in rows) for o in ["CS", "US", "IM", "SF", "FM", "NI", "LC", "IS"]}
 chk("A per-op entries recomputed = summary", all(ms["tag_entries"].get(o, 0) == n for o, n in tag.items()), str(tag))
 chk("A entries = dashboard modified", len(rows) == dash["entries"]["by_cat"]["modified"])
 purp = len({r["paper_key"] for r in rows if not r["purpose_stated_by_authors"].startswith("none")})

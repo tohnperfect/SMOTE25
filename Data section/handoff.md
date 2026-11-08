@@ -2097,3 +2097,36 @@ python3 build/outcome_pilot.py
 - manuscript แก้: ย่อหน้ากติกาตรวจ (N+1, คลาส, Kaggle), 986/256, 236/701, ตารางความยาก, ย่อหน้าโปรไฟล์, Figure Description/caption, paper mix 39/36, ชุดอ้างอิง (ตาราง generate ใหม่), Limits (Kaggle + 161/58/196/79), noise vs ชนะ · overview.json, CONCLUSIONS.md, section 0 ของไฟล์นี้
 - ไฟล์ใน Downloads ของ Toon ที่เป็นของเรา (ลบเองได้): 01ad4a4f…tmp, smote25_uci_a.bin, smote25_uci_b.bin, uci_extended.tar.gz, archive.zip, archive1–8.zip (สำเนาอยู่ใน difficulty/src/ แล้ว)
 - ไม่ได้ push
+
+---
+
+### 9 พ.ย. 2026 (Claude) — ข้อมูลที่ดัดแปลง: noise, แตกหมวด "อื่น ๆ", ดัดแปลงเพื่ออะไร, ชุดที่ใช้ร่วม, การใช้ตามช่วงเวลา
+
+คำสั่ง Toon: dataset ไหนเติม noise · แยกวิธีดัดแปลงให้ครบ ไม่ใช้ "อื่น ๆ" · ปรับเปลี่ยนเพื่ออะไร (ยากขึ้นกี่ % / ให้เหมาะกับวิธีกี่ %) และจะรู้ได้อย่างไรว่าปรับให้วิธีตัวเองดี · ชุดที่ modify ที่พบบ่อย และที่หลายคนใช้ · ช่วงหลัง ๆ ยังใช้ original / modified / synthetic ที่แชร์ อะไรบ้าง
+คำตอบ AskUserQuestion: ช่วงเวลา = แสดงทุกช่วง (ช่วง 5 ปี) · วัดเจตนาด้วย (1) ประโยคใน PDF (2) สัญญาณจากการออกแบบการทดลอง (3) สัดส่วนชนะบนชุดดัดแปลง vs ชุดอื่นใน paper เดียวกัน · ผลไป Atlas + handoff ก่อน แล้วค่อยตัดสินว่าเข้า manuscript (ยกเว้นการแตกหมวดอื่น ๆ)
+
+**(1) noise** — ค้นทุก PDF (pdftotext บนเครื่อง) ด้วยคำ label/class/attribute/feature noise, noise level, inject, corrupt, mislabel, outlier added แล้วอ่านประโยคทีละ paper
+- ใส่ลงข้อมูลจริง 8 paper: SMOTE-IPF (class + attribute noise 20/40%, เป็น entry modified 2), RAMOBoost (class + attribute noise บน Abalone), RSMOTE (label noise 10/20/30% ทุกชุด + outlier 1 จุดใน fourclass ซึ่งเป็น entry), RBO (label 0–20%, feature noise), MC-CCR (label 0–25%), MC-MBRC (label 0–30%), MC-NCLWO (Gaussian feature noise 5–30% บน 4 ชุด), SPE (ค่าหาย แทนด้วย 0) → `out/noise_injection_papers.csv`
+- 6 paper ในนี้ (ยกเว้น SMOTE-IPF และ outlier ของ RSMOTE) ใส่ noise เป็นเงื่อนไขการทดลองบนชุดที่ลิสต์เป็น entry อยู่แล้ว ชุดเดิมจึงยังอยู่ในหมวดเดิม · **ยังไม่ได้เพิ่มชุดที่มี noise เป็น entry modified — เป็นเรื่องที่ Toon ต้องตัดสิน** (ถ้าเพิ่ม ตัวเลข entry ทั้งหมดเปลี่ยน)
+- synthetic ที่สร้างให้มี noise/outlier ในตัว 5 paper 23 entry (SPIDER2, DLexiBoost family B, OREM-M, SVDD-WSMOTE A–C, k-means SMOTE toy/circles/moons)
+
+**(2) แตกหมวดอื่น ๆ** — `build/modified_operations.py` (รันบนเครื่อง): OT เดิม 5 entry → NI (noise / outlier injection: class noise ของ SMOTE-IPF, outlier ของ RSMOTE) และ LC (labels constructed by the authors: Cluster-SMOTE สร้างชุดจาก traffic + SNORT, SMOTE สร้างชุด Can จาก simulation) · attribute noise ของ SMOTE-IPF ย้าย FM → NI (FM 16 → 15) · ตอนนี้ entry: CS 175, US 148, IM 147, SF 18, FM 15, NI 3, LC 3, IS 0 · แก้ตามใน name_level_types.py, temporal_comparison.py, atlas_analysis_checks.py, atlas_template.html · manuscript ไม่ได้อ้าง OT จึงไม่ต้องแก้
+
+**(3) ดัดแปลงเพื่ออะไร** — `build/modification_purpose.py` (รันบนเครื่อง; ประโยค 41 ประโยคจาก 27 paper พบใน PDF ครบ ระบุหน้า) → `out/modification_purpose_quotes.csv`
+- หัวข้อตั้งตามที่ประโยคพูด: two-class scope (งาน/วิธีเป็นสองคลาส), create/raise imbalance, robustness test (noise/outlier/ค่าหาย), practical (ขนาด, train/test สอดคล้อง) + ที่มาของการเลือก (ตามงานก่อน / กฎที่เขียนไว้) + เผยแพร่ไฟล์ที่ดัดแปลง
+- paper ที่ครอบ 43 (39 ที่มี entry modified + 4 ที่ใส่ noise อย่างเดียว) · two-class scope 10 (23%) · create/raise imbalance 9 · robustness test 8 · practical 2 · ไม่พบเหตุผล 19 (44%) · "ทำให้ยากขึ้น" (imbalance หรือ noise) 16 (37%)
+- ระดับ entry (332 modified; entry รับเหตุผลเมื่อวิธีของ entry ตรงกับเรื่องที่ประโยคพูด): imbalance 149, two-class scope 51, practical 10, robustness 3, ไม่บอก 127
+- ที่มาของการเลือก: ตามงานก่อน 5 paper, กฎที่เขียนไว้ 2, ไม่บอก 36
+
+**(4) สัญญาณจากการออกแบบการทดลอง** — `build/modification_analysis.py` (กติกาเขียนใน docstring ก่อนนับ)
+- แปลงคลาสแล้วทดลองบนสองคลาสล้วน 16 จาก 29 paper ที่แปลงคลาส (เขียนเหตุผลสองคลาสไว้ 7) · มีชุดเดิม (family เดียวกัน) ที่ไม่ดัดแปลงคู่กัน 5 จาก 39 (G-SMOTE, k-means SMOTE, DGOT, RSMOTE, SMOM) · ไล่หลายระดับ 12 (ทุกตัวเป็น paper ที่เขียนว่าทำให้ยากขึ้น) · เผยแพร่ไฟล์ที่ดัดแปลง 3 (HDE, k-means SMOTE, DSRBF)
+- สัดส่วนชนะ plain SMOTE (ทุก metric) บนชุดที่ดัดแปลงเอง vs ชุดอื่นใน paper เดียวกัน: 11 paper ที่มีทั้งสองแบบ — ดัดแปลงสูงกว่า 2, ชุดอื่นสูงกว่า 6, เท่ากัน 3 (424 กับ 278 แถว)
+- ไม่ได้เขียนข้อสรุปเรื่องเจตนาแทน Toon ในหน้า Atlas บอกเพียงว่าไม่มีสัญญาณใดพิสูจน์เจตนาได้
+
+**(5) ชุดที่ใช้ร่วม** — family ที่ถูกดัดแปลง 130, ใน ≥ 2 paper 37 · บ่อยสุด vehicle 11 paper, ecoli 10, abalone 9, satimage 9, glass 8, pageblocks 8 (ส่วนใหญ่ one-vs-rest) · ชื่อเดียวกันใน ≥ 2 paper 38 ชื่อ แต่ขนาด/minority ที่พิมพ์ต่างกัน (vehicle 9 paper มี 7 แบบ; satimage 6435/626 ตรงกัน 3 paper) → `out/modified_families.csv`
+
+**(6) การใช้ตามช่วงเวลา** (ช่วง 5 ปี; paper ≤2004 5, 2005–09 9, 2010–14 8, 2015–19 18, 2020–24 24, 2025–26 8) → `out/usage_by_period.csv`
+- 2020–2026 (32 paper): original ที่ยังใช้ yeast 12 paper, newthyroid 11, pageblocks 11, ecoli 10, hayesroth/thyroid/cleveland 9 (ส่วนใหญ่ใน paper หลายคลาส) · repository-defined yeast 11, glass 11, ecoli 9, abalone 8 · modified pageblocks 4, abalone 3 · synthetic ที่เผยแพร่ในช่วงนี้มาจาก SVDD-WSMOTE, GMMSampling, OREM-M (ชุดละ paper เดียว)
+
+**Atlas**: แท็บใหม่ "ข้อมูลที่ดัดแปลง" (#modified) — การ์ด noise, วิธีดัดแปลง (ไม่มีอื่น ๆ), เหตุผล (paper/entry), สัญญาณ, ตารางราย paper พร้อมประโยค (ค้นได้), ชุดที่ถูกดัดแปลงบ่อย + เวอร์ชันที่พิมพ์, การใช้ตามช่วง (เลือกช่วงได้) · checks 41/41, consistency 44/44, phase2 14/14
+- ไม่ได้ push
