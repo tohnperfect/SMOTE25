@@ -1,5 +1,5 @@
 """name_level_extras.py  ตัวเลขที่ตอบ Toon ในแชต 29 ต.ค. 2026 (บ่าย) ให้ย้อนกลับไปหาแหล่งได้ (Claude)
-อ่าน  out/name_level_types.csv, out/dataset_records.csv, out/allmetric_links.csv, out/h3_entries.csv, out/pdf_map.json + paper/*.pdf (pdftotext)
+อ่าน  out/name_level_types.csv, out/dataset_records.csv, out/allmetric_links.csv, out/h3_entries.csv, out/synthetic_availability.json (8 Nov; no PDF needed here any more)
 เขียน out/name_level_extras.json
 1. not_measured: เหตุที่วัดความยากไม่ได้ ระดับชื่อ (เหตุหลักต่อชื่อตามลำดับ synthetic > minority_mismatch > task_not_reconstructible
    > size_mismatch > no_printed_size > no_public_file) แยกตามแหล่ง
@@ -17,7 +17,7 @@ D = pd.read_csv("out/dataset_records.csv", dtype=str).fillna("")
 out = {}
 
 # 1
-PRI = ["U-synthetic", "U-minority_mismatch", "U-task_not_reconstructible", "U-size_mismatch", "U-no_printed_size", "U-no_public_file"]
+PRI = ["U-synthetic", "U-minority_mismatch", "U-task_not_reconstructible", "U-name_ambiguous", "U-size_mismatch", "U-no_printed_size", "U-no_class_info", "U-no_public_file"]   # 8 Nov: + name_ambiguous, no_class_info (verify_ext.py)
 n = R[R.difficulty == "not measured"].copy()
 n["reason"] = n.not_measured_reason.map(lambda s: next(x for x in PRI if x in [y.rsplit(" ", 1)[0] for y in s.split("; ")]))
 npf = n[n.reason == "U-no_public_file"]
@@ -28,37 +28,29 @@ out["not_measured"] = dict(names=int(len(n)), by_reason=n.reason.value_counts().
     note="แหล่ง KEEL/UCI/group-level/multiple/other repository = ไฟล์น่าจะมีเผยแพร่แต่ไม่อยู่ใน mirror ที่เข้าถึงได้; private/other paper/not stated = ไม่มีไฟล์ให้ดาวน์โหลด (แบ่งตามแหล่งที่ paper เขียน ยังไม่ได้ตรวจทีละชื่อ)")
 pub = npf.source.isin(["KEEL", "UCI", "group-level", "multiple", "other repository"]).sum()
 out["not_measured"]["no_public_file_split"] = {"likely_public_not_in_mirror": int(pub), "no_file_to_download": int(len(npf) - pub)}
+# 8 Nov 2026: list of names whose paper names a public source but whose file is in none of the mirrors -> for Toon to download
+_lp = npf[npf.source.isin(["KEEL", "UCI", "group-level", "multiple", "other repository"])].copy()
+_rec = D.set_index("record_id")
+def _sizes(ids, col): return "; ".join(sorted({_rec.at[i, col] for i in ids.split("; ") if i in _rec.index and _rec.at[i, col]}))
+_lp["printed_n"] = _lp.record_ids.map(lambda x: _sizes(x, "n_instances")); _lp["printed_features"] = _lp.record_ids.map(lambda x: _sizes(x, "n_features"))
+_lp["sources_as_reported"] = _lp.record_ids.map(lambda x: _sizes(x, "source_as_reported"))
+_lp = _lp.sort_values(["n_papers", "entries", "normalized_name"], ascending=[False, False, True], key=lambda c: c.astype(int) if c.name != "normalized_name" else c)
+_lp[["normalized_name", "name_type", "source", "n_papers", "entries", "papers", "printed_n", "printed_features", "sources_as_reported", "record_ids"]].to_csv("out/names_to_download.csv", index=False)
+out["not_measured"]["names_to_download"] = dict(file="out/names_to_download.csv", names=int(len(_lp)), by_type=_lp.name_type.value_counts().to_dict(),
+    with_printed_size=int((_lp.printed_n != "").sum()))
 
 # 2
 m = R[R.mod_ops != ""]
 out["modified_ops_per_name"] = dict(names=int(len(m)), by_number_of_ops=dict(sorted(Counter(m.mod_ops.str.count(";") + 1).items())),
                                     combos=dict(Counter(m.mod_ops).most_common()), sum_of_tag_names=int(sum(len(x.split(";")) for x in m.mod_ops)))
 
-# 3  (group, evidence phrase that must occur in the PDF text, file glob)
-SYN = {
- "G-SMOTE": ("published", "can be found at https://github.com/IMS-ML-Lab", "*/2019 G-SMOTE*"),
- "GMMSampling": ("published", "the artificial datasets can be found in the repository of multi-imbalance", "*/2024_GMMSampling*"),
- "SVDD-WSMOTE": ("published", "can be found in https://github.com/Zheng7777/simulated-datasets", "*/SVDD-based weighted*"),
- "SMOTE-IPF": ("published", "This web-page also includes the basic information of this paper, the datasets used", "*/SMOTE-IPF*"),
- "SOUP": ("cited source", "synthetic data sets coming from the work of Lango et al. (2017)", "*/2019_SOUP*"),
- "Tomek Links": ("cited source", None, None),
- "NBU": ("code link only", "Source code available at https://github.com/fonkafon/NB-undersampling", "*/2020 NBU*"),
- "DLexiBoost": ("code link only", "Our implementation of LexiBoost can be found at https://github.com/Shounak-D/LexiBoost", "*/DLexiBoost - Boosting*"),
-}
-NOT = ["ADASYN", "Borderline-SMOTE", "CTGAN / TVAE", "ClusterCentroids", "GOIO", "Global-CS (AAAI)", "Global-CS (journal)", "MWMOTE", "SPE", "SPIDER2", "k-means SMOTE"]
-import glob
-def txt(g): return re.sub(r"\s+", " ", subprocess.run(["pdftotext", glob.glob("paper/" + g)[0], "-"], capture_output=True, text=True).stdout)
+# 3  (8 Nov 2026) superseded by build/synthetic_availability.py, which reads every PDF and asserts each quote;
+#    the 29 Oct keyword search had missed k-means SMOTE and CTGAN (both publish their simulated data). Copied here.
+SA = json.load(open("out/synthetic_availability.json", encoding="utf-8"))
 S = D[D.category == "synthetic"]
-assert set(S.paper_key) == set(SYN) | set(NOT), f"STOP: synthetic papers changed {set(S.paper_key) ^ (set(SYN) | set(NOT))}"
-rows = []
-for k, (grp, ev, g) in SYN.items():
-    if ev: assert ev in txt(g), f"STOP: evidence phrase not found in PDF for {k}"
-    rows.append(dict(paper=k, group=grp, entries=int((S.paper_key == k).sum()), evidence=ev or "ตัวอย่างจาก ref. [4] (บันทึกการอ่าน: Fig. 6 caption p.3)"))
-for k in NOT: rows.append(dict(paper=k, group="not found", entries=int((S.paper_key == k).sum()), evidence="ค้นคำ github/http/available/download/supplementary ใน PDF ไม่พบข้อความว่าเผยแพร่ข้อมูล synthetic"))
-G = ["published", "cited source", "code link only", "not found"]
-out["synthetic_availability"] = dict(papers=len(rows), entries=int(len(S)),
-    by_group={x: dict(papers=sum(r["group"] == x for r in rows), entries=sum(r["entries"] for r in rows if r["group"] == x)) for x in G},
-    rows=rows, method="pdftotext + ค้นคำ ไม่ได้อ่านทั้งเรื่อง; 'not found' ไม่ได้แปลว่ายืนยันแล้วว่าไม่มี (เช่น CTGAN มี SDGym แต่ PDF ให้ลิงก์เฉพาะข้อมูลจริง)")
+out["synthetic_availability"] = dict(papers=SA["corpus"]["papers_with_synthetic_entries"], entries=int(len(S)),
+    by_group={k: dict(papers=v["papers"], entries=v["entries"]) for k, v in SA["part_A_by_group"].items()},
+    rows=[r for r in SA["rows"] if r["part"] == "A"], part_B=SA["part_B"], method=SA["method"], source="out/synthetic_availability.json")
 assert sum(v["entries"] for v in out["synthetic_availability"]["by_group"].values()) == len(S)
 
 # 4

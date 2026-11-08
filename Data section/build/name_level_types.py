@@ -67,7 +67,7 @@ HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); os.chdir(HER
 ORDER = ["modified", "synthetic", "repository-defined", "original", "not stated"]
 DIFF = ["none", "small_sample", "outlier_flag", "small_sample + outlier_flag", "small_disjuncts + outlier_flag",
         "small_disjuncts + small_sample", "small_disjuncts + small_sample + outlier_flag", "varies", "multiclass", "not measured"]
-BIN_FILE = {"V-binary_file", "V-keel_name_only", "V-name_only_other"}
+BIN_FILE = {"V-binary_file", "V-keel_name_only", "V-name_only_other", "V-name_only_ext"}   # V-name_only_ext: 8 Nov (verify_ext.py)
 MULTI = {"V-multiclass_asis", "V?-binarized_rule_ambiguous"}
 
 D = pd.read_csv("out/dataset_records.csv", dtype=str).fillna("")
@@ -75,10 +75,10 @@ D = D[D.is_placeholder != "yes"]
 V = pd.read_csv("difficulty/verifiability_entries.csv", dtype=str).fillna("")
 P = pd.read_csv("difficulty/difficulty_profile_final.csv", dtype=str).fillna("")
 assert len(D) == 1653 and D.normalized_name.nunique() == 771, "STOP: dataset_records.csv changed (expected 1,653 entries, 771 names)"
-M = D.merge(V[["record_id", "verif", "file", "file_src"]], on="record_id", how="left")
+M = D.merge(V[["record_id", "verif", "file", "file_src", "task_minority"]], on="record_id", how="left")
 assert M.verif.notna().all(), "STOP: a record has no verifiability row"
 M["src"] = M.source_as_reported.map(src_group)
-M["sid"] = [src_id(r, p) for r, p in zip(M.source_as_reported, M.paper_key)]
+M["sid"] = [src_id(r, p) or "" for r, p in zip(M.source_as_reported, M.paper_key)]   # "" not None (pandas 3 turns None into NaN)
 
 PB = {(r.file, r.source): r for r in P[P.origin == "binary file"].itertuples()}
 OVR = {(r.file, r.source) for r in P[P.origin.str.startswith("one-vs")].itertuples()}
@@ -91,6 +91,9 @@ def task_of(e):
     if e.verif == "V-binarized_rule_unique":
         m = re.search(r"\d+", e.n_minority)
         hit = [r for r in PZ.get((e.file, e.file_src), []) if m and r.n_min == m.group()]
+        return hit[0] if len(hit) == 1 else None
+    if e.verif == "V-imblearn_task":   # 8 Nov: imbalanced-learn task rebuilt from the named file (verify_ext.py)
+        hit = [r for r in PZ.get((e.file, e.file_src), []) if r.minority_label == e.task_minority]
         return hit[0] if len(hit) == 1 else None
     return None
 
@@ -114,7 +117,7 @@ for name, g in M.groupby("normalized_name", sort=True):
         elif e.verif in BIN_FILE:   # name matched a multiclass file without a known minority class -> measured only one-vs-rest
             assert (e.file, e.file_src) in OVR, f"STOP: {e.record_id} matched {e.file} but no measured task"
             multi = True
-        if e.verif == "V-binarized_rule_unique" and t is None: unmapped_binarised.append(e.record_id)
+        if e.verif in ("V-binarized_rule_unique", "V-imblearn_task") and t is None: unmapped_binarised.append(e.record_id)
     profs = sorted({t.profile for t in tasks.values()})
     if profs: diff = profs[0] if len(profs) == 1 else "varies"
     elif multi: diff = "multiclass"
@@ -177,7 +180,7 @@ out["modified_ops"] = dict(
 assert all(out["modified_ops"]["by_op"][o]["entries"] == MOS["tag_entries"][o] and out["modified_ops"]["by_op"][o]["papers"] == MOS["tag_papers"][o] for o in OPS)
 assert out["modified_ops"]["names"] == by_type["modified"]
 # แหล่งที่ต่างกัน: 1 แถวต่อแหล่ง
-S = M[M.sid.notna()]
+S = M[M.sid.notna() & (M.sid != "")]
 SI = pd.DataFrame([dict(source=k, group=src_group(g.source_as_reported.iloc[0]), names=g.normalized_name.nunique(), entries=len(g),
                         papers=g.paper_key.nunique(), paper_list="; ".join(sorted(set(g.paper_key))),
                         as_reported=" | ".join(sorted(set(g.source_as_reported)))) for k, g in S.groupby("sid")])

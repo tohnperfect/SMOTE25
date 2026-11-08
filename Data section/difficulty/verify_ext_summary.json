@@ -1,0 +1,74 @@
+{
+ "entries": 1653,
+ "rechecked": 855,
+ "status_28oct": {
+  "U-no_public_file": 646,
+  "V-binary_file": 425,
+  "U-size_mismatch": 182,
+  "U-synthetic": 119,
+  "V-multiclass_asis": 89,
+  "V-keel_name_only": 80,
+  "V-name_only_other": 29,
+  "U-no_printed_size": 28,
+  "U-task_not_reconstructible": 25,
+  "V-binarized_rule_unique": 20,
+  "V?-binarized_rule_ambiguous": 8,
+  "U-minority_mismatch": 2
+ },
+ "status_now": {
+  "V-binary_file": 475,
+  "U-no_public_file": 358,
+  "V-multiclass_asis": 214,
+  "U-size_mismatch": 188,
+  "U-synthetic": 119,
+  "V-keel_name_only": 80,
+  "U-task_not_reconstructible": 69,
+  "V-binarized_rule_unique": 42,
+  "U-no_printed_size": 35,
+  "V-name_only_other": 29,
+  "V-name_only_ext": 18,
+  "V?-binarized_rule_ambiguous": 13,
+  "V-imblearn_task": 6,
+  "U-name_ambiguous": 5,
+  "U-minority_mismatch": 2
+ },
+ "newly_verifiable": {
+  "entries": 221,
+  "papers": 49,
+  "names": 85,
+  "files": 63,
+  "by_source": {
+   "KEEL-std(F)": 126,
+   "UCI++": 48,
+   "KEEL(keel_ds)": 29,
+   "jbrownlee-UCI": 9,
+   "PROMISE-ck": 5,
+   "Weka-UCI": 3,
+   "PMLB": 1
+  },
+  "by_basis": {
+   "exact name": 133,
+   "alias": 74,
+   "KEEL split name cut at _vs_": 8,
+   "imbalanced-learn task: minority = 8 (documented size 554)": 1,
+   "imbalanced-learn task: minority = 4 (documented size 626)": 1,
+   "imbalanced-learn task: minority = 5 (documented size 1055)": 1,
+   "imbalanced-learn task: minority = sick (documented size 231)": 1,
+   "imbalanced-learn task: minority = Z (documented size 734)": 1,
+   "imbalanced-learn task: minority = 19 (documented size 32)": 1
+  },
+  "by_status": {
+   "V-multiclass_asis": 125,
+   "V-binary_file": 50,
+   "V-binarized_rule_unique": 22,
+   "V-name_only_ext": 18,
+   "V-imblearn_task": 6
+  }
+ },
+ "verifiable_total": {
+  "entries": 864,
+  "papers": 65,
+  "names": 276,
+  "files": 172
+ }
+}

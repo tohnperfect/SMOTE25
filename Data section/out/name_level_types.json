@@ -40,29 +40,29 @@
   "not measured"
  ],
  "by_difficulty": {
-  "none": 43,
-  "small_sample": 84,
-  "outlier_flag": 0,
-  "small_sample + outlier_flag": 25,
+  "none": 68,
+  "small_sample": 98,
+  "outlier_flag": 3,
+  "small_sample + outlier_flag": 36,
   "small_disjuncts + outlier_flag": 0,
-  "small_disjuncts + small_sample": 0,
-  "small_disjuncts + small_sample + outlier_flag": 17,
-  "varies": 0,
-  "multiclass": 30,
-  "not measured": 572
+  "small_disjuncts + small_sample": 1,
+  "small_disjuncts + small_sample + outlier_flag": 21,
+  "varies": 1,
+  "multiclass": 53,
+  "not measured": 490
  },
  "type_by_difficulty": {
   "modified": {
-   "none": 18,
-   "small_sample": 11,
-   "outlier_flag": 0,
+   "none": 27,
+   "small_sample": 18,
+   "outlier_flag": 1,
    "small_sample + outlier_flag": 4,
    "small_disjuncts + outlier_flag": 0,
    "small_disjuncts + small_sample": 0,
-   "small_disjuncts + small_sample + outlier_flag": 1,
+   "small_disjuncts + small_sample + outlier_flag": 2,
    "varies": 0,
-   "multiclass": 19,
-   "not measured": 180
+   "multiclass": 23,
+   "not measured": 158
   },
   "synthetic": {
    "none": 0,
@@ -77,40 +77,40 @@
    "not measured": 107
   },
   "repository-defined": {
-   "none": 24,
-   "small_sample": 67,
+   "none": 29,
+   "small_sample": 71,
    "outlier_flag": 0,
-   "small_sample + outlier_flag": 21,
+   "small_sample + outlier_flag": 24,
    "small_disjuncts + outlier_flag": 0,
    "small_disjuncts + small_sample": 0,
-   "small_disjuncts + small_sample + outlier_flag": 16,
+   "small_disjuncts + small_sample + outlier_flag": 17,
    "varies": 0,
    "multiclass": 1,
-   "not measured": 35
+   "not measured": 22
   },
   "original": {
-   "none": 1,
-   "small_sample": 6,
-   "outlier_flag": 0,
-   "small_sample + outlier_flag": 0,
+   "none": 8,
+   "small_sample": 7,
+   "outlier_flag": 2,
+   "small_sample + outlier_flag": 2,
    "small_disjuncts + outlier_flag": 0,
    "small_disjuncts + small_sample": 0,
    "small_disjuncts + small_sample + outlier_flag": 0,
    "varies": 0,
-   "multiclass": 10,
-   "not measured": 132
+   "multiclass": 28,
+   "not measured": 102
   },
   "not stated": {
-   "none": 0,
-   "small_sample": 0,
+   "none": 4,
+   "small_sample": 2,
    "outlier_flag": 0,
-   "small_sample + outlier_flag": 0,
+   "small_sample + outlier_flag": 6,
    "small_disjuncts + outlier_flag": 0,
-   "small_disjuncts + small_sample": 0,
-   "small_disjuncts + small_sample + outlier_flag": 0,
-   "varies": 0,
-   "multiclass": 0,
-   "not measured": 118
+   "small_disjuncts + small_sample": 1,
+   "small_disjuncts + small_sample + outlier_flag": 2,
+   "varies": 1,
+   "multiclass": 1,
+   "not measured": 101
   }
  },
  "source_order": [
@@ -202,31 +202,31 @@
  },
  "source_by_difficulty": {
   "KEEL": {
-   "none": 22,
-   "small_sample": 62,
+   "none": 24,
+   "small_sample": 63,
    "outlier_flag": 0,
-   "small_sample + outlier_flag": 20,
+   "small_sample + outlier_flag": 22,
    "small_disjuncts + outlier_flag": 0,
    "small_disjuncts + small_sample": 0,
-   "small_disjuncts + small_sample + outlier_flag": 15,
-   "varies": 0,
-   "multiclass": 4,
-   "not measured": 23
+   "small_disjuncts + small_sample + outlier_flag": 16,
+   "varies": 1,
+   "multiclass": 7,
+   "not measured": 13
   },
   "UCI": {
-   "none": 3,
-   "small_sample": 4,
-   "outlier_flag": 0,
-   "small_sample + outlier_flag": 0,
+   "none": 16,
+   "small_sample": 10,
+   "outlier_flag": 1,
+   "small_sample + outlier_flag": 2,
    "small_disjuncts + outlier_flag": 0,
    "small_disjuncts + small_sample": 0,
-   "small_disjuncts + small_sample + outlier_flag": 0,
+   "small_disjuncts + small_sample + outlier_flag": 1,
    "varies": 0,
-   "multiclass": 9,
-   "not measured": 187
+   "multiclass": 21,
+   "not measured": 152
   },
   "group-level": {
-   "none": 0,
+   "none": 1,
    "small_sample": 1,
    "outlier_flag": 0,
    "small_sample + outlier_flag": 0,
@@ -234,44 +234,44 @@
    "small_disjuncts + small_sample": 0,
    "small_disjuncts + small_sample + outlier_flag": 0,
    "varies": 0,
-   "multiclass": 0,
-   "not measured": 19
+   "multiclass": 3,
+   "not measured": 15
   },
   "other repository": {
-   "none": 0,
-   "small_sample": 0,
+   "none": 7,
+   "small_sample": 2,
    "outlier_flag": 0,
-   "small_sample + outlier_flag": 0,
+   "small_sample + outlier_flag": 5,
    "small_disjuncts + outlier_flag": 0,
-   "small_disjuncts + small_sample": 0,
-   "small_disjuncts + small_sample + outlier_flag": 1,
+   "small_disjuncts + small_sample": 1,
+   "small_disjuncts + small_sample + outlier_flag": 2,
    "varies": 0,
    "multiclass": 0,
-   "not measured": 80
+   "not measured": 64
   },
   "other paper/author": {
    "none": 0,
    "small_sample": 0,
-   "outlier_flag": 0,
+   "outlier_flag": 1,
    "small_sample + outlier_flag": 0,
    "small_disjuncts + outlier_flag": 0,
    "small_disjuncts + small_sample": 0,
    "small_disjuncts + small_sample + outlier_flag": 0,
    "varies": 0,
    "multiclass": 0,
-   "not measured": 34
+   "not measured": 33
   },
   "private": {
    "none": 0,
    "small_sample": 0,
    "outlier_flag": 0,
-   "small_sample + outlier_flag": 0,
+   "small_sample + outlier_flag": 1,
    "small_disjuncts + outlier_flag": 0,
    "small_disjuncts + small_sample": 0,
    "small_disjuncts + small_sample + outlier_flag": 0,
    "varies": 0,
    "multiclass": 0,
-   "not measured": 23
+   "not measured": 22
   },
   "synthetic": {
    "none": 0,
@@ -286,20 +286,20 @@
    "not measured": 105
   },
   "multiple": {
-   "none": 14,
-   "small_sample": 9,
-   "outlier_flag": 0,
-   "small_sample + outlier_flag": 2,
+   "none": 16,
+   "small_sample": 13,
+   "outlier_flag": 1,
+   "small_sample + outlier_flag": 3,
    "small_disjuncts + outlier_flag": 0,
    "small_disjuncts + small_sample": 0,
-   "small_disjuncts + small_sample + outlier_flag": 1,
+   "small_disjuncts + small_sample + outlier_flag": 2,
    "varies": 0,
-   "multiclass": 16,
-   "not measured": 35
+   "multiclass": 21,
+   "not measured": 21
   },
   "not stated": {
    "none": 4,
-   "small_sample": 8,
+   "small_sample": 9,
    "outlier_flag": 0,
    "small_sample + outlier_flag": 3,
    "small_disjuncts + outlier_flag": 0,
@@ -307,7 +307,7 @@
    "small_disjuncts + small_sample + outlier_flag": 0,
    "varies": 0,
    "multiclass": 1,
-   "not measured": 66
+   "not measured": 65
   }
  },
  "multiple_source_combos": {
@@ -385,7 +385,7 @@
   "private": "private",
   "synthetic": "synthetic"
  },
- "measured_names": 169,
+ "measured_names": 228,
  "rules": {
   "source": "แหล่งตามที่ paper เขียน จัดเป็น 8 กลุ่มด้วยการจับข้อความ (source_map) · ระดับชื่อ: ถ้า paper ที่ระบุแหล่งรายชุดระบุตรงกันแหล่งเดียว ใช้แหล่งนั้น · ระบุต่างกัน = multiple · ไม่มี paper ระบุรายชุด แต่มีระดับกลุ่ม (เช่น UCI หรือ KEEL) = group-level · ไม่มีเลย = not stated",
   "type": "ชื่อหนึ่งได้ชนิดเดียว: ถ้ามี entry ใดเป็นชนิดที่มาก่อนตามลำดับ precedence ใช้ชนิดนั้น (เคยดัดแปลง = modified)",

@@ -15,7 +15,8 @@ ck("reconcile checks all ok", all(v["ok"] for v in RC["checks"].values()), f'{su
 DRS = json.load(open("out/dataset_records_summary.json", encoding="utf-8"))
 ck("dataset_records built from current verified_datasets", DRS["sources"]["datasets"]["sha256"] == sha("out/verified_datasets.csv"))
 DF = json.load(open("out/difficulty_evidence.json", encoding="utf-8"))
-ck("difficulty_evidence sources current", all(sha(f) == h for f, h in DF["sources"].items()))
+import reconcile_counts as _RCM  # sha_ok: CRLF-insensitive (8 Nov 2026, Windows checkout)
+ck("difficulty_evidence sources current", all(_RCM.sha_ok(f, h) for f, h in DF["sources"].items()))
 O = rc("out/verified_outcomes.csv"); LK = rc("out/outcome_dataset_links.csv")
 ck("outcome links align row-by-row with verified_outcomes", len(LK) == len(O) and all(a["paper"] == b["paper"] and a["dataset"] == b["dataset"] for a, b in zip(LK, O)))
 ck("no unaudited name differences left", not [l for l in LK if l["name_check"] == "differs"], str(sum(l["name_check"] == "differs" for l in LK)))
@@ -61,6 +62,10 @@ ck("overview.json rule-A robustness", f'{pr["rows"]} แถว: วิธีท�
 pdf = "manuscript/data-section-draft-preview.pdf"
 pt = subprocess.run(["pdftotext", pdf, "-"], capture_output=True, text=True).stdout
 ck("preview PDF newer than tex and shows the all-metric total", os.path.getmtime(pdf) >= os.path.getmtime("manuscript/data-section-draft.tex") and f'{fmt(o["rows"])} comparisons on' in re.sub(r"\s+", " ", pt))
+# 8 Nov 2026: the JAIR-formatted PDF of the merge-ready text (build/build_jair_pdf.py)
+jp = "manuscript/data-section-jair.pdf"
+jt = re.sub(r"\s+", " ", subprocess.run(["pdftotext", jp, "-"], capture_output=True, text=True).stdout)
+ck("JAIR PDF newer than final tex and shows the all-metric total", os.path.getmtime(jp) >= os.path.getmtime("manuscript/data-section-final.tex") and f'{fmt(o["rows"])} comparisons on' in jt)
 # 4 workbook
 try:
     import openpyxl

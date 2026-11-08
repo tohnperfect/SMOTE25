@@ -1,48 +1,43 @@
 {
  "papers_with_at_least_1_tasks": {
+  "n": 45,
+  "all_flag_free": [
+   "Borderline-SMOTE",
+   "COG-OS",
+   "GAMO",
+   "SMOTE-ENN / SMOTE-Tomek",
+   "Safe-Level-SMOTE"
+  ],
+  "all_flagged": [
+   "GOIO",
+   "MLOS",
+   "RUSBoost",
+   "SHRINK"
+  ],
+  "mixed": 36
+ },
+ "papers_with_at_least_2_tasks": {
   "n": 41,
   "all_flag_free": [
    "Borderline-SMOTE",
-   "CGMOS",
-   "CTGAN / TVAE",
-   "GAMO",
-   "LS",
-   "MBS",
-   "SMOTE",
-   "SMOTE-ENN / SMOTE-Tomek",
-   "SMOTEBoost",
-   "Safe-Level-SMOTE"
-  ],
-  "all_flagged": [
-   "DGOT",
-   "MLOS"
-  ],
-  "mixed": 29
- },
- "papers_with_at_least_2_tasks": {
-  "n": 36,
-  "all_flag_free": [
-   "Borderline-SMOTE",
-   "LS",
-   "MBS",
-   "SMOTE",
+   "COG-OS",
    "SMOTE-ENN / SMOTE-Tomek",
    "Safe-Level-SMOTE"
   ],
   "all_flagged": [
    "MLOS"
   ],
-  "mixed": 29
+  "mixed": 36
  },
  "papers_with_at_least_3_tasks": {
-  "n": 29,
+  "n": 35,
   "all_flag_free": [
-   "SMOTE",
+   "COG-OS",
    "SMOTE-ENN / SMOTE-Tomek"
   ],
   "all_flagged": [
    "MLOS"
   ],
-  "mixed": 26
+  "mixed": 32
  }
 }

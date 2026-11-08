@@ -2,293 +2,245 @@ normalized_name,n_features_median,n_features_min,n_features_max,entries,papers,v
 ecoli,7.0,7.0,7.0,21,19,False
 vehicle,18.0,17.0,34.0,18,16,True
 haberman,3.0,3.0,4.0,18,16,True
-pima,8.0,8.0,8.0,17,15,False
 glass,9.0,9.0,10.0,17,15,True
+pima,8.0,8.0,8.0,17,15,False
 yeast,8.0,8.0,9.0,16,16,True
 wine,13.0,13.0,13.0,15,13,False
 balance,4.0,4.0,4.0,13,13,False
 yeast4,8.0,8.0,10.0,12,12,True
-yeast5,8.0,8.0,10.0,11,11,True
-yeast6,8.0,8.0,10.0,11,11,True
 page-blocks,10.0,10.0,10.0,11,11,False
-satimage,36.0,36.0,37.0,10,10,True
-new-thyroid,5.0,5.0,5.0,10,10,False
-cleveland,13.0,6.0,13.0,10,10,True
-contraceptive,9.0,9.0,9.0,10,10,False
+yeast6,8.0,8.0,10.0,11,11,True
+yeast5,8.0,8.0,10.0,11,11,True
 car,6.0,4.0,21.0,10,10,True
 abalone,8.0,7.0,10.0,10,10,True
+satimage,36.0,36.0,37.0,10,10,True
+contraceptive,9.0,9.0,9.0,10,10,False
 dermatology,34.0,33.0,35.0,10,10,True
+cleveland,13.0,6.0,13.0,10,10,True
 yeast3,8.0,8.0,9.0,10,10,True
-ecoli4,7.0,7.0,8.0,9,9,True
-vowel0,13.0,13.0,14.0,9,9,True
+new-thyroid,5.0,5.0,5.0,10,10,False
 segment,18.0,16.0,19.0,9,9,True
+vowel0,13.0,13.0,14.0,9,9,True
+ecoli4,7.0,7.0,8.0,9,9,True
+zoo,16.0,16.0,16.0,8,8,False
+vowel,13.0,10.0,13.0,8,6,True
 thyroid,21.0,21.0,21.0,8,8,False
 glass5,9.0,9.0,10.0,8,8,True
-hayes-roth,4.0,4.0,4.0,8,8,False
 iris,4.0,4.0,5.0,8,6,True
-vowel,13.0,10.0,13.0,8,6,True
-zoo,16.0,16.0,16.0,8,8,False
+hayes-roth,4.0,4.0,4.0,8,8,False
 yeast1,8.0,8.0,8.0,7,7,False
-splice,60.0,60.0,60.0,7,7,False
-winequality-red,11.0,11.0,12.0,7,7,True
-nursery,8.0,8.0,8.0,7,7,False
 letter,16.0,16.0,16.0,7,7,False
 heart,13.0,13.0,13.0,7,5,False
 glass2,9.0,9.0,10.0,7,7,True
-vehicle1,18.0,18.0,19.0,6,6,True
-abalone19,8.0,8.0,8.0,6,6,False
-ecoli1,7.0,7.0,7.0,6,6,False
+winequality-red,11.0,11.0,12.0,7,7,True
+splice,60.0,60.0,60.0,7,7,False
+nursery,8.0,8.0,8.0,7,7,False
 shuttle,9.0,9.0,10.0,6,6,True
+ecoli3,7.0,7.0,8.0,6,6,True
 flare,11.0,11.0,11.0,6,6,False
+ecoli1,7.0,7.0,7.0,6,6,False
 glass4,9.0,9.0,10.0,6,6,True
 liver,6.0,6.0,6.0,6,4,False
-ecoli3,7.0,7.0,8.0,6,6,True
-libra,90.0,90.0,90.0,5,5,False
+vehicle1,18.0,18.0,19.0,6,6,True
+abalone19,8.0,8.0,8.0,6,6,False
+breast-tissue,9.0,9.0,9.0,5,5,False
 yeast2vs4,8.0,8.0,9.0,5,5,True
 automobile,25.0,25.0,71.0,5,5,True
 led7digit,7.0,7.0,7.0,5,5,False
-new-thyroid1,5.0,5.0,5.0,5,5,False
-breast-tissue,9.0,9.0,9.0,5,5,False
 lymphography,18.0,18.0,18.0,5,5,False
-yeast-2 vs 4,8.0,8.0,8.0,4,4,False
-german,22.5,20.0,24.0,4,4,True
-glass6,9.0,9.0,9.0,4,4,False
-glass0,9.0,9.0,9.0,4,4,False
-ecoli0137vs26,7.0,7.0,8.0,4,4,True
-statlog,20.0,9.0,36.0,4,4,True
-waveform,30.5,21.0,40.0,4,4,True
+new-thyroid1,5.0,5.0,5.0,5,5,False
+libra,90.0,90.0,90.0,5,5,False
 yeast1289vs7,8.0,8.0,9.0,4,4,True
-yeast1458vs7,8.0,7.0,9.0,4,4,True
 yeast1vs7,7.5,7.0,8.0,4,4,True
-ecoli2,7.0,7.0,7.0,4,4,False
-eucalyptus,8.0,8.0,91.0,4,2,True
 ionosphere,33.5,18.0,34.0,4,4,True
-phoneme,5.0,5.0,5.0,4,4,False
-page,10.0,10.0,10.0,4,4,False
-breast tissue,9.0,9.0,9.0,4,3,False
-newthyroid,5.0,5.0,5.0,4,4,False
 glass016vs2,9.0,9.0,10.0,4,4,True
-glass1,9.0,9.0,9.0,4,4,False
-spambase,57.0,34.0,57.0,4,4,True
+glass6,9.0,9.0,9.0,4,4,False
 svmguide1,4.0,4.0,4.0,4,4,False
-shuttle-c0-vs-c4,9.0,9.0,9.0,3,3,False
-bankruptcy,94.0,64.0,94.0,3,2,True
-vehicle0,18.0,18.0,18.0,3,3,False
-texture,40.0,40.0,40.0,3,3,False
-vertebral-column,6.0,6.0,6.0,3,3,False
-autos,25.0,15.0,25.0,3,3,True
-avila,10.0,10.0,10.0,3,3,False
-yeast 1,8.0,8.0,8.0,3,1,False
+breast tissue,9.0,9.0,9.0,4,3,False
+yeast1458vs7,8.0,7.0,9.0,4,4,True
+waveform,30.5,21.0,40.0,4,4,True
+eucalyptus,8.0,8.0,91.0,4,2,True
+yeast-2 vs 4,8.0,8.0,8.0,4,4,False
+phoneme,5.0,5.0,5.0,4,4,False
+newthyroid,5.0,5.0,5.0,4,4,False
+page,10.0,10.0,10.0,4,4,False
+glass0,9.0,9.0,9.0,4,4,False
+german,22.5,20.0,24.0,4,4,True
+ecoli2,7.0,7.0,7.0,4,4,False
+spambase,57.0,34.0,57.0,4,4,True
+statlog,20.0,9.0,36.0,4,4,True
+ecoli0137vs26,7.0,7.0,8.0,4,4,True
+glass1,9.0,9.0,9.0,4,4,False
 yeast 3,8.0,8.0,8.0,3,1,False
 yeast 4,8.0,8.0,8.0,3,1,False
-wisconsin,9.0,9.0,9.0,3,3,False
-winequality-white,11.0,11.0,11.0,3,3,False
-vehicle2,18.0,18.0,18.0,3,3,False
-vehicle3,18.0,18.0,18.0,3,3,False
-page blocks 0,10.0,10.0,10.0,3,1,False
-segmentation,16.0,16.0,16.0,3,1,False
-glass016vs5,9.0,9.0,10.0,3,3,True
-mandelon 1,20.0,20.0,20.0,3,1,False
-mammography,6.0,6.0,7.0,3,3,True
-lev,4.0,4.0,4.0,3,3,False
-mandelon 2,200.0,200.0,200.0,3,1,False
-pendigits,16.0,16.0,16.0,3,3,False
-segment0,19.0,19.0,19.0,3,3,False
-glass-0-1-6 vs 2,9.0,7.0,9.0,3,3,True
-chess,6.0,6.0,22.0,3,3,True
-cmc,9.0,9.0,9.0,3,3,False
-diabetes,8.0,8.0,9.0,3,3,True
-abalone9-18,8.0,8.0,8.0,3,3,False
-yeast-0-5-6-7-9 vs 4,8.0,8.0,8.0,3,3,False
-yeast05679vs4,8.0,8.0,9.0,3,3,True
 yeast-1-4-5-8 vs 7,8.0,8.0,8.0,3,3,False
+bankruptcy,94.0,64.0,94.0,3,2,True
+abalone9-18,8.0,8.0,8.0,3,3,False
+yeast 1,8.0,8.0,8.0,3,1,False
+mammography,6.0,6.0,7.0,3,3,True
+winequality-white,11.0,11.0,11.0,3,3,False
+glass-0-1-6 vs 2,9.0,7.0,9.0,3,3,True
+glass016vs5,9.0,9.0,10.0,3,3,True
+yeast05679vs4,8.0,8.0,9.0,3,3,True
+mandelon 2,200.0,200.0,200.0,3,1,False
+diabetes,8.0,8.0,9.0,3,3,True
+segment0,19.0,19.0,19.0,3,3,False
+shuttle-c0-vs-c4,9.0,9.0,9.0,3,3,False
+segmentation,16.0,16.0,16.0,3,1,False
+vehicle2,18.0,18.0,18.0,3,3,False
+vertebral-column,6.0,6.0,6.0,3,3,False
+chess,6.0,6.0,22.0,3,3,True
+vehicle3,18.0,18.0,18.0,3,3,False
+vehicle0,18.0,18.0,18.0,3,3,False
+texture,40.0,40.0,40.0,3,3,False
+autos,25.0,15.0,25.0,3,3,True
+yeast-0-5-6-7-9 vs 4,8.0,8.0,8.0,3,3,False
 yeast-1 vs 7,7.0,7.0,7.0,3,3,False
-abalone 15,8.0,8.0,8.0,2,2,False
-ann,21.0,21.0,21.0,2,2,False
-abalone 6,8.0,8.0,8.0,2,2,False
-yeast 5,8.0,8.0,8.0,2,1,False
-yeast 6,8.0,8.0,8.0,2,1,False
-vowel5,10.0,10.0,10.0,2,2,False
-wine quality,11.0,11.0,11.0,2,2,False
-australian,14.5,14.0,15.0,2,2,True
-bank,13.5,11.0,16.0,2,2,True
-vertebral,6.0,6.0,6.0,2,2,False
-vertebralcolumn,6.0,6.0,6.0,2,2,False
-thyroid sick,52.0,52.0,52.0,2,2,False
-user knowledge modeling,5.0,5.0,5.0,2,2,False
-user-knowledge-modelling,5.0,5.0,5.0,2,2,False
-userknowledge,5.0,5.0,5.0,2,2,False
+avila,10.0,10.0,10.0,3,3,False
+lev,4.0,4.0,4.0,3,3,False
+mandelon 1,20.0,20.0,20.0,3,1,False
+pendigits,16.0,16.0,16.0,3,3,False
+page blocks 0,10.0,10.0,10.0,3,1,False
+cmc,9.0,9.0,9.0,3,3,False
+wisconsin,9.0,9.0,9.0,3,3,False
+car-good,6.0,6.0,6.0,2,2,False
+bupa,6.5,6.0,7.0,2,2,True
 svmguide3,22.0,22.0,22.0,2,2,False
-swd,4.0,4.0,4.0,2,2,False
-syn-a,2.0,2.0,2.0,2,2,False
-syn-b,2.0,2.0,2.0,2,2,False
-syn-c,2.0,2.0,2.0,2,2,False
-syn-d,2.0,2.0,2.0,2,2,False
+breastcancer,9.5,9.0,10.0,2,2,True
+breast-w,19.5,9.0,30.0,2,2,True
+cardiotocography,28.0,21.0,35.0,2,2,True
+user knowledge modeling,5.0,5.0,5.0,2,2,False
+vertebralcolumn,6.0,6.0,6.0,2,2,False
+user-knowledge-modelling,5.0,5.0,5.0,2,2,False
+yeast 6,8.0,8.0,8.0,2,1,False
+yeast-2 vs 8,8.0,8.0,8.0,2,2,False
+yeast2,8.0,8.0,8.0,2,2,False
+breast,9.5,9.0,10.0,2,2,True
+yeast 5,8.0,8.0,8.0,2,1,False
+bank,13.5,11.0,16.0,2,2,True
+abalone 15,8.0,8.0,8.0,2,2,False
+car3,4594.5,7.0,9182.0,2,2,True
+vertebral,6.0,6.0,6.0,2,2,False
+userknowledge,5.0,5.0,5.0,2,2,False
+thyroid sick,52.0,52.0,52.0,2,2,False
 syn-e,2.0,2.0,2.0,2,2,False
 syn-f,2.0,2.0,2.0,2,2,False
-connect-4,42.0,42.0,42.0,2,2,False
-connect4,42.0,42.0,42.0,2,2,False
+syn-c,2.0,2.0,2.0,2,2,False
+syn-b,2.0,2.0,2.0,2,2,False
+syn-a,2.0,2.0,2.0,2,2,False
+swd,4.0,4.0,4.0,2,2,False
 covertype,33.0,12.0,54.0,2,2,True
+mfeat-fouri,76.0,76.0,76.0,2,2,False
+mushrooms,112.0,112.0,112.0,2,2,False
+musk,167.0,166.0,168.0,2,2,True
+magic,10.0,10.0,10.0,2,2,False
+ecoli-0-1-4-6 vs 5,6.0,6.0,6.0,2,2,False
+pageblock,10.0,10.0,10.0,2,2,False
+pageblocks,10.0,10.0,10.0,2,2,False
+new thyroid 2,5.0,5.0,5.0,2,1,False
+new thyroid 1,5.0,5.0,5.0,2,1,False
+new-thyroid2,5.0,5.0,5.0,2,2,False
+e.coli,7.0,7.0,7.0,2,2,False
+page-blocks13vs2,10.0,10.0,10.0,2,2,False
+optical digits,64.0,64.0,64.0,2,2,False
+page blocks,10.0,10.0,10.0,2,2,False
+syn-d,2.0,2.0,2.0,2,2,False
 spect,22.0,22.0,22.0,2,2,False
 solarflare2,11.0,11.0,11.0,2,2,False
-sensorreadings,24.0,24.0,24.0,2,2,False
-shoppers,13.5,11.0,16.0,2,2,True
-shuttlec0vsc4,9.5,9.0,10.0,2,2,True
-shuttlec2vsc4,9.5,9.0,10.0,2,2,True
-sick euthyroid,42.0,42.0,42.0,2,2,False
-segmemt0,19.0,19.0,19.0,2,2,False
-post-operative,8.0,8.0,8.0,2,2,False
-robot,14.0,4.0,24.0,2,2,True
 sat,36.0,36.0,36.0,2,2,False
+segmemt0,19.0,19.0,19.0,2,2,False
+connect-4,42.0,42.0,42.0,2,2,False
 satellite,36.0,36.0,36.0,2,2,False
-default,23.0,23.0,23.0,2,2,False
-dermatology-6,34.0,34.0,34.0,2,2,False
+robot,14.0,4.0,24.0,2,2,True
+post-operative,8.0,8.0,8.0,2,2,False
 penbased,16.0,16.0,16.0,2,2,False
 phishingdata,8.5,8.0,9.0,2,2,True
 pageblocks13vs4,10.5,10.0,11.0,2,2,True
 parkinson,390.5,26.0,755.0,2,2,True
-page blocks,10.0,10.0,10.0,2,2,False
-page-blocks13vs2,10.0,10.0,10.0,2,2,False
-pageblock,10.0,10.0,10.0,2,2,False
-pageblocks,10.0,10.0,10.0,2,2,False
-breast,9.5,9.0,10.0,2,2,True
-breast-w,19.5,9.0,30.0,2,2,True
-breastcancer,9.5,9.0,10.0,2,2,True
-optical digits,64.0,64.0,64.0,2,2,False
-mushrooms,112.0,112.0,112.0,2,2,False
-musk,167.0,166.0,168.0,2,2,True
-new thyroid 1,5.0,5.0,5.0,2,1,False
-new thyroid 2,5.0,5.0,5.0,2,1,False
-e.coli,7.0,7.0,7.0,2,2,False
+sick euthyroid,42.0,42.0,42.0,2,2,False
+sensorreadings,24.0,24.0,24.0,2,2,False
+shuttlec0vsc4,9.5,9.0,10.0,2,2,True
+shuttlec2vsc4,9.5,9.0,10.0,2,2,True
+shoppers,13.5,11.0,16.0,2,2,True
+default,23.0,23.0,23.0,2,2,False
+dermatology-6,34.0,34.0,34.0,2,2,False
+connect4,42.0,42.0,42.0,2,2,False
 ecoli-0 vs 1,7.0,7.0,7.0,2,2,False
-ecoli-0-1-4-6 vs 5,6.0,6.0,6.0,2,2,False
-new-thyroid2,5.0,5.0,5.0,2,2,False
-magic,10.0,10.0,10.0,2,2,False
-mfeat-fouri,76.0,76.0,76.0,2,2,False
+libras,90.5,90.0,91.0,2,2,True
+htru2,8.5,8.0,9.0,2,2,True
+housing10,13.0,13.0,13.0,2,2,False
 led,7.0,7.0,7.0,2,1,False
 led7digit02456789vs1,7.5,7.0,8.0,2,2,True
-libras,90.5,90.0,91.0,2,2,True
 kddcup,42.0,42.0,42.0,2,1,False
 isolet,617.0,617.0,617.0,2,2,False
-car-good,6.0,6.0,6.0,2,2,False
-fourclass,2.0,2.0,2.0,2,2,False
-car3,4594.5,7.0,9182.0,2,2,True
-cardiotocography,28.0,21.0,35.0,2,2,True
-hepatitis,19.0,19.0,19.0,2,2,False
-housing10,13.0,13.0,13.0,2,2,False
-htru2,8.5,8.0,9.0,2,2,True
 glass0123vs456,9.0,9.0,9.0,2,2,False
+hepatitis,19.0,19.0,19.0,2,2,False
+australian,14.5,14.0,15.0,2,2,True
+fourclass,2.0,2.0,2.0,2,2,False
 german.numer,24.0,24.0,24.0,2,2,False
+firewall,11.0,11.0,11.0,2,2,False
 glass-0-1-2-3 vs 4-5-6,9.0,9.0,9.0,2,2,False
 glass-0-1-6 vs 5,9.0,9.0,9.0,2,2,False
-bupa,6.5,6.0,7.0,2,2,True
-firewall,11.0,11.0,11.0,2,2,False
-abalone09-18,8.0,8.0,8.0,2,2,False
 abalone918,8.5,8.0,9.0,2,2,True
-yeast2,8.0,8.0,8.0,2,2,False
+ann,21.0,21.0,21.0,2,2,False
 yeast7,8.0,8.0,8.0,2,2,False
 yeast8,8.0,8.0,8.0,2,2,False
-yeast-2 vs 8,8.0,8.0,8.0,2,2,False
-clover-safe,2.0,2.0,2.0,1,1,False
-a1a,119.0,119.0,119.0,1,1,False
-yeast0359vs78,9.0,9.0,9.0,1,1,False
-vowel7,10.0,10.0,10.0,1,1,False
-vw0,10.0,10.0,10.0,1,1,False
-wafer,152.0,152.0,152.0,1,1,False
-"clover ir=7, dr=50",2.0,2.0,2.0,1,1,False
-"clover ir=7, dr=60",2.0,2.0,2.0,1,1,False
-"clover ir=7, dr=70",2.0,2.0,2.0,1,1,False
-clover-0,2.0,2.0,2.0,1,1,False
-clover-30,2.0,2.0,2.0,1,1,False
-clover-50,2.0,2.0,2.0,1,1,False
-clover-70,2.0,2.0,2.0,1,1,False
-clover-b,2.0,2.0,2.0,1,1,False
-clover-bc,2.0,2.0,2.0,1,1,False
-clover-c,2.0,2.0,2.0,1,1,False
-yeast-0-5-6-7-9,8.0,8.0,8.0,1,1,False
-approval,7.0,7.0,7.0,1,1,False
-artificial 0.3 5,25.0,25.0,25.0,1,1,False
-"clover ir=5, dr=30",2.0,2.0,2.0,1,1,False
-employee,7.0,7.0,7.0,1,1,False
-era,4.0,4.0,4.0,1,1,False
-era5,4.0,4.0,4.0,1,1,False
-esl,4.0,4.0,4.0,1,1,False
-esophageal cancer patient data set,750.0,750.0,750.0,1,1,False
-faceall,131.0,131.0,131.0,1,1,False
-fault,28.0,28.0,28.0,1,1,False
-fertility,10.0,10.0,10.0,1,1,False
+vowel5,10.0,10.0,10.0,2,2,False
+wine quality,11.0,11.0,11.0,2,2,False
+abalone 6,8.0,8.0,8.0,2,2,False
+abalone09-18,8.0,8.0,8.0,2,2,False
+bank small,16.0,16.0,16.0,1,1,False
+abalone-17vs78910,8.0,8.0,8.0,1,1,False
 abalone-3 vs 11,9.0,9.0,9.0,1,1,False
 abalone10,10.0,10.0,10.0,1,1,False
 abalone3vs11,8.0,8.0,8.0,1,1,False
 abalone7,8.0,8.0,8.0,1,1,False
-abalone8,10.0,10.0,10.0,1,1,False
-absenteeism at work,11.0,11.0,11.0,1,1,False
-yeast-0-2-5-7-9,8.0,8.0,8.0,1,1,False
-give me some credit,10.0,10.0,10.0,1,1,False
-glass identification,9.0,9.0,9.0,1,1,False
-glass-0-4 vs 5,9.0,9.0,9.0,1,1,False
-glass-0-6 vs 5,9.0,9.0,9.0,1,1,False
-carevaluation,6.0,6.0,6.0,1,1,False
-cccs12,9.0,9.0,9.0,1,1,False
-charactertraj,3.0,3.0,3.0,1,1,False
-chesscking-rook vs. king,6.0,6.0,6.0,1,1,False
-circle,2.0,2.0,2.0,1,1,False
-circles,2.0,2.0,2.0,1,1,False
-cleveland-0,13.0,13.0,13.0,1,1,False
-cleveland-0 vs 4,13.0,13.0,13.0,1,1,False
-cleveland0vs4,14.0,14.0,14.0,1,1,False
-climate,18.0,18.0,18.0,1,1,False
-climatesim,18.0,18.0,18.0,1,1,False
-"clover ir=5, dr=0",2.0,2.0,2.0,1,1,False
-housing5,13.0,13.0,13.0,1,1,False
-hr,21.0,21.0,21.0,1,1,False
-icr,33.0,33.0,33.0,1,1,False
-ijcnn,22.0,22.0,22.0,1,1,False
-glass0146vs2,10.0,10.0,10.0,1,1,False
-glass015vs2,10.0,10.0,10.0,1,1,False
-glass04vs5,10.0,10.0,10.0,1,1,False
-glass06vs5,10.0,10.0,10.0,1,1,False
-glass3,10.0,10.0,10.0,1,1,False
-glioma,4434.0,4434.0,4434.0,1,1,False
-haberman’s survival,3.0,3.0,3.0,1,1,False
-g7,10.0,10.0,10.0,1,1,False
-gender,18.0,18.0,18.0,1,1,False
-gender by name,4.0,4.0,4.0,1,1,False
-gesturephasesegmentationprocessed,32.0,32.0,32.0,1,1,False
-gisette,5000.0,5000.0,5000.0,1,1,False
-ecoli034vs5,8.0,8.0,8.0,1,1,False
-ecoli046vs5,7.0,7.0,7.0,1,1,False
-ecoli067vs35,8.0,8.0,8.0,1,1,False
-ecoli067vs5,7.0,7.0,7.0,1,1,False
-car1,9182.0,9182.0,9182.0,1,1,False
-car2,9182.0,9182.0,9182.0,1,1,False
-car4,9182.0,9182.0,9182.0,1,1,False
-cardiovascular,10.0,10.0,10.0,1,1,False
+vowel7,10.0,10.0,10.0,1,1,False
+vw0,10.0,10.0,10.0,1,1,False
+wafer,152.0,152.0,152.0,1,1,False
+wdbc,31.0,31.0,31.0,1,1,False
+wine quality-white,11.0,11.0,11.0,1,1,False
+wine-quality-red,11.0,11.0,11.0,1,1,False
+wine-quality-white,11.0,11.0,11.0,1,1,False
+wine-red,11.0,11.0,11.0,1,1,False
+winequality,11.0,11.0,11.0,1,1,False
+winequality-red-4,11.0,11.0,11.0,1,1,False
+winequality-white-3 vs 7,11.0,11.0,11.0,1,1,False
+winequalityred3vs5,11.0,11.0,11.0,1,1,False
+winequalityred4,11.0,11.0,11.0,1,1,False
+bearing of + rf,36.0,36.0,36.0,1,1,False
+bearing rf,36.0,36.0,36.0,1,1,False
+bezediris,5.0,5.0,5.0,1,1,False
+bhat1,3312.0,3312.0,3312.0,1,1,False
+bhat2,3312.0,3312.0,3312.0,1,1,False
+bhat3,3312.0,3312.0,3312.0,1,1,False
+bhat4,3312.0,3312.0,3312.0,1,1,False
 bloodservice,5.0,5.0,5.0,1,1,False
-hayesroth,5.0,5.0,5.0,1,1,False
-hcv,12.0,12.0,12.0,1,1,False
-healthy older people2,8.0,8.0,8.0,1,1,False
-heart failure,12.0,12.0,12.0,1,1,False
-heating,8.0,8.0,8.0,1,1,False
-hive-0.12.0,54.0,54.0,54.0,1,1,False
-hmeq,10.0,10.0,10.0,1,1,False
-camel-1.4,20.0,20.0,20.0,1,1,False
-camel-1.6,20.0,20.0,20.0,1,1,False
-cancer,10.0,10.0,10.0,1,1,False
-car evaluation,6.0,6.0,6.0,1,1,False
-car-vgood,6.0,6.0,6.0,1,1,False
-flag,28.0,28.0,28.0,1,1,False
-flare-f,11.0,11.0,11.0,1,1,False
-ecoli0146vs5,7.0,7.0,7.0,1,1,False
-ecoli0147vs2356,8.0,8.0,8.0,1,1,False
-ecoli0147vs56,7.0,7.0,7.0,1,1,False
-ecoli01vs235,8.0,8.0,8.0,1,1,False
-ecoli01vs5,7.0,7.0,7.0,1,1,False
-ecoli0234vs5,8.0,8.0,8.0,1,1,False
-ecoli0267vs35,8.0,8.0,8.0,1,1,False
-ecoli0346vs5,8.0,8.0,8.0,1,1,False
-ecoli0347vs56,8.0,8.0,8.0,1,1,False
-leaves plant,64.0,64.0,64.0,1,1,False
+bankmarket,17.0,17.0,17.0,1,1,False
+banknote,5.0,5.0,5.0,1,1,False
+bar crawl,4.0,4.0,4.0,1,1,False
+bearing if,36.0,36.0,36.0,1,1,False
+bearing if + of,36.0,36.0,36.0,1,1,False
+bearing if + of + rf,36.0,36.0,36.0,1,1,False
+bearing if + rf,36.0,36.0,36.0,1,1,False
+bearing of,36.0,36.0,36.0,1,1,False
+uknowledge,5.0,5.0,5.0,1,1,False
+user knowledge-modelling,5.0,5.0,5.0,1,1,False
+veh1,19.0,19.0,19.0,1,1,False
+velocity-1.5,20.0,20.0,20.0,1,1,False
+vertebal,7.0,7.0,7.0,1,1,False
+voice,9.0,9.0,9.0,1,1,False
+xalan-2.7,20.0,20.0,20.0,1,1,False
+xerces-1.2,20.0,20.0,20.0,1,1,False
+texture l,40.0,40.0,40.0,1,1,False
+texture s,40.0,40.0,40.0,1,1,False
+toxicity,1171.0,1171.0,1171.0,1,1,False
+toy,2.0,2.0,2.0,1,1,False
+toy dataset a,2.0,2.0,2.0,1,1,False
+toy dataset b,2.0,2.0,2.0,1,1,False
+toy dataset c,2.0,2.0,2.0,1,1,False
+twopats,128.0,128.0,128.0,1,1,False
+ijcnn,22.0,22.0,22.0,1,1,False
 ijcnn1,22.0,22.0,22.0,1,1,False
 ilpd,10.0,10.0,10.0,1,1,False
 image1,19.0,19.0,19.0,1,1,False
@@ -296,31 +248,62 @@ imagenet12,2048.0,2048.0,2048.0,1,1,False
 imagenet8,2048.0,2048.0,2048.0,1,1,False
 imagenet9,2048.0,2048.0,2048.0,1,1,False
 imgseg,19.0,19.0,19.0,1,1,False
-intrusion,41.0,41.0,41.0,1,1,False
+healthy older people2,8.0,8.0,8.0,1,1,False
+heart failure,12.0,12.0,12.0,1,1,False
+heating,8.0,8.0,8.0,1,1,False
+hive-0.12.0,54.0,54.0,54.0,1,1,False
+hmeq,10.0,10.0,10.0,1,1,False
+housing5,13.0,13.0,13.0,1,1,False
+hr,21.0,21.0,21.0,1,1,False
+icr,33.0,33.0,33.0,1,1,False
+glass015vs2,10.0,10.0,10.0,1,1,False
+glass04vs5,10.0,10.0,10.0,1,1,False
+glass06vs5,10.0,10.0,10.0,1,1,False
+glass3,10.0,10.0,10.0,1,1,False
+glioma,4434.0,4434.0,4434.0,1,1,False
+haberman’s survival,3.0,3.0,3.0,1,1,False
+hayesroth,5.0,5.0,5.0,1,1,False
+hcv,12.0,12.0,12.0,1,1,False
+gender by name,4.0,4.0,4.0,1,1,False
+gesturephasesegmentationprocessed,32.0,32.0,32.0,1,1,False
+gisette,5000.0,5000.0,5000.0,1,1,False
+give me some credit,10.0,10.0,10.0,1,1,False
+glass identification,9.0,9.0,9.0,1,1,False
+glass-0-4 vs 5,9.0,9.0,9.0,1,1,False
+glass-0-6 vs 5,9.0,9.0,9.0,1,1,False
+glass0146vs2,10.0,10.0,10.0,1,1,False
+era5,4.0,4.0,4.0,1,1,False
+esl,4.0,4.0,4.0,1,1,False
+esophageal cancer patient data set,750.0,750.0,750.0,1,1,False
 iris0,4.0,4.0,4.0,1,1,False
 isolet5,617.0,617.0,617.0,1,1,False
 ivy-1.4,20.0,20.0,20.0,1,1,False
 jedit-4.3,20.0,20.0,20.0,1,1,False
 k1b,21839.0,21839.0,21839.0,1,1,False
-calmodoulin,131.0,131.0,131.0,1,1,False
-camel-1.0,20.0,20.0,20.0,1,1,False
-log4j-1.2,20.0,20.0,20.0,1,1,False
-lung,12533.0,12533.0,12533.0,1,1,False
-kddbufferoverflowvsback,41.0,41.0,41.0,1,1,False
-kddcup99data,41.0,41.0,41.0,1,1,False
-kddlandvssatan,41.0,41.0,41.0,1,1,False
-kddrootkitvsback,41.0,41.0,41.0,1,1,False
-kr,15.0,15.0,15.0,1,1,False
-kr-vs-k-one vs fifteen,6.0,6.0,6.0,1,1,False
-kr-vs-k-three vs eleven,6.0,6.0,6.0,1,1,False
-kr-vs-k-zero-one vs draw,6.0,6.0,6.0,1,1,False
-krvsk0vs15,6.0,6.0,6.0,1,1,False
-krvsk0vs8,6.0,6.0,6.0,1,1,False
-krvsk3vs11,6.0,6.0,6.0,1,1,False
-la12,31472.0,31472.0,31472.0,1,1,False
-laryngeal,16.0,16.0,16.0,1,1,False
-leaf,16.0,16.0,16.0,1,1,False
-machine,6.0,6.0,6.0,1,1,False
+ecoli0346vs5,8.0,8.0,8.0,1,1,False
+ecoli0347vs56,8.0,8.0,8.0,1,1,False
+ecoli034vs5,8.0,8.0,8.0,1,1,False
+ecoli046vs5,7.0,7.0,7.0,1,1,False
+ecoli067vs35,8.0,8.0,8.0,1,1,False
+ecoli067vs5,7.0,7.0,7.0,1,1,False
+employee,7.0,7.0,7.0,1,1,False
+era,4.0,4.0,4.0,1,1,False
+ecoli-0-6-7 vs 5,6.0,6.0,6.0,1,1,False
+ecoli0146vs5,7.0,7.0,7.0,1,1,False
+ecoli0147vs2356,8.0,8.0,8.0,1,1,False
+ecoli0147vs56,7.0,7.0,7.0,1,1,False
+ecoli01vs235,8.0,8.0,8.0,1,1,False
+ecoli01vs5,7.0,7.0,7.0,1,1,False
+ecoli0234vs5,8.0,8.0,8.0,1,1,False
+ecoli0267vs35,8.0,8.0,8.0,1,1,False
+intrusion,41.0,41.0,41.0,1,1,False
+ecoli-0-2-3-4 vs 5,7.0,7.0,7.0,1,1,False
+ecoli-0-2-6-7 vs 3–5,7.0,7.0,7.0,1,1,False
+ecoli-0-3-4 vs 5,7.0,7.0,7.0,1,1,False
+ecoli-0-3-4-6 vs 5,7.0,7.0,7.0,1,1,False
+ecoli-0-3-4-7 vs 5–6,7.0,7.0,7.0,1,1,False
+ecoli-0-4-6 vs 5,6.0,6.0,6.0,1,1,False
+ecoli-0-6-7 vs 3–5,7.0,7.0,7.0,1,1,False
 madelon,500.0,500.0,500.0,1,1,False
 mafalda,14.0,14.0,14.0,1,1,False
 magic04,11.0,11.0,11.0,1,1,False
@@ -329,115 +312,38 @@ me2vsother,8.0,8.0,8.0,1,1,False
 medv,13.0,13.0,13.0,1,1,False
 mf zernike,47.0,47.0,47.0,1,1,False
 mnist 3,784.0,784.0,784.0,1,1,False
-mnist 5,784.0,784.0,784.0,1,1,False
-letter img,16.0,16.0,16.0,1,1,False
 letter recognition,16.0,16.0,16.0,1,1,False
 letter-a,16.0,16.0,16.0,1,1,False
 letter-recognition,16.0,16.0,16.0,1,1,False
 letter-vowel,16.0,16.0,16.0,1,1,False
 liver disorders,6.0,6.0,6.0,1,1,False
-national,9.0,9.0,9.0,1,1,False
+log4j-1.2,20.0,20.0,20.0,1,1,False
+lung,12533.0,12533.0,12533.0,1,1,False
+machine,6.0,6.0,6.0,1,1,False
+krvsk0vs15,6.0,6.0,6.0,1,1,False
+krvsk0vs8,6.0,6.0,6.0,1,1,False
+krvsk3vs11,6.0,6.0,6.0,1,1,False
+la12,31472.0,31472.0,31472.0,1,1,False
+laryngeal,16.0,16.0,16.0,1,1,False
+leaf,16.0,16.0,16.0,1,1,False
+leaves plant,64.0,64.0,64.0,1,1,False
+letter img,16.0,16.0,16.0,1,1,False
+kddbufferoverflowvsback,41.0,41.0,41.0,1,1,False
+kddcup99data,41.0,41.0,41.0,1,1,False
+kddlandvssatan,41.0,41.0,41.0,1,1,False
+kddrootkitvsback,41.0,41.0,41.0,1,1,False
+kr,15.0,15.0,15.0,1,1,False
+kr-vs-k-one vs fifteen,6.0,6.0,6.0,1,1,False
+kr-vs-k-three vs eleven,6.0,6.0,6.0,1,1,False
+kr-vs-k-zero-one vs draw,6.0,6.0,6.0,1,1,False
 e. coli,7.0,7.0,7.0,1,1,False
 ecoli-0-1 vs 5,6.0,6.0,6.0,1,1,False
 ecoli-0-1-3-7 vs 2-6,7.0,7.0,7.0,1,1,False
 ecoli-0-1-4-7 vs 5–6,6.0,6.0,6.0,1,1,False
-ecoli-0-2-3-4 vs 5,7.0,7.0,7.0,1,1,False
-ecoli-0-2-6-7 vs 3–5,7.0,7.0,7.0,1,1,False
-ecoli-0-3-4 vs 5,7.0,7.0,7.0,1,1,False
-ecoli-0-3-4-6 vs 5,7.0,7.0,7.0,1,1,False
-ecoli-0-3-4-7 vs 5–6,7.0,7.0,7.0,1,1,False
-ecoli-0-4-6 vs 5,6.0,6.0,6.0,1,1,False
-ecoli-0-6-7 vs 3–5,7.0,7.0,7.0,1,1,False
-ecoli-0-6-7 vs 5,6.0,6.0,6.0,1,1,False
-creditapproval,15.0,15.0,15.0,1,1,False
 newthyroid1,5.0,5.0,5.0,1,1,False
 newthyroid2,5.0,5.0,5.0,1,1,False
-occupancy,7.0,7.0,7.0,1,1,False
-ocr,64.0,64.0,64.0,1,1,False
-oil,49.0,49.0,49.0,1,1,False
-oil spill,49.0,49.0,49.0,1,1,False
-oil1,44.0,44.0,44.0,1,1,False
-oil2,39.0,39.0,39.0,1,1,False
-online,38.0,38.0,38.0,1,1,False
-online retail,7.0,7.0,7.0,1,1,False
-online shoppers,17.0,17.0,17.0,1,1,False
-optdigits,64.0,64.0,64.0,1,1,False
-ozone-level,72.0,72.0,72.0,1,1,False
-mocap,33.0,33.0,33.0,1,1,False
-moons,2.0,2.0,2.0,1,1,False
-movement libras,90.0,90.0,90.0,1,1,False
-multiplefs,649.0,649.0,649.0,1,1,False
-mushroom,12.0,12.0,12.0,1,1,False
-pageblock1,10.0,10.0,10.0,1,1,False
-pageblocks0,11.0,11.0,11.0,1,1,False
 nomao,119.0,119.0,119.0,1,1,False
-boundary,174.0,174.0,174.0,1,1,False
-br,15.0,15.0,15.0,1,1,False
-breast cancer,117.0,117.0,117.0,1,1,False
-breast tissue2,9.0,9.0,9.0,1,1,False
-breast-cancer,10.0,10.0,10.0,1,1,False
-breast-cancer-original,9.0,9.0,9.0,1,1,False
-breast-cancer-wisconsin,11.0,11.0,11.0,1,1,False
-breastc,15.0,15.0,15.0,1,1,False
-breasttissue,10.0,10.0,10.0,1,1,False
-bullinger,17404.0,17404.0,17404.0,1,1,False
-bankmarket,17.0,17.0,17.0,1,1,False
 obesity,17.0,17.0,17.0,1,1,False
-obs,21.0,21.0,21.0,1,1,False
-"paw ir=5, dr=70",2.0,2.0,2.0,1,1,False
-"paw ir=7, dr=0",2.0,2.0,2.0,1,1,False
-"paw ir=7, dr=30",2.0,2.0,2.0,1,1,False
-"paw ir=7, dr=50",2.0,2.0,2.0,1,1,False
-"paw ir=7, dr=60",2.0,2.0,2.0,1,1,False
-"paw ir=7, dr=70",2.0,2.0,2.0,1,1,False
-paw-0,2.0,2.0,2.0,1,1,False
-paw-30,2.0,2.0,2.0,1,1,False
-paw-50,2.0,2.0,2.0,1,1,False
-packets,43.0,43.0,43.0,1,1,False
-page blocks 1 3,10.0,10.0,10.0,1,1,False
-page-block0,10.0,10.0,10.0,1,1,False
-page-blocks 0vs3,10.0,10.0,10.0,1,1,False
-page-blocks-1-3,10.0,10.0,10.0,1,1,False
-page-blocks-1-3 vs 4,10.0,10.0,10.0,1,1,False
-page-blocks0,10.0,10.0,10.0,1,1,False
-paw-b,2.0,2.0,2.0,1,1,False
-paw-bc,2.0,2.0,2.0,1,1,False
-paw-c,2.0,2.0,2.0,1,1,False
-paw-safe,2.0,2.0,2.0,1,1,False
-payment simulation,11.0,11.0,11.0,1,1,False
-pc1,16.0,16.0,16.0,1,1,False
-pen digits,16.0,16.0,16.0,1,1,False
-pendigits5,17.0,17.0,17.0,1,1,False
-phishing,68.0,68.0,68.0,1,1,False
-phoss,479.0,479.0,479.0,1,1,False
-pid,8.0,8.0,8.0,1,1,False
-parkinsons telemonitoring,26.0,26.0,26.0,1,1,False
-"paw ir=5, dr=0",2.0,2.0,2.0,1,1,False
-"paw ir=5, dr=30",2.0,2.0,2.0,1,1,False
-"paw ir=5, dr=50",2.0,2.0,2.0,1,1,False
-"paw ir=5, dr=60",2.0,2.0,2.0,1,1,False
-cod,8.0,8.0,8.0,1,1,False
-pima-diabetes,8.0,8.0,8.0,1,1,False
-planningrelax,13.0,13.0,13.0,1,1,False
-planrelax,13.0,13.0,13.0,1,1,False
-plates faults,27.0,27.0,27.0,1,1,False
-plates-faults5,27.0,27.0,27.0,1,1,False
-plates-faults7,27.0,27.0,27.0,1,1,False
-platesfaults,27.0,27.0,27.0,1,1,False
-poker,10.0,10.0,10.0,1,1,False
-poker hand,10.0,10.0,10.0,1,1,False
-poker-8 vs 6,10.0,10.0,10.0,1,1,False
-poker89vs5,10.0,10.0,10.0,1,1,False
-poker89vs6,10.0,10.0,10.0,1,1,False
-poker8vs6,10.0,10.0,10.0,1,1,False
-poker9vs7,10.0,10.0,10.0,1,1,False
-paw-70,2.0,2.0,2.0,1,1,False
-record linkage,12.0,12.0,12.0,1,1,False
-rt-iot,53.0,53.0,53.0,1,1,False
-pima indian diabetes,8.0,8.0,8.0,1,1,False
-ctg,21.0,21.0,21.0,1,1,False
-customers,8.0,8.0,8.0,1,1,False
-cytvspox,8.0,8.0,8.0,1,1,False
 darwin,423.0,423.0,423.0,1,1,False
 destinations,25.0,25.0,25.0,1,1,False
 drug,13.0,13.0,13.0,1,1,False
@@ -446,48 +352,174 @@ dry bean,611.0,611.0,611.0,1,1,False
 dry beans,16.0,16.0,16.0,1,1,False
 dry-bean,16.0,16.0,16.0,1,1,False
 e-state,12.0,12.0,12.0,1,1,False
-cm1,16.0,16.0,16.0,1,1,False
-cnae,312.0,312.0,312.0,1,1,False
-seed,7.0,7.0,7.0,1,1,False
-segment 2,18.0,18.0,18.0,1,1,False
-segment 6,18.0,18.0,18.0,1,1,False
-segment5,20.0,20.0,20.0,1,1,False
-seismicbumps,19.0,19.0,19.0,1,1,False
-semeion,265.0,265.0,265.0,1,1,False
+contraceptive method choice,9.0,9.0,9.0,1,1,False
+contraceptivel,9.0,9.0,9.0,1,1,False
+cover type,54.0,54.0,54.0,1,1,False
+credit fraud,31.0,31.0,31.0,1,1,False
+creditapproval,15.0,15.0,15.0,1,1,False
+ctg,21.0,21.0,21.0,1,1,False
+customers,8.0,8.0,8.0,1,1,False
+cytvspox,8.0,8.0,8.0,1,1,False
+mnist 5,784.0,784.0,784.0,1,1,False
+mocap,33.0,33.0,33.0,1,1,False
+moons,2.0,2.0,2.0,1,1,False
+movement libras,90.0,90.0,90.0,1,1,False
+multiplefs,649.0,649.0,649.0,1,1,False
+mushroom,12.0,12.0,12.0,1,1,False
+national,9.0,9.0,9.0,1,1,False
+contra2,10.0,10.0,10.0,1,1,False
+"paw ir=5, dr=50",2.0,2.0,2.0,1,1,False
+"paw ir=5, dr=60",2.0,2.0,2.0,1,1,False
+"paw ir=5, dr=70",2.0,2.0,2.0,1,1,False
+"paw ir=7, dr=0",2.0,2.0,2.0,1,1,False
+"paw ir=7, dr=30",2.0,2.0,2.0,1,1,False
+"paw ir=7, dr=50",2.0,2.0,2.0,1,1,False
+"paw ir=7, dr=60",2.0,2.0,2.0,1,1,False
+"paw ir=7, dr=70",2.0,2.0,2.0,1,1,False
+page-blocks-1-3,10.0,10.0,10.0,1,1,False
+page-blocks-1-3 vs 4,10.0,10.0,10.0,1,1,False
+page-blocks0,10.0,10.0,10.0,1,1,False
+pageblock1,10.0,10.0,10.0,1,1,False
+pageblocks0,11.0,11.0,11.0,1,1,False
+parkinsons telemonitoring,26.0,26.0,26.0,1,1,False
+"paw ir=5, dr=0",2.0,2.0,2.0,1,1,False
+"paw ir=5, dr=30",2.0,2.0,2.0,1,1,False
+online retail,7.0,7.0,7.0,1,1,False
+online shoppers,17.0,17.0,17.0,1,1,False
+optdigits,64.0,64.0,64.0,1,1,False
+ozone-level,72.0,72.0,72.0,1,1,False
+packets,43.0,43.0,43.0,1,1,False
+page blocks 1 3,10.0,10.0,10.0,1,1,False
+page-block0,10.0,10.0,10.0,1,1,False
+page-blocks 0vs3,10.0,10.0,10.0,1,1,False
+obs,21.0,21.0,21.0,1,1,False
+occupancy,7.0,7.0,7.0,1,1,False
+ocr,64.0,64.0,64.0,1,1,False
+oil,49.0,49.0,49.0,1,1,False
+oil spill,49.0,49.0,49.0,1,1,False
+oil1,44.0,44.0,44.0,1,1,False
+oil2,39.0,39.0,39.0,1,1,False
+online,38.0,38.0,38.0,1,1,False
+poker hand,10.0,10.0,10.0,1,1,False
+poker-8 vs 6,10.0,10.0,10.0,1,1,False
+poker89vs5,10.0,10.0,10.0,1,1,False
+poker89vs6,10.0,10.0,10.0,1,1,False
+poker8vs6,10.0,10.0,10.0,1,1,False
+poker9vs7,10.0,10.0,10.0,1,1,False
 polish bankruptcy,64.0,64.0,64.0,1,1,False
 pre2d,2.0,2.0,2.0,1,1,False
+pima-diabetes,8.0,8.0,8.0,1,1,False
+planningrelax,13.0,13.0,13.0,1,1,False
+planrelax,13.0,13.0,13.0,1,1,False
+plates faults,27.0,27.0,27.0,1,1,False
+plates-faults5,27.0,27.0,27.0,1,1,False
+plates-faults7,27.0,27.0,27.0,1,1,False
+platesfaults,27.0,27.0,27.0,1,1,False
+poker,10.0,10.0,10.0,1,1,False
+payment simulation,11.0,11.0,11.0,1,1,False
+pc1,16.0,16.0,16.0,1,1,False
+pen digits,16.0,16.0,16.0,1,1,False
+pendigits5,17.0,17.0,17.0,1,1,False
+phishing,68.0,68.0,68.0,1,1,False
+phoss,479.0,479.0,479.0,1,1,False
+pid,8.0,8.0,8.0,1,1,False
+pima indian diabetes,8.0,8.0,8.0,1,1,False
+paw-0,2.0,2.0,2.0,1,1,False
+paw-30,2.0,2.0,2.0,1,1,False
+paw-50,2.0,2.0,2.0,1,1,False
+paw-70,2.0,2.0,2.0,1,1,False
+paw-b,2.0,2.0,2.0,1,1,False
+paw-bc,2.0,2.0,2.0,1,1,False
+paw-c,2.0,2.0,2.0,1,1,False
+paw-safe,2.0,2.0,2.0,1,1,False
+clover-b,2.0,2.0,2.0,1,1,False
+clover-bc,2.0,2.0,2.0,1,1,False
+clover-c,2.0,2.0,2.0,1,1,False
+clover-safe,2.0,2.0,2.0,1,1,False
+cm1,16.0,16.0,16.0,1,1,False
+cnae,312.0,312.0,312.0,1,1,False
+cod,8.0,8.0,8.0,1,1,False
+codrna,8.0,8.0,8.0,1,1,False
+"clover ir=7, dr=30",2.0,2.0,2.0,1,1,False
+"clover ir=7, dr=50",2.0,2.0,2.0,1,1,False
+"clover ir=7, dr=60",2.0,2.0,2.0,1,1,False
+"clover ir=7, dr=70",2.0,2.0,2.0,1,1,False
+clover-0,2.0,2.0,2.0,1,1,False
+clover-30,2.0,2.0,2.0,1,1,False
+clover-50,2.0,2.0,2.0,1,1,False
+clover-70,2.0,2.0,2.0,1,1,False
+climate,18.0,18.0,18.0,1,1,False
+climatesim,18.0,18.0,18.0,1,1,False
+"clover ir=5, dr=0",2.0,2.0,2.0,1,1,False
+"clover ir=5, dr=30",2.0,2.0,2.0,1,1,False
+"clover ir=5, dr=50",2.0,2.0,2.0,1,1,False
+"clover ir=5, dr=60",2.0,2.0,2.0,1,1,False
+"clover ir=5, dr=70",2.0,2.0,2.0,1,1,False
+"clover ir=7, dr=0",2.0,2.0,2.0,1,1,False
 prend,21.0,21.0,21.0,1,1,False
 probe binary,41.0,41.0,41.0,1,1,False
 promotion,4.0,4.0,4.0,1,1,False
 prompting,17.0,17.0,17.0,1,1,False
 purchase,18.0,18.0,18.0,1,1,False
-qsar,41.0,41.0,41.0,1,1,False
-r2l binary,41.0,41.0,41.0,1,1,False
-raisin,8.0,8.0,8.0,1,1,False
-solarflaref,13.0,13.0,13.0,1,1,False
-sonar,60.0,60.0,60.0,1,1,False
+cleveland-0,13.0,13.0,13.0,1,1,False
+cleveland-0 vs 4,13.0,13.0,13.0,1,1,False
+cleveland0vs4,14.0,14.0,14.0,1,1,False
+simulated1,20.0,20.0,20.0,1,1,False
+simulated10,200.0,200.0,200.0,1,1,False
+simulated2,20.0,20.0,20.0,1,1,False
+simulated3,20.0,20.0,20.0,1,1,False
+simulated4,20.0,20.0,20.0,1,1,False
+simulated5,20.0,20.0,20.0,1,1,False
+simulated6,200.0,200.0,200.0,1,1,False
+simulated7,200.0,200.0,200.0,1,1,False
+seismicbumps,19.0,19.0,19.0,1,1,False
+semeion,265.0,265.0,265.0,1,1,False
 shuttle2vs4,9.0,9.0,9.0,1,1,False
 shuttle2vs5,9.0,9.0,9.0,1,1,False
 simulated dataset a,2.0,2.0,2.0,1,1,False
 simulated dataset b,2.0,2.0,2.0,1,1,False
 simulated dataset c,2.0,2.0,2.0,1,1,False
 simulated dataset d,2.0,2.0,2.0,1,1,False
-simulated1,20.0,20.0,20.0,1,1,False
-simulated10,200.0,200.0,200.0,1,1,False
-simulated2,20.0,20.0,20.0,1,1,False
-satimage 4,36.0,36.0,36.0,1,1,False
 satimage4,37.0,37.0,37.0,1,1,False
 satisfied,21.0,21.0,21.0,1,1,False
 saureus4,3.0,3.0,3.0,1,1,False
 scene,294.0,294.0,294.0,1,1,False
+seed,7.0,7.0,7.0,1,1,False
+segment 2,18.0,18.0,18.0,1,1,False
+segment 6,18.0,18.0,18.0,1,1,False
+segment5,20.0,20.0,20.0,1,1,False
+coil 2000,85.0,85.0,85.0,1,1,False
+compustat,20.0,20.0,20.0,1,1,False
+qsar,41.0,41.0,41.0,1,1,False
+r2l binary,41.0,41.0,41.0,1,1,False
+raisin,8.0,8.0,8.0,1,1,False
+record linkage,12.0,12.0,12.0,1,1,False
+rt-iot,53.0,53.0,53.0,1,1,False
+satimage 4,36.0,36.0,36.0,1,1,False
+"sub-cluster ir=7, dr=0",2.0,2.0,2.0,1,1,False
+"sub-cluster ir=7, dr=30",2.0,2.0,2.0,1,1,False
+"sub-cluster ir=7, dr=50",2.0,2.0,2.0,1,1,False
+"sub-cluster ir=7, dr=60",2.0,2.0,2.0,1,1,False
+"sub-cluster ir=7, dr=70",2.0,2.0,2.0,1,1,False
+subcl-b,2.0,2.0,2.0,1,1,False
+subcl-bc,2.0,2.0,2.0,1,1,False
+subcl-c,2.0,2.0,2.0,1,1,False
+statlandsat,37.0,37.0,37.0,1,1,False
+stock10,9.0,9.0,9.0,1,1,False
+students dropout,36.0,36.0,36.0,1,1,False
 "sub-cluster ir=5, dr=0",2.0,2.0,2.0,1,1,False
 "sub-cluster ir=5, dr=30",2.0,2.0,2.0,1,1,False
 "sub-cluster ir=5, dr=50",2.0,2.0,2.0,1,1,False
-simulated3,20.0,20.0,20.0,1,1,False
-simulated4,20.0,20.0,20.0,1,1,False
-simulated5,20.0,20.0,20.0,1,1,False
-simulated6,200.0,200.0,200.0,1,1,False
-simulated7,200.0,200.0,200.0,1,1,False
+"sub-cluster ir=5, dr=60",2.0,2.0,2.0,1,1,False
+"sub-cluster ir=5, dr=70",2.0,2.0,2.0,1,1,False
+solarflaref,13.0,13.0,13.0,1,1,False
+sonar,60.0,60.0,60.0,1,1,False
+sp1,43.0,43.0,43.0,1,1,False
+sp3,43.0,43.0,43.0,1,1,False
+spectf,44.0,44.0,44.0,1,1,False
+splice-ei,60.0,60.0,60.0,1,1,False
+splice-ie,60.0,60.0,60.0,1,1,False
+srbct,2308.0,2308.0,2308.0,1,1,False
 simulated8,200.0,200.0,200.0,1,1,False
 simulated9,200.0,200.0,200.0,1,1,False
 skin,3.0,3.0,3.0,1,1,False
@@ -496,131 +528,99 @@ sleaf,128.0,128.0,128.0,1,1,False
 smartphone,536.0,536.0,536.0,1,1,False
 smoke,14.0,14.0,14.0,1,1,False
 solar,10.0,10.0,10.0,1,1,False
-subcl-c,2.0,2.0,2.0,1,1,False
+carevaluation,6.0,6.0,6.0,1,1,False
+cccs12,9.0,9.0,9.0,1,1,False
+charactertraj,3.0,3.0,3.0,1,1,False
+chesscking-rook vs. king,6.0,6.0,6.0,1,1,False
+circle,2.0,2.0,2.0,1,1,False
+circles,2.0,2.0,2.0,1,1,False
+taevaluation,5.0,5.0,5.0,1,1,False
+taiwanses,94.0,94.0,94.0,1,1,False
+cancer,10.0,10.0,10.0,1,1,False
+car evaluation,6.0,6.0,6.0,1,1,False
+car-vgood,6.0,6.0,6.0,1,1,False
+car1,9182.0,9182.0,9182.0,1,1,False
+car2,9182.0,9182.0,9182.0,1,1,False
+car4,9182.0,9182.0,9182.0,1,1,False
+cardiovascular,10.0,10.0,10.0,1,1,False
+card’graphy,23.0,23.0,23.0,1,1,False
+breast-cancer-wisconsin,11.0,11.0,11.0,1,1,False
+breastc,15.0,15.0,15.0,1,1,False
+breasttissue,10.0,10.0,10.0,1,1,False
+bullinger,17404.0,17404.0,17404.0,1,1,False
+calmodoulin,131.0,131.0,131.0,1,1,False
+camel-1.0,20.0,20.0,20.0,1,1,False
+camel-1.4,20.0,20.0,20.0,1,1,False
+camel-1.6,20.0,20.0,20.0,1,1,False
 subcl-safe,2.0,2.0,2.0,1,1,False
 subclus-0,2.0,2.0,2.0,1,1,False
 subclus-30,2.0,2.0,2.0,1,1,False
 subclus-50,2.0,2.0,2.0,1,1,False
 subclus-70,2.0,2.0,2.0,1,1,False
 susy,18.0,18.0,18.0,1,1,False
-sp1,43.0,43.0,43.0,1,1,False
-sp3,43.0,43.0,43.0,1,1,False
-spectf,44.0,44.0,44.0,1,1,False
-splice-ei,60.0,60.0,60.0,1,1,False
-splice-ie,60.0,60.0,60.0,1,1,False
-srbct,2308.0,2308.0,2308.0,1,1,False
-statlandsat,37.0,37.0,37.0,1,1,False
-stock10,9.0,9.0,9.0,1,1,False
-students dropout,36.0,36.0,36.0,1,1,False
-bearing of + rf,36.0,36.0,36.0,1,1,False
-bearing rf,36.0,36.0,36.0,1,1,False
-bezediris,5.0,5.0,5.0,1,1,False
-bhat1,3312.0,3312.0,3312.0,1,1,False
-bhat2,3312.0,3312.0,3312.0,1,1,False
-bhat3,3312.0,3312.0,3312.0,1,1,False
-bhat4,3312.0,3312.0,3312.0,1,1,False
-artificial c x c grid domain,2.0,2.0,2.0,1,1,False
-"sub-cluster ir=5, dr=70",2.0,2.0,2.0,1,1,False
-"sub-cluster ir=7, dr=0",2.0,2.0,2.0,1,1,False
-"sub-cluster ir=7, dr=30",2.0,2.0,2.0,1,1,False
-"sub-cluster ir=7, dr=50",2.0,2.0,2.0,1,1,False
-"sub-cluster ir=7, dr=60",2.0,2.0,2.0,1,1,False
-"sub-cluster ir=7, dr=70",2.0,2.0,2.0,1,1,False
-subcl-b,2.0,2.0,2.0,1,1,False
-subcl-bc,2.0,2.0,2.0,1,1,False
-bearing if + of + rf,36.0,36.0,36.0,1,1,False
-bearing if + rf,36.0,36.0,36.0,1,1,False
-codrna,8.0,8.0,8.0,1,1,False
-coil 2000,85.0,85.0,85.0,1,1,False
-compustat,20.0,20.0,20.0,1,1,False
-contra2,10.0,10.0,10.0,1,1,False
-contraceptive method choice,9.0,9.0,9.0,1,1,False
-contraceptivel,9.0,9.0,9.0,1,1,False
-cover type,54.0,54.0,54.0,1,1,False
-credit fraud,31.0,31.0,31.0,1,1,False
-"clover ir=5, dr=50",2.0,2.0,2.0,1,1,False
-"clover ir=5, dr=60",2.0,2.0,2.0,1,1,False
-"clover ir=5, dr=70",2.0,2.0,2.0,1,1,False
-"clover ir=7, dr=0",2.0,2.0,2.0,1,1,False
-"clover ir=7, dr=30",2.0,2.0,2.0,1,1,False
-bearing of,36.0,36.0,36.0,1,1,False
-toy dataset b,2.0,2.0,2.0,1,1,False
-toy dataset c,2.0,2.0,2.0,1,1,False
-twopats,128.0,128.0,128.0,1,1,False
-uknowledge,5.0,5.0,5.0,1,1,False
-user knowledge-modelling,5.0,5.0,5.0,1,1,False
-veh1,19.0,19.0,19.0,1,1,False
 svmguide2,20.0,20.0,20.0,1,1,False
-taevaluation,5.0,5.0,5.0,1,1,False
-taiwanses,94.0,94.0,94.0,1,1,False
-texture l,40.0,40.0,40.0,1,1,False
-texture s,40.0,40.0,40.0,1,1,False
-"sub-cluster ir=5, dr=60",2.0,2.0,2.0,1,1,False
-banknote,5.0,5.0,5.0,1,1,False
-bar crawl,4.0,4.0,4.0,1,1,False
-bearing if,36.0,36.0,36.0,1,1,False
-bearing if + of,36.0,36.0,36.0,1,1,False
+breast-cancer-original,9.0,9.0,9.0,1,1,False
+a1a,119.0,119.0,119.0,1,1,False
+avila 0vs5,10.0,10.0,10.0,1,1,False
+avila 0vs6,10.0,10.0,10.0,1,1,False
 avila 0vs7,10.0,10.0,10.0,1,1,False
+50words,270.0,270.0,270.0,1,1,False
+aids 50000,23.0,23.0,23.0,1,1,False
 bank full,16.0,16.0,16.0,1,1,False
-bank small,16.0,16.0,16.0,1,1,False
-academic,37.0,37.0,37.0,1,1,False
-velocity-1.5,20.0,20.0,20.0,1,1,False
-vertebal,7.0,7.0,7.0,1,1,False
-voice,9.0,9.0,9.0,1,1,False
-voice3,10.0,10.0,10.0,1,1,False
-voice6,10.0,10.0,10.0,1,1,False
-voice9 6,10.0,10.0,10.0,1,1,False
+winequalitywhite9vs4,11.0,11.0,11.0,1,1,False
+yeast-0-5-6-7-9,8.0,8.0,8.0,1,1,False
+abalone8,10.0,10.0,10.0,1,1,False
+yeast-1-2-8-9,8.0,8.0,8.0,1,1,False
+yeast-1-2-8-9 vs 7,8.0,8.0,8.0,1,1,False
+yeast0256vs3789,9.0,9.0,9.0,1,1,False
+yeast02579vs368,9.0,9.0,9.0,1,1,False
+yeast0359vs78,9.0,9.0,9.0,1,1,False
+yeast2vs8,9.0,9.0,9.0,1,1,False
 voice9 7,10.0,10.0,10.0,1,1,False
 votes,16.0,16.0,16.0,1,1,False
 vowel4,10.0,10.0,10.0,1,1,False
-toxicity,1171.0,1171.0,1171.0,1,1,False
-toy,2.0,2.0,2.0,1,1,False
-toy dataset a,2.0,2.0,2.0,1,1,False
-artificial 0.5 10,25.0,25.0,25.0,1,1,False
+yeast-0-2-5-6,8.0,8.0,8.0,1,1,False
+yeast-0-2-5-7-9,8.0,8.0,8.0,1,1,False
+yeast-0-2-5-7-9 vs 3-6-8,8.0,8.0,8.0,1,1,False
+yeast-0-3-5-9,8.0,8.0,8.0,1,1,False
+yeast-0-3-5-9 vs 7-8,8.0,8.0,8.0,1,1,False
+boundary,174.0,174.0,174.0,1,1,False
+br,15.0,15.0,15.0,1,1,False
+breast cancer,117.0,117.0,117.0,1,1,False
+breast tissue2,9.0,9.0,9.0,1,1,False
+breast-cancer,10.0,10.0,10.0,1,1,False
+voice3,10.0,10.0,10.0,1,1,False
+voice6,10.0,10.0,10.0,1,1,False
+voice9 6,10.0,10.0,10.0,1,1,False
+abalone 19,8.0,8.0,8.0,1,1,False
+faceall,131.0,131.0,131.0,1,1,False
+fault,28.0,28.0,28.0,1,1,False
+fertility,10.0,10.0,10.0,1,1,False
+flag,28.0,28.0,28.0,1,1,False
+flare-f,11.0,11.0,11.0,1,1,False
+g7,10.0,10.0,10.0,1,1,False
+gender,18.0,18.0,18.0,1,1,False
 artificial 0.5 2.5,25.0,25.0,25.0,1,1,False
 artificial 0.5 5,25.0,25.0,25.0,1,1,False
-wdbc,31.0,31.0,31.0,1,1,False
-wine quality-white,11.0,11.0,11.0,1,1,False
-wine-quality-red,11.0,11.0,11.0,1,1,False
-wine-quality-white,11.0,11.0,11.0,1,1,False
-wine-red,11.0,11.0,11.0,1,1,False
-winequality,11.0,11.0,11.0,1,1,False
-winequality-red-4,11.0,11.0,11.0,1,1,False
+artificial 1 5,25.0,25.0,25.0,1,1,False
+artificial c x c grid domain,2.0,2.0,2.0,1,1,False
 artificial family a,5.0,5.0,5.0,1,1,False
 artificial family b,5.0,5.0,5.0,1,1,False
 australia,15.0,15.0,15.0,1,1,False
 auto5,7.0,7.0,7.0,1,1,False
-avila 0vs5,10.0,10.0,10.0,1,1,False
-avila 0vs6,10.0,10.0,10.0,1,1,False
-yeast02579vs368,9.0,9.0,9.0,1,1,False
-card’graphy,23.0,23.0,23.0,1,1,False
-anneal,59.0,59.0,59.0,1,1,False
-abalone 19,8.0,8.0,8.0,1,1,False
-yeast-0-2-5-7-9 vs 3-6-8,8.0,8.0,8.0,1,1,False
-abalone-17vs78910,8.0,8.0,8.0,1,1,False
-50words,270.0,270.0,270.0,1,1,False
-winequality-white-3 vs 7,11.0,11.0,11.0,1,1,False
-acl,6.0,6.0,6.0,1,1,False
-adiac,176.0,176.0,176.0,1,1,False
 adult,14.0,14.0,14.0,1,1,False
 ai4i2020,5.0,5.0,5.0,1,1,False
 aids 15000,23.0,23.0,23.0,1,1,False
 aids 5000,23.0,23.0,23.0,1,1,False
-aids 50000,23.0,23.0,23.0,1,1,False
-yeast-1-2-8-9,8.0,8.0,8.0,1,1,False
-yeast-0-3-5-9 vs 7-8,8.0,8.0,8.0,1,1,False
-yeast-0-3-5-9,8.0,8.0,8.0,1,1,False
-yeast2vs8,9.0,9.0,9.0,1,1,False
-yoga,426.0,426.0,426.0,1,1,False
-artificial 1 5,25.0,25.0,25.0,1,1,False
-yeast-0-2-5-6,8.0,8.0,8.0,1,1,False
-winequalityred3vs5,11.0,11.0,11.0,1,1,False
-winequalityred4,11.0,11.0,11.0,1,1,False
-winequalitywhite9vs4,11.0,11.0,11.0,1,1,False
+anneal,59.0,59.0,59.0,1,1,False
+approval,7.0,7.0,7.0,1,1,False
+artificial 0.3 5,25.0,25.0,25.0,1,1,False
+artificial 0.5 10,25.0,25.0,25.0,1,1,False
 wisconsin5,32.0,32.0,32.0,1,1,False
 wpbc,34.0,34.0,34.0,1,1,False
 xalan-2.4,20.0,20.0,20.0,1,1,False
-xalan-2.7,20.0,20.0,20.0,1,1,False
-xerces-1.2,20.0,20.0,20.0,1,1,False
-yeast-1-2-8-9 vs 7,8.0,8.0,8.0,1,1,False
-yeast0256vs3789,9.0,9.0,9.0,1,1,False
+yoga,426.0,426.0,426.0,1,1,False
+absenteeism at work,11.0,11.0,11.0,1,1,False
+academic,37.0,37.0,37.0,1,1,False
+acl,6.0,6.0,6.0,1,1,False
+adiac,176.0,176.0,176.0,1,1,False

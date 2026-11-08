@@ -104,7 +104,7 @@ _want = dict(plain=(_PT["primary"]["rows"], _PT["primary"]["papers"], _PT["prima
 _have = {k: (ELIG[k]["rows"], ELIG[k]["papers"], ELIG[k]["up"], ELIG[k]["dn"], ELIG[k]["eq"]) for k in ("plain", "wrapper")}
 if _have != _want or ELIG["excluded"]["rows"] != _PT["excluded"]["rows"]:
     sys.exit(f"STOP: Atlas eligibility {_have} / excluded {ELIG['excluded']['rows']} differs from reconcile_counts.json {_want} / {_PT['excluded']['rows']}")
-if _RCJ["sources"]["outcomes"]["sha256"] != RC.sha(RC.SRC["outcomes"]):
+if not RC.sha_ok(RC.SRC["outcomes"], _RCJ["sources"]["outcomes"]["sha256"]):
     sys.exit("STOP: verified_outcomes.csv changed since reconcile_counts.json was written; rerun build/reconcile_counts.py")
 ELIG["reconciled_with"] = {"file": "out/reconcile_counts.json", "outcomes_sha256": _RCJ["sources"]["outcomes"]["sha256"],
                            "checks_ok": sum(v["ok"] for v in _RCJ["checks"].values()), "checks_total": len(_RCJ["checks"])}
@@ -157,7 +157,7 @@ DASH = dict(
 _DRS = json.load(open(p("out/dataset_records_summary.json"), encoding="utf-8"))
 if not all(v["ok"] for v in _DRS["checks"].values()):
     sys.exit("STOP: dataset_records_summary.json has failing checks; run python3 build/dataset_records.py")
-if _DRS["sources"]["datasets"]["sha256"] != RC.sha(RC.SRC["datasets"]):
+if not RC.sha_ok(RC.SRC["datasets"], _DRS["sources"]["datasets"]["sha256"]):
     sys.exit("STOP: verified_datasets.csv changed since dataset_records.py ran; rerun it first")
 _DR = rcsv("out/dataset_records.csv")
 if len(_DR) != DASH["entries"]["total"] or _DRS["counts"]["normalized_names"] != DASH["names"]["distinct"] \
@@ -196,7 +196,7 @@ DX["nsa"] = {r["record_id"]: [r["assessment"], r["assessment_basis"], r["categor
 # C: หลักฐานความยาก (build/difficulty_evidence.py ตรวจ quote กับ PDF แล้ว)
 _DF = json.load(open(p("out/difficulty_evidence.json"), encoding="utf-8"))
 for _f, _h in _DF["sources"].items():
-    if RC.sha(p(_f)) != _h:
+    if not RC.sha_ok(p(_f), _h):
         sys.exit(f"STOP: {_f} changed since difficulty_evidence.py ran; rerun python3 build/difficulty_evidence.py")
 if any(x not in _RID for it in _DF["items"] for x in it["record_ids"]):
     sys.exit("STOP: difficulty_evidence.json names a record_id that is not in dataset_records.csv")
@@ -321,6 +321,34 @@ data["mz"] = dict(rows=[{k: r[k] for k in _keep} for r in _MZ_ROWS], summary=_MZ
                   sources=dict(rows="difficulty/difficulty_profile_final.csv", summary="difficulty/profile_final_summary.json",
                                proj="difficulty/projections.json", dim="difficulty/dimension_profile.json",
                                scripts="difficulty/measure.py, group_cited.py, profile_final.py, projection.py, dimension_profile.py"))
+# 8 พ.ย. 2026: ตรวจรอบสองกับ mirror เพิ่ม (difficulty/verify_ext.py) + ชื่อที่ยังวัดไม่ได้ (build/name_level_extras.py)
+_VX = json.load(open(p("difficulty/verify_ext_summary.json"), encoding="utf-8"))
+_NX = json.load(open(p("out/name_level_extras.json"), encoding="utf-8"))
+_DL = rcsv("out/names_to_download.csv")
+if _VX["verifiable_total"]["entries"] != sum(1 for r in rcsv("difficulty/verifiability_entries.csv") if r["verif"].startswith("V-")):
+    sys.exit("STOP: verify_ext_summary.json disagrees with verifiability_entries.csv (rerun difficulty/verify_ext.py)")
+if len(_DL) != _NX["not_measured"]["names_to_download"]["names"]:
+    sys.exit("STOP: out/names_to_download.csv disagrees with out/name_level_extras.json (rerun build/name_level_extras.py)")
+data["mz"]["verify"] = dict(total=_VX["verifiable_total"], new=_VX["newly_verifiable"], status=_VX["status_now"], status28=_VX["status_28oct"],
+                            notm=_NX["not_measured"], dl=[[r["normalized_name"], r["name_type"], r["source"], int(r["n_papers"]), int(r["entries"]),
+                                                          r["papers"], r["printed_n"], r["printed_features"], r["sources_as_reported"]] for r in _DL],
+                            src="difficulty/verify_ext_summary.json, out/name_level_extras.json, out/names_to_download.csv")
+# 8 พ.ย. 2026: synthetic เผยแพร่ไหม (build/synthetic_availability.py, รันบนเครื่องที่มี paper/)
+_SY = json.load(open(p("out/synthetic_availability.json"), encoding="utf-8"))
+if sum(v["entries"] for v in _SY["part_A_by_group"].values()) != DASH["entries"]["by_cat"]["synthetic"]:
+    sys.exit("STOP: synthetic_availability.json entries differ from the synthetic entries in dataset_records (rerun build/synthetic_availability.py)")
+data["syn"] = dict(_SY, source="out/synthetic_availability.json (build/synthetic_availability.py; scan: out/synthetic_scan.json)")
+# 8 พ.ย. 2026: Toon ขอให้ Atlas มีข้อมูล handoff ทั้งหมด -> ฝัง handoff.md (แปลงด้วย build/md2html.py)
+import md2html
+_HO_MD = open(p("handoff.md"), encoding="utf-8").read()
+_HO_HTML, _HO_TOC = md2html.convert(_HO_MD)
+data["handoff"] = dict(html=_HO_HTML, toc=_HO_TOC, lines=_HO_MD.count("\n") + 1,
+                       conclusions_html=md2html.convert(open(p("CONCLUSIONS.md"), encoding="utf-8").read())[0],
+                       status=dict(corpus=DASH["entries"]["by_cat"], names=DASH["names"]["distinct"], verify=_VX["verifiable_total"],
+                                   tasks=dict(binary=_MZ_SUM["tasks_binary_binarised"]["n"], ovr=_MZ_SUM["tasks_ovr"]["n"],
+                                              entries=_MZ_SUM["entries_binary_binarised"]["n"], papers=_MZ_SUM["entries_binary_binarised_papers"]),
+                                   syn=_SY["part_A_by_group"], synB=_SY["part_B"]),
+                       source="handoff.md, CONCLUSIONS.md")
 # ผลตรวจการกระจุกตามตระกูล (28 ต.ค. 2026): build/family_dependence.py -> out/family_dependence.json
 _FD = json.load(open(p("out/family_dependence.json"), encoding="utf-8"))
 if _FD["rows"] != ELIG["plain"]["rows"]:

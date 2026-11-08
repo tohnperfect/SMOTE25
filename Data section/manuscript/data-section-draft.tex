@@ -16,6 +16,8 @@
 % (72 papers re-read 18 Oct with table and page refs), out/data_handling_summary.json
 % (selection-rationale codes, 6 Oct records), handoff.md.
 % No em-dash anywhere. Placement in main.tex undecided (new file vs 07).
+% Revised 8 Nov 2026 (Claude): JAIR layout check -- header row + \midrule added to tab:data-handling and
+% tab:granularity (JAIR template: midrule separates header from data rows); difficulty subsection rerun.
 % Revised 28 Oct 2026 (Claude, Toon asked): new subsection "How Difficult Are the
 % Datasets That Can Be Checked?" (sec:data-difficulty, tab:data-difficulty,
 % fig:data-difficulty) from Data section/difficulty/; new keys napierala2016types,
@@ -318,6 +320,8 @@ Top: paper level, 73 papers with an evaluation on data. Bottom: dataset entries.
 \label{tab:data-handling}
 \begin{tabular}{lr}
 \toprule
+Item & Count\\
+\midrule
 \multicolumn{2}{l}{\emph{Reason given for the choice of datasets (papers)}}\\
 \quad Own reason (diversity, difficulty, application, \ldots) & 48\\
 \quad Cites prior work & 14\\
@@ -431,29 +435,41 @@ paper in out/full\_summary.json.}
 % ---------------------------------------------------------------------
 \subsection{How Difficult Are the Datasets That Can Be Checked?}
 \label{sec:data-difficulty}
+% Revised 8 Nov 2026 (Claude; Toon asked to measure every dataset that can be obtained): second
+% verification pass over extended mirrors (difficulty/verify_ext.py), 643 -> 864 verifiable entries,
+% 113 -> 151 two-class tasks. Numbers: difficulty/profile_final_summary.json, verify_ext_summary.json.
 The papers rarely describe how hard their data are beyond the imbalance ratio.
 A numerical overlap measure is printed for 36 of the 1,653 named entries, all in
 two papers, and noise or borderline examples are described for 5; three of 72
 papers report such a property of their original data
-(Section~\ref{sec:data-landscape}). We therefore measured difficulty ourselves on
-the entries whose data can be identified. An entry counts as verifiable when its
-name matches a public file and the printed number of instances (and of minority
-examples, when printed) equals that file's, or when the paper prints no size but
-the name matches a KEEL file and the authors did not modify the data. This holds
-for 643 entries from 61 papers, which use 131 files. Entries modified by their
-authors without printed characteristics (28) are left out, because the data
-actually used cannot be reconstructed.
+(Section~\ref{sec:data-landscape}). The literature on imbalanced learning, however,
+attributes much of the difficulty of these problems to characteristics of the data other
+than the imbalance ratio: overlap between the classes, noisy and borderline examples,
+small disjuncts and a shortage of minority examples
+\pcite{jo2004smalldisjuncts,lopez2013insight,napierala2016types}.
+We therefore measured these characteristics ourselves on the entries whose data can be
+identified. An entry counts as verifiable when its name matches a public file and the
+printed number of instances (and of minority examples, when printed) equals that file's,
+or when the paper prints no size, the name matches a public file and the authors did not
+modify the data. The files come from KEEL \pcite{alcalafdez2011keel}, the UCI repository
+\pcite{kellyucirepository} (through the UCI++ collection \pcite{garciaucipp}, the UCI files
+distributed with Weka and single-file copies), PMLB \pcite{romano2022pmlb}, imbalanced-learn
+\pcite{lemaitre2017imbalanced} and the PROMISE defect data \pcite{jureczko2010towards}. A name is
+looked up under the other published names of the same data set (liver disorders is
+\texttt{bupa}, contraceptive method choice is \texttt{cmc}), but only the printed size decides
+whether a file is accepted. This holds for 864 entries from 65 papers, which use 172 files.
+Entries modified by their authors without printed characteristics (35) are left out, because
+the data actually used cannot be reconstructed.
 
-Each two-class file, and each binarisation that a paper describes precisely enough
-to reproduce, defines one task: 113 tasks, used by 512 entries in 41 papers.
-One-vs-rest tasks that we built from multiclass files (171) are not tasks any paper
+Each two-class file, each binarisation that a paper describes precisely enough to reproduce,
+and each imbalanced-learn task defines one task: 151 tasks, used by 594 entries in 45 papers.
+One-vs-rest tasks that we built from multiclass files (305) are not tasks any paper
 evaluated and are reported apart. Every minority example is labelled safe,
 borderline, rare or outlier from the classes of its five nearest neighbours
 \pcite{napierala2016types}, with distances measured by HVDM
-\pcite{wilson1997improved}.
-The noise index of a task is the share of minority examples that are borderline or
-outliers; we report it as a continuous value because we found no published
-threshold for it. Three flags use published thresholds: small disjuncts when at
+\pcite{wilson1997improved}. The noise index of a task is the share of minority examples
+that are borderline or outliers; we report it as a continuous value because we found no
+published threshold for it. Three flags use published thresholds: small disjuncts when at
 least 20\% of minority examples are rare and outliers when more than 20\% are
 outliers \pcite{napierala2016types}, and small sample when there are fewer than ten
 minority examples per feature \pcite{jain2000statistical}. The imbalance ratio
@@ -471,34 +487,33 @@ entries count how often the corpus uses a task.}
  & \multicolumn{2}{c}{Binary and binarised} & One-vs-rest\\
  & Tasks & Entries & Tasks\\
 \midrule
-All & 113 & 512 & 171\\
-Small disjuncts (rare $\geq$ 20\%) & 11 (10\%) & 39 (8\%) & 7 (4\%)\\
-Outliers ($>$ 20\%) & 24 (21\%) & 120 (23\%) & 14 (8\%)\\
-Small sample ($N_{\min}/d < 10$) & 79 (70\%) & 345 (67\%) & 70 (41\%)\\
-None of the three & 34 (30\%) & 167 (33\%) & 97 (57\%)\\
-Imbalance ratio $>$ 9 & 68 & 284 & 90\\
-Noise index, median [P25, P75] & \multicolumn{2}{c}{0.40 [0.25, 0.72]} & 0.16 [0.05, 0.45]\\
+All & 151 & 594 & 305\\
+Small disjuncts (rare $\geq$ 20\%) & 15 (10\%) & 45 (8\%) & 25 (8\%)\\
+Outliers ($>$ 20\%) & 38 (25\%) & 145 (24\%) & 40 (13\%)\\
+Small sample ($N_{\min}/d < 10$) & 103 (68\%) & 389 (66\%) & 148 (49\%)\\
+None of the three & 45 (30\%) & 197 (33\%) & 148 (49\%)\\
+Imbalance ratio $>$ 9 & 87 & 319 & 148\\
+Noise index, median [P25, P75] & \multicolumn{2}{c}{0.44 [0.25, 0.74]} & 0.30 [0.07, 0.63]\\
 \bottomrule
 \end{tabular}
 \end{table}
 
 Table~\ref{tab:data-difficulty} shows that the most common property of the binary
-tasks is a small sample: 79 of 113 have fewer than ten minority examples per
-feature. The flags combine in only four profiles: small sample alone (55 tasks),
-small sample with outliers (13), all three flags (11) and none (34); every task
-with small disjuncts also carries the other two flags. The noise index separates
-tasks that the flags do not (Figure~\ref{fig:data-difficulty}a): among the 34
-tasks without a flag it ranges from 0 to 0.84, with ten tasks at 0.5 or above
-(haberman 0.84, bupa 0.79, vehicle1 0.74, yeast1 0.72 among them) and eight below
-0.1. Its median is 0.37, 0.40, 0.31 and 0.50 in the imbalance-ratio bands up to 1.5
-(4 tasks), 1.5 to 3 (22), 3 to 9 (19) and above 9 (68), and its rank correlation
-with the imbalance ratio is 0.15.
+tasks is a small sample: 103 of 151 have fewer than ten minority examples per
+feature. The flags combine in six profiles: small sample alone (67 tasks), small sample
+with outliers (21), all three flags (14), outliers alone (3), small disjuncts with a small
+sample (1) and none (45). The noise index separates tasks that the flags do not
+(Figure~\ref{fig:data-difficulty}a): among the 45 tasks without a flag it ranges from 0 to
+0.84, with 13 tasks at 0.5 or above (haberman 0.84, the numeric German credit data 0.81,
+contraceptive 0.79 and bupa 0.79 among them) and 11 below 0.1. Its median is 0.37, 0.43,
+0.33 and 0.55 in the imbalance-ratio bands up to 1.5 (4 tasks), 1.5 to 3 (31), 3 to 9 (29)
+and above 9 (87), and its rank correlation with the imbalance ratio is 0.18.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{figures/data-difficulty}
-\Description{Left: dot plot of the noise index (0 to 1) for 113 binary tasks in four rows by flag profile, with medians 0.30 (no flag), 0.31 (small sample), 0.84 (small sample and outliers) and 0.77 (all three flags). Right: bar chart of dataset entries by printed number of features; most entries have 6 to 10 features and none above 100 features could be verified.}
-\caption{(a) Noise index of the 113 verifiable binary and binarised tasks, one row
+\Description{Left: dot plot of the noise index (0 to 1) for 151 binary tasks in six rows by flag profile, with medians 0.29 (no flag, 45 tasks), 0.32 (small sample, 67), 0.65 (outliers, 3), 0.85 (small sample and outliers, 21), 0.57 (small disjuncts and small sample, 1) and 0.76 (all three flags, 14). Right: bar chart of dataset entries by printed number of features; most entries have 6 to 10 features and only two entries above 100 features could be verified.}
+\caption{(a) Noise index of the 151 verifiable binary and binarised tasks, one row
 per flag profile; marker area grows with the number of entries that use the task,
 and the vertical bar marks the median. (b) Number of features printed for the
 1,255 entries that report it, with the entries that could be verified and measured.
@@ -510,8 +525,8 @@ The measurable part of the corpus is also low-dimensional
 (Figure~\ref{fig:data-difficulty}b). The printed number of features has a median
 of 9 and half of the entries lie between 4 and 10 features. The 59 entries with more
 than 100 features come from 54 names in 18 papers, no name is used by more than two
-papers, and none of them could be verified; the verified tasks have at most 85
-features (median 9).
+papers, and only two of them (both musk) could be verified; the verified tasks have at
+most 167 features (median 9).
 
 %
 % Claude 29 Oct 2026 (Toon delegated all open decisions): adopted (was \claudedraft)
@@ -522,80 +537,98 @@ necessarily easy. Conclusions drawn from the common benchmarks speak mainly for
 small, low-dimensional tables with few minority examples per feature.
 
 % Claude 29 Oct 2026 (Toon delegated all open decisions): replaces the [Toon] slot on per-paper profiles
-Most papers mix these profiles. Of the 29 papers with at least three verifiable tasks,
-26 include both flagged and flag-free tasks, two (SMOTE~\pcite{chawla2002smote} and
+Most papers mix these profiles. Of the 35 papers with at least three verifiable tasks,
+32 include both flagged and flag-free tasks, two (COG-OS~\pcite{wu2007cogos} and
 SMOTE-ENN) use only flag-free tasks and one (MLOS) only flagged ones.
 Section~\ref{sec:data-wins} relates the measured profiles to the reported wins.
 
 \paragraph{A reference collection.} For readers who need a small benchmark that covers
-the measured range, Table~\ref{tab:data-reference} selects 27 of the 113 tasks by a
+the measured range, Table~\ref{tab:data-reference} selects 33 of the 151 tasks by a
 fixed rule with no threshold of our own. Each combination of flag profile and
-imbalance-ratio band that occurs (ten combinations) contributes the task that the
+imbalance-ratio band that occurs (13 combinations) contributes the task that the
 corpus uses most, for comparability with earlier results, and the tasks with the
 lowest and the highest noise index, for spread. The collection spans noise indices from
-0 to 1, imbalance ratios from 1.1 to 68 and sizes from 150 to 48,842 instances, and 17
+0 to 1, imbalance ratios from 1.1 to 46.5 and sizes from 100 to 11,183 instances, and 15
 of its files match the official KEEL table. Its tasks are not independent of one
-another: it holds five yeast, three ecoli and three glass splits, which should be
-grouped by source when results are tested.
+another: it holds five yeast splits and two splits each of ecoli, glass and cleveland,
+which should be grouped by source when results are tested.
 
 % Table generated by difficulty/reference_collection.py (do not edit by hand); in data-section-draft.tex since 29 Oct 2026.
 \begin{table}[t]\centering\small
 \caption{A Reference Collection of Verifiable Two-Class Tasks. One row per selected task; Role: core = most used task in its cell, low/high = lowest/highest noise index in its cell. Profile: S small sample, O outliers, D small disjuncts; Noise: noise index; Entries: corpus entries that use the task.}
 \label{tab:data-reference}
-\begin{tabular}{@{}llllrrrrrr@{}}
+\begin{tabular}{@{}p{0.27\linewidth}lllrrrrrr@{}}
 \toprule
 Task & Role & Profile & IR band & $N$ & $N_{\min}$ & $d$ & IR & Noise & Entries\\
 \midrule
-\texttt{australian} & low & none & $\leq$1.5 & 690 & 307 & 14 & 1.2 & 0.29 & 1\\
-\texttt{bupa} & core+high & none & $\leq$1.5 & 345 & 145 & 6 & 1.4 & 0.79 & 2\\
-\texttt{iris0} & low & none & 1.5--3 & 150 & 50 & 4 & 2.0 & 0.02 & 2\\
-\texttt{haberman} & core+high & none & 1.5--3 & 306 & 81 & 3 & 2.8 & 0.84 & 21\\
-\texttt{segment0} & low & none & 3--9 & 2,308 & 329 & 19 & 6.0 & 0.02 & 7\\
-\texttt{yeast3} & core & none & 3--9 & 1,484 & 163 & 8 & 8.1 & 0.40 & 13\\
-\texttt{adult} & high & none & 3--9 & 48,842 & 11,687 & 14 & 3.2 & 0.54 & 2\\
-\texttt{kr-vs-k-one\_vs\_fifteen} & low & none & $>$9 & 2,244 & 78 & 6 & 27.8 & 0.00 & 1\\
-\texttt{shuttle-c0-vs-c4} & core & none & $>$9 & 1,829 & 123 & 9 & 13.9 & 0.01 & 7\\
-\texttt{yeast-0-2-5-6\_vs\_3-7-8-9} & high & none & $>$9 & 1,004 & 99 & 8 & 9.1 & 0.57 & 2\\
-\texttt{heart} & core+low & S & $\leq$1.5 & 270 & 120 & 13 & 1.2 & 0.33 & 4\\
-\texttt{sonar} & high & S & $\leq$1.5 & 208 & 97 & 60 & 1.1 & 0.40 & 1\\
-\texttt{wine [minority: 1]} & low & S & 1.5--3 & 178 & 59 & 13 & 2.0 & 0.00 & 1\\
-\texttt{glass0} & core & S & 1.5--3 & 214 & 70 & 9 & 2.1 & 0.44 & 7\\
-\texttt{glass1} & high & S & 1.5--3 & 214 & 76 & 9 & 1.8 & 0.47 & 7\\
-\texttt{ecoli2} & low & S & 3--9 & 336 & 52 & 7 & 5.5 & 0.23 & 6\\
-\texttt{ecoli3} & core & S & 3--9 & 336 & 35 & 7 & 8.6 & 0.69 & 10\\
-\texttt{hepatitis (PMLB, N=155)} & high & S & 3--9 & 155 & 32 & 19 & 3.8 & 0.75 & 2\\
-\texttt{dermatology-6} & low & S & $>$9 & 358 & 20 & 34 & 16.9 & 0.00 & 2\\
-\texttt{yeast5} & core & S & $>$9 & 1,484 & 44 & 8 & 32.7 & 0.66 & 13\\
-\texttt{cleveland-0\_vs\_4} & high & S & $>$9 & 177 & 13 & 13 & 12.6 & 1.00 & 4\\
-\texttt{ecoli-0-1-3-7\_vs\_2-6} & low & S+O & $>$9 & 281 & 7 & 7 & 39.1 & 0.29 & 7\\
-\texttt{yeast4} & core & S+O & $>$9 & 1,484 & 51 & 8 & 28.1 & 0.86 & 15\\
-\texttt{winequality-red-3\_vs\_5} & high & S+O & $>$9 & 691 & 10 & 11 & 68.1 & 1.00 & 1\\
-\texttt{yeast-1-4-5-8\_vs\_7} & low & D+S+O & $>$9 & 693 & 30 & 8 & 22.1 & 0.60 & 7\\
-\texttt{glass2} & core & D+S+O & $>$9 & 214 & 17 & 9 & 11.6 & 0.65 & 9\\
-\texttt{winequality-red-8\_vs\_6-7} & high & D+S+O & $>$9 & 855 & 18 & 11 & 46.5 & 0.78 & 1\\
+\raggedright\texttt{australian} & low & none & $\leq$1.5 & 690 & 307 & 14 & 1.2 & 0.29 & 1\\
+\raggedright\texttt{bupa} & core+high & none & $\leq$1.5 & 345 & 145 & 6 & 1.4 & 0.79 & 6\\
+\raggedright\texttt{iris0} & low & none & 1.5--3 & 150 & 50 & 4 & 2.0 & 0.02 & 2\\
+\raggedright\texttt{pima} & core & none & 1.5--3 & 768 & 268 & 8 & 1.9 & 0.65 & 24\\
+\raggedright\texttt{haberman} & high & none & 1.5--3 & 306 & 81 & 3 & 2.8 & 0.84 & 22\\
+\raggedright\texttt{segment0} & low & none & 3--9 & 2,308 & 329 & 19 & 6.0 & 0.02 & 7\\
+\raggedright\texttt{yeast3} & core & none & 3--9 & 1,484 & 163 & 8 & 8.1 & 0.40 & 13\\
+\raggedright\texttt{contraceptive [minority: 2]} & high & none & 3--9 & 1,473 & 333 & 9 & 3.4 & 0.79 & 1\\
+\raggedright\texttt{kr-\allowbreak{}vs-\allowbreak{}k-\allowbreak{}one\_\allowbreak{}vs\_\allowbreak{}fifteen} & low & none & $>$9 & 2,244 & 78 & 6 & 27.8 & 0.00 & 1\\
+\raggedright\texttt{shuttle-\allowbreak{}c0-\allowbreak{}vs-\allowbreak{}c4} & core & none & $>$9 & 1,829 & 123 & 9 & 13.9 & 0.01 & 7\\
+\raggedright\texttt{yeast-\allowbreak{}0-\allowbreak{}2-\allowbreak{}5-\allowbreak{}6\_\allowbreak{}vs\_\allowbreak{}3-\allowbreak{}7-\allowbreak{}8-\allowbreak{}9} & high & none & $>$9 & 1,004 & 99 & 8 & 9.1 & 0.57 & 4\\
+\raggedright\texttt{heart} & core+low & S & $\leq$1.5 & 270 & 120 & 13 & 1.2 & 0.33 & 4\\
+\raggedright\texttt{sonar} & high & S & $\leq$1.5 & 208 & 97 & 60 & 1.1 & 0.40 & 1\\
+\raggedright\texttt{wine [minority: 1]} & low & S & 1.5--3 & 178 & 59 & 13 & 2.0 & 0.00 & 1\\
+\raggedright\texttt{glass0} & core & S & 1.5--3 & 214 & 70 & 9 & 2.1 & 0.44 & 7\\
+\raggedright\texttt{planning-\allowbreak{}relax} & high & S & 1.5--3 & 182 & 52 & 12 & 2.5 & 0.85 & 1\\
+\raggedright\texttt{musk} & low & S & 3--9 & 6,598 & 1,017 & 167 & 5.5 & 0.01 & 2\\
+\raggedright\texttt{ecoli3} & core & S & 3--9 & 336 & 35 & 7 & 8.6 & 0.69 & 10\\
+\raggedright\texttt{hepatitis (PMLB, N=155)} & high & S & 3--9 & 155 & 32 & 19 & 3.8 & 0.75 & 2\\
+\raggedright\texttt{dermatology-\allowbreak{}6} & low & S & $>$9 & 358 & 20 & 34 & 16.9 & 0.00 & 2\\
+\raggedright\texttt{yeast5} & core & S & $>$9 & 1,484 & 44 & 8 & 32.7 & 0.66 & 13\\
+\raggedright\texttt{cleveland-\allowbreak{}0\_\allowbreak{}vs\_\allowbreak{}4} & high & S & $>$9 & 177 & 13 & 13 & 12.6 & 1.00 & 4\\
+\raggedright\texttt{mammography} & core+low & O & $>$9 & 11,183 & 260 & 6 & 42.0 & 0.54 & 5\\
+\raggedright\texttt{balance [minority: B]} & high & O & $>$9 & 625 & 49 & 4 & 11.8 & 0.88 & 2\\
+\raggedright\texttt{ecoli-\allowbreak{}0-\allowbreak{}1-\allowbreak{}3-\allowbreak{}7\_\allowbreak{}vs\_\allowbreak{}2-\allowbreak{}6} & low & S+O & $>$9 & 281 & 7 & 7 & 39.1 & 0.29 & 7\\
+\raggedright\texttt{yeast4} & core & S+O & $>$9 & 1,484 & 51 & 8 & 28.1 & 0.86 & 15\\
+\raggedright\texttt{ivy-\allowbreak{}1.4} & high & S+O & $>$9 & 241 & 16 & 20 & 14.1 & 1.00 & 1\\
+\raggedright\texttt{breast.cancer} & core+low+high & D+S & 1.5--3 & 277 & 81 & 9 & 2.4 & 0.57 & 2\\
+\raggedright\texttt{heart-\allowbreak{}disease-\allowbreak{}processed-\allowbreak{}cleveland [minority: 4]} & low & D+S+O & 3--9 & 303 & 35 & 13 & 7.7 & 0.71 & 1\\
+\raggedright\texttt{fertility-\allowbreak{}diagnosis} & core+high & D+S+O & 3--9 & 100 & 12 & 9 & 7.3 & 0.75 & 1\\
+\raggedright\texttt{yeast-\allowbreak{}1-\allowbreak{}4-\allowbreak{}5-\allowbreak{}8\_\allowbreak{}vs\_\allowbreak{}7} & low & D+S+O & $>$9 & 693 & 30 & 8 & 22.1 & 0.60 & 7\\
+\raggedright\texttt{glass2} & core & D+S+O & $>$9 & 214 & 17 & 9 & 11.6 & 0.65 & 9\\
+\raggedright\texttt{winequality-\allowbreak{}red-\allowbreak{}8\_\allowbreak{}vs\_\allowbreak{}6-\allowbreak{}7} & high & D+S+O & $>$9 & 855 & 18 & 11 & 46.5 & 0.78 & 1\\
 \bottomrule
 \end{tabular}
 \end{table}
 
 
-\paragraph{Limits of the measurement.} The files come from mirrors of the
-repositories (the keel-ds and imbalanced-databases packages and PMLB); for the
-72 KEEL files in the official KEEL table, instance and feature counts match in
-every case, and the remaining files have not yet been compared with the
-repositories. PMLB stores nominal attributes as integer codes, so they enter HVDM
-as numeric attributes. The labels are computed in the full feature space, not in any two-dimensional
-projection.
+\paragraph{Limits of the measurement.} The files are copies of the repositories, not
+downloads from the repositories themselves, whose web sites could not be reached from our
+machines: the keel-ds and imbalanced-databases packages, two independent GitHub copies of
+the KEEL standard collection, PMLB, UCI++, the UCI files distributed with Weka, a copy of
+the tera-PROMISE defect data and single UCI files from a public data-set mirror. For the 72
+KEEL files in the official KEEL table, instance and feature counts match in every case, and
+the two copies of the KEEL standard collection agree in instances and features on all 67
+files they share; the other files have not been compared with the repositories. When
+several copies hold the same data set, each entry added in the second pass is mapped to one
+copy, KEEL first and PMLB last, because PMLB stores nominal attributes as integer codes, which then enter HVDM
+as numeric attributes. Rows with missing values are dropped before the neighbours are
+found; the largest losses are 1,129 of the 3,772 rows of the sick thyroid data and 75 of the
+155 rows of hepatitis. The labels are computed in the full feature space, not in any
+two-dimensional projection. Of the 771 dataset names, 309 have no file in these copies
+(200 of them name a public source such as UCI or KEEL and could be measured once the files
+are obtained), 109 are synthetic and 51 have a file whose size differs from every printed one.
 
-\evidence{difficulty/verifiability\_entries.csv (643 verifiable entries, 61 papers,
-131 files); difficulty/measure.py (HVDM, $k=5$, Napierala types incl.\ the rule for
-rare examples) $\rightarrow$ difficulty\_measures.csv; group\_cited.py
+\evidence{difficulty/verify\_ext.py (8 Nov 2026: extended mirrors, name crosswalk, same
+size rule) $\rightarrow$ verifiability\_entries.csv (864 verifiable entries, 65 papers,
+172 files; 28 Oct snapshot: verifiability\_entries\_28oct.csv, 643 entries) and
+verify\_ext\_summary.json; mirrors\_ext.py $\rightarrow$ file\_catalog\_ext.csv;
+difficulty/measure.py (HVDM, $k=5$, Napierala types incl.\ the rule for
+rare examples; the 291 tasks of 28 Oct reproduce exactly) $\rightarrow$ difficulty\_measures.csv; group\_cited.py
 $\rightarrow$ difficulty\_groups\_cited.csv; profile\_final.py $\rightarrow$
 profile\_final\_summary.json (Table~\ref{tab:data-difficulty}); fig\_noise\_summary.json
 (rank correlation); dimension\_profile.json; keel\_official\_check.csv; per-paper profiles:
 paper\_profile\_mix.py $\rightarrow$ paper\_profile\_mix.json; reference collection:
 reference\_collection.py $\rightarrow$ reference\_collection.csv (rule and coverage in
 reference\_collection\_summary.json; independent check reference\_collection\_check.py); figure:
-difficulty/fig\_manuscript.py; reported properties: out/characteristics\_coverage.json
+difficulty/fig\_manuscript.py; names not measured: out/name\_level\_extras.json; reported properties: out/characteristics\_coverage.json
 (Analysis E).}
 
 % ---------------------------------------------------------------------
@@ -709,13 +742,13 @@ least two standard datasets and also report other data (482 of 600, 80.3\%). Fiv
 suggests that the standard dataset serves a different purpose from the rest.
 
 Measured difficulty says more about where the wins fall than the origin of the data.
-For the 72 verifiable two-class files (Section~\ref{sec:data-difficulty}) that appear
-in these comparisons (20 papers, 374 comparisons), the chance that the proposed method
-beats SMOTE rises with the noise index: the odds ratio per 0.1 of noise index is 1.15
-(95\% CI 1.04 to 1.26, $p = 0.005$) with paper-level clustering and 1.19 (1.04 to 1.35,
-$p = 0.01$) within papers, and 1.16 (0.98 to 1.36, $p = 0.08$) with one result per file
-and paper. The imbalance ratio shows no such relation (odds ratio 0.92 per doubling,
-$p = 0.61$), nor do the small-sample, outlier and small-disjunct flags taken one at a
+For the 89 verifiable two-class files (Section~\ref{sec:data-difficulty}) that appear
+in these comparisons (22 papers, 440 comparisons), the chance that the proposed method
+beats SMOTE rises with the noise index: the odds ratio per 0.1 of noise index is 1.13
+(95\% CI 1.01 to 1.26, $p = 0.03$) with paper-level clustering and 1.17 (1.04 to 1.33,
+$p = 0.01$) within papers, and 1.19 (1.02 to 1.39, $p = 0.03$) with one result per file
+and paper. The imbalance ratio shows no such relation (odds ratio 0.91 per doubling,
+$p = 0.48$), nor do the small-sample, outlier and small-disjunct flags taken one at a
 time. This analysis is exploratory: it covers the files that could be verified, which
 are mostly small and low-dimensional.
 
@@ -771,6 +804,8 @@ and Table~8 only; Tables 9--12, p.10--11.}
 \label{tab:granularity}
 \begin{tabular}{lr}
 \toprule
+How results are reported & Papers\\
+\midrule
 Per-dataset table & 47\\
 Per-dataset, partial (some datasets, metrics or classifiers only) & 8\\
 Plots only & 5\\
@@ -799,6 +834,22 @@ largest for synthetic sets (38 of 47) and for entries whose origin cannot be tol
 (44 of 166), and smallest for modified and repository-defined data (5 of 180 and 7 of
 189). Some of these datasets appear in other results tables of the same paper; what is
 missing for them is the pair of scores against SMOTE.
+
+% Claude 8 Nov 2026 (Toon asked whether the synthetic datasets are published): build/synthetic_availability.py
+% -> out/synthetic_availability.json; every quoted statement asserted against the PDF text.
+Synthetic data are the hardest to check, because a reader can only regenerate them. Of the
+19 papers whose evaluation includes author-generated data (120 dataset entries), six give a
+location for those data (62 entries; for example k-means SMOTE~\pcite{douzas2018kmeans} and
+G-SMOTE~\pcite{douzas2019gsmote}), two take them from cited work (5 entries), four link only the
+code of their method (9 entries), and seven say nothing about where the data can be obtained
+(44 entries, among them the 24 sets of SPIDER2). Ten more papers generate data for an illustration or a side experiment that we did not
+count as dataset entries; of these, only MC-MBRC~\pcite{ma2024mcmbrc} states that its data are
+available on request.
+
+\evidence{build/synthetic\_scan.py (all 72 PDFs) and build/synthetic\_availability.py
+$\rightarrow$ out/synthetic\_availability.json and .csv (part A: 19 papers, 120 entries by group;
+part B: 10 papers with illustrative or side-experiment data). Supersedes the keyword search of
+29 Oct (name\_level\_extras.py), which had missed the statements of k-means SMOTE and CTGAN.}
 
 Baseline results are also reused across papers. QC-SMOTE copies its baseline
 numbers from the VS-SMOTE paper~\pcite{qiu2025vssmote}, and every SMOTE-all value in MC-CCR's Table~6

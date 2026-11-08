@@ -14,7 +14,8 @@ K = pd.read_csv(H / "keel_official_check.csv").set_index("file")
 fails = []
 ok = lambda c, m: None if c else fails.append(m)
 
-ok(len(P) == 113, "universe != 113")
+import json
+ok(len(P) == json.load(open(H / "profile_final_summary.json"))["tasks_binary_binarised"]["n"], "universe != binary/binarised tasks in profile_final_summary.json")
 # 1 every selected row equals its source row
 for _, s in S.iterrows():
     src = P[(P.file == s.file) & (P.minority_label == str(s.minority_label)) & (P.source == s.source)]

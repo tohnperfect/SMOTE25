@@ -52,16 +52,18 @@
 - MWMOTE: Satimage กับ Statlandsat เป็นชุดเดียวกัน (ทั้งชุดกับไฟล์ train) นับเป็น 2 ชุด
 - แหล่ง: `out/reconcile_counts.json` (size_variation), `out/full_summary.json`, `mwmote-table5-audit.md`
 
-## 5. ความยากของข้อมูลที่ตรวจได้
+## 5. ความยากของข้อมูลที่ตรวจได้ (อัปเดต 8 พ.ย. 2026: ดึง mirror เพิ่ม)
 
-- ตรวจได้ 643 entry 61 paper 131 ไฟล์ → 113 task binary/binarise (512 entry, 41 paper) + OvR 171 task รายงานแยก
-- วิธี: Napierala & Stefanowski (k = 5, กติกา rare เต็ม) ระยะ HVDM · ธงมีอ้างอิง: small disjuncts (rare ≥ 20%), outliers > 20%, small sample (n_min/d < 10) · noise index รายงานเป็นค่าต่อเนื่อง
-- 113 task: small sample 79 (70%), outliers 24, small disjuncts 11 (ทุกตัวติดอีกสองธง), ไม่ติดธง 34 · noise มัธยฐาน 0.40 [0.25, 0.72]
-- IR บอกได้น้อยว่า minority อยู่ตรงไหน: rank correlation กับ noise 0.15; กลุ่มไม่ติดธงมี noise 0–0.84
-- มิติ: มัธยฐาน 9 feature; 59 entry ที่ > 100 feature ตรวจไม่ได้เลย; task ที่วัดได้ ≤ 85 feature → ข้อสรุปจาก benchmark ยอดนิยมพูดได้แค่ตารางเล็ก มิติต่ำ
-- ราย paper (≥ 3 task): ผสม 26, ไม่ติดธงล้วน 2 (SMOTE, SMOTE-ENN), ติดธงล้วน 1 (MLOS)
-- **ชุดอ้างอิง** 27 task (10 ช่อง profile × แถบ IR; ชุดที่ใช้บ่อยสุด + noise ต่ำสุด/สูงสุดในช่อง) ครอบ noise 0–1, IR 1.1–68, N 150–48,842; 17 ไฟล์ตรงกับตาราง KEEL ทางการ; yeast 5, ecoli 3, glass 3
-- แหล่ง: `difficulty/difficulty_profile_final.csv`, `profile_final_summary.json`, `paper_profile_mix.json`, `reference_collection.csv`, `dimension_profile.json`
+- ตรวจได้ **864 entry 65 paper 172 ไฟล์** (เดิม 28 ต.ค. 643/61/131) → **151 task binary/binarise** (594 entry, 45 paper) + OvR 305 task รายงานแยก
+- รอบ 8 พ.ย.: `difficulty/verify_ext.py` ใช้กติกาเดิม (ขนาดที่พิมพ์ต้องตรงไฟล์) กับ mirror ใหม่บน GitHub/PyPI (KEEL standard 2 ชุดอิสระ, PMLB ทั้งหมด, UCI++, Weka-UCI, PROMISE, NASA MDP, jbrownlee) + ตารางชื่อเรียกอื่นของ dataset เดียวกัน · entry ที่ตรวจได้เพิ่ม 221 (85 ชื่อ, 49 paper) · ค่าของ 291 task เดิมได้ซ้ำทุกคอลัมน์
+- วิธี: Napierala & Stefanowski (k = 5, กติกา rare เต็ม) ระยะ HVDM · ธงมีอ้างอิง: small disjuncts (rare ≥ 20%), outliers > 20%, small sample (n_min/d < 10) · noise index รายงานเป็นค่าต่อเนื่อง · กรอบ "ความยากจากลักษณะข้อมูล" อ้าง López et al. 2013, Jo & Japkowicz 2004
+- 151 task: small sample 103 (68%), outliers 38 (25%), small disjuncts 15 (10%), ไม่ติดธง 45 (30%) · โปรไฟล์ 6 แบบ (S 67, none 45, S+O 21, D+S+O 14, O 3, D+S 1) · noise มัธยฐาน 0.44 [0.25, 0.74]
+- IR บอกได้น้อยว่า minority อยู่ตรงไหน: rank correlation กับ noise 0.18; กลุ่มไม่ติดธงมี noise 0–0.84 (≥ 0.5 มี 13 task)
+- มิติ: มัธยฐาน 9 feature; 59 entry ที่ > 100 feature ตรวจได้แค่ 2 (musk); task ที่วัดได้ ≤ 167 feature
+- ราย paper (≥ 3 task, 35 paper): ผสม 32, ไม่ติดธงล้วน 2 (COG-OS, SMOTE-ENN), ติดธงล้วน 1 (MLOS)
+- **ชุดอ้างอิง** 33 task (13 ช่อง profile × แถบ IR) ครอบ noise 0–1, IR 1.1–46.5, N 100–11,183; 15 ไฟล์ตรงกับตาราง KEEL ทางการ; yeast 5, ecoli 2, glass 2, cleveland 2
+- ชื่อที่ยังวัดไม่ได้ 490/771: ไม่พบไฟล์ 309 (200 ชื่ออ้างแหล่งสาธารณะ UCI/KEEL/คลังอื่น วัดได้ถ้าได้ไฟล์), synthetic 109, ขนาดไม่ตรง 51, สร้าง task ซ้ำไม่ได้ 19, อื่น 2 (`out/name_level_extras.json`)
+- แหล่ง: `difficulty/verify_ext_summary.json`, `difficulty_profile_final.csv`, `profile_final_summary.json`, `paper_profile_mix.json`, `reference_collection.csv`, `dimension_profile.json`
 
 ## 6. ผลชนะ SMOTE มาจากไหน
 
@@ -94,9 +96,9 @@
 
 **H2 (ใส่ชุดมาตรฐานชุดเดียวเพื่อความน่าเชื่อถือ)** — เข้าเงื่อนไข 2 paper (MWMOTE 1+19, RUSBoost 1+14) ชนะบนชุดมาตรฐานทั้งคู่ บนข้อมูลดัดแปลง/บอกที่มาไม่ได้ชนะ 52/65 = 80.0% (ไม่รวม 2 dataset ของ MWMOTE ที่จับคู่ record ไม่ได้; ถ้ารวม 54/71) เท่ากับข้อมูลแบบเดียวกันใน 21 paper ที่มีชุดมาตรฐาน ≥ 2 และมีข้อมูลอื่นด้วย 482/600 = 80.3% → ไม่พบรูปแบบ ทดสอบไม่ได้เพราะน้อยเกินไป · 5 paper เทียบเฉพาะชุดมาตรฐาน, INOS เฉพาะชุดดัดแปลง
 
-**ความยากที่วัดได้กับผลชนะ (exploratory)** — 72 ไฟล์, 20 paper, 374 แถว
-- noise index +0.1 → odds ชนะ ×1.15 [1.04, 1.26] p 0.005; ภายใน paper ×1.19 p 0.01; หนึ่งผลต่อไฟล์ ×1.16 p 0.08
-- IR ไม่สัมพันธ์ (×0.92 ต่อ IR สองเท่า, p 0.61); ธง small sample / outlier / small disjuncts ไม่สัมพันธ์เมื่อดูทีละตัว
+**ความยากที่วัดได้กับผลชนะ (exploratory)** — 89 ไฟล์, 22 paper, 440 แถว (8 พ.ย.; เดิม 72/20/374)
+- noise index +0.1 → odds ชนะ ×1.13 [1.01, 1.26] p 0.03; ภายใน paper ×1.17 p 0.01; หนึ่งผลต่อไฟล์ ×1.19 p 0.03
+- IR ไม่สัมพันธ์ (×0.91 ต่อ IR สองเท่า, p 0.48); ธง small sample / outlier / small disjuncts ไม่สัมพันธ์เมื่อดูทีละตัว
 - อ่านว่า: ผลชนะ SMOTE ที่รายงานไว้มีแนวโน้มอยู่บนข้อมูลที่ minority เป็น borderline/outlier มาก ไม่ใช่บนข้อมูลที่ IR สูง
 
 **SMOTE แบบอื่น (รายงานแยก)** 12 paper 558 แถว: Static-SMOTE 79 (69/3/7) · OVO-SMOTE 148 (101/6/41) · SMOTE-all 239 (231/0/8) · ห่อกับ learner อื่น 92 (71/2/19) · **ตัดออก**: KNNOR (มีแต่ค่าเฉลี่ย), RBBoost (ค่าคนละตาราง ไม่เคยเทียบตรง), MC-MBRC (หัวคอลัมน์ไม่ระบุว่าคือ SMOTE)
@@ -127,8 +129,8 @@
 - ผลชนะเป็นการเทียบค่าที่ paper พิมพ์ ไม่ใช่การทดลองซ้ำ และสเกลเทียบข้าม paper ไม่ได้ (ใช้ paper เป็น cluster ทุกโมเดล)
 - หน่วย dataset × metric ให้น้ำหนัก paper ที่รายงานหลาย metric มากกว่า จึงรายงานหนึ่งผลต่อ dataset และกติกา A คู่กันเสมอ
 - metric อื่นนอกจาก metric ของกติกา A อ่านจาก PDF ครั้งเดียว (ไม่มีการลอกซ้ำอิสระ)
-- ความยากวัดจากไฟล์ mirror (keel-ds, imbalanced-databases, PMLB); 72 ไฟล์ KEEL ตรงกับตารางทางการ ที่เหลือยังไม่ได้เทียบเพราะเข้าเว็บ KEEL/UCI ไม่ได้
-- การเชื่อมความยากกับผลชนะเป็น exploratory (72 ไฟล์ 20 paper ไฟล์เล็ก มิติต่ำ)
+- ความยากวัดจากไฟล์ mirror (keel-ds, imbalanced-databases, PMLB + 8 พ.ย.: KEEL standard 2 ชุด, UCI++, Weka-UCI, PROMISE, jbrownlee); 72 ไฟล์ KEEL ตรงกับตารางทางการ, KEEL standard สองชุดตรงกัน 67/67 ไฟล์ ที่เหลือยังไม่ได้เทียบเพราะเข้าเว็บ KEEL/UCI ไม่ได้
+- การเชื่อมความยากกับผลชนะเป็น exploratory (89 ไฟล์ 22 paper ไฟล์เล็ก มิติต่ำ)
 - H2 มีแค่ 2 paper
 
 ## 10. วิธีรันซ้ำ (จาก `Data section/`)

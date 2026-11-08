@@ -1,62 +1,49 @@
 {
  "not_measured": {
-  "names": 572,
+  "names": 490,
   "by_reason": {
-   "U-no_public_file": 437,
+   "U-no_public_file": 309,
    "U-synthetic": 109,
-   "U-size_mismatch": 21,
-   "U-task_not_reconstructible": 4,
-   "U-no_printed_size": 1
+   "U-size_mismatch": 51,
+   "U-task_not_reconstructible": 19,
+   "U-no_printed_size": 1,
+   "U-name_ambiguous": 1
   },
   "no_public_file_by_source": {
-   "UCI": 177,
-   "other repository": 73,
-   "not stated": 63,
-   "other paper/author": 34,
-   "multiple": 30,
-   "private": 23,
-   "group-level": 19,
-   "KEEL": 18
+   "UCI": 114,
+   "not stated": 59,
+   "other repository": 57,
+   "other paper/author": 28,
+   "private": 22,
+   "group-level": 12,
+   "multiple": 12,
+   "KEEL": 5
   },
-  "no_public_file_single_paper": 355,
+  "no_public_file_single_paper": 276,
   "no_public_file_3plus_papers": [
-   "abalone",
-   "automobile",
-   "autos",
    "avila",
-   "balance",
-   "breast tissue",
-   "breast-tissue",
-   "car",
-   "cleveland",
-   "cmc",
    "covertype",
    "default",
-   "diabetes",
-   "flare",
    "lev",
-   "libra",
-   "liver",
-   "mammography",
-   "oil",
-   "page",
    "phishingdata",
-   "sensorreadings",
    "shoppers",
-   "statlog",
-   "svmguide1",
-   "thyroid",
-   "userknowledge",
-   "vertebral-column",
-   "vertebralcolumn",
-   "waveform",
-   "wine quality",
-   "zoo"
+   "svmguide1"
   ],
   "note": "แหล่ง KEEL/UCI/group-level/multiple/other repository = ไฟล์น่าจะมีเผยแพร่แต่ไม่อยู่ใน mirror ที่เข้าถึงได้; private/other paper/not stated = ไม่มีไฟล์ให้ดาวน์โหลด (แบ่งตามแหล่งที่ paper เขียน ยังไม่ได้ตรวจทีละชื่อ)",
   "no_public_file_split": {
-   "likely_public_not_in_mirror": 317,
-   "no_file_to_download": 120
+   "likely_public_not_in_mirror": 200,
+   "no_file_to_download": 109
+  },
+  "names_to_download": {
+   "file": "out/names_to_download.csv",
+   "names": 200,
+   "by_type": {
+    "modified": 116,
+    "not stated": 45,
+    "original": 36,
+    "repository-defined": 3
+   },
+   "with_printed_size": 124
   }
  },
  "modified_ops_per_name": {
@@ -92,139 +79,254 @@
   "entries": 120,
   "by_group": {
    "published": {
-    "papers": 4,
-    "entries": 40
+    "papers": 6,
+    "entries": 62
    },
    "cited source": {
     "papers": 2,
     "entries": 5
    },
+   "on request": {
+    "papers": 0,
+    "entries": 0
+   },
    "code link only": {
-    "papers": 2,
-    "entries": 3
+    "papers": 4,
+    "entries": 9
+   },
+   "generator named": {
+    "papers": 0,
+    "entries": 0
    },
    "not found": {
-    "papers": 11,
-    "entries": 72
+    "papers": 7,
+    "entries": 44
    }
   },
   "rows": [
    {
+    "part": "A",
     "paper": "G-SMOTE",
     "group": "published",
     "entries": 2,
-    "evidence": "can be found at https://github.com/IMS-ML-Lab"
+    "names": 2,
+    "sets_stated": "",
+    "role": "dataset entries",
+    "evidence": "can be found at https://github.com/IMS-ML-Lab",
+    "note": ""
    },
    {
+    "part": "A",
     "paper": "GMMSampling",
     "group": "published",
     "entries": 4,
-    "evidence": "the artificial datasets can be found in the repository of multi-imbalance"
+    "names": 4,
+    "sets_stated": "",
+    "role": "dataset entries",
+    "evidence": "the artificial datasets can be found in the repository of multi-imbalance",
+    "note": ""
    },
    {
+    "part": "A",
     "paper": "SVDD-WSMOTE",
     "group": "published",
     "entries": 4,
-    "evidence": "can be found in https://github.com/Zheng7777/simulated-datasets"
+    "names": 4,
+    "sets_stated": "",
+    "role": "dataset entries",
+    "evidence": "can be found in https://github.com/Zheng7777/simulated-datasets",
+    "note": ""
    },
    {
+    "part": "A",
     "paper": "SMOTE-IPF",
     "group": "published",
     "entries": 30,
-    "evidence": "This web-page also includes the basic information of this paper, the datasets used"
+    "names": 30,
+    "sets_stated": "",
+    "role": "dataset entries",
+    "evidence": "This web-page also includes the basic information of this paper, the datasets used",
+    "note": ""
    },
    {
+    "part": "A",
+    "paper": "k-means SMOTE",
+    "group": "published",
+    "entries": 15,
+    "names": 15,
+    "sets_stated": "",
+    "role": "dataset entries",
+    "evidence": "All modified and simulated datasets used in the study are made available at",
+    "note": "corrected 8 Nov (was not found)"
+   },
+   {
+    "part": "A",
+    "paper": "CTGAN / TVAE",
+    "group": "published",
+    "entries": 7,
+    "names": 7,
+    "sets_stated": "",
+    "role": "dataset entries",
+    "evidence": "Our benchmark can be found at https://github.com/DAI-Lab/SDGym",
+    "note": "benchmark with 7 simulated datasets; corrected 8 Nov (was not found)"
+   },
+   {
+    "part": "A",
     "paper": "SOUP",
     "group": "cited source",
     "entries": 4,
-    "evidence": "synthetic data sets coming from the work of Lango et al. (2017)"
+    "names": 4,
+    "sets_stated": "",
+    "role": "dataset entries",
+    "evidence": "synthetic data sets coming from the work of Lango et al. (2017)",
+    "note": ""
    },
    {
+    "part": "A",
     "paper": "Tomek Links",
     "group": "cited source",
     "entries": 1,
-    "evidence": "ตัวอย่างจาก ref. [4] (บันทึกการอ่าน: Fig. 6 caption p.3)"
+    "names": 0,
+    "sets_stated": "",
+    "role": "dataset entries",
+    "evidence": "example from ref. [4] (Fig. 6 caption p.3; reading note)",
+    "note": ""
    },
    {
+    "part": "A",
     "paper": "NBU",
     "group": "code link only",
     "entries": 1,
-    "evidence": "Source code available at https://github.com/fonkafon/NB-undersampling"
+    "names": 1,
+    "sets_stated": "",
+    "role": "dataset entries",
+    "evidence": "Source code available at https://github.com/fonkafon/NB-undersampling",
+    "note": ""
    },
    {
+    "part": "A",
     "paper": "DLexiBoost",
     "group": "code link only",
     "entries": 2,
-    "evidence": "Our implementation of LexiBoost can be found at https://github.com/Shounak-D/LexiBoost"
+    "names": 2,
+    "sets_stated": "",
+    "role": "dataset entries",
+    "evidence": "Our implementation of LexiBoost can be found at https://github.com/Shounak-D/LexiBoost",
+    "note": ""
    },
    {
+    "part": "A",
+    "paper": "GOIO",
+    "group": "code link only",
+    "entries": 5,
+    "names": 5,
+    "sets_stated": "",
+    "role": "dataset entries",
+    "evidence": "The source code of GOIO is available",
+    "note": ""
+   },
+   {
+    "part": "A",
+    "paper": "SPE",
+    "group": "code link only",
+    "entries": 1,
+    "names": 1,
+    "sets_stated": "",
+    "role": "dataset entries",
+    "evidence": "github.com/ZhiningLiu1998/self-paced-ensemble",
+    "note": ""
+   },
+   {
+    "part": "A",
     "paper": "ADASYN",
     "group": "not found",
     "entries": 1,
-    "evidence": "ค้นคำ github/http/available/download/supplementary ใน PDF ไม่พบข้อความว่าเผยแพร่ข้อมูล synthetic"
+    "names": 1,
+    "sets_stated": "",
+    "role": "dataset entries",
+    "evidence": "All data examples are generated by multidimensional Gaussian distributions",
+    "note": ""
    },
    {
+    "part": "A",
     "paper": "Borderline-SMOTE",
     "group": "not found",
     "entries": 1,
-    "evidence": "ค้นคำ github/http/available/download/supplementary ใน PDF ไม่พบข้อความว่าเผยแพร่ข้อมูล synthetic"
+    "names": 1,
+    "sets_stated": "",
+    "role": "dataset entries",
+    "evidence": "no availability sentence in the PDF",
+    "note": ""
    },
    {
-    "paper": "CTGAN / TVAE",
-    "group": "not found",
-    "entries": 7,
-    "evidence": "ค้นคำ github/http/available/download/supplementary ใน PDF ไม่พบข้อความว่าเผยแพร่ข้อมูล synthetic"
-   },
-   {
+    "part": "A",
     "paper": "ClusterCentroids",
     "group": "not found",
     "entries": 5,
-    "evidence": "ค้นคำ github/http/available/download/supplementary ใน PDF ไม่พบข้อความว่าเผยแพร่ข้อมูล synthetic"
+    "names": 5,
+    "sets_stated": "",
+    "role": "dataset entries",
+    "evidence": "The synthetic datasets have two kinds of noisy data",
+    "note": ""
    },
    {
-    "paper": "GOIO",
-    "group": "not found",
-    "entries": 5,
-    "evidence": "ค้นคำ github/http/available/download/supplementary ใน PDF ไม่พบข้อความว่าเผยแพร่ข้อมูล synthetic"
-   },
-   {
+    "part": "A",
     "paper": "Global-CS (AAAI)",
     "group": "not found",
     "entries": 6,
-    "evidence": "ค้นคำ github/http/available/download/supplementary ใน PDF ไม่พบข้อความว่าเผยแพร่ข้อมูล synthetic"
+    "names": 6,
+    "sets_stated": "",
+    "role": "dataset entries",
+    "evidence": "The synthetic ones are generated as follows",
+    "note": ""
    },
    {
+    "part": "A",
     "paper": "Global-CS (journal)",
     "group": "not found",
     "entries": 6,
-    "evidence": "ค้นคำ github/http/available/download/supplementary ใน PDF ไม่พบข้อความว่าเผยแพร่ข้อมูล synthetic"
+    "names": 6,
+    "sets_stated": "",
+    "role": "dataset entries",
+    "evidence": "same 6 synthetic sets as the AAAI version; no availability sentence",
+    "note": ""
    },
    {
+    "part": "A",
     "paper": "MWMOTE",
     "group": "not found",
     "entries": 1,
-    "evidence": "ค้นคำ github/http/available/download/supplementary ใน PDF ไม่พบข้อความว่าเผยแพร่ข้อมูล synthetic"
+    "names": 1,
+    "sets_stated": "",
+    "role": "dataset entries",
+    "evidence": "MWMOTE has been evaluated extensively on four artificial and 20 real-world data sets",
+    "note": ""
    },
    {
-    "paper": "SPE",
-    "group": "not found",
-    "entries": 1,
-    "evidence": "ค้นคำ github/http/available/download/supplementary ใน PDF ไม่พบข้อความว่าเผยแพร่ข้อมูล synthetic"
-   },
-   {
+    "part": "A",
     "paper": "SPIDER2",
     "group": "not found",
     "entries": 24,
-    "evidence": "ค้นคำ github/http/available/download/supplementary ใน PDF ไม่พบข้อความว่าเผยแพร่ข้อมูล synthetic"
-   },
-   {
-    "paper": "k-means SMOTE",
-    "group": "not found",
-    "entries": 15,
-    "evidence": "ค้นคำ github/http/available/download/supplementary ใน PDF ไม่พบข้อความว่าเผยแพร่ข้อมูล synthetic"
+    "names": 24,
+    "sets_stated": "",
+    "role": "dataset entries",
+    "evidence": "We generated multiple data sets with diﬀerent numbers of examples",
+    "note": ""
    }
   ],
-  "method": "pdftotext + ค้นคำ ไม่ได้อ่านทั้งเรื่อง; 'not found' ไม่ได้แปลว่ายืนยันแล้วว่าไม่มี (เช่น CTGAN มี SDGym แต่ PDF ให้ลิงก์เฉพาะข้อมูลจริง)"
+  "part_B": {
+   "papers": 10,
+   "by_group": {
+    "published": 0,
+    "cited source": 1,
+    "on request": 1,
+    "code link only": 1,
+    "generator named": 1,
+    "not found": 6
+   }
+  },
+  "method": "pdftotext of every PDF (main + supplement); evidence quotes asserted; Part B from build/synthetic_scan.py",
+  "source": "out/synthetic_availability.json"
  },
  "results_by_type": {
   "plain_smote": {

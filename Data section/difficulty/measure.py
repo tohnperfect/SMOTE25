@@ -10,18 +10,31 @@ Rows with missing values are dropped (so HVDM's d_a = 1 for unknowns is never us
 T2 / T4 stay on the min-max + one-hot encoding (dimension measures, not neighbourhoods).
 Factors: noise (overlap merged in), small disjuncts, small sample / rarity, plus IR.
 Defaults (Claude, not yet reviewed): k=5, Euclidean on min-max scaled numeric + one-hot nominal,
-rows with missing values dropped, duplicates kept; multiclass files -> one-vs-rest for every class."""
+rows with missing values dropped, duplicates kept; multiclass files -> one-vs-rest for every class.
+Revised 8 Nov 2026 (Toon: measure every dataset that can be obtained): reads verifiability_entries.csv as rewritten
+by verify_ext.py; files from the extended GitHub mirrors are loaded with mirrors_ext.parse();
+V-imblearn_task rebuilds the imbalanced-learn task (minority = task_minority). Tasks of the 28 Oct files are
+computed exactly as before (checked: identical numeric columns, see measure_ext_check in handoff)."""
 import pandas as pd,numpy as np,glob,os,re,itertools,csv
 from sklearn.neighbors import NearestNeighbors
 from scipy.sparse.csgraph import connected_components
 from scipy.sparse import csr_matrix
 from catalog import key
 K=5
-o=pd.read_csv('verifiability_entries.csv'); o=o[o.verif.str.startswith('V-')]
+VE=os.environ.get('VERIF_FILE','verifiability_entries.csv')   # 8 Nov: written by verify_ext.py (28 Oct snapshot: verifiability_entries_28oct.csv)
+o=pd.read_csv(VE); o=o[o.verif.str.startswith('V-')]
+EXT_SRC={'KEEL-std(F)','KEEL-std(C)','UCI++','Weka-UCI','PROMISE-ck','NASA-MDP','jbrownlee-UCI','PMLB'}
+_cx=pd.read_csv('file_catalog_ext.csv') if os.path.exists('file_catalog_ext.csv') else None
 rec=pd.read_csv(os.environ.get('DATASET_RECORDS','../out/dataset_records.csv')).set_index('record_id')
 idb={key(os.path.basename(d)):glob.glob(d+'/*.dat') for d in glob.glob('src/idb/imbalanced_databases/data/*')}
 def load(fname,src):
     k=key(fname)
+    if src in EXT_SRC and not (src=='PMLB' and os.path.exists(f'src/pmlb/{fname}.tsv.gz') and fname in OLD_PMLB):
+        from mirrors_ext import parse
+        path=_cx[(_cx.src==src)&(_cx.name==fname)].path.iloc[0]
+        d,y,how=parse(src,path)
+        nom=[c for c in d.columns if str(d[c].dtype)=='category']
+        return d,y.astype(str),how
     if src=='PMLB':
         d=pd.read_csv(f'src/pmlb/{fname}.tsv.gz',sep='\t'); y=d.pop('target').astype(str); return d,y,'pmlb(label-encoded)'
     if src.startswith('imbalanced_databases(other'):
@@ -48,6 +61,7 @@ def load(fname,src):
     return d,y,'keel(raw,no header)'
 def encode(d):
     d=d.replace('?',np.nan).replace('<null>',np.nan)
+    d=d.loc[:,d.notna().any(axis=0)]   # 8 Nov: a column with no value at all (e.g. TBG in UCI sick) is dropped before rows
     keep=d.notna().all(axis=1); d=d[keep]; cols=[]
     for c in d.columns:
         if str(d[c].dtype)=='category': cols.append(pd.get_dummies(d[c].astype(str),prefix=c).astype(float)); continue
@@ -59,6 +73,7 @@ def encode(d):
 def typed(d):
     """Drop rows with missing values; return the cleaned frame, the kept-row mask and the nominal columns."""
     d=d.replace('?',np.nan).replace('<null>',np.nan)
+    d=d.loc[:,d.notna().any(axis=0)]
     keep=d.notna().all(axis=1); d=d[keep]; nominal=[]
     for c in d.columns:
         if str(d[c].dtype)=='category' or pd.to_numeric(d[c],errors='coerce').isna().any(): nominal.append(c)
@@ -127,13 +142,15 @@ def iter_tasks():
     Shared by main() and projection.py so both see the same rows and minority definition."""
     tasks={}
     for _,r in o.iterrows():
-        tasks.setdefault((r.file,r.file_src),[]).append((r.verif,r.record_id,r.paper))
+        tasks.setdefault((r.file,r.file_src),[]).append((r.verif,r.record_id,r.paper,r.get('task_minority') if isinstance(r.get('task_minority'),str) else None))
     for (f,src),lst in tasks.items():
         d,y,how=load(f,src); X,keep=encode(d); y=y[keep].astype(str).values
         dt,keep2,nominal=typed(d); assert (keep2==keep).all()
         labs,cnt=np.unique(y,return_counts=True); nfeat=d.shape[1]
         todo={}
-        for kind,rid,paper in lst:
+        for kind,rid,paper,tmin in lst:
+            if kind=='V-imblearn_task':
+                todo.setdefault(('binarized',tmin),[]).append((rid,paper)); continue
             if len(labs)==2: todo.setdefault(('binary',labs[np.argmin(cnt)]),[]).append((rid,paper))
             elif kind=='V-binarized_rule_unique':
                 m=re.search(r'\d+',str(rec.loc[rid,'n_minority'])); s_=subset(list(labs),list(cnt),int(m.group()))
@@ -145,13 +162,15 @@ def iter_tasks():
             ymin=np.isin(y,lab.split('+')) if t=='binarized' else (y==lab)
             if ymin.sum()<2: LOG.append((f,lab,'minority <2 rows')); continue
             yield f,src,how,X,dt,nominal,t,lab,ymin.astype(bool),who,nfeat,keep
+OLD_PMLB={'adult','balance_scale','car_evaluation','coil2000','connect_4','dermatology','ecoli','hepatitis','lymphography',
+          'new_thyroid','nursery','page_blocks','pendigits','shuttle','spambase','spect','wine_quality_red','wine_quality_white','yeast'}
 LOG=[]
 def main():
     out=[]
     for f,src,how,X,dt,nominal,t,lab,ymin,who,nfeat,keep in iter_tasks():
         m=measures(X,ymin,hvdm_embed(dt,nominal,ymin))
         out.append(dict(file=f,source=src,loader=how,task_type=t,minority_label=lab,n_features_raw=nfeat,n_features_encoded=X.shape[1],n_nominal=len(nominal),distance='HVDM',
-            rows_dropped_missing=int((~keep).sum()),min_share_ge_half=m['n_min']/m['N']>=0.5,
+            rows_dropped_missing=int((~keep).sum()),cols_dropped_empty=int(dt.shape[1]<nfeat),min_share_ge_half=m['n_min']/m['N']>=0.5,
             n_min_per_feature=round(m['n_min']/nfeat,2),entries=len(who),papers='; '.join(sorted({p for _,p in who})),**m))
     R=pd.DataFrame(out); R.to_csv('difficulty_measures.csv',index=False)
     pd.DataFrame(LOG,columns=['file','item','note']).to_csv('measure_log.csv',index=False)

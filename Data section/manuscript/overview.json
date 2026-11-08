@@ -62,12 +62,12 @@
       "reader": "รู้ว่าข้อมูลที่วงการใช้มีลักษณะความยากแบบไหน และ IR ไม่ได้บอกว่า minority อยู่ตรงไหน",
       "found": [
         "paper รายงานความยากเองน้อยมาก: overlap ที่เป็นตัวเลข 36 entry ใน 2 paper, noise/borderline บรรยาย 5 entry",
-        "ตรวจได้ 643 entry 61 paper 131 ไฟล์ → 113 task binary/binarise (512 entry 41 paper) + OvR 171 แยกรายงาน; วัดด้วย Napierala types, k=5, HVDM",
-        "small sample 79/113 (70%), outlier > 20% 24, small disjuncts 11 (ทุกตัวติดอีกสองธงด้วย), ไม่ติดธง 34",
-        "กลุ่มไม่ติดธง noise 0–0.84 (≥ 0.5 มี 10 task เช่น haberman 0.84); noise มัธยฐานตามแถบ IR 0.37/0.40/0.31/0.50, rank correlation กับ IR 0.15",
-        "จำนวน feature มัธยฐาน 9; 59 entry ที่ > 100 feature ตรวจไม่ได้เลย task ที่วัดได้มี ≤ 85 feature",
-        "29 paper ที่มี task ตรวจได้ ≥ 3: ผสมทั้งมีธงและไม่มีธง 26, ไม่มีธงล้วน 2 (SMOTE, SMOTE-ENN), มีธงล้วน 1 (MLOS)",
-        "ชุด dataset อ้างอิง 27 task จาก 113 (กฎตายตัว: ทุกช่อง profile × แถบ IR เลือกชุดที่ใช้บ่อยสุด + noise ต่ำสุด/สูงสุด) ครอบ noise 0–1, IR 1.1–68, N 150–48,842; yeast 5, ecoli 3, glass 3 ให้รวมตามแหล่งเวลาทดสอบ"
+        "ตรวจได้ 864 entry 65 paper 172 ไฟล์ (8 พ.ย.: mirror เพิ่ม, เดิม 643) → 151 task binary/binarise (594 entry 45 paper) + OvR 305 แยกรายงาน; วัดด้วย Napierala types, k=5, HVDM",
+        "small sample 103/151 (68%), outlier > 20% 38, small disjuncts 15, ไม่ติดธง 45 · โปรไฟล์ 6 แบบ (S 67, none 45, S+O 21, D+S+O 14, O 3, D+S 1)",
+        "กลุ่มไม่ติดธง noise 0–0.84 (≥ 0.5 มี 13 task เช่น haberman 0.84); noise มัธยฐานตามแถบ IR 0.37/0.43/0.33/0.55, rank correlation กับ IR 0.18",
+        "จำนวน feature มัธยฐาน 9; 59 entry ที่ > 100 feature ตรวจได้แค่ 2 (musk) task ที่วัดได้มี ≤ 167 feature",
+        "35 paper ที่มี task ตรวจได้ ≥ 3: ผสมทั้งมีธงและไม่มีธง 32, ไม่มีธงล้วน 2 (COG-OS, SMOTE-ENN), มีธงล้วน 1 (MLOS)",
+        "ชุด dataset อ้างอิง 33 task จาก 151 (กฎตายตัว: ทุกช่อง profile × แถบ IR เลือกชุดที่ใช้บ่อยสุด + noise ต่ำสุด/สูงสุด) 13 ช่อง ครอบ noise 0–1, IR 1.1–46.5, N 100–11,183; yeast 5, ecoli 2, glass 2, cleveland 2 ให้รวมตามแหล่งเวลาทดสอบ"
       ],
       "status": "เสร็จ · ช่อง Toon และประโยคตีความเขียนเป็นฉบับสุดท้ายแล้ว (Claude 29 ต.ค. (Toon มอบให้ตัดสินแทน)) · ตาราง tab:data-reference"
     },
@@ -82,7 +82,7 @@
         "ความทนทาน: หนึ่งผลต่อ dataset 409/35/76; กติกา A (metric เดียว) 521 แถว: วิธีที่เสนอชนะ 402 เสมอ 39 แพ้ 80",
         "H1 ไม่ได้รับการสนับสนุน: modified+synthetic ชนะ 75.7% vs original 79.3%; GEE OR 0.68 (p 0.10), ภายใน paper OR 0.61 (p 0.04), mixed 0.75; ไม่ทนเมื่อใช้หนึ่งผลต่อ dataset หรือกติกา A; ราย paper 3 vs 7 (sign p 0.34)",
         "H2: เข้าเงื่อนไขแค่ 2 paper (MWMOTE, RUSBoost) ชนะบนข้อมูลอื่น 80.0% เท่ากับ paper อื่น 80.3% ทดสอบไม่ได้",
-        "ความยากที่วัดได้ (72 ไฟล์, 20 paper, 374 แถว): noise index สูงขึ้น 0.1 → odds ชนะ ×1.15 (p 0.005; ภายใน paper ×1.19 p 0.01; หนึ่งผลต่อไฟล์ ×1.16 p 0.08); IR ไม่สัมพันธ์ (p 0.61) · exploratory",
+        "ความยากที่วัดได้ (89 ไฟล์, 22 paper, 440 แถว): noise index สูงขึ้น 0.1 → odds ชนะ ×1.13 (p 0.03; ภายใน paper ×1.17 p 0.01; หนึ่งผลต่อไฟล์ ×1.19 p 0.03); IR ไม่สัมพันธ์ (p 0.61) · exploratory",
         "SMOTE แบบอื่น 12 paper 558 แถวรายงานแยก (Static-SMOTE 79, OVO 148, SMOTE-all 239, ห่อกับ learner อื่น 92) · ตัดออก KNNOR (ค่าเฉลี่ย), RBBoost (ข้ามตาราง), MC-MBRC (หัวคอลัมน์ไม่ระบุ SMOTE)"
       ],
       "status": "เขียนใหม่ด้วยผล all-metric + ทดสอบ H1/H2 (Claude 29 ต.ค. (Toon มอบให้ตัดสินแทน))"

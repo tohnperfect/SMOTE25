@@ -84,3 +84,9 @@
 ## อัปเดต 28 ต.ค. (รอบ 5): HVDM + ภาพสำหรับ Atlas
 - `measure.py` ใช้ HVDM (Wilson & Martinez 1997) สำหรับเพื่อนบ้านทุกตัว · ค่าเดิมแบบ Euclidean: `difficulty_measures_euclidean.csv`
 - `projection.py` → `projections.json` (ต้องมี src/ จาก `fetch_mirrors.sh`) · ลำดับ rebuild: measure.py → group_cited.py → profile_final.py → fig_noise.py / structure_check.py / category_options.py / dimension_profile.py → projection.py → ../build/make_atlas.py
+
+## อัปเดต 8 พ.ย. 2026: ตรวจรอบสองกับ mirror เพิ่ม (Toon สั่ง "ดึงที่ยังไม่ได้วิเคราะห์มาให้หมด")
+- `fetch_mirrors_ext.sh` → `src/` (GitHub: KEEL standard 2 ชุด, UCI++, Weka UCI ARFF, tera-PROMISE/NASA MDP, jbrownlee; PMLB ทั้ง 179 ชุด) · `mirrors_ext.py` → `file_catalog_ext.csv`
+- `verify_ext.py`: อ่าน `verifiability_entries_28oct.csv` (สำเนาผล 28 ต.ค.) ตรวจซ้ำเฉพาะ entry ที่ตรวจไม่ได้ ด้วยนิยามเดิม → เขียนทับ `verifiability_entries.csv` + `verify_ext_summary.json` · ตรวจได้ 864 entry 65 paper 172 ไฟล์ (เดิม 643/61/131)
+- `measure.py` อ่านไฟล์ใหม่ผ่าน `mirrors_ext.parse()` (ค่า 291 task เดิมได้ซ้ำทุกคอลัมน์) → 472 task · task binary/binarise 151, OvR 305 (ตัด minority ≥ 50% แล้ว)
+- ลำดับ rebuild ทั้งหมด: `rebuild_difficulty.sh` · บันทึกเต็มอยู่ใน `../handoff.md` วันที่ 2026-11-08

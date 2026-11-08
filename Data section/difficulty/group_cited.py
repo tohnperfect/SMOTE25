@@ -1,6 +1,6 @@
 """Difficulty profile with cited thresholds only (Toon 28 Oct 2026: no self-set cut-offs).
 
-Reads  difficulty_measures.csv (measure.py, 291 tasks) + version_notes.csv (Toon 28 Oct: keep flagged files, note
+Reads  difficulty_measures.csv (measure.py; 291 tasks on 28 Oct, more after the 8 Nov mirrors) + version_notes.csv (Toon 28 Oct: keep flagged files, note
        that the paper gives only the name; copied from the earlier difficulty_groups.csv, which is now superseded)
 Writes difficulty_groups_cited.csv, group_cited_summary.json
 
@@ -40,8 +40,20 @@ def main():
     g = pd.read_csv(HERE / "difficulty_measures.csv")
     vn = pd.read_csv(HERE / "version_notes.csv")
     key = ["file", "source", "task_type", "minority_label", "N"]
-    g = g.merge(vn, on=key, how="left", validate="one_to_one")
-    assert len(g) == 291, len(g)
+    n0 = len(g)
+    g = g.merge(vn, on=key, how="left", validate="one_to_one", indicator="_vn")
+    assert len(g) == n0, (len(g), n0)
+    # 8 Nov: tasks added by verify_ext.py have no row in version_notes.csv (28 Oct). Same rule as Toon's 28 Oct
+    # decision: when every verifiable entry of the file gives only the name, note that the structure is the file's.
+    ve = pd.read_csv(HERE / "verifiability_entries.csv")
+    ve = ve[ve.verif.str.startswith("V-")]
+    nameonly = ve.groupby(["file", "file_src"]).note_structure.apply(lambda s: s.notna().all() and (s.astype(str) != "").all())
+    new = g._vn == "left_only"
+    for i in g[new].index:
+        k = (g.at[i, "file"], g.at[i, "source"])
+        g.at[i, "version_note"] = ("paper reports only the name; structure taken from the named file (8 Nov)"
+                                   if nameonly.get(k, False) else "")
+    g = g.drop(columns="_vn")
     excluded = g.min_share_ge_half.astype(str).str.lower() == "true"
     g["small_disjuncts"] = g.rare >= RARE_T
     g["outlier_heavy"] = g.outlier > OUTLIER_T

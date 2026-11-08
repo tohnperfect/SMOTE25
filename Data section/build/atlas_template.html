@@ -42,6 +42,24 @@ nav button:focus-visible,button:focus-visible,input:focus-visible,select:focus-v
 main{padding-block:4px 48px}
 section[role="tabpanel"]{display:grid;gap:16px}
 [hidden]{display:none!important}
+/* Handoff tab (8 Nov 2026) */
+.ho-grid{display:grid;grid-template-columns:240px minmax(0,1fr);gap:16px;align-items:start}
+@media (max-width:820px){.ho-grid{grid-template-columns:minmax(0,1fr)}}
+.ho-toc{position:sticky;top:112px;max-height:calc(100vh - 130px);overflow:auto;font-size:13px;border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:10px 12px}
+@media (max-width:820px){.ho-toc{position:static;max-height:260px}}
+.ho-toc a{display:block;color:var(--ink2);text-decoration:none;padding:2px 0;overflow-wrap:anywhere}
+.ho-toc a:hover{color:var(--accent)} .ho-toc .l3{padding-left:12px;font-size:12px;color:var(--ink3)}
+.ho-doc{min-width:0;overflow-wrap:anywhere}
+.ho-doc h1,.ho-doc h2{font-family:var(--f-display);font-size:18px;margin:22px 0 8px;padding-top:10px;border-top:1px solid var(--line)}
+.ho-doc h3{font-family:var(--f-display);font-size:15px;margin:16px 0 6px;color:var(--accent)}
+.ho-doc p,.ho-doc li{font-size:14px}
+.ho-doc blockquote{margin:8px 0;padding:6px 12px;border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 6px 6px 0}
+.ho-doc pre{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px;overflow:auto;font-size:12.5px}
+.ho-doc code{font-family:var(--f-mono);font-size:12.5px;background:var(--bg);padding:0 3px;border-radius:3px}
+.ho-doc table{font-size:13px}
+.ho-doc mark{background:var(--warn-soft);color:var(--ink)}
+.ho-hide{display:none}
+.hb.wide .hrow{grid-template-columns:minmax(120px,52%) minmax(0,1fr) auto}
 .ms-head h2{font-size:18px}
 .ms-q{font-family:var(--f-display);font-size:16px;margin:4px 0 8px}
 .ms-legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--ink2);margin:8px 0}
@@ -325,7 +343,7 @@ tr.mz-sel td{background:var(--accent-soft)}
 </style>
 
 <header><div class="wrap">
-  <h1>SMOTE25 Dataset Atlas <small>Data section · อัปเดต 28 ต.ค. 2026 · corpus 76 paper · มีการประเมินผลบนข้อมูล 73 paper</small></h1>
+  <h1>SMOTE25 Dataset Atlas <small>Data section · อัปเดต 8 พ.ย. 2026 · corpus 76 paper · มีการประเมินผลบนข้อมูล 73 paper</small></h1>
   <nav role="tablist" aria-label="มุมมอง">
     <button role="tab" id="t-db" aria-selected="true" aria-controls="p-db">ภาพรวม</button>
     <button role="tab" id="t-ms" aria-selected="false" aria-controls="p-ms">ร่าง manuscript</button>
@@ -339,6 +357,7 @@ tr.mz-sel td{background:var(--accent-soft)}
     <button role="tab" id="t-ov" aria-selected="false" aria-controls="p-ov">ภาพรวมการจัดการข้อมูล</button>
     <button role="tab" id="t-wn" aria-selected="false" aria-controls="p-wn">ชนะ SMOTE บนข้อมูลแบบไหน</button>
     <button role="tab" id="t-an" aria-selected="false" aria-controls="p-an">Analyses A–F</button>
+    <button role="tab" id="t-ho" aria-selected="false" aria-controls="p-ho">Handoff</button>
   </nav>
 </div></header>
 
@@ -362,6 +381,7 @@ tr.mz-sel td{background:var(--accent-soft)}
     <div class="card" id="db-ops"></div>
     <div class="card" id="db-diff"></div>
     <div class="card" id="db-src"></div>
+    <div class="card" id="db-syn"></div>
     <div class="card" id="db-rec" hidden>
       <h3 class="ct" id="db-rec-h"></h3>
       <div class="controls">
@@ -609,6 +629,9 @@ tr.mz-sel td{background:var(--accent-soft)}
     </div>
     <div class="notice" id="mz-scope"></div>
     <div class="kgrid" id="mz-kpi"></div>
+    <h2 class="sec">ไฟล์มาจากไหน และอะไรที่ยังวัดไม่ได้ (รอบ 8 พ.ย. 2026)</h2>
+    <div class="grid2"><div class="card" id="mz-ext"></div><div class="card" id="mz-notm"></div></div>
+    <div class="card" id="mz-dl"></div>
     <h2 class="sec">ลักษณะของข้อมูลแต่ละแบบ หมายความว่าอะไร</h2>
     <div class="legend" id="mz-legend"></div>
     <div class="mz-grid" id="mz-cards"></div>
@@ -632,6 +655,24 @@ tr.mz-sel td{background:var(--accent-soft)}
     <div class="card mz-hist" id="mz-dim"></div>
     <p class="cap" id="mz-src"></p>
   </section>
+  <section role="tabpanel" id="p-ho" aria-labelledby="t-ho" hidden>
+    <div class="db-head">
+      <h2>Handoff ของ Data section</h2>
+      <p>ไฟล์ <code>handoff.md</code> ทั้งไฟล์ (สถานะ คำตัดสิน บันทึกการดำเนินงานทุกรอบ กติกา แผนที่ไฟล์ คำสั่ง rebuild) ฝังไว้ในหน้านี้ตอนสร้าง Atlas พร้อม <code>CONCLUSIONS.md</code> · ตัวเลขในการ์ดด้านบนอ่านจากไฟล์ผลลัพธ์ชุดเดียวกับแท็บอื่น</p>
+    </div>
+    <div class="kgrid" id="ho-kpi"></div>
+    <div class="card" id="ho-now"></div>
+    <div class="ms-sub" role="group" aria-label="เลือกเอกสาร" id="ho-sub">
+      <button type="button" aria-pressed="true" data-doc="handoff">handoff.md</button>
+      <button type="button" aria-pressed="false" data-doc="conc">CONCLUSIONS.md</button>
+    </div>
+    <div class="controls"><input type="search" id="ho-q" placeholder="ค้นใน handoff (เช่น verify_ext, Toon ตัดสิน, synthetic)" aria-label="ค้นใน handoff"><span class="count" id="ho-n"></span></div>
+    <div class="ho-grid">
+      <nav class="ho-toc" id="ho-toc" aria-label="สารบัญ handoff"></nav>
+      <div class="card ho-doc" id="ho-doc"></div>
+    </div>
+    <p class="cap" id="ho-src"></p>
+  </section>
 </main>
 <footer class="wrap">ที่มา: ชีต <code>extraction</code> และ <code>papers</code> ใน <code>SMOTE25_data_extraction.xlsx</code>, <code>out/data_handling_matrix.csv</code>, <code>out/data_handling_summary.json</code>, <code>ai-draft/dataset_variants.json</code> ใน repo SMOTE25 โฟลเดอร์ <code>Data section/</code> · รหัส 4 มิติ (เหตุผลการเลือก, basis, ยก benchmark, กติกา minority) Claude ให้จากข้อความต้นทาง นิยามอยู่ใน <code>ai-draft/data_handling_codes.json</code></footer>
 
@@ -644,12 +685,12 @@ const split = s => (s || "").split(";").filter(Boolean);
 const nz = v => (v===null||v===undefined||v==="None"||v==="null") ? "" : v;
 
 /* ---------- tabs ---------- */
-const TABS = ["db","ms","ds","dx","co","df","mz","pp","ov","wn","an","ln"];
+const TABS = ["db","ms","ds","dx","co","df","mz","pp","ov","wn","an","ln","ho"];
 function show(t){ TABS.forEach(x=>{ $("#t-"+x).setAttribute("aria-selected", x===t); $("#p-"+x).hidden = x!==t; });
   try{ localStorage.setItem("atlas-tab", t) }catch(e){} }
 TABS.forEach(x => $("#t-"+x).addEventListener("click", () => show(x)));
 let start = "db"; try{ start = localStorage.getItem("atlas-tab") || "db" }catch(e){}
-const HASH = {"#dashboard":"db","#explorer":"dx","#characteristics":"co","#difficulty":"df","#manuscript":"ms","#papers":"pp","#overview":"ov","#wins":"wn","#analyses":"an","#landscape":"ln","#measured":"mz"}; if (HASH[location.hash]) start = HASH[location.hash];
+const HASH = {"#dashboard":"db","#explorer":"dx","#characteristics":"co","#difficulty":"df","#manuscript":"ms","#papers":"pp","#overview":"ov","#wins":"wn","#analyses":"an","#landscape":"ln","#measured":"mz","#handoff":"ho"}; if (HASH[location.hash]) start = HASH[location.hash];
 show(TABS.includes(start) ? start : "db");
 
 /* ---------- manuscript tab ---------- */
@@ -2059,11 +2100,13 @@ makeLand("ln", $("#p-ln"));
   const papersB = new Set(B.flatMap(r => r.pl)).size;
 
   /* scope + KPI */
-  $("#mz-scope").innerHTML = `<b>ขอบเขตและวิธีวัด</b> วัดเฉพาะ dataset ที่ตรวจได้ว่าเป็นไฟล์สาธารณะไฟล์เดียวกับที่ paper ใช้ (643 จาก 1,653 entry ที่มีชื่อ; ที่เหลือเว้นไว้ รวม entry ที่ผู้เขียนดัดแปลงแต่ไม่พิมพ์ลักษณะของชุดที่ได้)
+  const VX = Z.verify || {}; const VT = VX.total || {};
+  $("#mz-scope").innerHTML = `<b>ขอบเขตและวิธีวัด</b> วัดเฉพาะ dataset ที่ตรวจได้ว่าเป็นไฟล์สาธารณะไฟล์เดียวกับที่ paper ใช้ (${(VT.entries||0).toLocaleString()} จาก 1,653 entry ที่มีชื่อ, ${VT.papers} paper, ${VT.files} ไฟล์; ที่เหลือเว้นไว้ รวม entry ที่ผู้เขียนดัดแปลงแต่ไม่พิมพ์ลักษณะของชุดที่ได้ ${(VX.status||{})["U-no_printed_size"]||0} entry)
+    · ตรวจรอบสอง 8 พ.ย. ด้วย mirror เพิ่ม ใช้กติกาเดิม: ขนาดที่ paper พิมพ์ต้องตรงกับไฟล์ ชื่อเรียกอื่นใช้แค่หาไฟล์ ไม่ใช่ตัวตัดสิน
     · เพื่อนบ้าน k = 5 ด้วยระยะ HVDM (Wilson &amp; Martinez 1997) แบบเดียวกับ Napierala &amp; Stefanowski (2016)
     · เกณฑ์ทุกตัวมีอ้างอิง noise รายงานเป็นค่าต่อเนื่อง ไม่มีเกณฑ์
     · task แบบ one-vs-rest เราสร้างเองจากไฟล์หลายคลาส ไม่ใช่ task ที่ paper ประเมิน จึงแยกรายงาน
-    · ไฟล์มาจาก mirror (keel-ds, imbalanced-databases, PMLB) เทียบกับตาราง KEEL ทางการแล้ว 72 ไฟล์ (N และจำนวน feature ตรงทุกไฟล์) ที่เหลือยังไม่ได้เทียบ`;
+    · ไฟล์มาจาก mirror (keel-ds, imbalanced-databases, PMLB + 8 พ.ย.: KEEL standard 2 ชุด, UCI++, Weka-UCI, PROMISE, jbrownlee) เทียบกับตาราง KEEL ทางการแล้ว 72 ไฟล์ (N และจำนวน feature ตรงทุกไฟล์) KEEL standard สองชุดตรงกัน 67/67 ไฟล์ ที่เหลือยังไม่ได้เทียบ`;
   const kp = (b, s, t) => `<div class="card"><div class="kpi" ${t ? tipA(t) : ""}><b>${b}</b><span>${s}</span></div></div>`;
   $("#mz-kpi").innerHTML = kp(TB.n, "task binary + binarise ที่วัดได้") + kp(EB.n.toLocaleString(), `entry ที่ใช้ task เหล่านี้ (${papersB} paper)`, "1 entry = 1 dataset ใน 1 paper; task หนึ่งถูกใช้ได้หลาย entry")
     + kp(TB.no_flag.n + ` <small style="font-size:13px">(${TB.no_flag.pct}%)</small>`, "task ที่ไม่ติดธงใด (ยังอาจมี noise สูง ดูกราฟ noise)") + kp(TO.n, "task one-vs-rest (แยกรายงาน)");
@@ -2287,5 +2330,104 @@ makeLand("ln", $("#p-ln"));
     <p class="sub" style="margin:0"><b>H3</b> granularity: รายชุด ${H3a.counts["per-dataset"]}, รายชุดบางส่วน ${H3a.counts["per-dataset partial"]}, กราฟ ${H3a.counts["plots only"]}, ค่าเฉลี่ย ${H3a.counts["aggregate only"]}, อันดับ ${H3a.counts["ranking only"]}, ไม่เทียบ ${H3a.counts["no comparison"]} จาก ${H3a.papers} paper · entry ที่ลิสต์แต่ไม่มีคู่ค่ากับ SMOTE ${H3b.not_in_comparison.k}/${H3b.not_in_comparison.n} (${H3b.not_in_comparison.pct}%, CI ${H3b.not_in_comparison.ci95.join("–")}) จาก ${H3b.papers_with_any_missing} paper</p>
     <p class="sub" style="margin:0"><b>ความยากที่วัดได้</b> (${DO.tasks} ไฟล์, ${DO.papers} paper, ${DO.rows_joined} แถว): noise index +0.1 → odds ชนะ ×${f2(DO.models["noise_per_0.1"].gee.odds_ratio)} (p ${fp(DO.models["noise_per_0.1"].gee.p)}; ภายใน paper ×${f2(DO.models["noise_per_0.1"].within_paper.odds_ratio)} p ${fp(DO.models["noise_per_0.1"].within_paper.p)}; หนึ่งผลต่อไฟล์ ×${f2(DO.robust.odds_ratio)} p ${fp(DO.robust.p)}) · log2 IR ×${f2(DO.models.log2_IR.gee.odds_ratio)} (p ${fp(DO.models.log2_IR.gee.p)}) · exploratory</p>
     <p class="cap">ที่มา <code>${esc(H.source)}</code></p>`;
+})();
+
+/* ---------- 8 พ.ย. 2026: ไฟล์มาจากไหน + สิ่งที่ยังวัดไม่ได้ (D.mz.verify จาก difficulty/verify_ext_summary.json, out/name_level_extras.json) ---------- */
+(function(){
+  const V = D.mz && D.mz.verify; if (!V) return;
+  const f = n => (+n).toLocaleString(), tipA = s => `data-tip="${esc(s)}"`;
+  const SRCL = {"KEEL-std(F)":"KEEL standard (GitHub: Fuminides/keel_datasets)","KEEL(keel_ds)":"KEEL (keel-ds, PyPI)","UCI++":"UCI++ (lpfgarcia/ucipp)",
+    "jbrownlee-UCI":"UCI CSV (jbrownlee/Datasets)","PROMISE-ck":"tera-PROMISE CK (klainfo/DefectData)","Weka-UCI":"UCI ARFF ของ Weka","PMLB":"PMLB"};
+  const BL = k => k.startsWith("imbalanced-learn") ? "task ของ imbalanced-learn" : ({"exact name":"ชื่อตรง","alias":"ชื่อเรียกอื่นของ dataset เดียวกัน","KEEL split name cut at _vs_":"ชื่อ split ของ KEEL ที่ถูกตัดที่ _vs_"}[k] || k);
+  const bars = (obj, lab, cls) => { const e = Object.entries(obj).sort((a,b)=>b[1]-a[1]), mx = Math.max(...e.map(x=>x[1]));
+    return `<div class="hb wide">${e.map(([k,n]) => `<div class="hrow ${cls||"k-up"}" ${tipA(lab(k)+": "+n)}><span class="lab"><i class="sw"></i>${esc(lab(k))}</span><span class="trk"><span class="fillk ${cls||"k-up"}" style="width:${n/mx*100}%"></span></span><span class="val">${f(n)}</span></div>`).join("")}</div>`; };
+  const bb = {}; Object.entries(V.new.by_basis).forEach(([k,n]) => { const L = BL(k); bb[L] = (bb[L]||0) + n; });
+  $("#mz-ext").innerHTML = `<h3 class="ct">entry ที่ตรวจได้เพิ่มในรอบ 8 พ.ย. <span class="unit">${f(V.new.entries)} entry · ${V.new.names} ชื่อ · ${V.new.papers} paper · ${V.new.files} ไฟล์</span></h3>
+    <p class="cap">เว็บ KEEL / UCI / OpenML ถูกบล็อก จึงใช้สำเนาบน GitHub และ PyPI · กติกาเดิม: จำนวน instance ที่พิมพ์ต้องตรงกับไฟล์ (feature ±1) ถ้าไม่พิมพ์ขนาด ชื่อต้องตรงและผู้เขียนไม่ได้ดัดแปลง</p>
+    <h4 style="margin:10px 0 6px;font-size:14px">แหล่งของไฟล์</h4>${bars(V.new.by_source, k => SRCL[k] || k)}
+    <h4 style="margin:12px 0 6px;font-size:14px">หาไฟล์เจอด้วยอะไร (ตัวตัดสินยังเป็นขนาดที่พิมพ์)</h4>${bars(bb, x => x)}
+    <p class="cap" style="margin-top:6px">รวมทั้งหมด ${f(V.total.entries)} entry ${V.total.papers} paper ${V.total.files} ไฟล์ (28 ต.ค. 643 entry 61 paper 131 ไฟล์) · ไฟล์ชุดเดียวกันหลายสำเนา map ไปสำเนาเดียว ลำดับ KEEL &gt; UCI++ &gt; Weka &gt; jbrownlee &gt; PMLB</p>`;
+  const RL = {"U-no_public_file":"ไม่พบไฟล์ในสำเนาใด","U-synthetic":"synthetic (ผู้เขียนสร้างเอง)","U-size_mismatch":"มีไฟล์ แต่ขนาดไม่ตรงทุกเวอร์ชัน","U-task_not_reconstructible":"สร้าง task ซ้ำไม่ได้ (ไม่รู้ว่าคลาสไหนเป็น minority)","U-no_printed_size":"ดัดแปลงโดยไม่พิมพ์ขนาด","U-name_ambiguous":"ชื่อเข้ากับไฟล์ที่โครงสร้างต่างกัน"};
+  const N = V.notm, SL = {"UCI":"UCI","not stated":"ไม่ระบุแหล่ง","other repository":"คลังอื่น","other paper/author":"จาก paper/ผู้เขียนอื่น","private":"private","group-level":"ระบุระดับกลุ่ม","multiple":"หลายแหล่ง","KEEL":"KEEL"};
+  $("#mz-notm").innerHTML = `<h3 class="ct">ชื่อ dataset ที่ยังวัดความยากไม่ได้ <span class="unit">${f(N.names)} จาก 771 ชื่อ</span></h3>
+    ${bars(N.by_reason, k => RL[k] || k, "k-dn")}
+    <h4 style="margin:12px 0 6px;font-size:14px">"ไม่พบไฟล์" ${f(N.by_reason["U-no_public_file"])} ชื่อ paper บอกแหล่งว่า</h4>${bars(N.no_public_file_by_source, k => SL[k] || k, "k-not-stated")}
+    <p class="cap" style="margin-top:6px">${f(N.no_public_file_split.likely_public_not_in_mirror)} ชื่ออ้างแหล่งที่ควรมีไฟล์เผยแพร่ (UCI, KEEL, คลังอื่น, ระดับกลุ่ม, หลายแหล่ง) แต่ไม่อยู่ในสำเนาที่เข้าถึงได้ → รายชื่อด้านล่าง · ${f(N.no_public_file_split.no_file_to_download)} ชื่อไม่มีไฟล์ให้ดาวน์โหลด (private, ไม่ระบุ, จาก paper อื่น)</p>`;
+  const DT = {"modified":"Modified","not stated":"Not stated","original":"Original","repository-defined":"Repository-defined"};
+  function dl(q){
+    const rows = V.dl.filter(r => !q || (r[0]+" "+r[5]+" "+r[8]).toLowerCase().includes(q));
+    $("#mz-dl-n").textContent = rows.length + " / " + V.dl.length + " ชื่อ";
+    $("#mz-dl-t tbody").innerHTML = rows.map(r => `<tr><td>${esc(r[0])}</td><td>${esc(DT[r[1]]||r[1])}</td><td>${esc(r[8])}</td><td class="num">${r[3]}</td><td class="num">${r[4]}</td><td>${esc(r[6])}</td><td>${esc(r[7])}</td><td style="font-size:12px">${esc(r[5])}</td></tr>`).join("");
+  }
+  $("#mz-dl").innerHTML = `<h3 class="ct">ชื่อที่วัดได้ถ้ามีไฟล์ทางการ <span class="unit">${V.dl.length} ชื่อ · out/names_to_download.csv</span></h3>
+    <p class="cap">ดาวน์โหลดจาก UCI / KEEL / คลังที่ paper อ้าง แล้ววางไฟล์ไว้ใน difficulty/src/ รัน difficulty/rebuild_difficulty.sh ได้ทันที · ${V.notm.names_to_download.with_printed_size} ชื่อมีขนาดที่ paper พิมพ์ไว้ (ตรวจได้ตามกติกาเดิม) ที่เหลือเป็น modified ที่ไม่พิมพ์ขนาด ซึ่งตัดตามคำตัดสินแนวทาง ก</p>
+    <div class="controls"><input type="search" id="mz-dl-q" placeholder="ค้นชื่อ / paper / แหล่ง" aria-label="ค้นชื่อที่ควรดาวน์โหลด"><span class="count" id="mz-dl-n"></span></div>
+    <div class="tbox" style="max-height:420px"><table class="dxt" id="mz-dl-t"><thead><tr><th>ชื่อ</th><th>ชนิด</th><th>แหล่งที่ paper เขียน</th><th class="num">paper</th><th class="num">entry</th><th>N ที่พิมพ์</th><th>feature ที่พิมพ์</th><th>paper</th></tr></thead><tbody></tbody></table></div>
+    <p class="cap">ที่มา: ${esc(V.src)}</p>`;
+  dl(""); $("#mz-dl-q").addEventListener("input", e => dl(e.target.value.trim().toLowerCase()));
+})();
+
+/* ---------- 8 พ.ย. 2026: synthetic ที่ผู้เขียนสร้างเผยแพร่หรือไม่ (D.syn จาก out/synthetic_availability.json) ---------- */
+(function(){
+  const S = D.syn; if (!S) return;
+  const f = n => (+n).toLocaleString(), tipA = s => `data-tip="${esc(s)}"`;
+  const G = ["published","cited source","on request","code link only","generator named","not found"];
+  const GL = {"published":"เผยแพร่ข้อมูลเอง (บอกที่ดาวน์โหลด)","cited source":"ข้อมูลมาจากงานอื่นที่อ้าง","on request":"ขอได้เมื่อร้องขอ","code link only":"มีแค่ลิงก์โค้ดของวิธี","generator named":"บอกแค่ตัวสร้าง (เช่น scikit-learn)","not found":"ไม่พบว่าเผยแพร่"};
+  const GC = {"published":"k-up","cited source":"k-eq","on request":"k-eq","code link only":"k-not-stated","generator named":"k-not-stated","not found":"k-dn"};
+  const A = S.part_A_by_group, mx = Math.max(...G.map(g => A[g].entries)), rows = S.rows;
+  const RA = rows.filter(r => r.part === "A"), RB = rows.filter(r => r.part === "B");
+  const pub = S.part_A_published_vs_not;
+  $("#db-syn").innerHTML = `<h3 class="ct">ข้อมูล synthetic ที่ผู้เขียนสร้าง เผยแพร่หรือไม่ <span class="unit">${S.corpus.papers_with_synthetic_entries} paper · ${f(S.corpus.synthetic_entries)} entry · ${S.corpus.synthetic_names} ชื่อ</span></h3>
+    <div class="kpis" style="margin:4px 0 10px">
+      <div class="kpi" ${tipA("paper บอกที่ดาวน์โหลดข้อมูล synthetic เอง")}><b>${f(pub.published.entries)}</b><span>entry เผยแพร่ (${pub.published.papers} paper)</span></div>
+      <div class="kpi" ${tipA("ไม่ได้เผยแพร่เอง: รวมข้อมูลจากงานอื่นที่อ้าง " + pub.not_published_by_authors.of_which_cited_source_entries + " entry")}><b>${f(pub.not_published_by_authors.entries)}</b><span>entry ไม่ได้เผยแพร่เอง (${pub.not_published_by_authors.papers} paper)</span></div></div>
+    <div class="hb">${G.filter(g => A[g].papers).map(g => `<div class="hrow ${GC[g]}" ${tipA(GL[g]+": "+A[g].papers+" paper, "+A[g].entries+" entry")}><span class="lab"><i class="sw"></i>${GL[g]}</span><span class="trk"><span class="fillk ${GC[g]}" style="width:${A[g].entries/mx*100}%"></span></span><span class="val">${A[g].entries} entry · ${A[g].papers} paper</span></div>`).join("")}</div>
+    <details style="margin-top:10px"><summary>ราย paper พร้อมข้อความยืนยันจาก PDF (${RA.length} paper)</summary>
+      <div class="tbox"><table class="dxt"><thead><tr><th>paper</th><th>กลุ่ม</th><th class="num">entry</th><th>ข้อความใน PDF</th></tr></thead><tbody>
+      ${RA.map(r => `<tr><td>${esc(r.paper)}</td><td>${esc(GL[r.group])}</td><td class="num">${r.entries}</td><td style="font-size:12.5px">${esc(r.evidence)}${r.note ? ` <span class="cap">(${esc(r.note)})</span>` : ""}</td></tr>`).join("")}</tbody></table></div></details>
+    <details><summary>อีก ${RB.length} paper สร้างข้อมูลเองเพื่อภาพประกอบหรือทดลองข้างเคียง (ไม่นับเป็น entry)</summary>
+      <div class="tbox"><table class="dxt"><thead><tr><th>paper</th><th>ชุดที่สร้าง</th><th>บทบาท</th><th>กลุ่ม</th><th>ข้อความใน PDF</th></tr></thead><tbody>
+      ${RB.map(r => `<tr><td>${esc(r.paper)}</td><td>${esc(r.sets_stated)}</td><td>${esc(r.role)}</td><td>${esc(GL[r.group])}</td><td style="font-size:12.5px">${esc(r.evidence)}</td></tr>`).join("")}</tbody></table></div></details>
+    <p class="cap" style="margin-top:6px">Synthetic = ผู้เขียนสร้างข้อมูลเองด้วย generator/simulation ที่อธิบายใน paper · ทุกข้อความยืนยันถูกตรวจว่ามีอยู่จริงใน PDF (pdftotext) · แก้ผลรอบ 29 ต.ค. ที่ค้นคำแล้วพลาด k-means SMOTE และ CTGAN · ที่มา: ${esc(S.source)}</p>`;
+})();
+
+/* ---------- 8 พ.ย. 2026: แท็บ Handoff (D.handoff = handoff.md + CONCLUSIONS.md แปลงด้วย build/md2html.py) ---------- */
+(function(){
+  const H = D.handoff; if (!H) return;
+  const f = n => (+n).toLocaleString(), tipA = s => `data-tip="${esc(s)}"`, st = H.status;
+  const kp = (b, s, t) => `<div class="card"><div class="kpi" ${t ? tipA(t) : ""}><b>${b}</b><span>${s}</span></div></div>`;
+  const ent = Object.values(st.corpus).reduce((a,b)=>a+b,0);
+  $("#ho-kpi").innerHTML = kp(f(ent), `dataset entry · ${f(st.names)} ชื่อ`, "1 entry = 1 dataset ใน 1 paper")
+    + kp(f(st.verify.entries), `entry ที่ตรวจกับไฟล์ได้ · ${st.verify.papers} paper · ${st.verify.files} ไฟล์`, "รอบ 8 พ.ย. ด้วย mirror เพิ่ม (28 ต.ค. 643)")
+    + kp(st.tasks.binary, `task binary/binarise ที่วัดความยาก · ${f(st.tasks.entries)} entry · ${st.tasks.papers} paper`, "one-vs-rest " + st.tasks.ovr + " task รายงานแยก")
+    + kp(`${st.syn.published.entries} / ${ent ? (st.syn["cited source"].entries + st.syn["code link only"].entries + st.syn["not found"].entries + st.syn["on request"].entries + st.syn["generator named"].entries) : 0}`, "entry synthetic: เผยแพร่ / ไม่ได้เผยแพร่เอง", "ดูการ์ดในแท็บภาพรวม");
+  $("#ho-now").innerHTML = `<h3 class="ct">ถ้าเป็นแชทหรือคนใหม่ เริ่มที่นี่</h3>
+    <ol style="margin:4px 0 0;padding-left:20px;font-size:14px;display:grid;gap:4px">
+      <li><code>git fetch origin main</code> ถ้ามีของใหม่ <code>git pull --rebase origin main</code> (บนเครื่อง Windows ต้องอนุญาตให้ลบไฟล์ใน D:\\SMOTE25 ก่อน เพราะ git ลบ lock ของตัวเอง)</li>
+      <li>อ่านข้อ 0 "สถานะปัจจุบัน" ของ handoff ด้านล่าง แล้วอ่านบันทึกล่าสุดท้ายไฟล์ (วันที่ใหม่สุดอยู่ล่างสุด)</li>
+      <li>ทุกครั้งที่ทำอะไร เขียนบันทึกต่อท้าย <code>handoff.md</code> แล้วรัน <code>python3 build/make_atlas.py</code> ให้แท็บนี้อัปเดตตาม</li>
+      <li>กติกาที่ห้ามละเมิดอยู่ข้อ 9: ทุกค่าย้อนกลับหา PDF ได้ · ไม่เดา · ไม่ตัดข้อมูล · ไม่ตั้งเกณฑ์ตัวเลขเอง · แก้เฉพาะในโฟลเดอร์ Data section</li>
+    </ol>`;
+  const docs = {handoff: {html: H.html, toc: H.toc}, conc: {html: H.conclusions_html, toc: null}};
+  let cur = "handoff";
+  function render(){
+    const d = docs[cur]; $("#ho-doc").innerHTML = d.html;
+    if (d.toc) $("#ho-toc").innerHTML = d.toc.filter(t => t[0] <= 3).map(t => `<a href="#${t[1]}" class="l${t[0]}" data-hid="${t[1]}">${esc(t[2])}</a>`).join("");
+    else $("#ho-toc").innerHTML = [...$("#ho-doc").querySelectorAll("h1,h2,h3")].map((h,i) => { h.id = "c-"+i; return `<a href="#c-${i}" class="l${h.tagName[1]}">${esc(h.textContent)}</a>`; }).join("");
+    $("#ho-q").value = ""; $("#ho-n").textContent = "";
+  }
+  $("#ho-toc").addEventListener("click", e => { const a = e.target.closest("a"); if (!a) return; e.preventDefault(); const el = document.getElementById(a.getAttribute("href").slice(1)); if (el) el.scrollIntoView({behavior:"smooth", block:"start"}); });
+  $("#ho-sub").addEventListener("click", e => { const b = e.target.closest("button[data-doc]"); if (!b) return; cur = b.dataset.doc; [...$("#ho-sub").children].forEach(x => x.setAttribute("aria-pressed", x === b)); render(); });
+  $("#ho-q").addEventListener("input", e => {
+    const q = e.target.value.trim().toLowerCase(); const blocks = [...$("#ho-doc").children];
+    if (!q) { blocks.forEach(b => b.classList.remove("ho-hide")); $("#ho-n").textContent = ""; return; }
+    let n = 0, lastH = null;
+    blocks.forEach(b => { const hit = b.textContent.toLowerCase().includes(q); const isH = /^H[1-6]$/.test(b.tagName);
+      if (isH) { lastH = b; b.classList.add("ho-hide"); }
+      if (hit) { n++; b.classList.remove("ho-hide"); if (lastH) lastH.classList.remove("ho-hide"); } else if (!isH) b.classList.add("ho-hide"); });
+    $("#ho-n").textContent = n + " ช่วงที่พบ";
+  });
+  render();
+  $("#ho-src").textContent = `ที่มา: ${H.source} · handoff.md ${f(H.lines)} บรรทัด ฝังตอนรัน build/make_atlas.py (แปลงด้วย build/md2html.py)`;
 })();
 </script>

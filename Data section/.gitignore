@@ -7,3 +7,15 @@ _verify_png/
 # Python bytecode (28 Oct 2026)
 __pycache__/
 *.pyc
+
+# mirror files for difficulty measurement (8 Nov 2026; rebuild with difficulty/fetch_mirrors*.sh)
+difficulty/src/
+# LaTeX intermediates of the JAIR build (8 Nov 2026)
+manuscript/jair/*.aux
+manuscript/jair/*.log
+manuscript/jair/*.bcf
+manuscript/jair/*.bbl
+manuscript/jair/*.blg
+manuscript/jair/*.out
+manuscript/jair/*.run.xml
+manuscript/jair/*.pdf

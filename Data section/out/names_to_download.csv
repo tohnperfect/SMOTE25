@@ -1,0 +1,201 @@
+normalized_name,name_type,source,n_papers,entries,papers,printed_n,printed_features,sources_as_reported,record_ids
+svmguide1,modified,multiple,4,4,COG-OS; HDE; LS; RSMOTE,3089; 3175; 4400,4,LibSVM; UCI,P012-D014; P052-D022; P014-D020; P053-D010
+avila,modified,UCI,3,3,DGOT; MKC-SMOTE; RSMOTE,10430; 11695; 20850,10,UCI,P074-D010; P068-D021; P053-D019
+covertype,original,multiple,3,3,CTGAN / TVAE; Loyalty-SMOTE; MKC-SMOTE,5781; 581012,12; 54,Kaggle; UCI,P039-D010; P075-D038; P068-D017
+default,original,UCI,3,3,DGOT; GOIO; SOS,30000,23,UCI; not stated in paper,P074-D003; P071-D001; P060-D001
+phishingdata,original,multiple,3,3,MLOS; RSMOTE; SHSampler,1353,8; 9,KEEL; UCI,P073-D002; P053-D030; P059-D011
+shoppers,original,group-level,3,3,GOIO; Loyalty-SMOTE; SOS,12330; 12331,11; 16,not stated in paper; other: UCI/KEEL (group-level; per dataset not stated),P071-D002; P075-D010; P060-D002
+bankruptcy,original,other repository,2,3,GOIO; Loyalty-SMOTE,19967; 6820,64; 94,Kaggle; not stated in paper; other: UCI/KEEL (group-level; per dataset not stated),P071-D017; P075-D018; P075-D056
+abalone 15,modified,UCI,2,2,DGOT; GOIO,4177,8,UCI; not stated in paper,P074-D007; P071-D011
+abalone 6,modified,UCI,2,2,DGOT; GOIO,3527; 4177,8,UCI; not stated in paper,P074-D008; P071-D013
+acl,not stated,multiple,2,2,SMOTE-IPF; SPIDER2,140,6,other: provided by authors of [45]; private,P029-D031; P021-D025
+bank,original,UCI,2,2,DGOT; MBS,4521; 45211,11; 16,UCI,P074-D005; P046-D012
+boundary,original,multiple,2,2,LS; RBBoost / Random Balance,3505,174,other: HDDT collection of Cieslak et al. [37] (http://www.nd.edu/dial/hddt/); other: biological datasets [20] (Radivojac et al.),P014-D001; P027-D001
+breast tissue2,modified,UCI,2,2,RSMOTE; k-means SMOTE,88,9,UCI,P053-D001; P038-D068
+car3,modified,multiple,2,2,FW-SMOTE; RUSBoost,1728; 174,7; 9182,UCI; other: microarray datasets reported in Maldonado et al. [6],P056-D038; P020-D004
+cleveland 1,modified,UCI,2,2,GMMSampling; SOUP,,,UCI,P066-D001; P043-D003
+cleveland 2,modified,UCI,2,2,GMMSampling; SOUP,,,UCI,P066-D002; P043-D004
+compustat,original,other repository,2,2,LS; RBBoost / Random Balance,13657,20,other: Compustat North America financial database; other: HDDT collection of Cieslak et al. [37] (http://www.nd.edu/dial/hddt/),P014-D004; P027-D004
+e-state,original,multiple,2,2,LS; SMOTE,5322; 53220,12,other: real-world dataset originally considered in [6] (NCI Yeast AntiCancer drug screen); private,P014-D005; P006-D004
+firewall,original,multiple,2,2,DGOT; Loyalty-SMOTE,65532; 65533,11,Kaggle; UCI,P074-D012; P075-D051
+fourclass,modified,other repository,2,2,COG-OS; LS,862,2,LibSVM,P012-D011; P014-D006
+htru2,original,UCI,2,2,CISO; GDO,17898,8; 9,UCI,P069-D044; P057-D042
+intrusion,modified,multiple,2,2,CTGAN / TVAE; LS,,41,UCI; other: KDD'99 Challenge [16],P039-D012; P014-D008
+isolet,repository-defined,multiple,2,2,DGOT; GDO,7797,617,UCI; imbalanced-learn,P074-D017; P057-D043
+phoss,original,multiple,2,2,LS; RBBoost / Random Balance,11411,479,other: HDDT collection of Cieslak et al. [37] (http://www.nd.edu/dial/hddt/); other: biological datasets [20] (Radivojac et al.),P014-D015; P027-D018
+svmguide3,modified,multiple,2,2,HDE; RSMOTE,1041; 312,22,LibSVM; UCI,P052-D012; P053-D014
+vowel5,modified,UCI,2,2,OREM-M; SMOM,990,10,UCI; not stated in paper,P065-D009; P034-D006
+yeast7,modified,UCI,2,2,SMOM; SVDD-WSMOTE,1055,8,UCI,P034-D024; P061-D023
+yeast8,modified,UCI,2,2,SMOM; SVDD-WSMOTE,1484,8,UCI,P034-D026; P061-D024
+50words,modified,other repository,1,1,INOS,,270,UCR,P023-D003
+a1a,modified,other repository,1,1,HDE,404,119,LibSVM,P052-D028
+abalone10,modified,UCI,1,1,SMOM,2297,10,UCI,P034-D025
+abalone8,modified,UCI,1,1,SMOM,2148,10,UCI,P034-D017
+absenteeism at work,original,UCI,1,1,MKC-SMOTE,740,11,UCI,P068-D009
+academic,not stated,group-level,1,1,Loyalty-SMOTE,4425,37,other: UCI/KEEL (group-level; per dataset not stated),P075-D011
+adiac,modified,other repository,1,1,INOS,,176,UCR,P023-D001
+ai4i2020,not stated,group-level,1,1,Loyalty-SMOTE,10000,5,other: UCI/KEEL (group-level; per dataset not stated),P075-D002
+aids 15000,not stated,group-level,1,1,Loyalty-SMOTE,15000,23,other: UCI/KEEL (group-level; per dataset not stated),P075-D012
+aids 5000,not stated,group-level,1,1,Loyalty-SMOTE,5000,23,other: UCI/KEEL (group-level; per dataset not stated),P075-D005
+aids 50000,not stated,other repository,1,1,Loyalty-SMOTE,50000,23,Kaggle,P075-D041
+approval,not stated,other repository,1,1,Loyalty-SMOTE,697,7,Kaggle,P075-D035
+attribute noise versions of the 9 real-world datasets,modified,KEEL,1,1,SMOTE-IPF,,,KEEL,P029-D041
+bankmarket,not stated,UCI,1,1,CGMOS,45211,17,UCI,P032-D001
+bar crawl,original,UCI,1,1,MKC-SMOTE,10486,4,UCI,P068-D020
+breast can.,not stated,UCI,1,1,SPIDER2,,,UCI,P021-D026
+breast tissue4,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D069
+cam,not stated,other repository,1,1,RBBoost / Random Balance,18916,,other: HDDT collection of Cieslak et al. [37] (http://www.nd.edu/dial/hddt/),P027-D003
+cardiovascular,not stated,other repository,1,1,Loyalty-SMOTE,55772,10,Kaggle,P075-D052
+census-income database,modified,UCI,1,1,ClusterCentroids,30162,,UCI,P015-D006
+charactertraj,not stated,UCI,1,1,CGMOS,2860,3,UCI,P032-D007
+cifar-10,modified,other repository,1,1,ROS (Buda),,,"other: CIFAR-10 benchmark (Krizhevsky & Hinton, 2009)",P037-D002
+class noise versions of the 9 real-world datasets,modified,KEEL,1,1,SMOTE-IPF,,,KEEL,P029-D040
+cnae,not stated,other repository,1,1,Loyalty-SMOTE,1080,312,Kaggle,P075-D059
+cod,modified,other repository,1,1,HDE,19871,8,LibSVM,P052-D041
+codrna,modified,UCI,1,1,RSMOTE,41674,8,UCI,P053-D018
+contra2,modified,UCI,1,1,RUSBoost,1473,10,UCI,P020-D014
+covtype,not stated,other repository,1,1,RBBoost / Random Balance,38500,,other: HDDT collection of Cieslak et al. [37] (http://www.nd.edu/dial/hddt/),P027-D005
+credit,original,other repository,1,1,CTGAN / TVAE,,,Kaggle,P039-D011
+customer churn wireless telecom,not stated,other repository,1,1,AB-SMOTE,5000,,other: Crowd Analytix,P044-D002
+cytvspox,modified,UCI,1,1,DSRBF / Static-SMOTE,482,8,UCI,P022-D004
+darwin,not stated,other repository,1,1,Loyalty-SMOTE,129,423,Kaggle,P075-D057
+drug,not stated,group-level,1,1,Loyalty-SMOTE,1886,13,other: UCI/KEEL (group-level; per dataset not stated),P075-D004
+drug200,original,UCI,1,1,Loyalty-SMOTE,413,5,UCI,P075-D048
+dry beans,original,UCI,1,1,DGOT,13611,16,UCI,P074-D004
+dry-bean,original,KEEL,1,1,MC-NCLWO,13611,16,KEEL,P072-D010
+ecoli6,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D052
+employe attrition,not stated,other repository,1,1,AB-SMOTE,1470,,other: IBM Analytics,P044-D005
+employee,original,UCI,1,1,Loyalty-SMOTE,4654,7,UCI,P075-D047
+estate,not stated,other repository,1,1,RBBoost / Random Balance,5322,,other: HDDT collection of Cieslak et al. [37] (http://www.nd.edu/dial/hddt/),P027-D007
+faceall,modified,other repository,1,1,INOS,,131,UCR,P023-D002
+flag,modified,UCI,1,1,SMOTE-ENN / SMOTE-Tomek,194,28,UCI,P008-D012
+forest cover,modified,UCI,1,1,SMOTE,,,UCI,P006-D006
+g7,modified,UCI,1,1,OSS,,10,UCI,P004-D005
+gender,not stated,other repository,1,1,Loyalty-SMOTE,4747,18,Kaggle,P075-D034
+gender by name,not stated,other repository,1,1,Loyalty-SMOTE,146870,4,Kaggle,P075-D054
+gisette,modified,other repository,1,1,HDE,3076,5000,LibSVM,P052-D025
+give me some credit,not stated,other repository,1,1,MBS,150000,10,Kaggle,P046-D008
+glass3,modified,UCI,1,1,RUSBoost,214,10,UCI,P020-D008
+haberman10,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D092
+haberman2,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D089
+haberman4,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D090
+haberman6,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D091
+hcv,original,UCI,1,1,MKC-SMOTE,589,12,UCI,P068-D015
+healthy older people2,original,UCI,1,1,RSMOTE,22646,8,UCI,P053-D035
+heart-v,not stated,other repository,1,1,RBBoost / Random Balance,200,,other: HDDT collection of Cieslak et al. [37] (http://www.nd.edu/dial/hddt/),P027-D009
+heart10,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D076
+heart15,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D077
+heart2,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D073
+heart4,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D074
+heart6,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D075
+hmeq,not stated,other repository,1,1,MBS,5960,10,Kaggle,P046-D010
+housing,modified,UCI,1,1,EasyEnsemble / BalanceCascade,506,,UCI,P016-D006
+hr,original,UCI,1,1,Loyalty-SMOTE,1470,21,UCI,P075-D046
+hypo,not stated,other repository,1,1,RBBoost / Random Balance,3163,,other: HDDT collection of Cieslak et al. [37] (http://www.nd.edu/dial/hddt/),P027-D010
+icr,not stated,group-level,1,1,Loyalty-SMOTE,634,33,other: UCI/KEEL (group-level; per dataset not stated),P075-D017
+ijcnn,modified,other repository,1,1,HDE,4858,22,LibSVM,P052-D042
+ilsvrc-2012,modified,other repository,1,1,ROS (Buda),,,"other: ImageNet ILSVRC-2012 (Russakovsky et al., 2015)",P037-D003
+imagenet12,modified,other repository,1,1,DLexiBoost,,2048,other: ImageNet 2011 Fall Release,P045-D033
+imagenet8,modified,other repository,1,1,DLexiBoost,1120,2048,other: ImageNet 2011 Fall Release,P045-D031
+imagenet9,modified,other repository,1,1,DLexiBoost,1240,2048,other: ImageNet 2011 Fall Release,P045-D032
+iris2,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D044
+iris4,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D045
+iris6,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D046
+ism,not stated,other repository,1,1,RBBoost / Random Balance,11180,,other: HDDT collection of Cieslak et al. [37] (http://www.nd.edu/dial/hddt/),P027-D011
+isolet5,modified,UCI,1,1,RSMOTE,858,617,UCI,P053-D017
+k1b,original,other repository,1,1,COG-OS,2340,21839,other: WebACE,P012-D009
+kddcup-99 intrusion,modified,UCI,1,1,SMOTEBoost,,,"other: KDD-Cup 1999 (ref [20], http://kdd.ics.uci.edu/databases/kddcup99/task.html)",P007-D001
+kddcup99data,modified,UCI,1,1,COG-OS,,41,other: UCI KDD Archive,P012-D015
+la12,original,other repository,1,1,COG-OS,6279,31472,other: TREC,P012-D010
+letter-a,modified,UCI,1,1,SMOTE-ENN / SMOTE-Tomek,20000,16,UCI,P008-D014
+letter-vowel,modified,UCI,1,1,SMOTE-ENN / SMOTE-Tomek,20000,16,UCI,P008-D008
+libra2,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D047
+libra4,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D048
+libra6,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D049
+liver disorders10,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D087
+liver disorders15,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D088
+liver disorders2,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D084
+liver disorders4,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D085
+liver disorders6,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D086
+mafalda,original,other repository,1,1,EMDO,23762,14,"other: GitHub (sisinflab-swot/mafalda, ref [64])",P051-D011
+magic04,not stated,other repository,1,1,Loyalty-SMOTE,19020,11,Kaggle,P075-D037
+maternal,not stated,group-level,1,1,Loyalty-SMOTE,1015,7,other: UCI/KEEL (group-level; per dataset not stated),P075-D006
+me2vsother,modified,UCI,1,1,DSRBF / Static-SMOTE,1484,8,UCI,P022-D005
+medv,original,UCI,1,1,Loyalty-SMOTE,512,13,UCI,P075-D049
+mnist 3,modified,other repository,1,1,NBU,,784,other: MNIST,P049-D027
+mnist 5,modified,other repository,1,1,NBU,,784,other: MNIST,P049-D028
+mnist12,modified,other repository,1,1,CTGAN / TVAE,,,other: MNIST (LeCun),P039-D013
+mnist28,modified,other repository,1,1,CTGAN / TVAE,,,other: MNIST (LeCun),P039-D014
+mocap,modified,UCI,1,1,RSMOTE,48023,33,UCI,P053-D022
+multiplefs,not stated,UCI,1,1,CGMOS,2000,649,UCI,P032-D017
+national,not stated,group-level,1,1,Loyalty-SMOTE,2279,9,other: UCI/KEEL (group-level; per dataset not stated),P075-D007
+news,original,UCI,1,1,CTGAN / TVAE,,,UCI,P039-D015
+obesity,not stated,other repository,1,1,Loyalty-SMOTE,2112,17,Kaggle,P075-D033
+obs,original,UCI,1,1,RSMOTE,1075,21,UCI,P053-D029
+occupancy,not stated,group-level,1,1,Loyalty-SMOTE,2666,7,other: UCI/KEEL (group-level; per dataset not stated),P075-D008
+online,not stated,group-level,1,1,Loyalty-SMOTE,39645,38,other: UCI/KEEL (group-level; per dataset not stated),P075-D009
+online retail,modified,UCI,1,1,RSMOTE,541909,7,UCI,P053-D027
+online shoppers,original,UCI,1,1,CISO,12330,17,UCI,P069-D043
+page-block0,not stated,UCI,1,1,GDO,5472,10,UCI,P057-D047
+pageblock1,modified,UCI,1,1,SVDD-WSMOTE,,10,UCI,P061-D015
+parkinsons telemonitoring,not stated,UCI,1,1,GDO,5875,26,UCI,P057-D048
+pendigits5,modified,UCI,1,1,RUSBoost,10992,17,UCI,P020-D010
+phishing,modified,other repository,1,1,HDE,4910,68,LibSVM,P052-D039
+pima10,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D081
+pima15,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D082
+pima2,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D078
+pima20,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D083
+pima4,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D079
+pima6,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D080
+plates-faults5,modified,UCI,1,1,SMOM,1941,27,UCI,P034-D018
+plates-faults7,original,UCI,1,1,SMOM,1941,27,UCI,P034-D019
+poker hand,original,UCI,1,1,MKC-SMOTE,24811,10,UCI,P068-D014
+polish bankruptcy,original,UCI,1,1,DGOT,19967,64,UCI,P074-D009
+probe binary,modified,UCI,1,1,COG-OS,,41,other: UCI KDD Archive,P012-D016
+promotion,not stated,other repository,1,1,MBS,25000,4,Kaggle,P046-D011
+purchase,not stated,other repository,1,1,Loyalty-SMOTE,12331,18,Kaggle,P075-D039
+r2l binary,modified,UCI,1,1,COG-OS,,41,other: UCI KDD Archive,P012-D017
+raisin,not stated,group-level,1,1,Loyalty-SMOTE,600,8,other: UCI/KEEL (group-level; per dataset not stated),P075-D026
+rt-iot,not stated,other repository,1,1,Loyalty-SMOTE,123118,53,Kaggle,P075-D053
+sales: win loss,not stated,other repository,1,1,AB-SMOTE,78025,,other: IBM Analytics,P044-D008
+satimage4,modified,UCI,1,1,RUSBoost,6435,37,UCI,P020-D011
+satisfied,not stated,other repository,1,1,Loyalty-SMOTE,103905,21,Kaggle,P075-D040
+seed,modified,UCI,1,1,SVDD-WSMOTE,,7,UCI,P061-D012
+segment10,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D056
+segment15,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D057
+segment2,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D053
+segment20,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D058
+segment4,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D054
+segment5,modified,UCI,1,1,RUSBoost,2310,20,UCI,P020-D013
+segment6,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D055
+sick2,repository-defined,KEEL,1,1,DLexiBoost,,,KEEL,P045-D008
+skin,modified,UCI,1,1,RSMOTE,196139,3,UCI,P053-D026
+skinnonskin,modified,other repository,1,1,HDE,20034,3,LibSVM,P052-D040
+sleaf,modified,other repository,1,1,INOS,,128,UCR,P023-D004
+smartphone,not stated,other repository,1,1,Loyalty-SMOTE,2948,536,Kaggle,P075-D055
+smoke,not stated,other repository,1,1,Loyalty-SMOTE,62631,14,Kaggle,P075-D042
+solarflaref,modified,UCI,1,1,RUSBoost,1389,13,UCI,P020-D003
+soybean12,repository-defined,KEEL,1,1,DLexiBoost,,,KEEL,P045-D007
+splice-ei,modified,UCI,1,1,SMOTE-ENN / SMOTE-Tomek,3176,60,UCI,P008-D006
+splice-ie,modified,UCI,1,1,SMOTE-ENN / SMOTE-Tomek,3176,60,UCI,P008-D005
+students dropout,original,UCI,1,1,DGOT,4424,36,UCI,P074-D002
+susy,modified,UCI,1,1,RSMOTE,23752,18,UCI,P053-D021
+svmguide2,original,UCI,1,1,RSMOTE,391,20,UCI,P053-D032
+telco customer churn,original,other repository,1,1,AB-SMOTE,7043,,other: IBM Analytics,P044-D003
+toxicity,not stated,other repository,1,1,Loyalty-SMOTE,172,1171,Kaggle,P075-D058
+twopats,modified,other repository,1,1,INOS,,128,UCR,P023-D005
+veh1,modified,UCI,1,1,OSS,,19,UCI,P004-D007
+vehicle10,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D062
+vehicle15,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D063
+vehicle20,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D064
+vehicle4,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D060
+vehicle6,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D061
+voice9 6,modified,UCI,1,1,SMOM,413,10,UCI,P034-D005
+voice9 7,original,UCI,1,1,SMOM,413,10,UCI,P034-D014
+vowel7,modified,UCI,1,1,SMOM,990,10,UCI,P034-D007
+vw0,modified,UCI,1,1,OSS,,10,UCI,P004-D006
+wafer,modified,other repository,1,1,INOS,,152,UCR,P023-D006
+wine2,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D065
+wine4,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D066
+wine6,modified,UCI,1,1,k-means SMOTE,,,UCI,P038-D067
+yoga,modified,other repository,1,1,INOS,,426,UCR,P023-D007

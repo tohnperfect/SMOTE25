@@ -97,6 +97,14 @@ def sha(path):
     with open(P(path), "rb") as fh: h.update(fh.read())
     return h.hexdigest()
 
+def sha_ok(path, stored):
+    """8 Nov 2026: a git checkout on Windows (core.autocrlf) rewrites LF as CRLF, so a hash stored when a file was
+    written can differ from the checked-out bytes although the content is the same. Accept the raw bytes, the
+    LF-normalised and the CRLF-normalised bytes."""
+    b = open(P(path), "rb").read()
+    lf = b.replace(b"\r\n", b"\n")
+    return stored in {hashlib.sha256(x).hexdigest() for x in (b, lf, lf.replace(b"\n", b"\r\n"))}
+
 def rcsv(path):
     with open(P(path), encoding="utf-8-sig", newline="") as fh: return list(csv.DictReader(fh))
 

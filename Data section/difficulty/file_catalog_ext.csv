@@ -1,0 +1,717 @@
+src,name,path,n,f,classes,minority,dist,err,key
+KEEL-std(F),abalone,src/Fuminides_keel_datasets/abalone/abalone.dat,4174,8,28,1,"[1, 1, 1, 1, 1, 2, 2, 6, 9, 14, 15, 26, 32, 42, 57, 58, 67, 103, 115, 126, 203, 259, 266, 390, 487, 567, 634, 689]",,abalone
+KEEL-std(F),adult,src/Fuminides_keel_datasets/adult/adult.dat,45222,14,2,11208,"[11208, 34014]",,adult
+KEEL-std(F),appendicitis,src/Fuminides_keel_datasets/appendicitis/appendicitis.dat,106,7,2,21,"[21, 85]",,appendicitis
+KEEL-std(F),australian,src/Fuminides_keel_datasets/australian/australian.dat,690,14,2,307,"[307, 383]",,australian
+KEEL-std(F),automobile,src/Fuminides_keel_datasets/automobile/automobile.dat,159,25,6,3,"[3, 13, 20, 29, 46, 48]",,automobile
+KEEL-std(F),balance,src/Fuminides_keel_datasets/balance/balance.dat,625,4,3,49,"[49, 288, 288]",,balance
+KEEL-std(F),banana,src/Fuminides_keel_datasets/banana/banana.dat,5300,2,2,2376,"[2376, 2924]",,banana
+KEEL-std(F),bands,src/Fuminides_keel_datasets/bands/bands.dat,365,19,2,135,"[135, 230]",,bands
+KEEL-std(F),breast,src/Fuminides_keel_datasets/breast/breast.dat,277,9,2,81,"[81, 196]",,breast
+KEEL-std(F),bupa,src/Fuminides_keel_datasets/bupa/bupa.dat,345,6,2,145,"[145, 200]",,bupa
+KEEL-std(F),car,src/Fuminides_keel_datasets/car/car.dat,1728,6,4,65,"[65, 69, 384, 1210]",,car
+KEEL-std(F),census,src/Fuminides_keel_datasets/census/census.dat,142521,41,2,8162,"[8162, 134359]",,census
+KEEL-std(F),chess,src/Fuminides_keel_datasets/chess/chess.dat,3196,36,2,1527,"[1527, 1669]",,chess
+KEEL-std(F),cleveland,src/Fuminides_keel_datasets/cleveland/cleveland.dat,297,13,5,13,"[13, 35, 35, 54, 160]",,cleveland
+KEEL-std(F),coil2000,src/Fuminides_keel_datasets/coil2000/coil2000.dat,9822,85,2,586,"[586, 9236]",,coil2000
+KEEL-std(F),contraceptive,src/Fuminides_keel_datasets/contraceptive/contraceptive.dat,1473,9,3,333,"[333, 511, 629]",,contraceptive
+KEEL-std(F),crx,src/Fuminides_keel_datasets/crx/crx.dat,653,15,2,296,"[296, 357]",,crx
+KEEL-std(F),dermatology,src/Fuminides_keel_datasets/dermatology/dermatology.dat,358,34,6,20,"[20, 48, 48, 60, 71, 111]",,dermatology
+KEEL-std(F),ecoli,src/Fuminides_keel_datasets/ecoli/ecoli.dat,336,7,8,2,"[2, 2, 5, 20, 35, 52, 77, 143]",,ecoli
+KEEL-std(F),flare,src/Fuminides_keel_datasets/flare/flare.dat,1066,11,6,43,"[43, 95, 147, 211, 239, 331]",,flare
+KEEL-std(F),german,src/Fuminides_keel_datasets/german/german.dat,1000,20,2,300,"[300, 700]",,german
+KEEL-std(F),glass,src/Fuminides_keel_datasets/glass/glass.dat,214,9,6,9,"[9, 13, 17, 29, 70, 76]",,glass
+KEEL-std(F),haberman,src/Fuminides_keel_datasets/haberman/haberman.dat,306,3,2,81,"[81, 225]",,haberman
+KEEL-std(F),heart,src/Fuminides_keel_datasets/heart/heart.dat,270,13,2,120,"[120, 150]",,heart
+KEEL-std(F),hepatitis,src/Fuminides_keel_datasets/hepatitis/hepatitis.dat,80,19,2,13,"[13, 67]",,hepatitis
+KEEL-std(F),housevotes,src/Fuminides_keel_datasets/housevotes/housevotes.dat,232,16,2,108,"[108, 124]",,housevotes
+KEEL-std(F),ionosphere,src/Fuminides_keel_datasets/ionosphere/ionosphere.dat,351,33,2,126,"[126, 225]",,ionosphere
+KEEL-std(F),iris,src/Fuminides_keel_datasets/iris/iris.dat,150,4,3,50,"[50, 50, 50]",,iris
+KEEL-std(F),kr-vs-k,src/Fuminides_keel_datasets/kr-vs-k/kr-vs-k.dat,28056,6,18,27,"[27, 78, 81, 198, 246, 390, 471, 592, 683, 1433, 1712, 1985, 2166, 2796, 2854, 3597, 4194, 4553]",,krvsk
+KEEL-std(F),led7digit,src/Fuminides_keel_datasets/led7digit/led7digit.dat,500,7,10,37,"[37, 45, 47, 49, 51, 52, 52, 53, 57, 57]",,led7digit
+KEEL-std(F),letter,src/Fuminides_keel_datasets/letter/letter.dat,20000,16,26,734,"[734, 734, 736, 739, 747, 748, 752, 753, 755, 758, 761, 764, 766, 768, 773, 775, 783, 783, 786, 787, 789, 792, 796, 803, 805, 813]",,letter
+KEEL-std(F),lymphography,src/Fuminides_keel_datasets/lymphography/lymphography.dat,148,18,4,2,"[2, 4, 61, 81]",,lymphography
+KEEL-std(F),magic,src/Fuminides_keel_datasets/magic/magic.dat,19020,10,2,6688,"[6688, 12332]",,magic
+KEEL-std(F),mammographic,src/Fuminides_keel_datasets/mammographic/mammographic.dat,830,5,2,403,"[403, 427]",,mammographic
+KEEL-std(F),marketing,src/Fuminides_keel_datasets/marketing/marketing.dat,6876,13,9,505,"[505, 527, 529, 618, 743, 784, 846, 1069, 1255]",,marketing
+KEEL-std(F),monk-2,src/Fuminides_keel_datasets/monk-2/monk-2.dat,432,6,2,204,"[204, 228]",,monk2
+KEEL-std(F),mushroom,src/Fuminides_keel_datasets/mushroom/mushroom.dat,5644,22,2,2156,"[2156, 3488]",,mushroom
+KEEL-std(F),newthyroid,src/Fuminides_keel_datasets/newthyroid/newthyroid.dat,215,5,3,30,"[30, 35, 150]",,newthyroid
+KEEL-std(F),nursery,src/Fuminides_keel_datasets/nursery/nursery.dat,12960,8,5,2,"[2, 328, 4044, 4266, 4320]",,nursery
+KEEL-std(F),optdigits,src/Fuminides_keel_datasets/optdigits/optdigits.dat,5620,64,10,554,"[554, 554, 557, 558, 558, 562, 566, 568, 571, 572]",,optdigits
+KEEL-std(F),page-blocks,src/Fuminides_keel_datasets/page-blocks/page-blocks.dat,5472,10,5,28,"[28, 87, 115, 329, 4913]",,pageblocks
+KEEL-std(F),penbased,src/Fuminides_keel_datasets/penbased/penbased.dat,10992,16,10,1055,"[1055, 1055, 1055, 1055, 1056, 1142, 1143, 1143, 1144, 1144]",,penbased
+KEEL-std(F),phoneme,src/Fuminides_keel_datasets/phoneme/phoneme.dat,5404,5,2,1586,"[1586, 3818]",,phoneme
+KEEL-std(F),pima,src/Fuminides_keel_datasets/pima/pima.dat,768,8,2,268,"[268, 500]",,pima
+KEEL-std(F),post-operative,src/Fuminides_keel_datasets/post-operative/post-operative.dat,87,8,3,1,"[1, 24, 62]",,postoperative
+KEEL-std(F),ring,src/Fuminides_keel_datasets/ring/ring.dat,7400,20,2,3664,"[3664, 3736]",,ring
+KEEL-std(F),saheart,src/Fuminides_keel_datasets/saheart/saheart.dat,462,9,2,160,"[160, 302]",,saheart
+KEEL-std(F),satimage,src/Fuminides_keel_datasets/satimage/satimage.dat,6435,36,6,626,"[626, 703, 707, 1358, 1508, 1533]",,satimage
+KEEL-std(F),segment,src/Fuminides_keel_datasets/segment/segment.dat,2310,19,7,330,"[330, 330, 330, 330, 330, 330, 330]",,segment
+KEEL-std(F),shuttle,src/Fuminides_keel_datasets/shuttle/shuttle.dat,57999,9,7,10,"[10, 13, 49, 171, 3267, 8903, 45586]",,shuttle
+KEEL-std(F),sonar,src/Fuminides_keel_datasets/sonar/sonar.dat,208,60,2,97,"[97, 111]",,sonar
+KEEL-std(F),spambase,src/Fuminides_keel_datasets/spambase/spambase.dat,4597,57,2,1812,"[1812, 2785]",,spambase
+KEEL-std(F),spectfheart,src/Fuminides_keel_datasets/spectfheart/spectfheart.dat,267,44,2,55,"[55, 212]",,spectfheart
+KEEL-std(F),splice,src/Fuminides_keel_datasets/splice/splice.dat,3190,60,3,767,"[767, 768, 1655]",,splice
+KEEL-std(F),texture,src/Fuminides_keel_datasets/texture/texture.dat,5500,40,11,500,"[500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500]",,texture
+KEEL-std(F),thyroid,src/Fuminides_keel_datasets/thyroid/thyroid.dat,7200,21,3,166,"[166, 368, 6666]",,thyroid
+KEEL-std(F),tic-tac-toe,src/Fuminides_keel_datasets/tic-tac-toe/tic-tac-toe.dat,958,9,2,332,"[332, 626]",,tictactoe
+KEEL-std(F),titanic,src/Fuminides_keel_datasets/titanic/titanic.dat,2201,3,4,285,"[285, 325, 706, 885]",,titanic
+KEEL-std(F),twonorm,src/Fuminides_keel_datasets/twonorm/twonorm.dat,7400,20,2,3697,"[3697, 3703]",,twonorm
+KEEL-std(F),vehicle,src/Fuminides_keel_datasets/vehicle/vehicle.dat,846,18,4,199,"[199, 212, 217, 218]",,vehicle
+KEEL-std(F),vowel,src/Fuminides_keel_datasets/vowel/vowel.dat,990,13,11,90,"[90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90]",,vowel
+KEEL-std(F),wdbc,src/Fuminides_keel_datasets/wdbc/wdbc.dat,569,30,2,212,"[212, 357]",,wdbc
+KEEL-std(F),wine,src/Fuminides_keel_datasets/wine/wine.dat,178,13,3,48,"[48, 59, 71]",,wine
+KEEL-std(F),winequality-red,src/Fuminides_keel_datasets/winequality-red/winequality-red.dat,1599,11,6,10,"[10, 18, 53, 199, 638, 681]",,winequalityred
+KEEL-std(F),winequality-white,src/Fuminides_keel_datasets/winequality-white/winequality-white.dat,4898,11,7,5,"[5, 20, 163, 175, 880, 1457, 2198]",,winequalitywhite
+KEEL-std(F),wisconsin,src/Fuminides_keel_datasets/wisconsin/wisconsin.dat,683,9,2,239,"[239, 444]",,wisconsin
+KEEL-std(F),yeast,src/Fuminides_keel_datasets/yeast/yeast.dat,1484,8,10,5,"[5, 20, 30, 35, 44, 51, 163, 244, 429, 463]",,yeast
+KEEL-std(F),zoo,src/Fuminides_keel_datasets/zoo/zoo.dat,101,16,7,4,"[4, 5, 8, 10, 13, 20, 41]",,zoo
+KEEL-std(C),abalone,src/keelcsv_lfs/abalone.csv,4174,8,28,1,"[1, 1, 1, 1, 1, 2, 2, 6, 9, 14, 15, 26, 32, 42, 57, 58, 67, 103, 115, 126, 203, 259, 266, 390, 487, 567, 634, 689]",,abalone
+KEEL-std(C),adult,src/keelcsv_lfs/adult.csv,45222,14,2,11208,"[11208, 34014]",,adult
+KEEL-std(C),appendicitis,src/keelcsv_lfs/appendicitis.csv,106,7,2,21,"[21, 85]",,appendicitis
+KEEL-std(C),australian,src/keelcsv_lfs/australian.csv,690,14,2,307,"[307, 383]",,australian
+KEEL-std(C),automobile,src/keelcsv_lfs/automobile.csv,159,25,6,3,"[3, 13, 20, 29, 46, 48]",,automobile
+KEEL-std(C),balance,src/keelcsv_lfs/balance.csv,625,4,3,49,"[49, 288, 288]",,balance
+KEEL-std(C),banana,src/keelcsv_lfs/banana.csv,5300,2,2,2376,"[2376, 2924]",,banana
+KEEL-std(C),bands,src/keelcsv_lfs/bands.csv,365,19,2,135,"[135, 230]",,bands
+KEEL-std(C),breast,src/keelcsv_lfs/breast.csv,277,9,2,81,"[81, 196]",,breast
+KEEL-std(C),bupa,src/keelcsv_lfs/bupa.csv,345,6,2,145,"[145, 200]",,bupa
+KEEL-std(C),car,src/keelcsv_lfs/car.csv,1728,6,4,65,"[65, 69, 384, 1210]",,car
+KEEL-std(C),census,src/keelcsv_lfs/census.csv,142521,41,2,8162,"[8162, 134359]",,census
+KEEL-std(C),chess,src/keelcsv_lfs/chess.csv,3196,36,2,1527,"[1527, 1669]",,chess
+KEEL-std(C),coil2000,src/keelcsv_lfs/coil2000.csv,9822,85,2,586,"[586, 9236]",,coil2000
+KEEL-std(C),connect-4,src/keelcsv_lfs/connect-4.csv,67557,42,3,6449,"[6449, 16635, 44473]",,connect4
+KEEL-std(C),contraceptive,src/keelcsv_lfs/contraceptive.csv,1473,9,3,333,"[333, 511, 629]",,contraceptive
+KEEL-std(C),crx,src/keelcsv_lfs/crx.csv,653,15,2,296,"[296, 357]",,crx
+KEEL-std(C),dermatology,src/keelcsv_lfs/dermatology.csv,358,34,6,20,"[20, 48, 48, 60, 71, 111]",,dermatology
+KEEL-std(C),ecoli,src/keelcsv_lfs/ecoli.csv,336,7,8,2,"[2, 2, 5, 20, 35, 52, 77, 143]",,ecoli
+KEEL-std(C),fars,src/keelcsv_lfs/fars.csv,100968,29,8,9,"[9, 299, 901, 8674, 13890, 15072, 20007, 42116]",,fars
+KEEL-std(C),flare,src/keelcsv_lfs/flare.csv,1066,11,6,43,"[43, 95, 147, 211, 239, 331]",,flare
+KEEL-std(C),german,src/keelcsv_lfs/german.csv,1000,20,2,300,"[300, 700]",,german
+KEEL-std(C),glass,src/keelcsv_lfs/glass.csv,214,9,6,9,"[9, 13, 17, 29, 70, 76]",,glass
+KEEL-std(C),haberman,src/keelcsv_lfs/haberman.csv,306,3,2,81,"[81, 225]",,haberman
+KEEL-std(C),hayes-roth,src/keelcsv_lfs/hayes-roth.csv,160,4,3,31,"[31, 64, 65]",,hayesroth
+KEEL-std(C),heart,src/keelcsv_lfs/heart.csv,270,13,2,119,"[119, 150]",,heart
+KEEL-std(C),hepatitis,src/keelcsv_lfs/hepatitis.csv,80,19,2,13,"[13, 67]",,hepatitis
+KEEL-std(C),housevotes,src/keelcsv_lfs/housevotes.csv,232,16,2,108,"[108, 124]",,housevotes
+KEEL-std(C),ionosphere,src/keelcsv_lfs/ionosphere.csv,351,33,2,126,"[126, 225]",,ionosphere
+KEEL-std(C),iris,src/keelcsv_lfs/iris.csv,150,4,3,50,"[50, 50, 50]",,iris
+KEEL-std(C),kddcup,src/keelcsv_lfs/kddcup.csv,494020,41,23,2,"[2, 3, 4, 7, 8, 9, 10, 12, 20, 21, 30, 53, 231, 264, 979, 1020, 1040, 1247, 1589, 2203, 97277, 107201, 280790]",,kdd
+KEEL-std(C),kr-vs-k,src/keelcsv_lfs/kr-vs-k.csv,28056,6,18,27,"[27, 78, 81, 198, 246, 390, 471, 592, 683, 1433, 1712, 1985, 2166, 2796, 2854, 3597, 4194, 4553]",,krvsk
+KEEL-std(C),led7digit,src/keelcsv_lfs/led7digit.csv,500,7,10,37,"[37, 45, 47, 49, 51, 52, 52, 53, 57, 57]",,led7digit
+KEEL-std(C),letter,src/keelcsv_lfs/letter.csv,20000,16,26,734,"[734, 734, 736, 739, 747, 748, 752, 753, 755, 758, 761, 764, 766, 768, 773, 775, 783, 783, 786, 787, 789, 792, 796, 803, 805, 813]",,letter
+KEEL-std(C),lymphography,src/keelcsv_lfs/lymphography.csv,148,18,4,2,"[2, 4, 61, 81]",,lymphography
+KEEL-std(C),magic,src/keelcsv_lfs/magic.csv,19020,10,2,6688,"[6688, 12332]",,magic
+KEEL-std(C),mammographic,src/keelcsv_lfs/mammographic.csv,830,5,2,403,"[403, 427]",,mammographic
+KEEL-std(C),marketing,src/keelcsv_lfs/marketing.csv,6876,13,9,505,"[505, 527, 529, 618, 743, 784, 846, 1069, 1255]",,marketing
+KEEL-std(C),monk-2,src/keelcsv_lfs/monk-2.csv,432,6,2,204,"[204, 228]",,monk2
+KEEL-std(C),movement_libras,src/keelcsv_lfs/movement_libras.csv,360,90,15,24,"[24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24]",,movementlibras
+KEEL-std(C),mushroom,src/keelcsv_lfs/mushroom.csv,5644,22,2,2156,"[2156, 3488]",,mushroom
+KEEL-std(C),newthyroid,src/keelcsv_lfs/newthyroid.csv,215,5,3,30,"[30, 35, 150]",,newthyroid
+KEEL-std(C),nursery,src/keelcsv_lfs/nursery.csv,12960,8,5,2,"[2, 328, 4044, 4266, 4320]",,nursery
+KEEL-std(C),optdigits,src/keelcsv_lfs/optdigits.csv,5620,64,10,554,"[554, 554, 557, 558, 558, 562, 566, 568, 571, 572]",,optdigits
+KEEL-std(C),page-blocks,src/keelcsv_lfs/page-blocks.csv,5472,10,5,28,"[28, 87, 115, 329, 4913]",,pageblocks
+KEEL-std(C),penbased,src/keelcsv_lfs/penbased.csv,10992,16,10,1055,"[1055, 1055, 1055, 1055, 1056, 1142, 1143, 1143, 1144, 1144]",,penbased
+KEEL-std(C),phoneme,src/keelcsv_lfs/phoneme.csv,5404,5,2,1586,"[1586, 3818]",,phoneme
+KEEL-std(C),pima,src/keelcsv_lfs/pima.csv,768,8,2,268,"[268, 500]",,pima
+KEEL-std(C),poker,src/keelcsv_lfs/poker.csv,1025009,10,10,8,"[8, 17, 236, 1460, 2050, 3978, 21634, 48828, 433097, 513701]",,poker
+KEEL-std(C),post-operative,src/keelcsv_lfs/post-operative.csv,87,8,3,1,"[1, 24, 62]",,postoperative
+KEEL-std(C),ring,src/keelcsv_lfs/ring.csv,7400,20,2,3664,"[3664, 3736]",,ring
+KEEL-std(C),saheart,src/keelcsv_lfs/saheart.csv,462,9,2,160,"[160, 302]",,saheart
+KEEL-std(C),satimage,src/keelcsv_lfs/satimage.csv,6435,36,6,626,"[626, 703, 707, 1358, 1508, 1533]",,satimage
+KEEL-std(C),segment,src/keelcsv_lfs/segment.csv,2310,19,7,330,"[330, 330, 330, 330, 330, 330, 330]",,segment
+KEEL-std(C),shuttle,src/keelcsv_lfs/shuttle.csv,57999,9,7,10,"[10, 13, 49, 171, 3267, 8903, 45586]",,shuttle
+KEEL-std(C),sonar,src/keelcsv_lfs/sonar.csv,208,60,2,97,"[97, 111]",,sonar
+KEEL-std(C),spambase,src/keelcsv_lfs/spambase.csv,4597,57,2,1812,"[1812, 2785]",,spambase
+KEEL-std(C),spectfheart,src/keelcsv_lfs/spectfheart.csv,267,44,2,55,"[55, 212]",,spectfheart
+KEEL-std(C),splice,src/keelcsv_lfs/splice.csv,3190,60,3,767,"[767, 768, 1655]",,splice
+KEEL-std(C),tae,src/keelcsv_lfs/tae.csv,151,5,3,49,"[49, 50, 52]",,tae
+KEEL-std(C),texture,src/keelcsv_lfs/texture.csv,5500,40,11,500,"[500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500]",,texture
+KEEL-std(C),thyroid,src/keelcsv_lfs/thyroid.csv,7200,21,3,166,"[166, 368, 6666]",,thyroid
+KEEL-std(C),tic-tac-toe,src/keelcsv_lfs/tic-tac-toe.csv,958,9,2,332,"[332, 626]",,tictactoe
+KEEL-std(C),titanic,src/keelcsv_lfs/titanic.csv,2201,3,2,711,"[711, 1490]",,titanic
+KEEL-std(C),twonorm,src/keelcsv_lfs/twonorm.csv,7400,20,2,3697,"[3697, 3703]",,twonorm
+KEEL-std(C),vehicle,src/keelcsv_lfs/vehicle.csv,846,18,4,199,"[199, 212, 217, 218]",,vehicle
+KEEL-std(C),vowel,src/keelcsv_lfs/vowel.csv,990,13,11,90,"[90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90]",,vowel
+KEEL-std(C),wdbc,src/keelcsv_lfs/wdbc.csv,569,30,2,212,"[212, 357]",,wdbc
+KEEL-std(C),wine,src/keelcsv_lfs/wine.csv,178,13,3,48,"[48, 59, 71]",,wine
+KEEL-std(C),winequality-red,src/keelcsv_lfs/winequality-red.csv,1599,11,6,10,"[10, 18, 53, 199, 638, 681]",,winequalityred
+KEEL-std(C),winequality-white,src/keelcsv_lfs/winequality-white.csv,4898,11,7,5,"[5, 20, 163, 175, 880, 1457, 2198]",,winequalitywhite
+KEEL-std(C),wisconsin,src/keelcsv_lfs/wisconsin.csv,683,9,2,239,"[239, 444]",,wisconsin
+KEEL-std(C),yeast,src/keelcsv_lfs/yeast.csv,1484,8,10,5,"[5, 20, 30, 35, 44, 51, 163, 244, 429, 463]",,yeast
+KEEL-std(C),zoo,src/keelcsv_lfs/zoo.csv,101,16,7,4,"[4, 5, 8, 10, 13, 20, 41]",,zoo
+PMLB,GAMETES_Epistasis_2_Way_1000atts_0.4H_EDM_1_EDM_1_1,src/pmlb/GAMETES_Epistasis_2_Way_1000atts_0.4H_EDM_1_EDM_1_1.tsv.gz,1600,1000,2,800,"[800, 800]",,gametesepistasis2way1000atts04hedm1edm11
+PMLB,GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1,src/pmlb/GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1.tsv.gz,1600,20,2,800,"[800, 800]",,gametesepistasis2way20atts01hedm11
+PMLB,GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1,src/pmlb/GAMETES_Epistasis_2_Way_20atts_0.4H_EDM_1_1.tsv.gz,1600,20,2,800,"[800, 800]",,gametesepistasis2way20atts04hedm11
+PMLB,GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1,src/pmlb/GAMETES_Epistasis_3_Way_20atts_0.2H_EDM_1_1.tsv.gz,1600,20,2,800,"[800, 800]",,gametesepistasis3way20atts02hedm11
+PMLB,GAMETES_Heterogeneity_20atts_1600_Het_0.4_0.2_50_EDM_2_001,src/pmlb/GAMETES_Heterogeneity_20atts_1600_Het_0.4_0.2_50_EDM_2_001.tsv.gz,1600,20,2,800,"[800, 800]",,gametesheterogeneity20atts1600het040250edm2001
+PMLB,GAMETES_Heterogeneity_20atts_1600_Het_0.4_0.2_75_EDM_2_001,src/pmlb/GAMETES_Heterogeneity_20atts_1600_Het_0.4_0.2_75_EDM_2_001.tsv.gz,1600,20,2,800,"[800, 800]",,gametesheterogeneity20atts1600het040275edm2001
+PMLB,Hill_Valley_with_noise,src/pmlb/Hill_Valley_with_noise.tsv.gz,1212,100,2,606,"[606, 606]",,hillvalleywithnoise
+PMLB,Hill_Valley_without_noise,src/pmlb/Hill_Valley_without_noise.tsv.gz,1212,100,2,600,"[600, 612]",,hillvalleywithoutnoise
+PMLB,_deprecated_australian,src/pmlb/_deprecated_australian.tsv.gz,690,14,2,307,"[307, 383]",,deprecatedaustralian
+PMLB,_deprecated_auto,src/pmlb/_deprecated_auto.tsv.gz,202,25,5,22,"[22, 27, 32, 54, 67]",,deprecatedauto
+PMLB,_deprecated_breast,src/pmlb/_deprecated_breast.tsv.gz,699,10,2,241,"[241, 458]",,deprecatedbreast
+PMLB,_deprecated_breast_cancer_wisconsin,src/pmlb/_deprecated_breast_cancer_wisconsin.tsv.gz,569,30,2,212,"[212, 357]",,deprecatedbreastcancerwisconsin
+PMLB,_deprecated_breast_w,src/pmlb/_deprecated_breast_w.tsv.gz,699,9,2,241,"[241, 458]",,deprecatedbreastw
+PMLB,_deprecated_buggyCrx,src/pmlb/_deprecated_buggyCrx.tsv.gz,690,15,2,307,"[307, 383]",,deprecatedbuggycrx
+PMLB,_deprecated_car,src/pmlb/_deprecated_car.tsv.gz,1728,6,4,65,"[65, 69, 384, 1210]",,deprecatedcar
+PMLB,_deprecated_car_evaluation,src/pmlb/_deprecated_car_evaluation.tsv.gz,1728,21,4,65,"[65, 69, 384, 1210]",,deprecatedcarevaluation
+PMLB,_deprecated_cleve,src/pmlb/_deprecated_cleve.tsv.gz,303,13,2,138,"[138, 165]",,deprecatedcleve
+PMLB,_deprecated_cleveland,src/pmlb/_deprecated_cleveland.tsv.gz,303,13,5,13,"[13, 35, 36, 55, 164]",,deprecatedcleveland
+PMLB,_deprecated_cleveland_nominal,src/pmlb/_deprecated_cleveland_nominal.tsv.gz,303,7,5,13,"[13, 35, 36, 55, 164]",,deprecatedclevelandnominal
+PMLB,_deprecated_cmc,src/pmlb/_deprecated_cmc.tsv.gz,1473,9,3,333,"[333, 511, 629]",,deprecatedcmc
+PMLB,_deprecated_colic,src/pmlb/_deprecated_colic.tsv.gz,368,22,2,136,"[136, 232]",,deprecatedcolic
+PMLB,_deprecated_contraceptive,src/pmlb/_deprecated_contraceptive.tsv.gz,1473,9,3,333,"[333, 511, 629]",,deprecatedcontraceptive
+PMLB,_deprecated_credit_a,src/pmlb/_deprecated_credit_a.tsv.gz,690,15,2,307,"[307, 383]",,deprecatedcredita
+PMLB,_deprecated_credit_g,src/pmlb/_deprecated_credit_g.tsv.gz,1000,20,2,300,"[300, 700]",,deprecatedcreditg
+PMLB,_deprecated_crx,src/pmlb/_deprecated_crx.tsv.gz,690,15,2,307,"[307, 383]",,deprecatedcrx
+PMLB,_deprecated_diabetes,src/pmlb/_deprecated_diabetes.tsv.gz,768,8,2,268,"[268, 500]",,deprecateddiabetes
+PMLB,_deprecated_flare,src/pmlb/_deprecated_flare.tsv.gz,1066,10,2,182,"[182, 884]",,deprecatedflare
+PMLB,_deprecated_german,src/pmlb/_deprecated_german.tsv.gz,1000,20,2,300,"[300, 700]",,deprecatedgerman
+PMLB,_deprecated_glass,src/pmlb/_deprecated_glass.tsv.gz,205,9,5,13,"[13, 17, 29, 70, 76]",,deprecatedglass
+PMLB,_deprecated_heart_c,src/pmlb/_deprecated_heart_c.tsv.gz,303,13,2,138,"[138, 165]",,deprecatedheartc
+PMLB,_deprecated_heart_h,src/pmlb/_deprecated_heart_h.tsv.gz,294,13,2,106,"[106, 188]",,deprecatedhearth
+PMLB,_deprecated_heart_statlog,src/pmlb/_deprecated_heart_statlog.tsv.gz,270,13,2,120,"[120, 150]",,deprecatedheartstatlog
+PMLB,_deprecated_horse_colic,src/pmlb/_deprecated_horse_colic.tsv.gz,368,22,2,136,"[136, 232]",,deprecatedhorsecolic
+PMLB,_deprecated_house_votes_84,src/pmlb/_deprecated_house_votes_84.tsv.gz,435,16,2,168,"[168, 267]",,deprecatedhousevotes84
+PMLB,_deprecated_hungarian,src/pmlb/_deprecated_hungarian.tsv.gz,294,13,2,106,"[106, 188]",,deprecatedhungarian
+PMLB,_deprecated_pima,src/pmlb/_deprecated_pima.tsv.gz,768,8,2,268,"[268, 500]",,deprecatedpima
+PMLB,_deprecated_prnn_fglass,src/pmlb/_deprecated_prnn_fglass.tsv.gz,205,9,5,13,"[13, 17, 29, 70, 76]",,deprecatedprnnfglass
+PMLB,_deprecated_solar_flare_1,src/pmlb/_deprecated_solar_flare_1.tsv.gz,315,12,5,21,"[21, 65, 65, 76, 88]",,deprecatedsolarflare1
+PMLB,_deprecated_solar_flare_2,src/pmlb/_deprecated_solar_flare_2.tsv.gz,1066,12,6,43,"[43, 95, 147, 211, 239, 331]",,deprecatedsolarflare2
+PMLB,_deprecated_vote,src/pmlb/_deprecated_vote.tsv.gz,435,16,2,168,"[168, 267]",,deprecatedvote
+PMLB,_deprecated_wdbc,src/pmlb/_deprecated_wdbc.tsv.gz,569,30,2,212,"[212, 357]",,deprecatedwdbc
+PMLB,adult,src/pmlb/adult.tsv.gz,48842,14,2,11687,"[11687, 37155]",,adult
+PMLB,agaricus_lepiota,src/pmlb/agaricus_lepiota.tsv.gz,8145,22,2,3917,"[3917, 4228]",,agaricuslepiota
+PMLB,allbp,src/pmlb/allbp.tsv.gz,3772,29,3,14,"[14, 149, 3609]",,allbp
+PMLB,allhyper,src/pmlb/allhyper.tsv.gz,3771,29,4,10,"[10, 12, 79, 3670]",,allhyper
+PMLB,allhypo,src/pmlb/allhypo.tsv.gz,3770,29,3,95,"[95, 194, 3481]",,allhypo
+PMLB,allrep,src/pmlb/allrep.tsv.gz,3772,29,4,34,"[34, 38, 52, 3648]",,allrep
+PMLB,analcatdata_aids,src/pmlb/analcatdata_aids.tsv.gz,50,4,2,25,"[25, 25]",,analcatdataaids
+PMLB,analcatdata_asbestos,src/pmlb/analcatdata_asbestos.tsv.gz,83,3,2,37,"[37, 46]",,analcatdataasbestos
+PMLB,analcatdata_authorship,src/pmlb/analcatdata_authorship.tsv.gz,841,70,4,55,"[55, 173, 296, 317]",,analcatdataauthorship
+PMLB,analcatdata_bankruptcy,src/pmlb/analcatdata_bankruptcy.tsv.gz,50,6,2,25,"[25, 25]",,analcatdatabankruptcy
+PMLB,analcatdata_boxing1,src/pmlb/analcatdata_boxing1.tsv.gz,120,3,2,42,"[42, 78]",,analcatdataboxing1
+PMLB,analcatdata_boxing2,src/pmlb/analcatdata_boxing2.tsv.gz,132,3,2,61,"[61, 71]",,analcatdataboxing2
+PMLB,analcatdata_creditscore,src/pmlb/analcatdata_creditscore.tsv.gz,100,6,2,27,"[27, 73]",,analcatdatacreditscore
+PMLB,analcatdata_cyyoung8092,src/pmlb/analcatdata_cyyoung8092.tsv.gz,97,10,2,24,"[24, 73]",,analcatdatacyyoung8092
+PMLB,analcatdata_cyyoung9302,src/pmlb/analcatdata_cyyoung9302.tsv.gz,92,10,2,19,"[19, 73]",,analcatdatacyyoung9302
+PMLB,analcatdata_dmft,src/pmlb/analcatdata_dmft.tsv.gz,797,4,6,123,"[123, 124, 127, 132, 136, 155]",,analcatdatadmft
+PMLB,analcatdata_fraud,src/pmlb/analcatdata_fraud.tsv.gz,42,11,2,13,"[13, 29]",,analcatdatafraud
+PMLB,analcatdata_germangss,src/pmlb/analcatdata_germangss.tsv.gz,400,5,4,100,"[100, 100, 100, 100]",,analcatdatagermangss
+PMLB,analcatdata_happiness,src/pmlb/analcatdata_happiness.tsv.gz,60,3,3,20,"[20, 20, 20]",,analcatdatahappiness
+PMLB,analcatdata_japansolvent,src/pmlb/analcatdata_japansolvent.tsv.gz,52,9,2,25,"[25, 27]",,analcatdatajapansolvent
+PMLB,analcatdata_lawsuit,src/pmlb/analcatdata_lawsuit.tsv.gz,264,4,2,19,"[19, 245]",,analcatdatalawsuit
+PMLB,ann_thyroid,src/pmlb/ann_thyroid.tsv.gz,7200,21,3,166,"[166, 368, 6666]",,annthyroid
+PMLB,appendicitis,src/pmlb/appendicitis.tsv.gz,106,7,2,21,"[21, 85]",,appendicitis
+PMLB,auto_insurance_symboling,src/pmlb/auto_insurance_symboling.tsv.gz,205,24,6,3,"[3, 22, 27, 32, 54, 67]",,autoinsurancesymboling
+PMLB,backache,src/pmlb/backache.tsv.gz,180,32,2,25,"[25, 155]",,backache
+PMLB,balance_scale,src/pmlb/balance_scale.tsv.gz,625,4,3,49,"[49, 288, 288]",,balancescale
+PMLB,banana,src/pmlb/banana.tsv.gz,5300,2,2,2376,"[2376, 2924]",,banana
+PMLB,biomed,src/pmlb/biomed.tsv.gz,209,8,2,75,"[75, 134]",,biomed
+PMLB,breast_cancer,src/pmlb/breast_cancer.tsv.gz,286,9,2,85,"[85, 201]",,breastcancer
+PMLB,breast_cancer_wisconsin_diagnostic,src/pmlb/breast_cancer_wisconsin_diagnostic.tsv.gz,569,30,2,212,"[212, 357]",,breastcancerwisconsindiagnostic
+PMLB,breast_cancer_wisconsin_original,src/pmlb/breast_cancer_wisconsin_original.tsv.gz,699,9,2,241,"[241, 458]",,breastcancerwisconsinoriginal
+PMLB,bupa,src/pmlb/bupa.tsv.gz,345,5,2,169,"[169, 176]",,bupa
+PMLB,calendarDOW,src/pmlb/calendarDOW.tsv.gz,399,32,5,44,"[44, 81, 83, 95, 96]",,calendardow
+PMLB,car_evaluation,src/pmlb/car_evaluation.tsv.gz,1728,6,4,65,"[65, 69, 384, 1210]",,carevaluation
+PMLB,cars,src/pmlb/cars.tsv.gz,392,8,3,68,"[68, 79, 245]",,cars
+PMLB,chess,src/pmlb/chess.tsv.gz,3196,36,2,1527,"[1527, 1669]",,chess
+PMLB,churn,src/pmlb/churn.tsv.gz,5000,20,2,707,"[707, 4293]",,churn
+PMLB,clean1,src/pmlb/clean1.tsv.gz,476,168,2,207,"[207, 269]",,clean1
+PMLB,clean2,src/pmlb/clean2.tsv.gz,6598,168,2,1017,"[1017, 5581]",,clean2
+PMLB,cloud,src/pmlb/cloud.tsv.gz,108,7,4,24,"[24, 24, 28, 32]",,cloud
+PMLB,coil2000,src/pmlb/coil2000.tsv.gz,9822,85,2,586,"[586, 9236]",,coil2000
+PMLB,collins,src/pmlb/collins.tsv.gz,485,23,13,17,"[17, 17, 24, 27, 29, 29, 29, 30, 36, 44, 48, 75, 80]",,collins
+PMLB,confidence,src/pmlb/confidence.tsv.gz,72,3,6,12,"[12, 12, 12, 12, 12, 12]",,confidence
+PMLB,congressional_voting_records,src/pmlb/congressional_voting_records.tsv.gz,435,16,2,168,"[168, 267]",,congressionalvotingrecords
+PMLB,connect_4,src/pmlb/connect_4.tsv.gz,67557,42,3,6449,"[6449, 16635, 44473]",,connect4
+PMLB,contraceptive_method,src/pmlb/contraceptive_method.tsv.gz,1473,9,3,333,"[333, 511, 629]",,contraceptivemethod
+PMLB,corral,src/pmlb/corral.tsv.gz,160,6,2,70,"[70, 90]",,corral
+PMLB,credit_approval_australia,src/pmlb/credit_approval_australia.tsv.gz,690,15,2,307,"[307, 383]",,creditapprovalaustralia
+PMLB,credit_approval_germany,src/pmlb/credit_approval_germany.tsv.gz,1000,20,2,300,"[300, 700]",,creditapprovalgermany
+PMLB,dermatology,src/pmlb/dermatology.tsv.gz,366,34,6,20,"[20, 49, 52, 61, 72, 112]",,dermatology
+PMLB,dis,src/pmlb/dis.tsv.gz,3772,29,2,58,"[58, 3714]",,dis
+PMLB,dna,src/pmlb/dna.tsv.gz,3186,180,3,765,"[765, 767, 1654]",,dna
+PMLB,ecoli,src/pmlb/ecoli.tsv.gz,327,7,5,20,"[20, 35, 52, 77, 143]",,ecoli
+PMLB,fars,src/pmlb/fars.tsv.gz,100968,29,8,9,"[9, 299, 901, 8674, 13890, 15072, 20007, 42116]",,fars
+PMLB,flags,src/pmlb/flags.tsv.gz,178,43,5,15,"[15, 27, 36, 40, 60]",,flags
+PMLB,glass2,src/pmlb/glass2.tsv.gz,163,9,2,76,"[76, 87]",,glass2
+PMLB,haberman,src/pmlb/haberman.tsv.gz,306,3,2,81,"[81, 225]",,haberman
+PMLB,hayes_roth,src/pmlb/hayes_roth.tsv.gz,160,4,3,31,"[31, 64, 65]",,hayesroth
+PMLB,heart_disease_cleveland,src/pmlb/heart_disease_cleveland.tsv.gz,303,13,2,139,"[139, 164]",,heartdiseasecleveland
+PMLB,heart_disease_hungarian,src/pmlb/heart_disease_hungarian.tsv.gz,294,13,2,106,"[106, 188]",,heartdiseasehungarian
+PMLB,heart_disease_va_long_beach,src/pmlb/heart_disease_va_long_beach.tsv.gz,200,13,2,51,"[51, 149]",,heartdiseasevalongbeach
+PMLB,heart_disease_zurich,src/pmlb/heart_disease_zurich.tsv.gz,123,12,2,8,"[8, 115]",,heartdiseasezurich
+PMLB,hepatitis,src/pmlb/hepatitis.tsv.gz,155,19,2,32,"[32, 123]",,hepatitis
+PMLB,horse_colic_lesion_type,src/pmlb/horse_colic_lesion_type.tsv.gz,368,20,5,12,"[12, 22, 79, 127, 128]",,horsecoliclesiontype
+PMLB,horse_colic_outcome,src/pmlb/horse_colic_outcome.tsv.gz,366,21,3,52,"[52, 89, 225]",,horsecolicoutcome
+PMLB,horse_colic_surgery,src/pmlb/horse_colic_surgery.tsv.gz,368,20,2,136,"[136, 232]",,horsecolicsurgery
+PMLB,hypothyroid,src/pmlb/hypothyroid.tsv.gz,3163,25,2,151,"[151, 3012]",,hypothyroid
+PMLB,ionosphere,src/pmlb/ionosphere.tsv.gz,351,34,2,126,"[126, 225]",,ionosphere
+PMLB,iris,src/pmlb/iris.tsv.gz,150,4,3,50,"[50, 50, 50]",,iris
+PMLB,irish,src/pmlb/irish.tsv.gz,500,5,2,222,"[222, 278]",,irish
+PMLB,kddcup,src/pmlb/kddcup.tsv.gz,494020,41,23,2,"[2, 3, 4, 7, 8, 9, 10, 12, 20, 21, 30, 53, 231, 264, 979, 1020, 1040, 1247, 1589, 2203, 97277, 107201, 280790]",,kdd
+PMLB,kr_vs_kp,src/pmlb/kr_vs_kp.tsv.gz,3196,36,2,1527,"[1527, 1669]",,krvskp
+PMLB,krkopt,src/pmlb/krkopt.tsv.gz,28056,6,18,27,"[27, 78, 81, 198, 246, 390, 471, 592, 683, 1433, 1712, 1985, 2166, 2796, 2854, 3597, 4194, 4553]",,krkopt
+PMLB,labor,src/pmlb/labor.tsv.gz,57,16,2,20,"[20, 37]",,labor
+PMLB,led24,src/pmlb/led24.tsv.gz,3200,24,10,296,"[296, 302, 308, 319, 320, 327, 327, 329, 335, 337]",,led24
+PMLB,led7,src/pmlb/led7.tsv.gz,3200,7,10,270,"[270, 304, 310, 319, 325, 327, 333, 335, 336, 341]",,led7
+PMLB,letter,src/pmlb/letter.tsv.gz,20000,16,26,734,"[734, 734, 736, 739, 747, 748, 752, 753, 755, 758, 761, 764, 766, 768, 773, 775, 783, 783, 786, 787, 789, 792, 796, 803, 805, 813]",,letter
+PMLB,lupus,src/pmlb/lupus.tsv.gz,87,3,2,35,"[35, 52]",,lupus
+PMLB,lymphography,src/pmlb/lymphography.tsv.gz,148,18,4,2,"[2, 4, 61, 81]",,lymphography
+PMLB,magic,src/pmlb/magic.tsv.gz,19020,10,2,6688,"[6688, 12332]",,magic
+PMLB,mfeat_factors,src/pmlb/mfeat_factors.tsv.gz,2000,216,10,200,"[200, 200, 200, 200, 200, 200, 200, 200, 200, 200]",,mfeatfactors
+PMLB,mfeat_fourier,src/pmlb/mfeat_fourier.tsv.gz,2000,76,10,200,"[200, 200, 200, 200, 200, 200, 200, 200, 200, 200]",,mfeatfourier
+PMLB,mfeat_karhunen,src/pmlb/mfeat_karhunen.tsv.gz,2000,64,10,200,"[200, 200, 200, 200, 200, 200, 200, 200, 200, 200]",,mfeatkarhunen
+PMLB,mfeat_morphological,src/pmlb/mfeat_morphological.tsv.gz,2000,6,10,200,"[200, 200, 200, 200, 200, 200, 200, 200, 200, 200]",,mfeatmorphological
+PMLB,mfeat_pixel,src/pmlb/mfeat_pixel.tsv.gz,2000,240,10,200,"[200, 200, 200, 200, 200, 200, 200, 200, 200, 200]",,mfeatpixel
+PMLB,mfeat_zernike,src/pmlb/mfeat_zernike.tsv.gz,2000,47,10,200,"[200, 200, 200, 200, 200, 200, 200, 200, 200, 200]",,mfeatzernike
+PMLB,mnist,src/pmlb/mnist.tsv.gz,70000,784,10,6313,"[6313, 6824, 6825, 6876, 6903, 6958, 6990, 7141, 7293, 7877]",,mnist
+PMLB,mofn_3_7_10,src/pmlb/mofn_3_7_10.tsv.gz,1324,10,2,292,"[292, 1032]",,mofn3710
+PMLB,molecular_biology_promoters,src/pmlb/molecular_biology_promoters.tsv.gz,106,57,2,53,"[53, 53]",,molecularbiologypromoters
+PMLB,monk1,src/pmlb/monk1.tsv.gz,556,6,2,278,"[278, 278]",,monk1
+PMLB,monk2,src/pmlb/monk2.tsv.gz,601,6,2,206,"[206, 395]",,monk2
+PMLB,monk3,src/pmlb/monk3.tsv.gz,554,6,2,266,"[266, 288]",,monk3
+PMLB,movement_libras,src/pmlb/movement_libras.tsv.gz,360,90,15,24,"[24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24]",,movementlibras
+PMLB,mushroom,src/pmlb/mushroom.tsv.gz,8124,22,2,3916,"[3916, 4208]",,mushroom
+PMLB,mux6,src/pmlb/mux6.tsv.gz,128,6,2,64,"[64, 64]",,mux6
+PMLB,new_thyroid,src/pmlb/new_thyroid.tsv.gz,215,5,3,30,"[30, 35, 150]",,newthyroid
+PMLB,nursery,src/pmlb/nursery.tsv.gz,12958,8,4,328,"[328, 4044, 4266, 4320]",,nursery
+PMLB,optdigits,src/pmlb/optdigits.tsv.gz,5620,64,10,554,"[554, 554, 557, 558, 558, 562, 566, 568, 571, 572]",,optdigits
+PMLB,page_blocks,src/pmlb/page_blocks.tsv.gz,5473,10,5,28,"[28, 88, 115, 329, 4913]",,pageblocks
+PMLB,parity5+5,src/pmlb/parity5+5.tsv.gz,1124,10,2,557,"[557, 567]",,parity55
+PMLB,parity5,src/pmlb/parity5.tsv.gz,32,5,2,16,"[16, 16]",,parity5
+PMLB,pendigits,src/pmlb/pendigits.tsv.gz,10992,16,10,1055,"[1055, 1055, 1055, 1055, 1056, 1142, 1143, 1143, 1144, 1144]",,pendigits
+PMLB,penguins,src/pmlb/penguins.tsv.gz,344,7,3,68,"[68, 124, 152]",,penguins
+PMLB,phoneme,src/pmlb/phoneme.tsv.gz,5404,5,2,1586,"[1586, 3818]",,phoneme
+PMLB,poker,src/pmlb/poker.tsv.gz,1025010,10,10,8,"[8, 17, 236, 1460, 2050, 3978, 21634, 48828, 433097, 513702]",,poker
+PMLB,postoperative_patient_data,src/pmlb/postoperative_patient_data.tsv.gz,88,8,2,24,"[24, 64]",,postoperativepatientdata
+PMLB,prnn_crabs,src/pmlb/prnn_crabs.tsv.gz,200,7,2,100,"[100, 100]",,prnncrabs
+PMLB,prnn_synth,src/pmlb/prnn_synth.tsv.gz,250,2,2,125,"[125, 125]",,prnnsynth
+PMLB,profb,src/pmlb/profb.tsv.gz,672,9,2,224,"[224, 448]",,profb
+PMLB,ring,src/pmlb/ring.tsv.gz,7400,20,2,3664,"[3664, 3736]",,ring
+PMLB,saheart,src/pmlb/saheart.tsv.gz,462,9,2,160,"[160, 302]",,saheart
+PMLB,satimage,src/pmlb/satimage.tsv.gz,6435,36,6,626,"[626, 703, 707, 1358, 1508, 1533]",,satimage
+PMLB,schizo,src/pmlb/schizo.tsv.gz,340,14,3,62,"[62, 78, 200]",,schizo
+PMLB,segmentation,src/pmlb/segmentation.tsv.gz,2310,19,7,330,"[330, 330, 330, 330, 330, 330, 330]",,segmentation
+PMLB,shuttle,src/pmlb/shuttle.tsv.gz,58000,9,7,10,"[10, 13, 50, 171, 3267, 8903, 45586]",,shuttle
+PMLB,sleep,src/pmlb/sleep.tsv.gz,105908,13,5,9052,"[9052, 10832, 11967, 21359, 52698]",,sleep
+PMLB,sonar,src/pmlb/sonar.tsv.gz,208,60,2,97,"[97, 111]",,sonar
+PMLB,soybean,src/pmlb/soybean.tsv.gz,675,35,18,14,"[14, 15, 16, 20, 20, 20, 20, 20, 20, 20, 20, 20, 44, 44, 88, 91, 91, 92]",,soybean
+PMLB,spambase,src/pmlb/spambase.tsv.gz,4601,57,2,1813,"[1813, 2788]",,spambase
+PMLB,spect,src/pmlb/spect.tsv.gz,267,22,2,55,"[55, 212]",,spect
+PMLB,spectf,src/pmlb/spectf.tsv.gz,349,44,2,95,"[95, 254]",,spectf
+PMLB,splice,src/pmlb/splice.tsv.gz,3188,60,3,764,"[764, 769, 1655]",,splice
+PMLB,tae,src/pmlb/tae.tsv.gz,151,5,3,49,"[49, 50, 52]",,tae
+PMLB,texture,src/pmlb/texture.tsv.gz,5500,40,11,500,"[500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500]",,texture
+PMLB,threeOf9,src/pmlb/threeOf9.tsv.gz,512,9,2,238,"[238, 274]",,threeof9
+PMLB,tic_tac_toe,src/pmlb/tic_tac_toe.tsv.gz,958,9,2,332,"[332, 626]",,tictactoe
+PMLB,titanic,src/pmlb/titanic.tsv.gz,2207,8,2,711,"[711, 1496]",,titanic
+PMLB,tokyo1,src/pmlb/tokyo1.tsv.gz,959,44,2,346,"[346, 613]",,tokyo1
+PMLB,twonorm,src/pmlb/twonorm.tsv.gz,7400,20,2,3697,"[3697, 3703]",,twonorm
+PMLB,vehicle,src/pmlb/vehicle.tsv.gz,846,18,4,199,"[199, 212, 217, 218]",,vehicle
+PMLB,vowel,src/pmlb/vowel.tsv.gz,990,13,11,90,"[90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90]",,vowel
+PMLB,waveform_21,src/pmlb/waveform_21.tsv.gz,5000,21,3,1647,"[1647, 1657, 1696]",,waveform21
+PMLB,waveform_40,src/pmlb/waveform_40.tsv.gz,5000,40,3,1653,"[1653, 1655, 1692]",,waveform40
+PMLB,wine_quality_red,src/pmlb/wine_quality_red.tsv.gz,1599,11,6,10,"[10, 18, 53, 199, 638, 681]",,winequalityred
+PMLB,wine_quality_white,src/pmlb/wine_quality_white.tsv.gz,4898,11,7,5,"[5, 20, 163, 175, 880, 1457, 2198]",,winequalitywhite
+PMLB,wine_recognition,src/pmlb/wine_recognition.tsv.gz,178,13,3,48,"[48, 59, 71]",,winerecognition
+PMLB,xd6,src/pmlb/xd6.tsv.gz,973,9,2,322,"[322, 651]",,xd6
+PMLB,yeast,src/pmlb/yeast.tsv.gz,1479,8,9,20,"[20, 30, 35, 44, 51, 163, 244, 429, 463]",,yeast
+UCI++,abalone-11class,src/lpfgarcia_ucipp/uci/abalone-11class.arff,3842,8,11,103,"[103, 115, 126, 203, 259, 267, 391, 487, 568, 634, 689]",,abalone11class
+UCI++,abalone-28class,src/lpfgarcia_ucipp/uci/abalone-28class.arff,4177,8,28,1,"[1, 1, 1, 1, 1, 2, 2, 6, 9, 14, 15, 26, 32, 42, 57, 58, 67, 103, 115, 126, 203, 259, 267, 391, 487, 568, 634, 689]",,abalone28class
+UCI++,abalone-3class,src/lpfgarcia_ucipp/uci/abalone-3class.arff,4177,8,3,1323,"[1323, 1407, 1447]",,abalone3class
+UCI++,abalone-7class,src/lpfgarcia_ucipp/uci/abalone-7class.arff,3295,8,7,259,"[259, 267, 391, 487, 568, 634, 689]",,abalone7class
+UCI++,acute-inflammations-nephritis,src/lpfgarcia_ucipp/uci/acute-inflammations-nephritis.arff,120,6,2,50,"[50, 70]",,acuteinflammationsnephritis
+UCI++,acute-inflammations-urinary,src/lpfgarcia_ucipp/uci/acute-inflammations-urinary.arff,120,6,2,59,"[59, 61]",,acuteinflammationsurinary
+UCI++,amazon-commerce-reviews,src/lpfgarcia_ucipp/uci/amazon-commerce-reviews.arff,1500,10000,50,30,"[30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30]",,amazoncommercereviews
+UCI++,annealing,src/lpfgarcia_ucipp/uci/annealing.arff,898,38,5,8,"[8, 40, 67, 99, 684]",,annealing
+UCI++,appendicitis,src/lpfgarcia_ucipp/uci/appendicitis.arff,106,7,2,21,"[21, 85]",,appendicitis
+UCI++,arcene,src/lpfgarcia_ucipp/uci/arcene.arff,200,10000,2,88,"[88, 112]",,arcene
+UCI++,arrhythmia,src/lpfgarcia_ucipp/uci/arrhythmia.arff,452,262,13,2,"[2, 3, 4, 5, 9, 13, 15, 15, 22, 25, 44, 50, 245]",,arrhythmia
+UCI++,artificial-characters,src/lpfgarcia_ucipp/uci/artificial-characters.arff,10218,7,10,600,"[600, 800, 808, 1000, 1000, 1008, 1192, 1196, 1198, 1416]",,artificialcharacters
+UCI++,audiology,src/lpfgarcia_ucipp/uci/audiology.arff,226,70,24,1,"[1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 3, 4, 4, 4, 6, 8, 9, 20, 22, 22, 48, 57]",,audiology
+UCI++,autoUniv-au1-1000,src/lpfgarcia_ucipp/uci/autoUniv-au1-1000.arff,1000,20,2,259,"[259, 741]",,autounivau11000
+UCI++,autoUniv-au4-2500,src/lpfgarcia_ucipp/uci/autoUniv-au4-2500.arff,2500,100,3,196,"[196, 1131, 1173]",,autounivau42500
+UCI++,autoUniv-au6-1000,src/lpfgarcia_ucipp/uci/autoUniv-au6-1000.arff,1000,40,8,89,"[89, 93, 107, 111, 118, 120, 122, 240]",,autounivau61000
+UCI++,autoUniv-au6-250-drift-au6-cd1-500,src/lpfgarcia_ucipp/uci/autoUniv-au6-250-drift-au6-cd1-500.arff,750,40,8,57,"[57, 66, 73, 73, 78, 89, 149, 165]",,autounivau6250driftau6cd1500
+UCI++,autoUniv-au6-cd1-400,src/lpfgarcia_ucipp/uci/autoUniv-au6-cd1-400.arff,400,40,8,25,"[25, 29, 29, 33, 36, 47, 90, 111]",,autounivau6cd1400
+UCI++,autoUniv-au7-300-drift-au7-cpd1-800,src/lpfgarcia_ucipp/uci/autoUniv-au7-300-drift-au7-cpd1-800.arff,1100,12,5,153,"[153, 180, 216, 246, 305]",,autounivau7300driftau7cpd1800
+UCI++,autoUniv-au7-700,src/lpfgarcia_ucipp/uci/autoUniv-au7-700.arff,700,12,3,214,"[214, 241, 245]",,autounivau7700
+UCI++,autoUniv-au7-cpd1-500,src/lpfgarcia_ucipp/uci/autoUniv-au7-cpd1-500.arff,500,12,5,43,"[43, 71, 85, 109, 192]",,autounivau7cpd1500
+UCI++,balance-scale,src/lpfgarcia_ucipp/uci/balance-scale.arff,625,4,3,49,"[49, 288, 288]",,balancescale
+UCI++,balloons-adult+stretch,src/lpfgarcia_ucipp/uci/balloons-adult+stretch.arff,20,4,2,8,"[8, 12]",,balloonsadultstretch
+UCI++,balloons-adult-stretch,src/lpfgarcia_ucipp/uci/balloons-adult-stretch.arff,20,4,2,8,"[8, 12]",,balloonsadultstretch
+UCI++,balloons-yellow-small+adult-stretch,src/lpfgarcia_ucipp/uci/balloons-yellow-small+adult-stretch.arff,16,4,2,7,"[7, 9]",,balloonsyellowsmalladultstretch
+UCI++,balloons-yellow-small,src/lpfgarcia_ucipp/uci/balloons-yellow-small.arff,20,4,2,8,"[8, 12]",,balloonsyellowsmall
+UCI++,banana,src/lpfgarcia_ucipp/uci/banana.arff,5300,2,2,2376,"[2376, 2924]",,banana
+UCI++,bank-marketing-full,src/lpfgarcia_ucipp/uci/bank-marketing-full.arff,45211,16,2,5289,"[5289, 39922]",,bankmarketingfull
+UCI++,bank-marketing,src/lpfgarcia_ucipp/uci/bank-marketing.arff,4521,16,2,521,"[521, 4000]",,bankmarketing
+UCI++,banknote-authentication,src/lpfgarcia_ucipp/uci/banknote-authentication.arff,1372,4,2,610,"[610, 762]",,banknoteauthentication
+UCI++,blogger,src/lpfgarcia_ucipp/uci/blogger.arff,100,5,2,32,"[32, 68]",,blogger
+UCI++,blood-transfusion-service,src/lpfgarcia_ucipp/uci/blood-transfusion-service.arff,748,4,2,178,"[178, 570]",,bloodtransfusionservice
+UCI++,breast-cancer-wisconsin,src/lpfgarcia_ucipp/uci/breast-cancer-wisconsin.arff,699,9,2,241,"[241, 458]",,breastcancerwisconsin
+UCI++,breast-tissue-4class,src/lpfgarcia_ucipp/uci/breast-tissue-4class.arff,106,9,4,14,"[14, 21, 22, 49]",,breasttissue4class
+UCI++,breast-tissue-6class,src/lpfgarcia_ucipp/uci/breast-tissue-6class.arff,106,9,6,14,"[14, 15, 16, 18, 21, 22]",,breasttissue6class
+UCI++,bupa,src/lpfgarcia_ucipp/uci/bupa.arff,345,6,2,145,"[145, 200]",,bupa
+UCI++,car-evaluation,src/lpfgarcia_ucipp/uci/car-evaluation.arff,1728,6,4,65,"[65, 69, 384, 1210]",,carevaluation
+UCI++,cardiotocography-10class,src/lpfgarcia_ucipp/uci/cardiotocography-10class.arff,2126,35,10,53,"[53, 69, 72, 81, 107, 197, 252, 332, 384, 579]",,cardiotocography10class
+UCI++,cardiotocography-3class,src/lpfgarcia_ucipp/uci/cardiotocography-3class.arff,2126,35,3,176,"[176, 295, 1655]",,cardiotocography3class
+UCI++,climate-simulation-craches,src/lpfgarcia_ucipp/uci/climate-simulation-craches.arff,540,20,2,46,"[46, 494]",,climatesimulationcraches
+UCI++,cnae-9,src/lpfgarcia_ucipp/uci/cnae-9.arff,1080,856,9,120,"[120, 120, 120, 120, 120, 120, 120, 120, 120]",,cnae9
+UCI++,colon32,src/lpfgarcia_ucipp/uci/colon32.arff,62,32,2,22,"[22, 40]",,colon32
+UCI++,connectionist-mines-vs-rocks,src/lpfgarcia_ucipp/uci/connectionist-mines-vs-rocks.arff,208,60,2,97,"[97, 111]",,connectionistminesvsrocks
+UCI++,connectionist-vowel-reduced,src/lpfgarcia_ucipp/uci/connectionist-vowel-reduced.arff,528,10,11,48,"[48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48]",,connectionistvowelreduced
+UCI++,connectionist-vowel,src/lpfgarcia_ucipp/uci/connectionist-vowel.arff,990,13,11,90,"[90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90]",,connectionistvowel
+UCI++,contraceptive-method-choice,src/lpfgarcia_ucipp/uci/contraceptive-method-choice.arff,1473,9,3,333,"[333, 511, 629]",,contraceptivemethodchoice
+UCI++,credit-approval,src/lpfgarcia_ucipp/uci/credit-approval.arff,690,15,2,307,"[307, 383]",,creditapproval
+UCI++,dbworld-bodies-stemmed,src/lpfgarcia_ucipp/uci/dbworld-bodies-stemmed.arff,64,3721,2,29,"[29, 35]",,dbworldbodiesstemmed
+UCI++,dbworld-bodies,src/lpfgarcia_ucipp/uci/dbworld-bodies.arff,64,4702,2,29,"[29, 35]",,dbworldbodies
+UCI++,dbworld-subjects-stemmed,src/lpfgarcia_ucipp/uci/dbworld-subjects-stemmed.arff,64,229,2,29,"[29, 35]",,dbworldsubjectsstemmed
+UCI++,dbworld-subjects,src/lpfgarcia_ucipp/uci/dbworld-subjects.arff,64,242,2,29,"[29, 35]",,dbworldsubjects
+UCI++,dermatology,src/lpfgarcia_ucipp/uci/dermatology.arff,366,34,6,20,"[20, 49, 52, 61, 72, 112]",,dermatology
+UCI++,dresses-sales,src/lpfgarcia_ucipp/uci/dresses-sales.arff,500,12,2,210,"[210, 290]",,dressessales
+UCI++,ecoli,src/lpfgarcia_ucipp/uci/ecoli.arff,336,7,8,2,"[2, 2, 5, 20, 35, 52, 77, 143]",,ecoli
+UCI++,eeg-eye-state,src/lpfgarcia_ucipp/uci/eeg-eye-state.arff,14980,14,2,6723,"[6723, 8257]",,eegeyestate
+UCI++,energy-efficiency-y1,src/lpfgarcia_ucipp/uci/energy-efficiency-y1.arff,768,8,37,1,"[1, 2, 2, 3, 3, 3, 4, 5, 5, 8, 8, 8, 9, 9, 10, 10, 12, 12, 13, 16, 19, 20, 20, 20, 22, 24, 25, 33, 34, 35, 43, 44, 45, 54, 55, 58, 74]",,energyefficiencyy1
+UCI++,energy-efficiency-y2,src/lpfgarcia_ucipp/uci/energy-efficiency-y2.arff,768,8,38,1,"[1, 2, 2, 2, 5, 5, 5, 5, 6, 6, 8, 11, 12, 12, 12, 13, 14, 14, 14, 14, 16, 16, 16, 16, 17, 18, 20, 22, 22, 26, 28, 30, 40, 48, 53, 65, 75, 77]",,energyefficiencyy2
+UCI++,fertility-diagnosis,src/lpfgarcia_ucipp/uci/fertility-diagnosis.arff,100,9,2,12,"[12, 88]",,fertilitydiagnosis
+UCI++,first-order-theorem,src/lpfgarcia_ucipp/uci/first-order-theorem.arff,6118,51,6,486,"[486, 617, 624, 748, 1089, 2554]",,firstordertheorem
+UCI++,flags-colour,src/lpfgarcia_ucipp/uci/flags-colour.arff,194,29,8,1,"[1, 2, 9, 9, 17, 40, 47, 69]",,flagscolour
+UCI++,flags-religion,src/lpfgarcia_ucipp/uci/flags-religion.arff,194,29,8,4,"[4, 4, 8, 15, 27, 36, 40, 60]",,flagsreligion
+UCI++,flare,src/lpfgarcia_ucipp/uci/flare.arff,1389,12,6,51,"[51, 116, 212, 287, 327, 396]",,flare
+UCI++,gas-drift-different-concentrations,src/lpfgarcia_ucipp/uci/gas-drift-different-concentrations.arff,13910,129,6,1641,"[1641, 1833, 1936, 2565, 2926, 3009]",,gasdriftdifferentconcentrations
+UCI++,gas-drift,src/lpfgarcia_ucipp/uci/gas-drift.arff,13910,128,6,1641,"[1641, 1833, 1936, 2565, 2926, 3009]",,gasdrift
+UCI++,glass,src/lpfgarcia_ucipp/uci/glass.arff,214,9,6,9,"[9, 13, 17, 29, 70, 76]",,glass
+UCI++,glioma16,src/lpfgarcia_ucipp/uci/glioma16.arff,50,16,2,22,"[22, 28]",,glioma16
+UCI++,habermans-survival,src/lpfgarcia_ucipp/uci/habermans-survival.arff,306,3,2,81,"[81, 225]",,habermanssurvival
+UCI++,har,src/lpfgarcia_ucipp/uci/har.arff,10299,561,6,1406,"[1406, 1544, 1722, 1777, 1906, 1944]",,har
+UCI++,hayes-roth,src/lpfgarcia_ucipp/uci/hayes-roth.arff,160,4,3,31,"[31, 64, 65]",,hayesroth
+UCI++,heart-disease-processed-cleveland,src/lpfgarcia_ucipp/uci/heart-disease-processed-cleveland.arff,303,13,5,13,"[13, 35, 36, 55, 164]",,heartdiseaseprocessedcleveland
+UCI++,heart-disease-processed-hungarian,src/lpfgarcia_ucipp/uci/heart-disease-processed-hungarian.arff,294,13,2,106,"[106, 188]",,heartdiseaseprocessedhungarian
+UCI++,heart-disease-processed-switzerland,src/lpfgarcia_ucipp/uci/heart-disease-processed-switzerland.arff,123,12,5,5,"[5, 8, 30, 32, 48]",,heartdiseaseprocessedswitzerland
+UCI++,heart-disease-processed-va,src/lpfgarcia_ucipp/uci/heart-disease-processed-va.arff,200,13,5,10,"[10, 41, 42, 51, 56]",,heartdiseaseprocessedva
+UCI++,heart-disease-reprocessed-hungarian,src/lpfgarcia_ucipp/uci/heart-disease-reprocessed-hungarian.arff,294,13,5,15,"[15, 26, 28, 37, 188]",,heartdiseasereprocessedhungarian
+UCI++,hepatitis,src/lpfgarcia_ucipp/uci/hepatitis.arff,155,19,2,32,"[32, 123]",,hepatitis
+UCI++,hill-valley-with-noise,src/lpfgarcia_ucipp/uci/hill-valley-with-noise.arff,1212,100,2,606,"[606, 606]",,hillvalleywithnoise
+UCI++,hill-valley-without-noise,src/lpfgarcia_ucipp/uci/hill-valley-without-noise.arff,1212,100,2,600,"[600, 612]",,hillvalleywithoutnoise
+UCI++,horse-colic-surgical,src/lpfgarcia_ucipp/uci/horse-colic-surgical.arff,300,27,2,109,"[109, 191]",,horsecolicsurgical
+UCI++,indian-liver-patient,src/lpfgarcia_ucipp/uci/indian-liver-patient.arff,583,10,2,167,"[167, 416]",,indianliverpatient
+UCI++,ionosphere,src/lpfgarcia_ucipp/uci/ionosphere.arff,351,33,2,126,"[126, 225]",,ionosphere
+UCI++,iris,src/lpfgarcia_ucipp/uci/iris.arff,150,4,3,50,"[50, 50, 50]",,iris
+UCI++,kr-vs-k,src/lpfgarcia_ucipp/uci/kr-vs-k.arff,28056,6,18,27,"[27, 78, 81, 198, 246, 390, 471, 592, 683, 1433, 1712, 1985, 2166, 2796, 2854, 3597, 4194, 4553]",,krvsk
+UCI++,kr-vs-kp,src/lpfgarcia_ucipp/uci/kr-vs-kp.arff,3196,36,2,1527,"[1527, 1669]",,krvskp
+UCI++,leaf,src/lpfgarcia_ucipp/uci/leaf.arff,340,15,30,8,"[8, 8, 9, 10, 10, 10, 10, 10, 11, 11, 11, 11, 11, 11, 11, 11, 12, 12, 12, 12, 12, 12, 12, 12, 12, 13, 13, 13, 14, 16]",,leaf
+UCI++,led7digit,src/lpfgarcia_ucipp/uci/led7digit.arff,500,7,10,37,"[37, 45, 47, 49, 51, 52, 52, 53, 57, 57]",,led7digit
+UCI++,lenses,src/lpfgarcia_ucipp/uci/lenses.arff,24,4,3,4,"[4, 5, 15]",,lenses
+UCI++,letter,src/lpfgarcia_ucipp/uci/letter.arff,20000,16,26,734,"[734, 734, 736, 739, 747, 748, 752, 753, 755, 758, 761, 764, 766, 768, 773, 775, 783, 783, 786, 787, 789, 792, 796, 803, 805, 813]",,letter
+UCI++,leukemia-haslinger,src/lpfgarcia_ucipp/uci/leukemia-haslinger.arff,100,50,2,49,"[49, 51]",,leukemiahaslinger
+UCI++,localization-for-person-activity,src/lpfgarcia_ucipp/uci/localization-for-person-activity.arff,164860,7,11,1381,"[1381, 1706, 2848, 2973, 5210, 6168, 11779, 18361, 27244, 32710, 54480]",,localizationforpersonactivity
+UCI++,lsvt-voice-rehabilitation,src/lpfgarcia_ucipp/uci/lsvt-voice-rehabilitation.arff,126,310,2,42,"[42, 84]",,lsvtvoicerehabilitation
+UCI++,lung-cancer,src/lpfgarcia_ucipp/uci/lung-cancer.arff,32,56,3,9,"[9, 10, 13]",,lungcancer
+UCI++,lymphography,src/lpfgarcia_ucipp/uci/lymphography.arff,148,18,4,2,"[2, 4, 61, 81]",,lymphography
+UCI++,madelon,src/lpfgarcia_ucipp/uci/madelon.arff,2600,500,2,1300,"[1300, 1300]",,madelon
+UCI++,magic,src/lpfgarcia_ucipp/uci/magic.arff,19020,10,2,6688,"[6688, 12332]",,magic
+UCI++,mammographic-mass,src/lpfgarcia_ucipp/uci/mammographic-mass.arff,961,5,2,445,"[445, 516]",,mammographicmass
+UCI++,meta-data,src/lpfgarcia_ucipp/uci/meta-data.arff,528,21,24,22,"[22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22]",,metadata
+UCI++,mfeat-fourier,src/lpfgarcia_ucipp/uci/mfeat-fourier.arff,2000,76,10,200,"[200, 200, 200, 200, 200, 200, 200, 200, 200, 200]",,mfeatfourier
+UCI++,micro-mass-mixed-spectra,src/lpfgarcia_ucipp/uci/micro-mass-mixed-spectra.arff,360,1300,10,36,"[36, 36, 36, 36, 36, 36, 36, 36, 36, 36]",,micromassmixedspectra
+UCI++,micro-mass-pure-spectra,src/lpfgarcia_ucipp/uci/micro-mass-pure-spectra.arff,571,1300,20,11,"[11, 14, 16, 18, 20, 21, 24, 26, 26, 26, 27, 28, 29, 29, 31, 31, 32, 50, 52, 60]",,micromasspurespectra
+UCI++,molecular-promotor-gene,src/lpfgarcia_ucipp/uci/molecular-promotor-gene.arff,106,57,2,53,"[53, 53]",,molecularpromotorgene
+UCI++,molecular-splice-junction,src/lpfgarcia_ucipp/uci/molecular-splice-junction.arff,3190,60,3,767,"[767, 768, 1655]",,molecularsplicejunction
+UCI++,monks1,src/lpfgarcia_ucipp/uci/monks1.arff,556,6,2,278,"[278, 278]",,monks1
+UCI++,monks2,src/lpfgarcia_ucipp/uci/monks2.arff,601,6,2,206,"[206, 395]",,monks2
+UCI++,monks3,src/lpfgarcia_ucipp/uci/monks3.arff,554,6,2,266,"[266, 288]",,monks3
+UCI++,movement-libras-1,src/lpfgarcia_ucipp/uci/movement-libras-1.arff,45,90,15,3,"[3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]",,movementlibras1
+UCI++,movement-libras-10,src/lpfgarcia_ucipp/uci/movement-libras-10.arff,270,90,15,18,"[18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18]",,movementlibras10
+UCI++,movement-libras-9,src/lpfgarcia_ucipp/uci/movement-libras-9.arff,45,90,15,3,"[3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]",,movementlibras9
+UCI++,movement-libras,src/lpfgarcia_ucipp/uci/movement-libras.arff,360,90,15,24,"[24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24]",,movementlibras
+UCI++,multiple-features,src/lpfgarcia_ucipp/uci/multiple-features.arff,2000,649,10,200,"[200, 200, 200, 200, 200, 200, 200, 200, 200, 200]",,multiplefeatures
+UCI++,mushroom-expanded,src/lpfgarcia_ucipp/uci/mushroom-expanded.arff,8416,21,2,3928,"[3928, 4488]",,mushroomexpanded
+UCI++,mushroom,src/lpfgarcia_ucipp/uci/mushroom.arff,8124,21,2,3916,"[3916, 4208]",,mushroom
+UCI++,musk,src/lpfgarcia_ucipp/uci/musk.arff,6598,167,2,1017,"[1017, 5581]",,musk
+UCI++,nomao,src/lpfgarcia_ucipp/uci/nomao.arff,34465,118,2,9844,"[9844, 24621]",,nomao
+UCI++,nursery-4class,src/lpfgarcia_ucipp/uci/nursery-4class.arff,12958,8,4,328,"[328, 4044, 4266, 4320]",,nursery4class
+UCI++,nursery,src/lpfgarcia_ucipp/uci/nursery.arff,12960,8,5,2,"[2, 328, 4044, 4266, 4320]",,nursery
+UCI++,optdigits,src/lpfgarcia_ucipp/uci/optdigits.arff,5620,62,10,554,"[554, 554, 557, 558, 558, 562, 566, 568, 571, 572]",,optdigits
+UCI++,ozone-eighthr,src/lpfgarcia_ucipp/uci/ozone-eighthr.arff,2534,72,2,160,"[160, 2374]",,ozone8hr
+UCI++,ozone-onehr,src/lpfgarcia_ucipp/uci/ozone-onehr.arff,2536,72,2,73,"[73, 2463]",,ozoneonehr
+UCI++,page-blocks,src/lpfgarcia_ucipp/uci/page-blocks.arff,5473,10,5,28,"[28, 88, 115, 329, 4913]",,pageblocks
+UCI++,parkinsons,src/lpfgarcia_ucipp/uci/parkinsons.arff,195,22,2,48,"[48, 147]",,parkinsons
+UCI++,pendigits,src/lpfgarcia_ucipp/uci/pendigits.arff,10992,16,10,1055,"[1055, 1055, 1055, 1055, 1056, 1142, 1143, 1143, 1144, 1144]",,pendigits
+UCI++,phoneme,src/lpfgarcia_ucipp/uci/phoneme.arff,5404,5,2,1586,"[1586, 3818]",,phoneme
+UCI++,pima-indians-diabetes,src/lpfgarcia_ucipp/uci/pima-indians-diabetes.arff,768,8,2,268,"[268, 500]",,pimaindiansdiabetes
+UCI++,planning-relax,src/lpfgarcia_ucipp/uci/planning-relax.arff,182,12,2,52,"[52, 130]",,planningrelax
+UCI++,plant-species-leaves-margin,src/lpfgarcia_ucipp/uci/plant-species-leaves-margin.arff,1600,64,100,16,"[16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16]",,plantspeciesleavesmargin
+UCI++,plant-species-leaves-shape,src/lpfgarcia_ucipp/uci/plant-species-leaves-shape.arff,1600,64,100,16,"[16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16]",,plantspeciesleavesshape
+UCI++,plant-species-leaves-texture,src/lpfgarcia_ucipp/uci/plant-species-leaves-texture.arff,1599,64,100,15,"[15, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16]",,plantspeciesleavestexture
+UCI++,poker-9class,src/lpfgarcia_ucipp/uci/poker-9class.arff,1025000,10,9,17,"[17, 236, 1460, 2050, 3978, 21634, 48828, 433096, 513701]",,poker9class
+UCI++,poker,src/lpfgarcia_ucipp/uci/poker.arff,1025009,10,10,8,"[8, 17, 236, 1460, 2050, 3978, 21634, 48828, 433097, 513701]",,poker
+UCI++,post-operative-patient,src/lpfgarcia_ucipp/uci/post-operative-patient.arff,90,8,3,2,"[2, 24, 64]",,postoperativepatient
+UCI++,qsar-biodegradation,src/lpfgarcia_ucipp/uci/qsar-biodegradation.arff,1055,41,2,356,"[356, 699]",,qsarbiodegradation
+UCI++,qualitative-bankruptcy,src/lpfgarcia_ucipp/uci/qualitative-bankruptcy.arff,250,6,2,107,"[107, 143]",,qualitativebankruptcy
+UCI++,ringnorm,src/lpfgarcia_ucipp/uci/ringnorm.arff,7400,20,2,3664,"[3664, 3736]",,ringnorm
+UCI++,robot-failure-lp1,src/lpfgarcia_ucipp/uci/robot-failure-lp1.arff,88,90,4,16,"[16, 17, 21, 34]",,robotfailurelp1
+UCI++,robot-failure-lp2,src/lpfgarcia_ucipp/uci/robot-failure-lp2.arff,47,90,5,5,"[5, 6, 7, 9, 20]",,robotfailurelp2
+UCI++,robot-failure-lp3,src/lpfgarcia_ucipp/uci/robot-failure-lp3.arff,47,90,4,3,"[3, 9, 15, 20]",,robotfailurelp3
+UCI++,robot-failure-lp4,src/lpfgarcia_ucipp/uci/robot-failure-lp4.arff,117,90,3,21,"[21, 24, 72]",,robotfailurelp4
+UCI++,robot-failure-lp5,src/lpfgarcia_ucipp/uci/robot-failure-lp5.arff,164,90,5,21,"[21, 26, 26, 44, 47]",,robotfailurelp5
+UCI++,robot-nav-sensor-readings-2,src/lpfgarcia_ucipp/uci/robot-nav-sensor-readings-2.arff,5456,2,4,328,"[328, 826, 2097, 2205]",,robotnavsensorreadings2
+UCI++,robot-nav-sensor-readings-24,src/lpfgarcia_ucipp/uci/robot-nav-sensor-readings-24.arff,5456,24,4,328,"[328, 826, 2097, 2205]",,robotnavsensorreadings24
+UCI++,robot-nav-sensor-readings-4,src/lpfgarcia_ucipp/uci/robot-nav-sensor-readings-4.arff,5456,4,4,328,"[328, 826, 2097, 2205]",,robotnavsensorreadings4
+UCI++,saheart,src/lpfgarcia_ucipp/uci/saheart.arff,462,9,2,160,"[160, 302]",,saheart
+UCI++,seeds,src/lpfgarcia_ucipp/uci/seeds.arff,210,7,3,70,"[70, 70, 70]",,seeds
+UCI++,seismic-bumps,src/lpfgarcia_ucipp/uci/seismic-bumps.arff,2584,18,2,170,"[170, 2414]",,seismicbumps
+UCI++,semeion,src/lpfgarcia_ucipp/uci/semeion.arff,1593,256,10,155,"[155, 158, 158, 159, 159, 159, 161, 161, 161, 162]",,semeion
+UCI++,shuttle-landing-control,src/lpfgarcia_ucipp/uci/shuttle-landing-control.arff,15,6,2,6,"[6, 9]",,shuttlelandingcontrol
+UCI++,skin-segmentation,src/lpfgarcia_ucipp/uci/skin-segmentation.arff,245057,3,2,50859,"[50859, 194198]",,skinsegmentation
+UCI++,soybean-large,src/lpfgarcia_ucipp/uci/soybean-large.arff,307,35,19,1,"[1, 4, 6, 6, 10, 10, 10, 10, 10, 10, 10, 10, 10, 20, 20, 40, 40, 40, 40]",,soybeanlarge
+UCI++,soybean-small,src/lpfgarcia_ucipp/uci/soybean-small.arff,47,21,4,10,"[10, 10, 10, 17]",,soybeansmall
+UCI++,spambase,src/lpfgarcia_ucipp/uci/spambase.arff,4601,57,2,1813,"[1813, 2788]",,spambase
+UCI++,spect-heart,src/lpfgarcia_ucipp/uci/spect-heart.arff,267,22,2,110,"[110, 157]",,spectheart
+UCI++,spectf-heart,src/lpfgarcia_ucipp/uci/spectf-heart.arff,349,44,2,95,"[95, 254]",,spectfheart
+UCI++,spectrometer,src/lpfgarcia_ucipp/uci/spectrometer.arff,531,101,48,1,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 5, 7, 8, 9, 10, 10, 12, 13, 15, 18, 19, 19, 20, 24, 26, 27, 30, 31, 35, 42, 45, 55]",,spectrometer
+UCI++,spoken-arabic-digit,src/lpfgarcia_ucipp/uci/spoken-arabic-digit.arff,263256,14,10,26124,"[26124, 26135, 26277, 26310, 26326, 26327, 26367, 26428, 26466, 26496]",,spokenarabicdigit
+UCI++,statlog-australian-credit,src/lpfgarcia_ucipp/uci/statlog-australian-credit.arff,690,14,2,307,"[307, 383]",,statlogaustraliancredit
+UCI++,statlog-german-credit-numeric,src/lpfgarcia_ucipp/uci/statlog-german-credit-numeric.arff,1000,24,2,300,"[300, 700]",,statloggermancreditnumeric
+UCI++,statlog-german-credit,src/lpfgarcia_ucipp/uci/statlog-german-credit.arff,1000,20,2,300,"[300, 700]",,statloggermancredit
+UCI++,statlog-heart,src/lpfgarcia_ucipp/uci/statlog-heart.arff,270,13,2,120,"[120, 150]",,statlogheart
+UCI++,statlog-image-segmentation,src/lpfgarcia_ucipp/uci/statlog-image-segmentation.arff,2310,18,7,330,"[330, 330, 330, 330, 330, 330, 330]",,statlogimagesegmentation
+UCI++,statlog-landsat-satellite,src/lpfgarcia_ucipp/uci/statlog-landsat-satellite.arff,2859,36,6,275,"[275, 278, 393, 461, 581, 871]",,statloglandsatsatellite
+UCI++,statlog-vehicle-silhouettes,src/lpfgarcia_ucipp/uci/statlog-vehicle-silhouettes.arff,846,18,4,199,"[199, 212, 217, 218]",,statlogvehiclesilhouettes
+UCI++,steel-plates-faults,src/lpfgarcia_ucipp/uci/steel-plates-faults.arff,1941,33,2,673,"[673, 1268]",,steelplatesfaults
+UCI++,systhetic-control,src/lpfgarcia_ucipp/uci/systhetic-control.arff,600,60,6,100,"[100, 100, 100, 100, 100, 100]",,systheticcontrol
+UCI++,tamilnadu-electricity,src/lpfgarcia_ucipp/uci/tamilnadu-electricity.arff,45781,3,20,1397,"[1397, 1400, 1403, 1403, 1405, 1405, 1410, 1418, 2830, 2857, 2867, 2870, 2874, 2876, 2884, 2887, 2888, 2896, 2905, 2906]",,tamilnaduelectricity
+UCI++,teaching-assistant-evaluation,src/lpfgarcia_ucipp/uci/teaching-assistant-evaluation.arff,151,5,3,49,"[49, 50, 52]",,teachingassistantevaluation
+UCI++,texture,src/lpfgarcia_ucipp/uci/texture.arff,5500,40,11,500,"[500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500]",,texture
+UCI++,thoracic-surgery,src/lpfgarcia_ucipp/uci/thoracic-surgery.arff,470,16,2,70,"[70, 400]",,thoracicsurgery
+UCI++,thyroid-allbp,src/lpfgarcia_ucipp/uci/thyroid-allbp.arff,2800,26,5,31,"[31, 91, 275, 771, 1632]",,thyroidallbp
+UCI++,thyroid-allhyper,src/lpfgarcia_ucipp/uci/thyroid-allhyper.arff,2800,26,5,31,"[31, 91, 275, 771, 1632]",,thyroidallhyper
+UCI++,thyroid-allhypo,src/lpfgarcia_ucipp/uci/thyroid-allhypo.arff,2800,26,5,31,"[31, 91, 275, 771, 1632]",,thyroidallhypo
+UCI++,thyroid-allrep,src/lpfgarcia_ucipp/uci/thyroid-allrep.arff,2800,26,5,31,"[31, 91, 275, 771, 1632]",,thyroidallrep
+UCI++,thyroid-ann,src/lpfgarcia_ucipp/uci/thyroid-ann.arff,3772,21,3,93,"[93, 191, 3488]",,thyroidann
+UCI++,thyroid-dis,src/lpfgarcia_ucipp/uci/thyroid-dis.arff,2800,26,5,31,"[31, 91, 275, 771, 1632]",,thyroiddis
+UCI++,thyroid-hypothyroid,src/lpfgarcia_ucipp/uci/thyroid-hypothyroid.arff,3163,25,2,151,"[151, 3012]",,thyroidhypothyroid
+UCI++,thyroid-newthyroid,src/lpfgarcia_ucipp/uci/thyroid-newthyroid.arff,215,5,3,30,"[30, 35, 150]",,thyroidnewthyroid
+UCI++,thyroid-sick-euthyroid,src/lpfgarcia_ucipp/uci/thyroid-sick-euthyroid.arff,3163,25,2,293,"[293, 2870]",,thyroidsickeuthyroid
+UCI++,thyroid-sick,src/lpfgarcia_ucipp/uci/thyroid-sick.arff,2800,26,5,31,"[31, 91, 275, 771, 1632]",,thyroidsick
+UCI++,tic-tac-toe,src/lpfgarcia_ucipp/uci/tic-tac-toe.arff,958,9,2,332,"[332, 626]",,tictactoe
+UCI++,trains,src/lpfgarcia_ucipp/uci/trains.arff,10,26,2,5,"[5, 5]",,trains
+UCI++,turkiye-student,src/lpfgarcia_ucipp/uci/turkiye-student.arff,5820,32,13,41,"[41, 140, 187, 187, 303, 448, 484, 500, 558, 571, 656, 841, 904]",,turkiyestudent
+UCI++,twonorm,src/lpfgarcia_ucipp/uci/twonorm.arff,7400,20,2,3697,"[3697, 3703]",,twonorm
+UCI++,user-knowledge,src/lpfgarcia_ucipp/uci/user-knowledge.arff,403,5,5,24,"[24, 26, 102, 122, 129]",,userknowledge
+UCI++,vertebra-column-2c,src/lpfgarcia_ucipp/uci/vertebra-column-2c.arff,310,6,2,100,"[100, 210]",,vertebracolumn2c
+UCI++,vertebra-column-3c,src/lpfgarcia_ucipp/uci/vertebra-column-3c.arff,310,6,3,60,"[60, 100, 150]",,vertebracolumn3c
+UCI++,volcanoes-a1,src/lpfgarcia_ucipp/uci/volcanoes-a1.arff,3252,3,5,58,"[58, 68, 86, 88, 2952]",,volcanoesa1
+UCI++,volcanoes-a2,src/lpfgarcia_ucipp/uci/volcanoes-a2.arff,1623,3,5,29,"[29, 35, 44, 44, 1471]",,volcanoesa2
+UCI++,volcanoes-a3,src/lpfgarcia_ucipp/uci/volcanoes-a3.arff,1521,3,5,29,"[29, 35, 44, 44, 1369]",,volcanoesa3
+UCI++,volcanoes-a4,src/lpfgarcia_ucipp/uci/volcanoes-a4.arff,1515,3,5,29,"[29, 33, 43, 45, 1365]",,volcanoesa4
+UCI++,volcanoes-b1,src/lpfgarcia_ucipp/uci/volcanoes-b1.arff,10176,3,5,26,"[26, 74, 74, 211, 9791]",,volcanoesb1
+UCI++,volcanoes-b2,src/lpfgarcia_ucipp/uci/volcanoes-b2.arff,10668,3,5,26,"[26, 73, 73, 211, 10285]",,volcanoesb2
+UCI++,volcanoes-b3,src/lpfgarcia_ucipp/uci/volcanoes-b3.arff,10386,3,5,25,"[25, 72, 75, 208, 10006]",,volcanoesb3
+UCI++,volcanoes-b4,src/lpfgarcia_ucipp/uci/volcanoes-b4.arff,10190,3,5,26,"[26, 73, 75, 211, 9805]",,volcanoesb4
+UCI++,volcanoes-b5,src/lpfgarcia_ucipp/uci/volcanoes-b5.arff,9989,3,5,26,"[26, 75, 75, 214, 9599]",,volcanoesb5
+UCI++,volcanoes-b6,src/lpfgarcia_ucipp/uci/volcanoes-b6.arff,10130,3,5,26,"[26, 73, 74, 211, 9746]",,volcanoesb6
+UCI++,volcanoes-c1,src/lpfgarcia_ucipp/uci/volcanoes-c1.arff,28626,3,5,71,"[71, 139, 161, 360, 27895]",,volcanoesc1
+UCI++,volcanoes-d1,src/lpfgarcia_ucipp/uci/volcanoes-d1.arff,8753,3,5,56,"[56, 81, 115, 236, 8265]",,volcanoesd1
+UCI++,volcanoes-d2,src/lpfgarcia_ucipp/uci/volcanoes-d2.arff,9172,3,5,56,"[56, 90, 117, 239, 8670]",,volcanoesd2
+UCI++,volcanoes-d3,src/lpfgarcia_ucipp/uci/volcanoes-d3.arff,9285,3,5,58,"[58, 96, 119, 241, 8771]",,volcanoesd3
+UCI++,volcanoes-d4,src/lpfgarcia_ucipp/uci/volcanoes-d4.arff,8654,3,5,56,"[56, 84, 115, 236, 8163]",,volcanoesd4
+UCI++,volcanoes-e1,src/lpfgarcia_ucipp/uci/volcanoes-e1.arff,1183,3,5,9,"[9, 21, 21, 49, 1083]",,volcanoese1
+UCI++,volcanoes-e2,src/lpfgarcia_ucipp/uci/volcanoes-e2.arff,1080,3,5,8,"[8, 18, 19, 51, 984]",,volcanoese2
+UCI++,volcanoes-e3,src/lpfgarcia_ucipp/uci/volcanoes-e3.arff,1277,3,5,9,"[9, 21, 24, 53, 1170]",,volcanoese3
+UCI++,volcanoes-e4,src/lpfgarcia_ucipp/uci/volcanoes-e4.arff,1252,3,5,9,"[9, 22, 24, 53, 1144]",,volcanoese4
+UCI++,volcanoes-e5,src/lpfgarcia_ucipp/uci/volcanoes-e5.arff,1112,3,5,9,"[9, 20, 21, 52, 1010]",,volcanoese5
+UCI++,voting,src/lpfgarcia_ucipp/uci/voting.arff,435,16,2,168,"[168, 267]",,voting
+UCI++,walking-activity,src/lpfgarcia_ucipp/uci/walking-activity.arff,149332,4,22,911,"[911, 1129, 1144, 1728, 3082, 3086, 3457, 3653, 3729, 3882, 4799, 4936, 5069, 5636, 6699, 6981, 7988, 9698, 12027, 16949, 20758, 21991]",,walkingactivity
+UCI++,waveform-v1,src/lpfgarcia_ucipp/uci/waveform-v1.arff,5000,21,3,1647,"[1647, 1657, 1696]",,waveformv1
+UCI++,waveform-v2,src/lpfgarcia_ucipp/uci/waveform-v2.arff,5000,40,3,1653,"[1653, 1655, 1692]",,waveformv2
+UCI++,wdbc,src/lpfgarcia_ucipp/uci/wdbc.arff,569,30,2,212,"[212, 357]",,wdbc
+UCI++,wholesale-channel,src/lpfgarcia_ucipp/uci/wholesale-channel.arff,440,7,2,142,"[142, 298]",,wholesalechannel
+UCI++,wholesale-region,src/lpfgarcia_ucipp/uci/wholesale-region.arff,440,7,3,47,"[47, 77, 316]",,wholesaleregion
+UCI++,wilt,src/lpfgarcia_ucipp/uci/wilt.arff,4839,5,2,261,"[261, 4578]",,wilt
+UCI++,wine-quality-5class,src/lpfgarcia_ucipp/uci/wine-quality-5class.arff,6462,11,5,193,"[193, 216, 1079, 2138, 2836]",,winequality5class
+UCI++,wine-quality-red,src/lpfgarcia_ucipp/uci/wine-quality-red.arff,1599,11,6,10,"[10, 18, 53, 199, 638, 681]",,winequalityred
+UCI++,wine-quality-white-5class,src/lpfgarcia_ucipp/uci/wine-quality-white-5class.arff,4873,11,5,163,"[163, 175, 880, 1457, 2198]",,winequalitywhite5class
+UCI++,wine-quality-white,src/lpfgarcia_ucipp/uci/wine-quality-white.arff,4898,11,7,5,"[5, 20, 163, 175, 880, 1457, 2198]",,winequalitywhite
+UCI++,wine,src/lpfgarcia_ucipp/uci/wine.arff,178,13,3,48,"[48, 59, 71]",,wine
+UCI++,wpbc,src/lpfgarcia_ucipp/uci/wpbc.arff,198,33,23,1,"[1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 6, 6, 10, 17, 35, 87]",,wpbc
+UCI++,yeast-4class,src/lpfgarcia_ucipp/uci/yeast-4class.arff,1299,8,4,163,"[163, 244, 429, 463]",,yeast4class
+UCI++,yeast,src/lpfgarcia_ucipp/uci/yeast.arff,1484,8,10,5,"[5, 20, 30, 35, 44, 51, 163, 244, 429, 463]",,yeast
+UCI++,zoo,src/lpfgarcia_ucipp/uci/zoo.arff,101,16,7,4,"[4, 5, 8, 10, 13, 20, 41]",,zoo
+Weka-UCI,anneal,src/renatopp_arff-datasets/classification/anneal.arff,898,38,5,8,"[8, 40, 67, 99, 684]",,anneal
+Weka-UCI,anneal.orig,src/renatopp_arff-datasets/classification/anneal.orig.arff,898,38,5,8,"[8, 40, 67, 99, 684]",,annealorig
+Weka-UCI,arrhythmia,src/renatopp_arff-datasets/classification/arrhythmia.arff,452,279,13,2,"[2, 3, 4, 5, 9, 13, 15, 15, 22, 25, 44, 50, 245]",,arrhythmia
+Weka-UCI,audiology,src/renatopp_arff-datasets/classification/audiology.arff,226,69,24,1,"[1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 3, 4, 4, 4, 6, 8, 9, 20, 22, 22, 48, 57]",,audiology
+Weka-UCI,autos,src/renatopp_arff-datasets/classification/autos.arff,205,25,6,3,"[3, 22, 27, 32, 54, 67]",,autos
+Weka-UCI,balance.scale,src/renatopp_arff-datasets/classification/balance.scale.arff,625,4,3,49,"[49, 288, 288]",,balancescale
+Weka-UCI,breast.cancer,src/renatopp_arff-datasets/classification/breast.cancer.arff,286,9,2,85,"[85, 201]",,breastcancer
+Weka-UCI,breast.w,src/renatopp_arff-datasets/classification/breast.w.arff,699,9,2,241,"[241, 458]",,breastw
+Weka-UCI,bridges.version1,src/renatopp_arff-datasets/classification/bridges.version1.arff,107,12,7,2,"[2, 10, 11, 11, 13, 16, 44]",,bridgesversion1
+Weka-UCI,bridges.version2,src/renatopp_arff-datasets/classification/bridges.version2.arff,107,12,7,2,"[2, 10, 11, 11, 13, 16, 44]",,bridgesversion2
+Weka-UCI,car,src/renatopp_arff-datasets/classification/car.arff,1728,6,4,65,"[65, 69, 384, 1210]",,car
+Weka-UCI,cmc,src/renatopp_arff-datasets/classification/cmc.arff,1473,9,3,333,"[333, 511, 629]",,cmc
+Weka-UCI,colic,src/renatopp_arff-datasets/classification/colic.arff,368,22,2,136,"[136, 232]",,colic
+Weka-UCI,colic.orig,src/renatopp_arff-datasets/classification/colic.orig.arff,368,27,2,124,"[124, 244]",,colicorig
+Weka-UCI,column2C,src/renatopp_arff-datasets/classification/column2C.arff,310,6,2,100,"[100, 210]",,column2c
+Weka-UCI,column3C,src/renatopp_arff-datasets/classification/column3C.arff,310,6,3,60,"[60, 100, 150]",,column3c
+Weka-UCI,credit.a,src/renatopp_arff-datasets/classification/credit.a.arff,690,15,2,307,"[307, 383]",,credita
+Weka-UCI,credit.g,src/renatopp_arff-datasets/classification/credit.g.arff,1000,20,2,300,"[300, 700]",,creditg
+Weka-UCI,cylinder.bands,src/renatopp_arff-datasets/classification/cylinder.bands.arff,540,39,2,228,"[228, 312]",,cylinderbands
+Weka-UCI,dermatology,src/renatopp_arff-datasets/classification/dermatology.arff,366,34,6,20,"[20, 49, 52, 61, 72, 112]",,dermatology
+Weka-UCI,diabetes,src/renatopp_arff-datasets/classification/diabetes.arff,768,8,2,268,"[268, 500]",,diabetes
+Weka-UCI,ecoli,src/renatopp_arff-datasets/classification/ecoli.arff,336,7,8,2,"[2, 2, 5, 20, 35, 52, 77, 143]",,ecoli
+Weka-UCI,flags,src/renatopp_arff-datasets/classification/flags.arff,194,29,8,1,"[1, 2, 9, 9, 17, 40, 47, 69]",,flags
+Weka-UCI,glass,src/renatopp_arff-datasets/classification/glass.arff,214,9,6,9,"[9, 13, 17, 29, 70, 76]",,glass
+Weka-UCI,haberman,src/renatopp_arff-datasets/classification/haberman.arff,306,3,2,81,"[81, 225]",,haberman
+Weka-UCI,heart.c,src/renatopp_arff-datasets/classification/heart.c.arff,303,13,2,138,"[138, 165]",,heartc
+Weka-UCI,heart.h,src/renatopp_arff-datasets/classification/heart.h.arff,294,13,2,106,"[106, 188]",,hearth
+Weka-UCI,heart.statlog,src/renatopp_arff-datasets/classification/heart.statlog.arff,270,13,2,120,"[120, 150]",,heartstatlog
+Weka-UCI,hepatitis,src/renatopp_arff-datasets/classification/hepatitis.arff,155,19,2,32,"[32, 123]",,hepatitis
+Weka-UCI,hypothyroid,src/renatopp_arff-datasets/classification/hypothyroid.arff,3772,29,4,2,"[2, 95, 194, 3481]",,hypothyroid
+Weka-UCI,ionosphere,src/renatopp_arff-datasets/classification/ionosphere.arff,351,34,2,126,"[126, 225]",,ionosphere
+Weka-UCI,iris,src/renatopp_arff-datasets/classification/iris.arff,150,4,3,50,"[50, 50, 50]",,iris
+Weka-UCI,kr.vs.kp,src/renatopp_arff-datasets/classification/kr.vs.kp.arff,3196,36,2,1527,"[1527, 1669]",,krvskp
+Weka-UCI,labor,src/renatopp_arff-datasets/classification/labor.arff,57,16,2,20,"[20, 37]",,labor
+Weka-UCI,letter,src/renatopp_arff-datasets/classification/letter.arff,20000,16,26,734,"[734, 734, 736, 739, 747, 748, 752, 753, 755, 758, 761, 764, 766, 768, 773, 775, 783, 783, 786, 787, 789, 792, 796, 803, 805, 813]",,letter
+Weka-UCI,lymph,src/renatopp_arff-datasets/classification/lymph.arff,148,18,4,2,"[2, 4, 61, 81]",,lymph
+Weka-UCI,mushroom,src/renatopp_arff-datasets/classification/mushroom.arff,8124,22,2,3916,"[3916, 4208]",,mushroom
+Weka-UCI,nursery,src/renatopp_arff-datasets/classification/nursery.arff,12960,8,5,2,"[2, 328, 4044, 4266, 4320]",,nursery
+Weka-UCI,optdigits,src/renatopp_arff-datasets/classification/optdigits.arff,5620,64,10,554,"[554, 554, 557, 558, 558, 562, 566, 568, 571, 572]",,optdigits
+Weka-UCI,page.blocks,src/renatopp_arff-datasets/classification/page.blocks.arff,5473,10,5,28,"[28, 88, 115, 329, 4913]",,pageblocks
+Weka-UCI,pendigits,src/renatopp_arff-datasets/classification/pendigits.arff,10992,16,10,1055,"[1055, 1055, 1055, 1055, 1056, 1142, 1143, 1143, 1144, 1144]",,pendigits
+Weka-UCI,postoperative.patient.data,src/renatopp_arff-datasets/classification/postoperative.patient.data.arff,90,8,3,2,"[2, 24, 64]",,postoperativepatientdata
+Weka-UCI,primary.tumor,src/renatopp_arff-datasets/classification/primary.tumor.arff,339,17,21,1,"[1, 1, 1, 2, 2, 2, 6, 6, 7, 9, 10, 14, 14, 16, 20, 24, 24, 28, 29, 39, 84]",,primarytumor
+Weka-UCI,segment,src/renatopp_arff-datasets/classification/segment.arff,2310,19,7,330,"[330, 330, 330, 330, 330, 330, 330]",,segment
+Weka-UCI,shuttle.landing.control,src/renatopp_arff-datasets/classification/shuttle.landing.control.arff,15,6,2,6,"[6, 9]",,shuttlelandingcontrol
+Weka-UCI,sick,src/renatopp_arff-datasets/classification/sick.arff,3772,29,2,231,"[231, 3541]",,sick
+Weka-UCI,solar.flare1,src/renatopp_arff-datasets/classification/solar.flare1.arff,323,12,6,8,"[8, 21, 65, 65, 76, 88]",,solarflare1
+Weka-UCI,solar.flare2,src/renatopp_arff-datasets/classification/solar.flare2.arff,1066,12,6,43,"[43, 95, 147, 211, 239, 331]",,solarflare2
+Weka-UCI,sonar,src/renatopp_arff-datasets/classification/sonar.arff,208,60,2,97,"[97, 111]",,sonar
+Weka-UCI,soybean,src/renatopp_arff-datasets/classification/soybean.arff,683,35,19,8,"[8, 14, 15, 16, 20, 20, 20, 20, 20, 20, 20, 20, 20, 44, 44, 88, 91, 91, 92]",,soybean
+Weka-UCI,spambase,src/renatopp_arff-datasets/classification/spambase.arff,4601,57,2,1813,"[1813, 2788]",,spambase
+Weka-UCI,spect.test,src/renatopp_arff-datasets/classification/spect.test.arff,187,22,2,84,"[84, 103]",,specttest
+Weka-UCI,spect.train,src/renatopp_arff-datasets/classification/spect.train.arff,80,22,2,26,"[26, 54]",,specttrain
+Weka-UCI,spectf.test,src/renatopp_arff-datasets/classification/spectf.test.arff,269,44,59,1,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 8, 8, 9, 9, 11, 11, 12, 13, 15, 16, 16]",,spectftest
+Weka-UCI,spectf.train,src/renatopp_arff-datasets/classification/spectf.train.arff,80,44,33,1,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 7, 10]",,spectftrain
+Weka-UCI,spectrometer,src/renatopp_arff-datasets/classification/spectrometer.arff,531,102,531,1,"[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]",,spectrometer
+Weka-UCI,splice,src/renatopp_arff-datasets/classification/splice.arff,3190,61,3,767,"[767, 768, 1655]",,splice
+Weka-UCI,sponge,src/renatopp_arff-datasets/classification/sponge.arff,76,45,3,3,"[3, 3, 70]",,sponge
+Weka-UCI,tae,src/renatopp_arff-datasets/classification/tae.arff,151,5,3,49,"[49, 50, 52]",,tae
+Weka-UCI,tic-tac-toe,src/renatopp_arff-datasets/classification/tic-tac-toe.arff,958,9,2,332,"[332, 626]",,tictactoe
+Weka-UCI,trains,src/renatopp_arff-datasets/classification/trains.arff,10,32,2,5,"[5, 5]",,trains
+Weka-UCI,vehicle,src/renatopp_arff-datasets/classification/vehicle.arff,846,18,4,199,"[199, 212, 217, 218]",,vehicle
+Weka-UCI,vote,src/renatopp_arff-datasets/classification/vote.arff,435,16,2,168,"[168, 267]",,vote
+Weka-UCI,vowel,src/renatopp_arff-datasets/classification/vowel.arff,990,13,11,90,"[90, 90, 90, 90, 90, 90, 90, 90, 90, 90, 90]",,vowel
+Weka-UCI,waveform5000,src/renatopp_arff-datasets/classification/waveform5000.arff,5000,40,3,1653,"[1653, 1655, 1692]",,waveform5000
+Weka-UCI,wine,src/renatopp_arff-datasets/classification/wine.arff,178,13,3,48,"[48, 59, 71]",,wine
+Weka-UCI,zoo,src/renatopp_arff-datasets/classification/zoo.arff,101,17,7,4,"[4, 5, 8, 10, 13, 20, 41]",,zoo
+PROMISE-ck,ant-1.3,src/klainfo_DefectData/inst/extdata/terapromise/ck/ant-1.3.csv,125,20,2,20,"[20, 105]",,ant13
+PROMISE-ck,ant-1.4,src/klainfo_DefectData/inst/extdata/terapromise/ck/ant-1.4.csv,178,20,2,40,"[40, 138]",,ant14
+PROMISE-ck,ant-1.5,src/klainfo_DefectData/inst/extdata/terapromise/ck/ant-1.5.csv,293,20,2,32,"[32, 261]",,ant15
+PROMISE-ck,ant-1.6,src/klainfo_DefectData/inst/extdata/terapromise/ck/ant-1.6.csv,351,20,2,92,"[92, 259]",,ant16
+PROMISE-ck,ant-1.7,src/klainfo_DefectData/inst/extdata/terapromise/ck/ant-1.7.csv,745,20,2,166,"[166, 579]",,ant17
+PROMISE-ck,arc,src/klainfo_DefectData/inst/extdata/terapromise/ck/arc.csv,234,20,2,27,"[27, 207]",,arc
+PROMISE-ck,berek,src/klainfo_DefectData/inst/extdata/terapromise/ck/berek.csv,43,20,2,16,"[16, 27]",,berek
+PROMISE-ck,camel-1.0,src/klainfo_DefectData/inst/extdata/terapromise/ck/camel-1.0.csv,339,20,2,13,"[13, 326]",,camel10
+PROMISE-ck,camel-1.2,src/klainfo_DefectData/inst/extdata/terapromise/ck/camel-1.2.csv,608,20,2,216,"[216, 392]",,camel12
+PROMISE-ck,camel-1.4,src/klainfo_DefectData/inst/extdata/terapromise/ck/camel-1.4.csv,872,20,2,145,"[145, 727]",,camel14
+PROMISE-ck,camel-1.6,src/klainfo_DefectData/inst/extdata/terapromise/ck/camel-1.6.csv,965,20,2,188,"[188, 777]",,camel16
+PROMISE-ck,ckjm,src/klainfo_DefectData/inst/extdata/terapromise/ck/ckjm.csv,10,20,2,5,"[5, 5]",,ckjm
+PROMISE-ck,e-learning,src/klainfo_DefectData/inst/extdata/terapromise/ck/e-learning.csv,64,20,2,5,"[5, 59]",,elearning
+PROMISE-ck,forrest-0.6,src/klainfo_DefectData/inst/extdata/terapromise/ck/forrest-0.6.csv,6,20,2,1,"[1, 5]",,forrest06
+PROMISE-ck,forrest-0.7,src/klainfo_DefectData/inst/extdata/terapromise/ck/forrest-0.7.csv,29,20,2,5,"[5, 24]",,forrest07
+PROMISE-ck,forrest-0.8,src/klainfo_DefectData/inst/extdata/terapromise/ck/forrest-0.8.csv,32,20,2,2,"[2, 30]",,forrest08
+PROMISE-ck,intercafe,src/klainfo_DefectData/inst/extdata/terapromise/ck/intercafe.csv,27,20,2,4,"[4, 23]",,intercafe
+PROMISE-ck,ivy-1.1,src/klainfo_DefectData/inst/extdata/terapromise/ck/ivy-1.1.csv,111,20,2,48,"[48, 63]",,ivy11
+PROMISE-ck,ivy-1.4,src/klainfo_DefectData/inst/extdata/terapromise/ck/ivy-1.4.csv,241,20,2,16,"[16, 225]",,ivy14
+PROMISE-ck,ivy-2.0,src/klainfo_DefectData/inst/extdata/terapromise/ck/ivy-2.0.csv,352,20,2,40,"[40, 312]",,ivy20
+PROMISE-ck,jedit-3.2,src/klainfo_DefectData/inst/extdata/terapromise/ck/jedit-3.2.csv,272,20,2,90,"[90, 182]",,jedit32
+PROMISE-ck,jedit-4.0,src/klainfo_DefectData/inst/extdata/terapromise/ck/jedit-4.0.csv,306,20,2,75,"[75, 231]",,jedit40
+PROMISE-ck,jedit-4.1,src/klainfo_DefectData/inst/extdata/terapromise/ck/jedit-4.1.csv,312,20,2,79,"[79, 233]",,jedit41
+PROMISE-ck,jedit-4.2,src/klainfo_DefectData/inst/extdata/terapromise/ck/jedit-4.2.csv,367,20,2,48,"[48, 319]",,jedit42
+PROMISE-ck,jedit-4.3,src/klainfo_DefectData/inst/extdata/terapromise/ck/jedit-4.3.csv,492,20,2,11,"[11, 481]",,jedit43
+PROMISE-ck,kalkulator,src/klainfo_DefectData/inst/extdata/terapromise/ck/kalkulator.csv,27,20,2,6,"[6, 21]",,kalkulator
+PROMISE-ck,log4j-1.0,src/klainfo_DefectData/inst/extdata/terapromise/ck/log4j-1.0.csv,135,20,2,34,"[34, 101]",,log4j10
+PROMISE-ck,log4j-1.1,src/klainfo_DefectData/inst/extdata/terapromise/ck/log4j-1.1.csv,109,20,2,37,"[37, 72]",,log4j11
+PROMISE-ck,log4j-1.2,src/klainfo_DefectData/inst/extdata/terapromise/ck/log4j-1.2.csv,205,20,2,16,"[16, 189]",,log4j12
+PROMISE-ck,lucene-2.0,src/klainfo_DefectData/inst/extdata/terapromise/ck/lucene-2.0.csv,195,20,2,91,"[91, 104]",,lucene20
+PROMISE-ck,lucene-2.2,src/klainfo_DefectData/inst/extdata/terapromise/ck/lucene-2.2.csv,247,20,2,103,"[103, 144]",,lucene22
+PROMISE-ck,lucene-2.4,src/klainfo_DefectData/inst/extdata/terapromise/ck/lucene-2.4.csv,340,20,2,137,"[137, 203]",,lucene24
+PROMISE-ck,nieruchomosci,src/klainfo_DefectData/inst/extdata/terapromise/ck/nieruchomosci.csv,27,20,2,10,"[10, 17]",,nieruchomosci
+PROMISE-ck,pbeans1,src/klainfo_DefectData/inst/extdata/terapromise/ck/pbeans1.csv,26,20,2,6,"[6, 20]",,pbeans1
+PROMISE-ck,pbeans2,src/klainfo_DefectData/inst/extdata/terapromise/ck/pbeans2.csv,51,20,2,10,"[10, 41]",,pbeans2
+PROMISE-ck,pdftranslator,src/klainfo_DefectData/inst/extdata/terapromise/ck/pdftranslator.csv,33,20,2,15,"[15, 18]",,pdftranslator
+PROMISE-ck,poi-1.5,src/klainfo_DefectData/inst/extdata/terapromise/ck/poi-1.5.csv,237,20,2,96,"[96, 141]",,poi15
+PROMISE-ck,poi-2.0,src/klainfo_DefectData/inst/extdata/terapromise/ck/poi-2.0.csv,314,20,2,37,"[37, 277]",,poi20
+PROMISE-ck,poi-2.5,src/klainfo_DefectData/inst/extdata/terapromise/ck/poi-2.5.csv,385,20,2,137,"[137, 248]",,poi25
+PROMISE-ck,poi-3.0,src/klainfo_DefectData/inst/extdata/terapromise/ck/poi-3.0.csv,442,20,2,161,"[161, 281]",,poi30
+PROMISE-ck,prop-1,src/klainfo_DefectData/inst/extdata/terapromise/ck/prop-1.csv,18471,21,2,2738,"[2738, 15733]",,prop1
+PROMISE-ck,prop-2,src/klainfo_DefectData/inst/extdata/terapromise/ck/prop-2.csv,23014,21,2,2431,"[2431, 20583]",,prop2
+PROMISE-ck,prop-3,src/klainfo_DefectData/inst/extdata/terapromise/ck/prop-3.csv,10274,21,2,1180,"[1180, 9094]",,prop3
+PROMISE-ck,prop-4,src/klainfo_DefectData/inst/extdata/terapromise/ck/prop-4.csv,8718,21,2,840,"[840, 7878]",,prop4
+PROMISE-ck,prop-5,src/klainfo_DefectData/inst/extdata/terapromise/ck/prop-5.csv,8516,21,2,1299,"[1299, 7217]",,prop5
+PROMISE-ck,prop-6,src/klainfo_DefectData/inst/extdata/terapromise/ck/prop-6.csv,660,21,2,66,"[66, 594]",,prop6
+PROMISE-ck,redaktor,src/klainfo_DefectData/inst/extdata/terapromise/ck/redaktor.csv,176,20,2,27,"[27, 149]",,redaktor
+PROMISE-ck,serapion,src/klainfo_DefectData/inst/extdata/terapromise/ck/serapion.csv,45,20,2,9,"[9, 36]",,serapion
+PROMISE-ck,skarbonka,src/klainfo_DefectData/inst/extdata/terapromise/ck/skarbonka.csv,45,20,2,9,"[9, 36]",,skarbonka
+PROMISE-ck,sklebagd,src/klainfo_DefectData/inst/extdata/terapromise/ck/sklebagd.csv,20,20,2,8,"[8, 12]",,sklebagd
+PROMISE-ck,synapse-1.0,src/klainfo_DefectData/inst/extdata/terapromise/ck/synapse-1.0.csv,157,20,2,16,"[16, 141]",,synapse10
+PROMISE-ck,synapse-1.1,src/klainfo_DefectData/inst/extdata/terapromise/ck/synapse-1.1.csv,222,20,2,60,"[60, 162]",,synapse11
+PROMISE-ck,synapse-1.2,src/klainfo_DefectData/inst/extdata/terapromise/ck/synapse-1.2.csv,256,20,2,86,"[86, 170]",,synapse12
+PROMISE-ck,systemdata,src/klainfo_DefectData/inst/extdata/terapromise/ck/systemdata.csv,65,20,2,9,"[9, 56]",,systemdata
+PROMISE-ck,szybkafucha,src/klainfo_DefectData/inst/extdata/terapromise/ck/szybkafucha.csv,25,20,2,11,"[11, 14]",,szybkafucha
+PROMISE-ck,termoproject,src/klainfo_DefectData/inst/extdata/terapromise/ck/termoproject.csv,42,20,2,13,"[13, 29]",,termoproject
+PROMISE-ck,tomcat,src/klainfo_DefectData/inst/extdata/terapromise/ck/tomcat.csv,858,20,2,77,"[77, 781]",,tomcat
+PROMISE-ck,velocity-1.4,src/klainfo_DefectData/inst/extdata/terapromise/ck/velocity-1.4.csv,196,20,2,49,"[49, 147]",,velocity14
+PROMISE-ck,velocity-1.5,src/klainfo_DefectData/inst/extdata/terapromise/ck/velocity-1.5.csv,214,20,2,72,"[72, 142]",,velocity15
+PROMISE-ck,velocity-1.6,src/klainfo_DefectData/inst/extdata/terapromise/ck/velocity-1.6.csv,229,20,2,78,"[78, 151]",,velocity16
+PROMISE-ck,workflow,src/klainfo_DefectData/inst/extdata/terapromise/ck/workflow.csv,39,20,2,19,"[19, 20]",,workflow
+PROMISE-ck,wspomaganiepi,src/klainfo_DefectData/inst/extdata/terapromise/ck/wspomaganiepi.csv,18,20,2,6,"[6, 12]",,wspomaganiepi
+PROMISE-ck,xalan-2.4,src/klainfo_DefectData/inst/extdata/terapromise/ck/xalan-2.4.csv,723,20,2,110,"[110, 613]",,xalan24
+PROMISE-ck,xalan-2.5,src/klainfo_DefectData/inst/extdata/terapromise/ck/xalan-2.5.csv,803,20,2,387,"[387, 416]",,xalan25
+PROMISE-ck,xalan-2.6,src/klainfo_DefectData/inst/extdata/terapromise/ck/xalan-2.6.csv,885,20,2,411,"[411, 474]",,xalan26
+PROMISE-ck,xalan-2.7,src/klainfo_DefectData/inst/extdata/terapromise/ck/xalan-2.7.csv,909,20,2,11,"[11, 898]",,xalan27
+PROMISE-ck,xerces-1.2,src/klainfo_DefectData/inst/extdata/terapromise/ck/xerces-1.2.csv,440,20,2,71,"[71, 369]",,xerces12
+PROMISE-ck,xerces-1.3,src/klainfo_DefectData/inst/extdata/terapromise/ck/xerces-1.3.csv,453,20,2,69,"[69, 384]",,xerces13
+PROMISE-ck,xerces-1.4,src/klainfo_DefectData/inst/extdata/terapromise/ck/xerces-1.4.csv,588,20,2,151,"[151, 437]",,xerces14
+PROMISE-ck,xerces-init,src/klainfo_DefectData/inst/extdata/terapromise/ck/xerces-init.csv,162,20,2,77,"[77, 85]",,xercesinit
+PROMISE-ck,zuzel,src/klainfo_DefectData/inst/extdata/terapromise/ck/zuzel.csv,29,20,2,13,"[13, 16]",,zuzel
+NASA-MDP,JM1,src/klainfo_DefectData/inst/extdata/terapromise/mccabe/JM1.arff,7782,21,2,1672,"[1672, 6110]",,jm1
+NASA-MDP,KC3,src/klainfo_DefectData/inst/extdata/terapromise/mccabe/KC3.arff,194,39,2,36,"[36, 158]",,kc3
+NASA-MDP,MC1,src/klainfo_DefectData/inst/extdata/terapromise/mccabe/MC1.arff,1988,38,2,46,"[46, 1942]",,mc1
+NASA-MDP,MC2,src/klainfo_DefectData/inst/extdata/terapromise/mccabe/MC2.arff,125,39,2,44,"[44, 81]",,mc2
+NASA-MDP,MW1,src/klainfo_DefectData/inst/extdata/terapromise/mccabe/MW1.arff,253,37,2,27,"[27, 226]",,mw1
+NASA-MDP,PC1,src/klainfo_DefectData/inst/extdata/terapromise/mccabe/PC1.arff,705,37,2,61,"[61, 644]",,pc1
+NASA-MDP,PC2,src/klainfo_DefectData/inst/extdata/terapromise/mccabe/PC2.arff,745,36,2,16,"[16, 729]",,pc2
+NASA-MDP,PC3,src/klainfo_DefectData/inst/extdata/terapromise/mccabe/PC3.arff,1077,37,2,134,"[134, 943]",,pc3
+NASA-MDP,PC4,src/klainfo_DefectData/inst/extdata/terapromise/mccabe/PC4.arff,1287,37,2,177,"[177, 1110]",,pc4
+NASA-MDP,PC5,src/klainfo_DefectData/inst/extdata/terapromise/mccabe/PC5.arff,1711,38,2,471,"[471, 1240]",,pc5
+NASA-MDP,ar1,src/klainfo_DefectData/inst/extdata/terapromise/mccabe/ar1.arff,121,29,2,9,"[9, 112]",,ar1
+NASA-MDP,ar3,src/klainfo_DefectData/inst/extdata/terapromise/mccabe/ar3.arff,63,29,2,8,"[8, 55]",,ar3
+NASA-MDP,ar4,src/klainfo_DefectData/inst/extdata/terapromise/mccabe/ar4.arff,107,29,2,20,"[20, 87]",,ar4
+NASA-MDP,ar5,src/klainfo_DefectData/inst/extdata/terapromise/mccabe/ar5.arff,36,29,2,8,"[8, 28]",,ar5
+NASA-MDP,ar6,src/klainfo_DefectData/inst/extdata/terapromise/mccabe/ar6.arff,101,29,2,15,"[15, 86]",,ar6
+NASA-MDP,cm1,src/klainfo_DefectData/inst/extdata/terapromise/mccabe/cm1.arff,327,37,2,42,"[42, 285]",,cm1
+NASA-MDP,kc2,src/klainfo_DefectData/inst/extdata/terapromise/mccabe/kc2.arff,522,21,2,107,"[107, 415]",,kc2
+jbrownlee-UCI,abalone,src/jbrownlee/abalone.csv,4177,8,28,1,"[1, 1, 1, 1, 1, 2, 2, 6, 9, 14, 15, 26, 32, 42, 57, 58, 67, 103, 115, 126, 203, 259, 267, 391, 487, 568, 634, 689]",,abalone
+jbrownlee-UCI,adult-all,src/jbrownlee/adult-all.csv,48842,14,2,11687,"[11687, 37155]",,adultall
+jbrownlee-UCI,banknote_authentication,src/jbrownlee/banknote_authentication.csv,1372,4,2,610,"[610, 762]",,banknoteauthentication
+jbrownlee-UCI,breast-cancer-wisconsin,src/jbrownlee/breast-cancer-wisconsin.csv,699,9,2,241,"[241, 458]",,breastcancerwisconsin
+jbrownlee-UCI,breast-cancer,src/jbrownlee/breast-cancer.csv,286,9,2,85,"[85, 201]",,breastcancer
+jbrownlee-UCI,ecoli,src/jbrownlee/ecoli.csv,336,7,8,2,"[2, 2, 5, 20, 35, 52, 77, 143]",,ecoli
+jbrownlee-UCI,german,src/jbrownlee/german.csv,1000,20,2,300,"[300, 700]",,german
+jbrownlee-UCI,glass,src/jbrownlee/glass.csv,214,9,6,9,"[9, 13, 17, 29, 70, 76]",,glass
+jbrownlee-UCI,haberman,src/jbrownlee/haberman.csv,306,3,2,81,"[81, 225]",,haberman
+jbrownlee-UCI,horse-colic,src/jbrownlee/horse-colic.csv,300,27,2,99,"[99, 201]",,horsecolic
+jbrownlee-UCI,ionosphere,src/jbrownlee/ionosphere.csv,351,34,2,126,"[126, 225]",,ionosphere
+jbrownlee-UCI,mammography,src/jbrownlee/mammography.csv,11183,6,2,260,"[260, 10923]",,mammography
+jbrownlee-UCI,new-thyroid,src/jbrownlee/new-thyroid.csv,215,5,3,30,"[30, 35, 150]",,newthyroid
+jbrownlee-UCI,oil-spill,src/jbrownlee/oil-spill.csv,937,49,2,41,"[41, 896]",,oilspill
+jbrownlee-UCI,phoneme,src/jbrownlee/phoneme.csv,5404,5,2,1586,"[1586, 3818]",,phoneme
+jbrownlee-UCI,pima-indians-diabetes,src/jbrownlee/pima-indians-diabetes.csv,768,8,2,268,"[268, 500]",,pimaindiansdiabetes
+jbrownlee-UCI,sonar,src/jbrownlee/sonar.csv,208,60,2,97,"[97, 111]",,sonar
+jbrownlee-UCI,wheat-seeds,src/jbrownlee/wheat-seeds.csv,210,7,3,70,"[70, 70, 70]",,wheatseeds
+jbrownlee-UCI,wine,src/jbrownlee/wine.csv,178,13,3,48,"[48, 59, 71]",,wine

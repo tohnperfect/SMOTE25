@@ -20,8 +20,9 @@ import pandas as pd
 
 HERE = Path(__file__).resolve().parent
 OUT = HERE.parent / "manuscript" / "figures"
-NAMES = {"none": "No flag", "small_sample": "Small sample",
+NAMES = {"none": "No flag", "small_sample": "Small sample", "outlier_flag": "Outliers",
          "small_sample + outlier_flag": "Small sample + outliers",
+         "small_disjuncts + small_sample": "Small disjuncts + small sample",
          "small_disjuncts + small_sample + outlier_flag": "Small disjuncts + small sample\n+ outliers"}
 
 
@@ -31,11 +32,11 @@ def main():
     dim = json.load(open(HERE / "dimension_profile.json"))
     plt.rcParams.update({"font.size": 8, "axes.spines.top": False, "axes.spines.right": False,
                          "pdf.fonttype": 42})
-    fig, ax = plt.subplots(1, 2, figsize=(6.8, 2.8), gridspec_kw={"width_ratios": [1.45, 1]})
+    fig, ax = plt.subplots(1, 2, figsize=(6.8, 3.3), gridspec_kw={"width_ratios": [1.45, 1]})
 
     a = ax[0]
-    order = [p for p in ["small_disjuncts + small_sample + outlier_flag", "small_sample + outlier_flag",
-                         "small_sample", "none"] if p in set(b.profile)]
+    order = [p for p in ["small_disjuncts + small_sample + outlier_flag", "small_disjuncts + small_sample",
+                         "small_sample + outlier_flag", "outlier_flag", "small_sample", "none"] if p in set(b.profile)]
     rng = np.random.default_rng(0)
     for i, p in enumerate(order):
         s = b[b.profile == p]

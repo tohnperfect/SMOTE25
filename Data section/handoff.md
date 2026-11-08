@@ -30,7 +30,7 @@
 ผู้รับผิดชอบ section นี้: Toon
 เจ้าของ repo: Supawit (P)
 เป้าหมายวารสาร: JAIR
-อัปเดตล่าสุด: 19 ตุลาคม 2026 (บันทึกล่าสุดอยู่ท้ายข้อ 4)
+อัปเดตล่าสุด: 8 พฤศจิกายน 2026 (บันทึกล่าสุดอยู่ท้ายไฟล์; สถานะปัจจุบันสรุปไว้ในข้อ 0 ด้านล่าง)
 ที่อยู่ของโฟลเดอร์นี้: `Data section/` ที่ระดับบนสุดของ repo
 
 อ่านไฟล์นี้ไฟล์เดียวแล้วต่องานได้ รายละเอียดแต่ละเรื่องอยู่ในไฟล์ที่อ้างถึงท้ายหัวข้อ
@@ -44,6 +44,37 @@
 > รวมถึงรายละเอียดเล็ก ๆ ที่คิดว่าไม่สำคัญ เช่น ทำไมถึงเลือกวิธีนี้ ตัวเลขไหนแก้แล้ว อะไรที่ลองแล้วไม่ได้ผล
 > เพราะสิ่งที่หายง่ายที่สุดคือเหตุผลเบื้องหลัง ไม่ใช่ตัวเลขผลลัพธ์
 > ถ้างานรอบนั้นมีรายละเอียดเยอะ ให้แยกเป็นไฟล์ของตัวเองแล้วลิงก์มาจากข้อ 4
+
+---
+
+## 0. สถานะปัจจุบัน (8 พ.ย. 2026) อ่านข้อนี้ก่อน
+
+ข้อ 3 และข้อ 5–8 ด้านล่างเป็นบันทึกสถานะเก่า (ต.ค.) เก็บไว้เป็นประวัติ ตัวเลขปัจจุบันอยู่ที่นี่และใน `CONCLUSIONS.md`
+
+| เรื่อง | ตัวเลขปัจจุบัน | ไฟล์ |
+|---|---|---|
+| corpus | 76 paper (มีการประเมินบนข้อมูล 73) · entry 1,654 (มีชื่อ 1,653) → 771 ชื่อ → 680 dataset → 459 family | `out/reconcile_counts.json`, `out/dataset_families.csv` |
+| ชนิด entry | original 534 · repository-defined 470 · modified 331 · synthetic 120 · not stated 199 | `out/dataset_records.csv` |
+| ตรวจได้ (ความยาก) | 864 entry 65 paper 172 ไฟล์ (28 ต.ค. 643/61/131) | `difficulty/verify_ext_summary.json` |
+| task ที่วัดได้ | binary/binarise 151 (594 entry 45 paper) · OvR 305 | `difficulty/profile_final_summary.json` |
+| ความยากระดับชื่อ | มีโปรไฟล์ 228 · หลายคลาส 53 · วัดไม่ได้ 490 (ไม่พบไฟล์ 309, synthetic 109, ขนาดไม่ตรง 51, อื่น 21) | `out/name_level_types.json`, `out/name_level_extras.json` |
+| ชื่อที่ควรดาวน์โหลดไฟล์ทางการ | 200 ชื่อ (อ้าง UCI/KEEL/คลังอื่น แต่ไม่อยู่ใน mirror ใด) | `out/names_to_download.csv` |
+| synthetic เผยแพร่ไหม | 19 paper 120 entry: เผยแพร่ 6 paper/62 · อ้างงานอื่น 2/5 · มีแค่โค้ด 4/9 · ไม่พบ 7/44 · อีก 10 paper สร้างข้อมูลประกอบภาพ/ทดลองข้างเคียง (ไม่นับเป็น entry) | `out/synthetic_availability.json` |
+| ผลชนะ SMOTE | plain 29 paper 1,511 แถว ชนะ 1,107 เสมอ 102 แพ้ 286 · H1 ไม่ได้รับการสนับสนุน · noise +0.1 → odds ชนะ ×1.13 (p 0.03) | `out/winloss_allmetric_summary.json`, `out/hypotheses.json`, `out/difficulty_outcomes.json` |
+| manuscript | `manuscript/data-section-draft.tex` (แก้ที่นี่) → `data-section-final.tex` + `.bib` (make_final.py) → **`manuscript/data-section-jair.pdf`** (template JAIR จริง, build_jair_pdf.py) · พรีวิวแบบมีมาร์กอัป `data-section-draft-preview.pdf` | |
+| HTML หลัก | `out/dataset-atlas.html` (มีแท็บ Handoff ที่ฝังไฟล์นี้ทั้งไฟล์) | `build/make_atlas.py` + `build/atlas_template.html` |
+| git | commit ในเครื่องแล้ว ยังไม่ push (push ต้องรันเองบนเครื่อง) | |
+
+**คำสั่ง rebuild ทั้งหมด** (จาก `Data section/`; ต้องมี mirror ใน `difficulty/src/` จาก `difficulty/fetch_mirrors.sh` + `difficulty/fetch_mirrors_ext.sh`, statsmodels, TeX Live + biber + biblatex + libertine/newtx/inconsolata)
+
+```
+bash difficulty/rebuild_difficulty.sh        # verify_ext -> measure -> ... -> name_level_* -> difficulty_outcomes
+python3 build/synthetic_availability.py      # ต้องมี paper/ (PDF ไม่อยู่ใน git)
+python3 build/make_final.py && python3 build/build_jair_pdf.py && python3 build/preview/build_preview.py
+python3 build/make_atlas.py && python3 build/atlas_analysis_checks.py && python3 build/consistency_check.py && python3 build/phase2_checks.py
+```
+
+**ยังค้าง (ต้องใช้คน)**: ดาวน์โหลดไฟล์ทางการของ 200 ชื่อใน `out/names_to_download.csv` (เว็บ KEEL/UCI ถูกบล็อกจากทั้งเครื่องและ cloud; Claude ขอให้ web-fetch ดาวน์โหลดแล้วถูกปฏิเสธ) · ตัดสินว่าจะเพิ่ม synthetic ส่วน B (10 paper) เป็น entry หรือไม่ · เติมชื่อผู้เขียนใน main.tex · merge เข้า main.tex/sections/references.bib ตอนรวมกับ P · push
 
 ---
 
@@ -1969,3 +2000,32 @@ python3 build/outcome_pilot.py
 - **ชื่อหนึ่งถูกดัดแปลงกี่แบบ (233 ชื่อ)**: 1 แบบ 86, 2 แบบ 132, 3 แบบ 14, 4 แบบ 1 · ผลรวม tag 396 · US+IM 97, CS อย่างเดียว 70, CS+US+IM 11, CS+IM 11, CS+FM 7 · เหตุผลที่ paper เขียน (15/39 paper): สองคลาส 7, เพิ่ม IR 7 (more extreme 1, extreme 1, higher 4, imbalance study 1), ลดขนาด 1 — **แก้คำตอบในแชตที่เคยบอกว่า "ดัดแปลงมักทำเพื่อเพิ่ม IR"** เป็น สองคลาสกับเพิ่ม IR พอ ๆ กัน
 - **synthetic เผยแพร่หรือไม่ (19 paper, 120 entry; ค้นคำใน PDF ไม่ได้อ่านทั้งเรื่อง, สคริปต์ตรวจว่าข้อความยืนยันมีอยู่ใน PDF)**: บอกที่ดาวน์โหลด 4 paper 40 entry (G-SMOTE, GMMSampling, SVDD-WSMOTE, SMOTE-IPF) · อ้างแหล่งเป็นงานอื่น 2 paper 5 entry (SOUP → Lango et al. 2017, Tomek Links → ref [4]) · มีลิงก์โค้ดของวิธีเท่านั้น 2 paper 3 entry (NBU, DLexiBoost) · ไม่พบข้อความว่าเผยแพร่ 11 paper 72 entry · ระดับการอธิบายวิธีสร้าง (บอกพารามิเตอร์ 11 paper / อ้างแหล่ง 4 / คร่าว ๆ 4) และจุดประสงค์ของ synthetic (คุมความยาก, คุม IR, ภาพประกอบ, ประเมิน generative model, multiclass) **เป็นการอ่านของ Claude ในแชต ยังไม่ได้ลงรหัสเป็นสคริปต์**
 - **dataset ที่มีผลเทียบกับ SMOTE (all-metric)**: plain SMOTE 337 ชื่อ = modified 123, not stated 73, original 69, repository-defined 67, synthetic 5 (520 entry, 1,500 แถวที่ผูก record) · ทุกตัวเทียบรวมที่ตัด 419 ชื่อ = modified 144, original 102, repository-defined 84, not stated 80, synthetic 9 · ระดับ entry original มากสุด (345/833 entry ที่มีผลเทียบ) · synthetic แทบไม่อยู่ในตารางผลเทียบกับ SMOTE (9/119 entry)
+
+
+## 2026-11-08 — ดึงไฟล์ที่ยังไม่ได้วัดความยาก, synthetic เผยแพร่ไหม, manuscript ตาม template JAIR, แท็บ Handoff ใน Atlas (Claude; Toon สั่ง)
+**คำสั่งของ Toon 8 พ.ย.** (1) ดึง dataset ที่ยังไม่ได้วิเคราะห์ความยาก (~200 กว่า) มาวิเคราะห์ให้หมด (2) อธิบาย synthetic / not stated (3) synthetic ที่ผู้เขียนสร้างเผยแพร่ไหม กี่ชุด/ไม่เผยแพร่กี่ชุด (4) ทุกอย่างคิดจาก 76 paper (5) แก้เฉพาะใน `Data section/` (6) manuscript ให้ตรง template ของวารสาร (PDF เดิมไม่ใช่รูปแบบ JAIR) (7) อ้างอิงวิธีของคนอื่นที่ใช้จัดความยาก (8) ใส่ทุกอย่างใน atlas_template รวม handoff ทั้งหมด · ผลสุดท้าย: Atlas HTML + manuscript PDF
+
+- git: `git pull --rebase origin main` (ต้นทางมี 3 commit ของ P: Method section, Section 7 ไม่แตะ Data section) ต้องขอสิทธิ์ลบในโฟลเดอร์ D:\SMOTE25 ก่อน (lock/temp ของ git) ลบ `.git/objects/**/tmp_obj_*` ที่ค้าง 98 ไฟล์
+- **เครือข่าย**: archive.ics.uci.edu, sci2s.ugr.es, openml.org, figshare, zenodo, kaggle ถูก proxy ปฏิเสธทั้ง cloud และเครื่อง · GitHub (raw/media/git clone) และ PyPI เข้าได้ · api.github.com ใช้ได้จากเครื่อง (ค้น repo) · Claude ลองให้ web-fetch agent ดาวน์โหลด zip จาก UCI/KEEL → **ถูกระบบปฏิเสธ ไม่ได้ทำต่อ**
+- **mirror ใหม่** (`difficulty/fetch_mirrors_ext.sh`, `difficulty/mirrors_ext.py` → `file_catalog_ext.csv` 717 ไฟล์): KEEL standard 2 ชุดอิสระ (Fuminides/keel_datasets 68 ไฟล์ .dat มี header; 15399240803/keel_csv 74 ไฟล์ LFS — ใช้เทียบ: 67 ไฟล์ที่มีทั้งคู่ N และ feature ตรงกันทุกไฟล์ จำนวนต่อคลาสตรง 66 ไฟล์ ยกเว้น heart ที่ csv มีแถวผิดหนึ่งแถว และ 41 ไฟล์ที่ซ้ำกับ keel-ds เดิมตรงกันทุกไฟล์), PMLB ทั้ง 179 ชุด classification, UCI++ (lpfgarcia/ucipp 221 ARFF), UCI ARFF ของ Weka (renatopp/arff-datasets 67), tera-PROMISE CK 71 + NASA MDP 17 (klainfo/DefectData), jbrownlee/Datasets 19 ไฟล์ UCI · ไฟล์ที่คอลัมน์คลาสผิด (คลาส > 30% ของแถว เช่น Weka spectrometer) ถูกตัดจาก catalog
+- **ตรวจรอบสอง** (`difficulty/verify_ext.py`): ใช้นิยามเดิมทุกข้อ (ขนาดที่พิมพ์ต้องตรงไฟล์ feature ±1, minority ต้องตรง, ไม่พิมพ์ขนาด = ชื่อตรง + ไม่ใช่ modified) ตรวจเฉพาะ entry ที่ 28 ต.ค. เป็น U-no_public_file / U-size_mismatch / U-task_not_reconstructible / U-minority_mismatch · entry อื่นคงสถานะ ไฟล์ แหล่งเดิม
+  - ตัวช่วยหาชื่อ (ไม่ใช่ตัวตัดสิน): ชื่อตรง, ALIAS = ชื่อเรียกอื่นของ dataset เดียวกัน (liver = bupa, cmc = contraceptive, satellite = satimage ฯลฯ ตารางอยู่ในสคริปต์), ชื่อ split ของ KEEL ที่เขียนกลุ่มคลาสสลับลำดับ, ชื่อ split ที่ถูกตัดที่ `_vs_` (k-means SMOTE พิมพ์ `yeast-0-5-6-7-9` = `yeast-0-5-6-7-9_vs_4`)
+  - task ของ imbalanced-learn (DGOT/GOIO: satimage 4, letter_img, optical_digits, pen_digits, thyroid_sick, abalone_19) สร้างจากไฟล์ต้นทางตามนิยาม minority ของ imbalanced-learn และตรวจว่าจำนวน minority ตรงกับค่าที่เอกสารประกาศ (6 entry; feature ต่างได้เพราะ one-hot)
+  - ไม่พิมพ์ขนาดและชื่อเข้ากับไฟล์ที่โครงสร้างต่างกัน → `U-name_ambiguous` (5 entry: winequality, vertebral, abalone, liver) ไม่เลือกให้
+  - ชุดเดียวกันหลาย mirror → map ไปสำเนาเดียว (ลำดับ KEEL > UCI++ > Weka > jbrownlee > PMLB เพราะ PMLB แปลง nominal เป็นเลข) กัน task ซ้ำ · task ซ้ำแบบนี้ที่มีอยู่แล้วตั้งแต่ 28 ต.ค. (เช่น penbased keel-ds กับ pendigits PMLB) ไม่ได้แก้
+  - 28 ต.ค. เก็บไว้ที่ `verifiability_entries_28oct.csv` · ผลใหม่เขียนทับ `verifiability_entries.csv` (คอลัมน์เพิ่ม pass, basis, candidates_considered, task_minority)
+  - ผล: ตรวจได้เพิ่ม **221 entry (85 ชื่อ, 49 paper, 63 ไฟล์)** แหล่ง KEEL-std 126, UCI++ 48, keel-ds 29, jbrownlee 9, PROMISE 5, Weka 3, PMLB 1 · รวม **864 entry 65 paper 172 ไฟล์** · modified ที่ไม่พิมพ์ขนาด 28 → 35 (ชื่อหาไฟล์เจอแล้วแต่ยังตัดตามคำตัดสินแนวทาง ก)
+- **measure.py**: อ่านไฟล์ใหม่ผ่าน `mirrors_ext.parse()`, รองรับ V-imblearn_task, คอลัมน์ที่ว่างทั้งคอลัมน์ (TBG ของ UCI sick) ถูกตัดก่อนตัดแถวที่มีค่าหาย (คอลัมน์ใหม่ `cols_dropped_empty`) · **ตรวจแล้ว 291 task เดิมได้ค่าเดิมทุกคอลัมน์ตัวเลข** (ต่างแค่ entries) · 472 task (binary 124, binarise 27, OvR 321) · sick เสียแถว 1,129/3,772 จากค่าหาย
+- downstream ทุกตัวรันใหม่ตามลำดับใน `difficulty/rebuild_difficulty.sh` · แก้สคริปต์ที่มีตัวเลข/ลำดับโปรไฟล์ตายตัว: group_cited (version_note ของ task ใหม่ใช้กติกาเดิม), reference_collection(+check) (จักรวาลอ่านจาก summary, โปรไฟล์ใหม่ outlier_flag และ small_disjuncts + small_sample), fig_manuscript, name_level_types (V-name_only_ext, V-imblearn_task; แก้ pandas 3 ที่แปลง None เป็น NaN ในคอลัมน์ sid), difficulty_outcomes (+V-name_only_ext)
+- **ผลใหม่**: 151 task binary/binarise · small sample 103 (68%) · outliers 38 · small disjuncts 15 · ไม่ติดธง 45 · โปรไฟล์ 6 แบบ (เดิม 4; มี outlier อย่างเดียว 3 task: balance B-vs-rest, census, mammography และ disjuncts + sample 1 task: breast.cancer) · noise มัธยฐาน 0.44 [0.25, 0.74] · rank corr IR–noise 0.18 · ชุดอ้างอิง 33 task 13 ช่อง · ความยากกับผลชนะ: 89 ไฟล์ 22 paper 440 แถว noise +0.1 → ×1.13 (p 0.03), ภายใน paper ×1.17 (p 0.01), หนึ่งผลต่อไฟล์ ×1.19 (p 0.03; เดิม p 0.08) · ระดับชื่อ: มีโปรไฟล์ 228 (เดิม 169), หลายคลาส 53 (เดิม 30), วัดไม่ได้ 490 (เดิม 572)
+- **ยังวัดไม่ได้ 490 ชื่อ**: ไม่พบไฟล์ 309 (อ้างแหล่งสาธารณะ 200 → `out/names_to_download.csv` ให้ Toon ดาวน์โหลดเอง; ไม่มีไฟล์ให้โหลด 109: private/ไม่ระบุ/จาก paper อื่น), synthetic 109, ขนาดไม่ตรงทุกเวอร์ชัน 51, สร้าง task ซ้ำไม่ได้ 19, อื่น 2 · ตอบ Toon ว่า "200 กว่า" ที่เห็นน่าจะคือกลุ่มนี้ ดึงได้จริง 85 ชื่อ (+ อีกบางชื่อกลายเป็นหลายคลาส)
+- **synthetic เผยแพร่ไหม** (`build/synthetic_scan.py` สแกนข้อความ 72 PDF ทั้งหมด → `out/synthetic_scan.json`; `build/synthetic_availability.py` → `out/synthetic_availability.json/.csv` assert ทุกข้อความยืนยันกับ PDF; รันบนเครื่องเพราะต้องใช้ paper/)
+  - ส่วน A (entry ชนิด synthetic 120 entry 19 paper 109 ชื่อ): **เผยแพร่ 6 paper 62 entry** (G-SMOTE, GMMSampling, SVDD-WSMOTE, SMOTE-IPF, k-means SMOTE, CTGAN) · อ้างแหล่งงานอื่น 2 paper 5 entry (SOUP, Tomek Links) · มีแค่ลิงก์โค้ดของวิธี 4 paper 9 entry (NBU, DLexiBoost, GOIO, SPE) · **ไม่พบว่าเผยแพร่ 7 paper 44 entry** (ADASYN, Borderline-SMOTE, ClusterCentroids, Global-CS ×2, MWMOTE, SPIDER2) → สรุป: ผู้เขียนเผยแพร่เอง 62 entry / ไม่ได้เผยแพร่เอง 58 entry (ในนั้น 5 entry มาจากงานอื่นที่อ้าง)
+  - **แก้คำตอบเดิม 29 ต.ค.** (name_level_extras ค้นคำ): k-means SMOTE ("All modified and simulated datasets used in the study are made available at ...github") และ CTGAN ("Our benchmark can be found at https://github.com/DAI-Lab/SDGym" ซึ่งมี simulated 7 ชุด) เดิมจัดเป็น "ไม่พบ" ผิด · GOIO, SPE เดิมไม่พบ → มีแค่ลิงก์โค้ด · name_level_extras.py ข้อ 3 เปลี่ยนเป็นอ่าน json นี้แทน
+  - ส่วน B (paper ที่สร้างข้อมูลเองแต่ไม่ได้ลงเป็น entry เพราะเป็นภาพประกอบหรือการทดลองข้างเคียง; 10 paper): COG-OS, LS, MC-MBRC (50 ชุด; "Data will be made available on request" + badge Code Ocean), NROMM (4 ชุดจาก ref [7]), RSMOTE (scikit-learn), MDO, MLOS, RBBoost, GDO, OREM-M · **ไม่ได้เพิ่มเป็น entry** (เปลี่ยนตัวเลข corpus ทั้งหมด) → รอ Toon ตัดสิน · ข้อสังเกต: OREM-M "Toy" ถูกลงเป็น entry ชนิด original ทั้งที่น่าจะเป็น synthetic → ให้ Toon ดู
+- **manuscript ตาม template JAIR**: PDF เดิม (`data-section-draft-preview.pdf`) คอมไพล์ด้วย `article` 11pt จึงไม่ใช่รูปแบบวารสาร · ใหม่ `manuscript/jair/data-section-jair.tex` ใช้ preamble ของ main.tex (official JAIR template: `\documentclass[manuscript, screen, review]{jair}`, CC, BibLaTeX + biber + acmauthoryear, ไม่แก้ style) อ่าน class จาก root ของ repo (ไม่คัดลอก ไม่แก้) · `build/build_jair_pdf.py` → **`manuscript/data-section-jair.pdf` 14 หน้า ไม่มี undefined citation/reference ไม่มี overfull** · ตรวจตามกติกา JAIR (author kit + หน้า formatting ของ jair.org): caption ตารางอยู่บน รูปอยู่ล่าง, `\Description` ทุกรูป, booktabs + `\midrule` คั่น header (เพิ่ม header ให้ tab:data-handling, tab:granularity), หัวข้อ Title Case, section ไม่ขึ้นต้นด้วย subsection, ไม่มี CCS/keywords · ผู้เขียนใช้ block เดิมของ main.tex (ยังเป็น placeholder)
+- **อ้างอิงวิธีจัดความยาก** (เพิ่มใน `data-section-refs.bib`, Crossref ผ่าน web fetch): López et al. 2013 (data intrinsic characteristics), Jo & Japkowicz 2004 (small disjuncts) เป็นกรอบ · ของเดิม Napierala & Stefanowski 2016 (ชนิด safe/borderline/rare/outlier, k = 5, เกณฑ์ 20%), Wilson & Martinez 1997 (HVDM), Jain, Duin & Mao 2000 (n/d < 10), Fernández et al. 2008 (แถบ IR) · แหล่งไฟล์: Alcalá-Fdez et al. 2011 (KEEL; vol/หน้าจาก reference list ของ RBBoost), Kelly et al. (UCI, ไม่มีปี), Garcia (UCI++, Zenodo DOI), Romano et al. 2022 (PMLB), Lemaître et al. 2017 (imbalanced-learn), Jureczko & Madeyski 2010 (PROMISE) · Smith et al. 2014 (kDN) ตรวจข้อมูลแล้วแต่ไม่ได้อ้างเพราะ manuscript ไม่ได้รายงาน kDN
+- **draft** (สำรอง `data-section-draft.before_ext_2026-11-08.tex`): เขียนหัวข้อ How Difficult ใหม่ด้วยตัวเลขใหม่ (ย่อหน้าขอบเขต+แหล่ง+กติกาชื่อ, ตาราง tab:data-difficulty, ย่อหน้าโปรไฟล์, รูป + Description, มิติ, ราย paper 35/32/2/1, ชุดอ้างอิง 33 task, Limits ใหม่ (mirror, การเทียบ, map สำเนาเดียว, แถวที่หาย, ชื่อที่วัดไม่ได้), evidence) · ย่อหน้าความยากกับผลชนะในหัวข้อ Wins · ย่อหน้าใหม่เรื่อง synthetic ในหัวข้อ Can the Reported Results Be Checked? · ตาราง reference collection คอลัมน์ชื่อตัดบรรทัดได้ (`p{0.27\linewidth}`) · overview.json (สำรอง `.before_ext_2026-11-08.json`) และ CONCLUSIONS.md ข้อ 5–6 อัปเดต
+- **CRLF**: working copy บน Windows (core.autocrlf) แปลงไฟล์เป็น CRLF ทำให้ sha256 ที่เก็บไว้ไม่ตรง (make_atlas หยุดที่ difficulty_evidence) → เพิ่ม `sha_ok()` ใน `build/reconcile_counts.py` (ยอมรับไบต์ดิบ/LF/CRLF) ใช้ใน make_atlas และ consistency_check · consistency_check เพิ่ม check ว่า PDF JAIR ใหม่กว่า final tex
+- **Atlas**: แท็บใหม่ **Handoff** (ฝัง handoff.md ทั้งไฟล์ + สารบัญ + ค้นหา + การ์ดสถานะที่อ่านจาก json), แท็บความยากที่วัดได้ (ขอบเขตอ่านจาก verify_ext_summary, การ์ดที่มาของไฟล์รอบ 8 พ.ย., ตารางชื่อที่ควรดาวน์โหลด), หน้าภาพรวม (การ์ด synthetic เผยแพร่ไหม) · checks: atlas_analysis 41/41, consistency 44/44, phase2 14/14, reference_collection_check PASS
+- ยังไม่ได้ทำ: push · ดาวน์โหลดไฟล์ทางการ 200 ชื่อ · คำตัดสินส่วน B ของ synthetic และ "Toy" ของ OREM-M
