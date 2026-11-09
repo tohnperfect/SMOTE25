@@ -170,6 +170,11 @@ FOUND_NOT_USABLE = {
                "SDGym's original data bucket (sdgym.s3.amazonaws.com/datasets/, the CTGAN authors' benchmark) is no longer public and the current SDGym bucket has no mnist12"),
  'P039-D014': ('U-no_public_file', '', '', None, None,
                "SDGym's original data bucket (sdgym.s3.amazonaws.com/datasets/, the CTGAN authors' benchmark) is no longer public and the current SDGym bucket has no mnist28"),
+ # Toon 9 Nov: not accessed. The set is the Kaggle competition 'ICR - Identifying Age-Related Conditions' (Toon's check,
+ # out/names_download_check.csv); its rules page states 'DATA ACCESS AND USE: Custom - Competition Use Only', so the rules
+ # were not accepted and the data were not downloaded.
+ 'P075-D017': ('U-no_public_file', '', '', None, None,
+               "not accessible for this study: Kaggle competition 'ICR - Identifying Age-Related Conditions', whose rules restrict the data to competition use only (DATA ACCESS AND USE: Custom - Competition Use Only); rules not accepted, data not downloaded (Toon 9 Nov)"),
 }
 
 def num(x):

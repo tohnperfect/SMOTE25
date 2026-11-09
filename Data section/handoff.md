@@ -77,7 +77,7 @@ python3 build/make_atlas.py && python3 build/atlas_analysis_checks.py && python3
 
 **จัดโฟลเดอร์ (9 พ.ย.)**: ไฟล์สำรองรุ่นเก่า (`*.before_*`, `out/audit_backup/`, `ai-draft/full_backup_*`, `_verify_png/`) ลบแล้ว ดูย้อนหลังจาก git history · เอกสารทำงานรุ่นก่อนอยู่ใน `_archive/` (ตัวเลขเก่า ไม่ใช่สถานะปัจจุบัน) · ชื่อไฟล์ before_ ที่ปรากฏในบันทึกด้านล่างคือไฟล์ที่ลบไปแล้ว
 
-**สถานะเรื่องที่เคยค้าง (อัปเดต 9 พ.ย.)**: V-author_release รับแล้ว (Toon 8 พ.ย. รอบสาม) · ขนาด +1 ของ Loyalty-SMOTE รับแล้ว (Toon 8 พ.ย.) · Kaggle ดาวน์โหลดแล้ว 11 ชุดด้วยบัญชีของ Toon (9 พ.ย. เพิ่ม Sales Win Loss, Credit Card Fraud; ที่เหลือ: icr เป็น competition, approval ระบุชุดไม่ได้) · ไฟล์ชั่วคราวใน Downloads (.tmp, smote25_uci_*.bin, uci_extended.tar.gz, archive*.zip) มีสำเนาใน difficulty/src/ แล้ว ลบได้ · ชื่อผู้เขียนใน PDF ปล่อยว่าง (Toon 8 พ.ย.) · **ที่เหลือจริง**: merge เข้า main.tex/sections/references.bib ตอนรวมกับ P · git pull แล้ว push
+**สถานะเรื่องที่เคยค้าง (อัปเดต 9 พ.ย.)**: V-author_release รับแล้ว (Toon 8 พ.ย. รอบสาม) · ขนาด +1 ของ Loyalty-SMOTE รับแล้ว (Toon 8 พ.ย.) · Kaggle ดาวน์โหลดแล้ว 11 ชุดด้วยบัญชีของ Toon (9 พ.ย. เพิ่ม Sales Win Loss, Credit Card Fraud; ที่เหลือ: icr เข้าถึงไม่ได้ — ข้อมูล competition ที่กติกาให้ใช้เฉพาะในการแข่งขัน ไม่ได้กดยอมรับ (Toon 9 พ.ย.), approval ระบุชุดไม่ได้) · ไฟล์ชั่วคราวใน Downloads (.tmp, smote25_uci_*.bin, uci_extended.tar.gz, archive*.zip) มีสำเนาใน difficulty/src/ แล้ว ลบได้ · ชื่อผู้เขียนใน PDF ปล่อยว่าง (Toon 8 พ.ย.) · **ที่เหลือจริง**: merge เข้า main.tex/sections/references.bib ตอนรวมกับ P · git pull แล้ว push
 
 ---
 
@@ -2175,8 +2175,15 @@ python3 build/outcome_pilot.py
 - ระดับชื่อ: มีโปรไฟล์ 317, หลายคลาส 66, วัดไม่ได้ 483 (synthetic 196, ไม่พบไฟล์ 159 — อ้างแหล่งสาธารณะ 45, ขนาดไม่ตรง 82, task สร้างซ้ำไม่ได้ 35, อื่น 11)
 - noise vs ชนะ: 107 ไฟล์ 23 paper 496 แถว · OR ต่อ noise 0.1 = 1.15 (1.04–1.26, p 0.005), ภายใน paper 1.19 (1.05–1.34, p 0.006), หนึ่งผลต่อไฟล์ 1.21 (1.06–1.37, p 0.004), IR 0.93 (p 0.62) · H1/H2/H3b ไม่เปลี่ยน (แถวผลเดิม)
 
-**45 ชื่อที่อ้างแหล่งสาธารณะแต่ยังไม่มีไฟล์** (`out/names_to_download.csv`, เหตุผลรายชื่อใน `out/names_download_result.csv` คอลัมน์ผลตรวจของ Toon): HDDT เว็บปิด/ข้อมูลไม่เผยแพร่ (boundary, compustat, phoss, cam, covtype 38,500, e-state/estate, acl) · ชุดย่อยหรือเวอร์ชันที่ผู้เขียนสร้างเอง (UCR ของ INOS, MNIST ของ NBU, CIFAR/ILSVRC ของ Buda, ImageNet feature ของ DLexiBoost, kddcup ของ COG-OS/SMOTEBoost, susy, mocap, online retail, gisette 3,076, housing/medv ที่แบ่งเป้าหมายเอง, bar crawl, sick2/soybean12) · ระบุชุดไม่ได้ (approval, national, voice9) · icr (ต้องกดยอมรับกติกา competition — ไม่ได้กดแทน Toon) · mafalda (EMDO; รอบก่อนตัดสินว่าสร้างชุดตามขนาดที่พิมพ์จากไฟล์ของผู้เขียนไม่ได้) · mnist12/28 (bucket เดิมของ SDGym ปิด) · customer churn wireless telecom (หน้า contest ปิด; สำเนาบน Kaggle ยืนยันไม่ได้)
+**45 ชื่อที่อ้างแหล่งสาธารณะแต่ยังไม่มีไฟล์** (`out/names_to_download.csv`, เหตุผลรายชื่อใน `out/names_download_result.csv` คอลัมน์ผลตรวจของ Toon): HDDT เว็บปิด/ข้อมูลไม่เผยแพร่ (boundary, compustat, phoss, cam, covtype 38,500, e-state/estate, acl) · ชุดย่อยหรือเวอร์ชันที่ผู้เขียนสร้างเอง (UCR ของ INOS, MNIST ของ NBU, CIFAR/ILSVRC ของ Buda, ImageNet feature ของ DLexiBoost, kddcup ของ COG-OS/SMOTEBoost, susy, mocap, online retail, gisette 3,076, housing/medv ที่แบ่งเป้าหมายเอง, bar crawl, sick2/soybean12) · ระบุชุดไม่ได้ (approval, national, voice9) · icr (เข้าถึงไม่ได้ ดูบันทึกถัดไป) · mafalda (EMDO; รอบก่อนตัดสินว่าสร้างชุดตามขนาดที่พิมพ์จากไฟล์ของผู้เขียนไม่ได้) · mnist12/28 (bucket เดิมของ SDGym ปิด) · customer churn wireless telecom (หน้า contest ปิด; สำเนาบน Kaggle ยืนยันไม่ได้)
 
 **manuscript** (หัวข้อความยาก + wins): แหล่งไฟล์เพิ่ม CLUTO · 991/261 · 133 entry (15 paper) ไม่พิมพ์ขนาดและไม่บอกการดัดแปลง (36 ไม่พิมพ์สัดส่วนคลาส) · 238/703/347 · ตารางความยาก · ย่อหน้าโปรไฟล์ (none 65, 21 task ≥ 0.5, แถบ IR, rho 0.25) · Figure Description/caption · มิติ (8 entry > 100 feature, k1b 21,839) · paper mix 40/37 · ชุดอ้างอิง "42 of the 238" · Limits (Kaggle 11 ชุด + CLUTO, la12 ไม่ได้วัด, 159/45/196/82) · noise vs ชนะ · evidence block · overview.json, CONCLUSIONS.md, section 0 ของไฟล์นี้อัปเดตตาม
 - ไฟล์ของเราใน Downloads ของ Toon (ลบเองได้ สำเนาอยู่ใน difficulty/src/ แล้ว): smote25_*.bin (9 ไฟล์), uci_extended.tar.gz, archive.zip, archive1–11.zip, `archive (1).zip`, `Unconfirmed 48111.crdownload` (0 byte จากการโหลดที่ไม่สำเร็จ)
 - ไม่ได้ push
+
+**9 พ.ย. ต่อ — icr ของ Loyalty-SMOTE: บันทึกว่าเข้าถึงไม่ได้ (Toon: "บอกไปว่าเข้าถึง dataset นี้ไม่ได้")**
+- Toon อนุญาตให้กดยอมรับกติกา competition แทน แต่หน้า Rules ของ Kaggle competition "ICR - Identifying Age-Related Conditions" เขียน "DATA ACCESS AND USE: Custom - Competition Use Only" (ใช้ข้อมูลได้เฉพาะในการแข่งขัน) ซึ่งไม่ครอบการใช้ใน survey → Claude แจ้งก่อนกด Toon ตัดสินไม่กดยอมรับ ไม่ได้ดาวน์โหลด
+- `difficulty/verify_ext.py` `FOUND_NOT_USABLE['P075-D017']`: สถานะ U-no_public_file เท่าเดิม แต่ basis เขียนเหตุผลข้างบน · ตัวเลขทั้งหมดไม่เปลี่ยน (991 entry / 261 ไฟล์ / 238 task)
+- ข้อสังเกตที่ยังไม่ได้ตรวจ: paper พิมพ์ 634 × 33 ส่วนไฟล์ train ของ competition น่าจะไม่ตรงขนาดนี้ (ไม่ได้เปิดไฟล์ จึงไม่ได้ยืนยัน)
+- ไม่ได้ push
+
