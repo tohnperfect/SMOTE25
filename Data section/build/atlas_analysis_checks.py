@@ -51,7 +51,9 @@ chk("B tier1 recomputed", t1 == 216 and prim == 521,  # 541 before rule R8 (MC-M
 
 # C
 cj = json.load(open(os.path.join(OUT, "benchmark_concentration.json"), encoding="utf-8"))
-chk("C summary = json", an["C"]["summary"] == cj)
+# 9 Nov 2026: the Atlas shows the data after build/atlas_scrub.py (attributions removed), so compare with the scrubbed source
+import sys as _sys; _sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)))); import atlas_scrub
+chk("C summary = json", an["C"]["summary"] == atlas_scrub.data(cj))
 chk("C names sum = uses", sum(n for _, n in an["C"]["names"]) == cj["by_name"]["uses"])
 cum, half = 0, None
 for i, (_, n) in enumerate(an["C"]["names"], 1):
@@ -94,7 +96,7 @@ for r in recs: fp[LD["fam"][r["normalized_name"]]].add(r["paper_key"])
 chk("L family paper uses = Analysis C", sum(map(len, fp.values())) == cj["by_family"]["uses"])
 r3 = json.load(open(os.path.join(OUT, "reconcile_counts.json"), encoding="utf-8"))["name_frequencies"]
 chk("L R3 figures = reconcile_counts", all(LD["r3"][k]["prefix"] == r3[k]["family_papers"] for k in LD["r3"]), str(LD["r3"]))
-chk("L candidates = csv (without record_ids)", LD["cand"] == [{k: v for k, v in r.items() if k != "record_ids"} for r in lc], f"{len(lc)}")
+chk("L candidates = csv (without record_ids)", LD["cand"] == atlas_scrub.data([{k: v for k, v in r.items() if k != "record_ids"} for r in lc]), f"{len(lc)}")
 chk("L candidate group counts = json", dict(collections.Counter(r["group"] for r in lc)) == lj["counts"] == LD["counts"], str(lj["counts"]))
 chk("L frequent group = datasets used by 10+ papers (C, T1)", lj["counts"].get("frequently used benchmark") == cj["datasets_used_by_10plus_papers"])
 pk = collections.defaultdict(set)
@@ -107,7 +109,7 @@ chk("L all 11 listed names present", not lj["listed_not_found"] and sum(r["liste
 import subprocess, re as _re
 tex = open("manuscript/data-section-draft.tex", encoding="utf-8").read()
 ms = json.load(open(os.path.join(OUT, "explorer_data.json"), encoding="utf-8"))["manuscript"]
-chk("M Atlas manuscript tex = source tex", ms["tex"] == tex)
+chk("M Atlas manuscript tex = source tex", ms["tex"] == atlas_scrub.tex(tex))
 chk("M candidate table rows = benchmark_candidates.csv", subprocess.run([sys.executable, "build/landscape_manuscript.py", "--check"], capture_output=True).returncode == 0)
 lc_sel = [r for r in lc if r["listed_in_task"] == "yes" or r["group"] != "frequently used benchmark"]
 cnt = collections.Counter(r["group"] for r in lc)

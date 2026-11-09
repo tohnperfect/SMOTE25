@@ -96,7 +96,8 @@
 | `manuscript/data-section-final.tex`, `.bib`, `data-section-jair.pdf` | ฉบับพร้อม merge (ตัดหมายเหตุภายใน) และ PDF รูปแบบ JAIR (`manuscript/jair/`) | ปัจจุบัน |
 | `manuscript/overview.json` | เนื้อหาแท็บ "ร่าง manuscript" ใน Atlas | ปัจจุบัน |
 | `manuscript/proposal_dataset_landscape.tex`, `data-section-refs.bib` | ข้อเสนอเดิมของหัวข้อ landscape (ถูกอ้างในหมายเหตุ evidence) และ bib ต้นทางที่ `make_final.py` ใช้ | ใช้อยู่ |
-| `out/dataset-atlas.html` | SMOTE25 Dataset Atlas (ทุกแท็บ รวมแท็บ Handoff) สร้างด้วย `build/make_atlas.py` + `build/atlas_template.html` | ปัจจุบัน |
+| `out/dataset-atlas.html` | SMOTE25 Dataset Atlas (ข้อความที่แสดงไม่มีชื่อผู้ตัดสิน/ผู้สั่ง: `build/atlas_scrub.py`) สร้างด้วย `build/make_atlas.py` + `build/atlas_template.html` | ปัจจุบัน |
+| `out/handoff.html` | handoff.md + CONCLUSIONS.md เป็นหน้า HTML แยก (สารบัญ, ค้นหา; ไม่มีชื่อผู้ตัดสิน/ผู้สั่ง) สร้างด้วย `build/make_handoff_html.py` | 
 | `out/` | ข้อมูลที่สกัดและตรวจแล้ว (`verified_*.csv`, `dataset_records.csv`) และผลวิเคราะห์ทุกชุด (`*.json`, `*.csv`) | สร้างจากสคริปต์ |
 | `difficulty/` | การตรวจกับไฟล์สาธารณะและวัดความยาก (`verify_ext.py`, `measure.py`, `rebuild_difficulty.sh`); `difficulty/src/` คือ mirror และไฟล์ทางการที่ดาวน์โหลด (ไม่อยู่ใน git, สร้างใหม่ด้วย `fetch_mirrors*.sh` และ `official_manifest.csv`) | ปัจจุบัน |
 | `build/` | สคริปต์ทั้งหมด (สกัด ตรวจ วิเคราะห์ manuscript Atlas checks) | ปัจจุบัน |

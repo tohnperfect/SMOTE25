@@ -42,29 +42,12 @@ nav button:focus-visible,button:focus-visible,input:focus-visible,select:focus-v
 main{padding-block:4px 48px}
 section[role="tabpanel"]{display:grid;gap:16px}
 [hidden]{display:none!important}
-/* Handoff tab (8 Nov 2026) */
-.ho-grid{display:grid;grid-template-columns:240px minmax(0,1fr);gap:16px;align-items:start}
-@media (max-width:820px){.ho-grid{grid-template-columns:minmax(0,1fr)}}
-.ho-toc{position:sticky;top:112px;max-height:calc(100vh - 130px);overflow:auto;font-size:13px;border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:10px 12px}
-@media (max-width:820px){.ho-toc{position:static;max-height:260px}}
-.ho-toc a{display:block;color:var(--ink2);text-decoration:none;padding:2px 0;overflow-wrap:anywhere}
-.ho-toc a:hover{color:var(--accent)} .ho-toc .l3{padding-left:12px;font-size:12px;color:var(--ink3)}
-.ho-doc{min-width:0;overflow-wrap:anywhere}
-.ho-doc h1,.ho-doc h2{font-family:var(--f-display);font-size:18px;margin:22px 0 8px;padding-top:10px;border-top:1px solid var(--line)}
-.ho-doc h3{font-family:var(--f-display);font-size:15px;margin:16px 0 6px;color:var(--accent)}
-.ho-doc p,.ho-doc li{font-size:14px}
-.ho-doc blockquote{margin:8px 0;padding:6px 12px;border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 6px 6px 0}
-.ho-doc pre{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px;overflow:auto;font-size:12.5px}
-.ho-doc code{font-family:var(--f-mono);font-size:12.5px;background:var(--bg);padding:0 3px;border-radius:3px}
-.ho-doc table{font-size:13px}
-.ho-doc mark{background:var(--warn-soft);color:var(--ink)}
-.ho-hide{display:none}
 .hb.wide .hrow{grid-template-columns:minmax(120px,52%) minmax(0,1fr) auto}
 .ms-head h2{font-size:18px}
 .ms-q{font-family:var(--f-display);font-size:16px;margin:4px 0 8px}
 .ms-legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--ink2);margin:8px 0}
 .lg{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:6px;vertical-align:-1px}
-.lg-v{background:var(--ink)} .lg-cd{background:#2457c5} .lg-toon{border:2px solid var(--warn)}
+.lg-v{background:var(--ink)} .lg-cd{background:#2457c5} .lg-slot{border:2px solid var(--warn)}
 .ms-sub{display:flex;flex-wrap:wrap;gap:6px}
 .ms-sub button{font:500 14px var(--f-body);color:var(--ink2);background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:6px 12px;cursor:pointer}
 .ms-sub button[aria-pressed="true"]{color:var(--accent);background:var(--accent-soft);border-color:var(--accent-soft)}
@@ -80,7 +63,7 @@ section[role="tabpanel"]{display:grid;gap:16px}
 .ms-doc h1{font-size:22px;margin:4px 0 12px} .ms-doc h2{font-size:18px;margin:22px 0 8px} .ms-doc h4{font-size:15px;margin:14px 0 4px}
 .ms-doc .cd{color:#2457c5}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .ms-doc .cd{color:#8fb3ff}}
-.ms-doc .toonbox{border:2px solid var(--warn);border-radius:6px;padding:8px 12px;margin:10px 0;font-family:var(--f-body);font-size:14px;background:var(--warn-soft)}
+.ms-doc .slotbox{border:2px solid var(--warn);border-radius:6px;padding:8px 12px;margin:10px 0;font-family:var(--f-body);font-size:14px;background:var(--warn-soft)}
 .ms-doc .evid{font-family:var(--f-body);font-size:12.5px;color:var(--ink3);border-left:3px solid var(--line);padding:4px 10px;margin:6px 0 12px}
 .ms-doc .cite{font-family:var(--f-mono);font-size:12px;color:var(--ink3)}
 .ms-doc .dn{color:var(--warn)}
@@ -344,7 +327,7 @@ tr.mz-sel td{background:var(--accent-soft)}
 </style>
 
 <header><div class="wrap">
-  <h1>SMOTE25 Dataset Atlas <small>Data section · อัปเดต 8 พ.ย. 2026 · corpus 76 paper · มีการประเมินผลบนข้อมูล 73 paper</small></h1>
+  <h1>SMOTE25 Dataset Atlas <small>Data section · อัปเดต 9 พ.ย. 2026 · corpus 76 paper · มีการประเมินผลบนข้อมูล 73 paper</small></h1>
   <nav role="tablist" aria-label="มุมมอง">
     <button role="tab" id="t-db" aria-selected="true" aria-controls="p-db">ภาพรวม</button>
     <button role="tab" id="t-ms" aria-selected="false" aria-controls="p-ms">ร่าง manuscript</button>
@@ -359,12 +342,11 @@ tr.mz-sel td{background:var(--accent-soft)}
     <button role="tab" id="t-md" aria-selected="false" aria-controls="p-md">ข้อมูลที่ดัดแปลง</button>
     <button role="tab" id="t-wn" aria-selected="false" aria-controls="p-wn">ชนะ SMOTE บนข้อมูลแบบไหน</button>
     <button role="tab" id="t-an" aria-selected="false" aria-controls="p-an">Analyses A–F</button>
-    <button role="tab" id="t-ho" aria-selected="false" aria-controls="p-ho">Handoff</button>
   </nav>
 </div></header>
 
 <main class="wrap">
-  <div class="notice"><b>ตรวจกับ PDF แล้วทุกแถว (18 ต.ค.)</b> คุณลักษณะ dataset 1,654 แถวและผลเทียบ SMOTE 835 แถว ผ่านการตรวจรอบสองกับ PDF ในเครื่อง โดย Claude และ Toon ตรวจกับ PDF แล้ว (Toon แจ้ง 28 ต.ค. ไม่ได้บันทึกค่าที่ตรวจ จึงไม่มีอัตราไม่ตรงกัน) ส่วนรหัสระดับ paper (เหตุผลการเลือก ยก benchmark กติกา minority) Claude ให้จากประโยคยกมาที่ตรวจแล้วว่ามีอยู่จริงใน PDF<br><b>ตัวหาร</b> corpus มี 76 paper ตรงกับ Section 7 ของ P ทุกเรื่อง (คู่คีย์อยู่ใน <code>out/section7_key_map.csv</code>) หน้านี้ใช้ 73 paper ที่มีการประเมินผลบนข้อมูล ตัด ENN, AdaBoost และ Survey: SMOTE Review (นับ Tomek Links ตามที่ Toon ตัดสิน) ส่วน Section 7 ของ P นับ 71 เพราะไม่นับ Tomek Links และนับ Hassanat 2022 (Stop Oversampling) เป็น survey เวลาเขียนให้บอกทั้งสองตัวเลข </div>
+  <div class="notice"><b>ตรวจกับ PDF แล้วทุกแถว (18 ต.ค.)</b> คุณลักษณะ dataset 1,654 แถวและผลเทียบ SMOTE 835 แถว ผ่านการตรวจรอบสองกับ PDF ส่วนรหัสระดับ paper (เหตุผลการเลือก ยก benchmark กติกา minority) ให้จากประโยคยกมาที่ตรวจแล้วว่ามีอยู่จริงใน PDF<br><b>ตัวหาร</b> corpus มี 76 paper ตรงกับ Section 7 ของ P ทุกเรื่อง (คู่คีย์อยู่ใน <code>out/section7_key_map.csv</code>) หน้านี้ใช้ 73 paper ที่มีการประเมินผลบนข้อมูล ตัด ENN, AdaBoost และ Survey: SMOTE Review (นับ Tomek Links) ส่วน Section 7 ของ P นับ 71 เพราะไม่นับ Tomek Links และนับ Hassanat 2022 (Stop Oversampling) เป็น survey เวลาเขียนให้บอกทั้งสองตัวเลข </div>
 
   <section role="tabpanel" id="p-db" aria-labelledby="t-db" hidden>
     <div class="db-head">
@@ -548,7 +530,6 @@ tr.mz-sel td{background:var(--accent-soft)}
       <p class="ms-q" id="ms-q"></p>
       <p class="sub" id="ms-scope"></p>
       <p class="sub" id="ms-gap"></p>
-      <div class="ms-legend"><span><i class="lg lg-v"></i>ตัวหนังสือปกติ: ข้อเท็จจริงและวิธีการ ตัวเลขตรวจกับ PDF แล้ว</span><span><i class="lg lg-cd"></i>สีน้ำเงิน: ประโยคตีความที่ Claude ร่าง Toon ต้องเขียนใหม่</span><span><i class="lg lg-toon"></i>กรอบ: ช่องที่ Toon ต้องเขียนเอง</span></div>
       <p class="sub">ไฟล์: <code>manuscript/data-section-draft.tex</code> · พรีวิว PDF: <a href="../manuscript/data-section-draft-preview.pdf" target="_blank" rel="noopener">data-section-draft-preview.pdf</a> (เปิดได้เมื่อเปิดหน้านี้จากโฟลเดอร์ <code>out/</code>)</p>
     </div>
     <div class="ms-sub" role="tablist" aria-label="มุมมองร่าง">
@@ -558,7 +539,7 @@ tr.mz-sel td{background:var(--accent-soft)}
     </div>
     <div id="ms-ov">
       <div class="card"><h2>สิ่งที่ section นี้สังเคราะห์ได้</h2><p class="sub" id="ms-syn-note"></p><ol class="ms-syn" id="ms-syn"></ol></div>
-      <div class="card"><h2>โครงของ section: คำถาม สิ่งที่ผู้อ่านได้ และข้อค้นพบ</h2><p class="sub">หัวข้อละหนึ่งแถว ตัวเลขทุกตัวตรวจกับ PDF แล้ว (Claude ตรวจ, Toon ให้นับเป็น verified)</p>
+      <div class="card"><h2>โครงของ section: คำถาม สิ่งที่ผู้อ่านได้ และข้อค้นพบ</h2><p class="sub">หัวข้อละหนึ่งแถว ตัวเลขทุกตัวตรวจกับ PDF แล้ว</p>
         <div class="ms-grid" id="ms-grid"></div></div>
     </div>
     <div id="ms-tx" hidden><article class="card ms-doc" id="ms-doc"></article></div>
@@ -569,7 +550,7 @@ tr.mz-sel td{background:var(--accent-soft)}
   <section role="tabpanel" id="p-wn" aria-labelledby="t-wn" hidden>
     <div class="notice"><b>ส่วนล่างของแท็บนี้ (ตาราง 1–3) ใช้กติกา A: metric เดียวต่อ paper</b> ซึ่งเป็นการตรวจความทนทาน ผลหลักตั้งแต่ 29 ต.ค. คือทุก metric (การ์ดด้านบน) · (metric เดียวต่อ paper ค่าเท่ากันที่ทศนิยมที่พิมพ์ = เสมอ) "สูงกว่า" คือค่าที่พิมพ์มากกว่า
     diff อยู่ในหน่วยของ metric ของ paper นั้น <b>เทียบข้าม paper ไม่ได้</b> แต่ละ paper ใช้ metric และ classifier ตามกติกาเดียวกัน (G-mean &gt; AUC &gt; F1 &gt; accuracy, classifier ที่ abstract ชู)</div>
-    <div class="notice"><b>สถานะ 29 ต.ค. 2026: เสร็จ</b> นิยาม win/tie/loss ตามที่ Toon ตัดสิน (28 ต.ค.): ทุก metric ที่ paper รายงานคู่กับ SMOTE เทียบค่าที่พิมพ์ เท่ากัน = เสมอ · ทดสอบ H1–H3 แล้ว (การ์ดด้านล่าง) ข้อความใน manuscript ส่วน Wins เขียนจากผลชุดนี้</div>
+    <div class="notice"><b>สถานะ 29 ต.ค. 2026: เสร็จ</b> นิยาม win/tie/loss: ทุก metric ที่ paper รายงานคู่กับ SMOTE เทียบค่าที่พิมพ์ เท่ากัน = เสมอ · ทดสอบ H1–H3 แล้ว (การ์ดด้านล่าง) ข้อความใน manuscript ส่วน Wins เขียนจากผลชุดนี้</div>
     <div class="card" id="wn-hyp"></div>
     <div class="card" id="wn-allm"></div>
     <div class="card" id="wn-famdep"></div>
@@ -606,10 +587,10 @@ tr.mz-sel td{background:var(--accent-soft)}
   <section role="tabpanel" id="p-an" aria-labelledby="t-an" hidden>
     <div class="db-head">
       <h2>ผลวิเคราะห์ A–F และนิยาม category</h2>
-      <p>ผลของรอบวิเคราะห์ 19 ต.ค. 2026 ทุกตัวเลขอ่านจากไฟล์ผลลัพธ์ใน <code>out/</code> และรายงานใน <code>analysis/</code> ไม่ได้พิมพ์ใหม่ ยังไม่ผ่านการทบทวนของ Toon และยังไม่ได้ใส่ใน manuscript</p>
+      <p>ผลของรอบวิเคราะห์ 19 ต.ค. 2026 ทุกตัวเลขอ่านจากไฟล์ผลลัพธ์ใน <code>out/</code> และรายงานใน <code>analysis/</code> ไม่ได้พิมพ์ใหม่</p>
     </div>
     <div class="notice"><b>ป้ายในแท็บนี้</b> <span class="lb lb-rep">รายงานโดย paper</span> ข้อความ/ตัวเลขที่ paper พิมพ์ (ตรวจกับ PDF แล้ว) ·
-      <span class="lb lb-rev">ป้ายของผู้ตรวจ</span> การจัดประเภทที่ Claude ให้ตามกติกาที่เขียนไว้ · <span class="lb lb-int">ตีความ</span> การอ่านผลที่รอ Toon ยืนยัน ·
+      <span class="lb lb-rev">ป้ายของผู้ตรวจ</span> การจัดประเภทตามกติกาที่เขียนไว้ · <span class="lb lb-int">ตีความ</span> การอ่านผล ·
       ค่าที่ไม่มีแสดงเป็น <span class="nr">not reported / ไม่พบ</span> ไม่ได้แปลว่าไม่มีคุณสมบัตินั้น</div>
     <div class="subnav" role="group" aria-label="เลือกการวิเคราะห์" id="an-nav"></div>
     <div id="an-body"></div>
@@ -658,26 +639,8 @@ tr.mz-sel td{background:var(--accent-soft)}
     <div class="card mz-hist" id="mz-dim"></div>
     <p class="cap" id="mz-src"></p>
   </section>
-  <section role="tabpanel" id="p-ho" aria-labelledby="t-ho" hidden>
-    <div class="db-head">
-      <h2>Handoff ของ Data section</h2>
-      <p>ไฟล์ <code>handoff.md</code> ทั้งไฟล์ (สถานะ คำตัดสิน บันทึกการดำเนินงานทุกรอบ กติกา แผนที่ไฟล์ คำสั่ง rebuild) ฝังไว้ในหน้านี้ตอนสร้าง Atlas พร้อม <code>CONCLUSIONS.md</code> · ตัวเลขในการ์ดด้านบนอ่านจากไฟล์ผลลัพธ์ชุดเดียวกับแท็บอื่น</p>
-    </div>
-    <div class="kgrid" id="ho-kpi"></div>
-    <div class="card" id="ho-now"></div>
-    <div class="ms-sub" role="group" aria-label="เลือกเอกสาร" id="ho-sub">
-      <button type="button" aria-pressed="true" data-doc="handoff">handoff.md</button>
-      <button type="button" aria-pressed="false" data-doc="conc">CONCLUSIONS.md</button>
-    </div>
-    <div class="controls"><input type="search" id="ho-q" placeholder="ค้นใน handoff (เช่น verify_ext, Toon ตัดสิน, synthetic)" aria-label="ค้นใน handoff"><span class="count" id="ho-n"></span></div>
-    <div class="ho-grid">
-      <nav class="ho-toc" id="ho-toc" aria-label="สารบัญ handoff"></nav>
-      <div class="card ho-doc" id="ho-doc"></div>
-    </div>
-    <p class="cap" id="ho-src"></p>
-  </section>
 </main>
-<footer class="wrap">ที่มา: ชีต <code>extraction</code> และ <code>papers</code> ใน <code>SMOTE25_data_extraction.xlsx</code>, <code>out/data_handling_matrix.csv</code>, <code>out/data_handling_summary.json</code>, <code>ai-draft/dataset_variants.json</code> ใน repo SMOTE25 โฟลเดอร์ <code>Data section/</code> · รหัส 4 มิติ (เหตุผลการเลือก, basis, ยก benchmark, กติกา minority) Claude ให้จากข้อความต้นทาง นิยามอยู่ใน <code>ai-draft/data_handling_codes.json</code></footer>
+<footer class="wrap">ที่มา: ชีต <code>extraction</code> และ <code>papers</code> ใน <code>SMOTE25_data_extraction.xlsx</code>, <code>out/data_handling_matrix.csv</code>, <code>out/data_handling_summary.json</code>, <code>ai-draft/dataset_variants.json</code> ใน repo SMOTE25 โฟลเดอร์ <code>Data section/</code> · รหัส 4 มิติ (เหตุผลการเลือก, basis, ยก benchmark, กติกา minority) ให้จากข้อความต้นทาง นิยามอยู่ใน <code>ai-draft/data_handling_codes.json</code></footer>
 
 <script>
 const D = __DATA__;
@@ -688,12 +651,12 @@ const split = s => (s || "").split(";").filter(Boolean);
 const nz = v => (v===null||v===undefined||v==="None"||v==="null") ? "" : v;
 
 /* ---------- tabs ---------- */
-const TABS = ["db","ms","ds","dx","co","df","mz","pp","ov","md","wn","an","ln","ho"];
+const TABS = ["db","ms","ds","dx","co","df","mz","pp","ov","md","wn","an","ln"];
 function show(t){ TABS.forEach(x=>{ $("#t-"+x).setAttribute("aria-selected", x===t); $("#p-"+x).hidden = x!==t; });
   try{ localStorage.setItem("atlas-tab", t) }catch(e){} }
 TABS.forEach(x => $("#t-"+x).addEventListener("click", () => show(x)));
 let start = "db"; try{ start = localStorage.getItem("atlas-tab") || "db" }catch(e){}
-const HASH = {"#dashboard":"db","#explorer":"dx","#characteristics":"co","#difficulty":"df","#manuscript":"ms","#papers":"pp","#overview":"ov","#wins":"wn","#analyses":"an","#landscape":"ln","#measured":"mz","#modified":"md","#handoff":"ho"}; if (HASH[location.hash]) start = HASH[location.hash];
+const HASH = {"#dashboard":"db","#explorer":"dx","#characteristics":"co","#difficulty":"df","#manuscript":"ms","#papers":"pp","#overview":"ov","#wins":"wn","#analyses":"an","#landscape":"ln","#measured":"mz","#modified":"md"}; if (HASH[location.hash]) start = HASH[location.hash];
 show(TABS.includes(start) ? start : "db");
 
 /* ---------- manuscript tab ---------- */
@@ -703,13 +666,11 @@ show(TABS.includes(start) ? start : "db");
   $("#ms-q").textContent = "คำถามหลัก: " + O.question;
   $("#ms-scope").textContent = O.scope;
   $("#ms-gap").textContent = "ช่องว่างในวรรณกรรม: " + O.gap;
-  $("#ms-syn-note").textContent = O.synthesis_note;
   $("#ms-syn").innerHTML = O.synthesis.map(x => `<li>${esc(x)}</li>`).join("");
   $("#ms-grid").innerHTML = O.sections.map((r,i) => `<div class="ms-row"><h3>${i+1}. ${esc(r.title)}</h3>
     <div><span class="k">คำถามที่ตอบ</span>${esc(r.q)}</div>
     <div><span class="k">ผู้อ่านได้อะไร</span>${esc(r.reader)}</div>
-    <div><span class="k">ข้อค้นพบ</span><ul>${r.found.map(f=>`<li>${esc(f)}</li>`).join("")}</ul></div>
-    <div class="st">สถานะ: ${esc(r.status)}</div></div>`).join("");
+    <div><span class="k">ข้อค้นพบ</span><ul>${r.found.map(f=>`<li>${esc(f)}</li>`).join("")}</ul></div></div>`).join("");
   $("#ms-doc").innerHTML = M.html;
   $("#ms-pre").textContent = M.tex;
   const V = {ov:"#ms-ov", tx:"#ms-tx", tex:"#ms-tex"};
@@ -805,7 +766,7 @@ function renderPP(){
       <div class="tbox"><table class="ptab"><thead><tr><th>dataset ตามที่พิมพ์</th><th>กลุ่ม</th><th>แหล่ง</th><th>N</th><th>F</th><th>คลาส</th><th>minority</th><th>majority</th><th>IR ที่พิมพ์</th><th>ได้มาอย่างไร</th><th>ที่มาในเอกสาร</th></tr></thead><tbody>
         ${p.rows.map(r => `<tr><td class="mono">${esc(r[0])}${r[13] && r[13]!=="None" ? `<div style="font-size:11px;color:var(--ink3)">dist ${esc(r[13])}</div>` : ""}</td><td style="font-size:12px">${esc(r[1])}</td><td style="font-size:12px">${esc(r[2])}</td><td class="num">${esc(nz(r[3]))}</td><td class="num">${esc(nz(r[4]))}</td><td class="num">${esc(nz(r[5]))}</td><td class="num">${esc(nz(r[6]))}</td><td class="num">${esc(nz(r[7]))}</td><td class="num">${esc(nz(r[8]))}</td><td><span class="dt dt-${esc(HOWCLS[r[9]]||"")}" title="${esc(r[10])}">${esc(r[9])}${r[10].startsWith("rule")?"*":""}</span>${r[11] && r[11]!=="None" ? `<div style="font-size:11px;color:var(--ink3)">${esc(r[11])}</div>` : ""}</td><td class="mono" style="font-size:11px">${esc(nz(r[12]))}</td></tr>`).join("")}
       </tbody></table></div>
-      <p style="font-size:12px;color:var(--ink3);margin:0">* จัดด้วยกฎที่ Toon อนุมัติ 18 ต.ค. (ชื่อไฟล์แบบ KEEL หรือชื่อสามัญใน paper multiclass) ไม่ใช่ paper บอกเอง</p>
+      <p style="font-size:12px;color:var(--ink3);margin:0">* จัดด้วยกฎ (ชื่อไฟล์แบบ KEEL หรือชื่อสามัญใน paper multiclass) ไม่ใช่ paper บอกเอง</p>
     </div></details>`; }).join("") : `<div class="empty">ไม่พบ paper ที่ตรงกับตัวกรอง</div>`;
   if (ppFocus){ const el = document.querySelector(`details.paper[data-k="${CSS.escape(ppFocus)}"]`); if (el) el.scrollIntoView({block:"start"}); ppFocus = null; }
 }
@@ -828,7 +789,7 @@ const perCT = ["1972-2009","2010-2019","2020-2026"].map(pe => { const c = S.crit
 $("#ov-grid").innerHTML = [
   card("ให้เหตุผลการเลือก dataset ไหม", "รหัส crit_type หนึ่งค่าต่อ paper", ent(S.crit_type), "pp-ct"),
   card("เหตุผลที่ให้เป็นแบบไหน", "รหัส basis เลือกได้หลายค่า (none = ไม่ให้เหตุผล)", ent(S.basis)),
-  card("ดัดแปลงข้อมูลแบบไหน", "origin เลือกได้หลายค่า · Binarised รวมไฟล์ KEEL 2 คลาส (รอคำตัดสินเรื่องที่ 2)", ent(S.origin), "pp-org"),
+  card("ดัดแปลงข้อมูลแบบไหน", "origin เลือกได้หลายค่า · Binarised รวมไฟล์ KEEL 2 คลาส", ent(S.origin), "pp-org"),
   card("บอกไหมว่าคลาสไหนเป็น minority", "รหัส minority_rule หนึ่งค่าต่อ paper", ent(S.minority_rule_all), "pp-mr"),
   card("แหล่งข้อมูล", "paper ที่ใช้แหล่งนั้นอย่างน้อยหนึ่งชุด", ent(S.sources)),
   `<div class="card"><h2>ไม่ให้เหตุผล หรือบอกแค่ widely used แยกช่วงปี</h2><p class="sub">paper ในช่วงที่เป็น not stated หรือ generic only / paper ที่มีการประเมินผลบนข้อมูลทั้งหมดในช่วง</p><div class="bars">${perCT.map(([pe,n,x]) =>
@@ -848,7 +809,7 @@ const rowsK = () => { const k = $("#wn-k").value;
   $("#wn-rules").innerHTML = `<b>ตัวหารและเกณฑ์</b> ผลเทียบทั้งหมด ${E.all_rows} แถว แยกเป็น 3 ชุด ไม่รวมกัน · `+
   `<b>ผลหลัก</b> plain SMOTE รายชุด ${E.plain.rows} แถว ${E.plain.papers} paper (ชนะ ${E.plain.up} แพ้ ${E.plain.dn} เสมอ ${E.plain.eq}) ตรงกับตารางใน manuscript · `+
   `<b>SMOTE แบบห่อ</b> ${E.wrapper.rows} แถว ${E.wrapper.papers} paper แสดงแยก ไม่รวมกับผลหลัก · `+
-  `<b>ไม่เข้าเกณฑ์</b> ${E.excluded.rows} แถว (${xp.map(p=>esc(p)+" "+X.filter(r=>r.paper===p).length+" แถว").join(", ")}): แถวค่าเฉลี่ยหลายชุดไม่ใช่ผลรายชุด (R4) และคู่ค่าที่มาจากคนละตาราง ซึ่งไม่ผ่านเกณฑ์ "ในตารางเดียวกัน" (R6) และ paper ที่หัวคอลัมน์ไม่ระบุว่าคอลัมน์ไหนคือ SMOTE (R8, MC-MBRC, Toon 29 ต.ค.) แถวเหล่านี้ยังอยู่ในข้อมูล เลือกดูได้ที่ตัวเลือกด้านล่าง · ตัวเลขตรวจตรงกับ <code>${esc(E.reconciled_with.file)}</code> (checks ${E.reconciled_with.checks_ok}/${E.reconciled_with.checks_total})`; }
+  `<b>ไม่เข้าเกณฑ์</b> ${E.excluded.rows} แถว (${xp.map(p=>esc(p)+" "+X.filter(r=>r.paper===p).length+" แถว").join(", ")}): แถวค่าเฉลี่ยหลายชุดไม่ใช่ผลรายชุด (R4) และคู่ค่าที่มาจากคนละตาราง ซึ่งไม่ผ่านเกณฑ์ "ในตารางเดียวกัน" (R6) และ paper ที่หัวคอลัมน์ไม่ระบุว่าคอลัมน์ไหนคือ SMOTE (R8, MC-MBRC) แถวเหล่านี้ยังอยู่ในข้อมูล เลือกดูได้ที่ตัวเลือกด้านล่าง · ตัวเลขตรวจตรงกับ <code>${esc(E.reconciled_with.file)}</code> (checks ${E.reconciled_with.checks_ok}/${E.reconciled_with.checks_total})`; }
 function tally(L){ return {n:L.length, up:L.filter(r=>r.raw_sign==="+").length, dn:L.filter(r=>r.raw_sign==="-").length, eq:L.filter(r=>r.raw_sign==="=").length, papers:new Set(L.map(r=>r.paper)).size}; }
 function cell(a, k, t){ if(!a.n) return `<td class="num" style="color:var(--ink3)">-</td>`;
   return `<td class="num"><a href="#" data-p="${esc(k)}" data-t="${esc(t)}" style="color:inherit">${a.dn?`<b>${a.up}/${a.n}</b>`:`${a.up}/${a.n}`}</a><div style="font-size:11px;color:var(--ink3);line-height:1.4"><span style="white-space:nowrap">SMOTE สูงกว่า ${a.dn}</span>${a.eq?` <span style="white-space:nowrap">· เท่า ${a.eq}</span>`:""}</div></td>`; }
@@ -1032,7 +993,7 @@ renderWNsum();
 
   /* C. KEEL กับ UCI */
   const stackRow = (lab, by, n, extra) => `<div class="mrow"><span>${lab}</span><div class="stack" role="img" aria-label="${esc(lab)}: ${CATS.filter(c=>by[c]).map(c=>CATLAB[c]+" "+by[c]).join(", ")}">${CATS.filter(c=>by[c]).map(c => `<span class="seg ${kc(c)}" style="flex:${by[c]}" tabindex="0" ${tipA(lab+" · "+CATLAB[c]+": "+f(by[c])+" จาก "+f(n)+" entry ("+pc(by[c],n)+")")}></span>`).join("")}</div><span class="n">${f(n)}</span></div>`;
-  /* แหล่งข้อมูล หน่วยชื่อหลัง normalise (29 ต.ค. 2026 บ่าย, Toon สั่ง) ข้อมูลจาก D.nt (build/name_level_types.py) */
+  /* แหล่งข้อมูล หน่วยชื่อหลัง normalise (29 ต.ค. 2026 บ่าย) ข้อมูลจาก D.nt (build/name_level_types.py) */
   const SO = NT.source_order, SB = NT.by_source, SX = NT.source_by_type, ES = NT.entry_level_by_source;
   const combos = Object.entries(NT.multiple_source_combos).map(([k,v]) => k.split(" + ").map(x=>SLAB[x]).join(" + ")+" "+v).join(" · ");
   $("#db-prov").innerHTML = `<h3 class="ct">แหล่งของ dataset <span class="unit">n = ${f(tot)} ชื่อ (normalise แล้ว) · สีคือชนิด</span></h3>
@@ -1044,7 +1005,7 @@ renderWNsum();
   $("#db-prov").addEventListener("click", e => { const el = e.target.closest(".mrow[data-src]"); if (el) pick(null, "", el.dataset.src); });
   $("#db-prov").addEventListener("keydown", e => { const el = e.target.closest(".mrow[data-src]"); if (el && (e.key==="Enter"||e.key===" ")){ e.preventDefault(); pick(null, "", el.dataset.src); } });
 
-  /* ชนิดการดำเนินการของข้อมูลที่ถูกดัดแปลง (29 ต.ค. 2026 บ่าย 6, Toon สั่ง) ข้อมูลจาก D.nt.sum.modified_ops */
+  /* ชนิดการดำเนินการของข้อมูลที่ถูกดัดแปลง (29 ต.ค. 2026 บ่าย 6) ข้อมูลจาก D.nt.sum.modified_ops */
   const MOP = NT.modified_ops;
   $("#db-ops").innerHTML = `<h3 class="ct">ข้อมูลที่ถูกดัดแปลง ดัดแปลงอย่างไร <span class="unit">${f(MOP.entries)} entry · ${MOP.papers} paper · ${f(MOP.names)} ชื่อ dataset</span></h3>
     <div class="tbox"><table class="dxt"><thead><tr><th>ชนิดการดำเนินการ</th><th class="num">entry</th><th class="num">paper</th><th class="num">ชื่อ dataset</th></tr></thead><tbody>
@@ -1054,7 +1015,7 @@ renderWNsum();
   $("#db-ops").addEventListener("click", e => { const tr = e.target.closest("tr[data-op]"); if (tr) pick(null, "", "", "", tr.dataset.op); });
   $("#db-ops").addEventListener("keydown", e => { const tr = e.target.closest("tr[data-op]"); if (tr && (e.key==="Enter"||e.key===" ")){ e.preventDefault(); pick(null, "", "", "", tr.dataset.op); } });
 
-  /* แหล่งที่ต่างกัน 1 แหล่งนับ 1 (29 ต.ค. 2026 บ่าย 3, Toon สั่ง) ข้อมูลจาก D.nt.sum.distinct_sources (out/name_level_sources.csv) */
+  /* แหล่งที่ต่างกัน 1 แหล่งนับ 1 (29 ต.ค. 2026 บ่าย 3) ข้อมูลจาก D.nt.sum.distinct_sources (out/name_level_sources.csv) */
   const DS0 = NT.distinct_sources, GLAB = {"KEEL":"KEEL","UCI":"UCI","other repository":"คลังหรือ benchmark อื่น","other paper/author":"จาก paper หรือผู้เขียนอื่น","private":"Private"};
   let srcAll = false;
   function renderSrc(){
@@ -1103,7 +1064,7 @@ renderWNsum();
   $("#db-part").innerHTML = `<h3 class="ct">แถวผลเทียบ ${f(EL.all_rows)} แถว แบ่งเป็นสามชุดที่ไม่รวมกัน <span class="unit">หน่วย แถวผลเทียบ</span></h3>
     <div class="stack" style="height:30px" role="img" aria-label="${part.map(p=>p[1]+" "+p[2]+" แถว").join(", ")}">${part.map(([k,l,n]) => `<span class="seg k-${k}" style="flex:${n}" tabindex="0" ${tipA(l+": "+f(n)+" จาก "+f(EL.all_rows)+" แถว ("+pc(n,EL.all_rows)+")")}></span>`).join("")}</div>
     <div class="legend">${part.map(([k,l,n]) => `<span class="k-${k}"><i class="sw"></i>${l} <b>${f(n)}</b> · ${pc(n,EL.all_rows)}</span>`).join("")}</div>
-    <div class="xg">${XG.map(g => `<div class="xi"><div><b>${esc(g.paper)}</b> · ${g.rows} แถว<p>${g.reason==="aggregate" ? "แถวเดียวเป็นค่าเฉลี่ยของหลายชุดข้อมูล ไม่ใช่คู่ค่ารายชุด (กติกา R4)" : g.reason==="comparator" ? "หัวคอลัมน์ในตารางผลรายชุดไม่ได้ระบุว่าคอลัมน์ไหนคือ SMOTE (ชื่อ SMOTE มีแค่ใน Appendix A.1 และ Table 8) ตัดออกตามคำตัดสินของ Toon 29 ต.ค. (กติกา R8)" : "ค่าวิธีที่เสนอกับค่า SMOTE มาจากคนละตารางใน supplementary และ paper ไม่ได้เทียบสองค่านี้โดยตรง (กติกา R6)"}</p>
+    <div class="xg">${XG.map(g => `<div class="xi"><div><b>${esc(g.paper)}</b> · ${g.rows} แถว<p>${g.reason==="aggregate" ? "แถวเดียวเป็นค่าเฉลี่ยของหลายชุดข้อมูล ไม่ใช่คู่ค่ารายชุด (กติกา R4)" : g.reason==="comparator" ? "หัวคอลัมน์ในตารางผลรายชุดไม่ได้ระบุว่าคอลัมน์ไหนคือ SMOTE (ชื่อ SMOTE มีแค่ใน Appendix A.1 และ Table 8) ตัดออก (กติกา R8)" : "ค่าวิธีที่เสนอกับค่า SMOTE มาจากคนละตารางใน supplementary และ paper ไม่ได้เทียบสองค่านี้โดยตรง (กติกา R6)"}</p>
       ${g.reason==="cross-table" ? `<p>${Object.entries(D.dash.by_type.excluded).filter(([t])=>ORALL.some(r=>!r.eligible&&r.paper===g.paper&&r.how_obtained===t)).map(([t]) => CATLAB[t]+" "+ORALL.filter(r=>!r.eligible&&r.paper===g.paper&&r.how_obtained===t).length).join(" · ")}</p>` : ""}</div>
       <button class="btnl" type="button" data-audit="${esc(g.paper)}">ดูแถวใน audit</button></div>`).join("")}</div>
     <p class="cap">แถวที่ไม่เข้าเกณฑ์ไม่ได้แปลว่าข้อมูลผิด แค่ไม่เข้ากติกาการนับชุดนั้น ยังอยู่ใน <code>out/verified_outcomes.csv</code> และดูได้ในแท็บ "ชนะ SMOTE บนข้อมูลแบบไหน" โหมด audit</p>`;
@@ -1298,7 +1259,7 @@ renderWNsum();
         <td class="mono">${esc(r.name_as_reported)}</td><td style="font-size:12px">${show_(r.group_in_paper)}</td>
         ${DCOL.map(([k,,n]) => { const v = miss(r[k]) ? null : String(r[k]).trim(); const d = v!==null && M[k].n>1 && v!==M[k].top;
           return `<td class="${n?"num":""} ${d?"diff":""}" ${d?tipA("ต่างจากค่าที่พบบ่อยที่สุด ("+M[k].top+")"):""}>${v===null?NR:esc(v)}</td>`; }).join("")}
-        <td class="wrap">${show_(P0.irdef)}</td><td>${catChip(r.category)}<div style="font-size:11px;color:var(--ink3)">${String(r.category_basis).startsWith("rule")?"กฎที่ Toon อนุมัติ":"อ่านจาก paper"}</div></td>
+        <td class="wrap">${show_(P0.irdef)}</td><td>${catChip(r.category)}<div style="font-size:11px;color:var(--ink3)">${String(r.category_basis).startsWith("rule")?"จัดด้วยกฎ":"อ่านจาก paper"}</div></td>
         <td class="wrap">${show_(r.preprocessing_note)}</td><td class="mono" style="font-size:11.5px;min-width:150px">${show_(r.evidence_ref)}<div style="color:var(--ink3)">verified_datasets.csv แถว ${esc(r.source_csv_line)}</div></td></tr>`; }).join("")}
       </tbody></table></div>
       ${detailExtra(E)}
@@ -1522,7 +1483,7 @@ renderWNsum();
   const curated = P.filter(p=>p.n_items>0).length;
   $("#df-rules").innerHTML = `<b>ที่มาและข้อจำกัด</b> ค้นคำ (noise, overlap, borderline, small disjunct, outlier ฯลฯ) ใน PDF ทุกเรื่องที่มีไฟล์ ได้ ${f(S.keyword_passages)} ข้อความจาก ${S.keyword_papers} paper (<code>out/difficulty_candidates.csv</code>)
     แล้วอ่านคัดด้วยมือเป็น ${S.items} รายการจาก ${S.papers_with_items} paper (<code>ai-draft/difficulty/evidence.json</code>) ทุกข้อความตรวจอัตโนมัติว่ามีอยู่จริงในหน้าที่ระบุ (<code>build/difficulty_evidence.py</code>) ·
-    Claude เป็นผู้อ่านคัด Toon ยังไม่ได้ทบทวน · paper อื่น ${P.length - curated} เรื่องยังไม่ได้ทบทวนข้อความทีละรายการ จึงเป็น "unresolved" ไม่ใช่ "ไม่มี" ·
+    paper อื่น ${P.length - curated} เรื่องยังไม่ได้ทบทวนข้อความทีละรายการ จึงเป็น "unresolved" ไม่ใช่ "ไม่มี" ·
     <b>ไม่มีค่า noise หรือ overlap ที่ paper ไม่ได้พิมพ์</b> และไม่อนุมานจากผลที่ไม่ดี · แถวผลเทียบ SMOTE ในแท็บอื่นมาจากเงื่อนไขข้อมูลเดิม (ไม่ใส่ noise) ของแต่ละ paper ตามที่บันทึกในคอลัมน์สุดท้ายของตารางล่าง`;
   $("#df-kpi").innerHTML = `<div class="kgroup"><h3>หลักฐานที่คัดแล้ว</h3><div class="kpis"><div class="kpi"><b>${S.items}</b><span>รายการ</span></div><div class="kpi"><b>${S.papers_with_items}</b><span>paper จาก ${S.papers}</span></div></div></div>
     <div class="kgroup"><h3>ผูกกับ dataset record</h3><div class="kpis"><div class="kpi" ${tipA("record ที่ถูกอ้างตรงในรายการหลักฐาน (ชื่อตรงกันใน paper เดียวกัน)")}><b>${S.records_linked}</b><span>record</span></div></div></div>
@@ -1691,7 +1652,7 @@ renderWNsum();
     const dist = Object.entries(M.papers_per_name_distribution);
     const sp = S.size_profile_all_entries, sh = S.size_profile_names_used_by_10plus_papers;
     const prow = (l, a, b) => `<tr><td>${l}</td><td class="num">${a}</td><td class="num">${b}</td></tr>`;
-    return `<p class="unitline">หน่วย: use = คู่ (paper, ชื่อหลัง normalise) ไม่ซ้ำ ${f(S.by_name.uses)} คู่ จาก ${f(S.named_entries)} entry ที่มีชื่อ ใน ${S.papers} paper · dataset และ family ตามกฎ T1 ของ Toon (28 ต.ค. 2026): ชื่อที่ต่างกันแค่เครื่องหมายเป็นชุดเดียวกัน, split เป็น subset ของชุดหลัก, ชื่อไม่มาตรฐานไม่รวม (<code>out/dataset_families.csv</code>)</p>
+    return `<p class="unitline">หน่วย: use = คู่ (paper, ชื่อหลัง normalise) ไม่ซ้ำ ${f(S.by_name.uses)} คู่ จาก ${f(S.named_entries)} entry ที่มีชื่อ ใน ${S.papers} paper · dataset และ family ตามกฎ T1: ชื่อที่ต่างกันแค่เครื่องหมายเป็นชุดเดียวกัน, split เป็น subset ของชุดหลัก, ชื่อไม่มาตรฐานไม่รวม (<code>out/dataset_families.csv</code>)</p>
       <div class="controls"><label>นับตาม <select data-cu><option value="name" ${cUnit==="name"?"selected":""}>ชื่อหลัง normalise</option><option value="ds" ${cUnit==="ds"?"selected":""}>dataset (T1 ข้อ 1)</option><option value="fam" ${cUnit==="fam"?"selected":""}>family (T1)</option></select></label></div>
       <div class="kgrid"><div class="kgroup"><h3>${cUnit==="name"?"ชื่อ":(cUnit==="ds"?"dataset":"family")}</h3><div class="kpis"><div class="kpi"><b>${f(M.names)}</b><span>ทั้งหมด</span></div><div class="kpi"><b>${f(M.singletons)}</b><span>ใช้ paper เดียว (${pc(M.singletons,M.names)} ของชื่อ, ${(M.singleton_share_of_uses*100).toFixed(1)}% ของ use)</span></div></div></div>
         <div class="kgroup"><h3>การกระจุก</h3><div class="kpis"><div class="kpi"><b>${M.names_for_half_of_uses}</b><span>${cUnit==="name"?"ชื่อ":(cUnit==="ds"?"dataset":"family")}ครอบครึ่งหนึ่งของ use</span></div><div class="kpi" ${tipA("inverse Simpson: 1/Σp² เท่ากับจำนวนชื่อถ้าทุกชื่อถูกใช้เท่ากัน")}><b>${M.effective_number}</b><span>effective number</span></div><div class="kpi"><b>${M.gini}</b><span>Gini</span></div></div></div></div>
@@ -1792,7 +1753,7 @@ renderWNsum();
     const basis = {}, cat = {}; X.rows.forEach(a => { basis[a[fi.category_basis]] = (basis[a[fi.category_basis]]||0)+1; cat[a[fi.category]] = (cat[a[fi.category]]||0)+1; });
     return `<p class="unitline">หน่วย: data entry (${f(X.rows.length)} ทั้งหมด) · ตารางนี้บันทึกกติกาที่ใช้อยู่ ไม่ได้เปลี่ยน category ของ entry ใด · ข้อความจาก <code>${esc(AN.sources.G)}</code></p>
       <div class="grid2"><div class="card"><h3 class="ct">${LB.rev} category ปัจจุบัน <span class="unit">entry</span></h3>${bars(["original","repository-defined","modified","synthetic","not stated"].map(c=>[`<span class="dt dt-${HOWCLS[c]||""}">${c}</span>`, cat[c]||0]))}</div>
-        <div class="card"><h3 class="ct">ที่มาของการจัด category <span class="unit">entry</span></h3>${bars(Object.entries(basis).sort((a,b)=>b[1]-a[1]).map(([k,n])=>[esc(k), n, k+": "+n]))}<p class="cap">"reader (PDF)" = ผู้อ่านจัดจากข้อความใน paper; "rule ..." = กติกาที่ Toon อนุมัติ 18 ต.ค. ใช้เมื่อ paper ไม่ได้บอก (ป้ายของผู้ตรวจ)</p></div></div>
+        <div class="card"><h3 class="ct">ที่มาของการจัด category <span class="unit">entry</span></h3>${bars(Object.entries(basis).sort((a,b)=>b[1]-a[1]).map(([k,n])=>[esc(k), n, k+": "+n]))}<p class="cap">"reader (PDF)" = ผู้อ่านจัดจากข้อความใน paper; "rule ..." = กติกาที่ใช้เมื่อ paper ไม่ได้บอก (ป้ายของผู้ตรวจ)</p></div></div>
       <div class="card"><div class="tbox"><table class="dxt"><thead><tr>${G.head.map(h=>`<th>${esc(h)}</th>`).join("")}</tr></thead><tbody>
         ${G.rows.map(r=>`<tr>${r.map(c=>`<td class="wrap">${md(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>
         <ul class="anlist">${G.notes.map(x=>`<li>${md(x)}</li>`).join("")}</ul></div>`;
@@ -1889,7 +1850,7 @@ function makeLand(P, host){
         <td class="mono" style="font-size:11px;max-width:200px;white-space:normal">${blank(r.evidence_ref)?NRt("Not extracted"):esc(r.evidence_ref)}</td>
         <td style="font-size:12px">${miss.length?`<span class="nr">${esc(miss.join(", "))}</span>`:""}</td></tr>`; }).join("") || `<tr><td colspan="17" class="empty">ไม่พบ</td></tr>`}
       </tbody></table></div>${R.length>lim?`<div class="controls"><button class="btnl" type="button" data-lmore>แสดงเพิ่ม (เหลือ ${f(R.length-lim)})</button></div>`:""}
-      <p class="cap">"Not reported" = paper ไม่พิมพ์ค่านั้น (ไม่ใช่ศูนย์) · * = พิมพ์แต่ไม่ใช่ตัวเลขเดี่ยว · family ตามกฎ T1 (Toon 28 ต.ค.) ธง = ชื่อที่กฎแยกไว้เพราะจำนวน feature ขัดกัน หรือรวมด้วยรากชื่อ (stem) ให้ตรวจ · กด record เพื่อเปิดรายละเอียดในแท็บสำรวจ dataset</p>`;
+      <p class="cap">"Not reported" = paper ไม่พิมพ์ค่านั้น (ไม่ใช่ศูนย์) · * = พิมพ์แต่ไม่ใช่ตัวเลขเดี่ยว · family ตามกฎ T1 ธง = ชื่อที่กฎแยกไว้เพราะจำนวน feature ขัดกัน หรือรวมด้วยรากชื่อ (stem) ให้ตรวจ · กด record เพื่อเปิดรายละเอียดในแท็บสำรวจ dataset</p>`;
   }
   const rb = $$("rec");
   rb.addEventListener("click", e => { const t = e.target;
@@ -1917,7 +1878,7 @@ function makeLand(P, host){
   /* ---------- มุมมอง ---------- */
   const SECS = [["pop","1 · ความนิยม"],["chr","2 · ลักษณะ"],["cls","3 · โครงสร้างคลาสและ IR"],["org","4 · ที่มาและการดัดแปลง"],["dif","5 · หลักฐานความยาก"],["cand","6 · ผู้สมัคร benchmark"]];
   let cur = "pop", popU = "name", popN = 25;
-  $$("units").innerHTML = `<b>หน่วยนับ</b> <b>entry</b> = 1 dataset ใน 1 paper (${f(REC.length)} entry ที่มีชื่อ; ตัด placeholder ${ALL.length-REC.length} รายการ) · <b>ชื่อ</b> = ชื่อหลัง norm() ของโครงการ (${f(new Set(REC.map(r=>r.normalized_name)).size)} ชื่อ) · <b>dataset</b> = ชื่อที่ต่างกันแค่ - _ เว้นวรรค จุด รวมเป็นชุดเดียว (${f(new Set(REC.map(r=>L.dskey[r.normalized_name])).size)} dataset) · <b>family</b> = กฎ T1 ของ Toon: split/รุ่นที่มีเลขเป็น subset ของชุดหลัก ชื่อไม่มาตรฐานไม่รวม (${f(new Set(REC.map(r=>r.fam)).size)} family, ธง ${Object.keys(L.famflags).length} family ให้ตรวจ) · <b>paper</b> = จำนวน paper ที่ต่างกัน · ตัวเลขทุกตัวบอกหน่วยกำกับ`;
+  $$("units").innerHTML = `<b>หน่วยนับ</b> <b>entry</b> = 1 dataset ใน 1 paper (${f(REC.length)} entry ที่มีชื่อ; ตัด placeholder ${ALL.length-REC.length} รายการ) · <b>ชื่อ</b> = ชื่อหลัง norm() ของโครงการ (${f(new Set(REC.map(r=>r.normalized_name)).size)} ชื่อ) · <b>dataset</b> = ชื่อที่ต่างกันแค่ - _ เว้นวรรค จุด รวมเป็นชุดเดียว (${f(new Set(REC.map(r=>L.dskey[r.normalized_name])).size)} dataset) · <b>family</b> = กฎ T1: split/รุ่นที่มีเลขเป็น subset ของชุดหลัก ชื่อไม่มาตรฐานไม่รวม (${f(new Set(REC.map(r=>r.fam)).size)} family, ธง ${Object.keys(L.famflags).length} family ให้ตรวจ) · <b>paper</b> = จำนวน paper ที่ต่างกัน · ตัวเลขทุกตัวบอกหน่วยกำกับ`;
   $$("nav").innerHTML = SECS.map(([k,l]) => `<button type="button" data-s="${k}" aria-pressed="${k===cur}">${l}</button>`).join("");
 
   function rPop(){
@@ -1995,7 +1956,7 @@ function makeLand(P, host){
       <div class="card"><h3 class="ct">category × ที่มาของการจัด <span class="unit">entry · กดตัวเลขเพื่อดู record</span></h3>
         <div class="tbox"><table class="matrix" style="min-width:640px"><thead><tr><th>category</th>${bs.map(b=>`<th class="num" style="white-space:normal;font-size:12px">${BASIS(b)==="reader"?'<span class="lb lb-rep">paper</span>':'<span class="lb lb-rev">ผู้ตรวจ</span>'}${esc(b)}</th>`).join("")}<th class="num">รวม</th></tr></thead><tbody>
         ${CATS.map(c=>`<tr><td>${chip(c)}</td>${bs.map(b=>cell(c,b)).join("")}<td class="num">${f(REC.filter(r=>r.category===c).length)}</td></tr>`).join("")}</tbody></table></div>
-        <p class="cap">"reader (PDF)" = ผู้อ่านจัดจากข้อความใน paper; คอลัมน์ "rule ..." = กติกาที่ Toon อนุมัติ 18 ต.ค. ใช้เมื่อ paper ไม่ได้บอก · repository-defined ยังเป็นป้ายชั่วคราว (decisions-pending ข้อ 2) <button class="btnl" type="button" data-an="G">เปิดนิยาม category</button></p></div>
+        <p class="cap">"reader (PDF)" = ผู้อ่านจัดจากข้อความใน paper; คอลัมน์ "rule ..." = กติกาที่ใช้เมื่อ paper ไม่ได้บอก <button class="btnl" type="button" data-an="G">เปิดนิยาม category</button></p></div>
       <div class="card"><h3 class="ct">แหล่งที่ paper ระบุ (คำแรกของข้อความ) <span class="unit">entry · 10 อันดับแรก</span></h3>${bars(srcI,"entry")}<p class="cap">ข้อความตามที่ paper พิมพ์ บางรายการระบุแค่ระดับกลุ่ม · สัดส่วนรายคลังและ entry ที่ไม่ระบุการได้มาอยู่ในแท็บสำรวจ dataset</p></div>`;
   }
 
@@ -2042,9 +2003,9 @@ function makeLand(P, host){
     return `<p class="unitline">หน่วย: ชื่อหลัง normalise · paper = exact name · ${C.length} ชื่อ (ชื่อที่ระบุในงาน ${C.filter(c=>c.listed_in_task==="yes").length} + ชื่อที่เข้าเกณฑ์) · ไม่ได้จัดอันดับ และไม่ได้บอกว่าชุดใด "ดีที่สุด" หรือเป็นตัวแทน</p>
       <div class="notice"><b>เกณฑ์ (จาก <code>${esc(L.sources.criteria)}</code>)</b>
         <span class="lngrp g1">ใช้บ่อย</span> ${esc(L.crit.frequent)} · <span class="lngrp g2">อาจเพิ่มความหลากหลาย</span> ${esc(L.crit.diversity)} · <span class="lngrp g3">ต้องตรวจเพิ่ม</span> ${esc(L.crit.verification)} · ${esc(L.crit.not_used)}
-        · ${esc(L.crit.high_dim_note)} · ${esc(L.crit.scope_note)} · <b>ป้ายกลุ่ม Toon อนุมัติแล้ว (28 ต.ค.)</b>: ${esc(L.crit.label_status)} · ${esc(L.crit.family_note)}</div>
+        · ${esc(L.crit.high_dim_note)} · ${esc(L.crit.scope_note)} · <b>ป้ายกลุ่ม</b>: ${esc(L.crit.label_status)} · ${esc(L.crit.family_note)}</div>
       <div class="controls"><label>กลุ่ม <select data-cg><option value="">ทุกกลุ่ม</option>${GR.map(([g,,l])=>`<option value="${g}" ${cg===g?"selected":""}>${l} (${cnt[g]})</option>`).join("")}</select></label></div>
-      ${GR.filter(([g])=>!cg||cg===g).map(([g,cls,l]) => `<div class="card"><h3 class="ct"><span class="lngrp ${cls}">${l}</span> <span class="unit">${cnt[g]} ชื่อ · อนุมัติ 28 ต.ค.</span></h3>${cnt[g]?tbl(C.filter(c=>c.group===g)):NRt("ไม่มี")}</div>`).join("")}
+      ${GR.filter(([g])=>!cg||cg===g).map(([g,cls,l]) => `<div class="card"><h3 class="ct"><span class="lngrp ${cls}">${l}</span> <span class="unit">${cnt[g]} ชื่อ</span></h3>${cnt[g]?tbl(C.filter(c=>c.group===g)):NRt("ไม่มี")}</div>`).join("")}
       <p class="cap">ค่าในตารางคือค่าที่ paper พิมพ์ (ทุกค่าที่ต่างกัน คั่นด้วย ;) ไม่ได้เลือกค่าใดเป็นค่าจริง · "ใช้บ่อย" ทุกชื่อยังมีข้อจำกัดในคอลัมน์ขวา · แหล่ง: <code>${esc(L.sources.candidates)}</code> สร้างโดย <code>${esc(L.sources.script)}</code></p>`;
   }
 
@@ -2077,7 +2038,7 @@ makeLand("ln", $("#p-ln"));
   const doc = $("#ms-doc"); if (!doc || !D.land) return;
   const box = document.createElement("section"); box.className = "ms-live"; box.id = "msl-host"; box.setAttribute("aria-label", "สำรวจ dataset landscape แบบโต้ตอบ");
   box.innerHTML = `<h3 class="ms-live-h">สำรวจแบบโต้ตอบ: dataset landscape</h3>
-    <p class="sub">ส่วนนี้ไม่ใช่ข้อความของ manuscript ใช้ข้อมูลและโค้ดชุดเดียวกับแท็บ Landscape (<code>out/dataset_records.csv</code>, <code>out/landscape_families.csv</code>, <code>out/benchmark_candidates.csv</code>) · family ตามกฎ T1 ของ Toon · ป้ายกลุ่มผู้สมัคร F/D/V Toon อนุมัติแล้ว 28 ต.ค. · <button class="btnl" type="button" data-go="ln">เปิดแท็บ Landscape</button> <button class="btnl" type="button" data-go="dx">เปิดแท็บสำรวจ dataset</button></p>
+    <p class="sub">ส่วนนี้ไม่ใช่ข้อความของ manuscript ใช้ข้อมูลและโค้ดชุดเดียวกับแท็บ Landscape (<code>out/dataset_records.csv</code>, <code>out/landscape_families.csv</code>, <code>out/benchmark_candidates.csv</code>) · family ตามกฎ T1 · ป้ายกลุ่มผู้สมัคร F/D/V · <button class="btnl" type="button" data-go="ln">เปิดแท็บ Landscape</button> <button class="btnl" type="button" data-go="dx">เปิดแท็บสำรวจ dataset</button></p>
     <div class="notice" id="msl-units"></div><div class="subnav" role="group" aria-label="เลือกมุมมอง" id="msl-nav"></div><div id="msl-body" class="lnb"></div>
     <h4 class="ms-live-h" id="msl-rec-h">Record ที่เลือก</h4><div class="card" id="msl-rec"></div>`;
   const hs = [...doc.querySelectorAll("h1,h2,h3")];
@@ -2148,7 +2109,7 @@ makeLand("ln", $("#p-ln"));
      how:"เพื่อนบ้าน minority 1:4 และเพื่อนบ้านคลาสเดียวกันตัวนั้นก็โดดเดี่ยว (0:5 หรือ 1:4 ที่ชี้กลับ) (§5.2.1) · ธง: rare ≥ 20% (§6.2)",
      ex: () => `ติดธง ${TB.flags.small_disjuncts.n} task (${TB.flags.small_disjuncts.pct}%) · ` + top(B.filter(r=>r.small_disjuncts).sort(byEnt), 6)},
     {k:"noise", t:"Noise index (borderline + outlier)",
-     what:"สัดส่วนของ minority ที่อยู่ในบริเวณปนกันหรือโดดเดี่ยว ใช้แทน noise รวมกับ overlap ตามที่ตัดสินไว้ ค่า 0 คือ minority อยู่เป็นกลุ่มชัดเจน ค่าใกล้ 1 คือ minority เกือบทั้งหมดปนกับ majority",
+     what:"สัดส่วนของ minority ที่อยู่ในบริเวณปนกันหรือโดดเดี่ยว ใช้แทน noise รวมกับ overlap ค่า 0 คือ minority อยู่เป็นกลุ่มชัดเจน ค่าใกล้ 1 คือ minority เกือบทั้งหมดปนกับ majority",
      how:`ค่าต่อเนื่อง 0–1 ไม่มีเกณฑ์ (ไม่พบเกณฑ์ที่มีอ้างอิงสำหรับ borderline + outlier) · มัธยฐานของ binary + binarise ${f2(TB.noise_index.median)} [P25 ${f2(TB.noise_index.P25)}, P75 ${f2(TB.noise_index.P75)}]`,
      ex: () => `noise สูงสุด: ` + top([...B].sort((a,b)=>b.noise-a.noise), 6)},
     {k:"small_sample", t:"Small sample (minority น้อยเมื่อเทียบกับจำนวน feature)",
@@ -2304,7 +2265,7 @@ makeLand("ln", $("#p-ln"));
   const pp = Object.entries(W.per_paper);
   el.innerHTML = `<h3 class="ct">ชนะ/แพ้ SMOTE ในทุก metric ที่ paper รายงาน <span class="unit">${pp.length} paper · classifier และเงื่อนไขเดิมของแต่ละ paper</span></h3>
     <p class="sub" style="margin:0">เทียบค่าที่พิมพ์ของวิธีที่เสนอกับ SMOTE ทีละชุดข้อมูล ทุก metric ที่มีทั้งสองคอลัมน์ · ${esc(W.rule)} · ค่าของ metric เดิม (กติกา A) ที่คัดลอกใหม่ตรงกับของเดิม ${W.cross.match}/${Object.values(W.cross).reduce((a,b)=>a+b,0)} แถว</p>
-    <p class="sub" style="margin:.4rem 0 0"><b>คำตัดสินของ Toon 28 ต.ค.</b> ผลหลัก = plain SMOTE ${W.plain.overall_all_metrics.papers} paper · paper ที่ตัวเทียบเป็น SMOTE แบบอื่นแยกรายงาน (${Object.entries(W.nonplain).map(([g,v])=>`${esc(g)}: ${v.papers_list.map(esc).join(", ")}`).join(" · ")}) · ตัดออก: ${Object.entries(W.excluded).map(([k,v])=>`${esc(k)} (${v.rows} แถว; ${esc(v.reason)})`).join(" · ")}</p>
+    <p class="sub" style="margin:.4rem 0 0"><b>ชุดเทียบ</b> ผลหลัก = plain SMOTE ${W.plain.overall_all_metrics.papers} paper · paper ที่ตัวเทียบเป็น SMOTE แบบอื่นแยกรายงาน (${Object.entries(W.nonplain).map(([g,v])=>`${esc(g)}: ${v.papers_list.map(esc).join(", ")}`).join(" · ")}) · ตัดออก: ${Object.entries(W.excluded).map(([k,v])=>`${esc(k)} (${v.rows} แถว; ${esc(v.reason)})`).join(" · ")}</p>
     <div class="controls"><label>ชุดเทียบ <select id="wa-k"><option value="plain">ผลหลัก: plain SMOTE</option>${Object.keys(W.nonplain).map(g=>`<option value="np:${esc(g)}">แยกรายงาน: ${esc(g)}</option>`).join("")}<option value="all">plain + SMOTE แบบอื่น (ไม่รวมที่ตัดออก)</option><option value="ruleA">เฉพาะ metric เดิม (กติกา A, ไม่รวมที่ตัดออก)</option></select></label>
     <label>paper <select id="wa-p"><option value="">— ดูราย paper —</option>${pp.map(([k,v])=>`<option value="${esc(k)}">${esc(k)}${v.excluded?" (ตัดออก)":v.comparator_group!=="plain SMOTE"?" (แยกรายงาน)":""}</option>`).join("")}</select></label></div>
     <div id="wa-t"></div><div id="wa-pp"></div>
@@ -2342,12 +2303,12 @@ makeLand("ln", $("#p-ln"));
   const SRCL = {"UCI-official":"UCI (ดาวน์โหลดจาก archive.ics.uci.edu)","LibSVM":"LIBSVM (csie.ntu.edu.tw)","author-HDE":"repo ผู้เขียน HDE","author-DGOT":"repo ผู้เขียน DGOT",
     "author-SOS":"repo ผู้เขียน SOS","author-MBS":"repo ผู้เขียน MBS","author-kmeans":"release ผู้เขียน k-means SMOTE","KEEL-std(F)":"KEEL standard (GitHub: Fuminides/keel_datasets)","KEEL(keel_ds)":"KEEL (keel-ds, PyPI)","UCI++":"UCI++ (lpfgarcia/ucipp)",
     "jbrownlee-UCI":"UCI CSV (jbrownlee/Datasets)","PROMISE-ck":"tera-PROMISE CK (klainfo/DefectData)","Weka-UCI":"UCI ARFF ของ Weka","PMLB":"PMLB"};
-  const BL = k => k.includes("printed N = file N + 1") ? BL(k.split(";")[0].trim()) + " · ขนาดที่พิมพ์ = ไฟล์ + 1 (นับแถวหัวตาราง, Toon 8 พ.ย.)" : k.startsWith("imbalanced-learn") ? "task ของ imbalanced-learn" : ({"exact name":"ชื่อตรง","alias":"ชื่อเรียกอื่นของ dataset เดียวกัน","KEEL split name cut at _vs_":"ชื่อ split ของ KEEL ที่ถูกตัดที่ _vs_","modified file published by the paper's authors under the same name":"ผู้เขียนเผยแพร่ไฟล์ที่ดัดแปลงเองในชื่อเดียวกัน (V-author_release)"}[k] || k);
+  const BL = k => k.includes("printed N = file N + 1") ? BL(k.split(";")[0].trim()) + " · ขนาดที่พิมพ์ = ไฟล์ + 1 (นับแถวหัวตาราง)" : k.startsWith("imbalanced-learn") ? "task ของ imbalanced-learn" : ({"exact name":"ชื่อตรง","alias":"ชื่อเรียกอื่นของ dataset เดียวกัน","KEEL split name cut at _vs_":"ชื่อ split ของ KEEL ที่ถูกตัดที่ _vs_","modified file published by the paper's authors under the same name":"ผู้เขียนเผยแพร่ไฟล์ที่ดัดแปลงเองในชื่อเดียวกัน (V-author_release)"}[k] || k);
   const bars = (obj, lab, cls) => { const e = Object.entries(obj).sort((a,b)=>b[1]-a[1]), mx = Math.max(...e.map(x=>x[1]));
     return `<div class="hb wide">${e.map(([k,n]) => `<div class="hrow ${cls||"k-up"}" ${tipA(lab(k)+": "+n)}><span class="lab"><i class="sw"></i>${esc(lab(k))}</span><span class="trk"><span class="fillk ${cls||"k-up"}" style="width:${n/mx*100}%"></span></span><span class="val">${f(n)}</span></div>`).join("")}</div>`; };
   const bb = {}; Object.entries(V.new.by_basis).forEach(([k,n]) => { const L = BL(k); bb[L] = (bb[L]||0) + n; });
   $("#mz-ext").innerHTML = `<h3 class="ct">entry ที่ตรวจได้เพิ่มในรอบ 8 พ.ย. <span class="unit">${f(V.new.entries)} entry · ${V.new.names} ชื่อ · ${V.new.papers} paper · ${V.new.files} ไฟล์</span></h3>
-    <p class="cap">รอบแรก: เว็บ KEEL / UCI / OpenML ถูกบล็อก จึงใช้สำเนาบน GitHub และ PyPI · รอบสอง (Toon ขอ): ดาวน์โหลดไฟล์ทางการจาก UCI และ LIBSVM ผ่าน browser บนเครื่อง Toon และไฟล์ที่ผู้เขียน 5 paper เผยแพร่เอง · กติกาเดิม: จำนวน instance ที่พิมพ์ต้องตรงกับไฟล์ (feature ±1) ถ้าไม่พิมพ์ขนาด ชื่อต้องตรงและผู้เขียนไม่ได้ดัดแปลง</p>
+    <p class="cap">รอบแรก: เว็บ KEEL / UCI / OpenML ถูกบล็อก จึงใช้สำเนาบน GitHub และ PyPI · รอบสอง: ดาวน์โหลดไฟล์ทางการจาก UCI และ LIBSVM ผ่าน browser และไฟล์ที่ผู้เขียน 5 paper เผยแพร่เอง · กติกาเดิม: จำนวน instance ที่พิมพ์ต้องตรงกับไฟล์ (feature ±1) ถ้าไม่พิมพ์ขนาด ชื่อต้องตรงและผู้เขียนไม่ได้ดัดแปลง</p>
     <h4 style="margin:10px 0 6px;font-size:14px">แหล่งของไฟล์</h4>${bars(V.new.by_source, k => SRCL[k] || k)}
     <h4 style="margin:12px 0 6px;font-size:14px">หาไฟล์เจอด้วยอะไร (ตัวตัดสินยังเป็นขนาดที่พิมพ์)</h4>${bars(bb, x => x)}
     <p class="cap" style="margin-top:6px">รวมทั้งหมด ${f(V.total.entries)} entry ${V.total.papers} paper ${V.total.files} ไฟล์ (28 ต.ค. 643 entry 61 paper 131 ไฟล์) · ไฟล์ชุดเดียวกันหลายสำเนา map ไปสำเนาเดียว ลำดับ ไฟล์ผู้เขียน = KEEL &gt; UCI ทางการ/LIBSVM &gt; UCI++ &gt; Weka &gt; jbrownlee &gt; PMLB</p>`;
@@ -2383,9 +2344,9 @@ makeLand("ln", $("#p-ln"));
   }
   el.innerHTML = `<h3 class="ct">ผลการตามไฟล์ของ 200 ชื่อ (8 พ.ย. รอบสอง) <span class="unit">${R2.summary.names} ชื่อ · ${R2.summary.entries} entry · ไฟล์ที่ดาวน์โหลด/อ่าน ${R2.manifest.files} รายการ</span></h3>
     <div class="hb wide">${RES.filter(k => BR[k].names).map(k => `<div class="hrow ${RESC[k]}" ${tipA(RESL[k]+": "+BR[k].names+" ชื่อ, "+BR[k].entries+" entry")}><span class="lab"><i class="sw"></i>${RESL[k]}</span><span class="trk"><span class="fillk ${RESC[k]}" style="width:${BR[k].names/mx2*100}%"></span></span><span class="val">${BR[k].names} ชื่อ · ${BR[k].entries} entry</span></div>`).join("")}</div>
-    <p class="cap">ตรวจได้แล้ว = มีอย่างน้อย 1 entry ของชื่อนั้นผ่านกติกาเดิม (ขนาดที่พิมพ์ตรงไฟล์) หรือผู้เขียนเผยแพร่ไฟล์ที่ดัดแปลงเอง · คอลัมน์ "ตรวจของ Toon" มาจาก out/names_download_check.csv ตามที่ให้มา</p>
+    <p class="cap">ตรวจได้แล้ว = มีอย่างน้อย 1 entry ของชื่อนั้นผ่านกติกาเดิม (ขนาดที่พิมพ์ตรงไฟล์) หรือผู้เขียนเผยแพร่ไฟล์ที่ดัดแปลงเอง · คอลัมน์ "ตรวจรายชื่อ" และ "หมายเหตุ" มาจาก out/names_download_check.csv (ตรวจรายชื่อด้วยมือ)</p>
     <div class="controls"><input type="search" id="mz-d2-q" placeholder="ค้นชื่อ / paper / ผล" aria-label="ค้นผล 200 ชื่อ"><span class="count" id="mz-d2-n"></span></div>
-    <div class="tbox" style="max-height:440px"><table class="dxt" id="mz-d2-t"><thead><tr><th>ชื่อ</th><th>ผล</th><th class="num">entry ตรวจได้</th><th>paper</th><th>ตรวจของ Toon</th><th>หมายเหตุของ Toon</th><th>รายละเอียด</th></tr></thead><tbody></tbody></table></div>
+    <div class="tbox" style="max-height:440px"><table class="dxt" id="mz-d2-t"><thead><tr><th>ชื่อ</th><th>ผล</th><th class="num">entry ตรวจได้</th><th>paper</th><th>ตรวจรายชื่อ</th><th>หมายเหตุ</th><th>รายละเอียด</th></tr></thead><tbody></tbody></table></div>
     <p class="cap">ที่มา: ${esc(R2.src)}</p>`;
   d2(""); $("#mz-d2-q").addEventListener("input", e => d2(e.target.value.trim().toLowerCase()));
 })();
@@ -2408,51 +2369,11 @@ makeLand("ln", $("#p-ln"));
     <details style="margin-top:10px"><summary>ราย paper พร้อมข้อความยืนยันจาก PDF (${RA.length} paper)</summary>
       <div class="tbox"><table class="dxt"><thead><tr><th>paper</th><th>กลุ่ม</th><th class="num">entry</th><th>ข้อความใน PDF</th></tr></thead><tbody>
       ${RA.map(r => `<tr><td>${esc(r.paper)}</td><td>${esc(GL[r.group])}</td><td class="num">${r.entries}</td><td style="font-size:12.5px">${esc(r.evidence)}${r.note ? ` <span class="cap">(${esc(r.note)})</span>` : ""}</td></tr>`).join("")}</tbody></table></div></details>
-    ${RB.length ? "" : `<p class="cap" style="margin-top:8px">8 พ.ย. รอบสอง (Toon สั่ง): ชุดที่ 10 paper สร้างเพื่อภาพประกอบหรือทดลองข้างเคียงนับเป็น entry แล้ว 93 entry (build/add_synthetic_entries.py) · Toy ของ OREM-M เปลี่ยนเป็น synthetic ที่เผยแพร่ (ชุด toy ของ benchmark ordinal regression, ตรวจนอก paper) · OREM-M จึงอยู่ 2 กลุ่ม</p>`}
+    ${RB.length ? "" : `<p class="cap" style="margin-top:8px">8 พ.ย. รอบสอง: ชุดที่ 10 paper สร้างเพื่อภาพประกอบหรือทดลองข้างเคียงนับเป็น entry แล้ว 93 entry (build/add_synthetic_entries.py) · Toy ของ OREM-M เปลี่ยนเป็น synthetic ที่เผยแพร่ (ชุด toy ของ benchmark ordinal regression, ตรวจนอก paper) · OREM-M จึงอยู่ 2 กลุ่ม</p>`}
     <details ${RB.length ? "" : "hidden"}><summary>อีก ${RB.length} paper สร้างข้อมูลเองเพื่อภาพประกอบหรือทดลองข้างเคียง (ไม่นับเป็น entry)</summary>
       <div class="tbox"><table class="dxt"><thead><tr><th>paper</th><th>ชุดที่สร้าง</th><th>บทบาท</th><th>กลุ่ม</th><th>ข้อความใน PDF</th></tr></thead><tbody>
       ${RB.map(r => `<tr><td>${esc(r.paper)}</td><td>${esc(r.sets_stated)}</td><td>${esc(r.role)}</td><td>${esc(GL[r.group])}</td><td style="font-size:12.5px">${esc(r.evidence)}</td></tr>`).join("")}</tbody></table></div></details>
     <p class="cap" style="margin-top:6px">Synthetic = ผู้เขียนสร้างข้อมูลเองด้วย generator/simulation ที่อธิบายใน paper · ทุกข้อความยืนยันถูกตรวจว่ามีอยู่จริงใน PDF (pdftotext) · แก้ผลรอบ 29 ต.ค. ที่ค้นคำแล้วพลาด k-means SMOTE และ CTGAN · ที่มา: ${esc(S.source)}</p>`;
-})();
-
-/* ---------- 8 พ.ย. 2026: แท็บ Handoff (D.handoff = handoff.md + CONCLUSIONS.md แปลงด้วย build/md2html.py) ---------- */
-(function(){
-  const H = D.handoff; if (!H) return;
-  const f = n => (+n).toLocaleString(), tipA = s => `data-tip="${esc(s)}"`, st = H.status;
-  const kp = (b, s, t) => `<div class="card"><div class="kpi" ${t ? tipA(t) : ""}><b>${b}</b><span>${s}</span></div></div>`;
-  const ent = Object.values(st.corpus).reduce((a,b)=>a+b,0);
-  $("#ho-kpi").innerHTML = kp(f(ent), `dataset entry · ${f(st.names)} ชื่อ`, "1 entry = 1 dataset ใน 1 paper")
-    + kp(f(st.verify.entries), `entry ที่ตรวจกับไฟล์ได้ · ${st.verify.papers} paper · ${st.verify.files} ไฟล์`, "รอบ 8 พ.ย. ด้วย mirror เพิ่ม (28 ต.ค. 643)")
-    + kp(st.tasks.binary, `task binary/binarise ที่วัดความยาก · ${f(st.tasks.entries)} entry · ${st.tasks.papers} paper`, "one-vs-rest " + st.tasks.ovr + " task รายงานแยก")
-    + kp(`${st.syn.published.entries} / ${ent ? (st.syn["cited source"].entries + st.syn["code link only"].entries + st.syn["not found"].entries + st.syn["on request"].entries + st.syn["generator named"].entries) : 0}`, "entry synthetic: เผยแพร่ / ไม่ได้เผยแพร่เอง", "ดูการ์ดในแท็บภาพรวม");
-  $("#ho-now").innerHTML = `<h3 class="ct">ถ้าเป็นแชทหรือคนใหม่ เริ่มที่นี่</h3>
-    <ol style="margin:4px 0 0;padding-left:20px;font-size:14px;display:grid;gap:4px">
-      <li><code>git fetch origin main</code> ถ้ามีของใหม่ <code>git pull --rebase origin main</code> (บนเครื่อง Windows ต้องอนุญาตให้ลบไฟล์ใน D:\\SMOTE25 ก่อน เพราะ git ลบ lock ของตัวเอง)</li>
-      <li>อ่านข้อ 0 "สถานะปัจจุบัน" ของ handoff ด้านล่าง แล้วอ่านบันทึกล่าสุดท้ายไฟล์ (วันที่ใหม่สุดอยู่ล่างสุด)</li>
-      <li>ทุกครั้งที่ทำอะไร เขียนบันทึกต่อท้าย <code>handoff.md</code> แล้วรัน <code>python3 build/make_atlas.py</code> ให้แท็บนี้อัปเดตตาม</li>
-      <li>กติกาที่ห้ามละเมิดอยู่ข้อ 9: ทุกค่าย้อนกลับหา PDF ได้ · ไม่เดา · ไม่ตัดข้อมูล · ไม่ตั้งเกณฑ์ตัวเลขเอง · แก้เฉพาะในโฟลเดอร์ Data section</li>
-    </ol>`;
-  const docs = {handoff: {html: H.html, toc: H.toc}, conc: {html: H.conclusions_html, toc: null}};
-  let cur = "handoff";
-  function render(){
-    const d = docs[cur]; $("#ho-doc").innerHTML = d.html;
-    if (d.toc) $("#ho-toc").innerHTML = d.toc.filter(t => t[0] <= 3).map(t => `<a href="#${t[1]}" class="l${t[0]}" data-hid="${t[1]}">${esc(t[2])}</a>`).join("");
-    else $("#ho-toc").innerHTML = [...$("#ho-doc").querySelectorAll("h1,h2,h3")].map((h,i) => { h.id = "c-"+i; return `<a href="#c-${i}" class="l${h.tagName[1]}">${esc(h.textContent)}</a>`; }).join("");
-    $("#ho-q").value = ""; $("#ho-n").textContent = "";
-  }
-  $("#ho-toc").addEventListener("click", e => { const a = e.target.closest("a"); if (!a) return; e.preventDefault(); const el = document.getElementById(a.getAttribute("href").slice(1)); if (el) el.scrollIntoView({behavior:"smooth", block:"start"}); });
-  $("#ho-sub").addEventListener("click", e => { const b = e.target.closest("button[data-doc]"); if (!b) return; cur = b.dataset.doc; [...$("#ho-sub").children].forEach(x => x.setAttribute("aria-pressed", x === b)); render(); });
-  $("#ho-q").addEventListener("input", e => {
-    const q = e.target.value.trim().toLowerCase(); const blocks = [...$("#ho-doc").children];
-    if (!q) { blocks.forEach(b => b.classList.remove("ho-hide")); $("#ho-n").textContent = ""; return; }
-    let n = 0, lastH = null;
-    blocks.forEach(b => { const hit = b.textContent.toLowerCase().includes(q); const isH = /^H[1-6]$/.test(b.tagName);
-      if (isH) { lastH = b; b.classList.add("ho-hide"); }
-      if (hit) { n++; b.classList.remove("ho-hide"); if (lastH) lastH.classList.remove("ho-hide"); } else if (!isH) b.classList.add("ho-hide"); });
-    $("#ho-n").textContent = n + " ช่วงที่พบ";
-  });
-  render();
-  $("#ho-src").textContent = `ที่มา: ${H.source} · handoff.md ${f(H.lines)} บรรทัด ฝังตอนรัน build/make_atlas.py (แปลงด้วย build/md2html.py)`;
 })();
 
 /* ---------- 9 พ.ย. 2026: ข้อมูลที่ดัดแปลง (D.md จาก build/modification_analysis.py) ---------- */
@@ -2480,7 +2401,7 @@ makeLand("ln", $("#p-ln"));
   // noise
   $("#md-noise").innerHTML = `<h3 class="ct">ชุดที่มีการใส่ noise / outlier <span class="unit">${N.real_data_papers} paper ใส่ลงข้อมูลจริง · ${N.synthetic_with_noise_papers} paper สร้างข้อมูล synthetic ที่มี noise ในตัว</span></h3>
     <div class="tbox"><table class="dxt"><thead><tr><th>paper</th><th>ใส่อะไร</th><th>ระดับ</th><th>ข้อมูลที่ใส่</th><th>ชุดที่มี noise เป็น entry ไหม</th><th>ตำแหน่งใน paper</th></tr></thead><tbody>${N.real_data.map(r => `<tr><td>${esc(r.paper_key)}</td><td>${esc(r.what_was_added)}</td><td>${esc(r.levels)}</td><td>${esc(r.data_sets)}</td><td>${esc(r.noisy_sets_are_entries)}</td><td>${esc(r.where_in_paper)}</td></tr>`).join("")}</tbody></table></div>
-    <p class="cap">ค้นทุก PDF ด้วยคำว่า label/class/attribute/feature noise, noise level, inject, corrupt, mislabel, outlier added แล้วอ่านประโยคทีละ paper · ชุดที่ใส่ noise นับเป็น entry modified 1 ต่อ paper ต่อชนิด (SMOTE-IPF และ outlier ของ RSMOTE บันทึกไว้ตั้งแต่ 18 ต.ค./8 พ.ย.; อีก 9 entry ของ 7 paper เพิ่ม 9 พ.ย. ตาม Toon, build/add_noise_entries.py) ชุดต้นทางยังอยู่ในหมวดเดิม</p>
+    <p class="cap">ค้นทุก PDF ด้วยคำว่า label/class/attribute/feature noise, noise level, inject, corrupt, mislabel, outlier added แล้วอ่านประโยคทีละ paper · ชุดที่ใส่ noise นับเป็น entry modified 1 ต่อ paper ต่อชนิด (SMOTE-IPF และ outlier ของ RSMOTE บันทึกไว้ตั้งแต่ 18 ต.ค./8 พ.ย.; อีก 9 entry ของ 7 paper เพิ่ม 9 พ.ย., build/add_noise_entries.py) ชุดต้นทางยังอยู่ในหมวดเดิม</p>
     <details><summary>synthetic ที่ผู้เขียนสร้างให้มี noise หรือ outlier ในตัว (${N.synthetic_generated_with_noise.length} entry)</summary><div class="tbox"><table class="dxt"><thead><tr><th>paper</th><th>record</th><th>ชื่อ</th><th>บันทึก</th></tr></thead><tbody>${N.synthetic_generated_with_noise.map(r => `<tr><td>${esc(r.paper)}</td><td class="mono">${esc(r.record_id)}</td><td>${esc(r.name)}</td><td style="font-size:12px">${esc(r.note)}</td></tr>`).join("")}</tbody></table></div></details>`;
   // ops
   const TE = C.tag_entries, TP = C.tag_papers, OPS = Object.keys(OPL).filter(o => TE[o] !== undefined);

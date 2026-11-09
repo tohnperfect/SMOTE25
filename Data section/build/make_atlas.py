@@ -348,17 +348,7 @@ _SY = json.load(open(p("out/synthetic_availability.json"), encoding="utf-8"))
 if sum(v["entries"] for v in _SY["part_A_by_group"].values()) != DASH["entries"]["by_cat"]["synthetic"]:
     sys.exit("STOP: synthetic_availability.json entries differ from the synthetic entries in dataset_records (rerun build/synthetic_availability.py)")
 data["syn"] = dict(_SY, source="out/synthetic_availability.json (build/synthetic_availability.py; scan: out/synthetic_scan.json)")
-# 8 พ.ย. 2026: Toon ขอให้ Atlas มีข้อมูล handoff ทั้งหมด -> ฝัง handoff.md (แปลงด้วย build/md2html.py)
-import md2html
-_HO_MD = open(p("handoff.md"), encoding="utf-8").read()
-_HO_HTML, _HO_TOC = md2html.convert(_HO_MD)
-data["handoff"] = dict(html=_HO_HTML, toc=_HO_TOC, lines=_HO_MD.count("\n") + 1,
-                       conclusions_html=md2html.convert(open(p("CONCLUSIONS.md"), encoding="utf-8").read())[0],
-                       status=dict(corpus=DASH["entries"]["by_cat"], names=DASH["names"]["distinct"], verify=_VX["verifiable_total"],
-                                   tasks=dict(binary=_MZ_SUM["tasks_binary_binarised"]["n"], ovr=_MZ_SUM["tasks_ovr"]["n"],
-                                              entries=_MZ_SUM["entries_binary_binarised"]["n"], papers=_MZ_SUM["entries_binary_binarised_papers"]),
-                                   syn=_SY["part_A_by_group"], synB=_SY["part_B"]),
-                       source="handoff.md, CONCLUSIONS.md")
+# 9 พ.ย. 2026: handoff แยกเป็นหน้า out/handoff.html (build/make_handoff_html.py) ไม่อยู่ใน Atlas
 # ผลตรวจการกระจุกตามตระกูล (28 ต.ค. 2026): build/family_dependence.py -> out/family_dependence.json
 _FD = json.load(open(p("out/family_dependence.json"), encoding="utf-8"))
 if _FD["rows"] != ELIG["plain"]["rows"]:
@@ -419,11 +409,20 @@ data["md"] = dict(a=_MA, papers=_MP, quotes=_MQ, fams=[list(r.values()) for r in
                   usage=[[r["family"], r["category"], int(r["papers_total"]), *[int(r[k]) for k in ["<=2004", "2005-2009", "2010-2014", "2015-2019", "2020-2024", "2025-2026"]], r["first_year"], r["last_year"]] for r in _UP],
                   src="out/modification_analysis.json, out/modification_purpose_by_paper.csv, out/modification_purpose_quotes.csv (quotes found in the PDFs), "
                       "out/noise_injection_papers.csv, out/modified_families.csv, out/usage_by_period.csv; build/modification_purpose.py, build/modification_analysis.py")
-data["manuscript"] = dict(overview=json.load(open(p("manuscript/overview.json"), encoding="utf-8")),
-                          html=tex2html.convert(_tex), tex=_tex)
+# 9 พ.ย. 2026: Atlas แสดงเฉพาะเนื้อหา -- ไม่มีชื่อผู้ตัดสิน/ผู้สั่ง (build/atlas_scrub.py); ไฟล์ต้นทางไม่เปลี่ยน
+import atlas_scrub
+_ov = json.load(open(p("manuscript/overview.json"), encoding="utf-8"))
+_ov.pop("synthesis_note", None)
+for _s in _ov["sections"]: _s.pop("status", None)          # สถานะงานของแต่ละหัวข้อ (ใครเขียน/ตัดสิน) ไม่แสดง
+_tex_shown = atlas_scrub.tex(_tex)
+data["manuscript"] = dict(overview=_ov, html=tex2html.convert(_tex_shown), tex=_tex_shown)
+data = atlas_scrub.data(data)
 js = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
-open(p("out/explorer_data.json"), "w", encoding="utf-8").write(js)
 tpl = open(p("build/atlas_template.html"), encoding="utf-8").read()
+_left = atlas_scrub.check(js) + atlas_scrub.check(tpl)
+if _left:
+    sys.exit("STOP: attribution left in the Atlas (add a rule to build/atlas_scrub.py or edit the template): " + " | ".join(_left[:10]))
+open(p("out/explorer_data.json"), "w", encoding="utf-8").write(js)
 open(p("out/dataset-atlas.html"), "w", encoding="utf-8").write(tpl.replace("__DATA__", js.replace("</", "<\\/")))
 print("datasets", len(out_ds), "papers", len(pp), "dataset rows", len(FD), "outcome rows", len(FO))
 print("eligibility", json.dumps(ELIG))

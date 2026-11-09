@@ -62,7 +62,7 @@
 | synthetic เผยแพร่ไหม | 29 paper 213 entry: เผยแพร่ 7 paper/63 (รวม Toy ของ OREM-M) · อ้างงานอื่น 3/13 · ขอได้ 1/60 (MC-MBRC) · บอกแค่ตัวสร้าง 1/3 · มีแค่โค้ด 5/10 · ไม่พบ 13/64 (OREM-M อยู่ 2 กลุ่ม) | `out/synthetic_availability.json` |
 | ผลชนะ SMOTE | plain 29 paper 1,511 แถว ชนะ 1,107 เสมอ 102 แพ้ 286 (ไม่เปลี่ยน) · H1 ไม่ได้รับการสนับสนุน (GEE 0.69 p 0.10) · noise +0.1 → odds ชนะ ×1.15 (p 0.005) | `out/winloss_allmetric_summary.json`, `out/hypotheses.json`, `out/difficulty_outcomes.json` |
 | manuscript | `manuscript/data-section-draft.tex` (แก้ที่นี่) → `data-section-final.tex` + `.bib` (make_final.py) → **`manuscript/data-section-jair.pdf`** (template JAIR จริง, build_jair_pdf.py) · พรีวิวแบบมีมาร์กอัป `data-section-draft-preview.pdf` | |
-| HTML หลัก | `out/dataset-atlas.html` (มีแท็บ Handoff ที่ฝังไฟล์นี้ทั้งไฟล์) | `build/make_atlas.py` + `build/atlas_template.html` |
+| HTML หลัก | `out/dataset-atlas.html` (เนื้อหา) และ `out/handoff.html` (ไฟล์นี้ + CONCLUSIONS.md เป็นหน้าแยก; build/make_handoff_html.py) · ข้อความใน HTML ไม่มีชื่อผู้ตัดสิน/ผู้สั่ง ตั้งแต่ 9 พ.ย. | `build/make_atlas.py` + `build/atlas_template.html` |
 | git | commit ในเครื่องแล้ว ยังไม่ push (push ต้องรันเองบนเครื่อง) | |
 
 **คำสั่ง rebuild ทั้งหมด** (จาก `Data section/`; ต้องมี mirror ใน `difficulty/src/` จาก `difficulty/fetch_mirrors.sh` + `difficulty/fetch_mirrors_ext.sh`, statsmodels, TeX Live + biber + biblatex + libertine/newtx/inconsolata)
@@ -72,7 +72,7 @@ bash difficulty/rebuild_difficulty.sh        # verify_ext -> measure -> ... -> n
 python3 build/synthetic_availability.py      # ต้องมี paper/ (PDF ไม่อยู่ใน git)
 python3 build/names_download_result.py       # ผลของ 200 ชื่อรอบแรก (8 พ.ย. รอบสอง)
 python3 build/make_final.py && python3 build/build_jair_pdf.py && python3 build/preview/build_preview.py
-python3 build/make_atlas.py && python3 build/atlas_analysis_checks.py && python3 build/consistency_check.py && python3 build/phase2_checks.py
+python3 build/make_atlas.py && python3 build/make_handoff_html.py && python3 build/atlas_analysis_checks.py && python3 build/consistency_check.py && python3 build/phase2_checks.py
 ```
 
 **จัดโฟลเดอร์ (9 พ.ย.)**: ไฟล์สำรองรุ่นเก่า (`*.before_*`, `out/audit_backup/`, `ai-draft/full_backup_*`, `_verify_png/`) ลบแล้ว ดูย้อนหลังจาก git history · เอกสารทำงานรุ่นก่อนอยู่ใน `_archive/` (ตัวเลขเก่า ไม่ใช่สถานะปัจจุบัน) · ชื่อไฟล์ before_ ที่ปรากฏในบันทึกด้านล่างคือไฟล์ที่ลบไปแล้ว
@@ -2186,4 +2186,15 @@ python3 build/outcome_pilot.py
 - `difficulty/verify_ext.py` `FOUND_NOT_USABLE['P075-D017']`: สถานะ U-no_public_file เท่าเดิม แต่ basis เขียนเหตุผลข้างบน · ตัวเลขทั้งหมดไม่เปลี่ยน (991 entry / 261 ไฟล์ / 238 task)
 - ข้อสังเกตที่ยังไม่ได้ตรวจ: paper พิมพ์ 634 × 33 ส่วนไฟล์ train ของ competition น่าจะไม่ตรงขนาดนี้ (ไม่ได้เปิดไฟล์ จึงไม่ได้ยืนยัน)
 - ไม่ได้ push
+
+**9 พ.ย. ต่อ — Atlas แสดงเฉพาะเนื้อหา (Toon: ลบข้อความ "ข้อสรุปฉบับสุดท้าย 29 ต.ค. 2026: Claude เขียนตามที่ Toon มอบหมายให้ตัดสินแทนทุกเรื่อง ..." ลบที่กล่าวถึง Toon ไม่ต้องบอกว่าใครตัดสินอะไร ทั้งหมดใน html)**
+- คำตอบ AskUserQuestion: แท็บ Handoff → "เอาแท็บออก" · ไฟล์ handoff.md ใน repo ไม่แตะ (บันทึกที่มาอยู่ที่นี่ตามเดิม)
+- `build/atlas_scrub.py` (ใหม่): ตัดวลีระบุผู้ตัดสิน/ผู้สั่ง (Toon และ Claude) ออกจากข้อความทุกช่องที่ฝังใน Atlas รวมทั้ง key ที่แสดงเป็นป้าย (เช่น "(header row counted, Toon 8 Nov)" → "(header row counted)", "(Toon 18 Oct)" ออก, "approved by Toon 18 Oct" → "of 18 Oct") · LaTeX ที่แสดงในแท็บร่าง manuscript ไม่มีบรรทัด comment และ macro \claudedraft / \toon (ทั้งสองไม่ได้ใช้ในเนื้อความ) · make_atlas.py หยุดถ้ายังเหลือคำว่า Toon หรือ Claude ใน HTML
+- `build/make_atlas.py`: ไม่ฝัง handoff.md, ไม่แสดง synthesis_note และ "สถานะ" ของแต่ละหัวข้อใน overview.json (เป็นสถานะงานว่าใครเขียน/ตัดสิน) · `build/atlas_template.html`: ลบแท็บ Handoff, แก้ข้อความที่อ้างผู้ตัดสิน (หมายเหตุด้านบน, ตำนานสีของร่าง, คำอธิบายกฎ T1/F/D/V/R8, คอลัมน์ "ตรวจของ Toon" → "ตรวจรายชื่อ" ฯลฯ), วันที่หัวหน้าเป็น 9 พ.ย.
+- `build/atlas_analysis_checks.py`: 3 ข้อที่เทียบข้อมูลใน Atlas กับไฟล์ต้นทาง เทียบกับต้นทางที่ผ่าน atlas_scrub แล้ว · checks: atlas 41/41, consistency 44/44, phase2 14/14 · ตรวจด้วย Chromium: 13 แท็บ ไม่มี error ของหน้า ไม่มีคำว่า Toon
+- ไฟล์ต้นทาง (handoff.md, CONCLUSIONS.md, overview.json, comment ใน .tex, out/*.csv) ยังมีชื่อและที่มาของการตัดสินตามเดิม
+- ไม่ได้ push
+- ต่อมา (Toon: "ทำไมมันไม่มี handoff") → คำตอบ AskUserQuestion: "เอากลับมา ตัดชื่อออก" · แท็บ Handoff กลับมาแล้ว ข้อความ handoff.md และ CONCLUSIONS.md ที่ฝังผ่าน `atlas_scrub.md()`: ตัดชื่อ Toon/Claude และวลีระบุผู้สั่ง/ผู้ตัดสิน (ประโยคไทยเหลือแบบไม่มีประธาน เช่น "รันบน Windows"), macro `\toon{}` / `\claudedraft{}` แสดงเป็น "ช่องเขียนเอง" / "ประโยคร่าง", "ฝั่ง Claude" → "ฝั่ง cloud" · ตรวจด้วย Chromium: แท็บ Handoff แสดง 82 หัวข้อย่อย ไม่มี error ไม่มีชื่อ · checks 41/41, 44/44, 14/14
+- commit: Toon ขอให้ข้อความ commit เป็น "final" อย่างเดียว → แก้ commit ล่าสุด (amend) รวมงานนี้ ข้อความ "final" · ต้อง force push (Toon รันเอง)
+- ต่อมา (Toon: "แยก handoff ออกได้ไหม ทำอีกไฟล์เลย") · `build/make_handoff_html.py` (ใหม่) → `out/handoff.html`: handoff.md + CONCLUSIONS.md (สลับได้), สารบัญ, ค้นหา, ข้อความผ่าน `atlas_scrub.md()` · แท็บ Handoff ออกจาก Atlas (template + make_atlas.py) · คำสั่ง rebuild ข้อ 0 เพิ่ม make_handoff_html.py · ตรวจด้วย Chromium 1280 px (light) และ 390 px (dark): ไม่มี error ไม่ล้นแนวนอน ค้น "Kaggle" ได้ 19 ช่วง · checks 41/41, 44/44, 14/14
 
