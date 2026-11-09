@@ -1,11 +1,10 @@
 # Data section
 
-> **29 ต.ค. 2026:** ข้อสรุปทั้งหมดอยู่ที่ `CONCLUSIONS.md` · manuscript ฉบับเต็ม `manuscript/data-section-draft.tex` (ไม่มีช่องค้าง) และฉบับพร้อม merge `manuscript/data-section-final.tex` + `.bib`
-
-> **28 ต.ค. 2026:** HTML หลักของ Data section คือ `out/dataset-atlas.html` (สร้างด้วย `python3 build/make_atlas.py`) ไฟล์ `../SMOTE25_Data_Section_Explorer.html` และ `ai-draft/Data_Section_Explorer.html` เป็นรุ่นเก่า เลิกใช้แล้ว
+> **สถานะ 9 พ.ย. 2026:** งานวิเคราะห์ของ Data section ครบแล้ว · ข้อสรุปทั้งหมดอยู่ที่ `CONCLUSIONS.md` · manuscript: แก้ที่ `manuscript/data-section-draft.tex` → ฉบับพร้อม merge `manuscript/data-section-final.tex` + `.bib` → PDF รูปแบบ JAIR `manuscript/data-section-jair.pdf` · HTML หลัก `out/dataset-atlas.html` (เปิดในเบราว์เซอร์ได้เลย; `build/atlas_template.html` เป็นแค่แม่แบบ เปิดเองไม่ได้)
+> ไฟล์สำรองรุ่นเก่า (`*.before_*`, `out/audit_backup/`, `ai-draft/full_backup_*`) ลบแล้ว 9 พ.ย. ดูย้อนหลังได้จาก git history · เอกสารทำงานรุ่นก่อนย้ายไป `_archive/` (ดู `_archive/README.md`)
 
 วัสดุทั้งหมดของ **Data section** (ส่วนที่ Toon รับผิดชอบ) ของ survey `25 Years of SMOTE: What Has Been Done and How Did It Benefit Society?`
-วารสารเป้าหมาย JAIR · เจ้าของ repo Supawit (P) · อัปเดตล่าสุด 18 ตุลาคม 2026
+วารสารเป้าหมาย JAIR · เจ้าของ repo Supawit (P) · อัปเดตล่าสุด 9 พฤศจิกายน 2026
 
 โฟลเดอร์นี้อยู่ระดับบนสุดของ repo แยกจาก `notes/` ของทีม และไม่ขึ้น Overleaf
 **เริ่มอ่านที่ `handoff.md`** ไฟล์นี้เป็นแค่สถานะย่อและแผนที่ไฟล์
@@ -89,27 +88,25 @@
 
 ## ไฟล์ในโฟลเดอร์
 
-| ไฟล์ | คืออะไร | เชื่อถือได้แค่ไหน |
+| ไฟล์ | คืออะไร | สถานะ |
 |---|---|---|
-| `handoff.md` | **เริ่มอ่านที่นี่** สถานะรวม บันทึกการดำเนินงานทุกครั้ง เรื่องที่รอตัดสิน และกติกา | ปัจจุบัน |
-| `manuscript/data-section-draft.tex` | ร่าง section พร้อมพรีวิว PDF ตัวเลขตรวจแล้ว ประโยคสีน้ำเงินต้องเขียนใหม่ | ร่าง ตัวเลข verified |
-| `manuscript/overview.json` | เนื้อหาแท็บ "ร่าง manuscript" ใน Atlas: คำถาม สิ่งที่ผู้อ่านได้ ข้อค้นพบ และกล่องสังเคราะห์ (Claude ร่าง) | ให้ Toon ตรวจก่อนนำไปใช้ |
-| `out/dataset-atlas.html` | หน้า SMOTE25 Dataset Atlas 5 แท็บ (แท็บแรกคือร่าง manuscript) สร้างจาก `build/make_atlas.py` + `build/atlas_template.html` + `build/tex2html.py` | ข้อมูล verified |
-| `out/full_*.csv/json` | ผลอ่าน PDF ครบ 72 paper รวมด้วย `build/full_extraction.py` | ai_draft มีตารางและหน้า |
-| `out/section7_key_map.csv` | คู่คีย์ paper ของเรากับคีย์และ bibkey ของ Section 7 สร้างจาก `build/section7_key_map.py` | จับคู่ครบ 76 เรื่อง |
-| `out/verified_*.csv`, `out/visual_checks.json`, `out/uncertain_resolution.csv` | ข้อมูลที่ตรวจกับ PDF แล้ว และบันทึกการตรวจ | ตรวจแล้ว |
-| `paper/` | PDF ทั้ง 100 ไฟล์ที่ Toon ดาวน์โหลดจาก Drive | **ห้าม commit** (อยู่ใน `.gitignore` ของโฟลเดอร์นี้) |
-| `SMOTE25_data_extraction.xlsx` | ไฟล์ทำงานหลัก วิธีใช้อยู่ในชีต `README` | ชีต `*_verified` ตรวจแล้ว ชีต `extraction` เดิมยังไม่ตรวจ |
-| `decisions-pending.md` | เรื่องที่เคยรอตัดสิน ปิดครบแล้ว 29 ต.ค. | ปิดแล้ว |
-| `section-outline.md` | โครง D1 ถึง D9 แต่ละหัวข้อต้องใช้หลักฐานอะไร และแมปไปหัวข้อใน draft | ร่าง 16 ต.ค. |
-| `workplan.md` | แผน 8 เฟส พร้อมเกณฑ์ผ่าน | เป็นข้อเสนอ มีสถานะ 18 ต.ค. ด้านบน |
-| `data-handling-corpus.md` | ภาพรวมการเลือกและจัดการข้อมูลทั้ง corpus | ai_draft |
-| `mwmote-table5-audit.md` | ตรวจตาราง 5 ของ MWMOTE เทียบแหล่งข้อมูลต้นทาง | ตรวจกับแหล่งต้นทางแล้ว ยังไม่มี page_ref |
-| `outcome-pilot.md` | pilot 10 paper ผลรายชุดเทียบ SMOTE | ถูกแทนด้วยรอบอ่านครบ เก็บเป็นร่องรอย |
-| `dataset-usage-recon.md`, `dataset-name-topup.md` | รอบสำรวจ 6 ถึง 14 ต.ค. | ตัวเลขเก่า เก็บเป็นร่องรอย |
-| `drive-inventory.md` | สารบัญไฟล์ใน Drive ครบ 100 ไฟล์ 76 เรื่อง | ตรวจนับครบแล้ว |
-| `build/` | สคริปต์สร้าง workbook วิเคราะห์ และ Atlas | เชื่อถือได้ |
-| `ai-draft/` | ผลสกัดด้วย AI เก็บเป็น audit trail | **ห้ามอ้างตัวเลขในตัว paper** |
-| `MC-RBO - ... .pdf` | PDF ที่ Toon วางไว้ให้อ่านตารางที่เป็นรูป | **ห้าม commit** |
+| `handoff.md` | **เริ่มอ่านที่นี่** สถานะรวม (ข้อ 0) กติกา คำสั่ง rebuild และบันทึกการดำเนินงานทุกรอบ | ปัจจุบัน |
+| `CONCLUSIONS.md` | ข้อสรุปและตัวเลขทั้งหมดของ section พร้อมไฟล์ต้นทาง | ปัจจุบัน |
+| `manuscript/data-section-draft.tex` | ต้นฉบับที่แก้ (มีหมายเหตุ `\evidence{}` บอกที่มาของตัวเลข) · พรีวิวแบบมีมาร์กอัป `data-section-draft-preview.pdf` | ปัจจุบัน |
+| `manuscript/data-section-final.tex`, `.bib`, `data-section-jair.pdf` | ฉบับพร้อม merge (ตัดหมายเหตุภายใน) และ PDF รูปแบบ JAIR (`manuscript/jair/`) | ปัจจุบัน |
+| `manuscript/overview.json` | เนื้อหาแท็บ "ร่าง manuscript" ใน Atlas | ปัจจุบัน |
+| `manuscript/proposal_dataset_landscape.tex`, `data-section-refs.bib` | ข้อเสนอเดิมของหัวข้อ landscape (ถูกอ้างในหมายเหตุ evidence) และ bib ต้นทางที่ `make_final.py` ใช้ | ใช้อยู่ |
+| `out/dataset-atlas.html` | SMOTE25 Dataset Atlas (ทุกแท็บ รวมแท็บ Handoff) สร้างด้วย `build/make_atlas.py` + `build/atlas_template.html` | ปัจจุบัน |
+| `out/` | ข้อมูลที่สกัดและตรวจแล้ว (`verified_*.csv`, `dataset_records.csv`) และผลวิเคราะห์ทุกชุด (`*.json`, `*.csv`) | สร้างจากสคริปต์ |
+| `difficulty/` | การตรวจกับไฟล์สาธารณะและวัดความยาก (`verify_ext.py`, `measure.py`, `rebuild_difficulty.sh`); `difficulty/src/` คือ mirror และไฟล์ทางการที่ดาวน์โหลด (ไม่อยู่ใน git, สร้างใหม่ด้วย `fetch_mirrors*.sh` และ `official_manifest.csv`) | ปัจจุบัน |
+| `build/` | สคริปต์ทั้งหมด (สกัด ตรวจ วิเคราะห์ manuscript Atlas checks) | ปัจจุบัน |
+| `analysis/` | เอกสารวิธีของ Analysis A–F และตารางนิยามหมวด (Atlas ใช้) | ปัจจุบัน |
+| `ai-draft/` | ผลอ่าน PDF ราย paper (`full/*.json` เป็นต้นทางของ `build/full_extraction.py`; `outcome/` ผลเทียบ SMOTE) และ `extraction-notes.md` | audit trail ห้ามอ้างตัวเลขจากที่นี่โดยตรง ใช้ `out/verified_*.csv` |
+| `blind/` | ชุดสุ่มตรวจซ้ำแบบ blind (`build/blind_check.py`) | ปัจจุบัน |
+| `SMOTE25_data_extraction.xlsx` | workbook (ชีต `*_verified` ตรงกับ `out/verified_*.csv` ด้วย `build/sync_workbook_verified.py`) | ปัจจุบัน |
+| `decisions-pending.md` | บันทึกคำตัดสินเรื่องนิยาม (ปิดครบแล้ว 29 ต.ค.; `build/hypotheses.py` อ้าง) | ปิดแล้ว |
+| `mwmote-table5-audit.md` | ตรวจตาราง 5 ของ MWMOTE เทียบแหล่งต้นทาง (manuscript อ้าง) | ใช้อยู่ |
+| `paper/` | PDF ของ paper ทั้งหมด | **ห้าม commit** (อยู่ใน `.gitignore`) |
+| `_archive/` | เอกสารทำงานรุ่นก่อน (แผนงาน โครงร่าง รอบสำรวจแรก pilot) เก็บไว้เป็นประวัติ ตัวเลขในนั้นเก่าแล้ว | ประวัติ ไม่ใช่สถานะปัจจุบัน |
 
 คำสั่ง regenerate ทั้งหมดอยู่ท้าย `handoff.md`

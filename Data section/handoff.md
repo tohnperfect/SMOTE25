@@ -16,7 +16,7 @@
 
 **ถ้าแชทใหม่อยู่ใน Project SMOTE25 เดียวกัน** จะได้ ID ของโฟลเดอร์ Google Drive
 ที่เก็บ paper ทั้ง 76 เรื่องมาอัตโนมัติจาก project instructions
-**ถ้าอยู่นอก Project** ต้องบอก ID ให้เอง รายการอยู่ใน `drive-inventory.md`
+**ถ้าอยู่นอก Project** ต้องบอก ID ให้เอง รายการอยู่ใน `_archive/drive-inventory.md`
 
 **สิ่งที่แชทใหม่จะไม่รู้ถ้าไม่บอก** สไตล์การทำงานที่ตกลงกันไว้ ตอบกระชับเป็นภาษาไทย
 ใช้ศัพท์เทคนิคอังกฤษได้ เขียนโค้ดขอไฟล์สมบูรณ์ไม่เอาเป็นท่อน และห้ามสรุป insight แทน
@@ -74,6 +74,8 @@ python3 build/names_download_result.py       # ผลของ 200 ชื่อ�
 python3 build/make_final.py && python3 build/build_jair_pdf.py && python3 build/preview/build_preview.py
 python3 build/make_atlas.py && python3 build/atlas_analysis_checks.py && python3 build/consistency_check.py && python3 build/phase2_checks.py
 ```
+
+**จัดโฟลเดอร์ (9 พ.ย.)**: ไฟล์สำรองรุ่นเก่า (`*.before_*`, `out/audit_backup/`, `ai-draft/full_backup_*`, `_verify_png/`) ลบแล้ว ดูย้อนหลังจาก git history · เอกสารทำงานรุ่นก่อนอยู่ใน `_archive/` (ตัวเลขเก่า ไม่ใช่สถานะปัจจุบัน) · ชื่อไฟล์ before_ ที่ปรากฏในบันทึกด้านล่างคือไฟล์ที่ลบไปแล้ว
 
 **สถานะเรื่องที่เคยค้าง (อัปเดต 9 พ.ย.)**: V-author_release รับแล้ว (Toon 8 พ.ย. รอบสาม) · ขนาด +1 ของ Loyalty-SMOTE รับแล้ว (Toon 8 พ.ย.) · Kaggle ดาวน์โหลดแล้ว 9 ชุดด้วยบัญชีของ Toon (ที่เหลือ: icr เป็น competition, credit ของ CTGAN/TVAE เป็นเวอร์ชัน SDGym, approval ระบุชุดไม่ได้) · ไฟล์ชั่วคราวใน Downloads (.tmp, smote25_uci_*.bin, uci_extended.tar.gz, archive*.zip) มีสำเนาใน difficulty/src/ แล้ว ลบได้ · ชื่อผู้เขียนใน PDF ปล่อยว่าง (Toon 8 พ.ย.) · **ที่เหลือจริง**: merge เข้า main.tex/sections/references.bib ตอนรวมกับ P · git pull แล้ว push
 
@@ -160,9 +162,9 @@ Fisher exact ใช้เป็นตัวอ้างอิงหยาบเ�
 
 ### 13 ตุลาคม 2026 วางโครงสร้างงานใหม่
 - ตรวจพบว่าการนับ paper รอบแรกผิด Drive connector แบ่งหน้าแล้วข้ามไฟล์เงียบ ๆ
-  จำนวนจริงคือ **76 เรื่อง ไม่ใช่ 69** แก้ด้วยการวนขอทุกหน้าแล้ว union ตาม file id (ดู `drive-inventory.md`)
+  จำนวนจริงคือ **76 เรื่อง ไม่ใช่ 69** แก้ด้วยการวนขอทุกหน้าแล้ว union ตาม file id (ดู `_archive/drive-inventory.md`)
 - สร้าง `SMOTE25_data_extraction.xlsx` เป็นไฟล์ทำงานหลัก
-- เขียน `workplan.md` 8 เฟส และ `decisions-pending.md`
+- เขียน `_archive/workplan.md` 8 เฟส และ `decisions-pending.md`
 
 ### 14 ตุลาคม 2026 รอบเติมชื่อ dataset
 พบว่าช่องว่าง 33 เปอร์เซ็นต์ของรายชื่อ dataset **เกิดจากข้อจำกัดของการสกัดรอบแรกที่จำกัดไว้เอง 15 ชื่อต่อ paper
@@ -175,7 +177,7 @@ Fisher exact ใช้เป็นตัวอ้างอิงหยาบเ�
 | แถว extraction | 1,001 | 1,460 |
 | ชื่อที่ยังค้าง | ~498 | 13 |
 
-รายละเอียดและสิ่งที่พบระหว่างทางอยู่ใน `dataset-name-topup.md`
+รายละเอียดและสิ่งที่พบระหว่างทางอยู่ใน `_archive/dataset-name-topup.md`
 
 ### 14 ตุลาคม 2026 สร้าง handoff และ commit เข้า repo ครั้งแรก
 - สร้างไฟล์นี้ขึ้นมา เดิมโฟลเดอร์นี้ไม่มีเอกสารส่งต่อ มีแต่ README สถานะย่อ
@@ -266,7 +268,7 @@ push สำเร็จเป็น `45ad6c4` บน `origin/main` 22 ไฟล�
    ถ้าตัดออก ภาระการตรวจลดลง เหลือเฉพาะ `data_type`, `modification_kind`, `source_repo`,
    ขนาด/คลาส/IR และ outcome สองช่องที่ใช้ทดสอบ H1 H2
    **outcome ยังต้องเก็บ** เพราะข้อโต้แย้งของเราคือชนะบน *ข้อมูลแบบไหน* ไม่ใช่ชนะด้วย *metric อะไร*
-2. **ไม่ต้องตรวจครบ 1,460 แถวก่อนเขียน** ตัวเลข 85 ถึง 115 ชั่วโมงใน `workplan.md`
+2. **ไม่ต้องตรวจครบ 1,460 แถวก่อนเขียน** ตัวเลข 85 ถึง 115 ชั่วโมงใน `_archive/workplan.md`
    มาจากสมมติว่าตรวจครบทุกแถวก่อน ซึ่งผิดลำดับ
 
 **งานชิ้นถัดไปที่ตกลงกันแล้ว** ร่างโครง Data section เป็นหัวข้อย่อย แล้วแมปว่าแต่ละหัวข้อ
@@ -508,7 +510,7 @@ push สำเร็จเป็น `45ad6c4` บน `origin/main` ตรวจ�
 fetch ทิ้ง `.git/objects/maintenance.lock` ไว้เพราะยังไม่มีสิทธิ์ลบ ขอสิทธิ์ลบในโฟลเดอร์ repo แล้วลบ lock ตัวนั้นทิ้ง
 
 **งานรอบนี้** Toon เลือกทำงานที่ตกลงไว้ 14 ต.ค. (ร่างโครง + แมปหลักฐาน) เพราะข้อ 7 ขั้นที่ 1 ยังไม่ได้ตัดสินในตอนนั้น
-ผลอยู่ใน `section-outline.md` 9 หัวข้อ D1 ถึง D9 แต่ละหัวข้อเขียนเป็นคำถาม ไม่ใช่ข้อสรุป
+ผลอยู่ใน `_archive/section-outline.md` 9 หัวข้อ D1 ถึง D9 แต่ละหัวข้อเขียนเป็นคำถาม ไม่ใช่ข้อสรุป
 บอกหลักฐานที่มี ไฟล์/คอลัมน์ที่อยู่ ขอบเขต (กี่ paper กี่แถว) และสถานะ พร้อมร่าง / ตรวจเฉพาะจุด / บล็อก
 มีช่อง "insight ของ Toon" เว้นว่างไว้ทุกหัวข้อ ไม่ได้เติมแทน
 ท้ายไฟล์มีตารางลำดับงาน 7 ขั้นที่สั้นที่สุดไปถึงตัวหนังสือ มีแค่ขั้นสุดท้ายที่ต้องรอคำตัดสินเรื่องนิยาม (ปิดแล้ว 29 ต.ค.)
@@ -518,7 +520,7 @@ fetch ทิ้ง `.git/objects/maintenance.lock` ไว้เพราะย�
 - ทะเบียน variant ที่ให้ตัวเลข "20 จาก 75 ชื่อ" สร้างจาก **8 paper** เท่านั้น (88 คู่ paper กับชื่อ)
   ไม่ใช่ทั้ง corpus ข้อ 5 เขียนไว้โดยไม่บอกขอบเขตนี้ ถ้าเอาไปเขียนต้องระบุ
 - นิยาม IR ที่ติดป้ายไว้อยู่ใน 150 แถวของ 8 paper เดียวกัน คอลัมน์ `ir_definition` ในชีตยังว่าง
-- ตารางใน `dataset-usage-recon.md` ข้อ 2 ใช้ตัวหาร 69 paper ซึ่งเก่าแล้ว ต้องรันใหม่ด้วย 76
+- ตารางใน `_archive/dataset-usage-recon.md` ข้อ 2 ใช้ตัวหาร 69 paper ซึ่งเก่าแล้ว ต้องรันใหม่ด้วย 76
 
 **บั๊กที่เจอและแก้แล้ว ใน guard ที่ใส่เมื่อเช้า 16 ต.ค.**
 `v[:1] in "=+-@"` เป็น True เมื่อ `v` เป็นสตริงว่าง เพราะใน Python `"" in "abc"` เป็น True เสมอ
@@ -529,7 +531,7 @@ fetch ทิ้ง `.git/objects/maintenance.lock` ไว้เพราะย�
 **ผลต่อการวิเคราะห์** ถ้าใครกรองแถวด้วย `ai_hint_data_type` ว่าง หรือนับ `group_in_paper` ที่มีค่า
 ระหว่างเช้าถึงตอนนี้ จะได้ตัวเลขผิด เท่าที่รู้ยังไม่มีใครใช้
 
-**ยังไม่ได้ทำ** ยังไม่ได้ commit รอ Toon ดู `section-outline.md` ก่อน
+**ยังไม่ได้ทำ** ยังไม่ได้ commit รอ Toon ดู `_archive/section-outline.md` ก่อน
 
 ### 16 ตุลาคม 2026 เปลี่ยนทิศ: ดูการเลือกและจัดการข้อมูลทั้ง 76 paper ไม่ใช่ MWMOTE เรื่องเดียว
 
@@ -553,7 +555,7 @@ fetch ทิ้ง `.git/objects/maintenance.lock` ไว้เพราะย�
    Claude ให้รหัส 69 เรื่องจากข้อความในฟิลด์ ไม่ได้เปิด PDF จึงเป็นการตีความซ้อนบนร่างของ AI อีกชั้น ต้องตรวจ
 
 `build/data_handling_matrix.py` รวมทุกอย่างเป็น `out/data_handling_matrix.csv` (1 แถวต่อ paper พร้อมข้อความต้นทาง)
-และ `out/data_handling_summary.json` (ตัวนับ) รายงานอ่านง่ายอยู่ที่ `data-handling-corpus.md`
+และ `out/data_handling_summary.json` (ตัวนับ) รายงานอ่านง่ายอยู่ที่ `_archive/data-handling-corpus.md`
 **รายงาน md สร้างครั้งเดียวด้วยสคริปต์ inline ไม่ได้เก็บตัวสร้างไว้** ตัวเลขทุกตัวในนั้นมาจาก `out/data_handling_summary.json`
 ถ้าแก้รหัสแล้วรันสคริปต์ใหม่ md จะไม่อัปเดตตาม ต้องสร้างใหม่
 
@@ -570,7 +572,7 @@ fetch ทิ้ง `.git/objects/maintenance.lock` ไว้เพราะย�
 นิยามและรูปแบบพิมพ์ IR, ที่ประกาศการดัดแปลง 69 เรื่องเดิมไม่ได้เก็บเป็นช่อง **ห้ามตีความว่า paper ไม่บอก**
 ถ้าจะนับทั้ง corpus ต้องอ่านส่วน experimental setup ของ 69 เรื่องด้วย schema เดียวกัน
 
-**แก้ `section-outline.md`** D1 กลายเป็นหัวข้อฐานของทั้ง section ใช้ `data-handling-corpus.md` เป็นหลักฐานหลัก
+**แก้ `_archive/section-outline.md`** D1 กลายเป็นหัวข้อฐานของทั้ง section ใช้ `_archive/data-handling-corpus.md` เป็นหลักฐานหลัก
 MWMOTE เหลือเป็นกรณีตัวอย่างใน D3 D5 ตารางลำดับงานเปลี่ยน ขั้นแรกคือตรวจค่า "ไม่มี" ทั้ง corpus 35 paper
 (ค่าที่บอกว่า paper ไม่ได้บอก ผิดได้ง่ายสุด และค้นคำใน PDF ได้โดยไม่ต้องอ่านทั้งเล่ม)
 
@@ -578,7 +580,7 @@ MWMOTE เหลือเป็นกรณีตัวอย่างใน D3 
 
 ### 16 ตุลาคม 2026 หน้า SMOTE25 Dataset Atlas
 
-Toon ขอดูหน้ารวม dataset ที่เก็บมา หน้าเดิม `ai-draft/Data_Section_Explorer.html` เป็นของ 6 ต.ค. (69 paper 990 ชื่อ) เก่าเกินไป
+Toon ขอดูหน้ารวม dataset ที่เก็บมา หน้าเดิม `_archive/ai-draft/Data_Section_Explorer.html` เป็นของ 6 ต.ค. (69 paper 990 ชื่อ) เก่าเกินไป
 จึงสร้างหน้าใหม่จากข้อมูลปัจจุบัน publish เป็น Artifact ส่วนตัวของ Toon ชื่อ **SMOTE25 Dataset Atlas**
 (https://claude.ai/artifact/EuoyidJPHwz7deRmi2bMdc ยังไม่ได้แชร์ให้ใคร คนอื่นในทีมเปิดไม่ได้จนกว่า Toon จะแชร์)
 
@@ -611,7 +613,7 @@ schema อยู่ที่ `ai-draft/outcome/SCHEMA.md` กติกา: metri
 เงื่อนไขไม่มี noise, SMOTE ดั้งเดิมเท่านั้น 10 เรื่องที่เลือก: Borderline-SMOTE, ADASYN, Safe-Level-SMOTE, G-SMOTE, RBO, KNNOR, MDO, MC-CCR, CISO, GOIO
 ใช้ subagent 5 ตัว ตัวละ 2 เรื่อง ผลอยู่ `ai-draft/outcome/<key>.json` มีเลขตารางและหน้าทุกเรื่อง
 
-**ผล pilot** (รายละเอียดใน `outcome-pilot.md` สร้างด้วย `build/outcome_pilot.py`)
+**ผล pilot** (รายละเอียดใน `_archive/outcome-pilot.md` สร้างด้วย `build/outcome_pilot.py`)
 - มีตัวเลขรายชุดของทั้งวิธีที่เสนอและ SMOTE แค่ 3 จาก 10 เรื่อง ADASYN 5 ชุด, MC-CCR 20, GOIO 23
 - Borderline-SMOTE และ Safe-Level-SMOTE มีแต่กราฟเส้น ไม่ได้อ่านค่าจากกราฟ
 - G-SMOTE, RBO, KNNOR, MDO, CISO มีแต่ค่าเฉลี่ยหรืออันดับ RBO กับ KNNOR ชี้ไปที่ GitHub หรือเอกสารเพิ่มเติมที่ไม่อยู่ใน Drive
@@ -625,7 +627,7 @@ schema อยู่ที่ `ai-draft/outcome/SCHEMA.md` กติกา: metri
 (optical_digits 8, scene, wine_quality <=4, sick_euthyroid, thyroid_sick, mammography) จัดเป็น Repository-defined
 ส่วน abalone_15, abalone_6, avila_0vsX, page-blocks_0vs3 ผู้เขียนเลือกเอง จัดเป็น Modified **ยังไม่ได้เปิดรายการของ imbalanced-learn ยืนยัน**
 
-**สิ่งที่ pilot บอกว่าต้องแก้ก่อนขยาย** ดู `outcome-pilot.md` ข้อ 4 สำคัญที่สุดคือ paper ส่วนใหญ่ไม่มีตารางรายชุด
+**สิ่งที่ pilot บอกว่าต้องแก้ก่อนขยาย** ดู `_archive/outcome-pilot.md` ข้อ 4 สำคัญที่สุดคือ paper ส่วนใหญ่ไม่มีตารางรายชุด
 ต้องตัดสินว่าจะนับผลบน GitHub/supplementary เป็นผลที่ตีพิมพ์ไหม ก่อนลงแรงอีก 62 เรื่อง
 
 **ยังไม่ได้ commit**
@@ -653,7 +655,7 @@ Toon ขอให้ใส่ผล pilot ลงหน้า interactive เพ�
 `out/full_uncertain.csv`, `out/full_summary.json`
 - กลางทางชน session limit ของบัญชี (รอบที่ 4) ทำต่อหลัง reset 19:30 สำหรับ 35 paper หลังใช้โมเดล sonnet สำหรับ subagent เพื่อประหยัด
 - **MC-RBO อ่านไม่ได้** PDF ใน Drive ทั้งสองไฟล์ 17MB เกิน limit ดาวน์โหลด 10MB และตารางเป็นรูป Toon จะวาง PDF ไว้ใน repo ให้ **ยังรออยู่**
-- 10 paper ของ pilot ถูกอ่านใหม่ด้วย schema เต็ม ผล pilot (`ai-draft/outcome/`, `outcome-pilot.md`) เก็บไว้เป็นร่องรอย ใช้ของ full แทน
+- 10 paper ของ pilot ถูกอ่านใหม่ด้วย schema เต็ม ผล pilot (`ai-draft/outcome/`, `_archive/outcome-pilot.md`) เก็บไว้เป็นร่องรอย ใช้ของ full แทน
 
 **คำตัดสินของ Toon 18 ต.ค. (ตอบคำถาม 4 ข้อ)**
 1. ชื่อที่ตรงรูปแบบไฟล์ KEEL แต่ paper ไม่บอกที่มา -> **repository-defined** (ติดป้าย how_basis = rule)
@@ -711,7 +713,7 @@ render หน้า 7 (Table I) และหน้า 10 (Table VI) ที่ 17
 
 ### 18 ตุลาคม 2026 เช็คจำนวน paper อีกรอบ (Toon ทักว่าของเพื่อนได้ 76)
 
-ไล่ Drive ใหม่ทั้ง 4 โฟลเดอร์ ได้ 100 ไฟล์ id ไม่ซ้ำ (Both 53, Binary 24, Multiclass 21, Survey 2) ตรงกับ `drive-inventory.md` วันที่ 14 ต.ค. ทุกตัว
+ไล่ Drive ใหม่ทั้ง 4 โฟลเดอร์ ได้ 100 ไฟล์ id ไม่ซ้ำ (Both 53, Binary 24, Multiclass 21, Survey 2) ตรงกับ `_archive/drive-inventory.md` วันที่ 14 ต.ค. ทุกตัว
 ไฟล์ล่าสุดสร้างเมื่อ 6 ต.ค. ไม่มีไฟล์ใหม่ 100 - supplementary 12 = 88 ไฟล์ paper - ซ้ำข้ามโฟลเดอร์ 12 = **76 paper ตรงกับของเพื่อน**
 **72 ไม่ใช่จำนวน paper** แต่คือ paper ที่มีการประเมินผลบนชุดข้อมูล ตัดออก 4 เรื่องที่ไม่มีการประเมินผลบนชุดข้อมูล ENN (Wilson 1972), Tomek Links (1976), AdaBoost (1997), Survey: SMOTE Review (2021) (เดิมเขียนว่า "ไม่มีการทดลอง" ซึ่งไม่ตรงสำหรับ Tomek ดูบันทึกถัดไป)
 ส่วน evidence map ของ P ได้ 73 เพราะนับ Global-CS สองฉบับเป็นเรื่องเดียว และไม่นับ survey 2 เรื่อง (บันทึก 14 ต.ค.)
@@ -767,9 +769,9 @@ render หน้า 7 (Table I) และหน้า 10 (Table VI) ที่ 17
   **ยังไม่ได้ publish ทับ URL เดิม** เพราะ Artifact อยู่ในอีก organization ของบัญชี session นี้เข้าไม่ถึง
 - `README.md` เขียนใหม่ทั้งไฟล์ (เดิมค้างสถานะ 14 ต.ค.) เพิ่มตำแหน่งของ section ใน paper, ตารางตัวเลข corpus, หลักการทำงาน, กติกา, แนวทางการเขียน
 - `decisions-pending.md` เปลี่ยนหัวจาก 2 เรื่องเป็นตารางสถานะ 4 เรื่อง และบอกว่าป้ายที่ใช้จริงตอนนี้คือทางเลือกที่ 3 ของเรื่องที่ 2
-- `workplan.md` ตารางสถานะรายเฟส ด้านบน, x.1 บอกว่าใช้ 4 ป้าย
-- `section-outline.md` สถานะด้านบน และตารางแมป D1 ถึง D9 ไปหัวข้อใน draft
-- `data-handling-corpus.md` แก้คำตัวหาร, `dataset-usage-recon.md` `outcome-pilot.md` `ai-draft/README.md` ใส่แถบสถานะว่าล้าสมัยหรือถูกแทนด้วยอะไร
+- `_archive/workplan.md` ตารางสถานะรายเฟส ด้านบน, x.1 บอกว่าใช้ 4 ป้าย
+- `_archive/section-outline.md` สถานะด้านบน และตารางแมป D1 ถึง D9 ไปหัวข้อใน draft
+- `_archive/data-handling-corpus.md` แก้คำตัวหาร, `_archive/dataset-usage-recon.md` `_archive/outcome-pilot.md` `ai-draft/README.md` ใส่แถบสถานะว่าล้าสมัยหรือถูกแทนด้วยอะไร
 - ไฟล์นี้: ข้อ 1 หมายเหตุป้าย 4 แบบ, ข้อ 7 ข้อ 2 แก้ 450 เป็น 452, ข้อ 10 เพิ่มไฟล์ใหม่และแก้คำอธิบาย
 - เนื้อหาเดิมทุกไฟล์ยังอยู่ครบ ใส่ข้อความเพิ่มด้านบนแทนการลบ (ยกเว้น README ที่เป็นสถานะย่อ)
 
@@ -909,7 +911,7 @@ Claude คำนวณสดจาก `out/verified_datasets.csv` `out/verified_
 ### 19 ตุลาคม 2026 รับ Research Thinking Handoff ฉบับภาษาอังกฤษ และกระทบยอดตัวเลขกับไฟล์ในเครื่อง
 
 **ที่มา** Toon ส่ง "Research Thinking Handoff — SMOTE Family Survey, Data Section" ภาษาอังกฤษเข้ามาในแชทใหม่ (session cloud)
-เก็บไว้ที่ `research-thinking-handoff.md` (ข้อ 1 ถึง 10 คำต่อคำ ข้อ 11 ถึง 16 ย่อแต่ตัวเลขและคำเตือนครบ)
+เก็บไว้ที่ `_archive/research-thinking-handoff.md` (ข้อ 1 ถึง 10 คำต่อคำ ข้อ 11 ถึง 16 ย่อแต่ตัวเลขและคำเตือนครบ)
 เอกสารนั้นเป็น **thesis และโครงความคิด** ของ section ไม่ใช่สถานะงาน ไฟล์นี้ (`handoff.md`) ยังเป็นสถานะหลัก
 
 **สถานะ git ที่พบ**
@@ -946,7 +948,7 @@ Claude คำนวณสดจาก `out/verified_datasets.csv` `out/verified_
 9. **สถานะการตรวจ** ฉบับอังกฤษไม่ได้บอกว่าแถว verified ทั้งหมด Claude เป็นผู้ตรวจตามคำตัดสินของ Toon 18 ต.ค. และ blind check 10 ถึง 20% ของ Toon ยังไม่ได้ทำ
    ถ้าใช้ฉบับอังกฤษส่งต่อให้คนอื่น ต้องเติมเรื่องนี้
 
-**ไม่ได้แก้ draft, CSV, workbook หรือ Atlas** มีแค่ไฟล์นี้และ `research-thinking-handoff.md` ที่เพิ่ม/แก้
+**ไม่ได้แก้ draft, CSV, workbook หรือ Atlas** มีแค่ไฟล์นี้และ `_archive/research-thinking-handoff.md` ที่เพิ่ม/แก้
 
 **งานที่เกิดจากรอบนี้**
 - แก้ถ้อยคำ draft บรรทัด 118 ถึง 120 ให้บอกว่า 39/36 เป็น family by prefix (หรือใช้ตัวเลขชื่อตรง 22/26/19)
@@ -1047,7 +1049,7 @@ Claude คำนวณสดจาก `out/verified_datasets.csv` `out/verified_
 1. Toon เลือกทางของ RBBoost (ก) (ข) หรือคงไว้พร้อมธง
 2. Toon อนุมัติแก้ draft และ overview.json ตามรายการข้างบน แล้ว rebuild Atlas
 3. commit งานที่ค้างทั้งหมด (รวมสคริปต์และ json ใหม่) แล้ว pull `5bc37e5` ก่อน push Toon รันเอง หรือสั่งให้ Claude ทำ
-4. `research-thinking-handoff.md` ข้อ 9.1, 9.3, 14D ยังเขียนตามความเข้าใจเดิม (542 กับ 835 คนละเกณฑ์) ไม่ได้แก้ เพราะเป็นเอกสารเสริมที่ Toon ส่งมา ให้อ่านคู่กับบันทึกนี้
+4. `_archive/research-thinking-handoff.md` ข้อ 9.1, 9.3, 14D ยังเขียนตามความเข้าใจเดิม (542 กับ 835 คนละเกณฑ์) ไม่ได้แก้ เพราะเป็นเอกสารเสริมที่ Toon ส่งมา ให้อ่านคู่กับบันทึกนี้
 
 ### 19 ตุลาคม 2026 แก้ manuscript ตามผลกระทบยอด (Toon อนุมัติ) และตัดสินเรื่อง RBBoost
 
@@ -1084,7 +1086,7 @@ Claude คำนวณสดจาก `out/verified_datasets.csv` `out/verified_
 **ยังค้าง**
 - `manuscript/data-section-draft-preview.pdf` และหน้า Atlas (`out/dataset-atlas.html`) ยังเป็นของเก่า ต้องรัน `python3 build/make_atlas.py` และคอมไพล์พรีวิวใหม่ (รอบนี้ไม่ได้รับอนุญาตให้แก้ไฟล์อื่นนอกจาก 2 ไฟล์)
 - ข้อมูลของแท็บ wins ใน Atlas อ่านจาก `verified_outcomes.csv` โดยตรง ยังนับแถว KNNOR และ RBBoost ตามเดิม ถ้าจะให้ตรงกับ manuscript ต้องแก้ `build/make_atlas.py` (ยังไม่ได้ขออนุญาต)
-- `research-thinking-handoff.md` ยังไม่ได้แก้ตามคำสั่ง ข้อที่ล้าสมัย: 3.1 (39/36 ไม่บอกว่าเป็น family), 9.1 (44 ไม่แยกความหมาย), 9.2 (542/31/421 และแถว unmatched 4), 9.3 (835 "คนละเกณฑ์" และ repository-defined 63%/26% ที่ขับโดย RBBoost), 9.5 (INOS และ KNNOR), 10.1 (57 กับ 14), 11.2, 11.5, 14 C และ D
+- `_archive/research-thinking-handoff.md` ยังไม่ได้แก้ตามคำสั่ง ข้อที่ล้าสมัย: 3.1 (39/36 ไม่บอกว่าเป็น family), 9.1 (44 ไม่แยกความหมาย), 9.2 (542/31/421 และแถว unmatched 4), 9.3 (835 "คนละเกณฑ์" และ repository-defined 63%/26% ที่ขับโดย RBBoost), 9.5 (INOS และ KNNOR), 10.1 (57 กับ 14), 11.2, 11.5, 14 C และ D
 - ยืนยัน 86 กับ 63 ของ RBBoost (ข้างบน)
 - commit และ pull `5bc37e5` รอ Toon อนุมัติ
 
@@ -1121,7 +1123,7 @@ Claude คำนวณสดจาก `out/verified_datasets.csv` `out/verified_
   pdflatex สองรอบ ไม่มี error ไม่มี undefined reference 6 หน้า (เดิม 5) ดูภาพหน้า 4 แล้ว ตาราง 3 และย่อหน้าใหม่ถูกต้อง (ภาพที่ `_verify_png/preview_19oct-4.png` ซึ่ง gitignore อยู่)
   **wrapper นี้ไม่ได้อยู่ใน repo** ถ้าต้องการให้สร้างซ้ำได้ ควรเพิ่มเป็นไฟล์ (ยังไม่ได้ขออนุญาต)
 
-**C. แก้ `research-thinking-handoff.md`** (เพิ่มอย่างเดียว 74 บรรทัด ไม่ลบของเดิม)
+**C. แก้ `_archive/research-thinking-handoff.md`** (เพิ่มอย่างเดียว 74 บรรทัด ไม่ลบของเดิม)
 - หัวไฟล์บอกว่ามีการแก้แบบเจาะจงวันนี้ และ `handoff.md` ยังเป็นเอกสารหลัก
 - ใส่หมายเหตุ "Update 19 Oct 2026 (verified)" ต่อท้ายข้อ 3.1 (Tomek placeholder, นิยาม norm, family กับ exact), 4.2 (555 = 192 + 108 + 56 ตามกฎ + rule B ย้าย 1 แถว),
   9.1 (44 สองความหมาย, 30 paper, wrapper เข้าเกณฑ์ 12), 9.2 (541/30 และแถว unmatched 3), 9.3 (835 คือแถวทั้งหมด ไม่ใช่คนละเกณฑ์ ตัด RBBoost พร้อมหลักฐาน และ 63%/26% มาจาก RBBoost),
@@ -1132,7 +1134,7 @@ Claude คำนวณสดจาก `out/verified_datasets.csv` `out/verified_
 **D. การตรวจ**
 - `python3 build/reconcile_counts.py` 18/18 ok, ไฟล์ผล unchanged
 - sha256 ของ CSV และ JSON ต้นทางทั้งสามตรงกับก่อนเริ่มทุกรอบ
-- ดู diff ของ `build/make_atlas.py`, `build/atlas_template.html`, `manuscript/data-section-draft.tex`, `manuscript/overview.json`, `research-thinking-handoff.md` แล้ว
+- ดู diff ของ `build/make_atlas.py`, `build/atlas_template.html`, `manuscript/data-section-draft.tex`, `manuscript/overview.json`, `_archive/research-thinking-handoff.md` แล้ว
 - 541/30, 207/12, 86 (63/17/6), 87 ไม่เข้าเกณฑ์ ตรงกันใน draft, PDF, overview.json, Atlas และ research-thinking-handoff
 - 542 และ 421 ไม่เหลือใน draft, overview.json, template มีแต่ใน research-thinking-handoff ซึ่งติดป้ายว่าเป็นค่าก่อนแก้
 
@@ -1179,7 +1181,7 @@ sha256 ของ `out/verified_datasets.csv` (99b0cfd0…), `out/verified_outcom
   publish ทับเป็น version 5 (1792349440-f294) อ่านกลับแล้วเห็นหัว "19 ต.ค. 2026", กล่อง `wn-rules` และตัวเลือก 3 ชุด เป็น private ยังไม่ได้แชร์ให้ทีม
 
 **4. handoff**
-- `research-thinking-handoff.md` เพิ่มกล่อง "Current state at a glance" ใต้หัวไฟล์ (ตาราง 541/207/87, KNNOR, RBBoost 63/17/6, wrapper แยกชนิด, ระดับ paper, ชื่อ)
+- `_archive/research-thinking-handoff.md` เพิ่มกล่อง "Current state at a glance" ใต้หัวไฟล์ (ตาราง 541/207/87, KNNOR, RBBoost 63/17/6, wrapper แยกชนิด, ระดับ paper, ชื่อ)
   และเติมป้าย historical ที่หัวข้อ 9.2 กับ 9.3 (สองบรรทัดหัวข้อเท่านั้นที่เปลี่ยน เนื้อเดิมอยู่ครบ)
 - บันทึกเก่าในไฟล์นี้ที่อ้าง `~/tex/` เป็นประวัติ ตอนนี้ใช้ `build/preview/` แทน
 
@@ -1332,7 +1334,7 @@ sha256 ของ CSV และ JSON ต้นทางทั้งสามต�
 
 - `manuscript/data-section-draft.tex`: Table wins-by-type Original 167/133 -> 166/132, Cannot be told 104/82 -> 105/83; บรรทัด 306 standard 286 -> 285 (ไม่แตะช่อง \toon{} หรือ \claudedraft{})
 - `manuscript/overview.json`: "บนชุดมาตรฐาน 285 แถว"
-- `research-thinking-handoff.md` ข้อ 9.2: เพิ่มกล่อง Update 19 Oct (outcome-mapping audit) เก็บตารางเดิมไว้เป็นประวัติ
+- `_archive/research-thinking-handoff.md` ข้อ 9.2: เพิ่มกล่อง Update 19 Oct (outcome-mapping audit) เก็บตารางเดิมไว้เป็นประวัติ
 - `SMOTE25_data_extraction.xlsx`: เขียนชีต outcomes_verified ใหม่จาก verified_outcomes.csv ปัจจุบัน (835 แถว + 3 คอลัมน์ audit) ชีตอื่นไม่แตะ สำรองเดิมที่ `out/audit_backup/SMOTE25_data_extraction.before_2026-10-19.xlsx`
 - `build/apply_verification.py`: เพิ่ม guard หยุดถ้า verified_outcomes.csv มีคอลัมน์ mapping_audit (รันซ้ำจะเขียนทับการแก้จาก full_outcome_rows.csv ที่ยังเป็นค่าเดิม) ใช้ --force-rebuild ถ้าตั้งใจ
 - DGOT wine_quality #T = '≤4' ตามที่ Toon ยืนยัน: verified_datasets.csv และชีต datasets_verified เป็น '≤4' อยู่แล้ว ไม่ต้องแก้
@@ -1604,10 +1606,10 @@ sha256 ของ CSV และ JSON ต้นทางทั้งสามต�
 
 ### 28 ต.ค. 2026 ตรวจว่า Atlas อัปเดตครบไหม (Toon ถาม) (Claude)
 - แก้แล้ว: หัวหน้าเป็น "อัปเดต 28 ต.ค. 2026" · แท็บ Noise / overlap หัวข้อเพิ่มปุ่มไปแท็บ "ความยากที่วัดได้" · Landscape มุมมองหลักฐานความยาก กล่องเตือนเปลี่ยนเป็น "จากสิ่งที่ paper รายงานเอง หลักฐานไม่พอ..." + ปุ่มไปแท็บใหม่ · เพิ่มตัวรับคลิก data-go="mz" ทั้งหน้า · ทดสอบปุ่มจากทั้งสองแท็บแล้ว ไม่มี JS error · checks 41/41, 31/31 · publish version 7
-- **ยังไม่อัปเดต (รอ Toon)**: แท็บ "ร่าง manuscript" มาจาก `manuscript/data-section-draft.tex` + `overview.json` ซึ่งยังไม่มีส่วนความยากของข้อมูล (ตารางเสนอ `difficulty/profile_summary_proposal.tex` ยังไม่ได้ใส่) · ไฟล์ HTML อื่นนอก Atlas (`../SMOTE25_Data_Section_Explorer.html` 8 ต.ค., `ai-draft/Data_Section_Explorer.html` 14 ต.ค.) เป็นรุ่นเก่า ไม่ได้แตะ
+- **ยังไม่อัปเดต (รอ Toon)**: แท็บ "ร่าง manuscript" มาจาก `manuscript/data-section-draft.tex` + `overview.json` ซึ่งยังไม่มีส่วนความยากของข้อมูล (ตารางเสนอ `difficulty/profile_summary_proposal.tex` ยังไม่ได้ใส่) · ไฟล์ HTML อื่นนอก Atlas (`../SMOTE25_Data_Section_Explorer.html` 8 ต.ค., `_archive/ai-draft/Data_Section_Explorer.html` 14 ต.ค.) เป็นรุ่นเก่า ไม่ได้แตะ
 
 ### 28 ต.ค. 2026 Atlas เป็น HTML หลัก + ใส่ส่วนความยากใน manuscript ตาม template JAIR (Claude, Toon สั่ง)
-- **คำตัดสินของ Toon 28 ต.ค.** ใช้ `out/dataset-atlas.html` (artifact EuoyidJPHwz7deRmi2bMdc) เป็น HTML หลักตัวเดียว · `../SMOTE25_Data_Section_Explorer.html` และ `ai-draft/Data_Section_Explorer.html` เลิกใช้ (ไม่ได้ลบ)
+- **คำตัดสินของ Toon 28 ต.ค.** ใช้ `out/dataset-atlas.html` (artifact EuoyidJPHwz7deRmi2bMdc) เป็น HTML หลักตัวเดียว · `../SMOTE25_Data_Section_Explorer.html` และ `_archive/ai-draft/Data_Section_Explorer.html` เลิกใช้ (ไม่ได้ลบ)
 - ตรวจ repo: main.tex ใช้ JAIR Author Kit (jair.cls 2025/08/15 บน acmart, `[manuscript, screen, review]`, BibLaTeX + Biber, acmauthoryear, ห้ามแก้ style) · sections/01–09 ยังเป็นโครง (\TODO) · ไม่มีไฟล์ Data section ใน main.tex ตำแหน่งยังไม่ตัดสิน (ไฟล์ใหม่ vs 07 ของ P)
 - `manuscript/data-section-draft.tex` (สำรอง `data-section-draft.before_difficulty_2026-10-28.tex`): เพิ่ม \subsection{How Difficult Are the Datasets That Can Be Checked?} (sec:data-difficulty) ระหว่าง Same Name กับ Wins: ขอบเขต/นิยามตรวจได้, วิธีวัด (Napierala k=5, HVDM, เกณฑ์อ้างอิง), ตาราง tab:data-difficulty, รูป fig:data-difficulty, ผล, มิติ, \claudedraft 1 ย่อหน้า, \toon 1 ช่อง, Limits, \evidence · คำถามนำใน intro เพิ่ม 1 ประโยค · Landscape "Limits of the evidence" ชี้ไปหัวข้อใหม่ · Recommendations ข้อ 7 (\claudedraft) · cite ใหม่ใช้ \pcite (key อยู่ใน difficulty/difficulty_refs.bib)
 - รูป: `difficulty/fig_manuscript.py` → `manuscript/figures/data-difficulty.pdf/.png` (greyscale ได้) · preview.tex เพิ่ม graphicx · `build/tex2html.py` ฝัง PNG เป็น data URI + เลข Figure · overview.json เพิ่มแถวหัวข้อใหม่
@@ -1766,8 +1768,8 @@ Fernandez et al. 2018 ใน JAIR เองก็ไม่มี search protocol
 7. ~~เรื่อง Tomek~~ เสร็จ ตัวหาร 73 แก้ draft แล้ว
 8. ~~รัน full_extraction ใหม่~~ เสร็จ 18 ต.ค. 23:44 หลัง Toon ปิด Excel ไฟล์ out/full_* ตรงกับชุดที่ตรวจแล้วทุกไบต์ รัน verify_pdf, apply_verification, uncertain_resolution, make_atlas ซ้ำ ผลเท่าเดิม
 
-**ขั้นที่ 1 (แผนเดิม 16 ต.ค.; ทำครบแล้ว)** ทำตามตาราง "ทางที่สั้นที่สุด" ท้าย `section-outline.md`
-ลำดับ 1 ถึง 7 ไม่ต้องรอคำตัดสินใด เริ่มจากตรวจค่า "ไม่มี" ทั้ง corpus 35 paper (ดู `data-handling-corpus.md` ข้อ 7)
+**ขั้นที่ 1 (แผนเดิม 16 ต.ค.; ทำครบแล้ว)** ทำตามตาราง "ทางที่สั้นที่สุด" ท้าย `_archive/section-outline.md`
+ลำดับ 1 ถึง 7 ไม่ต้องรอคำตัดสินใด เริ่มจากตรวจค่า "ไม่มี" ทั้ง corpus 35 paper (ดู `_archive/data-handling-corpus.md` ข้อ 7)
 **ฐานของ section คือภาพทั้ง 76 paper ไม่ใช่ MWMOTE** (Toon ทัก 16 ต.ค.)
 
 1. เคลียร์ 3 เรื่องในข้อ 6 แล้วบันทึกคำตัดสินลงชีต `win_loss_rule` (ปิดแล้ว 29 ต.ค.)
@@ -1778,7 +1780,7 @@ Fernandez et al. 2018 ใน JAIR เองก็ไม่มี search protocol
 5. ทดสอบ H1 H2 H3
 6. เขียนเนื้อ section จากผลที่ตรวจแล้วเท่านั้น
 
-แผนเต็มพร้อมเกณฑ์ผ่านและเวลาโดยประมาณ (85 ถึง 115 ชั่วโมง) อยู่ใน `workplan.md`
+แผนเต็มพร้อมเกณฑ์ผ่านและเวลาโดยประมาณ (85 ถึง 115 ชั่วโมง) อยู่ใน `_archive/workplan.md`
 
 ---
 
@@ -1817,22 +1819,22 @@ Fernandez et al. 2018 ใน JAIR เองก็ไม่มี search protocol
 | `build/preview/preview.tex`, `build/preview/build_preview.py` | สร้าง `manuscript/data-section-draft-preview.pdf` จาก repo | 19 ต.ค. ผ่าน 6 หน้า |
 | `build/dataset_records.py` → `out/dataset_records.csv`, `out/dataset_records_summary.json` | ระเบียน dataset ราย entry พร้อม record_id สำหรับแท็บสำรวจ dataset และเฟสเทียบ dataset ข้าม paper | 19 ต.ค. checks 11/11 |
 | `out/reconcile_counts.json` | ผลของสคริปต์ข้างบน พร้อม sha256 ของไฟล์ต้นทาง | derived จาก verified_* |
-| `research-thinking-handoff.md` | thesis และโครงความคิดของ section ภาษาอังกฤษ (Toon ส่งมา 19 ต.ค.) ตัวเลขบางข้อต้องอ่านคู่กับบันทึก 19 ต.ค. | ความคิด ไม่ใช่สถานะ |
-| `data-handling-corpus.md` | ภาพรวมทั้ง corpus: แหล่ง เหตุผลการเลือก การยก benchmark การดัดแปลง กติกา minority แยกช่วงปี | ai_draft 69 เรื่องไม่มีเลขหน้า 7 เรื่องมี |
+| `_archive/research-thinking-handoff.md` | thesis และโครงความคิดของ section ภาษาอังกฤษ (Toon ส่งมา 19 ต.ค.) ตัวเลขบางข้อต้องอ่านคู่กับบันทึก 19 ต.ค. | ความคิด ไม่ใช่สถานะ |
+| `_archive/data-handling-corpus.md` | ภาพรวมทั้ง corpus: แหล่ง เหตุผลการเลือก การยก benchmark การดัดแปลง กติกา minority แยกช่วงปี | ai_draft 69 เรื่องไม่มีเลขหน้า 7 เรื่องมี |
 | `ai-draft/new7/` | ผลอ่าน PDF ใหม่ 7 เรื่อง พร้อมเลขหน้าและคำพูดยกมา และ `SCHEMA.md` | ai_draft มีเลขหน้า |
 | `ai-draft/data_handling_codes.json` | รหัส 4 มิติต่อ paper ที่ Claude ให้ พร้อมนิยาม | ai_draft ต้องตรวจ |
 | `manuscript/data-section-draft.tex` | โครง LaTeX ของ section พร้อมช่อง `\toon{}` และกล่อง evidence | ร่าง 18 ต.ค. |
-| `outcome-pilot.md` | pilot 10 paper ผลรายชุดของวิธีที่เสนอเทียบ SMOTE แยกตามชนิดข้อมูล | ai_draft |
+| `_archive/outcome-pilot.md` | pilot 10 paper ผลรายชุดของวิธีที่เสนอเทียบ SMOTE แยกตามชนิดข้อมูล | ai_draft |
 | `ai-draft/outcome/` | ค่าดิบจากตารางผล 10 paper, `SCHEMA.md`, `row_data_type.json` | ai_draft มีเลขหน้า |
 | `ai-draft/full/` | ผลอ่าน PDF ครบ 72 paper (dataset + ผลเทียบ SMOTE + uncertain) พร้อม SCHEMA.md | ai_draft มีตารางและหน้า |
 | `out/full_*.csv/json` | ตารางรวมจาก build/full_extraction.py | ai_draft |
-| `section-outline.md` | โครง D1 ถึง D9 แต่ละหัวข้อต้องใช้หลักฐานอะไร จากไหน กี่แถว และลำดับงานที่สั้นที่สุด | ร่าง 16 ต.ค. ยังไม่ผ่าน Toon |
+| `_archive/section-outline.md` | โครง D1 ถึง D9 แต่ละหัวข้อต้องใช้หลักฐานอะไร จากไหน กี่แถว และลำดับงานที่สั้นที่สุด | ร่าง 16 ต.ค. ยังไม่ผ่าน Toon |
 | `SMOTE25_data_extraction.xlsx` | **ไฟล์ทำงานหลัก** 6 ชีต วิธีใช้อยู่ในชีต `README` | โครงเชื่อถือได้ เนื้อยังไม่ตรวจ |
 | `decisions-pending.md` | เรื่องที่เคยรอตัดสิน ปิดครบแล้ว 29 ต.ค. ตารางสถานะอยู่ด้านบน | ปิดแล้ว |
-| `workplan.md` | แผน 8 เฟส พร้อมเกณฑ์ผ่านและเวลา | เป็นข้อเสนอ |
-| `dataset-name-topup.md` | บันทึกรอบเติมชื่อ 14 ต.ค. และสิ่งที่พบ | ai_draft ทุกชื่อ |
-| `dataset-usage-recon.md` | ผลสำรวจการใช้ dataset ข้าม paper | ตัวเลขยังไม่ตรวจ |
-| `drive-inventory.md` | สารบัญไฟล์ใน Drive ครบ 100 ไฟล์ 76 เรื่อง ซ้ำข้ามโฟลเดอร์ 12 | ตรวจนับครบแล้ว |
+| `_archive/workplan.md` | แผน 8 เฟส พร้อมเกณฑ์ผ่านและเวลา | เป็นข้อเสนอ |
+| `_archive/dataset-name-topup.md` | บันทึกรอบเติมชื่อ 14 ต.ค. และสิ่งที่พบ | ai_draft ทุกชื่อ |
+| `_archive/dataset-usage-recon.md` | ผลสำรวจการใช้ dataset ข้าม paper | ตัวเลขยังไม่ตรวจ |
+| `_archive/drive-inventory.md` | สารบัญไฟล์ใน Drive ครบ 100 ไฟล์ 76 เรื่อง ซ้ำข้ามโฟลเดอร์ 12 | ตรวจนับครบแล้ว |
 | `README.md` | สถานะย่อ ตำแหน่งของ section ใน paper ตัวเลข corpus กติกา และแนวทางการเขียน | ปัจจุบัน (18 ต.ค.) |
 | `out/section7_key_map.csv` | คู่คีย์ของเรากับคีย์และ bibkey ของ Section 7 ของ P 76/76 สร้างจาก `build/section7_key_map.py` | ตรวจคู่ด้วยมือ 16 คู่ |
 | `out/dataset-atlas.html` | หน้า SMOTE25 Dataset Atlas สร้างจาก `build/make_atlas.py` + `build/atlas_template.html` | ai_draft |
@@ -1946,7 +1948,7 @@ python3 build/outcome_pilot.py
 - **แก้ป้ายตัวเทียบใน all-metric** (`build/winloss_allmetric.py`, สำรอง `.before_reclass_2026-10-29.py`, ผลเดิม `out/winloss_allmetric_summary.before_reclass_2026-10-29.json`): GAMO, MC-CCR, MC-RBO, NROMM เป็น non-plain (SMOTE-all / ห่อกับ learner) และ RBBoost (R6), KNNOR (R4) ตัดออก ให้ตรงกับชุดกติกา A · plain 35 → **29 paper 1,511 แถว** (ชนะ 1,107 เสมอ 102 แพ้ 286 เทียบไม่ได้ 16) · non-plain 12 paper 558 แถว · Atlas v17–v18 ที่แสดง plain 35 paper ถูกแทนแล้ว
 - ใหม่: `build/allmetric_links.py` → `out/allmetric_links.csv` (ผูก 2,496/2,497 แถวกับ record และชนิดข้อมูล; กติกา L1–L3) · `build/hypotheses.py` → `out/hypotheses.json`, `hypotheses_paper_split.csv`, `h3_entries.csv` (statsmodels 0.15 ติดตั้งบนเครื่องด้วย pip --user) · `build/difficulty_outcomes.py` → `out/difficulty_outcomes.json`, `_rows.csv` · `difficulty/paper_profile_mix.py` → `.json` · `build/make_final.py` → `manuscript/data-section-final.tex` + `.bib`
 - ผล: H1 ไม่ได้รับการสนับสนุน (mod+syn vs original GEE OR 0.68 p 0.10; ภายใน paper 0.61 p 0.04; mixed 0.75; ไม่ทนเมื่อหนึ่งผลต่อ dataset หรือกติกา A) · H2 มี 2 paper (MWMOTE, RUSBoost) ไม่พบรูปแบบ · H3 119/952 entry (12.5%) ลิสต์แต่ไม่มีคู่ค่ากับ SMOTE, 12 paper · noise index +0.1 → odds ชนะ ×1.15 (p 0.005; ภายใน paper ×1.19 p 0.01; หนึ่งผลต่อไฟล์ p 0.08), IR ไม่สัมพันธ์ · precision 57% และ specificity 14% ของที่ตัดสินได้
-- manuscript (`data-section-draft.tex`, สำรอง `.before_final_2026-10-29.tex`): Wins เขียนใหม่ (`manuscript/parts/wins_2026-10-29.tex` เป็นสำเนาฉบับแรก) ตาราง tab:wins-by-metric + tab:wins-by-type · \claudedraft 9 จุดเป็นข้อความสุดท้าย, ช่อง [Toon] 4 ช่องเขียนแล้ว (ประกาศ/ไม่ประกาศ, โปรไฟล์ราย paper, Wins, Recommendations 8 ข้อ) ทุกจุดมีคอมเมนต์ `% Claude 29 Oct 2026 (Toon delegated all open decisions)` · ตาราง tab:data-reference (ชุดอ้างอิง 27 task) · ย่อหน้า H3 · Extraction เพิ่ม all-metric · intro อัปเดต · bib เพิ่ม chawla2002smote, saez2015smoteipf; zhu2023orem 35(6):6167–6181 จาก PDF; cieslak2006 note; jain1982 ไม่ได้อ้าง
+- manuscript (`data-section-draft.tex`, สำรอง `.before_final_2026-10-29.tex`): Wins เขียนใหม่ (`_archive/manuscript/wins_2026-10-29.tex` เป็นสำเนาฉบับแรก) ตาราง tab:wins-by-metric + tab:wins-by-type · \claudedraft 9 จุดเป็นข้อความสุดท้าย, ช่อง [Toon] 4 ช่องเขียนแล้ว (ประกาศ/ไม่ประกาศ, โปรไฟล์ราย paper, Wins, Recommendations 8 ข้อ) ทุกจุดมีคอมเมนต์ `% Claude 29 Oct 2026 (Toon delegated all open decisions)` · ตาราง tab:data-reference (ชุดอ้างอิง 27 task) · ย่อหน้า H3 · Extraction เพิ่ม all-metric · intro อัปเดต · bib เพิ่ม chawla2002smote, saez2015smoteipf; zhu2023orem 35(6):6167–6181 จาก PDF; cieslak2006 note; jain1982 ไม่ได้อ้าง
 - ตรวจ: subagent ตรวจตัวเลขอิสระกับไฟล์ต้นทาง → แก้ 6 จุด (1,511 แถวอยู่บน 524 dataset ไม่ใช่ 520; paper ที่ไม่มีคู่ค่ารายชุด 14/57 ไม่ใช่ 13; "ชนะดิบสูงสุด" ยกเว้น synthetic; นิยามกลุ่ม 21 paper ของ H2; 2 dataset MWMOTE ที่จับคู่ไม่ได้; ใส่ AUC-PR ใน CONCLUSIONS) และปรับถ้อยคำเรื่อง metric ให้ตรงตัวเลข (accuracy 91%, MCC 83% สูงกว่า metric อื่น)
 - checks: reconcile 47/47, atlas_analysis 41/41, consistency 43/43 (เขียน check ส่วน 3 ใหม่ให้ตรวจตาราง Wins ใหม่กับ json; สำรอง `.before_final_2026-10-29.py`), phase2 14/14, reference_collection_check PASS, landscape_manuscript --check ตรง · preview 12 หน้า undefined 0 · **merge test** (cloud, TeX Live + biber): main.tex + data-section-final.tex เป็น sections/07a + bib ต่อท้าย → 17 หน้า ไม่มี undefined citation/reference, overfull เฉพาะใน appendix-reproducibility ของ repo
 - Atlas: การ์ดใหม่ `#wn-hyp` (H1–H3 + ความยาก), กล่องสถานะแท็บชนะ SMOTE = เสร็จ, overview.json (แท็บร่าง manuscript) อัปเดตทุกหัวข้อ + synthesis ฉบับสุดท้าย · Playwright 1280/390 ไม่มี JS error ไม่ล้นจอ
@@ -2141,4 +2143,11 @@ python3 build/outcome_pilot.py
 - modified_operations.py: กฎ NI ของ 7 paper · name_level_extras.py: ชื่อที่ดัดแปลงด้วย NI อย่างเดียวไม่นับเป็น "ไฟล์สาธารณะที่ควรดาวน์โหลด" (รวม 2 ชื่อของ SMOTE-IPF ที่เคยอยู่ในรายการ)
 - ตัวเลขใหม่: entry 1,756 (มีชื่อ 1,755) · 866 ชื่อ → 775 dataset → 491 family (single-paper 552; ครึ่งของการใช้ที่ 41 family) · modified 341 (43 paper; NI 12 entry 8 paper) · ข้อมูลไม่พอทำซ้ำ 103/341 (ไม่พิมพ์ลักษณะ 65) · เหตุผลที่เขียน 24/43 paper · ความครบที่พิมพ์ 75.6/72.4/78.3%, สัดส่วนคลาส 54.5% · ชื่อที่ไม่มีไฟล์ 170 (56 อ้างแหล่งสาธารณะ) · H3b 201/1,034 (19.4%); 76 ชุดประกอบภาพ + 6 ชุด noise ของ 5 paper; ที่เหลือ 119/952 เท่าเดิม · ตารางช่วงเวลาเปลี่ยนเล็กน้อย (2010–14 154 entry ฯลฯ) · ผลแพ้ชนะ H1/H2 ไม่เปลี่ยน (แถวผลเดิม)
 - manuscript, overview.json, CONCLUSIONS.md, section 0 ของไฟล์นี้, หน้า Atlas อัปเดตตาม · ข้อความ "ยังค้าง (ต้องใช้คน)" ในข้อ 0 เขียนใหม่เป็นสถานะที่ปิดแล้ว (V-author_release และ +1 ของ Loyalty-SMOTE รับแล้ว, Kaggle โหลดแล้ว, ไฟล์ชั่วคราวใน Downloads ลบได้)
+- ไม่ได้ push
+
+**9 พ.ย. ต่อ (3) — จัดโฟลเดอร์ก่อนส่งต่อ (Toon: ให้คนที่อ่านต่อเห็นเฉพาะสิ่งที่ถูกต้องจริง)**
+- ลบ (Toon อนุมัติ): ไฟล์สำรองใน git 62 ไฟล์ (`build/*.before_*` 26, `manuscript/*.before_*` 10, `out/*.before_*` 4, `out/audit_backup/` 5, `ai-draft/full_backup_*` 17) · ไฟล์ที่อยู่แค่ในเครื่อง: `_verify_png/` (130 ไฟล์), PDF ของ MC-RBO ที่ซ้ำกับใน `paper/`, ไฟล์ sync ชั่วคราวใน `difficulty/src/` · ไฟล์ใน git ยังดูย้อนหลังได้จาก history
+- ย้ายไป `_archive/` (พร้อม `_archive/README.md` บอกว่าแต่ละไฟล์ถูกแทนด้วยอะไร): workplan, section-outline, research-thinking-handoff, data-handling-corpus, dataset-usage-recon, dataset-name-topup, drive-inventory, outcome-pilot, `ai-draft/Data_Section_Explorer.html`, `manuscript/parts/wins_2026-10-29.tex`
+- add_synthetic_entries.py / add_noise_entries.py ไม่สร้างโฟลเดอร์สำรองอีก (ต้นฉบับอยู่ใน git history) · README.md เขียนตารางไฟล์ใหม่ตามโครงสร้างปัจจุบัน · การอ้างถึงไฟล์ที่ย้ายใน handoff เปลี่ยนเป็น path ใน `_archive/` แล้ว
+- checks หลังจัด: consistency 44/44, atlas 41/41, phase2 14/14
 - ไม่ได้ push

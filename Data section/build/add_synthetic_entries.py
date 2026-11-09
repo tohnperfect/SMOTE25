@@ -18,8 +18,8 @@ Entries are APPENDED after each paper's existing entries, so every existing reco
 Modes (run from Data section/):
   python3 build/add_synthetic_entries.py --check-pdf   on the machine that holds paper/: assert every evidence quote
                                                        occurs on the cited PDF page (pdftotext, whitespace collapsed)
-  python3 build/add_synthetic_entries.py --apply       edit ai-draft/full/<KEY>.json (originals kept in ai-draft/full_backup_partb_2026-11-08/,
-                                                       outside the folder that build/full_extraction.py globs),
+  python3 build/add_synthetic_entries.py --apply       edit ai-draft/full/<KEY>.json (the originals are in git history;
+                                                       the backup folder was removed 9 Nov),
                                                        rerun build/full_extraction.py, then insert the new rows into
                                                        out/verify_datasets.csv and out/verified_datasets.csv at the same
                                                        positions (existing rows unchanged, except Toy's how_obtained fields)
@@ -182,9 +182,6 @@ def apply():
     added = 0
     for k, lst in list(NEW.items()) + [("OREM-M", None)]:
         f = f"ai-draft/full/{FILE.get(k, k)}.json"
-        bak = f"ai-draft/full_backup_partb_2026-11-08/{FILE.get(k, k)}.json"
-        os.makedirs(os.path.dirname(bak), exist_ok=True)
-        if not os.path.exists(bak): shutil.copy(f, bak)
         d = json.load(open(f, encoding="utf-8"))
         if lst is None:   # Toy: reader value unchanged; the category is an override in build/full_extraction.py (EXTERNAL)
             pass

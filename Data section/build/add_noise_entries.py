@@ -13,7 +13,7 @@ is unchanged.
 Entries are APPENDED after each paper's existing entries, so every existing record_id is unchanged.
 Modes (run from Data section/):
   python3 build/add_noise_entries.py --check-pdf   on the machine with paper/: every evidence quote is on the cited PDF page
-  python3 build/add_noise_entries.py --apply       edit ai-draft/full/<KEY>.json (originals in ai-draft/full_backup_noise_2026-11-09/),
+  python3 build/add_noise_entries.py --apply       edit ai-draft/full/<KEY>.json (the originals are in git history; the backup folder was removed 9 Nov),
                                                    rerun build/full_extraction.py, insert the new rows into out/verify_datasets.csv
                                                    and out/verified_datasets.csv at the same positions
 Idempotent: an entry whose name already exists in the paper's JSON is not added again.
@@ -99,9 +99,7 @@ def apply():
     assert len(old_full) == len(old_ver) == len(old_vd)
     added = 0
     for k, lst in NEW.items():
-        f = f"ai-draft/full/{k}.json"; bak = f"ai-draft/full_backup_noise_2026-11-09/{k}.json"
-        os.makedirs(os.path.dirname(bak), exist_ok=True)
-        if not os.path.exists(bak): shutil.copy(f, bak)
+        f = f"ai-draft/full/{k}.json"
         d = json.load(open(f, encoding="utf-8"))
         have = {x["name"] for x in d["datasets"]}
         for e in lst:
