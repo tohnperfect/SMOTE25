@@ -40,7 +40,7 @@
   "not measured"
  ],
  "by_difficulty": {
-  "none": 85,
+  "none": 87,
   "small_sample": 116,
   "outlier_flag": 12,
   "small_sample + outlier_flag": 56,
@@ -48,8 +48,8 @@
   "small_disjuncts + small_sample": 4,
   "small_disjuncts + small_sample + outlier_flag": 35,
   "varies": 5,
-  "multiclass": 63,
-  "not measured": 488
+  "multiclass": 66,
+  "not measured": 483
  },
  "type_by_difficulty": {
   "modified": {
@@ -89,7 +89,7 @@
    "not measured": 20
   },
   "original": {
-   "none": 12,
+   "none": 13,
    "small_sample": 7,
    "outlier_flag": 5,
    "small_sample + outlier_flag": 3,
@@ -97,11 +97,11 @@
    "small_disjuncts + small_sample": 1,
    "small_disjuncts + small_sample + outlier_flag": 0,
    "varies": 1,
-   "multiclass": 38,
-   "not measured": 83
+   "multiclass": 41,
+   "not measured": 79
   },
   "not stated": {
-   "none": 12,
+   "none": 13,
    "small_sample": 3,
    "outlier_flag": 4,
    "small_sample + outlier_flag": 7,
@@ -110,7 +110,7 @@
    "small_disjuncts + small_sample + outlier_flag": 2,
    "varies": 1,
    "multiclass": 0,
-   "not measured": 85
+   "not measured": 84
   }
  },
  "source_order": [
@@ -222,8 +222,8 @@
    "small_disjuncts + small_sample": 3,
    "small_disjuncts + small_sample + outlier_flag": 13,
    "varies": 1,
-   "multiclass": 27,
-   "not measured": 93
+   "multiclass": 28,
+   "not measured": 92
   },
   "group-level": {
    "none": 4,
@@ -238,7 +238,7 @@
    "not measured": 10
   },
   "other repository": {
-   "none": 14,
+   "none": 16,
    "small_sample": 3,
    "outlier_flag": 3,
    "small_sample + outlier_flag": 10,
@@ -246,8 +246,8 @@
    "small_disjuncts + small_sample": 1,
    "small_disjuncts + small_sample + outlier_flag": 3,
    "varies": 0,
-   "multiclass": 0,
-   "not measured": 46
+   "multiclass": 2,
+   "not measured": 42
   },
   "other paper/author": {
    "none": 0,
@@ -385,7 +385,7 @@
   "private": "private",
   "synthetic": "synthetic"
  },
- "measured_names": 315,
+ "measured_names": 317,
  "rules": {
   "source": "แหล่งตามที่ paper เขียน จัดเป็น 8 กลุ่มด้วยการจับข้อความ (source_map) · ระดับชื่อ: ถ้า paper ที่ระบุแหล่งรายชุดระบุตรงกันแหล่งเดียว ใช้แหล่งนั้น · ระบุต่างกัน = multiple · ไม่มี paper ระบุรายชุด แต่มีระดับกลุ่ม (เช่น UCI หรือ KEEL) = group-level · ไม่มีเลย = not stated",
   "type": "ชื่อหนึ่งได้ชนิดเดียว: ถ้ามี entry ใดเป็นชนิดที่มาก่อนตามลำดับ precedence ใช้ชนิดนั้น (เคยดัดแปลง = modified)",

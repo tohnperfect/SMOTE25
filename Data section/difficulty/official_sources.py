@@ -69,12 +69,16 @@ def libsvm(paths):
     d = pd.DataFrame([[r.get(i, '0') for i in range(1, mx + 1)] for r in rows], columns=[f'f{i}' for i in range(1, mx + 1)])
     return d, pd.Series(ys).astype(str)
 
-def table(path, sep=',', header='infer', label=-1, drop=(), na=None, sheet=None, skiprows=None, onehot_last=None, names=None, encoding=None):
+def table(path, sep=',', header='infer', label=-1, drop=(), na=None, sheet=None, skiprows=None, onehot_last=None, names=None, encoding=None,
+          literal=False):
+    # literal=True: read every cell as written; pandas would otherwise turn words such as 'None' or 'NA' into missing values
+    # (9 Nov: the IBM Sales Win Loss file uses 'None' as one of the three values of Competitor Type)
     if path.endswith(('.xls', '.xlsx')):
         d = pd.read_excel(path, sheet_name=sheet or 0, header=0 if header == 'infer' else header, dtype=str, skiprows=skiprows)
     else:
         d = pd.read_csv(path, sep=sep, header=0 if header == 'infer' else header, dtype=str, skipinitialspace=True,
-                        engine='python' if sep not in (',', '\t', ';') else 'c', skiprows=skiprows, encoding=encoding)
+                        engine='python' if sep not in (',', '\t', ';') else 'c', skiprows=skiprows, encoding=encoding,
+                        keep_default_na=not literal)
     if header is None: d.columns = names or [f'a{i}' for i in range(d.shape[1])]
     d = d.drop(columns=[c for c in drop if c in d.columns])
     if onehot_last:                                      # class given as k one-hot columns at the end (steel plates faults)
@@ -92,6 +96,31 @@ def npz_traintest(path):
     a = np.vstack([z['train'], z['test']])
     return pd.DataFrame(a[:, :-1]).astype(str), pd.Series(a[:, -1]).astype(str)
 
+def cluto(path):
+    """CLUTO sparse matrix (first line: rows cols nonzeros; then per row 'col value' pairs, 1-based) + <path>.rclass labels
+    (9 Nov 2026). Returned as a sparse frame, so that the catalog gets the true shape without a dense copy."""
+    from scipy import sparse
+    rows, cols, vals = [], [], []
+    with open(path) as fh:
+        nr, nc, _ = map(int, fh.readline().split())
+        for i, ln in enumerate(fh):
+            t = ln.split()
+            for j in range(0, len(t) - 1, 2):
+                rows.append(i); cols.append(int(t[j]) - 1); vals.append(float(t[j + 1]))
+    m = sparse.csr_matrix((vals, (rows, cols)), shape=(nr, nc))
+    y = pd.Series(open(path + '.rclass').read().split()).astype(str)
+    assert len(y) == nr, 'STOP: CLUTO label count differs from rows'
+    # pandas 3 gives the sparse frame a NaN fill value (pandas 2: 0); a cell absent from the CLUTO file is a zero count,
+    # so the fill value is set to 0 explicitly (9 Nov)
+    return pd.DataFrame.sparse.from_spmatrix(m).fillna(0.0), y
+
+def dirconcat(folder, label=-1):
+    """all files of one folder, no header, label = given column (9 Nov 2026; UCI 'healthy older people' room files)."""
+    fs = sorted(f for f in glob.glob(os.path.join(SRC, folder, '*')) if os.path.isfile(f) and not f.lower().endswith('.txt'))
+    d = pd.concat([pd.read_csv(f, header=None) for f in fs], ignore_index=True)
+    y = d.pop(d.columns[label]).astype(str).str.strip()
+    return _clean(d), y
+
 def load(spec):
     src, name, rel, fn, kw = spec
     p = os.path.join(SRC, rel)
@@ -99,6 +128,8 @@ def load(spec):
     if fn == 'libsvm': return libsvm([os.path.join(SRC, r) for r in kw['files']])
     if fn == 'table': return table(p, **kw)
     if fn == 'npz': return npz_traintest(p)
+    if fn == 'cluto': return cluto(p)
+    if fn == 'dirconcat': return dirconcat(rel, **kw)
     if fn == 'concat':                                          # several table files of one data set (train + test splits)
         parts = [table(os.path.join(SRC, r), **kw.get('opts', {})) for r in kw['files']]
         return pd.concat([d for d, _ in parts], ignore_index=True), pd.concat([y for _, y in parts], ignore_index=True)
@@ -198,6 +229,21 @@ SPEC += [
  ('Kaggle', 'smoke detection', f'{KG}/deepcontractor__smoke-detection-dataset/smoke_detection_iot.csv', 'table', dict(label='Fire Alarm', drop=('Unnamed: 0',))),
  ('Kaggle', 'telco customer churn', f'{KG}/blastchar__telco-customer-churn/WA_Fn-UseC_-Telco-Customer-Churn.csv', 'table', dict(label='Churn', drop=('customerID',))),
  ('Kaggle', 'har test', f'{KG}/uciml__human-activity-recognition-with-smartphones/test.csv', 'table', dict(label='Activity', drop=('subject',))),
+]
+
+# --- 9 Nov 2026 (Toon: "ทำต่อให้เสร็จเลย", the names that had a public file but had not been tried) ---------------------
+# UCI (browser bundle, official_manifest.csv tag uci), CLUTO text collections (papers.karypis.org mirror of the glaros page,
+# tag cluto), Kaggle (downloaded with Toon's sign-in). Files that were found but cannot carry the paper's task (no class
+# label, regression target, time series) are recorded in verify_ext.py FOUND_NOT_USABLE instead of being loaded here.
+UO = 'official/uci'
+SPEC += [
+ ('UCI-official', 'healthy older people1', f'{UO}/427_activity+recognition+with+healthy+older+people+using+a+batteryless+wearable+sensor.zip.d/S1_Dataset', 'dirconcat', dict(label=-1)),
+ ('UCI-official', 'healthy older people2', f'{UO}/427_activity+recognition+with+healthy+older+people+using+a+batteryless+wearable+sensor.zip.d/S2_Dataset', 'dirconcat', dict(label=-1)),
+ ('UCI-official', 'gender by name', f'{UO}/591_gender+by+name.zip.d/name_gender_dataset.csv', 'table', dict(label='Gender')),
+ ('CLUTO', 'k1b', 'official/cluto/datasets.d/k1b.mat', 'cluto', {}),
+ ('CLUTO', 'la12', 'official/cluto/datasets.d/la12.mat', 'cluto', {}),
+ ('Kaggle', 'sales win loss', f'{KG}/thatbrock__ibm-watson-saleswinloss/WA_Fn-UseC_-Sales-Win-Loss.csv', 'table', dict(label='Opportunity Result', drop=('Opportunity Number',), literal=True)),
+ ('Kaggle', 'creditcard', f'{KG}/mlg-ulb__creditcardfraud/creditcard.csv', 'table', dict(label='Class')),
 ]
 
 def entries():

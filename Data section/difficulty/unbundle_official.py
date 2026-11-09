@@ -29,8 +29,10 @@ def unbundle(path):
         fp = os.path.join(d, safe); open(fp, 'wb').write(b)
         if safe.endswith('.zip'):
             with zipfile.ZipFile(io.BytesIO(b)) as z:
-                for m in z.namelist():                      # nested zips (UCI sometimes zips a zip) are opened once more
+                names = z.namelist()
+                for m in names:                             # nested zips (UCI sometimes zips a zip) are opened once more
                     if m.endswith('/') or '..' in m or m.startswith('/'): continue
+                    if any(o.startswith(m + '/') for o in names): continue   # 9 Nov: folder entry stored without a trailing slash
                     tgt = os.path.join(fp + '.d', m)
                     try:                                    # some archives hold a file and a folder of the same name
                         os.makedirs(os.path.dirname(tgt), exist_ok=True)

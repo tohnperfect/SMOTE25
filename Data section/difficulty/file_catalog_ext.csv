@@ -873,3 +873,10 @@ Kaggle,airline satisfaction train,src/official/kaggle/teejmahal20__airline-passe
 Kaggle,smoke detection,src/official/kaggle/deepcontractor__smoke-detection-dataset/smoke_detection_iot.csv,62630,14,2,17873,"[17873, 44757]",,smokedetection
 Kaggle,telco customer churn,src/official/kaggle/blastchar__telco-customer-churn/WA_Fn-UseC_-Telco-Customer-Churn.csv,7043,19,2,1869,"[1869, 5174]",,telcocustomerchurn
 Kaggle,har test,src/official/kaggle/uciml__human-activity-recognition-with-smartphones/test.csv,2947,561,6,420,"[420, 471, 491, 496, 532, 537]",,hartest
+UCI-official,healthy older people1,src/official/uci/427_activity+recognition+with+healthy+older+people+using+a+batteryless+wearable+sensor.zip.d/S1_Dataset,52482,8,4,1956,"[1956, 4381, 15162, 30983]",,healthyolderpeople1
+UCI-official,healthy older people2,src/official/uci/427_activity+recognition+with+healthy+older+people+using+a+batteryless+wearable+sensor.zip.d/S2_Dataset,22646,8,4,335,"[335, 530, 1244, 20537]",,healthyolderpeople2
+UCI-official,gender by name,src/official/uci/591_gender+by+name.zip.d/name_gender_dataset.csv,147269,3,2,57520,"[57520, 89749]",,genderbyname
+CLUTO,k1b,src/official/cluto/datasets.d/k1b.mat,2340,21839,6,60,"[60, 114, 141, 142, 494, 1389]",,k1b
+CLUTO,la12,src/official/cluto/datasets.d/la12.mat,6279,31472,6,521,"[521, 642, 729, 1042, 1497, 1848]",,la12
+Kaggle,sales win loss,src/official/kaggle/thatbrock__ibm-watson-saleswinloss/WA_Fn-UseC_-Sales-Win-Loss.csv,78025,17,2,17627,"[17627, 60398]",,saleswinloss
+Kaggle,creditcard,src/official/kaggle/mlg-ulb__creditcardfraud/creditcard.csv,284807,30,2,492,"[492, 284315]",,creditcard

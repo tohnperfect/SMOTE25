@@ -59,19 +59,19 @@
 - MWMOTE: Satimage กับ Statlandsat เป็นชุดเดียวกัน (ทั้งชุดกับไฟล์ train) นับเป็น 2 ชุด
 - แหล่ง: `out/reconcile_counts.json` (size_variation), `out/full_summary.json`, `mwmote-table5-audit.md`
 
-## 5. ความยากของข้อมูลที่ตรวจได้ (อัปเดต 8 พ.ย. 2026 รอบสาม: Kaggle + กติกา N+1 ของ Loyalty-SMOTE + กฎ NS)
+## 5. ความยากของข้อมูลที่ตรวจได้ (อัปเดต 9 พ.ย. 2026 รอบสี่: CLUTO, UCI 427/591, Kaggle Sales Win Loss + Credit Card Fraud)
 
-- ตรวจได้ **986 entry 65 paper 256 ไฟล์** (รอบสอง 973/65/247; รอบแรก 8 พ.ย. 864/65/172; 28 ต.ค. 643/61/131) → **236 task binary/binarise** (701 entry, 46 paper) + OvR 339 task รายงานแยก
-- รอบแรก 8 พ.ย.: mirror บน GitHub/PyPI (KEEL standard 2 ชุดอิสระ, PMLB, UCI++, Weka-UCI, PROMISE, NASA MDP, jbrownlee) + ตารางชื่อเรียกอื่น · รอบสอง: ไฟล์ทางการจาก UCI (60 zip) และ LIBSVM ผ่าน browser บนเครื่อง Toon, ไฟล์ที่ผู้เขียนเผยแพร่เอง (HDE, DGOT, SOS, MBS, release ของ k-means SMOTE) · URL + sha256 ทุกไฟล์ใน `difficulty/official_manifest.csv` · กติกาเดิมทุกข้อ (ขนาดที่พิมพ์ต้องตรงไฟล์) + สถานะใหม่ V-author_release (43 entry ของ k-means SMOTE ที่ผู้เขียนเผยแพร่ไฟล์ที่ดัดแปลงเอง; Toon ยืนยัน 8 พ.ย.) · รอบสาม: Kaggle 9 ชุด (Toon login ให้), Loyalty-SMOTE พิมพ์ N = ไฟล์ + 1 นับว่าตรง (Toon: น่าจะนับแถวหัวตาราง; 8 entry), ไฟล์ 2 คลาสไม่รับเมื่อ paper พิมพ์ > 2 คลาส
+- ตรวจได้ **991 entry 65 paper 261 ไฟล์** (รอบสาม 986/65/256; รอบสอง 973/65/247; รอบแรก 8 พ.ย. 864/65/172; 28 ต.ค. 643/61/131) → **238 task binary/binarise** (703 entry, 46 paper) + OvR 347 task รายงานแยก
+- รอบแรก 8 พ.ย.: mirror บน GitHub/PyPI (KEEL standard 2 ชุดอิสระ, PMLB, UCI++, Weka-UCI, PROMISE, NASA MDP, jbrownlee) + ตารางชื่อเรียกอื่น · รอบสอง: ไฟล์ทางการจาก UCI (60 zip) และ LIBSVM ผ่าน browser บนเครื่อง Toon, ไฟล์ที่ผู้เขียนเผยแพร่เอง (HDE, DGOT, SOS, MBS, release ของ k-means SMOTE) · URL + sha256 ทุกไฟล์ใน `difficulty/official_manifest.csv` · กติกาเดิมทุกข้อ (ขนาดที่พิมพ์ต้องตรงไฟล์) + สถานะใหม่ V-author_release (43 entry ของ k-means SMOTE ที่ผู้เขียนเผยแพร่ไฟล์ที่ดัดแปลงเอง; Toon ยืนยัน 8 พ.ย.) · รอบสาม: Kaggle 9 ชุด (Toon login ให้), Loyalty-SMOTE พิมพ์ N = ไฟล์ + 1 นับว่าตรง (Toon: น่าจะนับแถวหัวตาราง; 8 entry), ไฟล์ 2 คลาสไม่รับเมื่อ paper พิมพ์ > 2 คลาส · รอบสี่ (9 พ.ย.): ตรวจได้เพิ่ม 5 entry — sales win loss (AB-SMOTE), k1b และ la12 (COG-OS, CLUTO), credit (CTGAN/TVAE, Credit Card Fraud ที่ supplement ระบุ), healthy older people2 (RSMOTE); ได้ไฟล์แต่ใช้ไม่ได้ 8 entry (เหตุผลราย entry ใน `FOUND_NOT_USABLE` ของ verify_ext.py และ gender by name ขนาดไม่ตรง)
 - วิธี: Napierala & Stefanowski (k = 5, กติกา rare เต็ม) ระยะ HVDM · ธงมีอ้างอิง: small disjuncts (rare ≥ 20%), outliers > 20%, small sample (n_min/d < 10) · noise index รายงานเป็นค่าต่อเนื่อง · กรอบ "ความยากจากลักษณะข้อมูล" อ้าง López et al. 2013, Jo & Japkowicz 2004
-- 236 task: small sample 160 (68%), outliers 83 (35%), small disjuncts 33 (14%), ไม่ติดธง 63 (27%) · โปรไฟล์ 7 แบบ (S 87, none 63, S+O 42, D+S+O 28, O 11, D+S 3, D+O 2) · noise มัธยฐาน 0.58 [0.29, 0.77] (สูงขึ้นจาก 0.44 เพราะชุดที่ผู้เขียนลด minority เพิ่ม IR ของ k-means SMOTE/HDE)
-- IR บอกได้น้อยว่า minority อยู่ตรงไหน: rank correlation กับ noise 0.26; กลุ่มไม่ติดธงมี noise 0–0.84 (≥ 0.5 มี 20 task)
-- มิติ: มัธยฐาน 9 feature; 59 entry ที่ > 100 feature ตรวจได้ 6 (musk 2, isolet, madelon/a1a/mushrooms จากไฟล์ของ HDE); task ที่วัดได้ ≤ 617 feature
-- ราย paper (≥ 3 task, 39 paper): ผสม 36, ไม่ติดธงล้วน 2 (COG-OS, SMOTE-ENN), ติดธงล้วน 1 (GOIO)
+- 238 task: small sample 160 (67%), outliers 83 (35%), small disjuncts 33 (14%), ไม่ติดธง 65 (27%) · โปรไฟล์ 7 แบบ (S 87, none 65, S+O 42, D+S+O 28, O 11, D+S 3, D+O 2) · noise มัธยฐาน 0.57 [0.29, 0.77] (สูงขึ้นจาก 0.44 เพราะชุดที่ผู้เขียนลด minority เพิ่ม IR ของ k-means SMOTE/HDE)
+- IR บอกได้น้อยว่า minority อยู่ตรงไหน: rank correlation กับ noise 0.25; กลุ่มไม่ติดธงมี noise 0–0.84 (≥ 0.5 มี 21 task)
+- มิติ: มัธยฐาน 9 feature; 59 entry ที่ > 100 feature ตรวจได้ 8 (musk 2, isolet, madelon/a1a/mushrooms จากไฟล์ของ HDE, k1b/la12 ของ COG-OS); task สองคลาสที่วัดได้ ≤ 617 feature (k1b วัดแบบ OvR มี 21,839)
+- ราย paper (≥ 3 task, 40 paper): ผสม 37, ไม่ติดธงล้วน 2 (COG-OS, SMOTE-ENN), ติดธงล้วน 1 (GOIO)
 - **ชุดอ้างอิง** 42 task (19 ช่อง profile × แถบ IR) ครอบ noise 0–1, IR 1.1–970.6, N 79–62,630; 13 ไฟล์ตรงกับตาราง KEEL ทางการ; yeast 4, pima 3, ecoli/glass/haberman/cleveland/heart/iris อย่างละ 2
-- ไม่ได้วัด: covertype (581,012 แถว, OvR อย่างเดียว, เกินเวลา), heart-v (เหลือ minority 1 แถวหลังตัด missing) · `difficulty/measure_log.csv`
-- ชื่อที่ยังวัดไม่ได้ 488/866: synthetic 196, ไม่พบไฟล์ 170 (56 อ้างแหล่งสาธารณะ → `out/names_to_download.csv`; ชุดที่ใส่ noise ไม่นับเป็นไฟล์ที่ดาวน์โหลดได้), ขนาดไม่ตรง 79, สร้าง task ซ้ำไม่ได้ 32, อื่น 11 (`out/name_level_extras.json`)
-- **200 ชื่อที่ไม่มีไฟล์ในรอบแรก**: ตรวจได้แล้ว 83 ชื่อ (103 entry) · ได้ไฟล์แต่ขนาด/task ไม่ตรง 39 · modified ไม่พิมพ์ขนาด 8 · ยังไม่ได้ไฟล์ 70 (`out/names_download_result.csv` มีคอลัมน์ผลตรวจของ Toon) · ข้อสังเกต: Loyalty-SMOTE พิมพ์ N มากกว่าไฟล์ 1 แถวในหลายชุด (น่าจะนับหัวตาราง) ยังไม่ผ่อนกติกา
+- ไม่ได้วัด: covertype (581,012 แถว, OvR อย่างเดียว, เกินเวลา), la12 (6,279 × 31,472 term matrix, เกินหน่วยความจำ 7 GB ของเครื่อง; k1b วัดได้ใช้ 3.6 GB), heart-v (เหลือ minority 1 แถวหลังตัด missing) · `difficulty/measure_log.csv`
+- ชื่อที่ยังวัดไม่ได้ 483/866: synthetic 196, ไม่พบไฟล์ 159 (45 อ้างแหล่งสาธารณะ → `out/names_to_download.csv`; ชุดที่ใส่ noise ไม่นับเป็นไฟล์ที่ดาวน์โหลดได้), ขนาดไม่ตรง 82, สร้าง task ซ้ำไม่ได้ 35, อื่น 11 (`out/name_level_extras.json`)
+- **200 ชื่อที่ไม่มีไฟล์ในรอบแรก**: ตรวจได้แล้ว 97 ชื่อ (119 entry) · ได้ไฟล์แต่ขนาด/task ไม่ตรง 48 · modified ไม่พิมพ์ขนาด 8 · ยังไม่ได้ไฟล์ 47 (`out/names_download_result.csv` มีคอลัมน์ผลตรวจของ Toon)
 - แหล่ง: `difficulty/verify_ext_summary.json`, `difficulty_profile_final.csv`, `profile_final_summary.json`, `paper_profile_mix.json`, `reference_collection.csv`, `dimension_profile.json`, `official_manifest.csv`
 
 ## 6. ผลชนะ SMOTE มาจากไหน
@@ -106,9 +106,9 @@
 
 **H2 (ใส่ชุดมาตรฐานชุดเดียวเพื่อความน่าเชื่อถือ)** — เข้าเงื่อนไข 2 paper (MWMOTE 1+19, RUSBoost 1+14) ชนะบนชุดมาตรฐานทั้งคู่ บนข้อมูลดัดแปลง/บอกที่มาไม่ได้ชนะ 52/65 = 80.0% (ไม่รวม 2 dataset ของ MWMOTE ที่จับคู่ record ไม่ได้; ถ้ารวม 54/71) เท่ากับข้อมูลแบบเดียวกันใน 21 paper ที่มีชุดมาตรฐาน ≥ 2 และมีข้อมูลอื่นด้วย 482/600 = 80.3% → ไม่พบรูปแบบ ทดสอบไม่ได้เพราะน้อยเกินไป · 5 paper เทียบเฉพาะชุดมาตรฐาน, INOS เฉพาะชุดดัดแปลง
 
-**ความยากที่วัดได้กับผลชนะ (exploratory)** — 106 ไฟล์, 23 paper, 494 แถว (8 พ.ย. รอบสาม; รอบสอง 100/23/474; รอบแรก 89/22/440; 28 ต.ค. 72/20/374)
-- noise index +0.1 → odds ชนะ ×1.14 [1.03, 1.27] p 0.009; ภายใน paper ×1.18 p 0.009; หนึ่งผลต่อไฟล์ ×1.20 p 0.01
-- IR ไม่สัมพันธ์ (×0.92 ต่อ IR สองเท่า, p 0.58); ธง small sample / outlier / small disjuncts ไม่สัมพันธ์เมื่อดูทีละตัว
+**ความยากที่วัดได้กับผลชนะ (exploratory)** — 107 ไฟล์, 23 paper, 496 แถว (9 พ.ย. รอบสี่; รอบสาม 106/23/494; รอบสอง 100/23/474; รอบแรก 89/22/440; 28 ต.ค. 72/20/374)
+- noise index +0.1 → odds ชนะ ×1.15 [1.04, 1.26] p 0.005; ภายใน paper ×1.19 p 0.006; หนึ่งผลต่อไฟล์ ×1.21 p 0.004
+- IR ไม่สัมพันธ์ (×0.93 ต่อ IR สองเท่า, p 0.62); ธง small sample / outlier / small disjuncts ไม่สัมพันธ์เมื่อดูทีละตัว
 - อ่านว่า: ผลชนะ SMOTE ที่รายงานไว้มีแนวโน้มอยู่บนข้อมูลที่ minority เป็น borderline/outlier มาก ไม่ใช่บนข้อมูลที่ IR สูง
 
 **SMOTE แบบอื่น (รายงานแยก)** 12 paper 558 แถว: Static-SMOTE 79 (69/3/7) · OVO-SMOTE 148 (101/6/41) · SMOTE-all 239 (231/0/8) · ห่อกับ learner อื่น 92 (71/2/19) · **ตัดออก**: KNNOR (มีแต่ค่าเฉลี่ย), RBBoost (ค่าคนละตาราง ไม่เคยเทียบตรง), MC-MBRC (หัวคอลัมน์ไม่ระบุว่าคือ SMOTE)
@@ -164,4 +164,4 @@ python3 build/make_final.py                      # ฉบับพร้อม m
 2. **merge กับ P**: คัดลอก `manuscript/data-section-final.tex` ไป `sections/`, เพิ่ม `\input` ใน main.tex, ต่อ `manuscript/data-section-final.bib` เข้า `references.bib`, คัดลอก `manuscript/figures/data-difficulty.pdf` ไป `figures/` (ทดสอบแล้ว: main.tex + ส่วนนี้คอมไพล์ด้วย biber ได้ 17 หน้า ไม่มี undefined citation/reference จากส่วนนี้) และตกลงเรื่องเนื้อหาที่ซ้อนกับ Section 7
 3. **git push** (commit แล้ว ยังไม่ push)
 4. เทียบไฟล์ mirror ที่เหลือกับไฟล์ทางการ (UCI ทางการดาวน์โหลดผ่าน browser ได้แล้ว 8 พ.ย.; KEEL sci2s.ugr.es ยังไม่ได้)
-(ข้อเดิม: V-author_release และขนาด +1 ของ Loyalty-SMOTE รับแล้ว 8 พ.ย. · Kaggle ดาวน์โหลดแล้ว 9 ชุด)
+(ข้อเดิม: V-author_release และขนาด +1 ของ Loyalty-SMOTE รับแล้ว 8 พ.ย. · Kaggle ดาวน์โหลดแล้ว 11 ชุด (9 พ.ย. เพิ่ม Sales Win Loss, Credit Card Fraud))

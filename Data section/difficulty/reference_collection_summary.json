@@ -1,9 +1,9 @@
 {
   "universe": {
-    "tasks": 236,
-    "entries": 701,
+    "tasks": 238,
+    "entries": 703,
     "cells_nonempty": 19,
-    "families_t1": 103
+    "families_t1": 105
   },
   "selection": {
     "tasks": 42,
@@ -64,7 +64,7 @@
     "N": {
       "all": [
         79,
-        142521
+        284807
       ],
       "selected": [
         79,
@@ -119,7 +119,7 @@
       ]
     },
     "none | 3-9 medium": {
-      "tasks": 14,
+      "tasks": 15,
       "selected": [
         "contraceptive [minority: 2]",
         "segment0",
@@ -127,7 +127,7 @@
       ]
     },
     "none | >9 high": {
-      "tasks": 18,
+      "tasks": 19,
       "selected": [
         "kr-vs-k-one_vs_fifteen",
         "shuttle-c0-vs-c4",

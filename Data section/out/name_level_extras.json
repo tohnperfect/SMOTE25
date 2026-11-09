@@ -1,44 +1,44 @@
 {
  "not_measured": {
-  "names": 488,
+  "names": 483,
   "by_reason": {
    "U-synthetic": 196,
-   "U-no_public_file": 170,
-   "U-size_mismatch": 79,
-   "U-task_not_reconstructible": 32,
+   "U-no_public_file": 159,
+   "U-size_mismatch": 82,
+   "U-task_not_reconstructible": 35,
    "U-no_printed_size": 9,
    "V-not_run": 1,
    "U-name_ambiguous": 1
   },
   "no_public_file_by_source": {
    "not stated": 53,
-   "other repository": 29,
    "other paper/author": 28,
+   "other repository": 24,
    "private": 22,
-   "UCI": 20,
+   "UCI": 16,
    "KEEL": 9,
    "multiple": 5,
-   "group-level": 4
+   "group-level": 2
   },
-  "no_public_file_single_paper": 159,
+  "no_public_file_single_paper": 148,
   "no_public_file_3plus_papers": [
    "lev"
   ],
   "note": "แหล่ง KEEL/UCI/group-level/multiple/other repository = ไฟล์น่าจะมีเผยแพร่แต่ไม่อยู่ใน mirror ที่เข้าถึงได้; private/other paper/not stated = ไม่มีไฟล์ให้ดาวน์โหลด (แบ่งตามแหล่งที่ paper เขียน ยังไม่ได้ตรวจทีละชื่อ)",
   "no_public_file_split": {
-   "likely_public_not_in_mirror": 56,
+   "likely_public_not_in_mirror": 45,
    "no_file_to_download": 114
   },
   "names_to_download": {
    "file": "out/names_to_download.csv",
-   "names": 56,
+   "names": 45,
    "by_type": {
     "modified": 27,
-    "not stated": 14,
-    "original": 13,
+    "not stated": 8,
+    "original": 8,
     "repository-defined": 2
    },
-   "with_printed_size": 33
+   "with_printed_size": 24
   }
  },
  "modified_ops_per_name": {

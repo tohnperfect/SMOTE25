@@ -47,7 +47,7 @@
 
 ---
 
-## 0. สถานะปัจจุบัน (8 พ.ย. 2026) อ่านข้อนี้ก่อน
+## 0. สถานะปัจจุบัน (9 พ.ย. 2026) อ่านข้อนี้ก่อน
 
 ข้อ 3 และข้อ 5–8 ด้านล่างเป็นบันทึกสถานะเก่า (ต.ค.) เก็บไว้เป็นประวัติ ตัวเลขปัจจุบันอยู่ที่นี่และใน `CONCLUSIONS.md`
 
@@ -55,12 +55,12 @@
 |---|---|---|
 | corpus | 76 paper (มีการประเมินบนข้อมูล 73) · entry 1,756 (มีชื่อ 1,755; รวม 93 ชุดประกอบภาพ/ทดลองข้างเคียงของ 10 paper ที่เพิ่ม 8 พ.ย. และ 9 entry ชุดที่ใส่ noise ของ 7 paper ที่เพิ่ม 9 พ.ย.) → 866 ชื่อ → 775 dataset → 491 family | `out/reconcile_counts.json`, `out/dataset_families.csv` |
 | ชนิด entry | original 537 · repository-defined 470 · modified 341 · synthetic 213 · not stated 195 (Toy ของ OREM-M: original → synthetic, override `EXTERNAL`; กฎ NS ของ Toon รอบสาม: 4 entry SPIDER2 → original, `RULE_NS` จาก `out/rule_ns_original.csv`; ทั้งสองใน build/full_extraction.py) | `out/dataset_records.csv` |
-| ตรวจได้ (ความยาก) | 986 entry 65 paper 256 ไฟล์ (รอบสอง 973/65/247; รอบแรก 8 พ.ย. 864/65/172; 28 ต.ค. 643/61/131) · V-author_release 43 entry (k-means SMOTE, Toon ยืนยัน) · Kaggle 7 entry · Loyalty-SMOTE N+1 8 entry (Toon ยืนยัน) | `difficulty/verify_ext_summary.json` |
-| task ที่วัดได้ | binary/binarise 236 (701 entry 46 paper) · OvR 339 · covertype ไม่ได้วัด (ใหญ่เกินเวลา) | `difficulty/profile_final_summary.json`, `difficulty/measure_log.csv` |
-| ความยากระดับชื่อ | มีโปรไฟล์ 315 (รวม varies 5) · หลายคลาส 63 · วัดไม่ได้ 488 (synthetic 196, ไม่พบไฟล์ 170, ขนาดไม่ตรง 79, task สร้างซ้ำไม่ได้ 32, อื่น 11) | `out/name_level_types.json`, `out/name_level_extras.json` |
-| 200 ชื่อที่ไม่มีไฟล์ (รอบแรก) | ตรวจได้แล้ว 92 ชื่อ (114 entry) · ได้ไฟล์แต่ขนาด/task ไม่ตรง 42 · modified ไม่พิมพ์ขนาด 8 · ยังไม่ได้ไฟล์ 58 (HDDT เว็บปิด, private, ภาพ/ข้อความ/time series, Kaggle competition) | `out/names_download_result.csv`, `out/names_to_download.csv` (58 ที่เหลือ), `difficulty/official_manifest.csv` |
+| ตรวจได้ (ความยาก) | 991 entry 65 paper 261 ไฟล์ (รอบสาม 986/65/256; รอบสอง 973/65/247; รอบแรก 8 พ.ย. 864/65/172; 28 ต.ค. 643/61/131) · V-author_release 43 entry (k-means SMOTE, Toon ยืนยัน) · Kaggle 9 entry (11 ไฟล์) · CLUTO 2 entry · Loyalty-SMOTE N+1 8 entry (Toon ยืนยัน) | `difficulty/verify_ext_summary.json` |
+| task ที่วัดได้ | binary/binarise 238 (703 entry 46 paper) · OvR 347 · ไม่ได้วัด: covertype (ใหญ่เกินเวลา), la12 (เกินหน่วยความจำ) | `difficulty/profile_final_summary.json`, `difficulty/measure_log.csv` |
+| ความยากระดับชื่อ | มีโปรไฟล์ 317 (รวม varies 5) · หลายคลาส 66 · วัดไม่ได้ 483 (synthetic 196, ไม่พบไฟล์ 159, ขนาดไม่ตรง 82, task สร้างซ้ำไม่ได้ 35, อื่น 11) | `out/name_level_types.json`, `out/name_level_extras.json` |
+| 200 ชื่อที่ไม่มีไฟล์ (รอบแรก) | ตรวจได้แล้ว 97 ชื่อ (119 entry) · ได้ไฟล์แต่ขนาด/task ไม่ตรง 48 · modified ไม่พิมพ์ขนาด 8 · ยังไม่ได้ไฟล์ 47 (HDDT เว็บปิด, private, ภาพ/ข้อความ/time series, Kaggle competition, ชุดย่อยที่ผู้เขียนสร้างเอง) | `out/names_download_result.csv`, `out/names_to_download.csv` (45 ชื่อที่อ้างแหล่งสาธารณะแต่ไม่มีไฟล์), `difficulty/official_manifest.csv` |
 | synthetic เผยแพร่ไหม | 29 paper 213 entry: เผยแพร่ 7 paper/63 (รวม Toy ของ OREM-M) · อ้างงานอื่น 3/13 · ขอได้ 1/60 (MC-MBRC) · บอกแค่ตัวสร้าง 1/3 · มีแค่โค้ด 5/10 · ไม่พบ 13/64 (OREM-M อยู่ 2 กลุ่ม) | `out/synthetic_availability.json` |
-| ผลชนะ SMOTE | plain 29 paper 1,511 แถว ชนะ 1,107 เสมอ 102 แพ้ 286 (ไม่เปลี่ยน) · H1 ไม่ได้รับการสนับสนุน (GEE 0.69 p 0.10) · noise +0.1 → odds ชนะ ×1.14 (p 0.009) | `out/winloss_allmetric_summary.json`, `out/hypotheses.json`, `out/difficulty_outcomes.json` |
+| ผลชนะ SMOTE | plain 29 paper 1,511 แถว ชนะ 1,107 เสมอ 102 แพ้ 286 (ไม่เปลี่ยน) · H1 ไม่ได้รับการสนับสนุน (GEE 0.69 p 0.10) · noise +0.1 → odds ชนะ ×1.15 (p 0.005) | `out/winloss_allmetric_summary.json`, `out/hypotheses.json`, `out/difficulty_outcomes.json` |
 | manuscript | `manuscript/data-section-draft.tex` (แก้ที่นี่) → `data-section-final.tex` + `.bib` (make_final.py) → **`manuscript/data-section-jair.pdf`** (template JAIR จริง, build_jair_pdf.py) · พรีวิวแบบมีมาร์กอัป `data-section-draft-preview.pdf` | |
 | HTML หลัก | `out/dataset-atlas.html` (มีแท็บ Handoff ที่ฝังไฟล์นี้ทั้งไฟล์) | `build/make_atlas.py` + `build/atlas_template.html` |
 | git | commit ในเครื่องแล้ว ยังไม่ push (push ต้องรันเองบนเครื่อง) | |
@@ -77,7 +77,7 @@ python3 build/make_atlas.py && python3 build/atlas_analysis_checks.py && python3
 
 **จัดโฟลเดอร์ (9 พ.ย.)**: ไฟล์สำรองรุ่นเก่า (`*.before_*`, `out/audit_backup/`, `ai-draft/full_backup_*`, `_verify_png/`) ลบแล้ว ดูย้อนหลังจาก git history · เอกสารทำงานรุ่นก่อนอยู่ใน `_archive/` (ตัวเลขเก่า ไม่ใช่สถานะปัจจุบัน) · ชื่อไฟล์ before_ ที่ปรากฏในบันทึกด้านล่างคือไฟล์ที่ลบไปแล้ว
 
-**สถานะเรื่องที่เคยค้าง (อัปเดต 9 พ.ย.)**: V-author_release รับแล้ว (Toon 8 พ.ย. รอบสาม) · ขนาด +1 ของ Loyalty-SMOTE รับแล้ว (Toon 8 พ.ย.) · Kaggle ดาวน์โหลดแล้ว 9 ชุดด้วยบัญชีของ Toon (ที่เหลือ: icr เป็น competition, credit ของ CTGAN/TVAE เป็นเวอร์ชัน SDGym, approval ระบุชุดไม่ได้) · ไฟล์ชั่วคราวใน Downloads (.tmp, smote25_uci_*.bin, uci_extended.tar.gz, archive*.zip) มีสำเนาใน difficulty/src/ แล้ว ลบได้ · ชื่อผู้เขียนใน PDF ปล่อยว่าง (Toon 8 พ.ย.) · **ที่เหลือจริง**: merge เข้า main.tex/sections/references.bib ตอนรวมกับ P · git pull แล้ว push
+**สถานะเรื่องที่เคยค้าง (อัปเดต 9 พ.ย.)**: V-author_release รับแล้ว (Toon 8 พ.ย. รอบสาม) · ขนาด +1 ของ Loyalty-SMOTE รับแล้ว (Toon 8 พ.ย.) · Kaggle ดาวน์โหลดแล้ว 11 ชุดด้วยบัญชีของ Toon (9 พ.ย. เพิ่ม Sales Win Loss, Credit Card Fraud; ที่เหลือ: icr เป็น competition, approval ระบุชุดไม่ได้) · ไฟล์ชั่วคราวใน Downloads (.tmp, smote25_uci_*.bin, uci_extended.tar.gz, archive*.zip) มีสำเนาใน difficulty/src/ แล้ว ลบได้ · ชื่อผู้เขียนใน PDF ปล่อยว่าง (Toon 8 พ.ย.) · **ที่เหลือจริง**: merge เข้า main.tex/sections/references.bib ตอนรวมกับ P · git pull แล้ว push
 
 ---
 
@@ -2150,4 +2150,33 @@ python3 build/outcome_pilot.py
 - ย้ายไป `_archive/` (พร้อม `_archive/README.md` บอกว่าแต่ละไฟล์ถูกแทนด้วยอะไร): workplan, section-outline, research-thinking-handoff, data-handling-corpus, dataset-usage-recon, dataset-name-topup, drive-inventory, outcome-pilot, `ai-draft/Data_Section_Explorer.html`, `manuscript/parts/wins_2026-10-29.tex`
 - add_synthetic_entries.py / add_noise_entries.py ไม่สร้างโฟลเดอร์สำรองอีก (ต้นฉบับอยู่ใน git history) · README.md เขียนตารางไฟล์ใหม่ตามโครงสร้างปัจจุบัน · การอ้างถึงไฟล์ที่ย้ายใน handoff เปลี่ยนเป็น path ใน `_archive/` แล้ว
 - checks หลังจัด: consistency 44/44, atlas 41/41, phase2 14/14
+- ไม่ได้ push
+
+### 9 พ.ย. 2026 รอบสี่ (Claude) — ดาวน์โหลดชื่อที่มีไฟล์สาธารณะที่ยังไม่ได้ลอง แล้วตรวจ วัด และ rebuild
+
+คำสั่ง Toon: "โอเค ทำต่อให้เสร็จเลย" (หลังรายงานว่ายังมี 15 ชื่อที่มีไฟล์สาธารณะแต่ยังไม่ได้ลองโหลด) · Toon โหลด Credit Card Fraud จาก Kaggle เองใน Chrome (ไฟล์ `archive (1).zip`)
+
+**ที่มาไฟล์** (ทุกไฟล์มี URL + sha256 ใน `difficulty/official_manifest.csv`; ตัวไฟล์อยู่ใน `difficulty/src/official/`, ไม่อยู่ใน git)
+- UCI (browser ของแอป, หน้าเว็บทางการ): 175 character trajectories, 189 parkinsons telemonitoring, 332 online news popularity, 373 drug consumption, 427 activity recognition with healthy older people, 591 gender by name
+- CLUTO (papers.karypis.org): datasets.tar.gz → k1b.mat, la12.mat (+ .rclass) · loader `cluto()` ใน official_sources.py (sparse; pandas 3 ให้ fill เป็น NaN จึงตั้ง fill = 0 เอง)
+- Kaggle: thatbrock/ibm-watson-saleswinloss (browser ของแอป), mlg-ulb/creditcardfraud (Toon โหลดเอง; creditcard.csv 284,807 แถว Class 1 = 492; ไฟล์ zip ถูกต้อง)
+- SDGym bucket ปัจจุบัน (sdv-datasets-public): มีแค่ news และ intrusion ที่มาจาก Kaggle ไม่ใช่เวอร์ชันใน paper — เก็บไว้แต่ไม่ใช้
+- loader ใหม่: `dirconcat()` (S1/S2_Dataset ของ UCI 427 เป็นไฟล์ละคน ต่อกัน), `table(..., literal=True)` สำหรับ Sales Win Loss (ค่า "None" ของ Competitor Type เป็นหมวด ไม่ใช่ค่าหาย — pandas อ่านเป็น NaN แล้วตัดทิ้ง 9,257 แถว; แก้แล้ว ไม่มีแถวถูกตัด) · ตรวจไฟล์ทางการทุกไฟล์แล้ว ชุดอื่นไม่มีคำแบบนี้ในคอลัมน์หมวด (ค่าหายของ hmeq, give me some credit, promotion, hcv เป็นค่าหายจริงในคอลัมน์ตัวเลข)
+
+**ผลตรวจ** (`difficulty/verify_ext.py`; กติกาเดิมไม่ผ่อน)
+- ตรวจได้เพิ่ม 5 entry: AB-SMOTE sales: win loss (78,025 / Won 17,627 ตรงที่พิมพ์ → V-binary_file) · COG-OS k1b (2,340 × 21,839, 6 คลาส ตรง) และ la12 (6,279 × 31,472, 6 คลาส ตรง) → V-multiclass_asis · CTGAN/TVAE credit (paper ไม่พิมพ์ขนาด, supplement ระบุ kaggle.com/mlg-ulb/creditcardfraud → ALIAS credit → creditcard, V-name_only_ext) · RSMOTE healthy older people2 (22,646 × 8, 4 คลาส 20,537/1,244/530/335 ตรง → V-multiclass_asis)
+- ได้ไฟล์แต่ใช้ไม่ได้ (บันทึกใน `FOUND_NOT_USABLE` พร้อมเหตุผล): Loyalty-SMOTE drug (ไฟล์มีเป้าหมาย 19 ตัว ไม่รู้ว่าใช้ตัวไหน → U-task_not_reconstructible), online (feature 38 vs ไฟล์ 58 → U-size_mismatch), gender by name (พิมพ์ 146,870 ไฟล์ 147,269 → U-size_mismatch) · CTGAN news (เป็น regression → U-task_not_reconstructible) · GDO parkinsons telemonitoring (22 vs 26 คอลัมน์, เป้าหมาย UPDRS ไม่มีเกณฑ์แบ่งที่พิมพ์ → U-task_not_reconstructible) · CGMOS charactertraj (ไฟล์ 2,858 trajectory vs พิมพ์ 2,860 × 3 → U-size_mismatch) · CTGAN mnist12, mnist28 (bucket เดิมของ SDGym ไม่เปิดสาธารณะแล้ว → U-no_public_file พร้อมเหตุผล)
+- แก้บั๊กใน verify_ext.py: ชื่อที่ใช้ค้นไฟล์เก็บเป็น set ซึ่งเรียงต่างกันทุกครั้งที่รัน Python (hash randomisation) ทำให้ "ไฟล์ที่ใกล้สุด" ของ entry ที่ขนาดไม่ตรงสลับได้เมื่อมีไฟล์ขนาดเท่ากัน (vehicle/vehicle3) → เปลี่ยนเป็น list เรียงตามชื่อ entry ก่อน · ตรวจแล้ว: รันสองครั้งได้ผลเท่ากัน และเทียบกับไฟล์ก่อนรอบนี้ต่างเฉพาะ 13 entry ที่ตั้งใจ (5 ตรวจได้, 8 ใช้ไม่ได้/เหตุผลใหม่)
+- รวม: **991 entry 65 paper 261 ไฟล์** (เดิม 986/65/256) · 200 ชื่อรอบแรก: ตรวจได้ 97 ชื่อ (119 entry), ได้ไฟล์แต่ไม่ตรง 48, modified ไม่พิมพ์ขนาด 8, ยังไม่ได้ไฟล์ 47
+
+**วัดความยาก** (`difficulty/measure.py`, ทั้งชุดใหม่ ~35 นาที) — task เดิม 594 task ค่าตรงเดิมทุกคอลัมน์ · task ใหม่ 12: creditcard (binary, noise 0.24, ไม่ติดธง), sales win loss (binary, noise 0.52, ไม่ติดธง), healthy older people2 OvR 4, k1b OvR 6 (dense 0.4 GB/สำเนา ใช้หน่วยความจำสูงสุด 3.6 GB)
+- ไม่ได้วัด la12: dense 1.6 GB ต่อสำเนา × ราว 9 สำเนา ≈ 14 GB เกินเครื่อง (7 GB) → `NOT_MEASURED` (entry ยังนับว่าตรวจได้ แบบเดียวกับ covertype) · CLUTO อ่านเป็น sparse แล้วแปลงเป็น dense ใน measure.load
+- ผล: binary/binarise **238 task** (703 entry 46 paper) · OvR 347 · small sample 160 (67%), outliers 83 (35%), small disjuncts 33 (14%), ไม่ติดธง 65 · noise median 0.57 [0.29, 0.77] · แถบ IR 0.31 (6) / 0.44 (40) / 0.50 (52) / 0.65 (140), rho 0.25 · ไม่ติดธง 65 task noise 0–0.84 (≥ 0.5 มี 21, < 0.1 มี 16) · ราย paper ≥ 3 task 40 (ผสม 37; COG-OS, SMOTE-ENN ไม่ติดธงล้วน; GOIO ติดธงล้วน) · ชุดอ้างอิง 42 task เท่าเดิม · > 100 feature ตรวจได้ 8 entry (เพิ่ม k1b, la12)
+- ระดับชื่อ: มีโปรไฟล์ 317, หลายคลาส 66, วัดไม่ได้ 483 (synthetic 196, ไม่พบไฟล์ 159 — อ้างแหล่งสาธารณะ 45, ขนาดไม่ตรง 82, task สร้างซ้ำไม่ได้ 35, อื่น 11)
+- noise vs ชนะ: 107 ไฟล์ 23 paper 496 แถว · OR ต่อ noise 0.1 = 1.15 (1.04–1.26, p 0.005), ภายใน paper 1.19 (1.05–1.34, p 0.006), หนึ่งผลต่อไฟล์ 1.21 (1.06–1.37, p 0.004), IR 0.93 (p 0.62) · H1/H2/H3b ไม่เปลี่ยน (แถวผลเดิม)
+
+**45 ชื่อที่อ้างแหล่งสาธารณะแต่ยังไม่มีไฟล์** (`out/names_to_download.csv`, เหตุผลรายชื่อใน `out/names_download_result.csv` คอลัมน์ผลตรวจของ Toon): HDDT เว็บปิด/ข้อมูลไม่เผยแพร่ (boundary, compustat, phoss, cam, covtype 38,500, e-state/estate, acl) · ชุดย่อยหรือเวอร์ชันที่ผู้เขียนสร้างเอง (UCR ของ INOS, MNIST ของ NBU, CIFAR/ILSVRC ของ Buda, ImageNet feature ของ DLexiBoost, kddcup ของ COG-OS/SMOTEBoost, susy, mocap, online retail, gisette 3,076, housing/medv ที่แบ่งเป้าหมายเอง, bar crawl, sick2/soybean12) · ระบุชุดไม่ได้ (approval, national, voice9) · icr (ต้องกดยอมรับกติกา competition — ไม่ได้กดแทน Toon) · mafalda (EMDO; รอบก่อนตัดสินว่าสร้างชุดตามขนาดที่พิมพ์จากไฟล์ของผู้เขียนไม่ได้) · mnist12/28 (bucket เดิมของ SDGym ปิด) · customer churn wireless telecom (หน้า contest ปิด; สำเนาบน Kaggle ยืนยันไม่ได้)
+
+**manuscript** (หัวข้อความยาก + wins): แหล่งไฟล์เพิ่ม CLUTO · 991/261 · 133 entry (15 paper) ไม่พิมพ์ขนาดและไม่บอกการดัดแปลง (36 ไม่พิมพ์สัดส่วนคลาส) · 238/703/347 · ตารางความยาก · ย่อหน้าโปรไฟล์ (none 65, 21 task ≥ 0.5, แถบ IR, rho 0.25) · Figure Description/caption · มิติ (8 entry > 100 feature, k1b 21,839) · paper mix 40/37 · ชุดอ้างอิง "42 of the 238" · Limits (Kaggle 11 ชุด + CLUTO, la12 ไม่ได้วัด, 159/45/196/82) · noise vs ชนะ · evidence block · overview.json, CONCLUSIONS.md, section 0 ของไฟล์นี้อัปเดตตาม
+- ไฟล์ของเราใน Downloads ของ Toon (ลบเองได้ สำเนาอยู่ใน difficulty/src/ แล้ว): smote25_*.bin (9 ไฟล์), uci_extended.tar.gz, archive.zip, archive1–11.zip, `archive (1).zip`, `Unconfirmed 48111.crdownload` (0 byte จากการโหลดที่ไม่สำเร็จ)
 - ไม่ได้ push

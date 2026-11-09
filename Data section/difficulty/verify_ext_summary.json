@@ -16,48 +16,49 @@
   "U-minority_mismatch": 2
  },
  "status_now": {
-  "V-binary_file": 530,
-  "V-multiclass_asis": 225,
-  "U-size_mismatch": 213,
+  "V-binary_file": 531,
+  "V-multiclass_asis": 228,
+  "U-size_mismatch": 216,
   "U-synthetic": 212,
-  "U-no_public_file": 188,
-  "U-task_not_reconstructible": 86,
+  "U-no_public_file": 177,
+  "U-task_not_reconstructible": 89,
   "V-keel_name_only": 80,
   "V-binarized_rule_unique": 49,
   "U-no_printed_size": 48,
   "V-author_release": 43,
   "V-name_only_other": 29,
-  "V-name_only_ext": 23,
+  "V-name_only_ext": 24,
   "V?-binarized_rule_ambiguous": 15,
   "V-imblearn_task": 7,
   "U-name_ambiguous": 5,
   "U-minority_mismatch": 2
  },
  "newly_verifiable": {
-  "entries": 343,
+  "entries": 348,
   "papers": 53,
-  "names": 189,
-  "files": 153,
+  "names": 194,
+  "files": 158,
   "by_source": {
    "KEEL-std(F)": 130,
    "UCI++": 53,
    "author-kmeans": 52,
    "KEEL(keel_ds)": 34,
-   "UCI-official": 18,
+   "UCI-official": 19,
    "author-HDE": 10,
+   "Kaggle": 9,
    "jbrownlee-UCI": 9,
    "author-SOS": 8,
-   "Kaggle": 7,
    "LibSVM": 5,
    "PROMISE-ck": 5,
    "Weka-UCI": 4,
    "author-MBS": 4,
+   "CLUTO": 2,
    "author-DGOT": 2,
    "PMLB": 2
   },
   "by_basis": {
-   "exact name": 183,
-   "alias": 94,
+   "exact name": 187,
+   "alias": 95,
    "modified file published by the paper's authors under the same name": 43,
    "KEEL split name cut at _vs_": 8,
    "alias; printed N = file N + 1 (header row counted, Toon 8 Nov)": 6,
@@ -71,18 +72,18 @@
    "imbalanced-learn task: minority = 19 (documented size 32)": 1
   },
   "by_status": {
-   "V-multiclass_asis": 136,
-   "V-binary_file": 105,
+   "V-multiclass_asis": 139,
+   "V-binary_file": 106,
    "V-author_release": 43,
    "V-binarized_rule_unique": 29,
-   "V-name_only_ext": 23,
+   "V-name_only_ext": 24,
    "V-imblearn_task": 7
   }
  },
  "verifiable_total": {
-  "entries": 986,
+  "entries": 991,
   "papers": 65,
-  "names": 374,
-  "files": 256
+  "names": 379,
+  "files": 261
  }
 }

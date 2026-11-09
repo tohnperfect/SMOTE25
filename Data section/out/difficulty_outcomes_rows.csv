@@ -15,10 +15,12 @@ AB-SMOTE,Abalone9-18 (Table IV),F-measure,win,P044-D001,abalone9-18,KEEL(keel_ds
 AB-SMOTE,Harberman (Table VI),F-measure,loss,P044-D004,haberman,KEEL(keel_ds),none,0.84,2.778,False,False,False
 AB-SMOTE,Employee Attrition (Table VII),F-measure,win,P044-D005,ibm hr attrition,Kaggle,small_sample + outlier_flag,0.802,5.203,True,True,False
 AB-SMOTE,Telco Customer Churn (Table VIII),F-measure,loss,P044-D003,telco customer churn,Kaggle,none,0.643,2.762,False,False,False
+AB-SMOTE,Sales: Win Loss (Table XI),F-measure,loss,P044-D008,sales win loss,Kaggle,none,0.521,3.426,False,False,False
 AB-SMOTE,Abalone9-18 (Table IV),Recall/sensitivity,win,P044-D001,abalone9-18,KEEL(keel_ds),small_sample + outlier_flag,0.857,16.405,True,True,False
 AB-SMOTE,Harberman (Table VI),Recall/sensitivity,loss,P044-D004,haberman,KEEL(keel_ds),none,0.84,2.778,False,False,False
 AB-SMOTE,Employee Attrition (Table VII),Recall/sensitivity,win,P044-D005,ibm hr attrition,Kaggle,small_sample + outlier_flag,0.802,5.203,True,True,False
 AB-SMOTE,Telco Customer Churn (Table VIII),Recall/sensitivity,loss,P044-D003,telco customer churn,Kaggle,none,0.643,2.762,False,False,False
+AB-SMOTE,Sales: Win Loss (Table XI),Recall/sensitivity,loss,P044-D008,sales win loss,Kaggle,none,0.521,3.426,False,False,False
 ADASYN,Pima Indian Diabetes,Accuracy,win,P013-D002,pima,KEEL(keel_ds),none,0.649,1.866,False,False,False
 ADASYN,Ionosphere,Accuracy,win,P013-D004,ionosphere,KEEL(keel_ds),small_sample,0.437,1.786,True,False,False
 ADASYN,Pima Indian Diabetes,Precision,win,P013-D002,pima,KEEL(keel_ds),none,0.649,1.866,False,False,False

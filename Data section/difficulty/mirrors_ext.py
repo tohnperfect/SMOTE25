@@ -21,7 +21,7 @@ import os, re, csv, glob, gzip, io
 import pandas as pd, numpy as np
 from catalog import key
 import official_sources
-OFFICIAL_SRC = {'UCI-official', 'LibSVM', 'author-HDE', 'author-DGOT', 'author-SOS', 'author-MBS', 'author-kmeans', 'Kaggle'}
+OFFICIAL_SRC = {'UCI-official', 'LibSVM', 'author-HDE', 'author-DGOT', 'author-SOS', 'author-MBS', 'author-kmeans', 'Kaggle', 'CLUTO'}
 OFFICIAL_BY_PATH = {s[2]: s for s in official_sources.SPEC}   # key = path under src/
 
 HERE = os.path.dirname(os.path.abspath(__file__))

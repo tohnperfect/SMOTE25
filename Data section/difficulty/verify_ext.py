@@ -34,6 +34,7 @@ RECHECK = {'U-no_public_file', 'U-size_mismatch', 'U-task_not_reconstructible', 
 
 # corpus key -> catalog keys (other published names of the same data set)
 ALIAS = {
+ 'credit': ['creditcard'],   # 9 Nov: CTGAN supplement names kaggle.com/mlg-ulb/creditcardfraud for 'credit' (only corpus entry named credit)
  'balance': ['balancescale'], 'balancescale': ['balance'],
  'liver': ['bupa'], 'liverdisorders': ['bupa'], 'bupa': ['bupa'],
  'cmc': ['contraceptive', 'contraceptivemethodchoice', 'contraceptivemethod'],
@@ -152,6 +153,24 @@ AUTHOR_RELEASE = {'k-means SMOTE': 'author-kmeans'}   # paper -> source holding 
 # Toon 8 Nov 2026: Loyalty-SMOTE prints N one larger than the public file for many sets (the header line was counted);
 # for this paper a printed N equal to file N + 1 counts as a size match. All other rules (features +-1, minority) unchanged.
 HEADER_ROW_PAPERS = {'Loyalty-SMOTE'}
+# 9 Nov 2026: files that were downloaded and opened, but cannot carry the paper's task (no class column, regression target,
+# time series, or several possible targets). Recorded per entry so that the reason is kept with the file that was checked.
+FOUND_NOT_USABLE = {
+ 'P075-D004': ('U-task_not_reconstructible', 'drug consumption', 'UCI-official', 1885, 31,
+               'file found (UCI Drug consumption, 1,885 rows = printed 1,886 - 1); it has 19 drug-use columns with 7 levels each and the paper does not say which one is the class or how it was made two-class'),
+ 'P075-D009': ('U-size_mismatch', 'online news popularity', 'UCI-official', 39644, 58,
+               'file found (UCI Online News Popularity, 39,644 rows = printed 39,645 - 1); printed 38 features vs 58 predictive attributes, and the target is a share count with no class given'),
+ 'P039-D015': ('U-task_not_reconstructible', 'online news popularity', 'UCI-official', 39644, 58,
+               'file found (UCI Online News Popularity, named in the CTGAN supplement); the paper evaluates news with regressors (share count), so the file has no classes'),
+ 'P057-D048': ('U-task_not_reconstructible', 'parkinsons telemonitoring', 'UCI-official', 5875, 21,
+               'file found (UCI Parkinsons Telemonitoring, 5,875 rows = printed); 22 columns vs 26 printed features, and no class column: the targets (motor/total UPDRS) are scores and the paper does not print the threshold for its two classes'),
+ 'P032-D007': ('U-size_mismatch', 'character trajectories', 'UCI-official', 2858, 3,
+               'file found (UCI Character Trajectories): 2,858 variable-length pen trajectories of 20 letters in a MATLAB file; printed 2,860 x 3 does not match'),
+ 'P039-D013': ('U-no_public_file', '', '', None, None,
+               "SDGym's original data bucket (sdgym.s3.amazonaws.com/datasets/, the CTGAN authors' benchmark) is no longer public and the current SDGym bucket has no mnist12"),
+ 'P039-D014': ('U-no_public_file', '', '', None, None,
+               "SDGym's original data bucket (sdgym.s3.amazonaws.com/datasets/, the CTGAN authors' benchmark) is no longer public and the current SDGym bucket has no mnist28"),
+}
 
 def num(x):
     if pd.isna(x): return None
@@ -168,7 +187,7 @@ def subsets(ds, t):
 SRC_RANK = {'KEEL(keel_ds)': 0, 'KEEL(imbalanced_databases)': 0, 'KEEL-std(F)': 1, 'KEEL-std(C)': 2, 'UCI++': 3, 'Weka-UCI': 4,
             'jbrownlee-UCI': 5, 'imbalanced_databases(other fmt)': 6, 'PMLB': 7, 'PROMISE-ck': 8, 'NASA-MDP': 8,
             # 8 Nov second round: the authors' own files first, then the official sites
-            'author-HDE': 0, 'author-DGOT': 0, 'author-SOS': 0, 'author-MBS': 0, 'author-kmeans': 0, 'UCI-official': 1, 'LibSVM': 1, 'Kaggle': 2}
+            'author-HDE': 0, 'author-DGOT': 0, 'author-SOS': 0, 'author-MBS': 0, 'author-kmeans': 0, 'UCI-official': 1, 'LibSVM': 1, 'Kaggle': 2, 'CLUTO': 1}
 
 def sync_with_records(old, rec):
     """8 Nov 2026 (second round): bring the 28 Oct snapshot in line with the current dataset_records.csv.
@@ -211,8 +230,13 @@ def main():
     cat['vsp'] = cat.key.map(vs_parts)
 
     def candidates(r):
-        ks = {key(r['name'])}
-        try: ks.add(key(rec.loc[r.record_id, 'name_as_reported']))
+        # 9 Nov: an ordered list, not a set -- a set of strings is iterated in a different order in every Python process
+        # (hash randomisation), which changed the order of the candidates and so which file is reported as the nearest
+        # one when several files are equally near (vehicle vs vehicle3, both N 846). The entry's name comes first.
+        ks = [key(r['name'])]
+        try:
+            k2 = key(rec.loc[r.record_id, 'name_as_reported'])
+            if k2 not in ks: ks.append(k2)
         except Exception: pass
         out = []
         for k in ks:
@@ -247,6 +271,10 @@ def main():
     for _, r in old.iterrows():
         row = r.to_dict(); row.update(pass_='28oct', basis='', candidates_considered='')
         if r.verif not in RECHECK:
+            rows.append(row); continue
+        if r.record_id in FOUND_NOT_USABLE:
+            v_, f_, s_, n_, d_, b_ = FOUND_NOT_USABLE[r.record_id]
+            row.update(verif=v_, file=f_ or None, file_src=s_ or None, file_n=n_, file_f=d_, basis=b_, **{'pass_': 'ext'})
             rows.append(row); continue
         q = rec.loc[r.record_id]
         pn, pf, pc, pm = num(q.n_instances), num(q.n_features), num(q.n_classes), num(q.n_minority)

@@ -67,12 +67,12 @@
       "reader": "รู้ว่าข้อมูลที่วงการใช้มีลักษณะความยากแบบไหน และ IR ไม่ได้บอกว่า minority อยู่ตรงไหน",
       "found": [
         "paper รายงานความยากเองน้อยมาก: overlap ที่เป็นตัวเลข 36 entry ใน 2 paper, noise/borderline บรรยาย 5 entry",
-        "ตรวจได้ 986 entry 65 paper 256 ไฟล์ (8 พ.ย.: mirror เพิ่ม 864 → รอบสองไฟล์ทางการ UCI/LIBSVM + repo ของผู้เขียน 5 ราย 973 → รอบสาม Kaggle 9 ชุด + กติกา N+1 ของ Loyalty-SMOTE; เดิม 643) → 236 task binary/binarise (701 entry 46 paper) + OvR 339 แยกรายงาน; วัดด้วย Napierala types, k=5, HVDM; covertype ไม่ได้วัด (581,012 แถว OvR เท่านั้น)",
-        "small sample 160/236 (68%), outlier > 20% 83, small disjuncts 33, ไม่ติดธง 63 · โปรไฟล์ 7 แบบ (S 87, none 63, S+O 42, D+S+O 28, O 11, D+S 3, D+O 2) · noise median 0.58 [0.29, 0.77]",
-        "กลุ่มไม่ติดธง noise 0–0.84 (≥ 0.5 มี 20 task เช่น haberman 0.84); noise มัธยฐานตามแถบ IR 0.31/0.44/0.48/0.66, rank correlation กับ IR 0.26",
-        "จำนวน feature มัธยฐาน 9; 59 entry ที่ > 100 feature ตรวจได้ 6 (musk 2, isolet, madelon/a1a/mushrooms) task ที่วัดได้มี ≤ 617 feature",
-        "39 paper ที่มี task ตรวจได้ ≥ 3: ผสมทั้งมีธงและไม่มีธง 36, ไม่มีธงล้วน 2 (COG-OS, SMOTE-ENN), มีธงล้วน 1 (GOIO)",
-        "ชุด dataset อ้างอิง 42 task จาก 236 (กฎตายตัว: ทุกช่อง profile × แถบ IR เลือกชุดที่ใช้บ่อยสุด + noise ต่ำสุด/สูงสุด) 19 ช่อง ครอบ noise 0–1, IR 1.1–970.6, N 79–62,630; yeast 4, pima 3, ecoli/glass/haberman/cleveland/heart/iris อย่างละ 2 ให้รวมตามแหล่งเวลาทดสอบ"
+        "ตรวจได้ 991 entry 65 paper 261 ไฟล์ (8 พ.ย.: mirror เพิ่ม 864 → รอบสองไฟล์ทางการ UCI/LIBSVM + repo ของผู้เขียน 5 ราย 973 → รอบสาม Kaggle 9 ชุด + กติกา N+1 ของ Loyalty-SMOTE 986 → 9 พ.ย. รอบสี่ CLUTO, UCI 427/591, Kaggle Sales Win Loss + Credit Card Fraud; เดิม 643) → 238 task binary/binarise (703 entry 46 paper) + OvR 347 แยกรายงาน; วัดด้วย Napierala types, k=5, HVDM; ไม่ได้วัด covertype (581,012 แถว OvR เท่านั้น) และ la12 (6,279 × 31,472 เกินหน่วยความจำ)",
+        "small sample 160/238 (67%), outlier > 20% 83, small disjuncts 33, ไม่ติดธง 65 · โปรไฟล์ 7 แบบ (S 87, none 65, S+O 42, D+S+O 28, O 11, D+S 3, D+O 2) · noise median 0.57 [0.29, 0.77]",
+        "กลุ่มไม่ติดธง noise 0–0.84 (≥ 0.5 มี 21 task เช่น haberman 0.84); noise มัธยฐานตามแถบ IR 0.31/0.44/0.50/0.65, rank correlation กับ IR 0.25",
+        "จำนวน feature มัธยฐาน 9; 59 entry ที่ > 100 feature ตรวจได้ 8 (musk 2, isolet, madelon/a1a/mushrooms, k1b/la12) task สองคลาสที่วัดได้มี ≤ 617 feature (k1b วัดแบบ OvR มี 21,839)",
+        "40 paper ที่มี task ตรวจได้ ≥ 3: ผสมทั้งมีธงและไม่มีธง 37, ไม่มีธงล้วน 2 (COG-OS, SMOTE-ENN), มีธงล้วน 1 (GOIO)",
+        "ชุด dataset อ้างอิง 42 task จาก 238 (กฎตายตัว: ทุกช่อง profile × แถบ IR เลือกชุดที่ใช้บ่อยสุด + noise ต่ำสุด/สูงสุด) 19 ช่อง ครอบ noise 0–1, IR 1.1–970.6, N 79–62,630; yeast 4, pima 3, ecoli/glass/haberman/cleveland/heart/iris อย่างละ 2 ให้รวมตามแหล่งเวลาทดสอบ"
       ],
       "status": "เสร็จ · ช่อง Toon และประโยคตีความเขียนเป็นฉบับสุดท้ายแล้ว (Claude 29 ต.ค. (Toon มอบให้ตัดสินแทน)) · ตาราง tab:data-reference"
     },
@@ -87,7 +87,7 @@
         "ความทนทาน: หนึ่งผลต่อ dataset 409/35/76; กติกา A (metric เดียว) 521 แถว: วิธีที่เสนอชนะ 402 เสมอ 39 แพ้ 80",
         "H1 ไม่ได้รับการสนับสนุน: modified+synthetic ชนะ 75.7% vs original 79.4%; GEE OR 0.69 (p 0.10), ภายใน paper OR 0.62 (p 0.04), mixed 0.75; ไม่ทนเมื่อใช้หนึ่งผลต่อ dataset หรือกติกา A; ราย paper 4 vs 7 (sign p 0.55)",
         "H2: เข้าเงื่อนไขแค่ 2 paper (MWMOTE, RUSBoost) ชนะบนข้อมูลอื่น 80.0% เท่ากับ paper อื่น 80.3% ทดสอบไม่ได้",
-        "ความยากที่วัดได้ (106 ไฟล์, 23 paper, 494 แถว): noise index สูงขึ้น 0.1 → odds ชนะ ×1.14 (p 0.009; ภายใน paper ×1.18 p 0.009; หนึ่งผลต่อไฟล์ ×1.20 p 0.01); IR ไม่สัมพันธ์ (p 0.58) · exploratory",
+        "ความยากที่วัดได้ (107 ไฟล์, 23 paper, 496 แถว): noise index สูงขึ้น 0.1 → odds ชนะ ×1.15 (p 0.005; ภายใน paper ×1.19 p 0.006; หนึ่งผลต่อไฟล์ ×1.21 p 0.004); IR ไม่สัมพันธ์ (p 0.62) · exploratory",
         "SMOTE แบบอื่น 12 paper 558 แถวรายงานแยก (Static-SMOTE 79, OVO 148, SMOTE-all 239, ห่อกับ learner อื่น 92) · ตัดออก KNNOR (ค่าเฉลี่ย), RBBoost (ข้ามตาราง), MC-MBRC (หัวคอลัมน์ไม่ระบุ SMOTE)"
       ],
       "status": "เขียนใหม่ด้วยผล all-metric + ทดสอบ H1/H2 (Claude 29 ต.ค. (Toon มอบให้ตัดสินแทน))"

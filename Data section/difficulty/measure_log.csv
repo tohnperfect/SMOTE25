@@ -1,4 +1,5 @@
 file,item,note
+la12,CLUTO,"not measured: 6,279 x 31,472 term matrix; dense copies exceed the memory of the machine used (9 Nov)"
 covertype,UCI-official,"not measured: 581,012 rows, one-vs-rest tasks only; not run for time (8 Nov)"
 post-operative,I,minority <2 rows
 heart_disease_va_long_beach,1,minority <2 rows

@@ -10,27 +10,20 @@ adiac,modified,other repository,1,1,INOS,,176,UCR,P023-D001
 approval,not stated,other repository,1,1,Loyalty-SMOTE,697,7,Kaggle,P075-D035
 bar crawl,original,UCI,1,1,MKC-SMOTE,10486,4,UCI,P068-D020
 cam,not stated,other repository,1,1,RBBoost / Random Balance,18916,,other: HDDT collection of Cieslak et al. [37] (http://www.nd.edu/dial/hddt/),P027-D003
-charactertraj,not stated,UCI,1,1,CGMOS,2860,3,UCI,P032-D007
 cifar-10,modified,other repository,1,1,ROS (Buda),,,"other: CIFAR-10 benchmark (Krizhevsky & Hinton, 2009)",P037-D002
 covtype,not stated,other repository,1,1,RBBoost / Random Balance,38500,,other: HDDT collection of Cieslak et al. [37] (http://www.nd.edu/dial/hddt/),P027-D005
-credit,original,other repository,1,1,CTGAN / TVAE,,,Kaggle,P039-D011
 customer churn wireless telecom,not stated,other repository,1,1,AB-SMOTE,5000,,other: Crowd Analytix,P044-D002
-drug,not stated,group-level,1,1,Loyalty-SMOTE,1886,13,other: UCI/KEEL (group-level; per dataset not stated),P075-D004
 estate,not stated,other repository,1,1,RBBoost / Random Balance,5322,,other: HDDT collection of Cieslak et al. [37] (http://www.nd.edu/dial/hddt/),P027-D007
 faceall,modified,other repository,1,1,INOS,,131,UCR,P023-D002
-gender by name,not stated,other repository,1,1,Loyalty-SMOTE,146870,4,Kaggle,P075-D054
 gisette,modified,other repository,1,1,HDE,3076,5000,LibSVM,P052-D025
-healthy older people2,original,UCI,1,1,RSMOTE,22646,8,UCI,P053-D035
 housing,modified,UCI,1,1,EasyEnsemble / BalanceCascade,506,,UCI,P016-D006
 icr,not stated,group-level,1,1,Loyalty-SMOTE,634,33,other: UCI/KEEL (group-level; per dataset not stated),P075-D017
 ilsvrc-2012,modified,other repository,1,1,ROS (Buda),,,"other: ImageNet ILSVRC-2012 (Russakovsky et al., 2015)",P037-D003
 imagenet12,modified,other repository,1,1,DLexiBoost,,2048,other: ImageNet 2011 Fall Release,P045-D033
 imagenet8,modified,other repository,1,1,DLexiBoost,1120,2048,other: ImageNet 2011 Fall Release,P045-D031
 imagenet9,modified,other repository,1,1,DLexiBoost,1240,2048,other: ImageNet 2011 Fall Release,P045-D032
-k1b,original,other repository,1,1,COG-OS,2340,21839,other: WebACE,P012-D009
 kddcup-99 intrusion,modified,UCI,1,1,SMOTEBoost,,,"other: KDD-Cup 1999 (ref [20], http://kdd.ics.uci.edu/databases/kddcup99/task.html)",P007-D001
 kddcup99data,modified,UCI,1,1,COG-OS,,41,other: UCI KDD Archive,P012-D015
-la12,original,other repository,1,1,COG-OS,6279,31472,other: TREC,P012-D010
 mafalda,original,other repository,1,1,EMDO,23762,14,"other: GitHub (sisinflab-swot/mafalda, ref [64])",P051-D011
 medv,original,UCI,1,1,Loyalty-SMOTE,512,13,UCI,P075-D049
 mnist 3,modified,other repository,1,1,NBU,,784,other: MNIST,P049-D027
@@ -39,13 +32,9 @@ mnist12,modified,other repository,1,1,CTGAN / TVAE,,,other: MNIST (LeCun),P039-D
 mnist28,modified,other repository,1,1,CTGAN / TVAE,,,other: MNIST (LeCun),P039-D014
 mocap,modified,UCI,1,1,RSMOTE,48023,33,UCI,P053-D022
 national,not stated,group-level,1,1,Loyalty-SMOTE,2279,9,other: UCI/KEEL (group-level; per dataset not stated),P075-D007
-news,original,UCI,1,1,CTGAN / TVAE,,,UCI,P039-D015
-online,not stated,group-level,1,1,Loyalty-SMOTE,39645,38,other: UCI/KEEL (group-level; per dataset not stated),P075-D009
 online retail,modified,UCI,1,1,RSMOTE,541909,7,UCI,P053-D027
-parkinsons telemonitoring,not stated,UCI,1,1,GDO,5875,26,UCI,P057-D048
 probe binary,modified,UCI,1,1,COG-OS,,41,other: UCI KDD Archive,P012-D016
 r2l binary,modified,UCI,1,1,COG-OS,,41,other: UCI KDD Archive,P012-D017
-sales: win loss,not stated,other repository,1,1,AB-SMOTE,78025,,other: IBM Analytics,P044-D008
 sick2,repository-defined,KEEL,1,1,DLexiBoost,,,KEEL,P045-D008
 sleaf,modified,other repository,1,1,INOS,,128,UCR,P023-D004
 soybean12,repository-defined,KEEL,1,1,DLexiBoost,,,KEEL,P045-D007

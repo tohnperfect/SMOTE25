@@ -6,6 +6,7 @@ author,git:b10071007/Model-Based-Synthetic-Sampling,https://github.com/b10071007
 author,git:sisinflab-swot/mafalda,https://github.com/sisinflab-swot/mafalda,2026-11-08,,0bf33dfb1bcd0352f240ed1a2a3f469c90a229bb
 author,git:smallcube/HD-Ensemble,https://github.com/smallcube/HD-Ensemble,2026-11-08,,ae78b37243391f42475ce485bcbc90c124dfdd3d
 author,kmeans_uci_extended.tar.gz,https://github.com/felix-last/evaluate-kmeans-smote/releases/download/v0.0.1/uci_extended.tar.gz,2026-11-08,63688428,bc0aff0adc079ab01a51d286c070334ca23a393393488a6fee441cf3cd0225cf
+cluto,datasets.tar.gz,http://glaros.dtc.umn.edu/gkhome/fetch/sw/cluto/datasets.tar.gz (mirror: http://papers.karypis.org/glaros/files/sw/cluto/datasets.tar.gz),2026-11-09,29220866,dbecf52dab217a5372159fe50a190dd1a0cb51c970d1f85c1c52aafd346e9de0
 kaggle,aadarshvelu/aids-virus-infection-prediction.zip,https://www.kaggle.com/datasets/aadarshvelu/aids-virus-infection-prediction,2026-11-08,1710961,3e0f6bffc2c0dbe2c0b859d0e2d1bba650efe93fc3b8b984d12cb4c0f992b292
 kaggle,blastchar/telco-customer-churn.zip,https://www.kaggle.com/datasets/blastchar/telco-customer-churn,2026-11-08,175758,cf7e6dcd8a238ecaa841a7d133142525453992d8d5e3ef6d1e5f0d359e7bf444
 kaggle,deepcontractor/smoke-detection-dataset.zip,https://www.kaggle.com/datasets/deepcontractor/smoke-detection-dataset,2026-11-08,1721785,9c1fb61d38f5efa0293c3f2c36f7c4af2556ee0a177653adaaaeb1ea78aceff8
@@ -14,6 +15,7 @@ kaggle,prathamtripathi/drug-classification.zip,https://www.kaggle.com/datasets/p
 kaggle,sulianova/cardiovascular-disease-dataset.zip,https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset,2026-11-08,760066,b78ff607480810c3e27de3e11d52c4962a3a81dbb3d69365e1cf3394a67c2b23
 kaggle,tawfikelmetwally/employee-dataset.zip,https://www.kaggle.com/datasets/tawfikelmetwally/employee-dataset,2026-11-08,18961,bd9370633edb356ed980120d17397e66033531a7fa383595853aa7e283cae8bd
 kaggle,teejmahal20/airline-passenger-satisfaction.zip,https://www.kaggle.com/datasets/teejmahal20/airline-passenger-satisfaction,2026-11-08,2841945,9dda424707f8bf6be12313df3c6c24ea9eed04b3ec85b50dae5089125f0d701b
+kaggle,thatbrock__ibm-watson-saleswinloss.zip,https://www.kaggle.com/datasets/thatbrock/ibm-watson-saleswinloss,2026-11-09,1415294,0697b34ed3659b242ab64532817b81d6f0d881b93387760fac4b1bf300d1ec4f
 kaggle,uciml/human-activity-recognition-with-smartphones.zip,https://www.kaggle.com/datasets/uciml/human-activity-recognition-with-smartphones,2026-11-08,25693584,431950be2adea269b54df9f2d93de29f46117f87fa5e3057c4ae36c4c00c78f4
 libsvm,binary/a1a,https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary/a1a,2026-11-08T10:15:51.500Z,114818,eb54c45f1bdb51286f803dd092eb8202b44637a858fc6c4e533a2d64a0d94b4e
 libsvm,binary/a1a.t,https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary/a1a.t,2026-11-08T10:15:51.500Z,2215057,0212d0c4a3996fe6fb6a0ab54033d9f4fa4b60369b6e3bb141821d9ffc40c04d
@@ -23,6 +25,14 @@ libsvm,binary/svmguide1.t,https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/dataset
 libsvm,binary/svmguide3,https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary/svmguide3,2026-11-08T10:15:51.500Z,305582,e46b0f7da5f5f9dfd640a9a738d0006fcd1e0b87eae8e055c124a240f3aa3a4c
 libsvm,binary/svmguide3.t,https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary/svmguide3.t,2026-11-08T10:15:51.500Z,10282,c8450c995c3f6f8913d1c4570933e42c1cbf3a3a9c9c5436cda205fb600c09bb
 libsvm,multiclass/svmguide2,https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/multiclass/svmguide2,2026-11-08T10:15:51.500Z,165698,d55cbb1a4a6fb3aa4d388ab06b01e7cbb8fe4d6436b068be940592bdf85384a7
+sdgym,sdgym_intrusion_data.zip,https://sdv-datasets-public.s3.amazonaws.com/single_table/intrusion/data.zip,2026-11-09,2828907,ff1f444f69b1cf3e0d34aef96a54bd5f763907ed897a706d468eb13c72af8093
+sdgym,sdgym_intrusion_metadata.json,https://sdv-datasets-public.s3.amazonaws.com/single_table/intrusion/metadata.json,2026-11-09,6191,56f8190323bae24d960064573d55184d3d757f0d11e0445e33838703295c114c
+sdgym,sdgym_intrusion_metainfo.yaml,https://sdv-datasets-public.s3.amazonaws.com/single_table/intrusion/metainfo.yaml,2026-11-09,222,b631a37b4a2e7fb82103b2daf241b5e4402a3184eba3b84d98c5598acc197a29
+sdgym,sdgym_intrusion_source.txt,https://sdv-datasets-public.s3.amazonaws.com/single_table/intrusion/source.txt,2026-11-09,83,241fdb9eaa79369f52b228de3d22bb5587290b2d622c685d7df024ae15e1f5c3
+sdgym,sdgym_news_data.zip,https://sdv-datasets-public.s3.amazonaws.com/single_table/news/data.zip,2026-11-09,1460133,498384c364254b0bc1c759bdd878ef22dcbc8406192fbd45b6667cdacb449621
+sdgym,sdgym_news_metadata.json,https://sdv-datasets-public.s3.amazonaws.com/single_table/news/metadata.json,2026-11-09,9350,10b8aeffc9f78301a90ce7b9a1c69acbc11c666731268b6dff2219b964115547
+sdgym,sdgym_news_metainfo.yaml,https://sdv-datasets-public.s3.amazonaws.com/single_table/news/metainfo.yaml,2026-11-09,224,c9336270d3905f9460a5639b18b5bf13342924261316986614908f995b602371
+sdgym,sdgym_news_source.txt,https://sdv-datasets-public.s3.amazonaws.com/single_table/news/source.txt,2026-11-09,122,0379d0b345eb1c61486c7266427f1dc4bd1157b368fed6b4cd9d42995893a430
 uci,109_wine.zip,https://archive.ics.uci.edu/static/public/109/wine.zip,2026-11-08T13:23:50.916Z,6038,2bae62c4481220623579d4c4fb36b55652b6b75e06e49fa1981b8198362dfdab
 uci,110_yeast.zip,https://archive.ics.uci.edu/static/public/110/yeast.zip,2026-11-08T13:23:50.938Z,18938,8fe9a4490edfa67532f1dee7ec11f1804437ad43f9f8b7536e32d5be8bce0bb5
 uci,145_statlog+heart.zip,https://archive.ics.uci.edu/static/public/145/statlog+heart.zip,2026-11-08T13:23:50.938Z,4397,04e44018af4f4b32008029fbfb1079e112d3b372bb032dd1ae361c74d7528b2c
@@ -30,8 +40,9 @@ uci,146_statlog+landsat+satellite.zip,https://archive.ics.uci.edu/static/public/
 uci,149_statlog+vehicle+silhouettes.zip,https://archive.ics.uci.edu/static/public/149/statlog+vehicle+silhouettes.zip,2026-11-08T13:23:50.916Z,26406,66ca807d5be5e3403cf035a579e85113880c3019d6cde825670deff05a4a71e0
 uci,152_connectionist+bench+vowel+recognition+deterding+data.zip,https://archive.ics.uci.edu/static/public/152/connectionist+bench+vowel+recognition+deterding+data.zip,2026-11-08T13:23:50.938Z,69486,65af0381f52f1805cd0e0c18e84652a95da6bd6e0288337e6642e4b6d5f51018
 uci,159_magic+gamma+telescope.zip,https://archive.ics.uci.edu/static/public/159/magic+gamma+telescope.zip,2026-11-08T13:23:50.916Z,646639,252e0a78333c108d0ea54537b61154aa781e95a15675e65ddf9b76993617191d
+uci,175_character+trajectories.zip,https://archive.ics.uci.edu/static/public/175/character+trajectories.zip,2026-11-09,7915950,5d2db017ef0d8cf0e65ed060c9e90399f78eb9f1e3cb63e22ca8c3ef4ba67d52
 uci,181_libras+movement.zip,https://archive.ics.uci.edu/static/public/181/libras+movement.zip,2026-11-08T13:23:50.916Z,164761,486f22f63919002a991be4042d7c7489a56cbd5f40f2930a24f80744c93e7105
-uci,189_parkinsons+telemonitoring.zip,https://archive.ics.uci.edu/static/public/189/parkinsons+telemonitoring.zip,2026-11-08T13:23:50.916Z,292221,2f82bb0ef96fa7d8d7edf4d97b89173e07c2cca7723440a64bc38918a83345df
+uci,189_parkinsons+telemonitoring.zip,https://archive.ics.uci.edu/static/public/189/parkinsons+telemonitoring.zip,2026-11-09,292221,2f82bb0ef96fa7d8d7edf4d97b89173e07c2cca7723440a64bc38918a83345df
 uci,192_breast+tissue.zip,https://archive.ics.uci.edu/static/public/192/breast+tissue.zip,2026-11-08T13:23:50.916Z,29513,fee45ef499f1028829c6f29c8ab05cf51f8042c6dde135c1ded29853e9e83593
 uci,198_steel+plates+faults.zip,https://archive.ics.uci.edu/static/public/198/steel+plates+faults.zip,2026-11-08T13:23:50.916Z,100890,cb8eb9859198b63f053e443513036b401746fa517ef58bd17c846c6741c93919
 uci,19_car+evaluation.zip,https://archive.ics.uci.edu/static/public/19/car+evaluation.zip,2026-11-08T13:23:50.938Z,6342,1559d51dcf327f4f8c71b711ceed7fd95a382fc8d8e1998667f4f23b82860403
@@ -44,16 +55,16 @@ uci,2_adult.zip,https://archive.ics.uci.edu/static/public/2/adult.zip,2026-11-08
 uci,30_contraceptive+method+choice.zip,https://archive.ics.uci.edu/static/public/30/contraceptive+method+choice.zip,2026-11-08T13:23:50.916Z,7160,ca2e59780133ce0040cbe3939243ee71419fd2d1c72ae1edb5c90c0977d55785
 uci,31_covertype.zip,https://archive.ics.uci.edu/static/public/31/covertype.zip,2026-11-08T13:23:50.916Z,11251206,89a975c2457cd48e824238ae43c5a3cb762e42c4b4078d9b44a4514055105f6d
 uci,327_phishing+websites.zip,https://archive.ics.uci.edu/static/public/327/phishing+websites.zip,2026-11-08T13:23:50.938Z,1011184,514f582cb44cba17251baf1d59f64cddff16efa2b644d091ce8d2a1e8d492940
-uci,332_online+news+popularity.zip,https://archive.ics.uci.edu/static/public/332/online+news+popularity.zip,2026-11-08T13:23:50.916Z,7476401,dba2ae526f62ccef6f2f8efb53b0268319f4d0d2719bb98d88958cfe31d58a22
+uci,332_online+news+popularity.zip,https://archive.ics.uci.edu/static/public/332/online+news+popularity.zip,2026-11-09,7476401,dba2ae526f62ccef6f2f8efb53b0268319f4d0d2719bb98d88958cfe31d58a22
 uci,350_default+of+credit+card+clients.zip,https://archive.ics.uci.edu/static/public/350/default+of+credit+card+clients.zip,2026-11-08T13:23:50.916Z,5539494,56c885f84457f6680f8438f02bfcdac9579323d8a94465ee5f26e32baa727602
 uci,357_occupancy+detection.zip,https://archive.ics.uci.edu/static/public/357/occupancy+detection.zip,2026-11-08T13:23:50.938Z,335713,4ae3f46aa98eedff564a9f6924d1635173e2fd2c816004342a9be93076d3a81a
 uci,365_polish+companies+bankruptcy+data.zip,https://archive.ics.uci.edu/static/public/365/polish+companies+bankruptcy+data.zip,2026-11-08T13:23:50.938Z,8834471,17377929aa0b204bbf957e56462cf827c19fe4e2ce89f27dfbc77f9ea2bb16c9
 uci,372_htru2.zip,https://archive.ics.uci.edu/static/public/372/htru2.zip,2026-11-08T13:23:50.916Z,1563015,ba442c076dd22a8952700f26e38499fc1806037dcf7bea0e125e6bfba393f379
-uci,373_drug+consumption+quantified.zip,https://archive.ics.uci.edu/static/public/373/drug+consumption+quantified.zip,2026-11-08T13:23:50.916Z,346835,0fb006913b8ecde52560dd04e4b8d10c75aad938d337a9e7e11fcab7dd1f6993
+uci,373_drug+consumption+quantified.zip,https://archive.ics.uci.edu/static/public/373/drug+consumption+quantified.zip,2026-11-09,346835,0fb006913b8ecde52560dd04e4b8d10c75aad938d337a9e7e11fcab7dd1f6993
 uci,379_website+phishing.zip,https://archive.ics.uci.edu/static/public/379/website+phishing.zip,2026-11-08T13:23:50.938Z,33767,fa029c3b079b6bfb4f0833c0ec94a778a20522161b028273e81ac3b93ee8bfee
 uci,404_burst+header+packet+bhp+flooding+attack+on+optical+burst+switching+obs+network.zip,https://archive.ics.uci.edu/static/public/404/burst+header+packet+bhp+flooding+attack+on+optical+burst+switching+obs+network.zip,2026-11-08T13:23:50.938Z,183821,b154f2018d24c0caff4b08daaea27784831529ecfbbc7e491bff7a2be9e4532e
 uci,40_flags.zip,https://archive.ics.uci.edu/static/public/40/flags.zip,2026-11-08T13:23:50.916Z,5862,f88ba6e07ab996cd09f5eafdffc1ecfe6b7e5492f7e984056de07e4380e82030
-uci,427_activity+recognition+with+healthy+older+people+using+a+batteryless+wearable+sensor.zip,https://archive.ics.uci.edu/static/public/427/activity+recognition+with+healthy+older+people+using+a+batteryless+wearable+sensor.zip,2026-11-08T13:23:50.916Z,654610,b05fb0ddadffcb5ec70f1b340d57f5345a1150bd603e8c0299a67ccf3c4ac8dc
+uci,427_activity+recognition+with+healthy+older+people+using+a+batteryless+wearable+sensor.zip,https://archive.ics.uci.edu/static/public/427/activity+recognition+with+healthy+older+people+using+a+batteryless+wearable+sensor.zip,2026-11-09,654610,b05fb0ddadffcb5ec70f1b340d57f5345a1150bd603e8c0299a67ccf3c4ac8dc
 uci,42_glass+identification.zip,https://archive.ics.uci.edu/static/public/42/glass+identification.zip,2026-11-08T13:23:50.916Z,6380,499c07a17115bf63100bb19cc1fdefad7f464bf5dc2b168930fa2071fd6b6e65
 uci,43_haberman+s+survival.zip,https://archive.ics.uci.edu/static/public/43/haberman+s+survival.zip,2026-11-08T13:23:50.938Z,1844,1001bac29022350e279b064003c426c8ed60f4d76ab4916fb05baf886c8e3ac7
 uci,445_absenteeism+at+work.zip,https://archive.ics.uci.edu/static/public/445/absenteeism+at+work.zip,2026-11-08T13:23:50.938Z,66136,89ecdfed5f107bb97015c335b1d812d7ecbe86e601a23b56516967d8657e53c4
@@ -67,7 +78,7 @@ uci,544_estimation+of+obesity+levels+based+on+eating+habits+and+physical+conditi
 uci,54_isolet.zip,https://archive.ics.uci.edu/static/public/54/isolet.zip,2026-11-08T13:23:50.938Z,10072073,fe2e0d45f1057d112e051d309070992fc178e7f6922cc7b4e8b2bd310303a053
 uci,571_hcv+data.zip,https://archive.ics.uci.edu/static/public/571/hcv+data.zip,2026-11-08T13:23:50.916Z,46303,0fafa2c4ae94db98b95f35cd41e9f4cedbd1e105282ab0cd7b5ed3effe5a05d8
 uci,572_taiwanese+bankruptcy+prediction.zip,https://archive.ics.uci.edu/static/public/572/taiwanese+bankruptcy+prediction.zip,2026-11-08T13:23:50.938Z,4808883,c346f5ad2618cb198e7ed8306cf2f31fe3bb2ec60acdbbe1736788d50f269aac
-uci,591_gender+by+name.zip,https://archive.ics.uci.edu/static/public/591/gender+by+name.zip,2026-11-08T13:23:50.916Z,3774735,b671d056cefb6f1d363186e77a831ca26711e26ba881d73ee24148382ac145ae
+uci,591_gender+by+name.zip,https://archive.ics.uci.edu/static/public/591/gender+by+name.zip,2026-11-09,3774735,b671d056cefb6f1d363186e77a831ca26711e26ba881d73ee24148382ac145ae
 uci,59_letter+recognition.zip,https://archive.ics.uci.edu/static/public/59/letter+recognition.zip,2026-11-08T13:23:50.916Z,387167,3b5f07a334697b6cace4fbae22940393a18fee596e73f68d97ce5973d52dc60f
 uci,601_ai4i+2020+predictive+maintenance+dataset.zip,https://archive.ics.uci.edu/static/public/601/ai4i+2020+predictive+maintenance+dataset.zip,2026-11-08T13:23:50.938Z,522170,f601f14294bcf190f9d720676b7f0aea46a26cde9ab8ebc7b4f8174d9d26b252
 uci,602_dry+bean+dataset.zip,https://archive.ics.uci.edu/static/public/602/dry+bean+dataset.zip,2026-11-08T13:23:50.938Z,4738776,0a64eff5be87f48c3dbbfc0a12a56c5d5b5167ef8e61cd45d69b3e7c7130c06f
@@ -83,3 +94,4 @@ uci,852_gender+gap+in+spanish+wp.zip,https://archive.ics.uci.edu/static/public/8
 uci,863_maternal+health+risk.zip,https://archive.ics.uci.edu/static/public/863/maternal+health+risk.zip,2026-11-08T13:23:50.938Z,3342,84f0de0d647bb217ff7224ff265afadf27eb65c5483baaf1cfcc59abadeb75b1
 uci,89_solar+flare.zip,https://archive.ics.uci.edu/static/public/89/solar+flare.zip,2026-11-08T13:23:50.938Z,6604,3375fec68ba1e3215081e25de66752fd96a26dbcfada9d0767c4a413b9b03c63
 uci,942_rt-iot2022.zip,https://archive.ics.uci.edu/static/public/942/rt-iot2022.zip,2026-11-08T13:23:50.916Z,3445559,bcaa24d62abbb1215be576d5cf9c02dfcb0bb7c4c2f5a00e03055afaa1ed109e
+kaggle,mlg-ulb__creditcardfraud.zip,https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud,2026-11-09,69155672,a0360ce715992212e9ac72d8ccdca97f4be87dc1fdf2bed011358f7ab409a28a

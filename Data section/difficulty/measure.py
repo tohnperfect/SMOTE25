@@ -25,7 +25,7 @@ VE=os.environ.get('VERIF_FILE','verifiability_entries.csv')   # 8 Nov: written b
 o=pd.read_csv(VE); o=o[o.verif.str.startswith('V-')]
 EXT_SRC={'KEEL-std(F)','KEEL-std(C)','UCI++','Weka-UCI','PROMISE-ck','NASA-MDP','jbrownlee-UCI','PMLB',
          # 8 Nov second round: official sites and author repositories (official_sources.py)
-         'UCI-official','LibSVM','author-HDE','author-DGOT','author-SOS','author-MBS','author-kmeans','Kaggle'}
+         'UCI-official','LibSVM','author-HDE','author-DGOT','author-SOS','author-MBS','author-kmeans','Kaggle','CLUTO'}
 _cx=pd.read_csv('file_catalog_ext.csv') if os.path.exists('file_catalog_ext.csv') else None
 rec=pd.read_csv(os.environ.get('DATASET_RECORDS','../out/dataset_records.csv')).set_index('record_id')
 idb={key(os.path.basename(d)):glob.glob(d+'/*.dat') for d in glob.glob('src/idb/imbalanced_databases/data/*')}
@@ -35,6 +35,9 @@ def load(fname,src):
         from mirrors_ext import parse
         path=_cx[(_cx.src==src)&(_cx.name==fname)].path.iloc[0]
         d,y,how=parse(src,path)
+        # 9 Nov: CLUTO text files are read as sparse columns; the measures below work on dense values (a zero is a value,
+        # not a missing cell), so the frame is made dense here
+        if any(isinstance(t,pd.SparseDtype) for t in d.dtypes): d=d.sparse.to_dense(); how=how+' (sparse -> dense)'
         nom=[c for c in d.columns if str(d[c].dtype)=='category']
         return d,y.astype(str),how
     if src=='PMLB':
@@ -171,7 +174,11 @@ LOG=[]
 # 8 Nov second round: files that are verifiable but not measured. covertype (581,012 rows) is used only as a 7-class file
 # (CTGAN name-only, GAMO as is), so it gives one-vs-rest tasks only; the 5-NN search on 581,012 rows took more than 15 min
 # per one-vs-rest task (7 tasks), beyond the time available. Its 2 entries stay verifiable; they have no measured profile.
-NOT_MEASURED={('covertype','UCI-official'):'581,012 rows, one-vs-rest tasks only; not run for time (8 Nov)'}
+# 9 Nov: la12 (CLUTO, COG-OS) is a 6,279 x 31,472 term matrix; one dense copy is 1.6 GB and the pipeline below holds
+# several copies at once (frame, min-max matrix, typed frame, HVDM embedding, PCA), more than the 7 GB of the machine used.
+# k1b (2,340 x 21,839, 0.4 GB per copy) was measured; its peak memory was 3.6 GB, about 9 copies, which for la12 is about 14 GB. la12's entry stays verifiable; it has no measured profile.
+NOT_MEASURED={('covertype','UCI-official'):'581,012 rows, one-vs-rest tasks only; not run for time (8 Nov)',
+              ('la12','CLUTO'):'6,279 x 31,472 term matrix; dense copies exceed the memory of the machine used (9 Nov)'}
 def main():
     out=[]
     for f,src,how,X,dt,nominal,t,lab,ymin,who,nfeat,keep in iter_tasks():

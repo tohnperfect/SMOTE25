@@ -1,25 +1,25 @@
 {
-  "n_all": 575,
-  "n_binary_binarised": 236,
-  "n_ovr": 339,
+  "n_all": 585,
+  "n_binary_binarised": 238,
+  "n_ovr": 347,
   "quantiles": {
-    "all tasks (n=575)": {
-      "0.25": 0.122,
-      "0.5": 0.399,
-      "0.75": 0.702
+    "all tasks (n=585)": {
+      "0.25": 0.127,
+      "0.5": 0.4,
+      "0.75": 0.7
     },
-    "binary + binarised (n=236)": {
+    "binary + binarised (n=238)": {
       "0.25": 0.293,
-      "0.5": 0.579,
-      "0.75": 0.768
+      "0.5": 0.569,
+      "0.75": 0.767
     }
   },
   "spearman_IR_noise": {
-    "all": 0.171,
-    "binary": 0.255
+    "all": 0.167,
+    "binary": 0.245
   },
   "outlier_heavy": {
-    "all": 126,
+    "all": 132,
     "binary": 83
   },
   "noise_eq_0": {
