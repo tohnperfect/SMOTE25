@@ -1,0 +1,25 @@
+%% Table: who uses each learner family (toolkit, code, data) (input from sections/07-empirical-comparisons.tex). Version 4.1, generated 2026-11-08 by v4.1/make_tables_v41.py.
+%% JAIR style: caption above the table, booktabs rules. Regenerate instead of editing numbers by hand.
+\begin{table}[t]
+  \caption{Who Uses Each Learner Family}
+  \label{tab:empirical-learner-use}
+  \footnotesize
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.2\linewidth}rrrrrrrr@{}}
+    \toprule
+    Family & Studies & Python & Weka & Code & KEEL data & Multi-class & Alone & Datasets\\
+    \midrule
+    C4.5 or C5.0 & 33 & 2 & 11 & 8 & 15 & 16 & 9 & 20\\
+    CART (decision tree) & 17 & 10 & 1 & 13 & 7 & 11 & 2 & 21\\
+    Rule learner & 9 & 0 & 4 & 1 & 2 & 4 & 2 & 19\\
+    k-NN & 28 & 11 & 6 & 17 & 16 & 13 & 0 & 23\\
+    Support vector machine & 28 & 10 & 5 & 10 & 15 & 10 & 5 & 23.5\\
+    Logistic regression & 13 & 6 & 0 & 9 & 4 & 5 & 0 & 19\\
+    Random forest & 12 & 6 & 2 & 7 & 6 & 4 & 1 & 26.5\\
+    Gradient boosting & 8 & 7 & 0 & 6 & 4 & 3 & 1 & 34.5\\
+    Naive Bayes & 14 & 6 & 4 & 6 & 8 & 8 & 0 & 20\\
+    Multilayer perceptron & 17 & 3 & 3 & 7 & 5 & 10 & 3 & 20\\
+    \bottomrule
+  \end{tabular}
+  \par\smallskip\raggedright\scriptsize All counts are studies among the 71. Python, Weka: the study names the toolkit (a lower bound). Code: the study releases code. Alone: the family is the only learner of the study. Datasets: median number of datasets of the users.
+\end{table}

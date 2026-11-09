@@ -1,0 +1,19 @@
+%% Table: SMOTE (2002) against the studies published 2021 to 2026 (input from sections/07-empirical-comparisons.tex). Version 4.1 (from v4/make_tables.py, learner row edited for v4.1).
+%% JAIR style: caption above the table, booktabs rules. Regenerate instead of editing numbers by hand.
+\begin{table}[t]
+  \caption{What SMOTE Used in 2002 and What Studies Use Now}
+  \label{tab:empirical-thennow}
+  \footnotesize
+  \begin{tabular}{@{}p{0.17\linewidth}p{0.33\linewidth}p{0.44\linewidth}@{}}
+    \toprule
+    & SMOTE~\parencite{chawla2002smote} & Studies published 2021 to 2026 ($n = 24$)\\
+    \midrule
+    Learners & C4.5, Ripper (rule learner), naive Bayes & 12 families (32 learner names as written); median 3 families per study (range 1 to 6), with 9 of 24 studies using a single family\\
+    Scalar measures & AUC, TPR (\%TP, Acc$^+$), TNR (Acc$^-$, or 1 $-$ \%FP) & 21 distinct measures; median 3 per study; 19 different combinations among 24 studies\\
+    Most used measures & AUC (from ROC curves) & G-mean (17 of 24), AUC (13), F1 or F-measure (10), MAUC (6)\\
+    Other evidence & ROC curves and ROC convex hull, tree size, a 2-D plot of decision regions & 2-D plots of synthetic samples (15 of 24), runtime (7), direct checks of the resampled data (2)\\
+    Data and protocol & 9 datasets, single 10-fold CV, no significance test & KEEL data in 67\%, repeated CV in 62\%, a significance test in 83\%\\
+    Code & not released & released by 12 of 24\\
+    \bottomrule
+  \end{tabular}
+\end{table}

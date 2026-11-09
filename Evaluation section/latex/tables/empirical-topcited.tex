@@ -1,0 +1,24 @@
+%% Table: the ten most cited empirical studies and how they evaluate (input from sections/07-empirical-comparisons.tex). Version 4.1, generated 2026-11-08 by v4.1/make_tables_v41.py.
+%% JAIR style: caption above the table, booktabs rules. Regenerate instead of editing numbers by hand.
+\begin{table}[t]
+  \caption{How the Ten Most Cited Empirical Studies Evaluate}
+  \label{tab:empirical-topcited}
+  \footnotesize
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.36\linewidth}rrrll@{}}
+    \toprule
+    Study & Citations & Real datasets & Learners & Protocol & Test\\
+    \midrule
+    SMOTE (2002)~\parencite{chawla2002smote} & 32{,}518 & 9 & 3 & single $k$-fold & none\\
+    ADASYN (2008)~\parencite{he2008adasyn} & 4{,}927 & 5 & 1 & repeated hold-out & none\\
+    Borderline-SMOTE (2005)~\parencite{han2005borderline} & 4{,}313 & 3 & 1 & repeated $k$-fold & none\\
+    Batista et al. (2004)~\parencite{batista2004study} & 4{,}207 & 15 & 1 & single $k$-fold & corrected\\
+    Buda et al. (2018)~\parencite{buda2018systematic} & 3{,}053 & 3 & 1 & fixed split & none\\
+    OSS (1997)~\parencite{kubat1997oss} & 2{,}562 & 7 & 2 & single $k$-fold & none\\
+    EasyEnsemble (2009)~\parencite{liu2009easyensemble} & 2{,}475 & 16 & 2 & repeated $k$-fold & pairwise\\
+    RUSBoost (2010)~\parencite{seiffert2010rusboost} & 1{,}867 & 15 & 3 & repeated $k$-fold & corrected\\
+    SMOTEBoost (2003)~\parencite{chawla2003smoteboost} & 1{,}738 & 4 & 1 & single $k$-fold & none\\
+    k-means SMOTE (2018)~\parencite{douzas2018kmeans} & 1{,}273 & 80 & 3 & repeated $k$-fold & corrected\\
+    \bottomrule
+  \end{tabular}
+\end{table}

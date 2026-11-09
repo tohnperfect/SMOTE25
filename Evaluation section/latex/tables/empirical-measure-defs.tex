@@ -1,0 +1,47 @@
+%% Table: every scalar measure found in the corpus, with its definition (input from sections/07-empirical-comparisons.tex). Version 4.1, generated 2026-11-08 by v4.1/make_tables_v41.py.
+%% JAIR style: caption above the table, booktabs rules. Regenerate instead of editing numbers by hand.
+\begin{table}[p]
+  \caption{The 27 Scalar Measures Found in the Corpus}
+  \label{tab:empirical-measure-defs}
+  \footnotesize
+  \setlength{\tabcolsep}{3pt}
+  \begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.1\linewidth}>{\raggedright\arraybackslash}p{0.38\linewidth}>{\raggedright\arraybackslash}p{0.24\linewidth}r@{}}
+    \toprule
+    Measure & Family & Meaning & Definition & Studies\\
+    \midrule
+    Accuracy or error & Overall & share of all predictions that are correct (error: 1 $-$ accuracy) & $(TP + TN)/n$ & 13\\
+    \midrule
+    Recall (TPR, sensitivity) & Single class & share of minority examples found & $TP/(TP + FN)$ & 29\\
+    Specificity (TNR) & Single class & share of majority examples rejected & $TN/(TN + FP)$ & 5\\
+    Precision & Single class & share of minority predictions that are correct; depends on the class prior & $TP/(TP + FP)$ & 20\\
+    FPR & Single class & false positive rate & $1 - \mathrm{TNR}$ & 1\\
+    \midrule
+    G-mean & Composite & geometric mean of the two class rates & $\sqrt{\mathrm{TPR}\cdot\mathrm{TNR}}$ & 41\\
+    F1 & Composite & harmonic mean of precision and recall & $2PR/(P + R)$ & 24\\
+    F-measure ($F_\beta$) & Composite & weights recall $\beta$ times as much as precision & $(1 + \beta^2)PR/(\beta^2 P + R)$ & 11\\
+    Balanced accuracy & Composite & arithmetic mean of the two class rates & $(\mathrm{TPR} + \mathrm{TNR})/2$ & 3\\
+    MCC & Composite & correlation between predicted and true labels; uses all four cells & Equation~\ref{eq:empirical-mcc} & 4\\
+    Kappa & Composite & agreement corrected for chance & $(p_o - p_e)/(1 - p_e)$ & 1\\
+    G-score & Composite & geometric mean of precision and recall (not G-mean) & $\sqrt{P \cdot R}$ & 1\\
+    \midrule
+    ROC-AUC & Ranking & probability that a minority example is scored above a majority one & area under TPR against FPR & 33\\
+    PR-AUC (AUPRC) & Ranking & area under precision against recall; depends on the prior & area under $P$ against $R$ & 5\\
+    MAUC & Ranking & average AUC over all pairs of classes~\parencite{hand2001simple} & $\frac{2}{K(K-1)}\sum_{i<j}\hat{A}(i,j)$ & 12\\
+    AUCm & Ranking & other multi-class AUC, for example one-vs-rest average & mean of per-class AUC & 2\\
+    \midrule
+    Per-class recall & Multi-class & recall of each class reported separately & $r_k$ & 4\\
+    Macro-F1 & Multi-class & F1 averaged over classes with equal weight & $\frac{1}{K}\sum_k F1_k$ & 7\\
+    AvAcc & Multi-class & mean per-class recall (some studies use mean one-vs-rest accuracy, which true negatives inflate) & $\frac{1}{K}\sum_k r_k$ & 7\\
+    Weighted F1 & Multi-class & F1 averaged with class-size weights; dominated by large classes & $\sum_k w_k F1_k$ & 1\\
+    Macro-precision & Multi-class & precision averaged over classes & $\frac{1}{K}\sum_k P_k$ & 4\\
+    Pmin & Multi-class & smallest per-class precision & $\min_k P_k$ & 1\\
+    CBA & Multi-class & class balance accuracy: each diagonal cell over the larger of its row and column sums, averaged & $\frac{1}{K}\sum_k c_{kk}/\max(c_{k\cdot}, c_{\cdot k})$ & 6\\
+    CEN & Multi-class & confusion entropy, the spread of the errors (lower is better) & entropy of the confusion matrix & 5\\
+    Macro-recall & Multi-class & recall averaged over classes (equals AvAcc when AvAcc is defined correctly) & $\frac{1}{K}\sum_k r_k$ & 1\\
+    Minimum sensitivity & Multi-class & smallest per-class recall & $\min_k r_k$ & 2\\
+    \midrule
+    Misclassification cost & Cost & total cost of the errors under a cost matrix & $\sum C(i,j)\,n_{ij}$ & 2\\
+    \bottomrule
+  \end{tabular}
+  \par\smallskip\raggedright\scriptsize TP, FN, FP, TN: cells of the binary confusion matrix with the minority class as positive; $P$ precision, $R$ recall, $r_k$ and $P_k$ recall and precision of class $k$ of $K$, $c_{ij}$ cells of the multi-class confusion matrix. ROC curves (8 studies), confusion matrices (4), running time (14) and the fidelity of synthetic data (3) are also reported but are not scalar measures of classification.
+\end{table}

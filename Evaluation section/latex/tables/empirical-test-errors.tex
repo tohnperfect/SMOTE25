@@ -1,0 +1,19 @@
+%% Table: errors in the use of statistical tests (input from sections/07-empirical-comparisons.tex). Version 4.1, generated 2026-11-08 by v4.1/make_tables_v41.py.
+%% JAIR style: caption above the table, booktabs rules. Regenerate instead of editing numbers by hand.
+\begin{table}[t]
+  \caption{Errors Found in the Use of Statistical Tests}
+  \label{tab:empirical-test-errors}
+  \footnotesize
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.26\linewidth}>{\raggedright\arraybackslash}p{0.7\linewidth}@{}}
+    \toprule
+    Study & Error\\
+    \midrule
+    SOUP (2019)~\parencite{janicka2019soup} & A Nemenyi critical-difference diagram is drawn after a Friedman test that is not significant ($p = 0.36$)\\
+    MC-MBRC (2024)~\parencite{ma2024mcmbrc} & A Nemenyi test is applied without an omnibus Friedman test\\
+    MC-NCLWO (2025)~\parencite{tao2025mcnclwo} & The post-hoc procedure is named Holm in one place and Shaffer in another, and no omnibus test is reported\\
+    G-SMOTE (2019)~\parencite{douzas2019gsmote} & Holm-adjusted $p$-values are reported, but the paired test behind them is not named\\
+    CBHSID (2022)~\parencite{palli2022cbhsid} & Pairwise Wilcoxon tests without correction; the test is cited to a guide on normality testing; the significance level is given as 0.1 in one place and 0.01 or 0.05 in another\\
+    \bottomrule
+  \end{tabular}
+\end{table}

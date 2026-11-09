@@ -1,0 +1,24 @@
+%% Table: what a new study should report, by topic (input from sections/07-empirical-comparisons.tex). Version 4.1, generated 2026-11-08 by v4.1/make_tables_v41.py.
+%% JAIR style: caption above the table, booktabs rules. Regenerate instead of editing numbers by hand.
+\begin{table}[p]
+  \caption{What a New Study Should Report}
+  \label{tab:empirical-checklist}
+  \footnotesize
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.2\linewidth}>{\raggedright\arraybackslash}p{0.76\linewidth}@{}}
+    \toprule
+    Topic & What to report\\
+    \midrule
+    Benchmark data & Source and name of every dataset (KEEL or UCI) with the date of download; size, number of features, number of classes and IR of each, with the definition of IR; how classes were merged, categorical features encoded and missing values handled; why these datasets (range of IR and difficulty, not only popularity); where the processed files and fold assignments are\\
+    Base learners & Name, library and version of each learner; every hyperparameter and whether it was tuned; which score feeds AUC (probability or decision function); why each learner was chosen\\
+    Competitors and baselines & Every competitor with the source of its code (library and version, or own implementation); the parameters of each; a statement that all were re-run on the same folds; for own implementations, which part of the original paper was followed, how unspecified values were set and how the implementation was checked\\
+    Measures & The formula of every measure and the positive class; the threshold of each threshold measure; the scores used for AUC and PR-AUC; the averaging rule for several classes; the primary measure and why; the function or library that computes it\\
+    Validation protocol & $k$, the number of repetitions, stratification and seeds; which steps are fitted on the training folds only; a statement that every method uses the same partitions; the smallest number of minority examples in a test fold\\
+    Choice of settings & The settings or search grid of every method; the search budget of each (number of configurations tried); the measure and data used to choose; a statement that nothing was chosen on the test folds\\
+    Statistical testing & The test, its unit (the dataset) and $N$; the significance level and the correction for multiple comparisons; the measures and learners tested; the software; a table of $p$-values or a critical-difference diagram; effect sizes\\
+    Reporting & Which tables are in the main text and which in the supplement; where code, per-fold results and data files are; library versions and the hardware used for timing\\
+    Direct checks of the data & The definition of each check and the data it is computed on; how its results relate to the classifier scores; two-dimensional plots used as illustrations only\\
+    Claims and limits & Conclusions per measure and learner, including where the method loses; effect sizes, not only $p$-values; the limits of the study (own implementations, chosen settings, data sources, what was not tested); a link to a pre-registered plan if there is one\\
+    \bottomrule
+  \end{tabular}
+\end{table}

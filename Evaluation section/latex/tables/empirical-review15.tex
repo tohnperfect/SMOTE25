@@ -1,0 +1,19 @@
+%% Table: recommendations of the fifteen-year review and what the later studies did (input from sections/07-empirical-comparisons.tex). Version 4.1, generated 2026-11-08 by v4.1/make_tables_v41.py.
+%% JAIR style: caption above the table, booktabs rules. Regenerate instead of editing numbers by hand.
+\begin{table}[t]
+  \caption{Points of the Fifteen-Year Review That Bear on Evaluation, and What Followed}
+  \label{tab:empirical-review15}
+  \footnotesize
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.46\linewidth}>{\raggedright\arraybackslash}p{0.5\linewidth}@{}}
+    \toprule
+    Point made by the review~\parencite{fernandez2018smote} & What the studies of the corpus did\\
+    \midrule
+    Preprocessing and cost-sensitive learning are equally effective; compare with both~\parencite{lopez2012analysis} & A cost-sensitive or instance-weighting competitor in 5 studies, 3 of them after 2018~\parencite{fernandez2013analysing,yang2018amdo,yao2021emdo,xie2022gdo,yadav2025ciso}; plain class weighting in one~\parencite{yadav2025ciso}\\
+    Partition-induced dataset shift distorts cross-validation on imbalanced data; use DOB-SCV~\parencite{morenotorres2012study,lopez2014importance} & No study uses DOB-SCV\\
+    The main open question is how synthetic examples relate to small disjuncts, noise and overlap & A direct check of the resampled data in 5 of the 36 studies since 2019, against 1 of 35 before; 2 count safe, borderline or rare examples~\parencite{liu2020spe,han2023glos}\\
+    SMOTE-based methods exist for 22 other paradigms, each with its own measures & One of them (INOS, time series) is in the corpus, evaluated as classification~\parencite{cao2013inos}\\
+    High-dimensional data and big data are open challenges~\parencite{blagus2013smote} & No study evaluates on big data; image data appear in 4 studies, all from 2018 to 2020\\
+    \bottomrule
+  \end{tabular}
+\end{table}

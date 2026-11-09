@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>SMOTE25 Section 7 Handoff</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Bai+Jamjuree:wght@600;700&display=swap">
+<style>
+/* Layout: one reading column with a sticky contents rail; a handoff ticket at the top (state, next actions), reference material below. */
+:root{
+  --bg:#eef2f1; --paper:#ffffff; --ink:#14211f; --ink-2:#44524f; --muted:#6b7a77; --rule:#d4dcda; --rule-2:#e7eceb; --tint:#f5f8f7;
+  --accent:#0f6e64; --accent-soft:#e1f1ee; --decide:#8a5a00; --decide-soft:#fbf0d8; --task:#1f5fbf; --task-soft:#e6eefb; --team:#7a3e8f; --team-soft:#f3e8f7;
+  --done:#2e7d4f; --done-soft:#e3f2e8; --warn:#a33a1c; --warn-soft:#fbe9e3;
+  --f-display:"Bai Jamjuree","IBM Plex Sans Thai",system-ui,sans-serif;
+  --f-ui:"IBM Plex Sans Thai",system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1514; --paper:#161e1d; --ink:#e4ecea; --ink-2:#b3c1be; --muted:#87958f; --rule:#2a3533; --rule-2:#202a28; --tint:#1b2422;
+  --accent:#5cc3b5; --accent-soft:#16302c; --decide:#e3b55a; --decide-soft:#33280f; --task:#7aaaf0; --task-soft:#192841; --team:#cf9be0; --team-soft:#2e1e35;
+  --done:#6cc58c; --done-soft:#173022; --warn:#f09a7c; --warn-soft:#3a1d14; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1514; --paper:#161e1d; --ink:#e4ecea; --ink-2:#b3c1be; --muted:#87958f; --rule:#2a3533; --rule-2:#202a28; --tint:#1b2422;
+  --accent:#5cc3b5; --accent-soft:#16302c; --decide:#e3b55a; --decide-soft:#33280f; --task:#7aaaf0; --task-soft:#192841; --team:#cf9be0; --team-soft:#2e1e35;
+  --done:#6cc58c; --done-soft:#173022; --warn:#f09a7c; --warn-soft:#3a1d14; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-ui);font-size:15.5px;line-height:1.75;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+.wrap{max-width:1160px;margin:0 auto}
+header.top{padding-block:30px 18px;display:grid;gap:8px}
+.eyebrow{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--f-display);font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0;font-weight:700;letter-spacing:-.01em;text-wrap:balance}
+.lede{max-width:70ch;color:var(--ink-2);margin:0}
+.layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:28px;align-items:start}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px);font-size:13.5px;line-height:1.45}
+nav.toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+nav.toc a{display:block;padding:5px 8px;border-radius:6px;color:var(--ink-2);text-decoration:none}
+nav.toc a:hover{background:var(--paper);color:var(--ink)}
+nav.toc .h{font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:0 0 6px 8px}
+main{min-width:0;display:grid;gap:22px}
+section.s{background:var(--paper);border:1px solid var(--rule);border-radius:12px;padding:20px clamp(16px,3.5vw,32px) 24px;display:grid;gap:12px;min-width:0;scroll-margin-top:12px}
+h2{font-family:var(--f-display);font-size:22px;line-height:1.3;margin:0;font-weight:700;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;text-wrap:balance}
+h2 .en{font-family:var(--f-ui);font-size:13px;font-weight:400;color:var(--muted)}
+h3{font-size:16px;margin:6px 0 0}
+p{margin:0;max-width:72ch}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+code,.mono{font-family:var(--f-mono);font-size:.86em;background:var(--tint);border:1px solid var(--rule-2);border-radius:5px;padding:1px 5px;overflow-wrap:anywhere}
+ul.list,ol.list{margin:0;padding-left:1.3em;display:grid;gap:6px;max-width:74ch}
+.ticket{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.ticket div{border:1px solid var(--rule);border-radius:10px;padding:12px 14px;background:var(--tint);display:grid;gap:2px}
+.ticket .k{font-size:12px;color:var(--muted);letter-spacing:.04em}
+.ticket .v{font-family:var(--f-display);font-size:19px;font-weight:700;line-height:1.3}
+.ticket .d{font-size:13px;color:var(--ink-2);line-height:1.5}
+.todo{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.todo li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;align-items:start;border:1px solid var(--rule);border-radius:10px;padding:12px 14px}
+.todo .n{font-family:var(--f-mono);font-size:13px;color:var(--muted);padding-top:3px}
+.todo .t{font-weight:600;line-height:1.5}
+.todo .x{grid-column:2;font-size:14px;color:var(--ink-2);line-height:1.6}
+.chip{display:inline-block;font-size:11.5px;font-weight:600;border-radius:999px;padding:1px 9px;margin-right:6px;vertical-align:2px;white-space:nowrap}
+.c-decide{background:var(--decide-soft);color:var(--decide)} .c-task{background:var(--task-soft);color:var(--task)} .c-team{background:var(--team-soft);color:var(--team)}
+.c-done{background:var(--done-soft);color:var(--done)} .c-warn{background:var(--warn-soft);color:var(--warn)}
+.scroll{overflow-x:auto;min-width:0}
+table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;font-variant-numeric:tabular-nums}
+th{text-align:left;font-weight:600;color:var(--ink-2);border-bottom:1.5px solid var(--ink-2);padding:7px 10px 7px 0;vertical-align:bottom}
+td{border-bottom:1px solid var(--rule-2);padding:8px 10px 8px 0;vertical-align:top}
+td.r,th.r{text-align:right}
+table.wide{min-width:640px}
+.timeline{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.timeline li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:14px;padding:10px 0;border-bottom:1px dashed var(--rule)}
+.timeline li:last-child{border-bottom:0}
+.timeline .when{font-family:var(--f-mono);font-size:13px;color:var(--muted);padding-top:2px}
+.timeline .what b{display:block}
+.cmd{display:grid;gap:6px}
+.cmd pre{margin:0;background:var(--tint);border:1px solid var(--rule);border-radius:8px;padding:10px 12px;overflow-x:auto;font-family:var(--f-mono);font-size:13px;line-height:1.55;white-space:pre}
+.cmd .bar{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+.cmd button{font:inherit;font-size:12.5px;border:1px solid var(--rule);background:var(--paper);color:var(--ink);border-radius:7px;padding:3px 10px;cursor:pointer}
+.cmd button:hover{border-color:var(--accent)}
+.steps{counter-reset:s;list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px}
+.steps li::before{content:counter(s);font-family:var(--f-mono);font-size:13px;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font-weight:500;margin-top:2px}
+.note{font-size:13px;color:var(--muted)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.box{border:1px solid var(--rule);border-radius:10px;padding:12px 14px;display:grid;gap:6px;min-width:0}
+.box.warn{border-color:var(--warn);background:var(--warn-soft)}
+.box b.h{font-size:14px}
+.foot{font-size:12.5px;color:var(--muted);display:grid;gap:4px}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr)}nav.toc{position:static}nav.toc ol{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}}
+@media (max-width:640px){table.stack,table.stack tbody,table.stack tr,table.stack td{display:block;width:auto}table.stack{min-width:0}table.stack thead{display:none}table.stack tr{border-bottom:1px solid var(--rule);padding:8px 0}table.stack td{border:0;padding:1px 0}table.stack td:first-child{font-weight:600}table.stack td:last-child{color:var(--muted);font-size:13px}}
+@media (max-width:560px){.timeline li{grid-template-columns:minmax(0,1fr);gap:2px}body{font-size:15px}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="eyebrow">SMOTE25 · Section 7 Evaluation · Handoff · 9 พ.ย. 2026</div>
+  <h1>ส่งต่องาน Section 7: Empirical Comparisons and Benchmarks</h1>
+  <p class="lede">สำหรับคนที่จะทำต่อจากตรงนี้ ไม่ว่าจะเป็นทีม, Tan เองในวันหลัง หรือ Claude session ใหม่: ตอนนี้งานอยู่ตรงไหน ต้องตัดสินใจอะไร ไฟล์อยู่ที่ไหน และสร้างทุกอย่างใหม่ได้อย่างไร</p>
+</header>
+
+<div class="layout">
+<nav class="toc" aria-label="สารบัญ"><div class="h">สารบัญ</div><ol>
+  <li><a href="#state">สถานะตอนนี้</a></li>
+  <li><a href="#next">ต้องทำต่อ</a></li>
+  <li><a href="#links">ลิงก์และไฟล์</a></li>
+  <li><a href="#history">ประวัติร่าง</a></li>
+  <li><a href="#decisions">ตัดสินใจไปแล้ว</a></li>
+  <li><a href="#numbers">ตัวเลขหลัก</a></li>
+  <li><a href="#rebuild">สร้างใหม่</a></li>
+  <li><a href="#rules">กติกา</a></li>
+  <li><a href="#team">ทีม</a></li>
+</ol></nav>
+
+<main>
+<section class="s" id="state">
+  <h2>สถานะตอนนี้ <span class="en">Where things stand</span></h2>
+  <div class="ticket">
+    <div><span class="k">ร่างล่าสุด</span><span class="v">v4.1</span><span class="d">8 พ.ย. 2026 · 14 หัวข้อย่อย + ภาคผนวก · ตาราง 31 · รูป 8 · PDF ตรวจ 49 หน้า</span></div>
+    <div><span class="k">ที่มาของ v4.1</span><span class="v">226 picks</span><span class="d">ใช้ 183 · อาจใช้ 14 · ไม่ใช้ 28 · โน้ต 7 และแก้ข้อความ 2 ใน Paper Picker</span></div>
+    <div><span class="k">Git / Overleaf</span><span class="v">v4.1 อยู่ใน repo</span><span class="d">เป็น package ใน <span class="mono">Evaluation section/</span> แทน v3 พร้อม Paper Picker และ handoff · ยังไม่ได้รวมเข้า main.tex</span></div>
+  </div>
+  <p>v4.1 เป็นร่างภาษาอังกฤษของ Section 7 ที่เขียนตามที่ Tan เลือกและเขียนโน้ตไว้ใน Paper Picker โครงตามรายชื่อหัวข้อ 7.1 ถึง 7.14 ผลทดลองของเราย้ายไปภาคผนวก, review 15 ปีเก็บไว้ใน 7.1, และ citation เปลี่ยนเป็นตัวเลขดิบคู่กับปีที่ตีพิมพ์ v4 ยังอยู่ครบไม่ได้แก้ แต่มีจุดผิดหนึ่งจุด (threshold moving) ที่แก้แล้วใน v4.1 เท่านั้น</p>
+  <p>ภาษาไทยของ v4.1 ตอนนี้มีแค่สรุปสิ่งที่เปลี่ยนจาก v4 (แท็บที่สองของหน้า v4.1) ยังไม่มีฉบับแปลเต็มแบบที่ v4 มี</p>
+</section>
+
+<section class="s" id="next">
+  <h2>ต้องทำต่อ <span class="en">Next actions</span></h2>
+  <p class="note">เรียงตามลำดับที่ควรทำ <span class="chip c-decide">ตัดสินใจ</span> Tan ต้องเลือก <span class="chip c-task">งาน</span> ทำได้เลยเมื่อสั่ง <span class="chip c-team">รอทีม</span> ต้องคุยกับส่วนอื่น</p>
+  <ol class="todo">
+    <li><span class="n">1</span><span class="t"><span class="chip c-decide">ตัดสินใจ</span>อ่าน v4.1 และรับเป็นร่างหลัก</span><span class="x">ถ้ารับ v4.1 ให้ถือว่า v4 ถูกแทนที่ทั้งหมด (รวมย่อหน้า review 15 ปีที่เคยใส่เข้า v4 โดยไม่ได้สั่ง) จุดที่ควรอ่านก่อน: 7.3 (ข้อมูลและ task), 7.4 (เหตุผลการเลือก learner), 7.11 (citation แบบตัวเลขดิบ)</span></li>
+    <li><span class="n">2</span><span class="t"><span class="chip c-decide">ตัดสินใจ</span>ผลทดลองของเรายังอยู่ใน paper ไหม</span><span class="x">ตอนนี้เหลือในเนื้อหาแค่รูป SMOTE เทียบ None และตารางตัวอย่างผล ส่วนรายละเอียดอยู่ภาคผนวก A ถ้าเก็บไว้ ต้องรัน CV ซ้ำอย่างน้อย 5 รอบ และควรเพิ่ม baseline class weighting กับ ROS ถ้าไม่เก็บ ต้องหาตัวอย่างตารางผลแบบอื่นมาแทนใน 7.10</span></li>
+    <li><span class="n">3</span><span class="t"><span class="chip c-decide">ตัดสินใจ</span>แปล v4.1 เป็นภาษาไทยทั้งฉบับหรือไม่</span><span class="x">v4 มีฉบับแปลเต็ม (<span class="mono">v4/th/section07-th.md</span>) v4.1 ยังไม่มี</span></li>
+    <li><span class="n">4</span><span class="t"><span class="chip c-decide">ตัดสินใจ</span>roadmap 46 แนวปฏิบัติ ใส่ภาคผนวกไหม</span><span class="x">เลือกไว้เป็น "อาจใช้" แต่ยังไม่ได้ใส่เพราะยาว ถ้าใส่จะเป็นตารางในภาคผนวกต่อจากตารางรหัสของ 71 งาน</span></li>
+    <li><span class="n">5</span><span class="t"><span class="chip c-team">รอทีม</span>ตกลงขอบเขต 7.3 กับส่วน Data (Toon)</span><span class="x">7.3 พูดถึงข้อมูลในระดับการวัดผลเท่านั้น (แหล่ง, จำนวนชุด, เหตุผล, การเปิดเผย) รายละเอียดรายชุดข้อมูลเป็นของส่วน Data ตัวเลขของส่วน Data ยังเป็น ai_draft ห้ามอ้างใน manuscript</span></li>
+    <li><span class="n">6</span><span class="t"><span class="chip c-team">รอทีม</span>ใส่ label ของส่วน Data และ Method ให้อ้างถึงได้</span><span class="x">v4.1 ยังมี TODO อ้างถึงสองส่วนนี้ใน 7.3 และ 7.14 (ค้นคำว่า <span class="mono">\TODO</span> ใน LaTeX)</span></li>
+    <li><span class="n">7</span><span class="t"><span class="chip c-team">รอทีม</span>ให้ผู้ร่วมเขียนตรวจคำพูดจากการอ่านรอบที่ 2</span><span class="x">ทุกรหัสรอบ 2 มีเลขหน้าและคำพูดสั้นจาก paper อยู่ใน <span class="mono">section07-pass2-verification.xlsx</span> สุ่มตรวจกับ PDF แล้ว 20 รายการ: ยืนยัน 14 ยืนยันบางส่วน 6</span></li>
+    <li><span class="n">8</span><span class="t"><span class="chip c-task">งาน</span>รวม v4.1 เข้า paper (main.tex บน Overleaf)</span><span class="x">package อยู่ใน repo แล้วที่ <span class="mono">Evaluation section/latex/</span>: คัดลอก <span class="mono">sections/07-empirical-comparisons.tex</span>, <span class="mono">sections/07-empirical-appendix.tex</span> (ใส่หลัง <span class="mono">\appendix</span>), <span class="mono">tables/</span>, <span class="mono">figures/</span> ไปที่ root; เพิ่ม <span class="mono">\usepackage{array}</span> และ <span class="mono">longtable</span> ใน main.tex; ตรวจ <span class="mono">notes/empirical-bib-candidates.bib</span> แล้วเพิ่มใน references.bib; commit ในชื่อ Tan แล้ว Tan push เองจาก cmd (ดูหัวข้อ "สร้างใหม่")</span></li>
+  </ol>
+</section>
+
+<section class="s" id="links">
+  <h2>ลิงก์และไฟล์ <span class="en">Pages and files</span></h2>
+  <h3>หน้าเว็บ (artifact บน claude.ai, เปิดได้เฉพาะคนที่ได้รับแชร์)</h3>
+  <div class="scroll"><table class="wide stack">
+    <thead><tr><th>หน้า</th><th>ใช้ทำอะไร</th><th>สถานะ</th></tr></thead>
+    <tbody>
+      <tr><td><a href="https://claude.ai/artifact/7HRYkw26k872LpYehEBNDa" target="_blank" rel="noopener">Section 7 v4.1</a></td><td>ร่างล่าสุด: ข้อความ paper ภาษาอังกฤษพร้อมภาคผนวก และแท็บสรุปสิ่งที่เปลี่ยน (ไทย)</td><td><span class="chip c-done">ล่าสุด</span></td></tr>
+      <tr><td><a href="https://claude.ai/artifact/LvyVNKUoinsS2jFB3jZRb4" target="_blank" rel="noopener">Paper Picker</a></td><td>เลือก แก้ และเขียนโน้ตให้ 237 รายการจาก data book; การเลือกเก็บในข้อมูลกลางของหน้า (collection <span class="mono">picks</span>) Claude อ่านได้</td><td><span class="chip c-done">ใช้งานอยู่</span></td></tr>
+      <tr><td><a href="https://claude.ai/artifact/QD9SpbnXyZQd27crxxp2ws" target="_blank" rel="noopener">Evaluation Data Book</a></td><td>ทุกตัวเลขและตารางที่วิเคราะห์ไว้ (D0 ถึง D16) พร้อมดัชนีคำถาม 61 ข้อ และแผนที่ 71 งาน</td><td><span class="chip c-done">อ้างอิง</span></td></tr>
+      <tr><td><a href="https://claude.ai/artifact/LmHmzdeTyvy6qzqnjTqffW" target="_blank" rel="noopener">Section 7 v4</a></td><td>ร่างก่อนหน้า (อังกฤษ + แปลไทยเต็ม)</td><td><span class="chip c-warn">ถูกแทนที่</span></td></tr>
+      <tr><td><a href="https://claude.ai/artifact/DJKDt4ZU6yWUXaUYHzYy2t" target="_blank" rel="noopener">Evaluation, Tan</a></td><td>คำตอบ 8 คำถามของ Tan พร้อมการ์ดเหตุและผลรายแถว</td><td><span class="chip c-done">อ้างอิง</span></td></tr>
+      <tr><td><a href="https://claude.ai/artifact/ToYftCPiDTd36U2cZPPXcB" target="_blank" rel="noopener">Evaluation Guide</a></td><td>คู่มือ 10 หัวข้อ (ทำอะไร, ควรเลือกอะไร, ต้องรายงานอะไร) และ checklist</td><td><span class="chip c-done">อ้างอิง</span></td></tr>
+      <tr><td><a href="https://claude.ai/artifact/CK5PH6nLSqWshQw93NDB2m" target="_blank" rel="noopener">Evaluation Primer</a>, <a href="https://claude.ai/artifact/Y4cW1RFS9YnkRYi9jbkibb" target="_blank" rel="noopener">Roadmap</a>, <a href="https://claude.ai/artifact/QrYUWJ3jFHen8qTsFyYUfx" target="_blank" rel="noopener">Evaluation Section</a></td><td>หน้าชุดเก่า (ต.ค. 2026): นิยาม measure, roadmap ตามเวลา, ร่างรุ่นก่อน v3</td><td><span class="chip c-warn">เก่า</span></td></tr>
+    </tbody>
+  </table></div>
+  <h3>ไฟล์บนเครื่อง Tan</h3>
+  <p>โฟลเดอร์หลัก <span class="mono">D:\WORKSPACE\claude-workspace\SMOTE\section07-empirical\</span></p>
+  <div class="scroll"><table class="wide stack">
+    <thead><tr><th>โฟลเดอร์</th><th>มีอะไร</th></tr></thead>
+    <tbody>
+      <tr><td><span class="mono">v4.1\</span></td><td>PDF, HTML, LaTeX zip, build-source zip, สรุปสิ่งที่เปลี่ยน (<span class="mono">section07-v4.1-changes-th.md</span>)</td></tr>
+      <tr><td><span class="mono">v4\</span></td><td>ร่าง v4 (PDF, HTML, LaTeX, source), PDF ของ review 15 ปี, และไฟล์ที่ส่งออกจาก picker (<span class="mono">smote25-section7-picks.json</span>, <span class="mono">.md</span>)</td></tr>
+      <tr><td><span class="mono">databook\</span></td><td>หน้า data book และ picker แบบไฟล์ และสคริปต์ <span class="mono">build_databook.py</span>, <span class="mono">build_picker.py</span></td></tr>
+      <tr><td><span class="mono">v3\</span></td><td>ร่าง v3, coded data, หน้า Tan, guide, primer, roadmap, และ <span class="mono">section07-pass2-verification.xlsx</span> (หลักฐานรายรหัส)</td></tr>
+      <tr><td><span class="mono">handoff\</span></td><td>หน้านี้ (<span class="mono">section07-handoff.html</span> และฉบับ Markdown <span class="mono">section07-handoff.md</span>) และ <span class="mono">smote25-section7-workspace-2026-11-09.zip</span> (โค้ดและข้อมูลทั้งหมดที่ใช้สร้างทุกอย่าง)</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Repo: <span class="mono">D:\WORKSPACE\claude-workspace\SMOTE\Git\SMOTE25</span> (github.com/tohnperfect/SMOTE25, ผูกกับ Overleaf) มีชุดเดียวกันใน <span class="mono">Evaluation section/</span>: ร่าง v4.1 (HTML ที่ root ของ repo, PDF, LaTeX), Paper Picker และ <span class="mono">handoff/</span> · ข้อมูลทดลองดิบ: <span class="mono">SMOTE\experiment\</span></p>
+</section>
+
+<section class="s" id="history">
+  <h2>ประวัติร่าง <span class="en">Draft history</span></h2>
+  <ol class="timeline">
+    <li><span class="when">ต.ค. 2026</span><span class="what"><b>v1 ถึง v3</b>ลงรหัส 76 เรื่อง (รอบ 1 และรอบ 2 พร้อมเลขหน้า), วิเคราะห์ citation, roadmap, primer, ร่าง Section 7 สองภาษา (v3)</span></li>
+    <li><span class="when">8 พ.ย. เช้า</span><span class="what"><b>หน้า Evaluation ของ Tan และ guide</b>ตอบ 8 คำถาม, การ์ดเหตุและผลทุกแถวของตาราง learner และ measure, คู่มือ 10 หัวข้อ</span></li>
+    <li><span class="when">8 พ.ย. บ่าย</span><span class="what"><b>v4</b>เขียนใหม่ให้อ่านรู้เรื่องและทำตามได้ 13 หัวข้อ + แปลไทยเต็ม ต่อมามีย่อหน้า review 15 ปีถูกใส่เข้าไปโดยไม่ได้สั่ง</span></li>
+    <li><span class="when">8 พ.ย. เย็น</span><span class="what"><b>Data book และ Paper Picker</b>รวมทุกการวิเคราะห์ไว้หน้าเดียว แล้วแยกเป็น 237 รายการให้เลือกและแก้</span></li>
+    <li><span class="when">8 พ.ย. ค่ำ</span><span class="what"><b>v4.1</b>เขียนตาม picks และโน้ต 14 หัวข้อ + ภาคผนวก ตารางใหม่ 20 ตาราง ตัดรูป 2 รูป แก้ threshold moving</span></li>
+  </ol>
+</section>
+
+<section class="s" id="decisions">
+  <h2>ตัดสินใจไปแล้ว <span class="en">Decisions made</span></h2>
+  <ul class="list">
+    <li><b>โครง 14 หัวข้อ</b> ตามรายชื่อหัวข้อใน picker (7.1 คลังบทความ ถึง 7.14 ข้อจำกัด) "ทำไม G-mean" และ "G-mean กับ F1" เป็นหัวข้อย่อยของ 7.6</li>
+    <li><b>ผลทดลองของเรา</b> ตัด CD diagram, กราฟ threshold, ตัวอย่าง IR, การเทียบผู้ชนะระหว่าง measure, ตาราง rank และ Holm ออกจากเนื้อหา เก็บรูป SMOTE เทียบ None (427/550) และตารางตัวอย่างผล</li>
+    <li><b>review 15 ปี</b> เก็บไว้ใน 7.1 พร้อมตารางว่างานหลังจากนั้นทำตามไหม ไม่ใส่ข้อที่ review บอกว่า SMOTE 2002 มีนัยสำคัญทางสถิติ</li>
+    <li><b>citation</b> ใช้ค่ากลางของจำนวนดิบคู่กับปีค่ากลางของแต่ละกลุ่ม ไม่ใช้ citation ratio จาก regression แล้ว และเตือนว่าต้องอ่านเทียบกับเวลาที่ตีพิมพ์</li>
+    <li><b>ตัวเลข UCI/KEEL</b> นับแบบไม่ซ้อนกันให้รวมได้ 71: UCI อย่างเดียว 33, KEEL อย่างเดียว 13, ทั้งสอง 20, ไม่ใช้ทั้งคู่ 5</li>
+    <li><b>ประโยค learner</b> "median 3 families per study (range 1 to 6), with 9 of 24 studies using a single family" พร้อมตาราง 12 กลุ่มและ algorithm ในแต่ละกลุ่ม</li>
+    <li><b>threshold moving</b> เป็นคู่เทียบใน 3 งาน (Global-CS 2010, DSRBF 2011, Buda 2018) ไม่ใช่ 1 ตามที่ v4 เขียน</li>
+    <li><b>ใช้รายชื่อ paper ชุดเดียวกับส่วน Method และ Data</b> (76 เรื่อง, ตระกูล SMOTE 37 เรื่อง)</li>
+  </ul>
+</section>
+
+<section class="s" id="numbers">
+  <h2>ตัวเลขหลัก <span class="en">Key numbers</span></h2>
+  <p class="note">ทุกตัวเลขจาก <span class="mono">data.json</span> (71 งานที่มีการทดลอง) ช่วงปี: ถึง 2009 (14), 2010–15 (13), 2016–20 (20), 2021–26 (24)</p>
+  <div class="scroll"><table class="wide stack">
+    <thead><tr><th>หัวข้อ</th><th>ตัวเลข</th><th>อยู่ที่</th></tr></thead>
+    <tbody>
+      <tr><td>คลังบทความ</td><td>76 เรื่อง · มีการทดลอง 71 · ตระกูล SMOTE 37 (Binary 24, Multiclass 5, ทั้งสอง 8) · binary 39, multi-class 19, ทั้งสอง 13</td><td>7.1</td></tr>
+      <tr><td>ข้อมูล</td><td>UCI 53 · KEEL 33 (ปีแรก 2013) · ไม่ซ้อนกัน: UCI อย่างเดียว 33, KEEL อย่างเดียว 13, ทั้งสอง 20, ไม่ใช้ 5 · ค่ากลางจำนวนชุด 6.5 (ก่อน 2010) เป็น 23 (ตั้งแต่ 2021) · ดัดแปลง 52 เปิดเผย 10</td><td>7.3</td></tr>
+      <tr><td>Learner</td><td>2021–26: 12 กลุ่ม (ชื่อต่างกัน 32 ชื่อ) · ค่ากลาง 3 กลุ่มต่องาน (1 ถึง 6) · กลุ่มเดียว 9 จาก 24 · SVM 13, CART 12, k-NN 9</td><td>7.2, 7.4</td></tr>
+      <tr><td>คู่เทียบ</td><td>ค่ากลาง 7 วิธี · SMOTE 50 · ไม่ resample 52 (86% ลดเหลือ 54%) · cost-sensitive 5 · class weighting 1 · threshold moving 3</td><td>7.5</td></tr>
+      <tr><td>Measure</td><td>27 ตัว (5 กลุ่ม + 1) · ค่ากลาง 3 ต่องาน · G-mean 41 (29% เป็น 71%) · measure หลักที่ประกาศ: AUC 16, G-mean 7 · นิยามมีปัญหา 14</td><td>7.6</td></tr>
+      <tr><td>นอกเหนือคะแนน</td><td>วัดข้อมูลหลัง resample ตรง ๆ 6 · รูป 2 มิติ 33 · มีแต่คะแนน 23</td><td>7.7</td></tr>
+      <tr><td>Protocol และการเลือกค่า</td><td>แบ่งซ้ำ 43 · บอกว่า resample เฉพาะข้อมูลฝึก 34 · เลือกค่าบนข้อมูลที่ใช้วัดผล 35 · nested 9 · ค่าคงที่ 20 · ไม่ชัด 7</td><td>7.8</td></tr>
+      <tr><td>Test</td><td>มี test 52 · ปรับแก้หลายคู่ 27 · รายคู่ไม่ปรับแก้ 19 · Bayesian 3 · ไม่มี 19 (64% ลดเหลือ 17%) · อ้าง Demšar 19</td><td>7.9</td></tr>
+      <tr><td>การรายงาน</td><td>ตารางรายชุดข้อมูล 58 · SD 24 · CD diagram 4 · แจก code 27</td><td>7.10</td></tr>
+      <tr><td>Citation</td><td>ค่ากลาง: งานถึง 2009 มี 1,738 · งานตั้งแต่ 2021 มี 21 · ไปทางเดียวทุกช่วงปีแค่ 3 แนวปฏิบัติ: มี SMOTE เป็นคู่เทียบ (มากกว่า), นิยาม measure มีปัญหา และมี baseline ไม่ resample (น้อยกว่า; อย่างหลังกลุ่มเล็กในช่วงต้น)</td><td>7.11</td></tr>
+      <tr><td>ข้อสรุปที่อ้าง</td><td>68 จาก 69 งานบอกว่าวิธีตัวเองดีสุด · CISO 2025 งานเดียวที่ไม่ชนะ baseline · มาตรฐาน 7 ข้อ: ผ่านครบแค่ RBO 2019, ค่ากลาง 3</td><td>7.12</td></tr>
+      <tr><td>ผลทดลองของเรา</td><td>110 ชุด KEEL × 5 วิธี × 5 learner, 5-fold รอบเดียว · SMOTE ชนะ None ด้วย G-mean 427/550 แต่ด้วย PR-AUC แค่ 175/550</td><td>7.6, ภาคผนวก A</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section class="s" id="rebuild">
+  <h2>สร้างใหม่ <span class="en">How to rebuild</span></h2>
+  <p>ทุกตาราง รูป และหน้าเว็บสร้างจากสคริปต์ อย่าแก้ตัวเลขด้วยมือ ให้แก้ข้อมูลหรือสคริปต์แล้วสร้างใหม่ สคริปต์ใช้ path แบบเต็ม <span class="mono">/home/claude/smote25/</span> จึงต้องแตก zip ไว้ที่ตำแหน่งนั้นใน cloud session ของ Claude</p>
+  <ol class="steps">
+    <li><span><b>เริ่ม session ใหม่</b>: แตก <span class="mono">handoff\smote25-section7-workspace-2026-11-09.zip</span> ไปที่ <span class="mono">/home/claude/</span> และอ่าน <span class="mono">handoff\section07-handoff.md</span> (ข้อความเดียวกับหน้านี้แบบ Markdown)</span></li>
+    <li><span><b>ข้อมูลที่ลงรหัส</b>: <span class="mono">data.json</span> (76 เรื่อง) และ <span class="mono">v2/analysis.json</span> (roadmap, citation, ตระกูลชุดข้อมูล)</span></li>
+    <li><span><b>ตัวเลขของหน้า Tan</b>: <span class="mono">evalpage/facts.py</span>, <span class="mono">why_facts.py</span>, <span class="mono">exp.py</span> (ผลทดลองจาก <span class="mono">SMOTE/experiment/results_*.csv</span>) แล้ว <span class="mono">build_evalpage.py</span></span></li>
+    <li><span><b>Data book และ picker</b>: <span class="mono">databook/build_databook.py</span> แล้ว <span class="mono">build_picker.py</span> (id ของรายการคงที่ถ้าเนื้อหาไม่เปลี่ยน การเลือกเดิมใน picker จึงยังใช้ได้)</span></li>
+    <li><span><b>v4.1</b>: <span class="mono">make_figures.py</span>, <span class="mono">make_tables_v41.py</span> (ตารางใหม่ 20 ตาราง), รวม <span class="mono">sections/parts/p1.tex</span> ถึง <span class="mono">p4.tex</span> เป็น <span class="mono">07-empirical-comparisons.tex</span>, compile <span class="mono">preview/</span>, แล้ว <span class="mono">make_page.py</span> สำหรับ HTML</span></li>
+    <li><span><b>อ่านการเลือกใน picker</b>: Claude ใช้ ArtifactData อ่าน collection <span class="mono">picks</span> ของ Paper Picker (226 เอกสาร: status, target, form, note, html ที่แก้)</span></li>
+  </ol>
+  <div class="cmd"><div class="bar"><span>compile ฉบับตรวจ (ในโฟลเดอร์ <span class="mono">v4.1/preview</span>)</span><button type="button" data-copy="c1">คัดลอก</button></div>
+<pre id="c1">TEXINPUTS=..: pdflatex -interaction=nonstopmode preview.tex
+bibtex preview
+TEXINPUTS=..: pdflatex -interaction=nonstopmode preview.tex
+TEXINPUTS=..: pdflatex -interaction=nonstopmode preview.tex</pre></div>
+  <div class="cmd"><div class="bar"><span>push จากเครื่อง Tan หลัง commit (Claude push ไม่ได้)</span><button type="button" data-copy="c2">คัดลอก</button></div>
+<pre id="c2">cd /d D:\WORKSPACE\claude-workspace\SMOTE\Git\SMOTE25
+git push</pre></div>
+</section>
+
+<section class="s" id="rules">
+  <h2>กติกา <span class="en">Standing rules</span></h2>
+  <div class="two">
+    <div class="box"><b class="h">การเขียน</b><ul class="list">
+      <li>ไม่ใช้ em-dash ในงานที่ส่ง (ใช้ en-dash เฉพาะช่วงตัวเลข)</li>
+      <li>ไม่อ้างตัวเลขของส่วน Data ที่ยังเป็น ai_draft ใน manuscript</li>
+      <li>ตัวเลขทุกตัวต้องมาจากข้อมูลที่ลงรหัส และตรวจซ้ำก่อนใช้</li>
+    </ul></div>
+    <div class="box"><b class="h">การทำงานกับไฟล์และ Git</b><ul class="list">
+      <li>ถามก่อนแก้งานที่ส่งไปแล้ว (เช่น v4) และอย่าเพิ่มอะไรที่ไม่ได้สั่ง</li>
+      <li>commit เมื่อ Tan สั่งเท่านั้น ในชื่อ Tan &lt;pharamut@kkumail.com&gt; พร้อมบรรทัด Co-Authored-By และ Claude-Session</li>
+      <li>Claude ไม่จัดการรหัสผ่านหรือ token ของ GitHub; Tan push เองจาก cmd</li>
+      <li>ไม่ใช้คำสั่ง git ที่ลบงาน (เช่น reset --hard); ลบไฟล์ในโฟลเดอร์บนเครื่องต้องขออนุญาตก่อน</li>
+    </ul></div>
+  </div>
+</section>
+
+<section class="s" id="team">
+  <h2>ทีม <span class="en">Who does what</span></h2>
+  <div class="scroll"><table class="stack">
+    <thead><tr><th>ส่วน</th><th>ผู้รับผิดชอบ</th><th>เกี่ยวกับ Section 7 อย่างไร</th></tr></thead>
+    <tbody>
+      <tr><td>Method</td><td>P / S1xzy</td><td>รายชื่อตระกูล SMOTE 37 เรื่อง (Binary 24, Multiclass 5, ทั้งสอง 8) ที่ Section 7 ใช้</td></tr>
+      <tr><td>Data</td><td>Toon / Kanvara001</td><td>รายละเอียดรายชุดข้อมูล; ขอบเขตกับ 7.3 ยังต้องตกลง; ตัวเลขยังเป็น ai_draft</td></tr>
+      <tr><td>Evaluation (Section 7)</td><td>Tan</td><td>เจ้าของร่างนี้ทั้งหมด</td></tr>
+    </tbody>
+  </table></div>
+  <div class="foot"><span>อัปเดต 9 พ.ย. 2026 · สร้างจาก session ที่ทำ data book, Paper Picker และ v4.1</span></div>
+</section>
+</main>
+</div>
+</div>
+
+<script>
+document.querySelectorAll('button[data-copy]').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var el = document.getElementById(b.getAttribute('data-copy')); var text = el.textContent;
+    function done() { var t = b.textContent; b.textContent = 'คัดลอกแล้ว'; setTimeout(function () { b.textContent = t; }, 1500); }
+    function fallback() { var r = document.createRange(); r.selectNodeContents(el); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'กด Ctrl+C'; setTimeout(function () { b.textContent = 'คัดลอก'; }, 2000); }
+    try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+  });
+});
+</script>
+</body>
+</html>

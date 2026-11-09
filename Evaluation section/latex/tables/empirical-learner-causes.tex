@@ -1,0 +1,30 @@
+%% Table: learner families by period, with the cause of the change (input from sections/07-empirical-comparisons.tex). Version 4.1 (from v4/make_tables.py, rule-learner row edited for v4.1).
+%% JAIR style: caption above the table, booktabs rules. Regenerate instead of editing numbers by hand.
+\begin{table}[p]
+  \caption{Base Learners by Period and Why Their Use Changed}
+  \label{tab:empirical-learner-causes}
+  \footnotesize
+  \setlength{\tabcolsep}{3pt}
+  \begin{tabular}{@{}p{0.16\linewidth}rrrrp{0.07\linewidth}p{0.06\linewidth}p{0.42\linewidth}@{}}
+    \toprule
+    Learner & --2009 & --2015 & --2020 & --2026 & Trend & Driver & Cause of the change\\
+    & (14) & (13) & (20) & (24) & & & \\
+    \midrule
+    C4.5 or C5.0 & 64\% & 77\% & 45\% & 21\% & falling & T, L & Shipped with Weka (J48) and KEEL, the tools of the first decade; scikit-learn has no C4.5. Users name Weka in 11 of 33 studies and Python in 2. The five users since 2021 keep it to stay comparable with earlier work in their line.\\
+    CART (decision tree) & 7\% & 0\% & 20\% & 50\% & rising & T & The decision tree of scikit-learn is CART, so the tree did not disappear: it changed with the toolkit. 13 of 17 users release code (C4.5: 8 of 33), and 12 of the 17 are from 2021 onwards.\\
+    SVM & 21\% & 46\% & 30\% & 54\% & rising & T, L & Available in both toolkits, and the most frequent choice of studies that use one learner only: 4 of the 9 single-learner studies since 2021 use an SVM, 3 use C4.5.\\
+    k-NN & 14\% & 46\% & 55\% & 38\% & rising & T, R & Available in both toolkits and chosen to cover different learning paradigms (11 of 28 say so). Its share fell after 2020 because studies still use about three learners while SVM, RF and boosting took more of the slots.\\
+    Multilayer perceptron & 7\% & 31\% & 30\% & 25\% & rising & L & Carried by one line of work: all four studies of the MC-CCR line (MC-CCR, MC-RBO, NROMM, MC-MBRC) use it; three early studies used it alone.\\
+    Naive Bayes & 14\% & 23\% & 20\% & 21\% & stable & L & Cheap, parameter-free and present in every toolkit; never used alone (0 of 14), so nothing pushed it up or down.\\
+    Logistic regression & 7\% & 8\% & 30\% & 21\% & stable & T, R & Arrived with Python (6 of 13 users name Python, none name Weka); chosen because few hyperparameters limit tuning bias.\\
+    Random forest & 7\% & 8\% & 20\% & 25\% & rising & R, T & Studies want to know whether resampling still helps a strong learner that practitioners use; RF is reported as top performing or most widely used.\\
+    Gradient boosting & 0\% & 0\% & 15\% & 21\% & new & R, T, L & The strongest off-the-shelf tabular learner today; 7 of 8 users name Python and their median benchmark has 34.5 datasets. QC-SMOTE keeps CatBoost to match a published benchmark.\\
+    AdaBoost-type boosting & 7\% & 15\% & 25\% & 8\% & stable & T, R & Represented the ensemble paradigm in 2016 to 2020 (5 studies) and was then replaced by gradient boosting (2 against 5 studies since 2021).\\
+    Rule learners (RIPPER, PART, MODLEM) & 29\% & 23\% & 10\% & 0\% & gone & T, L & Only in Weka or in the authors' code; scikit-learn has none. They were used by two groups (Chawla and co-authors early on; the Poznań group in SPIDER2 and SOUP) and not after SOUP (2019).\\
+    Convolutional network & 0\% & 0\% & 10\% & 0\% & gone & P & Not abandoned: the two image studies (2018, 2019) used CNNs because the data were images, and no study since 2021 uses image data.\\
+    LDA & 0\% & 0\% & 5\% & 4\% & new & N & Used twice because it has no parameters to tune.\\
+    Other & 0\% & 0\% & 5\% & 4\% & new & N & Method-specific choices: a Bayesian KDE classifier that matches the generator of CGMOS, and a one-vs-one ensemble in RSMOTE.\\
+    \bottomrule
+  \end{tabular}
+  \par\smallskip\raggedright\scriptsize Columns give the share of the studies of each period (number of studies in brackets). Trend: gone = no study since 2021; new = first used in 2016 or later; rising or falling = the share changed by 15 points or more between the first and the last period. Drivers: T = change of toolkit; L = following a line of earlier work; R = realism or a critique; P = change of problem or data type; N = used in at most two studies. Tool names count only studies that name the tool.
+\end{table}

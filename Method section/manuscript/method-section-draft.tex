@@ -37,6 +37,7 @@
 \providecommand{\pnote}[1]{\par\noindent\fbox{\parbox{0.95\linewidth}{\small\textbf{[P]} #1}}\par}
 \providecommand{\teamslot}[2]{\par\noindent\fbox{\parbox{0.95\linewidth}{\small\textbf{[Team: #1]} #2}}\par}
 \providecommand{\fm}{$\bullet$}
+\providecommand{\checkmark}{$\surd$}
 
 % =====================================================================
 \section{Introduction}
@@ -51,6 +52,31 @@ its 15-year anniversary. This survey follows the line from 2002 to the present
 through a corpus of 76 papers and asks, for the methods that build on SMOTE,
 what exactly they change, and in which class setting (two classes, several
 classes, or both) they are shown to work.
+
+\paragraph{What we call the SMOTE family.} SMOTE creates each synthetic minority
+example by moving from a minority example $\mathbf{x}_i$ (the \emph{seed}) towards
+one of its nearest minority neighbours $\mathbf{x}_j$ (the \emph{partner}) by a
+random fraction of the distance between them:
+\[
+  \mathbf{x}_{\mathrm{new}} = \mathbf{x}_i + \lambda\,(\mathbf{x}_j-\mathbf{x}_i),
+  \qquad \lambda\sim U(0,1),
+\]
+so that the new point lies on the segment between the two. We call a method
+\emph{SMOTE-family} when it generates synthetic minority examples with this
+equation, or with a rule that extends it in one of four ways: (i) a different law
+for $\lambda$, for example $\lambda\le 0.5$ or a Gaussian step; (ii) a region built
+around the segment instead of the segment itself; (iii) extrapolation along the
+line through $\mathbf{x}_i$ and $\mathbf{x}_j$, that is, $\lambda$ outside $[0,1]$;
+or (iv) a convex combination of more than two instances,
+$\mathbf{x}_{\mathrm{new}}=\sum_m \alpha_m\mathbf{x}_m$ with $\alpha_m\ge 0$ and
+$\sum_m\alpha_m=1$. A method may change which seeds and partners it uses, how
+many points it makes, what it removes afterwards, or where in the learning process
+it runs, and still belong to the family. Methods that sample around a single
+point without a partner (inside a sphere, on a Mahalanobis contour, along a random
+direction) or draw from a fitted or learned distribution do not belong to it. The
+definition concerns the generator, not the name: a method called ``SMOTE'' that
+does not interpolate is excluded, and a method with another name that does is
+included.
 
 Our account rests on three elements. First, we write the SMOTE generation rule
 as six decisions and record which of them each method changes
@@ -96,37 +122,68 @@ Read as a procedure, Eq.~\eqref{eq:smote} fixes six choices in the simplest way
 weight; every seed receives the same number of points; the partner is drawn
 uniformly from the five nearest minority neighbours; the point is drawn uniformly
 on the segment; nothing is removed afterwards; and the generator runs once,
-before training. We call these the six \emph{decision points} of the rule. A
-general SMOTE-family generator can then be written as
+before training. We call these the six \emph{decision points} of the rule. Writing
+each of them as a symbol turns Eq.~\eqref{eq:smote} into a generation template in
+which every SMOTE-family method fills the six slots in its own way:
 \begin{equation}
-  i\sim w(\cdot),\quad g_i,\quad \mathbf{x}_j\sim q(\cdot\mid\mathbf{x}_i),\quad
-  \mathbf{x}_{\mathrm{new}}\sim r(\cdot\mid\mathbf{x}_i,\mathbf{x}_j),\quad F(\cdot),
-  \label{eq:template}
+\begin{aligned}
+&\text{(1) seed selection:} && i\sim w(i),\ \ \mathbf{x}_i\in S_{\min}\\
+&\text{(2) sample allocation:} && \text{repeat } g_i \text{ times for seed } \mathbf{x}_i:\\
+&\text{(3) neighbour choice:} && \qquad \mathbf{x}_j\sim q(\cdot\mid\mathbf{x}_i)\\
+&\text{(4) placement rule:} && \qquad \mathbf{x}_{\mathrm{new}}=\mathbf{x}_i+\lambda\,(\mathbf{x}_j-\mathbf{x}_i),\ \ \lambda\sim r(\cdot)\\
+&\text{(5) post-filtering:} && S'\leftarrow F\bigl(S\cup S_{\mathrm{syn}}\bigr)\\
+&\text{(6) inside a pipeline:} && \text{steps (1) to (5) run once before training, or at every step } t \text{ of a learner}
+\end{aligned}
+\label{eq:template}
 \end{equation}
-with a seed distribution $w$, an allocation $g_i$ of points to seeds (or to
-clusters or classes), a partner distribution $q$, a placement distribution $r$,
-and a filter $F$ applied to the enlarged training set; the sixth decision is
-whether the procedure is called once or repeatedly inside a learner. SMOTE is the
-special case with uniform $w$, constant $g_i=N/100$, uniform $q$ over
-$N_5(\mathbf{x}_i)$, $r$ uniform on the segment, and the identity as $F$.
+Here $w$ is the seed distribution over $S_{\min}$, $g_i$ the number of points given
+to seed $\mathbf{x}_i$ (or to its cluster or class), $q$ the partner distribution
+(its candidate pool, metric and weights), $r$ the law of $\lambda$ or, more
+generally, the region in which the new point is placed, and $F$ a filter applied
+to the enlarged training set. SMOTE is the special case with uniform $w$, constant
+$g_i=N/100$, $q$ uniform over the five nearest minority neighbours, $r=U(0,1)$ on
+the segment, $F$ the identity, and a single run before training.
+Figure~\ref{fig:decision-points} shows the same correspondence: panel~(a) points
+each decision at the symbol of Eq.~\eqref{eq:smote} it changes, and panel~(b)
+shows what each decision does on two-dimensional data.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{figures/smote-decision-points}
+  \caption{The Six Decision Points of the SMOTE Generation Rule. (a) The symbol
+  of Eq.~(1) that each decision point changes, with SMOTE's own choice under each
+  label. (b) The same decisions on two-dimensional data: which seed, how many
+  points per seed, which partner, where the point lands, which candidates are
+  rejected, and whether generation is repeated inside a learner.}
+  \Description{Panel (a) shows the equation x-new equals x-i plus lambda times
+  x-j minus x-i, framed by a box that is repeated g-i times and followed by a
+  filter F, all inside a dashed box for the learner. Six numbered labels point at
+  x-i, the box, x-j, lambda, F and the dashed box. Panel (b) shows minority
+  circles and majority squares, a seed with a dashed circle of nearest
+  neighbours, a partner, a new point on the segment between them inside a shaded
+  region, extra points from the same seed, a rejected candidate among the
+  majority, and a loop to a learner.}
+  \label{fig:decision-points}
+\end{figure}
 
 \begin{table}[t]
 \centering\small
-\caption{The Six Decision Points of the SMOTE Generation Rule. Papers: SMOTE-family
+\caption{The Six Decision Points of the SMOTE Generation Rule. Symbol: the part of
+the generation template, Eq.~(2), that the decision changes. Papers: SMOTE-family
 papers in the corpus that change each decision (37 papers; a paper is counted once
 for every decision it changes).}
 \label{tab:decision-points}
 \setlength{\tabcolsep}{4pt}
-\begin{tabular}{@{}p{0.16\linewidth}p{0.3\linewidth}p{0.24\linewidth}r@{}}
+\begin{tabular}{@{}p{0.15\linewidth}p{0.13\linewidth}p{0.27\linewidth}p{0.22\linewidth}r@{}}
 \toprule
-Decision point & What it decides & SMOTE (2002) & Papers\\
+Decision point & Symbol & What it decides & SMOTE (2002) & Papers\\
 \midrule
-Seed selection & Which minority points become seeds, or how they are weighted & All seeds, equal weight & 24\\
-Sample allocation & How many points each seed, cluster or class receives & $N/100$ per seed & 21\\
-Neighbour choice & Which partner is paired with the seed & Uniform over 5 minority neighbours, Euclidean & 22\\
-Placement rule & Where the new point lands & Uniform on the segment & 13\\
-Post-filtering & What is removed or rejected after generation & Nothing & 12\\
-Inside a pipeline & Whether generation runs inside boosting, bagging, a wrapper or training & Once, before training & 8\\
+Seed selection & $w$: which $\mathbf{x}_i$ & Which minority points become seeds, or how they are weighted & All seeds, equal weight & 24\\
+Sample allocation & $g_i$: how often & How many points each seed, cluster or class receives & $N/100$ per seed & 21\\
+Neighbour choice & $q$: which $\mathbf{x}_j$ & Which partner is paired with the seed & Uniform over 5 minority neighbours, Euclidean & 22\\
+Placement rule & $r$: $\lambda$ or region & Where the new point lands & $\lambda\sim U(0,1)$, on the segment & 13\\
+Post-filtering & $F$ & What is removed or rejected after generation & Nothing & 12\\
+Inside a pipeline & step (6) & Whether generation runs inside boosting, bagging, a wrapper or training & Once, before training & 8\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -142,17 +199,136 @@ Eq.~3). Check the printed page; if confirmed, this is worth a footnote.}
 
 \subsection{Corpus}
 \label{sec:corpus}
-The corpus is the team's collection of 76 papers, published from 1972 to 2026
-and kept in four folders by problem setting: binary (24 papers), multiclass (21),
-both (29) and surveys (2). Sixty-six papers propose a new method, five are
-foundational (for example ENN, Tomek links and AdaBoost), three are empirical
-studies and two are surveys. Each paper was recorded in a coding sheet (the
-Method Map) with its approach, mechanism, baselines, datasets, classifiers,
-metrics, stated limitations and code availability.
+We call the papers analysed in this survey the \emph{SMOTE25 core corpus}. It is a
+curated collection, assembled by the authors in a shared folder with four
+sub-folders by problem setting (binary, multiclass, both, and surveys), and not
+the result of a systematic database search. The folders hold 100 files: 12
+supplementary files and 88 paper files, 12 of which are second copies of the same
+paper filed under two settings. Merging the copies leaves 76 distinct papers,
+published from 1972 to 2026; the number is therefore a count of what the
+collection contains, not a target.
 
-\teamslot{Review protocol}{Search strategy, databases, time window, inclusion and
-exclusion criteria, and the PRISMA-style flow belong here (Section 3 of the
-outline). The numbers above describe the corpus as it stands on 28 October 2026.}
+The 76 papers play four roles. Five are foundational works that later methods
+build on or compare with (ENN, Tomek links, AdaBoost, the multiclass ensemble
+analysis of Wang and Yao, and the CTGAN and TVAE tabular generators); 66 propose a
+new method for imbalanced classification (29 oversampling, 17 hybrid sampling, 9
+ensemble, 4 undersampling, 4 deep generative, 2 algorithm-level and 1
+cost-sensitive); three are empirical studies of SMOTE or resampling; and two are
+surveys. Measured against our definition, 37
+of the papers are SMOTE-family, 3 study SMOTE without proposing a generator, 12
+are related to SMOTE but generate in another way, and 24 have no direct link to
+it. \claudedraft{The corpus thus places the SMOTE family among its predecessors,
+its competitors and its critics, which is what the comparisons in this survey
+require; it is not a census of every SMOTE variant ever published.} Each paper
+was recorded in a coding sheet (the Method Map) with its approach, mechanism,
+baselines, datasets, classifiers, metrics, stated limitations and code
+availability.
+
+The 15-year review of \textcite{fernandez2018smote} was assembled in the same way.
+It reports no databases, search terms, time window, inclusion criteria or
+screening counts; it presents the SMOTE-based approaches its authors judged most
+significant (Section~3, p.~868), states that more than 85 extensions exist
+(p.~871), and lists about 90 of them, from 2004 to 2017, in its Table~1
+(p.~872), with further tables for SMOTE-based ensembles (Table~2) and other
+learning paradigms (Table~3). Each extension is characterised by seven properties
+(Section~3.1, pp.~869--871): initial selection of instances, integration with
+undersampling, type of interpolation, dimensionality change, adaptive generation,
+relabelling, and filtering of noisy generated instances. \claudedraft{Four of these
+properties correspond to our decision points (initial selection to seed selection,
+adaptive generation to sample allocation, type of interpolation to the placement
+rule and partly to neighbour choice, filtering to post-filtering); integration with
+undersampling, relabelling and dimensionality change act on the data around the
+generator rather than on Eq.~(1), and generation inside a pipeline appears in their
+review as a separate table of ensembles.}
+
+\paragraph{How the 76 papers were chosen.} We selected the papers on the same
+principle as \textcite{fernandez2018smote}: the authors collected the approaches
+they judged most significant for learning from imbalanced data since SMOTE,
+together with the foundational works these approaches build on or are compared
+with, the empirical studies and critical reviews that evaluate them, and recent
+work up to 2026. Where our survey departs from the 15-year review is in what it
+then analyses. Fernández et al.\ treat every oversampling method that creates
+synthetic examples by interpolation or another process as related to SMOTE
+(p.~868); we fix the object of analysis by a definition. Only the 37 papers whose
+generator meets the definition of the SMOTE family (Section~\ref{sec:smote-definition})
+are coded and compared as methods in Sections~\ref{sec:smote-by-decision}
+to~\ref{sec:method-choice}; the other 39 papers (undersampling, ensembles,
+cost-sensitive learning, other generators, studies and surveys) are kept as the
+context against which the family is described and are not analysed as SMOTE
+methods. The systematic search of Section~\ref{sec:search} tests how far this
+expert selection covers the literature.
+
+\pnote{Section~7 calls the same set ``the SMOTE25 collection selected for this
+survey''; agree on one name with Tan.}
+
+\subsection{Systematic Search}
+\label{sec:search}
+To test how far the core corpus represents the SMOTE literature, and to extend it,
+we defined a systematic search and ran its identification stage.
+
+\paragraph{Protocol.} Sources: Scopus and Web of Science Core Collection (title,
+abstract and author keywords), OpenAlex and arXiv for preprints, and backward and
+forward citation snowballing from the 37 SMOTE-family papers. Window: January 2002
+to the date of the search. Search string, applied to title, abstract and keywords:
+\begin{quote}\small
+(SMOTE OR oversampling OR ``over-sampling'' OR ``synthetic minority'' OR
+``adaptive synthetic'' OR ``synthetic samples'' OR ``synthetic instances'') AND
+(imbalanced OR imbalance OR ``minority class'' OR ``minority classes'')
+\end{quote}
+A record is included when it (I1) proposes a method that generates synthetic
+minority examples, or changes how SMOTE is applied, for classification; (I2)
+evaluates it on data; and (I3) is a peer-reviewed journal or conference paper, or
+a preprint with full text, in English. It is excluded when it (E1) applies existing
+resampling to a domain without proposing a method; (E2) addresses regression,
+clustering or anomaly detection only; (E3) has no accessible full text; or (E4)
+is an earlier version of an included paper. Two reviewers screen titles and
+abstracts independently and resolve conflicts by discussion; full texts are
+screened by one reviewer with a second check of a 20\% sample; every exclusion is
+recorded with its reason, and the flow is reported in the PRISMA 2020 format.
+
+\paragraph{Pilot on OpenAlex.} We ran the identification stage on OpenAlex on
+29 October 2026 (articles, conference papers, chapters and preprints, 2002 to
+2026) and measured, for each candidate string, how many corpus papers it
+retrieves (Table~\ref{tab:search-pilot}). The final string returns 14,589
+records and retrieves 36 of the 37 SMOTE-family papers; the one it misses, LS, has
+none of the generation terms of the string in its OpenAlex title and abstract. Of the 75 corpus papers
+with an OpenAlex record it retrieves 57; the 18 it misses are, as intended, almost
+all papers that do not oversample (undersampling, ensembles, cost-sensitive and
+foundational works). The pilot also exposed a limit of OpenAlex: it holds an
+abstract for only 17 of the 37 SMOTE-family papers, so its ``title and abstract''
+search is in practice a title search for most journal papers. The search for the
+paper therefore has to be run in Scopus or Web of Science, which index abstracts
+and keywords.
+
+\begin{table}[t]
+\centering\small
+\caption{Pilot of the Search Strings on OpenAlex (29 October 2026, 2002 to 2026).
+Recall: corpus papers with an OpenAlex record that each string retrieves.}
+\label{tab:search-pilot}
+\begin{tabular}{@{}p{0.5\linewidth}rrr@{}}
+\toprule
+String & Records & SMOTE-family (37) & Corpus (75)\\
+\midrule
+S1: SMOTE named & 16,109 & 21 & 24\\
+S2: oversampling and imbalance & 10,853 & 32 & 52\\
+S3: S2 in the title only & 4,519 & 27 & 39\\
+S4: S2 and method words (propose, novel, algorithm) & 10,407 & 31 & 48\\
+S5: final string (above) & 14,589 & 36 & 57\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\teamslot{Search, screening and PRISMA}{Run the final string in Scopus and Web of
+Science (KKU access), export the records with abstracts, merge with OpenAlex and
+arXiv, remove duplicates, and screen as above. Expect more than 10,000 records
+before screening; most are applications of SMOTE to a domain (criterion E1), which
+a title pass removes quickly. Report the PRISMA numbers here and in the abstract.
+The script and the pilot results are in Method section/build/search\_openalex.py
+and Method section/search/.}
+
+\evidence{Method section/search/openalex\_search.json (counts and recall per
+string), missed\_check.json (abstract availability); corpus OpenAlex identifiers
+from Evaluation section/section07-coded-data.json.}
 
 \subsection{What Counts as a SMOTE-Family Method}
 \label{sec:smote-definition}
@@ -257,18 +433,37 @@ differ widely in how much they change: of the 36 variants, 8 change one decision
 multiclass and boosting versions) changes all six.
 
 \begin{table}[p]
-\centering\footnotesize
+\centering\scriptsize
 \caption{SMOTE-Family Methods in the Corpus. Class: B binary only, M multiclass
 only, B+M binary and multiclass (Section~\ref{sec:coding}; * provisional). Link:
 Core or Partial. Decisions: Seed selection, sample Allocation, Neighbour choice,
-Placement rule, post-Filtering, inside a Pipeline. Checked against the PDFs on
-28 October 2026.}
+Placement rule, post-Filtering, inside a Pipeline. $\Delta$ vs SMOTE: median
+difference from plain SMOTE in the paper's own per-dataset table (0 to 1 scale, one
+metric per paper; datasets where the method is higher in brackets); $\dagger$ SMOTE
+inside a wrapper; plots, avg.: no per-dataset scores; --: no comparison with SMOTE.}
 \label{tab:smote-family}
 \setlength{\tabcolsep}{3pt}
 \input{generated/smote-family-table}
 \end{table}
 
-\paragraph{Seed selection (24 papers).}
+\subsection{Seed Selection, $w$ (24 Papers)}
+\label{sec:dp-seed}
+SMOTE draws every minority point as a seed with equal probability. A seed rule replaces the uniform draw by a score $s$:
+\begin{equation}
+  \mathbf{x}_i \sim w(i) = \frac{s(\mathbf{x}_i)}{\sum_{k\in S_{\min}} s(\mathbf{x}_k)}, \qquad s(\mathbf{x}_i)\ge 0.
+  \label{eq:dp-seed}
+\end{equation}
+Figure~\ref{fig:dp-seed} shows the rule on two-dimensional data.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth,page=1]{figures/smote-dp-equations}
+  \caption{Seed selection: SMOTE draws seeds uniformly; a seed rule weights them by a score $s$, and a score of zero removes a point as a seed. Example: Borderline-SMOTE keeps only points with between $k/2$ and $k-1$ majority neighbours.}
+  \Description{Left: the SMOTE and generalised seed rules with the Borderline-SMOTE example. Right: minority points near the majority marked as selected seeds, interior points faded, and a minority point inside the majority marked as noise.}
+  \label{fig:dp-seed}
+\end{figure}
+
+
 The most frequently changed decision is the choice of seeds, and the papers do
 it in four ways. Eight concentrate generation near the class border or on hard
 examples: Borderline-SMOTE~\pcite{han2005borderline} and
@@ -296,7 +491,24 @@ from the boosting distribution, RBBoost~\pcite{diezpastor2015randombalance} may
 grow the majority class when it draws inverted class proportions, and
 GAMO~\pcite{mullick2019gamo} has no single seed at all.
 
-\paragraph{Sample allocation (21).}
+\subsection{Sample Allocation, $g_i$ (21 Papers)}
+\label{sec:dp-alloc}
+SMOTE gives every seed the same number of points, $g_i=N/100$. An allocation rule shares a total $G$ out by a weight $r_i$:
+\begin{equation}
+  g_i = G\,\hat r_i, \qquad \hat r_i = \frac{r_i}{\sum_k r_k}.
+  \label{eq:dp-alloc}
+\end{equation}
+Figure~\ref{fig:dp-alloc} shows the rule on two-dimensional data.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth,page=2]{figures/smote-dp-equations}
+  \caption{Sample allocation: SMOTE gives each seed $N/100$ points; an allocation rule shares a total $G$ by weights $r_i$. Example: ADASYN uses the share of majority neighbours, so seeds near the majority receive more points.}
+  \Description{Left: the SMOTE and generalised allocation rules with the ADASYN example. Right: three seeds that receive one, two and four synthetic points, the most for the seed nearest the majority.}
+  \label{fig:dp-alloc}
+\end{figure}
+
+
 Ten methods give seeds unequal numbers of points: ADASYN~\pcite{he2008adasyn} by
 the share of majority neighbours, RAMOBoost, MWMOTE, A-SUWO, RSMOTE, SVDD-WSMOTE,
 CISO and QC-SMOTE through weighted seed draws or quotas, k-means SMOTE by the
@@ -310,7 +522,24 @@ searches the SMOTE level per data segment with a wrapper, and RBBoost draws rand
 class proportions. INOS~\pcite{cao2013inos} splits the quota between an
 interpolating and a Gaussian generator, and in GAMO the allocation is learned.
 
-\paragraph{Neighbour choice (22).}
+\subsection{Neighbour Choice, $q$ (22 Papers)}
+\label{sec:dp-nbr}
+SMOTE draws the partner uniformly from the five nearest minority neighbours under the Euclidean distance. A partner rule changes the candidate pool $P$, the weights $\omega_{ij}$ or the metric $d$:
+\begin{equation}
+  \mathbf{x}_j \sim q(j\mid i) \;\propto\; \omega_{ij}\,\mathbf{1}\bigl[\mathbf{x}_j \in P(\mathbf{x}_i)\bigr].
+  \label{eq:dp-nbr}
+\end{equation}
+Figure~\ref{fig:dp-nbr} shows the rule on two-dimensional data.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth,page=3]{figures/smote-dp-equations}
+  \caption{Neighbour choice: SMOTE draws the partner uniformly from five nearest minority neighbours; a partner rule changes the pool $P$, the weights $\omega_{ij}$ or the distance $d$. Example: Cluster-SMOTE restricts the pool to the seed's own cluster.}
+  \Description{Left: the SMOTE and generalised partner rules with Cluster-SMOTE, Borderline-SMOTE2 and FW-SMOTE as examples. Right: two minority clusters separated by majority points; the seed is joined only to partners in its own cluster, and a nearer point in the other cluster is crossed out.}
+  \label{fig:dp-nbr}
+\end{figure}
+
+
 Nine methods restrict the partner to a region: the same cluster
 (Cluster-SMOTE~\pcite{cieslak2006cluster}, MWMOTE, k-means SMOTE, NROMM), a
 sub-cluster that does not cross the majority class (A-SUWO), other borderline
@@ -325,7 +554,24 @@ GDHS, CISO, SVDD-WSMOTE), three replace the single partner by several instances
 instances of the class), and FW-SMOTE~\pcite{maldonado2022fwsmote} changes the
 distance to a feature-weighted Minkowski metric.
 
-\paragraph{Placement rule (13).}
+\subsection{Placement Rule, $r$ (13 Papers)}
+\label{sec:dp-place}
+SMOTE places the point uniformly on the segment. A placement rule changes the law of $\lambda$, replaces the segment by a region $R$, or combines more than two instances:
+\begin{equation}
+  \mathbf{x}_{\mathrm{new}} = \mathbf{x}_i + \lambda(\mathbf{x}_j-\mathbf{x}_i),\ \lambda\sim r(\lambda); \quad\text{or}\quad \mathbf{x}_{\mathrm{new}} \in R(\mathbf{x}_i,\mathbf{x}_j); \quad\text{or}\quad \mathbf{x}_{\mathrm{new}} = \textstyle\sum_m \alpha_m \mathbf{x}_m.
+  \label{eq:dp-place}
+\end{equation}
+Figure~\ref{fig:dp-place} shows the rule on two-dimensional data.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth,page=4]{figures/smote-dp-equations}
+  \caption{Placement rule: SMOTE draws $\lambda\sim U(0,1)$ on the segment; a placement rule changes the law of $\lambda$, uses a region $R$ around the segment, extrapolates, or combines more than two instances. Examples: Borderline-SMOTE2, HDE, G-SMOTE and GAMO.}
+  \Description{Left: the SMOTE and generalised placement rules with four examples. Right: a seed and a partner joined by a segment; the half nearest the seed is highlighted for lambda at most one half, dashed extensions show lambda below zero and above one, and a shaded ellipse shows a region around the segment.}
+  \label{fig:dp-place}
+\end{figure}
+
+
 Five methods change the law of $\lambda$ or the step: Borderline-SMOTE2
 ($\lambda\le 0.5$ towards majority partners), Safe-Level-SMOTE (shifted towards
 the safer endpoint), OREM (half the step towards majority partners), CISO (a
@@ -339,7 +585,24 @@ combination, QC-SMOTE keeps the best of several candidates, and NROMM uses an
 optimised embedding for trapped seeds and a constrained rule for categorical
 values.
 
-\paragraph{Post-filtering (12).}
+\subsection{Post-Filtering, $F$ (12 Papers)}
+\label{sec:dp-filt}
+SMOTE keeps every synthetic point. A filter accepts candidates with a test $a$ and removes a set $R$ of examples:
+\begin{equation}
+  S' = \Bigl(S \cup \{\mathbf{x}\in S_{\mathrm{syn}} : a(\mathbf{x})=1\}\Bigr) \setminus R.
+  \label{eq:dp-filt}
+\end{equation}
+Figure~\ref{fig:dp-filt} shows the rule on two-dimensional data.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth,page=5]{figures/smote-dp-equations}
+  \caption{Post-filtering: SMOTE keeps every synthetic point; a filter rejects candidates with a test $a$ and removes a set $R$. Examples: KNNOR keeps a point only if all its nearest neighbours are minority; SMOTE-ENN removes examples misclassified by their three nearest neighbours.}
+  \Description{Left: the SMOTE and generalised filtering rules with the KNNOR and SMOTE-ENN examples. Right: kept synthetic points among the minority, a rejected candidate among the majority, and a removed majority point.}
+  \label{fig:dp-filt}
+\end{figure}
+
+
 Four methods clean the enlarged training set as a whole: SMOTE-Tomek and
 SMOTE-ENN~\pcite{batista2004study}, SMOTE-IPF~\pcite{saez2015smoteipf}, INOS (noise
 links) and Loyalty-SMOTE. Five test each candidate and reject or replace it:
@@ -348,7 +611,24 @@ candidates nearest the centroid) and OREM-M (which drops points nearest to anoth
 minority class). Three remove or move majority examples in the regions where
 synthetic points were placed: NROMM, MC-MBRC and GDHS.
 
-\paragraph{Inside a pipeline (8).}
+\subsection{Inside a Pipeline, Step 6 (8 Papers)}
+\label{sec:dp-pipe}
+SMOTE generates once and the learner is trained on the result. In a pipeline the generator runs at every step $t$ of a learner $\mathcal{A}$, for example with the weights $\mathcal{D}_t$ of a boosting round:
+\begin{equation}
+  D_t = D \cup \mathrm{SMOTE}(D;\,\mathcal{D}_t),\quad h_t = \mathcal{A}(D_t),\quad H(\mathbf{x}) = \arg\max_y \textstyle\sum_t \alpha_t\, h_t(\mathbf{x},y).
+  \label{eq:dp-pipe}
+\end{equation}
+Figure~\ref{fig:dp-pipe} shows the rule on two-dimensional data.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth,page=6]{figures/smote-dp-equations}
+  \caption{Inside a pipeline: SMOTE generates once before training; in a pipeline generation is repeated at every step of a learner. Example: SMOTEBoost generates fresh points in each AdaBoost.M2 round and discards them after the round.}
+  \Description{Left: the SMOTE and generalised pipeline rules with the SMOTEBoost example. Right: three boosting rounds, each with fresh synthetic points, feeding classifiers h1 to h3 that are combined into H.}
+  \label{fig:dp-pipe}
+\end{figure}
+
+
 Eight methods call the generator repeatedly inside a learner: in every round of
 AdaBoost.M2 (SMOTEBoost, RAMOBoost, RBBoost, OREMBoost), in every member of a
 bagging ensemble (HDE), inside a wrapper that tunes the sampling levels (LS),
@@ -544,6 +824,85 @@ CISO Sec.~6.7, p.~29; QC-SMOTE Sec.~4.5.5, Table~7, p.~10; CISO's PR-AUC result 
 its limitations field (\draftnum{not re-checked}).}
 
 % =====================================================================
+\section{Which SMOTE-Family Method to Use}
+\label{sec:method-choice}
+
+A reader who needs to oversample a training set, rather than to design a new
+method, can use the survey to choose among the 37 methods. We select with three
+criteria, applied in order of what the corpus can show.
+
+\begin{itemize}
+\item \emph{C1, performance on par with SMOTE.} In its own per-dataset comparison
+      the method does at least as well as plain SMOTE (median $\Delta\ge 0$ in
+      Table~\ref{tab:smote-family}). We do not rank methods by the size of their
+      reported gain. Of the 26 papers that report a difference from SMOTE, 19 lie
+      within $\pm 0.03$ of it, and only two (AB-SMOTE and RBBoost) are below it;
+      the reported differences come from each paper's own protocol and metric, so
+      within this band performance does not separate the methods.
+\item \emph{C2, a simple method.} The method changes at most two of the six
+      decision points, does not run inside a learner, and does not learn its
+      generator; 13 of the 37 methods qualify.
+\item \emph{C3, no loss of data.} The method keeps every original training
+      example and stays within the SMOTE-family definition: it adds interpolated
+      points and does not undersample, clean or move existing examples; 23 of the
+      37 qualify.
+\end{itemize}
+
+Ten methods meet C2 and C3 (Table~\ref{tab:method-choice}); six of them, including
+SMOTE, also meet C1 on the evidence their papers print.
+
+\begin{table}[t]
+\centering\small
+\caption{SMOTE-Family Methods That Are Simple and Keep All Data (C2 and C3), with
+Their Difference from SMOTE (C1). $\Delta$ as in Table~\ref{tab:smote-family};
+\checkmark{} met, -- not met, ? not checkable because the paper gives no per-dataset
+comparison with SMOTE.}
+\label{tab:method-choice}
+\setlength{\tabcolsep}{5pt}
+\input{generated/smote-family-choice}
+\end{table}
+
+\paragraph{Binary only.} Plain SMOTE remains the first choice, as the reference
+every variant is measured against. Where a variant is wanted, ADASYN changes only
+the allocation of points, keeps every example and scores above SMOTE on all five
+of its datasets ($+0.015$), though on little evidence; FW-SMOTE changes only the
+distance used to find neighbours and has the broadest support among the simple
+variants ($+0.018$, higher on 30 of 42 datasets), but its authors note that it has
+many parameters to tune; CGMOS changes only the seed weights ($+0.009$, 24 of 30).
+Borderline-SMOTE, Safe-Level-SMOTE, Cluster-SMOTE and G-SMOTE are as simple and
+keep all data, but their papers give no per-dataset comparison with SMOTE, so C1
+cannot be checked; AB-SMOTE fails C1 ($-0.029$, higher on 2 of 8 datasets).
+
+\paragraph{Multiclass only.} SMOM is the only Multiclass-only method that meets all
+three criteria ($+0.004$, higher on 19 of 27 datasets; it changes only how the
+partner is chosen). Its authors describe the implementation as complex
+\draftnum{(NBDOS clustering and a two-round filtration)}. The simplest alternative
+is not a method paper of its own: decomposing the problem one-vs-one and applying
+plain SMOTE to each pair of classes, which was among the best combinations in the
+study of \pcite{fernandez2013analysing}.
+
+\paragraph{Binary + Multiclass.} RSMOTE meets all three criteria and works in both
+settings: it changes only the seeds and the allocation, keeps every example,
+oversamples every class to the size of the largest, and scores above SMOTE on 21
+of its 27 two-class datasets ($+0.021$). It is the method we recommend when the
+same procedure must serve two-class and multiclass data.
+
+The seven methods with the largest reported gains (median $\Delta$ above $0.03$:
+SMOTEBoost, SSRBF/DSRBF, GAMO, EMDO, NROMM, MC-MBRC and MKC-SMOTE) all fail C2 or
+C3: they run inside a learner, learn their generator, change four or more
+decisions, or remove or move original examples. Four of them were also compared
+with SMOTE inside a multiclass or ensemble wrapper rather than with plain SMOTE.
+\claudedraft{The methods that look strongest on their own papers' numbers are the
+ones that change the most, which is what makes their gains hardest to attribute
+and to reproduce.}
+
+\pnote{Criteria C1 to C3 were set by P on 8 November 2026. C1 rests on the scores
+the authors print (Data section, verified against the PDFs on 18 October 2026),
+not on a common benchmark. The data-removal coding behind C3 comes from the PDF
+check accounts (build/delta\_vs\_smote.py, REMOVES); check it for MWMOTE and
+RSMOTE, which drop noisy points as seeds but, by our reading, keep them in the
+data.}
+
 \section{Recommendations for Describing a New Variant}
 \label{sec:method-recommendations}
 \begin{enumerate}

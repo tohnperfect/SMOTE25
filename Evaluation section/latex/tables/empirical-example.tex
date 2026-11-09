@@ -1,0 +1,28 @@
+%% Table: an example results table, from the authors' illustrative runs (input from sections/07-empirical-comparisons.tex). Version 4, generated 2026-11-08 by v4/make_tables.py.
+%% JAIR style: caption above the table, booktabs rules. Regenerate instead of editing numbers by hand.
+\begin{table}[t]
+  \caption{A Results Table in the Recommended Form (Illustrative Runs, SVM, G-mean)}
+  \label{tab:empirical-example}
+  \scriptsize
+  \setlength{\tabcolsep}{3pt}
+  \begin{tabular}{@{}lrrrrrr@{}}
+    \toprule
+    Dataset & IR & None & SMOTE & MWMOTE & CISO & QC-SMOTE\\
+    \midrule
+    wisconsin & 1.9 & 0.966 $\pm$ 0.007 & 0.971 $\pm$ 0.008 & \textbf{0.974 $\pm$ 0.006} & 0.971 $\pm$ 0.003 & 0.970 $\pm$ 0.003\\
+    hepatitis & 3.8 & 0.625 $\pm$ 0.149 & 0.712 $\pm$ 0.098 & \textbf{0.719 $\pm$ 0.077} & 0.715 $\pm$ 0.101 & 0.691 $\pm$ 0.095\\
+    yeast\_0\_2\_5\_6\_vs\_3\_7\_8\_9 & 9.1 & 0.621 $\pm$ 0.064 & 0.783 $\pm$ 0.047 & 0.742 $\pm$ 0.026 & \textbf{0.786 $\pm$ 0.046} & 0.786 $\pm$ 0.050\\
+    ecoli\_0\_1\_vs\_5 & 11.0 & 0.839 $\pm$ 0.227 & \textbf{0.904 $\pm$ 0.129} & 0.879 $\pm$ 0.161 & 0.881 $\pm$ 0.158 & 0.839 $\pm$ 0.227\\
+    glass\_0\_1\_6\_vs\_5 & 19.4 & 0.283 $\pm$ 0.387 & 0.816 $\pm$ 0.154 & 0.816 $\pm$ 0.154 & \textbf{0.819 $\pm$ 0.153} & \textbf{0.819 $\pm$ 0.153}\\
+    kddcup\_guess\_passwd\_vs\_satan & 30.0 & 0.950 $\pm$ 0.050 & 0.989 $\pm$ 0.023 & 0.949 $\pm$ 0.050 & 0.949 $\pm$ 0.050 & \textbf{0.999 $\pm$ 0.001}\\
+    abalone\_19\_vs\_10\_11\_12\_13 & 49.7 & 0.000 $\pm$ 0.000 & \textbf{0.601 $\pm$ 0.103} & 0.436 $\pm$ 0.285 & 0.563 $\pm$ 0.149 & 0.365 $\pm$ 0.220\\
+    poker\_8\_vs\_6 & 85.9 & 0.720 $\pm$ 0.198 & 0.941 $\pm$ 0.131 & \textbf{1.000 $\pm$ 0.000} & 0.915 $\pm$ 0.130 & 0.915 $\pm$ 0.130\\
+    \multicolumn{7}{c}{\textit{102 further datasets in the supplement}}\\
+    \midrule
+    Average rank ($N = 110$) & & 4.63 & \textbf{2.10} & 2.56 & 3.01 & 2.71\\
+    Win/tie/loss against SMOTE & & 5/6/99 & control & 33/19/58 & 21/16/73 & 29/24/57\\
+    Holm-adjusted $p$ (Wilcoxon) & & $<$0.001 & -- & 0.003 & $<$0.001 & $<$0.001\\
+    \bottomrule
+  \end{tabular}
+  \par\smallskip\raggedright\scriptsize Mean $\pm$ standard deviation over the five folds of a single stratified 5-fold run; bold marks the best value in a row. Friedman test (Iman--Davenport): $p = 1.5 \times 10^{-43}$. Datasets were chosen to span the range of IR. CISO and QC-SMOTE are our reimplementations.
+\end{table}

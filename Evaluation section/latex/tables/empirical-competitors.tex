@@ -1,0 +1,33 @@
+%% Table: competitors and baselines by period (input from sections/07-empirical-comparisons.tex). Version 4.1, generated 2026-11-08 by v4.1/make_tables_v41.py.
+%% JAIR style: caption above the table, booktabs rules. Regenerate instead of editing numbers by hand.
+\begin{table}[t]
+  \caption{Competitors and Baselines: Studies That Include Each, by Period}
+  \label{tab:empirical-competitors}
+  \footnotesize
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.34\linewidth}rrrrr@{}}
+    \toprule
+    Competitor & Studies & --2009 & --2015 & --2020 & --2026\\
+    & (71) & (14) & (13) & (20) & (24)\\
+    \midrule
+    SMOTE & 50 & 50\% & 77\% & 70\% & 79\%\\
+    No resampling & 52 & 86\% & 85\% & 80\% & 54\%\\
+    \midrule
+    Random oversampling (ROS) & 27 & 36\% & 31\% & 60\% & 25\%\\
+    Borderline-SMOTE & 27 & 7\% & 15\% & 50\% & 58\%\\
+    ADASYN & 19 & 0\% & 23\% & 35\% & 38\%\\
+    Safe-Level-SMOTE & 8 & 0\% & 8\% & 15\% & 17\%\\
+    Random undersampling (RUS) & 18 & 50\% & 31\% & 25\% & 8\%\\
+    MWMOTE & 8 & 0\% & 0\% & 15\% & 21\%\\
+    SMOTE+ENN or SMOTE+Tomek & 12 & 0\% & 23\% & 10\% & 29\%\\
+    MDO & 13 & 0\% & 0\% & 20\% & 38\%\\
+    k-means SMOTE & 9 & 0\% & 0\% & 10\% & 29\%\\
+    RBO or MC-RBO & 7 & 0\% & 0\% & 0\% & 29\%\\
+    MC-CCR or CCR & 9 & 0\% & 0\% & 0\% & 38\%\\
+    SMOTEBoost & 9 & 7\% & 38\% & 5\% & 8\%\\
+    RUSBoost & 7 & 0\% & 23\% & 10\% & 8\%\\
+    EasyEnsemble & 5 & 0\% & 15\% & 5\% & 8\%\\
+    \bottomrule
+  \end{tabular}
+  \par\smallskip\raggedright\scriptsize Period columns give the share of the studies of that period. SMOTE and no resampling are coded directly; the other rows are matched on the names in each study's list of competitors.
+\end{table}

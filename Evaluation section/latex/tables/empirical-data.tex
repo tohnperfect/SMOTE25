@@ -1,0 +1,30 @@
+%% Table: data sources and benchmark size by period (input from sections/07-empirical-comparisons.tex). Version 4.1, generated 2026-11-08 by v4.1/make_tables_v41.py.
+%% JAIR style: caption above the table, booktabs rules. Regenerate instead of editing numbers by hand.
+\begin{table}[t]
+  \caption{Benchmark Data by Period}
+  \label{tab:empirical-data}
+  \footnotesize
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.36\linewidth}rrrrr@{}}
+    \toprule
+    Studies (number) & All & --2009 & --2015 & --2020 & --2026\\
+    & (71) & (14) & (13) & (20) & (24)\\
+    \midrule
+    UCI only & 33 & 12 & 7 & 6 & 8\\
+    KEEL only & 13 & 0 & 3 & 4 & 6\\
+    Both UCI and KEEL & 20 & 0 & 2 & 8 & 10\\
+    Neither & 5 & 2 & 1 & 2 & 0\\
+    Total & 71 & 14 & 13 & 20 & 24\\
+    \midrule
+    Synthetic data & 30 & 6 & 7 & 8 & 9\\
+    Private or application data & 11 & 5 & 3 & 1 & 2\\
+    Image data & 4 & 0 & 0 & 4 & 0\\
+    Fewer than 10 real datasets & 19 & 9 & 4 & 5 & 1\\
+    States why the data were chosen & 58 & 10 & 10 & 17 & 21\\
+    \midrule
+    Median datasets per study (all) & 20 & 6.5 & 20 & 20 & 23\\
+    Median real datasets per study & 18 & 6 & 14 & 20 & 21.5\\
+    \bottomrule
+  \end{tabular}
+  \par\smallskip\raggedright\scriptsize The first four rows partition the 71 studies, so they add up to 71: 53 use UCI data (33 only UCI, 20 both) and 33 use KEEL data (13 only KEEL, 20 both). The five that use neither use private data (2), the UCR time-series archive (1), public fraud and record-linkage data (1) and image benchmarks (1). All datasets includes synthetic ones.
+\end{table}

@@ -1,0 +1,50 @@
+%% Table: measures by period, with the cause of the change (input from sections/07-empirical-comparisons.tex). Version 4, generated 2026-11-08 by v4/make_tables.py.
+%% JAIR style: caption above the table, booktabs rules. Regenerate instead of editing numbers by hand.
+\begin{small}
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}p{0.17\linewidth}rrrrp{0.07\linewidth}p{0.06\linewidth}p{0.4\linewidth}@{}}
+  \caption{Measures by Period and Why Their Use Changed}\label{tab:empirical-measure-causes}\\
+  \toprule
+  Measure & --2009 & --2015 & --2020 & --2026 & Trend & Driver & Cause of the change\\
+  \midrule
+  \endfirsthead
+  \toprule
+  Measure & --2009 & --2015 & --2020 & --2026 & Trend & Driver & Cause of the change\\
+  \midrule
+  \endhead
+  \bottomrule
+  \endfoot
+  \multicolumn{8}{@{}l}{\textit{Overall}}\\
+  Accuracy, error rate & 21\% & 38\% & 10\% & 12\% & stable & P & Criticised since 1997 and used as a secondary number; since 2016 four of its five users are generative studies (CTGAN, SOS, GOIO, DGOT) that follow the train-on-synthetic, test-on-real tradition.\\
+  \multicolumn{8}{@{}l}{\textit{Single-class rates}}\\
+  Recall (TPR) & 71\% & 38\% & 45\% & 21\% & falling & A & Absorbed into G-mean and F1: among studies reporting one of them, the share that also reports recall separately fell from 8 of 9 to 5 of 21.\\
+  Precision & 36\% & 23\% & 40\% & 17\% & falling & A, P & Absorbed into F1 (5 of 7 F users also report it before 2010, 2 of 10 since 2021); what remains is per-class precision in multi-class studies.\\
+  Specificity (TNR) & 21\% & 15\% & 0\% & 0\% & gone & A & Absorbed into G-mean: 2 of 4 G-mean users report it before 2010, 0 of 17 since 2021; last reported alone in 2013.\\
+  \multicolumn{8}{@{}l}{\textit{Threshold composites}}\\
+  G-mean & 29\% & 54\% & 65\% & 71\% & rising & A, L & Measures the TPR--TNR trade-off that resampling moves, ignores the class prior, needs only labels and extends to multi-class (MG); see Section~\ref{sec:empirical-gmean}.\\
+  F1 & 43\% & 31\% & 35\% & 29\% & stable & R & Inherited from information retrieval and kept by studies that focus on the positive class; it does not grow because it depends on the class prior, which makes averages over KEEL benchmarks hard to read (Section~\ref{sec:empirical-f1}).\\
+  F-measure ($\beta$ not stated) & 7\% & 23\% & 20\% & 12\% & stable & R & The same measure as F1 named F-measure or F-value without $\beta$; read it together with F1 (35 studies in total).\\
+  MCC & 0\% & 0\% & 5\% & 12\% & new & R, T & Follows critiques of F1 and accuracy; all four users name Python and release code.\\
+  Balanced accuracy & 0\% & 0\% & 5\% & 8\% & new & T & The arithmetic mean of TPR and TNR, available in standard toolkits; three studies.\\
+  \multicolumn{8}{@{}l}{\textit{Threshold-free ranking}}\\
+  ROC-AUC & 36\% & 62\% & 35\% & 54\% & rising & L, P & Standard for binary studies on KEEL data; its share drops when multi-class studies, which use MAUC instead, are frequent (2016 to 2020) and recovers afterwards.\\
+  MAUC & 7\% & 8\% & 20\% & 25\% & rising & P & Every user is a multi-class study, and multi-class studies grew from 3 to 15 per period; one formula for the whole field.\\
+  PR-AUC & 0\% & 8\% & 10\% & 8\% & stable & R & Recommended for imbalance but needs good scores, which C4.5 and rule learners do not give, and depends on the prior; 4 of 5 users name Python.\\
+  \multicolumn{8}{@{}l}{\textit{Multi-class aggregates}}\\
+  Macro-F1 & 0\% & 0\% & 10\% & 21\% & new & P, T & F1 averaged over classes, a standard option in scikit-learn; 6 of 7 users are multi-class studies.\\
+  AvAcc & 0\% & 8\% & 15\% & 12\% & stable & L & From the KEEL group (2013); adopted by the MC-CCR line as part of a fixed set (AvAcc, CBA, MG, CEN): 5 of 7 users belong to that line, all use KEEL data.\\
+  CBA & 0\% & 0\% & 10\% & 17\% & new & L & Introduced to this literature with MC-CCR and MC-RBO (2020); all 6 users belong to that line, one of them states it follows MC-CCR.\\
+  CEN & 0\% & 0\% & 10\% & 12\% & new & L & Comes with CBA in the same set; all 5 users belong to the MC-CCR line.\\
+  Macro-precision & 0\% & 0\% & 5\% & 12\% & new & L, P & Per-class precision averaged (Pavg) in the AMDO and EMDO line and in studies that compare with it.\\
+  Per-class recall & 7\% & 0\% & 10\% & 4\% & stable & P & Multi-class studies that inspect the smallest classes one at a time (4 studies).\\
+  \multicolumn{8}{@{}l}{\textit{Other}}\\
+  Misclassification cost & 7\% & 8\% & 0\% & 0\% & gone & P & Needs known error costs, which benchmark data do not have; only the two cost-sensitive studies (2006, 2010).\\
+  Running time & 14\% & 15\% & 15\% & 29\% & rising & R & Newer methods are heavier (optimisation, generative models, certificates) and benchmarks larger, so authors must show the method is practical; QC-SMOTE reports about 39 times the cost of SMOTE against 209 for VS-SMOTE.\\
+  ROC curves (plots) & 29\% & 15\% & 10\% & 0\% & gone & S & Readable only for a few datasets: users have a median of 12 datasets against 34 for AUC users who draw none; the median benchmark grew from 6.5 to 23 datasets.\\
+  Confusion matrices & 7\% & 8\% & 10\% & 0\% & gone & S & Shown per dataset only when there are few datasets (median 10); summarised by measures when there are dozens.\\
+  Fidelity of synthetic data & 0\% & 0\% & 10\% & 4\% & new & P & Comes with methods that generate data from a model (CTGAN, GAMO) and with CISO; see Section~\ref{sec:empirical-direct}.\\
+  \multicolumn{8}{@{}p{0.98\linewidth}}{\textit{Used in one or two studies, so no trend can be read: kappa (Random Balance 2015); G-score of precision and recall (CGMOS 2016); FPR (Cluster-SMOTE 2006, for ROC plots); minimum sensitivity (DSRBF 2011, AMDO 2018); AUCm (AMDO 2018, NROMM 2023); Pmin (NROMM 2023); weighted F1 (SOS 2022); macro-recall (RSMOTE 2021).}}\\
+\end{longtable}
+\end{small}
+\vspace{-\baselineskip}
+{\raggedright\scriptsize Same conventions as Table~\ref{tab:empirical-learner-causes}; A = absorbed into a composite measure; S = larger benchmarks. F1 and F-measure are coded apart only because papers name them differently.\par}

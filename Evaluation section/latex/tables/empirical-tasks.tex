@@ -1,0 +1,18 @@
+%% Table: studies with data other than plain tables, and how they evaluate (input from sections/07-empirical-comparisons.tex). Version 4.1, generated 2026-11-08 by v4.1/make_tables_v41.py.
+%% JAIR style: caption above the table, booktabs rules. Regenerate instead of editing numbers by hand.
+\begin{table}[t]
+  \caption{Studies Whose Data or Output Is Not a Plain Table, and How They Evaluate}
+  \label{tab:empirical-tasks}
+  \footnotesize
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.16\linewidth}>{\raggedright\arraybackslash}p{0.3\linewidth}>{\raggedright\arraybackslash}p{0.5\linewidth}@{}}
+    \toprule
+    Study & What is generated or resampled & How it is evaluated\\
+    \midrule
+    CTGAN (2019)~\parencite{xu2019ctgan} & Generator of synthetic tables; 8 real datasets, one of them a regression task (news), and 7 simulated data sets with a known generating model & Train on synthetic, test on real: each of several learners is trained on the synthetic table and scored on the real test split (F1, macro-F1 or accuracy; $R^2$ for the regression set). On simulated data, likelihood of the synthetic rows under the true model ($L_{syn}$) and of real test rows under a model refitted on synthetic rows ($L_{test}$)\\
+    GAMO (2019)~\parencite{mullick2019gamo} & Generative oversampling of minority images; 7 image benchmarks made imbalanced by subsampling, plus tabular sets in a supplement & Classification of a fixed, balanced test set (average class accuracy and G-mean); separately, the Fréchet inception distance between real and generated images of each class\\
+    INOS (2013)~\parencite{cao2013inos} & Oversampling of time series; 7 UCR data sets split into 48 binary tasks & Classification by an SVM: F1, G-mean, precision, recall and TNR on random hold-out splits\\
+    Buda et al. (2018)~\parencite{buda2018systematic} & Random oversampling for convolutional networks; MNIST, CIFAR-10 and ImageNet made imbalanced & Classification of a balanced test set: multi-class ROC-AUC and accuracy\\
+    \bottomrule
+  \end{tabular}
+\end{table}

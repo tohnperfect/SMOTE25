@@ -1,0 +1,88 @@
+%% Appendix table: coding of the 71 empirical studies (input from sections/07-empirical-comparisons.tex). Version 4.1, generated 2026-11-08 by v4.1/make_tables_v41.py.
+%% JAIR style: caption above the table, booktabs rules. Regenerate instead of editing numbers by hand.
+{\scriptsize\setlength{\tabcolsep}{2.5pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.2\linewidth}l>{\raggedright\arraybackslash}p{0.07\linewidth}>{\raggedright\arraybackslash}p{0.14\linewidth}>{\raggedright\arraybackslash}p{0.2\linewidth}llllr@{}}
+\caption{Coding of the 71 Empirical Studies}\label{tab:empirical-studies}\\
+\toprule
+Study & Set. & Data & Learners & Measures & Prot. & Settings & Test & Code & Std.\\
+\midrule
+\endfirsthead
+\toprule
+Study & Set. & Data & Learners & Measures & Prot. & Settings & Test & Code & Std.\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+OSS (1997)~\parencite{kubat1997oss} & B & 7 U & kNN C45 & GM TPR TNR Acc & CV$^\ast$ & Fixed & -- &  & 3\\
+SHRINK (1998)~\parencite{kubat1998shrink} & B & 1 & C45 kNN & GM TPR TNR & RCV$^\ast$ & Eval & Pair &  & 3\\
+SMOTE (2002)~\parencite{chawla2002smote} & B & 9 U & C45 Rule NB & AUC TPR TNR & CV & Eval & -- &  & 0\\
+SMOTEBoost (2003)~\parencite{chawla2003smoteboost} & B+M & 4 U & Rule & Prec TPR Fb & CV & Eval & -- &  & 1\\
+Batista et al. (2004)~\parencite{batista2004study} & B & 15 U & C45 & AUC & CV & Fixed & Corr &  & 3\\
+Borderline-SMOTE (2005)~\parencite{han2005borderline} & B & 3 U & C45 & TPR F1 & RCV$^\ast$ & Fixed & -- &  & 4\\
+Cluster-SMOTE (2006)~\parencite{cieslak2006cluster} & B & 2 & Rule & TPR FPR & HO$^\ast$ & Eval & -- &  & 1\\
+Global-CS (2006)~\parencite{zhou2006globalcs} & M & 14 U & C45 & Cost MAUC & RCV & Fixed & Pair &  & 3\\
+COG-OS (2007)~\parencite{wu2007cogos} & B+M & 15 U & SVM LR C45 Rule & Prec TPR F1 Acc PCR & HO$^\ast$ & Eval & -- &  & 2\\
+ADASYN (2008)~\parencite{he2008adasyn} & B & 5 U & CART & Acc Prec TPR F1 GM & RHO$^\ast$ & Fixed & -- &  & 4\\
+LS (2008)~\parencite{cieslak2008ls} & B & 20 U & C45 SVM & AUC & 5x2$^\ast$ & Nest & Corr &  & 5\\
+EasyEnsemble (2009)~\parencite{liu2009easyensemble} & B & 16 U & Boost RF & AUC F1 GM & RCV$^\ast$ & Fixed & Pair &  & 5\\
+SBC (2009)~\parencite{yen2009sbc} & B & 2 U & MLP & Prec TPR F1 & HO & Fixed & -- &  & 2\\
+Safe-Level-SMOTE (2009)~\parencite{bunkhumpornpat2009safelevel} & B & 2 U & C45 NB SVM & Prec TPR F1 AUC & CV & Fixed & -- &  & 3\\
+Global-CS (2010)~\parencite{zhou2010globalcs} & M & 14 U & C45 MLP Boost & Cost MAUC & RCV & Fixed & Pair &  & 3\\
+RAMOBoost (2010)~\parencite{chen2010ramoboost} & B & 19 U & MLP & Acc Prec TPR Fb GM AUC & RHO & NS & Pair &  & 2\\
+RUSBoost (2010)~\parencite{seiffert2010rusboost} & B & 15 U & C45 Rule NB & AUC PRAUC F1 & RCV & Fixed & Corr &  & 5\\
+SPIDER2 (2010)~\parencite{napierala2010spider2} & B & 9 U & Rule C45 & TPR TNR GM Acc & RCV & Fixed & Pair &  & 3\\
+DSRBF (2011)~\parencite{fernandeznavarro2011dsrbf} & B+M & 13 U & MLP & Acc MS & RCV$^\ast$ & NS & Corr &  & 4\\
+INOS (2013)~\parencite{cao2013inos} & B & 7 & SVM & F1 GM Prec TPR TNR & RHO$^\ast$ & Eval & -- &  & 3\\
+Fernandez et al. (2013)~\parencite{fernandez2013analysing} & M & 24 K & C45 SVM kNN & AvAcc Fb & CV$^\ast$ & Eval & Pair & yes & 3\\
+MWMOTE (2014)~\parencite{barua2014mwmote} & B & 20 U & MLP Boost kNN C45 & Acc Prec TPR F1 GM AUC & CV & Eval & Pair &  & 1\\
+RACOG (2015)~\parencite{das2015racog} & B & 10 U & C45 SVM kNN LR & TPR GM AUC & CV$^\ast$ & Eval & Pair &  & 3\\
+Random Balance (2015)~\parencite{diezpastor2015randombalance} & B & 86 KU & C45 kNN SVM & AUC F1 GM Acc Kap & 5x2$^\ast$ & NS & Corr &  & 5\\
+SCUT (2015)~\parencite{agrawal2015scut} & M & 8 KU & C45 SVM NB kNN & GM Fb AUC & CV & Fixed & Omni &  & 3\\
+SMOTE-IPF (2015)~\parencite{saez2015smoteipf} & B & 9 K & C45 & AUC & RCV & Eval & Corr & yes & 4\\
+SplitBal (2015)~\parencite{sun2015splitbal} & B & 46 K & NB C45 Rule RF SVM kNN & AUC & RCV & Eval & Corr &  & 3\\
+A-SUWO (2016)~\parencite{nekooeimehr2016asuwo} & B & 16 U & SVM LR kNN LDA & Fb GM AUC Prec TPR & RCV$^\ast$ & Nest & Corr &  & 5\\
+CGMOS (2016)~\parencite{zhang2016cgmos} & B & 30 U & Oth kNN SVM MLP RF Boost & Prec TPR F1 GS AUC & RCV & NS & Pair &  & 3\\
+MDO (2016)~\parencite{abdi2016mdo} & M & 20 KU & C45 Rule kNN & MAUC GM Prec TPR Fb & RCV & Eval & Corr &  & 3\\
+SMOM (2017)~\parencite{zhu2017smom} & M & 27 U & C45 Boost MLP NB & GM MAUC TPR Prec Fb PCR & RCV & Eval & Pair &  & 3\\
+AMDO (2018)~\parencite{yang2018amdo} & M & 17 KU & C45 & Prec mP MAUC AUCm MS & RCV$^\ast$ & Fixed & Corr &  & 5\\
+k-means SMOTE (2018)~\parencite{douzas2018kmeans} & B & 80 KU & LR kNN GB & GM F1 PRAUC & RCV$^\ast$ & Eval & Corr & yes & 6\\
+OBU (2018)~\parencite{vuttipittayamongkol2018obu} & B & 36 KU & RF & TPR BA & HO$^\ast$ & Eval & Pair & yes & 3\\
+Buda et al. (2018)~\parencite{buda2018systematic} & M & 3 & CNN & AUC Acc & FS$^\ast$ & Eval & -- &  & 2\\
+CTGAN (2019)~\parencite{xu2019ctgan} & B+M & 8 U & CART SVM MLP Boost LR & F1 mF1 Acc & FS$^\ast$ & NS & -- & yes & 3\\
+G-SMOTE (2019)~\parencite{douzas2019gsmote} & B & 63 KU & LR kNN CART GB & AUC F1 GM & RCV$^\ast$ & Eval & Corr & yes & 6\\
+GAMO (2019)~\parencite{mullick2019gamo} & M & 7 KU & CNN & AvAcc GM & FS$^\ast$ & Eval & -- & yes & 3\\
+RBO (2019)~\parencite{koziarski2019rbo} & B & 34 K & CART kNN SVM NB & Prec TPR Fb AUC GM & 5x2$^\ast$ & Nest & Corr & yes & 7\\
+SOUP (2019)~\parencite{janicka2019soup} & M & 15 U & C45 Rule kNN & GM PCR mF1 & CV & Eval & Corr & yes & 3\\
+AB-SMOTE (2020)~\parencite{almajzoub2020absmote} & B & 8 KU & C45 & TPR F1 & CV & Eval & -- &  & 1\\
+DLexiBoost (2020)~\parencite{datta2020dlexiboost} & B+M & 33 K & C45 kNN & GM AUC MAUC & NS & Eval & Omni & yes & 3\\
+MBS (2020)~\parencite{liu2020mbs} & B & 13 U & LR Boost & AUC & RHO$^\ast$ & Eval & Pair & yes & 4\\
+MC-CCR (2020)~\parencite{koziarski2020mcccr} & M & 20 K & C45 MLP kNN NB & AvAcc CBA GM CEN & RCV & Nest & Corr & yes & 4\\
+MC-RBO (2020)~\parencite{krawczyk2020mcrbo} & M & 20 K & C45 MLP kNN NB & AvAcc CBA GM CEN & RCV & Nest & Corr & yes & 4\\
+NBU (2020)~\parencite{vuttipittayamongkol2020nbu} & B & 26 KU & SVM RF & TPR GM Prec F1 & HO$^\ast$ & Fixed & Pair & yes & 4\\
+SPE (2020)~\parencite{liu2020spe} & B & 5 & kNN CART SVM MLP Boost RF GB LR C45 & PRAUC F1 GM MCC TPR Prec & HO$^\ast$ & Fixed & -- & yes & 5\\
+EMDO (2021)~\parencite{yao2021emdo} & M & 11 KU & C45 & Prec mP AUC MAUC & RCV & NS & -- &  & 2\\
+HDE (2021)~\parencite{chen2021hde} & B & 42 K & C45 & AUC GM & RCV$^\ast$ & Eval & Corr & yes & 5\\
+RSMOTE (2021)~\parencite{chen2021rsmote} & B+M & 35 U & Boost LR CART kNN GB Oth & Prec TPR AUC F1 GM mF1 mP mR & RHO & Eval & Corr & yes & 5\\
+CBHSID (2022)~\parencite{palli2022cbhsid} & B+M & 16 KU & SVM & GM TPR F1 & RHO & Fixed & Corr &  & 3\\
+FW-SMOTE (2022)~\parencite{maldonado2022fwsmote} & B & 42 KU & kNN SVM LR & AUC GM & CV$^\ast$ & Eval & Corr & yes & 4\\
+GDO (2022)~\parencite{xie2022gdo} & B & 52 KU & SVM & AUC GM & CV & NS & Pair &  & 1\\
+KNNOR (2022)~\parencite{islam2022knnor} & B & 19 KU & SVM kNN CART MLP & AUC F1 GM & RCV & Eval & -- & yes & 4\\
+SHSampler (2022)~\parencite{zheng2022shsampler} & M & 20 K & CART RF NB & MAUC GM & CV & Fixed & Bayes &  & 3\\
+SOS (2022)~\parencite{kim2022sos} & B+M & 6 U & CART LR Boost MLP & wF1 Acc & HO$^\ast$ & Eval & -- & yes & 3\\
+SVDD-WSMOTE (2022)~\parencite{tao2022svddw} & B & 31 U & MLP LDA SVM & GM Fb AUC & RCV & Nest & Corr &  & 4\\
+GLOS (2023)~\parencite{han2023glos} & M & 21 KU & C45 & GM Prec PCR CBA & RCV & Eval & Pair &  & 2\\
+NROMM (2023)~\parencite{liu2023nromm} & B+M & 30 K & C45 MLP kNN NB SVM & AvAcc GM CBA CEN AUC Pmin mP AUCm MAUC & 5x2$^\ast$ & Eval & Corr &  & 4\\
+OREM (2023)~\parencite{zhu2023orem} & B+M & 49 U & C45 MLP SVM CART & F1 GM AUC mF1 MAUC TPR Prec BA & RCV & Nest & Pair &  & 4\\
+GMMSampling (2024)~\parencite{naglik2024gmmsampling} & M & 11 U & CART NB kNN RF GB & BA mF1 GM MCC PRAUC & RCV$^\ast$ & Nest & Omni & yes & 5\\
+MC-MBRC (2024)~\parencite{ma2024mcmbrc} & M & 20 KU & RF CART MLP kNN & AvAcc Fb CBA CEN & RCV & Eval & Corr & yes & 3\\
+MKC-SMOTE (2024)~\parencite{wang2024mkc} & M & 21 U & CART SVM & MAUC GM & CV & Eval & Pair &  & 2\\
+CISO (2025)~\parencite{yadav2025ciso} & B & 50 KU & LR SVM RF GB & PRAUC AUC GM & CV$^\ast$ & Nest & Corr &  & 5\\
+GDHS (2025)~\parencite{yan2025gdhs} & B+M & 20 K & CART & GM MAUC & RCV & Eval & Bayes & yes & 5\\
+GOIO (2025)~\parencite{ren2025goio} & B & 18 U & NB kNN CART SVM RF & F1 MCC Acc & RCV$^\ast$ & Fixed & Corr & yes & 6\\
+MC-NCLWO (2025)~\parencite{tao2025mcnclwo} & M & 23 K & kNN CART NB SVM & Fb AvAcc CBA CEN & RCV & Eval & Corr & yes & 4\\
+MLOS (2025)~\parencite{yan2025mlos} & B & 16 KU & SVM & AUC GM TPR & RCV & Eval & Bayes & yes & 5\\
+DGOT (2026)~\parencite{ren2026dgot} & B+M & 22 U & GB kNN CART LR RF & Acc F1 mF1 MCC & RCV$^\ast$ & Fixed & Corr & yes & 6\\
+Loyalty-SMOTE (2026)~\parencite{hu2026loyalty} & B+M & 59 KU & SVM & F1 AUC TPR GM & HO & Fixed & -- &  & 2\\
+QC-SMOTE (2026)~\parencite{upman2026qcsmote} & B & 30 K & GB & AUC mF1 & RCV$^\ast$ & Eval & Pair &  & 2\\
+\end{longtable}
+\par\raggedright Set.: B binary, M multi-class, B+M both. Data: number of real datasets; K KEEL, U UCI. Learners: C45 C4.5 or C5.0, CART, Rule rule learner, kNN, SVM, LR logistic regression, RF random forest, GB gradient boosting, Boost AdaBoost-type, NB naive Bayes, MLP, LDA, CNN, Oth other. Measures: Acc accuracy or error, TPR, TNR, Prec precision, FPR, GM G-mean, F1, Fb F-measure, Kap kappa, BA balanced accuracy, MCC, GS G-score, AUC ROC-AUC, PRAUC, MAUC, AUCm, PCR per-class recall, mF1 macro-F1, AvAcc, wF1 weighted F1, mP macro-precision, Pmin, CBA, CEN, mR macro-recall, MS minimum sensitivity, Cost. Prot.: RCV repeated $k$-fold CV, CV single $k$-fold CV, 5x2 CV, RHO repeated hold-out, HO single hold-out, FS fixed benchmark split, NS not stated; $^\ast$ train-only resampling stated. Settings: Eval chosen on evaluation data, Fixed fixed or default, Nest nested or held-out tuning, NS not stated. Test: Corr corrected multiple comparison, Pair pairwise without correction, Omni omnibus only, Bayes Bayesian, -- none. Std.: points met of the standard in Table~\ref{tab:empirical-standard}.\par}

@@ -1,0 +1,21 @@
+%% Table: drivers of change in evaluation practice (input from sections/07-empirical-comparisons.tex). Version 4, generated 2026-11-08 by v4/make_tables.py.
+%% JAIR style: caption above the table, booktabs rules. Regenerate instead of editing numbers by hand.
+\begin{table}[t]
+  \caption{What Drove the Changes in Evaluation Practice}
+  \label{tab:empirical-drivers}
+  \footnotesize
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{@{}p{0.16\linewidth}p{0.46\linewidth}p{0.32\linewidth}@{}}
+    \toprule
+    Driver & Evidence by period (1997--2009 $\to$ 2010--2015 $\to$ 2016--2020 $\to$ 2021--2026) & Changes it explains\\
+    \midrule
+    Change of toolkit & Studies naming Python: 0 $\to$ 0 $\to$ 6 $\to$ 12; naming Weka: 1 $\to$ 6 $\to$ 4 $\to$ 1; releasing code: 0 $\to$ 2 $\to$ 13 $\to$ 12 & C4.5 falls and CART rises; rule learners disappear; logistic regression, random forest and gradient boosting arrive; MCC and macro-F1 appear\\
+    Absorption into composites & Composite users who also report recall: 8/9 $\to$ 5/21; F users who report precision: 5/7 $\to$ 2/10; G-mean users who report TNR: 2/4 $\to$ 0/17 & Recall, precision and TNR fall or vanish as stand-alone measures; G-mean rises\\
+    Larger benchmarks & Median datasets per study: 6.5 $\to$ 20 $\to$ 20 $\to$ 23 & ROC curves and confusion matrices disappear; running time is reported more often\\
+    Change of problem or data & Multi-class studies: 3 $\to$ 4 $\to$ 10 $\to$ 15; image studies: 0 $\to$ 0 $\to$ 2 $\to$ 0; generative studies from 2019 (5) & MAUC, MG and macro-F1 rise; CNNs come and go; accuracy survives in generative studies\\
+    Following a line of work & 11 studies say they chose learners as an earlier study did; six studies of the MC-CCR line (2020 to 2025) share AvAcc, CBA and CEN & CBA, CEN, AvAcc and MLP spread together; C4.5 persists where comparability with older work matters\\
+    Methodological sources & Demšar (2006) cited for the tests by 19 studies; first Friedman test 2008, first Wilcoxon test 2010; last t-test 2015 & Significance testing spreads (studies without a test: 64\% $\to$ 17\%)\\
+    Realism and critiques & RF or GB: 7\% $\to$ 33\%; critiques of F1 and accuracy (Boughorbel et al. cited by 3 studies) & Strong learners appear; MCC appears; F1 stops growing\\
+    \bottomrule
+  \end{tabular}
+\end{table}
