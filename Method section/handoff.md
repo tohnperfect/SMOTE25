@@ -115,7 +115,7 @@
 | `manuscript/method-section-draft.tex` | ร่าง paper ส่วน Method (v2.3) |
 | `manuscript/generated/` | ตาราง 37 วิธี, Table 7, คำอธิบายรายวิธี **สร้างจาก script ห้ามแก้มือ** |
 | `manuscript/figures/` | Figure 1 และ Figure 2 ถึง 7 (PDF) ต้นฉบับ TikZ อยู่ใน `figures/src/` |
-| `manuscript/*-preview.pdf` | PDF ตัวอย่าง (ไม่ขึ้น git) |
+| `manuscript/method-section-draft-preview.pdf` | PDF ของร่าง (v2.3, 26 หน้า) อยู่บน git ตั้งแต่ 10 พ.ย. **ถ้าแก้ร่างหรือตาราง ให้ compile ใหม่แล้ว commit PDF ด้วย** |
 | `smote-family-overview.html` | หน้า SMOTE Family at 25 (4 หน้าต่าง) |
 | `binary-multiclass-summary.html` | หน้าสรุปประเภทคลาสพร้อม Timeline |
 | `pdf-check/` | กติกาการอ่าน PDF และผลราย paper |
